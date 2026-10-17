@@ -20,7 +20,7 @@
       {
         "method": "mail",
         "date": "2026-10-19",
-        "rule": "A paper application must be RECEIVED by your county voter registration office by Monday, October 19. The official calendar says 'Voter Registration Mail Applications must be received by the county voter registration commission not later than the deadline to register.' A postmark is not enough. As of Friday, October 16, mailing one is risky; register online or in person instead.",
+        "rule": "A paper application must be received by your county voter registration office by Monday, October 19. The official calendar says 'Voter Registration Mail Applications must be received by the county voter registration commission not later than the deadline to register.' a postmark is not enough. As of Friday, October 16, mailing one is risky; register online or in person instead.",
         "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf"
       },
       {
@@ -39,7 +39,7 @@
     "who_gets_one": "You must ask for one. Any registered voter can request a no-excuse mail-in ballot (or an absentee ballot if you'll be away, ill or disabled; same deadlines, same process). Nothing is mailed automatically. If you checked the 'annual mail-in list' box on a past application, the county mailed you an application in early 2026; if you returned it, your ballot should have arrived in October. Not sure? Check the tracking link.",
     "request_deadline": {
       "date": "2026-10-27",
-      "rule": "Your application must be RECEIVED by your county election office by 5:00 PM on Tuesday, October 27. The official calendar: 'Last day before the November election on which official applications for mail-in ballots may be received by the county boards of elections, due at 5:00 PM.' Apply online at pavoterservices.pa.gov/OnlineAbsenteeApplication (needs a PennDOT ID number or last four of SSN), on paper, or in person. The state says apply as early as possible because the ballot has to travel to you and back. After about October 20, the safe move is to go to your county election office or a satellite office, apply, get the ballot, and vote it on the spot (see early_in_person). Emergency absentee ballots (sudden illness or emergency after 5 PM Oct. 27) can be requested until 8 PM on Election Day; ask your county.",
+      "rule": "Your application must be received by your county election office by 5:00 PM on Tuesday, October 27. The official calendar: 'Last day before the November election on which official applications for mail-in ballots may be received by the county boards of elections, due at 5:00 PM.' Apply online at pavoterservices.pa.gov/OnlineAbsenteeApplication (needs a PennDOT ID number or last four of SSN), on paper, or in person. The state says apply as early as possible because the ballot has to travel to you and back. After about October 20, the safe move is to go to your county election office or a satellite office, apply, get the ballot, and vote it on the spot (see early_in_person). Emergency absentee ballots (sudden illness or emergency after 5 PM Oct. 27) can be requested until 8 PM on Election Day; ask your county.",
       "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf"
     },
     "return_deadline": {
@@ -56,7 +56,7 @@
       "NOT your polling place. Poll workers cannot accept a voted mail ballot on Election Day."
     ],
     "postage": "Prepaid in recent elections. Since 2020 the state has paid return postage on mail ballot envelopes. The DOS mail-ballot page does not say either way, so look for the postage-paid marking when yours arrives; if it isn't there, add a stamp. Drop boxes and return sites need no postage.",
-    "signature_witness_rules": "No witness or notary. Two envelopes matter. (1) Seal your ballot in the yellow inner envelope marked 'Official Election Ballot.' DOS: 'Do not make any stray marks on the yellow envelope.' (2) Put that inside the pre-addressed outer return envelope and SIGN AND DATE the voter's declaration on the back. DOS: 'Sign and write the current date on the voter's declaration' and 'If you do not complete the declaration on the return envelope your ballot will not be counted.' And: 'Both of these envelopes must be used in order for your vote to count.' A ballot that arrives without the inner envelope (a 'naked ballot') is rejected under a 2020 Pennsylvania Supreme Court ruling. On the date: the outer envelope pre-prints '20' so you write the month, day and last two digits of the year. Write the date you sign, not your birthday. Since August 2025 a federal appeals court (Third Circuit, Eakin v. Adams County) has barred counties from rejecting ballots over a missing or wrong date, and Votebeat (May 2026) reports 'Currently, counties cannot reject mail ballots for lacking a proper date.' Date it anyway. The rule has flipped before, that ruling is on appeal to the U.S. Supreme Court (docket 25-967), and a separate state case (Baxter) is pending.",
+    "signature_witness_rules": "No witness or notary. Two envelopes matter. (1) Seal your ballot in the yellow inner envelope marked 'Official Election Ballot.' DOS: 'Do not make any stray marks on the yellow envelope.' (2) Put that inside the pre-addressed outer return envelope and sign and date the voter's declaration on the back. DOS: 'Sign and write the current date on the voter's declaration' and 'If you do not complete the declaration on the return envelope your ballot will not be counted.' And: 'Both of these envelopes must be used in order for your vote to count.' A ballot that arrives without the inner envelope (a 'naked ballot') is rejected under a 2020 Pennsylvania Supreme Court ruling. On the date: the outer envelope pre-prints '20' so you write the month, day and last two digits of the year. Write the date you sign, not your birthday. Since August 2025 a federal appeals court (Third Circuit, Eakin v. Adams County) has barred counties from rejecting ballots over a missing or wrong date, and Votebeat (May 2026) reports 'Currently, counties cannot reject mail ballots for lacking a proper date.' Date it anyway. The rule has flipped before, that ruling is on appeal to the U.S. Supreme Court (docket 25-967), and a separate state case (Baxter) is pending.",
     "tracking_url": "https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx",
     "cure_process": "Pennsylvania has no statewide cure law, so it depends on your county. Philadelphia and Allegheny County both notify voters whose returned ballot has a problem (missing signature, naked ballot) and let them fix or replace it before Election Day; the state tracker will show the status. Your universal fallback: under Genser v. Butler County (Pa. Supreme Court, Oct. 2024), if your mail ballot is rejected for a packaging mistake you may go to your polling place on Election Day, vote a provisional ballot, and it must be counted. Give an email and phone on your application so the county can reach you; DOS says you may get notifications 'depending on county practices.'",
     "mail_cutoff_advice": "The Department of State says paper applications must be received 'at least one week before the election,' and USPS recommends mailing a voted ballot at least seven days out, so mail by about Tuesday, October 27. After that, hand-deliver it to your county election office, a satellite office, a Philadelphia drop box or an Allegheny return site. DOS: 'A postmark by 8 p.m. Nov. 3 is not sufficient.'",
@@ -67,7 +67,7 @@
     "available": false,
     "start": null,
     "end": "2026-10-27",
-    "hours_note": "Pennsylvania has no early in-person voting. What it has instead is 'on-demand' mail voting. DOS: once ballots are available, 'you can request, receive, vote, and submit the ballot in one visit' at your county election office or another designated location, and 'there is no need for mail at all.' It works until the application deadline, 5:00 PM on Tuesday, October 27, and not on Election Day. Bring your PennDOT ID number or last four of SSN. Lines get long in the last few days. PHILADELPHIA: City Hall Room 140 plus 10 satellite election offices (one per Council district; addresses at vote.phila.gov/about-us/satellite-election-offices). Posted hours: Mon to Fri 9 AM to 5 PM, Sat and Sun 10 AM to 4 PM; the city says hours may change close to the election. ALLEGHENY COUNTY: County Office Building, 542 Forbes Ave., Mon to Fri 8:30 AM to 4:30 PM, plus weekend satellite sites on Sat and Sun Oct. 17, 18, 24 and 25, 9 AM to 4 PM, at CCAC Homewood (701 N. Homewood Ave.), North Park Ice Rink (1200 Pearce Mill Rd., Wexford), South Park Ice Rink (Corrigan Dr., Bethel Park) and the County Office Building. Any county voter can use any site.",
+    "hours_note": "Pennsylvania has no early in-person voting. What it has instead is 'on-demand' mail voting. DOS: once ballots are available, 'you can request, receive, vote, and submit the ballot in one visit' at your county election office or another designated location, and 'there is no need for mail at all.' It works until the application deadline, 5:00 PM on Tuesday, October 27, and not on Election Day. Bring your PennDOT ID number or last four of SSN. Lines get long in the last few days. PHILADELPHIA: City Hall Room 140 plus 10 satellite election offices (one per Council district; addresses at vote.phila.gov/about-us/satellite-election-offices). Posted hours: Mon to Fri 9 AM to 5 PM, Sat and Sun 10 AM to 4 PM; the city says hours may change close to the election. ALLEGHENY county: County Office Building, 542 Forbes Ave., Mon to Fri 8:30 AM to 4:30 PM, plus weekend satellite sites on Sat and Sun Oct. 17, 18, 24 and 25, 9 AM to 4 PM, at CCAC Homewood (701 N. Homewood Ave.), North Park Ice Rink (1200 Pearce Mill Rd., Wexford), South Park Ice Rink (Corrigan Dr., Bethel Park) and the County Office Building. Any county voter can use any site.",
     "vote_centers": null,
     "lookup_url": "https://vote.phila.gov/about-us/satellite-election-offices/",
     "confidence": "verified"
@@ -101,11 +101,191 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "REGISTER BY MONDAY, OCTOBER 19. Three days from today. Online by 11:59 PM at pavoterservices.pa.gov. No same-day registration exists in Pennsylvania, so missing this means sitting out. Already registered but moved? Same deadline to update.",
+    "REGISTER by Monday, October 19. Three days from today. Online by 11:59 PM at pavoterservices.pa.gov. No same-day registration exists in Pennsylvania, so missing this means sitting out. Already registered but moved? Same deadline to update.",
     "Two envelopes or your mail ballot doesn't count. Ballot goes in the yellow 'Official Election Ballot' envelope (write nothing on it), then in the big return envelope. Sign AND date the back of the big one with today's date, not your birthday. A 'naked ballot' with no inner envelope is thrown out. The date rule is currently relaxed by a federal court, but date it anyway.",
     "'Received by 8 PM' means in the county's hands, not postmarked. Mail it by about October 27 or hand-deliver it. Philadelphia: 35 drop boxes, 24/7 until 8 PM Nov. 3. Pittsburgh: no unstaffed boxes; use the County Office Building (542 Forbes, weekdays) or one of 12 staffed return sites open only Oct. 30 to Nov. 2. You cannot hand it to a poll worker at your polling place.",
     "There is no early voting, but you can vote early anyway. Go to your county election office or a satellite office before 5 PM on Tuesday, October 27, apply for a mail ballot, and vote it right there. Philly has 10 satellite offices open seven days a week. Allegheny's weekend sites are Oct. 17, 18, 24 and 25 only. After October 27 that door closes and your only option is Election Day, 7 AM to 8 PM.",
     "Requested a mail ballot but want to vote in person instead? Bring 'your ballot and the pre-addressed outer return envelope' to your polling place to be voided; then you vote normally. If you can't surrender it (lost it, never got it), you vote a provisional ballot. If you already sent your mail ballot back, DOS says 'you cannot vote at your polling place on Election Day.' The exception: if your county tells you your returned ballot was rejected for a mistake, you can vote a provisional ballot at your polling place and it counts (Genser, Pa. Supreme Court 2024)."
+  ],
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in Pennsylvania.",
+      "answer": "Update your address online by 11:59 PM on Monday, October 19 so it counts for this election. If you miss it, vote one more time at the polling place for your old address and fill out a change-of-address form there.",
+      "steps": [
+        "Update at pavoterservices.pa.gov and check Change of Address.",
+        "Moved within the same county? Tell the poll workers your new address and they'll update you.",
+        "Moved to a different county? Fill out the form telling them your new address and county."
+      ],
+      "deadline": "2026-10-19",
+      "source": "https://www.pa.gov/agencies/vote/voter-registration/update-my-registration",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I moved out of Pennsylvania.",
+      "answer": "Register in your new state instead; Pennsylvania ballots are only for people who live here. You can cancel your Pennsylvania registration by mailing a cancellation form to your old county election office.",
+      "steps": [
+        "Look up your new state's rules and deadline at vote.gov.",
+        "The cancellation form is on the Department of State's Update My Registration page."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-registration/update-my-registration",
+      "confidence": "verified"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered yet.",
+      "answer": "Register by Monday, October 19. Pennsylvania has no same-day registration, so this is the last chance for this election.",
+      "steps": [
+        "Online at pavoterservices.pa.gov by 11:59 PM; you need a PennDOT license or ID number, or the last four digits of your Social Security number.",
+        "Don't mail a form now; it has to be received by October 19.",
+        "In person: your county election office during business hours. Allegheny County's satellite sites also take registrations Saturday and Sunday, October 17 and 18, 9 AM to 4 PM."
+      ],
+      "deadline": "2026-10-19",
+      "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "answer": "Go to your assigned polling place if you can. If you vote a provisional ballot somewhere else, the county may count only the races you're eligible for, and a provisional ballot cast in a different county isn't counted.",
+      "steps": [
+        "Find your polling place at pavoterservices.pa.gov (Find Your Polling Place).",
+        "Polls are open 7 AM to 8 PM."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/provisional-ballot",
+      "confidence": "sourced"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "answer": "You can vote a provisional ballot at your polling place on Election Day; the county counts it after checking that you didn't also vote by mail. Before October 27, you can also ask your county election office about getting a new ballot in person.",
+      "steps": [
+        "Track your ballot at pavoterservices.pa.gov (Ballot Tracking).",
+        "Philadelphia: City Hall Room 140 or a satellite election office. Allegheny: County Office Building, 542 Forbes Ave.",
+        "Keep your provisional ballot receipt so you can check it later."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my ballot.",
+      "answer": "At the polls, ask a poll worker for a new ballot before you scan it. On a mail ballot, don't send it: bring the ballot and its outer return envelope to your polling place to be voided, then vote a regular ballot, or call your county election office before October 27 about a replacement.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I requested a mail ballot, but I want to vote in person.",
+      "answer": "Bring your mail ballot and its pre-addressed outer return envelope to your polling place. You surrender them, sign a form, and vote a regular ballot; without them, you can only vote a provisional ballot.",
+      "steps": [
+        "Already sent your mail ballot back? Then you can't vote at your polling place.",
+        "Exception: if the county tells you your returned ballot was rejected for a mistake, vote a provisional ballot at your polling place and it counts.",
+        "You can't hand a voted mail ballot to poll workers on Election Day."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "answer": "You only need ID the first time you vote at a polling place; everyone else just signs the poll book. A first-timer without ID can vote a provisional ballot, which counts once the county confirms your registration.",
+      "steps": [
+        "Photo ID works: PA license or PennDOT ID, passport, military, student or employee ID.",
+        "So does a non-photo ID with your name and address: voter card, utility bill, bank statement, paycheck or government check."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/new-voters",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "answer": "Update your registration by Monday, October 19 (check Change of Name) so it applies to this election; changes made later take effect for the next one. Bring ID with your new name when you vote.",
+      "steps": [
+        "Update at pavoterservices.pa.gov.",
+        "Missed it? Vote as usual and tell the poll workers your name changed."
+      ],
+      "deadline": "2026-10-19",
+      "source": "https://www.pa.gov/agencies/vote/voter-registration/update-my-registration",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "answer": "Registered at home but away at school? Apply for a mail ballot online by 5 PM on Tuesday, October 27, but go early, because your county must receive the voted ballot by 8 PM on November 3; a postmark doesn't count.",
+      "steps": [
+        "Apply at pavoterservices.pa.gov (needs a PennDOT ID number or last four of your Social Security number).",
+        "Mail it back right away, or hand it in at your county election office.",
+        "Want to vote where you go to school in Pennsylvania instead? Update your registration by October 19."
+      ],
+      "deadline": "2026-10-27",
+      "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "answer": "Pennsylvania has no early voting, but you can vote a mail ballot in one trip: go to your county election office or a satellite office before 5 PM on Tuesday, October 27, apply, fill it out and turn it in. A sudden emergency after that? Ask for an emergency absentee ballot by 8 PM on Election Day.",
+      "steps": [
+        "Philadelphia: City Hall Room 140 plus 10 satellite offices, open seven days a week.",
+        "Allegheny: County Office Building, 542 Forbes Ave., weekdays, plus weekend satellites on October 17, 18, 24 and 25.",
+        "Or apply online by October 27 and return the ballot by hand; it must arrive by 8 PM on November 3."
+      ],
+      "deadline": "2026-10-27",
+      "source": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when the polls close.",
+      "answer": "Stay in line. If you're in line at 8 PM, you get to vote.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/elections/upcoming-elections",
+      "confidence": "sourced"
+    },
+    {
+      "id": "signature_problem",
+      "question": "There's a problem with the envelope on my mail ballot.",
+      "answer": "Pennsylvania has no statewide fix-it rule, so it depends on your county; Philadelphia and Allegheny both contact voters about problems like a missing signature or missing inner envelope. If your ballot is rejected for a mistake like that, you can vote a provisional ballot at your polling place and it counts.",
+      "steps": [
+        "Give your email and phone on your application so the county can reach you.",
+        "Watch your status at pavoterservices.pa.gov (Ballot Tracking).",
+        "Sign and date the outer envelope, and use the yellow inner envelope."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.pa.gov/agencies/vote/voter-support/provisional-ballot",
+      "confidence": "sourced"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "They told me to vote a provisional ballot.",
+      "answer": "Fill out the envelope in front of the poll workers and keep your receipt. The county decides within 7 days whether you were eligible, and the ballot may be fully counted, partly counted or not counted.",
+      "steps": [
+        "Starting 7 days after the election, look it up at pavoterservices.pa.gov (Provisional Ballot Search) with the number on your receipt.",
+        "Or call 1-877-VOTESPA."
+      ],
+      "deadline": null,
+      "source": "https://www.pa.gov/agencies/vote/voter-support/provisional-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check that my ballot was counted?",
+      "answer": "Track a mail ballot at pavoterservices.pa.gov (Ballot Tracking); give an email on your application to get updates. For a provisional ballot, use the Provisional Ballot Search starting 7 days after the election.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx",
+      "confidence": "verified"
+    }
   ],
   "sources": [
     {

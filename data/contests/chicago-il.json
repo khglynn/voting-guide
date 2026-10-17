@@ -1242,7 +1242,7 @@
     "district": "SD-18",
     "scope_plain": "Voters in Illinois Senate District 18. Districts cut across ZIP codes and wards; confirm yours with the Board of Elections address lookup.",
     "office_explainer": "One of 59 Illinois state senators. Writes state laws and the state budget in Springfield.",
-    "why_it_matters": "Our primary-results source does not list an incumbent in this race, so it is treated as an open seat. The length of this Senate term (two or four years) is not stated in our sources.",
+    "why_it_matters": "Open seat: Sen. Bill Cunningham is retiring (Chicago Tribune). The length of this Senate term (two or four years) is not stated in our sources.",
     "vote_for": 1,
     "incumbent": null,
     "open_seat": true,
@@ -1296,6 +1296,10 @@
       {
         "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
         "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
+      },
+      {
+        "name": "Chicago Tribune editorial: Fran Hurley for Illinois 18th Senate District (Oct. 8, 2026)",
+        "url": "https://www.chicagotribune.com/2026/10/08/editorial-fran-hurley-illinois-18th-senate-district/"
       }
     ],
     "confidence": "sourced"
@@ -1450,80 +1454,6 @@
       }
     ],
     "confidence": "sourced"
-  },
-  {
-    "id": "il-hd-2",
-    "state": "IL",
-    "level": "state",
-    "office": "Illinois State Representative",
-    "district": "HD-2",
-    "scope_plain": "Voters in Illinois House District 2. Districts cut across ZIP codes and wards; confirm yours with the Board of Elections address lookup.",
-    "office_explainer": "One of 118 Illinois state representatives. Writes state laws and the state budget in Springfield.",
-    "why_it_matters": "Both parties' primary winners are shown, but this district did not appear in our extracted copy of the official Chicago candidate list, so the November ballot is not confirmed.",
-    "vote_for": 1,
-    "incumbent": "Elizabeth Hernandez",
-    "open_seat": false,
-    "term_years": 2,
-    "is_retention": false,
-    "candidates": [
-      {
-        "name": "Laura Hruska",
-        "party": "Republican",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Riverside-Brookfield Township school board member. Won the March 17 Republican primary. Not confirmed on the November ballot: this race is missing from our extracted copy of the official candidate list.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      },
-      {
-        "name": "Elizabeth \"Lisa\" Hernandez",
-        "party": "Democratic",
-        "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Incumbent state representative and chair of the Democratic Party of Illinois. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Chicago Board of Elections: official Candidate List, Nov 3, 2026 (ballot order)",
-        "url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-      },
-      {
-        "name": "Critical Report: 2026 Illinois House primary results (Mar 18, 2026)",
-        "url": "https://criticalreport.substack.com/p/2026-il-state-house-primaries"
-      },
-      {
-        "name": "Wikipedia: 2026 Illinois House of Representatives election",
-        "url": "https://en.wikipedia.org/wiki/2026_Illinois_House_of_Representatives_election"
-      },
-      {
-        "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
-        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
-      },
-      {
-        "name": "Wikipedia: 2026 Cook County Board of Commissioners election",
-        "url": "https://en.wikipedia.org/wiki/2026_Cook_County_Board_of_Commissioners_election"
-      }
-    ],
-    "confidence": "unverified"
   },
   {
     "id": "il-hd-3",
@@ -3498,76 +3428,6 @@
     "confidence": "sourced"
   },
   {
-    "id": "il-hd-77",
-    "state": "IL",
-    "level": "state",
-    "office": "Illinois State Representative",
-    "district": "HD-77",
-    "scope_plain": "Voters in Illinois House District 77. Districts cut across ZIP codes and wards; confirm yours with the Board of Elections address lookup.",
-    "office_explainer": "One of 118 Illinois state representatives. Writes state laws and the state budget in Springfield.",
-    "why_it_matters": "The Board of Elections lists a map for this district, so part of Chicago votes here. This district did not appear in our extracted copy of the official Chicago candidate list, so the November ballot is not confirmed.",
-    "vote_for": 1,
-    "incumbent": "Norma Hernandez",
-    "open_seat": false,
-    "term_years": 2,
-    "is_retention": false,
-    "candidates": [
-      {
-        "name": "Anthony Airdo",
-        "party": "Republican",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Won the March 17 Republican primary. Not confirmed on the November ballot: this race is missing from our extracted copy of the official candidate list.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      },
-      {
-        "name": "Norma Hernandez",
-        "party": "Democratic",
-        "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Incumbent state representative. Won the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Chicago Board of Elections: official Candidate List, Nov 3, 2026 (ballot order)",
-        "url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-      },
-      {
-        "name": "Critical Report: 2026 Illinois House primary results (Mar 18, 2026)",
-        "url": "https://criticalreport.substack.com/p/2026-il-state-house-primaries"
-      },
-      {
-        "name": "Wikipedia: 2026 Illinois House of Representatives election",
-        "url": "https://en.wikipedia.org/wiki/2026_Illinois_House_of_Representatives_election"
-      },
-      {
-        "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
-        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
-      }
-    ],
-    "confidence": "unverified"
-  },
-  {
     "id": "il-hd-78",
     "state": "IL",
     "level": "state",
@@ -4340,7 +4200,7 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Incumbent commissioner, seeking a third term. Unopposed in the primary.",
+        "background": "Incumbent commissioner. Unopposed in the primary.",
         "own_words": [
           {
             "text": "No statement collected for this guide yet.",
@@ -4616,80 +4476,6 @@
     "confidence": "sourced"
   },
   {
-    "id": "il-cook-commissioner-15",
-    "state": "IL",
-    "level": "county",
-    "office": "Cook County Commissioner",
-    "district": "Cook County Board District 15",
-    "scope_plain": "Voters in Cook County Board District 15. Districts cut across ZIP codes and wards; confirm yours with the Board of Elections address lookup.",
-    "office_explainer": "One of 17 Cook County Board members. Votes on the county budget, taxes and ordinances.",
-    "why_it_matters": "Open seat: incumbent Kevin Morrison ran for Congress (IL-8). Mostly suburban; the Board of Elections lists a district map, so a small part of Chicago may vote here. This race is missing from our extracted copy of the official Chicago candidate list.",
-    "vote_for": 1,
-    "incumbent": null,
-    "open_seat": true,
-    "term_years": 4,
-    "is_retention": false,
-    "candidates": [
-      {
-        "name": "Daniel Lee",
-        "party": "Republican",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Small business owner. Won the Republican primary with 61.0% over Gabriella Hoxie.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      },
-      {
-        "name": "Ted Mason",
-        "party": "Democratic",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Chief of staff to Commissioner Kevin Morrison. Unopposed in the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Chicago Board of Elections: official Candidate List, Nov 3, 2026 (ballot order)",
-        "url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-      },
-      {
-        "name": "Wikipedia: 2026 Cook County Board of Commissioners election",
-        "url": "https://en.wikipedia.org/wiki/2026_Cook_County_Board_of_Commissioners_election"
-      },
-      {
-        "name": "Critical Report: 2026 Illinois county primary results (Mar 18, 2026)",
-        "url": "https://criticalreport.substack.com/p/2026-il-county-primaries"
-      },
-      {
-        "name": "Chicago Board of Elections: legislative district maps",
-        "url": "https://chicagoelections.gov/districts-maps/legislative-maps"
-      },
-      {
-        "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
-        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
-      }
-    ],
-    "confidence": "sourced"
-  },
-  {
     "id": "il-cook-commissioner-16",
     "state": "IL",
     "level": "county",
@@ -4734,80 +4520,6 @@
       {
         "name": "Critical Report: 2026 Illinois county primary results (Mar 18, 2026)",
         "url": "https://criticalreport.substack.com/p/2026-il-county-primaries"
-      }
-    ],
-    "confidence": "sourced"
-  },
-  {
-    "id": "il-cook-commissioner-17",
-    "state": "IL",
-    "level": "county",
-    "office": "Cook County Commissioner",
-    "district": "Cook County Board District 17",
-    "scope_plain": "Voters in Cook County Board District 17. Districts cut across ZIP codes and wards; confirm yours with the Board of Elections address lookup.",
-    "office_explainer": "One of 17 Cook County Board members. Votes on the county budget, taxes and ordinances.",
-    "why_it_matters": "Open seat: Sean Morrison, the board's only Republican, is not running again. Mostly suburban; the Board of Elections lists a district map, so a small part of Chicago may vote here. This race is missing from our extracted copy of the official Chicago candidate list.",
-    "vote_for": 1,
-    "incumbent": null,
-    "open_seat": true,
-    "term_years": 4,
-    "is_retention": false,
-    "candidates": [
-      {
-        "name": "Liz Gorman",
-        "party": "Republican",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Former Cook County commissioner (2002 to 2015). Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      },
-      {
-        "name": "Elyse Hoffenberg",
-        "party": "Democratic",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Lyons Township clerk. Unopposed in the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Chicago Board of Elections: official Candidate List, Nov 3, 2026 (ballot order)",
-        "url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-      },
-      {
-        "name": "Wikipedia: 2026 Cook County Board of Commissioners election",
-        "url": "https://en.wikipedia.org/wiki/2026_Cook_County_Board_of_Commissioners_election"
-      },
-      {
-        "name": "Critical Report: 2026 Illinois county primary results (Mar 18, 2026)",
-        "url": "https://criticalreport.substack.com/p/2026-il-county-primaries"
-      },
-      {
-        "name": "Chicago Board of Elections: legislative district maps",
-        "url": "https://chicagoelections.gov/districts-maps/legislative-maps"
-      },
-      {
-        "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
-        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
       }
     ],
     "confidence": "sourced"
@@ -4924,11 +4636,11 @@
     "level": "special_district",
     "office": "Commissioner, Metropolitan Water Reclamation District (full 6-year term)",
     "district": null,
-    "scope_plain": "Every Cook County voter (the district serves Cook County). Vote for up to THREE; the top three vote-getters win.",
+    "scope_plain": "Every Cook County voter (the district serves Cook County). Vote for up to three; the top three vote-getters win.",
     "office_explainer": "Treats the region's sewage and manages stormwater to prevent flooding and protect Lake Michigan.",
     "why_it_matters": "Nine part-time commissioners, three elected every two years. The district levied $756 million in property taxes in 2026 (Illinois Policy) and is exploring selling treated wastewater to data centers for cooling. Three Democratic incumbents face three Republicans.",
     "vote_for": 3,
-    "incumbent": "Precious Brady-Davis, Eira Corral Sepulveda, Beth McElroy Kirkwood",
+    "incumbent": "Precious Brady-Davis, Eira Corral Sepúlveda, Beth McElroy Kirkwood",
     "open_seat": false,
     "term_years": 6,
     "is_retention": false,
@@ -5002,7 +4714,7 @@
         "lwv_url": "https://vote411.org/lwvchicago"
       },
       {
-        "name": "Eira Lizeth Corral Sepulveda",
+        "name": "Eira Lizeth Corral Sepúlveda",
         "party": "Democratic",
         "incumbent": true,
         "website": null,
@@ -6186,7 +5898,7 @@
     "office": "Circuit Court of Cook County: retain Judge Lewis Nixon?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 203/204 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Lewis Nixon",
@@ -6252,7 +5964,7 @@
     "office": "Circuit Court of Cook County: retain Judge Kerry M. Kennedy?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 205/206 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Kerry M. Kennedy",
@@ -6318,7 +6030,7 @@
     "office": "Circuit Court of Cook County: retain Judge Joan E. Powell?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 207/208 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Joan E. Powell",
@@ -6384,7 +6096,7 @@
     "office": "Circuit Court of Cook County: retain Judge Maureen Ward Kirby?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 209/210 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Maureen Ward Kirby",
@@ -6450,7 +6162,7 @@
     "office": "Circuit Court of Cook County: retain Judge Edward A. Arce?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 211/212 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Edward A. Arce",
@@ -6516,7 +6228,7 @@
     "office": "Circuit Court of Cook County: retain Judge Thomas J. Byrne?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 213/214 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Thomas J. Byrne",
@@ -6582,7 +6294,7 @@
     "office": "Circuit Court of Cook County: retain Judge Diana L. Kenworthy?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 215/216 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Diana L. Kenworthy",
@@ -6648,7 +6360,7 @@
     "office": "Circuit Court of Cook County: retain Judge Kristyna Colleen Ryan?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 217/218 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Kristyna Colleen Ryan",
@@ -6714,8 +6426,8 @@
     "office": "Circuit Court of Cook County: retain Judge Ursula Walowski?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 219/220 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
-    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is NOT on the Chicago Federation of Labor's 'recommended for retention' list (58 of 60 judges are). Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
+    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is not on the Chicago Federation of Labor's 'recommended for retention' list (58 of the 59 circuit judges on the ballot are). Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Ursula Walowski",
     "open_seat": false,
@@ -6741,7 +6453,7 @@
             "source": "https://2026retention.injusticewatch.org/candidate/ursula-walowski-35891"
           },
           {
-            "text": "Injustice Watch published a story on Oct. 1, 2026 titled around reversals of her rulings ('Walowski reversals').",
+            "text": "Injustice Watch reported on Oct. 1, 2026 that the Illinois Appellate Court has repeatedly overturned and criticized her decisions during her first full term in the Criminal Division.",
             "is_quote": false,
             "source": "https://www.injusticewatch.org/judges/judicial-elections/2026-retention/2026/walowski-reversals/"
           }
@@ -6774,6 +6486,10 @@
       {
         "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
         "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
+      },
+      {
+        "name": "Injustice Watch: This judge up for retention faced a flood of reversals (Oct. 1, 2026)",
+        "url": "https://www.injusticewatch.org/judges/judicial-elections/2026-retention/2026/walowski-reversals/"
       }
     ],
     "confidence": "verified"
@@ -6785,7 +6501,7 @@
     "office": "Circuit Court of Cook County: retain Judge Anthony C. \"Tony\" Kyriakopoulos?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 221/222 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Anthony C. \"Tony\" Kyriakopoulos",
@@ -6851,7 +6567,7 @@
     "office": "Circuit Court of Cook County: retain Judge Caroline Kate Moreland?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 223/224 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Caroline Kate Moreland",
@@ -6917,7 +6633,7 @@
     "office": "Circuit Court of Cook County: retain Judge Thomas J. Carroll?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 225/226 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Thomas J. Carroll",
@@ -6983,7 +6699,7 @@
     "office": "Circuit Court of Cook County: retain Judge Andrea M. Buford?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 227/228 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Andrea M. Buford",
@@ -7049,7 +6765,7 @@
     "office": "Circuit Court of Cook County: retain Judge John Michael Allegretti?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 229/230 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "John Michael Allegretti",
@@ -7115,7 +6831,7 @@
     "office": "Circuit Court of Cook County: retain Judge Kristal R. Rivers?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 231/232 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Kristal R. Rivers",
@@ -7181,7 +6897,7 @@
     "office": "Circuit Court of Cook County: retain Judge Steven G. Watkins?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 233/234 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Steven G. Watkins",
@@ -7247,7 +6963,7 @@
     "office": "Circuit Court of Cook County: retain Judge Abbey Fishman Romanek?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 235/236 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Abbey Fishman Romanek",
@@ -7313,7 +7029,7 @@
     "office": "Circuit Court of Cook County: retain Judge Judith C. Rice?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 237/238 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Judith C. Rice",
@@ -7379,7 +7095,7 @@
     "office": "Circuit Court of Cook County: retain Judge Patrick Kevin Coughlin?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 239/240 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Patrick Kevin Coughlin",
@@ -7445,7 +7161,7 @@
     "office": "Circuit Court of Cook County: retain Judge Megan Elizabeth Goldish?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 241/242 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Megan Elizabeth Goldish",
@@ -7511,7 +7227,7 @@
     "office": "Circuit Court of Cook County: retain Judge Anjana M.J. Hansen?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 243/244 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Anjana M.J. Hansen",
@@ -7577,7 +7293,7 @@
     "office": "Circuit Court of Cook County: retain Judge Robert D. Kuzas?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 245/246 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Robert D. Kuzas",
@@ -7637,79 +7353,13 @@
     "confidence": "verified"
   },
   {
-    "id": "il-cook-retention-john-j-mahoney-iii",
-    "state": "IL",
-    "level": "judicial",
-    "office": "Circuit Court of Cook County: retain Judge John J. Mahoney III?",
-    "district": "Countywide",
-    "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 247/248 (not confirmed) (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
-    "why_it_matters": "MAY NOT BE ON YOUR BALLOT. Injustice Watch lists Judge Mahoney among the 60 circuit judges seeking retention, and a gap in the official ballot numbering (247/248) falls where his name would be. But he is missing from our extracted copy of the Board of Elections list, from ISBA's 2026 ratings page, and from the Chicago Federation of Labor list. Check your sample ballot. If he is on it: yes/no, needs 60% YES.",
-    "vote_for": 1,
-    "incumbent": "John J. Mahoney III",
-    "open_seat": false,
-    "term_years": 6,
-    "is_retention": true,
-    "candidates": [
-      {
-        "name": "John J. Mahoney III",
-        "party": null,
-        "incumbent": true,
-        "website": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845",
-        "website_confidence": "verified",
-        "background": "Assigned to the Fifth Municipal District (Bridgeview), per Injustice Watch. Injustice Watch lists him on the 2026 retention ballot; the Board of Elections list as extracted, ISBA's ratings page and the Chicago Federation of Labor list do not show him.",
-        "own_words": [
-          {
-            "text": "No ISBA rating found: he does not appear on ISBA's 2026 Cook County page.",
-            "is_quote": false,
-            "source": "https://www.isba.org/judicial-elections/counties/cook"
-          },
-          {
-            "text": "Injustice Watch profile: background, bar ratings and any controversies, with no recommendation.",
-            "is_quote": false,
-            "source": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": null
-      }
-    ],
-    "sources": [
-      {
-        "name": "Injustice Watch: Check Your Judges, 2026 retention guide",
-        "url": "https://2026retention.injusticewatch.org/"
-      },
-      {
-        "name": "Injustice Watch profile: John J. Mahoney III",
-        "url": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845"
-      },
-      {
-        "name": "Injustice Watch: list of judges filing for Nov 2026 retention (June 2026)",
-        "url": "https://www.injusticewatch.org/judges/judicial-elections/2026-retention/2026/cook-county-judges-running-for-retention-november-2026-tips/"
-      },
-      {
-        "name": "Chicago Board of Elections: official Candidate List, Nov 3, 2026 (ballot order)",
-        "url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-      },
-      {
-        "name": "Illinois State Bar Association: 2026 Cook County judicial evaluations",
-        "url": "https://www.isba.org/judicial-elections/counties/cook"
-      },
-      {
-        "name": "Chicago Federation of Labor: Nov 3, 2026 endorsed candidates (as of 9/16/2026)",
-        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
-      }
-    ],
-    "confidence": "unverified"
-  },
-  {
     "id": "il-cook-retention-maritza-martinez",
     "state": "IL",
     "level": "judicial",
     "office": "Circuit Court of Cook County: retain Judge Maritza Martinez?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 249/250 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Maritza Martinez",
@@ -7775,7 +7425,7 @@
     "office": "Circuit Court of Cook County: retain Judge Terrence J. McGuire?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 251/252 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Terrence J. McGuire",
@@ -7841,7 +7491,7 @@
     "office": "Circuit Court of Cook County: retain Judge Bridget Anne Mitchell?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 253/254 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Bridget Anne Mitchell",
@@ -7907,7 +7557,7 @@
     "office": "Circuit Court of Cook County: retain Judge James P. Pieczonka?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 255/256 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "James P. Pieczonka",
@@ -7973,7 +7623,7 @@
     "office": "Circuit Court of Cook County: retain Judge Patricia O'Brien Sheahan?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 257/258 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Patricia O'Brien Sheahan",
@@ -8039,7 +7689,7 @@
     "office": "Circuit Court of Cook County: retain Judge Michael A. Forti?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 259/260 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Michael A. Forti",
@@ -8105,7 +7755,7 @@
     "office": "Circuit Court of Cook County: retain Judge Nichole C. Patton?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 261/262 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Nichole C. Patton",
@@ -8171,7 +7821,7 @@
     "office": "Circuit Court of Cook County: retain Judge Sondra N. Denmark?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 263/264 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Sondra N. Denmark",
@@ -8237,7 +7887,7 @@
     "office": "Circuit Court of Cook County: retain Judge Gerardo Tristan, Jr.?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 265/266 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Gerardo Tristan, Jr.",
@@ -8303,7 +7953,7 @@
     "office": "Circuit Court of Cook County: retain Judge Lynn Weaver Boyle?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 267/268 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Lynn Weaver Boyle",
@@ -8369,7 +8019,7 @@
     "office": "Circuit Court of Cook County: retain Judge Daniel Edward Maloney?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 269/270 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Daniel Edward Maloney",
@@ -8435,7 +8085,7 @@
     "office": "Circuit Court of Cook County: retain Judge Thomas M. Cushing?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 271/272 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Thomas M. Cushing",
@@ -8501,7 +8151,7 @@
     "office": "Circuit Court of Cook County: retain Judge John G. Mulroe?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 273/274 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "John G. Mulroe",
@@ -8567,7 +8217,7 @@
     "office": "Circuit Court of Cook County: retain Judge Tyria B. Walton?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 275/276 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Tyria B. Walton",
@@ -8633,7 +8283,7 @@
     "office": "Circuit Court of Cook County: retain Judge Erin Haggerty Antonietti?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 277/278 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Erin Haggerty Antonietti",
@@ -8699,7 +8349,7 @@
     "office": "Circuit Court of Cook County: retain Judge Teresa Molina-Gonzalez?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 279/280 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Teresa Molina-Gonzalez",
@@ -8765,7 +8415,7 @@
     "office": "Circuit Court of Cook County: retain Judge Patricia Maria Fallon?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 281/282 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Patricia Maria Fallon",
@@ -8831,7 +8481,7 @@
     "office": "Circuit Court of Cook County: retain Judge Sheree D. Henry?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 283/284 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Sheree D. Henry",
@@ -8897,7 +8547,7 @@
     "office": "Circuit Court of Cook County: retain Judge Celestia L. Mays?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 285/286 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Celestia L. Mays",
@@ -8963,7 +8613,7 @@
     "office": "Circuit Court of Cook County: retain Judge Levander Smith, Jr.?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 287/288 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Levander Smith, Jr.",
@@ -9029,7 +8679,7 @@
     "office": "Circuit Court of Cook County: retain Judge Julie Bess Aimen?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 289/290 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Julie Bess Aimen",
@@ -9095,7 +8745,7 @@
     "office": "Circuit Court of Cook County: retain Judge Laura Ayala-Gonzalez?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 291/292 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Laura Ayala-Gonzalez",
@@ -9161,7 +8811,7 @@
     "office": "Circuit Court of Cook County: retain Judge Krista D. Butler?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 293/294 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Krista D. Butler",
@@ -9227,7 +8877,7 @@
     "office": "Circuit Court of Cook County: retain Judge Marie Aileen Dempsey?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 295/296 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Marie Aileen Dempsey",
@@ -9293,7 +8943,7 @@
     "office": "Circuit Court of Cook County: retain Judge Jamie Guerra Dickler?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 297/298 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Jamie Guerra Dickler",
@@ -9359,7 +9009,7 @@
     "office": "Circuit Court of Cook County: retain Judge Jonathan Clark Green?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 299/300 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Jonathan Clark Green",
@@ -9425,7 +9075,7 @@
     "office": "Circuit Court of Cook County: retain Judge Mary Catherine Marubio?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 301/302 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Mary Catherine Marubio",
@@ -9491,7 +9141,7 @@
     "office": "Circuit Court of Cook County: retain Judge Regina A. Mescall?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 303/304 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Regina A. Mescall",
@@ -9557,8 +9207,8 @@
     "office": "Circuit Court of Cook County: retain Judge Lorraine Mary Murphy?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 305/306 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
-    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA does NOT recommend retention; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
+    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA does not recommend retention; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Lorraine Mary Murphy",
     "open_seat": false,
@@ -9574,7 +9224,7 @@
         "background": "Former Cook County prosecutor; elected 2020. Felony courtroom in the Second Municipal District (Skokie) since March 2024.",
         "own_words": [
           {
-            "text": "ISBA: does NOT recommend, citing \"concerns ... about her lack of impartiality in criminal cases in favor of the prosecution.\"",
+            "text": "ISBA: does not recommend, citing \"concerns ... about her lack of impartiality in criminal cases in favor of the prosecution.\"",
             "is_quote": false,
             "source": "https://www.isba.org/judicial-elections/counties/cook"
           },
@@ -9623,7 +9273,7 @@
     "office": "Circuit Court of Cook County: retain Judge Eileen Marie O'Connor?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 307/308 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Eileen Marie O'Connor",
@@ -9689,7 +9339,7 @@
     "office": "Circuit Court of Cook County: retain Judge Jill Rose Quinn?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 309/310 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Jill Rose Quinn",
@@ -9755,7 +9405,7 @@
     "office": "Circuit Court of Cook County: retain Judge Pamela Reaves-Harris?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 311/312 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Pamela Reaves-Harris",
@@ -9821,8 +9471,8 @@
     "office": "Circuit Court of Cook County: retain Judge Tiesha L. Smith?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 313/314 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
-    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA does NOT recommend retention; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
+    "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA does not recommend retention; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Tiesha L. Smith",
     "open_seat": false,
@@ -9838,7 +9488,7 @@
         "background": "Former assistant public defender; elected 2020. Juvenile Justice Division since 2024; Child Protection 2021 to 2024.",
         "own_words": [
           {
-            "text": "ISBA: does NOT recommend, citing \"reports of screaming matches between the Judge and attorneys, and between the Judge and minor respondents.\"",
+            "text": "ISBA: does not recommend, citing \"reports of screaming matches between the Judge and attorneys, and between the Judge and minor respondents.\"",
             "is_quote": false,
             "source": "https://www.isba.org/judicial-elections/counties/cook"
           },
@@ -9887,7 +9537,7 @@
     "office": "Circuit Court of Cook County: retain Judge Chris Stacey?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 315/316 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Chris Stacey",
@@ -9953,7 +9603,7 @@
     "office": "Circuit Court of Cook County: retain Judge Perla Tirado?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 317/318 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Perla Tirado",
@@ -10019,7 +9669,7 @@
     "office": "Circuit Court of Cook County: retain Judge Elizabeth Anne Walsh?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 319/320 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Elizabeth Anne Walsh",
@@ -10085,7 +9735,7 @@
     "office": "Circuit Court of Cook County: retain Judge Maura McMahon Zeller?",
     "district": "Countywide",
     "scope_plain": "Every Cook County voter (Chicago and suburbs) votes on every Circuit Court retention question. Ballot numbers 321/322 (Yes/No).",
-    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, NO to remove. Needs 60% yes.",
+    "office_explainer": "Trial judge in Cook County courts. Vote YES to keep the judge, no to remove. Needs 60% yes.",
     "why_it_matters": "Yes/no question; a judge needs 60% YES to stay, and a blank vote does not count either way. ISBA recommends a YES vote; the judge is on the Chicago Federation of Labor's 'recommended for retention' list. Injustice Watch's profile adds all 14 bar groups' ratings and any red flags (it makes no recommendations).",
     "vote_for": 1,
     "incumbent": "Maura McMahon Zeller",
@@ -10152,7 +9802,7 @@
     "district": null,
     "scope_plain": "Every Chicago voter. Nonpartisan: no party labels on the ballot.",
     "office_explainer": "Runs Chicago school board meetings and votes as a member, with no veto. Elected citywide.",
-    "why_it_matters": "First time all 21 board seats are elected. The board votes on CPS's nearly $10 billion budget, sets policy and hires the schools chief for about 315,000 students (FOX 32). New terms begin Jan. 15, 2027. Ten district seats get four-year terms and ten get two-year terms this time (WTTW); which is which is not in our sources. Appointed board president Sean Harden is not running (Chalkbeat). Sendhil Revuluri withdrew on Sept. 30 (WTTW) but was on the official candidate list issued Sept. 11, so his name may still appear.",
+    "why_it_matters": "First time all 21 board seats are elected. The board votes on CPS's nearly $10 billion budget, sets policy and hires the schools chief for about 315,000 students (FOX 32). New terms begin Jan. 15, 2027. Ten district seats get four-year terms and ten get two-year terms this time (WTTW); which is which is not in our sources. Appointed board president Sean Harden is not running (Chalkbeat). Sendhil Revuluri suspended his campaign on Sept. 30, but his name is still printed on the Nov. 3 ballot (Sun-Times). He has not endorsed anyone.",
     "vote_for": 1,
     "incumbent": null,
     "open_seat": true,
@@ -10184,7 +9834,7 @@
       {
         "name": "Jessica Biggs",
         "party": null,
-        "incumbent": true,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": "Current elected board member (District 6B). Former CPS principal (Edmund Burke Elementary, from 2012) and special education teacher.",
@@ -10209,7 +9859,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Former board vice president, appointed in 2019 by Mayor Lori Lightfoot; former New York teacher who co-founded a public school; works at PEAK6 Capital Management. WITHDREW from the race on Sept. 30, 2026 (WTTW).",
+        "background": "Former board vice president, appointed in 2019 by Mayor Lori Lightfoot; former New York teacher who co-founded a public school; works at PEAK6 Capital Management. Suspended his campaign on Sept. 30, 2026; his name is still printed on the ballot (Sun-Times).",
         "own_words": [
           {
             "text": "Campaign priorities before withdrawing: clear goals for student success, \"reality-based\" budgeting, and helping families understand the board's work to \"build real trust.\"",
@@ -10258,6 +9908,10 @@
       {
         "name": "Chicago Sun-Times: How to vote in the November 2026 Illinois general election",
         "url": "https://chicago.suntimes.com/elections/2026/how-to-vote-illinois-general"
+      },
+      {
+        "name": "Chicago Sun-Times: Sendhil Revuluri drops out; name still on the Nov. 3 ballot (Sept. 30, 2026)",
+        "url": "https://chicago.suntimes.com/education/2026/09/30/cps-school-board-candidate-sendhil-revuluri-drops-out-making-it-a-three-way-race"
       }
     ],
     "confidence": "sourced"
@@ -10645,7 +10299,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Jason Donés",
+        "name": "Jason Dónes",
         "party": null,
         "incumbent": false,
         "website": null,

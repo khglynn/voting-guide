@@ -4,12 +4,12 @@
     "name": "Chicago Tribune editorial board",
     "type": "publication",
     "lean": "lean_right",
-    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth'; in 2026 it endorsed Democrats in the four statewide races it weighed in on. AllSides rates Tribune news Center. No 2026 general-election endorsements in Chicago or Cook County races were located for this guide as of Oct. 16.",
+    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth'; in 2026 it endorsed Democrats in the four statewide races it weighed in on. AllSides rates Tribune news Center. From Sept. 27 to Oct. 17, 2026 it published general-election endorsements in most contested Chicago and Cook County races and on three Chicago-area ballot questions; no judicial retention picks as of Oct. 17.",
     "geography": [
       "IL",
       "chicago-il"
     ],
-    "guide_url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
+    "guide_url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -19,7 +19,7 @@
     "name": "Chicago Sun-Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). Stopped endorsing candidates on Jan. 23, 2012 ('inform you, not spin you'); publishes voter guides and questionnaires instead. AllSides rates its news Lean Left.",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). Does not endorse candidates; publishes voter guides and questionnaires instead. AllSides rates its news Lean Left.",
     "geography": [
       "IL",
       "chicago-il"
@@ -79,7 +79,7 @@
     "name": "Chicago Federation of Labor",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "Central labor council for Chicago and Cook County. Its Nov. 3, 2026 slate (dated 9/16/2026) endorses the Democrat in every partisan Chicago race except House District 20, where it backs the unopposed Republican incumbent, plus 58 of the 60 Circuit Court retention judges (not Ursula Walowski or John J. Mahoney III) and named Chicago school board candidates, with 'Neutral' in four subdistricts.",
+    "lean_basis": "Central labor council for Chicago and Cook County. Its Nov. 3, 2026 slate (dated 9/16/2026) endorses the Democrat in every partisan Chicago race except House District 20, where it backs the unopposed Republican incumbent, plus 58 of the 59 Circuit Court retention judges on the ballot (not Ursula Walowski) and named Chicago school board candidates, with 'Neutral' in four subdistricts.",
     "geography": [
       "cook-county-il",
       "chicago-il"

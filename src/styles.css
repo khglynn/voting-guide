@@ -448,3 +448,8 @@ textarea.copy-fallback { width: 100%; min-height: 160px; font-family: var(--f-mo
   .p-url::after { content: " (" attr(data-url) ")"; font-family: var(--f-mono); font-size: 8pt; }
   .lim { color: #333; }
 }
+
+/* "What if…" situations in the plan card (Oct 17) */
+.whatif { padding-left: 0; }
+.whatif .disc-sub { font-size: 1rem; font-weight: 500; padding-left: .75rem; border-left: 2px solid var(--rule, currentColor); }
+.whatif .disc-bd { padding-left: .75rem; margin-bottom: .5rem; }

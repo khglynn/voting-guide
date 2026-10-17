@@ -2,10 +2,12 @@
   "state": "TX",
   "election_date": "2026-11-03",
   "last_verified": "2026-10-16",
-  "official_site": { "name": "VoteTexas.gov (Texas Secretary of State)", "url": "https://www.votetexas.gov/" },
+  "official_site": {
+    "name": "VoteTexas.gov (Texas Secretary of State)",
+    "url": "https://www.votetexas.gov/"
+  },
   "voting_model": "in_person_first",
   "model_plain": "Most Texans vote in person, either during early voting (Oct. 19 to 30) or on Election Day (Nov. 3). Mail ballots are only for people who qualify: 65 or older, sick or disabled, out of the county, expecting a baby, or in jail.",
-
   "registration": {
     "check_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
     "deadlines": [
@@ -33,12 +35,11 @@
     "still_possible_now": "No. The deadline to register for the November 3 election was Monday, October 5, 2026, and it has passed. If you registered before then, confirm it worked at the My Voter Portal (link above). If you moved to a new Texas county and didn't re-register there by October 5, you may be able to vote a 'limited ballot' (only the races your old and new county share) at your new county's main early voting location, during early voting only, not on Election Day. If you moved within the same county, you can still vote: go to a polling place and fill out a Statement of Residence.",
     "confidence": "verified"
   },
-
   "mail_ballot": {
     "who_gets_one": "You must apply, and you must qualify. Texas allows voting by mail only if you: are 65 or older on Election Day; are sick or have a disability that keeps you from going to the polls without help or risk to your health; expect to give birth within three weeks before or after Election Day; will be out of your county during all of early voting and on Election Day; or are confined in jail but otherwise eligible. Nobody is mailed a ballot automatically. If you're 65+ or have a disability you can file one 'annual' application that covers every election in the calendar year.",
     "request_deadline": {
       "date": "2026-10-23",
-      "rule": "Your application must be RECEIVED (not postmarked) by your county's Early Voting Clerk by Friday, October 23, 2026. Get the form (6-1f) at VoteTexas.gov or from your county. You can submit it by mail, in person, by fax or by email as a signed scanned attachment, but if you fax or email it the signed original must arrive by mail within 4 business days. The application must include your Texas driver license, personal ID or Election Identification Certificate number (NOT your VUID), or if you have none of those, the last 4 digits of your Social Security number. Send it to the Early Voting Clerk in the county where you're registered.",
+      "rule": "Your application must be received (not postmarked) by your county's Early Voting Clerk by Friday, October 23, 2026. Get the form (6-1f) at VoteTexas.gov or from your county. You can submit it by mail, in person, by fax or by email as a signed scanned attachment, but if you fax or email it the signed original must arrive by mail within 4 business days. The application must include your Texas driver license, personal ID or Election Identification Certificate number (NOT your VUID), or if you have none of those, the last 4 digits of your Social Security number. Send it to the Early Voting Clerk in the county where you're registered.",
       "source": "https://www.votetexas.gov/voting-by-mail/application-for-ballot-by-mail.html"
     },
     "return_deadline": {
@@ -50,7 +51,7 @@
     "return_options": [
       "mail (USPS) to your county Early Voting Clerk, arriving by 7:00 PM Nov. 3, OR postmarked by 7:00 PM Nov. 3 and arriving by 5:00 PM Wednesday, Nov. 4",
       "common or contract carrier (FedEx, UPS) arriving by 7:00 PM Nov. 3",
-      "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but ONLY on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
+      "hand-deliver it yourself, in person, to the county Early Voting Clerk's office, but only on Election Day (Nov. 3) while polls are open, with your photo ID (Election Code 86.006(a-1))",
       "Texas does not use ballot drop boxes"
     ],
     "postage": "Varies by county; check your return envelope. Harris County says it takes two standard stamps ($1.10) but that a ballot mailed without postage will still be delivered and counted. We did not find a statewide official statement on postage, so treat this as sourced, not verified: https://www.harrisvotes.com/Voter/Voting-FAQ",
@@ -61,7 +62,6 @@
     "drop_box_lookup_url": null,
     "confidence": "verified"
   },
-
   "early_in_person": {
     "available": true,
     "start": "2026-10-19",
@@ -71,7 +71,6 @@
     "lookup_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
     "confidence": "verified"
   },
-
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "7:00 PM",
@@ -80,7 +79,6 @@
     "lookup_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
     "confidence": "verified"
   },
-
   "id_rules": {
     "required": "photo",
     "accepted": [
@@ -96,17 +94,15 @@
     "no_id_option": "If you don't have one of the seven photo IDs and can't reasonably get one, you can still vote a regular ballot: show a supporting document (voter registration certificate, current utility bill, bank statement, government check, paycheck, certified birth certificate, or any government document with your name and address, copy or original) and sign a Reasonable Impediment Declaration at the polls. If you have none of that, you vote a provisional ballot and have until the 6th day after the election (Monday, Nov. 9, 2026) to bring ID to the county voter registrar's office so it counts (Election Code 65.0541). You can also leave and come back with ID before polls close.",
     "confidence": "verified"
   },
-
   "in_the_booth": {
     "phones": "prohibited",
     "phones_detail": "You may not use a phone or any wireless device inside the room where voting is happening. Texas Election Code 61.014(a), as amended by HB 3909 effective Sept. 1, 2025: 'a person may not use a wireless communication device within a room in which voting is taking place.' Separately, 61.014(b) bans recording images or sound within 100 feet of a voting station. The judge can make you turn it off or leave (61.014(c)). Put your phone away before you walk in. Counties like Harris still tell voters 'within 100 feet,' so expect to be asked to put it away as you approach. Statute: https://statutes.capitol.texas.gov/Docs/EL/pdf/EL.61.pdf",
     "notes_allowed": "allowed",
     "notes_detail": "Yes. Bring paper. The Texas Secretary of State says in writing: 'Voters are allowed to bring written materials into voting stations to assist them in casting their ballot' (Election Advisory 2025-01, April 17, 2025, and the SOS 'Activities in Vicinity of Polling Places' handout). A printed cheat sheet, a marked-up sample ballot or handwritten notes are all fine. Two limits: (1) you can't post or hand out your guide at the polling place, and (2) the election judge can decide a document is 'electioneering' if it's campaign material rather than your personal notes, so keep it to your own list and take it with you when you leave. Harris County puts it plainly: 'What should I bring to vote? Your printed sample ballot or handwritten notes.' Sources: https://www.sos.state.tx.us/elections/laws/advisory2025-01.shtml and https://www.sos.state.tx.us/elections/forms/activities-in-vicinity-polling-places.pdf and https://www.harrisvotes.com/Voter/Election-Information",
     "ballot_selfies": "prohibited",
-    "apparel_rule": "No campaign gear within 100 feet of the door. Election Code 61.010(a) bans wearing a badge, insignia, emblem 'or other similar communicative device' relating to a candidate, measure or party on the ballot, inside the polling place or within 100 feet of an outside door. It's a Class C misdemeanor. The SOS reads this (after the Ostrewich v. Hudspeth judgment) as: apparel about a candidate, measure or party on THIS ballot is out; apparel about something not on this ballot is OK. Practical advice: wear a plain shirt, or turn a campaign shirt inside out, and leave the hat in the car. The same 100-foot zone bans electioneering of any kind (61.003), and the zone is marked by signs outside the building.",
+    "apparel_rule": "No campaign gear within 100 feet of the door. Election Code 61.010(a) bans wearing a badge, insignia, emblem 'or other similar communicative device' relating to a candidate, measure or party on the ballot, inside the polling place or within 100 feet of an outside door. It's a Class C misdemeanor. The SOS reads this (after the Ostrewich v. Hudspeth judgment) as: apparel about a candidate, measure or party on this ballot is out; apparel about something not on this ballot is OK. Practical advice: wear a plain shirt, or turn a campaign shirt inside out, and leave the hat in the car. The same 100-foot zone bans electioneering of any kind (61.003), and the zone is marked by signs outside the building.",
     "confidence": "verified"
   },
-
   "gotchas": [
     "Registration is closed. The deadline was October 5. If you aren't registered, you can't vote in this election. Check your status at the My Voter Portal before you go so there are no surprises.",
     "If you applied for a mail ballot but want to vote in person, bring the mail ballot with you and hand it over ('surrender' it) to get a regular ballot. If you show up without it, you'll have to vote a provisional ballot, which only counts after the county confirms your mail ballot was never returned.",
@@ -114,42 +110,336 @@
     "A mail ballot arriving after 7 PM on November 3 only counts if it has a postmark by that time AND arrives by 5 PM the next day. Postmarks are not guaranteed; if you're cutting it close, hand-deliver it to the Early Voting Clerk's office on Election Day with your photo ID, or just vote in person.",
     "Vote centers: in Travis, Williamson, Hays, Dallas, Collin, Tarrant, Harris, Fort Bend and Bexar counties you can vote at ANY polling location in your county, during early voting and on Election Day. You are not tied to a precinct. Pick the one with the shortest line."
   ],
-
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in Texas.",
+      "answer": "If you moved within the same county, you can still vote: go to any polling place in your county and fill out a short Statement of Residence. If you moved to a different Texas county and didn't re-register there by October 5, you may be able to vote a limited ballot in your new county, but only during early voting (Oct 19 to 30) at its main early voting site.",
+      "steps": [
+        "Same county (say, a move within Travis or within Harris): vote anywhere in the county and tell the worker your address changed.",
+        "New county (say, Travis to Williamson or Hays): call your new county's early voting clerk before Oct 30. A limited ballot covers only the races your old and new counties share.",
+        "Update your address with your county voter registrar so you're set for next time. Same-county moves can be done online at Texas.gov."
+      ],
+      "deadline": "2026-10-30",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I just moved to Texas from another state.",
+      "answer": "Texas registration for this election closed October 5, so if you weren't registered here by then, you can't vote in Texas on November 3. Register now so you're ready next time; a registration takes effect 30 days after the county accepts it.",
+      "steps": [
+        "Fill out the form at VoteTexas.gov, then print, sign and mail it to your county voter registrar. Texas has no fully online registration.",
+        "Get a Texas driver's license or ID card. Texas asks for photo ID at the polls."
+      ],
+      "deadline": "2026-10-05",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered to vote.",
+      "answer": "We're sorry: the Texas deadline was October 5, so if you didn't register by then, you can't vote in this election. Before you give up, double-check, because you may be registered and not know it.",
+      "steps": [
+        "Look yourself up at the My Voter Portal, or call your county voter registrar.",
+        "Registered but moved within your county? You can still vote. See the moving question.",
+        "Truly not registered? Mail in an application now so you're ready for the next election."
+      ],
+      "deadline": "2026-10-05",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "answer": "Travis, Williamson, Hays and Harris counties use vote centers, so you can vote at any polling place in your county, early or on Election Day. Just head to the closest one in the county where you're registered.",
+      "steps": [
+        "Find locations (and wait times, in many counties) on your county elections site or the My Voter Portal.",
+        "In a different county? Go back to your own county; that's where your ballot is."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.sos.state.tx.us/elections/laws/countywide-polling-place-program.shtml",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "answer": "Texas only mails ballots to voters who applied and qualified. If yours never came or got lost, you can vote in person instead, or cancel it in writing and apply for a new one.",
+      "steps": [
+        "Check the Ballot by Mail Tracker to see whether it was mailed.",
+        "To vote in person, sign a cancellation form at the polls. Without the ballot to hand in, you vote a provisional ballot, counted once the county confirms your mail ballot wasn't returned.",
+        "Want a new mail ballot? Send your county's early voting clerk a signed cancellation and a new application. It must arrive by Oct 23."
+      ],
+      "deadline": "2026-10-23",
+      "source": "https://www.sos.texas.gov/elections/forms/cancellation-of-ballot-by-mail-(2.10.22).pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my ballot.",
+      "answer": "At the polls, don't cast it: Texas law gives you a new ballot when you hand the spoiled one back to an election worker. On a mail ballot, bring the whole packet to an early voting site or your Election Day polling place, surrender it, and vote in person.",
+      "steps": [
+        "In person: tell a poll worker before you cast your ballot and ask for a new one.",
+        "Mail ballot: bring the ballot and envelope with you, so you can vote a regular ballot instead of a provisional one."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://statutes.capitol.texas.gov/Docs/EL/pdf/EL.64.pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I mailed my ballot but now want to vote in person.",
+      "answer": "Once the county has your marked mail ballot, that's your vote and you can't swap it for an in-person one. If you haven't sent it yet, bring it to any polling place in your county, surrender it, and vote a regular ballot.",
+      "steps": [
+        "Check the Ballot by Mail Tracker to see whether it was received.",
+        "Still have it? Bring the ballot and envelope with you.",
+        "Can't find it? You can still vote in person, but it will be a provisional ballot."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.sos.texas.gov/elections/forms/cancellation-of-ballot-by-mail-(2.10.22).pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "answer": "Texas asks for one of 7 photo IDs, like a Texas driver's license or a U.S. passport, and it can be expired up to 4 years (any length of time if you're 70 or older). If you don't have one and can't reasonably get one, bring a supporting document, like a utility bill, bank statement or your voter registration certificate, and sign a Reasonable Impediment Declaration to vote a regular ballot.",
+      "steps": [
+        "Have a photo ID but left it at home? Go get it and come back before polls close.",
+        "Or vote a provisional ballot and show your ID at the county voter registrar's office by Monday, Nov 9.",
+        "Student IDs and out-of-state licenses are not on the list."
+      ],
+      "deadline": "2026-11-09",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "answer": "You can still vote. If the name on your ID doesn't exactly match the voter list, workers check whether it's substantially similar (they also look at your address and birth date), and if it is, you sign a short affidavit and vote.",
+      "steps": [
+        "Bring your photo ID, plus your voter registration certificate if you have it.",
+        "Send your county voter registrar an updated registration form so your new name is on file next time."
+      ],
+      "deadline": null,
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "answer": "Registration closed October 5, so you vote where you're already registered. If that's your family's county and you'll be away at school for all of early voting and on Election Day, you can vote by mail, but your application must arrive by Friday, October 23.",
+      "steps": [
+        "Get the mail ballot application at VoteTexas.gov and send it to the early voting clerk in your home county.",
+        "Registered at school (say, UT in Travis or Texas State in Hays)? Vote at any polling place in that county.",
+        "Voting in person? Bring one of the 7 photo IDs. Student IDs don't count in Texas."
+      ],
+      "deadline": "2026-10-23",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "answer": "Vote early in person, Monday, October 19 through Friday, October 30, at any early voting site in your county. If you'll be out of your county for all of early voting and on Election Day, you can vote by mail; your application must arrive by Friday, October 23.",
+      "steps": [
+        "Check your county's early voting hours (Travis, Williamson, Hays and Harris each post their own).",
+        "Mail ballot: get the form at VoteTexas.gov and send it to your county's early voting clerk.",
+        "A mailed ballot must arrive by 7 PM Nov 3, or be postmarked by then and arrive by 5 PM Nov 4."
+      ],
+      "deadline": "2026-10-23",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when polls close.",
+      "answer": "Stay in line. If you're inside or in line at the polling place at 7 PM, you get to vote.",
+      "steps": [
+        "Don't leave, even if the line is long.",
+        "Put your phone away before you reach the voting room."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://texas.public.law/statutes/tex._election_code_section_41.032",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "question": "They said my signature doesn't match.",
+      "answer": "You can fix it. Fill out the Corrective Action Form that came with your notice and mail it back, or do it in person at your county's early voting clerk's office, by Monday, November 9.",
+      "steps": [
+        "If the problem is a missing or wrong ID number, fix it online in the Ballot by Mail Tracker.",
+        "Or cancel your mail ballot and vote in person. Without the ballot to hand in, it will be a provisional ballot.",
+        "Act the day you get the notice."
+      ],
+      "deadline": "2026-11-09",
+      "source": "https://www.votetexas.gov/voting-by-mail/corrective-action.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "What's a provisional ballot?",
+      "answer": "It's a backup ballot for when workers can't confirm on the spot that you can vote, such as when you're not on the list or don't have ID with you. You sign a short affidavit, and the county decides afterward whether it counts.",
+      "steps": [
+        "If it was about ID, show your photo ID at the county voter registrar's office by Monday, Nov 9.",
+        "You'll get a notice in the mail saying whether it counted, and why if it didn't."
+      ],
+      "deadline": "2026-11-09",
+      "source": "https://www.votetexas.gov/faq/index.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check my ballot was counted?",
+      "answer": "If you voted by mail, use the state's Ballot by Mail Tracker to see when your ballot was received and whether there's a problem to fix. If you voted a provisional ballot, the county mails you a notice saying whether it counted.",
+      "steps": [
+        "Log in with your Texas license or ID number and the last 4 of your Social Security number.",
+        "If it shows a problem, fix it by Monday, Nov 9."
+      ],
+      "deadline": "2026-11-09",
+      "source": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html",
+      "confidence": "verified"
+    }
+  ],
   "sources": [
-    { "name": "Texas SOS: Important Election Dates (Nov. 3, 2026)", "url": "https://www.sos.state.tx.us/elections/voter/important-election-dates.shtml" },
-    { "name": "Texas SOS: November 3, 2026 General Election page", "url": "https://www.sos.state.tx.us/elections/laws/2026-november-general-election.shtml" },
-    { "name": "Texas SOS press release, Sept. 28, 2026: Oct. 5 registration deadline", "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092826.shtml" },
-    { "name": "Texas SOS: Governor's proclamation ordering the Nov. 3, 2026 general election", "url": "https://www.sos.texas.gov/elections/forms/proclamation-general-election-2026.pdf" },
-    { "name": "Texas SOS: Election Advisory 2026-22, ballot preparation and sample ballot", "url": "https://www.sos.state.tx.us/elections/laws/advisory2026-22.shtml" },
-    { "name": "Texas SOS: official 2026 sample ballot (statewide)", "url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf" },
-    { "name": "VoteTexas.gov: ID requirements", "url": "https://www.votetexas.gov/voting/need-id.html" },
-    { "name": "VoteTexas.gov: Voting by mail (overview)", "url": "https://www.votetexas.gov/voting-by-mail/index.html" },
-    { "name": "VoteTexas.gov: Application for ballot by mail", "url": "https://www.votetexas.gov/voting-by-mail/application-for-ballot-by-mail.html" },
-    { "name": "VoteTexas.gov: Completing and mailing your carrier envelope", "url": "https://www.votetexas.gov/voting-by-mail/carrier-envelope.html" },
-    { "name": "VoteTexas.gov: Track my ballot and correct ID information", "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html" },
-    { "name": "VoteTexas.gov: How to correct a defect on your application or carrier envelope", "url": "https://www.votetexas.gov/voting-by-mail/corrective-action.html" },
-    { "name": "VoteTexas.gov: FAQ (limited ballots, suspense, certificates)", "url": "https://www.votetexas.gov/faq/index.html" },
-    { "name": "Texas SOS: My Voter Portal (Am I registered? Where do I vote?)", "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do" },
-    { "name": "Texas SOS: Ballot by Mail Tracker login", "url": "https://goelect.txelections.civixapps.com/ivis-oab-ui/#/login" },
-    { "name": "Texas SOS: Election Advisory 2025-01, Certain Activities in Vicinity of Polling Places", "url": "https://www.sos.state.tx.us/elections/laws/advisory2025-01.shtml" },
-    { "name": "Texas SOS: Election Advisory 2023-01 (apparel and Ostrewich judgment)", "url": "https://sos.state.tx.us/elections/laws/advisory2023-01.shtml" },
-    { "name": "Texas SOS: Activities in Vicinity of Polling Places handout (written materials allowed, phones, apparel)", "url": "https://www.sos.state.tx.us/elections/forms/activities-in-vicinity-polling-places.pdf" },
-    { "name": "Texas SOS: Cancellation of Mail Ballots, Forms and Uses (surrender rules)", "url": "https://www.sos.texas.gov/elections/forms/cancellation-of-mail-ballots-forms-and-uses-2-13-24.pdf" },
-    { "name": "Texas SOS: Countywide Polling Place Program, Nov. 3, 2026 list", "url": "https://www.sos.state.tx.us/elections/laws/countywide-polling-place-program.shtml" },
-    { "name": "Texas Election Code Chapter 61 (61.003 electioneering, 61.010 apparel, 61.014 devices), official PDF", "url": "https://statutes.capitol.texas.gov/Docs/EL/pdf/EL.61.pdf" },
-    { "name": "HB 3909 (89th Leg., 2025), enrolled text amending 61.014", "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB03909F.HTM" },
-    { "name": "Texas Election Code 41.031 (voting hours)", "url": "https://texas.public.law/statutes/tex._election_code_section_41.031" },
-    { "name": "Texas Election Code 41.032 (voting after polls close)", "url": "https://texas.public.law/statutes/tex._election_code_section_41.032" },
-    { "name": "Texas Election Code 65.0541 (provisional ballot ID cure, 6 days)", "url": "https://texas.public.law/statutes/tex._election_code_section_65.0541" },
-    { "name": "Texas Election Code 86.006 (returning a marked mail ballot; in-person delivery)", "url": "https://texas.public.law/statutes/tex._election_code_section_86.006" },
-    { "name": "Travis County Clerk: 2026 Elections Calendar", "url": "https://votetravis.gov/wp-content/uploads/2026-Elections-Calendar-EngSpn.pdf" },
-    { "name": "Travis County Clerk: Nov. 2026 early voting flyer (hours)", "url": "https://votetravis.gov/wp-content/uploads/G26-Early-Voting-Flyer-9.21.pdf" },
-    { "name": "Dallas County Elections: Nov. 3, 2026 event calendar (hours)", "url": "https://www.dallascountyvotes.org/event_type/november-3-2026-general-and-joint-election/" },
-    { "name": "Harris Votes: Election Information (bring notes, no phones)", "url": "https://www.harrisvotes.com/Voter/Election-Information" },
-    { "name": "Harris Votes: Voting FAQ (surrender, postage, cure)", "url": "https://www.harrisvotes.com/Voter/Voting-FAQ" },
-    { "name": "KSAT: Bexar County early voting hours, Oct. 6, 2026", "url": "https://www.ksat.com/news/local/2026/10/06/what-to-know-about-early-voting-in-bexar-county-for-nov-3-midterm-election/" },
-    { "name": "KPRC/Click2Houston: Texas voter guide 2026, Oct. 2, 2026", "url": "https://www.click2houston.com/decision-2026/2026/10/02/texas-voter-guide-2026-what-to-know-before-the-nov-3-election/" },
-    { "name": "Disability Rights Texas: postmarks and mail ballot deadlines", "url": "https://disabilityrightstx.org/en/handout/texas-voting-postmarks/" },
-    { "name": "Texas Tribune Texplainer: ballot selfies (2016)", "url": "https://www.texastribune.org/2016/10/26/texplainer-can-i-take-ballot-selfie-texas" }
+    {
+      "name": "Texas SOS: Important Election Dates (Nov. 3, 2026)",
+      "url": "https://www.sos.state.tx.us/elections/voter/important-election-dates.shtml"
+    },
+    {
+      "name": "Texas SOS: November 3, 2026 General Election page",
+      "url": "https://www.sos.state.tx.us/elections/laws/2026-november-general-election.shtml"
+    },
+    {
+      "name": "Texas SOS press release, Sept. 28, 2026: Oct. 5 registration deadline",
+      "url": "https://www.sos.state.tx.us/about/newsreleases/2026/092826.shtml"
+    },
+    {
+      "name": "Texas SOS: Governor's proclamation ordering the Nov. 3, 2026 general election",
+      "url": "https://www.sos.texas.gov/elections/forms/proclamation-general-election-2026.pdf"
+    },
+    {
+      "name": "Texas SOS: Election Advisory 2026-22, ballot preparation and sample ballot",
+      "url": "https://www.sos.state.tx.us/elections/laws/advisory2026-22.shtml"
+    },
+    {
+      "name": "Texas SOS: official 2026 sample ballot (statewide)",
+      "url": "https://content.govdelivery.com/attachments/TXSOS/2026/08/28/file_attachments/3762824/2026%20Sample%20Ballot-final.pdf"
+    },
+    {
+      "name": "VoteTexas.gov: ID requirements",
+      "url": "https://www.votetexas.gov/voting/need-id.html"
+    },
+    {
+      "name": "VoteTexas.gov: Voting by mail (overview)",
+      "url": "https://www.votetexas.gov/voting-by-mail/index.html"
+    },
+    {
+      "name": "VoteTexas.gov: Application for ballot by mail",
+      "url": "https://www.votetexas.gov/voting-by-mail/application-for-ballot-by-mail.html"
+    },
+    {
+      "name": "VoteTexas.gov: Completing and mailing your carrier envelope",
+      "url": "https://www.votetexas.gov/voting-by-mail/carrier-envelope.html"
+    },
+    {
+      "name": "VoteTexas.gov: Track my ballot and correct ID information",
+      "url": "https://www.votetexas.gov/voting-by-mail/track-my-ballot.html"
+    },
+    {
+      "name": "VoteTexas.gov: How to correct a defect on your application or carrier envelope",
+      "url": "https://www.votetexas.gov/voting-by-mail/corrective-action.html"
+    },
+    {
+      "name": "VoteTexas.gov: FAQ (limited ballots, suspense, certificates)",
+      "url": "https://www.votetexas.gov/faq/index.html"
+    },
+    {
+      "name": "Texas SOS: My Voter Portal (Am I registered? Where do I vote?)",
+      "url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
+    },
+    {
+      "name": "Texas SOS: Ballot by Mail Tracker login",
+      "url": "https://goelect.txelections.civixapps.com/ivis-oab-ui/#/login"
+    },
+    {
+      "name": "Texas SOS: Election Advisory 2025-01, Certain Activities in Vicinity of Polling Places",
+      "url": "https://www.sos.state.tx.us/elections/laws/advisory2025-01.shtml"
+    },
+    {
+      "name": "Texas SOS: Election Advisory 2023-01 (apparel and Ostrewich judgment)",
+      "url": "https://sos.state.tx.us/elections/laws/advisory2023-01.shtml"
+    },
+    {
+      "name": "Texas SOS: Activities in Vicinity of Polling Places handout (written materials allowed, phones, apparel)",
+      "url": "https://www.sos.state.tx.us/elections/forms/activities-in-vicinity-polling-places.pdf"
+    },
+    {
+      "name": "Texas SOS: Cancellation of Mail Ballots, Forms and Uses (surrender rules)",
+      "url": "https://www.sos.texas.gov/elections/forms/cancellation-of-mail-ballots-forms-and-uses-2-13-24.pdf"
+    },
+    {
+      "name": "Texas SOS: Countywide Polling Place Program, Nov. 3, 2026 list",
+      "url": "https://www.sos.state.tx.us/elections/laws/countywide-polling-place-program.shtml"
+    },
+    {
+      "name": "Texas Election Code Chapter 61 (61.003 electioneering, 61.010 apparel, 61.014 devices), official PDF",
+      "url": "https://statutes.capitol.texas.gov/Docs/EL/pdf/EL.61.pdf"
+    },
+    {
+      "name": "HB 3909 (89th Leg., 2025), enrolled text amending 61.014",
+      "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB03909F.HTM"
+    },
+    {
+      "name": "Texas Election Code 41.031 (voting hours)",
+      "url": "https://texas.public.law/statutes/tex._election_code_section_41.031"
+    },
+    {
+      "name": "Texas Election Code 41.032 (voting after polls close)",
+      "url": "https://texas.public.law/statutes/tex._election_code_section_41.032"
+    },
+    {
+      "name": "Texas Election Code 65.0541 (provisional ballot ID cure, 6 days)",
+      "url": "https://texas.public.law/statutes/tex._election_code_section_65.0541"
+    },
+    {
+      "name": "Texas Election Code 86.006 (returning a marked mail ballot; in-person delivery)",
+      "url": "https://texas.public.law/statutes/tex._election_code_section_86.006"
+    },
+    {
+      "name": "Travis County Clerk: 2026 Elections Calendar",
+      "url": "https://votetravis.gov/wp-content/uploads/2026-Elections-Calendar-EngSpn.pdf"
+    },
+    {
+      "name": "Travis County Clerk: Nov. 2026 early voting flyer (hours)",
+      "url": "https://votetravis.gov/wp-content/uploads/G26-Early-Voting-Flyer-9.21.pdf"
+    },
+    {
+      "name": "Dallas County Elections: Nov. 3, 2026 event calendar (hours)",
+      "url": "https://www.dallascountyvotes.org/event_type/november-3-2026-general-and-joint-election/"
+    },
+    {
+      "name": "Harris Votes: Election Information (bring notes, no phones)",
+      "url": "https://www.harrisvotes.com/Voter/Election-Information"
+    },
+    {
+      "name": "Harris Votes: Voting FAQ (surrender, postage, cure)",
+      "url": "https://www.harrisvotes.com/Voter/Voting-FAQ"
+    },
+    {
+      "name": "KSAT: Bexar County early voting hours, Oct. 6, 2026",
+      "url": "https://www.ksat.com/news/local/2026/10/06/what-to-know-about-early-voting-in-bexar-county-for-nov-3-midterm-election/"
+    },
+    {
+      "name": "KPRC/Click2Houston: Texas voter guide 2026, Oct. 2, 2026",
+      "url": "https://www.click2houston.com/decision-2026/2026/10/02/texas-voter-guide-2026-what-to-know-before-the-nov-3-election/"
+    },
+    {
+      "name": "Disability Rights Texas: postmarks and mail ballot deadlines",
+      "url": "https://disabilityrightstx.org/en/handout/texas-voting-postmarks/"
+    },
+    {
+      "name": "Texas Tribune Texplainer: ballot selfies (2016)",
+      "url": "https://www.texastribune.org/2016/10/26/texplainer-can-i-take-ballot-selfie-texas"
+    }
   ]
 }

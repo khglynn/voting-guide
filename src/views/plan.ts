@@ -210,6 +210,7 @@ function facts(): Fact[] {
 export function planHTML(): string {
   const b = S.ballot!;
   const h = b.howto;
+  const sits = (h.situations || []).filter((x) => x && x.question && x.answer);
   const t = todayISO();
   const d = daysBetween(t, h.election_date);
   const step = nextStep(h);
@@ -252,6 +253,7 @@ export function planHTML(): string {
     <div class="plan-sec plan-discs">
       ${discBtn('plan-dates', `Every key date${past.length ? `, ${past.length} passed` : ''}`)}
       ${isOpen('plan-dates') ? `<ol class="pdates">${past.map((r) => rowHTML(r, true)).join('')}${future.map((r) => rowHTML(r, false)).join('')}</ol>` : ''}
+      ${sits.length ? `${discBtn('plan-whatif', 'What if… I moved, I’m not registered, I lost my ballot, and more')}${isOpen('plan-whatif') ? `<div class="disc-bd whatif">${sits.map((x) => `${discBtn(`wi-${x.id}`, x.question, 'disc disc-sub')}${isOpen(`wi-${x.id}`) ? `<div class="disc-bd small"><p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol class="bul">${x.steps.map((t) => `<li>${escP(t)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="lim">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? ' · not yet confirmed' : ''}</p>` : ''}</div>` : ''}`).join('')}</div>` : ''}` : ''}
       ${h.gotchas.length ? `${discBtn('plan-gotchas', `Things people get wrong in ${b.stateName}`)}${isOpen('plan-gotchas') ? leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas') : ''}` : ''}
       ${h.model_plain || notes.length ? `${discBtn('plan-more', `More about voting in ${where}`)}${moreOpen ? `<div class="disc-bd small">${sub(`How voting works in ${b.stateName}`, bulletsHTML(h.model_plain))}${notes.map((n) => sub(`${where} notes`, bulletsHTML(n))).join('')}</div>` : ''}` : ''}
       <p class="lim">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>

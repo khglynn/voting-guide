@@ -20,7 +20,7 @@
       {
         "method": "mail",
         "date": "2026-10-13",
-        "rule": "Paper applications had to be RECEIVED by DCBOE by Tuesday, October 13, 2026 (not postmarked). That date has passed.",
+        "rule": "Paper applications had to be received by DCBOE by Tuesday, October 13, 2026 (not postmarked). That date has passed.",
         "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
       },
       {
@@ -56,10 +56,10 @@
       "DCBOE headquarters, 1015 Half Street SE (also has a drop box)"
     ],
     "postage": "prepaid",
-    "signature_witness_rules": "Sign and date the Voter's Oath on the back of the return envelope. No witness or notary. DCBOE: 'You MUST sign the Voter's Oath in order for your vote to count!' Put only your own ballot in your envelope; if it contains anyone else's ballot, none of them count. Don't tape the envelope shut. First-time voters who registered by mail or online without a DC DMV or Social Security match must include a photocopy of ID (photo ID, or a utility bill, bank statement, government check or paycheck dated within 90 days) or the ballot is treated as a special (provisional) ballot. Source: https://www.dcboe.org/voters/casting-your-vote/mail-ballot-instructions",
+    "signature_witness_rules": "Sign and date the Voter's Oath on the back of the return envelope. No witness or notary. DCBOE: 'You must sign the Voter's Oath in order for your vote to count!' Put only your own ballot in your envelope; if it contains anyone else's ballot, none of them count. Don't tape the envelope shut. First-time voters who registered by mail or online without a DC DMV or Social Security match must include a photocopy of ID (photo ID, or a utility bill, bank statement, government check or paycheck dated within 90 days) or the ballot is treated as a special (provisional) ballot. Source: https://www.dcboe.org/voters/casting-your-vote/mail-ballot-instructions",
     "tracking_url": "https://votedc.ballottrax.net/voter/",
     "cure_process": "DCBOE says: 'We will contact you if there is an issue with your signature.' The official calendar sets Thursday, November 19, 2026 as the deadline to cure mail ballots. Sign up for BallotTrax (text and email alerts) so the notice reaches you quickly. Special (provisional) ballot voters have until Tuesday, November 10 to present proof of eligibility; starting that day you can check whether your special ballot was counted at 1-866-DCVOTES or dcboe.org.",
-    "mail_cutoff_advice": "Postmarks count in DC, but a missing or late postmark is a real risk (DCBOE had to clarify USPS postmark rules during the June primary). Mail by about Tuesday, October 27 at the latest. From then on, use a drop box: 55 of them, open around the clock until 8:00 PM on November 3. A mailed ballot postmarked by November 3 still has to ARRIVE at DCBOE by Friday, November 13.",
+    "mail_cutoff_advice": "Postmarks count in DC, but a missing or late postmark is a real risk (DCBOE had to clarify USPS postmark rules during the June primary). Mail by about Tuesday, October 27 at the latest. From then on, use a drop box: 55 of them, open around the clock until 8:00 PM on November 3. A mailed ballot postmarked by November 3 still has to arrive at DCBOE by Friday, November 13.",
     "drop_box_lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
     "confidence": "verified"
   },
@@ -105,6 +105,183 @@
     "The regular registration deadline (October 13) has passed, but you can still register and vote in person at any Early Vote Center (Oct 26 to Nov 1) or any Vote Center on November 3. Bring proof of your DC address.",
     "Postmarks count, but don't lean on them. Mail by about October 27 or use one of 55 drop boxes (open 24 hours until 8:00 PM on November 3). No stamp needed. Sign and date the oath on the envelope or your ballot won't count. A mailed ballot must also arrive by November 13.",
     "There IS one ballot measure this year: Initiative 86, the foie gras ban. It's at the very end of the ballot, after the ANC race. And you can vote at ANY Vote Center in the District, not just the one near you; early voting uses 25 sites and Election Day uses 75. Polls are open 7:00 AM to 8:00 PM. DC law also gives employees and students up to 2 hours of paid leave to vote."
+  ],
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in DC.",
+      "answer": "Update your address at any Vote Center during early voting (October 26 to November 1) or on Election Day. Show proof of your new address, fill out a Registration Update Form, and you'll vote a regular ballot.",
+      "steps": [
+        "Bring one proof: DC DMV ID, lease, utility bill, bank statement, paycheck or government document (bills and statements dated within 90 days).",
+        "The address on your proof has to match the new address on the form.",
+        "No proof with you? You'll vote a special ballot and have to bring proof to DCBOE afterward."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I moved out of DC.",
+      "answer": "You vote where you live now, so register in your new state instead, and don't return the DC ballot mailed to your old address. Some states still take registrations or offer same-day registration, so check today.",
+      "steps": [
+        "Look up your new state's rules and deadline at vote.gov.",
+        "When you register, list your old DC address so your DC registration can be canceled."
+      ],
+      "deadline": null,
+      "source": "https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote",
+      "confidence": "sourced"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered yet.",
+      "answer": "The October 13 deadline has passed, but DC has same-day registration. Go to any Vote Center during early voting (October 26 to November 1, 8:30 AM to 7 PM) or on Election Day (7 AM to 8 PM), bring proof of your DC address, and you'll register and vote a regular ballot.",
+      "steps": [
+        "Proof: DC DMV ID, lease, utility bill, bank statement, paycheck, government document, student housing or tuition bill, or shelter letter.",
+        "You need to have lived in DC since at least October 4.",
+        "Check first at apps.dcboe.org/VRS in case you're already registered."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "answer": "There's no wrong Vote Center in DC. You can vote at any Vote Center in the District, early or on Election Day, no matter which ward you live in.",
+      "steps": [
+        "Early voting: 25 centers, October 26 to November 1, 8:30 AM to 7 PM.",
+        "Election Day: 75 Vote Centers, 7 AM to 8 PM.",
+        "Find one near you at earlyvoting.dcboe.org or on dcboe.org."
+      ],
+      "deadline": null,
+      "source": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "answer": "Vote in person at any Vote Center instead; DCBOE says if your mail ballot hasn't come 7 days before Election Day, plan to vote in person. If you asked for an absentee ballot because you're away and lost it, call (202) 727-2525 and they'll mail a new one.",
+      "steps": [
+        "Check its status at votedc.ballottrax.net.",
+        "Early voting runs October 26 to November 1, 8:30 AM to 7 PM; Election Day is 7 AM to 8 PM.",
+        "Questions: 1-866-DCVOTES (1-866-328-6837)."
+      ],
+      "deadline": null,
+      "source": "https://dcboe.org/faqs/early-voting-and-election-day",
+      "confidence": "verified"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my ballot.",
+      "answer": "At a Vote Center, tell an election worker right away; they'll cancel it and give you a new one, up to three ballots in all. On a mail ballot, call DCBOE at (202) 727-2525 and they'll mail you a new one, or just vote in person instead.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://dcboe.org/faqs/early-voting-and-election-day",
+      "confidence": "verified"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I got a mail ballot, but I want to vote in person.",
+      "answer": "Write \"Voting in Person\" on the unopened mail ballot, then hand it to an election worker at any Vote Center or drop it in a DCBOE drop box, and you'll get a new ballot to vote. If you already returned a voted mail ballot, you've voted; trying again means a special ballot.",
+      "steps": [
+        "Or fill out the mail ballot at home and drop it off at any Vote Center without waiting in line.",
+        "Track it at votedc.ballottrax.net."
+      ],
+      "deadline": null,
+      "source": "https://dcboe.org/faqs/early-voting-and-election-day",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "answer": "Most DC voters are never asked for ID. If you're a first-time voter flagged for ID and don't have it, you'll vote a special ballot and need to bring ID to DCBOE afterward so it counts.",
+      "steps": [
+        "Accepted: a government photo ID, or a utility bill, bank statement, paycheck, government check or government document with your name and address, dated within 90 days.",
+        "Bring it to DCBOE at 1015 Half Street SE. The 2026 calendar allows until Tuesday, November 10."
+      ],
+      "deadline": "2026-11-10",
+      "source": "https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "answer": "Update it at any Vote Center during early voting or on Election Day by filling out a Registration Update Form. You don't need proof of address for a name change, and you'll vote a regular ballot.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "answer": "If you go to school in DC, you can register and vote the same day at any Vote Center, using a student housing statement or tuition bill as proof. If you're registered in DC but at school somewhere else, ask for your ballot to be mailed to your school by Monday, October 19.",
+      "steps": [
+        "Use the Mail Ballot Request form on dcboe.org.",
+        "Mail your ballot so it's postmarked by November 3; it must arrive within 10 days.",
+        "Track it at votedc.ballottrax.net."
+      ],
+      "deadline": "2026-10-19",
+      "source": "https://dcboe.org/voters/casting-your-vote/mail-ballot-request",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "answer": "You already have a mail ballot, so vote it now and drop it in any of 55 drop boxes or mail it. If you'll be away from your DC address and need it sent somewhere else, request that by Monday, October 19.",
+      "steps": [
+        "Or vote early in person any day October 26 to November 1, 8:30 AM to 7 PM.",
+        "Mail by about October 27; postage is prepaid.",
+        "The request form is on dcboe.org's Mail Ballot Request page."
+      ],
+      "deadline": "2026-10-19",
+      "source": "https://dcboe.org/voters/casting-your-vote/mail-ballot-request",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when the polls close.",
+      "answer": "Stay in line. Everyone in line at 8 PM on Election Day gets to vote. Drop boxes lock at 8 PM, though.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "question": "There's a problem with the signature on my mail ballot.",
+      "answer": "DCBOE will send you a letter, and BallotTrax alerts too, explaining the problem and your deadline. Sign the certificate in the letter and send it back right away; DCBOE's FAQ says cures are accepted up to seven days after the election (November 10), though the 2026 calendar lists November 19.",
+      "steps": [
+        "Email the signed certificate to dcabsentee@dcboe.org, or mail or deliver it to 1015 Half Street SE, #750.",
+        "If the letter asks for proof of residence, send that with the certificate.",
+        "Sign up for alerts at votedc.ballottrax.net."
+      ],
+      "deadline": "2026-11-10",
+      "source": "https://dcboe.org/faqs/early-voting-and-election-day",
+      "confidence": "verified"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "They told me to vote a provisional ballot.",
+      "answer": "DC calls it a special ballot. It's counted if DCBOE decides you're eligible, even if it won't change the outcome; if you were missing proof of address or ID, bring it to DCBOE afterward.",
+      "steps": [
+        "Bring proof to DCBOE, 1015 Half Street SE, by 5 PM on Thursday, November 5 to be safe. The 2026 calendar allows until November 10.",
+        "Check the result on dcboe.org's Special Ballot Status page or at 1-866-DCVOTES."
+      ],
+      "deadline": "2026-11-05",
+      "source": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot",
+      "confidence": "verified"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check that my ballot was counted?",
+      "answer": "Track your mail ballot at votedc.ballottrax.net and opt in to text, email or voice alerts; it also flags problems you need to fix. For a special ballot, use the Special Ballot Status page on dcboe.org or call 1-866-DCVOTES.",
+      "steps": null,
+      "deadline": null,
+      "source": "https://votedc.ballottrax.net/voter/",
+      "confidence": "verified"
+    }
   ],
   "sources": [
     {

@@ -2,2642 +2,2542 @@
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jonathan L. Jackson",
+    "why": "Endorses him again, as in 2024, as a service-oriented representative.",
+    "url": "https://www.chicagotribune.com/2026/10/04/editorial-jonathan-jackson-u-s-house-of-representatives-illinois-district-1/",
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Donna Miller",
+    "why": "Finds her well informed on immigration and reproductive rights and aware of small business problems.",
+    "url": "https://www.chicagotribune.com/2026/10/04/editorial-donna-miller-u-s-house-of-representatives-illinois-district-2/",
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Angel Oakley",
+    "why": "Expects her to be a moderate in the political center.",
+    "url": "https://www.chicagotribune.com/2026/10/04/editorial-angel-oakley-for-u-s-house-of-representatives-in-district-3/",
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-4",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The board made no endorsement in this race, criticizing how Rep. Chuy Garcia handed off the seat.",
+    "url": "https://www.chicagotribune.com/2026/10/04/editorial-no-endorsement-for-u-s-house-of-representatives-illinois-district-4/",
+    "date": "2026-10-04",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-5",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Mike Quigley",
+    "why": "Endorses the incumbent while noting his possible run for mayor.",
+    "url": "https://www.chicagotribune.com/2026/10/05/editorial-mike-quigley-u-s-house-of-representatives-illinois-district-5/",
+    "date": "2026-10-05",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-6",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Sean Casten",
+    "why": "Calls him one of its favorite Democrats in Congress for how he serves his district.",
+    "url": "https://www.chicagotribune.com/2026/10/05/editorial-sean-casten-for-u-s-house-of-representatives-illinois-district-6/",
+    "date": "2026-10-05",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-7",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "La Shawn K. Ford",
+    "why": "Says Ford faces no credible opposition.",
+    "url": "https://www.chicagotribune.com/2026/10/05/editorial-la-shawn-ford-u-s-house-of-representatives-illinois-district-7/",
+    "date": "2026-10-05",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Melissa L. Bean",
+    "why": "Praises her pragmatism and principles.",
+    "url": "https://www.chicagotribune.com/2026/10/05/editorial-melissa-bean-for-us-house-of-representatives-illinois-district-8/",
+    "date": "2026-10-05",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-us-house-9",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Daniel Biss",
+    "why": "Says he has moved back toward the center in the general election.",
+    "url": "https://www.chicagotribune.com/2026/10/05/editorial-daniel-biss-for-us-house-of-representatives-illinois-district-9/",
+    "date": "2026-10-05",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-sd-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Ram Villivalam",
+    "why": "Considers him an experienced problem solver.",
+    "url": "https://www.chicagotribune.com/2026/10/08/editorial-ram-villivalam-illinois-8th-senate-district/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-sd-9",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Patrick Hanley",
+    "why": "Notes he opposes the proposed millionaire tax but supports a graduated income tax.",
+    "url": "https://www.chicagotribune.com/2026/10/08/editorial-patrick-hanley-illinois-9th-senate-district/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-sd-14",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Brian Skala",
+    "why": "Calls him a reasonable alternative for voters who want a change from the incumbent.",
+    "url": "https://www.chicagotribune.com/2026/10/08/editorial-brian-skala-illinois-14th-senate-district/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-sd-17",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Elgie R. Sims, Jr.",
+    "why": "Cites his role chairing the Senate Appropriations Committee.",
+    "url": "https://www.chicagotribune.com/2026/10/08/editorial-elgie-sims-illinois-17th-senate-district/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-sd-18",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "chicago-tribune-eb",
-    "target_id": "il-hd-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Frances Ann Hurley",
+    "why": "Expects her to be a moderating voice and a worthy successor to retiring Sen. Bill Cunningham.",
+    "url": "https://www.chicagotribune.com/2026/10/08/editorial-fran-hurley-illinois-18th-senate-district/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-12",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Paul Kendrick",
+    "why": "Notes he told the board he would not seek major new revenue without a pension deal.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-paul-kendrick-illinois-12th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-13",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Terry Nguyen Le",
+    "why": "Cites his support for tighter electronic-monitoring rules and pension reform.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-terry-nguyen-le-illinois-13th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-18",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Pete Donaghue",
+    "why": "Notes he opposes a millionaire surtax and supports pension reform.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-pete-donaghue-for-illinois-18th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-19",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Lindsey LaPointe",
+    "why": "Cites her command of the issues and willingness to challenge her own party.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-lindsey-lapointe-for-illinois-19th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-21",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Eric Su",
+    "why": "Notes he opposes a millionaire surtax and supports changing future pension benefits.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-eric-su-illinois-21st-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-25",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Curtis J. Tarver II",
+    "why": "Cites his legislative record and reputation across the aisle.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-curtis-tarver-ii-illinois-25th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-35",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Mary Gill",
+    "why": "Credits her for taking public safety seriously.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-mary-gill-illinois-35th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-36",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "David Sheppard",
+    "why": "Notes he opposes new taxes and is concerned about electronic monitoring.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-david-sheppard-illinois-36th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-39",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Will Guzzardi",
+    "why": "Calls him an experienced legislator with growing influence in Springfield.",
+    "url": "https://www.chicagotribune.com/2026/10/11/editorial-will-guzzardi-for-illinois-39th-house-district/",
+    "date": "2026-10-11",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-55",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "chicago-tribune-eb",
-    "target_id": "il-hd-77",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Joseph Johnson",
+    "why": "Says he would bring a different view on taxes and spending to a Democratic-led legislature.",
+    "url": "https://www.chicagotribune.com/2026/10/12/editorial-joseph-johnson-for-illinois-55th-house-district/",
+    "date": "2026-10-12",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-hd-78",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Julian-Jahleel Randolph Jemison",
+    "why": "Describes him as open-minded with a limited-government outlook.",
+    "url": "https://www.chicagotribune.com/2026/10/14/editorial-julian-jahleel-randolph-jemison-illinois-78th-house-district/",
+    "date": "2026-10-14",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-board-president",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Toni Preckwinkle",
+    "why": "Notes her promised plan to get property tax bills out on time.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-toni-preckwinkle-cook-county-president/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-sheriff",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Thomas J. Dart",
+    "why": "Says it has long been impressed with Dart, including his work on CTA safety.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-tom-dart-cook-county-sheriff-midterms/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-assessor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Pat Hynes",
+    "why": "Cites his more than 20 years working in the Cook County assessor's office.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-patrick-j-hynes-cook-county-assessor/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-5",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Kisha E. McCaskill",
+    "why": "Notes she calls any tax increase a last resort.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-kisha-mccaskill-cook-county-board-of-commissioners-district-5/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jessica Vasquez",
+    "why": "Notes she wants county revenue to rely less on property taxes.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-jessica-vasquez-cook-county-board-8th-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-9",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Maggie Trevor",
+    "why": "Calls the incumbent well informed and notes her promise to study budget cuts closely.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-maggie-trevor-cook-county-board-9th-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-11",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "John P. Daley",
+    "why": "Credits him with pursuing grant funding and helping the county's credit rating.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-john-daley-cook-county-board-11th-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-12",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Xiaoli \"Alice\" Hu",
+    "why": "Cites her background in procurement management.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-xiaoli-alice-hu-cook-county-board-12th-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-commissioner-13",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "chicago-tribune-eb",
-    "target_id": "il-cook-commissioner-15",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "chicago-tribune-eb",
-    "target_id": "il-cook-commissioner-17",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Josina Morita",
+    "why": "Says she gives the district the best shot at competent representation.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-josina-morita-cook-county-board-13th-district/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-mwrd-6yr",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Precious Brady-Davis; Eira Lizeth Corral Sepúlveda; Jill B. Shestokas",
+    "why": "Advises splitting the ticket: two Democratic incumbents and one Republican.",
+    "url": "https://www.chicagotribune.com/2026/10/15/editorial-our-endorsements-metropolitan-water-reclamation-district-midterms/",
+    "date": "2026-10-15",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-lewis-nixon",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-kerry-m-kennedy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-joan-e-powell",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-maureen-ward-kirby",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-edward-a-arce",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-thomas-j-byrne",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-diana-l-kenworthy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-kristyna-colleen-ryan",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-ursula-walowski",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-anthony-c-tony-kyriakopoulos",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-caroline-kate-moreland",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-thomas-j-carroll",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-andrea-m-buford",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-john-michael-allegretti",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-kristal-r-rivers",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-steven-g-watkins",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-abbey-fishman-romanek",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-judith-c-rice",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-patrick-kevin-coughlin",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-megan-elizabeth-goldish",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-anjana-m-j-hansen",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-robert-d-kuzas",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "chicago-tribune-eb",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-maritza-martinez",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-terrence-j-mcguire",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-bridget-anne-mitchell",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-james-p-pieczonka",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-patricia-o-brien-sheahan",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-michael-a-forti",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-nichole-c-patton",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-sondra-n-denmark",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-gerardo-tristan-jr",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-lynn-weaver-boyle",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-daniel-edward-maloney",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-thomas-m-cushing",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-john-g-mulroe",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-tyria-b-walton",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-erin-haggerty-antonietti",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-teresa-molina-gonzalez",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-patricia-maria-fallon",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-sheree-d-henry",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-celestia-l-mays",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-levander-smith-jr",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-julie-bess-aimen",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-laura-ayala-gonzalez",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-krista-d-butler",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-marie-aileen-dempsey",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-jamie-guerra-dickler",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-jonathan-clark-green",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-mary-catherine-marubio",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-regina-a-mescall",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-lorraine-mary-murphy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-eileen-marie-o-connor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-jill-rose-quinn",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-pamela-reaves-harris",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-tiesha-l-smith",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-chris-stacey",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-perla-tirado",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-elizabeth-anne-walsh",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-retention-maura-mcmahon-zeller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The Tribune had not published judicial retention picks as of Oct. 17; check its endorsement roundup closer to Election Day.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-president",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jessica Biggs",
+    "why": "Endorses Biggs to be Chicago's first elected school board president.",
+    "url": "https://www.chicagotribune.com/2026/09/27/editorial-chicago-school-board-president/",
+    "date": "2026-09-27",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-1a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Margie B. Luczak",
+    "why": "Cites her nearly three decades with the Chicago Police Department and backing from two aldermen.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-margie-luczak-chicago-school-board-in-district-1a/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-1b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Michelle N. Pierre",
+    "why": "Calls her highly qualified, citing her past role as schools chief at the LEARN Charter School Network.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-michelle-pierre-chicago-school-board-district-1b/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-2a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Hector Morales",
+    "why": "Sees him as a voice of budget restraint who would balance support for students and taxpayers.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-hector-morales-chicago-school-board-district-2a/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-2b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Kyna Lenhof",
+    "why": "Says she offers the best chance of a balanced point of view on the board.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-kyna-lenhof-chicago-school-board-district-2b/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-3a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Peter Gonzales",
+    "why": "Notes he wants teachers to have a strong voice but no group to have outsized influence.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-peter-gonzales-chicago-school-board-district-3a/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-3b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Carlos A. Rivas Jr.",
+    "why": "Points to his record on the current board advocating for students.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-carlos-rivas-chicago-school-board-district-3b/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-4a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Ellen Sherratt",
+    "why": "Cites her years of experience recruiting and developing teachers and principals.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-ellen-sherratt-chicago-school-board-district-4a/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-5a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "LaPamela Williams",
+    "why": "Notes she supports charter schools and wants CPS to better justify its spending.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-lapamela-williams-chicago-school-board-district-5a/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-5b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Anthony Hargrove",
+    "why": "Notes his top priority is improving students' math and reading skills.",
+    "url": "https://www.chicagotribune.com/2026/09/28/editorial-anthony-hargrove-chicago-school-board-district-5b/",
+    "date": "2026-09-28",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-6a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Isaiah White",
+    "why": "Calls him the best choice to improve accountability and set standards.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-isaiah-white-chicago-school-board-district-6a/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-6b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Michael L. Neal",
+    "why": "A CPS graduate and parent; the board likes his balanced approach to running the district.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-michael-neal-chicago-school-board-district-6b/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-7a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Jesus Ayala Jr.",
+    "why": "Endorses Ayala, who also has SEIU backing in this race.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-jesus-ayala-jr-chicago-school-board-district-7a/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-7b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Yesenia Lopez",
+    "why": "Praises her for abstaining on a budget the board calls unbalanced.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-yesenia-lopez-chicago-school-board-district-7b/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-9b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Therese Boyle",
+    "why": "Cites her more than three decades working for CPS.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-therese-boyle-chicago-school-board-district-9b/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-board-10b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Patrick C. Watson",
+    "why": "Notes he says the teachers union has too much influence over CPS and that consolidating schools can help.",
+    "url": "https://www.chicagotribune.com/2026/09/29/editorial-patrick-watson-chicago-school-board-district-10b/",
+    "date": "2026-09-29",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cook-millionaire-amendment-advisory",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Argues the surcharge would also hit employers in a state lagging in job growth.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-vote-no-cook-county-millionaires-tax-referendum/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-gunshot-detection-advisory",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Argues that since ShotSpotter was canceled, shooting victims have gone unfound for hours.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-vote-yes-bringing-back-gunshot-detection-service-chicago/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-festival-space-advisory",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Argues festival sponsors already pay to restore parks after events.",
+    "url": "https://www.chicagotribune.com/2026/10/17/editorial-vote-no-permanent-festival-space-chicago/",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-ice-cost-recovery-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-millionaire-surcharge-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-cps-vacant-property-charge-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-mid-northside-mental-health-program",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-mid-northside-mental-health-2027-levy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-far-southwest-side-mental-health-program",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-far-southwest-side-mental-health-2027-levy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-ward-4-jackson-statue-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-ward-26-shared-housing-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-lakefront-national-park-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-south-works-remediation-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-south-works-quantum-spending-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-corporate-tax-youth-jobs-advisory",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-chicago-ward-21-precinct-10-liquor-local-option",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election Tribune endorsement for this race was located as of Oct. 16 (searches returned only primary-season endorsements). Check the board's endorsement roundup.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "No Tribune editorial on this question was found as of Oct. 17 (the board has endorsed in most contested Chicago races). Check its endorsement roundup.",
+    "url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-1",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-2",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-3",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-4",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-5",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-6",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-7",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-8",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-us-house-9",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-sd-8",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-sd-9",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-sd-14",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-sd-17",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-sd-18",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-sun-times-eb",
-    "target_id": "il-hd-2",
-    "status": "no_position",
-    "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
-    "url": "https://chicago.suntimes.com/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-12",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-13",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-18",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-19",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-21",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-25",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-35",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-36",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-39",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-55",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-sun-times-eb",
-    "target_id": "il-hd-77",
-    "status": "no_position",
-    "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
-    "url": "https://chicago.suntimes.com/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-hd-78",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-board-president",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-sheriff",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-assessor",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-5",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-8",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-9",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-11",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-12",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-commissioner-13",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-sun-times-eb",
-    "target_id": "il-cook-commissioner-15",
-    "status": "no_position",
-    "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
-    "url": "https://chicago.suntimes.com/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-sun-times-eb",
-    "target_id": "il-cook-commissioner-17",
-    "status": "no_position",
-    "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
-    "url": "https://chicago.suntimes.com/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-mwrd-6yr",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-lewis-nixon",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-kerry-m-kennedy",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-joan-e-powell",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-maureen-ward-kirby",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-edward-a-arce",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-thomas-j-byrne",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-diana-l-kenworthy",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-kristyna-colleen-ryan",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-ursula-walowski",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-anthony-c-tony-kyriakopoulos",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-caroline-kate-moreland",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-thomas-j-carroll",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-andrea-m-buford",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-john-michael-allegretti",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-kristal-r-rivers",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-steven-g-watkins",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-abbey-fishman-romanek",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-judith-c-rice",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-patrick-kevin-coughlin",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-megan-elizabeth-goldish",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-anjana-m-j-hansen",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-robert-d-kuzas",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-sun-times-eb",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
-    "status": "no_position",
-    "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
-    "url": "https://chicago.suntimes.com/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-maritza-martinez",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-terrence-j-mcguire",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-bridget-anne-mitchell",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-james-p-pieczonka",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-patricia-o-brien-sheahan",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-michael-a-forti",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-nichole-c-patton",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-sondra-n-denmark",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-gerardo-tristan-jr",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-lynn-weaver-boyle",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-daniel-edward-maloney",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-thomas-m-cushing",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-john-g-mulroe",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-tyria-b-walton",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-erin-haggerty-antonietti",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-teresa-molina-gonzalez",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-patricia-maria-fallon",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-sheree-d-henry",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-celestia-l-mays",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-levander-smith-jr",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-julie-bess-aimen",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-laura-ayala-gonzalez",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-krista-d-butler",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-marie-aileen-dempsey",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-jamie-guerra-dickler",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-jonathan-clark-green",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-mary-catherine-marubio",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-regina-a-mescall",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-lorraine-mary-murphy",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-eileen-marie-o-connor",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-jill-rose-quinn",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-pamela-reaves-harris",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-tiesha-l-smith",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-chris-stacey",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-perla-tirado",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-elizabeth-anne-walsh",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-retention-maura-mcmahon-zeller",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-president",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-1a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-1b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-2a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-2b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-3a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-3b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-4a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-5a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-5b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-6a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-6b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-7a",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-7b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-9b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-board-10b",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cook-millionaire-amendment-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-gunshot-detection-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-festival-space-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-ice-cost-recovery-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-millionaire-surcharge-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-cps-vacant-property-charge-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-mid-northside-mental-health-program",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-mid-northside-mental-health-2027-levy",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-far-southwest-side-mental-health-program",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-far-southwest-side-mental-health-2027-levy",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-ward-4-jackson-statue-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-ward-26-shared-housing-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-lakefront-national-park-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-south-works-remediation-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-south-works-quantum-spending-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-corporate-tax-youth-jobs-advisory",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
     "target_id": "il-chicago-ward-21-precinct-10-liquor-local-option",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since Jan. 2012: the Sun-Times editorial board does not endorse ('inform you, not spin you'). It publishes voter guides instead.",
+    "why": "The Sun-Times editorial board does not endorse candidates; it publishes voter guides instead. Its 2026 election hub lists no endorsements.",
     "url": "https://chicago.suntimes.com/elections/2026",
     "date": "2026-10-16",
-    "confidence": "verified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "lwv-chicago",
@@ -2781,16 +2681,6 @@
   },
   {
     "endorser_id": "lwv-chicago",
-    "target_id": "il-hd-2",
-    "status": "no_position",
-    "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
-    "url": "https://vote411.org/lwvchicago",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "lwv-chicago",
     "target_id": "il-hd-12",
     "status": "no_position",
     "choice": null,
@@ -2891,16 +2781,6 @@
   },
   {
     "endorser_id": "lwv-chicago",
-    "target_id": "il-hd-77",
-    "status": "no_position",
-    "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
-    "url": "https://vote411.org/lwvchicago",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "lwv-chicago",
     "target_id": "il-hd-78",
     "status": "no_position",
     "choice": null,
@@ -2992,26 +2872,6 @@
   {
     "endorser_id": "lwv-chicago",
     "target_id": "il-cook-commissioner-13",
-    "status": "no_position",
-    "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
-    "url": "https://vote411.org/lwvchicago",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "lwv-chicago",
-    "target_id": "il-cook-commissioner-15",
-    "status": "no_position",
-    "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
-    "url": "https://vote411.org/lwvchicago",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "lwv-chicago",
-    "target_id": "il-cook-commissioner-17",
     "status": "no_position",
     "choice": null,
     "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
@@ -3242,16 +3102,6 @@
   {
     "endorser_id": "lwv-chicago",
     "target_id": "il-cook-retention-robert-d-kuzas",
-    "status": "no_position",
-    "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
-    "url": "https://vote411.org/lwvchicago",
-    "date": "2026-10-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "lwv-chicago",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
     "status": "no_position",
     "choice": null,
     "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. Candidate answers, where given, are on VOTE411.",
@@ -4401,16 +4251,6 @@
   },
   {
     "endorser_id": "injustice-watch",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
-    "status": "no_position",
-    "choice": null,
-    "why": "'Injustice Watch does not make recommendations or endorsements.' See its guide for bar ratings and background.",
-    "url": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845",
-    "date": "2026-10-06",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "injustice-watch",
     "target_id": "il-cook-retention-maritza-martinez",
     "status": "no_position",
     "choice": null,
@@ -4995,16 +4835,6 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "\"A knowledgeable judge who applies the law carefully, is professional and diligent.\"",
-    "url": "https://www.isba.org/judicial-elections/counties/cook",
-    "date": null,
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "isba-judicial-evaluations",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
-    "status": "not_found",
-    "choice": null,
-    "why": "Judge Mahoney does not appear on ISBA's 2026 Cook County evaluations page.",
     "url": "https://www.isba.org/judicial-elections/counties/cook",
     "date": null,
     "confidence": "verified"
@@ -5621,16 +5451,6 @@
   },
   {
     "endorser_id": "chicago-federation-of-labor",
-    "target_id": "il-hd-2",
-    "status": "endorsed",
-    "choice": "Elizabeth \"Lisa\" Hernandez",
-    "why": "Listed on the CFL's Nov. 3, 2026 endorsed-candidates slate.",
-    "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-09-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-federation-of-labor",
     "target_id": "il-hd-3",
     "status": "endorsed",
     "choice": "Eva-Dina Delgado",
@@ -5971,16 +5791,6 @@
   },
   {
     "endorser_id": "chicago-federation-of-labor",
-    "target_id": "il-hd-77",
-    "status": "endorsed",
-    "choice": "Norma Hernandez",
-    "why": "The CFL slate lists 'District 77, Democrat'; the candidate's name is not in the PDF's text layer, so the name here is that party's only nominee in the district.",
-    "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-09-16",
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "chicago-federation-of-labor",
     "target_id": "il-hd-78",
     "status": "endorsed",
     "choice": "Camille Lilly",
@@ -6063,7 +5873,7 @@
     "endorser_id": "chicago-federation-of-labor",
     "target_id": "il-mwrd-6yr",
     "status": "endorsed",
-    "choice": "Eira Lizeth Corral Sepulveda; Precious Brady-Davis; Beth McElroy Kirkwood",
+    "choice": "Eira Lizeth Corral Sepúlveda; Precious Brady-Davis; Beth McElroy Kirkwood",
     "why": "Listed on the CFL's Nov. 3, 2026 endorsed-candidates slate.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "date": "2026-09-16",
@@ -6201,29 +6011,9 @@
   },
   {
     "endorser_id": "chicago-federation-of-labor",
-    "target_id": "il-cook-commissioner-15",
-    "status": "endorsed",
-    "choice": "Ted Mason",
-    "why": "Listed on the CFL's Nov. 3, 2026 endorsed-candidates slate.",
-    "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-09-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-federation-of-labor",
     "target_id": "il-cook-commissioner-16",
     "status": "endorsed",
     "choice": "Miranda E. Hernandez",
-    "why": "Listed on the CFL's Nov. 3, 2026 endorsed-candidates slate.",
-    "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-09-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-federation-of-labor",
-    "target_id": "il-cook-commissioner-17",
-    "status": "endorsed",
-    "choice": "Elyse Hoffenberg",
     "why": "Listed on the CFL's Nov. 3, 2026 endorsed-candidates slate.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "date": "2026-09-16",
@@ -6534,7 +6324,7 @@
     "target_id": "il-cook-retention-ursula-walowski",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the CFL's list of judges recommended for retention, which names 58 of the 60; the slate does not explain omissions.",
+    "why": "Not on the CFL's list of judges recommended for retention, which names 58 of the 59 circuit judges on the ballot; the slate does not explain the omission.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "date": "2026-09-16",
     "confidence": "verified"
@@ -6665,16 +6455,6 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "On the CFL list of 'Cook County Circuit Court judges recommended for retention.'",
-    "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
-    "date": "2026-09-16",
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "chicago-federation-of-labor",
-    "target_id": "il-cook-retention-john-j-mahoney-iii",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on the CFL's list of judges recommended for retention, which names 58 of the 60; the slate does not explain omissions.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "date": "2026-09-16",
     "confidence": "verified"
@@ -7443,7 +7223,7 @@
     "endorser_id": "ift-ctu",
     "target_id": "il-mwrd-6yr",
     "status": "endorsed",
-    "choice": "Eira Lizeth Corral Sepulveda; Precious Brady-Davis; Beth McElroy Kirkwood",
+    "choice": "Eira Lizeth Corral Sepúlveda; Precious Brady-Davis; Beth McElroy Kirkwood",
     "why": "Illinois Policy reports the three incumbents 'were also endorsed by the Chicago Teachers Union,' citing a CTU post; the timing (primary or general) is not stated.",
     "url": "https://www.illinoispolicy.org/faq-election-for-metropolitan-water-reclamation-district-of-greater-chicago-commissioners/",
     "date": null,

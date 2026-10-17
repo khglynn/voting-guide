@@ -144,6 +144,7 @@ export interface HowTo {
     apparel_rule: string | null;
   };
   gotchas: string[];
+  situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence }[];
   sources: Src[];
 }
 

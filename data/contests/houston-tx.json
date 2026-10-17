@@ -787,17 +787,17 @@
   "district": "SD-13",
   "scope_plain": "Voters in Texas Senate District 13 (part of Harris County)",
   "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
-  "why_it_matters": "Borris Miles is unopposed on the November ballot.",
+  "why_it_matters": "Incumbent Borris Miles is unopposed on the November ballot.",
   "vote_for": 1,
-  "incumbent": null,
-  "open_seat": null,
+  "incumbent": "Borris L. Miles",
+  "open_seat": false,
   "term_years": 4,
   "is_retention": false,
   "candidates": [
    {
     "name": "Borris L. Miles",
     "party": "Democratic",
-    "incumbent": false,
+    "incumbent": true,
     "website": null,
     "website_confidence": "unverified",
     "background": null,
@@ -810,6 +810,10 @@
    {
     "name": "Harris County sample ballot, Nov 3, 2026 (official PDF)",
     "url": "https://hctxdnnstg.blob.core.windows.net/harrisvotes/prd/SampleBallot/2026/11-3/1126_Yellow%20Sample%20Ballot%20ENG-SPA%20for%20Website%20Posting.pdf?sv=2017-04-17&sr=b&si=DNNFileManagerPolicy&sig=hs1POFZK5TnbA%2BtPK4PC2dPczCggvtATNgRDkT38rl8%3D"
+   },
+   {
+    "name": "TCTA: 2026 Texas Senate candidates (marks incumbents)",
+    "url": "https://www.tcta.org/texasteachersvote/find-candidates/texas-senate-candidates"
    }
   ],
   "confidence": "verified"
@@ -822,17 +826,17 @@
   "district": "SD-18",
   "scope_plain": "Voters in Texas Senate District 18 (part of Harris County)",
   "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
-  "why_it_matters": null,
+  "why_it_matters": "Incumbent Lois Kolkhorst faces Democrat Erica Gillum.",
   "vote_for": 1,
-  "incumbent": null,
-  "open_seat": null,
+  "incumbent": "Lois W. Kolkhorst",
+  "open_seat": false,
   "term_years": 4,
   "is_retention": false,
   "candidates": [
    {
     "name": "Lois W. Kolkhorst",
     "party": "Republican",
-    "incumbent": false,
+    "incumbent": true,
     "website": null,
     "website_confidence": "unverified",
     "background": null,
@@ -856,6 +860,10 @@
    {
     "name": "Harris County sample ballot, Nov 3, 2026 (official PDF)",
     "url": "https://hctxdnnstg.blob.core.windows.net/harrisvotes/prd/SampleBallot/2026/11-3/1126_Yellow%20Sample%20Ballot%20ENG-SPA%20for%20Website%20Posting.pdf?sv=2017-04-17&sr=b&si=DNNFileManagerPolicy&sig=hs1POFZK5TnbA%2BtPK4PC2dPczCggvtATNgRDkT38rl8%3D"
+   },
+   {
+    "name": "TCTA: 2026 Texas Senate candidates (marks incumbents)",
+    "url": "https://www.tcta.org/texasteachersvote/find-candidates/texas-senate-candidates"
    }
   ],
   "confidence": "verified"
@@ -2608,7 +2616,7 @@
   "district": "234th Judicial District",
   "scope_plain": "Every Harris County voter",
   "office_explainer": "A trial judge for big lawsuits over money, property, injuries and business disputes.",
-  "why_it_matters": "The Democratic candidate's name did not come through in our copy of the county PDF; the Chronicle and the Houston LGBTQ+ Political Caucus both name Lauren Reeder.",
+  "why_it_matters": "Incumbent Lauren Reeder faces Republican David \"Dave\" Harvey.",
   "vote_for": 1,
   "incumbent": "Lauren Reeder",
   "open_seat": false,
@@ -2652,7 +2660,7 @@
     "url": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026+Midterm+Election+Readiness+Worksheet+-+Digital.pdf"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-harris-district-court-269th",
@@ -3349,7 +3357,7 @@
   "district": "209th Judicial District",
   "scope_plain": "Every Harris County voter",
   "office_explainer": "A trial judge for felonies, the most serious criminal charges.",
-  "why_it_matters": "The Republican candidate's name did not come through in our copy of the county PDF; Branch, a nonpartisan guide, lists Tony Coveny.",
+  "why_it_matters": "Incumbent Brian Edward Warren faces Republican Tony Coveny.",
   "vote_for": 1,
   "incumbent": "Brian Edward Warren",
   "open_seat": false,
@@ -3397,7 +3405,7 @@
     "url": "https://branch.vote/races/2026-texas-general-election-tx-state-district-judge-tx-judicial-district-209/candidates/brian-edward-warren"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-harris-district-court-228th",
@@ -6554,7 +6562,7 @@
   "district": "Precinct 3, Place 2",
   "scope_plain": "Voters in Harris County JP Precinct 3",
   "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
-  "why_it_matters": "Lucia Bates appears to be the only candidate. The county PDF text runs Precincts 3 and 4 together; we matched names using the Chronicle's and Ballotpedia's race lists.",
+  "why_it_matters": "Unopposed.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -6587,7 +6595,7 @@
     "url": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026+Midterm+Election+Readiness+Worksheet+-+Digital.pdf"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-harris-jp-4-2",
@@ -6597,7 +6605,7 @@
   "district": "Precinct 4, Place 2",
   "scope_plain": "Voters in Harris County JP Precinct 4",
   "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
-  "why_it_matters": "The Chronicle calls Sean Simon the challenger. Names were matched to this precinct using the Chronicle's guide because the county PDF text runs Precincts 3 and 4 together.",
+  "why_it_matters": "The Chronicle calls Sean Simon the challenger.",
   "vote_for": 1,
   "incumbent": "Laryssa Korduba",
   "open_seat": false,
@@ -6641,7 +6649,7 @@
     "url": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026+Midterm+Election+Readiness+Worksheet+-+Digital.pdf"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-harris-jp-5-2",
@@ -6699,7 +6707,7 @@
     "url": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026+Midterm+Election+Readiness+Worksheet+-+Digital.pdf"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-harris-jp-6-2",
@@ -6787,7 +6795,7 @@
   "district": "Precinct 8, Place 2",
   "scope_plain": "Voters in Harris County JP Precinct 8",
   "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
-  "why_it_matters": "The Democratic candidate's name did not come through in our copy of the county PDF; Ballotpedia lists Nicolas Juan.",
+  "why_it_matters": "Incumbent Louie Ditta faces Democrat Nicolas Juan.",
   "vote_for": 1,
   "incumbent": "Louie Ditta",
   "open_seat": false,
@@ -6835,7 +6843,7 @@
     "url": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026+Midterm+Election+Readiness+Worksheet+-+Digital.pdf"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "tx-hcad-place-1",
@@ -7029,7 +7037,7 @@
   "district": "Position 1",
   "scope_plain": "Klein ISD voters (northwest Harris County; reaches small parts of Houston Council Districts A and B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Candidate names come from the county's sample-ballot PDF, whose text did not extract cleanly for this race. The list may be incomplete. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7069,7 +7077,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-kleinisd-trustee-2",
@@ -7079,7 +7087,7 @@
   "district": "Position 2",
   "scope_plain": "Klein ISD voters (northwest Harris County; reaches small parts of Houston Council Districts A and B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7108,7 +7116,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-springisd-trustee-4",
@@ -7118,7 +7126,7 @@
   "district": "Position 4",
   "scope_plain": "Spring ISD voters (north Harris County; reaches part of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7147,7 +7155,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-springisd-trustee-5",
@@ -7157,7 +7165,7 @@
   "district": "Position 5",
   "scope_plain": "Spring ISD voters (north Harris County; reaches part of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Candidate names come from the county's sample-ballot PDF, whose text did not extract cleanly for this race. The list may be incomplete. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7197,7 +7205,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-sheldonisd-trustee-4",
@@ -7207,7 +7215,7 @@
   "district": "Position 4",
   "scope_plain": "Sheldon ISD voters (northeast Harris County; reaches a small part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Position 6 (Devora Myles) is unopposed and is listed as declared elected.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": "Fred Rivas",
   "open_seat": false,
@@ -7330,6 +7338,49 @@
   "confidence": "verified"
  },
  {
+  "id": "tx-sheldonisd-trustee-6",
+  "state": "TX",
+  "level": "school",
+  "office": "Sheldon ISD Trustee",
+  "district": "Position 6",
+  "scope_plain": "Sheldon ISD voters (northeast Harris County; reaches a small part of Houston Council District E)",
+  "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
+  "why_it_matters": "Unopposed. Sheldon ISD's election notice says this seat would be listed as \"Unopposed Candidate Declared Elected,\" but the county's official sample ballot prints it as a regular race with one name.",
+  "vote_for": 1,
+  "incumbent": "Devora Myles",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Devora Myles",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent trustee. Works as a longshoremen clerk and checker; president of the Sheldon Basketball League (Sheldon ISD).",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.houstonvotersguide.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Harris County sample ballot, Nov 3, 2026 (official PDF)",
+    "url": "https://hctxdnnstg.blob.core.windows.net/harrisvotes/prd/SampleBallot/2026/11-3/1126_Yellow%20Sample%20Ballot%20ENG-SPA%20for%20Website%20Posting.pdf?sv=2017-04-17&sr=b&si=DNNFileManagerPolicy&sig=hs1POFZK5TnbA%2BtPK4PC2dPczCggvtATNgRDkT38rl8%3D"
+   },
+   {
+    "name": "Sheldon ISD: School Board Elections (candidates by position)",
+    "url": "https://www.sheldonisd.com/about-us/board-of-trustees/school-board-elections"
+   },
+   {
+    "name": "City of Houston Planning: Council Districts by School District (2024)",
+    "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
   "id": "tx-sheldonisd-trustee-7",
   "state": "TX",
   "level": "school",
@@ -7391,7 +7442,7 @@
   "district": "Position 1",
   "scope_plain": "Tomball ISD voters (far northwest Harris County; reaches a sliver of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Candidate names come from the county's sample-ballot PDF, whose text did not extract cleanly for this race. The list may be incomplete. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7431,7 +7482,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-tomballisd-trustee-2",
@@ -7441,7 +7492,7 @@
   "district": "Position 2",
   "scope_plain": "Tomball ISD voters (far northwest Harris County; reaches a sliver of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7470,7 +7521,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-tomballisd-trustee-3",
@@ -7480,7 +7531,7 @@
   "district": "Position 3",
   "scope_plain": "Tomball ISD voters (far northwest Harris County; reaches a sliver of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Candidate names come from the county's sample-ballot PDF, whose text did not extract cleanly for this race. The list may be incomplete. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7520,7 +7571,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-tomballisd-trustee-4",
@@ -7530,7 +7581,7 @@
   "district": "Position 4",
   "scope_plain": "Tomball ISD voters (far northwest Harris County; reaches a sliver of Houston Council District B)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7559,7 +7610,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-huffmanisd-trustee-1",
@@ -7569,13 +7620,24 @@
   "district": "Position 1",
   "scope_plain": "Huffman ISD voters (northeast Harris County near Lake Houston; reaches part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Two candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
   "term_years": null,
   "is_retention": false,
   "candidates": [
+   {
+    "name": "Lori Freshour",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.houstonvotersguide.org/"
+   },
    {
     "name": "Vernon Reed",
     "party": null,
@@ -7598,7 +7660,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-huffmanisd-trustee-2",
@@ -7608,7 +7670,7 @@
   "district": "Position 2",
   "scope_plain": "Huffman ISD voters (northeast Harris County near Lake Houston; reaches part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7637,7 +7699,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-huffmanisd-trustee-3",
@@ -7647,7 +7709,7 @@
   "district": "Position 3",
   "scope_plain": "Huffman ISD voters (northeast Harris County near Lake Houston; reaches part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7676,7 +7738,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-newcaneyisd-trustee-1",
@@ -7686,7 +7748,7 @@
   "district": "Position 1",
   "scope_plain": "New Caney ISD voters in Harris County (reaches a small part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "Only one name appeared under this heading in the county's sample-ballot text. The race may be unopposed (and possibly declared elected, so not on your ballot), or a name may have been lost when the PDF was read. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Unopposed: one candidate is printed on the county's official sample ballot.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7715,7 +7777,7 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  },
  {
   "id": "tx-newcaneyisd-trustee-2",
@@ -7725,7 +7787,7 @@
   "district": "Position 2",
   "scope_plain": "New Caney ISD voters in Harris County (reaches a small part of Houston Council District E)",
   "office_explainer": "School board member: helps set the district's budget, tax rate and policies, and hires the superintendent.",
-  "why_it_matters": "A Position 3 race may also be on New Caney ballots; the PDF text shows a \"Position 3\" label and the names Chad Turner and Kristina Haggard without a clear heading. Candidate names come from the county's sample-ballot PDF, whose text did not extract cleanly for this race. The list may be incomplete. Check your ballot at harrisvotes.com.",
+  "why_it_matters": "Four candidates for one seat.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": null,
@@ -7753,6 +7815,28 @@
     "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.houstonvotersguide.org/"
+   },
+   {
+    "name": "Chad Turner",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.houstonvotersguide.org/"
+   },
+   {
+    "name": "Kristina Haggard",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.houstonvotersguide.org/"
    }
   ],
   "sources": [
@@ -7765,6 +7849,6 @@
     "url": "https://preflight.houstontx.gov/planning/Demographics/2024-council-districts/jurisdiction-tables/Council-District-by-School-Districts.pdf"
    }
   ],
-  "confidence": "unverified"
+  "confidence": "verified"
  }
 ]

@@ -111,11 +111,206 @@
     "confidence": "verified"
   },
   "gotchas": [
-    "Postmarks don't count. Your ballot must be IN THE CLERK'S HANDS by 7:00 PM on November 3. The state's last suggested day to mail is Monday, October 26. After that, use any 24-hour drop box in YOUR county (not just the one near your house) or a vote center. A friend or family member can drop yours off; state law caps how many other people's ballots one person may carry at 10 (C.R.S. 1-7.5-107(4)(b)(I)(B)). A box in another county must forward it to yours, but that takes time, so stay in your county.",
+    "Postmarks don't count. Your ballot must be in THE CLERK'S HANDS by 7:00 PM on November 3. The state's last suggested day to mail is Monday, October 26. After that, use any 24-hour drop box in your county (not just the one near your house) or a vote center. A friend or family member can drop yours off; state law caps how many other people's ballots one person may carry at 10 (C.R.S. 1-7.5-107(4)(b)(I)(B)). A box in another county must forward it to yours, but that takes time, so stay in your county.",
     "Sign the envelope. The number one reason ballots get rejected is a missing or mismatched signature. Sign it the way you sign your driver's license, and don't let anyone else sign for you. If you get a letter or a BallotTrax text saying there's a problem, you have until 11:59 PM on Thursday, November 12 to fix it (the usual 8th day, Nov. 11, is Veterans Day).",
-    "Mail ballots don't come with an ID check for most people, but if you vote IN PERSON you must show ID. Non-photo ID like a utility bill with a Colorado address works. A digital copy on your phone is fine.",
+    "Mail ballots don't come with an ID check for most people, but if you vote in person you must show ID. Non-photo ID like a utility bill with a Colorado address works. A digital copy on your phone is fine.",
     "On every measure, 'Yes' means change the law and 'No' means keep things as they are. Amendments 81 through 86 need 55% to pass; Amendment 87 and all seven propositions need a simple majority. Two measures directly conflict: Amendment 87 (graduated income tax) and Proposition 136 (4.4% cap). If both pass, the Blue Book says the one with more yes votes is generally expected to control, but the outcome is legally unclear.",
     "Denver-metro only: about 800,000 voters in Adams, Arapahoe, Douglas and Weld counties got ballots that wrongly include Ballot Issue 7A (the Front Range passenger rail tax). If you don't live inside the rail district, your 7A vote won't count but the rest of your ballot will. Officials say don't request a new ballot; they will copy your votes onto the correct ballot style. Sources: https://www.cpr.org/2026/10/07/front-range-passenger-rail-incorrect-ballots/ and https://www.denverpost.com/2026/10/09/after-unprecedented-colorado-ballot-error-whats-next-for-front-range-rail-measure/ (sourced, not official)."
+  ],
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in Colorado.",
+      "answer": "You can still vote where you live now. Update your address at GoVoteColorado.gov by Monday, October 26 and a ballot is mailed to your new home; after that, update it at any vote center in your new county and vote right there, through 7 PM on Election Day.",
+      "steps": [
+        "Update your address online at GoVoteColorado.gov by Oct 26.",
+        "Moved to a different county? Vote with your new county. Denver, Jefferson, Arapahoe and Boulder each run their own ballots and vote centers.",
+        "Missed Oct 26? Bring ID to a vote center in your new county; you can update your address and vote in one visit."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I just moved to Colorado from another state.",
+      "answer": "If you've lived in Colorado for at least 22 days before the election (since October 12), you can register and vote here. If you moved away from Colorado for good, you vote in your new state instead, not Colorado.",
+      "steps": [
+        "Register at GoVoteColorado.gov by Oct 26 to get a ballot in the mail.",
+        "After Oct 26, register and vote in person at any vote center in your county, through 7 PM Nov 3.",
+        "Bring ID with a Colorado address, like a new Colorado license or a recent utility bill."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://bouldercounty.gov/elections/register/student-voting/",
+      "confidence": "verified"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered to vote.",
+      "answer": "You still have time. Register online at GoVoteColorado.gov by Monday, October 26 to get a ballot in the mail, or register and vote in the same visit at any vote center in your county, up to 7 PM on Election Day.",
+      "steps": [
+        "Check first: you may already be registered. Look yourself up at GoVoteColorado.gov.",
+        "Online registration needs a Colorado driver's license or ID, or the last 4 digits of your Social Security number.",
+        "Registering in person? Bring an accepted ID, such as a Colorado license or a recent bank statement with your Colorado address."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "answer": "In Colorado you can vote at any vote center in your county, so just use the closest one. If you're in a different county, you can vote a statewide ballot there (statewide races and measures only), or go to a vote center in your own county for your full ballot.",
+      "steps": [
+        "Find vote centers and drop boxes in your county with the state lookup.",
+        "Don't vote a provisional ballot in the wrong county. The state says it won't count.",
+        "Have your mail ballot? You can drop it in any drop box in your county instead."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/ProvisionalBallots.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "answer": "Ask your county clerk for a replacement, or skip it and vote in person at any vote center in your county. Counties mailed ballots October 2 to 9, so if yours hasn't arrived by now, don't wait.",
+      "steps": [
+        "Check BallotTrax or GoVoteColorado.gov to see when it was mailed and to which address.",
+        "Want a new one by mail? Ask soon. Denver's last day to have a replacement mailed is Oct 26.",
+        "After that, get a replacement at a vote center or just vote there, with ID, by 7 PM Nov 3."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/mailBallotsFAQ.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my mail ballot.",
+      "answer": "No problem. Ask your county clerk for a replacement ballot, or take it to any vote center in your county and vote a fresh ballot there.",
+      "steps": [
+        "Call or visit your county clerk and ask for a replacement.",
+        "Or vote in person at a vote center with ID. Once you vote in person, the ballot mailed to you won't be counted.",
+        "Left a race blank on purpose? That's fine. Your other votes still count."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/ElectionDay.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I mailed my ballot but now want to vote in person.",
+      "answer": "If your mail ballot was already returned, that's your vote; you can't vote again. If you haven't sent it back yet, you can vote at any vote center instead, and the county won't count the ballot that was mailed to you.",
+      "steps": [
+        "Check BallotTrax to see whether your ballot was received.",
+        "Not returned yet? Bring ID to a vote center in your county and vote there."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/ElectionDay.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "answer": "If you vote by mail, most people need no ID because the signature on your envelope is checked instead. In person you need one, but many things count, including a recent utility bill, bank statement or paycheck with your name and a Colorado address.",
+      "steps": [
+        "See the full list of accepted IDs on the Secretary of State's page.",
+        "No ID at all at a vote center? You can vote a provisional ballot, counted once the county confirms you're eligible.",
+        "Or go home and use your mail ballot, then drop it in a drop box by 7 PM Nov 3."
+      ],
+      "deadline": null,
+      "source": "https://www.coloradosos.gov/pubs/elections/vote/acceptableFormsOfID.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "answer": "You can still vote. Update your name with your county clerk, or at any vote center, including on Election Day.",
+      "steps": [
+        "At a vote center or the clerk's office, fill out the name change form.",
+        "Or mail the county clerk a signed letter with your old name, new name and birth date.",
+        "If your signature changed too, watch for a letter or text asking you to confirm it, and answer it quickly."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://colorado.public.law/statutes/crs_1-2-218",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "answer": "You choose where you vote: at your home address or your school address, but not both. Students from other states can register in Colorado if they've lived here 22 days, or keep voting absentee back home.",
+      "steps": [
+        "Keeping your Colorado home address? Add your school address as a mailing address at GoVoteColorado.gov by Oct 26 so the ballot comes to you.",
+        "CU Boulder dorm? Boulder County says to use your mailbox number, not your room number.",
+        "A photo student ID from a Colorado college counts as ID at a vote center."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://coloradosos.gov/pubs/elections/FAQs/college.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "answer": "That's easy in Colorado, since everyone already has a mail ballot. Vote it before you leave and drop it in any drop box in your county, or mail it by Monday, October 26.",
+      "steps": [
+        "Fill it out, sign the envelope, and drop it off before you go.",
+        "Already away without your ballot? Ask your county clerk about a replacement soon; Denver mails replacements requested by Oct 26.",
+        "Mailing it? It must arrive by 7 PM Nov 3. Postmarks don't count."
+      ],
+      "deadline": "2026-10-26",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/mailBallotsFAQ.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when polls close.",
+      "answer": "Stay in line. If you're in line at a vote center by 7 PM, you get to vote, no matter how long it takes.",
+      "steps": [
+        "Don't leave, even if the line is long.",
+        "Dropping off a mail ballot instead? Drop boxes lock at 7 PM sharp."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/ElectionDay.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "question": "They said my signature doesn't match.",
+      "answer": "You can fix it, and it's quick. Your county mails you a letter (and BallotTrax alerts you if you signed up); you have until 11:59 PM on Thursday, November 12.",
+      "steps": [
+        "From your phone: text Colorado to 2VOTE (28683) and follow the prompts (TXT2Cure).",
+        "Or sign and return the form your county mailed you, with a copy of ID if it asks.",
+        "Do it the day you hear about it."
+      ],
+      "deadline": "2026-11-12",
+      "source": "https://coloradosos.gov/pubs/elections/FAQs/rejectedBallots.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "What's a provisional ballot?",
+      "answer": "It's a backup ballot for when your eligibility can't be confirmed on the spot, such as when you have no ID or the system says you already voted. You fill out a short form, and the county counts it once it confirms you're eligible.",
+      "steps": [
+        "Keep the receipt the election judge gives you; it tells you how to check on your ballot.",
+        "Counting finishes within 9 days after the election.",
+        "It won't count if you're in the wrong county, so vote in your own county."
+      ],
+      "deadline": null,
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/ProvisionalBallots.html",
+      "confidence": "verified"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check my ballot was counted?",
+      "answer": "Sign up for BallotTrax, Colorado's official tracker. It texts or emails you when your ballot is mailed, received and accepted.",
+      "steps": [
+        "Sign up at ballottrax.coloradosos.gov.",
+        "If it flags a problem, fix it by Nov 12 (see the signature question).",
+        "Voted a provisional ballot? Use the receipt from the election judge."
+      ],
+      "deadline": null,
+      "source": "https://ballottrax.coloradosos.gov/voter/",
+      "confidence": "verified"
+    }
   ],
   "sources": [
     {

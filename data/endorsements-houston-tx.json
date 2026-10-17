@@ -62,10 +62,10 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-us-house-29",
-  "status": "not_found",
-  "choice": null,
-  "why": "Listed as \"Coming soon\" on the board's endorsement page as of Oct 16.",
-  "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
+  "status": "endorsed",
+  "choice": "Sylvia Garcia",
+  "why": "The board calls the incumbent a tireless champion of her working-class constituents and expects her to fight as hard for the redrawn district.",
+  "url": "https://www.houstonchronicle.com/opinion/endorsements/article/sylvia-garcia-election-cd29-congress-houston-texas-22479240.php",
   "date": null,
   "confidence": "verified"
  },
@@ -564,7 +564,7 @@
   "target_id": "tx-harris-district-court-313th",
   "status": "endorsed",
   "choice": "Samantha Y. Davis",
-  "why": "The board cites her years as referee for the juvenile detention court. Its guide lists her under the 315th; the official ballot puts her in the 313th.",
+  "why": "The board cites her years as referee for the Harris County juvenile detention court.",
   "url": "https://www.houstonchronicle.com/opinion/endorsements/article/juvenile-courts-313-315-22478371.php",
   "date": null,
   "confidence": "verified"
@@ -584,7 +584,7 @@
   "target_id": "tx-harris-district-court-315th",
   "status": "endorsed",
   "choice": "Leah Shapiro",
-  "why": "The board calls her a two-term juvenile judge and advocate for juvenile justice. Its guide lists her under the 313th; the official ballot puts her in the 315th.",
+  "why": "The board calls her a two-term judge and a strong advocate for juvenile justice.",
   "url": "https://www.houstonchronicle.com/opinion/endorsements/article/juvenile-courts-313-315-22478371.php",
   "date": null,
   "confidence": "verified"
@@ -1371,6 +1371,16 @@
  },
  {
   "endorser_id": "houston-chronicle-eb",
+  "target_id": "tx-sheldonisd-trustee-6",
+  "status": "no_position",
+  "choice": null,
+  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "not_found",
   "choice": null,
@@ -1422,9 +1432,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-huffmanisd-trustee-1",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -2941,6 +2951,16 @@
  },
  {
   "endorser_id": "lwv-houston",
+  "target_id": "tx-sheldonisd-trustee-6",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League never supports or opposes candidates or parties. Its Houston Voters Guide prints candidates' own answers.",
+  "url": "https://www.houstonvotersguide.org/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-houston",
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "no_position",
   "choice": null,
@@ -3144,1750 +3164,1760 @@
   "target_id": "tx-us-senate",
   "status": "endorsed",
   "choice": "James Talarico",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-governor",
   "status": "endorsed",
   "choice": "Gina Hinojosa",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-lt-governor",
   "status": "endorsed",
   "choice": "Vikki Goodwin",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-attorney-general",
   "status": "endorsed",
   "choice": "Nathan Johnson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-comptroller",
   "status": "endorsed",
   "choice": "Sarah Eckhardt",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-land-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-agriculture-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-railroad-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-supreme-court-chief",
   "status": "endorsed",
   "choice": "Maggie Ellis",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-supreme-court-place-2",
   "status": "endorsed",
   "choice": "Chari Kelly",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-supreme-court-place-7",
   "status": "endorsed",
   "choice": "Kristen Hawkins",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-supreme-court-place-8",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cca-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cca-place-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cca-place-9",
   "status": "endorsed",
   "choice": "Holly Taylor",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-15th-coa-chief",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-15th-coa-place-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-15th-coa-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-7",
   "status": "endorsed",
   "choice": "Lizzie Pannill Fletcher",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-8",
   "status": "endorsed",
   "choice": "Laura Jones",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-9",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-18",
   "status": "endorsed",
   "choice": "Christian Dashaun Menefee",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-22",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-29",
   "status": "endorsed",
   "choice": "Sylvia Garcia",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-36",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-us-house-38",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sboe-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sboe-6",
   "status": "endorsed",
   "choice": "Michelle Palmer",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sboe-7",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sboe-8",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-senate-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-senate-11",
   "status": "endorsed",
   "choice": "Shannon Dicely",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-senate-13",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-senate-18",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-126",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-127",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-128",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-129",
   "status": "endorsed",
   "choice": "Albert Wittliff",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-130",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-131",
   "status": "endorsed",
   "choice": "Staci Childs",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-132",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-133",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-134",
   "status": "endorsed",
   "choice": "Ann Johnson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-135",
   "status": "endorsed",
   "choice": "Odus E. Evbagharu",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-137",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-138",
   "status": "endorsed",
   "choice": "Tyler Smith",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-139",
   "status": "endorsed",
   "choice": "Charlene Ward Johnson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-140",
   "status": "endorsed",
   "choice": "Armando Lucio Walle",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-141",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-142",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-143",
   "status": "endorsed",
   "choice": "Ana Hernandez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-144",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-145",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-146",
   "status": "endorsed",
   "choice": "Lauren Ashley Simmons",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-147",
   "status": "endorsed",
   "choice": "Jolanda Jones",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-148",
   "status": "endorsed",
   "choice": "Penny Morales Shaw",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-149",
   "status": "endorsed",
   "choice": "Darlene Breaux",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-house-150",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-1st-coa-place-3",
   "status": "endorsed",
   "choice": "Veronica Rivas-Molloy",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-1st-coa-place-4",
   "status": "endorsed",
   "choice": "Julie Countiss",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-1st-coa-place-5",
   "status": "endorsed",
   "choice": "Amy Guerra",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-14th-coa-chief",
   "status": "endorsed",
   "choice": "Sarah Beth Landau",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-14th-coa-place-7",
   "status": "endorsed",
   "choice": "William Demond",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-55th",
   "status": "endorsed",
   "choice": "Latosha Lewis Payne",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-113th",
   "status": "endorsed",
   "choice": "Rabeea Collier",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-157th",
   "status": "endorsed",
   "choice": "Tanya Garrison",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-189th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-190th",
   "status": "endorsed",
   "choice": "Beau Miller",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-234th",
   "status": "endorsed",
   "choice": "Lauren Reeder",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-269th",
   "status": "endorsed",
   "choice": "Cory Don Sepolio",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-270th",
   "status": "endorsed",
   "choice": "Dedra Davis",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-281st",
   "status": "endorsed",
   "choice": "Christine Weems",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-295th",
   "status": "endorsed",
   "choice": "Donna Roth",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-313th",
   "status": "endorsed",
   "choice": "Samantha Y. Davis",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-314th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-315th",
   "status": "endorsed",
   "choice": "Leah Shapiro",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-180th",
   "status": "endorsed",
   "choice": "Stephanie Morales",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-182nd",
   "status": "endorsed",
   "choice": "Danilo \"Danny\" Lacayo",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-183rd",
   "status": "endorsed",
   "choice": "Julia Maldonado",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-184th",
   "status": "endorsed",
   "choice": "Katherine \"Kat\" Thomas",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-185th",
   "status": "endorsed",
   "choice": "Andrea Beall",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-208th",
   "status": "endorsed",
   "choice": "Beverly D. Armstrong",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-209th",
   "status": "endorsed",
   "choice": "Brian Edward Warren",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-228th",
   "status": "endorsed",
   "choice": "Alyson Almaguer",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-230th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-232nd",
   "status": "endorsed",
   "choice": "Josh Hill",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-248th",
   "status": "endorsed",
   "choice": "Hilary Unger",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-262nd",
   "status": "endorsed",
   "choice": "Lori Chambers Gray",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-263rd",
   "status": "endorsed",
   "choice": "Melissa Marie Morris",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-482nd",
   "status": "endorsed",
   "choice": "Veronica M. Nelson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-496th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-497th",
   "status": "endorsed",
   "choice": "Breanna Schwartz",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-495th",
   "status": "endorsed",
   "choice": "Tiffany M. Hill",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-486th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "status": "endorsed",
+  "choice": "Kathryn \"Katie\" Wilson",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-245th",
   "status": "endorsed",
   "choice": "Angela M Lancelin",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-246th",
   "status": "endorsed",
   "choice": "Angela Graves-Harrington",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-247th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-257th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-280th",
   "status": "endorsed",
   "choice": "Damiane Dianne Curvey",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-308th",
   "status": "endorsed",
   "choice": "Gloria Lopez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-309th",
   "status": "endorsed",
   "choice": "Linda Marie Dunson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-310th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-311th",
   "status": "endorsed",
   "choice": "Germaine Janet Tanner",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-court-312th",
   "status": "endorsed",
   "choice": "Teresa Waldrop",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-civil-1",
   "status": "endorsed",
   "choice": "Sonia Lopez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-civil-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "No pick for this court on the Caucus's 2026 card (the card's \"No. 2\" entry names LaShawn A. Williams, who runs in No. 3).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-civil-3",
   "status": "endorsed",
   "choice": "LaShawn A. Williams",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card, which labels this pick \"County Civil Court at Law No. 2\"; LaShawn A. Williams is the No. 3 candidate on the ballot.",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-civil-4",
   "status": "endorsed",
   "choice": "M. Monica Singh",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-civil-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "status": "endorsed",
+  "choice": "Jermaine Thomas",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-1",
   "status": "endorsed",
   "choice": "Alex Salgado",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-2",
   "status": "endorsed",
   "choice": "Matthew Ruben Perez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-3",
   "status": "endorsed",
   "choice": "Carlos Alberto Aguayo",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-4",
   "status": "endorsed",
   "choice": "Shannon B. Baldwin",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-6",
   "status": "endorsed",
   "choice": "Kelley Andrews",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-7",
   "status": "endorsed",
   "choice": "Andrew A. Wright",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-8",
   "status": "endorsed",
   "choice": "Erika Ramirez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-9",
   "status": "endorsed",
   "choice": "Toria J. Finch",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-10",
   "status": "endorsed",
   "choice": "Juanita A. Jackson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-11",
   "status": "endorsed",
   "choice": "Sedrick T. Walker II",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-12",
   "status": "endorsed",
   "choice": "Ashley Mayes Guice",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-13",
   "status": "endorsed",
   "choice": "Raul Rodriguez",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-14",
   "status": "endorsed",
   "choice": "Yahaira Quezada",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-ccl-criminal-15",
   "status": "endorsed",
   "choice": "Tonya Jones",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-probate-1",
   "status": "endorsed",
   "choice": "Jerry Simoneaux",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-probate-2",
   "status": "endorsed",
   "choice": "Pamela Medina",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-probate-3",
   "status": "endorsed",
   "choice": "Jason Cox",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-probate-4",
   "status": "endorsed",
   "choice": "James S. Horwitz",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-county-judge",
   "status": "endorsed",
   "choice": "Letitia Plummer",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-county-attorney",
   "status": "endorsed",
   "choice": "Abbie Kamin",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-district-clerk",
   "status": "endorsed",
   "choice": "Darrell Jordan, Jr",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-county-clerk",
   "status": "endorsed",
   "choice": "Teneshia Hudspeth",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-treasurer",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-hcde-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-hcde-7",
   "status": "endorsed",
   "choice": "Silky Joshi Malik",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-commissioner-2",
   "status": "endorsed",
   "choice": "Adrian Garcia",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-commissioner-4",
   "status": "endorsed",
   "choice": "Lesley Briones",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-1-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-2-2",
   "status": "endorsed",
   "choice": "Dolores Lozano",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-3-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-4-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-5-2",
   "status": "endorsed",
   "choice": "Lisa Jefferson",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-6-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-7-2",
   "status": "endorsed",
   "choice": "Melanie Miles",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-harris-jp-8-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-hcad-place-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-hcad-place-2",
   "status": "endorsed",
   "choice": "Chris Ehlinger",
-  "why": "On the Caucus's 2026 general election card (read through the Blue Voter Guide mirror, since the card is an image).",
+  "why": "On the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-hcad-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-kleinisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-kleinisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-springisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-springisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sheldonisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sheldonisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "the-caucus-houston",
+  "target_id": "tx-sheldonisd-trustee-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
+  "url": "https://pac.thecaucus.org/endorsements",
+  "date": null,
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-tomballisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-tomballisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-tomballisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-tomballisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-huffmanisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-huffmanisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-huffmanisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-newcaneyisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-newcaneyisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card as mirrored by Blue Voter Guide.",
+  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-houston-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cfisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cfisd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cfisd-prop-c",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cfisd-prop-d",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-cfisd-prop-e",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-springisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-huffman-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-crosby-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "the-caucus-houston",
   "target_id": "tx-crosby-isd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card as mirrored by Blue Voter Guide.",
+  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
   "url": "https://pac.thecaucus.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "harris-county-gop",
@@ -6261,6 +6291,16 @@
  },
  {
   "endorser_id": "harris-county-gop",
+  "target_id": "tx-sheldonisd-trustee-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Nonpartisan race; no party recommendation found.",
+  "url": "https://hcgop.v-web.com/elections/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "harris-county-gop",
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "not_found",
   "choice": null,
@@ -6462,1572 +6502,1582 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Shaun Finnie",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lizzie Pannill Fletcher",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-8",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-9",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Leticia Gutierrez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-18",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Christian Dashaun Menefee",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-22",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Marquette Greene-Scott",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-29",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Sylvia Garcia",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-36",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-38",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Melissa McDonough",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sboe-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Coretta Mallet-Fontenot",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sboe-6",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Michelle Palmer",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sboe-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Tiffany Perkinz",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sboe-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Dana Van De Walker",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-4",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-11",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-13",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-18",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-126",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-127",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-128",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-129",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-130",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Brett Robinson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-131",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Staci Childs",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-132",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-133",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Josh Wallenstein",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-134",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Ann Johnson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-135",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Odus E. Evbagharu",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-137",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Gene Wu",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-138",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Tyler Smith",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-139",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Charlene Ward Johnson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-140",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Armando Lucio Walle",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-141",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Senfronia Thompson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-142",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-143",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Ana Hernandez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-144",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Mary Ann Perez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-145",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Christina Morales",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-146",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lauren Ashley Simmons",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-147",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-148",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Penny Morales Shaw",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-149",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Darlene Breaux",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-150",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-1st-coa-place-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Veronica Rivas-Molloy",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-1st-coa-place-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Julie Countiss",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-1st-coa-place-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Amy Guerra",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-14th-coa-chief",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Sarah Beth Landau",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-14th-coa-place-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "William Demond",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-55th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-113th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Rabeea Collier",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-157th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Tanya Garrison",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-189th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-190th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Beau Miller",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-234th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lauren Reeder",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-269th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Cory Don Sepolio",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-270th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Dedra Davis",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-281st",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Christine Weems",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-295th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Donna Roth",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-313th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Samantha Y. Davis",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-314th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-315th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Leah Shapiro",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-180th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-182nd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Danilo \"Danny\" Lacayo",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-183rd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Julia Maldonado",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-184th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Katherine \"Kat\" Thomas",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-185th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Andrea Beall",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-208th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Beverly D. Armstrong",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-209th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-228th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-230th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-232nd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Josh Hill",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-248th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Hilary Unger",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-262nd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lori Chambers Gray",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-263rd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Melissa Marie Morris",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-482nd",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Veronica M. Nelson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-496th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-497th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Breanna Schwartz",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-495th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Tiffany M. Hill",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-486th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Kathryn \"Katie\" Wilson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-245th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Angela M Lancelin",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-246th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-247th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-257th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-280th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Damiane Dianne Curvey",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-308th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-309th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Linda Marie Dunson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-310th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-311th",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-312th",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Teresa Waldrop",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Sonia Lopez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "LaShawn A. Williams",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-4",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-5",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Jermaine Thomas",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Alex Salgado",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Matthew Ruben Perez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Carlos Alberto Aguayo",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Shannon B. Baldwin",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-5",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-6",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Kelley Andrews",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Andrew A. Wright",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Erika Ramirez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-9",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Toria J. Finch",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-10",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Juanita A. Jackson",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-11",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Sedrick T. Walker II",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-12",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Ashley Mayes Guice",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-13",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Raul Rodriguez",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-14",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Yahaira Quezada",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-15",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Tonya Jones",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-probate-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Jerry Simoneaux",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-probate-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Pamela Medina",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-probate-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Jason Cox",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-probate-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "James S. Horwitz",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-county-judge",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Letitia Plummer",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-county-attorney",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Abbie Kamin",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-clerk",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-county-clerk",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Teneshia Hudspeth",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-treasurer",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-hcde-5",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-hcde-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Silky Joshi Malik",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-commissioner-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Adrian Garcia",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-commissioner-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lesley Briones",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-1-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-2-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Dolores Lozano",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-3-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Lucia Bates",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-4-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-5-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-6-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-7-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-8-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Nicolas Juan",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-hcad-place-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "status": "endorsed",
+  "choice": "Kathy Blueford-Daniels",
+  "why": "Listed as \"Labor Endorsed\" on the federation's Nov. 3, 2026 slate.",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-hcad-place-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-hcad-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-kleinisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-kleinisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "tx-gulf-coast-labor-federation",
+  "target_id": "tx-sheldonisd-trustee-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
+  "date": null,
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-newcaneyisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-newcaneyisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-houston-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-c",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-d",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-e",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffman-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-crosby-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-crosby-isd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "Its Blue Voter Guide page says it has no endorsements for active elections; its own site was not checked.",
-  "url": "https://bluevoterguide.org/endorser-org/Texas_Gulf_Coast_Area_Labor_Federation/XX/1195",
+  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
+  "url": "https://www.gcaflcio.org/endorsements",
   "date": null,
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "endorser_id": "ground-game-texas",

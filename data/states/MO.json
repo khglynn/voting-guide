@@ -39,7 +39,7 @@
     "who_gets_one": "Nobody gets one automatically. You must apply, and you must have one of six legal reasons (RSMo 115.277, listed on the SOS 'How to Vote' page): (1) you'll be away from your election jurisdiction (for most people, your county) on Election Day; (2) illness or physical disability, including being the primary caregiver of someone with that condition at your address; (3) religious belief or practice; (4) you work for an election authority, or as a first responder, health care worker or law enforcement officer, away from your polling place; (5) you're incarcerated but still eligible to vote; (6) you're a certified participant in the address confidentiality program. Missouri's no-excuse 'mail-in ballot' from 2020 expired and no longer exists. No excuse? Vote in person during no-excuse absentee voting (Oct 20 to Nov 2) or on Election Day.",
     "request_deadline": {
       "date": "2026-10-21",
-      "rule": "Applications for a ballot to be MAILED to you must be RECEIVED by your election authority by 5:00 PM on Wednesday, October 21, 2026. The SOS 'How to Vote' page: mail or fax requests 'must be received by the election authority no later than the 5:00 p.m. on the second Wednesday prior to any election.' STLPR, KCUR and the St. Louis County Democrats' logistics page all list Oct 21. St. Louis County absentee desk: 314-615-1833, boecabsentee@stlouiscountymo.gov. Relatives within the second degree (spouse, parents, children) may complete the application for you, in person.",
+      "rule": "Applications for a ballot to be mailed to you must be received by your election authority by 5:00 PM on Wednesday, October 21, 2026. The SOS 'How to Vote' page: mail or fax requests 'must be received by the election authority no later than the 5:00 p.m. on the second Wednesday prior to any election.' STLPR, KCUR and the St. Louis County Democrats' logistics page all list Oct 21. St. Louis County absentee desk: 314-615-1833, boecabsentee@stlouiscountymo.gov. Relatives within the second degree (spouse, parents, children) may complete the application for you, in person.",
       "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote"
     },
     "return_deadline": {
@@ -49,7 +49,7 @@
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.293"
     },
     "return_options": [
-      "mail (USPS); it must ARRIVE at the election authority by 7:00 PM on Nov 3 (St. Louis County: 'must be RECEIVED by the Board of Elections by 7 pm on Election Day'). Postmarks do not count.",
+      "mail (USPS); it must arrive at the election authority by 7:00 PM on Nov 3 (St. Louis County: 'must be received by the Board of Elections by 7 pm on Election Day'). Postmarks do not count.",
       "hand-deliver to the election authority office. State law (RSMo 115.291) limits who may deliver another voter's ballot to a relative within the second degree (spouse, parent, child, grandparent, grandchild, sibling). Friends and neighbors may not.",
       "St. Louis County: the Board of Elections office at 725 Northwest Plaza Dr., St. Ann, during business hours (Mon to Fri 8:00 AM to 4:30 PM). On Election Day, absentee ballots can only be turned in at the Board of Elections office, not at polling places (Board FAQ, April 2026 election). In April the Board also took returned absentee ballots at satellite sites during satellite hours; confirm for November with the absentee desk (314-615-1833).",
       "military and overseas voters: separate rules; see the SOS military/overseas page"
@@ -66,7 +66,7 @@
     "available": true,
     "start": "2026-10-20",
     "end": "2026-11-02",
-    "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS COUNTY has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Hours per the St. Louis County Democrats' logistics page: weekdays Oct 20 to 30, 8 AM to 4:30 PM; Saturdays Oct 24 and Oct 31, 9 AM to 1 PM; closed Sundays; Monday Nov 2, 8 AM to 5 PM. The county library lists its branches as 8 AM to 5 PM weekdays and Sat Oct 31, 9 AM to 1 PM. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
+    "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS county has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Hours per the St. Louis County Democrats' logistics page: weekdays Oct 20 to 30, 8 AM to 4:30 PM; Saturdays Oct 24 and Oct 31, 9 AM to 1 PM; closed Sundays; Monday Nov 2, 8 AM to 5 PM. The county library lists its branches as 8 AM to 5 PM weekdays and Sat Oct 31, 9 AM to 1 PM. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
     "vote_centers": true,
     "lookup_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=c094cf17f6214c2b9d6f7d77f225cf78",
     "confidence": "verified"
@@ -74,7 +74,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "SOS: 'POLLING PLACES ARE OPEN FROM 6:00 AM TO 7:00 PM ON ELECTION DAY.' If you are in line at 7:00 PM, you still have the right to vote.",
+    "in_line_rule": "SOS: 'polling PLACES ARE OPEN FROM 6:00 AM TO 7:00 PM on election day.' If you are in line at 7:00 PM, you still have the right to vote.",
     "vote_centers": true,
     "lookup_url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
     "confidence": "verified"
@@ -82,14 +82,14 @@
   "id_rules": {
     "required": "photo",
     "accepted": [
-      "Nonexpired Missouri driver or nondriver license (a Missouri license that expired AFTER the most recent general election, Nov 5, 2024, is still OK)",
+      "Nonexpired Missouri driver or nondriver license (a Missouri license that expired after the most recent general election, Nov 5, 2024, is still OK)",
       "Nonexpired military ID, including a veteran's ID card",
       "Nonexpired United States passport",
       "Another photo ID issued by the United States or the State of Missouri that is either not expired or expired after Nov 5, 2024",
       "NOT accepted: student IDs (including Mizzou, WashU, SLU), out-of-state driver licenses, voter registration cards, utility bills, bank statements",
       "Need an ID? A Missouri nondriver license is free for voting purposes at any Department of Revenue license office, or call 573-526-VOTE (8683)"
     ],
-    "no_id_option": "You can cast a PROVISIONAL ballot. It counts if either (a) you return to the same polling place before 7:00 PM on Election Day with an acceptable photo ID (in-person absentee voters return to the election authority office), or (b) the election authority finds the signature on your provisional envelope matches your voter registration record. You get a stub with instructions to check whether it counted. Most registered voters' provisional ballots do count on the signature match, but don't gamble if your ID is at home.",
+    "no_id_option": "You can cast a provisional ballot. It counts if either (a) you return to the same polling place before 7:00 PM on Election Day with an acceptable photo ID (in-person absentee voters return to the election authority office), or (b) the election authority finds the signature on your provisional envelope matches your voter registration record. You get a stub with instructions to check whether it counted. Most registered voters' provisional ballots do count on the signature match, but don't gamble if your ID is at home.",
     "confidence": "verified"
   },
   "in_the_booth": {
@@ -104,9 +104,199 @@
   "gotchas": [
     "St. Louis County is NOT the City of St. Louis. Webster Groves, Ballwin, Clayton, Kirkwood and the rest of the county vote through the St. Louis County Board of Election Commissioners (725 Northwest Plaza Dr., St. Ann; 314-615-1800; absentee desk 314-615-1833). The City has its own board downtown (300 N. Tucker Blvd.; 314-622-4336). Different sites, different ballots. Going to the wrong one wastes the trip.",
     "Registration closed October 7. There is no same-day registration in Missouri. If you're not on the rolls, you can't vote this time, but check voteroutreach.sos.mo.gov before you assume. If you moved within the state, you can still update your address and vote.",
-    "Two different 'absentee' systems. In person, Oct 20 to Nov 2: no excuse, no notary, just a photo ID, at any of 21 St. Louis County sites. By mail: you need one of six legal reasons, you had to ask by 5 PM Oct 21, and the envelope usually must be notarized (free). Mailed ballots must ARRIVE by 7 PM Nov 3; postmarks don't count; only you or a close relative can hand-deliver it.",
+    "Two different 'absentee' systems. In person, Oct 20 to Nov 2: no excuse, no notary, just a photo ID, at any of 21 St. Louis County sites. By mail: you need one of six legal reasons, you had to ask by 5 PM Oct 21, and the envelope usually must be notarized (free). Mailed ballots must arrive by 7 PM Nov 3; postmarks don't count; only you or a close relative can hand-deliver it.",
     "Photo ID is required, and it has to be a Missouri or federal photo ID. Student IDs and out-of-state licenses don't count. A passport or Missouri license that expired after Nov 5, 2024 is still OK. No ID? Vote provisional. It counts if your signature matches your registration.",
     "On Election Day, St. Louis County voters can use ANY county polling place (the county runs vote centers; every county library branch is one). Polls are open 6 AM to 7 PM. That flexibility applies only inside the county; it doesn't let you vote at a City of St. Louis site."
+  ],
+  "situations": [
+    {
+      "id": "moved_in_state",
+      "question": "I moved to a new address in Missouri.",
+      "answer": "If you're registered in Missouri, you can still vote even though the registration deadline passed. If you moved within the same county, update your address on Election Day at your new polling place (in St. Louis County, any polling place).",
+      "steps": [
+        "Moved to a different Missouri county? If your old registration is still active, file a change of address in person at your new county's election office, up through Election Day.",
+        "St. Louis County voters can also file a change of address in person at the Board of Elections, 725 Northwest Plaza Dr., St. Ann.",
+        "Remember: St. Louis County and the City of St. Louis are separate election offices."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://s1.sos.mo.gov/elections/goVoteMissouri/votingquestions",
+      "confidence": "verified"
+    },
+    {
+      "id": "moved_out_of_state",
+      "question": "I just moved to Missouri from another state.",
+      "answer": "New Missourians need a new registration, and the deadline for November 3 was October 7, so if you missed it you can't vote in Missouri this time. Register now so you're ready for the next election.",
+      "steps": [
+        "Register online through the Secretary of State or at stlouiscountymovotes.gov.",
+        "Get a Missouri driver or nondriver license; an out-of-state license doesn't count as voter ID here.",
+        "Moved away from Missouri for good? You'd vote in your new state instead."
+      ],
+      "deadline": "2026-10-07",
+      "source": "https://s1.sos.mo.gov/elections/goVoteMissouri/votingquestions",
+      "confidence": "verified"
+    },
+    {
+      "id": "not_registered",
+      "question": "I'm not registered to vote.",
+      "answer": "We're sorry: Missouri's deadline was October 7 and there's no same-day registration, so you can't vote in this election if you missed it. Before you give up, check, because you may be registered already.",
+      "steps": [
+        "Look yourself up at voteroutreach.sos.mo.gov, or call the St. Louis County Board at 314-615-1800.",
+        "Registered but moved within Missouri? You can still vote; see the moving question.",
+        "Truly not registered? Register now so you're set for next time."
+      ],
+      "deadline": "2026-10-07",
+      "source": "https://www.sos.mo.gov/elections/calendar",
+      "confidence": "verified"
+    },
+    {
+      "id": "wrong_polling_place",
+      "question": "I went to the wrong polling place.",
+      "answer": "In St. Louis County you can vote at any polling place in the county, so you're probably fine where you are. Elsewhere in Missouri, poll workers will send you to your correct polling place or a central polling place to vote a regular ballot.",
+      "steps": [
+        "Make sure you're at a St. Louis County site, not a City of St. Louis one.",
+        "Find nearby polling places and wait times with the county's lookup."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://extcontent.stlouisco.com/BOE/2026/FAQ.pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_mail_ballot_or_lost",
+      "question": "My mail ballot never came, or I lost it.",
+      "answer": "Just vote in person. As long as the Board hasn't received an absentee ballot from you, you can vote at the polls, where a worker checks your ballot's status first.",
+      "steps": [
+        "Vote no-excuse absentee in person at the Board or a satellite site, Oct 20 to Nov 2, with photo ID.",
+        "Or vote at any St. Louis County polling place on Nov 3, 6 AM to 7 PM.",
+        "Questions? The absentee desk is 314-615-1833."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://extcontent.stlouisco.com/BOE/2026/FAQ.pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "mistake_on_ballot",
+      "question": "I made a mistake on my mail ballot.",
+      "answer": "Bring the ballot with you and vote in person instead. An election judge spoils (cancels) the mail ballot, and you vote normally.",
+      "steps": [
+        "Vote in person at an absentee site Oct 20 to Nov 2, or at the polls on Nov 3.",
+        "At the polls, if you make a mistake, tell an election judge before you cast your ballot."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://extcontent.stlouisco.com/BOE/2026/FAQ.pdf",
+      "confidence": "sourced"
+    },
+    {
+      "id": "mailed_but_want_in_person",
+      "question": "I mailed my ballot but now want to vote in person.",
+      "answer": "If the Board has already received your mail ballot, that's your vote. If it hasn't arrived yet, you can vote at the polls; a worker checks its status, and if you still have the ballot, an election judge spoils it so you can vote normally.",
+      "steps": [
+        "Check your absentee ballot status on the Secretary of State's voter portal.",
+        "Still have it? Bring it with you."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://extcontent.stlouisco.com/BOE/2026/FAQ.pdf",
+      "confidence": "verified"
+    },
+    {
+      "id": "no_id",
+      "question": "I don't have an ID.",
+      "answer": "Missouri requires a Missouri or federal photo ID, like a Missouri driver or nondriver license, a U.S. passport, or a military ID; one that expired after November 5, 2024 still works. Student IDs, out-of-state licenses and utility bills don't count.",
+      "steps": [
+        "On Election Day without ID, you can vote a provisional ballot. It counts if you come back with ID before 7 PM or your signature matches your registration.",
+        "Voting absentee in person? The state says you can't vote provisionally there, so bring your ID.",
+        "Need one? A Missouri nondriver license is free for voting at any license office."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+      "confidence": "verified"
+    },
+    {
+      "id": "name_changed",
+      "question": "My name changed since I registered.",
+      "answer": "You can still vote. Tell the election judges at your polling place (or the election office beforehand) about the change, and you can vote this one election under your old name while they update your record.",
+      "steps": [
+        "Bring your photo ID.",
+        "Update your record afterward with the Board's Voter Update Form at stlouiscountymovotes.gov."
+      ],
+      "deadline": null,
+      "source": "https://s1.sos.mo.gov/elections/goVoteMissouri/votingquestions",
+      "confidence": "verified"
+    },
+    {
+      "id": "college_student",
+      "question": "I'm a college student.",
+      "answer": "Registration closed October 7, so you vote where you're already registered. If that's your home county and you'll be away at school on Election Day, you can vote absentee by mail; your request must arrive by 5 PM Wednesday, October 21.",
+      "steps": [
+        "Most mail absentee ballots must be notarized. Notaries can't charge for this.",
+        "Student IDs, including from Mizzou, WashU and SLU, don't count as voter ID in Missouri. Bring a Missouri license or passport.",
+        "Your ballot must arrive by 7 PM Nov 3; postmarks don't count."
+      ],
+      "deadline": "2026-10-21",
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+      "confidence": "verified"
+    },
+    {
+      "id": "away_on_election_day",
+      "question": "I'll be away on Election Day.",
+      "answer": "Vote early in person with no excuse needed: Tuesday, October 20 through Monday, November 2, at any St. Louis County absentee site. If you'll be gone that whole time, ask for a mail ballot by 5 PM Wednesday, October 21.",
+      "steps": [
+        "In person, bring photo ID. No notary needed.",
+        "Mail ballot: being away from the county counts as a reason, but the envelope usually needs a notary. The Board, satellite sites and county library branches have notaries.",
+        "Mailed ballots must arrive by 7 PM Nov 3."
+      ],
+      "deadline": "2026-10-21",
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+      "confidence": "verified"
+    },
+    {
+      "id": "in_line_at_close",
+      "question": "I'm in line when polls close.",
+      "answer": "Stay in line. If you're in line at 7 PM, you still have the right to vote.",
+      "steps": [
+        "Don't leave, even if the line is long.",
+        "Polls open at 6 AM if you'd rather go early."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.407",
+      "confidence": "verified"
+    },
+    {
+      "id": "signature_problem",
+      "question": "They said there's a problem with my absentee ballot envelope.",
+      "answer": "Missouri law doesn't set up a fix-it process for rejected mail ballots the way some states do, though local election offices may offer one. Call the St. Louis County Board's absentee desk right away to ask what you can do.",
+      "steps": [
+        "Call 314-615-1833 or email boecabsentee@stlouiscountymo.gov.",
+        "Most envelopes need a notary, a signature and your printed info. Double-check before you send it.",
+        "If your ballot hasn't been accepted yet, ask whether you can vote in person instead."
+      ],
+      "deadline": null,
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+      "confidence": "sourced"
+    },
+    {
+      "id": "provisional_ballot",
+      "question": "What's a provisional ballot?",
+      "answer": "It's a backup ballot for when your eligibility can't be confirmed at the polls, like when your name isn't in the poll book or you don't have photo ID. It's counted after the election office confirms you're eligible.",
+      "steps": [
+        "If it's about ID, it counts if you return with ID before 7 PM or your signature matches your record.",
+        "You'll get a stub with instructions for checking whether it counted."
+      ],
+      "deadline": "2026-11-03",
+      "source": "https://www.sos.mo.gov/elections/goVoteMissouri/howtovote",
+      "confidence": "verified"
+    },
+    {
+      "id": "check_ballot_counted",
+      "question": "How do I check my ballot was counted?",
+      "answer": "For an absentee ballot, look yourself up on the Secretary of State's voter portal, which shows absentee status. For a provisional ballot, use the instructions on the stub you got at the polls.",
+      "steps": [
+        "Use voteroutreach.sos.mo.gov.",
+        "Questions? Call the St. Louis County Board at 314-615-1800."
+      ],
+      "deadline": null,
+      "source": "https://voteroutreach.sos.mo.gov/portal/",
+      "confidence": "verified"
+    }
   ],
   "sources": [
     {

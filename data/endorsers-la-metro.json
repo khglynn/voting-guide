@@ -4,7 +4,7 @@
   "name": "Los Angeles Times editorial board",
   "type": "publication",
   "lean": "lean_left",
-  "lean_basis": "AllSides rates LA Times news Lean Left. The board made no endorsements in the June 2026 primary, the first modern election without them, after owner Patrick Soon-Shiong blocked a 2024 presidential endorsement. As of Oct 16, 2026 City Hall Pass (checked Sept 30) found no LA Times endorsement in any LA city, county or legislative race, and the paper's endorsements page returns a 404.",
+  "lean_basis": "AllSides rates LA Times news Lean Left. The editorial board made no local endorsements in the June 2026 primary, the first modern election without them (LA Material, June 17, 2026), after owner Patrick Soon-Shiong blocked a 2024 presidential endorsement. No November 2026 endorsements were found as of Oct 17, 2026.",
   "geography": [
    "CA",
    "los-angeles-ca"
@@ -120,11 +120,11 @@
   "name": "Republican Party of Los Angeles County",
   "type": "party",
   "lean": "right",
-  "lean_basis": "Official county Republican Party organization. Its 2026 voter guide page (lagop.org/voterguide2026) returned 'page not found' on Oct 16, 2026; positions below come from candidate pages and news reports.",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 picks are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some picks as recommended rather than formally endorsed.",
   "geography": [
    "los-angeles-ca"
   ],
-  "guide_url": "https://www.lagop.org/",
+  "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true
@@ -148,7 +148,7 @@
   "name": "Republican Party of Orange County",
   "type": "party",
   "lean": "right",
-  "lean_basis": "Official county Republican Party organization. Its endorsements page did not load on Oct 16, 2026; positions below come from LAist and candidate pages.",
+  "lean_basis": "Official county Republican Party organization. No 2026 endorsement list was found on its website on Oct 17, 2026; positions below come from LAist and candidate pages.",
   "geography": [
    "fullerton-ca"
   ],
@@ -162,7 +162,7 @@
   "name": "Los Angeles County Federation of Labor, AFL-CIO",
   "type": "labor",
   "lean": "lean_left",
-  "lean_basis": "Umbrella body for about 300 unions in LA County. Endorses mostly Democrats; also backed Sheriff Luna. Its November guide page lists picks in an embedded file that could not be read; positions below are confirmed through LAist, City Hall Pass and the Fed's own press releases.",
+  "lean_basis": "Umbrella body for about 300 unions in LA County. Endorses mostly Democrats; also backed Sheriff Luna. Positions come from its November 2026 voter guide, read in full on Oct 17, 2026.",
   "geography": [
    "los-angeles-ca"
   ],
@@ -176,11 +176,11 @@
   "name": "Los Angeles Area Chamber of Commerce (L.A. Jobs PAC)",
   "type": "business",
   "lean": "lean_right",
-  "lean_basis": "Regional business association; endorses through its L.A. Jobs PAC. Backs business-friendly candidates of both parties, in LA mostly moderate Democrats.",
+  "lean_basis": "Regional business association; endorses through its L.A. Jobs PAC. Backs business-friendly candidates of both parties, in LA mostly moderate Democrats. Its 2026 endorsements page still showed its June primary list on Oct 17, 2026.",
   "geography": [
    "los-angeles-ca"
   ],
-  "guide_url": "https://lachamber.com/",
+  "guide_url": "https://lachamber.com/center-for-business-advocacy/l.a.-jobs-pac-2026-endorsements/",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": true

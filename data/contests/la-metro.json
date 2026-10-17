@@ -6,7 +6,7 @@
   "office": "Mayor of Los Angeles",
   "district": null,
   "scope_plain": "Every City of Los Angeles voter. Not for people in other cities in LA County (Santa Monica, Culver City, West Hollywood, Burbank and so on). Los Angeles city offices are nonpartisan. If no one won a majority in the June 2 primary, the top two meet in this November runoff; most votes wins.",
-  "office_explainer": "Runs city departments, proposes the $14.8 billion budget, picks the police and fire chiefs, can veto Council laws.",
+  "office_explainer": "Runs city departments, proposes the $14.85 billion budget, picks the police and fire chiefs, can veto Council laws.",
   "why_it_matters": "The first incumbent LA mayor forced into a runoff since 2005. The next mayor decides whether to keep the Inside Safe homelessness program, how big LAPD should be, how the Palisades rebuild goes, and how the city handles the 2028 Olympics. The Council holds a lot of power too; this is a 'weak mayor' city.",
   "vote_for": 1,
   "incumbent": "Karen Bass",
@@ -15,44 +15,12 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Karen Ruth Bass",
-    "party": null,
-    "incumbent": true,
-    "website": "https://www.karenbass.com",
-    "website_confidence": "verified",
-    "background": "Mayor since 2022. Former member of Congress (2011 to 2022), Speaker of the California Assembly, physician assistant and founder of Community Coalition in South LA. Ballot designation: Mayor, City of Los Angeles. Finished first in June with 34.3%.",
-    "own_words": [
-     {
-      "text": "My top three priorities ... are ending street encampments ... strengthening public safety ... [and] elevating city services.",
-      "is_quote": true,
-      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
-     },
-     {
-      "text": "I will maintain focus on interim housing until the last street encampment is gone.",
-      "is_quote": true,
-      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
-     },
-     {
-      "text": "On the Trump administration: 'resistance with a purpose.' Says the city will protect residents from aggressive immigration enforcement while demanding federal aid it is owed.",
-      "is_quote": true,
-      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
-     },
-     {
-      "text": "Points to a 17.5% two-year drop in street homelessness, 40,000 housing units accelerated, the first rent stabilization update in 40 years, and the lowest homicide total since the 1960s. Opposes SB 79 (taller housing near transit). Backs Measure FD and signed the argument for Prop TE.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/mayor"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Nithya Raman",
     "party": null,
     "incumbent": false,
     "website": "https://www.nithyaforthecity.com",
     "website_confidence": "verified",
-    "background": "City Councilmember for District 4 (Silver Lake to Sherman Oaks) since 2020, urban planner, member of the Democratic Socialists of America. The first challenger to unseat an LA incumbent councilmember in nearly two decades. Ballot designation: Councilmember/Urban Planner. Finished second in June with 29.0%.",
+    "background": "City Councilmember for District 4 (Silver Lake to Sherman Oaks) since December 2020, when she unseated incumbent David Ryu; re-elected outright in 2024. Urban planner (MIT) who co-founded a Silver Lake homelessness coalition. Endorsed by Democratic Socialists of America-LA. Ballot designation: Councilmember/Urban Planner. Finished second in June with 29.0%.",
     "own_words": [
      {
       "text": "My top priority for improving quality of life is addressing housing and homelessness. ... Second, basic city services. ... Third, safer communities.",
@@ -77,9 +45,45 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
+   },
+   {
+    "name": "Karen Ruth Bass",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.karenbass.com",
+    "website_confidence": "verified",
+    "background": "Mayor since 2022. Former member of Congress (2011 to 2022), Speaker of the California Assembly, physician assistant and founder of Community Coalition in South LA. Ballot designation: Mayor, City of Los Angeles. Finished first in June with 34.3%.",
+    "own_words": [
+     {
+      "text": "My top three priorities ... are ending street encampments ... strengthening public safety ... [and] elevating city services.",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
+     },
+     {
+      "text": "I will maintain focus on interim housing until the last street encampment is gone.",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
+     },
+     {
+      "text": "On the Trump administration: “resistance with a purpose.” Says the city will protect residents from aggressive immigration enforcement while demanding federal aid it is owed.",
+      "is_quote": true,
+      "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-mayor"
+     },
+     {
+      "text": "Points to a 17.5% two-year drop in street homelessness, 40,000 housing units accelerated, the first rent stabilization update in 40 years, and the lowest homicide total since the 1960s. Opposes SB 79 (taller housing near transit). Backs Measure FD and signed the argument for Prop TE.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/mayor"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA City Clerk certified candidate list (Nov 3, 2026)",
     "url": "https://cityclerk.lacity.org/election/2026_General_Municipal_Election_List_of_Certified_Candidates.pdf"
@@ -123,7 +127,7 @@
     "background": "Deputy District Attorney in the LA County DA's office, where he has worked in the Hardcore Gang Unit and Major Crimes Division and prosecuted the Nipsey Hussle murder case. Ran for DA in 2024. UCLA Law. Ballot designation: Deputy District Attorney. Second in June with 28.6%.",
     "own_words": [
      {
-      "text": "Would 'enforce 41.18,' the anti-camping law, using diversion rather than jail, and says the office can 'leverage' arrested homeless people into treatment.",
+      "text": "Would “enforce 41.18,” the anti-camping law, using diversion rather than jail, and says the office can “leverage” arrested homeless people into treatment.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      },
@@ -133,12 +137,12 @@
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      },
      {
-      "text": "Measures success by 'fewer lawsuits and lower liability costs,' with better training for city workers including police to avoid suits.",
+      "text": "Measures success by “fewer lawsuits and lower liability costs,” with better training for city workers including police to avoid suits.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-city-attorney"
      },
      {
-      "text": "Says he will 'protect Angelenos against unconstitutional ICE raids and Trump administration overreach.'",
+      "text": "Says he will “protect Angelenos against unconstitutional ICE raids and Trump administration overreach.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      }
@@ -155,22 +159,22 @@
     "background": "Deputy Attorney General in the California Department of Justice (consumer protection). Previously outside counsel for LA County in its litigation against the first Trump administration, a staff attorney at the Public Rights Project, and a fellow in the City Attorney's office. Grew up in Monrovia. Ballot designation: Deputy Attorney General. First in June with 43.1%.",
     "own_words": [
      {
-      "text": "Wants to make the office 'the largest public interest law firm in Los Angeles,' devoting at least 20% of it to public rights work paid for by civil penalties and growing the public rights unit to 100 lawyers.",
-      "is_quote": true,
+      "text": "Would devote at least 20% of the office to public rights work (consumer, tenant and worker cases), paid for by civil penalties, and grow the public rights unit to 100 lawyers.",
+      "is_quote": false,
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      },
      {
-      "text": "Would 'invest in successful but underscaled diversion programs' and enforce renter protections to prevent evictions.",
+      "text": "Would “invest in successful but underscaled diversion programs” and enforce renter protections to prevent evictions.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-city-attorney"
      },
      {
-      "text": "Would 'immediately cut' outside counsel, using it only for conflicts or niche specialties, and invite the Controller to audit the city's lawsuit liability.",
+      "text": "Would “immediately cut” outside counsel, using it only for conflicts or niche specialties, and invite the Controller to audit the city's lawsuit liability.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      },
      {
-      "text": "Says she would prosecute 'rogue ICE agents,' sue companies such as Palantir and private prison operators, and join multi-city suits against the federal administration.",
+      "text": "Says she would prosecute “rogue ICE agents,” sue companies such as Palantir and private prison operators, and join multi-city suits against the federal administration.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/city-attorney"
      }
@@ -180,6 +184,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA City Clerk certified candidate list",
     "url": "https://cityclerk.lacity.org/election/2026_General_Municipal_Election_List_of_Certified_Candidates.pdf"
@@ -223,12 +231,12 @@
     "background": "Founder of Gaspar Insurance Services (sold in 2021), board chair of the West Valley YMCA, Cal State Northridge graduate who grew up in Woodland Hills and Canoga Park. Ballot designation: Valley Businessman/Parent. First in June with 46.1%.",
     "own_words": [
      {
-      "text": "Describes himself as 'the most moderate' candidate and 'a Democrat through and through' who opposes ICE raids.",
+      "text": "Describes himself as “the most moderate” candidate and “a Democrat through and through” who opposes ICE raids.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-3"
      },
      {
-      "text": "'The city needs somebody who comes from the outside,' with business experience.",
+      "text": "“The city needs somebody who comes from the outside,” with business experience.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-3"
      },
@@ -250,12 +258,12 @@
     "background": "Most recently community affairs director for County Supervisor Lindsey Horvath; earlier district director for Senate Majority Leader Bob Hertzberg, West Valley area director for Mayor Villaraigosa, and government affairs director for the Jewish Federation of Greater LA. Ballot designation: Valley Community Advocate. Second in June with 42.5%.",
     "own_words": [
      {
-      "text": "'We have an obligation to restore people's faith in government, even if it's not my jurisdiction.'",
+      "text": "“We have an obligation to restore people's faith in government, even if it's not my jurisdiction.”",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-3"
      },
      {
-      "text": "Calls constituent services her 'bread and butter' and promises a 'strike team on steroids' to deliver what residents need.",
+      "text": "Calls constituent services her “bread and butter” and promises a “strike team on steroids” to deliver what residents need.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-3"
      },
@@ -270,6 +278,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA City Clerk certified candidate list",
     "url": "https://cityclerk.lacity.org/election/2026_General_Municipal_Election_List_of_Certified_Candidates.pdf"
@@ -310,15 +322,15 @@
     "incumbent": false,
     "website": "https://www.estuardo4la.com",
     "website_confidence": "verified",
-    "background": "Co-director of the LA office of ACCE (Alliance of Californians for Community Empowerment), a tenant and economic justice organizing group. Came from Guatemala at age 3; degrees from Cal State Dominguez Hills and Cal State LA. Ballot designation: Director, Community Organization. Second in June with 26.2%.",
+    "background": "Co-director of the LA office of ACCE (Alliance of Californians for Community Empowerment), a tenant and economic justice organizing group. Came from Guatemala at age 3; degrees from Cal State Dominguez Hills and Cal State LA. In 2009 he was sentenced to probation and a day in jail after an arrest for gun possession; he has said the gun was not his. Ballot designation: Director, Community Organization. Second in June with 26.2%.",
     "own_words": [
      {
-      "text": "'Safety for me means access to safe streets. It means good services, like the lights come on. Folks in this district don't feel served by the LAPD.'",
+      "text": "“Safety for me means access to safe streets. It means good services, like the lights come on. Folks in this district don't feel served by the LAPD.”",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-9"
      },
      {
-      "text": "'The quality of life for immigrants is tied to how well they organize at the workplace.'",
+      "text": "“The quality of life for immigrants is tied to how well they organize at the workplace.”",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-9"
      },
@@ -340,7 +352,7 @@
     "background": "Longtime aide and chief deputy to Councilmember Curren Price; earlier worked for Assemblymember Anthony Rendon and as a labor and campaign organizer. Came from Oaxaca at age 4. Paid a $25,000 Ethics Commission fine for not reporting outside lobbying income while on Price's staff, which he called a clerical error. Ballot designation: Community Outreach Director. First in June with 39.5%.",
     "own_words": [
      {
-      "text": "'We need to take drastic measures on mental health and homelessness. Instead of putting all the money in housing, we need to allocate a lot more to mental health.'",
+      "text": "“We need to take drastic measures on mental health and homelessness. Instead of putting all the money in housing, we need to allocate a lot more to mental health.”",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-general-election-la-city-council-district-9"
      },
@@ -360,6 +372,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA City Clerk certified candidate list",
     "url": "https://cityclerk.lacity.org/election/2026_General_Municipal_Election_List_of_Certified_Candidates.pdf"
@@ -413,7 +429,7 @@
       "source": "https://cityhallpass.com/election-2026/races/sheriff"
      },
      {
-      "text": "On civilian oversight: has 'no problem' with it and says disputes were over records County Counsel told him not to share. Keeps the Office of Constitutional Policing and the anti-deputy-gang policy.",
+      "text": "On civilian oversight: has “no problem” with it and says disputes were over records County Counsel told him not to share. Keeps the Office of Constitutional Policing and the anti-deputy-gang policy.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/sheriff"
      }
@@ -430,7 +446,7 @@
     "background": "Sheriff from 2018 to 2022, after more than 30 years as a deputy rising to lieutenant. His term featured repeated clashes with the Board of Supervisors and investigations of critics. After leaving, the county placed him on a 'do not rehire' list over harassment and discrimination findings, which he denies. Second in June with 21.7%.",
     "own_words": [
      {
-      "text": "Says the department 'has just fallen apart' since he left and that he is running to restore it.",
+      "text": "Says the department “has just fallen apart” since he left and that he is running to restore it.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-county-sheriff"
      },
@@ -440,7 +456,7 @@
       "source": "https://cityhallpass.com/election-2026/races/sheriff"
      },
      {
-      "text": "On deputy gangs: 'the deputy gang narrative was a political campaign.' On oversight: 'Oversight is important, but it cannot be used as a weapon of political attacks.'",
+      "text": "On deputy gangs: “the deputy gang narrative was a political campaign.” On oversight: “Oversight is important, but it cannot be used as a weapon of political attacks.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/sheriff"
      }
@@ -450,6 +466,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -485,13 +505,18 @@
     "party": null,
     "incumbent": false,
     "website": "https://mariaghobadi4judge.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy District Attorney in the LA County Gang Homicide Division; prosecutor since 2007 (San Joaquin County, then LA since 2015). Born in Iran, came to Southern California as a child; McGeorge School of Law. LA County Bar rating: Well Qualified. Ballot designation: Deputy District Attorney, County of Los Angeles. First in June with 44.0%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by more than 75 judges, the County Democratic Party and, per the Daily News, the County Republican Party.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-64"
+      "text": "Her campaign says a vote for her is a vote to ensure “the courtroom remains a place of fairness, respect, and balanced justice.”",
+      "is_quote": true,
+      "source": "https://mariaghobadi4judge.com"
+     },
+     {
+      "text": "Points to more than 18 years as a prosecutor on domestic violence, sexual assault and gang murder cases; says she “understands the balance between protecting the public while upholding the constitutional rights of the accused.”",
+      "is_quote": true,
+      "source": "https://mariaghobadi4judge.com"
      }
     ],
     "lwv_status": "unknown",
@@ -502,13 +527,18 @@
     "party": null,
     "incumbent": false,
     "website": "https://www.rhondahaymon4judge.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy Public Defender in LA County since 2004 (Orange County before that), adjunct professor at Southwestern Law School. Gardena High, Tuskegee, Willamette Law. Ran for Superior Court in 2024 and lost. LA County Bar rating: Qualified. Ballot designation: Deputy Public Defender, County of Los Angeles. Second in June with 42.2%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by Mayor Karen Bass, Supervisor Holly Mitchell, the Public Defender and La Defensa.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-64"
+      "text": "“I'll be a judge for the people; bringing healing and fairness to my work.”",
+      "is_quote": true,
+      "source": "https://www.rhondahaymon4judge.com"
+     },
+     {
+      "text": "Her campaign site says justice must honor “both the spirit and the letter of the law” and points to more than 26 years as a public defender, including homicide trials and appeals.",
+      "is_quote": true,
+      "source": "https://www.rhondahaymon4judge.com"
      }
     ],
     "lwv_status": "unknown",
@@ -516,6 +546,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -547,13 +581,13 @@
     "party": null,
     "incumbent": false,
     "website": "https://www.claytonforjudge2026.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy Public Defender for about a decade; runs the Inglewood branch as deputy in charge since 2023. Former president of the Black Public Defenders Association. Grew up in South LA; played football at the University of New Mexico; Thomas Jefferson School of Law. LA County Bar rating: Qualified. First in June with 36.7%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by the County Democratic Party, La Defensa, the Public Defender and 17 judges.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-65"
+      "text": "His campaign site asks voters to help “keep Los Angeles courts fair and accessible for every resident.” The site lists no detailed platform.",
+      "is_quote": true,
+      "source": "https://www.claytonforjudge2026.com"
      }
     ],
     "lwv_status": "unknown",
@@ -568,9 +602,14 @@
     "background": "Deputy County Counsel in the Justice and Safety Division since 2024, after more than 10 years as a Deputy Public Defender. Child actor (Home Alone), Occidental College, UC Davis Law. Reached a Superior Court runoff in 2022 and lost. LA County Bar rating: Qualified. Second in June with 29.9%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by Rep. Laura Friedman, Sen. Ben Allen, Treasurer Fiona Ma, 13 judges and both primary rivals.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-65"
+      "text": "“Experience isn't just a qualification. It's a responsibility.”",
+      "is_quote": true,
+      "source": "https://reitanoforjudge.com"
+     },
+     {
+      "text": "Says her decade-plus as a public defender and her current work as a deputy county counsel give her “a rare understanding of how every part of our justice system works.”",
+      "is_quote": true,
+      "source": "https://reitanoforjudge.com"
      }
     ],
     "lwv_status": "unknown",
@@ -578,6 +617,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -609,13 +652,13 @@
     "party": null,
     "incumbent": false,
     "website": "https://electbayneforjudge.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy Public Defender for about 25 years, 19 of them at the Compton Courthouse. Worked in aerospace before law; admitted to the bar in 1994. LA County Bar rating: Well Qualified. First in June with 42.0%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by 34 judges, the Daily News, Metropolitan News-Enterprise, La Defensa and LA Forward (in the primary). The DeJute campaign has pointed to past Republican or independent registration and a $4.80 donation to Trump in 2016, which led La Defensa to withdraw.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-87"
+      "text": "His campaign site lists “30+ years of courtroom experience. Over 100 jury trials to verdict.”",
+      "is_quote": true,
+      "source": "https://electbayneforjudge.com"
      }
     ],
     "lwv_status": "unknown",
@@ -630,9 +673,9 @@
     "background": "Law professor and attorney; directs the Disaster Relief Clinic at Pepperdine law school. Former assistant U.S. attorney for 11 years and vice president of litigation at Sony Pictures. Notre Dame, Harvard Law. LA County Bar rating: Qualified. Second in June with 31.3%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by the County Democratic Party (which also spent for him), Rep. Ted Lieu, Sen. Ben Allen, Treasurer Fiona Ma, Assessor Jeffrey Prang and Rick Caruso.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-87"
+      "text": "His campaign site says his work as an assistant U.S. attorney, law professor, wildfire legal clinic director and Sony Pictures litigation head has “more than prepared him to serve” on the court.",
+      "is_quote": true,
+      "source": "https://www.dejuteforjudge.com"
      }
     ],
     "lwv_status": "unknown",
@@ -640,6 +683,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -671,13 +718,18 @@
     "party": null,
     "incumbent": false,
     "website": "https://www.davidrossforjudge2026.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy Alternate Public Defender in LA County since 2000 (Torrance office since 2018); five years as a Riverside County public defender before that. Earlier a congressional aide and TV reporter. Beverly Hills High, UC Davis, University of West LA law. LA County Bar rating: Qualified. Second in June with 33.2%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Says he takes no law enforcement, corporate or PAC money. Endorsed by about 90 judges, La Defensa, LA Forward, Knock LA and the Working Families Party.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-131"
+      "text": "“I have spent my career standing beside people from all walks of life and working daily to ensure fairness in our courts.”",
+      "is_quote": true,
+      "source": "https://www.davidrossforjudge2026.com"
+     },
+     {
+      "text": "“I will be a fair, independent and unbiased judge who listens to all sides.”",
+      "is_quote": true,
+      "source": "https://www.davidrossforjudge2026.com"
      }
     ],
     "lwv_status": "unknown",
@@ -688,13 +740,18 @@
     "party": null,
     "incumbent": false,
     "website": "https://www.tryfmanforjudge2026.com",
-    "website_confidence": "sourced",
+    "website_confidence": "verified",
     "background": "Deputy Public Defender since 1998, now in the Major Crimes Unit on special-circumstance homicide cases. Chaired the Beverly Hills Rent Stabilization Commission. Brandeis, University of La Verne law. Daughter of Holocaust survivors. LA County Bar rating: Qualified. First in June with 37.3%.",
     "own_words": [
      {
-      "text": "Campaign site and materials were not opened; no questionnaire answers found. Endorsed by about 45 judges, the Daily News, the Association of Deputy District Attorneys (its first-ever public defender endorsement), the Public Defender and Thrive LA.",
+      "text": "Says her role as a public defender “requires me to uphold the Constitution, protect due process, and ensure that the law is applied fairly,” skills she says carry over to the bench.",
+      "is_quote": true,
+      "source": "https://www.tryfmanforjudge2026.com"
+     },
+     {
+      "text": "Points to more than 100 jury trials, her current homicide caseload in the Major Cases Unit, and five years (2015 to 2020) as president of the Public Defenders Association.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/superior-court-office-131"
+      "source": "https://www.tryfmanforjudge2026.com"
      }
     ],
     "lwv_status": "unknown",
@@ -702,6 +759,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -721,7 +782,7 @@
   "district": "Seat 2",
   "scope_plain": "Every voter in the Los Angeles Community College District, which covers the City of LA and about 30 other cities. Seats are numbered but elected districtwide, so you vote once in each of Seats 2, 4 and 6. No primary; most votes wins even without a majority.",
   "office_explainer": "One of seven trustees governing nine community colleges, including LA City, East LA, Pierce, Valley and Trade-Tech.",
-  "why_it_matters": "Five names, one well-funded incumbent. The board canceled a student housing plan on Sept 2, 2026 and oversees a $574 million construction bond.",
+  "why_it_matters": "Five names, one well-funded incumbent. On Sept 2, 2026 the district canceled bidding on a student housing project at LA City College and Pierce and said it will start over. The board oversees about $7.5 billion in voter-approved construction bond money.",
   "vote_for": 1,
   "incumbent": "Steven F. Veres",
   "open_seat": false,
@@ -788,7 +849,7 @@
     "background": "Writer, researcher and former LA Mission College instructor from Pacoima. Ran for LACCD seats in 2022 and 2024. Ballot designation: Researcher/Writer/Environmentalist.",
     "own_words": [
      {
-      "text": "Wants cities to up-zone around the colleges for dense student housing, 'financial transparency' before new bonds, and 'equal pay and health care for the adjunct faculty.' His site still describes a 2022 race.",
+      "text": "Wants cities to up-zone around the colleges for dense student housing, “financial transparency” before new bonds, and “equal pay and health care for the adjunct faculty.” His site still describes a 2022 race.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
      }
@@ -802,10 +863,10 @@
     "incumbent": true,
     "website": "https://steveveres.com",
     "website_confidence": "verified",
-    "background": "Trustee since 2011; won Seat 2 in 2022 with 66.3%. Chairs the facilities committee overseeing bond projects. Backed by the County Democratic Party, the LA County Federation of Labor and the faculty union AFT 1521.",
+    "background": "Trustee since 2011; won Seat 2 in 2022 with 66.3%. Chairs the facilities committee overseeing bond projects. Backed by the County Democratic Party, the LA County Federation of Labor and the faculty union AFT 1521. Ballot designation: Los Angeles Community College District, Member of the Board of Trustees.",
     "own_words": [
      {
-      "text": "Goals listed without numbers: 'develop affordable student housing,' expand tuition-free education, and measure success by 'degrees and certificates earned and successful transfers, not enrollment alone.'",
+      "text": "Goals listed without numbers: “develop affordable student housing,” expand tuition-free education, and measure success by “degrees and certificates earned and successful transfers, not enrollment alone.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
      }
@@ -816,6 +877,10 @@
   ],
   "sources": [
    {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
     "name": "LA County election schedule (contests on the Nov 3 ballot)",
     "url": "https://content.lavote.gov/docs/rrcc/documents/schedule-6-0-v-7-24-2026-v-3.pdf"
    },
@@ -824,7 +889,7 @@
     "url": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "la-laccd-seat-4",
@@ -834,9 +899,9 @@
   "district": "Seat 4",
   "scope_plain": "Every voter in the Los Angeles Community College District, which covers the City of LA and about 30 other cities. Seats are numbered but elected districtwide, so you vote once in each of Seats 2, 4 and 6. No primary; most votes wins even without a majority.",
   "office_explainer": "One of seven trustees governing nine community colleges, including LA City, East LA, Pierce, Valley and Trade-Tech.",
-  "why_it_matters": "Open seat with seven candidates; the plurality winner takes it. Only Harris has meaningful money and institutional backing.",
+  "why_it_matters": "Open seat (trustee Sara Hernandez is running for State Senate) with seven candidates; the plurality winner takes it. Only Harris has meaningful money and institutional backing.",
   "vote_for": 1,
-  "incumbent": null,
+  "incumbent": "Sara Hernandez (running for State Senate District 26)",
   "open_seat": true,
   "term_years": 4,
   "is_retention": false,
@@ -915,10 +980,10 @@
     "incumbent": false,
     "website": "https://darrynharris.com",
     "website_confidence": "sourced",
-    "background": "Backed by the County Democratic Party, the faculty and staff unions, six of seven sitting trustees and dozens of elected officials. Raised about $55,000, by far the most in this race.",
+    "background": "Ballot designation: Community College Educator. Backed by the County Democratic Party, the faculty and staff unions, six of seven sitting trustees and dozens of elected officials. Raised about $55,000, by far the most in this race.",
     "own_words": [
      {
-      "text": "Says the colleges must take 'seriously the need for affordable housing'; no detailed plan or numbers published.",
+      "text": "Says the colleges must take “seriously the need for affordable housing”; no detailed plan or numbers published.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/laccd-seat-4"
      }
@@ -932,7 +997,7 @@
     "incumbent": false,
     "website": "https://www.nancypearlman.net",
     "website_confidence": "sourced",
-    "background": "Environmental broadcaster and former LACCD trustee (2001 to 2017, Seat 6). Ran for Seat 3 in 2024 (23.8%).",
+    "background": "Environmental broadcaster and former LACCD trustee (2001 to 2017, Seat 6). Ran for Seat 3 in 2024 (23.8%). Ballot designation: Environmentalist/Anthropologist/Educator.",
     "own_words": [
      {
       "text": "Designated overnight parking lots with restrooms and showers at all nine colleges for students without housing; free textbooks; equal pay for part-time faculty; organic farms and solar on every campus. Opposed the 2022 Measure LA bond.",
@@ -949,7 +1014,7 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Filed a form saying she expects to raise and spend under $2,000.",
+    "background": "Ballot designation: ASL Educational Interpreter. Filed a form saying she expects to raise and spend under $2,000.",
     "own_words": [
      {
       "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
@@ -963,6 +1028,10 @@
   ],
   "sources": [
    {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
     "name": "LA County election schedule (contests on the Nov 3 ballot)",
     "url": "https://content.lavote.gov/docs/rrcc/documents/schedule-6-0-v-7-24-2026-v-3.pdf"
    },
@@ -971,7 +1040,7 @@
     "url": "https://cityhallpass.com/election-2026/races/laccd-seat-4"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "la-laccd-seat-6",
@@ -1011,10 +1080,10 @@
     "incumbent": true,
     "website": "https://www.buelna4laccd.com",
     "website_confidence": "sourced",
-    "background": "Trustee since 2017; re-elected in 2022 with 73.1%. CSUN Chicana/o Studies professor since 1999, family and criminal lawyer, former county social worker. Grew up in South LA and attended West LA College. Raised about $170,000 plus personal loans.",
+    "background": "Trustee since 2017; re-elected in 2022 with 73.1%. CSUN Chicana/o Studies professor since 1999, family and criminal lawyer, former county social worker. Grew up in South LA and attended West LA College. Raised about $170,000 plus personal loans. Ballot designation: Member of the Board of Trustees, Los Angeles Community College District, Seat 6.",
     "own_words": [
      {
-      "text": "From 2022 answers and his record: 'affordable beds for student housing' at all colleges, a restaurant partnership to subsidize student meals, classes in multiple languages, and priority housing for foster youth (co-sponsored March 2026).",
+      "text": "From 2022 answers and his record: “affordable beds for student housing” at all colleges, a restaurant partnership to subsidize student meals, classes in multiple languages, and priority housing for foster youth (co-sponsored March 2026).",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/laccd-seat-6"
      }
@@ -1045,10 +1114,10 @@
     "incumbent": false,
     "website": "https://www.randalljwinston.com",
     "website_confidence": "sourced",
-    "background": "Challenger backed by the County Democratic Party, the LA County Federation of Labor, the faculty and staff unions, Mayor Bass, Supervisor Solis and former Gov. Jerry Brown; the faculty union's committee has spent about $141,000 for him. Raised about $115,000.",
+    "background": "Ballot designation: Architect. Challenger backed by the County Democratic Party, the LA County Federation of Labor, the faculty and staff unions, Mayor Bass, Supervisor Solis and former Gov. Jerry Brown; the faculty union's committee has spent about $141,000 for him. Raised about $115,000.",
     "own_words": [
      {
-      "text": "'Accelerate affordable student housing,' citing housing insecurity among 'nearly 70%' of students; expand aid for veterans and first-generation students; partnerships with labor and industry for 'high-demand careers.' No numbers given.",
+      "text": "“Accelerate affordable student housing,” citing housing insecurity among “nearly 70%” of students; expand aid for veterans and first-generation students; partnerships with labor and industry for “high-demand careers.” No numbers given.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/laccd-seat-6"
      }
@@ -1059,6 +1128,10 @@
   ],
   "sources": [
    {
+    "name": "LA County RR/CC final list of qualified candidates, Nov 3, 2026 (Sept 2, 2026)",
+    "url": "https://content.lavote.gov/docs/rrcc/documents/final-list-of-qualified-candidates-to-appear-on-the-ballot9fcf3b64-1a33-4882-9e17-8cbc3b3c8d76.pdf"
+   },
+   {
     "name": "LA County election schedule (contests on the Nov 3 ballot)",
     "url": "https://content.lavote.gov/docs/rrcc/documents/schedule-6-0-v-7-24-2026-v-3.pdf"
    },
@@ -1067,7 +1140,7 @@
     "url": "https://cityhallpass.com/election-2026/races/laccd-seat-6"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-us-house-34",
@@ -1103,7 +1176,7 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-34"
      },
      {
-      "text": "Campaign says he 'does not accept corporate PAC money' and backs overturning Citizens United. Voted yes on the GENIUS and CLARITY crypto bills, which his opponent criticizes.",
+      "text": "Campaign says he “does not accept corporate PAC money” and backs overturning Citizens United. Voted yes on the GENIUS and CLARITY crypto bills, which his opponent criticizes.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-34"
      }
@@ -1120,7 +1193,7 @@
     "background": "Former president of the Historic Highland Park Neighborhood Council; academic counselor at Pasadena City College for formerly incarcerated students and program director for an affordable housing project in Altadena. Calls herself a democratic socialist. Has not held elected office. Second in June with 30.7%.",
     "own_words": [
      {
-      "text": "Co-sponsor Medicare for All; 'abolish ICE' with a pathway to citizenship and more legal aid.",
+      "text": "Co-sponsor Medicare for All; “abolish ICE” with a pathway to citizenship and more legal aid.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-34"
      },
@@ -1217,6 +1290,10 @@
   ],
   "sources": [
    {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
    },
@@ -1278,7 +1355,7 @@
     "background": "27-year-old mother who grew up in a rent-controlled unit, studied at Santa Monica College, organized with Climate Action Santa Monica and served on Santa Monica's police oversight commission. Moved to Baldwin Hills in 2022. Second in June with 11.7%.",
     "own_words": [
      {
-      "text": "'Dismantle ICE and end for-profit detention,' with more access to asylum.",
+      "text": "“Dismantle ICE and end for-profit detention,” with more access to asylum.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-37"
      },
@@ -1288,7 +1365,7 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-37"
      },
      {
-      "text": "Pledges 'community-funding' and criticizes politicians who take money from 'special interests like private equity investors.'",
+      "text": "Pledges “community-funding” and criticizes politicians who take money from “special interests like private equity investors.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-37"
      }
@@ -1298,6 +1375,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1333,7 +1414,12 @@
     "background": "In Congress since January 2025. Glendale City Council (2009 to 2016, including mayor) and State Assembly (2016 to 2024), where she chaired Transportation and Natural Resources. Former film and TV producer. First in June with 52.7%.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added. Her Assembly record centered on transportation, housing near transit and environmental bills.",
+      "text": "Her campaign site says she is focused on “expanding access to affordable housing, supporting universal healthcare and childcare, strengthening economic security for families, and protecting democratic institutions.”",
+      "is_quote": true,
+      "source": "https://www.lauraforcongress.org"
+     },
+     {
+      "text": "Her Assembly record centered on transportation, housing near transit, climate and gun-violence bills.",
       "is_quote": false,
       "source": "https://cityhallpass.com/election-2026/races/congress-30"
      }
@@ -1350,9 +1436,14 @@
     "background": "Civil attorney with a Burbank law office, admitted to the bar in 1988. UCLA and Pepperdine Law. Has not held public office. Second in June with 16.6%.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added.",
+      "text": "Says he will back Republican leadership to “secure the border, restore law and order, rein in reckless spending, and protect our constitutional freedoms.”",
+      "is_quote": true,
+      "source": "https://www.meyersforcongress.com"
+     },
+     {
+      "text": "Supports the SAVE Act on proof of citizenship for voting, opposes tax increases, and wants federal pressure to expose high-speed rail and homelessness spending.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/congress-30"
+      "source": "https://www.meyersforcongress.com"
      }
     ],
     "lwv_status": "unknown",
@@ -1360,6 +1451,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1369,7 +1464,7 @@
     "url": "https://cityhallpass.com/election-2026/races/congress-30"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-state-senate-24",
@@ -1395,12 +1490,12 @@
     "background": "West Hollywood City Councilmember since 2020 (mayor in 2024). Former Planned Parenthood LA vice president, LAX legislative representative and West Hollywood staffer; chief of staff at Alliance for a Better Community. Doctorate from Claremont Graduate University. Ballot designation: Councilmember. First in June with 20.5%.",
     "own_words": [
      {
-      "text": "Supports Proposition 40, the one-time billionaire wealth tax; says 'the wealthy top 1%' should pay more.",
+      "text": "Supports Proposition 40, the one-time billionaire wealth tax; says “the wealthy top 1%” should pay more.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-24"
      },
      {
-      "text": "'Practical zoning changes,' especially near transit; points to West Hollywood's 3% cap on yearly rent increases and criticizes Goldsmith for not backing rent control.",
+      "text": "“Practical zoning changes,” especially near transit; points to West Hollywood's 3% cap on yearly rent increases and criticizes Goldsmith for not backing rent control.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-24"
      },
@@ -1422,17 +1517,17 @@
     "background": "Runs Kona Media & Message, a Democratic media consulting firm; former CBS and Yahoo news producer for Katie Couric and a Buttigieg 2020 campaign aide. Harvard and Stanford Law. Lives in Beverly Hills. Has never held elected office. Ballot designation: Small Business Owner. Second in June with 18.3%.",
     "own_words": [
      {
-      "text": "Opposes Proposition 40 and any change to Prop 13 now; wants a rainy day fund 'at least twice its current size.'",
+      "text": "Opposes Proposition 40 and any change to Prop 13 now; wants a rainy day fund “at least twice its current size.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-24"
      },
      {
-      "text": "Measure housing success by 'housing units produced': modular housing, building code review, public land for workforce housing, down payment help.",
+      "text": "Measure housing success by “housing units produced”: modular housing, building code review, public land for workforce housing, down payment help.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-24"
      },
      {
-      "text": "Fully fund Prop 36, widen CARE Court, find a way to provide involuntary treatment for people on the streets; no more high-speed rail money 'unless I see a realistic plan'; supports banning social media for children under 16.",
+      "text": "Fully fund Prop 36, widen CARE Court, find a way to provide involuntary treatment for people on the streets; no more high-speed rail money “unless I see a realistic plan”; supports banning social media for children under 16.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-24"
      }
@@ -1442,6 +1537,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1477,7 +1576,7 @@
     "background": "LA Community College District trustee since 2022 and board president in 2026; housing and environmental attorney, former LAUSD teacher and City Hall staffer. Duke, LMU, Loyola Law. Lives in Eagle Rock. Ballot designation: Affordable Housing Advocate. First in June with 31.2%.",
     "own_words": [
      {
-      "text": "By-right zoning for apartments near jobs and transit, CEQA and permitting changes, and easier condo financing; calls SB 79 'not a perfect law' but supports building near transit.",
+      "text": "By-right zoning for apartments near jobs and transit, CEQA and permitting changes, and easier condo financing; calls SB 79 “not a perfect law” but supports building near transit.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-26"
      },
@@ -1504,17 +1603,17 @@
     "background": "Works at the Mountains Recreation and Conservation Authority; formerly director of county and regional affairs for Mayor Bass and a staffer for Jimmy Gomez. Grew up in El Sereno. Has not held elected office. Ballot designation: Environmental Protection Director. Second in June with 19.4%.",
     "own_words": [
      {
-      "text": "Supports CalCare, a state single-payer plan; a split-roll property tax on commercial property, a wealth tax on 'ultra-high-net-worth individuals,' and a vacancy tax.",
+      "text": "Supports CalCare, a state single-payer plan; a split-roll property tax on commercial property, a wealth tax on “ultra-high-net-worth individuals,” and a vacancy tax.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-26"
      },
      {
-      "text": "Expand rent stabilization 'specifically among corporate landlords'; the state DSA guide says she backs repealing the Ellis Act and Costa-Hawkins.",
+      "text": "Expand rent stabilization “specifically among corporate landlords”; the state DSA guide says she backs repealing the Ellis Act and Costa-Hawkins.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-26"
      },
      {
-      "text": "Says 41.18 moves people 'from one street to another'; wants safe parking for people living in vehicles and more unarmed crisis teams; end oil and gas subsidies.",
+      "text": "Says 41.18 moves people “from one street to another”; wants safe parking for people living in vehicles and more unarmed crisis teams; end oil and gas subsidies.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-26"
      }
@@ -1524,6 +1623,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1559,9 +1662,14 @@
     "background": "State Senator since 2022; chairs the Senate Labor, Public Employment and Retirement Committee. Former journalist and SEIU Justice for Janitors organizer; co-founded the LA Black Worker Center. First in June with 77.5%.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added. Her committee work centers on labor and public employment.",
+      "text": "“We must build coalitions across local, county, and state levels.”",
+      "is_quote": true,
+      "source": "https://lolaforca.com"
+     },
+     {
+      "text": "Her campaign site says she prioritizes bills to protect workers and environmental justice for communities living closest to pollution.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/senate-28"
+      "source": "https://lolaforca.com"
      }
     ],
     "lwv_status": "unknown",
@@ -1576,9 +1684,14 @@
     "background": "Businessman with 32 years in food manufacturing; elected member of the South Robertson Neighborhood Council. CSUN and UCLA. No campaign committee found. Second in June with 16.2%.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added.",
+      "text": "“Serving the public should be exactly that: Serving Others.”",
+      "is_quote": true,
+      "source": "https://www.joelisuzzo.com"
+     },
+     {
+      "text": "Points to 32 years in food manufacturing and says he wants to bring business skills to state government; has volunteered with homeless and veterans programs in LA.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/senate-28"
+      "source": "https://www.joelisuzzo.com"
      }
     ],
     "lwv_status": "unknown",
@@ -1586,6 +1699,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1595,7 +1712,7 @@
     "url": "https://cityhallpass.com/election-2026/races/senate-28"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-assembly-51",
@@ -1613,6 +1730,33 @@
   "is_retention": false,
   "candidates": [
    {
+    "name": "Colin D. Hernandez",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://colinforcalifornia.com/",
+    "website_confidence": "sourced",
+    "background": "Digital communications strategist who calls himself a ninth-generation Californian and a Democratic Socialist. University of Colorado Boulder. Has not held office. Second in June with 22.1%.",
+    "own_words": [
+     {
+      "text": "Single-payer CalCare paid for by taxes on the ultra-wealthy; wealth, mansion and luxury taxes and an “Overpaid CEO tax”; reform Prop 13 for large corporations.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
+     },
+     {
+      "text": "Allow multifamily housing in single-family zones, a vacancy tax on corporate owners, and repeal Costa-Hawkins and the Ellis Act.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
+     },
+     {
+      "text": "“Abolish ICE”; opposes AB 715, saying it “censors discussions around Palestine”; “massively regulate AI” so it does not replace workers.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
     "name": "Rick Chavez Zbur",
     "party": "Democratic",
     "incumbent": true,
@@ -1621,7 +1765,7 @@
     "background": "Assemblymember since 2022 and Assembly Democratic Caucus Chair. Former environmental lawyer, executive director of Equality California and 20 years on the California League of Conservation Voters board. Yale and Harvard Law. First in June with 54.1%.",
     "own_words": [
      {
-      "text": "Close the 'water's edge' corporate tax loophole; cutting health and safety-net programs is his 'non-starter.'",
+      "text": "Close the “water's edge” corporate tax loophole; cutting health and safety-net programs is his “non-starter.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-51"
      },
@@ -1638,36 +1782,13 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
-   },
-   {
-    "name": "Colin D. Hernandez",
-    "party": "Democratic",
-    "incumbent": false,
-    "website": "https://colinforcalifornia.com/",
-    "website_confidence": "sourced",
-    "background": "Digital communications strategist who calls himself a ninth-generation Californian and a Democratic Socialist. University of Colorado Boulder. Has not held office. Second in June with 22.1%.",
-    "own_words": [
-     {
-      "text": "Single-payer CalCare paid for by taxes on the ultra-wealthy; wealth, mansion and luxury taxes and an 'Overpaid CEO tax'; reform Prop 13 for large corporations.",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
-     },
-     {
-      "text": "Allow multifamily housing in single-family zones, a vacancy tax on corporate owners, and repeal Costa-Hawkins and the Ellis Act.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
-     },
-     {
-      "text": "'Abolish ICE'; opposes AB 715, saying it 'censors discussions around Palestine'; 'massively regulate AI' so it does not replace workers.",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-51"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1703,9 +1824,9 @@
     "background": "Assemblymember since 2024 and Majority Whip. Former chair of the LA County Democratic Party and district director for Assemblymember Miguel Santiago. Grew up in Northeast LA; CSUN. First in June with 99.7%.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-54"
+      "text": "His campaign site calls him “an organizer, a caregiver, a renter, and an activist who knows that the system isn't working for ordinary people.”",
+      "is_quote": true,
+      "source": "https://www.markgonzalezforassembly.com/"
      }
     ],
     "lwv_status": "unknown",
@@ -1731,6 +1852,10 @@
   ],
   "sources": [
    {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
    },
@@ -1739,7 +1864,7 @@
     "url": "https://cityhallpass.com/election-2026/races/assembly-54"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-assembly-55",
@@ -1756,33 +1881,6 @@
   "term_years": 2,
   "is_retention": false,
   "candidates": [
-   {
-    "name": "Isaac G. Bryan",
-    "party": "Democratic",
-    "incumbent": true,
-    "website": "https://isaacbryanforca.com/",
-    "website_confidence": "sourced",
-    "background": "Assemblymember since 2021, former Majority Leader, now chair of Natural Resources. Founding director of the UCLA Black Policy Project. Raised in a large foster and adoptive family. First in June with 64.6%.",
-    "own_words": [
-     {
-      "text": "'Housing for all should be a right.' Wrote AB 246, tenant protections for Social Security recipients; did not vote on SB 79.",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
-     },
-     {
-      "text": "'No child should grow up with an oil well in their backyard.' Bills on Baldwin Hills oil wells; voted yes on SB 237, the Kern oil permits bill.",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
-     },
-     {
-      "text": "Wrote AB 1388 on police settlement agreements (law) and AB 1537 on police side jobs with ICE (vetoed Sept 30, 2026); voted yes on the SB 627 mask ban.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
    {
     "name": "Ashley M. Brown",
     "party": "Democratic",
@@ -1809,9 +1907,40 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
+   },
+   {
+    "name": "Isaac G. Bryan",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://isaacbryanforca.com/",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2021, former Majority Leader, now chair of Natural Resources. Founding director of the UCLA Black Policy Project. Raised in a large foster and adoptive family. First in June with 64.6%.",
+    "own_words": [
+     {
+      "text": "“Housing for all should be a right.” Wrote AB 246, tenant protections for Social Security recipients; did not vote on SB 79.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
+     },
+     {
+      "text": "“No child should grow up with an oil well in their backyard.” Bills on Baldwin Hills oil wells; voted yes on SB 237, the Kern oil permits bill.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
+     },
+     {
+      "text": "Wrote AB 1388 on police settlement agreements (law) and AB 1537 on police side jobs with ICE (vetoed Sept 30, 2026); voted yes on the SB 627 mask ban.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-55"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
    }
   ],
   "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
@@ -1847,7 +1976,7 @@
     "background": "Assemblymember since a June 2022 special election; chairs Public Employment and Retirement and the LA County legislative delegation. Former California Democratic Party operations director. Cal State Dominguez Hills. First in June with 98.6%.",
     "own_words": [
      {
-      "text": "'A working stove and a refrigerator are not luxuries': wrote AB 628 requiring both in all apartments (now law).",
+      "text": "“A working stove and a refrigerator are not luxuries”: wrote AB 628 requiring both in all apartments (now law).",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-61"
      },
@@ -1885,6 +2014,10 @@
   ],
   "sources": [
    {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
    },
@@ -1893,7 +2026,7 @@
     "url": "https://cityhallpass.com/election-2026/races/assembly-61"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-assembly-57",
@@ -1924,7 +2057,7 @@
       "source": "https://cityhallpass.com/election-2026/races/assembly-57"
      },
      {
-      "text": "Opposed Prop 36 in 2024: 'I don't know if rolling back Proposition 47 is the right way to go.' Wrote AB 812, resentencing for incarcerated firefighters (law).",
+      "text": "Opposed Prop 36 in 2024: “I don't know if rolling back Proposition 47 is the right way to go.” Wrote AB 812, resentencing for incarcerated firefighters (law).",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-57"
      },
@@ -1957,6 +2090,10 @@
   ],
   "sources": [
    {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
     "name": "LA County certified June primary results",
     "url": "https://results.lavote.gov/text-results/4338"
    },
@@ -1965,7 +2102,7 @@
     "url": "https://cityhallpass.com/election-2026/races/assembly-57"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "oc-supervisor-4",
@@ -1991,17 +2128,17 @@
     "background": "President of the Orange County Board of Education (trustee since 2020); La Habra City Council 2008 to 2021 including mayor; former chair of the Orange County Transportation Authority. Government affairs director for the Pacific West Association of Realtors and adjunct political science professor at Rio Hondo College. Registered Republican. Ballot designation: Orange County Board of Education Trustee. Second in June with 31.3%.",
     "own_words": [
      {
-      "text": "'We need to have a total homelessness solution. We need to help families with affordability, as well as encouraging business growth to create more jobs. We need fiscal responsibility and transparency from county government.'",
+      "text": "“We need to have a total homelessness solution. We need to help families with affordability, as well as encouraging business growth to create more jobs. We need fiscal responsibility and transparency from county government.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4004-1.pdf"
      },
      {
-      "text": "On the budget: 'Fund the things that are necessary, the DA's office, the sheriff's (office), the firefighters ... and then you're gonna have to trim the sails.' Supports 'local control' on housing but says cities must comply with state mandates; backs density near transit.",
+      "text": "On the budget: “Fund the things that are necessary, the DA's office, the sheriff's (office), the firefighters ... and then you're gonna have to trim the sails.” Supports “local control” on housing but says cities must comply with state mandates; backs density near transit.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisor-district-4"
      },
      {
-      "text": "On homelessness, wants mental health and addiction treatment first and a closer look at what spending is working; his late father was a county addiction counselor and he lost a brother to fentanyl. As an OC Board of Education trustee, backed charter schools and the 'Parents Bill of Rights.'",
+      "text": "On homelessness, wants mental health and addiction treatment first and a closer look at what spending is working; his late father was a county addiction counselor and he lost a brother to fentanyl. On the OC Board of Education he backed charter schools and joined the board's lawsuit against Gov. Newsom over pandemic school closures.",
       "is_quote": false,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisor-district-4"
      }
@@ -2018,12 +2155,12 @@
     "background": "Mayor of Buena Park (council since 2018); Centralia Elementary school board 2014 to 2018; board director of the Orange County Fire Authority. Attorney in his family's personal injury law firm; Chapman University and Chapman law. Fourth-generation OC resident, age 31. Registered Democrat. Ballot designation: Mayor/Business Owner. First in June with 33.3%.",
     "own_words": [
      {
-      "text": "Priorities: 'Address affordability to help working families stay in O.C. Reduce homelessness and focus on mental health and addiction. Combat crime and ensure fast emergency response times. Enhance our parks and repair our roads.'",
+      "text": "Priorities: “Address affordability to help working families stay in O.C. Reduce homelessness and focus on mental health and addiction. Combat crime and ensure fast emergency response times. Enhance our parks and repair our roads.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/4004-2.pdf"
      },
      {
-      "text": "'I support tenant protections, strong code enforcement against slumlords and rental assistance to keep people housed.' Would partner with cities on senior and workforce housing near jobs and transit and expand vouchers and ADUs.",
+      "text": "“I support tenant protections, strong code enforcement against slumlords and rental assistance to keep people housed.” Would partner with cities on senior and workforce housing near jobs and transit and expand vouchers and ADUs.",
       "is_quote": true,
       "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-orange-county-supervisor-district-4"
      },
@@ -2038,6 +2175,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log (Nov 3, 2026)",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2058,7 +2199,7 @@
   "state": "CA",
   "level": "city",
   "office": "Fullerton City Council",
-  "district": "District 3 (central Fullerton, including the Cal State Fullerton area)",
+  "district": "District 3",
   "scope_plain": "Only Fullerton voters who live in the district. Fullerton elects its five councilmembers by district; Districts 3 and 5 are up this year. Nonpartisan. No primary; most votes wins. Four-year term, three-term limit. Check the district map at the city clerk's site; Kevin's brother may be in District 3 or 5, or in a district not up this year.",
   "office_explainer": "One of five Fullerton councilmembers who set the budget, hire the city manager and police chief, and decide land use.",
   "why_it_matters": "Fullerton closed a $3.8 million deficit this summer with cuts after the council rejected putting a sales tax on the ballot (so there is no Fullerton city measure this November). Police and fire take about 70% of the general fund. Roads, parks and downtown are the recurring issues. District 3 is an incumbent defending her seat against a businessman and nonprofit founder.",
@@ -2069,33 +2210,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Shana Charles",
-    "party": null,
-    "incumbent": true,
-    "website": "https://shana4fullerton.com",
-    "website_confidence": "verified",
-    "background": "Councilmember since 2022; Cal State Fullerton public health professor. Ballot designation: City of Fullerton Councilmember/Professor. Endorsed by the OC Democratic Party, Reps. Lou Correa and Derek Tran, Sen. Tom Umberg, Assemblymembers Sharon Quirk-Silva and Avelino Valencia, Supervisors Chaffee and Sarmiento, NUHW, UFCW and OCEA.",
-    "own_words": [
-     {
-      "text": "'I led successful efforts to repave our streets and restore community events like First Night & 4th of July Fireworks.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
-     },
-     {
-      "text": "'I was the driving force behind Fullerton joining the lawsuit against U.S. Immigration and Customs Enforcement's racial profiling and other illegal practices.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
-     },
-     {
-      "text": "Says she secured funding for fire and police, helped create the Fiscal Sustainability Committee, holds weekly office hours, and will work to pave 100% of streets, restore parks and 'renew our commitment to a sustainably equitable future.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Daniel Kim",
     "party": null,
     "incumbent": false,
@@ -2104,14 +2218,41 @@
     "background": "Fullerton commissioner and businessman who describes himself as a corporate turnaround specialist. UCLA and Harvard. Co-founded the Dragon Kim Foundation, which funds youth service programs and scholarships, after his son was killed by a falling tree at Yosemite in 2015. Ballot designation: Fullerton Commissioner/Businessman. No campaign website found.",
     "own_words": [
      {
-      "text": "'Professionally, I'm a turnaround specialist: when companies are failing, I move them back to profitability. As I learned about Fullerton's multimillion dollar budget deficit, I knew I needed to help.'",
+      "text": "“Professionally, I'm a turnaround specialist: when companies are failing, I move them back to profitability. As I learned about Fullerton's multimillion dollar budget deficit, I knew I needed to help.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-2.pdf"
      },
      {
-      "text": "Would 'eliminate waste, make cuts, and increase revenue to fix Fullerton's budget crisis,' make sure police and firefighters 'have what they need,' and 'repair Fullerton's roads after years of neglect.'",
+      "text": "Would “eliminate waste, make cuts, and increase revenue to fix Fullerton's budget crisis,” make sure police and firefighters “have what they need,” and “repair Fullerton's roads after years of neglect.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-2.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Shana Charles",
+    "party": null,
+    "incumbent": true,
+    "website": "https://shana4fullerton.com",
+    "website_confidence": "verified",
+    "background": "Councilmember since 2022; Cal State Fullerton public health professor. Ballot designation: City of Fullerton Councilmember/Professor. Endorsed by the OC Democratic Party, Reps. Lou Correa and Derek Tran, Sen. Tom Umberg, Assemblymembers Sharon Quirk-Silva and Avelino Valencia, Supervisors Chaffee and Sarmiento, NUHW, UFCW and OCEA.",
+    "own_words": [
+     {
+      "text": "“I led successful efforts to repave our streets and restore community events like First Night & 4th of July Fireworks.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
+     },
+     {
+      "text": "“I was the driving force behind Fullerton joining the lawsuit against U.S. Immigration and Customs Enforcement's racial profiling and other illegal practices.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
+     },
+     {
+      "text": "Says she secured funding for fire and police, helped create the Fiscal Sustainability Committee, holds weekly office hours, and will work to pave 100% of streets, restore parks and “renew our commitment to a sustainably equitable future.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5073-1.pdf"
      }
     ],
     "lwv_status": "unknown",
@@ -2119,6 +2260,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2139,8 +2284,8 @@
   "state": "CA",
   "level": "city",
   "office": "Fullerton City Council",
-  "district": "District 5 (downtown Fullerton and south-central neighborhoods)",
-  "scope_plain": "Only Fullerton voters who live in the district. Fullerton elects its five councilmembers by district; Districts 3 and 5 are up this year. Nonpartisan. No primary; most votes wins. Four-year term, three-term limit.",
+  "district": "District 5",
+  "scope_plain": "Only Fullerton voters who live in the district. Fullerton elects its five councilmembers by district; Districts 3 and 5 are up this year. Nonpartisan. No primary; most votes wins. Four-year term, three-term limit. Check the district map at the city clerk’s site to see whether you live in District 5.",
   "office_explainer": "One of five Fullerton councilmembers who set the budget, hire the city manager and police chief, and decide land use.",
   "why_it_matters": "Fullerton closed a $3.8 million deficit this summer with cuts after the council rejected putting a sales tax on the ballot (so there is no Fullerton city measure this November). Police and fire take about 70% of the general fund. Roads, parks and downtown are the recurring issues. District 5 is open: Ahmad Zahra is not running again. Three candidates, so the winner may take it with well under half the vote.",
   "vote_for": 1,
@@ -2158,44 +2303,17 @@
     "background": "Chair of the Fullerton Planning Commission; also served on the Parks and Recreation and Transportation commissions. Owner of a family construction business, Stanford civil engineering graduate, born and raised in Fullerton. Ballot designation: Fullerton Commissioner/Businessowner.",
     "own_words": [
      {
-      "text": "'Ensure Fullerton police and firefighters have the resources they need to protect our safety. Improve Fullerton roads. Enhance Fullerton parks and public spaces.'",
+      "text": "“Ensure Fullerton police and firefighters have the resources they need to protect our safety. Improve Fullerton roads. Enhance Fullerton parks and public spaces.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-1.pdf"
      },
      {
-      "text": "'Balance and audit Fullerton's budget with more transparency. Build senior citizen and workforce housing in Fullerton. Protect the character of our neighborhoods.'",
+      "text": "“Balance and audit Fullerton's budget with more transparency. Build senior citizen and workforce housing in Fullerton. Protect the character of our neighborhoods.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-1.pdf"
      },
      {
-      "text": "His site lists no named endorsers ('coming soon'); says he is backed by community leaders, educators, small business owners, labor and faith organizations.",
-      "is_quote": false,
-      "source": "https://dailytitan.com/fullerton-city-council-district-5-candidates-seek-fiscal-transparency/article_75422bfc-efb8-4457-8190-55a28a90db8e.html"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
-    "name": "Jozef Maldonado",
-    "party": null,
-    "incumbent": false,
-    "website": "https://www.jozefforfullerton.com",
-    "website_confidence": "verified",
-    "background": "Chemist (UC Davis, forensic science emphasis) appointed to the Fullerton Parks and Recreation Commission in 2024. Moved to Fullerton after the pandemic. Age 30. Endorsed by the OC Democratic Party, Councilmembers Zahra and Charles, and school trustee Vanesa Estrella. Ballot designation: Chemist.",
-    "own_words": [
-     {
-      "text": "'Protect public safety funding to ensure strong response times. Expand funding for our Senior Mobility Program and increase access to community centers and services.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-2.pdf"
-     },
-     {
-      "text": "'Invest in small business development and social spaces throughout downtown to streamline permitting and increase foot traffic for businesses along Harbor.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-2.pdf"
-     },
-     {
-      "text": "Wants to revisit the downtown noise ordinance and the job cuts made to close the deficit, fix sidewalks and bike lanes, and has floated a tram to carry students downtown.",
+      "text": "His campaign site names no individual endorsers; it says he is backed by community leaders, educators, small business owners, labor and faith organizations.",
       "is_quote": false,
       "source": "https://dailytitan.com/fullerton-city-council-district-5-candidates-seek-fiscal-transparency/article_75422bfc-efb8-4457-8190-55a28a90db8e.html"
      }
@@ -2212,7 +2330,7 @@
     "background": "Retired U.S. Navy veteran (aviation and maritime operations) now working in quality assurance, purchasing and government acquisition. B.S. in business administration. Age 54. Ballot designation: Quality Assurance Inspector. His campaign site's endorsements page is password protected; URL not confirmed.",
     "own_words": [
      {
-      "text": "'Fullerton deserves a councilmember who will focus on responsible spending, safer streets, well-maintained infrastructure, responsive city services, and transparent government.'",
+      "text": "“Fullerton deserves a councilmember who will focus on responsible spending, safer streets, well-maintained infrastructure, responsive city services, and transparent government.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-3.pdf"
      },
@@ -2224,9 +2342,40 @@
     ],
     "lwv_status": "unknown",
     "lwv_url": null
+   },
+   {
+    "name": "Jozef Maldonado",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.jozefforfullerton.com",
+    "website_confidence": "verified",
+    "background": "Chemist (UC Davis, forensic science emphasis) appointed to the Fullerton Parks and Recreation Commission in 2024. Moved to Fullerton after the pandemic. Age 30. Endorsed by the OC Democratic Party, Councilmembers Zahra and Charles, and school trustee Vanesa Estrella. Ballot designation: Chemist.",
+    "own_words": [
+     {
+      "text": "“Protect public safety funding to ensure strong response times. Expand funding for our Senior Mobility Program and increase access to community centers and services.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-2.pdf"
+     },
+     {
+      "text": "“Invest in small business development and social spaces throughout downtown to streamline permitting and increase foot traffic for businesses along Harbor.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/5075-2.pdf"
+     },
+     {
+      "text": "Wants to revisit the downtown noise ordinance and the job cuts made to close the deficit, fix sidewalks and bike lanes, and has floated a tram to carry students downtown.",
+      "is_quote": false,
+      "source": "https://dailytitan.com/fullerton-city-council-district-5-candidates-seek-fiscal-transparency/article_75422bfc-efb8-4457-8190-55a28a90db8e.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2266,7 +2415,7 @@
     "background": "Chemistry professor (Ph.D., UC San Diego), small business owner and partner engagement specialist with the North Orange County Regional Occupational Program; nearly two decades as a district parent and volunteer. Age 50. Ballot designation: Parent/Foundation Boardmember.",
     "own_words": [
      {
-      "text": "Will focus on 'strengthening academic fundamentals, expanding STEM and career education, preparing students for an AI-driven future, supporting and retaining exceptional teachers.'",
+      "text": "Will focus on “strengthening academic fundamentals, expanding STEM and career education, preparing students for an AI-driven future, supporting and retaining exceptional teachers.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3305-2.pdf"
      }
@@ -2283,7 +2432,7 @@
     "background": "Father of two district students; three years on the Rolling Hills School Site Council; career in public policy and healthcare. Endorsed by the OC Democratic Party. Ballot designation: Parent/Healthcare Advocate.",
     "own_words": [
      {
-      "text": "Will 'strengthen campus safety, expand behavioral health support, improve communication, and ensure every family understands the resources available.'",
+      "text": "Will “strengthen campus safety, expand behavioral health support, improve communication, and ensure every family understands the resources available.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3305-1.pdf"
      }
@@ -2293,6 +2442,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2309,8 +2462,8 @@
   "state": "CA",
   "level": "school",
   "office": "Fullerton Joint Union High School District Governing Board",
-  "district": "Trustee Area 1 (La Habra area)",
-  "scope_plain": "Only voters in FJUHSD Trustee Area 1, which is mostly La Habra, not Fullerton proper. Included because the district serves Fullerton's high schools. Nonpartisan; most votes wins.",
+  "district": "Trustee Area 1",
+  "scope_plain": "Only voters in Fullerton Joint Union High School District Trustee Area 1. The district serves Fullerton, La Habra and Buena Park; check your sample ballot to see whether your address is in Area 1. Nonpartisan; most votes wins.",
   "office_explainer": "One of five trustees running the high school district for Fullerton, La Habra and Buena Park.",
   "why_it_matters": "Vacant seat. A special education teacher and PTA leader against a financial planner.",
   "vote_for": 1,
@@ -2328,7 +2481,7 @@
     "background": "Elementary special education teacher in La Habra, PTA leader and district parent; CSUF degrees and credential. Endorsed by the OC Democratic Party. Ballot designation: Parent/Teacher.",
     "own_words": [
      {
-      "text": "Promises 'a practical, compassionate, and deeply invested voice' and points to PTA grant-writing that brought new funding to students.",
+      "text": "Promises “a practical, compassionate, and deeply invested voice” and points to PTA grant-writing that brought new funding to students.",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3233-2.pdf"
      }
@@ -2345,7 +2498,7 @@
     "background": "Financial planning consultant raising his family in La Habra; two Rio Hondo College associate degrees. Age 33. Ballot designation: Financial Planning Consultant.",
     "own_words": [
      {
-      "text": "Wants 'strong academics, safe and supportive learning environments, financial literacy, critical thinking, and meaningful pathways to college, career technical education, skilled trades, military service.'",
+      "text": "Wants “strong academics, safe and supportive learning environments, financial literacy, critical thinking, and meaningful pathways to college, career technical education, skilled trades, military service.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3233-1.pdf"
      }
@@ -2355,6 +2508,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2382,23 +2539,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Marilyn Buchi",
-    "party": null,
-    "incumbent": true,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Longtime trustee; past president of the California School Boards Association. District parent, PTA leader and community volunteer. Ballot designation: Governing Board Member.",
-    "own_words": [
-     {
-      "text": "'Let's Continue the Excellence!' Points to record attendance and graduation, completed science labs, theaters and gyms, and her state-level governance work.",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3237-1.pdf"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Amy Dudich",
     "party": null,
     "incumbent": false,
@@ -2407,9 +2547,26 @@
     "background": "Mother of two Fullerton public school students, PTA leader and School Site Council member; 15-year resident; CSUF human services degree. Age 48. Endorsed by the OC Democratic Party. Ballot designation: Operations Manager/Parent.",
     "own_words": [
      {
-      "text": "'Now is the time to pass the baton of leadership in Area 5.' Would support teachers, prepare students for college or work, keep schools safe and 'advocate for access to the mental health resources students need.'",
+      "text": "“Now is the time to pass the baton of leadership in Area 5.” Would support teachers, prepare students for college or work, keep schools safe and “advocate for access to the mental health resources students need.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3237-2.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Marilyn Buchi",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Longtime trustee; past president of the California School Boards Association. District parent, PTA leader and community volunteer. Ballot designation: Governing Board Member.",
+    "own_words": [
+     {
+      "text": "“Let's Continue the Excellence!” Points to record attendance and graduation, completed science labs, theaters and gyms, and her state-level governance work.",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3237-1.pdf"
      }
     ],
     "lwv_status": "unknown",
@@ -2417,6 +2574,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2433,8 +2594,8 @@
   "state": "CA",
   "level": "special_district",
   "office": "North Orange County Community College District Board of Trustees",
-  "district": "Trustee Area 6 (parts of Fullerton and Anaheim)",
-  "scope_plain": "Only voters in the trustee area. The North Orange County Community College District runs Fullerton College and Cypress College. Nonpartisan; most votes wins. Areas 1, 3 and 6 are up; Area 6 is the one that includes part of Fullerton. Check your sample ballot.",
+  "district": "Trustee Area 6 (east Fullerton, part of Placentia and part of north Anaheim)",
+  "scope_plain": "Only voters in Trustee Area 6. In Fullerton, that is roughly the part east of Harbor Boulevard and south of Imperial Highway. Most of west Fullerton is in Area 4, which is not voting this year. The North Orange County Community College District runs Fullerton College and Cypress College. Nonpartisan; most votes wins. Areas 1 and 3 are also up, but they do not include Fullerton. Check your sample ballot.",
   "office_explainer": "One of seven trustees overseeing Fullerton College, Cypress College and adult education, with a $574 million bond.",
   "why_it_matters": "Four candidates including a long-serving incumbent engineer, a former Fullerton mayor backed by the OC Democratic Party, a Fullerton educator and attorney, and a nurse and Fullerton library trustee. Plurality wins.",
   "vote_for": 1,
@@ -2444,23 +2605,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Jeffrey P. Brown",
-    "party": null,
-    "incumbent": true,
-    "website": "https://www.jeff-brown-trustee.com",
-    "website_confidence": "verified",
-    "background": "Incumbent trustee; registered professional engineer with master's degrees in engineering and public administration and 45 years of project management. Fullerton homeowner for 46 years. Ballot designation: NOCCCD Boardmember/Engineer.",
-    "own_words": [
-     {
-      "text": "'I have been an independent voice, asking hard questions and insisting on accountability. I am not any group's \"special interest\" candidate.'",
-      "is_quote": true,
-      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3039-1.pdf"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Paulette Chaffee",
     "party": null,
     "incumbent": false,
@@ -2469,7 +2613,7 @@
     "background": "Educator, attorney, former public school teacher and speech therapist; serves on the district's bond oversight committee. Grew up in Fullerton. (Wife of termed-out Supervisor Doug Chaffee.) Ballot designation: Educator/Nonprofit Boardmember.",
     "own_words": [
      {
-      "text": "Will work to 'increase job-training programs, make transferring easier, improve counseling programs, support and enhance programs for our veterans, responsibly manage the district's budget.'",
+      "text": "“As your trustee, I'll work to: Increase job-training programs. Make transferring easier. Improve counseling programs.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3039-2.pdf"
      }
@@ -2486,9 +2630,26 @@
     "background": "Former Fullerton City Councilmember and Mayor; taught math at Fullerton's Nicolas Junior High for over two decades. Age 62. Endorsed by the OC Democratic Party, Assemblymember Quirk-Silva, Reps. Correa and Sánchez, Sen. Umberg. Ballot designation: Teacher/Business Owner.",
     "own_words": [
      {
-      "text": "'I will increase training programs, workforce development, student housing and partnerships with the private sector, trade associations & municipalities.'",
+      "text": "“I will increase training programs, workforce development, student housing and partnerships with the private sector, trade associations & municipalities.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3039-3.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jeffrey P. Brown",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.jeff-brown-trustee.com",
+    "website_confidence": "verified",
+    "background": "Incumbent trustee; registered professional engineer with master's degrees in engineering and public administration and 45 years of project management. Fullerton homeowner for 46 years. Ballot designation: NOCCCD Boardmember/Engineer.",
+    "own_words": [
+     {
+      "text": "“I have been an independent voice, asking hard questions and insisting on accountability. I am not any group's ‘special interest’ candidate.”",
+      "is_quote": true,
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3039-1.pdf"
      }
     ],
     "lwv_status": "unknown",
@@ -2503,7 +2664,7 @@
     "background": "Registered nurse for over 30 years, nurse manager and adjunct clinical nursing professor; Fullerton Public Library trustee and president of a statewide nursing organization. Ballot designation: Educator/Parent/Nurse.",
     "own_words": [
      {
-      "text": "Will 'champion academic excellence, career and technical education, workforce readiness, university transfer opportunities, strategic planning and responsible stewardship of taxpayer resources.'",
+      "text": "Will “champion academic excellence, career and technical education, workforce readiness, university transfer opportunities, strategic planning and responsible stewardship of taxpayer resources.”",
       "is_quote": true,
       "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3039-4.pdf"
      }
@@ -2513,6 +2674,14 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
+   {
+    "name": "NOCCCD trustee area descriptions",
+    "url": "https://www.nocccd.edu/board-trustees/where-we-serve"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2529,8 +2698,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-45 (northern Fullerton, Buena Park, Placentia, Brea, Cypress, Garden Grove, Westminster, Cerritos)",
-  "scope_plain": "Voters in the 45th Congressional District, which includes northern Fullerton. Southern Fullerton is in CD-46 (Lou Correa vs. David Pan), and after Prop 50 the lines changed, so check your sample ballot. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party.",
+  "district": "CD-45 (part of Fullerton; Buena Park, Cypress, La Palma, Garden Grove, Westminster, Cerritos, part of Placentia)",
+  "scope_plain": "Voters in the 45th Congressional District (new map approved with Prop 50). About 66,000 Fullerton residents live in it; other parts of Fullerton are in CD-46 (Lou Correa vs. David Pan) or CD-41 (Linda Sánchez vs. Mitch Clemmons), so check your sample ballot. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "One of the few competitive House seats in Southern California. Tran flipped it from Republican Michelle Steel in 2024 by a few hundred votes. National attention and money.",
   "vote_for": 1,
@@ -2548,9 +2717,14 @@
     "background": "First-term member of Congress (since January 2025); consumer and workers' rights attorney, Army veteran, small business owner. Son of Vietnamese refugees. Ballot designation: Representative/Business Owner. First in June (LA County portion: 64.0%).",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "“As a Member of Congress, I have been unafraid to stand against communist and socialist governments that flagrantly violate human rights.”",
+      "is_quote": true,
+      "source": "https://www.ocregister.com/2026/09/17/endorsement-re-elect-derek-tran-in-the-45th-congressional-district/"
+     },
+     {
+      "text": "Told the OC Register editorial board he wants a commission to propose fixes for Social Security, and criticized federal deficit spending, tariffs and ICE practices.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/federal"
+      "source": "https://www.ocregister.com/2026/09/17/endorsement-re-elect-derek-tran-in-the-45th-congressional-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2562,12 +2736,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Retired police officer. Ballot designation: Retired Police Officer. Second in June (LA County portion: 16.9%). No campaign website found yet.",
+    "background": "Retired police officer and former Cerritos mayor. Came to the U.S. as a toddler after his family fled communist Vietnam. Ballot designation: Retired Police Officer. Second in June (LA County portion: 16.9%). No campaign website found.",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "“I do not support any police, any law enforcement, trampling over private property without the authority to do so.”",
+      "is_quote": true,
+      "source": "https://www.ocregister.com/2026/09/17/endorsement-re-elect-derek-tran-in-the-45th-congressional-district/"
+     },
+     {
+      "text": "Told the OC Register editorial board he opposes defunding the police, wants to cut waste, fraud and abuse, and thinks ICE agents need more training.",
       "is_quote": false,
-      "source": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      "source": "https://www.ocregister.com/2026/09/17/endorsement-re-elect-derek-tran-in-the-45th-congressional-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2575,6 +2754,18 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2584,7 +2775,7 @@
     "url": "https://results.lavote.gov/text-results/4338"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-state-senate-34",
@@ -2610,9 +2801,14 @@
     "background": "Assemblymember for the 68th District since 2022; former Anaheim City Councilmember. Ballot designation: California State Assemblymember. First in June (LA County portion: 63.8%).",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "Promised the OC Register editorial board the same “analytical and rational approach” as retiring Sen. Tom Umberg.",
+      "is_quote": true,
+      "source": "https://www.ocregister.com/2026/09/16/endorsement-elect-rhonda-shader-in-the-34th-senate-district/"
+     },
+     {
+      "text": "Told the board he would protect Proposition 13 and opposes the proposed wealth tax; backs more market-rate housing construction.",
       "is_quote": false,
-      "source": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      "source": "https://www.ocregister.com/2026/09/16/endorsement-elect-rhonda-shader-in-the-34th-senate-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2622,14 +2818,19 @@
     "name": "Rhonda Shader",
     "party": "Republican",
     "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
+    "website": "https://shaderforsenate.com/",
+    "website_confidence": "verified",
     "background": "Placentia businesswoman and former Placentia mayor. Ballot designation: Local Small Businesswoman. Second in June (LA County portion: 36.2%).",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "“Sacramento is broken, and I believe you deserve a California that you can afford to enjoy.”",
+      "is_quote": true,
+      "source": "https://shaderforsenate.com/"
+     },
+     {
+      "text": "Criticized Sacramento's “death by 1,000 cuts” approach to business rules; as Placentia mayor she backed creating a city fire department to leave a county contract.",
       "is_quote": false,
-      "source": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      "source": "https://www.ocregister.com/2026/09/16/endorsement-elect-rhonda-shader-in-the-34th-senate-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2637,6 +2838,14 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2646,7 +2855,7 @@
     "url": "https://results.lavote.gov/text-results/4338"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-assembly-67",
@@ -2669,12 +2878,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Cerritos City Councilmember and former mayor. Ballot designation: City Councilmember. First in June (LA County portion: 38.2%).",
+    "background": "Cerritos City Councilmember and former mayor; ABC Unified school board member from 2001 to 2011; former deputy chief of staff to Rep. Alan Lowenthal. Ballot designation: City Councilmember. First in June (LA County portion: 38.2%).",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "“Life is short and I want to give back.” Describes himself as a “pragmatic problem solver willing to listen.”",
+      "is_quote": true,
+      "source": "https://www.ocregister.com/2026/10/09/endorsement-mark-pulido-for-the-67th-assembly-district/"
+     },
+     {
+      "text": "Supports pro-housing laws such as SB 79 (taller housing near transit) and says a strong business community matters.",
       "is_quote": false,
-      "source": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      "source": "https://www.ocregister.com/2026/10/09/endorsement-mark-pulido-for-the-67th-assembly-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2686,12 +2900,12 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Law Enforcement Officer. Second in June (LA County portion: 22.5%).",
+    "background": "Former Cypress mayor and city councilmember. Ballot designation: Law Enforcement Officer. Second in June (LA County portion: 22.5%).",
     "own_words": [
      {
-      "text": "Campaign site and questionnaire answers were not opened; positions should be added before publication.",
+      "text": "No published positions found. The OC Register says he did not respond to its editorial board's interview invitations.",
       "is_quote": false,
-      "source": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
+      "source": "https://www.ocregister.com/2026/10/09/endorsement-mark-pulido-for-the-67th-assembly-district/"
      }
     ],
     "lwv_status": "unknown",
@@ -2699,6 +2913,14 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
    {
     "name": "OC Registrar candidate log",
     "url": "https://ocvote.gov/fileadmin/user_upload/data/candlog/GEN2026/candlog.pdf"
@@ -2708,7 +2930,7 @@
     "url": "https://results.lavote.gov/text-results/4338"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  },
  {
   "id": "ca-us-house-26",
@@ -2734,7 +2956,7 @@
     "background": "State Assemblymember since 2014, now termed out; earlier a Thousand Oaks councilmember and two-term mayor. Systems engineer by training (UC San Diego). First in June with 41.3% districtwide.",
     "own_words": [
      {
-      "text": "On ICE: 'I would work to claw back excessive funding and get rid of untrained agents.'",
+      "text": "On ICE: “I would work to claw back excessive funding and get rid of untrained agents.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-26"
      },
@@ -2761,12 +2983,12 @@
     "background": "Pastor in Oxnard and founder of The Kingdom Center women’s shelter; former IBM and PeopleSoft executive. Ran for governor in the 2021 recall (0.2%). Has not held office. Second in June with 20.9%.",
     "own_words": [
      {
-      "text": "On immigration: 'All these workers need to stay, and the criminals need to go.'",
+      "text": "On immigration: “All these workers need to stay, and the criminals need to go.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-26"
      },
      {
-      "text": "Says current pollution laws 'are enough' when enforced; wants more domestic energy and faster permits.",
+      "text": "Says current pollution laws “are enough” when enforced; wants more domestic energy and faster permits.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-26"
      },
@@ -2820,17 +3042,17 @@
     "background": "In Congress since January 2025 after unseating Rep. Mike Garcia. Former NASA chief of staff and first CEO of Virgin Galactic; co-founded the wildfire nonprofit Megafire Action. Lives in Agua Dulce. Second in June with 40.6%.",
     "own_words": [
      {
-      "text": "Border security plus legal pathways to citizenship, 'especially for undocumented immigrants brought to the U.S. as children.'",
+      "text": "Border security plus legal pathways to citizenship, “especially for undocumented immigrants brought to the U.S. as children.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-27"
      },
      {
-      "text": "Calls unilateral military action without congressional approval 'unconstitutional'; voted yes on all six 2026 Iran war powers resolutions.",
+      "text": "Calls unilateral military action without congressional approval “unconstitutional”; voted yes on all six 2026 Iran war powers resolutions.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-27"
      },
      {
-      "text": "Campaign says he wants to 'ban congressional stock trading altogether.'",
+      "text": "Campaign says he wants to “ban congressional stock trading altogether.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-27"
      }
@@ -2847,12 +3069,12 @@
     "background": "Santa Clarita City Councilmember since 2020 (mayor in 2023). Aerospace mechanical engineer who worked on Delta and Atlas rocket programs; Cal Poly San Luis Obispo. First in June with 41.0%.",
     "own_words": [
      {
-      "text": "Federal money for the I-5 and Highway 14 instead of high-speed rail: 'I will fight to fund the projects that will actually help people now.'",
+      "text": "Federal money for the I-5 and Highway 14 instead of high-speed rail: “I will fight to fund the projects that will actually help people now.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-27"
      },
      {
-      "text": "Border barriers, shorter visa backlogs, and removing first the people who 'pose a threat to public safety.'",
+      "text": "Border barriers, shorter visa backlogs, and removing first the people who “pose a threat to public safety.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-27"
      },
@@ -2915,7 +3137,7 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-28"
      },
      {
-      "text": "Says ICE 'cannot continue to exist as it is'; wants detention centers such as Adelanto closed.",
+      "text": "Says ICE “cannot continue to exist as it is”; wants detention centers such as Adelanto closed.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-28"
      },
@@ -2942,7 +3164,7 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-28"
      },
      {
-      "text": "Border security, visas 'for all types of workers,' and a way to address long-time residents who committed no other crimes.",
+      "text": "Border security, visas “for all types of workers,” and a way to address long-time residents who committed no other crimes.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-28"
      },
@@ -3001,7 +3223,7 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-29"
      },
      {
-      "text": "'I will never vote to send U.S. weapons or military aid to Israel.'",
+      "text": "“I will never vote to send U.S. weapons or military aid to Israel.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-29"
      },
@@ -3023,7 +3245,7 @@
     "background": "In Congress since January 2025; State Assembly 2018 to 2024. Pacoima native, MIT electrical engineer and founder of the nonprofit DIY Girls. Lives in North Hollywood. First in June with 51.0%.",
     "own_words": [
      {
-      "text": "Has 'called for the abolishment of ICE'; original cosponsor of the American Dream and Promise Act for Dreamers and TPS holders.",
+      "text": "Has “called for the abolishment of ICE”; original cosponsor of the American Dream and Promise Act for Dreamers and TPS holders.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-29"
      },
@@ -3284,12 +3506,12 @@
       "source": "https://cityhallpass.com/election-2026/races/congress-44"
      },
      {
-      "text": "Lists 'Lower costs. More opportunity.' and 'Support accountability and effective enforcement' as priorities.",
+      "text": "Lists “Lower costs. More opportunity.” and “Support accountability and effective enforcement” as priorities.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-44"
      },
      {
-      "text": "On immigration: 'Secure, fair, and practical solutions.' No specific proposals were found.",
+      "text": "On immigration: “Secure, fair, and practical solutions.” No specific proposals were found.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/congress-44"
      }
@@ -3342,7 +3564,7 @@
     "background": "State senator since December 2022. Marine Corps veteran (2009 to 2016), former EMT, therapist and City of LA field deputy; UCLA Master of Social Welfare. Lives in Panorama City. First in June with 62.1%.",
     "own_words": [
      {
-      "text": "Close the 'Water's Edge' corporate tax loophole, which she says would bring in 'a couple of billion' dollars.",
+      "text": "Close the “Water's Edge” corporate tax loophole, which she says would bring in “a couple of billion” dollars.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-20"
      },
@@ -3352,7 +3574,7 @@
       "source": "https://cityhallpass.com/election-2026/races/senate-20"
      },
      {
-      "text": "No support for 'density-only solutions' without affordability rules; voted no on SB 79 in 2025.",
+      "text": "No support for “density-only solutions” without affordability rules; voted no on SB 79 in 2025.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-20"
      }
@@ -3369,12 +3591,12 @@
     "background": "Tujunga resident and regional recruiting manager; retired after 26 years in the Army. Lost the 2024 Assembly District 44 race to Nick Schultz. No ballot designation this year. Second in June with 27.9%.",
     "own_words": [
      {
-      "text": "Tax or fee increases are a 'non-starter'; cut spending first.",
+      "text": "Tax or fee increases are a “non-starter”; cut spending first.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-20"
      },
      {
-      "text": "Emergency care for everyone 'regardless of status,' but no 'broad, unlimited expansion' of coverage without a set funding source.",
+      "text": "Emergency care for everyone “regardless of status,” but no “broad, unlimited expansion” of coverage without a set funding source.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/senate-20"
      },
@@ -3420,33 +3642,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Rickey Tracy Hayes II",
-    "party": "Republican",
-    "incumbent": false,
-    "website": "https://rickeyhayesforassembly2026.com",
-    "website_confidence": "sourced",
-    "background": "Marine Corps veteran, former custody and police officer, and IBEW lineman turned energy infrastructure executive. Has lived in the Santa Clarita Valley for over a decade. Has not held office. Second in June with 22.3%.",
-    "own_words": [
-     {
-      "text": "Balance the budget 'entirely' with spending cuts and no new taxes.",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
-     },
-     {
-      "text": "Suspend the gas tax; give incentives to refineries that expand and modernize.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
-     },
-     {
-      "text": "Change CEQA and speed up permits to build housing.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Pilar Schiavo",
     "party": "Democratic",
     "incumbent": true,
@@ -3455,7 +3650,7 @@
     "background": "Assemblymember since 2022; chairs the Military and Veterans Affairs Committee. Former nurse advocate, small business owner and labor organizer. Lives in Chatsworth. First in June with 55.6%.",
     "own_words": [
      {
-      "text": "Close the deficit with 'a balance of both' cuts and revenue.",
+      "text": "Close the deficit with “a balance of both” cuts and revenue.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-40"
      },
@@ -3466,6 +3661,33 @@
      },
      {
       "text": "Bills to cut permit delays for housing (AB 301 and AB 2390).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Rickey Tracy Hayes II",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://rickeyhayesforassembly2026.com",
+    "website_confidence": "sourced",
+    "background": "Marine Corps veteran, former custody and police officer, and IBEW lineman turned energy infrastructure executive. Has lived in the Santa Clarita Valley for over a decade. Has not held office. Second in June with 22.3%.",
+    "own_words": [
+     {
+      "text": "Balance the budget “entirely” with spending cuts and no new taxes.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Suspend the gas tax; give incentives to refineries that expand and modernize.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Change CEQA and speed up permits to build housing.",
       "is_quote": false,
       "source": "https://cityhallpass.com/election-2026/races/assembly-40"
      }
@@ -3518,7 +3740,7 @@
     "background": "Agoura Hills councilmember since 2018 and former mayor; past board chair of Clean Power Alliance. Former financial analyst and legislative staffer; Northwestern. First in June.",
     "own_words": [
      {
-      "text": "New ongoing revenue, 'structural budget reform' and closing 'special interest loopholes'; opposes cuts to schools and health care.",
+      "text": "New ongoing revenue, “structural budget reform” and closing “special interest loopholes”; opposes cuts to schools and health care.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-42"
      },
@@ -3545,7 +3767,7 @@
     "background": "Newbury Park owner of a medical device company; started as a union heavy equipment operator. Lost this seat to Irwin in 2024. Has not held office. Second in June.",
     "own_words": [
      {
-      "text": "'DOGE the state budget'; says the state does not have 'a revenue problem.'",
+      "text": "“DOGE the state budget”; says the state does not have “a revenue problem.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-42"
      },
@@ -3592,6 +3814,33 @@
   "is_retention": false,
   "candidates": [
    {
+    "name": "Celeste Rodriguez",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votecelesterodriguez.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2024; former San Fernando mayor and councilmember. Ran the City of LA’s guaranteed basic income pilot in the mayor’s office. San Diego State economics. First in June with 74.9%.",
+    "own_words": [
+     {
+      "text": "Close corporate tax loopholes and use “outcome-based budgeting.”",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     },
+     {
+      "text": "Opposes cooperation between local agencies and ICE; more money for legal defense and rapid response networks.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     },
+     {
+      "text": "“Health care should not depend on immigration status.”",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
     "name": "Ricardo Benitez",
     "party": "Republican",
     "incumbent": false,
@@ -3602,33 +3851,6 @@
      {
       "text": "No published positions were found.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
-    "name": "Celeste Rodriguez",
-    "party": "Democratic",
-    "incumbent": true,
-    "website": "https://www.votecelesterodriguez.com",
-    "website_confidence": "sourced",
-    "background": "Assemblymember since 2024; former San Fernando mayor and councilmember. Ran the City of LA’s guaranteed basic income pilot in the mayor’s office. San Diego State economics. First in June with 74.9%.",
-    "own_words": [
-     {
-      "text": "Close corporate tax loopholes and use 'outcome-based budgeting.'",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
-     },
-     {
-      "text": "Opposes cooperation between local agencies and ICE; more money for legal defense and rapid response networks.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
-     },
-     {
-      "text": "'Health care should not depend on immigration status.'",
-      "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-43"
      }
     ],
@@ -3668,28 +3890,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Carolyn Daniels",
-    "party": "Republican",
-    "incumbent": false,
-    "website": "https://daniels4assembly.com",
-    "website_confidence": "sourced",
-    "background": "Former Miss America, the first from Hawaii, with three decades of advocacy on domestic violence and education. Has lived in the district for 20 years. Has not held office. Second in June with 20.7%.",
-    "own_words": [
-     {
-      "text": "'Spending cuts are the way to go'; audit and cut 'redundant and under-performing agencies.'",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
-     },
-     {
-      "text": "Reject new taxes; supports suspending the gas tax (AB 1745).",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Nicholas \"Nick\" Schultz",
     "party": "Democratic",
     "incumbent": true,
@@ -3698,7 +3898,7 @@
     "background": "Assemblymember since 2024; chairs the Public Safety Committee. Former deputy attorney general who prosecuted corruption and trafficking; former Burbank mayor. Lives in Burbank. First in June with 71.2%.",
     "own_words": [
      {
-      "text": "Close tax loopholes for the wealthy and large corporations, including the 'water's edge' loophole.",
+      "text": "Close tax loopholes for the wealthy and large corporations, including the “water's edge” loophole.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-44"
      },
@@ -3708,8 +3908,30 @@
       "source": "https://cityhallpass.com/election-2026/races/assembly-44"
      },
      {
-      "text": "Optional time-based 'dynamic' electricity rates (AB 1787, held in the Senate).",
+      "text": "Optional time-based “dynamic” electricity rates (AB 1787, held in the Senate).",
       "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Carolyn Daniels",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://daniels4assembly.com",
+    "website_confidence": "sourced",
+    "background": "Former Miss America, the first from Hawaii, with three decades of advocacy on domestic violence and education. Has lived in the district for 20 years. Has not held office. Second in June with 20.7%.",
+    "own_words": [
+     {
+      "text": "“Spending cuts are the way to go”; audit and cut “redundant and under-performing agencies.”",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     },
+     {
+      "text": "Reject new taxes; supports suspending the gas tax (AB 1745).",
+      "is_quote": false,
       "source": "https://cityhallpass.com/election-2026/races/assembly-44"
      }
     ],
@@ -3784,17 +4006,17 @@
     "background": "Longtime LAUSD teacher (24 years as of 2022) who served in UTLA’s House of Representatives. Ran for the LAUSD board in 2022 and against Gabriel in 2024. Second in June.",
     "own_words": [
      {
-      "text": "Suspend the gas tax, defend Prop 13 and oppose 'any new tax increase.'",
+      "text": "Suspend the gas tax, defend Prop 13 and oppose “any new tax increase.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-46"
      },
      {
-      "text": "A state audit to 'track where the money went' on homelessness; more mental health and addiction treatment.",
+      "text": "A state audit to “track where the money went” on homelessness; more mental health and addiction treatment.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-46"
      },
      {
-      "text": "Tougher penalties for repeat offenders; 'hold rogue DAs accountable.'",
+      "text": "Tougher penalties for repeat offenders; “hold rogue DAs accountable.”",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-46"
      }
@@ -3831,28 +4053,6 @@
   "is_retention": false,
   "candidates": [
    {
-    "name": "Andrea Lee Anderson",
-    "party": "Republican",
-    "incumbent": false,
-    "website": "https://www.andrealeeanderson.com/",
-    "website_confidence": "sourced",
-    "background": "Musician, per a 2026 questionnaire. On the ballot with no designation and no campaign finance committee on file. Has not held office. Second in June with 14.2%.",
-    "own_words": [
-     {
-      "text": "'Lower taxes'; adding more social programs is her 'non-starter.'",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
-     },
-     {
-      "text": "The state should 'cooperate with' federal immigration agents 'rather than threaten them.'",
-      "is_quote": true,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
-     }
-    ],
-    "lwv_status": "unknown",
-    "lwv_url": null
-   },
-   {
     "name": "Jessica Caloza",
     "party": "Democratic",
     "incumbent": true,
@@ -3868,6 +4068,28 @@
      {
       "text": "Voted yes on SB 79 (housing near transit) and SB 627, the ban on masked law enforcement.",
       "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Andrea Lee Anderson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.andrealeeanderson.com/",
+    "website_confidence": "sourced",
+    "background": "Musician, per a 2026 questionnaire. On the ballot with no designation and no campaign finance committee on file. Has not held office. Second in June with 14.2%.",
+    "own_words": [
+     {
+      "text": "“Lower taxes”; adding more social programs is her “non-starter.”",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     },
+     {
+      "text": "The state should “cooperate with” federal immigration agents “rather than threaten them.”",
+      "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-52"
      }
     ],
@@ -4001,7 +4223,7 @@
       "source": "https://cityhallpass.com/election-2026/races/assembly-66"
      },
      {
-      "text": "Backed single-payer before holding office; now 'agnostic' on the approach.",
+      "text": "Backed single-payer before holding office; now “agnostic” on the approach.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-66"
      }
@@ -4023,7 +4245,7 @@
       "source": "https://cityhallpass.com/election-2026/races/assembly-66"
      },
      {
-      "text": "Says single-payer does not 'make sense'; supports Medi-Cal for all income-eligible residents regardless of status.",
+      "text": "Says single-payer does not “make sense”; supports Medi-Cal for all income-eligible residents regardless of status.",
       "is_quote": true,
       "source": "https://cityhallpass.com/election-2026/races/assembly-66"
      },
@@ -4077,7 +4299,7 @@
     "background": "In Congress since 2003, most recently for the old 38th District, so she is not the incumbent in this new seat. Former labor and employment attorney and executive director of the Orange County Central Labor Council. UC Berkeley and UCLA Law.",
     "own_words": [
      {
-      "text": "Campaigning on costs: 'I'm fighting to lower prices and stand up for the hardworking people who keep our communities running.'",
+      "text": "Campaigning on costs: “I'm fighting to lower prices and stand up for the hardworking people who keep our communities running.”",
       "is_quote": true,
       "source": "https://news.ballotpedia.org/2026/07/15/u-s-rep-linda-sanchez-d-ca-38-and-mitch-clemmons-r-compete-for-californias-redrawn-41st-congressional-district/"
      }
@@ -4094,7 +4316,7 @@
     "background": "Has run a plumbing company since 2002; studied aerospace engineering technology at Cal Poly Pomona. Lost the 2022 race for State Senate District 30, 61% to 39%.",
     "own_words": [
      {
-      "text": "Campaign says it focuses on 'addressing everyday concerns that matter most to residents.'",
+      "text": "Campaign says it focuses on “addressing everyday concerns that matter most to residents.”",
       "is_quote": true,
       "source": "https://news.ballotpedia.org/2026/07/15/u-s-rep-linda-sanchez-d-ca-38-and-mitch-clemmons-r-compete-for-californias-redrawn-41st-congressional-district/"
      }
@@ -4104,6 +4326,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
     "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
@@ -4124,8 +4350,8 @@
   "state": "CA",
   "level": "federal",
   "office": "U.S. Representative",
-  "district": "CD-46 (southern Fullerton; plus Anaheim, Santa Ana, Orange, Placentia, Stanton)",
-  "scope_plain": "Voters in the 46th Congressional District (new map approved with Prop 50). About 61,000 Fullerton residents live in it, mostly in the south of the city; the rest of the district is mainly Anaheim and Santa Ana. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "district": "CD-46 (part of Fullerton; most of Anaheim and Santa Ana, plus parts of Orange, Placentia and Stanton)",
+  "scope_plain": "Voters in the 46th Congressional District (new map approved with Prop 50). About 61,000 Fullerton residents live in it; the rest of the district is mainly Anaheim and Santa Ana. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
   "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
   "why_it_matters": "A rematch of 2024: the Democratic incumbent, in Congress since 2017, against a Republican UC Irvine professor.",
   "vote_for": 1,
@@ -4143,7 +4369,7 @@
     "background": "In Congress since 2017. Earlier in the State Assembly (1998 to 2004), on the Orange County Board of Supervisors (2004 to 2006) and in the State Senate (2006 to 2014). Cal State Fullerton economics; UCLA MBA and law degree.",
     "own_words": [
      {
-      "text": "Campaign site says 'public service should be about people, not playing partisan games.'",
+      "text": "Campaign site says “public service should be about people, not playing partisan games.”",
       "is_quote": true,
       "source": "https://www.loucorrea.com"
      },
@@ -4170,12 +4396,12 @@
       "source": "https://www.davidpanforcongress.com"
      },
      {
-      "text": "On public safety (2024 site): 'recruit more police and enforce our laws.'",
+      "text": "On public safety (2024 site): “recruit more police and enforce our laws.”",
       "is_quote": true,
       "source": "https://ballotpedia.org/David_Pan"
      },
      {
-      "text": "'Reducing the size and reach of government will put money back in the hands of families' (2024 site).",
+      "text": "“Reducing the size and reach of government will put money back in the hands of families” (2024 site).",
       "is_quote": true,
       "source": "https://ballotpedia.org/David_Pan"
      }
@@ -4185,6 +4411,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
     "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
@@ -4228,7 +4458,7 @@
     "background": "Assemblymember since 2016; first elected to the Walnut Valley Unified school board in 2011. Business owner and educator. Cal State Fullerton; USC master’s in public administration and doctorate. First in June with 66.3%.",
     "own_words": [
      {
-      "text": "No current positions were opened for this guide.",
+      "text": "No published positions were found as of Oct 17, 2026.",
       "is_quote": false,
       "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
      }
@@ -4245,7 +4475,7 @@
     "background": "Account sales manager (ballot designation). Serves on the Green Party of Orange County Central Committee and is active in local mutual-aid events. Second in June with 33.7%.",
     "own_words": [
      {
-      "text": "No current positions were opened for this guide.",
+      "text": "No published positions were found as of Oct 17, 2026.",
       "is_quote": false,
       "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
      }
@@ -4255,6 +4485,10 @@
    }
   ],
   "sources": [
+   {
+    "name": "OC Registrar: contests qualified for the Nov 3, 2026 ballot",
+    "url": "https://ocvote.gov/elections/contests-qualified-for-the-ballot-for-the-2026-general-election"
+   },
    {
     "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
     "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"

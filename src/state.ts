@@ -34,8 +34,9 @@ export interface UI {
   noteOpen: Set<string>;
   showAll: Set<string>;       // races where the user asked to see filtered-out candidates
   why: Record<string, string | null>;
-  sourcesOpen: boolean;
   filterOpen: boolean;
+  gridOpen: boolean;          // the side-by-side grid, inside the Filter shelf
+  shelfFrom: string | null;   // data-fk to focus when the shelf closes
   addrOpen: boolean;
   addrBusy: boolean;
   addrMsg: string | null;
@@ -57,7 +58,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     open: new Set(), expanded: new Set(), collapsed: new Set(), noteOpen: new Set(), showAll: new Set(), why: {},
-    sourcesOpen: false, filterOpen: false, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null,
+    filterOpen: false, gridOpen: false, shelfFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null,
   } as UI,
   pending: null as Pending | null,
   loadErr: null as string | null,

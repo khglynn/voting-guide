@@ -103,7 +103,7 @@ function renderItem(id: string): void {
 let lazyTimer: number | undefined;
 function renderLazy(): void {
   window.clearTimeout(lazyTimer);
-  lazyTimer = window.setTimeout(() => render(['cheat', 'print', ...(S.ui.sourcesOpen ? ['sources' as Region] : [])]), 60);
+  lazyTimer = window.setTimeout(() => render(['cheat', 'print', ...(S.ui.filterOpen && S.ui.gridOpen ? ['sheet' as Region] : [])]), 60);
 }
 /* After a pick: the card (and any linked measure cards), the counters, then the rest lazily. */
 function afterPick(id: string): void {
@@ -165,7 +165,7 @@ async function openBallot(st: string, placeIds: string[], zip: string, opts: { s
     S.zipChoice = null;
     S.coverage = null;
     S.ui.expanded.clear(); S.ui.showAll.clear(); S.ui.noteOpen.clear(); S.ui.why = {};
-    S.ui.sourcesOpen = false; S.ui.filterOpen = false; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.saveOpen = false; S.ui.copyFallback = null;
+    S.ui.gridOpen = false; S.ui.filterOpen = false; S.ui.shelfFrom = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.saveOpen = false; S.ui.copyFallback = null;
     render();
     renderLazy();
     persist(true);
@@ -349,6 +349,7 @@ A['district-change'] = (d) => {
 };
 A.sec = (d) => { const s = d.sec as SectionKey; S.ui.collapsed.has(s) ? S.ui.collapsed.delete(s) : S.ui.collapsed.add(s); renderSection(s); };
 A.jump = (d) => {
+  if (S.ui.filterOpen) { S.ui.shelfFrom = null; A['filter-close']({}, document.body); }
   const it = S.ballot!.byId.get(d.id!);
   if (!it) return;
   const sec = sectionOf(it);
@@ -375,18 +376,38 @@ A.next = () => {
   h.setAttribute('tabindex', '-1');
   h.focus({ preventScroll: true });
 };
-A.filter = () => { S.ui.filterOpen = true; render(['sheet']); $('[data-fk="flt-x"]')?.focus(); };
+/* The Filter shelf. Opened from the sources line, it scrolls to the sources section and
+   moves focus to its heading. */
+function openShelf(at: 'top' | 'sources', from: string): void {
+  S.ui.filterOpen = true; S.ui.gridOpen = false; S.ui.shelfFrom = from;
+  render(['sheet']);
+  if (at === 'sources') {
+    const bd = $('.sheet-bd'); const sec = $('#flt-src');
+    if (bd && sec) bd.scrollTop += sec.getBoundingClientRect().top - bd.getBoundingClientRect().top - 4;
+    $('#flt-src-h')?.focus({ preventScroll: true });
+  } else $('[data-fk="flt-x"]')?.focus();
+}
+A.filter = () => openShelf('top', 'bar-filter');
+A.sources = () => openShelf('sources', 'sources-btn');
+A['go-sources'] = () => openShelf('sources', 'bar-filter');
+A['grid-open'] = () => { S.ui.gridOpen = true; render(['sheet']); $('[data-fk="grid-back"]')?.focus(); };
+A['grid-close'] = () => {
+  S.ui.gridOpen = false; render(['sheet']);
+  const bd = $('.sheet-bd'); const btn = $('[data-fk="grid-open"]');
+  if (bd && btn) bd.scrollTop += btn.getBoundingClientRect().top - bd.getBoundingClientRect().top - 80;
+  btn?.focus({ preventScroll: true });
+};
 A['filter-close'] = () => {
-  S.ui.filterOpen = false;
-  if (filterDirty) { filterDirty = false; render(['sheet', 'offer', 'ballot', 'bar']); renderLazy(); } else render(['sheet']);
-  $('[data-fk="bar-filter"]')?.focus();
+  S.ui.filterOpen = false; S.ui.gridOpen = false;
+  if (filterDirty) { filterDirty = false; render(['sheet', 'sources', 'offer', 'ballot', 'bar']); renderLazy(); } else render(['sheet']);
+  $(`[data-fk="${S.ui.shelfFrom || 'bar-filter'}"]`)?.focus();
 };
 /* Inside the sheet, only the sheet re-renders; the ballot catches up when it closes. */
 let filterDirty = false;
 const filterChanged = () => {
   persist();
   if (S.ui.filterOpen) { filterDirty = true; render(['sheet']); return; }
-  render(['offer', 'ballot', 'bar']); renderLazy();
+  render(['sources', 'offer', 'ballot', 'bar']); renderLazy();
 };
 A.party = (d) => {
   const p = d.p!;
@@ -407,15 +428,13 @@ A['f-auto'] = () => {
 };
 A['offer-yes'] = () => { const n = applyAuto(); ballotWide(); persist(); toast(`Picked ${n} ${n === 1 ? 'race' : 'races'}. Each says why, with an Undo.`); };
 A['offer-no'] = () => { S.b.offerDismissed = filterSig(); render(['offer']); persist(); };
-A.sources = () => { S.ui.sourcesOpen = !S.ui.sourcesOpen; render(['sources']); if (!S.ui.sourcesOpen) keepInView('#sources'); };
-A['go-sources'] = () => { S.ui.sourcesOpen = true; render(['sources']); scrollToEl($('#sources')); };
 A.src = (d) => {
   const cur = chosenIds();
   S.b.sources = cur.includes(d.id!) ? cur.filter((x) => x !== d.id) : [...cur, d.id!];
-  ballotWide(); persist();
+  filterChanged();
 };
-A['src-default'] = () => { S.b.sources = null; ballotWide(); persist(); };
-A['src-none'] = () => { S.b.sources = []; ballotWide(); persist(); };
+A['src-default'] = () => { S.b.sources = null; filterChanged(); };
+A['src-none'] = () => { S.b.sources = []; filterChanged(); };
 A['plan-fold'] = () => { S.b.planSeen = true; S.ui.open.delete('plan'); render(['plan']); persist(); keepInView('#plan'); };
 A['plan-open'] = () => { S.ui.open.add('plan'); render(['plan']); };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; render(['mast']); scrollToEl($('.mast')); $('#addr-in')?.focus(); };
@@ -461,6 +480,12 @@ document.addEventListener('pointerup', (e) => {
   if ((e.target as HTMLElement).closest('[data-act]') === t.el) fire(t.el);
 });
 document.addEventListener('pointercancel', () => { touch = null; });
+/* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
+   re-rendered under the finger (the Filter shelf opening, say), and a stray mousedown
+   there would pull focus away from where the action put it. */
+document.addEventListener('touchend', (e) => {
+  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act]')) e.preventDefault();
+}, { passive: false });
 document.addEventListener('click', (e) => {
   const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act]');
   if (!el) return;
@@ -491,7 +516,7 @@ document.addEventListener('change', (e) => {
   }
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && S.ui.filterOpen) A['filter-close']({}, document.body);
+  if (e.key === 'Escape' && S.ui.filterOpen) A[S.ui.gridOpen ? 'grid-close' : 'filter-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
 

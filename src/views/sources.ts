@@ -1,4 +1,5 @@
-/* Sources: one collapsed line; expanded, the picker and the side-by-side grid. */
+/* Sources: one line on the page. The picker lives in the Filter shelf, and the
+   side-by-side grid opens inside the shelf from there. */
 import type { Contest, Endorser, Item } from '../types';
 import { S } from '../state';
 import { chosen, chosenIds, endorsement, entriesBySection, status, isDecision, shortTitle, isMultiJudge, isMultiSeat, filterCands } from '../ballot';
@@ -43,16 +44,14 @@ function pickerHTML(): string {
     if (!list.length) return '';
     const k = `srcg-${lean}`;
     const onN = list.filter((e) => chosenIds().includes(e.id)).length;
-    return `<div class="src-group"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">
+    return `<div class="src-group"><button class="disc" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">
         <span class="row">${lean === 'none' ? '' : leanHTML(lean as Endorser['lean'], false)} ${esc(word)}: ${plural(list.length, 'source')}${onN ? `, ${onN} on` : ''}</span></button>
       ${isOpen(k) ? list.map(rowHTML).join('') : ''}</div>`;
   }).join('');
   return `<div class="picker">
-    <p class="small">Turn a source on to see its picks on every race. Publications and nonpartisan groups start on. Parties and advocacy groups are off until you turn them on. Each source shows its lean on a five-step scale, from Left to Right.</p>
-    <div class="row"><button class="btn btn-sm" data-act="src-default">Reset to default</button><button class="btn btn-sm" data-act="src-none">Turn all off</button></div>
-    <h3 class="kicker src-hd">On by default: publications and nonpartisan groups</h3>
+    <h4 class="kicker src-hd">On by default: publications and nonpartisan groups</h4>
     ${defaults.length ? defaults.map(rowHTML).join('') : '<p class="small muted">None for this ballot.</p>'}
-    <h3 class="kicker src-hd">Opt in: parties and advocacy groups, by lean</h3>
+    <h4 class="kicker src-hd">Opt in: parties and advocacy groups, by lean</h4>
     ${groups || '<p class="small muted">None for this ballot.</p>'}
   </div>`;
 }
@@ -108,7 +107,7 @@ export function gridRows(): Item[] {
 }
 function gridHTML(): string {
   const cols = chosen();
-  if (!cols.length) return '<p class="empty-src">Turn on a source above to fill the grid.</p>';
+  if (!cols.length) return '<p class="empty-src">Go back and turn on a source to fill the grid.</p>';
   const rows = gridRows();
   const head = `<thead><tr><th scope="col" class="rowhd">Ballot item</th>${cols.map((e) => `<th scope="col"><span class="th-name">${esc(e.short)}</span>${leanHTML(e.lean, false)}</th>`).join('')}<th scope="col" class="pickcell">Your pick</th></tr></thead>`;
   const body = rows.map((it) => `<tr><th scope="row" class="rowhd"><button class="rowbtn" data-act="jump" data-id="${esc(it.id)}"><span class="t">${esc(shortTitle(it))}</span></button></th>${cols.map((e) => cellHTML(it, e)).join('')}${pickCellHTML(it)}</tr>`).join('');
@@ -116,24 +115,33 @@ function gridHTML(): string {
     <div class="grid-wrap" data-keep="grid" tabindex="0" role="region" aria-label="Your sources side by side. Scrolls sideways."><table class="sheet">${head}<tbody>${body}</tbody></table></div>`;
 }
 
+/* The one line on the page where the sources block used to be. */
 export function sourcesHTML(): string {
   const b = S.ballot!;
-  const cols = chosen();
-  const names = cols.map((e) => e.short);
-  const list = names.length === 0 ? 'no sources yet' : names.length <= 3 ? names.join(', ') : `${names.slice(0, 3).join(', ')} and ${names.length - 3} more`;
-  const total = b.endorsers.length;
-  if (!S.ui.sourcesOpen) {
-    return `<section class="sources is-folded" id="sources" aria-label="Endorsement sources">
-      <div class="fold-main"><span class="fold-t">Endorsements from</span><span class="fold-v">${esc(list)}</span><span class="lim">${cols.length} of ${total} sources on</span></div>
-      <button class="btn btn-sm" data-act="sources" aria-expanded="false" data-fk="sources-btn">Change</button></section>`;
-  }
-  return `<section class="sources" id="sources" aria-labelledby="src-h">
-    <div class="sources-hd"><h2 class="h3" id="src-h">Endorsement sources</h2>
-      <button class="btn btn-sm" data-act="sources" aria-expanded="true" data-fk="sources-btn">Close</button></div>
-    <p class="small"><strong>${cols.length} of ${total} sources on.</strong> We list who weighed in and who didn’t. A source that endorses one side more often isn’t balanced by another unless you turn one on.</p>
+  const n = chosen().length;
+  if (!b.endorsers.length) return '';
+  return `<section class="src-line-wrap" id="sources" aria-label="Endorsement sources">
+    <button class="src-line" data-act="sources" aria-haspopup="dialog" data-fk="sources-btn">
+      <span class="src-line-t">${n ? `Endorsements from <strong>${plural(n, 'source')}</strong>` : 'No endorsement sources on'}</span>
+      <span class="src-line-cta">Change</span></button></section>`;
+}
+
+/* The sources section of the Filter shelf. */
+export function sourcesShelfHTML(tgl: (act: string, on: boolean, label: string, sub: string, fk: string) => string): string {
+  const b = S.ballot!;
+  const n = chosen().length;
+  return `<section class="flt-src" id="flt-src" aria-labelledby="flt-src-h">
+    <h3 class="h3" id="flt-src-h" tabindex="-1">Endorsement sources</h3>
+    <p class="small muted"><strong class="ink">${n} of ${b.endorsers.length} on.</strong> Turn a source on to see its picks on every race.</p>
+    ${tgl('f-endorsed', S.prefs.endorsedOnly, 'Only candidates my sources endorsed', `In races where at least one of your ${plural(n, 'source')} picked someone.`, 'f-end')}
+    <button class="btn btn-block" data-act="grid-open" data-fk="grid-open" ${n ? '' : 'disabled'}>See their picks side by side</button>
+    <div class="row"><button class="btn btn-sm" data-act="src-default" data-fk="src-default">Reset to default</button><button class="btn btn-sm" data-act="src-none" data-fk="src-none">Turn all off</button></div>
     ${pickerHTML()}
-    <h3 class="kicker src-hd">Side by side</h3>
-    <p class="small muted">Rows are your ballot. Columns are the sources you turned on. You can pick from here too.</p>
-    ${gridHTML()}
+    <p class="lim">Each source’s lean is shown on a five-step scale, Left to Right. One side’s sources aren’t balanced by the other’s unless you turn them on.</p>
   </section>`;
+}
+
+/* The side-by-side grid, full height inside the shelf. */
+export function gridShelfHTML(): string {
+  return `<p class="small muted">Rows are your ballot. Columns are the ${plural(chosen().length, 'source')} you turned on. You can pick from here too.</p>${gridHTML()}`;
 }

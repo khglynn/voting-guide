@@ -1,10 +1,11 @@
 /* Page chrome: masthead and ZIP flow, address lookup, restore prompt, auto-pick offer,
    sticky bar, filter sheet, and "How this guide works". */
 import { S } from '../state';
-import { autoCandidates, decisionItems, chosen, filterSig, isPartisan, partyCats, PARTY_LABEL, type PartyCat } from '../ballot';
+import { autoCandidates, decisionItems, filterSig, isPartisan, partyCats, PARTY_LABEL, type PartyCat } from '../ballot';
 import type { Contest } from '../types';
 import { esc, plural, fmtLong } from '../util';
 import { ext, isOpen, discBtn } from './common';
+import { sourcesShelfHTML, gridShelfHTML } from './sources';
 
 /* The election date shown up top comes from the data: this ballot's state file, or the
    date most covered states share. */
@@ -128,6 +129,14 @@ function partiesOnBallot(): PartyCat[] {
 
 export function sheetHTML(): string {
   if (!S.ui.filterOpen || !S.ballot) return '';
+  if (S.ui.gridOpen) {
+    return `<div class="scrim screen-only" data-act="filter-close"></div>
+    <div class="sheet-panel sheet-grid screen-only" role="dialog" aria-modal="true" aria-labelledby="flt-h">
+      <div class="sheet-hd"><button class="btn btn-sm" data-act="grid-close" data-fk="grid-back"><span aria-hidden="true">&larr;</span> Sources</button>
+        <h2 class="h3" id="flt-h">Side by side</h2><button class="drawer-x" data-act="filter-close" aria-label="Close" data-fk="flt-x">&times;</button></div>
+      <div class="sheet-bd">${gridShelfHTML()}</div>
+    </div>`;
+  }
   const cats = partiesOnBallot();
   const sel = S.prefs.parties;
   const tgl = (act: string, on: boolean, label: string, sub: string, fk: string) => `<div class="src-row">
@@ -136,17 +145,19 @@ export function sheetHTML(): string {
   return `<div class="scrim screen-only" data-act="filter-close"></div>
   <div class="sheet-panel screen-only" role="dialog" aria-modal="true" aria-labelledby="flt-h">
     <div class="sheet-hd"><h2 class="h3" id="flt-h">Filter your ballot</h2><button class="drawer-x" data-act="filter-close" aria-label="Close" data-fk="flt-x">&times;</button></div>
-    <div class="sheet-bd">
-      <div class="stack-sm"><span class="kicker">Parties</span>
+    <div class="sheet-bd" data-keep="sheet">
+      ${cats.length ? `<div class="stack-sm"><span class="kicker">Parties</span>
         <p class="small muted">Hides candidates in partisan races. Measures and nonpartisan races always show.</p>
         <div class="chips">${cats.map((p) => `<button class="fchip" data-act="party" data-p="${p}" aria-pressed="${!sel || sel.includes(p)}" data-fk="pty-${p}">${esc(PARTY_LABEL[p])}</button>`).join('')}</div>
         ${sel ? '<button class="btn-text btn btn-sm" data-act="party-all">Show every party</button>' : ''}
-      </div>
-      ${tgl('f-endorsed', S.prefs.endorsedOnly, 'Only candidates my sources endorsed', `In races where at least one of your ${chosen().length} sources picked someone.`, 'f-end')}
+      </div>` : ''}
+      <div class="flt-group">
       ${tgl('f-fold', S.prefs.foldDecided, 'Fold races I’ve decided', 'Each decided race shrinks to one line. Tap Change to reopen it.', 'f-fold')}
       ${tgl('f-auto', S.prefs.autoPick, 'Pick for me when one candidate is left', 'When your filters leave one candidate, we pick them and say why. You can undo any of them.', 'f-auto')}
-      <button class="btn btn-primary btn-block" data-act="filter-close">Done</button>
+      </div>
+      ${sourcesShelfHTML(tgl)}
     </div>
+    <div class="sheet-ft"><button class="btn btn-primary btn-block" data-act="filter-close" data-fk="flt-done">Done</button></div>
   </div>`;
 }
 

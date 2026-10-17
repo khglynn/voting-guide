@@ -727,7 +727,7 @@
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
           {
-            "text": "I support giving local governments the necessary land-use and regulatory authority over data centers.",
+            "text": "I support giving local governments the necessary land-use and regulatory authority to ensure developers are responsive to community and environmental concerns.",
             "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           }
@@ -995,7 +995,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not answer the LWV questionnaire, so the guide prints no biography.",
+        "background": "Republican nominee; currently judge of Travis County’s 250th District Court. Did not answer the LWV questionnaire.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire.",
@@ -1035,6 +1035,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -1144,17 +1148,17 @@
     "district": "250th Judicial District",
     "scope_plain": "Every Travis County voter",
     "office_explainer": "A trial judge who hears felony cases, big civil suits, and family cases in Travis County.",
-    "why_it_matters": null,
+    "why_it_matters": "Open seat. The current judge, Cory Liu, is on this ballot for chief justice of the 3rd Court of Appeals instead.",
     "vote_for": 1,
-    "incumbent": "Kennon Lily Wooten",
-    "open_seat": false,
+    "incumbent": "Cory Liu (running for 3rd Court of Appeals chief justice instead)",
+    "open_seat": true,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Kennon Lily Wooten",
         "party": "Democratic",
-        "incumbent": true,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": null,
@@ -1170,6 +1174,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -1549,17 +1557,17 @@
     "district": "No. 2",
     "scope_plain": "Every Travis County voter",
     "office_explainer": "A county trial judge: misdemeanors, smaller civil cases, and (in some courts) family or probate matters.",
-    "why_it_matters": null,
+    "why_it_matters": "Open seat. Judge Eric Shepperd is not on the ballot.",
     "vote_for": 1,
-    "incumbent": "Leslie Dippel",
-    "open_seat": false,
+    "incumbent": "Eric Shepperd (not on ballot)",
+    "open_seat": true,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Leslie Dippel",
         "party": "Democratic",
-        "incumbent": true,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": null,
@@ -1575,6 +1583,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -2103,20 +2115,20 @@
     "district": "Precinct 4",
     "scope_plain": "Voters in Travis County Commissioner Precinct 4 (east and southeast Travis County, including 78702)",
     "office_explainer": "One of four commissioners who, with the county judge, set the county budget, tax rate and roads.",
-    "why_it_matters": "Open seat. Commissioner Margaret Gómez retired after 32 years; George Morales III won the Democratic primary.",
+    "why_it_matters": "Margaret Gómez retired in June after more than 30 years. George Morales III, who won the May Democratic runoff, was appointed to finish her term and is unopposed for a full term.",
     "vote_for": 1,
-    "incumbent": "Margaret Gómez (not on ballot)",
-    "open_seat": true,
+    "incumbent": "George Morales III (appointed June 2026)",
+    "open_seat": false,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "George Morales III",
         "party": "Democratic",
-        "incumbent": false,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Travis County Constable Precinct 4 since 2017; won the March 2026 Democratic primary for the open commissioner seat.",
+        "background": "Former Travis County Constable, Precinct 4. Won the May 2026 Democratic runoff, then was appointed commissioner in June 2026 when Margaret Gómez retired.",
         "own_words": [
           {
             "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
@@ -2129,6 +2141,14 @@
       }
     ],
     "sources": [
+      {
+        "name": "KUT: Margaret Gómez retires (June 3, 2026)",
+        "url": "https://www.kut.org/austin/2026-06-03/travis-county-austin-tx-margaret-gomez-retires"
+      },
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -2148,17 +2168,17 @@
     "district": "Precinct 1",
     "scope_plain": "Voters in Travis County JP Precinct 1 (north-central Travis County)",
     "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
-    "why_it_matters": null,
+    "why_it_matters": "Open seat. Judge Yvonne Williams is not on the ballot.",
     "vote_for": 1,
-    "incumbent": "Ciara Parks",
-    "open_seat": false,
+    "incumbent": "Yvonne Williams (not on ballot)",
+    "open_seat": true,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Ciara Parks",
         "party": "Democratic",
-        "incumbent": true,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": null,
@@ -2174,6 +2194,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -2193,17 +2217,17 @@
     "district": "Precinct 2",
     "scope_plain": "Voters in Travis County JP Precinct 2 (northwest Travis County)",
     "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
-    "why_it_matters": null,
+    "why_it_matters": "Open seat. Judge Randall Slagle is not on the ballot.",
     "vote_for": 1,
-    "incumbent": "Mariel Kelley",
-    "open_seat": false,
+    "incumbent": "Randall Slagle (not on ballot)",
+    "open_seat": true,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Mariel Kelley",
         "party": "Democratic",
-        "incumbent": true,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": null,
@@ -2219,6 +2243,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -2377,20 +2405,20 @@
     "district": "Precinct 4 (unexpired term)",
     "scope_plain": "Voters in Travis County Constable Precinct 4 (east and southeast Travis County, including 78702)",
     "office_explainer": "Serves court papers and evictions for the JP court, and provides some law enforcement.",
-    "why_it_matters": "Special election to fill the rest of a term.",
+    "why_it_matters": "Special election for the rest of the term George Morales III left when he became county commissioner. Gabriel Padilla already holds the job by appointment and is unopposed.",
     "vote_for": 1,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "Gabriel Padilla (appointed)",
+    "open_seat": false,
     "term_years": null,
     "is_retention": false,
     "candidates": [
       {
         "name": "Gabriel Padilla",
         "party": "Democratic",
-        "incumbent": false,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Appointed Precinct 4 constable after George Morales III left; 20+ years in law enforcement, per his party’s slate.",
         "own_words": [
           {
             "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
@@ -2403,6 +2431,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Travis County organizational chart, June 22, 2026 (lists sitting judges and officials)",
+        "url": "https://www.traviscountytx.gov/images/docs/County-wide-Chart-6-22-2026.pdf"
+      },
       {
         "name": "Travis County sample ballot (official PDF)",
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
@@ -2605,7 +2637,7 @@
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
           {
-            "text": "Supports Prop I: \"In most businesses, standard practice is to have an outside audit.\"",
+            "text": "Supports Prop I: “I think it should be a part of the charter.”",
             "is_quote": false,
             "source": "https://www.kut.org/politics/2026-10-16/austin-city-council-district-1-candidates-election-2026"
           },
@@ -2732,7 +2764,7 @@
         "incumbent": false,
         "website": "https://misaelforaustin.com",
         "website_confidence": "verified",
-        "background": "Business analyst and community organizer; former board president of Blackland Community Development Corporation; ran for this seat in 2022. Endorsed by DSA. Faces a misdemeanor riot charge from an ICE protest, which he disputes.",
+        "background": "Business analyst and community organizer; former board president of Blackland Community Development Corporation; ran for this seat in 2022. Charged in September with rioting, a Class B misdemeanor, after a protest against an ICE shooting.",
         "own_words": [
           {
             "text": "We have taken a pledge to not take corporate or real estate interests.",
@@ -2740,7 +2772,7 @@
             "source": "https://www.kut.org/politics/2026-10-16/austin-city-council-district-1-candidates-election-2026"
           },
           {
-            "text": "Be intentional about building deeply affordable housing, and make it cheaper for affordable housing developers.",
+            "text": "Be intentional about building deeply affordable housing, and make it cheaper for affordable housing developers to develop in our city.",
             "is_quote": true,
             "source": "https://www.kut.org/politics/2026-10-16/austin-city-council-district-1-candidates-election-2026"
           },
@@ -3218,7 +3250,7 @@
         "background": "Civil engineer (PhD) and urban planner with 30 years in city and private work; local business owner; former AISD science teacher.",
         "own_words": [
           {
-            "text": "Replace traffic signals with roundabouts. Cancel Project Connect light rail; consider monorail for commuter routes.",
+            "text": "Replace traffic signals with roundabouts. … Cancel Project Connect light rail; consider monorail for commuter routes.",
             "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
@@ -3344,7 +3376,7 @@
         "background": "District 1 trustee for three terms, 2002 to 2014.",
         "own_words": [
           {
-            "text": "Closures and consolidation should cease.",
+            "text": "The focus should be on improving academic achievement, strengthening student outcomes and increasing enrollment.",
             "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
@@ -3666,8 +3698,8 @@
         "background": "Lawyer, former educator and former AISD counsel; PTA vice president twice; AISD mother of two. LWV lists no website.",
         "own_words": [
           {
-            "text": "My number one goal is to mitigate the impact to students and campuses of any TEA action.",
-            "is_quote": false,
+            "text": "Whether it's full take over, conservatorship, or monitoring, my number one goal is to mitigate the impact to students and campuses.",
+            "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
           {
@@ -4064,7 +4096,7 @@
         "background": "28-year Pflugerville resident; served on the PfISD strategic planning committee and the city charter commission; Dell technical sales representative.",
         "own_words": [
           {
-            "text": "The notion that data centers are disproportionately using resources is simply nonsense.",
+            "text": "The notion that data centers are disproportionately using resources & taking them from our citizens is simply nonsense.",
             "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           },
@@ -4143,9 +4175,9 @@
     "id": "tx-pfisd-trustee-6",
     "state": "TX",
     "level": "school",
-    "office": "Pflugerville ISD Trustee",
+    "office": "Pflugerville ISD Trustee, Place 6",
     "district": "Place 6",
-    "scope_plain": "Every Pflugerville ISD voter",
+    "scope_plain": "Pflugerville ISD voters (most of Pflugerville plus parts of northeast Austin). Every Pflugerville ISD voter votes on Place 6.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -4215,9 +4247,9 @@
     "id": "tx-pfisd-trustee-7",
     "state": "TX",
     "level": "school",
-    "office": "Pflugerville ISD Trustee",
+    "office": "Pflugerville ISD Trustee, Place 7",
     "district": "Place 7",
-    "scope_plain": "Every Pflugerville ISD voter",
+    "scope_plain": "Pflugerville ISD voters (most of Pflugerville plus parts of northeast Austin). Every Pflugerville ISD voter votes on Place 7.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -4264,11 +4296,11 @@
     "id": "tx-rrisd-trustee-3",
     "state": "TX",
     "level": "school",
-    "office": "Round Rock ISD Trustee",
+    "office": "Round Rock ISD Trustee, Place 3",
     "district": "Place 3",
-    "scope_plain": "Every Round Rock ISD voter (Williamson and Travis counties)",
+    "scope_plain": "Round Rock ISD voters (most of Round Rock plus parts of north and northwest Austin in Williamson and Travis counties). Every Round Rock ISD voter votes on Place 3.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
-    "why_it_matters": "Four-way race for the seat held by eight-year trustee Amber Feller Landrum. The Labor Council backs Ayaan Moledina.",
+    "why_it_matters": "Four-way race for the seat held by eight-year trustee Amber Feller Landrum.",
     "vote_for": 1,
     "incumbent": "Amber Feller Landrum",
     "open_seat": false,
@@ -4380,9 +4412,9 @@
     "id": "tx-rrisd-trustee-4",
     "state": "TX",
     "level": "school",
-    "office": "Round Rock ISD Trustee",
+    "office": "Round Rock ISD Trustee, Place 4",
     "district": "Place 4",
-    "scope_plain": "Every Round Rock ISD voter (Williamson and Travis counties)",
+    "scope_plain": "Round Rock ISD voters (most of Round Rock plus parts of north and northwest Austin in Williamson and Travis counties). Every Round Rock ISD voter votes on Place 4.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -4429,9 +4461,9 @@
     "id": "tx-rrisd-trustee-5",
     "state": "TX",
     "level": "school",
-    "office": "Round Rock ISD Trustee",
+    "office": "Round Rock ISD Trustee, Place 5",
     "district": "Place 5",
-    "scope_plain": "Every Round Rock ISD voter (Williamson and Travis counties)",
+    "scope_plain": "Round Rock ISD voters (most of Round Rock plus parts of north and northwest Austin in Williamson and Travis counties). Every Round Rock ISD voter votes on Place 5.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -4466,7 +4498,7 @@
         "background": "RRISD leadership program graduate.",
         "own_words": [
           {
-            "text": "We are past the ideas phase and in tightening the budget.",
+            "text": "We are past the ideas phase and in tightening the belt stage for years now, barely holding on.",
             "is_quote": true,
             "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
           }
@@ -4491,9 +4523,9 @@
     "id": "tx-rrisd-trustee-6",
     "state": "TX",
     "level": "school",
-    "office": "Round Rock ISD Trustee",
+    "office": "Round Rock ISD Trustee, Place 6",
     "district": "Place 6",
-    "scope_plain": "Every Round Rock ISD voter (Williamson and Travis counties)",
+    "scope_plain": "Round Rock ISD voters (most of Round Rock plus parts of north and northwest Austin in Williamson and Travis counties). Every Round Rock ISD voter votes on Place 6.",
     "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -4621,6 +4653,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       },
@@ -4683,6 +4719,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
@@ -4697,7 +4737,7 @@
     "district": null,
     "scope_plain": "Every Williamson County voter",
     "office_explainer": "Receives, keeps and pays out county money.",
-    "why_it_matters": "Democrat Brian Walbridge is listed as withdrawn by LWV; check the ballot.",
+    "why_it_matters": "Open seat. Carole Callahan is the only name on the ballot. Democrat Brian Walbridge withdrew (the LWV guide lists him as withdrawn, and the county ballot does not print his name).",
     "vote_for": 1,
     "incumbent": null,
     "open_seat": true,
@@ -4720,32 +4760,19 @@
         ],
         "lwv_status": "responded",
         "lwv_url": "https://austinvotersguide.org/"
-      },
-      {
-        "name": "Brian Walbridge",
-        "party": "Democratic",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Listed as withdrawn in the LWV guide.",
-        "own_words": [
-          {
-            "text": "Listed as withdrawn by the League of Women Voters.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
       {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-wilco-tax-assessor",
@@ -4799,11 +4826,15 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-wilco-commissioner-2",
@@ -4840,6 +4871,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       },
@@ -4858,7 +4893,7 @@
     "district": "Precinct 4",
     "scope_plain": "Voters in Williamson County Precinct 4 (Taylor, Hutto, part of Round Rock)",
     "office_explainer": "One of four commissioners who, with the county judge, set the county budget, tax rate and roads.",
-    "why_it_matters": "Tish Flores is a declared write-in; her name is not printed.",
+    "why_it_matters": "Tish Flores is a declared write-in candidate. Her name is not printed on the ballot, but she answered the LWV questionnaire.",
     "vote_for": 1,
     "incumbent": "Russ Boles",
     "open_seat": false,
@@ -4898,32 +4933,19 @@
         ],
         "lwv_status": "declined",
         "lwv_url": "https://austinvotersguide.org/"
-      },
-      {
-        "name": "Tish Flores (write-in)",
-        "party": null,
-        "incumbent": false,
-        "website": "https://www.tishflores.com",
-        "website_confidence": "verified",
-        "background": "Declared write-in; nonprofit finance, real estate and public education background.",
-        "own_words": [
-          {
-            "text": "Wants 24/7 mobile outreach teams and specialty diversion courts.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
-          }
-        ],
-        "lwv_status": "responded",
-        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
       {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-wilco-district-court-512",
@@ -4933,17 +4955,17 @@
     "district": "512th Judicial District",
     "scope_plain": "Every Williamson County voter",
     "office_explainer": "A trial judge for felonies, big civil suits and family cases in Williamson County.",
-    "why_it_matters": "The only contested Williamson County judicial race.",
+    "why_it_matters": "The only contested Williamson County judicial race. Sarah Moore was appointed to this court earlier this year.",
     "vote_for": 1,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "Sarah Moore (appointed)",
+    "open_seat": false,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Sarah Moore",
         "party": "Republican",
-        "incumbent": false,
+        "incumbent": true,
         "website": "https://www.mooreforwilco.com",
         "website_confidence": "verified",
         "background": null,
@@ -4965,11 +4987,15 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-hays-county-judge",
@@ -4987,7 +5013,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Michelle Gutierrez-Cohen",
+        "name": "Michelle Gutierrez Cohen",
         "party": "Democratic",
         "incumbent": false,
         "website": null,
@@ -5070,6 +5096,10 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "KUT Hays County guide",
         "url": "https://www.kut.org/politics/2026-10-14/hays-county-elections-voter-guide-ballot-voting"
       },
@@ -5082,7 +5112,7 @@
         "url": "https://www.haysfreepress.com/article/26453,hays-county-to-see-new-county-judge-come-november"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-hays-commissioner-2",
@@ -5094,7 +5124,7 @@
     "office_explainer": "One of four commissioners who, with the county judge, set the county budget, tax rate and roads.",
     "why_it_matters": "Open seat; Commissioner Cohen is running for county judge.",
     "vote_for": 1,
-    "incumbent": "Michelle Gutierrez-Cohen (not on ballot)",
+    "incumbent": "Michelle Gutierrez Cohen (not on ballot)",
     "open_seat": true,
     "term_years": 4,
     "is_retention": false,
@@ -5146,11 +5176,15 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "Community Impact Q&A",
         "url": "https://communityimpact.com/san-marcos-buda-kyle/election/q-a-meet-the-candidates-running-for-hays-county-commissioner-precinct-2/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-hays-commissioner-4",
@@ -5214,11 +5248,15 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "Community Impact Q&A",
         "url": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-hays-county-commissioners-court-precinct-4/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-hays-ccl-2",
@@ -5260,11 +5298,15 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "Hays Free Press",
         "url": "https://www.haysfreepress.com/article/26453,hays-county-to-see-new-county-judge-come-november"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-kyle-mayor",
@@ -5272,7 +5314,7 @@
     "level": "city",
     "office": "Mayor of Kyle",
     "district": null,
-    "scope_plain": "Every City of Kyle voter",
+    "scope_plain": "City of Kyle voters only. Kyle is a separate city north of San Marcos, so San Marcos voters do not see this race.",
     "office_explainer": "Leads the seven-member council that sets Kyle's budget, tax rate and local laws.",
     "why_it_matters": "Incumbent Yvonne Flores-Cale faces two challengers. Kyle also elects council Districts 2 and 4.",
     "vote_for": 1,
@@ -5345,6 +5387,10 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "Community Impact Q&A",
         "url": "https://communityimpact.com/san-marcos-buda-kyle/election/q-a-meet-the-candidates-for-kyle-mayor/"
       },
@@ -5353,7 +5399,7 @@
         "url": "https://www.cityofkyle.gov/city-hall/elections/2026-election/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-san-marcos-mayor",
@@ -5417,11 +5463,15 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "Community Impact Q&A",
         "url": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-mayor/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-us-house-31",
@@ -5512,6 +5562,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       },
@@ -5574,6 +5628,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       },
@@ -5606,13 +5664,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Former Major League Baseball first baseman.",
-        "own_words": [
-          {
-            "text": "The Statesman says he pairs fiscal conservatism with a focus on Central Texas business growth and water needs.",
-            "is_quote": false,
-            "source": "https://www.statesman.com/opinion/editorials/article/mark-teixeira-us-house-21-congress-endorsement-22421003.php"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -5630,11 +5682,15 @@
     ],
     "sources": [
       {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
         "name": "KUT Hays guide",
         "url": "https://www.kut.org/politics/2026-10-14/hays-county-elections-voter-guide-ballot-voting"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "tx-house-52",
@@ -5692,6 +5748,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
       {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
@@ -5761,6 +5821,10 @@
     ],
     "sources": [
       {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
       }
@@ -5791,17 +5855,17 @@
         "background": "State representative since 2019. Author, educator and conservationist, and a three-time Jeopardy! champion. Natural resource conservation degree from the University of Montana. Lives in Driftwood.",
         "own_words": [
           {
-            "text": "'Restore state funding for public education so that all our kids get a great education without overrelying on property taxes' (2022 survey).",
+            "text": "“Restore state funding for public education so that all our kids get a great education without overrelying on property taxes” (2022 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Erin_Zwiener"
           },
           {
-            "text": "'Expand Medicaid to provide health care for another 1.5 million Texans' (2022 survey).",
+            "text": "“Expand Medicaid to provide health care for another 1.5 million Texans and drive down costs for everyone” (2022 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Erin_Zwiener"
           },
           {
-            "text": "Wants an independent redistricting commission 'so that voters will choose their elected representatives' (2022 survey).",
+            "text": "Wants an independent redistricting commission “so that voters will choose their elected representatives” (2022 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Erin_Zwiener"
           }
@@ -5810,7 +5874,7 @@
         "lwv_url": null
       },
       {
-        "name": "Tennyson G. Moreno",
+        "name": "Tennyson Moreno",
         "party": "Republican",
         "incumbent": false,
         "website": null,
@@ -5828,6 +5892,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
       {
         "name": "Texas Legislative Council: PLANH2316 cities by district (Red-125)",
         "url": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/3e0434b0-c521-42fb-b703-5098f0352aba/download/planh2316r125.pdf"
@@ -5876,12 +5944,12 @@
             "source": "https://ballotpedia.org/Carrie_Isaac"
           },
           {
-            "text": "Secure the border by 'building a wall and stopping magnet policies that encourage illegal immigration' (2022 survey).",
+            "text": "Secure the border by “building a wall and stopping magnet policies that encourage illegal immigration” (2022 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Carrie_Isaac"
           },
           {
-            "text": "Lists property tax reform and 'education freedom' as the policy areas she cares most about (2022 survey).",
+            "text": "Names her policy passions as “Property tax reform, fighting Biden’s socialist agenda, and education freedom” (2022 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Carrie_Isaac"
           }
@@ -5898,17 +5966,12 @@
         "background": "Retired public school teacher and principal (31 years) with a PhD in educational leadership; now a nonprofit executive director. Says she has lived in the district for 45 years.",
         "own_words": [
           {
-            "text": "'If elected, I will work to eliminate vouchers' and state-sponsored religious instruction in schools.",
+            "text": "“As a veteran educator, I am a passionate and steadfast advocate for public schools” (2024 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Merrie_Fox"
           },
           {
-            "text": "Standardize groundwater districts' authority statewide 'to help prevent over-pumping by commercial wells.'",
-            "is_quote": true,
-            "source": "https://ballotpedia.org/Merrie_Fox"
-          },
-          {
-            "text": "Give county officials power to manage growth, 'especially regarding hyperscale data centers.'",
+            "text": "Says “public policy must be free of religious ideology” (2024 survey).",
             "is_quote": true,
             "source": "https://ballotpedia.org/Merrie_Fox"
           }
@@ -5918,6 +5981,10 @@
       }
     ],
     "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
       {
         "name": "Texas Legislative Council: PLANH2316 cities by district (Red-125)",
         "url": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/3e0434b0-c521-42fb-b703-5098f0352aba/download/planh2316r125.pdf"
@@ -5933,6 +6000,1846 @@
       {
         "name": "Ballotpedia: Merrie Fox",
         "url": "https://ballotpedia.org/Merrie_Fox"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dvisd-trustee-3",
+    "state": "TX",
+    "level": "school",
+    "office": "Del Valle ISD Trustee, Single Member District 3",
+    "district": "Single Member District 3",
+    "scope_plain": "Del Valle ISD voters in trustee Single Member District 3 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
+    "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charles Burton",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Claire Campos-O'Neal",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dvisd-trustee-5",
+    "state": "TX",
+    "level": "school",
+    "office": "Del Valle ISD Trustee, Single Member District 5",
+    "district": "Single Member District 5",
+    "scope_plain": "Del Valle ISD voters in trustee Single Member District 5 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
+    "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Jason Sierra is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason Sierra",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dvisd-trustee-7",
+    "state": "TX",
+    "level": "school",
+    "office": "Del Valle ISD Trustee, Single Member District 7",
+    "district": "Single Member District 7",
+    "scope_plain": "Del Valle ISD voters in trustee Single Member District 7 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
+    "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Trustee Susanna Ledesma Woody seeks another term against Josh Castro.",
+    "vote_for": 1,
+    "incumbent": "Susanna Ledesma Woody",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Josh Castro",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Susanna Ledesma Woody",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "GoodParty.org: Del Valle ISD board (current members and 2026 filings)",
+        "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-dvisd-trustee-8",
+    "state": "TX",
+    "level": "school",
+    "office": "Del Valle ISD Trustee, Single Member District 8",
+    "district": "Single Member District 8",
+    "scope_plain": "Del Valle ISD voters in trustee Single Member District 8 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
+    "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Trustee Darla Wegner seeks another term against Robert “Bobby” Hidrogo.",
+    "vote_for": 1,
+    "incumbent": "Darla Wegner",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Robert “Bobby” Hidrogo",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Darla Wegner",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "Ballotpedia: Darla Wegner",
+        "url": "https://ballotpedia.org/Darla_Wegner"
+      },
+      {
+        "name": "GoodParty.org: Del Valle ISD board (current members and 2026 filings)",
+        "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-dvisd-trustee-9",
+    "state": "TX",
+    "level": "school",
+    "office": "Del Valle ISD Trustee, Single Member District 9",
+    "district": "Single Member District 9",
+    "scope_plain": "Del Valle ISD voters in trustee Single Member District 9 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
+    "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Open seat. Trustee Elvia Guadian is not on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Elvia Guadian (not on ballot)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Randolph",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Gloria Vera-Bedolla",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Stephanie Arellano",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "GoodParty.org: Del Valle ISD board (current members and 2026 filings)",
+        "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-lisd-trustee-1",
+    "state": "TX",
+    "level": "school",
+    "office": "Leander ISD Trustee, Place 1",
+    "district": "Place 1",
+    "scope_plain": "Leander ISD voters, including Four Points and Steiner Ranch in northwest Travis County plus Cedar Park and Leander. Every Leander ISD voter votes on Place 1.",
+    "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Open seat. Trustee Trish Bode is not on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Trish Bode (not on ballot)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Serenity Coats",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Gerald Prater",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "Leander ISD board elections page",
+        "url": "https://www.leanderisd.org/board_elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-lisd-trustee-2",
+    "state": "TX",
+    "level": "school",
+    "office": "Leander ISD Trustee, Place 2",
+    "district": "Place 2",
+    "scope_plain": "Leander ISD voters, including Four Points and Steiner Ranch in northwest Travis County plus Cedar Park and Leander. Every Leander ISD voter votes on Place 2.",
+    "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Open seat. Trustee Gloria Gonzales-Dholakia is running for the ACC board instead.",
+    "vote_for": 1,
+    "incumbent": "Gloria Gonzales-Dholakia (running for ACC trustee)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Meg Dean",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Perla Muñoz Hopkins",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Chitra Nedun",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "Leander ISD board elections page",
+        "url": "https://www.leanderisd.org/board_elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-lisd-trustee-6",
+    "state": "TX",
+    "level": "school",
+    "office": "Leander ISD Trustee, Place 6",
+    "district": "Place 6",
+    "scope_plain": "Leander ISD voters, including Four Points and Steiner Ranch in northwest Travis County plus Cedar Park and Leander. Every Leander ISD voter votes on Place 6.",
+    "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Trustee Laura Marques is unopposed.",
+    "vote_for": 1,
+    "incumbent": "Laura Marques",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Laura Marques",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "Leander ISD board elections page",
+        "url": "https://www.leanderisd.org/board_elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-lisd-trustee-7",
+    "state": "TX",
+    "level": "school",
+    "office": "Leander ISD Trustee, Place 7",
+    "district": "Place 7",
+    "scope_plain": "Leander ISD voters, including Four Points and Steiner Ranch in northwest Travis County plus Cedar Park and Leander. Every Leander ISD voter votes on Place 7.",
+    "office_explainer": "One of seven trustees who hire the superintendent, pass the school budget and set district policy.",
+    "why_it_matters": "Trustee Paul Gauthier seeks another term against Jason Embry.",
+    "vote_for": 1,
+    "incumbent": "Paul Gauthier",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason Embry",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Paul Gauthier",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Travis County sample ballot (official PDF)",
+        "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
+      },
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "Leander ISD board elections page",
+        "url": "https://www.leanderisd.org/board_elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-senate-5",
+    "state": "TX",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-5",
+    "scope_plain": "Voters in Texas Senate District 5 (most of Williamson County, including Georgetown, Hutto, most of Round Rock and the Williamson County part of Pflugerville, plus counties to the north and east)",
+    "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Sen. Charles Schwertner, a Republican, seeks another term against Democrat Paul Thomasson.",
+    "vote_for": 1,
+    "incumbent": "Charles Schwertner",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charles Schwertner",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican incumbent. Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://austinvotersguide.org/"
+      },
+      {
+        "name": "Paul Thomasson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "United Methodist minister for more than 43 years, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "Opposes school vouchers and wants more state help for public schools that does not lean on property taxes.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Would stop turning down federal health dollars, try to restore weakened ACA provisions and aid rural hospitals.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "They should only be allowed in if the local voters vote them in.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-senate-24",
+    "state": "TX",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-24",
+    "scope_plain": "Voters in Texas Senate District 24 (western Williamson County, including Cedar Park, Leander and Liberty Hill, plus Hill Country counties to the west). Round Rock voters near the western city line should check their sample ballot.",
+    "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Sen. Pete Flores, a Republican, seeks another term against Democrat Joe Paz Herrera.",
+    "vote_for": 1,
+    "incumbent": "Pete Flores",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Pete Flores",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican incumbent. Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://austinvotersguide.org/"
+      },
+      {
+        "name": "Joe Paz Herrera",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://herrerafortexas.com",
+        "website_confidence": "sourced",
+        "background": "Business manager for 20+ years with a BBA from UTSA and an MBA from Our Lady of the Lake University; lives in Natalia, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "Texas should give counties greater authority to manage growth and protect local resources.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Top priority: more classroom funding and keeping taxpayer dollars in public schools.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I support pausing further data center expansion until Texas has stronger protections for water, electricity, and surrounding communities",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wcad-place-1",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Williamson Central Appraisal District",
+    "district": "Place 1",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": "Elected appraisal district directors are new since 2024. They do not set your value; they oversee the agency and hire the chief appraiser.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Hope Hisle-Piper",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://austinvotersguide.org/"
+      },
+      {
+        "name": "Clint Stephenson",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Business and property owner; former Liberty Hill ISD board member, vice president and president, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "The process should be fair, it should not be combative, or stacked against the tax payer.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wcad-place-2",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Williamson Central Appraisal District",
+    "district": "Place 2",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stephan Zaparolli",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wcad-place-3",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Williamson Central Appraisal District",
+    "district": "Place 3",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "One of three elected directors on the board that oversees the office that sets property values for taxes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mason Moses",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-district-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "District Clerk",
+    "district": null,
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "Keeps the records for district courts, collects court fees and runs jury selection.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cathy Mendoza",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-district-court-277",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "277th Judicial District",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Williamson County.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stacey Mathews",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-district-court-368",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "368th Judicial District",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Williamson County.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sarah Bruchmiller",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-district-court-480",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "480th Judicial District (unexpired term)",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Williamson County.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Terence Davis",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-ccl-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 1",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A county trial judge for misdemeanors, smaller civil cases and probate matters.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brandy Hallford",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-ccl-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 2",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A county trial judge for misdemeanors, smaller civil cases and probate matters.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Laura Barker",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-ccl-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 3",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A county trial judge for misdemeanors, smaller civil cases and probate matters.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kathryn Fowler",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-ccl-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 4",
+    "scope_plain": "Every Williamson County voter",
+    "office_explainer": "A county trial judge for misdemeanors, smaller civil cases and probate matters.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Oliver",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-jp-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1 (Williamson County)",
+    "scope_plain": "Voters in Williamson County Justice of the Peace Precinct 1. Check your sample ballot for your precinct.",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "KT Musselman",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-jp-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 2 (Williamson County)",
+    "scope_plain": "Voters in Williamson County Justice of the Peace Precinct 2. Check your sample ballot for your precinct.",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Angela Williams",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-wilco-jp-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 3 (Williamson County)",
+    "scope_plain": "Voters in Williamson County Justice of the Peace Precinct 3. Check your sample ballot for your precinct.",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Evelyn McLean",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-wilco-jp-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 4 (Williamson County)",
+    "scope_plain": "Voters in Williamson County Justice of the Peace Precinct 4. Check your sample ballot for your precinct.",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rhonda Redden",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Unopposed. LWV does not send questionnaires to unopposed candidates.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Williamson County comprehensive sample ballot (official PDF)",
+        "url": "https://www.wilcotx.gov/DocumentCenter/View/22018/20261103-November-JGSE---COMPREHENSIVE-SAMPLE-BALLOT-PDF?bidId="
+      },
+      {
+        "name": "LWV Austin Area Voters Guide (PDF)",
+        "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-cda",
+    "state": "TX",
+    "level": "county",
+    "office": "Criminal District Attorney",
+    "district": null,
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "The county's chief prosecutor: decides which criminal cases to bring and how to handle them.",
+    "why_it_matters": "A two-way race between Democrat Alfonso O. Salazar and independent Kirsta Melton. Salazar won the Democratic primary; no Republican is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alfonso O. Salazar",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Kirsta Melton",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      },
+      {
+        "name": "TDCAA: 2026 prosecutor primary winners",
+        "url": "https://www.tdcaa.com/wp-content/uploads/2026-prosecutor-results-2-1.pdf"
+      },
+      {
+        "name": "Texas SOS: 2026 independent candidate filings (Kirsta Melton, candidate in the general election)",
+        "url": "https://www.sos.state.tx.us/elections/laws/independent-declarations-2026.shtml"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-district-court-428",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "428th Judicial District",
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Hays County.",
+    "why_it_matters": "The only contested Hays County district court race.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Paul Still",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Cassie Benoist-Templeton",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-district-court-207",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "207th Judicial District",
+    "scope_plain": "Every Hays County voter (the 207th also serves Comal County)",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Hays County.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tracy Wright Reneau",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-district-court-274",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "274th Judicial District",
+    "scope_plain": "Every Hays County voter (the 274th also serves Comal and Guadalupe counties)",
+    "office_explainer": "A trial judge for felonies, big civil suits and family cases in Hays County.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Gary L. Steel",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-ccl-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "No. 1",
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "A county trial judge for misdemeanors and smaller civil cases.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jimmy Alan Hall",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-district-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "District Clerk",
+    "district": null,
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "Keeps the records for district courts, collects court fees and runs jury selection.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Amanda K. Calvert",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-county-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "County Clerk",
+    "district": null,
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "Records deeds and marriage licenses and keeps county court records.",
+    "why_it_matters": "Cynthia A. Millonzi won a three-way Democratic primary and is unopposed.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cynthia A. Millonzi",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-treasurer",
+    "state": "TX",
+    "level": "county",
+    "office": "County Treasurer",
+    "district": null,
+    "scope_plain": "Every Hays County voter",
+    "office_explainer": "Receives, keeps and pays out county money.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Daphne Sanchez Tenorio",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-hays-jp-1-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1, Place 2",
+    "scope_plain": "Voters in Hays County Justice of the Peace Precinct 1. Check your sample ballot; precinct lines do not follow city limits.",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": "Maggie Hernandez Moreno won the Democratic primary and is unopposed.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Maggie Hernandez Moreno",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Hays Free Press: March 2026 primary results",
+        "url": "https://www.haysfreepress.com/article/26142,2026-march-primary-election-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-san-marcos-council-3",
+    "state": "TX",
+    "level": "city",
+    "office": "San Marcos City Council Member",
+    "district": "Place 3",
+    "scope_plain": "Every City of San Marcos voter",
+    "office_explainer": "One of six council members who, with the mayor, set the city budget, tax rate and local laws.",
+    "why_it_matters": "Council Member Alyssa Garza faces Mayor Jane Hughson, who is running for this seat instead of for mayor.",
+    "vote_for": 1,
+    "incumbent": "Alyssa Garza",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alyssa Garza",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Jane Garnette Hughson",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Current mayor of San Marcos.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Community Impact: 2 San Marcos council members to run for different positions (Aug. 4, 2026)",
+        "url": "https://communityimpact.com/san-marcos-buda-kyle/government/2-san-marcos-council-members-to-run-for-different-positions-in-november-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-san-marcos-council-4",
+    "state": "TX",
+    "level": "city",
+    "office": "San Marcos City Council Member",
+    "district": "Place 4",
+    "scope_plain": "Every City of San Marcos voter",
+    "office_explainer": "One of six council members who, with the mayor, set the city budget, tax rate and local laws.",
+    "why_it_matters": "Council Member Shane Scott seeks another term against Heather Hunter.",
+    "vote_for": 1,
+    "incumbent": "Shane Scott",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shane Scott",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Heather Hunter",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Community Impact: 2 San Marcos council members to run for different positions (Aug. 4, 2026)",
+        "url": "https://communityimpact.com/san-marcos-buda-kyle/government/2-san-marcos-council-members-to-run-for-different-positions-in-november-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-san-marcos-council-6",
+    "state": "TX",
+    "level": "city",
+    "office": "San Marcos City Council Member",
+    "district": "Place 6 (unexpired term)",
+    "scope_plain": "Every City of San Marcos voter",
+    "office_explainer": "One of six council members who, with the mayor, set the city budget, tax rate and local laws.",
+    "why_it_matters": "Special election for the rest of Amanda Rodriguez’s term. She is running for mayor.",
+    "vote_for": 1,
+    "incumbent": "Amanda Rodriguez (running for mayor)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lisa Prewitt",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Bill Miller",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Juan Miguel Arredondo",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Hays County combined sample ballot (official PDF)",
+        "url": "https://www.hayscountytx.gov/DocumentCenter/View/5305/Hays-County-Combined-Sample-Ballot-11x17?bidId="
+      },
+      {
+        "name": "Community Impact: 2 San Marcos council members to run for different positions (Aug. 4, 2026)",
+        "url": "https://communityimpact.com/san-marcos-buda-kyle/government/2-san-marcos-council-members-to-run-for-different-positions-in-november-election/"
       }
     ],
     "confidence": "verified"

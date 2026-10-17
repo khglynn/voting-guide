@@ -74,80 +74,80 @@
     "target_id": "co-us-house-1",
     "status": "not_found",
     "choice": null,
-    "why": "The Post said U.S. House endorsements would run the week of Oct 19. Check the roundup after that.",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race. The Post said U.S. House picks would come the week of Oct 19.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "denver-council-at-large-b",
     "status": "not_found",
     "choice": null,
-    "why": "No council endorsement found in the Post's editorial index as of Oct 16; the Post published a candidate Q&A and news coverage only.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-sd-32",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-sd-34",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-hd-6",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-rtd-b",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-sboe-1",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-cu-regent-6",
     "status": "not_found",
     "choice": null,
-    "why": "No editorial found as of Oct 16.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "endorser_id": "gazette-eb",
@@ -912,152 +912,152 @@
   {
     "endorser_id": "denver-gop",
     "target_id": "co-frpr-7a",
-    "status": "not_found",
-    "choice": null,
-    "why": "7A not shown in the portion of the Denver GOP guide captured; check the printable guide.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Its 2026 guide lists 7A as No and describes it as a 'sales tax increase of 0.333% and additional debt for Colorado passenger rail.'",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "denver-council-at-large-b",
-    "status": "not_found",
-    "choice": null,
-    "why": "No council endorsement found on the Denver GOP site.",
+    "status": "endorsed",
+    "choice": "Raymon Anthony Doane",
+    "why": "The Denver GOP's endorsement in the at-large vacancy race, which it calls a key race and \"a key opportunity to reverse years of one-party rule in Denver.\"",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-us-house-1",
     "status": "endorsed",
     "choice": "Christy Peterson",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-sd-32",
     "status": "endorsed",
     "choice": "Sydnnia Wulff",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-sd-34",
     "status": "endorsed",
     "choice": "Jennifer Qualteri",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-1",
     "status": "endorsed",
     "choice": "Joseph Montoya",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-2",
     "status": "endorsed",
     "choice": "Carey Marin",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-3",
     "status": "endorsed",
     "choice": "Rebecca Winegar",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-4",
     "status": "endorsed",
     "choice": "Ellwood Ervin",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-5",
     "status": "endorsed",
     "choice": "Johnnie W. Johnson",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-6",
     "status": "endorsed",
     "choice": "Kathleen Angel",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-8",
     "status": "endorsed",
     "choice": "Carolyn Barnes",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-hd-9",
     "status": "endorsed",
     "choice": "Tom Cowhick",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-sboe-1",
     "status": "endorsed",
     "choice": "Frederick Espinoza",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "why": "Listed on the Denver GOP's 2026 endorsed candidates list.",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-gop",
     "target_id": "co-cu-regent-6",
-    "status": "endorsed",
-    "choice": "Veanessa Burbage",
-    "why": "Party nominee (the county party supports its nominees; no separate endorsement page).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Denver GOP's 2026 endorsed candidates list (checked Oct 17).",
     "url": "https://www.denvergop.org/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "co-wfp",
@@ -1533,7 +1533,7 @@
     "endorser_id": "dalf",
     "target_id": "jefferson-commissioner-3",
     "status": "endorsed",
-    "choice": "Lisa Cutter",
+    "choice": "Lisa A. Cutter",
     "why": null,
     "url": "https://denverlabor.org/endorsements",
     "date": null,
@@ -2283,11 +2283,11 @@
     "endorser_id": "jeffco-democrats",
     "target_id": "jefferson-commissioner-3",
     "status": "endorsed",
-    "choice": "Lisa Cutter",
-    "why": "Party nominee.",
-    "url": "https://www.jeffcodems.org/2026-ballot-measures",
+    "choice": "Lisa A. Cutter",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "issue-committees-denver",
@@ -2366,6 +2366,16 @@
     "choice": "YES",
     "why": "Yes on 4A committee backed by DPS, the Denver Classroom Teachers Association and the Denver Democrats; no opposition committee filed a TABOR comment.",
     "url": "https://denvergov.org/files/assets/public/v/2/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/tabor_eng-text.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race. The Post said U.S. House picks would come the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
     "confidence": "sourced"
   }

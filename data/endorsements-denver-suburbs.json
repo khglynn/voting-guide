@@ -1,1352 +1,1402 @@
 [
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-us-house-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17. The Post said its U.S. House endorsements would run the week of Oct 19.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-us-house-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-us-house-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-us-house-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-us-house-7",
-  "status": "endorsed",
-  "choice": "Brittany Pettersen",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-us-house-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-us-house-7",
-  "status": "endorsed",
-  "choice": "Brittany Pettersen",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-sboe-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-sboe-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-sboe-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-sboe-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-sboe-7",
-  "status": "endorsed",
-  "choice": "Karla Esser",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-sboe-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-sboe-7",
-  "status": "endorsed",
-  "choice": "Karla Esser",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-cu-regent-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-cu-regent-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-cu-regent-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-cu-regent-7",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-cu-regent-7",
-  "status": "endorsed",
-  "choice": "Nolbert Chavez",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-cu-regent-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-cu-regent-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "This race is not in the AFL-CIO's 2026 list.",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-sd-20",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-sd-20",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-sd-20",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-sd-20",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-sd-20",
-  "status": "endorsed",
-  "choice": "Sheila Lieder",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-sd-20",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-sd-20",
-  "status": "endorsed",
-  "choice": "Sheila Lieder",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-sd-22",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-sd-22",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-sd-22",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-sd-22",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-sd-22",
-  "status": "endorsed",
-  "choice": "Monica Irasema Duran",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-sd-22",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-sd-22",
-  "status": "not_found",
-  "choice": null,
-  "why": "This race is not in the AFL-CIO's 2026 list.",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-sd-27",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-sd-27",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-sd-27",
-  "status": "endorsed",
-  "choice": "Tom Sullivan",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-sd-27",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-sd-27",
-  "status": "endorsed",
-  "choice": "Tom Sullivan",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-sd-29",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-sd-29",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-sd-29",
-  "status": "endorsed",
-  "choice": "Iman M. Jodeh",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-sd-29",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-sd-29",
-  "status": "endorsed",
-  "choice": "Iman M. Jodeh",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-23",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-23",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-hd-23",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-hd-23",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-23",
-  "status": "endorsed",
-  "choice": "Alexis Hoffkling",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-23",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-23",
-  "status": "endorsed",
-  "choice": "Alexis Hoffkling",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-28",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-28",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-hd-28",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-hd-28",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-28",
-  "status": "endorsed",
-  "choice": "David Rein",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-28",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-28",
-  "status": "endorsed",
-  "choice": "David Rein",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-30",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-30",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-sun",
-  "target_id": "co-hd-30",
-  "status": "no_position",
-  "choice": null,
-  "why": "The Colorado Sun does not make endorsements.",
-  "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "lwv-colorado",
-  "target_id": "co-hd-30",
-  "status": "no_position",
-  "choice": null,
-  "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
-  "url": "https://www.vote411.org/colorado",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-30",
-  "status": "endorsed",
-  "choice": "Rebekah Stewart",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-30",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-30",
-  "status": "not_found",
-  "choice": null,
-  "why": "This race is not in the AFL-CIO's 2026 list.",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-36",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-36",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-36",
-  "status": "endorsed",
-  "choice": "Michael Carter",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-36",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-36",
-  "status": "not_found",
-  "choice": null,
-  "why": "This race is not in the AFL-CIO's 2026 list.",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-37",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-37",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-37",
-  "status": "endorsed",
-  "choice": "Chad Clifford",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-37",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-37",
-  "status": "endorsed",
-  "choice": "Chad Clifford",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-40",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-40",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-40",
-  "status": "endorsed",
-  "choice": "Naquetta Ricks",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-40",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-40",
-  "status": "endorsed",
-  "choice": "Naquetta Ricks",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-41",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-41",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-41",
-  "status": "endorsed",
-  "choice": "Jamie Jackson",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-41",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-41",
-  "status": "endorsed",
-  "choice": "Jamie Jackson",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-42",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-42",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-42",
-  "status": "endorsed",
-  "choice": "Sarah Amelia Woodson",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-42",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-42",
-  "status": "endorsed",
-  "choice": "Sarah Amelia Woodson",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-56",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-56",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-56",
-  "status": "no_position",
-  "choice": null,
-  "why": "No Democratic candidate is on the ballot in this race.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-56",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-56",
-  "status": "not_found",
-  "choice": null,
-  "why": "This race is not in the AFL-CIO's 2026 list.",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "denver-post-eb",
-  "target_id": "co-hd-61",
-  "status": "not_found",
-  "choice": null,
-  "why": "No editorial found as of Oct 17.",
-  "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "gazette-eb",
-  "target_id": "co-hd-61",
-  "status": "no_position",
-  "choice": null,
-  "why": "Not on the Gazette's Oct 12 picks list.",
-  "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
-  "date": "2026-10-12",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "co-democratic-party",
-  "target_id": "co-hd-61",
-  "status": "endorsed",
-  "choice": "Eliza Hamrick",
-  "why": "Listed as the party's nominee on its candidates page.",
-  "url": "https://www.coloradodems.org/candidates",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "co-republican-party",
-  "target_id": "co-hd-61",
-  "status": "not_found",
-  "choice": null,
-  "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
-  "url": "https://colorado.gop/candidates/",
-  "date": null,
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "colorado-afl-cio",
-  "target_id": "co-hd-61",
-  "status": "endorsed",
-  "choice": "Eliza Hamrick",
-  "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
-  "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-  "date": "2026-08-19",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-assessor",
-  "status": "endorsed",
-  "choice": "Andy Kerr",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-clerk",
-  "status": "endorsed",
-  "choice": "Nicole Hensel",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-coroner",
-  "status": "endorsed",
-  "choice": "Nick Lobello",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-treasurer",
-  "status": "endorsed",
-  "choice": "Eric Proctor",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-sheriff",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "jefferson-surveyor",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "arapahoe-assessor",
-  "status": "endorsed",
-  "choice": "PK Kaiser",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "arapahoe-clerk",
-  "status": "endorsed",
-  "choice": "Joan Lopez",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "arapahoe-sheriff",
-  "status": "endorsed",
-  "choice": "Tyler Scott Brown",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "arapahoe-treasurer",
-  "status": "endorsed",
-  "choice": "Michael Westerberg",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "arapahoe-coroner",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "adams-assessor",
-  "status": "endorsed",
-  "choice": "Thomas Swingle",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "adams-clerk",
-  "status": "endorsed",
-  "choice": "Josh Zygielbaum",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "adams-treasurer",
-  "status": "endorsed",
-  "choice": "Jason Anaya-Ledeboer",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "adams-sheriff",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "adams-coroner",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-assessor",
-  "status": "endorsed",
-  "choice": "Kara Garr",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-commissioner-1",
-  "status": "endorsed",
-  "choice": "Irene Bonham",
-  "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
-  "url": "https://denverlabor.org/endorsements",
-  "date": "2026-04-24",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-clerk",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-treasurer",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-sheriff",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-coroner",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "dalf",
-  "target_id": "douglas-surveyor",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on DALF's county endorsement list, which covers only some county races.",
-  "url": "https://denverlabor.org/endorsements",
-  "date": null,
-  "confidence": "verified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-treasurer",
-  "status": "endorsed",
-  "choice": "Murl Hendrickson",
-  "why": "The Denver Gazette reports the Jeffco Republican Party endorsed Hendrickson, a Libertarian, since no Republican is on the ballot.",
-  "url": "https://www.denvergazette.com/2026/10/09/what-jefferson-county-voters-can-expect-to-see-on-their-ballots/",
-  "date": "2026-10-09",
-  "confidence": "sourced"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-clerk",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-assessor",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-sheriff",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-coroner",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "jefferson-surveyor",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "co-sd-20",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "co-sd-22",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "co-hd-23",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "co-hd-28",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- },
- {
-  "endorser_id": "jeffco-gop",
-  "target_id": "co-hd-30",
-  "status": "not_found",
-  "choice": null,
-  "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
-  "url": null,
-  "date": null,
-  "confidence": "unverified"
- }
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race. The Post said U.S. House picks would come the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-us-house-7",
+    "status": "endorsed",
+    "choice": "Brittany Pettersen",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-us-house-7",
+    "status": "endorsed",
+    "choice": "Brittany Pettersen",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-sboe-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-sboe-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-sboe-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-sboe-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-sboe-7",
+    "status": "endorsed",
+    "choice": "Karla Esser",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-sboe-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-sboe-7",
+    "status": "endorsed",
+    "choice": "Karla Esser",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-cu-regent-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-cu-regent-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-cu-regent-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-cu-regent-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-cu-regent-7",
+    "status": "endorsed",
+    "choice": "Nolbert Chavez",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-cu-regent-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-cu-regent-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "This race is not in the AFL-CIO's 2026 list.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-sd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-sd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-sd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-sd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-sd-20",
+    "status": "endorsed",
+    "choice": "Sheila Lieder",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-sd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-sd-20",
+    "status": "endorsed",
+    "choice": "Sheila Lieder",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-sd-22",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-sd-22",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-sd-22",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-sd-22",
+    "status": "endorsed",
+    "choice": "Monica Irasema Duran",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "This race is not in the AFL-CIO's 2026 list.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-sd-27",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-sd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-sd-27",
+    "status": "endorsed",
+    "choice": "Tom Sullivan",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-sd-27",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-sd-27",
+    "status": "endorsed",
+    "choice": "Tom Sullivan",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-sd-29",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-sd-29",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-sd-29",
+    "status": "endorsed",
+    "choice": "Iman M. Jodeh",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-sd-29",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-sd-29",
+    "status": "endorsed",
+    "choice": "Iman M. Jodeh",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-23",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-23",
+    "status": "endorsed",
+    "choice": "Alexis Hoffkling",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-23",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-23",
+    "status": "endorsed",
+    "choice": "Alexis Hoffkling",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-28",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-28",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-hd-28",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-hd-28",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-28",
+    "status": "endorsed",
+    "choice": "David Rein",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-28",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-28",
+    "status": "endorsed",
+    "choice": "David Rein",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-30",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-30",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-hd-30",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Colorado Sun does not make endorsements.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-hd-30",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; see VOTE411 for candidate answers.",
+    "url": "https://www.vote411.org/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-30",
+    "status": "endorsed",
+    "choice": "Rebekah Stewart",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-30",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-30",
+    "status": "not_found",
+    "choice": null,
+    "why": "This race is not in the AFL-CIO's 2026 list.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-36",
+    "status": "endorsed",
+    "choice": "Michael Carter",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "This race is not in the AFL-CIO's 2026 list.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-37",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-37",
+    "status": "endorsed",
+    "choice": "Chad Clifford",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-37",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-37",
+    "status": "endorsed",
+    "choice": "Chad Clifford",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-40",
+    "status": "endorsed",
+    "choice": "Naquetta Ricks",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-40",
+    "status": "endorsed",
+    "choice": "Naquetta Ricks",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-41",
+    "status": "endorsed",
+    "choice": "Jamie Jackson",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-41",
+    "status": "endorsed",
+    "choice": "Jamie Jackson",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-42",
+    "status": "endorsed",
+    "choice": "Sarah Amelia Woodson",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-42",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-42",
+    "status": "endorsed",
+    "choice": "Sarah Amelia Woodson",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-56",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-56",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-56",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic candidate is on the ballot in this race.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-56",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-56",
+    "status": "not_found",
+    "choice": null,
+    "why": "This race is not in the AFL-CIO's 2026 list.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-hd-61",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked Oct 17: the Post's 2026 endorsements so far cover ballot measures and statewide offices only; nothing yet in this race.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-hd-61",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Gazette's Oct 12 picks list.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-hd-61",
+    "status": "endorsed",
+    "choice": "Eliza Hamrick",
+    "why": "Listed as the party's nominee on its candidates page.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-hd-61",
+    "status": "not_found",
+    "choice": null,
+    "why": "The state party's candidates page lists only statewide nominees as of Oct 17.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-afl-cio",
+    "target_id": "co-hd-61",
+    "status": "endorsed",
+    "choice": "Eliza Hamrick",
+    "why": "Listed in the Colorado AFL-CIO 2026 voter guide (Aug 19).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-assessor",
+    "status": "endorsed",
+    "choice": "Andy Kerr",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-clerk",
+    "status": "endorsed",
+    "choice": "Nicole Hensel",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-coroner",
+    "status": "endorsed",
+    "choice": "Nick Lobello",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-treasurer",
+    "status": "endorsed",
+    "choice": "Eric Proctor",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "jefferson-surveyor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "arapahoe-assessor",
+    "status": "endorsed",
+    "choice": "PK Kaiser",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "arapahoe-clerk",
+    "status": "endorsed",
+    "choice": "Joan Lopez",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "arapahoe-sheriff",
+    "status": "endorsed",
+    "choice": "Tyler Scott Brown",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "arapahoe-treasurer",
+    "status": "endorsed",
+    "choice": "Michael Westerberg",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "arapahoe-coroner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "adams-assessor",
+    "status": "endorsed",
+    "choice": "Thomas Swingle",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "adams-clerk",
+    "status": "endorsed",
+    "choice": "Josh Zygielbaum",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "adams-treasurer",
+    "status": "endorsed",
+    "choice": "Jason Anaya-Ledeboer",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "adams-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "adams-coroner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-assessor",
+    "status": "endorsed",
+    "choice": "Kara Garr",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-commissioner-1",
+    "status": "endorsed",
+    "choice": "Irene Bonham",
+    "why": "On the Denver Area Labor Federation's county endorsement list (as of April 24, 2026).",
+    "url": "https://denverlabor.org/endorsements",
+    "date": "2026-04-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-coroner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dalf",
+    "target_id": "douglas-surveyor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on DALF's county endorsement list, which covers only some county races.",
+    "url": "https://denverlabor.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-treasurer",
+    "status": "endorsed",
+    "choice": "Murl Hendrickson",
+    "why": "The Denver Gazette reports the Jeffco Republican Party endorsed Hendrickson, a Libertarian, since no Republican is on the ballot.",
+    "url": "https://www.denvergazette.com/2026/10/09/what-jefferson-county-voters-can-expect-to-see-on-their-ballots/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-coroner",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "jefferson-surveyor",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "co-sd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "co-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "co-hd-23",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "co-hd-28",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-gop",
+    "target_id": "co-hd-30",
+    "status": "not_found",
+    "choice": null,
+    "why": "We could not find a published Jeffco GOP slate as of Oct 17.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "jeffco-democrats",
+    "target_id": "jefferson-assessor",
+    "status": "endorsed",
+    "choice": "Andy Kerr",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "jeffco-democrats",
+    "target_id": "jefferson-clerk",
+    "status": "endorsed",
+    "choice": "Nicole Hensel",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "jeffco-democrats",
+    "target_id": "jefferson-sheriff",
+    "status": "endorsed",
+    "choice": "Regina \"Reggie\" Marinelli",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "jeffco-democrats",
+    "target_id": "jefferson-treasurer",
+    "status": "endorsed",
+    "choice": "Eric Proctor",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "jeffco-democrats",
+    "target_id": "jefferson-coroner",
+    "status": "endorsed",
+    "choice": "Nick Lobello",
+    "why": "Listed on the Jefferson County Democratic Party's 2026 candidates page.",
+    "url": "https://www.jeffcodems.org/2026-candidates",
+    "date": null,
+    "confidence": "verified"
+  }
 ]

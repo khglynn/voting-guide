@@ -5,7 +5,7 @@
     "level": "federal",
     "office": "U.S. House of Representatives",
     "district": "CD-1",
-    "scope_plain": "Voters in Colorado's 1st Congressional District: all of Denver plus Glendale.",
+    "scope_plain": "Voters in Colorado's 1st Congressional District: all of Denver plus Glendale. Three certified write-in candidates (Kevin StClair and John Wren, both Democrats, and Stephen Replin, unaffiliated) are not printed on the ballot; to vote for one, write the name on the write-in line.",
     "office_explainer": "Denver's one seat in the U.S. House. Votes on federal laws, taxes and spending.",
     "why_it_matters": "Open seat for the first time since 1996. Rep. Diana DeGette lost the June Democratic primary to Melat Kiros. The district has not elected a Republican since 1970; about 230,000 of its 464,000 active voters are unaffiliated.",
     "vote_for": 1,
@@ -20,7 +20,7 @@
         "incumbent": false,
         "website": "https://www.kirosforco.com",
         "website_confidence": "verified",
-        "background": "29. Daughter of Ethiopian immigrants, former attorney (fired from the law firm Sidley Austin after defending student protesters), PhD student and until recently a tipped-wage barista. Identifies as a democratic socialist. Beat 15-term Rep. Diana DeGette in the June 30 primary.",
+        "background": "29. Daughter of Ethiopian immigrants, graduate student and former attorney; she says Sidley Austin fired her after she defended students' right to protest the war in Gaza. Until recently a tipped-wage barista. Identifies as a democratic socialist. Beat 15-term Rep. Diana DeGette in the June 30 primary.",
         "own_words": [
           {
             "text": "Top priorities: \"Healthcare, housing, and ending the corruption blocking both.\"",
@@ -99,7 +99,7 @@
             "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
           },
           {
-            "text": "\"End warrantless government surveillance, including invasive Flock cameras.\"",
+            "text": "Would \"End warrantless government surveillance,\" including Flock license-plate cameras, and cut the power of regulatory agencies.",
             "is_quote": true,
             "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
           },
@@ -131,7 +131,7 @@
             "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
           },
           {
-            "text": "Says he will \"stand up to Trump and fight for ALL my constituents,\" takes no PAC money, and wants to restore federal funding cut from local hospitals and health programs.",
+            "text": "Says he will \"stand up to Trump\" for all his constituents, takes no PAC money, and wants to restore federal funding cut from local hospitals and health programs.",
             "is_quote": true,
             "source": "https://blauforcongress.com"
           }
@@ -405,7 +405,7 @@
     "level": "state",
     "office": "Regent of the University of Colorado",
     "district": "CD-6",
-    "scope_plain": "Voters in Congressional District 6 only (Aurora, Centennial, Littleton, Englewood areas, and a small piece of northeast Denver). Most Denver voters will NOT see this race; the CD-1 regent seat is not up in 2026.",
+    "scope_plain": "Voters in Congressional District 6 only (Aurora, Centennial, Littleton, Englewood areas, and a small piece of northeast Denver). Most Denver voters will not see this race; the CD-1 regent seat is not up in 2026.",
     "office_explainer": "One of nine elected regents who govern the University of Colorado system: tuition, budgets, the president.",
     "why_it_matters": "Regents set CU tuition and pick the university president. The board's partisan balance has flipped in recent cycles. Six-year term.",
     "vote_for": 1,
@@ -472,7 +472,7 @@
             "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
           },
           {
-            "text": "Calls the 'College for All' mentality \"disastrous\" and wants \"LESS government involvement in Higher education.\"",
+            "text": "Calls the 'College for All' mentality \"disastrous\" and wants less government involvement in higher education.",
             "is_quote": true,
             "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
           }
@@ -503,27 +503,32 @@
     "level": "state",
     "office": "State Senate",
     "district": "SD-31",
-    "scope_plain": "Voters in Senate District 31 (central and southeast Denver). Special election to fill the rest of an unexpired term.",
+    "scope_plain": "Voters in Senate District 31 (central and southeast Denver). This is a special election for the last two years of the current term.",
     "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
-    "why_it_matters": "Only one name is on the ballot. Note: the Critical Report recap says attorney Michael DiManna won the Republican primary, but the SOS certified list and the Denver sample ballot show only Ball; treat DiManna as withdrawn or not certified.",
+    "why_it_matters": "Only one name is on the ballot. Sen. Chris Hansen won this seat in 2024 and resigned; a Democratic vacancy committee picked Matt Ball in January 2025. This election fills the last two years of that term. (A Critical Report primary recap named Republican Michael DiManna as a primary winner, but he is not on the SOS certified list or the Denver ballot.)",
     "vote_for": 1,
     "incumbent": "Matt Ball (appointed)",
     "open_seat": false,
-    "term_years": 4,
+    "term_years": 2,
     "is_retention": false,
     "candidates": [
       {
         "name": "Matt Ball",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Appointed to the seat by a Democratic vacancy committee; won the June primary. Only candidate on the November ballot (no Republican qualified).",
+        "website": "https://www.mattforcolorado.com/",
+        "website_confidence": "sourced",
+        "background": "State senator since January 2025, picked by a Democratic vacancy committee after Sen. Chris Hansen resigned. Army veteran (101st Airborne and 75th Ranger Regiment) and Army Reservist; Stanford law degree; former policy director for the City of Denver. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "Unopposed on the ballot. No campaign site located as of Oct 16.",
+            "text": "Campaign site: \"As a father, veteran, and dedicated public servant, Matt brings lived experience and a track record of results.\"",
+            "is_quote": true,
+            "source": "https://www.mattforcolorado.com/"
+          },
+          {
+            "text": "His campaign says he passed the most bills of any first-term legislator in the 2025 session.",
             "is_quote": false,
-            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+            "source": "https://www.mattforcolorado.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -542,9 +547,17 @@
       {
         "name": "Critical Report primary recap",
         "url": "https://criticalreport.substack.com/p/2026-co-senate-primaries"
+      },
+      {
+        "name": "Wikipedia: Matthew Ball (politician)",
+        "url": "https://en.wikipedia.org/wiki/Matthew_Ball_(politician)"
+      },
+      {
+        "name": "Matt Ball campaign site",
+        "url": "https://www.mattforcolorado.com/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "co-sd-32",
@@ -620,9 +633,9 @@
     "district": "SD-34",
     "scope_plain": "Voters in Senate District 34 (west and downtown Denver)",
     "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
-    "why_it_matters": "Open seat. Sen. Julie Gonzales left to run for U.S. Senate and lost the Democratic primary to John Hickenlooper. Reliably Democratic district since 2018.",
+    "why_it_matters": "Open seat. Sen. Julie Gonzales, first elected in 2018, is term-limited; she ran for U.S. Senate and lost the June Democratic primary to John Hickenlooper. Four-year term.",
     "vote_for": 1,
-    "incumbent": "Julie Gonzales (resigned to run for U.S. Senate)",
+    "incumbent": "Julie Gonzales (term-limited)",
     "open_seat": true,
     "term_years": 4,
     "is_retention": false,
@@ -852,7 +865,7 @@
     "level": "state",
     "office": "State House of Representatives",
     "district": "HD-3",
-    "scope_plain": "Voters in House District 3 (southeast Denver, plus parts of Englewood, Sheridan, Cherry Hills Village and Littleton in Arapahoe County)",
+    "scope_plain": "Voters in House District 3 (southeast Denver, plus all of Englewood and parts of Sheridan, Cherry Hills Village and Littleton in Arapahoe County)",
     "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
     "why_it_matters": "Open seat. The district crosses the Denver and Arapahoe county line.",
     "vote_for": 1,
@@ -1526,7 +1539,7 @@
     "district": "At-Large",
     "scope_plain": "Every Denver voter",
     "office_explainer": "One of two citywide council seats. Council passes Denver's laws, budget and contracts.",
-    "why_it_matters": "Special election to replace Sarah Parady, who resigned in August. The winner serves only until the regular city election in spring 2027 (the Gazette notes the seat is 'only guaranteed into July'). Whoever gets the most votes wins; there is no runoff. Nonpartisan, but the Denver Democrats endorsed Melissa Mejía. The Denver Post reports Martinez ($291,000 raised, including $209,000 in Fair Elections Fund matching) and Mejía ($99,500) lead in money and endorsements; Martinez is backed by three current and 17 former council members, former mayors Webb and Hancock, DA John Walsh and Sen. Michael Bennet; Mejía by the Denver Democrats, four unions, Auditor Tim O'Brien and Melat Kiros. Both candidates say voters confuse their names.",
+    "why_it_matters": "Special election to fill the seat Sarah Parady left in August. The winner serves until the regular city election in spring 2027 picks someone for a new term starting in July 2027. Whoever gets the most votes wins; there is no runoff. Two front-runners have similar names: Monica Martinez (9th name on the ballot), who runs the Fax Partnership on East Colfax, and Melissa Adriana Mejía (7th), a housing policy strategist. Both say voters mix them up, so check the full name before you mark.",
     "vote_for": 1,
     "incumbent": null,
     "open_seat": true,
@@ -1620,7 +1633,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Founder of Julissa Soto Latino Health Equity Consulting and Casa Inmigrante. Withdrew from the Fair Elections Fund. Did not respond to the Denver Gazette questionnaire.",
+        "background": "Founder of Julissa Soto Latino Health Equity Consulting and Casa Inmigrante. Did not respond to the Denver Gazette or Denver Post questionnaires.",
         "own_words": [
           {
             "text": "Did not respond to the Denver Gazette questionnaire.",
@@ -1637,7 +1650,7 @@
         "incumbent": false,
         "website": "https://gabrielfordenver.com",
         "website_confidence": "verified",
-        "background": "37. Campaign launch: \"I am not a lawyer. I am not a politician. I am not a businessman.\"",
+        "background": "37. Software architect.",
         "own_words": [
           {
             "text": "Would introduce an ordinance requiring a judicial warrant for any technology-assisted surveillance (license plate readers, police drones).",
@@ -1691,7 +1704,7 @@
         "incumbent": false,
         "website": "https://www.mejiafordenver.com/",
         "website_confidence": "verified",
-        "background": "41. Housing policy strategist; director of state and local policy at the Community Economic Defense Project; former Council District 3 aide; member of Denver DSA. Endorsed by the Denver Democrats and DALF. About $99,500 raised.",
+        "background": "41. Housing policy strategist; director of state and local policy at the Community Economic Defense Project; former aide in Council District 3. Raised on Denver's north and west sides; member of Denver DSA.",
         "own_words": [
           {
             "text": "Top issue: affordability. \"Growth is inevitable, but displacement doesn't have to be.\" Supports tenant protections and public and nonprofit housing development.",
@@ -1718,7 +1731,7 @@
         "incumbent": false,
         "website": "https://brownefordenver.com",
         "website_confidence": "verified",
-        "background": "43. Takes the Fair Elections Fund ($415 cap per donor, no corporate or PAC money). Publishes his receipts.",
+        "background": "43. Marketing director. Takes part in the Fair Elections Fund ($415 cap per donor, no corporate or PAC money) and publishes his receipts.",
         "own_words": [
           {
             "text": "Top issue: people leaving Denver. Would open the property tax relief program to working renters, since \"Renters pay property tax, too. It's in the rent.\"",
@@ -1745,7 +1758,7 @@
         "incumbent": false,
         "website": "https://monica4council.com",
         "website_confidence": "verified",
-        "background": "52. Executive director of the Fax Partnership (East Colfax nonprofit) since 2015. Lifelong Democrat who says she is \"more circumspect\" about DSA policies. Leads fundraising with about $291,000.",
+        "background": "52. Executive director of the Fax Partnership, an East Colfax nonprofit for residents and businesses, since 2015. Lifelong Democrat who says she is \"more circumspect\" about some DSA policies.",
         "own_words": [
           {
             "text": "\"If you live in Denver, you should be able to afford to stay in Denver.\" Wants housing near transit and better neighborhood connections.",
@@ -1772,7 +1785,7 @@
         "incumbent": false,
         "website": "https://doanefordenver.com",
         "website_confidence": "unverified",
-        "background": "36. Site did not load on Oct 16. Withdrew from the Fair Elections Fund.",
+        "background": "36. Tax professional.",
         "own_words": [
           {
             "text": "Would support district-level shelters and \"case-by-case plans pairing enforcement with voluntary treatment/housing services.\"",
@@ -1818,6 +1831,14 @@
       {
         "name": "Denver Post: two favorites (Oct 15)",
         "url": "https://www.denverpost.com/2026/10/15/denver-council-special-election-mejia-martinez/"
+      },
+      {
+        "name": "Denver Post: front-runners in the council vacancy race (Oct 12)",
+        "url": "https://www.denverpost.com/2026/10/12/denver-city-council-vacancy-election-race/"
+      },
+      {
+        "name": "Denver Clerk: vacancy election candidate tracking (ballot status)",
+        "url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Campaign-Candidate-Resources/Candidate-and-Initiative-Tracking"
       }
     ],
     "confidence": "verified"
@@ -1830,7 +1851,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Michael W.V. Angel meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Michael W.V. Angel meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Michael W.V. Angel",
     "open_seat": false,
@@ -1875,7 +1896,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Christopher J. Baumann meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Christopher J. Baumann meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Christopher J. Baumann",
     "open_seat": false,
@@ -2010,7 +2031,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Jon J. Olafson meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Jon J. Olafson meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Jon J. Olafson",
     "open_seat": false,
@@ -2190,7 +2211,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Elizabeth D. Leith meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Elizabeth D. Leith meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Elizabeth D. Leith",
     "open_seat": false,
@@ -2280,7 +2301,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Olympia Z. Fay meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Olympia Z. Fay meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Olympia Z. Fay",
     "open_seat": false,
@@ -2460,7 +2481,7 @@
     "district": "Denver",
     "scope_plain": "Every Denver voter",
     "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
-    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Isaam L. Shamsid-Deen meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "why_it_matters": "Yes/no question. A majority of \"no\" votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Isaam L. Shamsid-Deen meets performance standards. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
     "vote_for": 1,
     "incumbent": "Isaam L. Shamsid-Deen",
     "open_seat": false,
@@ -2604,6 +2625,10 @@
     ],
     "sources": [
       {
+        "name": "Arapahoe County 2026 General sample ballot (PDF)",
+        "url": "https://www.arapahoeco.gov/Clerk%20and%20Recorder/ArapahoeVotes/Documents-Articles/2026%20Sample%20Ballots/2026%20Arapahoe%20County%20General%20Election%20Sample%20Ballot%20-%20English.pdf"
+      },
+      {
         "name": "Denver Gazette Arapahoe commissioner Q&A",
         "url": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
       },
@@ -2612,7 +2637,7 @@
         "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "arapahoe-commissioner-4",
@@ -2686,6 +2711,10 @@
     ],
     "sources": [
       {
+        "name": "Arapahoe County 2026 General sample ballot (PDF)",
+        "url": "https://www.arapahoeco.gov/Clerk%20and%20Recorder/ArapahoeVotes/Documents-Articles/2026%20Sample%20Ballots/2026%20Arapahoe%20County%20General%20Election%20Sample%20Ballot%20-%20English.pdf"
+      },
+      {
         "name": "Denver Gazette Arapahoe commissioner Q&A",
         "url": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
       },
@@ -2694,7 +2723,7 @@
         "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "jefferson-commissioner-3",
@@ -2712,7 +2741,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Lisa Cutter",
+        "name": "Lisa A. Cutter",
         "party": "Democratic",
         "incumbent": false,
         "website": "https://cutterforcolorado.com",
@@ -2768,6 +2797,14 @@
     ],
     "sources": [
       {
+        "name": "Jefferson County Clerk: On the Ballot, 2026 General",
+        "url": "https://www.jeffco.us/4652/On-the-Ballot"
+      },
+      {
+        "name": "Jefferson County 2026 General composite sample ballot (PDF)",
+        "url": "https://www.jeffco.us/DocumentCenter/View/59222"
+      },
+      {
         "name": "Denver Gazette Jeffco commissioner Q&A",
         "url": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
       },
@@ -2776,7 +2813,7 @@
         "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "adams-commissioner-3",
@@ -2786,7 +2823,7 @@
     "district": "District 3",
     "scope_plain": "Every Adams County voter (Adams commissioners are elected countywide), including Thornton and Westminster.",
     "office_explainer": "One of five commissioners who run county government: budget, roads, human services, land use.",
-    "why_it_matters": "Only one candidate qualified.",
+    "why_it_matters": "Only one candidate is on the ballot. Four-year term.",
     "vote_for": 1,
     "incumbent": "Emma Pinter",
     "open_seat": false,
@@ -2799,12 +2836,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Incumbent. No Republican qualified for the primary.",
+        "background": "Incumbent commissioner. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "Unopposed per the Critical Report primary recap; confirm against the Adams County sample ballot.",
+            "text": "No campaign statement found as of Oct 17.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -2813,11 +2850,15 @@
     ],
     "sources": [
       {
+        "name": "Adams County 2026 General sample ballot (PDF)",
+        "url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf"
+      },
+      {
         "name": "Critical Report county primary recap",
         "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
       }
     ],
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "id": "adams-commissioner-4",
@@ -2852,7 +2893,7 @@
         "lwv_url": "https://www.vote411.org/colorado"
       },
       {
-        "name": "Joseph Domenico",
+        "name": "Joseph P Domenico",
         "party": "Republican",
         "incumbent": false,
         "website": null,
@@ -2871,10 +2912,14 @@
     ],
     "sources": [
       {
+        "name": "Adams County 2026 General sample ballot (PDF)",
+        "url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf"
+      },
+      {
         "name": "Critical Report county primary recap",
         "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
       }
     ],
-    "confidence": "unverified"
+    "confidence": "sourced"
   }
 ]

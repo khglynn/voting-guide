@@ -327,7 +327,8 @@ ul, ol { margin: 0; padding: 0; }
 .yn { display: grid; gap: var(--s-2); }
 .yn-box { border: 1.5px solid var(--ink); background: var(--paper); padding: var(--s-3); display: grid; gap: 6px; }
 .yn-box.is-picked { background: var(--wash); outline: 2px solid var(--ink); outline-offset: -2px; }
-.yn-label { font-family: var(--f-mono); font-size: var(--t-sm); font-weight: 700; letter-spacing: .04em; }
+.yn-label { font-family: var(--f-mono); font-size: var(--t-sm); font-weight: 400; }
+.yn-label strong { font-weight: 700; }
 .heads-up { border: 1.5px dashed var(--ink); padding: var(--s-3); display: grid; gap: 6px; font-size: var(--t-sm); background: var(--paper); }
 .heads-up .kicker { color: var(--ink); font-weight: 700; display: flex; gap: 8px; align-items: center; }
 .heads-up .kicker::before { content: "!"; width: 18px; height: 18px; border: 1.5px solid var(--ink); display: grid; place-items: center; font-size: 12px; flex: none; }

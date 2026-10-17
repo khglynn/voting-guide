@@ -160,7 +160,7 @@ function facts(): Fact[] {
   out.push({
     label: 'By mail',
     value: access === 'all' ? 'Mailed to every voter' : access === 'anyone' ? 'Anyone can ask for one' : 'Only if you qualify',
-    sub: `${qual ? `<span class="fact-line">${esc(qual[1].charAt(0).toUpperCase() + qual[1].slice(1))}.</span>` : ''}<span class="fact-line">${esc(subBits.join(' · '))}</span>`,
+    sub: `${qual ? `<span class="fact-line">${esc(qual[1].charAt(0).toUpperCase() + qual[1].slice(1))}.</span>` : ''}${subBits.map((x) => `<span class="fact-line">${esc(x)}</span>`).join('')}`,
     k: 'pf-mail', more: access === 'qualify' ? 'Who qualifies and how' : 'How it works',
     detail: [
       sub(access === 'all' ? 'Who gets one' : 'Who can', bulletsHTML(mb.who_gets_one)),

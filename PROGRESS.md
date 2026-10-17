@@ -1,19 +1,50 @@
 # Voting Guide v2: progress
 
-Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Fri Oct 16, 2026, late evening.
+Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (v2.1 pass).
 
 ## Done
 - Vite + vanilla TS app in this folder, local git history (branch `main`).
 - `scripts/build-data.mjs`: validates, merges and bundles `data/` into `public/data/`.
   All 32 places and 14 states validate (0 skipped records) as of the last copy.
-- One-page flow: ZIP, place question, plan card, sources (picker + grid), ballot
+- One-page flow: ZIP, place question, plan card, sources line (picker + grid in the Filter shelf), ballot
   sections, district questions, Census address lookup, filters + auto-pick offer,
   notes, cheat sheet with print, copy and save link, "How this guide works".
-- `tests/e2e.mjs`: 26 checks at 380px (Denver, Austin, Atlanta, uncovered state). All pass.
+- `tests/e2e.mjs`: 41 checks at 380px (Denver, Austin, Atlanta, uncovered state). All pass.
   Screenshots in `shots/`.
 - Smoke pass over every place: no console errors, no sideways scroll at 380px.
 
-## Blocked: GitHub repo and Vercel deploy
+## v2.1 (Sat Oct 17): skimmable copy, sources in the Filter shelf, no all caps
+- Plan card: next step is the title, one short tip, and the button. Below it, "The basics"
+  as label/value rows (Early voting, Election Day, By mail, Bring, In the booth, Your
+  office, Your ballot), each with its full rules one tap away. Key dates, "Things people
+  get wrong" (bold lead sentence per bullet) and "More about voting in {place}" (state
+  overview and place notes as bullets) sit behind disclosures.
+- Mail row reads the state file's own words: mail-to-all model, else "Anyone can ask" when
+  who_gets_one says no excuse or any registered voter, else "Only if you qualify" (TX
+  adds the qualifier list from model_plain).
+- Shared helpers in `src/views/common.ts`: `sentences`, `leadRest`, `clampP` (lead plus an
+  inline More), `bulletsHTML` (colon-plus-semicolon lists become sub-bullets),
+  `leadBulletsHTML`, `telHTML`, `deshout`, `choiceWord`. All display-only: no data edits.
+- Cards: measure summaries, confusing-wording notes, why-it-matters, endorsement reasons and
+  retention-judge backgrounds show a lead plus More.
+- Sources: the page keeps one line ("Endorsements from N sources · Change"). It opens the
+  Filter shelf scrolled to the sources section with focus on its heading. The endorsed-only
+  toggle, Reset/Turn off, defaults and lean groups live there. "See their picks side by
+  side" swaps the shelf to the full-height grid; Back returns. Shelf footer holds Done.
+- No all caps: no text-transform uppercase anywhere (screen or print). Kickers, badges,
+  party labels and disclosures are sentence case. Stressed caps words in research prose
+  (NOT, RECEIVED, NOON, YES, FOR...) show in lower case via `deshout`; acronyms and anything
+  in quotation marks (ballot language like 'SHALL ... TAXES BE INCREASED') stay verbatim.
+  Measure boxes read "A **yes** vote means". The official ballot wording block is verbatim.
+- Taps cancel their follow-up mouse events (touchend preventDefault right after a fired tap)
+  so focus stays where the action put it.
+- e2e now 41 checks. Screenshots: `shots/v2.1-before-*` and `shots/v2.1-after-*`.
+- Coordinator note: fact-checkers are editing `../data/measures/*.json`; they re-copy data
+  and push after. This pass made no data edits.
+
+## (Resolved) GitHub repo and Vercel deploy
+Repo `khglynn/voting-guide` exists; pushes to `main` deploy to https://voting-guide-silk.vercel.app.
+Notes below kept for history.
 - **GitHub:** this session can't create repos. The GitHub MCP returns 403 and `gh api
   user/repos` is refused by session policy ("sessions are bound to their configured
   repositories"). `khglynn/voting-guide` does not exist yet.

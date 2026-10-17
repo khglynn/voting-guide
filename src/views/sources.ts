@@ -4,7 +4,9 @@ import type { Contest, Endorser, Item } from '../types';
 import { S } from '../state';
 import { chosen, chosenIds, endorsement, entriesBySection, status, isDecision, shortTitle, isMultiJudge, isMultiSeat, filterCands } from '../ballot';
 import { esc, plural } from '../util';
-import { leanHTML, isOpen, ext } from './common';
+import { leanHTML, isOpen, ext, choiceWord, deshout } from './common';
+
+const CHOICE_VALUES = ['YES', 'NO', 'FOR', 'AGAINST'];
 
 const TYPE_WORD: Record<string, string> = {
   publication: 'Publication', civic_nonpartisan: 'Nonpartisan group', party: 'Political party', advocacy: 'Advocacy group',
@@ -66,12 +68,11 @@ function cellHTML(it: Item, e: Endorser): string {
   if (en.both) label = 'Both';
   else if (en.c && en.c.length) {
     label = en.c.map((x) => {
-      if (x === 'YES') return 'Yes';
-      if (x === 'NO') return 'No';
+      if (CHOICE_VALUES.includes(x)) return choiceWord(x);
       const c = it.kind === 'contest' ? it.candidates.find((k) => k.name === x) : null;
       return c ? c.short : x;
     }).join(' + ');
-  } else if (en.note) label = en.note.length > 14 ? `${en.note.slice(0, 12)}...` : en.note;
+  } else if (en.note) { const n = deshout(en.note); label = n.length > 14 ? `${n.slice(0, 12)}...` : n; }
   const mine = S.b.picks[it.id];
   const match = !!mine && mine !== 'SKIP' && !!en.c && en.c.includes(mine);
   return `<td class="cell en ${match ? 'match' : ''}">${esc(label)}${match ? '<span class="vh"> (matches your pick)</span>' : ''}${en.conf === 'unverified' ? '<span class="unv">unconfirmed</span>' : ''}</td>`;

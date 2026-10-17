@@ -7,7 +7,7 @@ import {
   contestDistrict,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
-import { confLabel, discBtn, ext, firstSentence, isOpen, sampleBallot, srcLink, clampP, escP } from './common';
+import { confLabel, discBtn, ext, firstSentence, isOpen, sampleBallot, srcLink, clampP, escP, deshout, choiceWord } from './common';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
    The two entry ids prefill "Which race or measure?" and "Where are you voting?". */
@@ -47,10 +47,10 @@ export function pickLabel(it: Item): string | null {
 function choiceLabel(it: Item, en: Endorsement): string {
   if (en.s !== 'endorsed') return en.s === 'no_position' ? 'No stand' : 'None found';
   if (en.both) return 'Both sides';
-  if (!en.c || !en.c.length) return en.note ? (en.note.length > 26 ? `${en.note.slice(0, 24)}...` : en.note) : 'Endorsed';
-  if (it.kind === 'measure' || (it.kind === 'contest' && it.is_retention)) return en.c.map((x) => (x === 'YES' ? 'Yes' : x === 'NO' ? 'No' : x)).join(' and ');
+  if (!en.c || !en.c.length) { const n = deshout(en.note || ''); return n ? (n.length > 26 ? `${n.slice(0, 24)}...` : n) : 'Endorsed'; }
+  if (it.kind === 'measure' || (it.kind === 'contest' && it.is_retention)) return en.c.map(choiceWord).join(' and ');
   const c = it as Contest;
-  return en.c.map((n) => (c.candidates.find((k) => k.name === n) || { short: n }).short).join(' and ');
+  return en.c.map((n) => (c.candidates.find((k) => k.name === n) || { short: choiceWord(n) }).short).join(' and ');
 }
 
 /* ---------- endorsements on a card ---------- */
@@ -71,7 +71,7 @@ function endorseHTML(it: Item): string {
     const e = S.ballot!.eById.get(openId);
     const en = e ? endorsement(it.id, e.id) : null;
     if (e && en) {
-      const head = en.both ? `${e.name} lists campaigns on both sides.` : `${e.name}: ${choiceLabel(it, en)}${en.note && en.c ? ` (${en.note})` : ''}.`;
+      const head = en.both ? `${e.name} lists campaigns on both sides.` : `${e.name}: ${choiceLabel(it, en)}${en.note && en.c ? ` (${deshout(en.note)})` : ''}.`;
       why = `<div class="why" role="region" aria-label="Why ${esc(e.short)}"><strong>${esc(head)}</strong>
         ${en.why ? clampP(`why-${key}-${e.id}`, en.why, 40) : '<p class="muted">They didn’t give a reason.</p>'}
         <div class="meta">${en.url ? ext(en.url, 'Read their endorsement') : ''}${en.date ? `<span>${esc(en.date)}</span>` : ''}${confLabel(en.conf) ? `<span>${confLabel(en.conf)}</span>` : ''}</div></div>`;
@@ -239,8 +239,8 @@ function measureCard(m: Measure): string {
     <div class="row">${thresholdBadge(m)}${m.referred_by === 'citizen_initiative' ? '<span class="badge">Citizen initiative</span>' : m.referred_by === 'legislature' ? '<span class="badge">From the legislature</span>' : ''}</div>
     ${m.plain_summary ? clampP(`sum-${m.id}`, m.plain_summary, 32, 'summary') : ''}
     <div class="yn">
-      <div class="yn-box ${v === 'YES' ? 'is-picked' : ''}"><span class="yn-label">A YES vote means</span><p>${escP(m.yes_means || 'Not written up yet. See the official text.')}</p></div>
-      <div class="yn-box ${v === 'NO' ? 'is-picked' : ''}"><span class="yn-label">A NO vote means</span><p>${escP(m.no_means || 'Not written up yet. See the official text.')}</p></div>
+      <div class="yn-box ${v === 'YES' ? 'is-picked' : ''}"><span class="yn-label">A <strong>yes</strong> vote means</span><p>${escP(m.yes_means || 'Not written up yet. See the official text.')}</p></div>
+      <div class="yn-box ${v === 'NO' ? 'is-picked' : ''}"><span class="yn-label">A <strong>no</strong> vote means</span><p>${escP(m.no_means || 'Not written up yet. See the official text.')}</p></div>
     </div>
     ${m.confusing_wording_note ? `<div class="heads-up"><span class="kicker">Heads up: confusing wording</span>${clampP(`cw-${m.id}`, m.confusing_wording_note, 28)}</div>` : ''}
     ${linkedHTML(m)}

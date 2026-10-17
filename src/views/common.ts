@@ -59,7 +59,7 @@ export const firstSentence = (s: string): [string, string] => {
 const SHOUT = new Set(('NOT ONE TWO THREE ANY YOUR ONLY MORE LESS AFTER BEFORE NOON RECEIVED ARRIVE ARRIVES POSTMARKED ' +
   'WITH NEW EVERY SIGN AND DATE MONDAY TUESDAY OCTOBER NOVEMBER PROVISIONAL APPLICATION BALLOT VOTE CENTER COUNTIES ' +
   'POLLING PLACE EVERYTHING ELSE REPEALS NOTE HAVE IMPORTANT EARLY MAIL ABSENTEE MEETS PERFORMANCE STANDARDS NEVER ' +
-  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS').split(' '));
+  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS YES NO FOR AGAINST').split(' '));
 const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])('[^']*')(?=[\s.,;:)!?]|$)/g;
 export function deshout(text: string): string {
   if (!text || !/[A-Z]{3}/.test(text)) return text;
@@ -80,6 +80,9 @@ export function deshout(text: string): string {
   }
   return out + fix(text.slice(last), last === 0);
 }
+/* Ballot choice values are stored as YES, NO, FOR, AGAINST. Show them in sentence case. */
+const CHOICE: Record<string, string> = { YES: 'Yes', NO: 'No', FOR: 'For', AGAINST: 'Against' };
+export const choiceWord = (x: string): string => CHOICE[x] || x;
 export const escP = (s: string | null | undefined): string => esc(deshout(s || ''));
 
 /* ---------- skimmable prose ----------

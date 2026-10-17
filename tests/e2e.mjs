@@ -146,6 +146,8 @@ const noSideScroll = async (page, label) => {
   await page.waitForTimeout(400);
   await shotEl(page, `#i-${noteId}`, '06-denver-note');
 
+  const yn = await page.$$eval('#i-co-amendment-87 .yn-label', (els) => els.map((e) => e.textContent.trim() + (e.querySelector('strong') ? '*' : '')));
+  check('Denver: measure choices read "A yes vote means" with yes in bold', yn[0] === 'A yes vote means*' && yn[1] === 'A no vote means*', yn.join(' | '));
   // Pick a measure so the link carries a YES/NO too.
   await tap(page, '#i-co-amendment-87 [data-act="pick"][data-v="YES"]');
 

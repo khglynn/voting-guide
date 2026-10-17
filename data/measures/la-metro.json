@@ -24,6 +24,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "Los Angeles Proposition TE: What to know about suspending the 'mansion tax' for fire victims",
+    "url": "https://laist.com/news/politics/voter-guides/laist-los-angeles-city-voter-game-plan-prop-te"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -51,6 +58,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "What you need to know to vote on Los Angeles Charter Amendment LA",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-charter-amendment-la"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -78,6 +92,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "LA City Charter Amendment PL: Streamlining the city’s planning process",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-pl-planning-process"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -105,6 +126,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "LA City Charter Amendment EE: Making politicians more accountable?",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-ee"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -132,6 +160,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "LA City Charter Amendment PRK: Requiring the city to spend more on parks",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-charter-amendment-prk"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -159,6 +194,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "Los Angeles Charter Amendment PRT: What you need to know before voting",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-charter-amendment-prt-guide"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -186,6 +228,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "Los Angeles Measure FD: What to know about the proposed sales tax bump for the Fire Department",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-general-los-angeles-measure-fd-sales-tax"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -213,6 +262,13 @@
   },
   "official_text_url": "https://cityclerk.lacity.org/election/ENG201_NOV-2026_Voter_Info_Pamphlet.pdf",
   "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "Los Angeles Charter Amendment SC",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-sc-guide"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -240,6 +296,13 @@
   },
   "official_text_url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot",
   "official_guide_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot-7-31-2026-lira.pdf",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "LA County's Measure A: Binding arbitration for public safety labor disputes",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-your-la-county-measure-a-binding-arbitration"
+   }
+  ],
   "confidence": "verified"
  },
  {
@@ -267,6 +330,13 @@
   },
   "official_text_url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot",
   "official_guide_url": "https://www.californiachoices.org/los-angeles-measure-e-2026",
+  "explainers": [
+   {
+    "source": "LAist",
+    "title": "LA County Charter Amendment Measure E: Boost independent ethics investigators",
+    "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-county-measure-e-ethics-comission-measure-j"
+   }
+  ],
   "confidence": "sourced"
  }
 ]

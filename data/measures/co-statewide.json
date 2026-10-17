@@ -24,6 +24,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/95Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 81: Colorado police, prosecutors would be forced to alert ICE after filing certain charges",
+        "url": "https://coloradosun.com/2026/09/29/amendment-81-explained-colorado-immigration/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 81: Requires local law enforcement to communicate with ICE",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-81-local-law-enforcement-ice/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -51,6 +63,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/177Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 82: Colorado voters will decide whether to put right to natural gas in state constitution",
+        "url": "https://coloradosun.com/2026/09/30/amendment-82-explained-colorado-natural-gas/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 82: Constitutional Right to Purchase and Sell Natural Gas",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-82-natural-gas-right/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -78,6 +102,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/302Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 83: Colorado voters will decide whether to place right to hunt and fish in state constitution",
+        "url": "https://coloradosun.com/2026/10/01/amendment-83-explained-colorado-right-hunt-fish/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 83: Constitutional right to hunt and fish",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-83-right-to-hunt-fish/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -105,6 +141,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/362Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 84: Colorado voters would be forced to put Social Security, driver’s license numbers on their ballots",
+        "url": "https://coloradosun.com/2026/10/03/amendment-84-explained-ballot-id-numbers/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 84: Mail Ballot Voter Identification",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-initiative-362-mail-ballot-id/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -132,6 +180,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/234Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 85: Colorado voters will decide whether ballot measures must be understandable to an 8th grader",
+        "url": "https://coloradosun.com/2026/10/03/amendment-85-explained-plain-ballot-language/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 85: ‘Plain Language Ballot Questions’",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-initiative-234-plain-language-ballot-questions/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -159,6 +219,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/256Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 86: Congressional redistricting in Colorado outside the normal process would have more barriers",
+        "url": "https://coloradosun.com/2026/09/29/amendment-86-explained-colorado-redistricting/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 86: Congressional Redistricting",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-86-redistricting/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -186,6 +258,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/195Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Amendment 87: A graduated income tax would raise taxes on Colorado’s highest earners",
+        "url": "https://coloradosun.com/2026/10/02/amendment-87-graduated-income-tax-colorado-voters-guide/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Amendment 87: Graduated Income Tax",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-87-graduated-income-tax/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -213,6 +297,18 @@
     },
     "official_text_url": "https://leg.colorado.gov/bill_files/116503/download",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition NN: Colorado TABOR refunds would be diverted to K-12 education",
+        "url": "https://coloradosun.com/2026/10/03/proposition-nn-colorado-tabor-refunds-would-be-diverted-to-k-12-education/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition NN: TABOR Revenue Cap Increase for K-12 Education Measure",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-nn-tabor-school-funding/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -240,6 +336,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/85Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 132: Colorado voters will decide whether to increase penalties for possessing, selling fentanyl",
+        "url": "https://coloradosun.com/2026/10/02/proposition-132-explained-colorado-fentanyl/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 132: Penalties for Fentanyl Crimes",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-132-increase-fentanyl-penalties/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -267,6 +375,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/108Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 133: Colorado voters will decide whether to make child sex trafficking punishable by life in prison",
+        "url": "https://coloradosun.com/2026/10/01/proposition-133-child-sex-trafficking-colorado/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 133: Penalties for Human Trafficking of a Minor",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-133-life-in-prison-trafficking/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -294,6 +414,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/109Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 134: Colorado voters asked to ban transgender kids from gendered sports",
+        "url": "https://coloradosun.com/2026/10/01/proposition-134-explaine-colorado-transgender-kids-sports/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 134: Male and Female Participation in School Sports",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-134-trans-students-sports/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -321,6 +453,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/110Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 135: Colorado voters will decide whether to ban gender-related surgeries for kids",
+        "url": "https://coloradosun.com/2026/10/04/proposition-135-colorado-transgender-surgeries-kids/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 135: Prohibit Certain Surgeries on Minors",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-135-minor-gender-affirming-surgeries/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -348,6 +492,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/232FinalCorrected.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 136: Colorado income tax limit would hinder attempts to increase taxes on the rich",
+        "url": "https://coloradosun.com/2026/10/02/proposition-136-income-tax-limit-explained-voter-guide/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 136: Income Tax Rate Cap",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-136-income-tax-rate-cap/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -375,6 +531,18 @@
     },
     "official_text_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/titleBoard/filings/2025-2026/308Final.pdf",
     "official_guide_url": "https://leg.colorado.gov/bluebook",
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Proposition 137: $175M in existing Colorado tax revenue would be routed to conservation, wildfire mitigation",
+        "url": "https://coloradosun.com/2026/09/30/proposition-137-colorado-conservation-wildfire-funding/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Proposition 137: Sporting Goods Sales Tax for Conservation",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-137-sporting-goods-sales-tax/"
+      }
+    ],
     "confidence": "verified"
   }
 ]

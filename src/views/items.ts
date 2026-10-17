@@ -249,6 +249,7 @@ function measureCard(m: Measure): string {
       <button data-act="pick" data-id="${esc(m.id)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="pb-${esc(m.id)}-y">Yes</button>
       <button data-act="pick" data-id="${esc(m.id)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="pb-${esc(m.id)}-n">No</button>
       <button data-act="skip" data-id="${esc(m.id)}" aria-pressed="${v === 'SKIP'}" data-fk="pb-${esc(m.id)}-s">Skip</button></div>
+    ${m.explainers && m.explainers.length ? `<p class="small explainers">Read a news explainer: ${m.explainers.map((e) => ext(e.url, e.source)).join(' · ')}</p>` : ''}
     <div>${discBtn(k, 'Exact ballot wording, both sides, cost')}
     ${isOpen(k) ? `<div class="disc-bd">
       ${m.official_title ? `<div class="ballot-lang" tabindex="0">${esc(m.official_title)}</div>` : ''}

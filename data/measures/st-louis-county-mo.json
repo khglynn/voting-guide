@@ -24,6 +24,13 @@
     },
     "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -51,6 +58,18 @@
     },
     "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis County voters to weigh property tax increase for senior services",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-10-05/st-louis-county-voters-to-weigh-property-tax-increase-for-senior-services"
+      },
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -75,6 +94,13 @@
     "opponents_case": null,
     "official_text_url": "https://www.webster.k12.mo.us/prop-w",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -99,6 +125,13 @@
     "opponents_case": null,
     "official_text_url": "https://www.parkwayschools.net/about-parkway/proposition-p-2026",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "St. Louis Public Radio",
+        "title": "St. Louis Voter Guide: What to know about the 2026 election in Missouri and Illinois",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      }
+    ],
     "confidence": "verified"
   },
   {

@@ -140,6 +140,10 @@ function normMeasure(m, file) {
     opponents_case: cas(m.opponents_case),
     official_text_url: safeUrl(m.official_text_url),
     official_guide_url: safeUrl(m.official_guide_url),
+    explainers: (Array.isArray(m.explainers) ? m.explainers : [])
+      .filter((e) => e && isStr(e.source) && safeUrl(e.url))
+      .slice(0, 3)
+      .map((e) => ({ source: str(e.source), title: str(e.title), url: safeUrl(e.url) })),
     confidence: conf(m.confidence),
     links: [],
   };

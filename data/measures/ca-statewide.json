@@ -24,6 +24,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop1-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/1/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 1: Housing bond",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-1-housing-bond/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "There’s a $11.25 billion housing bond on the ballot this November. Here’s what you should know",
+        "url": "https://calmatters.org/housing/homelessness/2026/10/prop-1-housing-bond/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -51,6 +63,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop2-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/2/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 2: Rainy day fund",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-2-rainy-day-fund/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -78,6 +97,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop3-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/3/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 3: High-income tax",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-3-high-income-tax/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "5 tax measures are on the California ballot. Here’s how to make sense of them all",
+        "url": "https://calmatters.org/politics/2026/10/tax-propositions-ballot-measures/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -105,6 +136,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop4-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/4/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 4: Public fundraising",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-4-public-fundraising/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "Should California taxpayers chip in to fund political campaigns? Prop. 4 lets you decide",
+        "url": "https://calmatters.org/politics/2026/10/california-proposition-4-explainer/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -132,6 +175,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop5-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/5/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 5: Recall reform",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-5-recall-reform/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "Democrats want to change the rules for recall elections. Voters get their say with Prop. 5",
+        "url": "https://calmatters.org/politics/2026/10/california-election-proposition-5-explainer/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -159,6 +214,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop37-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/37/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 37: Homebuyers loan",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-37-homebuyers-loan/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -186,6 +248,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop38-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/38/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 38: Research bond",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-38-research-bond/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -213,6 +282,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop39-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/39/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 39: Voter ID",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-39-voter-id/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -240,6 +316,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop40-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/40/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 40: Billionaire tax",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-40-billionaire-tax/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "5 tax measures are on the California ballot. Here’s how to make sense of them all",
+        "url": "https://calmatters.org/politics/2026/10/tax-propositions-ballot-measures/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -267,6 +355,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop41-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/41/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 41: Tax audits",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-41-tax-audits/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "5 tax measures are on the California ballot. Here’s how to make sense of them all",
+        "url": "https://calmatters.org/politics/2026/10/tax-propositions-ballot-measures/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -294,6 +394,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop42-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/42/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 42: Property taxes",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-42-property-taxes/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "5 tax measures are on the California ballot. Here’s how to make sense of them all",
+        "url": "https://calmatters.org/politics/2026/10/tax-propositions-ballot-measures/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -321,6 +433,18 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop43-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/43/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 43: Tax threshold",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-43-tax-threshold/"
+      },
+      {
+        "source": "CalMatters",
+        "title": "5 tax measures are on the California ballot. Here’s how to make sense of them all",
+        "url": "https://calmatters.org/politics/2026/10/tax-propositions-ballot-measures/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -348,6 +472,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop44-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/44/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 44: Clinic funding",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-44-clinic-funding/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -375,6 +506,13 @@
     },
     "official_text_url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/prop45-text-proposed-laws.pdf",
     "official_guide_url": "https://voterguide.sos.ca.gov/propositions/45/index.htm",
+    "explainers": [
+      {
+        "source": "CalMatters",
+        "title": "Proposition 45: Environmental review",
+        "url": "https://calmatters.org/california-voter-guide-2026/proposition-45-environmental-review/"
+      }
+    ],
     "confidence": "verified"
   }
 ]

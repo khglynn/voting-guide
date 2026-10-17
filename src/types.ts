@@ -59,6 +59,7 @@ export interface Measure {
   opponents_case: { text: string; source: string | null } | null;
   official_text_url: string | null;
   official_guide_url: string | null;
+  explainers: { source: string; title: string | null; url: string }[];
   confidence: Confidence;
   links: string[];
 }

@@ -24,6 +24,13 @@
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Referred-Question-2H",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Referred Question 2H, Auditor’s Office powers",
+        "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2h-auditors-office-voter-guide/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -51,6 +58,13 @@
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Referred-Question-2I",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Referred Question 2I, biennial budgeting",
+        "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2i-biennial-budgeting-voter-guide/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -78,6 +92,13 @@
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Referred-Question-2J",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Referred Question 2J, changes to the hiring, management and discipline of police and fire employees",
+        "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2j-police-fire-employees-voter-guide/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -105,6 +126,13 @@
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Referred-Question-2K",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Referred Question 2K, Xcel Energy franchise agreement",
+        "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2k-xcel-energy-franchise-agreement-voter-guide/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -132,6 +160,13 @@
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Initiated-Ordinance-311",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Initiated Ordinance 311, ban force-feeding of birds",
+        "url": "https://denverite.com/2026/09/25/vg-2026-initiated-ordinance-311-force-feeding-birds-ban-voter-guide/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -159,6 +194,18 @@
     },
     "official_text_url": "https://denvergov.org/files/assets/public/v/2/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/tabor_eng-text.pdf",
     "official_guide_url": "https://denvergov.org/files/assets/public/v/2/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/tabor_eng-text.pdf",
+    "explainers": [
+      {
+        "source": "Denverite",
+        "title": "Ballot Issue 4A, tax increase to fund Denver Public Schools",
+        "url": "https://denverite.com/2026/09/25/vg-2026-ballot-issue-4a-denver-public-schools-mill-levy-voter-guide/"
+      },
+      {
+        "source": "Chalkbeat Colorado",
+        "title": "Voter guide 2026: Denver Public Schools Ballot Issue 4A would pay for employee raises, career education",
+        "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-denver-public-schools-ballot-issue-4a/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -186,6 +233,18 @@
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "The Colorado Sun",
+        "title": "Ballot Issue 7A: Front Range voters will weigh sales tax hike to pay for passenger train service",
+        "url": "https://coloradosun.com/2026/09/30/ballot-issue-7a-explained-colorado-train-tax/"
+      },
+      {
+        "source": "CPR News",
+        "title": "Ballot Measure 7A: Front Range Passenger Rail District",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-ballot-measure-7a-front-range-rail/"
+      }
+    ],
     "confidence": "sourced"
   },
   {
@@ -438,6 +497,13 @@
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Chalkbeat Colorado",
+        "title": "Voter guide 2026: Jeffco Public Schools 5A and 5B would fund salary increases, building fixes",
+        "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-jeffco-public-schools-ballot-issues-5a-5b/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -465,6 +531,13 @@
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Chalkbeat Colorado",
+        "title": "Voter guide 2026: Jeffco Public Schools 5A and 5B would fund salary increases, building fixes",
+        "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-jeffco-public-schools-ballot-issues-5a-5b/"
+      }
+    ],
     "confidence": "verified"
   },
   {

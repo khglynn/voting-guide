@@ -24,6 +24,18 @@
     },
     "official_text_url": "https://bouldercounty.gov/government/county-ballot-measures/",
     "official_guide_url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/2026-TABOR-Notice.pdf",
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder County voters will decide a $30 million-a-year childcare tax. Here’s what it would do.",
+        "url": "https://boulderreportinglab.org/2026/09/13/boulder-county-voters-will-decide-a-30-million-a-year-childcare-tax-heres-what-it-would-do/"
+      },
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -51,6 +63,13 @@
     },
     "official_text_url": "https://bouldercounty.gov/government/county-ballot-measures/",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -78,6 +97,13 @@
     },
     "official_text_url": "https://bouldercounty.gov/government/county-ballot-measures/",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -105,6 +131,13 @@
     },
     "official_text_url": "https://bouldercolorado.gov/2026-city-boulder-ballot-measures",
     "official_guide_url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/2026-TABOR-Notice.pdf",
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -132,6 +165,18 @@
     },
     "official_text_url": "https://bouldercolorado.gov/2026-city-boulder-ballot-measures",
     "official_guide_url": "https://bouldercolorado.gov/guide/recreation-and-safety-bond",
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder’s $400 million property tax measure is shaping the city election. Here’s what to know.",
+        "url": "https://boulderreportinglab.org/2026/09/29/boulders-400-million-property-tax-measure-is-shaping-the-city-election-heres-what-to-know/"
+      },
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -159,6 +204,13 @@
     },
     "official_text_url": "https://bouldercolorado.gov/2026-city-boulder-ballot-measures",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   },
   {
@@ -186,6 +238,13 @@
     },
     "official_text_url": "https://bouldercolorado.gov/2026-city-boulder-ballot-measures",
     "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "Boulder Reporting Lab",
+        "title": "Boulder 2026 Voter Guide: What to know before Election Day, Nov. 3",
+        "url": "https://boulderreportinglab.org/2026/10/07/boulder-2026-voter-guide-what-to-know-before-election-day-nov-3/"
+      }
+    ],
     "confidence": "verified"
   }
 ]

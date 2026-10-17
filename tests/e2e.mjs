@@ -45,6 +45,24 @@ async function openZip(page, zip) {
   await page.locator('button[type=submit]').tap();
   await page.waitForSelector('#plan', { timeout: 15000 });
 }
+/* No visible block in the plan card runs past about 40 words. */
+async function planWalls(page) {
+  return page.evaluate(() => {
+    const out = [];
+    document.querySelectorAll('#plan p, #plan li, #plan dd, #plan .fact-line').forEach((el) => {
+      if (!el.getClientRects().length) return;
+      const n = el.innerText.trim().split(/\s+/).filter(Boolean).length;
+      if (n > 40) out.push(`${n}w: ${el.innerText.trim().slice(0, 60)}`);
+    });
+    return out;
+  });
+}
+/* Kevin: no all caps. Nothing visible may use text-transform: uppercase. */
+async function upperCased(page) {
+  return page.evaluate(() => [...document.querySelectorAll('body *')]
+    .filter((el) => el.getClientRects().length && getComputedStyle(el).textTransform === 'uppercase' && el.textContent.trim())
+    .map((el) => `${el.tagName.toLowerCase()}.${el.className}: ${el.textContent.trim().slice(0, 30)}`).slice(0, 5));
+}
 const noSideScroll = async (page, label) => {
   const w = await page.evaluate(() => document.documentElement.scrollWidth);
   check(`${label}: no sideways page scroll at ${W}px`, w <= W, `scrollWidth ${w}`);
@@ -59,12 +77,36 @@ const noSideScroll = async (page, label) => {
   await shot(page, '01-denver-top');
   await noSideScroll(page, 'Denver');
   check('Denver: plan card shows a countdown', (await page.textContent('.count')).trim() === '18');
+  const walls = await planWalls(page);
+  check('Denver: no plan-card paragraph over 40 words by default', walls.length === 0, walls.join(' | '));
+  check('Denver: nothing visible is set in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
+
+  // The sources line opens the Filter shelf at the sources section, focus on its heading.
+  const lineBefore = (await page.textContent('#sources')).replace(/\s+/g, ' ').trim();
+  check('Denver: sources show as one compact line', /^Endorsements from \d+ sources? Change$/.test(lineBefore), lineBefore);
   await tap(page, '[data-act="sources"]');
-  await page.waitForSelector('.grid-wrap');
-  await noSideScroll(page, 'Denver with sources open');
-  await shotEl(page, '#sources', '01b-denver-sources-open');
-  await shotEl(page, '.grid-wrap', '01c-denver-sources-grid');
-  await tap(page, '[data-act="sources"]');
+  await page.waitForSelector('.sheet-panel #flt-src');
+  const at = await page.evaluate(() => {
+    const bd = document.querySelector('.sheet-bd'); const h = document.getElementById('flt-src-h');
+    return { focus: document.activeElement && document.activeElement.id, top: Math.round(h.getBoundingClientRect().top - bd.getBoundingClientRect().top) };
+  });
+  check('Denver: sources line opens the shelf at the sources section', at.focus === 'flt-src-h' && at.top >= 0 && at.top < 80, JSON.stringify(at));
+  check('Denver: "Only candidates my sources endorsed" sits in the sources section', !!(await page.$('#flt-src [data-act="f-endorsed"]')));
+  await shot(page, '01b-denver-sources-shelf');
+  check('Denver: shelf has nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
+  // Turn one default source off; the save link must carry it.
+  const offId = await page.locator('#flt-src [data-act="src"][aria-checked="true"]').first().getAttribute('data-id');
+  await tap(page, `#flt-src [data-act="src"][data-id="${offId}"]`);
+  check('Denver: a source toggles off in the shelf', (await page.getAttribute(`#flt-src [data-act="src"][data-id="${offId}"]`, 'aria-checked')) === 'false', offId);
+  await tap(page, '[data-act="grid-open"]');
+  await page.waitForSelector('.sheet-grid .grid-wrap');
+  await noSideScroll(page, 'Denver with the side-by-side grid open');
+  await shot(page, '01c-denver-sources-grid');
+  await tap(page, '[data-act="grid-close"]');
+  check('Denver: Back from the grid returns to the sources section', !!(await page.$('.sheet-panel #flt-src')) && !(await page.$('.sheet-grid')));
+  await tap(page, '[data-fk="flt-done"]');
+  const lineAfter = (await page.textContent('#sources')).replace(/\s+/g, ' ').trim();
+  check('Denver: the line counts one fewer source', lineAfter !== lineBefore, `${lineBefore} -> ${lineAfter}`);
 
   // Next undecided jumps to the first open item.
   await tap(page, '[data-act="next"]');
@@ -77,7 +119,7 @@ const noSideScroll = async (page, label) => {
   await page.waitForSelector('.sheet-panel');
   for (const p of ['R', 'O', 'I']) { if (await page.$(`[data-act="party"][data-p="${p}"]`)) await tap(page, `[data-act="party"][data-p="${p}"]`); }
   await shot(page, '02-denver-filter-sheet');
-  await tap(page, '.sheet-panel .btn-block');
+  await tap(page, '[data-fk="flt-done"]');
   await page.waitForSelector('.offer', { timeout: 5000 }).catch(() => {});
   const offer = await page.$('.offer');
   check('Denver: party filter shows the auto-pick offer', !!offer, offer ? (await offer.textContent()).trim().slice(0, 80) : 'no offer');
@@ -117,6 +159,7 @@ const noSideScroll = async (page, label) => {
   // Print stylesheet.
   await page.emulateMedia({ media: 'print' });
   await page.screenshot({ path: path.join(SHOTS, '08-denver-print.png'), fullPage: true });
+  check('Denver: print has nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
   const printVisible = await page.evaluate(() => getComputedStyle(document.getElementById('r-print')).display !== 'none' && getComputedStyle(document.getElementById('app')).display === 'none');
   check('Denver: print shows only the cheat sheet', printVisible);
   await page.pdf({ path: path.join(SHOTS, 'denver-cheat-sheet.pdf'), format: 'Letter' }).catch(() => {});
@@ -133,6 +176,12 @@ const noSideScroll = async (page, label) => {
   check('Denver: reopening the link restores the picks', decidedAfter === decidedBefore, `${decidedBefore} -> ${decidedAfter}; toast: ${toastText}`);
   const noteBack = await fresh.page.textContent('#cheat');
   check('Denver: the note comes back with the link', noteBack.includes('Ask a friend about this one'));
+  const freshLine = (await fresh.page.textContent('#sources')).replace(/\s+/g, ' ').trim();
+  await tap(fresh.page, '[data-act="sources"]');
+  await fresh.page.waitForSelector('#flt-src');
+  const offBack = await fresh.page.getAttribute(`#flt-src [data-act="src"][data-id="${offId}"]`, 'aria-checked');
+  check('Denver: the link restores source choices', freshLine === lineAfter && offBack === 'false', `${freshLine}; ${offId}=${offBack}`);
+  await tap(fresh.page, '[data-fk="flt-done"]');
   await shotEl(fresh.page, '#cheat', '09-denver-reopened');
   check('Denver reopen: no console errors', fresh.page.errors.length === 0, fresh.page.errors.slice(0, 3).join(' | '));
 
@@ -154,6 +203,11 @@ const noSideScroll = async (page, label) => {
   const { ctx, page } = await newPage();
   await openZip(page, '78702');
   await noSideScroll(page, 'Austin');
+  const aWalls = await planWalls(page);
+  check('Austin: no plan-card paragraph over 40 words by default', aWalls.length === 0, aWalls.join(' | '));
+  const booth = (await page.textContent('#plan .fact:has(dt:text-is("In the booth")) .fact-v')).replace(/\s+/g, ' ').trim();
+  check('Austin: booth rules read as one short line', booth.startsWith('Notes allowed') && booth.endsWith('Phones not allowed'), booth);
+  await shot(page, '10b-austin-plan');
   const q = page.locator('.q', { hasText: 'Austin City Council' });
   check('Austin: asks which council district', (await q.count()) === 1);
   await q.first().scrollIntoViewIfNeeded();
@@ -185,6 +239,8 @@ const noSideScroll = async (page, label) => {
   const txt = await page.textContent('#plan');
   check('Atlanta: says statewide only, honestly', txt.includes('We only have statewide races for your area so far.'));
   check('Atlanta: links an official ballot lookup', !!(await page.$('#plan .plan-sec a')));
+  const gWalls = await planWalls(page);
+  check('Atlanta: no plan-card paragraph over 40 words by default', gWalls.length === 0, gWalls.join(' | '));
   await shot(page, '15-atlanta-top');
   const sections = await page.$$eval('.sec', (els) => els.map((e) => e.dataset.sec));
   check('Atlanta: statewide sections only', !sections.includes('city') && !sections.includes('county'), sections.join(','));

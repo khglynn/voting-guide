@@ -150,7 +150,7 @@ function facts(): Fact[] {
   const access = mailAccess(h);
   const qual = access === 'qualify' ? (h.model_plain || '').match(/qualify:\s*([^.]+)\./i) : null;
   const r = mb.return_deadline;
-  const timeShort = shortText(r.time);
+  const timeShort = shortText(r.time, 18);
   const due = r.rule === 'received_by' ? 'Must arrive by' : r.rule === 'postmarked_by' ? 'Postmark by' : 'Return by';
   const rq = mb.request_deadline;
   const subBits = [

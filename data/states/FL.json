@@ -1,0 +1,277 @@
+{
+  "state": "FL",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "Florida Division of Elections (Florida Department of State)",
+    "url": "https://dos.fl.gov/elections/"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "Most Floridians vote in person, either early (any early voting site in your county) or on Election Day (your assigned precinct only). Anyone can vote by mail, but you have to ask for a mail ballot each election cycle; nobody is sent one automatically.",
+  "registration": {
+    "check_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-05",
+        "rule": "Registration 'book closing' is 29 days before the election. The Division of Elections lists 'Deadline to register to vote: October 5, 2026.' Online registration at RegisterToVoteFlorida.gov had to be submitted by 11:59 PM that day.",
+        "source": "https://dos.fl.gov/elections/for-voters/election-dates/"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-05",
+        "rule": "Paper applications had to be postmarked or hand-delivered to a voter registration agency or supervisor of elections by Monday, October 5, 2026 (s. 97.055, F.S.: books close on the 29th day before the election).",
+        "source": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0097/Sections/0097.055.html"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-05",
+        "rule": "Same deadline in person at the supervisor of elections office, a driver license office, or a library/other registration agency: Monday, October 5, 2026. Florida has no same-day registration.",
+        "source": "https://dos.fl.gov/elections/for-voters/election-dates/"
+      }
+    ],
+    "same_day_registration": false,
+    "same_day_notes": "None. If you were not registered by October 5, 2026, you cannot vote in this election. If you ARE registered but moved inside Florida, you can update your address at the polls (early voting or Election Day) and still vote a regular ballot (s. 101.045, F.S.). A name change can also be handled at the polls with a signed affirmation. Better: update your address or name online at RegisterToVoteFlorida.gov now so your record is clean before you show up.",
+    "still_possible_now": "No. As of October 16, 2026 the deadline (Monday, October 5) has passed. Check your status at the lookup link; if you are registered and moved within Florida, you can still fix your address at the polls.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Anyone who asks. No excuse needed, but nobody is mailed a ballot automatically. IMPORTANT: the Division of Elections says a request 'covers all elections from the date a request was submitted through the end of the calendar year' of the next regularly scheduled general election, then must be renewed. Every request made in 2023 or 2024 EXPIRED on December 31, 2024. If you got mail ballots in 2024 and have not re-requested since January 2025, you do not have one coming. Requests made in 2025 or 2026 cover this election. To request, you must give your Florida driver license number, Florida ID number, or the last 4 digits of your Social Security number. Request online, by phone, email, mail or in person through your county supervisor of elections (Orange: voteorangefl.gov; Leon: leonvotes.gov; Escambia: escambiavotes.gov). Domestic ballots went out September 24 to October 1, 2026. Check whether you have a request on file at the tracking link below.",
+    "request_deadline": {
+      "date": "2026-10-22",
+      "rule": "Official rule: 'The deadline to request that a ballot be mailed is no later than 5 p.m. on the 12th day before the election.' For November 3 that is 5:00 PM local time, Thursday, October 22, 2026. After that you can still pick up your own ballot in person at the supervisor's office through Election Day, but from the start of early voting on you must sign an affidavit that an emergency keeps you from voting in person. Simplest: vote early or on Election Day.",
+      "source": "https://dos.fl.gov/elections/for-voters/voting/vote-by-mail/"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "received_by",
+      "time": "7:00 PM local time",
+      "source": "https://dos.fl.gov/elections/for-voters/voting/vote-by-mail/"
+    },
+    "return_options": [
+      "mail (USPS or a private carrier) to your county supervisor of elections; must be 'received, regardless of postmark' by 7 PM local time on November 3",
+      "secure ballot intake station (Florida's name for a drop box) at any early voting site in your county, during early voting hours only; Orange and Leon confirm one at every early voting site",
+      "secure ballot intake station or front counter at the supervisor of elections main or branch office, until 7 PM on Election Day",
+      "NOT at your Election Day polling place. The state says a voter who has a mail ballot can bring it to the polls and vote a regular ballot instead; the precinct does not accept the mail ballot as a vote."
+    ],
+    "postage": "Varies by county. Leon County prepays return postage ('you do not need to use a stamp'). Orange and Escambia: not confirmed in this run, so read your return envelope; if it is not marked prepaid, use one Forever stamp (two if thick). Dropping it at an intake station or the office is always free.",
+    "signature_witness_rules": "Sign the Voter's Certificate on the back of the return envelope. No witness or notary. Your signature is compared to the one on your voter record. If your signature has changed, update it with a new voter registration application before you return your ballot. An unsigned or mismatched envelope is not counted unless you cure it (see cure_process). Picking up ballots for others: a designee may pick up ballots for no more than 2 other voters per election (immediate family excluded) and must sign Form DS-DE 162.",
+    "tracking_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "cure_process": "If your signature is missing or does not match, the supervisor must notify you. You fix it by submitting the Vote-by-Mail Ballot Cure Affidavit (Form DS-DE 139) plus a copy of an ID. Official deadline: 'no later than 5 p.m. (local time) on the 2nd day after an election,' which is Thursday, November 5, 2026. Return the form and ID by mail, email, fax, or in person. Acceptable ID copies include a Florida driver license, Florida ID, U.S. passport, debit/credit card, military/student/retirement center/neighborhood association/public assistance/veteran health ID, concealed weapon license, government employee ID; or, if none of those, a current utility bill, bank statement, government check, paycheck, or other government document showing your name and address.",
+    "mail_cutoff_advice": "Postmarks do not count. The state's own page: the ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' USPS recommends mailing at least 7 days out, so mail by about Tuesday, October 27. From then on, hand it to an intake station at an early voting site or the supervisor's office. Overseas voters are the only exception: a 10-day extension if postmarked by Election Day.",
+    "drop_box_lookup_url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-24",
+    "end": "2026-10-31",
+    "hours_note": "STATE MINIMUM: every county must open early voting Saturday, October 24 through Saturday, October 31, 2026 ('the 10th day before the election' through 'the 3rd day before'), 8 to 12 hours a day at each site. Counties may add days 'as early as the 15th day before the election and ending on the 2nd day' (Oct 19 to 23 and Nov 1). CONFIRMED COUNTY DATES: ORANGE (Orlando): Monday, October 19 through Sunday, November 1, 8:00 AM to 8:00 PM, 27 sites, each with a secure ballot intake station; six have drive-through drop-off. LEON (Tallahassee): Monday, October 19 through Sunday, November 1, 10 sites, hours vary by site (Courthouse 8 AM to 4 PM; Elections Center 8:30 AM to 6 PM; the other 8 sites 10 AM to 6 PM). ESCAMBIA (Pensacola): Monday, October 19 through Saturday, October 31 (no Sunday Nov 1), 8:00 AM to 6:00 PM Central Time, 10 sites. During early voting you can use ANY early voting site in your county.",
+    "vote_centers": true,
+    "lookup_url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "7:00 PM",
+    "in_line_rule": "Official: 'The polls are open on Election Day, from 7 a.m. until 7 p.m. (local time).' 'Any voters waiting in line at 7:00 p.m. will have the opportunity to cast a ballot.' On Election Day you 'must vote at his or her assigned precinct/polling location.' Orlando and Tallahassee are on Eastern Time; Pensacola and the western Panhandle are on Central Time.",
+    "vote_centers": false,
+    "lookup_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "photo",
+    "accepted": [
+      "Florida driver license",
+      "Florida identification card issued by the Department of Highway Safety and Motor Vehicles",
+      "United States passport",
+      "Debit or credit card (with photo)",
+      "Military identification",
+      "Student identification",
+      "Retirement center identification",
+      "Neighborhood association identification",
+      "Public assistance identification",
+      "Veteran health identification card issued by the U.S. Department of Veterans Affairs",
+      "Florida license to carry a concealed weapon or firearm",
+      "Employee ID issued by any branch, department, agency, or entity of the federal, state, county, or municipal government",
+      "Rule from the Division of Elections: the ID must be current and valid with your photo. 'If your photo ID does not include your signature, you will be asked to provide another ID that has your signature.' Your voter information card is NOT an ID."
+    ],
+    "no_id_option": "Official: 'If you do not bring proper ID, you can still vote a provisional ballot,' and it counts 'provided the signature on your provisional ballot matches the signature in your registration record.' You do not have to come back with ID. Mail ballots: no ID to vote by mail (your signature is checked), but you need an ID number to REQUEST one and an ID copy if you have to cure a signature problem.",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "restricted",
+    "phones_detail": "No Florida law bans carrying a phone into the polling place, and you may read notes or your marked sample ballot on it. The photo rule is s. 102.031(5), F.S.: 'No photography is permitted in the polling room or early voting area, except an elector may photograph his or her own ballot.' So you may photograph your own ballot, but not other voters, their ballots, or the room. Poll workers can ask you to put the phone away if it is disruptive. Source (2026 Florida Statutes): http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0102/Sections/0102.031.html",
+    "notes_allowed": "allowed",
+    "notes_detail": "Yes. You can bring a printed or handwritten cheat sheet, this guide, or your marked sample ballot into the booth. County supervisors (including Orange County) encourage it: mark your sample ballot at home and bring it. The only limit is you cannot campaign or hand materials to other voters inside or within 150 feet of the entrance. Source: https://voteorangefl.gov/ and s. 102.031, F.S.",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "No campaigning ('soliciting voters') within 150 feet of a polling place, early voting site, or secure ballot intake station (s. 102.031(4), F.S.). Simply wearing a campaign shirt, hat, or button while you go in and vote is generally allowed in Florida because it is not soliciting, but keep it to yourself: no handing out material, no talking up candidates in line, and a clerk can ask you to cover something disruptive. Ballot photos: since 2017, s. 102.031(5) lets a voter 'photograph his or her own ballot' (s. 104.20's ban on letting your ballot be seen applies 'except as provided by law'). Photograph only your own ballot, never anyone else's.",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "Your old mail-ballot request is probably dead. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). Everything requested in 2023 or 2024 expired December 31, 2024. If you have not re-requested since January 2025, nothing is coming. Request by 5 PM Thursday, October 22 (voteorangefl.gov, leonvotes.gov, escambiavotes.gov), or plan to vote in person.",
+    "Mail ballots must be IN the supervisor's office by 7 PM on November 3. Postmarks do not count. Do not mail after about October 27. And do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
+    "Early voting is 'any site in your county' and in Orange, Leon and Escambia it starts Monday, October 19 (not the Oct 24 state minimum you may see quoted). Election Day is 'your assigned precinct only.' Escambia has no Sunday Nov 1 early voting; Orange and Leon do. Check your precinct at the lookup link the night before.",
+    "Bring a photo ID WITH a signature. If the photo ID has no signature (common with student IDs), bring a second ID with your signature. No ID at all: you still vote a provisional ballot, and it counts if your signature matches your record.",
+    "Constitutional amendments need 60% YES to pass, not 50%. There are three this year (1: rainy-day fund, 2: farm equipment tax break, 3: bigger homestead exemption). A 'Yes' always means change the constitution. The one judicial retention question every Floridian sees is 'Shall Chief Justice Carlos G. Muñiz be retained?': Yes keeps him, No removes him, simple majority decides. Orlando-area voters will NOT see any District Court of Appeal judges this year (none from the 6th DCA are up); Tallahassee and Pensacola voters see five 1st DCA judges.",
+    "Pensacola is on Central Time. Polls open 7 AM to 7 PM Central there, and the 7 PM mail-ballot deadline is 7 PM Central too."
+  ],
+  "sources": [
+    {
+      "name": "Florida Division of Elections: Election Dates",
+      "url": "https://dos.fl.gov/elections/for-voters/election-dates/"
+    },
+    {
+      "name": "Florida Division of Elections: 2026 Election Dates and Activities Calendar (PDF)",
+      "url": "https://files.floridados.gov/media/711204/2026-calendar-20260713.pdf"
+    },
+    {
+      "name": "Florida Division of Elections: Vote-by-Mail",
+      "url": "https://dos.fl.gov/elections/for-voters/voting/vote-by-mail/"
+    },
+    {
+      "name": "Florida Division of Elections: Early Voting",
+      "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+    },
+    {
+      "name": "Florida Division of Elections: Election Day Voting (ID rules)",
+      "url": "https://dos.fl.gov/elections/for-voters/voting/election-day-voting/"
+    },
+    {
+      "name": "Florida Division of Elections: Check Your Voter Status, Precinct, and Vote-by-Mail Status",
+      "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+    },
+    {
+      "name": "RegisterToVoteFlorida.gov (online registration and updates)",
+      "url": "https://registertovoteflorida.gov/"
+    },
+    {
+      "name": "Florida Division of Elections: County Supervisors of Elections directory",
+      "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+    },
+    {
+      "name": "s. 97.055, F.S. (registration books close 29 days before election)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0097/Sections/0097.055.html"
+    },
+    {
+      "name": "s. 101.62, F.S. (vote-by-mail requests: 12th-day deadline, ID number, expiration)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.62.html"
+    },
+    {
+      "name": "s. 101.67, F.S. (mail ballots must be received by 7 PM Election Day)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.67.html"
+    },
+    {
+      "name": "s. 101.68, F.S. (signature cure: 5 PM on 2nd day after election)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.68.html"
+    },
+    {
+      "name": "s. 101.69, F.S. (secure ballot intake stations)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.69.html"
+    },
+    {
+      "name": "s. 101.657, F.S. (early voting: mandatory 10th to 3rd day, optional 15th to 11th and 2nd day)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.657.html"
+    },
+    {
+      "name": "s. 100.011, F.S. (polls open 7 AM to 7 PM)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0100/Sections/0100.011.html"
+    },
+    {
+      "name": "s. 101.043, F.S. (identification required at the polls; provisional ballot signature rule)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.043.html"
+    },
+    {
+      "name": "s. 101.045, F.S. (address changes at the polls)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.045.html"
+    },
+    {
+      "name": "s. 102.031, F.S. (150-foot no-solicitation zone; no photography in the polling room)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0102/Sections/0102.031.html"
+    },
+    {
+      "name": "s. 104.0616, F.S. (limit on possessing other voters' mail ballots)",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0104/Sections/0104.0616.html"
+    },
+    {
+      "name": "CBS12: Florida voter registration deadline is Mon. Oct. 5 (Oct 4, 2026)",
+      "url": "https://cbs12.com/news/local/florida-voter-registration-deadline-is-oct-5-how-to-register-and-check-your-status-election-day-vote-ballot-early-voting-november-general-oct-4-2026"
+    },
+    {
+      "name": "FOX 13: Here's when Floridians need to register to vote (Oct 5 deadline)",
+      "url": "https://www.fox13news.com/news/florida-voter-registration-deadline-what-know-before-oct-5"
+    },
+    {
+      "name": "WDBO: Today is the last day to register to vote in Florida's Nov. 3 election",
+      "url": "https://www.wdbo.com/news/local/today-is-last-day-register-vote-floridas-nov-3-election/IFU2BUFYNVBIFFKJOXQJZ5S4YM/"
+    },
+    {
+      "name": "WGCU: Vote-by-mail ballot request deadline is Oct. 22; sample ballots start to be mailed (Oct 8, 2026)",
+      "url": "https://www.wgcu.org/2026-10-08/vote-by-mail-ballot-request-deadline-is-oct-22-sample-ballots-start-to-be-mailed"
+    },
+    {
+      "name": "WGCU: First mailings of vote-by-mail ballots to domestic voters for Nov. 3 general election start to go out (Sept 24, 2026)",
+      "url": "https://www.wgcu.org/elections/2026-09-24/first-mailings-of-vote-by-mail-ballots-to-domestic-voters-for-nov-3-general-election-start-to-go-out"
+    },
+    {
+      "name": "WTSP: Is it too late to request a mail-in ballot in Florida? (2026)",
+      "url": "https://www.wtsp.com/article/news/politics/elections/voting/request-mail-in-ballot-deadline-florida-2026-election/67-68d79f5e-28af-420f-b2d9-0e8a23ecace4"
+    },
+    {
+      "name": "WPTV: Florida Election 2026: voter registration, vote-by-mail and early voting deadlines you need to know",
+      "url": "https://www.wptv.com/news/political/elections-local/florida-election-2026-voter-registration-vote-by-mail-and-early-voting-deadlines-you-need-to-know"
+    },
+    {
+      "name": "Central Florida Public Media: Early voting opens Monday in most Central Florida counties (Oct 16, 2026)",
+      "url": "https://www.cfpublic.org/politics/2026-10-16/early-voting-opens-2026"
+    },
+    {
+      "name": "The Apopka Chief: Early voting begins Oct. 19 at 27 Orange County locations",
+      "url": "https://theapopkachief.com/early-voting-begins-oct-19-at-27-orange-county-locations-including-two-in-apopka/"
+    },
+    {
+      "name": "Central Florida Public Media: Key dates for the 2026 Florida elections (July 17, 2026)",
+      "url": "https://www.cfpublic.org/2026-07-17/2026-florida-elections-key-dates-need-to-know"
+    },
+    {
+      "name": "Orange County Supervisor of Elections: Early Voting",
+      "url": "https://voteorangefl.gov/vote-early/"
+    },
+    {
+      "name": "Orange County Supervisor of Elections: Election Calendar",
+      "url": "https://voteorangefl.gov/election-calendar/"
+    },
+    {
+      "name": "Leon County Supervisor of Elections: Vote by Mail",
+      "url": "https://www.leonvotes.gov/Voting/Vote-by-Mail"
+    },
+    {
+      "name": "Escambia County Supervisor of Elections",
+      "url": "https://escambiavotes.gov/"
+    },
+    {
+      "name": "LWV Alachua: Important dates for the 2026 Florida general election",
+      "url": "https://my.lwv.org/florida/alachua/article/important-dates-2026-florida-general-election"
+    },
+    {
+      "name": "VOTE411 (League of Women Voters): Florida voting information",
+      "url": "https://www.vote411.org/florida"
+    },
+    {
+      "name": "Yahoo/Gannett: You must request vote-by-mail ballots again (request expiration explainer)",
+      "url": "https://www.yahoo.com/news/must-request-vote-mail-ballots-110837418.html"
+    },
+    {
+      "name": "Leon County Supervisor of Elections: Early Voting (Oct 19 to Nov 1, 10 sites, hours by site)",
+      "url": "https://www.leonvotes.gov/Voting/Early-Voting"
+    },
+    {
+      "name": "Escambia County Supervisor of Elections: Early Voting Locations (Oct 19 to 31, 8 AM to 6 PM CT, 10 sites)",
+      "url": "https://escambiavotes.gov/early-voting-locations"
+    },
+    {
+      "name": "Escambia County Supervisor of Elections: Vote By Mail",
+      "url": "https://escambiavotes.gov/vote-by-mail"
+    }
+  ]
+}

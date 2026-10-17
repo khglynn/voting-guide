@@ -1,0 +1,212 @@
+[
+  {
+    "id": "denver-post-eb",
+    "name": "The Denver Post editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Largest Colorado daily; editorial board has endorsed Democrats and Republicans. Since a 2022 company-wide decision it does not endorse for U.S. Senate or governor. AllSides rates the Denver Post news as Lean Left.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "co-springs-gazette-eb",
+    "name": "The Gazette (Colorado Springs) editorial board",
+    "type": "publication",
+    "lean": "right",
+    "lean_basis": "Owned by Clarity Media (Anschutz); the editorial board is consistently conservative and endorsed Republicans in every 2026 candidate race it weighed in on.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "denver-gazette-eb",
+    "name": "The Denver Gazette editorial board",
+    "type": "publication",
+    "lean": "right",
+    "lean_basis": "Sister paper of the Colorado Springs Gazette (Clarity Media); shares the same editorial board picks on statewide races and measures.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "colorado-sun",
+    "name": "The Colorado Sun",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit newsroom with no editorial board. Its opinion page states: 'The Sun will not publish candidate endorsement submissions, analysis of individual races or columns submitted by candidates in any race.'",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-colorado",
+    "name": "League of Women Voters of Colorado (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; does not endorse candidates. Publishes candidate questionnaire answers on VOTE411.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.vote411.org/colorado",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "co-democratic-party",
+    "name": "Colorado Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization; lists its general-election nominees.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.coloradodems.org/candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "co-republican-party",
+    "name": "Colorado Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; lists its general-election nominees.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://colorado.gop/candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "co-afl-cio",
+    "name": "Colorado AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation; its 2026 slate endorses only Democrats.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "colorado-education-association",
+    "name": "Colorado Education Association",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State teachers union; its 2026 statewide slate endorses only Democrats.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "conservation-colorado",
+    "name": "Conservation Colorado",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Environmental advocacy group; its 2026 endorsements are all Democrats.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://conservationco.org/resources/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "planned-parenthood-votes-co",
+    "name": "Planned Parenthood Votes Colorado",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Reproductive-rights advocacy PAC; its 2026 slate endorses only Democrats.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "nra-pvf",
+    "name": "NRA Political Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/colorado",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "rocky-mountain-gun-owners",
+    "name": "Rocky Mountain Gun Owners",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Colorado gun-rights group that describes itself as 'no compromise'; endorses only Republicans.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://rmgo.org/endorsement/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "colorado-chamber-pac",
+    "name": "Colorado Chamber of Commerce PAC",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide business lobby; endorses candidates of both parties in legislative races, skewing Republican. Does not endorse in statewide executive races.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "colorado-fop",
+    "name": "Colorado Fraternal Order of Police",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Largest police union in Colorado (10,000-plus officers). The Denver Post notes it 'historically has leaned toward Republican candidates'; in 2026 it endorsed Democrat Phil Weiser for governor.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://philforcolorado.com/endorsement-colorado-fraternal-order-of-police-endorses-phil-weiser-for-governor/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

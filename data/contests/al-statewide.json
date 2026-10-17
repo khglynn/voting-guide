@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "al-us-senate",
+    "state": "AL",
+    "level": "federal",
+    "office": "U.S. Senate",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race. The straight-party oval covers it; a mark for an individual candidate in this race overrides the straight-party choice. A write-in line is printed.",
+    "office_explainer": "One of Alabama's two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Six-year term for an open seat; Tommy Tuberville left it to run for governor. Senators confirm federal judges and cabinet members and set national tax, health, immigration and defense policy.",
+    "vote_for": 1,
+    "incumbent": "Tommy Tuberville (not running)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Everett Wess",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://wessforsenate.com/",
+        "website_confidence": "sourced",
+        "background": "Birmingham attorney (Wess Law Firm) who has also worked as a prosecutor and municipal judge. Has served on the Jefferson County Democratic executive committee and taught at Faulkner University. Won the June 16 Democratic runoff.",
+        "own_words": [
+          {
+            "text": "\"Gas prices are high, groceries are higher, prescription drugs are also high.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/25/democratic-u-s-senate-nominee-everett-wess-campaigns-against-long-odds/"
+          },
+          {
+            "text": "\"I thought I could put the Alabama citizens first before the wants and the needs of the administration.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/25/democratic-u-s-senate-nominee-everett-wess-campaigns-against-long-odds/"
+          },
+          {
+            "text": "Would work to expand access to health care, says Congress must have a role in tariffs, and backs federal limits on automated license plate readers.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsen/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Barry Moore",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://barrymooreforalabama.com/",
+        "website_confidence": "sourced",
+        "background": "U.S. representative from Enterprise since 2021 (now for the 1st District, which includes Mobile), after two terms in the state House. Won the June 16 Republican runoff with President Trump's endorsement.",
+        "own_words": [
+          {
+            "text": "\"We want to see interest rates come down. We want to see young families be able to afford a house for the first time.\"",
+            "is_quote": true,
+            "source": "https://aldailynews.com/alabamas-gop-frontrunners-for-u-s-senate-talk-affordability-iran/"
+          },
+          {
+            "text": "\"I think the Big, Beautiful Bill did some wonderful things. It cut taxes for working-class families.\"",
+            "is_quote": true,
+            "source": "https://aldailynews.com/alabamas-gop-frontrunners-for-u-s-senate-talk-affordability-iran/"
+          },
+          {
+            "text": "Supports President Trump's mass deportation policies and has called for arresting 'lawless Democrat sanctuary city elected officials.'",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsen/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: State certification of Republican candidates, Nov. 3, 2026 general (Aug. 26, 2026)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of Democratic candidates, Nov. 3, 2026 general (Aug. 26, 2026)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf"
+      },
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: U.S. Senate",
+        "url": "https://alabamareflector.com/voter-guides/contests/alsen/"
+      },
+      {
+        "name": "Alabama Reflector: Democratic U.S. Senate nominee Everett Wess campaigns against long odds (Sept. 25, 2026)",
+        "url": "https://alabamareflector.com/2026/09/25/democratic-u-s-senate-nominee-everett-wess-campaigns-against-long-odds/"
+      },
+      {
+        "name": "Alabama Daily News: GOP frontrunners for U.S. Senate talk affordability, Iran (May 17, 2026)",
+        "url": "https://aldailynews.com/alabamas-gop-frontrunners-for-u-s-senate-talk-affordability-iran/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-governor",
+    "state": "AL",
+    "level": "state",
+    "office": "Governor",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval. Three names are printed plus a write-in line.",
+    "office_explainer": "Runs the state government, signs or vetoes laws, proposes the budget and appoints agency heads and some judges.",
+    "why_it_matters": "Open seat; Gov. Kay Ivey is term-limited after two full terms. The winner sets direction on the state budget, schools, prisons, Medicaid and economic development for four years. Tuberville declined to debate Jones.",
+    "vote_for": 1,
+    "incumbent": "Kay Ivey (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Doug Jones",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://www.dougjones.com/",
+        "website_confidence": "verified",
+        "background": "U.S. senator 2018 to 2021 after winning the 2017 special election. Former U.S. Attorney for the Northern District of Alabama who prosecuted the 16th Street Baptist Church bombing cases. Won the May 19 Democratic primary with 78.6%.",
+        "own_words": [
+          {
+            "text": "\"Doug will declare a one year moratorium on data centers until we ensure every community is informed and protected.\"",
+            "is_quote": true,
+            "source": "https://www.dougjones.com/priorities"
+          },
+          {
+            "text": "Would 'expand Medicaid to cover more than 154,000 working Alabamians' and 'suspend the state gas tax when prices spike.'",
+            "is_quote": true,
+            "source": "https://www.dougjones.com/priorities"
+          },
+          {
+            "text": "Supports eliminating the state grocery tax and would 'ban elected officials from trading individual stocks while in office.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/algov/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Tommy Tuberville",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.coachforgovernor.com/",
+        "website_confidence": "verified",
+        "background": "U.S. senator since 2021. Former head football coach at Auburn, Ole Miss, Texas Tech and Cincinnati. Won the May 19 Republican primary with 85.5%. Printed on the ballot as 'Tommy Tuberville.'",
+        "own_words": [
+          {
+            "text": "\"As your Governor, I will work to further reduce taxes, get rid of waste, and make life in Alabama more affordable.\"",
+            "is_quote": true,
+            "source": "https://www.coachforgovernor.com/issues"
+          },
+          {
+            "text": "\"As a former educator for 40 years, I know that our kids are the most precious resource we have.\"",
+            "is_quote": true,
+            "source": "https://www.coachforgovernor.com/issues"
+          },
+          {
+            "text": "Supports eliminating the grocery tax, proposes tax cuts to encourage job creation, and opposes a moratorium on data centers.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/algov/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Ronald Burnette Jr.",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Independent candidate who qualified by petition. No campaign website, questionnaire response, or news coverage was found this run; the Alabama Reflector voter guide does not list him.",
+        "own_words": [
+          {
+            "text": "No campaign materials found.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/algov/"
+          },
+          {
+            "text": "No campaign materials found.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF; shows all three names)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of Republican candidates (Aug. 26, 2026)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of Democratic candidates (Aug. 26, 2026)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf"
+      },
+      {
+        "name": "Delilah (official state data): 2026 AL governor race and certified primary results",
+        "url": "https://www.sos.alabama.gov/sites/default/files/05-29-2026/GOP Results.xlsx"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Governor",
+        "url": "https://alabamareflector.com/voter-guides/contests/algov/"
+      },
+      {
+        "name": "WAFF: Tuberville rules out debate with Doug Jones (Aug. 26, 2026)",
+        "url": "https://www.waff.com/2026/08/26/senator-tommy-tuberville-rules-out-debate-with-doug-jones-alabama-governors-race/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-lieutenant-governor",
+    "state": "AL",
+    "level": "state",
+    "office": "Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "Presides over the state Senate and takes over if the governor leaves office. Elected separately from the governor.",
+    "why_it_matters": "Open seat; Will Ainsworth is term-limited. The office has few formal powers, but it is first in line for governor. Amendment 1 on this same ballot would change what happens if this seat becomes vacant.",
+    "vote_for": 1,
+    "incumbent": "Will Ainsworth (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Phillip Ensler",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://phillipensler.com/",
+        "website_confidence": "sourced",
+        "background": "Attorney and state representative from Montgomery since 2022.",
+        "own_words": [
+          {
+            "text": "Supports eliminating the grocery tax and restoring a tax break on overtime pay.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alltgov/"
+          },
+          {
+            "text": "Calls for more investment in mental health care, keeping medical professionals in the state, and tying teacher pay to a cost-of-living index.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alltgov/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "John Wahl",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://votejohnwahl.com/",
+        "website_confidence": "sourced",
+        "background": "Chaired the Alabama Republican Party 2021 to 2026 and chairs the board that oversees state funding for public libraries. Beat Secretary of State Wes Allen in the June runoff.",
+        "own_words": [
+          {
+            "text": "Backs \"pro-growth policies that reduce red tape, attract new businesses, and empower entrepreneurs.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alltgov/"
+          },
+          {
+            "text": "Emphasizes \"informed consent, individual liberty and protecting your right to choose what's best for you and your family,\" and supports eliminating the grocery tax.",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alltgov/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Lieutenant governor",
+        "url": "https://alabamareflector.com/voter-guides/contests/alltgov/"
+      },
+      {
+        "name": "Alabama Reflector: In lieutenant governor's race, big plans and little ability to carry them out (Aug. 21, 2026)",
+        "url": "https://alabamareflector.com/2026/08/21/in-alabama-lt-governors-race-big-plans-and-little-ability-to-carry-them-out/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-attorney-general",
+    "state": "AL",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "The state's top lawyer. Represents Alabama in court, issues legal opinions and oversees some criminal prosecutions.",
+    "why_it_matters": "Open seat; Steve Marshall is term-limited. The AG decides which lawsuits Alabama joins, defends state laws in court, runs public-corruption cases, and can intervene in utility rate cases at the Public Service Commission.",
+    "vote_for": 1,
+    "incumbent": "Steve Marshall (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff McLaughlin",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Guntersville lawyer who served in the Alabama House from 2001 to 2010. Printed on the ballot as 'Jeff McLaughlin.'",
+        "own_words": [
+          {
+            "text": "\"The AG's Office needs to be the champion of rate payers in our state.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/24/alabamas-attorney-general-can-intervene-in-rate-hearings-will-ag-candidates-do-so/"
+          },
+          {
+            "text": "Would use the office to 'root out corruption,' work with law enforcement on 'the flow of fentanyl into the state,' and refuse 'to use the office to settle political scores.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alag/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Katherine Robertson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.katherineforag.com/",
+        "website_confidence": "sourced",
+        "background": "Chief counsel to Attorney General Steve Marshall; previously a vice president at the Alabama Policy Institute, a conservative think tank.",
+        "own_words": [
+          {
+            "text": "Says she would \"support President Trump's America First vision\" from Montgomery and defend \"Alabama's Constitution and sovereignty from Washington's overreach.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alag/"
+          },
+          {
+            "text": "Pledges a tough-on-crime agenda and says she would fight 'the Left' while enforcing state laws. Did not respond to the Reflector's question on intervening in Alabama Power rate cases.",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/24/alabamas-attorney-general-can-intervene-in-rate-hearings-will-ag-candidates-do-so/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Attorney general",
+        "url": "https://alabamareflector.com/voter-guides/contests/alag/"
+      },
+      {
+        "name": "Alabama Reflector: Alabama's attorney general can intervene in power rate hearings. Will AG candidates do so? (Sept. 24, 2026)",
+        "url": "https://alabamareflector.com/2026/09/24/alabamas-attorney-general-can-intervene-in-rate-hearings-will-ag-candidates-do-so/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-secretary-of-state",
+    "state": "AL",
+    "level": "state",
+    "office": "Secretary of State",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "Alabama's chief elections officer. Runs voter registration, certifies results and keeps business and official state records.",
+    "why_it_matters": "Open seat; Wes Allen ran for lieutenant governor and lost the runoff. The winner administers the 2028 presidential election in Alabama and decides how voter rolls and absentee rules are enforced.",
+    "vote_for": 1,
+    "incumbent": "Wes Allen (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Wayne Rogers",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://waynerogersforalsecretaryofstate.com/",
+        "website_confidence": "sourced",
+        "background": "Birmingham lawyer, 64, first-time candidate and former chair of the Jefferson County Democratic Party; works as an executive assistant to the Jefferson County sheriff.",
+        "own_words": [
+          {
+            "text": "\"Let's make it a state law that makes it easier for people to vote.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
+          },
+          {
+            "text": "Says early voting or no-excuse absentee voting \"would drive our turnout up by 15 to 20%,\" and that the current system \"perpetuates the party that's in power.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Caroleene Dobson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.dobsonforalabama.com/",
+        "website_confidence": "sourced",
+        "background": "Montgomery real estate attorney, 39, and the 2024 Republican nominee for Alabama's 2nd Congressional District.",
+        "own_words": [
+          {
+            "text": "\"There's still a ways to go in ensuring that our elections are 100% secure.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
+          },
+          {
+            "text": "Wants a dedicated election-law enforcement branch in the office: \"Currently, we don't have a dedicated branch of the office to administer these election laws.\" Also: \"I'm committed to making sure that we have an absentee ballot system that works.\"",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector: Rogers, Dobson lay out contrasting plans for Secretary of State's office (Sept. 28, 2026)",
+        "url": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Secretary of State (fetch failed this run)",
+        "url": "https://alabamareflector.com/voter-guides/contests/alsos/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-state-treasurer",
+    "state": "AL",
+    "level": "state",
+    "office": "State Treasurer",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "Manages the state's cash and investments, runs the college savings plans and returns unclaimed property.",
+    "why_it_matters": "Decides how billions in state funds are invested and banked, and runs the PACT and CollegeCounts savings plans. Low-profile but handles real money.",
+    "vote_for": 1,
+    "incumbent": "Young Boozer",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rosilyn Houston",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://rozforalabama.com/",
+        "website_confidence": "sourced",
+        "background": "Former bank executive and former CEO of the Birmingham Civil Rights Institute.",
+        "own_words": [
+          {
+            "text": "Says she wants to \"modernize\" the treasurer's office.",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstatetreasurer/"
+          },
+          {
+            "text": "Wants more transparency about how state funds are spent.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstatetreasurer/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Young Boozer",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://boozerfortreasurer.com/",
+        "website_confidence": "sourced",
+        "background": "State treasurer since 2021 and previously 2011 to 2019. Former banker.",
+        "own_words": [
+          {
+            "text": "Points to steering the PACT prepaid college tuition program toward solvency.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstatetreasurer/"
+          },
+          {
+            "text": "Notes the office is now funded with unclaimed-property revenue instead of a budget appropriation.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstatetreasurer/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: State treasurer",
+        "url": "https://alabamareflector.com/voter-guides/contests/alstatetreasurer/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-state-auditor",
+    "state": "AL",
+    "level": "state",
+    "office": "State Auditor",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "Keeps inventory of state property and sits on the boards that appoint county voter registrars.",
+    "why_it_matters": "A small office with one big lever: the auditor helps appoint the registrars who maintain voter rolls in all 67 counties.",
+    "vote_for": 1,
+    "incumbent": "Andrew Sorrell",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Violet Edwards",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://www.voteviolet.com/",
+        "website_confidence": "sourced",
+        "background": "Madison County commissioner since 2020.",
+        "own_words": [
+          {
+            "text": "Says she would bring transparency to the auditor's office.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstateauditor/"
+          },
+          {
+            "text": "Highlights the auditor's power to appoint members of county boards of registrars and would 'look to put qualified people in those roles.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstateauditor/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Andrew Sorrell",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.andrewsorrell.com/",
+        "website_confidence": "sourced",
+        "background": "State auditor since 2023; served in the Alabama House 2018 to 2022. Briefly planned a run for Secretary of State before seeking re-election.",
+        "own_words": [
+          {
+            "text": "Highlights his experience running the office.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstateauditor/"
+          },
+          {
+            "text": "Wants the auditor to have power 'to investigate when state property loss is negligent.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alstateauditor/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: State auditor",
+        "url": "https://alabamareflector.com/voter-guides/contests/alstateauditor/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-agriculture-commissioner",
+    "state": "AL",
+    "level": "state",
+    "office": "Commissioner of Agriculture and Industries",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval.",
+    "office_explainer": "Runs the state agriculture department: food safety, animal health, pesticide rules, gas pump and scale inspections.",
+    "why_it_matters": "Open seat; Rick Pate is term-limited. Oversees inspections you rely on every day (gas pumps, grocery scales, food plants) and sets farm and pesticide policy.",
+    "vote_for": 1,
+    "incumbent": "Rick Pate (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ron Sparks",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://sparks2026.com/",
+        "website_confidence": "sourced",
+        "background": "Agriculture commissioner 2003 to 2011, former DeKalb County commissioner, and the 2010 Democratic nominee for governor.",
+        "own_words": [
+          {
+            "text": "Emphasizes food safety and fighting animal abuse.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alagcommissioner/"
+          },
+          {
+            "text": "Wants to eliminate the 1.5% state sales tax on farm equipment.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alagcommissioner/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Corey Hill",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://coreyhillforalabama.com/",
+        "website_confidence": "sourced",
+        "background": "Farmer and mayor of Douglas in Marshall County since 2012.",
+        "own_words": [
+          {
+            "text": "Wants to keep regulations on farmers at a 'low level.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alagcommissioner/"
+          },
+          {
+            "text": "Would encourage farmers to keep land in cultivation.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alagcommissioner/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Commissioner of Agriculture and Industries",
+        "url": "https://alabamareflector.com/voter-guides/contests/alagcommissioner/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-psc-place-1",
+    "state": "AL",
+    "level": "state",
+    "office": "Public Service Commission, Place 1",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval. Two PSC seats (Place 1 and Place 2) are on this ballot; each is a separate race.",
+    "office_explainer": "One of three commissioners who set rates for Alabama Power, Spire gas and other regulated utilities.",
+    "why_it_matters": "The PSC decides how much you pay for electricity and natural gas, and whether rate increases get a public hearing or go through the automatic 'RSE' formula. Open seat; Jeremy Oden did not run.",
+    "vote_for": 1,
+    "incumbent": "Jeremy Oden (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "James O. Gordon",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://jamesogordon.com/",
+        "website_confidence": "sourced",
+        "background": "Former state representative.",
+        "own_words": [
+          {
+            "text": "Calls for a 25% cut in the charges Alabama Power assesses on bills.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc01/"
+          },
+          {
+            "text": "Wants to replace the commission's rate stabilization and equalization (RSE) process with formal, public rate hearings.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc01/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Matt Gentry",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://mattgentryforpsc.com/",
+        "website_confidence": "sourced",
+        "background": "Sheriff of Cullman County.",
+        "own_words": [
+          {
+            "text": "Wants closer scrutiny of the electric rate increases utilities propose.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc01/"
+          },
+          {
+            "text": "Plans to travel the state to hear residents' concerns.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc01/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: PSC Place 1",
+        "url": "https://alabamareflector.com/voter-guides/contests/alpsc01/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-psc-place-2",
+    "state": "AL",
+    "level": "state",
+    "office": "Public Service Commission, Place 2",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval. Two PSC seats (Place 1 and Place 2) are on this ballot; each is a separate race.",
+    "office_explainer": "One of three commissioners who set rates for Alabama Power, Spire gas and other regulated utilities.",
+    "why_it_matters": "The PSC decides how much you pay for electricity and natural gas, and how data centers' power contracts are regulated. Open seat; Chris 'Chip' Beeker Jr. did not run.",
+    "vote_for": 1,
+    "incumbent": "Chris 'Chip' Beeker Jr. (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sheila D. McNeil",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://mcneilforpsc2.com/",
+        "website_confidence": "sourced",
+        "background": "Chair of the Madison County Democratic Executive Committee.",
+        "own_words": [
+          {
+            "text": "Calls for formal rate hearings on proposed utility rate increases.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc02/"
+          },
+          {
+            "text": "Supports strict regulation of the power contracts data centers sign, to protect consumers, and stronger PSC power over unwanted phone calls.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc02/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Jim Zig Zeigler",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://zig4alabama.com/",
+        "website_confidence": "sourced",
+        "background": "State auditor 2015 to 2023 and a PSC member 1975 to 1979. Printed on the ballot as 'Jim Zig Zeigler.'",
+        "own_words": [
+          {
+            "text": "Would thoroughly review utility rate requests.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc02/"
+          },
+          {
+            "text": "Would work to keep data centers and solar farms from being subsidized by residential ratepayers, and focus on pipeline and transportation safety.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alpsc02/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of Democratic candidates (McNeil, PSC Place 2)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: PSC Place 2",
+        "url": "https://alabamareflector.com/voter-guides/contests/alpsc02/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-supreme-court-place-7",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Associate Justice of the Supreme Court, Place 7",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Alabama elects its appellate judges in PARTISAN races, so this appears with a party label and is covered by the straight-party oval. Only one name is printed, plus a write-in line.",
+    "office_explainer": "Alabama's highest court. Nine justices decide appeals on state law, from contracts to criminal cases to IVF rulings.",
+    "why_it_matters": "Six-year term. The court issued the 2024 ruling that frozen embryos are children, and it decides death-penalty appeals and challenges to state laws. This seat is unopposed on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Brad Mendheim",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brad Mendheim",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Associate justice since 2018 (appointed, then elected in 2020). Former Houston County circuit judge. No Democratic opponent qualified.",
+        "own_words": [
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+          },
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of Republican candidates",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-supreme-court-place-8",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Associate Justice of the Supreme Court, Place 8",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan judicial race; covered by the straight-party oval. The only contested appellate seat on the 2026 ballot.",
+    "office_explainer": "Alabama's highest court. Nine justices decide appeals on state law, from contracts to criminal cases to IVF rulings.",
+    "why_it_matters": "Six-year term, and the only statewide judicial race with two names. The court's 2024 IVF ruling is a live issue in this race.",
+    "vote_for": 1,
+    "incumbent": "Greg Shaw",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "AshLeigh Meyer Dunham",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://www.ashleighdunhamforalabama.com/",
+        "website_confidence": "sourced",
+        "background": "Family-law attorney and Jefferson County Juvenile Court referee.",
+        "own_words": [
+          {
+            "text": "Has criticized the court's 2024 ruling that threatened in-vitro fertilization in Alabama.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
+          },
+          {
+            "text": "Says she will apply the law fairly and points to the court's power to shape lives through its decisions.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Greg Shaw",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Associate justice since 2009; previously on the Court of Criminal Appeals. As of Oct. 1 had released no ads and had no campaign website, per the Reflector.",
+        "own_words": [
+          {
+            "text": "No 2026 campaign statement found. A 2020 campaign ad described him as 'one of Alabama's most conservative justices.'",
+            "is_quote": true,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
+          },
+          {
+            "text": "No 2026 campaign statement found.",
+            "is_quote": false,
+            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama Reflector voter guide: Alabama Supreme Court Place 8",
+        "url": "https://alabamareflector.com/voter-guides/contests/alsc08/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-civil-appeals-place-4",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Court of Civil Appeals, Place 4",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan judicial race; covered by the straight-party oval. One name printed plus a write-in line.",
+    "office_explainer": "Five-judge court that hears appeals in civil cases like divorce, custody, workers' comp and smaller money disputes.",
+    "why_it_matters": "Most family-law and workers' comp appeals end here. Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Benjamin M. Bowden",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Benjamin M. Bowden",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge on the Court of Civil Appeals; unopposed.",
+        "own_words": [
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          },
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-civil-appeals-place-5",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Court of Civil Appeals, Place 5",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan judicial race; covered by the straight-party oval. One name printed plus a write-in line.",
+    "office_explainer": "Five-judge court that hears appeals in civil cases like divorce, custody, workers' comp and smaller money disputes.",
+    "why_it_matters": "Most family-law and workers' comp appeals end here. Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Matt Fridy",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Matt Fridy",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge on the Court of Civil Appeals; former state representative. Unopposed.",
+        "own_words": [
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          },
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-criminal-appeals-place-4",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Court of Criminal Appeals, Place 4",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan judicial race; covered by the straight-party oval. One name printed plus a write-in line.",
+    "office_explainer": "Five-judge court that hears appeals in criminal cases, including every felony conviction that is appealed.",
+    "why_it_matters": "This court reviews most criminal convictions and sentences in Alabama before the Supreme Court ever sees them. Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Mary Windom",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mary Windom",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Presiding judge of the Court of Criminal Appeals; on the court since 2009. Unopposed.",
+        "own_words": [
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          },
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-criminal-appeals-place-5",
+    "state": "AL",
+    "level": "judicial",
+    "office": "Court of Criminal Appeals, Place 5",
+    "district": null,
+    "scope_plain": "Every Alabama voter. Partisan judicial race; covered by the straight-party oval. One name printed plus a write-in line.",
+    "office_explainer": "Five-judge court that hears appeals in criminal cases, including every felony conviction that is appealed.",
+    "why_it_matters": "Open seat; incumbent Beth Kellum withdrew after the primary. Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Beth Kellum (withdrew)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Riggs Walker",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former Jefferson County deputy district attorney. Unopposed.",
+        "own_words": [
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+          },
+          {
+            "text": "Unopposed; no campaign materials sought this run.",
+            "is_quote": false,
+            "source": "https://en.wikipedia.org/wiki/2026_Alabama_appellate_court_elections"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Alabama SOS: Mobile County sample ballot (PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Wikipedia: 2026 Alabama appellate court elections (Kellum withdrawal)",
+        "url": "https://en.wikipedia.org/wiki/2026_Alabama_appellate_court_elections"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

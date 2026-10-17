@@ -1,0 +1,171 @@
+[
+ {
+  "id": "orlando-sentinel-eb",
+  "name": "Orlando Sentinel editorial board",
+  "type": "publication",
+  "lean": "lean_left",
+  "lean_basis": "Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. In 2026 every statewide pick went to the Democrat or against the Republican-sponsored amendments. Shares editorials on amendments with its sister paper, the South Florida Sun Sentinel.",
+  "geography": [
+   "FL"
+  ],
+  "guide_url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "lwv-florida",
+  "name": "League of Women Voters of Florida (VOTE411)",
+  "type": "civic_nonpartisan",
+  "lean": "neutral",
+  "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on constitutional amendments after member study; formally opposed Amendment 3 in August 2026. Publishes candidate questionnaire answers on VOTE411.",
+  "geography": [
+   "FL"
+  ],
+  "guide_url": "https://lwvfl.org/",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ },
+ {
+  "id": "fl-afl-cio",
+  "name": "Florida AFL-CIO",
+  "type": "labor",
+  "lean": "left",
+  "lean_basis": "State labor federation; endorses mostly Democrats through its COPE process. Endorsed Jolly for governor in June 2026.",
+  "geography": [
+   "FL"
+  ],
+  "guide_url": "https://flaflcio.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "fl-democratic-party",
+  "name": "Florida Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official state party organization; backs its general-election nominees and opposes Amendment 3.",
+  "geography": [
+   "FL"
+  ],
+  "guide_url": "https://www.floridadems.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "fl-republican-party",
+  "name": "Republican Party of Florida",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official state party organization; backs its general-election nominees and supports Amendments 1 and 3.",
+  "geography": [
+   "FL"
+  ],
+  "guide_url": "https://florida.gop/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "eqfl-action-pac",
+  "name": "Equality Florida Action PAC",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "LGBTQ civil-rights PAC. Every pick it made in an Orange County partisan race in 2026 (state Senate and House) is a Democrat; it says it does not endorse in federal races. Lean is our label from that pattern, not an outside rating.",
+  "geography": [
+   "FL",
+   "orlando-fl"
+  ],
+  "guide_url": "https://eqflpac.org/endorsed-candidates/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "orange-cta",
+  "name": "Orange County Classroom Teachers Association",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Teachers' union for Orange County Public Schools. Its only pick we recorded (Peña) is shared with Democratic officials and groups. Its own endorsement page was not opened; lean is our label, not an outside rating.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "maxwell-frost",
+  "name": "U.S. Rep. Maxwell Frost (FL-10)",
+  "type": "elected_official",
+  "lean": "left",
+  "lean_basis": "Democratic member of Congress for most of central Orange County since 2023.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "anna-eskamani",
+  "name": "State Rep. Anna Eskamani (HD-42)",
+  "type": "elected_official",
+  "lean": "left",
+  "lean_basis": "Democratic state representative for HD 42, described by Orlando Weekly as 'progressive'; term-limited in 2026.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "jerry-demings",
+  "name": "Orange County Mayor Jerry Demings",
+  "type": "elected_official",
+  "lean": "lean_left",
+  "lean_basis": "Term-limited Orange County mayor; a Democrat in an officially nonpartisan office.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "buddy-dyer",
+  "name": "Orlando Mayor Buddy Dyer",
+  "type": "elected_official",
+  "lean": "lean_left",
+  "lean_basis": "Mayor of Orlando since 2003, an officially nonpartisan office; a Democrat.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "glenda-hood",
+  "name": "Former Orlando Mayor Glenda Hood",
+  "type": "elected_official",
+  "lean": "lean_right",
+  "lean_basis": "Mayor of Orlando 1992 to 2003; listed as a Republican in the endorsement roundup.",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ }
+]

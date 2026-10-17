@@ -1,0 +1,40 @@
+{
+  "id": "callicoon-ny",
+  "label": "Callicoon (Sullivan County)",
+  "state": "NY",
+  "counties": [
+    "Sullivan"
+  ],
+  "county_election_office": {
+    "name": "Sullivan County Board of Elections",
+    "url": "https://www.sullivanny.gov/Departments/Elections",
+    "phone": null
+  },
+  "sample_ballot_url": "https://voterlookup.elections.ny.gov/",
+  "zips": [
+    "12723",
+    "12745",
+    "12750",
+    "12748",
+    "12791",
+    "12766",
+    "12724"
+  ],
+  "zip_caveats": "\"Callicoon\" means two different places. The hamlet of Callicoon on the Delaware River (ZIP 12723) is in the Town of Delaware, along with Hortonville (12745) and Kenoza Lake (12750); those voters get the Town of Delaware races. The separate Town of Callicoon (Jeffersonville 12748, Youngsville 12791, North Branch 12766, Callicoon Center 12724) has its own Supervisor and Highway Superintendent races. ZIP and post-office names don't follow town lines, so a 12723 mailing address can be in either town; your town is on your voter registration. Everyone in Sullivan County votes for NY-19, State Senate District 51 and the 3rd Judicial District, but the county is split between Assembly Districts 100 and 101, and which one you're in depends on your address (not confirmed for either town in the sources we have). There are no county-level offices or county ballot questions on the 2026 Sullivan ballot, and the NYC proposals do not appear here. Check your registration and districts at voterlookup.elections.ny.gov. ZIPs are commonly used local ZIPs compiled for this guide, not an official crosswalk.",
+  "contest_ids": [
+    "ny-governor",
+    "ny-attorney-general",
+    "ny-comptroller",
+    "ny-us-house-19",
+    "ny-sd-51",
+    "ny-ad-100",
+    "ny-ad-101",
+    "ny-supreme-court-jd3",
+    "delaware-town-supervisor",
+    "delaware-town-clerk-tax-collector",
+    "delaware-town-council-vacancy",
+    "delaware-town-highway-superintendent",
+    "callicoon-town-supervisor",
+    "callicoon-town-highway-superintendent"
+  ]
+}

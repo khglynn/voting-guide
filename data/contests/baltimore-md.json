@@ -1,0 +1,1636 @@
+[
+  {
+    "id": "md-us-house-2",
+    "state": "MD",
+    "level": "federal",
+    "office": "U.S. Representative, District 2",
+    "district": "CD-2",
+    "scope_plain": "Only a small slice of Baltimore City: about 5% of city voters, in north Baltimore near the county line (precincts voting at places in Hampden, Medfield, Roland Park, Mount Washington and along York Road and North Charles Street). Most of District 2 is in Baltimore County. Downtown and ZIP 21201 are in District 7, not here.",
+    "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
+    "why_it_matters": "One of Maryland's eight U.S. House seats. Only about 15 of Baltimore City's roughly 295 ballot styles include this race, so check your sample ballot before reading further.",
+    "vote_for": 1,
+    "incumbent": "John \"Johnny O\" Olszewski, Jr.",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John \"Johnny O\" Olszewski, Jr.",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://gojohnnyo.com",
+        "website_confidence": "verified",
+        "background": "Has represented Maryland's 2nd District in Congress since 2025 (Maryland Matters). Grew up in eastern Baltimore County.",
+        "own_words": [
+          {
+            "text": "On elections: \"I also oppose legislation that creates new barriers to voting like the SAVE Act.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On immigration enforcement: \"I do not\" support current approaches; says ICE \"has repeatedly undermined public trust.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On costs: says he is fighting \"against the tariffs, and for the ACA tax credits.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Dave Wallace",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://davewallace.us",
+        "website_confidence": "verified",
+        "background": "Describes himself as \"a businessman, employer, researcher, community advocate\" and \"not a career politician\" (Maryland Matters candidate statement).",
+        "own_words": [
+          {
+            "text": "On elections: \"The Save Act is essential to assure photo Voter Identification\"; would \"eliminate mail in ballots\" except special cases.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On immigration: \"End sanctuary for illegal aliens at all levels of government.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On costs: \"Reduce property and payroll taxes to raise take-home pay.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland Matters voter guide: U.S. House, 2nd District",
+        "url": "https://marylandmatters.org/voter-guides/contests/2nd-district/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-us-house-7",
+    "state": "MD",
+    "level": "federal",
+    "office": "U.S. Representative, District 7",
+    "district": "CD-7",
+    "scope_plain": "About 95% of Baltimore City voters, including all of downtown, Mount Vernon, the UMB campus and ZIP 21201. A slice of north Baltimore votes in District 2 instead.",
+    "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
+    "why_it_matters": "The congressional seat for nearly all of Baltimore City. Incumbent Kweisi Mfume faces Republican Scott M. Collier.",
+    "vote_for": 1,
+    "incumbent": "Kweisi Mfume",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kweisi Mfume",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://mfumeforcongress.com",
+        "website_confidence": "verified",
+        "background": "78. In Congress for District 7 since 2020 (and 1987 to 1996). President and CEO of the NAACP, 1996 to 2004. Baltimore City Council, 1978 to 1986 (Banner).",
+        "own_words": [
+          {
+            "text": "On elections: \"I have introduced the Vote by Mail Tracking Act.\" Opposes the SAVE America Act.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On immigration: \"I am refusing to fund immigration enforcement until reforms are made.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On costs: \"I strongly support Medicare for All\" and expanding the Child Tax Credit.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Scott M. Collier",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires. No campaign website listed.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: US Congressional District 7",
+        "url": "https://www.thebanner.com/voter-guide/2026/us-house/md-7/us-congressional-district-7-43E7XH3SHRDIDATSRVKXFIOMFE/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-sd-40",
+    "state": "MD",
+    "level": "state",
+    "office": "State Senator, District 40",
+    "district": "SD-40",
+    "scope_plain": "Voters in Legislative District 40: west and central Baltimore, including the UMB campus area and downtown west, part of Mount Vernon, Bolton Hill, Reservoir Hill, Upton, Sandtown, Hollins Market, Pigtown and parts of Hampden. Neighborhood list is approximate (based on where precincts vote).",
+    "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
+    "why_it_matters": "Covers much of the area around UMB and ZIP 21201. Incumbent Antonio Hayes faces a Working Class Party candidate. Note: The Banner's House District 40 page lists Alan Rebar there, but the certified ballot puts him in this Senate race.",
+    "vote_for": 1,
+    "incumbent": "Antonio Hayes",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Antonio Hayes",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "48. State senator for District 40 since 2019; vice chair of the Senate Finance Committee. Delegate for District 40, 2015 to 2019 (Banner).",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured in our saved copy.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Alan Rebar",
+        "party": "Working Class Party",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. No bio on The Banner's guide.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Maryland Senate District 40",
+        "url": "https://www.thebanner.com/voter-guide/2026/maryland/ga/md-senate/maryland-state-senate-district-40-55K22LY5OBC4JHYQRHU2PP7MTU/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-sd-41",
+    "state": "MD",
+    "level": "state",
+    "office": "State Senator, District 41",
+    "district": "SD-41",
+    "scope_plain": "Voters in Legislative District 41: northwest and west Baltimore, including Roland Park, Mount Washington, Forest Park and Edmondson Village areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
+    "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
+    "why_it_matters": "Unopposed: one name on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Malcolm P. Ruff",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-sd-43",
+    "state": "MD",
+    "level": "state",
+    "office": "State Senator, District 43",
+    "district": "SD-43",
+    "scope_plain": "Voters in Legislative District 43: north-central Baltimore (the city part of District 43, called 43A for delegates), including Charles Village, Waverly, Govans and Hamilton areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
+    "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
+    "why_it_matters": "Unopposed: one name on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mary Washington",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-sd-45",
+    "state": "MD",
+    "level": "state",
+    "office": "State Senator, District 45",
+    "district": "SD-45",
+    "scope_plain": "Voters in Legislative District 45: east and northeast Baltimore, including parts of 21202, 21205, 21206, 21213 and 21218. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
+    "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
+    "why_it_matters": "Unopposed: one name on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cory V. McCray",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-sd-46",
+    "state": "MD",
+    "level": "state",
+    "office": "State Senator, District 46",
+    "district": "SD-46",
+    "scope_plain": "Voters in Legislative District 46: southeast Baltimore and the harbor, including part of Mount Vernon and downtown, the Inner Harbor, Federal Hill, Fells Point, Canton, Highlandtown, Locust Point, Brooklyn and Curtis Bay. Neighborhood list is approximate (based on where precincts vote).",
+    "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
+    "why_it_matters": "Covers the eastern half of ZIP 21201 and much of downtown. Incumbent Bill Ferguson is president of the Maryland Senate, its top leader.",
+    "vote_for": 1,
+    "incumbent": "Bill Ferguson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bill Ferguson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.billformd.com",
+        "website_confidence": "verified",
+        "background": "43. State senator for District 46 since 2011 and Senate president since 2020. General counsel at CI Renewables; law degree from UMB Carey Law (Banner).",
+        "own_words": [
+          {
+            "text": "On data centers: they \"should only come to Maryland if done the right way,\" paying the state's new large-load tariff.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On utility bills: \"We have an insufficient supply of energy to meet demand, and aging infrastructure.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Top budget priority: \"increased funding for our public schools through the Blueprint for Maryland's Future.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Emmanuel Digman",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Maryland Senate District 46",
+        "url": "https://www.thebanner.com/voter-guide/2026/maryland/ga/md-senate/maryland-house-of-delegates-district-46-WG3DTVZXSVBMJKPCQQTQWGVB6Y/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-hd-40",
+    "state": "MD",
+    "level": "state",
+    "office": "House of Delegates, District 40",
+    "district": "HD-40",
+    "scope_plain": "Voters in Legislative District 40 (west and central Baltimore, including the UMB campus area). Same area as State Senate District 40.",
+    "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
+    "why_it_matters": "Three candidates for three seats, so all three will win unless write-ins change it. You may vote for up to 3.",
+    "vote_for": 3,
+    "incumbent": "Marlon D. Amprey; Melissa Wells",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marlon D. Amprey",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://marlonamprey.com",
+        "website_confidence": "verified",
+        "background": "39. Delegate for District 40 since 2021; attorney with SRD Legal Group (Banner).",
+        "own_words": [
+          {
+            "text": "On utilities: will \"ensure utility companies like BGE and Pepco pay a fair share of infrastructure improvement costs.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: wants to \"expand bus lines, improve light rail and metro services\" and \"restore Baltimore's Red Line.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Budget priorities: \"fully funding our schools through the Blueprint, investing in affordable housing, and protecting Medicaid and food assistance programs.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Tiffany Welch",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.ElectTiffanyWelch.com",
+        "website_confidence": "verified",
+        "background": "42. Lifelong resident of West Baltimore's Matthew Henson neighborhood; community strategist on economic opportunity, food access, youth and the arts (Banner).",
+        "own_words": [
+          {
+            "text": "On data centers: \"I support the development of data centers in Maryland\" with well-regulated approaches.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: \"Transit is supposed to make life easier, not complicate how people get to work, school, and meet daily needs.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Budget: wants funding that \"revitalizes vacant housing into affordable homes.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Melissa Wells",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "42. Delegate for District 40 since 2019; chair of the House Government, Labor and Elections Committee. Mount Vernon resident (Banner).",
+        "own_words": [
+          {
+            "text": "Not listed in our saved copy of the League of Women Voters guide (possibly a PDF parsing gap). The Banner's questionnaire answers were not captured.",
+            "is_quote": false,
+            "source": "https://www.thebanner.com/voter-guide/2026/maryland/ga/delegates/maryland-house-of-delegates-district-40-SZMVKQ5WX5BDBIR7P3QOXLRIIM/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Maryland House of Delegates District 40",
+        "url": "https://www.thebanner.com/voter-guide/2026/maryland/ga/delegates/maryland-house-of-delegates-district-40-SZMVKQ5WX5BDBIR7P3QOXLRIIM/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-hd-41",
+    "state": "MD",
+    "level": "state",
+    "office": "House of Delegates, District 41",
+    "district": "HD-41",
+    "scope_plain": "Voters in Legislative District 41 (northwest and west Baltimore). Same area as State Senate District 41. Not part of ZIP 21201.",
+    "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
+    "why_it_matters": "Three candidates for three seats. You may vote for up to 3.",
+    "vote_for": 3,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "S. I. \"Sandy\" Rosenberg",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Sean A. Stinnett",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Ryan Turner",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://www.ryanturner41.com",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "On data centers: \"At this time, I do not fully support additional data centers in Maryland.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On utility bills: would \"pause rate hikes, suspend PJM increases for two years.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Budget: \"closing tax loopholes for large businesses to ensure they pay their fair share.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-hd-43a",
+    "state": "MD",
+    "level": "state",
+    "office": "House of Delegates, District 43A",
+    "district": "HD-43A",
+    "scope_plain": "Voters in subdistrict 43A, the Baltimore City part of District 43 (north-central Baltimore). Not part of ZIP 21201.",
+    "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
+    "why_it_matters": "Two candidates for two seats. You may vote for up to 2.",
+    "vote_for": 2,
+    "incumbent": "Regina T. Boyce; Elizabeth Embry",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Regina T. Boyce",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://reginatboyce.com",
+        "website_confidence": "verified",
+        "background": "Sitting delegate; cites her vote this session for the Utility RELIEF Act (HB1532) in her League answers.",
+        "own_words": [
+          {
+            "text": "On data centers: supports them \"only for those who supply their own energy and water supply.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Budget priorities: \"1) education, 2) healthcare, and 3) transportation.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: wants to \"fund and move forward the redline - Bus Rapid Transit - in the City.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Elizabeth Embry",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.embryfordelegate.com",
+        "website_confidence": "verified",
+        "background": "Sitting delegate on the House Judiciary Committee, per her League answers.",
+        "own_words": [
+          {
+            "text": "On new data centers: \"I do not,\" citing the Utility RELIEF Act so ratepayers don't cover data-center costs.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: \"The inadequacy of Baltimore's public transit is a tragedy.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Budget priorities: \"Education, public transit and health care.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-hd-45",
+    "state": "MD",
+    "level": "state",
+    "office": "House of Delegates, District 45",
+    "district": "HD-45",
+    "scope_plain": "Voters in Legislative District 45 (east and northeast Baltimore). Same area as State Senate District 45. Not part of ZIP 21201.",
+    "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
+    "why_it_matters": "Four candidates for three seats: three Democrats and one Green Party candidate. You may vote for up to 3; the top three win.",
+    "vote_for": 3,
+    "incumbent": "Jackie Addison; Caylin Young",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jackie Addison",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://jackieaddison.com",
+        "website_confidence": "verified",
+        "background": "64. Delegate for District 45 since 2023. Lifelong Baltimorean; studied early childhood education at Sojourner-Douglass College (Banner).",
+        "own_words": [
+          {
+            "text": "Budget priorities: \"lowering healthcare costs\" and \"Making sure the vulnerable do not go hungry even in the face of federal cuts.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: public transportation \"should most assuredly be improved across the state.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On data centers: would \"hold judgement until research/studies are completed.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Chanel A. Branch",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Caylin Young",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "39. Sitting delegate for District 45; member of the House Ways and Means Committee and chair of its Early Childhood and Special Education Subcommittee. Lawyer (University of Baltimore School of Law) (Banner).",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Renaud De'Aundre Brown",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://www.renaudbrowndelegate45.com",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "On data centers: backs the Green Party's call for \"bans on hyperscale data centers.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On utilities: \"Utilities should be publicly owned not ran by profiteering\" companies.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On transit: wants Howard Street strengthened \"as a transit hub that includes the Red line.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Maryland House of Delegates District 45",
+        "url": "https://www.thebanner.com/voter-guide/2026/maryland/ga/delegates/maryland-house-of-delegates-district-45-PP45N66XCNABHHYPYMBOIWC32A/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "md-hd-46",
+    "state": "MD",
+    "level": "state",
+    "office": "House of Delegates, District 46",
+    "district": "HD-46",
+    "scope_plain": "Voters in Legislative District 46 (southeast Baltimore and the harbor, including part of Mount Vernon and downtown in ZIP 21201). Same area as State Senate District 46.",
+    "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
+    "why_it_matters": "Four candidates for three seats: three Democrats and one Republican. You may vote for up to 3; the top three win.",
+    "vote_for": 3,
+    "incumbent": "Mark Edelson; Robbyn Lewis",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Luke Clippinger",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Mark Edelson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://electedelson.com",
+        "website_confidence": "verified",
+        "background": "41. Delegate for District 46 since 2022; serves on the House Appropriations Committee. Lawyer (University of Maryland School of Law) (Banner, League answers).",
+        "own_words": [
+          {
+            "text": "On data centers: \"Without additional generation commitments from industry, I believe data centers place an unfair burden on Maryland.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On utility bills: supports \"actions by the Governor to secure a rate cap.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On immigration: \"I was proud to vote to end 287g agreements in Maryland.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Robbyn Lewis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "63. Delegate for District 46 (Banner lists 2022 to present); chairs the Baltimore City House Delegation and a transportation subcommittee. Founder of Patterson Park Public Charter School (Banner).",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Jeremy L. Amason",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://amason4md2026.com",
+        "website_confidence": "verified",
+        "background": "29. Former U.S. Army aviation officer, basketball coach and Defense Department policy consultant; married to a Baltimore City teacher (Banner).",
+        "own_words": [
+          {
+            "text": "On data centers: they \"should be required to have a sustainable, self-generating, electrical capacity.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On utilities: \"We must ban candidates from taking money from our providers.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On schools: city school spending \"has increased to near $2 Billion a year, but our school performance has continued to drop.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Maryland House of Delegates District 46",
+        "url": "https://www.thebanner.com/voter-guide/2026/maryland/ga/delegates/maryland-house-of-delegates-district-46-TSV6WDF4H5C33K6J3HM7RK75PE/"
+      },
+      {
+        "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
+        "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-circuit-court-8",
+    "state": "MD",
+    "level": "judicial",
+    "office": "Judge of the Circuit Court, Circuit 8 (Baltimore City)",
+    "district": "Circuit 8",
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Baltimore City's main trial court: major criminal cases, big civil lawsuits, divorce and custody.",
+    "why_it_matters": "Six candidates for six seats, so all six will win unless write-ins change it. Maryland circuit judges are first appointed by the governor, then must win an election; lawyers may run against them. Ballotpedia lists all six as sitting judges, and they campaign together as the 'Baltimore City Sitting Judges' slate. No party labels appear on the ballot.",
+    "vote_for": 6,
+    "incumbent": "Catherine Chen; Lawrence P. Fletcher-Hill; Kimberly C. McBride; Piper Faith McKeithen; Hope Tipton; Levi S. Zaslow",
+    "open_seat": false,
+    "term_years": 15,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Catherine Chen",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Lawrence P. Fletcher-Hill",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Kimberly C. McBride",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Piper Faith McKeithen",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Hope Tipton",
+        "party": null,
+        "incumbent": true,
+        "website": "https://baltimorecitysittingjudges.com/tipton-full-bio",
+        "website_confidence": "sourced",
+        "background": "Appointed to the Baltimore City Circuit Court on February 16, 2024 (Ballotpedia).",
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Levi S. Zaslow",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Ballotpedia: Hope Tipton (lists the six 2026 candidates as incumbents)",
+        "url": "https://ballotpedia.org/Hope_Tipton"
+      },
+      {
+        "name": "Maryland Manual On-Line: 2026 judges on the general ballot",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/42electg/html/2026/2026jud.html"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Judicial Circuit 8 Circuit Court judge",
+        "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/judicial-circuit-8-circuit-court-judge-MB3EU6SQ6JFKVIPKI2LTNFUTPU/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-states-attorney",
+    "state": "MD",
+    "level": "county",
+    "office": "State's Attorney for Baltimore City",
+    "district": null,
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Baltimore's chief prosecutor. Decides which criminal cases to bring and runs the prosecutors' office.",
+    "why_it_matters": "Unopposed: incumbent Ivan J. Bates is the only name on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Ivan J. Bates",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ivan J. Bates",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.batesforbaltimore.com",
+        "website_confidence": "verified",
+        "background": "Baltimore City State's Attorney for the past three years, seeking a second term; former prosecutor and defense attorney (League answers).",
+        "own_words": [
+          {
+            "text": "On violent crime: promised \"repeat, violent gun offenders to pack their toothbrushes due to the prison time we guaranteed them.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "On opioids: favors \"increased treatment services not by arresting and prosecuting our way out of this crisis.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Second-term priority: expand his office's Citation Docket for quality-of-life offenses, offering services instead of prosecution.",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-clerk-circuit-court",
+    "state": "MD",
+    "level": "county",
+    "office": "Clerk of the Circuit Court for Baltimore City",
+    "district": null,
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Keeps the Circuit Court's case and land records; issues marriage and business licenses.",
+    "why_it_matters": "Unopposed: one name on the ballot. Not the same person as Belinda K. Conaway, who is running for Register of Wills.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Xavier A. Conaway",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-register-of-wills",
+    "state": "MD",
+    "level": "county",
+    "office": "Register of Wills for Baltimore City",
+    "district": null,
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Handles wills and estates after someone dies, collects inheritance tax, and clerks for the Orphans' Court.",
+    "why_it_matters": "One of the few contested citywide races: incumbent Democrat Belinda K. Conaway faces Republican Andy Zipay. Not to be confused with Xavier A. Conaway, the Clerk of the Circuit Court candidate.",
+    "vote_for": 1,
+    "incumbent": "Belinda K. Conaway",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Belinda K. Conaway",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Register of Wills; cites \"11 years of service\" in the office (League answers). Did not respond to The Banner's questionnaire.",
+        "own_words": [
+          {
+            "text": "Says the office now prioritizes \"answering our phones and returning phone calls from the public.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Biggest need: residents who \"own property, but die without wills.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Runs a public campaign on wills: \"Where there's will, there's a way.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Andy Zipay",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "44. Social worker in Baltimore City for 21 years; East Baltimore resident; longtime member of his local party central committee (Banner, League answers).",
+        "own_words": [
+          {
+            "text": "\"My focus will be always be saving families money\" and settling estates faster.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "\"I will only spend taxpayer money when it is absolutely needed.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Priority: \"to bring a high level of integrity to the office.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Baltimore City register of wills",
+        "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-register-of-wills-IRFIQAGNS5GDRN77D6I3AQUWTU/"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-orphans-court",
+    "state": "MD",
+    "level": "judicial",
+    "office": "Judge of the Orphans' Court for Baltimore City",
+    "district": null,
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Despite the name, these judges oversee wills and estates and share guardianship cases for minors.",
+    "why_it_matters": "Three candidates for three seats. You may vote for up to 3. Unlike circuit judges, Orphans' Court judges run with party labels.",
+    "vote_for": 3,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charles \"Chuck\" Bernstein",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Lewyn Scott Garrett",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Michele E. Loewenthal",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
+            "is_quote": false,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-sheriff",
+    "state": "MD",
+    "level": "county",
+    "office": "Sheriff of Baltimore City",
+    "district": null,
+    "scope_plain": "Every Baltimore City voter.",
+    "office_explainer": "Serves court papers and evictions, guards courtrooms, moves prisoners, and serves warrants and protective orders.",
+    "why_it_matters": "Unopposed: Sabrina Tapp-Harper is the only name on the ballot. She is not the current sheriff, so the office will change hands.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sabrina Tapp-Harper",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://stappharperforbaltimorecity.com",
+        "website_confidence": "verified",
+        "background": "Former Baltimore Police major and Northern District commander; retired assistant sheriff in the Sheriff's Office (League answers).",
+        "own_words": [
+          {
+            "text": "Would \"implement a Professional Integrity Bureau (PIB) within the BCSO\" to handle complaints, including discrimination.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Promises an \"open-door policy\" so staff have \"a direct line of communication with leadership.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "baltimore-board-of-education-at-large",
+    "state": "MD",
+    "level": "school",
+    "office": "Baltimore City Board of School Commissioners, At Large",
+    "district": "At-Large",
+    "scope_plain": "Every Baltimore City voter. Nonpartisan.",
+    "office_explainer": "Sets city school policy, hires the schools CEO and approves the budget. Two of 11 adult seats are elected.",
+    "why_it_matters": "Four candidates for two elected seats; the top two win. You may vote for up to 2. The other nine adult members are appointed by the mayor. The new board will face budget pressure, enrollment declines and likely school closures (Banner). All four are registered Democrats, from self-described moderate liberal to Democratic socialist (Banner, Oct 9).",
+    "vote_for": 2,
+    "incumbent": "Ashley Ash Esposito; Kwame Jamal Kenyatta-Bey",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jamar Day",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://jamarday.com",
+        "website_confidence": "verified",
+        "background": "38. Former City Schools dean of students and DC history teacher; former aide in Gov. Wes Moore's office; now at the Maryland Department of General Services. Ran partly over the closure of the Baltimore Collegiate School for Boys (Banner).",
+        "own_words": [
+          {
+            "text": "\"I oppose vouchers and BOOST, which divert public dollars from schools.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "\"Safe, free transportation is necessary.\" Fewer high schools mean longer, riskier commutes.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "In the primary, called for a pause on school closures until the board has \"a clear, community-informed plan.\"",
+            "is_quote": true,
+            "source": "https://www.foxbaltimore.com/news/project-baltimore/there-are-the-top-priorities-for-the-baltimore-city-school-board-candidates"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Ashley Ash Esposito",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": "https://www.ashleyesposito.com",
+        "website_confidence": "verified",
+        "background": "42. Elected to the school board in 2022; chairs its Policy Committee. Former executive director of Baltimore Unity Hall and Baltimore Renters United; has a child in City Schools (Banner, League answers).",
+        "own_words": [
+          {
+            "text": "\"I want equity reviews before every budget vote. Equal is not the same as fair.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "\"I publish plain language explanations of every vote within 72 hours.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Wants to \"Protect immigrant families with a clear ICE non-cooperation policy.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Domonique A. Flowers",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.domoniqueflowers.com",
+        "website_confidence": "verified",
+        "background": "42. Attorney with special education law experience and adjunct professor at the University of Baltimore; former City Schools substitute teacher; father of two (Banner).",
+        "own_words": [
+          {
+            "text": "Supports \"policies that overhaul the current education funding system\" toward historically underserved communities.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Would update standards to teach real-world skills: \"financial literacy, resume writing, etc.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Would create \"parent advisory councils\" and focus on safety, tardiness and absenteeism.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Kwame Jamal Kenyatta-Bey",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Elected school board member; City Schools and Morgan State graduate with over three decades as an educator in the system; cellist and theater director (Banner). Did not respond to The Banner's questionnaire.",
+        "own_words": [
+          {
+            "text": "\"Maryland's schools risk prioritizing tests over learning,\" sidelining arts and career-technical education.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "Says the Blueprint for Maryland's Future \"gives us a roadmap to fix\" historic underfunding.",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          },
+          {
+            "text": "\"I support a student-centered, equitable curriculum that fosters critical thinking, hands-on learning, and multiple pathways to success.\"",
+            "is_quote": true,
+            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maryland SBE: Baltimore City certified general election ballot, all styles (PDF)",
+        "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf"
+      },
+      {
+        "name": "League of Women Voters of Baltimore City: 2026 General Election Voters' Guide (PDF)",
+        "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+      },
+      {
+        "name": "Baltimore Banner voter guide: Baltimore City Board of School Commissioners",
+        "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-board-of-education-VQ2HDEGH7VDUHIWO6RX5W7UXTA/"
+      },
+      {
+        "name": "Baltimore Banner (Oct 9, 2026): All the Baltimore school board candidates are Democrats",
+        "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/"
+      },
+      {
+        "name": "Baltimore Banner (June 24, 2026): school board primary results",
+        "url": "https://www.thebanner.com/politics-power/baltimore-city-school-board-primary-election-5BSE44H5HJERDHQZIVAZND5EVY/"
+      },
+      {
+        "name": "WBFF Fox45 Project Baltimore (June 8, 2026): school board candidate priorities",
+        "url": "https://www.foxbaltimore.com/news/project-baltimore/there-are-the-top-priorities-for-the-baltimore-city-school-board-candidates"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

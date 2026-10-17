@@ -1,0 +1,50 @@
+{
+  "id": "dc-ward-6",
+  "label": "DC Ward 6",
+  "state": "DC",
+  "ward": 6,
+  "counties": [
+    "District of Columbia"
+  ],
+  "county_election_office": {
+    "name": "DC Board of Elections (DCBOE), 1015 Half Street SE",
+    "url": "https://dcboe.org/",
+    "phone": "1-866-DCVOTES (1-866-328-6837) or 202-727-2525"
+  },
+  "sample_ballot_url": "https://www.dcboe.org/getContentAsset/99b1bd27-e974-42b5-b3e2-7c22517264d3/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward6C.pdf?language=en",
+  "zips": [
+    "20003",
+    "20002",
+    "20024",
+    "20001"
+  ],
+  "zip_caveats": "ZIPs don't follow ward lines, so use this as a starting point only. Ward 6 takes in Capitol Hill, Southwest, Navy Yard and Near Southeast. 20024 (Southwest) is Ward 6. 20003 is mostly Ward 6, but part of Hill East near the RFK campus is Ward 7. 20002 is split among Wards 5, 6 and 7. Part of 20001 (around Mount Vernon Triangle) is Ward 6. ANC 6/8F, around Navy Yard, crosses into Ward 8. To be sure, look up your address in the city's ANC locator (https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146): your district code starts with your ward number. Your mailed ballot is printed for your ward. These ZIP lists come from the home ZIPs of this year's candidates (who must live in the district they run for) plus general geography, not from an official ZIP-to-ward table.",
+  "contest_ids": [
+    "dc-mayor",
+    "dc-council-chair",
+    "dc-council-at-large",
+    "dc-delegate",
+    "dc-attorney-general",
+    "dc-shadow-senator",
+    "dc-shadow-representative",
+    "dc-ward-6-council",
+    "dc-ward-6-sboe",
+    "dc-ward-6-anc"
+  ],
+  "measure_ids": [
+    "dc-initiative-86"
+  ],
+  "find_my_ward": {
+    "anc_locator_url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146",
+    "anc_locator_note": "The city's ANC locator (official DC GIS map). Enter your address to get your single-member district code. The code starts with your ward number: 1B05 is Ward 1. Codes starting 3/4G or 6/8F sit on a ward line, so check your ballot.",
+    "registration_lookup_url": "https://apps.dcboe.org/VRS",
+    "sample_ballots_url": "https://dcboe.org/elections/2026-elections"
+  },
+  "notes": "Ward 6 ballot: districtwide races, then Ward 6 Council (two candidates, pick one), Ward 6 State Board of Education (open seat, ranked choice, rank up to 4), your ANC race, and Initiative 86 last. You can vote at any Vote Center in DC, early (Oct 26 to Nov 1, 8:30 AM to 7 PM) or on Election Day (7 AM to 8 PM); you don't have to stay in your ward.",
+  "superseded_statewide_placeholders": [
+    "dc-council-ward-seats-2026",
+    "dc-sboe-ward-seats-2026",
+    "dc-anc"
+  ],
+  "last_verified": "2026-10-16"
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ny-governor",
+    "state": "NY",
+    "level": "state",
+    "office": "Governor and Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every New York voter. New York uses fusion voting: one candidate can be nominated by several parties and shows up on more than one line of the ballot. In this race Hochul/Adams are on the Democratic and Working Families lines, and Blakeman/Hood are on the Republican, Conservative and Vote Affordable lines. Every vote for a person counts for them no matter which line you pick; the lines are added together. Fill in ONE oval. Two ovals for the same ticket still count once; two ovals for different tickets void your vote in this race. Governor and lieutenant governor are elected together as one ticket.",
+    "office_explainer": "Runs the state government, proposes the budget, signs or vetoes laws, and appoints agency heads and judges.",
+    "why_it_matters": "Four-year term. The governor writes the first draft of the state budget, picks most of the MTA board, and appoints the judges on the state's top court. There is no U.S. Senate race in New York this year, so this is the top of the ballot.",
+    "vote_for": 1,
+    "incumbent": "Kathy Hochul",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kathy C. Hochul / Adrienne E. Adams",
+        "party": "Democratic, Working Families",
+        "incumbent": true,
+        "website": "https://kathyhochul.com/",
+        "website_confidence": "verified",
+        "background": "Governor since August 2021, elected to a full term in 2022; before that lieutenant governor, a member of Congress from the Buffalo area, and Erie County clerk. Running mate Adrienne Adams was Speaker of the New York City Council (2022 to 2025), a council member from Queens (2017 to 2025), and a 2025 candidate for mayor.",
+        "own_words": [
+          {
+            "text": "\"put money back in people's pockets, lower costs\"",
+            "is_quote": true,
+            "source": "https://kathyhochul.com/"
+          },
+          {
+            "text": "\"Build on our progress to make New York affordable and keep standing up to Trump\"",
+            "is_quote": true,
+            "source": "https://kathyhochul.com/"
+          },
+          {
+            "text": "On data centers and electricity costs, at the Oct 13 debate: \"the data centers have to bring their own power.\"",
+            "is_quote": true,
+            "source": "https://www.oswegocountynewsnow.com/news/hochul-blakeman-spar-in-only-gubernatorial-debate/article_7ab2e8ac-a622-4474-a863-f0c661bcb232.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      },
+      {
+        "name": "Bruce A. Blakeman / Todd Hood",
+        "party": "Republican, Conservative, Vote Affordable",
+        "incumbent": false,
+        "website": "https://www.blakemanfornewyork.com/",
+        "website_confidence": "verified",
+        "background": "Nassau County Executive since 2022; earlier a Hempstead town councilman, Nassau County legislator and Port Authority commissioner. Running mate Todd Hood has been Sheriff of Madison County (central NY) since 2018. 'Vote Affordable' is a new line Blakeman's campaign petitioned onto the ballot; if it draws 2% or more of the governor vote it becomes a qualified party.",
+        "own_words": [
+          {
+            "text": "\"cut state income taxes, reduce utility bills, and repeal soft-on-crime bail laws\"",
+            "is_quote": true,
+            "source": "https://www.blakemanfornewyork.com/"
+          },
+          {
+            "text": "\"keeping communities safe, cutting taxes, and putting common sense first\"",
+            "is_quote": true,
+            "source": "https://www.blakemanfornewyork.com/"
+          },
+          {
+            "text": "At the Oct 13 debate: \"Every time I go upstate and talk to farmers, all they complain about is Kathy Hochul's overregulation.\"",
+            "is_quote": true,
+            "source": "https://www.oswegocountynewsnow.com/news/hochul-blakeman-spar-in-only-gubernatorial-debate/article_7ab2e8ac-a622-4474-a863-f0c661bcb232.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      }
+    ],
+    "sources": [
+      {
+        "name": "NYS Board of Elections: Amended Certification for the November 3, 2026 General Election (Oct 7, 2026). Lines: Democratic and Working Families for Hochul/Adams; Republican, Conservative and Vote Affordable for Blakeman/Hood. No other tickets certified.",
+        "url": "https://elections.ny.gov/certification-november-3-2026-general-election"
+      },
+      {
+        "name": "Delilah / Election Deets midterms feed, NY governor (running mates, websites)",
+        "url": "https://api.delilahusa.com/v1/midterms?state=NY&level=governor"
+      },
+      {
+        "name": "Kathy Hochul campaign site",
+        "url": "https://kathyhochul.com/"
+      },
+      {
+        "name": "Bruce Blakeman campaign site",
+        "url": "https://www.blakemanfornewyork.com/"
+      },
+      {
+        "name": "Oswego County News Now: Hochul, Blakeman spar in only gubernatorial debate (Oct 13, 2026, NY1/Spectrum News)",
+        "url": "https://www.oswegocountynewsnow.com/news/hochul-blakeman-spar-in-only-gubernatorial-debate/article_7ab2e8ac-a622-4474-a863-f0c661bcb232.html"
+      },
+      {
+        "name": "Hoodline: Hochul, Blakeman set single NY governor debate Oct 13 (7 PM, NY1 and Spectrum News, moderated by Errol Louis and Susan Arbetter)",
+        "url": "https://hoodline.com/2026/09/hochul-blakeman-set-for-lone-ny-governor-debate-as-poll-gap-narrows/"
+      },
+      {
+        "name": "Ballot Access News: New York might get a new ballot-qualified party, 'Vote Affordable' (Oct 7, 2026)",
+        "url": "https://ballot-access.org/2026/10/07/new-york-might-get-a-new-ballot-qualified-party-vote-affordable/"
+      },
+      {
+        "name": "Wikipedia: 2026 New York gubernatorial election (running mate bios, endorsement lists)",
+        "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ny-attorney-general",
+    "state": "NY",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every New York voter. Fusion voting: James is on the Democratic and Working Families lines; Komatireddy is on the Republican and Conservative lines. Fill in one oval for your candidate on any line.",
+    "office_explainer": "The state's top lawyer. Sues on behalf of New Yorkers, defends state laws, and runs consumer and civil-rights enforcement.",
+    "why_it_matters": "Four-year term. The AG decides which companies, landlords and federal policies the state takes to court.",
+    "vote_for": 1,
+    "incumbent": "Letitia James",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Letitia A. James",
+        "party": "Democratic, Working Families",
+        "incumbent": true,
+        "website": "https://jamesforny.com/",
+        "website_confidence": "verified",
+        "background": "Attorney General since 2019; before that New York City Public Advocate and a City Council member from Brooklyn. Seeking a third term.",
+        "own_words": [
+          {
+            "text": "Lists \"Public Safety\" and \"Jobs and Affordability\" as her priorities, and \"lowering costs for working families.\"",
+            "is_quote": true,
+            "source": "https://jamesforny.com/"
+          },
+          {
+            "text": "At the Oct 8 NY1 debate, on her opponent: \"my opponent knows nothing about the office of the attorney general.\"",
+            "is_quote": true,
+            "source": "https://ny1.com/nyc/all-boroughs/politics/2026/10/09/attorney-general-candidates-trade-blows-in-fiery-ny1-debate-letitia-james-saritha-komatireddy"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      },
+      {
+        "name": "Saritha Komatireddy",
+        "party": "Republican, Conservative",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Longtime federal prosecutor in the U.S. Attorney's Office for the Eastern District of New York (Brooklyn), most recently deputy chief of general crimes; former law clerk to Brett Kavanaugh on the D.C. Circuit; Harvard College and Harvard Law. Nominated by President Trump to a federal judgeship in 2020 (not confirmed). First run for office. No campaign website found by Delilah, Ballotpedia or Wikipedia.",
+        "own_words": [
+          {
+            "text": "At the Oct 8 NY1 debate: \"I will protect New Yorkers, whether it's against President Trump or President AOC.\"",
+            "is_quote": true,
+            "source": "https://ny1.com/nyc/all-boroughs/politics/2026/10/09/attorney-general-candidates-trade-blows-in-fiery-ny1-debate-letitia-james-saritha-komatireddy"
+          },
+          {
+            "text": "Says she would focus on mental illness and Medicaid fraud, and argues James has made New York less safe.",
+            "is_quote": false,
+            "source": "https://ny1.com/nyc/all-boroughs/politics/2026/10/09/attorney-general-candidates-trade-blows-in-fiery-ny1-debate-letitia-james-saritha-komatireddy"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      }
+    ],
+    "sources": [
+      {
+        "name": "NYS Board of Elections: Amended Certification for the November 3, 2026 General Election (Oct 7, 2026)",
+        "url": "https://elections.ny.gov/certification-november-3-2026-general-election"
+      },
+      {
+        "name": "Delilah / Election Deets midterms feed, NY state executive (websites)",
+        "url": "https://api.delilahusa.com/v1/midterms?state=NY&level=state_executive"
+      },
+      {
+        "name": "Letitia James campaign site",
+        "url": "https://jamesforny.com/"
+      },
+      {
+        "name": "NY1: Attorney general candidates trade blows in fiery NY1 debate (Oct 8, 2026; the only AG debate)",
+        "url": "https://ny1.com/nyc/all-boroughs/politics/2026/10/09/attorney-general-candidates-trade-blows-in-fiery-ny1-debate-letitia-james-saritha-komatireddy"
+      },
+      {
+        "name": "NY1: Full debate video (Oct 8, 2026)",
+        "url": "https://ny1.com/nyc/all-boroughs/politics/2026/10/08/full-debate--letitia-james--saritha-komatireddy-go-head-to-head-in-state-attorney-general-debate"
+      },
+      {
+        "name": "Ballotpedia: Saritha Komatireddy (career background)",
+        "url": "https://ballotpedia.org/Saritha_Komatireddy"
+      },
+      {
+        "name": "Wikipedia: 2026 New York Attorney General election",
+        "url": "https://en.wikipedia.org/wiki/2026_New_York_Attorney_General_election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ny-comptroller",
+    "state": "NY",
+    "level": "state",
+    "office": "State Comptroller",
+    "district": null,
+    "scope_plain": "Every New York voter. Fusion voting: DiNapoli is on the Democratic and Working Families lines; Hernandez is on the Republican and Conservative lines. Fill in one oval for your candidate on any line.",
+    "office_explainer": "The state's chief financial officer. Audits state and local governments and manages the state pension fund.",
+    "why_it_matters": "Four-year term. The comptroller is the sole trustee of the state pension fund for public workers and retirees, and audits state agencies, authorities, local governments and school districts.",
+    "vote_for": 1,
+    "incumbent": "Thomas P. DiNapoli",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Thomas P. DiNapoli",
+        "party": "Democratic, Working Families",
+        "incumbent": true,
+        "website": "https://www.dinapolifornewyork.com/",
+        "website_confidence": "verified",
+        "background": "State Comptroller since 2007. Before that a state Assembly member from Nassau County. Won the June 23 Democratic primary with 65.6% over Drew Warshaw and Raj Goyle (official results via Delilah).",
+        "own_words": [
+          {
+            "text": "Says he will \"protect the environment\" and \"support common sense gun safety reforms.\"",
+            "is_quote": true,
+            "source": "https://www.dinapolifornewyork.com/"
+          },
+          {
+            "text": "Backs \"impactful policies to make our streets, subways and homes safe.\"",
+            "is_quote": true,
+            "source": "https://www.dinapolifornewyork.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      },
+      {
+        "name": "Joseph Hernandez",
+        "party": "Republican, Conservative",
+        "incumbent": false,
+        "website": "https://hernandezforny.com/",
+        "website_confidence": "verified",
+        "background": "Entrepreneur and investor in biotechnology and health care; founder of Blue Water Venture Partners, with earlier work at Merck, Affymetrix and Digene. Describes himself as a Cuban refugee who came to the U.S. at age seven; University of Florida degree and MBA, graduate work at Yale and Oxford. No prior elected office.",
+        "own_words": [
+          {
+            "text": "\"Fight fraud and abuse with aggressive audits\" and \"Stop Albany's tax-and-spend policies.\"",
+            "is_quote": true,
+            "source": "https://hernandezforny.com/"
+          },
+          {
+            "text": "\"Public safety is my top priority.\"",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Joseph_Hernandez_(New_York)"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/new-york"
+      }
+    ],
+    "sources": [
+      {
+        "name": "NYS Board of Elections: Amended Certification for the November 3, 2026 General Election (Oct 7, 2026)",
+        "url": "https://elections.ny.gov/certification-november-3-2026-general-election"
+      },
+      {
+        "name": "Delilah / Election Deets midterms feed, NY state executive (websites, primary results)",
+        "url": "https://api.delilahusa.com/v1/midterms?state=NY&level=state_executive"
+      },
+      {
+        "name": "Thomas DiNapoli campaign site",
+        "url": "https://www.dinapolifornewyork.com/"
+      },
+      {
+        "name": "Joseph Hernandez campaign site",
+        "url": "https://hernandezforny.com/"
+      },
+      {
+        "name": "Ballotpedia: Joseph Hernandez (Candidate Connection survey, Oct 9, 2025)",
+        "url": "https://ballotpedia.org/Joseph_Hernandez_(New_York)"
+      },
+      {
+        "name": "CNY Central: Republican running for state comptroller Joe Hernandez says he'll focus on fraud, abuse (Oct 12, 2026)",
+        "url": "https://cnycentral.com/news/local/republican-running-for-state-comptroller-joe-hernandez-says-hell-focus-on-fraud-abuse-thomas-dinapoli-democrat-politics-trump"
+      },
+      {
+        "name": "Wikipedia: 2026 New York State Comptroller election",
+        "url": "https://en.wikipedia.org/wiki/2026_New_York_State_Comptroller_election"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

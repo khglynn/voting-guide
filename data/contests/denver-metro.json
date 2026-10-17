@@ -1,0 +1,2868 @@
+[
+  {
+    "id": "co-us-house-1",
+    "state": "CO",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-1",
+    "scope_plain": "Voters in Colorado's 1st Congressional District: all of Denver plus small slices of Arapahoe and Jefferson counties (Glendale, parts of Englewood, Sheridan, Cherry Hills Village, Edgewater, Lakeside and nearby areas)",
+    "office_explainer": "Denver's one seat in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Open seat for the first time since 1996. Rep. Diana DeGette lost the June Democratic primary to Melat Kiros. The district has not elected a Republican since 1970; about 230,000 of its 464,000 active voters are unaffiliated.",
+    "vote_for": 1,
+    "incumbent": "Diana DeGette (lost primary; not on ballot)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melat Kiros",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.kirosforco.com",
+        "website_confidence": "verified",
+        "background": "29. Daughter of Ethiopian immigrants, former attorney (fired from the law firm Sidley Austin after defending student protesters), PhD student and until recently a tipped-wage barista. Identifies as a democratic socialist. Beat 15-term Rep. Diana DeGette in the June 30 primary.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"Healthcare, housing, and ending the corruption blocking both.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+          },
+          {
+            "text": "\"I'll fight for Medicare for All to cut out the insurance middlemen.\" Supports Housing First policies and federal money for housing production.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+          },
+          {
+            "text": "\"Congress needs to abolish ICE and build something humane.\" Says she has never taken corporate PAC money and never will.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Christy Peterson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.christyforamerica.us",
+        "website_confidence": "sourced",
+        "background": "Accountant; Colorado born and raised; describes herself as a construction manager, notary and \"tax guru.\" Did not answer the Denver Gazette but did answer the Denver Post.",
+        "own_words": [
+          {
+            "text": "Top three priorities: \"Safety, Economy & Education.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          },
+          {
+            "text": "\"I support the President, his agendas and tax breaks.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          },
+          {
+            "text": "Says Denver's sanctuary policy \"invites illegal migrants, taking up housing, making prices higher.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Critter Milton",
+        "party": "Unity",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unity Party nominee. No campaign site or questionnaire answers found.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Chad Humphrey",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Tech manager and entrepreneur; retired Marine Corps officer and combat veteran; MBA from Pepperdine.",
+        "own_words": [
+          {
+            "text": "\"Turn Off the Money Printer: Stop federal spending, audit the Fed, and end corporate bailouts.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          },
+          {
+            "text": "\"End warrantless government surveillance, including invasive Flock cameras.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          },
+          {
+            "text": "\"End Ego-Driven Wars\": stop acting as the world's police and reclaim war powers.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Shimon Blau",
+        "party": "Unaffiliated",
+        "incumbent": false,
+        "website": "https://blauforcongress.com",
+        "website_confidence": "verified",
+        "background": "50. Board-certified physician with 20-plus years in practice and a small business owner. Born in Denver's Sloan's Lake neighborhood to immigrant parents. Launched his campaign and petitioned onto the ballot within days of the June primary.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"affordability, healthcare reform, and economic growth.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+          },
+          {
+            "text": "\"Our country needs a strong, secure border\" but also wants to \"fast-track legal status for long-term, contributing members of our communities.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+          },
+          {
+            "text": "Says he will \"stand up to Trump and fight for ALL my constituents,\" takes no PAC money, and wants to restore federal funding cut from local hospitals and health programs.",
+            "is_quote": true,
+            "source": "https://blauforcongress.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Denver Gazette CD-1 candidate Q&A (Oct 2, 2026)",
+        "url": "https://www.denvergazette.com/2026/10/02/kiros-blau-peterson-congressional-district-1/"
+      },
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post CD-1 candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-us-house-6",
+    "state": "CO",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-6",
+    "scope_plain": "Voters in Colorado's 6th Congressional District: Aurora, Centennial, Littleton and Englewood areas in Arapahoe County, plus a small piece of far northeast Denver. Most Denver voters are in CD-1, not CD-6.",
+    "office_explainer": "One of Colorado's eight seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Rep. Jason Crow is seeking a fifth term in a district that leans Democratic. Covered here because the Denver sample ballot includes it and because Aurora and Englewood voters are in it.",
+    "vote_for": 1,
+    "incumbent": "Jason Crow",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason Crow",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://jasoncrowforcongress.com/",
+        "website_confidence": "sourced",
+        "background": "U.S. representative since 2019; former Army Ranger and paratrooper; lives in Aurora. Heads the End Corruption Caucus.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Lowering the costs of housing, healthcare, gas, and groceries, cleaning up corruption,\" and \"ending forever wars in the Middle East.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          },
+          {
+            "text": "Says Trump's \"illegal war with Iran, reckless tariffs, and rampant corruption have raised prices.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          },
+          {
+            "text": "\"It's the job and duty of Congress to provide a check and balance on the Executive Branch.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jason Clark",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Entrepreneur and West Point graduate; former Army officer; lives in Aurora.",
+        "own_words": [
+          {
+            "text": "Top three priorities: \"1. Limited government. 2. Limited government. 3. Limited government.\" Answered every Post question with the same two words.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Patty McMahon",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Publisher; 35 years with the EEOC; lives in Littleton.",
+        "own_words": [
+          {
+            "text": "\"Fix how government spends\": rein in federal spending and the national debt.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          },
+          {
+            "text": "\"Restore the separation of powers\" including Congress's role in war and peace; expand lifelong credentialed education through 'O.P.E.N. America.'",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Meredith Ryan",
+        "party": "Unity",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unity Party nominee.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Samir Witta",
+        "party": "Unaffiliated",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Oncologist for 25 years in the district; PhD; founded nonprofits on patient costs; lives in Cherry Hills.",
+        "own_words": [
+          {
+            "text": "\"Cap medical deductibles by law, lower premiums, mandate drug price transparency.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          },
+          {
+            "text": "Wants to reform \"predatory HOA practices\" and stop corporate consolidation driving rents.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          },
+          {
+            "text": "\"Serve District 6 first, party never.\" Takes no corporate PAC money.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post CD-6 candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-sboe-1",
+    "state": "CO",
+    "level": "state",
+    "office": "State Board of Education",
+    "district": "CD-1",
+    "scope_plain": "Voters in Congressional District 1 (Denver and nearby slivers)",
+    "office_explainer": "Sets statewide K-12 rules: academic standards, graduation requirements, charter appeals, school ratings.",
+    "why_it_matters": "The nine-member board oversees the Colorado Department of Education and decides charter school appeals and how struggling schools are handled. Six-year term.",
+    "vote_for": 1,
+    "incumbent": "Lisa Escárcega",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lisa Escárcega",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://ed.cde.state.co.us/cdeboard/board-member-profiles-lisa-escrcega",
+        "website_confidence": "sourced",
+        "background": "Incumbent, first elected 2020. Over 40 years in education: school psychologist, district administrator, retired executive director of the Colorado Association of School Executives. Ed.S. and Ph.D.",
+        "own_words": [
+          {
+            "text": "Says that after \"decades of tax cuts and the constraints of TABOR,\" Colorado \"must find revenue that ensures adequate and equitable funding\" for public schools.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+          },
+          {
+            "text": "Wants alternative pathways into teaching and mental health jobs to address the educator shortage, and \"an inclusive public education for all.\"",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+          },
+          {
+            "text": "Says the state school-rating system is \"over reliant on our current measures\" and should include local performance data.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Frederick Espinoza",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Clayton Casciato",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Libertarian nominee.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post State Board of Education District 1 Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-cu-regent-6",
+    "state": "CO",
+    "level": "state",
+    "office": "Regent of the University of Colorado",
+    "district": "CD-6",
+    "scope_plain": "Voters in Congressional District 6 only (Aurora, Centennial, Littleton, Englewood areas, and a small piece of northeast Denver). Most Denver voters will NOT see this race; the CD-1 regent seat is not up in 2026.",
+    "office_explainer": "One of nine elected regents who govern the University of Colorado system: tuition, budgets, the president.",
+    "why_it_matters": "Regents set CU tuition and pick the university president. The board's partisan balance has flipped in recent cycles. Six-year term.",
+    "vote_for": 1,
+    "incumbent": "Ilana Spiegel",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ilana Spiegel",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://ilana4regent.com",
+        "website_confidence": "verified",
+        "background": "Incumbent regent since 2021. Educational consultant; Wellesley BA, Columbia MA in education; lives in Englewood.",
+        "own_words": [
+          {
+            "text": "Priorities: \"affordability, access and student success, and protecting CU's academic mission.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          },
+          {
+            "text": "Says CU's greatest challenge is \"preserving its public mission amid financial pressure and political interference.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          },
+          {
+            "text": "Points to CU Promise, the tuition guarantee and CU Denver's automatic acceptance program in CD-6.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Veanessa Burbage",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee; unopposed in the June primary.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Joe Johnson",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Business owner from Aurora; 30-plus years in sales and corporate training.",
+        "own_words": [
+          {
+            "text": "\"Return education as the top priority in Higher Education\"; says sports \"should no longer be job #1.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          },
+          {
+            "text": "Calls the 'College for All' mentality \"disastrous\" and wants \"LESS government involvement in Higher education.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post CU Regent District 6 Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-sd-31",
+    "state": "CO",
+    "level": "state",
+    "office": "State Senate",
+    "district": "SD-31",
+    "scope_plain": "Voters in Senate District 31 (central and southeast Denver). Special election to fill the rest of an unexpired term.",
+    "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Only one name is on the ballot. Note: the Critical Report recap says attorney Michael DiManna won the Republican primary, but the SOS certified list and the Denver sample ballot show only Ball; treat DiManna as withdrawn or not certified.",
+    "vote_for": 1,
+    "incumbent": "Matt Ball (appointed)",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Matt Ball",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Appointed to the seat by a Democratic vacancy committee; won the June primary. Only candidate on the November ballot (no Republican qualified).",
+        "own_words": [
+          {
+            "text": "Unopposed on the ballot. No campaign site located as of Oct 16.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-senate-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-sd-32",
+    "state": "CO",
+    "level": "state",
+    "office": "State Senate",
+    "district": "SD-32",
+    "scope_plain": "Voters in Senate District 32 (south and southwest Denver)",
+    "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat. Senate Majority Leader Robert Rodriguez is term-limited.",
+    "vote_for": 1,
+    "incumbent": "Robert Rodriguez (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Emily Sirota",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative for House District 9 since 2019. Won the June Democratic primary.",
+        "own_words": [
+          {
+            "text": "No 2026 campaign site located as of Oct 16; the Colorado Democratic Party candidate page lists her without a link.",
+            "is_quote": false,
+            "source": "https://www.coloradodems.org/candidates"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Sydnnia Wulff",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-senate-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-sd-34",
+    "state": "CO",
+    "level": "state",
+    "office": "State Senate",
+    "district": "SD-34",
+    "scope_plain": "Voters in Senate District 34 (west and downtown Denver)",
+    "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat. Sen. Julie Gonzales left to run for U.S. Senate and lost the Democratic primary to John Hickenlooper. Reliably Democratic district since 2018.",
+    "vote_for": 1,
+    "incumbent": "Julie Gonzales (resigned to run for U.S. Senate)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chela Garcia Irlando",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Nonprofit director. Won the June Democratic primary with 69% over Andrés Carrera. Listed as Graciela \"Chela\" Garcia Irlando by the state party. Did not participate in the Denver Gazette voter guide.",
+        "own_words": [
+          {
+            "text": "Did not answer the Denver Gazette questionnaire. No campaign site located as of Oct 16.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jennifer Qualteri",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://jenniferforcoloradosenate.com/",
+        "website_confidence": "verified",
+        "background": "Republican nominee. Says she does not take monetary donations.",
+        "own_words": [
+          {
+            "text": "\"A structural deficit is a spending problem dressed up as a revenue shortage.\" Would protect policing, roads and classroom instruction and \"freeze and audit everything else.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
+          },
+          {
+            "text": "On housing: \"legalize more homes on more parcels,\" cut permit timelines, no statewide rent control.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
+          },
+          {
+            "text": "\"Colorado should stop pretending mandates are free.\" Wants to keep gas and nuclear on the table and repeal rules that force early plant shutdowns.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jacob Luria",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Libertarian nominee.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-senate-primaries"
+      },
+      {
+        "name": "Denver Gazette SD-34 Q&A",
+        "url": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-1",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-1",
+    "scope_plain": "Voters in House District 1 (southwest Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Incumbent seeks a third term.",
+    "vote_for": 1,
+    "incumbent": "Javier Mabrey",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Javier Mabrey",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://javierforcolorado.com",
+        "website_confidence": "verified",
+        "background": "Incumbent since 2023. Eviction defense attorney. Describes himself as a progressive Democrat.",
+        "own_words": [
+          {
+            "text": "Site headline: \"Javier Mabrey is a progressive Democrat running for HD1\" promising \"Bold Political Leadership.\" Issue pages not read in full.",
+            "is_quote": true,
+            "source": "https://javierforcolorado.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Joseph Montoya",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Financial professional; won the June Republican primary.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-2",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-2",
+    "scope_plain": "Voters in House District 2 (central Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat.",
+    "vote_for": 1,
+    "incumbent": "Steven Woodrow (not running)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott Baldermann",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.scottforhd2.com",
+        "website_confidence": "verified",
+        "background": "Former Denver Board of Education member (2019 to 2023) and business owner.",
+        "own_words": [
+          {
+            "text": "\"I've built businesses and created jobs here in Colorado, and advocated for our community for more than a decade.\"",
+            "is_quote": true,
+            "source": "https://www.scottforhd2.com"
+          },
+          {
+            "text": "Priorities listed: accountable public investment, accessible health care and affordable housing, affordable capital for small businesses, expanded transit and clean energy.",
+            "is_quote": false,
+            "source": "https://www.scottforhd2.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Carey Marin",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Business owner; won the June Republican primary.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-3",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-3",
+    "scope_plain": "Voters in House District 3 (southeast Denver, plus parts of Englewood, Sheridan, Cherry Hills Village and Littleton in Arapahoe County)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat. The district crosses the Denver and Arapahoe county line.",
+    "vote_for": 1,
+    "incumbent": "Meg Froelich (term-limited)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Gena Ozols",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.ozolsforhd3.com",
+        "website_confidence": "verified",
+        "background": "Political consultant. Won the June Democratic primary.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Reproductive Rights,\" \"Labor Rights\" and \"Equity.\" Slogan: \"Action Over Talk.\"",
+            "is_quote": true,
+            "source": "https://www.ozolsforhd3.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Rebecca Winegar",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://winegarforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Won the June Republican primary. Critical Report describes her as an anti-abortion activist; her site says she holds the NRA-PVF's AQ rating.",
+        "own_words": [
+          {
+            "text": "\"A common-sense Republican fighting for safer streets, lower taxes, better schools.\"",
+            "is_quote": true,
+            "source": "https://winegarforcolorado.com/"
+          },
+          {
+            "text": "Cites a $1.2 billion state budget shortfall and a 40% property tax increase since 2023 as reasons to end \"one-party rule at the State Capitol.\"",
+            "is_quote": false,
+            "source": "https://winegarforcolorado.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      },
+      {
+        "name": "Winegar campaign site",
+        "url": "https://winegarforcolorado.com/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-4",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-4",
+    "scope_plain": "Voters in House District 4 (north and northwest Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Three-way race with a Forward Party candidate.",
+    "vote_for": 1,
+    "incumbent": "Cecelia Espenoza",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ellwood Ervin",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Won the June Republican primary (Critical Report spells it Erwin; the SOS list says Ervin).",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Cecelia Espenoza",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.cecelia4colorado.com",
+        "website_confidence": "verified",
+        "background": "Incumbent. Former immigration appellate judge, attorney and University of Denver law professor. Has lived in the district 34 years.",
+        "own_words": [
+          {
+            "text": "Priorities on her site: \"Justice that works for people,\" \"Safer communities. Smarter solutions,\" and \"Keeping Colorado affordable for families and businesses.\"",
+            "is_quote": true,
+            "source": "https://www.cecelia4colorado.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Bill Hare",
+        "party": "Forward",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Forward Party nominee.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-5",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-5",
+    "scope_plain": "Voters in House District 5 (north-central Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat.",
+    "vote_for": 1,
+    "incumbent": "Alex Valdez (not running)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Justine Sandoval",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://hd5justine.com",
+        "website_confidence": "verified",
+        "background": "Fifth-generation Coloradan from North Denver; political director who spent nearly a decade at NARAL Pro-Choice Colorado (now Cobalt). Won the June primary with 77%.",
+        "own_words": [
+          {
+            "text": "\"I come from a family of activists who fought for Chicano rights in Denver,\" and says that fighting spirit shapes her.",
+            "is_quote": true,
+            "source": "https://hd5justine.com"
+          },
+          {
+            "text": "Background in reproductive-rights advocacy, transportation access and environmental justice organizing.",
+            "is_quote": false,
+            "source": "https://hd5justine.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Johnnie W. Johnson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee in 2022 and 2024 as well.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-6",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-6",
+    "scope_plain": "Voters in House District 6 (east-central Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "The Democratic nominee unseated the incumbent in the primary, so the seat changes hands either way.",
+    "vote_for": 1,
+    "incumbent": "Sean Camacho (lost primary)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Iris Halpern",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.iris4colorado.org",
+        "website_confidence": "verified",
+        "background": "Civil rights and workers' rights attorney, formerly with the EEOC. Beat incumbent Rep. Sean Camacho in the June primary, 55% to 45%.",
+        "own_words": [
+          {
+            "text": "\"It's time for a fighter.\" Calls herself \"a career-long civil and workers' rights attorney.\"",
+            "is_quote": true,
+            "source": "https://www.iris4colorado.org"
+          },
+          {
+            "text": "Priorities: civil rights and bodily autonomy, housing affordability, \"make big polluters pay,\" affordable health care, school funding, gun control.",
+            "is_quote": false,
+            "source": "https://www.iris4colorado.org"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Kathleen Angel",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Campus coordinator; won the June Republican primary.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-7",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-7",
+    "scope_plain": "Voters in House District 7 (northeast Denver, including Montbello and Green Valley Ranch)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "No Republican on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Jennifer Bacon",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jennifer Bacon",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.electjenniferbacon.com",
+        "website_confidence": "verified",
+        "background": "Incumbent since 2021; former Denver school board member, teacher, community organizer and attorney.",
+        "own_words": [
+          {
+            "text": "Says she sought to \"educate in the classroom, build power with families as a community organizer and attorney, and partner with neighbors\" on legislation.",
+            "is_quote": true,
+            "source": "https://www.electjenniferbacon.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jeff Wilson",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Libertarian nominee. No Republican qualified.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-8",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-8",
+    "scope_plain": "Voters in House District 8 (central and north Denver, including Five Points and Cole)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Incumbent seeks a second term.",
+    "vote_for": 1,
+    "incumbent": "Lindsay Gilchrist",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Carolyn Barnes",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Implementation consultant; won the June Republican primary.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Lindsay Gilchrist",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.gilchristforcolorado.com",
+        "website_confidence": "verified",
+        "background": "Incumbent since 2025. Born and raised in Denver; policy professional. Says she passed 26 bills in her first term and chairs the House Health and Human Services Committee.",
+        "own_words": [
+          {
+            "text": "\"Government should be a place where we come together to solve real problems.\"",
+            "is_quote": true,
+            "source": "https://www.gilchristforcolorado.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jesse Lashawn Parris",
+        "party": "Unity",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unity Party nominee; frequent Denver City Council public commenter.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-9",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-9",
+    "scope_plain": "Voters in House District 9 (southeast Denver)",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Open seat; Rep. Emily Sirota is running for the Senate.",
+    "vote_for": 1,
+    "incumbent": "Emily Sirota (running for Senate District 32)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tom Cowhick",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee in 2022 and 2024 as well.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Monica VanBuskirk",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.monicaforcolorado.com",
+        "website_confidence": "verified",
+        "background": "Small business owner, parent and policy advisor who drafts bills; won the June primary with 59% over Neal Walia.",
+        "own_words": [
+          {
+            "text": "\"That means tackling the cost-of-living crisis, making our neighborhoods safer for everyone, and creating policies that allow our local businesses to compete and grow.\"",
+            "is_quote": true,
+            "source": "https://www.monicaforcolorado.com"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Critical Report primary recap (backgrounds)",
+        "url": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-rtd-b",
+    "state": "CO",
+    "level": "special_district",
+    "office": "RTD Board of Directors",
+    "district": "District B",
+    "scope_plain": "Voters in RTD Director District B (north and northeast Denver). Check your ballot; Denver is split among RTD districts A, B, C, D and E, and only B and C have elections this year.",
+    "office_explainer": "One of 15 directors who run RTD: bus and rail routes, fares, budget. Nonpartisan.",
+    "why_it_matters": "RTD is proposing its 2027 budget and deciding service levels and fares. Four-year term, unpaid.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John Glenn",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Architect (M.Arch and BFA); transit commuter for 35 years. Says he has spent his career connecting housing, transit and affordability. Raised about $20,000 through mid-September.",
+        "own_words": [
+          {
+            "text": "\"At this moment RTD doesn't need another politician, it needs a builder.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          },
+          {
+            "text": "Priorities: make transit \"reliable, frequent, clean, and safe\"; use RTD land for housing at stations \"not on the other side of giant parking lots\"; new leadership with \"less politics, more accountability.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          },
+          {
+            "text": "\"RTD needs to build ridership, not simply cut service.\" Says a 2028 ballot measure \"should remain on the table\" as a bridge.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Bianka Emerson",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Political strategist with 20-plus years in public policy, coalition building, affordable housing and environmental justice; president of Colorado Black Women for Political Action; Southern University graduate and trained lawyer. Raised about $2,900 through mid-September.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Reliable and Equitable Service,\" \"Safe, Accessible Transit & Connected Communities,\" and \"Accountability & Community Voice.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          },
+          {
+            "text": "\"I support the ballot measure because RTD needs sustainable revenue.\" Would oppose fare increases \"that price out riders.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          },
+          {
+            "text": "Hears most about late buses, limited District B routes, inconsistent light rail and safety; says \"operators should not be expected to serve as social workers.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "SOS RTD ballot-order drawing",
+        "url": "https://www.sos.state.co.us/pubs/elections/vote/RTDCandidateBallotOrder.html"
+      },
+      {
+        "name": "Kim Monson RTD District B page (campaign finance from TRACER)",
+        "url": "https://kimmonson.com/colorado-voter-guide/2026/race-rtd-board-of-directors-b/"
+      },
+      {
+        "name": "Denverite RTD voter guide (blocked; not read)",
+        "url": "https://denverite.com/2026/09/25/vg-2026-rtd-board-voter-guide/"
+      },
+      {
+        "name": "Denver Post RTD District B candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-rtd-c",
+    "state": "CO",
+    "level": "special_district",
+    "office": "RTD Board of Directors",
+    "district": "District C",
+    "scope_plain": "Voters in RTD Director District C (west and southwest Denver, plus parts of Lakewood and Edgewater). Check your ballot.",
+    "office_explainer": "One of 15 directors who run RTD: bus and rail routes, fares, budget. Nonpartisan.",
+    "why_it_matters": "Only one candidate qualified, so the race is effectively decided. Four-year term, unpaid.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joe Meyer",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Aerospace engineer (BS/MS mechanical engineering, Colorado School of Mines); transit rider and member of RTD's Citizens Advisory Committee. Only candidate on the ballot. Endorsed by the Democratic Party of Denver.",
+        "own_words": [
+          {
+            "text": "Priorities: \"reliability combined with convenience\" along major corridors, and \"speed up decision making by investing more in pilot projects.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-c-candidate-qa/"
+          },
+          {
+            "text": "\"I don't believe RTD's budget shortfall can be fixed with efficiency gains or cost cuts alone.\" Supports a voter-referred revenue measure but prefers \"a more creative solution\" than another sales tax.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-c-candidate-qa/"
+          },
+          {
+            "text": "Would push dedicated lanes, signal priority and in-lane boarding, and refocus security on the code of conduct rather than fare enforcement.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/rtd-director-district-c-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post RTD District C candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/rtd-director-district-c-candidate-qa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "denver-council-at-large-b",
+    "state": "CO",
+    "level": "city",
+    "office": "Denver City Council, At-Large Seat B (vacancy election)",
+    "district": "At-Large",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "One of two citywide council seats. Council passes Denver's laws, budget and contracts.",
+    "why_it_matters": "Special election to replace Sarah Parady, who resigned in August. The winner serves only until the regular city election in spring 2027 (the Gazette notes the seat is 'only guaranteed into July'). Whoever gets the most votes wins; there is no runoff. Nonpartisan, but the Denver Democrats endorsed Melissa Mejía. The Denver Post reports Martinez ($291,000 raised, including $209,000 in Fair Elections Fund matching) and Mejía ($99,500) lead in money and endorsements; Martinez is backed by three current and 17 former council members, former mayors Webb and Hancock, DA John Walsh and Sen. Michael Bennet; Mejía by the Denver Democrats, four unions, Auditor Tim O'Brien and Melat Kiros. Both candidates say voters confuse their names.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alfredo Reyes",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.reyesfordenver.com",
+        "website_confidence": "verified",
+        "background": "36. Nonprofit executive; west-side native and son of immigrants.",
+        "own_words": [
+          {
+            "text": "Top issue: \"Affordability.\" Wants Denver to \"build across the life span: three- and four-bedroom homes alongside childcare, amenities, and grocery stores.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "On data centers: \"We cannot drink data.\" Wants corporations to innovate on water and energy before asking Denver for anything.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"I will never vote on a contract I have not read.\" Would cut corporate subsidies and premium outside contracts first; would not privatize basic services.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Whitney Traylor",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.traylorfordenver.com",
+        "website_confidence": "sourced",
+        "background": "55. Denver attorney (Traylor Law Group).",
+        "own_words": [
+          {
+            "text": "Top issue: Denver \"keeps paying for its own mistakes,\" citing more than $30 million in police-related settlements since 2020. Proposes a public settlement tracker and root-cause reviews.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Supports the data center moratorium; says Denver already has about 50 data centers and more would strain water and raise grid costs.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Would cut outside legal spending and unproven consultant contracts; \"I would not privatize core services.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jeff Walker",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://walkerfordenver.com",
+        "website_confidence": "sourced",
+        "background": "61. Former elected RTD board member.",
+        "own_words": [
+          {
+            "text": "\"The number one issue is traffic safety.\" Would press to lower speed limits on all Denver streets.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Would exclude data centers over 50,000 square feet within a quarter mile of residential zones.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Says Denver spends too much on police patrol and should make the STAR crisis-response program a 24-hour service.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Julissa Soto",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Founder of Julissa Soto Latino Health Equity Consulting and Casa Inmigrante. Withdrew from the Fair Elections Fund. Did not respond to the Denver Gazette questionnaire.",
+        "own_words": [
+          {
+            "text": "Did not respond to the Denver Gazette questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Gabriel Konkle",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://gabrielfordenver.com",
+        "website_confidence": "verified",
+        "background": "37. Campaign launch: \"I am not a lawyer. I am not a politician. I am not a businessman.\"",
+        "own_words": [
+          {
+            "text": "Would introduce an ordinance requiring a judicial warrant for any technology-assisted surveillance (license plate readers, police drones).",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"We must ban data centers and protect our neighborhoods.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Calls the roughly $25 million a year spent on 3,000 acres of manicured grass \"a waste\"; wants more money for STAR and less for incarceration.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Cynthia Diaz",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://cynthiafordenver.com",
+        "website_confidence": "verified",
+        "background": "46. Owns Tonantzin Casa de Café on Santa Fe Drive.",
+        "own_words": [
+          {
+            "text": "\"Small businesses are closing across Denver, and the city is making it worse.\" Wants construction-mitigation money built into project budgets.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "No new data centers \"until Denver writes rules that protect our most vulnerable residents, our water, and our environment.\" No tax breaks.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"Privatization is not the answer. Trash is essential.\" Says the sales-tax-heavy budget is a structural weakness, so grow the small-business base.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Melissa Adriana Mejía",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.mejiafordenver.com/",
+        "website_confidence": "verified",
+        "background": "41. Housing policy strategist; director of state and local policy at the Community Economic Defense Project; former Council District 3 aide; member of Denver DSA. Endorsed by the Denver Democrats and DALF. About $99,500 raised.",
+        "own_words": [
+          {
+            "text": "Top issue: affordability. \"Growth is inevitable, but displacement doesn't have to be.\" Supports tenant protections and public and nonprofit housing development.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"Denver should not allow hyperscale data centers.\" Supports the current moratorium.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"Denver should spend less subsidizing wealthy corporations and more on the services that make life affordable.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jake Browne",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://brownefordenver.com",
+        "website_confidence": "verified",
+        "background": "43. Takes the Fair Elections Fund ($415 cap per donor, no corporate or PAC money). Publishes his receipts.",
+        "own_words": [
+          {
+            "text": "Top issue: people leaving Denver. Would open the property tax relief program to working renters, since \"Renters pay property tax, too. It's in the rent.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "On data centers: \"If they want to be in Denver, they pay us instead of the other way around.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "\"Every contract should prove it worked before it renews.\" Would grow STAR; would not privatize trash; \"I won't tax the poor to help the poor.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Monica Martinez",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://monica4council.com",
+        "website_confidence": "verified",
+        "background": "52. Executive director of the Fax Partnership (East Colfax nonprofit) since 2015. Lifelong Democrat who says she is \"more circumspect\" about DSA policies. Leads fundraising with about $291,000.",
+        "own_words": [
+          {
+            "text": "\"If you live in Denver, you should be able to afford to stay in Denver.\" Wants housing near transit and better neighborhood connections.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Supports \"responsible development\" of data centers with strong environmental and labor standards and recycled-water design.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Says government growth from 2010 to 2020 \"must now be reined in\" and regulations cut to reduce the \"time tax\" on local businesses.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Raymon Anthony Doane",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://doanefordenver.com",
+        "website_confidence": "unverified",
+        "background": "36. Site did not load on Oct 16. Withdrew from the Fair Elections Fund.",
+        "own_words": [
+          {
+            "text": "Would support district-level shelters and \"case-by-case plans pairing enforcement with voluntary treatment/housing services.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Says additional data centers \"should face scrutiny given high energy/water use.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          },
+          {
+            "text": "Wants \"greater efficiency to cut waste\" and to evaluate where services can be delivered more cost-effectively.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Denver Gazette council candidate Q&A (Oct 11, 2026)",
+        "url": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
+      },
+      {
+        "name": "Who is running (Browne campaign's sourced list, checked against the Clerk)",
+        "url": "https://brownefordenver.com/who-is-running/"
+      },
+      {
+        "name": "Denver Democrats endorsements",
+        "url": "https://www.denverdemocrats.org/vote"
+      },
+      {
+        "name": "Denver sample ballot",
+        "url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf"
+      },
+      {
+        "name": "Denver Post council Q&A",
+        "url": "https://www.denverpost.com/2026/10/06/denver-city-council-at-large-candidate-qa/"
+      },
+      {
+        "name": "Denver Post: two favorites (Oct 15)",
+        "url": "https://www.denverpost.com/2026/10/15/denver-council-special-election-mejia-martinez/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-angel",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge Michael W.V. Angel?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Michael W.V. Angel MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Michael W.V. Angel",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Michael W.V. Angel",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Criminal docket. Appointed July 2024; previously an Adams County magistrate, deputy DA and federal criminal defense lawyer.",
+        "own_words": [
+          {
+            "text": "Commission finding (10-0): Commission found him 'diligent, professional, and committed to growing as a judge'; no notable weakness; exceeded productivity benchmarks. 12 attorneys and 13 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-baumann",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge Christopher J. Baumann?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Christopher J. Baumann MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Christopher J. Baumann",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Christopher J. Baumann",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Chief Judge of Denver District Court since 2022; civil docket plus statewide grand jury and warrants.",
+        "own_words": [
+          {
+            "text": "Commission finding (10-0): Commended for 'alacrity' in administrative duties; strengths in balancing civil docket with Chief Judge role, courtroom demeanor and fairness; no notable weakness; exceeded productivity benchmark. 15 attorneys and 17 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-elliff",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge John Eric Elliff?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge John Eric Elliff MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "John Eric Elliff",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "John Eric Elliff",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Domestic relations docket. Commended for mentoring newer judges.",
+        "own_words": [
+          {
+            "text": "Commission finding (10-0): Strengths: professional temperament, clear and prompt decisions, respect for self-represented litigants; no notable weakness; exceeded productivity benchmark. 8 attorneys and 10 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-luxen",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge Andrew Luxen?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Andrew Luxen MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Andrew Luxen",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Andrew Luxen",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Criminal docket.",
+        "own_words": [
+          {
+            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: respectful demeanor, preparation, giving each side a fair hearing; no notable weakness. Did not meet the criminal productivity benchmark, which the commission attributes to inherited unresolved cases rather than his delay. 25 attorneys and 15 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-olafson",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge Jon J. Olafson?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Jon J. Olafson MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Jon J. Olafson",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Jon J. Olafson",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Civil docket.",
+        "own_words": [
+          {
+            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: civility, clear communication, commitment to reducing courtroom bias; no notable weakness; exceeded productivity benchmark. 41 attorneys and 4 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-wallace",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District: retain Judge Sarah Block Wallace?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Sarah Block Wallace MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Sarah Block Wallace",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Sarah Block Wallace",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Civil docket; has handled complex and high-profile matters.",
+        "own_words": [
+          {
+            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: case management, professionalism, composure in complex cases; no notable weakness; exceeded productivity benchmark. 39 attorneys and 12 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-gomez",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District (Juvenile): retain Judge Lisa Gomez?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 9-0 (one commissioner recused) that Judge Lisa Gomez MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Lisa Gomez",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Lisa Gomez",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Denver Juvenile Court.",
+        "own_words": [
+          {
+            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: knowledge of the law, respect for participants, balancing decisiveness with empathy; no notable weakness; exceeded 4 of 5 juvenile productivity benchmarks. 11 attorneys and 3 non-attorneys surveyed; too few responses to publish a 2025 interim survey.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-mccarthy",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District (Juvenile): retain Judge Elizabeth Joan McCarthy?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Elizabeth Joan McCarthy MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth Joan McCarthy",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Elizabeth Joan McCarthy",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Presiding Judge of Denver Juvenile Court.",
+        "own_words": [
+          {
+            "text": "Commission finding (10-0): Strengths: exceptional communication and listening, dignity for all participants, knowledge of juvenile law; no notable weakness; exceeded 5 of 6 productivity benchmarks. 10 attorneys and 4 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-leith",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 2nd Judicial District (Probate): retain Judge Elizabeth D. Leith?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Second Judicial District Commission on Judicial Performance voted 10-0 that Judge Elizabeth D. Leith MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth D. Leith",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Elizabeth D. Leith",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Denver Probate Court (probate and mental health cases).",
+        "own_words": [
+          {
+            "text": "Commission finding (10-0): Strengths: deep knowledge of probate and mental health law, fair treatment, managing emotionally difficult cases; no notable weakness. No productivity benchmarks exist for probate. 35 attorneys and 8 non-attorneys surveyed.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-eddy",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Andrea Eddy?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Andrea Eddy MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Andrea Eddy",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Andrea Eddy",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Appointed July 2016.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): 'Energetic, positive and low-stress courtroom'; fair, clear, efficient; volunteers to cover other courtrooms including weekends during a budget crisis.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-fay",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Olympia Z. Fay?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Olympia Z. Fay MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Olympia Z. Fay",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Olympia Z. Fay",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Senior member of the county bench.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): 'A model of efficiency'; clears heavy dockets; champion of equal access for self-represented litigants.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-lombardi",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Kerri Lombardi?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Kerri Lombardi MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Kerri Lombardi",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Kerri Lombardi",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Presiding judge of Denver County Court since 2024; oversees administration, budget and staff.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): Commended for transparency and clear communication during recent budget problems, including open forums; 'efficient, approachable, knowledgeable' in the courtroom.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-malone",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Chelsea Malone?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Chelsea Malone MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Chelsea Malone",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Chelsea Malone",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Appointed 2016; former criminal defense solo practitioner.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): 'Outstanding understanding of the law'; disciplined, well-prepared courtroom; revised the evidence chapter of a judges' benchbook.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-martinez-thomas",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Michelle Martinez-Thomas?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Michelle Martinez-Thomas MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Michelle Martinez-Thomas",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Michelle Martinez-Thomas",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Runs a 'supportive, rehabilitative courtroom.'",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): Creative in sentencing, values transparency, developed a plain-language brochure on county court procedures; educated juries on implicit bias before it was required.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-shamsid-deen",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Isaam L. Shamsid-Deen?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Isaam L. Shamsid-Deen MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Isaam L. Shamsid-Deen",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Isaam L. Shamsid-Deen",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Appointed June 2023; newest member evaluated.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): 'Direct and efficient'; hardworking; willing to seek guidance as a newer judge; commission expects him to 'add even more value' with experience.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-smith",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Denver County Court: retain Judge Judith Smith?",
+    "district": "Denver",
+    "scope_plain": "Every Denver voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Denver County Court Commission on Judicial Performance voted 5-0 that Judge Judith Smith MEETS PERFORMANCE STANDARDS. Every Denver judge on the 2026 ballot received that rating. Commissions look at surveys, courtroom observation and case data, not confidential discipline records.",
+    "vote_for": 1,
+    "incumbent": "Judith Smith",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Judith Smith",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "Led the court's move to a web-based case system.",
+        "own_words": [
+          {
+            "text": "Commission finding (5-0): 'Upbeat and approachable'; uses plain language; 'a legal scholar' sought out by colleagues.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations",
+        "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations"
+      },
+      {
+        "name": "Individual evaluation",
+        "url": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "arapahoe-commissioner-2",
+    "state": "CO",
+    "level": "county",
+    "office": "Arapahoe County Commissioner",
+    "district": "District 2",
+    "scope_plain": "Voters in Arapahoe County Commissioner District 2: Greenwood Village, Foxfield, most of Centennial, part of Aurora and unincorporated central Arapahoe County. (Note: Arapahoe commissioners are elected by district, not countywide; Englewood and Littleton are in other districts.)",
+    "office_explainer": "One of five commissioners who run county government: roads, human services, sheriff's budget, land use.",
+    "why_it_matters": "Four-year term. The board sets the county budget and land-use rules, including any data center regulations.",
+    "vote_for": 1,
+    "incumbent": "Jessica Campbell",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jessica Campbell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://jessicaforcommissioner.com",
+        "website_confidence": "sourced",
+        "background": "43. Incumbent since 2023 (BS, JD, MA). Won the June primary with 65%.",
+        "own_words": [
+          {
+            "text": "Cites securing \"$125 million for improving our roads and bridges\" and \"the strictest oil and gas regulations in the state.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "Led an FAA study group that cut Centennial Airport training overflights back to 2018 levels.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "\"I oppose tax incentives for data centers.\" Skeptical hyperscale facilities can be made sustainable.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Carl Schuldies",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired operations executive. Did not respond to the Denver Gazette questionnaire.",
+        "own_words": [
+          {
+            "text": "Did not respond to the Denver Gazette questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Denver Gazette Arapahoe commissioner Q&A",
+        "url": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+      },
+      {
+        "name": "Critical Report county primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "arapahoe-commissioner-4",
+    "state": "CO",
+    "level": "county",
+    "office": "Arapahoe County Commissioner",
+    "district": "District 4",
+    "scope_plain": "Voters in Arapahoe County Commissioner District 4: unincorporated northern Arapahoe County, Glendale and parts of Aurora.",
+    "office_explainer": "One of five commissioners who run county government: roads, human services, sheriff's budget, land use.",
+    "why_it_matters": "Four-year term. The incumbent chairs the board.",
+    "vote_for": 1,
+    "incumbent": "Leslie Summey",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Leslie Summey",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://leslie4arapahoe.com",
+        "website_confidence": "sourced",
+        "background": "62. Incumbent and board chair. Won the June primary with 53%.",
+        "own_words": [
+          {
+            "text": "Spearheaded \"a first-of-its-kind parking ordinance for the county.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "On data centers: \"It's important that consumers don't see rate increases\" and water should be in a closed-loop system.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "Wants the state to give counties \"the resources and the flexibility to meet statewide housing goals.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Sonda \"Sunny\" Banka",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://sunny4commissioner.com",
+        "website_confidence": "sourced",
+        "background": "69. Realtor for 40-plus years and business owner since 1998; served on the Aurora Planning Commission and 20 years on Aurora's Citizens Advisory Budget Committee.",
+        "own_words": [
+          {
+            "text": "\"Good government starts with listening, asking the right questions and focusing on results.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "Wants transparency on where county-funded services are delivered before asking taxpayers for more.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          },
+          {
+            "text": "Data centers \"can bring substantial private investment, jobs and tax revenue\" with clear standards on water, power, noise and setbacks.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Denver Gazette Arapahoe commissioner Q&A",
+        "url": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+      },
+      {
+        "name": "Critical Report county primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "jefferson-commissioner-3",
+    "state": "CO",
+    "level": "county",
+    "office": "Jefferson County Commissioner",
+    "district": "District 3",
+    "scope_plain": "Every Jefferson County voter (Jeffco commissioners must live in their district but are elected countywide), including Lakewood, Arvada and Golden.",
+    "office_explainer": "One of three commissioners who run county government: budget, roads, human services, land use.",
+    "why_it_matters": "Open seat; Commissioner Lesley Dahlkemper is term-limited and running for lieutenant governor. A second vacancy may follow if Commissioner Andy Kerr wins the assessor race.",
+    "vote_for": 1,
+    "incumbent": "Lesley Dahlkemper (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lisa Cutter",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://cutterforcolorado.com",
+        "website_confidence": "sourced",
+        "background": "63. State senator (SD-20) since 2023, state representative 2019 to 2023; former public relations firm owner; Jeffco native.",
+        "own_words": [
+          {
+            "text": "\"Wildfire is one of the most important issues.\" Wants more support for homeowners doing their own mitigation.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          },
+          {
+            "text": "\"I'm very against providing incentives to data centers.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          },
+          {
+            "text": "Says the county has \"a big role to play\" in affordable housing and should build on Prop 123 work.",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Stephanie VandenBerg",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://vandenbergforcolorado.com",
+        "website_confidence": "sourced",
+        "background": "46. CPA and accounting firm owner; moved to Jeffco in 2015; first run for office.",
+        "own_words": [
+          {
+            "text": "\"I'm not a career politician.\" Says the top issue is affordability: \"Are you gonna lower my property taxes?\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          },
+          {
+            "text": "Would support a data center moratorium \"to buy us time to figure it out.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          },
+          {
+            "text": "Wants the county to incentivize builders to put up starter homes and create first-time homebuyer programs.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Denver Gazette Jeffco commissioner Q&A",
+        "url": "https://www.denvergazette.com/2026/10/11/jeffco-commissioner-race-lisa-cutter-versus-stephanie-vandenberg/"
+      },
+      {
+        "name": "Critical Report county primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "adams-commissioner-3",
+    "state": "CO",
+    "level": "county",
+    "office": "Adams County Commissioner",
+    "district": "District 3",
+    "scope_plain": "Every Adams County voter (Adams commissioners are elected countywide), including Thornton and Westminster.",
+    "office_explainer": "One of five commissioners who run county government: budget, roads, human services, land use.",
+    "why_it_matters": "Only one candidate qualified.",
+    "vote_for": 1,
+    "incumbent": "Emma Pinter",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Emma Pinter",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent. No Republican qualified for the primary.",
+        "own_words": [
+          {
+            "text": "Unopposed per the Critical Report primary recap; confirm against the Adams County sample ballot.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Critical Report county primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+      }
+    ],
+    "confidence": "unverified"
+  },
+  {
+    "id": "adams-commissioner-4",
+    "state": "CO",
+    "level": "county",
+    "office": "Adams County Commissioner",
+    "district": "District 4",
+    "scope_plain": "Every Adams County voter (Adams commissioners are elected countywide), including Thornton and Westminster.",
+    "office_explainer": "One of five commissioners who run county government: budget, roads, human services, land use.",
+    "why_it_matters": "Open seat; the Democratic primary was decided by about 600 votes.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Karen DeAguero",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Environmental engineer; won the June primary 50.6% to 49.4% over Tyler Quick.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Joseph Domenico",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee; also the 2022 nominee.",
+        "own_words": [
+          {
+            "text": "No platform collected yet.",
+            "is_quote": false,
+            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Critical Report county primary recap",
+        "url": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+      }
+    ],
+    "confidence": "unverified"
+  }
+]

@@ -1,0 +1,195 @@
+{
+  "state": "IL",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "Illinois State Board of Elections (statewide) and Chicago Board of Election Commissioners (city of Chicago)",
+    "url": "https://www.elections.il.gov/"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "You can vote three ways: early in person (open now; any Chicago voter can use any Chicago site), by mail (anyone can ask for a ballot, no excuse needed, apply by Oct. 29), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk.",
+  "registration": {
+    "check_url": "https://ova.elections.il.gov/RegistrationLookup.aspx",
+    "deadlines": [
+      {
+        "method": "mail",
+        "date": "2026-10-06",
+        "rule": "Regular registration (by mail, at a DMV, or with a deputy registrar) closed Tuesday, October 6, 2026, the 28th day before the election. This date has passed. You can still register in person during the grace period (next row). State Board of Elections 2026 calendar: 'October 6, 2026: Close of Voter Registration. Last day for regular registration or transfer of registration within the offices of the election authority' (10 ILCS 5/4-6, 5-5, 6-29).",
+        "source": "https://www.elections.il.gov/agencyforms/1%20ELECTION%20CALENDAR/2026%20Abbreviated%20Calendar%207.7.2025%20Amended.pdf"
+      },
+      {
+        "method": "online",
+        "date": "2026-10-18",
+        "rule": "Online registration at ova.elections.il.gov closes Sunday, October 18, 2026 at 11:59 PM, the 16th day before the election. State Board 2026 calendar: 'October 18, 2026: Close of Online Voter Registration for the General Election. Last day for voters to register to vote through the State Board of Elections website' (10 ILCS 5/1A-16.5). As of Friday, Oct. 16 you still have through Sunday night to do this from your phone. After that, it's in person only.",
+        "source": "https://www.elections.il.gov/agencyforms/1%20ELECTION%20CALENDAR/2026%20Abbreviated%20Calendar%207.7.2025%20Amended.pdf"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-11-03",
+        "rule": "Grace period registration runs Wednesday, October 7 through Election Day, Tuesday, November 3, 2026. You register and vote at the same visit. In Chicago: at the Downtown Supersite (137 S. State St.), the Board office (69 W. Washington, 6th floor), or any of the 50 ward early voting sites from Oct. 19 through Nov. 2, and on Election Day at your precinct polling place or any of the 51 vote centers. Chicago Board of Elections: 'Same Day Registration is available at all Early Voting/Vote Center sites, including 51 sites on Election Day. You will need two forms of ID, one with your current address.' Statutory basis: 10 ILCS 5/4-50, 5-50, 6-100.",
+        "source": "https://chicagoelections.gov/voting/early-votingvote-centers"
+      }
+    ],
+    "same_day_registration": true,
+    "same_day_notes": "Yes. Illinois calls it grace period registration and it runs through 7:00 PM on Election Day. You must do it in person and vote right then; you can't register during the grace period and take a mail ballot home. Bring two forms of ID, at least one showing your current address (examples the Chicago Board and news guides list: Illinois driver's license or state ID, passport, student ID, utility bill, bank statement, lease or mortgage, paycheck, a piece of government mail). Chicago: any early voting site through Nov. 2, any of 51 vote centers on Nov. 3. Suburban Cook County and the collar counties run their own sites; check your county clerk. Chicago Board of Elections phone: 312-269-7900.",
+    "still_possible_now": "Yes. As of Friday, October 16, 2026: (1) you can still register ONLINE through Sunday, October 18 at 11:59 PM at ova.elections.il.gov; (2) after that, register in person and vote on the spot at any early voting site through Monday, November 2, or at the polls on Tuesday, November 3. Bring two forms of ID, one with your current address.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Anyone who asks. Illinois has no-excuse vote by mail. You must apply (online through your election authority, by mail, or in person) unless you're already on the permanent vote-by-mail list, in which case a ballot is mailed to you automatically every election. Election authorities started mailing ballots Thursday, September 24, 2026 (State Board calendar: 'mailing and delivery of ballots does not begin until Thursday, September 24, 2026'). If you're on the permanent list and have moved, update your registration or your ballot goes to the old address.",
+    "request_deadline": {
+      "date": "2026-10-29",
+      "rule": "Applications by mail or online must be received by Thursday, October 29, 2026 (5:00 PM in Chicago). You can still apply IN PERSON at your election authority's office through Monday, November 2. State Board 2026 calendar: 'Last day for the election authority to receive, by mail, an application for a vote by mail ballot and mail that ballot to the voter. In-person applications are still accepted until November 2, 2026.' Chicago: chicagoelections.gov, 'Apply for a Vote By Mail ballot'. Suburban Cook: cookcountyclerkil.gov. If you apply this late, plan to return the ballot by hand; there isn't time for two mail trips.",
+      "source": "https://www.elections.il.gov/agencyforms/1%20ELECTION%20CALENDAR/2026%20Abbreviated%20Calendar%207.7.2025%20Amended.pdf"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "7:00 PM CT if returned by hand or drop box; if mailed, postmarked by Nov. 3 and received by Tuesday, Nov. 17",
+      "source": "https://dekalbcountyclerkil.gov/wp-content/uploads/2026/08/11032026GeneralElectionImportantDates.pdf"
+    },
+    "return_options": [
+      "secure drop box: Chicago has them at every early voting site including the Downtown Supersite (137 S. State St.) and the Board office (69 W. Washington); suburban Cook and the collar counties have them at early voting sites and clerk offices. Chicago drop box list: https://chicagoelections.gov/voting/drop-boxes",
+      "hand it in at any early voting site in your election jurisdiction through Nov. 2. On Election Day in Chicago, use the secured drop box at any of the 51 Vote Centers (the Supersite at 137 S. State or any ward early voting site) or return it in person at the Board office, 69 W. Washington, Suite 600, by 7:00 PM. Do NOT bring it to a precinct polling place: the Chicago Board says 'Precinct election judges cannot accept Vote By Mail ballots. Vote By Mail ballots returned at precinct polling places will not be processed.' Outside Chicago, ask your county clerk where ballots can be returned on Election Day.",
+      "mail (USPS): counts if postmarked by Election Day and received by Nov. 17 (10 ILCS 5/19-8; DeKalb County Clerk's official date sheet: 'Tuesday, November 17: Deadline for validating and counting provisional ballots and timely postmarked mail ballots received after Election Day'). But see the gotchas on postmarks.",
+      "have someone you trust deliver it (the person carrying it signs the affidavit on the envelope)"
+    ],
+    "postage": "Chicago and suburban Cook County return envelopes are postage-paid. Elsewhere in Illinois most election authorities also prepay return postage; if your envelope doesn't say 'no postage necessary,' add a stamp. (Sourced from past-cycle practice and news guides; read your envelope.)",
+    "signature_witness_rules": "Sign the certification envelope. No witness or notary. A panel of three election judges compares your signature to the one on file. Date the certification: under 10 ILCS 5/19-8, if the postmark is missing or unreadable, the date you wrote on the certification can establish that you voted by Election Day.",
+    "tracking_url": "https://chicagoelections.gov/voting/vote-mail",
+    "cure_process": "If judges reject your ballot for a missing or mismatched signature, the election authority must notify you (by mail, and by email or phone if they have it) within 2 days, and you have until 14 days after the election, Tuesday, November 17, 2026, to fix it with a signed statement or new signature. Watch your mail and email after you return your ballot. Illinois Election Code 10 ILCS 5/19-8.",
+    "mail_cutoff_advice": "The law is on your side (postmarked by Nov. 3 counts, and the Supreme Court's June 29, 2026 Watson v. RNC ruling confirmed states may keep post-Election-Day receipt windows), but the Postal Service is not. USPS changed how it processes mail in 2025 and much of it never gets a postmark; Illinois clerks have warned since January 2026 that an unpostmarked late ballot can be rejected. The safe play: mail no later than about Tuesday, October 27, or ask a postal clerk to hand-stamp the envelope at the counter. From Oct. 28 on, use a drop box at an early voting site (through Nov. 2) or, on Election Day, a drop box at a Chicago Vote Center, so it's in official hands by 7:00 PM on Nov. 3. Precinct polling places in Chicago cannot accept mail ballots (Chicago Board of Elections).",
+    "drop_box_lookup_url": "https://chicagoelections.gov/voting/drop-boxes",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-01",
+    "end": "2026-11-02",
+    "hours_note": "CHICAGO (official, chicagoelections.gov): Downtown Voting Supersite, 137 S. State St., and the Chicago Board of Elections office, 69 W. Washington St., 6th floor, opened Thursday, Oct. 1. Hours Oct. 1 to 25: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Hours Oct. 26 to Nov. 2: Mon to Fri 9 AM to 7 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. All 50 ward sites open Monday, Oct. 19 through Monday, Nov. 2: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Any Chicago voter can use any site. Three campus sites (Chicago State, NEIU, UChicago Reynolds Club) run Oct. 28 to 30, 10 AM to 5 PM. On Election Day the Supersite and all 50 ward sites are open 6 AM to 7 PM as vote centers for any Chicago voter; the 69 W. Washington office is NOT open for voting on Election Day. SUBURBAN COOK: early voting began Oct. 7 at some sites and most sites open Oct. 19; hours vary by site and week; see cookcountyclerkil.gov. COLLAR COUNTIES: most opened Sept. 24 at the clerk's office, with more sites Oct. 19; DuPage's 24 permanent sites run weekdays 8 AM to 7 PM and weekends 9 AM to 5 PM.",
+    "vote_centers": true,
+    "lookup_url": "https://chicagoelections.gov/voting/early-votingvote-centers",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "6:00 AM",
+    "polls_close": "7:00 PM",
+    "in_line_rule": "If you are in line at 7:00 PM, stay in line. You get to vote. Chicago voters can vote at their home precinct OR at any of 51 vote centers (the Downtown Supersite at 137 S. State and all 50 ward sites), per the Chicago Board: 'Voters can choose whatever voting site is most convenient for them, including on Election Day.' Outside Chicago, go to your assigned precinct unless your county says otherwise.",
+    "vote_centers": true,
+    "lookup_url": "https://ova.elections.il.gov/RegistrationLookup.aspx",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "first_time_only",
+    "accepted": [
+      "Most voters: no ID needed. You sign in and election judges compare your signature to the one on file. Chicago Board: 'While identification is not required, it is helpful to bring it in case there is a question about the voter's registration, address, signature.'",
+      "First-time voters who registered by mail without providing an Illinois driver's license, state ID number, or Social Security digits must show one ID: a current photo ID, or a current utility bill, bank statement, paycheck, government check, or other government document with your name and address (federal HAVA rule).",
+      "Grace period (same-day) registration: two forms of ID, at least one showing your current address. Examples: Illinois driver's license or state ID, passport, student ID, utility bill, bank statement, lease or mortgage, paycheck, government mail.",
+      "If you requested a mail ballot and show up in person, bring the mail ballot and surrender it (see gotchas)."
+    ],
+    "no_id_option": "If you're required to show ID and don't have it, you vote a provisional ballot and have 7 days after the election (through Tuesday, November 10) to bring ID or proof to the election authority so it counts. Provisional ballots are validated by Nov. 17.",
+    "confidence": "sourced"
+  },
+  "in_the_booth": {
+    "phones": "restricted",
+    "phones_detail": "No Illinois law bans phones in the polling place, and you may use yours to look at notes or a sample ballot. But do not photograph or show your marked ballot: 10 ILCS 5/29-9 makes it a Class 4 felony to knowingly mark or show a ballot so another person can see how you voted (the Sun-Times guide: ballot selfies 'are prohibited' and a Class 4 felony; sticker selfies are fine). Election judges can ask you to put the phone away if it slows the line or bothers other voters. Source: https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=170&ChapterID=3 and https://chicago.suntimes.com/elections/2026/how-to-vote-illinois-general",
+    "notes_allowed": "allowed",
+    "notes_detail": "Yes. Bring a printed cheat sheet, a marked-up sample ballot, or a voter guide. The Sun-Times guide: 'Voters may bring notes, sample ballots, and endorsements into the booth.' Injustice Watch's judicial guide is built to be printed and carried in. Just don't hand your notes to other voters or leave campaign material in the booth.",
+    "ballot_selfies": "prohibited",
+    "apparel_rule": "Campaigning (electioneering) is banned within 100 feet of the polling place entrance (10 ILCS 5/17-29). Wearing a campaign button or shirt while you vote is generally tolerated as long as you vote and leave, but election judges can ask you to cover it. Safer to leave the gear in the car. (Statutory rule; no 2026 Chicago-specific guidance found.)",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "Online registration closes THIS SUNDAY, Oct. 18 at 11:59 PM. Miss it and you can still register, but only in person, with two IDs, at an early voting site (through Nov. 2) or a polling place or vote center (Nov. 3). You vote in the same visit.",
+    "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
+    "Asked for a mail ballot but want to vote in person? Bring the mail ballot with you and surrender it to the judges (Sun-Times: voters 'must bring the mail ballot to their polling place and surrender it to receive an in-person ballot'). If you don't have it, you'll sign an affidavit and may vote a provisional ballot. Don't vote both ways: only one counts and trying is a crime.",
+    "Judicial retention needs 60% yes, not 50%, and the Cook County ballot has 61 retention questions: 1 Appellate Court justice (Bertina E. Lampkin) and 60 Circuit Court judges. A blank vote neither helps nor hurts a judge. Use Injustice Watch's 'Check Your Judges' guide (2026retention.injusticewatch.org), which prints a take-along report, plus the Chicago Bar Association and ISBA ratings.",
+    "Two election offices, not one. City of Chicago voters use the Chicago Board of Election Commissioners (chicagoelections.gov, 312-269-7900). Suburban Cook County voters (Evanston, Oak Park, Cicero, Skokie, etc.) use the Cook County Clerk (cookcountyclerkil.gov). Early voting sites, drop boxes, and mail-ballot applications are specific to your jurisdiction. Also: on Election Day the 69 W. Washington office is closed for voting; the Supersite at 137 S. State is open 6 AM to 7 PM."
+  ],
+  "sources": [
+    {
+      "name": "Illinois State Board of Elections: Abbreviated Calendar of Dates, 2026 General Election (official PDF, read in full)",
+      "url": "https://www.elections.il.gov/agencyforms/1%20ELECTION%20CALENDAR/2026%20Abbreviated%20Calendar%207.7.2025%20Amended.pdf"
+    },
+    {
+      "name": "Illinois State Board of Elections: 2026 Election and Campaign Finance Calendar (full calendar, hosted copy on Peoria Election Commission site; Oct 6, Oct 7, Oct 18, Nov 2 entries read with statutory cites)",
+      "url": "https://www.peoriaelections.gov/250/2026-Election-Calendar"
+    },
+    {
+      "name": "DeKalb County Clerk: Nov. 3, 2026 General Election Important Dates (official county date sheet: Sept 24, Oct 6, Oct 7 to Nov 3, Oct 18, Oct 29, Nov 3 6 AM to 7 PM, Nov 17)",
+      "url": "https://dekalbcountyclerkil.gov/wp-content/uploads/2026/08/11032026GeneralElectionImportantDates.pdf"
+    },
+    {
+      "name": "Chicago Board of Election Commissioners: Early Voting / Vote Centers (official; dates, hours, 50 ward sites, same-day registration, Election Day vote centers; read in full Oct 16)",
+      "url": "https://chicagoelections.gov/voting/early-votingvote-centers"
+    },
+    {
+      "name": "Chicago Board of Election Commissioners: Drop Boxes (official)",
+      "url": "https://chicagoelections.gov/voting/drop-boxes"
+    },
+    {
+      "name": "Chicago Board of Election Commissioners: When You Need ID to Vote (official)",
+      "url": "https://chicagoelections.gov/voting/when-you-need-id-vote"
+    },
+    {
+      "name": "Chicago Board of Election Commissioners: Vote By Mail (official)",
+      "url": "https://chicagoelections.gov/voting/vote-mail"
+    },
+    {
+      "name": "Illinois online voter registration and registration lookup (official)",
+      "url": "https://ova.elections.il.gov/"
+    },
+    {
+      "name": "Cook County Clerk: Elections (official, suburban Cook)",
+      "url": "https://www.cookcountyclerkil.gov/elections"
+    },
+    {
+      "name": "Illinois Election Code, 10 ILCS 5 (registration 1A-16.5, 4-6/5-5/6-29, 4-50/5-50/6-100; vote by mail Article 19 incl. 19-8; early voting Article 19A; electioneering 17-29; ballot secrecy 29-9)",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=170&ChapterID=3"
+    },
+    {
+      "name": "Votebeat (June 29, 2026): Supreme Court allows states to accept mail ballots that arrive after Election Day (Watson v. RNC, 5-4)",
+      "url": "https://www.votebeat.org/national/2026/06/29/supreme-court-watson-rnc-mail-ballots-absentee-deadline-grace-period/"
+    },
+    {
+      "name": "Supreme Court opinion: Bost v. Illinois State Board of Elections, No. 24-568 (Jan. 14, 2026; standing only)",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/24-568_gfbh.pdf"
+    },
+    {
+      "name": "NPR Illinois (Jan. 15, 2026): Illinois county clerks alert public to postal changes that could delay mail-in ballots",
+      "url": "https://www.nprillinois.org/illinois/2026-01-15/illinois-county-clerks-alert-public-to-postal-changes-that-could-delay-mail-in-ballots"
+    },
+    {
+      "name": "Chicago Sun-Times: How to vote in the November 2026 Illinois general election (read in full)",
+      "url": "https://chicago.suntimes.com/elections/2026/how-to-vote-illinois-general"
+    },
+    {
+      "name": "WBEZ (Oct. 1, 2026): How to vote in the November 2026 Illinois general election (read in full)",
+      "url": "https://www.wbez.org/government-politics/elections/2026/10/01/how-to-vote-illinois-general-election"
+    },
+    {
+      "name": "WTTW (Oct. 1, 2026): Early Voting for November General Election Kicks Off in Downtown Chicago (secondary; it lists the 69 W. Washington office as open on Election Day and Sunday hours of 9 to 4 there, which conflicts with the Board's own page: the office is closed for voting on Election Day and Sunday hours are 10 to 4. The Board's page controls)",
+      "url": "https://news.wttw.com/2026/10/01/early-voting-november-general-election-kicks-thursday-downtown-chicago"
+    },
+    {
+      "name": "CBS Chicago (updated Oct. 15, 2026): Early voting in Illinois 2026, Chicago, Cook County and collar counties (read in full)",
+      "url": "https://www.cbsnews.com/chicago/news/early-voting-illinois-2026-chicago-cook-county-more/"
+    },
+    {
+      "name": "Axios Chicago (Oct. 2, 2026): How to vote in Chicago in the 2026 midterm election (Nov. 17 receipt rule, USPS warning, 212 field investigators)",
+      "url": "https://www.axios.com/local/chicago/2026/10/02/how-to-vote-in-chicago-2026-midterm-election-mail-register-early-polling"
+    },
+    {
+      "name": "Injustice Watch: Check Your Judges, Cook County November 2026 Judicial Election Guide (61 retention questions)",
+      "url": "https://2026retention.injusticewatch.org/"
+    },
+    {
+      "name": "League of Women Voters of Illinois: Election Calendar",
+      "url": "https://www.lwvil.org/election-calendar"
+    },
+    {
+      "name": "VOTE411 (LWV): Illinois voting information",
+      "url": "https://www.vote411.org/illinois"
+    }
+  ]
+}

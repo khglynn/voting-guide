@@ -1,0 +1,59 @@
+{
+ "id": "fullerton-ca",
+ "label": "Fullerton",
+ "state": "CA",
+ "counties": [
+  "Orange"
+ ],
+ "county_election_office": {
+  "name": "Orange County Registrar of Voters (OCVote.gov), 1300 S. Grand Ave, Bldg C, Santa Ana",
+  "url": "https://ocvote.gov",
+  "phone": "(714) 567-7600"
+ },
+ "sample_ballot_url": "https://ocvote.gov/vlt/",
+ "zips": [
+  "92831",
+  "92832",
+  "92833",
+  "92835"
+ ],
+ "zip_caveats": "92831 to 92835 are Fullerton, but 92831 includes part of Placentia and the Cal State Fullerton campus area, 92833 dips into Buena Park and La Habra, and 92835 reaches toward Brea. 92834, 92836, 92837 and 92838 are PO box ZIPs. Fullerton is split between two congressional districts after Prop 50: most of the north is CD-45 (Tran vs. Vo) and the south is CD-46 (Correa vs. Pan). Fullerton elects councilmembers by district, and only Districts 3 and 5 vote this year; the district map is at cityoffullerton.com. School district lines (Fullerton School District K-8, Fullerton Joint Union High School District, and Placentia-Yorba Linda or Buena Park districts at the edges) do not follow city lines. There is no Fullerton city measure in November 2026 (the council rejected a sales tax in July) and no countywide Orange County measure; OC Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
+ "contest_ids": [
+  "ca-governor",
+  "ca-lt-governor",
+  "ca-secretary-of-state",
+  "ca-controller",
+  "ca-treasurer",
+  "ca-attorney-general",
+  "ca-insurance-commissioner",
+  "ca-superintendent",
+  "ca-boe-4",
+  "ca-supreme-court-evans",
+  "ca-supreme-court-groban",
+  "ca-coa-4d-retention",
+  "ca-prop-1",
+  "ca-prop-2",
+  "ca-prop-3",
+  "ca-prop-4",
+  "ca-prop-5",
+  "ca-prop-37",
+  "ca-prop-38",
+  "ca-prop-39",
+  "ca-prop-40",
+  "ca-prop-41",
+  "ca-prop-42",
+  "ca-prop-43",
+  "ca-prop-44",
+  "ca-prop-45",
+  "oc-supervisor-4",
+  "fullerton-council-3",
+  "fullerton-council-5",
+  "fullerton-fsd-area-3",
+  "fullerton-fjuhsd-area-1",
+  "fullerton-fjuhsd-area-5",
+  "nocccd-area-6",
+  "ca-us-house-45",
+  "ca-state-senate-34",
+  "ca-assembly-67"
+ ]
+}

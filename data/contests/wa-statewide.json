@@ -1,0 +1,496 @@
+[
+  {
+    "id": "wa-supreme-court-pos-1",
+    "state": "WA",
+    "level": "judicial",
+    "office": "Washington Supreme Court, Justice Position 1 (unexpired 2-year term)",
+    "district": null,
+    "scope_plain": "Every Washington voter. Nonpartisan: no party labels on the ballot. Washington uses a top-two system; because each of these races had exactly two candidates after filing, some skipped the August primary and appear only now. This is a 2-year unexpired term: Justice Mary Yu resigned Dec 31, 2025, Gov. Ferguson appointed Colleen Melody in January 2026, and the winner serves the rest of Yu's term, through 2028. Position 1 was on the August primary ballot because a third candidate (Laura Christensen Colberg) filed; Melody and Edwards advanced.",
+    "office_explainer": "Highest state court. Nine justices have the final say on Washington law and the state constitution.",
+    "why_it_matters": "The court decides whether state laws and initiatives square with the state constitution, including tax, school funding and civil rights cases. Justices normally serve six-year terms and must retire at the end of the year they turn 75. Five of the nine seats are on this ballot, more than usual, because two justices resigned and two chose not to run again.",
+    "vote_for": 1,
+    "incumbent": "Colleen Melody (appointed Jan 2026)",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Colleen Melody",
+        "party": null,
+        "incumbent": true,
+        "website": "https://melodyforjustice.com/",
+        "website_confidence": "verified",
+        "background": "Supreme Court justice since January 2026, appointed by Gov. Bob Ferguson to fill Justice Mary Yu's seat. Before that she led the Attorney General's Civil Rights Division and worked at the U.S. Department of Justice. UW undergraduate and law. Grew up in Spokane; lives in rural Western Washington.",
+        "own_words": [
+          {
+            "text": "\"Now more than ever, state courts must safeguard our rights with independence and impartiality.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "\"Judges must anticipate and consider the law's impact on everyday people.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-1-2026-primary/"
+          },
+          {
+            "text": "Pamphlet: as head of the AG's Civil Rights Division she \"beat the Trump Administration\" on the travel ban and family separation, and \"returned millions in wages owed to workers.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      },
+      {
+        "name": "Scott Edwards",
+        "party": null,
+        "incumbent": false,
+        "website": "https://votescottedwards.com/",
+        "website_confidence": "verified",
+        "background": "Bainbridge Island tax and constitutional attorney; practice chair at Ballard Spahr/Lane Powell since 2010, previously at Perkins Coie. Adjunct professor at UW School of Law for more than 20 years. Princeton and UW Law. Has argued more than a dozen cases before the state Supreme Court.",
+        "own_words": [
+          {
+            "text": "\"The role of the Supreme Court is to apply the constitution and laws as written, not rewrite them.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "\"Take politics out of the courtroom.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "Wants \"to bring an independent voice, principled judgment, and a focus on the rule of law.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-1-2026-primary/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      }
+    ],
+    "sources": [
+      {
+        "name": "King County Elections: certified candidate list, Nov 3, 2026 (all five Supreme Court positions)",
+        "url": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=55"
+      },
+      {
+        "name": "King County sample ballot, Nov 3, 2026 (PDF; marks Positions 1 and 5 as unexpired 2-year terms)",
+        "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+      },
+      {
+        "name": "Washington SOS General Election Fact Sheet (5 State Supreme Court races)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+      },
+      {
+        "name": "2026 General Election Voters' Pamphlet, King/Seattle edition (candidate statements)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+      },
+      {
+        "name": "Full Court Press: 2026 Washington Supreme Court voter guide (seat status)",
+        "url": "https://wasupremecourt.org/"
+      },
+      {
+        "name": "Washington State Standard: Supreme Court Position 1 survey",
+        "url": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-1-2026-primary/"
+      },
+      {
+        "name": "WAGOP July 13, 2026: Supreme Court recommendations (notes Colberg also filed in Position 1)",
+        "url": "https://wagop.org/wagop-completes-official-recommendations-of-candidates-for-the-state-supreme-by-recommending-scott-edwards/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-supreme-court-pos-3",
+    "state": "WA",
+    "level": "judicial",
+    "office": "Washington Supreme Court, Justice Position 3",
+    "district": null,
+    "scope_plain": "Every Washington voter. Nonpartisan: no party labels on the ballot. Washington uses a top-two system; because each of these races had exactly two candidates after filing, some skipped the August primary and appear only now. Open seat: Justice Raquel Montoya-Lewis is not running again. Full six-year term.",
+    "office_explainer": "Highest state court. Nine justices have the final say on Washington law and the state constitution.",
+    "why_it_matters": "The court decides whether state laws and initiatives square with the state constitution, including tax, school funding and civil rights cases. Justices normally serve six-year terms and must retire at the end of the year they turn 75. Five of the nine seats are on this ballot, more than usual, because two justices resigned and two chose not to run again.",
+    "vote_for": 1,
+    "incumbent": "Raquel Montoya-Lewis (not running)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Stevens",
+        "party": null,
+        "incumbent": false,
+        "website": "https://judgestevensforwa.com/",
+        "website_confidence": "sourced",
+        "background": "Mason County Superior Court judge from Shelton. Navy veteran; former senior felony prosecutor, federal public defender, chief public defender for the Colville Confederated Tribes, federal prosecutor, and international prosecutor in Kosovo. UW and UW Law. Says he has tried more than 200 jury trials.",
+        "own_words": [
+          {
+            "text": "\"Public policy is the province of the political branches and not the courts.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "\"I strongly favor judicial restraint and stare decisis.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-3-2026-primary/"
+          },
+          {
+            "text": "Argues most justices now reach the court by governor's appointment rather than election, and that \"Judge Stevens was elected and not appointed.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      },
+      {
+        "name": "Jaime Michelle Hawk",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.judgehawk.com/",
+        "website_confidence": "verified",
+        "background": "King County Superior Court judge from Federal Way. Former federal public defender and ACLU of Washington attorney (the first ACLU-WA lawyer to become a judge), adjunct law professor, and member of the Supreme Court's Minority and Justice Commission. Gonzaga Law. First in her family to attend college.",
+        "own_words": [
+          {
+            "text": "\"Courts should follow the law, protect people's rights, and treat everyone fairly.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-3-2026-primary/"
+          },
+          {
+            "text": "\"She has never had a trial overturned for legal error. She follows the law.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "Pamphlet: Senators Murray and Cantwell appointed her to their federal judge selection committee; more than 100 current and retired judges endorse her.",
+            "is_quote": false,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      }
+    ],
+    "sources": [
+      {
+        "name": "King County Elections: certified candidate list, Nov 3, 2026 (all five Supreme Court positions)",
+        "url": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=55"
+      },
+      {
+        "name": "King County sample ballot, Nov 3, 2026 (PDF; marks Positions 1 and 5 as unexpired 2-year terms)",
+        "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+      },
+      {
+        "name": "Washington SOS General Election Fact Sheet (5 State Supreme Court races)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+      },
+      {
+        "name": "2026 General Election Voters' Pamphlet, King/Seattle edition (candidate statements)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+      },
+      {
+        "name": "Full Court Press: 2026 Washington Supreme Court voter guide (seat status)",
+        "url": "https://wasupremecourt.org/"
+      },
+      {
+        "name": "Washington State Standard: Supreme Court Position 3 survey",
+        "url": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-3-2026-primary/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-supreme-court-pos-4",
+    "state": "WA",
+    "level": "judicial",
+    "office": "Washington Supreme Court, Justice Position 4",
+    "district": null,
+    "scope_plain": "Every Washington voter. Nonpartisan: no party labels on the ballot. Washington uses a top-two system; because each of these races had exactly two candidates after filing, some skipped the August primary and appear only now. Open seat: Justice Charles Johnson, on the court since 1991, hits the mandatory retirement age and is not running. Full six-year term. The Seattle Times notes this race had only two candidates, so it did not appear on the primary ballot at all.",
+    "office_explainer": "Highest state court. Nine justices have the final say on Washington law and the state constitution.",
+    "why_it_matters": "The court decides whether state laws and initiatives square with the state constitution, including tax, school funding and civil rights cases. Justices normally serve six-year terms and must retire at the end of the year they turn 75. Five of the nine seats are on this ballot, more than usual, because two justices resigned and two chose not to run again.",
+    "vote_for": 1,
+    "incumbent": "Charles W. Johnson (retiring)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ian Birk",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.ianbirk.com/",
+        "website_confidence": "verified",
+        "background": "Judge on the Washington Court of Appeals, Division I (Seattle), appointed by Gov. Inslee in 2022 and then elected. Before that, about 20 years in private practice representing individuals and small businesses in insurance, consumer protection and discrimination cases. UW and UW Law.",
+        "own_words": [
+          {
+            "text": "\"Justice shouldn't depend on who you are or where you are.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-4-2026-primary/"
+          },
+          {
+            "text": "\"I'm proud to be the only candidate in this position with statewide judicial experience.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "Pamphlet: has written \"hundreds of decisions across civil, criminal, family, administrative, and constitutional law.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      },
+      {
+        "name": "Sean O'Donnell",
+        "party": null,
+        "incumbent": false,
+        "website": "https://odonnellforjustice.com/",
+        "website_confidence": "verified",
+        "background": "King County Superior Court judge since 2013 (chief of the family law and criminal departments, mental health court lead judge) and Supreme Court justice pro tem. Before that, 12 years as a King County prosecutor, including the Green River Task Force. Georgetown and Seattle University Law.",
+        "own_words": [
+          {
+            "text": "\"The values I bring to my job are compassion, fairness, independence, and honesty.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-4-2026-primary/"
+          },
+          {
+            "text": "\"The lack of legal aid for civil litigants will be the great challenge of the next decade.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-4-2026-primary/"
+          },
+          {
+            "text": "Pamphlet: as chief family law judge \"helped start a protection order court that resulted in hundreds of firearms being surrendered.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      }
+    ],
+    "sources": [
+      {
+        "name": "King County Elections: certified candidate list, Nov 3, 2026 (all five Supreme Court positions)",
+        "url": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=55"
+      },
+      {
+        "name": "King County sample ballot, Nov 3, 2026 (PDF; marks Positions 1 and 5 as unexpired 2-year terms)",
+        "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+      },
+      {
+        "name": "Washington SOS General Election Fact Sheet (5 State Supreme Court races)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+      },
+      {
+        "name": "2026 General Election Voters' Pamphlet, King/Seattle edition (candidate statements)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+      },
+      {
+        "name": "Full Court Press: 2026 Washington Supreme Court voter guide (seat status)",
+        "url": "https://wasupremecourt.org/"
+      },
+      {
+        "name": "Washington State Standard: Supreme Court Position 4 survey",
+        "url": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-4-2026-primary/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-supreme-court-pos-5",
+    "state": "WA",
+    "level": "judicial",
+    "office": "Washington Supreme Court, Justice Position 5 (unexpired 2-year term)",
+    "district": null,
+    "scope_plain": "Every Washington voter. Nonpartisan: no party labels on the ballot. Washington uses a top-two system; because each of these races had exactly two candidates after filing, some skipped the August primary and appear only now. This is a 2-year unexpired term: Justice Barbara Madsen resigned April 3, 2026, Gov. Ferguson appointed Theo Angelis that month, and the winner serves the rest of Madsen's term, through 2028. Position 5 was on the August primary because a third candidate (Greg Miller) filed; Angelis and Larson advanced.",
+    "office_explainer": "Highest state court. Nine justices have the final say on Washington law and the state constitution.",
+    "why_it_matters": "The court decides whether state laws and initiatives square with the state constitution, including tax, school funding and civil rights cases. Justices normally serve six-year terms and must retire at the end of the year they turn 75. Five of the nine seats are on this ballot, more than usual, because two justices resigned and two chose not to run again.",
+    "vote_for": 1,
+    "incumbent": "Theo Angelis (appointed Apr 2026)",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Theo Angelis",
+        "party": null,
+        "incumbent": true,
+        "website": "https://justiceangelis.com/",
+        "website_confidence": "verified",
+        "background": "Supreme Court justice since April 2026, appointed by Gov. Ferguson to fill Justice Barbara Madsen's seat. Previously a 26-year partner at K&L Gates in Seattle leading appellate and intellectual property teams, with pro bono work for immigrant children and veterans. Claremont McKenna, Oxford, LSE and Yale Law. First justice of Middle Eastern descent on the court.",
+        "own_words": [
+          {
+            "text": "\"A fair, independent, and efficient judiciary is the bedrock of a healthy society.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-5-2026-primary/"
+          },
+          {
+            "text": "\"Precedent must never be overruled simply because the membership of the court has changed.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-5-2026-primary/"
+          },
+          {
+            "text": "Pamphlet: \"I sued the federal government when they forced children, as young as 4 years old, to appear without lawyers in immigration court.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      },
+      {
+        "name": "Dave Larson",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.larsonforjustice.com/",
+        "website_confidence": "verified",
+        "background": "Retired Federal Way Municipal Court judge (18 years on the bench, 2008 to 2025) and 23 years as a trial lawyer; former mediator and arbitrator and Federal Way School Board president. Lives in Ellensburg. Seattle University Law and University of Puget Sound.",
+        "own_words": [
+          {
+            "text": "\"We don't need to be tougher or softer on crime; we need to be smarter on crime.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-5-2026-primary/"
+          },
+          {
+            "text": "\"Our Supreme Court needs to be part of the solution and not part of the problem.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-5-2026-primary/"
+          },
+          {
+            "text": "Pamphlet: says the court's decisions have \"weakened\" trial courts' response to crime and addiction, and he would \"help fix current problems.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      }
+    ],
+    "sources": [
+      {
+        "name": "King County Elections: certified candidate list, Nov 3, 2026 (all five Supreme Court positions)",
+        "url": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=55"
+      },
+      {
+        "name": "King County sample ballot, Nov 3, 2026 (PDF; marks Positions 1 and 5 as unexpired 2-year terms)",
+        "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+      },
+      {
+        "name": "Washington SOS General Election Fact Sheet (5 State Supreme Court races)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+      },
+      {
+        "name": "2026 General Election Voters' Pamphlet, King/Seattle edition (candidate statements)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+      },
+      {
+        "name": "Full Court Press: 2026 Washington Supreme Court voter guide (seat status)",
+        "url": "https://wasupremecourt.org/"
+      },
+      {
+        "name": "Washington State Standard: Supreme Court Position 5 survey (notes Greg Miller did not respond)",
+        "url": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-5-2026-primary/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-supreme-court-pos-7",
+    "state": "WA",
+    "level": "judicial",
+    "office": "Washington Supreme Court, Justice Position 7",
+    "district": null,
+    "scope_plain": "Every Washington voter. Nonpartisan: no party labels on the ballot. Washington uses a top-two system; some of these races skipped the August primary because only two people filed. The one seat with a sitting justice running for re-election. Full six-year term. Both candidates are on the November ballot.",
+    "office_explainer": "Highest state court. Nine justices have the final say on Washington law and the state constitution.",
+    "why_it_matters": "The court decides whether state laws and initiatives square with the state constitution, including tax, school funding and civil rights cases. Justices normally serve six-year terms and must retire at the end of the year they turn 75. Five of the nine seats are on this ballot, more than usual, because two justices resigned and two chose not to run again.",
+    "vote_for": 1,
+    "incumbent": "Debra L. Stephens",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Debra L. Stephens",
+        "party": null,
+        "incumbent": true,
+        "website": "https://justicestephens.com/",
+        "website_confidence": "verified",
+        "background": "Justice since 2008 and the court's current chief justice (chosen by the other justices). From Spokane; previously a Court of Appeals judge (2007) and an appellate attorney and Gonzaga law professor. Re-elected in 2014 and 2020. First woman from Eastern Washington on the court. Wrote the McCleary school-funding decision.",
+        "own_words": [
+          {
+            "text": "\"I approach the law with judicial humility and a deep respect for text and structure.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-7-2026-primary/"
+          },
+          {
+            "text": "\"In an era of growing attempts to politicize the judiciary, I work every day to maintain the integrity and independence of our courts.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "Pamphlet: cites \"a proven record of expanding access to justice, improving efficiency and transparency.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      },
+      {
+        "name": "Todd A. Bloom",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Tacoma-area attorney (Todd A. Bloom, PLLC), CPA, CFA and CFP, with more than two decades advising companies and families and a decade as a tax attorney at major accounting firms. Navy officer on active duty 2002 to 2013 after being recalled post-9/11. Member of the WSBA Board of Governors. Tulane JD/MBA, UW LL.M. No campaign website listed in the pamphlet (contact: electtoddbloom@gmail.com).",
+        "own_words": [
+          {
+            "text": "\"My judicial philosophy is rooted in the belief that judges must faithfully interpret and apply the law.\"",
+            "is_quote": true,
+            "source": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-7-2026-primary/"
+          },
+          {
+            "text": "\"This year's election is a choice: whether to retain the current justices or to give someone new your vote.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          },
+          {
+            "text": "Pamphlet: says he represents \"meaningful new perspective, experience, and common sense which will bring balance to the court.\"",
+            "is_quote": true,
+            "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/washington"
+      }
+    ],
+    "sources": [
+      {
+        "name": "King County Elections: certified candidate list, Nov 3, 2026 (all five Supreme Court positions)",
+        "url": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=55"
+      },
+      {
+        "name": "King County sample ballot, Nov 3, 2026 (PDF; marks Positions 1 and 5 as unexpired 2-year terms)",
+        "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+      },
+      {
+        "name": "Washington SOS General Election Fact Sheet (5 State Supreme Court races)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+      },
+      {
+        "name": "2026 General Election Voters' Pamphlet, King/Seattle edition (candidate statements)",
+        "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+      },
+      {
+        "name": "Full Court Press: 2026 Washington Supreme Court voter guide (seat status)",
+        "url": "https://wasupremecourt.org/"
+      },
+      {
+        "name": "Washington State Standard: Supreme Court Position 7 survey",
+        "url": "https://washingtonstatestandard.com/voter-guides/contests/washington-supreme-court-7-2026-primary/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

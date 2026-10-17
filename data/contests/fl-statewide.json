@@ -1,0 +1,777 @@
+[
+  {
+    "id": "fl-us-senate-special",
+    "state": "FL",
+    "level": "federal",
+    "office": "U.S. Senate (special election, unexpired term ending January 2029)",
+    "district": null,
+    "scope_plain": "Every Florida voter. This is a special election to finish the term Marco Rubio left when he became U.S. Secretary of State in January 2025. The winner serves through January 3, 2029, then faces a regular election in 2028. Write-in candidates do not appear by name; the ballot has a blank write-in line.",
+    "office_explainer": "One of Florida's two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Senators confirm federal judges and cabinet members and vote on national taxes, health care, immigration and spending. Ashley Moody was appointed, not elected, so this is the first time voters weigh in on the seat since 2022.",
+    "vote_for": 1,
+    "incumbent": "Ashley Moody",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashley Moody",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://ashleymoody.com/",
+        "website_confidence": "sourced",
+        "background": "Appointed to the U.S. Senate by Gov. DeSantis in January 2025 to replace Marco Rubio. Florida Attorney General 2019 to 2025; before that a Hillsborough County circuit judge and federal prosecutor. Won the Aug 18 Republican primary with 79.6%.",
+        "own_words": [
+          {
+            "text": "\"The top three issues are the economy, public safety, and restoring trust and accountability to Washington.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+          },
+          {
+            "text": "\"I am working to eliminate waste, fraud, and abuse so every taxpayer dollar is spent wisely.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Angie Nixon",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://angienixon.com/",
+        "website_confidence": "sourced",
+        "background": "State representative for House District 13 (Jacksonville) since 2020. Community organizer before the Legislature. Won the Aug 18 Democratic primary over Alex Vindman, 56.1% to 43.9%.",
+        "own_words": [
+          {
+            "text": "\"Floridians are being crushed by an affordability crisis created by greed and corruption.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+          },
+          {
+            "text": "\"I will fight to make childcare affordable and accessible.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Neil J. Gillespie",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "No-party candidate. Did not respond to the News4JAX questionnaire; no campaign website found.",
+        "own_words": [
+          {
+            "text": "Did not respond to the News4JAX candidate questionnaire.",
+            "is_quote": false,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+          },
+          {
+            "text": "No campaign website or platform statement found in this run.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Neil_Gillespie"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Delilah election slate (official state election-office data), FL U.S. Senate candidates, cycle 2026",
+        "url": "https://mcp.delilahusa.com/"
+      },
+      {
+        "name": "WFTV: Ashley Moody, Angie Nixon win Florida Senate primaries (Aug 18, 2026)",
+        "url": "https://www.wftv.com/news/local/ashley-moody-angie-nixon-win-florida-senate-primaries/QPPRX4F5KJDULKLU37T5YINKZY/"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida's U.S. Senate race (updated Aug 25, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+      },
+      {
+        "name": "Wikipedia: 2026 United States Senate special election in Florida (primary results, endorsements)",
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_special_election_in_Florida"
+      },
+      {
+        "name": "Florida Division of Elections: candidate listing",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-governor",
+    "state": "FL",
+    "level": "state",
+    "office": "Governor and Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Florida voter. Governor and lieutenant governor run as one ticket; you vote once for the pair. Open seat: Ron DeSantis is term-limited. The ballot lists 2 major-party tickets, 1 Libertarian ticket and 5 no-party (NPA) candidates, plus a write-in line (5 write-ins qualified; their names are not printed). Primary results: Donalds won the Republican primary with 47.8% over Lt. Gov. Jay Collins (25.2%); Jolly won the Democratic primary with 60.9%. Jerry Demings and Jason Pizzo, mentioned in earlier drafts, are NOT on the ballot.",
+    "office_explainer": "Runs the state's executive branch: signs or vetoes laws, proposes the budget, appoints judges and agency heads.",
+    "why_it_matters": "Four-year term. The governor appoints Florida Supreme Court justices and hundreds of board members, directs hurricane and emergency response, and sets the agenda on property insurance, schools, growth and taxes. First open-seat governor race since 2018.",
+    "vote_for": 1,
+    "incumbent": "Ron DeSantis (term-limited, not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Byron Donalds (Lt. Gov.: Bryan Avila)",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://byrondonalds.com/",
+        "website_confidence": "verified",
+        "background": "U.S. representative for Florida's 19th District (Naples and Fort Myers) since 2021; Florida House 2016 to 2020; background in insurance and banking. Endorsed by President Trump in February 2025. Running mate Bryan Avila is a state senator from Miami-Dade, named Aug 25, 2026.",
+        "own_words": [
+          {
+            "text": "\"Florida cannot become too expensive for working families and seniors on fixed incomes.\"",
+            "is_quote": true,
+            "source": "https://byrondonalds.com/"
+          },
+          {
+            "text": "\"We must secure our borders, keep local neighborhoods safe.\"",
+            "is_quote": true,
+            "source": "https://byrondonalds.com/"
+          },
+          {
+            "text": "Education plank: \"Every student should Read to Succeed, stay active and healthy, and have a debt-free route to a great-paying job.\"",
+            "is_quote": true,
+            "source": "https://byrondonalds.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "David Jolly (Lt. Gov.: Gwen Graham)",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://davidjolly.com/",
+        "website_confidence": "verified",
+        "background": "Former Republican U.S. representative for Pinellas County (2014 to 2017) who left the GOP in 2018 and registered as a Democrat in 2025; MSNBC commentator. Running mate Gwen Graham is a former U.S. representative for North Florida and daughter of the late Gov. Bob Graham.",
+        "own_words": [
+          {
+            "text": "On home insurance: \"Here is the plan to cut them by 60 to 70 percent.\"",
+            "is_quote": true,
+            "source": "https://davidjolly.com/"
+          },
+          {
+            "text": "\"We can't move forward together if we are constantly being driven apart.\"",
+            "is_quote": true,
+            "source": "https://davidjolly.com/"
+          },
+          {
+            "text": "Economy: \"everyone deserves a shot at work, wages, and wealth.\" Site also lists housing, healthcare, education and 'no data centers.'",
+            "is_quote": true,
+            "source": "https://davidjolly.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Scott Eckhard Jewett (Lt. Gov.: Nicole Skelly)",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://www.scottjewett.com/",
+        "website_confidence": "sourced",
+        "background": "Libertarian Party of Florida nominee; unopposed in the Aug 18 Libertarian primary. Running mate Nicole Skelly per the state candidate file.",
+        "own_words": [
+          {
+            "text": "Platform not captured this run; see the campaign's 'Our Mission' page.",
+            "is_quote": false,
+            "source": "https://www.scottjewett.com/our-mission/"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Scott_Jewett"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Dean Abrams",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://www.deanabrams.com/",
+        "website_confidence": "sourced",
+        "background": "No-party candidate. Background not captured this run.",
+        "own_words": [
+          { "text": "Platform not captured this run.", "is_quote": false, "source": "https://www.deanabrams.com/" },
+          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Dean_Abrams" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Charles Burkett",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://burkettforgov.com/",
+        "website_confidence": "sourced",
+        "background": "Former mayor of Surfside (Miami-Dade). Ran briefly as a Republican before switching to no-party.",
+        "own_words": [
+          { "text": "Platform not captured this run.", "is_quote": false, "source": "https://burkettforgov.com/" },
+          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Charles_Burkett_(Florida)" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Jeffrey Peter \"Dr. Jeff\" Datto",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "No-party candidate. No campaign website found; the state candidate page is the only listing.",
+        "own_words": [
+          { "text": "Platform not captured this run.", "is_quote": false, "source": "https://ballotpedia.org/Jeffrey_Datto" },
+          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Jeffrey_Datto" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Moliere \"Moe\" Dimanche",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://nomoecorruption.com/",
+        "website_confidence": "sourced",
+        "background": "No-party candidate. Background not captured this run.",
+        "own_words": [
+          { "text": "Platform not captured this run.", "is_quote": false, "source": "https://nomoecorruption.com/" },
+          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Moliere_Dimanche" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Frank J. Russo",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://www.russo2026.com/",
+        "website_confidence": "sourced",
+        "background": "No-party candidate. Background not captured this run.",
+        "own_words": [
+          { "text": "Platform not captured this run.", "is_quote": false, "source": "https://www.russo2026.com/" },
+          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Frank_Russo" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Delilah election slate (official state election-office data), race 2026-fl-gov, general contest, with Aug 18 primary results from results.elections.myflorida.com",
+        "url": "https://results.elections.myflorida.com/"
+      },
+      {
+        "name": "Florida Phoenix voter guide: 2026 general, Governor (full ballot list)",
+        "url": "https://floridaphoenix.com/voter-guides/contests/2026-general-governor/"
+      },
+      {
+        "name": "WLRN: Byron Donalds names state Sen. Bryan Avila as running mate (Aug 25, 2026)",
+        "url": "https://www.wlrn.org/government-politics/2026-08-25/byron-donalds-lt-governor-candidate-elections-florida"
+      },
+      {
+        "name": "Sparker's Soapbox: Florida Governor general election 2026 (candidates, endorsements; updated Oct 12, 2026)",
+        "url": "https://www.sparkers-soapbox.com/florida-governor-general-election-2026/"
+      },
+      {
+        "name": "Florida Division of Elections: candidate listing",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-attorney-general",
+    "state": "FL",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Florida voter. One of three elected Cabinet seats that, with the governor, make up the Florida Cabinet. Two candidates; both were unopposed in their primaries.",
+    "office_explainer": "Florida's top lawyer. Defends state laws in court, runs consumer protection, and sits on the Cabinet.",
+    "why_it_matters": "Decides which lawsuits Florida files and joins, from immigration to tech regulation, and defends state laws when they are challenged. James Uthmeier was appointed, not elected, so this is voters' first say on him.",
+    "vote_for": 1,
+    "incumbent": "James Uthmeier",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "James Uthmeier",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://jamesforfl.com/",
+        "website_confidence": "verified",
+        "background": "Appointed attorney general by Gov. DeSantis in February 2025 when Ashley Moody went to the U.S. Senate. Previously DeSantis's chief of staff and general counsel. Georgetown Law. Did not respond to the News4JAX questionnaire.",
+        "own_words": [
+          {
+            "text": "\"James is focused on keeping Florida safe, strong, and free.\"",
+            "is_quote": true,
+            "source": "https://jamesforfl.com/"
+          },
+          {
+            "text": "Lists \"prosecuting dangerous criminals to combatting illegal immigration\" and suing corporations he says are \"sexualizing and indoctrinating our children.\"",
+            "is_quote": true,
+            "source": "https://jamesforfl.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Jose Javier Rodriguez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://jjr.vote/",
+        "website_confidence": "sourced",
+        "background": "Workers' rights attorney; former state senator (2016 to 2020) and state representative from Miami-Dade; Assistant Secretary of Labor in the Biden administration. Harvard Law.",
+        "own_words": [
+          {
+            "text": "\"The top three issues are crime, costs and corruption.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-attorney-general/"
+          },
+          {
+            "text": "\"I hope to be remembered for restoring the Attorney General's office to its core mission.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-attorney-general/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Delilah election slate (official state election-office data), race 2026-fl-ag, general contest",
+        "url": "https://mcp.delilahusa.com/"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida Attorney General",
+        "url": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-attorney-general/"
+      },
+      {
+        "name": "WLRN: 'Crime, costs and corruption': José Javier Rodríguez on the battle for Florida's AG office (Sept 30, 2026)",
+        "url": "https://www.wlrn.org/government-politics/2026-09-30/jose-javier-rodriguez-florida-ag-attorney-general-uthmeier"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-cfo",
+    "state": "FL",
+    "level": "state",
+    "office": "Chief Financial Officer",
+    "district": null,
+    "scope_plain": "Every Florida voter. Cabinet seat. Two candidates on the ballot. NOTE: the Delilah feed did not return this race; the slate comes from the ClickOrlando voter guide (Oct 16, 2026) and should be checked against the Division of Elections list.",
+    "office_explainer": "State treasurer and chief accountant. Pays the state's bills, oversees insurance regulation and the state fire marshal.",
+    "why_it_matters": "The CFO runs the Department of Financial Services, which handles insurance consumer complaints, unclaimed property and state payments, and sits on the Cabinet that oversees insurance regulation. Property insurance is Florida's biggest pocketbook issue.",
+    "vote_for": 1,
+    "incumbent": "Blaise Ingoglia",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Blaise Ingoglia",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://blaiseforflorida.com/",
+        "website_confidence": "sourced",
+        "background": "Appointed CFO by Gov. DeSantis in July 2025 after Jimmy Patronis left for Congress. Former state senator and state representative from Spring Hill; former chair of the Republican Party of Florida; runs home-builder Hartland Homes. Did not respond to the ClickOrlando questionnaire; quotes are from a campaign release.",
+        "own_words": [
+          {
+            "text": "\"Families and taxpayers deserve a trusted, conservative fighter to make Florida more affordable.\"",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-chief-financial-officer-race/"
+          },
+          {
+            "text": "\"I promise you, nobody will work harder than I will to deliver on these promises.\"",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-chief-financial-officer-race/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Annette Taddeo",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://annettetaddeo.com/",
+        "website_confidence": "sourced",
+        "background": "Former state senator from Miami-Dade (2017 to 2022) and businesswoman; 2014 Democratic nominee for lieutenant governor. Won the Aug 18 Democratic primary over Earle Ford.",
+        "own_words": [
+          {
+            "text": "\"Florida's regulations should protect consumers, not powerful interests.\"",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-chief-financial-officer-race/"
+          },
+          {
+            "text": "\"My priorities are affordability, accountability, and anti-corruption.\"",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-chief-financial-officer-race/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "ClickOrlando (WKMG) 2026 Voter's Guide: Florida Chief Financial Officer race (Oct 16, 2026)",
+        "url": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-chief-financial-officer-race/"
+      },
+      {
+        "name": "Florida Phoenix: Democrats Annette Taddeo and Earle Ford compete to face CFO Blaise Ingoglia (July 24, 2026)",
+        "url": "https://floridaphoenix.com/2026/07/24/democrats-annette-taddeo-and-earle-ford-compete-to-face-cfo-blaise-ingoglia-in-november/"
+      },
+      {
+        "name": "Florida Division of Elections: candidate listing",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-agriculture-commissioner",
+    "state": "FL",
+    "level": "state",
+    "office": "Commissioner of Agriculture",
+    "district": null,
+    "scope_plain": "Every Florida voter. Cabinet seat. Two names printed plus a write-in line (Kyle 'KC' Gibson qualified as a write-in; his name is not printed).",
+    "office_explainer": "Runs the Department of Agriculture and Consumer Services: farms, food safety, gas pump inspections, concealed weapon licenses.",
+    "why_it_matters": "Beyond farming, this office licenses concealed weapons, inspects gas pumps and grocery scales, handles consumer complaints and sits on the Cabinet.",
+    "vote_for": 1,
+    "incumbent": "Wilton Simpson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Wilton Simpson",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://wiltonsimpson.com/",
+        "website_confidence": "verified",
+        "background": "Agriculture commissioner since 2023. Former president of the Florida Senate (2020 to 2022). Egg farmer from Trilby in Pasco County. Won the Aug 18 Republican primary. Did not respond to the News4JAX questionnaire.",
+        "own_words": [
+          {
+            "text": "Site pledges to protect \"family farms, clean water, consumers, and businesses\": \"Wilton knows we can protect them all.\"",
+            "is_quote": true,
+            "source": "https://wiltonsimpson.com/"
+          },
+          {
+            "text": "Touts farmland preserved through the Rural and Family Lands Protection Program and the lab-grown meat ban: \"Protect Floridians from These Untested Products.\"",
+            "is_quote": true,
+            "source": "https://wiltonsimpson.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Joey Mendoza Atkins",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.joeyforflorida.com/",
+        "website_confidence": "verified",
+        "background": "Miami and Tampa trial attorney with legal-aid experience representing farmworkers; 2024 Democratic nominee for Florida's 26th Congressional District. Won the Aug 18 Democratic primary over Donald Prichard.",
+        "own_words": [
+          {
+            "text": "\"To make Florida more affordable by fighting for Florida consumers against the Tariff Tax.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-agriculture-commissioner/"
+          },
+          {
+            "text": "\"Making farming and food affordable again, protecting and preserving our natural resources.\"",
+            "is_quote": true,
+            "source": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-agriculture-commissioner/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Delilah election slate (official state election-office data), race 2026-fl-agcomm, general contest",
+        "url": "https://mcp.delilahusa.com/"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida Agriculture Commissioner (updated Aug 25, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/07/31/2026-voters-guide-florida-agriculture-commissioner/"
+      },
+      {
+        "name": "Florida Election Watch: Commissioner of Agriculture",
+        "url": "https://floridaelectionwatch.gov/StateOffices/CommissionerOfAgriculture"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-muniz",
+    "state": "FL",
+    "level": "judicial",
+    "office": "Florida Supreme Court: retain Chief Justice Carlos G. Muñiz?",
+    "district": null,
+    "scope_plain": "Every Florida voter. Yes/no question. Muñiz is the only Supreme Court justice on the 2026 ballot (retained in 2020; justices face voters every six years). Florida has no official judicial performance commission, and The Florida Bar discontinued its lawyer retention poll in 2023, so there is no 2026 rating. No Florida appellate judge has ever lost a retention vote.",
+    "office_explainer": "Highest state court. Final say on Florida law. Vote yes to keep the justice, no to remove.",
+    "why_it_matters": "The seven justices decide what the Florida Constitution means, including on abortion, redistricting, ballot amendments and the death penalty. If a justice is not retained, the governor appoints a replacement.",
+    "vote_for": 1,
+    "incumbent": "Carlos G. Muñiz",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Carlos G. Muñiz",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Chief Justice since 2022 (re-elected by his peers 2024); on the court since January 2019, appointed by Gov. DeSantis. Before that: general counsel of the U.S. Department of Education, deputy attorney general under Pam Bondi, deputy general counsel to Gov. Jeb Bush. Yale Law 1997, UVA 1991.",
+        "own_words": [
+          {
+            "text": "Notable opinions: joined the 6-1 majority in Planned Parenthood v. State (April 2024) holding the state privacy clause does not protect abortion; wrote the July 2025 opinion upholding the DeSantis congressional map; in Conage directed courts to consider \"all textual and structural clues\" when reading statutes.",
+            "is_quote": false,
+            "source": "https://www.sparkers-soapbox.com/florida-supreme-court-merit-retention-2026-general/"
+          },
+          {
+            "text": "Official court biography.",
+            "is_quote": false,
+            "source": "https://supremecourt.flcourts.gov/Justices/Chief-Justice-Carlos-G.-Mu%C3%B1iz"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)",
+        "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar: 2026 Merit Retention Election (judge list and biographies)",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      },
+      {
+        "name": "Sparker's Soapbox: Florida Supreme Court Merit Retention 2026 (updated Oct 13, 2026)",
+        "url": "https://www.sparkers-soapbox.com/florida-supreme-court-merit-retention-2026-general/"
+      },
+      {
+        "name": "Florida Supreme Court: Chief Justice Carlos G. Muñiz",
+        "url": "https://supremecourt.flcourts.gov/Justices/Chief-Justice-Carlos-G.-Mu%C3%B1iz"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-1dca-lewis",
+    "state": "FL",
+    "level": "judicial",
+    "office": "First District Court of Appeal: retain Judge Joseph Lewis, Jr.?",
+    "district": "1st DCA (Panhandle and North Florida: Escambia, Santa Rosa, Okaloosa, Walton, Leon, Gadsden, Bay and 25 other counties)",
+    "scope_plain": "Only voters in the First District see this. Tallahassee (Leon) and Pensacola (Escambia) are in the 1st DCA. Orlando is NOT: Orange County is in the 6th DCA, and no 6th DCA judges are up in 2026, so Orlando voters see no DCA questions this year.",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "District courts of appeal are the final stop for most Florida appeals; the Supreme Court takes only a small share. The 1st DCA also hears many cases against state agencies because it sits in Tallahassee.",
+    "vote_for": 1,
+    "incumbent": "Joseph Lewis, Jr.",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Joseph Lewis, Jr.",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "On the 1st DCA since 2001 (appointed by Gov. Jeb Bush). The court's longest-serving judge. Last retained in 2020 with 84% of responding lawyers recommending retention in the Bar's final poll.",
+        "own_words": [
+          {
+            "text": "No 2026 performance rating exists; The Florida Bar ended its retention poll in 2023. See the court biography.",
+            "is_quote": false,
+            "source": "https://1dca.flcourts.gov/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
+      { "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)", "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/" },
+      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-1dca-nordby",
+    "state": "FL",
+    "level": "judicial",
+    "office": "First District Court of Appeal: retain Judge Rachel Nordby?",
+    "district": "1st DCA (Panhandle and North Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no).",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
+    "vote_for": 1,
+    "incumbent": "Rachel Nordby",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Rachel Nordby",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed to the 1st DCA in 2019 by Gov. DeSantis. Former deputy solicitor general of Florida. First retained in 2020 (71% in the Bar's final poll).",
+        "own_words": [
+          {
+            "text": "No 2026 performance rating exists; The Florida Bar ended its retention poll in 2023. See the court biography.",
+            "is_quote": false,
+            "source": "https://1dca.flcourts.gov/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
+      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-1dca-osterhaus",
+    "state": "FL",
+    "level": "judicial",
+    "office": "First District Court of Appeal: retain Chief Judge Tim Osterhaus?",
+    "district": "1st DCA (Panhandle and North Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no). NOTE: The Florida Bar's April 2026 list and News4JAX's Sept 24 guide both include Osterhaus; the Bar's current web page omits him. Confirm on the Division of Elections retention list or your county sample ballot.",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
+    "vote_for": 1,
+    "incumbent": "Tim Osterhaus",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Tim Osterhaus",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Chief Judge of the 1st DCA. Appointed in 2013 by Gov. Rick Scott; former Florida solicitor general. Last retained in 2020 (76% in the Bar's final poll).",
+        "own_words": [
+          {
+            "text": "No 2026 performance rating exists; The Florida Bar ended its retention poll in 2023. See the court biography.",
+            "is_quote": false,
+            "source": "https://1dca.flcourts.gov/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
+      { "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)", "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/" },
+      { "name": "Ballotpedia: Florida intermediate appellate court elections, 2026", "url": "https://ballotpedia.org/Florida_intermediate_appellate_court_elections,_2026" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-1dca-roberts",
+    "state": "FL",
+    "level": "judicial",
+    "office": "First District Court of Appeal: retain Judge Clay Roberts?",
+    "district": "1st DCA (Panhandle and North Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no).",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
+    "vote_for": 1,
+    "incumbent": "L. Clayton Roberts",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Clay Roberts",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed to the 1st DCA in 2007 by Gov. Charlie Crist. Former director of the Florida Division of Elections and general counsel to the Secretary of State. Last retained in 2020 (80% in the Bar's final poll).",
+        "own_words": [
+          {
+            "text": "No 2026 performance rating exists; The Florida Bar ended its retention poll in 2023. See the court biography.",
+            "is_quote": false,
+            "source": "https://1dca.flcourts.gov/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
+      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "fl-retention-1dca-treadwell",
+    "state": "FL",
+    "level": "judicial",
+    "office": "First District Court of Appeal: retain Judge Raymond Treadwell?",
+    "district": "1st DCA (Panhandle and North Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no). First retention vote for this judge.",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "District courts of appeal are the final stop for most Florida appeals. New appellate judges face voters in the first general election more than a year after appointment, then every six years.",
+    "vote_for": 1,
+    "incumbent": "Raymond F. Treadwell",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Raymond Treadwell",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed to the 1st DCA in 2025 by Gov. DeSantis. Former general counsel to Gov. DeSantis. This is his first retention vote; no Bar poll has ever rated him.",
+        "own_words": [
+          {
+            "text": "No performance rating exists; The Florida Bar ended its retention poll in 2023. See the court biography.",
+            "is_quote": false,
+            "source": "https://1dca.flcourts.gov/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
+      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+    ],
+    "confidence": "sourced"
+  }
+]

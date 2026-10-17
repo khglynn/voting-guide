@@ -1,0 +1,265 @@
+[
+  {
+    "id": "or-governor",
+    "state": "OR",
+    "level": "state",
+    "office": "Governor",
+    "district": null,
+    "scope_plain": "Every Oregon voter. Most votes wins; no runoff. Oregon allows fusion nominations, so two candidates show two party labels on the ballot: Kotek as 'Democrat, Working Families' and Drazan as 'Republican, Libertarian.' Names appear in this year's random ballot order: Smith, Kotek, Drazan.",
+    "office_explainer": "Runs the state government, signs or vetoes laws, proposes the budget, and appoints agency heads and judges.",
+    "why_it_matters": "Four-year term. The governor sets the state's direction on housing and homelessness, the behavioral health system, schools, wildfire, and transportation funding, and fills vacancies on Oregon courts.",
+    "vote_for": 1,
+    "incumbent": "Tina Kotek",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brett Smith",
+        "party": "Pacific Green",
+        "incumbent": false,
+        "website": "https://brett-smith.us/",
+        "website_confidence": "verified",
+        "background": "Inventor, welder, fabricator and small business owner; no prior government experience. Ran for Congress in Oregon's 5th District in 2024 as an Independent Party candidate and finished third with 4.7%.",
+        "own_words": [
+          {
+            "text": "Frames his run as 'The Protest Vote': \"To Independents, third-party and unaffiliated. It's you that will make or break this race.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Pledges \"a full audit of our systems and tax code by independent contractors,\" \"healthcare for all,\" and \"a permanent moratorium on data centers.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Tina Kotek",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://www.tinafororegon.com/",
+        "website_confidence": "verified",
+        "background": "Governor since January 2023. Before that, Oregon House Speaker and state representative; worked at Oregon Food Bank and Children First. Won the May 2026 Democratic primary with 86%.",
+        "own_words": [
+          {
+            "text": "\"Fighting back against the rising cost of housing,\" by \"cutting red tape to build more affordable homes.\" Says Oregon has outpaced the nation in new housing production.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "\"Supports moratoriums on new data centers,\" and is \"charting a path to statewide universal preschool\" with \"more learning time - not shorter school years.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Says she declared a housing emergency and increased shelter and treatment beds, and \"will continue the fight to reduce homelessness.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Christine Drazan",
+        "party": "Republican, Libertarian",
+        "incumbent": false,
+        "website": "https://www.christinefororegon.com/",
+        "website_confidence": "verified",
+        "background": "State senator from Canby; former state representative and House Republican Leader. The 2022 Republican nominee for governor. Won the May 2026 Republican primary with 41%; the Libertarian Party cross-nominated her in July.",
+        "own_words": [
+          {
+            "text": "\"On day one, Christine will order state agencies to repeal rules, fees and mandates driving up the cost of housing, energy, food, transportation, childcare and healthcare.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "The Drazan Plan: \"Break the cycle of homelessness and addiction,\" \"Restore graduation requirements and fix our schools,\" and \"Audit spending and deliver results.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "\"Our problems are not partisan problems; they are leadership problems.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Oregon SoS: 2026 General Election State Voters' Pamphlet, Multnomah edition (certified candidate list, pp. 28-29; statements pp. 38-39)",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Oregon SoS: certified May 19, 2026 primary abstract (via Delilah / Election Deets)",
+        "url": "https://records.sos.state.or.us/ORSOSCMSearch/Search/SearchDetail.aspx?uri=16180585"
+      },
+      {
+        "name": "OPB, Aug. 21, 2026: Kotek, Drazan, Smith and the minor parties in a three-way race for governor",
+        "url": "https://www.opb.org/article/2026/08/21/kotek-drazan-smith-minor-parties-three-way-race-oregon-governor/"
+      },
+      {
+        "name": "Ballotpedia: Brett Smith (Oregon)",
+        "url": "https://ballotpedia.org/Brett_Smith_(Oregon)"
+      },
+      {
+        "name": "Ballotpedia: Christine Drazan",
+        "url": "https://ballotpedia.org/Christine_Drazan"
+      },
+      {
+        "name": "Ballotpedia: Tina Kotek",
+        "url": "https://ballotpedia.org/Tina_Kotek"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-us-senate",
+    "state": "OR",
+    "level": "federal",
+    "office": "U.S. Senator",
+    "district": null,
+    "scope_plain": "Every Oregon voter. Most votes wins; no runoff. Fusion labels on the ballot: Merkley as 'Democrat, Working Families,' Henry as 'Progressive, Pacific Green.' Ballot order this year: Smith, Merkley, Dye, Henry.",
+    "office_explainer": "One of Oregon's two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Six-year term. Senators confirm federal judges and cabinet members and set national policy on taxes, health care, immigration and public lands, which cover more than half of Oregon.",
+    "vote_for": 1,
+    "incumbent": "Jeff Merkley",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Brock Smith",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.davidbrocksmithfororegon.com/",
+        "website_confidence": "sourced",
+        "background": "State senator and Senate deputy Republican leader from Port Orford in southwest Oregon; former state representative and Curry County commissioner; small business owner. Won the May 2026 Republican primary over several opponents.",
+        "own_words": [
+          {
+            "text": "\"Making Oregon Affordable\": says he \"fought Kotek's-Gas-Tax, stopped new tax-hikes,\" and will keep working to eliminate fraud and cut unnecessary spending.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "\"Ending the Homelessness Crisis: We need drug and mental health treatment that works!\" Wants to \"bring an end to permanent street camping.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Wants data centers held accountable so their costs aren't \"shifted onto Oregon households.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Jeff Merkley",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://jeffmerkley.com/",
+        "website_confidence": "verified",
+        "background": "U.S. senator since 2009, seeking a fourth term. Former Oregon House Speaker and state representative; worked at Habitat for Humanity and as a national security analyst. Grew up in and still lives in east Portland.",
+        "own_words": [
+          {
+            "text": "His stated vision: \"Families thrive, and the rich pay their fair share.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "\"Save our elections: Stop gerrymandering. Require paper ballots. End secret campaign funding. Expand vote-by-mail.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "On housing and costs: \"Ban hedge funds from buying single-family homes\" and \"stop drug companies from price gouging.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Gary Lyndon Dye",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Portland-born engineering consultant with past work in natural gas measurement and oil refining. Ran for U.S. Senate as a Libertarian in 2020, for Metro Council President in 2022, and in the 2024 Republican primary for the 3rd Congressional District. Chose not to submit a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No 2026 statement. The state pamphlet marks him as a candidate who 'chose not to submit a voters' pamphlet statement.'",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "From an earlier run: \"We need to rid ourselves of career politicians.\"",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Gary_Dye"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Chris Henry",
+        "party": "Progressive, Pacific Green",
+        "incumbent": false,
+        "website": "https://chrishenry.org/",
+        "website_confidence": "sourced",
+        "background": "Long-haul truck driver and former UAW aircraft mechanic; union shop steward and organizer. Has run before as a Progressive: U.S. Senate 2022 (1.9%), State Treasurer 2020 (4.4%), Portland City Council District 4 in 2024.",
+        "own_words": [
+          {
+            "text": "\"Cut massive U.S. military\" spending and \"end pointless wars.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "\"Medicare for All,\" and \"triple the $7.25/hour minimum wage, same since 2009.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Wants a federal \"Shaky Day Fund\" to prepare Oregon for the Cascadia earthquake, and says \"no special interests are funding my campaign.\"",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Oregon SoS: 2026 General Election State Voters' Pamphlet, Multnomah edition (certified candidate list p. 28; statements pp. 30-31)",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Delilah / Election Deets: Oregon 2026 U.S. Senate candidate directory (ballot status)",
+        "url": "https://ballotpedia.org/David_Brock_Smith_(Oregon_state_senator)"
+      },
+      {
+        "name": "Ballotpedia: Gary Dye",
+        "url": "https://ballotpedia.org/Gary_Dye"
+      },
+      {
+        "name": "Ballotpedia: Chris Henry (Oregon)",
+        "url": "https://ballotpedia.org/Chris_Henry_(Oregon)"
+      },
+      {
+        "name": "Ballotpedia: Jeff Merkley",
+        "url": "https://ballotpedia.org/Jeff_Merkley"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

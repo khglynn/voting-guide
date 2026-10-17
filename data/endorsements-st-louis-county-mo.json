@@ -1,0 +1,1032 @@
+[
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-county-executive",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-county-executive",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-prosecuting-attorney",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-prosecuting-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-assessor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-assessor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-council-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-council-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-council-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-council-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-council-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-council-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-council-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-council-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-us-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-sd-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-sd-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-sd-14",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-sd-14",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-sd-24",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-sd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-83",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-83",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-86",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-88",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-88",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-89",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-89",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-90",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-90",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-91",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-91",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-92",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-92",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-96",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-96",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-98",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-98",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-99",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-99",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-100",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-101",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-101",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-hd-110",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "mo-hd-110",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-stewart",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-stewart",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-stewart",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-borbonus",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-borbonus",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-borbonus",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-ott",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-ott",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-ott",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-mcnelley",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-mcnelley",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-mcnelley",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-mcpherson",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-mcpherson",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-mcpherson",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-baker",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-baker",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-baker",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-hearne",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-hearne",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-hearne",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-dunne",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-dunne",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-dunne",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-lasater",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-lasater",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-lasater",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-klapp",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-klapp",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-klapp",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-ruth",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-ruth",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-ruth",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-lewis",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-snyder",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-snyder",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-snyder",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-ghasedi",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-ghasedi",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-ghasedi",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-retention-dillon-amelung",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no endorsement in this race could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-retention-dillon-amelung",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates; it publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobar-jpr",
+    "target_id": "stlco-retention-dillon-amelung",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Committee majority recommendation: retain. It recommended retaining all 15 St. Louis County (21st Circuit) judges on the 2026 ballot.",
+    "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no editorial on this measure could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League of Women Voters of Metro St. Louis position on this local measure was found as of Oct. 16.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "stlco-prop-s",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no editorial on this measure could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "stlco-prop-s",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League of Women Voters of Metro St. Louis position on this local measure was found as of Oct. 16.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "webster-groves-sd-prop-w",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no editorial on this measure could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "webster-groves-sd-prop-w",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League of Women Voters of Metro St. Louis position on this local measure was found as of Oct. 16.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "parkway-sd-prop-p",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Dispatch's general-election editorials are paywalled; no editorial on this measure could be read or confirmed as of Oct. 16.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-metro-stl",
+    "target_id": "parkway-sd-prop-p",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League of Women Voters of Metro St. Louis position on this local measure was found as of Oct. 16.",
+    "url": "https://www.vote411.org/mo-lwvstl",
+    "date": null,
+    "confidence": "sourced"
+  }
+]

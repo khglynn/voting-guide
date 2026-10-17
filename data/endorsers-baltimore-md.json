@@ -1,0 +1,276 @@
+[
+  {
+    "id": "baltimore-sun-eb",
+    "name": "The Baltimore Sun editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Largest Maryland daily. Bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams. Williams announced the same month that the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan 20, 2024). Semafor (Apr 5, 2026) describes the paper's shift toward an ideological focus on Democratic officials' misdeeds and a joint investigative unit with Sinclair's WBFF. Its opinion pages have run multiple guest pieces against Question 3 but no board position was found. No Sun editorial on Baltimore City Questions A to I was found (site blocks automated reads).",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.baltimoresun.com/opinion/editorials/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "baltimore-banner",
+    "name": "The Baltimore Banner",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit newsroom founded 2022. Publishes a full 2026 voter guide and candidate profiles; as a 501(c)(3) it does not endorse candidates or ballot questions. Its Baltimore City ballot-question explainer explains each question and what FOR and AGAINST mean, without taking positions.",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/voter-guide/maryland-voter-guide-2026-24CQJDVUAVCIVIFJECKCDXMFPU/filter/baltimorecity/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-baltimore-city",
+    "name": "League of Women Voters of Baltimore City",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan. Its 2026 general election guide prints candidates' verbatim answers and says the League 'does not support or oppose any political candidate.' For Baltimore City Questions A to I, the guide reprints the ballot language with no position.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "md-democratic-party",
+    "name": "Maryland Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization; backs its nominees and campaigns FOR Question 3 (chair Steuart Pittman). Locally, every Democratic nominee on the Baltimore City ballot is counted as the party's pick. No Baltimore City Democratic Party 2026 slate page was found (its site's vote page is stale 2020 content).",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.mddems.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-republican-party",
+    "name": "Maryland Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; backs its nominees. Runs the 'Save Our Voice' campaign to defeat Question 3. Locally, every Republican nominee on the Baltimore City ballot is counted as the party's pick. No Baltimore City Republican slate was found.",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://mdgop.org/save-our-voice/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sierra-club-md",
+    "name": "Sierra Club Maryland Chapter PAC",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Environmental group's PAC. Its Sept 17, 2026 Maryland list endorses nearly all Democrats in partisan races; every Baltimore City pick is a Democrat or a nonpartisan school board candidate.",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "mayor-brandon-scott",
+    "name": "Baltimore Mayor Brandon M. Scott",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic mayor of Baltimore; national co-chair of Mayors for Guaranteed Income.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "council-president-zeke-cohen",
+    "name": "Baltimore City Council President Zeke Cohen",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic City Council president; backed the charter package that became Questions E, F and G, and co-announced Question H.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://baltimorebrew.com/2026/06/08/council-advances-three-charter-bills-eliminating-the-competitive-bid-requirement-and-more/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "comptroller-bill-henry",
+    "name": "Baltimore City Comptroller Bill Henry",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic city comptroller and Board of Estimates member.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "gov-wes-moore",
+    "name": "Gov. Wes Moore",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic governor of Maryland (on the ballot for re-election).",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sen-antonio-hayes",
+    "name": "State Sen. Antonio Hayes",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic state senator for District 40 (on the ballot for re-election).",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "baltimore-teachers-union",
+    "name": "Baltimore Teachers Union",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Baltimore City teachers union (American Federation of Teachers affiliate). Labeled lean_left by analogy with Maryland's statewide teachers union, which endorses mostly Democrats; the school board race itself is nonpartisan.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "metro-baltimore-afl-cio",
+    "name": "Metropolitan Baltimore Council of AFL-CIO Unions",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Regional labor federation. Labeled lean_left by analogy with the state AFL-CIO, whose 2026 slate endorses mostly Democrats.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "seiu-1199",
+    "name": "1199SEIU United Healthcare Workers East",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Healthcare workers union; signed the May 2026 coalition letter backing the City Council's budget and procurement charter reforms.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "progressive-maryland",
+    "name": "Progressive Maryland",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Self-described progressive organizing group ('building power for working families').",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "greater-baltimore-dsa",
+    "name": "Greater Baltimore Democratic Socialists of America",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Local chapter of the Democratic Socialists of America.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "charm-city-indivisible",
+    "name": "Charm City Indivisible",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Baltimore chapter of the progressive Indivisible network ('building political power to advance justice in our city').",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "moms-demand-action-gun-sense",
+    "name": "Moms Demand Action / Everytown 'Gun Sense Candidate'",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Gun-safety group; calls itself non-partisan, but its candidate designations go mostly to Democrats.",
+    "geography": [
+      "MD",
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "baltimore-baby-fund-campaign",
+    "name": "Baltimore Baby Fund campaign",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Ballot committee behind Question I (cash-style support for families with newborns); joint campaign with Mayor Scott.",
+    "geography": [
+      "baltimore-md"
+    ],
+    "guide_url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

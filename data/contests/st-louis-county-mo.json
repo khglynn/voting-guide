@@ -1,0 +1,2527 @@
+[
+  {
+    "id": "stlco-county-executive",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Executive",
+    "district": null,
+    "scope_plain": "Every St. Louis County voter (not the City of St. Louis)",
+    "office_explainer": "Runs St. Louis County government day to day: budget, police, roads, parks and public health.",
+    "why_it_matters": "First open race for county executive in 52 years; Sam Page is not running. Both major candidates focus on the county budget: Zimmerman pledges to stop using one-time money to plug ongoing gaps, and Hancock opposes new taxes to fix it.",
+    "vote_for": 1,
+    "incumbent": "Sam Page (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jake Zimmerman",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.jakezimmerman.org/",
+        "website_confidence": "verified",
+        "background": "St. Louis County assessor since 2011; earlier a state representative and an aide to Gov. Bob Holden and Attorney General Jay Nixon. Won the Aug. 4 Democratic primary with 46.5% over state Sens. Brian Williams and Angela Walton Mosley.",
+        "own_words": [
+          {
+            "text": "\"I'm here to get us back to basics and bring real leadership to County government.\"",
+            "is_quote": true,
+            "source": "https://www.jakezimmerman.org/"
+          },
+          {
+            "text": "\"On my watch, there are no backroom deals. On my watch, no special favors for the rich and connected.\"",
+            "is_quote": true,
+            "source": "https://www.jakezimmerman.org/"
+          },
+          {
+            "text": "Pledges to stop using one-time funds to close structural budget gaps; open to more city-county cooperation if it improves services for county residents (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Dennis Hancock",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://hancockforcountyexecutive.com/",
+        "website_confidence": "verified",
+        "background": "County Council member for the 3rd District since 2023; mayor of Fenton for 12 years before that. Won the Republican nomination.",
+        "own_words": [
+          {
+            "text": "\"Fighting out of control crime in and around St. Louis County is my top priority.\"",
+            "is_quote": true,
+            "source": "https://hancockforcountyexecutive.com/issues/"
+          },
+          {
+            "text": "\"No more kickbacks and no more reckless spending on government projects.\"",
+            "is_quote": true,
+            "source": "https://hancockforcountyexecutive.com/issues/"
+          },
+          {
+            "text": "Opposes additional taxes to help with the county government's budget; wants less red tape to boost economic growth (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "J.D. McFarland",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://jdmcfarlandforstl.com/",
+        "website_confidence": "sourced",
+        "background": "Community organizer; previously ran for St. Louis alderman and mayor on the Green Party ticket. Says he has worked for local nonprofits such as Better Family Life and Jobs with Justice.",
+        "own_words": [
+          {
+            "text": "Describes himself as a \"cultural architect\" who believes leadership is a responsibility.",
+            "is_quote": true,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Says he wants to build a region that focuses on youth, health and learning (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "St. Louis Public Radio: Zimmerman wins Democratic nomination (Aug. 4 county primary results)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-08-04/st-louis-county-executive-zimmerman-williams-mosley"
+      },
+      {
+        "name": "Jake Zimmerman campaign site",
+        "url": "https://www.jakezimmerman.org/"
+      },
+      {
+        "name": "Dennis Hancock campaign issues page",
+        "url": "https://hancockforcountyexecutive.com/issues/"
+      },
+      {
+        "name": "Wikipedia: 2026 St. Louis County Executive election (lags; lists Democrat as TBD)",
+        "url": "https://en.wikipedia.org/wiki/2026_St._Louis_County_Executive_election"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-prosecuting-attorney",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Prosecuting Attorney",
+    "district": null,
+    "scope_plain": "Every St. Louis County voter (not the City of St. Louis)",
+    "office_explainer": "Decides which state crimes get charged in St. Louis County and prosecutes those cases in court.",
+    "why_it_matters": "Price Smith was appointed in January 2025 after Wesley Bell left for Congress; this is her first race for a full term. Her only opponent is a Libertarian.",
+    "vote_for": 1,
+    "incumbent": "Melissa Price Smith",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melissa Price Smith",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://melissapricesmith.com/",
+        "website_confidence": "verified",
+        "background": "Sworn in Jan. 3, 2025, as the first woman to hold the job; in the prosecutor's office since 2008, where she supervised the Sexual Assault and Child Abuse Team. Former professional ballet dancer. Won the Aug. 4 Democratic primary with 74.1%.",
+        "own_words": [
+          {
+            "text": "Campaign slogan: \"All Prosecutor. No Politics.\"",
+            "is_quote": true,
+            "source": "https://melissapricesmith.com/"
+          },
+          {
+            "text": "Lists priorities including \"Combating violent crime\" and \"Rehabilitating non-violent offenders.\"",
+            "is_quote": true,
+            "source": "https://melissapricesmith.com/"
+          },
+          {
+            "text": "Pledges to continue stricter sentences for gun crimes and more support for people out on bond (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Theo Brown Sr.",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former police officer in St. Louis and Kinloch and a former St. Louis Community College trustee. Has run for state senator, Riverview Gardens school board and county assessor. No campaign website.",
+        "own_words": [
+          {
+            "text": "No campaign statements found; St. Louis Public Radio notes he has no campaign website.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "St. Louis Public Radio: Zimmerman wins Democratic nomination (Aug. 4 county primary results)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-08-04/st-louis-county-executive-zimmerman-williams-mosley"
+      },
+      {
+        "name": "Melissa Price Smith campaign site",
+        "url": "https://melissapricesmith.com/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-assessor",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Assessor",
+    "district": null,
+    "scope_plain": "Every St. Louis County voter (not the City of St. Louis)",
+    "office_explainer": "Sets the value of homes, businesses and vehicles, which drives everyone's property tax bill.",
+    "why_it_matters": "Open seat for the first time since 2011, because Jake Zimmerman is running for county executive. The assessor's values feed into every property tax bill, including the tax measures on this ballot.",
+    "vote_for": 1,
+    "incumbent": "Jake Zimmerman (running for county executive)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Doug Clemens",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://dougclemens.com/",
+        "website_confidence": "verified",
+        "background": "State representative first elected in 2018; about 30 years in operations management. Says he got into politics over radioactive contamination in north St. Louis County. Won the Aug. 4 Democratic primary with 57.5%.",
+        "own_words": [
+          {
+            "text": "\"Property assessments affect every family, every renter and every small business. They must be handled fairly and transparently.\"",
+            "is_quote": true,
+            "source": "https://dougclemens.com/"
+          },
+          {
+            "text": "Pledges an assessor's office focused on customer service (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "David Messner",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://messnerforassessor.com/",
+        "website_confidence": "sourced",
+        "background": "Developer who has worked in Hermann and on Laclede's Landing; helped relaunch Old Judge Coffee Co.",
+        "own_words": [
+          {
+            "text": "Says he will work to prevent deed theft and speak up against legislation that could hurt property values (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Wants to use the assessor's data to advise policymakers on growth and economic development (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Austin Brown",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://www.facebook.com/profile.php?id=61590669020120",
+        "website_confidence": "sourced",
+        "background": "Research and development engineer; member of the Young Friends of St. Louis Earth Day.",
+        "own_words": [
+          {
+            "text": "Says he would be transparent and not give special favors to \"big money.\"",
+            "is_quote": true,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Has pledged no special treatment for data center developments (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "St. Louis Public Radio: Zimmerman wins Democratic nomination (Aug. 4 county primary results)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-08-04/st-louis-county-executive-zimmerman-williams-mosley"
+      },
+      {
+        "name": "Doug Clemens campaign site",
+        "url": "https://dougclemens.com/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-council-1",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Council",
+    "district": "Council District 1",
+    "scope_plain": "Voters in County Council District 1 (north-central St. Louis County). Some Clayton-area addresses may fall here; check your sample ballot.",
+    "office_explainer": "One of seven County Council members who pass county laws and the budget and oversee the executive.",
+    "why_it_matters": "Unopposed. Council Chair Rita Heard Days won a three-way Democratic primary on Aug. 4 with 42.6% and is seeking a second full term.",
+    "vote_for": 1,
+    "incumbent": "Rita Heard Days",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rita H. Days",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.ritadays.com/",
+        "website_confidence": "unverified",
+        "background": "Council chair, from Bel-Nor; elected to a partial council term in 2019 and now seeking a second full term.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "St. Louis Public Radio: Zimmerman wins Democratic nomination (Aug. 4 county primary results)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-08-04/st-louis-county-executive-zimmerman-williams-mosley"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-council-3",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Council",
+    "district": "Council District 3",
+    "scope_plain": "Voters in County Council District 3, which runs from Creve Coeur and Ladue south to the Jefferson County line. Some Webster Groves, Clayton or Ballwin-area addresses may fall here; check your sample ballot.",
+    "office_explainer": "One of seven County Council members who pass county laws and the budget and oversee the executive.",
+    "why_it_matters": "Open seat: Republican Dennis Hancock is leaving it to run for county executive. The only contested council race likely to reach these three towns besides District 7.",
+    "vote_for": 1,
+    "incumbent": "Dennis Hancock (running for county executive)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Osmack",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://markosmack.com/",
+        "website_confidence": "sourced",
+        "background": "Army veteran (deployed to Afghanistan; Bronze Star, per his site as summarized by The Ballot Brief); director of government relations for IAPMO, a plumbing-code and product-certification group. Most recently ran for state treasurer.",
+        "own_words": [
+          {
+            "text": "Pledges to improve county roads and sidewalks and to look for wasteful spending in the county budget (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Andrew Koenig",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.electandrewkoenig.com/",
+        "website_confidence": "sourced",
+        "background": "Former state representative and state senator from west St. Louis County. Owns a construction company; formerly a licensed insurance adjuster.",
+        "own_words": [
+          {
+            "text": "Touts his legislative work to lower taxes and expand school choice, and to reform development incentives such as tax increment financing (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-council-5",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Council",
+    "district": "Council District 5",
+    "scope_plain": "Voters in County Council District 5: parts of Webster Groves, Kirkwood, Rock Hill, Glendale, Oakland, Warson Woods, Brentwood, Maplewood, Richmond Heights, Clayton, Ladue, University City, Olivette, Crestwood, Affton and Marlborough (2022 description).",
+    "office_explainer": "One of seven County Council members who pass county laws and the budget and oversee the executive.",
+    "why_it_matters": "Unopposed. Lisa Clancy (D-Maplewood) is seeking a third term.",
+    "vote_for": 1,
+    "incumbent": "Lisa Clancy",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lisa Clancy",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Council member from Maplewood seeking a third term; unopposed in the primary and general.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "Webster-Kirkwood Times (Oct. 31, 2022): Clancy vs. Bailey for County Council District 5 (district area)",
+        "url": "https://www.timesnewspapers.com/webster-kirkwoodtimes/clancy-vs-bailey-for-st-louis-county-council-district-5/article_da1be1ea-5602-11ed-8ef5-97532721bf6a.html"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-council-7",
+    "state": "MO",
+    "level": "county",
+    "office": "St. Louis County Council",
+    "district": "Council District 7",
+    "scope_plain": "Voters in County Council District 7 (far west county, including Wildwood, Eureka and Pacific; incumbent Mark Harder lives in Ballwin).",
+    "office_explainer": "One of seven County Council members who pass county laws and the budget and oversee the executive.",
+    "why_it_matters": "Harder, first elected in 2014, is the council's longest-serving member and vice chair, and is seeking a fourth term.",
+    "vote_for": 1,
+    "incumbent": "Mark Harder",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John Kiehne",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.kiehneformissouri.com/",
+        "website_confidence": "sourced",
+        "background": "Musician and advocate for victims of domestic violence; has run unsuccessfully for state House and Senate.",
+        "own_words": [
+          {
+            "text": "Promises a \"people's platform\" drawn from surveys of the residents he hopes to represent.",
+            "is_quote": true,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Says he will focus on opportunity, justice, safety and prosperity for every resident (St. Louis Public Radio's summary).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Mark Harder",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://harderforcouncil.com/",
+        "website_confidence": "unverified",
+        "background": "Council vice chair and licensed real estate broker; first elected in 2014.",
+        "own_words": [
+          {
+            "text": "Known for a focus on government transparency and support for the St. Louis County Police Department and other public safety agencies (St. Louis Public Radio's description).",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          },
+          {
+            "text": "Campaign site, as summarized by The Ballot Brief, highlights economic development projects, veterans services including the Veterans Treatment Court, and public safety.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "St. Louis Public Radio (Oct. 15, 2026): Harder wants a fourth term; Kiehne wants to stop him",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-10-15/harder-wants-a-fourth-term-on-the-st-louis-county-council-kiehne-wants-to-stop-him"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-us-house-1",
+    "state": "MO",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-1",
+    "scope_plain": "Voters in Missouri's 1st Congressional District: all of the City of St. Louis and much of north and central St. Louis County, including all of Clayton, Rock Hill and part of Webster Groves (2022 map, used again in 2026).",
+    "office_explainer": "One of Missouri's eight members of the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Bell is finishing his first term in a district St. Louis Public Radio calls overwhelmingly Democratic. The 2026 race uses the 2022 lines no matter how statewide Prop A turns out; a YES on Prop A would change the map starting in 2028. The U.S. Supreme Court's Sept. 25 order and the Secretary of State both say the 2022 map is used in November. Nominees were picked in the Aug. 4 primary, which used the 2025 map, so some voters now sit in a different district than in August.",
+    "vote_for": 1,
+    "incumbent": "Wesley Bell",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Wesley Bell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.bell4mo.com/",
+        "website_confidence": "sourced",
+        "background": "Finishing his first term in the U.S. House; previously St. Louis County prosecuting attorney and a Ferguson City Council member.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Paul Berry III",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.facebook.com/BerryForUSA/",
+        "website_confidence": "sourced",
+        "background": "Republican nominee for St. Louis County executive in 2018 and 2020.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Tom Schmitz",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "Wikipedia: Missouri's 1st congressional district (composition, 2022 map)",
+        "url": "https://en.wikipedia.org/wiki/Missouri%27s_1st_congressional_district"
+      },
+      {
+        "name": "U.S. Supreme Court: People Not Politicians v. Onder, No. 26A388, order of Sept. 25, 2026 (stays lower-court orders; 2022 map used in the 2026 congressional election)",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/26a388_q86b.pdf"
+      },
+      {
+        "name": "Missouri Secretary of State: Statement from Secretary Hoskins, Sept. 10, 2026 (local election authorities to use the 2022 map)",
+        "url": "https://www.sos.mo.gov/default.aspx?PageId=10670"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-us-house-2",
+    "state": "MO",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-2",
+    "scope_plain": "Voters in Missouri's 2nd Congressional District: parts of St. Louis and St. Charles counties plus all of Warren and Franklin counties, including Ballwin, Shrewsbury and part of Webster Groves (2022 map, used again in 2026).",
+    "office_explainer": "One of Missouri's eight members of the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Wagner has held the seat since 2013. St. Louis Public Radio says this 2022 version of the district is 'a few points more Democratic' than the 2025 plan and that Wagner 'has never lost St. Louis County.' The U.S. Supreme Court's Sept. 25 order and the Secretary of State both say the 2022 map is used in November. Nominees were picked in the Aug. 4 primary, which used the 2025 map, so some voters now sit in a different district than in August.",
+    "vote_for": 1,
+    "incumbent": "Ann Wagner",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ann Wagner",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://annwagner.com/",
+        "website_confidence": "sourced",
+        "background": "Has represented the 2nd District since 2013.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Fred Wellman",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.wellmanformo.com/",
+        "website_confidence": "sourced",
+        "background": "Combat veteran who has produced a left-of-center podcast.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Brandon Coulter Daugherty",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://www.facebook.com/BCD4MO/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
+        "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
+      },
+      {
+        "name": "Wikipedia: Missouri's 1st congressional district (composition, 2022 map)",
+        "url": "https://en.wikipedia.org/wiki/Missouri%27s_1st_congressional_district"
+      },
+      {
+        "name": "U.S. Supreme Court: People Not Politicians v. Onder, No. 26A388, order of Sept. 25, 2026 (stays lower-court orders; 2022 map used in the 2026 congressional election)",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/26a388_q86b.pdf"
+      },
+      {
+        "name": "Missouri Secretary of State: Statement from Secretary Hoskins, Sept. 10, 2026 (local election authorities to use the 2022 map)",
+        "url": "https://www.sos.mo.gov/default.aspx?PageId=10670"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-sd-4",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri State Senate",
+    "district": "SD-4",
+    "scope_plain": "Voters in State Senate District 4: central St. Louis City (around Forest Park and Tower Grove Park) plus Maplewood, Richmond Heights, Brentwood, most of Clayton, Rock Hill, Shrewsbury and the north and east edges of Webster Groves.",
+    "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
+    "why_it_matters": "Unopposed. No Republican filed. The Ballot Brief's roster does not list Mitten as the sitting senator, so this appears to be an open seat.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Gina Mitten",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://ginamitten.com/",
+        "website_confidence": "unverified",
+        "background": "Attorney; former Richmond Heights City Council member; served eight years in the Missouri House, including as caucus chair and assistant floor leader.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): funding first responders and community-police partnerships; universal background checks and red flag laws; public education.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-sd-14",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri State Senate",
+    "district": "SD-14",
+    "scope_plain": "Voters in State Senate District 14 (north and central St. Louis County, including University City and Olivette, and the north end of Clayton).",
+    "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
+    "why_it_matters": "Neither candidate is listed as the incumbent. Only the north end of Clayton (63105) is in this district among the three towns in this guide.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Vernon Norman",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.normanformissouri.com/",
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): stronger families, better schools, safer neighborhoods and more jobs.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Raychel Proudie",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://raychelproudie.com/",
+        "website_confidence": "unverified",
+        "background": "State representative from St. Louis County since 2019, with a background in education and mental health.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): maternal health care and domestic violence services; restoring workforce programs such as the AFL-CIO MO Works program; transparency for LLCs.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-sd-24",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri State Senate",
+    "district": "SD-24",
+    "scope_plain": "Voters in State Senate District 24 (central St. Louis County, including Ladue, Kirkwood, Creve Coeur and Valley Park). Only the edges of 63105, 63119 and 63011 may fall here.",
+    "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
+    "why_it_matters": "McCreery, the incumbent, faces a Republican challenger. For most Clayton, Webster Groves and Ballwin voters this race will NOT be on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Tracy McCreery",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "LaVanna Wrobley",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.wrobleyformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Small-business owner who founded Madyon Consulting, which works with nonprofits; finance degree from Miami University.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): literacy and keeping schools focused on education; lower taxes and fewer regulatory barriers for small businesses; supporting law enforcement and early childhood education.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Tracy McCreery",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://tracymccreery.com/",
+        "website_confidence": "unverified",
+        "background": "State senator for District 24 after four terms in the Missouri House. Earlier worked in sales and management, for Gov. Bob Holden's administration, and for Planned Parenthood of the St. Louis Region and Citizens for Missouri's Children.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): fully funding public schools and raising teacher pay; more property tax relief and affordable housing; expanding postpartum Medicaid.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-83",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-83",
+    "scope_plain": "Voters in House District 83: Maplewood, Shrewsbury and parts of Richmond Heights, Brentwood, Webster Groves (east side) and Clayton (west edge).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Reed, in his first term, faces a Libertarian; no Republican filed.",
+    "vote_for": 1,
+    "incumbent": "Ray Reed",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ray Reed",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.rayreedmo.com/",
+        "website_confidence": "unverified",
+        "background": "First-term state representative for District 83.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): defending reproductive freedom; protecting LGBTQ+ families; supporting public education.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Andrew Bolin",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://www.andrewbolin.com/",
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): constitutional representation; protecting liberty from government overreach.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-86",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-86",
+    "scope_plain": "Voters in House District 86 (University City area, reaching the north end of Clayton).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Jeff Hales",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff Hales",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://halesformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "University City 1st Ward council member since 2018; formerly on the city's Traffic Commission.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): government transparency, including live-streamed meetings; economic development; infrastructure accountability.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-88",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-88",
+    "scope_plain": "Voters in House District 88 (Ellisville and Eureka area; the western edge of 63011).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Incumbent Republican faces a Democratic challenger.",
+    "vote_for": 1,
+    "incumbent": "Holly Jones",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Holly Jones",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Worked in global logistics and as a civilian program-management contractor on Air Force, Navy and Defense Department contracts (official House biography, per The Ballot Brief).",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Jennifer Trickey",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://jennifertrickeyformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Mother from the Fenton, Eureka and Ellisville area who volunteers with food banks and civic engagement groups.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): holding the legislature accountable to statewide ballot measures approved by voters.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-89",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-89",
+    "scope_plain": "Voters in House District 89 (Frontenac and Town and Country area; may include the northeast edge of 63011).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Incumbent Republican faces a Democratic challenger; both are physicians.",
+    "vote_for": 1,
+    "incumbent": "George Hruza",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "George Hruza",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://hruzaformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Dermatologist and Mohs surgeon; came to the U.S. from Czechoslovakia at 14; past president of the American Academy of Dermatology and the Missouri State Medical Association.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): addressing inflation and government spending; education focused on workplace preparation; police funding and public safety.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Bryan Troop",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://troopformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Surgeon; directed trauma services and surgical education at Mercy Hospital St. Louis for 26 years; now teaches medical ethics.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-90",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-90",
+    "scope_plain": "Voters in House District 90: Kirkwood, Glendale and Valley Park (only the western edge of 63119, if any).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Mark Boyko",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Boyko",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://markboyko.com/",
+        "website_confidence": "unverified",
+        "background": "First-term representative; attorney representing workers since 2007; six years on the Kirkwood School Board.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): health care and abortion access; public education funding and workforce development; livable wages and labor protections.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-91",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-91",
+    "scope_plain": "Voters in House District 91: most of Webster Groves plus Marlborough and part of Affton.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed. Covers most Webster Groves addresses.",
+    "vote_for": 1,
+    "incumbent": "Jo Doll",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jo Doll",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Physical therapist before joining the legislature; vice president of the Webster Groves Board of Education (official House biography, per The Ballot Brief).",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-92",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-92",
+    "scope_plain": "Voters in House District 92 (south county around Lakeshire; only the far southeast edge of 63119, if any).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Incumbent Democrat faces a Republican challenger.",
+    "vote_for": 1,
+    "incumbent": "Michael Burton",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kenneth Abram",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://abram4missouri.com/",
+        "website_confidence": "unverified",
+        "background": "Senior manufacturing manager at Boeing; member of the St. Joseph Croatian Catholic Parish executive council.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): supporting law enforcement; improving schools.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Michael Burton",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Attended Lindenwood University; worked as a Broadway actor and a teacher.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-96",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-96",
+    "scope_plain": "Voters in House District 96 (Crestwood, Sappington and Fenton area; only the southwest edge of 63119, if any).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Three-way race; incumbent Republican faces Democratic and Libertarian challengers.",
+    "vote_for": 1,
+    "incumbent": "Brad Christ",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brad Christ",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Manages risk and benefits for companies; finance degree from DePaul University (official House biography, per The Ballot Brief).",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Matt Vitale",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.vitaleformo.com/",
+        "website_confidence": "unverified",
+        "background": "Worked at the U.S. Department of Veterans Affairs helping veterans with vision loss, then as lead accessibility specialist in the U.S. Department of Education's civil rights office.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): public school funding; earned sick time and union-led apprenticeships; lower child care, health care and utility costs.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Shane Ferguson",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-98",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-98",
+    "scope_plain": "Voters in House District 98 (Manchester and Valley Park area; the eastern edge of 63011).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Incumbent Democrat faces a Republican challenger.",
+    "vote_for": 1,
+    "incumbent": "Jaclyn Zimmermann",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Timothy Bosch",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Jaclyn Zimmermann",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Employment lawyer in St. Louis; law degree from UMKC (official House biography, per The Ballot Brief).",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-99",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-99",
+    "scope_plain": "Voters in House District 99: central and south Clayton plus Ladue and Olivette areas (and possibly the Rock Hill and Warson Woods edge of 63119).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Unopposed; no Republican filed. The Ballot Brief does not list Schafer as the sitting member, so this appears to be an open seat.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tori Schafer",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://votetori.com/",
+        "website_confidence": "unverified",
+        "background": "Attorney; director of policy and campaigns at the ACLU of Missouri.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): economic opportunity and affordable living; strong public schools; infrastructure and environmental protection.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-100",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-100",
+    "scope_plain": "Voters in House District 100: central Ballwin and nearby west-county areas.",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Three-way race; covers most Ballwin addresses.",
+    "vote_for": 1,
+    "incumbent": "Philip Oehlerking",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Philip Oehlerking",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Previously worked at the Missouri Higher Education Loan Authority (MOHELA) and the Show-Me Institute (official House biography, per The Ballot Brief).",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Mary Ann Perkins",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://perkinsformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Fundraising professional at Washington University; spent more than 15 years working internationally with the United Nations before returning home in 2021.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): public tax dollars for public rather than private schools; earned sick leave; abortion access under the state constitution.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Ken Newhouse",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://newhouse100.com/",
+        "website_confidence": "unverified",
+        "background": "Longtime Ballwin resident.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): fixing and maintaining local roads; strengthening Missouri's education system.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-101",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-101",
+    "scope_plain": "Voters in House District 101 (Chesterfield area; the northern edge of 63011).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Three-way race; incumbent Republican faces Democratic and Libertarian challengers.",
+    "vote_for": 1,
+    "incumbent": "Ben Keathley",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ben Keathley",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Attorney with a law practice in Chesterfield; served two terms on the Chesterfield City Council.",
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Paul Lentz",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://paulformo.com/",
+        "website_confidence": "unverified",
+        "background": "Has worked as a corporate revenue accountant, software analyst and data engineer, and small-business operator.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): fully funding public schools and universal pre-K; capping out-of-pocket costs for medications such as insulin; safer roads and public transit.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Jeff Coleman",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          {
+            "text": "No campaign statements collected in this pass.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "mo-hd-110",
+    "state": "MO",
+    "level": "state",
+    "office": "Missouri House of Representatives",
+    "district": "HD-110",
+    "scope_plain": "Voters in House District 110 (Wildwood area; the western edge of 63011).",
+    "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
+    "why_it_matters": "Open seat; neither candidate is the incumbent.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Niles Stephens",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://nilesformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Managing director of Missouri Tax Relief Now; helped lead efforts for the senior property tax freeze.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): working with law enforcement on neighborhood safety; continuing to lower property taxes.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      },
+      {
+        "name": "Claire Heinrich",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://claireformissouri.com/",
+        "website_confidence": "unverified",
+        "background": "Washington University computer science graduate and former programmer; MBA in nonprofit management; works with Civitas, a St. Louis nonprofit that mentors high school students.",
+        "own_words": [
+          {
+            "text": "Campaign site priorities (as summarized by The Ballot Brief): public education funding; roads and bridges; representing District 110 constituents directly.",
+            "is_quote": false,
+            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/mo-lwvstl"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
+        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+      },
+      {
+        "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
+        "url": "https://delilahusa.com/developers/request"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "stlco-retention-stewart",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 2: retain Judge Richard M. Stewart?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Stewart; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Richard M. Stewart",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Richard M. Stewart",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-richard-stewart/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 2, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Richard M. Stewart",
+        "url": "https://yourmissourijudges.org/judges/2026-richard-stewart/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-borbonus",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 6: retain Judge John Borbonus?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Borbonus; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "John Borbonus",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "John Borbonus",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-john-borbonus/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 6, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge John Borbonus",
+        "url": "https://yourmissourijudges.org/judges/2026-john-borbonus/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-ott",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 7: retain Judge Mary Elizabeth Ott?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Ott; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Mary Elizabeth Ott",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Mary Elizabeth Ott",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-mary-elizabeth-ott/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 7, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Mary Elizabeth Ott",
+        "url": "https://yourmissourijudges.org/judges/2026-mary-elizabeth-ott/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-mcnelley",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 8: retain Judge Amanda B. McNelley?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge McNelley; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Amanda B. McNelley",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Amanda B. McNelley",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-amanda-mcnelley/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 8, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Amanda B. McNelley",
+        "url": "https://yourmissourijudges.org/judges/2026-amanda-mcnelley/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-mcpherson",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 16: retain Judge Jeffery McPherson?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge McPherson; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Jeffery McPherson",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Jeffery McPherson",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-jeffery-mcpherson/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 16, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Jeffery McPherson",
+        "url": "https://yourmissourijudges.org/judges/2026-jeffery-mcpherson/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-baker",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 17: retain Judge Lorne Baker?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Baker; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Lorne Baker",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Lorne Baker",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-lorne-baker/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 17, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Lorne Baker",
+        "url": "https://yourmissourijudges.org/judges/2026-lorne-baker/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-hearne",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 20: retain Judge Matt Hearne?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Hearne; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Matt Hearne",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Matt Hearne",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-matt-hearne/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 20, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Matt Hearne",
+        "url": "https://yourmissourijudges.org/judges/2026-matt-hearne/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-dunne",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Circuit Judge, Division 21: retain Judge Ellen Wyatt Dunne?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for St. Louis County: felonies, big lawsuits, family and probate cases. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Dunne; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Ellen Wyatt Dunne",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Ellen Wyatt Dunne",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-ellen-dunne/",
+        "website_confidence": "verified",
+        "background": "Circuit Judge, Division 21, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Ellen Wyatt Dunne",
+        "url": "https://yourmissourijudges.org/judges/2026-ellen-dunne/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-lasater",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 32: retain Judge Julia Pusateri Lasater?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Lasater; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Julia Pusateri Lasater",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Julia Pusateri Lasater",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-julia-lasater/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 32, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Julia Pusateri Lasater",
+        "url": "https://yourmissourijudges.org/judges/2026-julia-lasater/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-klapp",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 33: retain Judge Nicolette Antonia Klapp?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Klapp; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Nicolette Antonia Klapp",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Nicolette Antonia Klapp",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-nicolette-klapp/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 33, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Nicolette Antonia Klapp",
+        "url": "https://yourmissourijudges.org/judges/2026-nicolette-klapp/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-ruth",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 34: retain Judge Justin W. Ruth?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Ruth; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Justin W. Ruth",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Justin W. Ruth",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-justin-ruth/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 34, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Justin W. Ruth",
+        "url": "https://yourmissourijudges.org/judges/2026-justin-ruth/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-lewis",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 35: retain Judge Jason K. Lewis?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Lewis; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Jason K. Lewis",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Jason K. Lewis",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-jason-lewis/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 35, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Jason K. Lewis",
+        "url": "https://yourmissourijudges.org/judges/2026-jason-lewis/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-snyder",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 39: retain Judge Kelly Snyder?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Snyder; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Kelly Snyder",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Kelly Snyder",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-kelly-snyder/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 39, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Kelly Snyder",
+        "url": "https://yourmissourijudges.org/judges/2026-kelly-snyder/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-ghasedi",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 43: retain Judge Mondonna L. Ghasedi?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Ghasedi; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Mondonna L. Ghasedi",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Mondonna L. Ghasedi",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-mondonna-ghasedi/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 43, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Mondonna L. Ghasedi",
+        "url": "https://yourmissourijudges.org/judges/2026-mondonna-ghasedi/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "stlco-retention-dillon-amelung",
+    "state": "MO",
+    "level": "judicial",
+    "office": "21st Judicial Circuit (St. Louis County), Associate Circuit Judge, Division 44: retain Judge Chastidy Dillon-Amelung?",
+    "district": "21st Judicial Circuit (St. Louis County)",
+    "scope_plain": "Every St. Louis County voter. (City of St. Louis voters decide on 22nd Circuit judges instead.)",
+    "office_explainer": "Trial judge for misdemeanors, traffic, small claims, evictions and smaller lawsuits. Yes keeps; no removes.",
+    "why_it_matters": "Yes/no question with no opponent; the judge stays if more people vote yes than no. If a judge loses, the governor picks a replacement from a nominating commission's list. The Missouri Bar's Judicial Performance Review Committee majority recommends retaining Judge Dillon-Amelung; it recommended retaining all 15 St. Louis County judges on the 2026 ballot.",
+    "vote_for": 1,
+    "incumbent": "Chastidy Dillon-Amelung",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Chastidy Dillon-Amelung",
+        "party": null,
+        "incumbent": true,
+        "website": "https://yourmissourijudges.org/judges/2026-chastidy-dillon-amelung/",
+        "website_confidence": "verified",
+        "background": "Associate Circuit Judge, Division 44, 21st Judicial Circuit (St. Louis County), seeking retention. Detailed biography not collected in this pass; see the Missouri Bar's page for this judge.",
+        "own_words": [
+          {
+            "text": "Missouri Bar Judicial Performance Review Committee: \"Majority recommendation: retain.\"",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF, Aug. 25, 2026)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, YourMissouriJudges.org: St. Louis County (21st Circuit) judges",
+        "url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/"
+      },
+      {
+        "name": "The Missouri Bar: 2026 Judicial Performance Reviews printable guide (PDF)",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      },
+      {
+        "name": "The Missouri Bar: 2026 review of Judge Chastidy Dillon-Amelung",
+        "url": "https://yourmissourijudges.org/judges/2026-chastidy-dillon-amelung/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

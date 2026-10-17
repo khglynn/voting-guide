@@ -1,0 +1,2402 @@
+[
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-lieutenant-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-state-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-psc-place-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-psc-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-supreme-court-place-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-supreme-court-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate endorsement found; AL.com's opinion page could not be opened this run (site blocked). Re-check before publishing.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-amendment-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-lieutenant-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-state-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-psc-place-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-psc-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-supreme-court-place-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-supreme-court-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Reflector does not endorse; it publishes a nonpartisan voter guide for this race.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-reflector",
+    "target_id": "al-amendment-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-lieutenant-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-state-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-psc-place-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-psc-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-supreme-court-place-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-supreme-court-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published League position found on this amendment.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published League position found on this amendment.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "LWV Alabama president Kim Bailey said the amendment is 'impinging on people's rights' and not allowing people 'to make a choice.' Reported position; the League's own written statement was not located.",
+    "url": "https://alabamareflector.com/2026/10/12/alabama-voters-to-consider-pledge-of-allegiance-national-anthem-school-prayer/",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published League position found on this amendment.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-us-senate",
+    "status": "endorsed",
+    "choice": "Barry Moore",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-governor",
+    "status": "endorsed",
+    "choice": "Tommy Tuberville",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-lieutenant-governor",
+    "status": "endorsed",
+    "choice": "John Wahl",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-attorney-general",
+    "status": "endorsed",
+    "choice": "Katherine Robertson",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Caroleene Dobson",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-state-treasurer",
+    "status": "endorsed",
+    "choice": "Young Boozer",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-state-auditor",
+    "status": "endorsed",
+    "choice": "Andrew Sorrell",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Corey Hill",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-psc-place-1",
+    "status": "endorsed",
+    "choice": "Matt Gentry",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-psc-place-2",
+    "status": "endorsed",
+    "choice": "Jim Zig Zeigler",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-supreme-court-place-7",
+    "status": "endorsed",
+    "choice": "Brad Mendheim",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-supreme-court-place-8",
+    "status": "endorsed",
+    "choice": "Greg Shaw",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Benjamin M. Bowden",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Matt Fridy",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Mary Windom",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Riggs Walker",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-us-senate",
+    "status": "endorsed",
+    "choice": "Everett Wess",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-governor",
+    "status": "endorsed",
+    "choice": "Doug Jones",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-lieutenant-governor",
+    "status": "endorsed",
+    "choice": "Phillip Ensler",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-attorney-general",
+    "status": "endorsed",
+    "choice": "Jeff McLaughlin",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Wayne Rogers",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-state-treasurer",
+    "status": "endorsed",
+    "choice": "Rosilyn Houston",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-state-auditor",
+    "status": "endorsed",
+    "choice": "Violet Edwards",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Ron Sparks",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-psc-place-1",
+    "status": "endorsed",
+    "choice": "James O. Gordon",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-psc-place-2",
+    "status": "endorsed",
+    "choice": "Sheila D. McNeil",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-supreme-court-place-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee qualified in this race; the Republican is unopposed.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-supreme-court-place-8",
+    "status": "endorsed",
+    "choice": "AshLeigh Meyer Dunham",
+    "why": "Party nominee, certified to the Secretary of State on Aug. 26, 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee qualified in this race; the Republican is unopposed.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee qualified in this race; the Republican is unopposed.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee qualified in this race; the Republican is unopposed.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee qualified in this race; the Republican is unopposed.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-us-senate",
+    "status": "endorsed",
+    "choice": "Barry Moore",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.' FarmPAC backed a different candidate in the primary and switched to the nominee after the runoff.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-governor",
+    "status": "endorsed",
+    "choice": "Tommy Tuberville",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-lieutenant-governor",
+    "status": "endorsed",
+    "choice": "John Wahl",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.' FarmPAC backed a different candidate in the primary and switched to the nominee after the runoff.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-attorney-general",
+    "status": "endorsed",
+    "choice": "Katherine Robertson",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Caroleene Dobson",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-state-treasurer",
+    "status": "endorsed",
+    "choice": "Young Boozer",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-state-auditor",
+    "status": "endorsed",
+    "choice": "Andrew Sorrell",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.' FarmPAC backed a different candidate in the primary and switched to the nominee after the runoff.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Corey Hill",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-psc-place-1",
+    "status": "endorsed",
+    "choice": "Matt Gentry",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-psc-place-2",
+    "status": "endorsed",
+    "choice": "Jim Zig Zeigler",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.' FarmPAC backed a different candidate in the primary and switched to the nominee after the runoff.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-supreme-court-place-7",
+    "status": "endorsed",
+    "choice": "Brad Mendheim",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-supreme-court-place-8",
+    "status": "endorsed",
+    "choice": "Greg Shaw",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Benjamin M. Bowden",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Matt Fridy",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Mary Windom",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Riggs Walker",
+    "why": "On FarmPAC's general-election slate. President Jimmy Parnell: the group backs candidates who understand 'the challenges facing farmers, timber owners and rural families.'",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alfa-farmpac",
+    "target_id": "al-amendment-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-governor",
+    "status": "endorsed",
+    "choice": "Tommy Tuberville",
+    "why": "Listed on BCA's ProgressPAC endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-lieutenant-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Caroleene Dobson",
+    "why": "Listed on BCA's ProgressPAC endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-state-treasurer",
+    "status": "endorsed",
+    "choice": "Young Boozer",
+    "why": "Listed on BCA's ProgressPAC endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-psc-place-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-psc-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-supreme-court-place-7",
+    "status": "endorsed",
+    "choice": "Brad Mendheim",
+    "why": "Judicial slate announced Dec. 16, 2025; BCA cites the judges' 'commitment to the state constitution and to applying statutes as written.'",
+    "url": "https://www.bcatoday.org/bca-announces-2026-judicial-endorsements/",
+    "date": "2025-12-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-supreme-court-place-8",
+    "status": "endorsed",
+    "choice": "Greg Shaw",
+    "why": "Judicial slate announced Dec. 16, 2025; BCA cites the judges' 'commitment to the state constitution and to applying statutes as written.'",
+    "url": "https://www.bcatoday.org/bca-announces-2026-judicial-endorsements/",
+    "date": "2025-12-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Benjamin M. Bowden",
+    "why": "Judicial slate announced Dec. 16, 2025; BCA cites the judges' 'commitment to the state constitution and to applying statutes as written.'",
+    "url": "https://www.bcatoday.org/bca-announces-2026-judicial-endorsements/",
+    "date": "2025-12-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Matt Fridy",
+    "why": "Judicial slate announced Dec. 16, 2025; BCA cites the judges' 'commitment to the state constitution and to applying statutes as written.'",
+    "url": "https://www.bcatoday.org/bca-announces-2026-judicial-endorsements/",
+    "date": "2025-12-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Mary Windom",
+    "why": "Judicial slate announced Dec. 16, 2025; BCA cites the judges' 'commitment to the state constitution and to applying statutes as written.'",
+    "url": "https://www.bcatoday.org/bca-announces-2026-judicial-endorsements/",
+    "date": "2025-12-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 16, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-amendment-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "ARPAC (state) did not endorse for U.S. Senate; the article notes the National Association of Realtors' RPAC backed Barry Moore.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-governor",
+    "status": "endorsed",
+    "choice": "Tommy Tuberville",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-lieutenant-governor",
+    "status": "endorsed",
+    "choice": "John Wahl",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-attorney-general",
+    "status": "endorsed",
+    "choice": "Katherine Robertson",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Caroleene Dobson",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-state-treasurer",
+    "status": "endorsed",
+    "choice": "Young Boozer",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-state-auditor",
+    "status": "endorsed",
+    "choice": "Andrew Sorrell",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Corey Hill",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-psc-place-1",
+    "status": "endorsed",
+    "choice": "Matt Gentry",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-psc-place-2",
+    "status": "endorsed",
+    "choice": "Jim Zig Zeigler",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-supreme-court-place-7",
+    "status": "endorsed",
+    "choice": "Brad Mendheim",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-supreme-court-place-8",
+    "status": "endorsed",
+    "choice": "Greg Shaw",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Benjamin M. Bowden",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Matt Fridy",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "endorsed",
+    "choice": "Mary Windom",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "endorsed",
+    "choice": "Riggs Walker",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-amendment-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "This source does not take positions on ballot measures.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-lieutenant-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-state-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-psc-place-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-psc-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-supreme-court-place-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-supreme-court-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-lieutenant-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-state-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-psc-place-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-psc-place-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-supreme-court-place-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-supreme-court-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election slate found online this run. Check the organization's site or ask directly.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-education-association",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://myaea.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-lieutenant-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-state-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-psc-place-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-psc-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-supreme-court-place-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-supreme-court-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "Alabama Arise does not endorse candidates.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-arise",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-lieutenant-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-state-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-psc-place-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-psc-place-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-supreme-court-place-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-supreme-court-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-civil-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-civil-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-criminal-appeals-place-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-criminal-appeals-place-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "API does not endorse candidates.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-policy-institute",
+    "target_id": "al-amendment-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published 2026 position on this amendment found this run.",
+    "url": "https://alabamapolicy.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  }
+]

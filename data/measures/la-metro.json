@@ -1,0 +1,272 @@
+[
+ {
+  "id": "la-city-prop-te",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Proposition TE",
+  "official_title": "PROPERTY TRANSFER TAX EXEMPTION FOR VICTIMS OF JANUARY 2025 FIRE DISASTER. PROPOSITION TE. Shall an ordinance be adopted to provide a one-time exemption from the City's special documentary transfer tax (Proposition ULA) for residential properties that were damaged or destroyed in the Palisades Fire and are sold within five years of the date of the Fire?",
+  "plain_summary": "In 2022 city voters passed Measure ULA, an extra 4% to 5.5% tax on property sales over about $5 million (now $5.4 million, adjusted for inflation) that funds affordable housing and tenant help. TE would exempt homes and apartment buildings damaged or destroyed in the January 2025 Palisades Fire from that tax, one time, if the owner at the time of the fire sells between Jan 7, 2025 and Jan 6, 2030. Owners who already paid could get a refund.",
+  "yes_means": "Palisades Fire-damaged residential property sold for over about $5.4 million by its pre-fire owner before January 2030 is exempt from the ULA transfer tax, once.",
+  "no_means": "Those sales keep paying the ULA transfer tax like any other sale over the threshold.",
+  "current_law": "The city charges a 0.45% documentary transfer tax on all property sales. Measure ULA (2022) adds 4% on sales over $5 million and 5.5% on sales at $10 million or more (thresholds now $5.4 million and $10.9 million). Government, affordable housing and some nonprofit sellers are already exempt. The Palisades Fire damaged or destroyed about 5,495 residential structures.",
+  "fiscal_impact": "City Administrative Officer: no effect on the General Fund. Reduces revenue to the House LA Fund (affordable housing and homelessness prevention) by an estimated $35 million to $66 million through January 2030, depending on how many eligible properties sell.",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "This only affects sales over roughly $5.4 million. It does not change the ULA tax for anyone else, and it is not limited to owner-occupied homes: rental buildings and second homes in the burn area qualify too.",
+  "supporters_case": {
+   "text": "Signers of the argument in favor (Councilmember Traci Park, Mayor Karen Bass, Council President Marqueece Harris-Dawson, Councilmember Monica Rodriguez, Sen. Ben Allen, Asm. Jacqui Irwin, LAUSD member Nick Melvoin, the LA/OC Building Trades, the Carpenters and the Pacific Palisades Community Council) say ULA 'was never intended to penalize survivors who lost everything in a declared disaster,' that the exemption is narrow and one-time, and that it 'does not repeal ULA or create a loophole for investors or speculators.'",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "No argument against was submitted to the City Clerk. Councilmember Eunisses Hernandez voted against placing it on the ballot, saying relief should be limited to primary residences rather than investors or owners of multiple properties (LAist, via LA Forward's guide).",
+   "source": "https://laforwardguide.org/guide/los-angeles"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-la",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Charter Amendment LA",
+  "official_title": "CITY INFRASTRUCTURE, BUDGET, FINANCE, AND CONTRACTING. CHARTER AMENDMENT LA. Shall the City Charter be amended to: establish a capital infrastructure plan and two-year budget cycle for the City; increase the authority of the Director of Public Works and allow for the elimination of or changes to the Board of Public Works; remove restrictions prohibiting the City from engaging in business enterprises and mortgaging City-owned property; and change certain contracting rules and procedures?",
+  "plain_summary": "A bundle of changes to how City Hall plans and pays for things. It would require a long-term capital infrastructure plan, move the city from a one-year to a two-year budget, put the Director of Public Works in charge of that department and let the Council shrink or eliminate the Board of Public Works by ordinance, drop old charter bans on the city running businesses or mortgaging city property, exempt some critical infrastructure projects from competitive bidding, and let bidders fix minor paperwork errors on ethics forms.",
+  "yes_means": "The charter changes to a two-year budget, a required infrastructure plan, a stronger Public Works director, and looser rules on city businesses, mortgages and contracting.",
+  "no_means": "The charter stays as it is: a one-year budget, a full-time Board of Public Works running the department, and the current bans and bidding rules.",
+  "current_law": "The charter sets a one-year budget, prohibits mortgaging city property and running commercial businesses, puts a full-time five-member Board of Public Works in charge of the department with a Director assisting, requires no capital plan, and sets contracting rules.",
+  "fiscal_impact": "City Administrative Officer: $4 million to $6 million in one-time costs to switch to a two-year budget and build the infrastructure plan (systems, training, consultants), from the General Fund. The effects of the contracting, mortgage and business-enterprise changes 'cannot be quantified at this time.'",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "Seven different changes in one yes/no vote. People who like the two-year budget and infrastructure plan may not like the Board of Public Works or mortgage provisions, and vice versa. There is no way to split them.",
+  "supporters_case": {
+   "text": "Controller Kenneth Mejia, Councilmembers Katy Yaroslavsky and Bob Blumenfield, former Controller Ron Galperin, Investing in Place, LA Forward and Streets For All say it 'requires Los Angeles to plan ahead,' puts one director in charge so 'Angelenos will know who is responsible,' and removes 'outdated Charter restrictions.'",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "Councilmember Monica Rodriguez says it would let the Council 'eliminate the Board of Public Works and consolidate its powers under a single individual,' removing an independent public check on billions in contracts, and that a capital plan 'can be implemented without amending the Charter.'",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-pl",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Charter Amendment PL",
+  "official_title": "CITY PLANNING DEPARTMENT. CHARTER AMENDMENT PL. Shall the City Charter be amended to: establish a Neighborhood Appeals Commission to replace Area Planning Commissions and establish a process for City Council review of Neighborhood Appeals Commission and City Planning Commission decisions; change the timing and process for City Council action on certain planning decisions; grant the Planning Department the authority to investigate, hear, and determine applications for quasi-judicial review; and allow for changes to floor area regulations by ordinance?",
+  "plain_summary": "Reorganizes how planning and zoning appeals work. The seven Area Planning Commissions would be replaced by one citywide Neighborhood Appeals Commission of at least seven members. The Council would face new procedures and deadlines to take over planning cases. Planning Department staff would formally decide routine 'quasi-judicial' applications. General Plan amendments would be deemed approved if the Council does not act within 75 days. The Council could change the charter's floor-area limit (13 times lot size) by ordinance instead of a public vote.",
+  "yes_means": "One citywide appeals commission replaces the seven area commissions, planning staff get clearer authority, and the Council can change the floor-area cap by ordinance.",
+  "no_means": "The seven Area Planning Commissions and the current charter rules for planning decisions stay.",
+  "current_law": "The charter sets up the City Planning Commission, seven Area Planning Commissions, the Director of Planning and the Office of Zoning Administration, and caps building floor area at 13 times the buildable lot area.",
+  "fiscal_impact": "City Administrative Officer: no effect on revenue. Commission staffing costs drop an estimated $360,000 a year (from $1.1 million to $740,000), a saving to a special fund that the General Fund subsidizes.",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "The 'floor area' item is easy to miss. Today the maximum building size relative to lot size is locked in the charter; PL would let the Council change it by ordinance, which is a significant shift in who controls building density.",
+  "supporters_case": {
+   "text": "Raymond Meza (chair of the Charter Reform Commission) and Roy Samaan (Engineers & Architects Association) say PL creates 'clearer rules, more consistent procedures, and greater accountability,' makes it 'harder for anyone to manipulate the system for preferential treatment,' and streamlines routine decisions.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "No argument against was submitted. The Westside Neighborhood Council in May 2026 supported the charter package only if the appeals-commission item was removed (per City Hall Pass). Thrive LA recommends no, citing loss of geographic representation in appeals and the floor-area change.",
+   "source": "https://cityhallpass.com/election-2026/measures/measure-pl"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-ee",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Charter Amendment EE",
+  "official_title": "CITY ETHICS, ELECTIONS, AND GOVERNANCE. CHARTER AMENDMENT EE. Shall the City Charter be amended to: increase the authority of the Police Department Inspector General and Fire Department Independent Assessor; prohibit Ethics Commissioners from running for certain elected offices for five years; increase penalties for campaign finance violations; require City Council to meet at least weekly rather than the currently required three days per week; increase referendum petition signature requirements; and make other changes regarding ethics, elections and governance?",
+  "plain_summary": "Another bundle. It would let the LAPD Inspector General and LAFD Independent Assessor open investigations and audits without the Police or Fire Commission's sign-off; bar Ethics Commissioners and the Ethics executive director from running for city or LAUSD office for five years after leaving; raise the maximum campaign finance fine to $15,000 (inflation-adjusted) or three times the amount involved; cut the required City Council meeting schedule from three days a week to at least weekly; and raise the signatures needed for a referendum from 10% to 15% of votes cast in the last mayoral election. It also lets the definition of a Neighborhood Council 'stakeholder' be set by ordinance.",
+  "yes_means": "Stronger independent police and fire oversight, higher ethics fines, a five-year cooling-off for ethics commissioners, fewer required Council meetings, and a higher bar to force a referendum.",
+  "no_means": "All of those stay as they are, including the three-days-a-week Council meeting requirement and the 10% referendum threshold.",
+  "current_law": "The charter requires the Council to meet at least three days a week, sets the referendum petition threshold at 10% of the last mayoral vote, and gives the Police and Fire Commissions oversight of the Inspector General and Independent Assessor.",
+  "fiscal_impact": "City Administrative Officer: fewer Council meetings may save some General Fund money on translation and captioning. The police and fire oversight changes may require new investigators or outside auditors at a cost that 'cannot be determined at this time.' The other changes have no expected fiscal impact.",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "The ballot title leads with 'ethics,' but the two most debated pieces are the Council meeting cut (three days a week to one) and making referendums 50% harder to qualify. Supporters and opponents both agree the oversight and fine provisions are improvements; the fight is over the other two.",
+  "supporters_case": {
+   "text": "Councilmembers Tim McOsker, Katy Yaroslavsky, Marqueece Harris-Dawson and Eunisses Hernandez and Charter Reform Commissioner Diego Andrades say EE 'strengthens the institutions responsible for holding City government accountable,' and that the three-meetings-a-week rule is 'an unusual mandate that makes Los Angeles an outlier' and limits time in the districts.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "Councilmember Monica Rodriguez says the measure is 'presented as an ethics reform measure, but buried within is a proposal to reduce Los Angeles City Council meetings from three times a week to once a week,' which means 'fewer opportunities for public scrutiny,' and that Valley meetings would likely become rarer.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-prk",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Charter Amendment PRK",
+  "official_title": "CITY DEPARTMENT OF RECREATION AND PARKS BUDGET. CHARTER AMENDMENT PRK. Shall the City Charter be amended to increase the minimum budget allocated to the Department of Recreation and Parks, phased in over ten years until it is double the current minimum budget allocation, with exceptions for fiscal emergencies?",
+  "plain_summary": "The charter guarantees parks a minimum share of the General Fund equal to 0.0325% of the city's assessed property value. PRK doubles that to 0.065%, phased in over ten years (2027-28 through 2036-37). It is not a new tax. The money comes out of the same General Fund that pays for police, fire, streets and homeless services. In a declared fiscal emergency the Council could cut the increase by up to 30%, but never below today's floor.",
+  "yes_means": "The guaranteed parks budget roughly doubles over ten years, taking a larger share of the existing General Fund.",
+  "no_means": "The parks minimum stays at 0.0325% of assessed value.",
+  "current_law": "The charter minimum for Recreation and Parks has been 0.0325% of assessed value. The 1996 Proposition K parks assessment, about $25 million a year, expires in fiscal year 2026-27.",
+  "fiscal_impact": "City Administrative Officer: parks funding rises from $303 million to about $995 million by 2036-37 if property values grow at average rates. Added cost attributed to PRK: $32 million in 2027-28, growing to $497 million a year by 2036-37. Because it raises no new revenue, 'the City must reallocate resources from other services, including public safety, public works, and homeless services.'",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "'Without raising taxes' is true, but the money is not free. It is a mandatory shift inside the existing budget, and the CAO and Chief Legislative Analyst both recommended against locking it in the charter.",
+  "supporters_case": {
+   "text": "Councilmembers Monica Rodriguez, Ysabel Jurado and Imelda Padilla, Controller Kenneth Mejia, Father Gregory Boyle, LA Waterkeeper, LA Neighborhood Land Trust and others say LA's parks fell to '93rd of America's 100 largest cities' in the 2026 ParkScore, face 'almost $3 billion in repairs,' and that 'protected parks funding has not increased since 1937.' Trust for Public Land sponsors the Yes committee.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "No argument against was submitted and no opposing committee has formed. Councilmember Bob Blumenfield voted no on placing it and has written against it. The CAO and CLA, as city staff, recommended against a charter set-aside because it reduces budget flexibility (per City Hall Pass).",
+   "source": "https://cityhallpass.com/election-2026/measures/measure-prk"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-prt",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Charter Amendment PRT",
+  "official_title": "CITY AIRPORTS, HARBOR, AND WATER AND POWER DEPARTMENTS. CHARTER AMENDMENT PRT. Shall the City Charter be amended to: require the Harbor Department to allocate funds for waterfront public access projects; require disclosure of workforce impacts for certain Harbor Department leases and agreements; increase maximum terms for certain leases; and change the composition requirement for the Airport Commission?",
+  "plain_summary": "Four changes to the city's three self-funded 'proprietary' departments. Airports (LAWA) and DWP could sign leases up to 66 years instead of 50, matching the Port. Three of the seven Airport Commissioners would have to live near LAX and two near Van Nuys Airport (today it is one each). The Port would have to spend some operating income on waterfront public access (it already does, about $28.6 million a year). And applicants for Port leases and coastal permits would have to disclose expected effects on jobs.",
+  "yes_means": "Longer airport and DWP leases, more locally based airport commissioners, a charter requirement for Port waterfront spending, and job-impact disclosures for Port leases.",
+  "no_means": "Leases stay capped at 50 years for LAWA and DWP, the Airport Commission keeps one LAX-area and one Van Nuys-area seat, and the Port's waterfront spending stays a practice rather than a charter rule.",
+  "current_law": "The charter allows leases up to 50 years for LAWA and DWP and 66 years for the Harbor Department. The seven-member Board of Airport Commissioners includes one member from the LAX area and one from the Van Nuys area.",
+  "fiscal_impact": "City Administrative Officer: the lease, commission and disclosure changes are cost-neutral. The waterfront access plan codifies an existing practice of allocating 10% of Port operating income, historically about $28.6 million a year.",
+  "pass_threshold": "simple majority",
+  "referred_by": "council",
+  "confusing_wording_note": "Mostly technical. The one real change in power is the Airport Commission residency rule; the rest largely writes current practice into the charter.",
+  "supporters_case": {
+   "text": "Councilmembers Tim McOsker, Imelda Padilla and Traci Park, the Westchester/Playa Neighborhood Council president and community advocates say PRT gives 'neighborhoods most affected by airport operations' a stronger voice and 'memorializes important existing commitments' at the Port.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "No argument against was submitted. The LA Area Chamber of Commerce and the Harbor Department objected in spring 2026 to putting the Port rules in the charter; four councilmembers voted against the airport residency piece in June without public explanation (per City Hall Pass).",
+   "source": "https://cityhallpass.com/election-2026/measures/measure-prt"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-ordinance-fd",
+  "state": "CA",
+  "level": "city",
+  "jurisdiction": "City of Los Angeles",
+  "number": "Initiative Ordinance FD",
+  "official_title": "FUNDING FOR THE LOS ANGELES FIRE DEPARTMENT THROUGH A ONE-HALF PERCENT SALES TAX. INITIATIVE ORDINANCE FD. Shall an ordinance providing funding for the Los Angeles Fire Department, including for hiring firefighters, paramedics, and other staff, purchasing and maintaining vehicles and equipment, building and upgrading fire stations, and brush clearance; by imposing a one-half percent (0.5%) sales tax in the City of Los Angeles; with annual audits and a citizen's oversight committee; generating approximately $345 million annually until ended by voters; be adopted?",
+  "plain_summary": "A new half-cent sales tax inside the City of Los Angeles, raising the rate from 10.25% to 10.75%, with about $345 million a year going to a special fund for the Fire Department: staffing, trucks and ambulances, stations, communications and brush clearance. It was written by the firefighters' union and qualified by petition. A five-member citizens' committee reviews spending, there is an annual audit, and the city must keep its own LAFD funding at the ten-year average share or the tax cannot be collected that year. No end date unless voters repeal it.",
+  "yes_means": "Sales tax in the City of LA goes up half a cent, with the money dedicated to the Fire Department.",
+  "no_means": "No new sales tax. LAFD continues to be funded through the regular city budget.",
+  "current_law": "LAFD is funded almost entirely from the General Fund. The sales tax in the City of LA is 10.25% as of October 1, 2026.",
+  "fiscal_impact": "City Administrative Officer: roughly $345 million a year to a dedicated special fund, audited annually, with a 'maintenance of effort' rule. Sales tax rises from 10.25% to 10.75%. The tax would start about 110 days after approval.",
+  "pass_threshold": "simple majority (as a citizen initiative; see note)",
+  "referred_by": "citizen_initiative",
+  "confusing_wording_note": "Because it was placed by petition, it needs only a simple majority under current court rulings, not the two-thirds that applies to special taxes the Council puts on the ballot. Statewide Proposition 43 on the same ballot would restore the two-thirds rule for future citizen-initiated special taxes starting January 2027; opponents say FD is timed to 'squeeze through' before that.",
+  "supporters_case": {
+   "text": "United Firefighters of LA City (IAFF Local 112), Fire Chief Jaime Moore and LAFD firefighters say that 'due to a lack of firefighters, paramedics, equipment, and resources, it's taking us nearly twice as long as it should to arrive in an emergency,' and that 'after decades of neglect, we can't trust City Hall to fix the LAFD.' Mayor Bass and the Central City Association also support it.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "The Howard Jarvis Taxpayers Association says 'Measure FD is a sales tax increase. It raises the sales tax to 10.75%,' the third increase in two years for city residents, and that it uses a court-created loophole to avoid the two-thirds vote normally required for special taxes.",
+   "source": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-city-charter-sc",
+  "state": "CA",
+  "level": "school",
+  "jurisdiction": "Los Angeles Unified School District (voted on by LAUSD voters, inside and outside the City of LA)",
+  "number": "Charter Amendment SC",
+  "official_title": "CAMPAIGN FINANCE RULES RELATED TO BOARD OF EDUCATION ELECTIONS. CHARTER AMENDMENT SC. Shall the Los Angeles City Charter be amended to clarify the campaign finance rules for Board of Education elections and allow for changes by ordinance?",
+  "plain_summary": "The LA City Charter sets the campaign finance rules for LAUSD school board races in its own long section. SC deletes that section and says school board candidates follow the same rules as candidates for Mayor, except the city's ban on lobbyist and contractor money and the public matching funds program. The City Council could then change school-board campaign rules by ordinance instead of a public vote. Only voters inside LAUSD boundaries vote on it.",
+  "yes_means": "School board candidates follow the mayoral campaign finance rules, and the Council can adjust those rules by ordinance.",
+  "no_means": "The separate charter section for school board campaign rules stays, and changing it still requires a vote of LAUSD voters.",
+  "current_law": "Charter Section 803 sets detailed campaign finance rules for Board of Education races (currently a $1,500 per-person limit, inflation-adjusted every four years, with a nine-month post-election fundraising window). Mayoral candidates follow Section 470 ($1,800 limit, adjusted yearly).",
+  "fiscal_impact": "City Administrative Officer: no anticipated financial impact.",
+  "pass_threshold": "simple majority of LAUSD voters",
+  "referred_by": "council",
+  "confusing_wording_note": "It appears as a City of LA charter amendment but is decided by LAUSD voters, including people in Gardena, South Gate, Beverly Hills and other cities inside the district. City voters outside LAUSD do not get it. The practical effect is small today; the bigger change is that the Council, not voters, would control future changes.",
+  "supporters_case": {
+   "text": "Councilmember Adrin Nazarian, LAUSD member Nick Melvoin, former Charter Reform Commissioner Diego Andrades, California Common Cause and the League of Women Voters of Greater Los Angeles call it 'a good governance reform that simplifies the Charter and reduces bureaucratic bloat and redundancy.'",
+   "source": "https://cityclerk.lacity.org/election/ENG201_NOV-2026_Voter_Info_Pamphlet.pdf"
+  },
+  "opponents_case": {
+   "text": "No argument against was submitted. Daily News columnist Susan Shelley recommended no because it 'would enable the City Council to pass an ordinance later that changes the campaign finance rules for school board races' (per LAist).",
+   "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-sc-guide"
+  },
+  "official_text_url": "https://cityclerk.lacity.org/election/ENG201_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "official_guide_url": "https://clerk.lacity.gov/elections/municipal-elections/ballot-measures",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-county-measure-a",
+  "state": "CA",
+  "level": "county",
+  "jurisdiction": "Los Angeles County",
+  "number": "Measure A",
+  "official_title": "Los Angeles County Charter Amendment Reiterating Good Faith Negotiation Obligations and Establishing Impartial Binding Arbitration for Certified Public Safety Employee Disputes. Shall the measure amending the Los Angeles County Charter to prohibit strikes by district attorney investigators, medical examiners, and lifeguards; their supervisors; and nonadministrative civilian employees working in the Fire Department, Sheriff's Department, and the Department of Medical Examiner, reiterate existing legal obligations for good faith negotiations, and establish an impartial binding arbitration process for resolving labor disputes with certified public safety employee organizations representing County employees including firefighters, sheriffs, and the abovementioned employees, as specified in the charter amendment ordinance, be adopted?",
+  "plain_summary": "Changes how LA County settles contract fights with its public safety unions (sheriff's deputies, county firefighters, lifeguards, DA investigators, coroner staff and civilian employees in those departments, about 16,500 workers in 14 bargaining units). Today, if talks break down, the Board of Supervisors can impose its final offer. Under Measure A either side could send the dispute to a three-person arbitration panel that picks one side's last offer on each issue, and the panel's decision is final; the Board and voters could not overturn it. It also bans strikes by the covered workers. This does not cover LAPD or LAFD, which are City of LA employees.",
+  "yes_means": "Stalled county public safety contract talks go to binding arbitration, and arbitrators, not the Board of Supervisors, have the final say on pay and conditions.",
+  "no_means": "The Board of Supervisors keeps the final say and can impose its last offer after mediation and fact-finding.",
+  "current_law": "After mediation and fact-finding, the Board of Supervisors holds a hearing and can impose its 'last, best and final offer.' State law already bars strikes by sworn peace officers and firefighters.",
+  "fiscal_impact": "County Auditor-Controller: no direct effect on revenue. Arbitrations could cost tens of thousands to millions of dollars each. The covered workers cost the county about $4.1 billion a year, and there is 'no basis to predict' whether arbitration would raise or lower that. The county's acting CEO warned of possible workforce reductions or credit-rating pressure if arbitrators impose large raises.",
+  "pass_threshold": "simple majority",
+  "referred_by": "other",
+  "confusing_wording_note": "Not the same as the 2024 county Measure A (the homelessness sales tax). This one is about labor arbitration. Placed by the Board of Supervisors (4-1, Mitchell no) in parallel with a union signature drive; the unions now back the county's version.",
+  "supporters_case": {
+   "text": "The Safer Los Angeles County campaign (ALADS, LA County Firefighters Local 1014, PPOA, the Lifeguard Association and the Building Trades), with Sheriff Robert Luna, DA Nathan Hochman and four supervisors, says binding arbitration will 'take politics out of public safety pay decisions' and 'put independent experts in charge of first responder wages,' helping recruitment and retention.",
+   "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-your-la-county-measure-a-binding-arbitration"
+  },
+  "opponents_case": {
+   "text": "No opponent is listed on the official ballot. LA Forward recommends no, arguing it hands 'unelected arbiters' power over a $4 billion payroll, weakens the county's leverage with a Sheriff's Department facing deputy-gang and jail-conditions problems, and that the county CEO warned of budget consequences.",
+   "source": "https://laforwardguide.org/guide/la-county-ballot-measures"
+  },
+  "official_text_url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot",
+  "official_guide_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot-7-31-2026-lira.pdf",
+  "confidence": "verified"
+ },
+ {
+  "id": "la-county-measure-e",
+  "state": "CA",
+  "level": "county",
+  "jurisdiction": "Los Angeles County",
+  "number": "Measure E",
+  "official_title": "Proposed County Charter Amendment. County of Los Angeles Ethics Commission and Community Investment Charter Amendment. Shall the measure amending the Los Angeles County Charter to provide greater independence and structure for the County of Los Angeles Ethics Commission, Office of Ethics Compliance, and Ethics Compliance Officer, including appointment processes, qualifications, term, duties and responsibilities, and to continue uninterrupted the County's commitment to community investment and alternatives to incarceration, as specified in the charter amendment ordinance, be adopted?",
+  "plain_summary": "Two things in one vote. First, it writes the structure and independence of the new County Ethics Commission (created by 2024's Measure G) into the charter: appointment rules, staggered five-year terms, subpoena power, fines up to $15,000 per violation, and a guaranteed minimum budget of $14.3 million a year starting 2027-28. Second, it restores 2020's Measure J, which requires at least 10% of the county's unrestricted general fund to go to community investment and alternatives to incarceration. Measure J was accidentally wiped out of the charter when Measure G rewrote it.",
+  "yes_means": "The Ethics Commission gets charter-protected independence, powers and funding, and the Measure J 10% set-aside is permanently restored.",
+  "no_means": "The Ethics Commission still exists under Measure G, but a future Board could weaken it, and the Measure J set-aside expires from the charter in December 2028.",
+  "current_law": "Measure G (2024) created an Ethics Commission and Office of Ethics Compliance by 2026 but left details to ordinance. Measure J (2020) was never added to the charter text, so Measure G's rewrite repealed it effective December 2028; the Board has kept funding it by ordinance in the meantime.",
+  "fiscal_impact": "County Auditor-Controller: at least $14.3 million a year for the Ethics Commission from 2027-28, rising with inflation, with no funding source named. The 10% set-aside ($288.3 million when fully phased in) 'continues an existing budget allocation and does not alter current County revenues or expenditures.'",
+  "pass_threshold": "simple majority",
+  "referred_by": "other",
+  "confusing_wording_note": "The ballot question does not say 'Measure J' anywhere; 'continue uninterrupted the County's commitment to community investment and alternatives to incarceration' is the Measure J restoration. Voters who want the ethics piece but not the spending mandate (or the reverse) cannot split them.",
+  "supporters_case": {
+   "text": "League of Women Voters of LA County, California Clean Money, Supervisor Lindsey Horvath, California Common Cause and AAPI Equity Alliance (listed on the ballot) say it fulfills Measure G's promise of a truly independent watchdog and corrects an 'administrative error' that undid a policy 2 million voters approved.",
+   "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-county-measure-e-ethics-comission-measure-j"
+  },
+  "opponents_case": {
+   "text": "No opponent is listed on the official ballot. The LA Daily News editorial board urged a no vote, writing that Measure E 'bundles plausibly fine ethics policy changes with the restoration of really bad policy' and that 'ballot box budgeting is simply irresponsible.' Supervisor Kathryn Barger abstained, saying the county 'should not tie the hands of future Boards.'",
+   "source": "https://cityhallpass.com/election-2026/measures/county-measure-e"
+  },
+  "official_text_url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot",
+  "official_guide_url": "https://www.californiachoices.org/los-angeles-measure-e-2026",
+  "confidence": "sourced"
+ }
+]

@@ -1,0 +1,2382 @@
+[
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since 2022: 'the Orlando Sentinel's Editorial Board no longer endorses candidates in races for president, governor or U.S. Senate, including this year's races.'",
+    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since 2022: 'the Orlando Sentinel's Editorial Board no longer endorses candidates in races for president, governor or U.S. Senate, including this year's races.'",
+    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Endorsement editorial Sept 17, 2026 (reasoning behind paywall; listed on the board's Oct 15 full slate).",
+    "url": "https://www.orlandosentinel.com/2026/09/17/for-attorney-general-jose-javier-rodr%ce%afguez-endorsement/",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Annette Taddeo",
+    "why": "Joint editorial Oct 4, 2026, \"Taddeo for CFO, Atkins for Ag Commissioner\" (reasoning behind paywall).",
+    "url": "https://www.orlandosentinel.com/2026/10/04/endorsements-taddeo-for-cfo-atkins-for-ag-commissioner/",
+    "date": "2026-10-04",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Joey Mendoza Atkins",
+    "why": "Oct 4, 2026 editorial endorsed Atkins; the board's own list labels it the \"Democrat primary\" pick, but the editorial ran after the primary and is the only Ag Commissioner recommendation on the general-election slate.",
+    "url": "https://www.orlandosentinel.com/2026/10/04/endorsements-taddeo-for-cfo-atkins-for-ag-commissioner/",
+    "date": "2026-10-04",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Editorial Oct 1, 2026, \"It's only fair to retire this Florida justice\": recommends voting NO on retaining Chief Justice Muñiz (reasoning behind paywall).",
+    "url": "https://www.orlandosentinel.com/2026/10/01/its-only-fair-to-retire-this-florida-justice-endorsement-2/",
+    "date": "2026-10-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
+    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
+    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
+    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
+    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
+    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"If you want to know what hypocrisy in action looks like, take a good look at these proposed constitutional amendments\" (joint editorial on 1 and 2, Sept 30).",
+    "url": "https://www.orlandosentinel.com/2026/09/30/endorsement-vote-no-on-amendments-1-and-2/",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Same Sept 30 editorial as Amendment 1: the board calls both legislative amendments hypocritical and unnecessary.",
+    "url": "https://www.orlandosentinel.com/2026/09/30/endorsement-vote-no-on-amendments-1-and-2/",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orlando-sentinel-eb",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"If you do nothing else at the polls this November, vote no on Amendment 3. It's that important... It's a recipe for disaster.\" Warns it guts local police, fire and basic services.",
+    "url": "https://www.orlandosentinel.com/2026/09/24/no-no-no-on-awful-amendment-3-endorsement/",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "Same Alden-wide 2022 policy as the Orlando Sentinel: no endorsements for president, governor or U.S. Senate.",
+    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Same Alden-wide 2022 policy as the Orlando Sentinel: no endorsements for president, governor or U.S. Senate.",
+    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "url": "https://www.sun-sentinel.com/opinion/endorsements/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Just say no to all 3 Florida amendments... Amendments 1 and 2 are less publicized but equally worthy of your 'no' vote.\"",
+    "url": "https://www.sun-sentinel.com/2026/09/30/just-say-no-to-all-three-state-amendments-endorsement/",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Just say no to all 3 Florida amendments... Amendments 1 and 2 are less publicized but equally worthy of your 'no' vote.\"",
+    "url": "https://www.sun-sentinel.com/2026/09/30/just-say-no-to-all-three-state-amendments-endorsement/",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sun-sentinel-eb",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"No, no, no on awful Amendment 3\" (Sept 19); says it \"would gut local governments.\"",
+    "url": "https://www.sun-sentinel.com/2026/09/19/no-no-no-on-awful-amendment-3-endorsement/",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "David Jolly",
+    "why": "Oct 1, 2026 editorial: picking Donalds means \"voters will be inviting more of the same: More division.\"",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317273434.html",
+    "date": "2026-10-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"After reading the ballot summary, voters may assume Florida is fiscally irresponsible and needs to be forced to save more money. That couldn't be farther from the truth.\"",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317433651.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Mom-and-pop farmers are not the ones who donate millions to elect state leaders each election. Big farming interest would benefit much more from this amendment.\"",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317441706.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "miami-herald-eb",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Nothing less than a fundamental rewrite of the economics of local governments... We'd see small cities and some rural communities going belly-up.\"",
+    "url": "https://www.miamiherald.com/opinion/election-recommendations/article317445636.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tampa-bay-times-eb",
+    "target_id": "fl-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "url": "https://www.tampabay.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Fund \"hasn't been used since 2008... There is no compelling reason to mandate this or centralize power in Tallahassee even more.\"",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "\"Agriculture is an essential part of our state's food system, economy and heritage. It is endangered and needs all the help it can get.\"",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tcpalm-eb",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Under proposed Amendment 3, we would limit the rights we have, through local officials, to control our taxes and services.\"",
+    "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-cfo",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-democrat-eb",
+    "target_id": "fl-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-cfo",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-cfo",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses or opposes candidates, including in judicial retention votes.",
+    "url": "https://www.vote411.org/florida",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide.",
+    "url": "https://lwvfl.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "LWV Florida's 2026 positions on Amendments 1 and 2 were not found; only the Amendment 3 opposition surfaced. Check lwvfl.org's 2026 voter guide.",
+    "url": "https://lwvfl.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Formally opposed in August 2026. President Jessica Lowe-Minor: \"we don't want to put our communities and the services we love at risk because of a confusing ballot amendment.\"",
+    "url": "https://lwvspa.org/?p=107970",
+    "date": "2026-08-24",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-cfo",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Florida TaxWatch does not endorse candidates or take positions on judges.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Building reserves is sound fiscal practice, though a mandatory $750 million a year \"could last a very long time.\"",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The tangible personal property tax is costly to administer and comply with, and the roughly $30 million a year impact is small.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "florida-taxwatch",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Shifts the burden onto non-homestead owners, gives local governments no replacement for a $45.8 billion five-year revenue loss, and was rushed; reform belongs with the Taxation and Budget Reform Commission.",
+    "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Angie Nixon",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "David Jolly",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Annette Taddeo",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Joey Mendoza Atkins",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridadems.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The Florida Democratic Party opposes Amendment 3 (Florida Phoenix voter guide).",
+    "url": "https://floridaphoenix.com/voter-guides/ballot-measures/2026-amendment-3/",
+    "date": "2026-10-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Ashley Moody",
+    "why": "Formal party endorsement, September 2025, before the primary.",
+    "url": "https://floridianpress.com/2025/09/republican-party-of-florida-formally-endorses-ashley-moody-for-senate/",
+    "date": "2025-09-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "Byron Donalds",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "url": "https://florida.gop/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "url": "https://florida.gop/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Blaise Ingoglia",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "url": "https://florida.gop/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "url": "https://florida.gop/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The Republican Party of Florida backs Amendment 1 (Tampa Bay Times explainer, Sept 27, 2026).",
+    "url": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html",
+    "date": "2026-09-27",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://florida.gop/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The Florida GOP backs Amendment 3 as the largest property-tax cut in state history (Tampa Bay Times and Florida Phoenix).",
+    "url": "https://floridaphoenix.com/voter-guides/ballot-measures/2026-amendment-3/",
+    "date": "2026-09-27",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Angie Nixon",
+    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "David Jolly",
+    "why": "Endorsed with the Florida Education Association in June 2026.",
+    "url": "https://floridianpress.com/2026/06/florida-afl-cio-florida-education-association-endorse-david-jolly-for-governor/",
+    "date": "2026-06-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE). Marked (EE), an early endorsement.",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Annette Taddeo",
+    "why": "Listed on the Florida AFL-CIO's official 2026 endorsement list, voted by its Committee on Public Education (COPE).",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Florida AFL-CIO's 2026 endorsement list on Oct 16: it names no Agriculture Commissioner endorsement. The page says it is not the full list of races the group considered, so this is not a stated 'no position'.",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://flaflcio.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Ashley Moody",
+    "why": "Florida Chamber of Commerce endorsement, Aug 3, 2026.",
+    "url": "https://floridapolitics.com/archives/810953-florida-chamber-of-commerce-throws-support-behind-ashley-moody-in-u-s-senate-race/",
+    "date": "2026-08-03",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-chamber",
+    "target_id": "fl-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.flchamber.com/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Ashley Moody",
+    "why": "Listed on the NRA-PVF Florida grades page.",
+    "url": "https://www.nrapvf.org/grades/florida",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "NRA-PVF grades candidates only.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "NRA-PVF grades candidates only.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "fl-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "NRA-PVF grades candidates only.",
+    "url": "https://www.nrapvf.org/grades/florida/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-us-senate-special",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-cfo",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-amendment-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-amendment-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Florida Sheriffs Association does not endorse candidates as an association; it spoke only on Amendment 3.",
+    "url": "https://www.flsheriffs.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-sheriffs-assn",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The Florida Sheriffs Association warns of stretched law-enforcement resources and longer response times if local property-tax revenue falls.",
+    "url": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html",
+    "date": "2026-09-27",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-us-senate-special",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "David Jolly",
+    "why": "FEA release: \"Educators, workers endorse David Jolly for Florida governor.\"",
+    "url": "https://feaweb.org/release/educators-workers-endorse-david-jolly-for-florida-governor/",
+    "date": "2026-06-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-education-assn",
+    "target_id": "fl-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://feaweb.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Ashley Moody",
+    "why": "Florida Realtors and the National Association of Realtors endorsed Moody, citing her support on housing issues.",
+    "url": "https://floridapolitics.com/archives/753518-realtors-back-ashley-moody-for-u-s-senate-citing-her-critical-support-of-key-issues/",
+    "date": "2025-10-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-muniz",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "url": "https://www.floridarealtors.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-realtors",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Florida Realtors argue the bigger homestead exemption makes homeownership more attainable.",
+    "url": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html",
+    "date": "2026-09-27",
+    "confidence": "sourced"
+  }
+]

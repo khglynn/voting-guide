@@ -1,0 +1,226 @@
+[
+  {
+    "id": "chicago-tribune-eb",
+    "name": "Chicago Tribune editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth' and in 2026 endorsed Democrats in all four statewide races it weighed in on. A Tribune Publishing corporate edict bars formal endorsements for U.S. Senate and governor; the board publishes an evaluation editorial instead. AllSides rates Tribune news Center.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "chicago-sun-times-eb",
+    "name": "Chicago Sun-Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Second-largest Chicago daily, owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). The paper announced on Jan. 23, 2012 that it would stop endorsing candidates ('inform you, not spin you') and in 2026 publishes candidate questionnaires and how-to-vote guides instead. AllSides rates its news Lean Left.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://chicago.suntimes.com/elections/2026",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "crains-chicago-eb",
+    "name": "Crain's Chicago Business editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Business weekly; its editorials favor fiscal restraint, pension reform and pro-business policy, and it has endorsed Republicans (Rauner 2014) and Democrats. No 2026 general-election endorsements were found as of Oct. 16.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.chicagobusiness.com/opinion",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-illinois",
+    "name": "League of Women Voters of Illinois (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; never endorses candidates or takes sides on judicial retention. Publishes candidate questionnaire answers on VOTE411 and hosts forums. Takes positions only on ballot measures; there are none statewide in 2026.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.vote411.org/illinois",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "injustice-watch",
+    "name": "Injustice Watch: Check Your Judges",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit investigative newsroom. Its judicial guide states: 'Injustice Watch does not make recommendations or endorsements.' It researched all 61 Cook County judges on the 2026 retention ballot and flags controversies, reversals and bar ratings.",
+    "geography": [
+      "cook-county-il"
+    ],
+    "guide_url": "https://2026retention.injusticewatch.org/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "il-democratic-party",
+    "name": "Democratic Party of Illinois",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization (chair: Lisa Hernandez). Backs its primary winners in the general election. The Cook County Democratic Party separately slated Pritzker/Mitchell, Raoul, Giannoulias, Frerichs and Croke in July 2025 and made no Senate primary endorsement.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://ildems.com/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "il-republican-party",
+    "name": "Illinois Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization (chair: Kathy Salvi; Don Tracy chaired it 2021 to 2024). Backs its primary winners in the general election.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://ilgop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "il-afl-cio",
+    "name": "Illinois AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation (about 1,500 affiliated unions). Paused endorsements in spring 2026 over stalled priorities (striking-worker unemployment benefits, Tier 2 pension reform), then on July 20, 2026 endorsed every Democrat on the statewide ticket.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://labortribune.com/illinois-afl-cio-2026-general-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "chicago-federation-of-labor",
+    "name": "Chicago Federation of Labor",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Central labor council for Chicago and Cook County (about 300 affiliated unions). Its Nov. 3, 2026 slate endorses the Democratic ticket statewide, Judith Rice for the appellate vacancy, and recommends 'yes' on 58 of the 60 Cook County Circuit Court retention judges (it does not list Ursula Walowski or John J. Mahoney III).",
+    "geography": [
+      "cook-county-il"
+    ],
+    "guide_url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ift-ctu",
+    "name": "Illinois Federation of Teachers (incl. Chicago Teachers Union, Local 1)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide teachers union (AFT affiliate) that includes the Chicago Teachers Union. Endorsed Stratton in the Senate primary. CTU is a self-described progressive union and sometimes endorses separately in local races. General-election slate page not confirmed.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.ift-aft.org/political-action",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "personal-pac",
+    "name": "Personal PAC (abortion rights)",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Illinois' main abortion-rights PAC. Endorses only candidates who support legal abortion; its 2026 general slate is all Democrats.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://personalpac.org/elections/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "il-right-to-life-pac",
+    "name": "Illinois Federation for Right to Life PAC",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-abortion PAC. Endorses only candidates who oppose legal abortion; in statewide races those have been Republicans. 2026 slate not found.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.illinoisrighttolife.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "il-manufacturers-assn",
+    "name": "Illinois Manufacturers' Association (IMA PAC)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide manufacturing trade group. Its PAC endorses in both parties but skews Republican in legislative races. 2026 statewide slate not found.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://ima-net.org/advocacy/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "nra-pvf-il",
+    "name": "NRA Political Victory Fund (Illinois grades)",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican. 2026 Illinois grades not found.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/illinois",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "il-fop",
+    "name": "Illinois Fraternal Order of Police (State Lodge)",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Largest police union in Illinois (about 34,000 members). Opposed the SAFE-T Act and endorsed Darren Bailey for governor in August 2022 alongside Chicago FOP Lodge 7. 2026 endorsements not found.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.ilfop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "sierra-club-il",
+    "name": "Sierra Club Illinois Chapter",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Environmental advocacy group; its statewide endorsements in recent cycles have all been Democrats. 2026 slate not found.",
+    "geography": [
+      "IL"
+    ],
+    "guide_url": "https://www.sierraclub.org/illinois/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

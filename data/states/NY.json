@@ -1,0 +1,224 @@
+{
+  "state": "NY",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "New York State Board of Elections",
+    "url": "https://elections.ny.gov/"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "Most New Yorkers vote in person, either during nine days of early voting (Sat Oct 24 to Sun Nov 1) or on Election Day (Tue Nov 3, 6 AM to 9 PM). Anyone can also ask for a mail ballot, but you must request one; nothing is mailed to you automatically.",
+  "registration": {
+    "check_url": "https://voterlookup.elections.ny.gov/",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-24",
+        "rule": "Register or update your registration online by Saturday, October 24, 2026. The state calendar says the application 'must be received by BOE' by Oct 24, and the state deadlines page confirms Oct 24. Use the State Board of Elections online portal (elections.ny.gov) or the DMV if you have a NY license, permit or non-driver ID.",
+        "source": "https://elections.ny.gov/registration-and-voting-deadlines"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-24",
+        "rule": "A mailed paper form must be RECEIVED by your county board of elections by Saturday, October 24, 2026. Not postmarked: received. The state page says 'Applications must be received by a board of elections no later than October 24, 2026.' This late, don't mail it. Register online or go in person.",
+        "source": "https://elections.ny.gov/registration-and-voting-deadlines"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-24",
+        "rule": "Hand a form to your county board of elections (or a state agency that offers registration, like the DMV) by Saturday, October 24, 2026. NYC BOE: 'Last day to register to vote in person is October 24, 2026.' Call your county board for Saturday hours before you go.",
+        "source": "https://vote.nyc/page/registration-deadlines"
+      }
+    ],
+    "same_day_registration": false,
+    "same_day_notes": "New York has no same-day registration. If you are not registered by October 24 you cannot vote on November 3. Separate from registration: the deadline to change your ADDRESS on an existing registration was Monday, October 19 (state calendar, Election Law 5-208(3); NYC311: 'Last day to request a change of address on your voter registration' is October 19). If you moved within your county (or within NYC) after that, go to the poll site for your NEW address and vote by affidavit ballot.",
+    "still_possible_now": "Yes. As of October 16 you have until Saturday, October 24 to register. Fastest is online at elections.ny.gov. The address-change deadline is sooner: Monday, October 19. Check whether you're already registered first at voterlookup.elections.ny.gov.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Only people who ask. New York has two kinds and they work the same once you have one. EARLY MAIL ballot: 'Any registered voter may apply,' no reason needed. ABSENTEE ballot: for voters who will be away from their county (or away from NYC's five boroughs) on Election Day, have an illness or disability, are the primary caregiver of someone ill or disabled, are in a VA hospital, or are in jail or prison for anything other than a felony conviction. Same ballot, same deadlines. If you don't have an absentee reason, pick early mail. Apply online at elections.ny.gov/request-ballot (NYC: vote.nyc/RequestBallot), by mail, email or fax to your county board, or in person at your county board. 'Each person must apply for themselves.'",
+    "request_deadline": {
+      "date": "2026-10-24",
+      "rule": "Online, by email, fax or mail: the county board must RECEIVE your application by Saturday, October 24, 2026 (state calendar: 'Last day for board of elections to RECEIVE application or letter of application by mail or online portal'). In person at your county board: through Monday, November 2, 2026, the day before the election, and they can hand you the ballot to vote on the spot. This late, use the online portal, not the mail.",
+      "source": "https://elections.ny.gov/system/files/documents/2025/12/2026-political-calendar-quad-fold-12.9.2025-final.pdf"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "9:00 PM ET if you hand it in",
+      "source": "https://elections.ny.gov/request-ballot"
+    },
+    "return_options": [
+      "Mail it: 'Postmarked no later than November 3, and received by the County Board of Elections no later than November 10' (state BOE). Note: NYC311 says received by November 11; the state calendar and state BOE say November 10. Go by November 10.",
+      "Hand it to your county board of elections office by 9 PM on Tuesday, November 3",
+      "Hand it in at any early voting site in your county, October 24 to November 1, during that site's hours (NYC: any NYC early voting site)",
+      "Hand it in at any Election Day poll site in your county by 9 PM on November 3 (NYC: any NYC poll site)",
+      "Someone else can hand in your sealed, signed ballot for you"
+    ],
+    "postage": "prepaid, statewide. State BOE: 'All early mail ballots include a pre-paid Return Envelope... The Return Envelope does not require any additional postage' (same for absentee ballots). NYC Votes: 'No postage needed!'",
+    "signature_witness_rules": "Put the voted ballot in the smaller security envelope (the state BOE's name for it; it has the signature line), then SIGN AND DATE the outside of the security envelope and seal it. No witness or notary. If you make a mark instead of a signature, one witness must sign. Then put the security envelope inside the return envelope. A missing signature is the most common reason a ballot is set aside.",
+    "tracking_url": "https://voterlookup.elections.ny.gov/",
+    "cure_process": "If your security envelope is unsigned or the signature doesn't match, the board must notify you and send a cure form; return it within the window on the notice and your ballot counts. Backstop: if you were issued a mail ballot, you can still go in person and vote an AFFIDAVIT ballot (not a machine). State BOE: 'If the voter's mailed ballot has been received, the affidavit ballot is not counted. If the mailed ballot has not been received, the affidavit ballot is counted.' Only one ever counts.",
+    "mail_cutoff_advice": "The state BOE passes along USPS advice to mail 'generally seven days ahead of the general election,' so mail by about Tuesday, October 27. Postmarks count, but USPS warns that a ballot dropped after the last pickup on Election Day 'will not be postmarked until the following business day,' which would miss the deadline. After Oct 27, hand it in: county board, any early voting site in your county through Nov 1, or any poll site in your county on Nov 3 by 9 PM.",
+    "drop_box_lookup_url": "https://voterlookup.elections.ny.gov/",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-24",
+    "end": "2026-11-01",
+    "hours_note": "Nine days, Saturday Oct 24 through Sunday Nov 1. No voting on Monday Nov 2. Hours are set by each county. NYC (all five boroughs): Sat Oct 24, Sun Oct 25, Mon Oct 26 9 AM to 5 PM; Tue Oct 27 and Wed Oct 28 10 AM to 8 PM; Thu Oct 29 8 AM to 4 PM; Fri Oct 30, Sat Oct 31, Sun Nov 1 9 AM to 5 PM. NYC assigns you ONE early voting site, often not your Election Day site: 'You must vote at your assigned early voting site.' Look it up at findmypollsite.vote.nyc. Sullivan County (Callicoon): two sites, and 'All Sullivan County registered voters are eligible to vote at' either one: Sullivan County Government Center, 1st floor, 100 North Street, Monticello; and Sullivan County Public Health, 50 Community Lane, Liberty. Sullivan hours: Sat Oct 24, Sun Oct 25, Mon Oct 26 9 AM to 5 PM; Tue Oct 27 12 PM to 8 PM; Wed Oct 28 9 AM to 5 PM; Thu Oct 29 12 PM to 8 PM; Fri Oct 30, Sat Oct 31, Sun Nov 1 9 AM to 5 PM. Other counties: state BOE says 'Voters may visit any of their assigned Early Voting Centers in their county'; check your county board.",
+    "vote_centers": null,
+    "lookup_url": "https://voterlookup.elections.ny.gov/",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "6:00 AM",
+    "polls_close": "9:00 PM",
+    "in_line_rule": "If you are in line at 9 PM, stay in line. NYC311: 'If you are in line by 9 PM, you can stay in line to cast a ballot.'",
+    "vote_centers": false,
+    "lookup_url": "https://voterlookup.elections.ny.gov/",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "first_time_only",
+    "accepted": [
+      "Most voters show nothing: you sign the poll book (or e-poll pad) and your signature is checked against your registration",
+      "First-time voters who registered by mail without a NY driver license or ID number, or the last 4 digits of a Social Security number, may be asked for ID",
+      "If asked: a current, valid photo ID (driver license, non-driver ID, passport, student ID)",
+      "Or a current utility bill, bank statement, government check, paycheck, or other government document showing your name and address"
+    ],
+    "no_id_option": "If you're asked for ID and don't have it, you can vote an affidavit (provisional) ballot. It counts once the board confirms you're registered. Ulster County BOE: 'the voter will not be allowed to vote on the poll site voting system, but will be able to vote by affidavit ballot.'",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "restricted",
+    "phones_detail": "No state law bans carrying your phone or reading your notes on it at the poll site, and poll workers generally allow it. What's illegal is showing your marked ballot to anyone, and a federal court has read Election Law 17-130(10) to cover photographing it (Silberberg v. Board of Elections, S.D.N.Y. 2017). Many sites post 'no photography' signs and a poll worker can ask you to put the phone away. Keep it to reading your list. Source: https://www.nysenate.gov/legislation/laws/ELN/17-130",
+    "notes_allowed": "allowed",
+    "notes_detail": "Bring a printed or handwritten list, a marked-up sample ballot, or this guide. The only limit is electioneering: don't show it around or hand it out within 100 feet of the poll site entrance (Election Law 8-104). Source: https://www.nysenate.gov/legislation/laws/ELN/8-104 and https://www.nyclu.org/resources/know-your-rights/voting-new-york",
+    "ballot_selfies": "prohibited",
+    "apparel_rule": "No electioneering within 100 feet of the poll site entrance, including campaign buttons, hats and shirts for anyone on the ballot. Poll workers can ask you to cover up or take it off. An 'I Voted' sticker selfie outside is fine. Source: Election Law 8-104, https://www.nysenate.gov/legislation/laws/ELN/8-104",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are RECEIVED-by, not postmarked, so don't put either in the mail this week. Register online; request your ballot online. No same-day registration in New York.",
+    "Address changes closed earlier: Monday, October 19. If you moved within your county (or within NYC) after that, vote at the poll site for your new address by affidavit ballot.",
+    "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
+    "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
+    "NYC: your early voting site is assigned and is often NOT your Election Day poll site. Check both at findmypollsite.vote.nyc. Early voting ends Sunday, November 1; there's no voting on Monday, November 2. NYC ballots also carry five ballot questions this year, all proposed City Charter amendments (NYC Votes: 'NYC voters will see five ballot proposals on their ballots'), usually on the back. Flip it over. There is no statewide ballot question in 2026."
+  ],
+  "sources": [
+    {
+      "name": "NYS Board of Elections: 2026 Political Calendar (PDF, revised 12/9/2025). Oct 19 address change, Oct 24 registration received-by, Oct 24 mail/online ballot application received-by, Nov 2 in-person application, Nov 3 postmark / Nov 10 receipt, Oct 24 to Nov 1 early voting",
+      "url": "https://elections.ny.gov/system/files/documents/2025/12/2026-political-calendar-quad-fold-12.9.2025-final.pdf"
+    },
+    {
+      "name": "NYS Board of Elections: Registration and Voting Deadlines (Oct 24 received-by)",
+      "url": "https://elections.ny.gov/registration-and-voting-deadlines"
+    },
+    {
+      "name": "NYS Board of Elections: Election Information (polls 6 AM to 9 PM; early voting Oct 24 to Nov 1)",
+      "url": "https://elections.ny.gov/election-information"
+    },
+    {
+      "name": "NYS Board of Elections: Request a Ballot (early mail vs absentee, deadlines, return options, affidavit rule)",
+      "url": "https://elections.ny.gov/request-ballot"
+    },
+    {
+      "name": "NYS Board of Elections: Early Voting in New York State",
+      "url": "https://elections.ny.gov/node/411"
+    },
+    {
+      "name": "NYS Board of Elections: 2026 Election Deadlines poster",
+      "url": "https://elections.ny.gov/2026-election-deadlines-poster"
+    },
+    {
+      "name": "NYS Board of Elections: Amended Certification for the November 3, 2026 General Election (dated Oct 7, 2026; candidates and party lines)",
+      "url": "https://elections.ny.gov/certification-november-3-2026-general-election"
+    },
+    {
+      "name": "NYS Voter Lookup (registration, poll site, early voting site, ballot status)",
+      "url": "https://voterlookup.elections.ny.gov/"
+    },
+    {
+      "name": "NYC Board of Elections: Registration Deadlines, General Election (Oct 24 in person and mail received-by)",
+      "url": "https://vote.nyc/page/registration-deadlines"
+    },
+    {
+      "name": "NYC Board of Elections: All Important Dates (ballot application Oct 24 / Nov 2; return options)",
+      "url": "https://vote.nyc/page/all-important-dates"
+    },
+    {
+      "name": "NYC Board of Elections: Upcoming Elections 2026 (full early voting hours table; polls 6 AM to 9 PM)",
+      "url": "https://www.vote.nyc/elections"
+    },
+    {
+      "name": "NYC Board of Elections: Request a Ballot",
+      "url": "https://vote.nyc/RequestBallot"
+    },
+    {
+      "name": "NYC Find My Poll Site / sample ballot (early voting site and Election Day site)",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "name": "NYC311: 2026 General Election (Oct 19 address change, early voting hours, in-line rule, drop-off). Note: its ballot-question count was not used; the official count is five (NYC Votes)",
+      "url": "https://portal.311.nyc.gov/article/?kanumber=KA-03114"
+    },
+    {
+      "name": "NYC Votes (Campaign Finance Board): Early Voting ('You must vote at your assigned early voting site')",
+      "url": "https://www.nycvotes.org/how-to-vote/early-voting/"
+    },
+    {
+      "name": "NYC Votes: Vote by mail in New York City (no postage needed)",
+      "url": "https://www.nycvotes.org/how-to-vote/vote-by-mail/"
+    },
+    {
+      "name": "NYC Votes: 2026 Ballot Proposals (five City Charter amendments)",
+      "url": "https://www.nycvotes.org/whats-on-the-ballot/2026-ballot-proposals/"
+    },
+    {
+      "name": "Sullivan County BOE: Early Voting Information (2026 General Election flyer)",
+      "url": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting"
+    },
+    {
+      "name": "Sullivan County BOE: GE26 Early Voting Flyer (PDF; two sites, hours, any-site rule)",
+      "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/GE26%20Early%20Voting%20Flyer.pdf"
+    },
+    {
+      "name": "Sullivan County BOE: Voting Dates, Times and Locations (Election Day 6 AM to 9 PM; Callicoon and Delaware poll sites)",
+      "url": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    },
+    {
+      "name": "Sullivan County BOE: contact (100 North Street, Monticello; 845-807-0400)",
+      "url": "https://www.sullivanny.gov/Departments/Elections"
+    },
+    {
+      "name": "Ulster County Board of Elections: What Do I Need When I Go to Vote? (first-time voter ID; affidavit ballot if no ID; same rule statewide)",
+      "url": "https://elections.ulstercountyny.gov/?p=482"
+    },
+    {
+      "name": "NYC Board of Elections: Contact Us (borough office addresses and phones)",
+      "url": "https://vote.nyc/page/contact-us"
+    },
+    {
+      "name": "NY Attorney General: 2026 election key dates and resources",
+      "url": "https://ag.ny.gov/election-key-dates"
+    },
+    {
+      "name": "NYCLU: Voting in New York (know your rights)",
+      "url": "https://www.nyclu.org/resources/know-your-rights/voting-new-york"
+    },
+    {
+      "name": "Election Law 17-130 (showing a marked ballot)",
+      "url": "https://www.nysenate.gov/legislation/laws/ELN/17-130"
+    },
+    {
+      "name": "Election Law 8-104 (electioneering within 100 feet)",
+      "url": "https://www.nysenate.gov/legislation/laws/ELN/8-104"
+    },
+    {
+      "name": "New York Focus: 2026 NY election guide (Oct 16, 2026)",
+      "url": "https://nysfocus.com/2026/10/16/2026-new-york-election-voter-guide"
+    }
+  ]
+}

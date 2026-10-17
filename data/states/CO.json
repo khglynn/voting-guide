@@ -1,0 +1,206 @@
+{
+  "state": "CO",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "GoVoteColorado (Colorado Secretary of State)",
+    "url": "https://www.govotecolorado.gov/"
+  },
+  "voting_model": "all_mail",
+  "model_plain": "Every registered voter gets a ballot in the mail. Fill it out, sign the envelope, and drop it in a drop box or mail it back early. You can also vote in person at any vote center in your county.",
+  "registration": {
+    "check_url": "https://www.govotecolorado.gov/",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-26",
+        "rule": "Register or update online at GoVoteColorado.gov by Monday, October 26 (8 days before the election) to still get a ballot in the mail. After that you can still register, but only in person at a vote center.",
+        "source": "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261002Ballots.html"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-26",
+        "rule": "Paper applications by mail, at a DMV, or at a voter registration agency must be submitted by the 8th day before the election (October 26) to get a mail ballot. Voter registration drives had an earlier cutoff: 22 days before the election (October 12).",
+        "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-11-03",
+        "rule": "You can register in person at any Voter Service and Polling Center in your county through 7:00 PM on Election Day and vote right then.",
+        "source": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html"
+      }
+    ],
+    "same_day_registration": true,
+    "same_day_notes": "Go to any Voter Service and Polling Center (VSPC) in your county through 7:00 PM on November 3. Bring an acceptable ID (see id_rules). If you register on Election Day without verifiable ID you may vote a provisional ballot that is counted after your eligibility is confirmed. Find VSPCs at GoVoteColorado.gov.",
+    "still_possible_now": "Yes. As of October 15 you can still register online at GoVoteColorado.gov through October 26 and get a ballot mailed to you. After October 26, register and vote in person at a vote center, right up to 7:00 PM on Election Day.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Automatic. Every active registered voter is mailed a ballot. No request or excuse is needed. County clerks mailed ballots between October 2 and October 9, 2026 (Denver mailed all ballots on October 5). If you registered or moved after that, a ballot goes out when your record is updated, through October 26.",
+    "request_deadline": {
+      "date": "2026-10-26",
+      "rule": "You don't need to request a ballot. If yours never arrived, was lost, or you made a mistake, ask your county clerk for a replacement. Denver says October 26 is the last day to request that a replacement be mailed to you; after that, get a replacement in person at a vote center or just vote in person. Denver also says: if your ballot hasn't arrived by Tuesday, October 13, call 720-913-VOTE (8683).",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "received_by",
+      "time": "7:00 PM MT",
+      "source": "https://www.coloradosos.gov/pubs/elections/FAQs/mailBallotsFAQ.html"
+    },
+    "return_options": [
+      "24-hour drop box (any drop box in your county; Denver has 49, open since Oct. 5; statewide minimum open since Oct. 12)",
+      "any Voter Service and Polling Center in your county (during its hours)",
+      "mail (USPS) only if you mail by Monday, October 26",
+      "county clerk's election office (Denver Elections Division, 200 W. 14th Ave., has a drop box at the NE corner of the building)"
+    ],
+    "postage": "Drop boxes and vote centers are free: no stamp needed. If you mail it, you pay postage. State law (C.R.S. 1-7.5-107(4)(b)(II)) says 'the elector must provide postage,' and Denver's elections FAQ says 'postage required.' How much depends on the weight of your ballot, so follow the instructions printed on your return envelope; media reports say some Front Range counties recommend two Forever stamps (68 cents) and Jefferson County one. Sources: https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-7-5-107/ and https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections/faq",
+    "signature_witness_rules": "Sign the back of the return envelope. No witness or notary. Election judges compare your signature to the signature on file (from voter registration and DMV records). First-time voters who registered by mail or online without a Colorado DL/ID or SSN match may need to include a photocopy of an acceptable ID; your ballot packet will say so if it applies to you.",
+    "tracking_url": "https://ballottrax.coloradosos.gov/voter/",
+    "cure_process": "If two election judges from different parties agree your signature is missing or doesn't match, or you were required to include ID and didn't, the county must mail you a letter (and BallotTrax sends a notice if you're signed up) explaining how to fix it. You have until 11:59 PM MT on the 8th day after Election Day. Because the 8th day (Nov. 11) is Veterans Day, the deadline moves to Thursday, November 12, 2026. Colorado's statewide TXT2Cure system lets most voters fix it from a phone: text the word Colorado to 2VOTE (28683), enter the voter ID number printed on your notice, and follow the prompts to sign and, if needed, photograph your ID. You can also return the affidavit your county mails you. Sources: https://coloradosos.gov/pubs/elections/FAQs/rejectedBallots.html and https://www.co.routt.co.us/990/How-do-I-cure-my-ballot",
+    "mail_cutoff_advice": "The Secretary of State says Monday, October 26 is the last suggested day to return your ballot by mail. From October 27 on, don't mail it: put it in a drop box or take it to a vote center. Postmarks do not count. Denver gives the same October 26 cutoff.",
+    "drop_box_lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-19",
+    "end": "2026-11-02",
+    "hours_note": "State law requires the minimum number of Voter Service and Polling Centers to open by Monday, October 19 (some counties open earlier; Denver's main VSPC at the Central Library opened October 12). Hours vary by county and location. Denver's centers open in phases: Oct. 19, Oct. 26, Oct. 30, and Nov. 2. Typical Denver hours are 8 AM to 5 or 6 PM weekdays, with Saturday, Oct. 31, 8 AM to 5 PM; closed Sundays. Check exact hours for your location at GoVoteColorado.gov or your county clerk's site.",
+    "vote_centers": true,
+    "lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "7:00 PM",
+    "in_line_rule": "If you are in line at a vote center by 7:00 PM you get to vote, no matter how long it takes. Ballots in a drop box or in the clerk's hands by 7:00 PM count; drop boxes lock at 7:00 PM.",
+    "vote_centers": true,
+    "lookup_url": "https://www.sos.state.co.us/pubs/elections/VIP.html",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "non_photo_ok",
+    "accepted": [
+      "Valid Colorado driver's license or Colorado ID card (digital format accepted)",
+      "Valid U.S. passport or passport card",
+      "Valid U.S. military ID with photo",
+      "Valid employee ID with photo issued by a U.S., Colorado, county, or municipal government entity",
+      "Valid pilot's license (FAA)",
+      "Copy of a current (within 60 days) utility bill, bank statement, government check, paycheck, or other government document showing your name and Colorado address",
+      "Certificate of Degree of Indian or Alaskan Native Blood",
+      "Valid Medicare or Medicaid card",
+      "Certified copy of a U.S. birth certificate",
+      "Certified naturalization documents",
+      "Valid student ID with photo from a Colorado institution of higher education",
+      "Valid VA veteran ID card with photo",
+      "Valid tribal government ID card",
+      "Division of Youth Services ID card",
+      "If the ID shows an address, it must be a Colorado address (it does not have to match your registration address)"
+    ],
+    "no_id_option": "Mail ballots: no ID is needed for most voters; your signature is your ID. Only some first-time voters must include a photocopy of ID (your packet will say). In person: ID is required for everyone. If you don't have one you can vote a provisional ballot, which is counted once the county verifies your eligibility, or you can go home, pick up your mail ballot, and drop it off instead.",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "No Colorado statute bans phones in a vote center, and the Secretary of State's FAQ says voters may show their own voted ballot to others 'if it is not done in furtherance of an election violation, like vote buying.' Under C.R.S. 1-13-712(1)(d), though, your county clerk may place 'reasonable restrictions on the use of photography' inside a Voter Service and Polling Center, so expect signs or a judge asking you not to photograph other people or the equipment. Using your phone to look up notes or your sample ballot is fine. Sources: https://coloradosos.gov/pubs/elections/FAQs/crimesRulesFAQ.html and https://law.justia.com/codes/colorado/title-1/general-primary-recall-and-congressional-vacancy-elections/article-13/part-7/section-1-13-712/",
+    "notes_allowed": "allowed",
+    "notes_detail": "Nothing in Colorado law prohibits bringing a printed or handwritten list, a marked-up sample ballot, or the Blue Book into the booth. The only limit is electioneering: your notes cannot be campaign material you display or hand out to others inside the center or within 100 feet. Most Coloradans never face this because they fill out the mail ballot at home. Source: C.R.S. 1-13-714 (electioneering), https://law.justia.com/codes/colorado/title-1/general-primary-recall-and-congressional-vacancy-elections/article-13/part-7/section-1-13-714/",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "No campaigning inside a vote center or within 100 feet of the building, or within 100 feet of a drop box. Inside a vote center you may NOT wear pins, shirts, hats, or other apparel with the name or likeness of a candidate on the ballot, or the number, title, subject, or logo of a ballot measure on the ballot. Take off or cover the 'Yes on 87' hat before you walk in. 'Comfort teams' can hand out water and snacks outside but cannot wear campaign gear within 100 feet. Source: https://coloradosos.gov/pubs/elections/FAQs/crimesRulesFAQ.html and C.R.S. 1-13-714.",
+    "confidence": "verified"
+  },
+  "gotchas": [
+    "Postmarks don't count. Your ballot must be IN THE CLERK'S HANDS by 7:00 PM on November 3. The state's last suggested day to mail is Monday, October 26. After that, use any 24-hour drop box in YOUR county (not just the one near your house) or a vote center. A friend or family member can drop yours off; state law caps how many other people's ballots one person may carry at 10 (C.R.S. 1-7.5-107(4)(b)(I)(B)). A box in another county must forward it to yours, but that takes time, so stay in your county.",
+    "Sign the envelope. The number one reason ballots get rejected is a missing or mismatched signature. Sign it the way you sign your driver's license, and don't let anyone else sign for you. If you get a letter or a BallotTrax text saying there's a problem, you have until 11:59 PM on Thursday, November 12 to fix it (the usual 8th day, Nov. 11, is Veterans Day).",
+    "Mail ballots don't come with an ID check for most people, but if you vote IN PERSON you must show ID. Non-photo ID like a utility bill with a Colorado address works. A digital copy on your phone is fine.",
+    "On every measure, 'Yes' means change the law and 'No' means keep things as they are. Amendments 81 through 86 need 55% to pass; Amendment 87 and all seven propositions need a simple majority. Two measures directly conflict: Amendment 87 (graduated income tax) and Proposition 136 (4.4% cap). If both pass, the Blue Book says the one with more yes votes is generally expected to control, but the outcome is legally unclear.",
+    "Denver-metro only: about 800,000 voters in Adams, Arapahoe, Douglas and Weld counties got ballots that wrongly include Ballot Issue 7A (the Front Range passenger rail tax). If you don't live inside the rail district, your 7A vote won't count but the rest of your ballot will. Officials say don't request a new ballot; they will copy your votes onto the correct ballot style. Sources: https://www.cpr.org/2026/10/07/front-range-passenger-rail-incorrect-ballots/ and https://www.denverpost.com/2026/10/09/after-unprecedented-colorado-ballot-error-whats-next-for-front-range-rail-measure/ (sourced, not official)."
+  ],
+  "sources": [
+    {
+      "name": "Colorado Secretary of State: 2026 Election Calendar (PDF)",
+      "url": "https://www.coloradosos.gov/pubs/elections/calendars/2026ElectionCalendar.pdf"
+    },
+    {
+      "name": "Colorado SoS press release, Oct 2, 2026: County Clerks May Begin Mailing Ballots",
+      "url": "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261002Ballots.html"
+    },
+    {
+      "name": "Colorado SoS press release, Sept 23, 2026: Colorado Is Ready for the 2026 General Election",
+      "url": "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20260923GeneralElection.html"
+    },
+    {
+      "name": "Colorado SoS press release, Oct 12, 2026: Drop Boxes Available Statewide",
+      "url": "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/PR20261012DropBoxes.html"
+    },
+    {
+      "name": "Colorado SoS: Mail-in Ballots FAQ",
+      "url": "https://www.coloradosos.gov/pubs/elections/FAQs/mailBallotsFAQ.html"
+    },
+    {
+      "name": "Colorado SoS: Election Day FAQ",
+      "url": "https://www.coloradosos.gov/pubs/elections/FAQs/ElectionDay.html"
+    },
+    {
+      "name": "Colorado SoS: Voter Registration FAQ",
+      "url": "https://www.coloradosos.gov/pubs/elections/FAQs/VoterRegistrationFAQ.html"
+    },
+    {
+      "name": "Colorado SoS: Rejected Ballots FAQ (signature cure)",
+      "url": "https://coloradosos.gov/pubs/elections/FAQs/rejectedBallots.html"
+    },
+    {
+      "name": "Colorado SoS: Acceptable Forms of Identification (revised June 30, 2026)",
+      "url": "https://www.coloradosos.gov/pubs/elections/vote/acceptableFormsOfID.html"
+    },
+    {
+      "name": "Colorado SoS: Election Crimes, Rules, and Penalties FAQ (electioneering, ballot photos)",
+      "url": "https://coloradosos.gov/pubs/elections/FAQs/crimesRulesFAQ.html"
+    },
+    {
+      "name": "C.R.S. 1-13-712 (disclosing a voted ballot / ballot selfies)",
+      "url": "https://law.justia.com/codes/colorado/title-1/general-primary-recall-and-congressional-vacancy-elections/article-13/part-7/section-1-13-712/"
+    },
+    {
+      "name": "C.R.S. 1-13-714 (electioneering within 100 feet of a polling place or drop box)",
+      "url": "https://law.justia.com/codes/colorado/title-1/general-primary-recall-and-congressional-vacancy-elections/article-13/part-7/section-1-13-714/"
+    },
+    {
+      "name": "C.R.S. 1-7.5-107 (mail ballot return: postage, 7 p.m. receipt rule, 10-ballot delivery limit, wrong-county forwarding)",
+      "url": "https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-7-5-107/"
+    },
+    {
+      "name": "Denver Elections Division: FAQ (postage required, replacement ballots, returning others' ballots)",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections/faq"
+    },
+    {
+      "name": "CPR: 800,000 voters will see ballots that incorrectly include Issue 7A",
+      "url": "https://www.cpr.org/2026/10/07/front-range-passenger-rail-incorrect-ballots/"
+    },
+    {
+      "name": "Routt County Clerk: How do I cure my ballot? (TXT2Cure instructions)",
+      "url": "https://www.co.routt.co.us/990/How-do-I-cure-my-ballot"
+    },
+    {
+      "name": "Colorado SoS: Find drop boxes and voting locations (VIP lookup)",
+      "url": "https://www.sos.state.co.us/pubs/elections/VIP.html"
+    },
+    {
+      "name": "BallotTrax (Colorado)",
+      "url": "https://ballottrax.coloradosos.gov/voter/"
+    },
+    {
+      "name": "Denver Elections Division: Upcoming Elections (key dates, replacement ballots)",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+    },
+    {
+      "name": "Denver Elections Division: Where to Vote in Denver (drop boxes, VSPC hours, mail cutoff)",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver"
+    },
+    {
+      "name": "2026 State Ballot Information Booklet (Blue Book), Legislative Council Staff",
+      "url": "https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf"
+    }
+  ]
+}

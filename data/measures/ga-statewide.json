@@ -1,0 +1,83 @@
+[
+  {
+    "id": "ga-amendment-1",
+    "state": "GA",
+    "level": "state",
+    "jurisdiction": "Georgia",
+    "number": "Amendment 1",
+    "official_title": "Shall the Constitution of Georgia, for the purpose of protecting family farmland, be amended so as to increase the maximum acreage to qualify for assessment and taxation as a bona fide conservation use property from 2,000 acres to 4,000 acres?",
+    "plain_summary": "Georgia taxes farm and timber land enrolled in its Conservation Use program (CUVA) on what the land earns as farmland, not what a developer would pay for it. Right now one owner can enroll up to 2,000 acres. This amendment doubles that cap to 4,000 acres. Everything else about the program stays the same: the owner signs a 10-year promise to keep farming or growing timber, and breaking it means paying back the tax savings.",
+    "yes_means": "One owner could enroll up to 4,000 acres of farm or timber land in the conservation-use tax program instead of 2,000.",
+    "no_means": "The cap stays at 2,000 acres per owner.",
+    "current_law": "Article VII, Section I, Paragraph III(e)(1) of the Georgia Constitution lets the legislature set a lower, current-use tax value for 'bona fide conservation use property' (agricultural and timber land) up to 2,000 acres of a single owner. Enrolled land is assessed at 40 percent of its current-use value under a 10-year covenant. The 'bona fide residential transitional property' limit of five acres is unchanged by this amendment.",
+    "fiscal_impact": "No official state fiscal note is published for Georgia constitutional amendments. The AJC reports opponents' concern that it 'could reduce local government and school property tax revenue' because more land would be taxed at the lower farm value; no dollar estimate has been published. The state's General Fund is not directly affected because property tax is local.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The question opens with 'for the purpose of protecting family farmland,' a purpose clause the legislature wrote into the ballot text; the official Attorney General / Secretary of State summary does not include it. The amendment itself does not define 'family farm.' CUVA eligibility already includes individuals, family farm entities, trusts and some nonprofits, so the higher cap applies to any qualifying owner, not only family farms.",
+    "supporters_case": {
+      "text": "Sponsor Sen. Sam Watson (R-Moultrie) says the conservation-use rules date from the 1980s when farms were smaller, and that raising the cap helps keep family farms in business.",
+      "source": "https://www.ajc.com/politics/2026/08/here-are-state-constitutional-amendments-georgians-will-vote-on-in-november/"
+    },
+    "opponents_case": {
+      "text": "Critics quoted by the AJC say it could reduce local government and school property tax revenue and give large or corporate farm operations a tax break they don't need.",
+      "source": "https://www.ajc.com/politics/2026/08/here-are-state-constitutional-amendments-georgians-will-vote-on-in-november/"
+    },
+    "official_text_url": "https://gov.georgia.gov/document/2025-signed-legislation/hr-32/download",
+    "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-amendment-2",
+    "state": "GA",
+    "level": "state",
+    "jurisdiction": "Georgia",
+    "number": "Amendment 2",
+    "official_title": "Shall the Constitution of Georgia be amended so as to require that all probate court judges be elected in nonpartisan elections?",
+    "plain_summary": "Probate judges handle wills and estates, guardianships, marriage licenses and weapons-carry licenses, and in some counties traffic and misdemeanor cases. They are the last judges in Georgia who still run with a party label (Democrat or Republican) on the ballot. This amendment makes their elections nonpartisan, the way superior court, state court, Court of Appeals and Supreme Court elections already are.",
+    "yes_means": "Probate judges would run in nonpartisan elections with no party label, like Georgia's other judges.",
+    "no_means": "Probate judges would keep running in partisan elections with a party label.",
+    "current_law": "Article VI, Section VII, Paragraph I(a) of the Georgia Constitution requires nonpartisan elections for superior court and state court judges (4-year terms) and Supreme Court justices and Court of Appeals judges (6-year terms). Probate judges fall under 'all other judges,' who are chosen the way they were on June 30, 1983, which in practice means partisan county elections unless a local law says otherwise.",
+    "fiscal_impact": "No official fiscal note. The change affects how candidates qualify and appear on the ballot, not the court's budget. Nonpartisan judicial races in Georgia are held with the May primary rather than in November, so the timing of probate judge elections would shift accordingly.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "legislature",
+    "confusing_wording_note": "Numbering: the Secretary of State's official booklet orders the questions acreage (1), probate judges (2), 9-1-1 fund (3), and News4Jax and Athens Politics Nerd match that. The Delilah election-data feed has 2 and 3 swapped, so if you see '9-1-1' called Amendment 2 somewhere, trust the ballot in front of you. A 'yes' here does not change who the current probate judges are or how long they serve; it changes how future elections are labeled (and nonpartisan judicial races are held in May, not November).",
+    "supporters_case": {
+      "text": "Sponsor Rep. Kimberly New (R-Villa Rica) says party labels conflict with the judicial code of conduct and that judges 'should serve the law, not a political party.' The measure passed with 94 percent of Republicans and 85 percent of Democrats voting yes, per Ballotpedia.",
+      "source": "https://www.ajc.com/politics/2026/08/here-are-state-constitutional-amendments-georgians-will-vote-on-in-november/"
+    },
+    "opponents_case": {
+      "text": "No organized opposition was found. The AJC and Augusta Press explainers list no arguments against. Some legislators voted no.",
+      "source": "https://news.ballotpedia.org/2026/04/02/georgia-general-assembly-places-constitutional-amendments-on-the-2026-ballot-to-fund-emergency-response-systems-and-require-nonpartisan-elections-for-probate-judges/"
+    },
+    "official_text_url": "https://gov.georgia.gov/document/2026-signed-legislation/hr-251/download",
+    "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-amendment-3",
+    "state": "GA",
+    "level": "state",
+    "jurisdiction": "Georgia",
+    "number": "Amendment 3",
+    "official_title": "Shall the Constitution of Georgia be amended so as to authorize the General Assembly to dedicate certain existing revenues, including revenues reallocated by law, to a nonlapsing fund to be used exclusively for the expansion, maintenance, and operation of emergency 9-1-1 systems in this state?",
+    "plain_summary": "Georgia wants to upgrade 911 so dispatchers can take texts, photos and video and so county systems can talk to each other ('Next Generation 9-1-1'). The state constitution normally bars locking money into a single purpose. This amendment lets the legislature create a dedicated 'Georgia Next Generation 9-1-1 Fund' that can only be spent on 911, and money left over at year end stays in the fund instead of going back to the general budget. It does not raise any fee or tax by itself.",
+    "yes_means": "The legislature may create a permanent, protected fund for 911 systems and steer existing 911 fee revenue into it.",
+    "no_means": "No dedicated 911 fund; 911 money keeps flowing through the regular budget and local distribution as it does now.",
+    "current_law": "Article III, Section IX, Paragraph VI of the Georgia Constitution limits dedicated funds and lets unspent money lapse. Georgians pay a $1.50 monthly 911 charge on phone lines, which is currently distributed to local 911 centers. The amended FY2025 budget put $5.7 million of seed money toward Next Generation 9-1-1.",
+    "fiscal_impact": "No official fiscal note. The AJC reports approval 'would not immediately change the current $1.50 cellphone 911 fee'; a later law would decide what revenue goes in. A House study committee recommended shifting the existing local 911 charge into the statewide fund. Athens Politics Nerd notes this could move money from local distribution to a state fund, though spending would likely stay about the same.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "legislature",
+    "confusing_wording_note": "On the ballot this is Amendment 3 per the SOS booklet (the Delilah data feed labels it Amendment 2; the ballot controls). 'Authorize the General Assembly' is the key phrase: a yes vote does not create the fund, it lets lawmakers create one by ordinary law later. 'Certain existing revenues, including revenues reallocated by law' is the ballot's way of saying the money would come from the 911 fee you already pay, possibly redirected from your county to the state.",
+    "supporters_case": {
+      "text": "Supporters, including the Georgia Emergency Communications Authority and the Georgia Municipal Association, say Georgia's 911 setup has changed little since 1968 while most calls now come from cell phones, and a protected fund is needed to finish the statewide upgrade. The resolution passed both chambers unanimously on final passage.",
+      "source": "https://www.ajc.com/politics/2026/08/here-are-state-constitutional-amendments-georgians-will-vote-on-in-november/"
+    },
+    "opponents_case": {
+      "text": "No organized opposition was found. Senate Democrats briefly blocked it in March 2026 over process, not substance (Sen. Derek Mallow: 'until we can find a way to work together in this chamber, I'm going to vote no'), then voted for it. Athens Politics Nerd flags a possible loss of local control over 911 fee revenue.",
+      "source": "https://theaugustapress.com/georgians-will-consider-three-constitutional-amendments-in-november/"
+    },
+    "official_text_url": "https://gov.georgia.gov/document/2026-signed-legislation/hr-1243/download",
+    "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
+    "confidence": "verified"
+  }
+]

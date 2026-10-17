@@ -1,0 +1,49 @@
+{
+  "id": "nyc-staten-island-ny",
+  "label": "Staten Island (Richmond County)",
+  "state": "NY",
+  "counties": [
+    "Richmond"
+  ],
+  "county_election_office": {
+    "name": "NYC Board of Elections, Staten Island borough office: 1 Edgewater Plaza, 4th Floor, Staten Island, NY 10305",
+    "url": "https://vote.nyc/",
+    "phone": "1-718-876-0079 (citywide: 1-866-VOTE-NYC)"
+  },
+  "sample_ballot_url": "https://findmypollsite.vote.nyc/",
+  "zips": [
+    "10301",
+    "10302",
+    "10303",
+    "10304",
+    "10305",
+    "10306",
+    "10307",
+    "10308",
+    "10309",
+    "10310",
+    "10312",
+    "10314"
+  ],
+  "zip_caveats": "All Staten Island ZIPs (103xx) are in Richmond County, so every voter here gets the same county races. NY-11 also covers southwest Brooklyn, and SD 23 and AD 61 also reach into other boroughs. Within Staten Island, your ZIP does not decide your districts; your street address does. Every voter here is in NY-11 for U.S. House. ONE of these State Senate races: SD 23, 24. ONE of these Assembly races: AD 61, 62, 63, 64. A Civil Court municipal-district race is on the ballot only in the 1st Municipal Court District this year; elsewhere in the borough you won't see one. Your exact ballot: enter your address at findmypollsite.vote.nyc. ZIP lists are standard USPS residential ZIPs for the borough, compiled for this guide, not an official Board of Elections crosswalk.",
+  "contest_ids": [
+    "ny-governor",
+    "ny-attorney-general",
+    "ny-comptroller",
+    "ny-us-house-11",
+    "ny-sd-23",
+    "ny-sd-24",
+    "ny-ad-61",
+    "ny-ad-62",
+    "ny-ad-63",
+    "ny-ad-64",
+    "ny-supreme-court-jd13",
+    "nyc-civil-court-staten-island",
+    "nyc-civil-court-staten-island-md1",
+    "nyc-proposal-1",
+    "nyc-proposal-2",
+    "nyc-proposal-3",
+    "nyc-proposal-4",
+    "nyc-proposal-5"
+  ]
+}

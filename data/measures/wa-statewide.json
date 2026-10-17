@@ -1,0 +1,83 @@
+[
+  {
+    "id": "wa-initiative-645",
+    "state": "WA",
+    "level": "state",
+    "jurisdiction": "Washington",
+    "number": "Initiative Measure No. IP26-645",
+    "official_title": "Initiative Measure No. IP26-645 concerns state and local taxes. This measure would repeal a 9.9% tax on annual individual income over $1,000,000; prohibit taxes measured by individual income and taxes on individual income or the receipt of individual income; and define \"income.\" This measure would decrease funding for public K-12 education, higher education (including universities and community colleges), and human services (primarily healthcare). Should this measure be enacted into law? [ ] Yes [ ] No",
+    "plain_summary": "In 2026 the Legislature passed a 9.9% state tax on an individual's income above $1 million a year (ESSB 6346, the 'millionaires tax'), set to start January 1, 2028. Initiative 645 repeals that tax before it starts, and goes further: it bars the state and local governments from ever imposing a tax on individual income, or measured by it, and defines 'income' broadly. It is an initiative to the people, so it went straight to voters after Let's Go Washington turned in signatures.",
+    "yes_means": "The 9.9% tax on income over $1 million is repealed before it takes effect, and state and local governments are barred from taxing individual income in the future.",
+    "no_means": "The 2026 law stays. The 9.9% tax on individual income over $1 million starts in calendar year 2028 as scheduled.",
+    "current_law": "Washington has no broad personal income tax. The state taxes capital gains above a threshold (upheld by the state Supreme Court in 2023). ESSB 6346 (2026) adds a 9.9% tax on an individual's receipt of income over $1,000,000 starting in calendar year 2028, with the $1 million standard deduction inflation-adjusted from 2029 and an extra charitable deduction of up to $100,000 per household. Credits are allowed for income tax paid to another state, Washington capital gains tax, and B&O or public utility tax paid on the same income. 95% of revenue goes to the general fund and 5% to the Fair Start for Kids account for child care and early learning. Nonresidents are taxed only on Washington-source income. The Department of Revenue projects about 25,000 households would owe it.",
+    "fiscal_impact": "Office of Financial Management: 'If approved by voters, Initiative 645 will result in an estimated loss to state revenue of $11.4 billion over state fiscal years 2027-2031' (exact figure $11,432,414,000, from the state general fund, federal general fund and Fair Start for Kids account). No impact on local revenue. OFM notes the Legislature said it intended to use the tax for free school meals, child care and early learning, and payments to local governments to offset sales tax losses, but impacts that depend on a future Legislature are not counted. Effective date December 3, 2026; the Department of Revenue would stop implementation that day.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "This is a repeal written as a yes question, so it reads backwards. YES = get rid of the millionaires tax (no income tax, and a ban on future ones). NO = keep the tax. If you want the tax on million-dollar earners to stay, vote NO. If you want it gone, vote YES. 'Enacted into law' refers to enacting the repeal, not the tax. Also note the measure does more than repeal: it blocks any future state or local tax on individual income, which is why the Attorney General's explanatory statement flags the broad definition of 'income.'",
+    "supporters_case": {
+      "text": "Supporters (voters' pamphlet statement by Sen. Chris Gildon and others) say Washingtonians have rejected an income tax ten times in 90 years, that lawmakers 'rejected opportunities to permanently limit its reach' so the tax could later expand to everyone, and that Olympia has repeatedly raided dedicated accounts, so 'an income tax on anyone will become an income tax on everyone.'",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "opponents_case": {
+      "text": "Opponents (pamphlet statement by WEA president Janie White, WSLC president April Sims and others) say Washington's tax system already falls hardest on working families, that repeal 'blows a $13 billion hole in the budget' for schools, health care and child care, and that the measure is bankrolled by hedge fund manager Brian Heywood to get 'a tax break for the top 1%.'",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-07/Finaltext_IP26-645_fulltext.pdf",
+    "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-initiative-001",
+    "state": "WA",
+    "level": "state",
+    "jurisdiction": "Washington",
+    "number": "Initiative Measure No. IL26-001",
+    "official_title": "Initiative Measure No. IL26-001 concerns parental rights relating to their children in public school. This measure would repeal amendments to a statute listing certain rights of parents and guardians of public-school children and re-enact the law as it was originally enacted by Initiative to the Legislature 2081. Should this measure be enacted into law? [ ] Yes [ ] No",
+    "plain_summary": "In 2024 the Legislature adopted Initiative 2081, a 'Parents' Bill of Rights' (RCW 28A.605.005) listing what parents of public school students can see, be told about, and opt out of. In 2025 the Legislature amended that law, changing some notification and records rules and adding student protections. Initiative 001 repeals the 2025 amendments and puts the 2024 text back exactly as it was. It was submitted to the Legislature first (an initiative to the Legislature); lawmakers didn't act, so it goes to voters.",
+    "yes_means": "The 2025 changes are undone and the 2024 Parents' Bill of Rights is restored word for word: parents get records within 10 business days instead of 45, schools can't require an in-person records request, parents get prior notice of non-emergency medical services offered at school, and the 2025 limits on which crime and law-enforcement incidents trigger notice are removed. Two 2025 additions also go away: the right to immediate notice when a child is allegedly abused by a school employee, and the clause saying health care records are governed by separate privacy law.",
+    "no_means": "RCW 28A.605.005 stays as the Legislature amended it in 2025.",
+    "current_law": "The 2024 Parents' Bill of Rights remains in law as amended in 2025 (HB 1296 and SB 5181). Under current law parents can review curriculum and records 'according to the provisions of other law and in conformity with school policies,' schools have 45 days to produce records, health care records are governed by separate disclosure laws, parents are entitled to notice of crimes or law-enforcement contact that occur on school property during school hours, and parents have a right to immediate notice if a child is allegedly the victim of abuse or assault by a school employee or contractor. The Attorney General notes many rights in both versions already exist elsewhere in state or federal law.",
+    "fiscal_impact": "Office of Financial Management: 'The initiative would have no fiscal impact on the state. Local school districts may incur minor costs to update policies and procedures, but this fiscal impact is indeterminate.' No impact on state or local revenue. Assumed effective date December 3, 2026.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The title says 'repeal amendments' and 're-enact,' which is a double negative: a YES vote changes current law BACK to the 2024 version. The two versions overlap a lot. The actual fight is over specific clauses: how fast schools must hand over records, whether health and counseling records get separate privacy treatment, and which incidents trigger parent notification. Both sides' pamphlet statements claim the other version removes a parental right, and both are technically correct about different clauses.",
+    "supporters_case": {
+      "text": "Supporters (pamphlet statement) say parents have a right to their child's instructional materials and records, notice of medical services and opt-outs, and that 'safeguards designed for children at risk should not become a default policy of withholding information from all parents,' including when a child expresses a new gender identity at school.",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "opponents_case": {
+      "text": "Opponents (pamphlet statement by Sen. John Lovick, the WA Coalition Against Domestic Violence and Sexual Assault, the Nurses Association, LWV WA and Planned Parenthood) say the measure would require schools to hand records to parents under investigation for abusing their own child, would end the current requirement of immediate notice when a child is a crime victim at school, and would out LGBTQ+ students to potentially abusive families.",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-03/INITIATIVE%20IL26-001%20fulltext.pdf",
+    "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "wa-initiative-638",
+    "state": "WA",
+    "level": "state",
+    "jurisdiction": "Washington",
+    "number": "Initiative Measure No. IL26-638",
+    "official_title": "Initiative Measure No. IL26-638 concerns participation in athletics at K-12 schools. This measure would prohibit students it defines as \"biologically male\" from competing in certain school athletic activities intended for female students only. It would require verification of biological sex by students' healthcare providers. Should this measure be enacted into law? [ ] Yes [ ] No",
+    "plain_summary": "Requires schools to bar students the measure defines as 'biologically male' from competing with or against female students on teams or in events designated for girls or women. The Attorney General's explanatory statement says this 'would generally prevent transgender girls from participating on girls' sports teams.' Any student who wants to play on a girls-only team must turn in a form signed by their personal health care provider verifying 'biological sex' based on reproductive anatomy, genetic makeup, or testosterone levels. It applies to public K-12 schools and to private schools in the WIAA or similar leagues. Submitted to the Legislature first; lawmakers didn't act, so it goes to voters.",
+    "yes_means": "Girls' and women's school teams are limited to students verified as female by a health care provider's signed form; transgender girls may not compete on them.",
+    "no_means": "Current rules stay, including Office of Superintendent of Public Instruction regulations that prohibit discrimination in school sports based on sex and gender identity, and WIAA policy letting students play on the team matching their gender identity.",
+    "current_law": "Washington's Law Against Discrimination covers gender identity, OSPI rules prohibit discrimination in school sports based on sex and gender identity, and WIAA policy allows students to participate consistent with their gender identity. No sex-verification form is required to play.",
+    "fiscal_impact": "Office of Financial Management: the Office of Superintendent of Public Instruction 'would incur a one-time cost of approximately $21,000' to update guidance. 'Local school districts would likely also incur costs to revise existing policies, procedures, rules, and other requirements, but this fiscal impact is indeterminate.' No impact on state or local revenue. Assumed effective date December 3, 2026.",
+    "pass_threshold": "simple majority of votes cast on the measure",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The title never says 'transgender'; it says 'biologically male' and 'female students only.' The plain question is whether transgender girls can play on girls' teams. The second sentence matters just as much: EVERY student who wants to play girls' sports, not only transgender students, would need a provider-signed sex verification form. The two sides disagree about what that exam involves; the AG's statement says students 'would thus have to undergo some type of medical evaluation of their sex.' YES restricts, NO keeps current rules.",
+    "supporters_case": {
+      "text": "Supporters (pamphlet statement by Alesha Perkins, coach Dori Whitford, Olympic rower Carol Brown and others) say 'Washington currently allows males to compete against girls,' that the measure aligns Washington with the IOC and World Athletics, and that verification happens 'during routine, medically necessary primary care' using birth records, medical history or a standard non-invasive exam.",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "opponents_case": {
+      "text": "Opponents (pamphlet statement by the WA State Nurses Association, Planned Parenthood, LWV WA, a family physician and a girls' wrestling coach) say the measure would require girls as young as 8 to get 'intrusive medical sex certification,' bans using a birth certificate instead, exempts boys, and is a 'statewide blanket ban to kick 5 - 10 trans girls off school teams' that burdens all girls.",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-03/INITIATIVE%20IL26-638%20fulltext.pdf",
+    "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
+    "confidence": "verified"
+  }
+]

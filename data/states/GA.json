@@ -1,0 +1,226 @@
+{
+  "state": "GA",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "Georgia Secretary of State: My Voter Page (MVP)",
+    "url": "https://mvp.sos.ga.gov/"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "Most Georgians vote in person, either during three weeks of early voting (any early voting site in your county) or on Election Day at your assigned precinct. Anyone can also vote by mail, but you have to ask for that ballot by October 23, and the drop boxes go away when early voting ends on October 30.",
+  "registration": {
+    "check_url": "https://mvp.sos.ga.gov/",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-05",
+        "rule": "Online registration closed on Monday, October 5, 2026 (the fifth Monday before the election, O.C.G.A. 21-2-224). The Secretary of State's election page lists 'Last day to register to vote: October 5th.' If a December 1 runoff happens, the registration deadline depends on the race: for a runoff in a FEDERAL race (U.S. Senate or U.S. House) you can register through Monday, November 2, 2026; for a runoff in a STATE or local race the deadline stays October 5. Fulton County's official key dates list 'Voter Registration Deadline: Monday, October 5' and 'Voter Registration Deadline (Federal races): Monday, November 2' for the General Runoff, and Gordon County's 2026 election calendar shows the same two dates, with Nov. 2 marked 'Runoff for Federal Offices.'",
+        "source": "https://sos.ga.gov/november-3-2026-general-election"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-05",
+        "rule": "Paper applications had to be postmarked by Monday, October 5, 2026 (VOTE411: 'online, mail (postmarked), and in-person registration' all closed that day).",
+        "source": "https://www.vote411.org/georgia"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-05",
+        "rule": "In-person registration at a county registrar's office, a Georgia DDS (driver's license) office, or a public library closed Monday, October 5, 2026. Georgia has no same-day or Election Day registration.",
+        "source": "https://sos.ga.gov/november-3-2026-general-election"
+      }
+    ],
+    "same_day_registration": false,
+    "same_day_notes": "None. Georgia does not allow registering and voting on the same day, during early voting or on Election Day. The only people who can still register for November 3 are military and overseas voters covered by federal UOCAVA rules.",
+    "still_possible_now": "Not for November 3. The deadline was Monday, October 5, 2026. If you think you registered, confirm it now at mvp.sos.ga.gov; if your record is wrong or missing, call your county elections office before you go vote. One exception worth knowing: if a FEDERAL race (U.S. Senate or U.S. House) goes to a December 1 runoff, you can still register to vote in that runoff through Monday, November 2 (Fulton County lists 'Voter Registration Deadline (Federal races): Monday, November 2'). For a runoff in a state or local race, the October 5 deadline still applies. If you moved within the same county after October 5, you can still vote (go to your old precinct, or update your address at the registrar's office and vote in the new one). If you moved to a different Georgia county within 30 days of the election (on or after October 4), vote in your old county. If you moved counties before that and didn't re-register there by October 5, call your county registrar; you may not be eligible this time (O.C.G.A. 21-2-218).",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Nobody automatically. Any registered Georgia voter can vote by mail without giving a reason, but you must apply for each election. Counties began mailing ballots on Monday, October 5, 2026 (29 days before the election). Apply at the state's absentee portal (securemyabsenteeballot.sos.ga.gov), or send the paper form to your county by mail, email, fax or in person. The application must include your Georgia driver's license or state ID number; if you have neither, you attach a copy of another accepted ID. Voters 65 and older, voters with a disability, and military and overseas voters can file one application that covers the whole election cycle.",
+    "request_deadline": {
+      "date": "2026-10-23",
+      "rule": "Your county must receive your application by Friday, October 23, 2026 (11 days before the election, O.C.G.A. 21-2-381). The SOS page says: 'First day to request an Absentee by Mail Ballot: August 17th (Last day is October 23rd).' Applying that late is risky: the ballot still has to reach you by mail and get back to the county by 7:00 PM on November 3. If it's after about October 19, consider voting early in person instead.",
+      "source": "https://sos.ga.gov/november-3-2026-general-election"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "received_by",
+      "time": "7:00 PM ET",
+      "source": "https://georgia.gov/georgia-election-guide"
+    },
+    "return_options": [
+      "drop box, but only inside an early voting site, only during that site's early voting hours, and only through the last day of early voting (Friday, October 30). Georgia.gov: 'Drop boxes are available inside early voting locations, during early voting hours only.' Fulton: 'Last day to return the Absentee Ballot in the Drop Box: Friday, October 30.'",
+      "hand-deliver to your county board of registrars / elections office by 7:00 PM on Election Day (georgia.gov: 'take it to your County Board of Registrar's Office by 7 p.m. on Election Day')",
+      "mail (USPS), only if you allow at least a week; it 'must be received by 7 p.m. on Election Day', postmarks don't count",
+      "a family member, someone who lives in your household, or your caregiver may deliver it for you; nobody else may (O.C.G.A. 21-2-385(a))"
+    ],
+    "postage": "Not prepaid statewide. Most Georgia counties require you to put a First-Class stamp on the return envelope; a few provide prepaid envelopes. Follow the instructions printed on your envelope, or skip postage by using a drop box. Confidence: unverified for your county; check your envelope.",
+    "signature_witness_rules": "No witness, no notary, and since SB 202 there is no signature matching. Instead you sign the oath on the return envelope and write your Georgia driver's license or state ID number and your date of birth. If you have no Georgia license or ID, you write the last four digits of your Social Security number; if you have none of those, you enclose a copy of an accepted ID. Keep the inner privacy sleeve: a ballot returned without the sealed oath envelope can be rejected.",
+    "tracking_url": "https://georgia.ballottrax.net/voter/",
+    "cure_process": "If your ID number or date of birth is missing or doesn't match, or the oath is unsigned, the county must notify you (by mail, and by phone or email if they have it) and your ballot is held as provisional. You fix it by returning a signed affidavit with a copy of an accepted ID. Georgia's cure window runs until the end of the third day after the election, Friday, November 6, 2026. SB 202 (O.C.G.A. 21-2-386) gives you 'until the end of the period for verifying provisional ballots,' and georgia.gov says provisional issues must be resolved 'within three days.' You can also check status on BallotTrax or My Voter Page.",
+    "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by 7:00 PM on Tuesday, November 3. If you decide to vote in person instead, bring the mail ballot with you so it can be canceled; without it you'll vote provisionally.",
+    "drop_box_lookup_url": "https://mvp.sos.ga.gov/",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-13",
+    "end": "2026-10-30",
+    "hours_note": "Early voting (Georgia calls it 'advance voting') runs Tuesday, October 13 through Friday, October 30, 2026. The SOS page lists 'In Person Early/Advance Voting: October 13th - 30th' and georgia.gov says it 'ends on the Friday immediately prior to Election Day.' It started on a Tuesday because Monday, October 12 was a state holiday. Georgia.gov lists typical hours of 9 AM to 5 PM weekdays and 9 AM to 4 PM Saturdays, and says counties may go longer (many metro Atlanta sites run 7 AM to 7 PM). Required days are Monday through Friday plus 'the second and third Saturdays before Election Day,' which are October 17 and October 24, 2026 (georgia.gov has an event page for the first Saturday, October 17). Sunday voting (October 18 and 25) is optional by county; Fulton, DeKalb, Cobb and Gwinnett have offered it in recent elections. You can vote at any early voting site in your county. Exact sites and hours are on My Voter Page and your county elections site (Fulton announced 32 sites).",
+    "vote_centers": true,
+    "lookup_url": "https://mvp.sos.ga.gov/",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "7:00 PM",
+    "in_line_rule": "Georgia.gov: 'As long as you are in line by 7 p.m., you are allowed to cast your ballot.' On Election Day you must vote at your assigned precinct (look it up on My Voter Page; it may differ from where you voted early). If you show up at the wrong precinct before 5:00 PM you'll be sent to the right one. After 5:00 PM you may cast a provisional ballot there only if you sign a statement that you can't get to your own precinct in time (SB 202, O.C.G.A. 21-2-418).",
+    "vote_centers": false,
+    "lookup_url": "https://mvp.sos.ga.gov/",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "photo",
+    "accepted": [
+      "Georgia driver's license, even if expired",
+      "Georgia state ID card issued by DDS or a county registrar, including the free Georgia Voter Identification Card",
+      "Valid U.S. passport",
+      "Valid employee photo ID issued by any branch, department, agency or entity of the U.S. government, the State of Georgia, or any county, city or other Georgia government entity",
+      "Valid U.S. military photo ID",
+      "Valid tribal photo ID",
+      "A Georgia Voter ID card is free from any county registrar's office or DDS office if you have no other photo ID"
+    ],
+    "no_id_option": "In person without photo ID: you can cast a provisional ballot, but it only counts if you bring an accepted ID to your county registrar's office within three days, by Friday, November 6, 2026 (georgia.gov: 'you must resolve eligibility issues with your County Registrar within three days'). By mail: no photo ID is needed if you write your Georgia driver's license or ID number and date of birth on the application and envelope; if you have no Georgia license or ID, use the last four of your Social Security number or enclose a copy of an accepted ID (VOTE411: 'Absentee applications require a Georgia driver's license or state ID number, or a copy of an accepted ID').",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "prohibited",
+    "phones_detail": "Georgia law bars anyone from using a cell phone, camera, or other recording device inside the enclosed voting area of a polling place (O.C.G.A. 21-2-413(e)). Poll workers will tell you to put it away. Use your phone in line outside if you need to, then switch to paper once you check in. Source: SB 202 as enacted and the Georgia Code, https://www.legis.ga.gov/api/legislation/document/20212022/201498",
+    "notes_allowed": "allowed",
+    "notes_detail": "Yes. You can bring a printed sample ballot (print yours from My Voter Page), a handwritten list, or this guide on paper into the booth. Just don't show it to other voters or leave it behind: campaign material inside the polling place counts as electioneering. Source: Georgia Secretary of State voter guidance, https://georgia.gov/georgia-election-guide",
+    "ballot_selfies": "prohibited",
+    "apparel_rule": "No campaigning within 150 feet of the polling place building or within 25 feet of voters standing in line: no handing out literature, asking for votes, or displaying candidate or ballot-question gear. Poll managers can ask you to cover or remove a shirt, hat or button that names a candidate or issue on the ballot before you enter. Same statute (O.C.G.A. 21-2-414) bans giving voters in that zone anything of value, including food and water; see gotchas.",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "Registration for November 3 is closed and there is no same-day registration. The deadline was Monday, October 5. One narrow exception: if a U.S. Senate or U.S. House race goes to a December 1 runoff, new voters can register for that runoff through Monday, November 2. A runoff for a state or local race keeps the October 5 deadline. Check that you're actually on the rolls at mvp.sos.ga.gov before you drive anywhere.",
+    "Drop boxes are not 24/7 and they vanish early. Since 2021 Georgia's boxes sit inside early voting sites, open only during those sites' voting hours, and they are pulled when early voting ends on Friday, October 30. After that, the only ways to return a mail ballot are to hand it to your county elections office (by 7:00 PM Nov. 3) or to mail it and hope it arrives in time. Postmarks do not count. If in doubt, vote in person and bring the mail ballot with you to cancel it.",
+    "Early voting is 'anywhere in your county.' Election Day is 'only your precinct.' From October 13 to 30 you can use any early voting site in your county. On November 3 you must go to your assigned precinct, which may be a different building. Look it up on My Voter Page the night before.",
+    "Don't hand out water or snacks to people in line. Under SB 202 it is a misdemeanor to give voters anything, including food and drink, within 150 feet of the polling place building. A federal judge blocked the extra '25 feet from any voter in line' part in 2023, but the 150-foot zone stands. Poll workers may set up self-serve water. If you expect a wait, bring your own water, a snack, and a paper cheat sheet (no phones inside).",
+    "Georgia makes you win a majority. If no candidate gets more than 50 percent, the top two meet in a runoff on Tuesday, December 1, 2026 (four weeks later). This year that is unlikely in the statewide races: the Libertarian Party failed to collect the roughly 70,000 signatures it needed, so every statewide race is a straight two-candidate contest (write-ins exist for Senate and governor but rarely move the number). If a runoff does happen anywhere, the early voting window is tiny: counties must offer it no later than Monday, November 23 through Wednesday, November 25 (georgia.gov: 'abbreviated due to the Thanksgiving holiday'), and some start sooner; Fulton lists Saturday, November 21 through Wednesday, November 25. Registration for a runoff stays open until November 2 only for federal races (U.S. Senate, U.S. House); state and local runoffs keep the October 5 deadline. If you vote by mail, you would need to apply again, by Friday, November 20 (Fulton and Gordon County calendars), unless you are 65+, disabled, or military/overseas."
+  ],
+  "sources": [
+    {
+      "name": "Georgia Secretary of State: November 3, 2026 General Election (official dates page)",
+      "url": "https://sos.ga.gov/november-3-2026-general-election"
+    },
+    {
+      "name": "Georgia.gov: Georgia Election Guide",
+      "url": "https://georgia.gov/georgia-election-guide"
+    },
+    {
+      "name": "Georgia.gov: Election Ready 2026 (general election hub)",
+      "url": "https://georgia.gov/georgia-general-election-2026"
+    },
+    {
+      "name": "Georgia.gov: Vote Early in Person",
+      "url": "https://georgia.gov/vote-early-person"
+    },
+    {
+      "name": "Georgia.gov event: First Day Registrars May Mail Absentee Ballots (Oct 5, 2026)",
+      "url": "https://georgia.gov/events/2026-10-05/first-day-registrars-may-mail-absentee-ballots-general-election"
+    },
+    {
+      "name": "Georgia.gov event: First Saturday for Early Voting (Oct 17, 2026)",
+      "url": "https://georgia.gov/events/2026-10-17/first-saturday-early-voting-general-election"
+    },
+    {
+      "name": "Georgia.gov event: Last Day to Request Absentee Ballots (Oct 23, 2026)",
+      "url": "https://georgia.gov/events/2026-10-23/last-day-request-absentee-ballots-general-election"
+    },
+    {
+      "name": "Georgia.gov event: General Election Runoff Early Voting (Nov 23, 2026)",
+      "url": "https://georgia.gov/events/2026-11-23/general-election-runoff-early-voting"
+    },
+    {
+      "name": "Georgia SOS press release: Georgians Shatter First Day Early Voting Record (Oct 13, 2026)",
+      "url": "https://sos.ga.gov/news/georgians-shatter-first-day-early-voting-record"
+    },
+    {
+      "name": "Georgia SOS: My Voter Page (registration check, precinct, early voting sites, sample ballot, absentee status)",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "name": "Georgia BallotTrax (absentee ballot tracking)",
+      "url": "https://georgia.ballottrax.net/voter/"
+    },
+    {
+      "name": "SB 202, Election Integrity Act of 2021 (enrolled text: drop boxes, absentee ID, food and water, out-of-precinct rules)",
+      "url": "https://www.legis.ga.gov/api/legislation/document/20212022/201498"
+    },
+    {
+      "name": "Fulton County: Early Voting Begins October 13",
+      "url": "https://fultoncountyga.gov/Calendar/2026/10/13/Fulton-Voting-Early-Voting-Begins-October-13"
+    },
+    {
+      "name": "Fulton County: Early Voting Locations for November 3 General and Special Election",
+      "url": "https://fultoncountyga.gov/News/2026/10/01/Fulton-County-Announces-Early-Voting-Locations-for-November-3-General-Special-Election"
+    },
+    {
+      "name": "Fulton County: Election Key Dates",
+      "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Election-Key-Dates"
+    },
+    {
+      "name": "Gordon County Board of Elections: 2026 Scheduled Elections and Summary of Events (runoff registration Oct 5 / Nov 2 for federal offices; runoff absentee deadline Nov 20)",
+      "url": "https://gordoncountyga.gov/DocumentCenter/View/2009/2026-Election-Calendar-and-Summary-of-Events-PDF"
+    },
+    {
+      "name": "DeKalb County: November General early voting and drop box locations (PDF)",
+      "url": "https://dekalbcountyga.gov/sites/default/files/2026-07/AIP%20Nov%20EV8.5x11.pdf"
+    },
+    {
+      "name": "Cobb County: Absentee Voting",
+      "url": "https://www.cobbcounty.gov/elections/voting/absentee-voting"
+    },
+    {
+      "name": "White County: December 1, 2026 General Election Runoff (county calendar)",
+      "url": "https://www.whitecountyga.gov/m/calendar/event/detail/706"
+    },
+    {
+      "name": "Georgia Recorder: Mail-in voting is still an option. Here's what voters should know (Sept 28, 2026)",
+      "url": "https://georgiarecorder.com/2026/09/28/mail-in-voting-is-still-an-option-for-this-years-midterms-heres-what-voters-should-know/"
+    },
+    {
+      "name": "Rough Draft Atlanta: How to vote by mail in Georgia before the October 23 deadline",
+      "url": "https://roughdraftatlanta.com/2026/09/28/georgia-vote-mail-rules/"
+    },
+    {
+      "name": "Rough Draft Atlanta: Georgia voters have until Oct. 5 to register",
+      "url": "https://roughdraftatlanta.com/2026/09/29/georgia-election-registration-deadline/"
+    },
+    {
+      "name": "WSB-TV: Absentee ballots for Georgia elections now available, requests open through Oct. 23",
+      "url": "https://www.wsbtv.com/news/local/atlanta/georgia-absentee-ballot-registration-midterm-elections-open-through-oct-23/5MO7Q3KZ5RDQ5BCZRSGBSC6KNA/"
+    },
+    {
+      "name": "CBS Atlanta: How to vote by mail in Georgia for the 2026 midterms and who is eligible",
+      "url": "https://www.cbsnews.com/atlanta/news/how-to-vote-by-mail-in-georgia-for-the-2026-midterm-elections-and-who-is-eligible/"
+    },
+    {
+      "name": "AJC: Early voting in Georgia is set to begin Tuesday for statewide midterm races",
+      "url": "https://www.ajc.com/politics/2026/10/georgia-midterms-early-voting/"
+    },
+    {
+      "name": "Axios Atlanta: Georgia early voting for 2026 midterm election begins Oct. 13",
+      "url": "https://www.axios.com/local/atlanta/2026/10/13/early-voting-georgia-nov-3-general-election-governor-senate"
+    },
+    {
+      "name": "VOTE411 (League of Women Voters): Georgia Voting Information",
+      "url": "https://www.vote411.org/georgia"
+    },
+    {
+      "name": "Election Protection (866-OUR-VOTE): Georgia",
+      "url": "https://866ourvote.org/state/georgia/"
+    }
+  ]
+}

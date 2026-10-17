@@ -1,0 +1,1249 @@
+[
+  {
+    "id": "co-us-house-2",
+    "state": "CO",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-2",
+    "scope_plain": "Every voter in Colorado's 2nd Congressional District, which includes all of Boulder County and stretches west along I-70 and north to Fort Collins",
+    "office_explainer": "Boulder's one seat in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Rep. Joe Neguse has held the seat since 2019 and was unopposed in the June Democratic primary. CPR calls the district heavily left-leaning and Neguse a safe incumbent.",
+    "vote_for": 1,
+    "incumbent": "Joe Neguse",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joe Neguse",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://joeforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Lafayette Democrat; has represented the district since 2019 and is Colorado's first Black U.S. congressman (CPR). Unopposed in the June primary.",
+        "own_words": [
+          {
+            "text": "No own-words statement collected. He was unopposed in the primary, so Colorado Newsline's primary questionnaire (sent only to contested races) did not include him, and his campaign site was not read.",
+            "is_quote": false,
+            "source": "https://coloradonewsline.com/2026/06/09/candidate-qa-colorado-1st-congressional-district-2/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Kelley Anne Dennison",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://kelleyforco.com/",
+        "website_confidence": "verified",
+        "background": "27-year-old massage therapist from Larimer County; won the June Republican primary with about 58% over Christina Blunt. CPR says her platform focuses on environmental conservation and immigration.",
+        "own_words": [
+          {
+            "text": "The top concern she hears is \"the economy and the overall direction of the country.\"",
+            "is_quote": true,
+            "source": "https://coloradonewsline.com/2026/06/09/candidate-qa-colorado-1st-congressional-district-2/"
+          },
+          {
+            "text": "\"I absolutely support participating in in-person town halls and taking unscreened questions from constituents.\"",
+            "is_quote": true,
+            "source": "https://coloradonewsline.com/2026/06/09/candidate-qa-colorado-1st-congressional-district-2/"
+          },
+          {
+            "text": "On federal aid to Colorado: \"Disaster assistance and essential federal support should never be politicized.\"",
+            "is_quote": true,
+            "source": "https://coloradonewsline.com/2026/06/09/candidate-qa-colorado-1st-congressional-district-2/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Gaylon Kent",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://thefreedomtrain.com/",
+        "website_confidence": "sourced",
+        "background": "Libertarian nominee. No profile or questionnaire answers found in the sources collected.",
+        "own_words": [
+          {
+            "text": "No statement collected. The county lists thefreedomtrain.com as his site; it was not read.",
+            "is_quote": false,
+            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" },
+      { "name": "CPR: CD-2 primary results (June 30, 2026)", "url": "https://www.cpr.org/2026/06/30/colorado-district-2-primary-election-2026-results/" },
+      { "name": "Colorado Newsline CD-2 candidate Q&A (June 9, 2026)", "url": "https://coloradonewsline.com/2026/06/09/candidate-qa-colorado-1st-congressional-district-2/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-cu-regent-2",
+    "state": "CO",
+    "level": "state",
+    "office": "Regent of the University of Colorado",
+    "district": "CD-2",
+    "scope_plain": "Every voter in Congressional District 2, which includes all of Boulder County",
+    "office_explainer": "One of nine elected regents who govern the University of Colorado system: tuition, budgets, the president.",
+    "why_it_matters": "Open seat: Democratic regent Callie Rennison did not run again. CU Boulder is the only CU campus in this district. Regents serve six-year terms, two terms at most.",
+    "vote_for": 1,
+    "incumbent": "Callie Rennison (not running)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marty Neilson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://neilsonforcuregent.com/",
+        "website_confidence": "verified",
+        "background": "Republican nominee; unopposed in the June primary.",
+        "own_words": [
+          {
+            "text": "No statement collected. His campaign site was not read, and no questionnaire answers were found.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/06/30/cu-board-of-regents-primary-election-2026-results/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Edie Hooton",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.edieforcu.com/",
+        "website_confidence": "verified",
+        "background": "Boulder resident since 1997. State representative for House District 10 (Boulder, Gunbarrel, CU Boulder) from 2017 to 2023, where she chaired the committee that decides state construction for higher education. Won a three-way Democratic primary with about 43%.",
+        "own_words": [
+          {
+            "text": "Wants to prioritize affordable tuition for in-state students and improve retention and graduation rates.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/06/30/cu-board-of-regents-primary-election-2026-results/"
+          },
+          {
+            "text": "Says her six years in the legislature give her a strong grasp of higher-education policy, government budgeting and state politics.",
+            "is_quote": false,
+            "source": "https://boulderreportinglab.org/2026/06/11/who-will-represent-boulder-on-the-cu-board-of-regents-meet-the-three-democratic-candidates/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Richard Friend",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Libertarian nominee. No campaign site or information found.",
+        "own_words": [
+          {
+            "text": "No statement collected; the county found no website or public email.",
+            "is_quote": false,
+            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" },
+      { "name": "CPR: CU Regent primary results (June 30, 2026)", "url": "https://www.cpr.org/2026/06/30/cu-board-of-regents-primary-election-2026-results/" },
+      { "name": "Boulder Reporting Lab: CU Regent Democratic candidates (June 11, 2026)", "url": "https://boulderreportinglab.org/2026/06/11/who-will-represent-boulder-on-the-cu-board-of-regents-meet-the-three-democratic-candidates/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-hd-10",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-10",
+    "scope_plain": "Voters in House District 10: most of the City of Boulder east of Broadway, plus Gunbarrel and the CU Boulder campus",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Junie Joseph",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Junie Joseph",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.junie4colorado.com/",
+        "website_confidence": "verified",
+        "background": "Appointed to the seat by a vacancy committee in August 2022 and still the district's representative in 2026 (Boulder Reporting Lab). Unopposed on the November ballot.",
+        "own_words": [
+          {
+            "text": "Unopposed. No statement collected; her campaign site was not read.",
+            "is_quote": false,
+            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder Reporting Lab: 2024 legislative primaries (district boundaries, Joseph's appointment)", "url": "https://boulderreportinglab.org/2024/05/16/high-stakes-in-boulder-democratic-primaries-heat-up-with-over-400k-raised-for-key-legislative-seats/" },
+      { "name": "Boulder Reporting Lab: Aaron Brockett profile (lists 'state Rep. Junie Joseph' as an endorser, 2026)", "url": "https://boulderreportinglab.org/govpack_profiles/aaron-brockett-2/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-hd-49",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-49",
+    "scope_plain": "Voters in House District 49: roughly the City of Boulder west of Broadway, plus a long mountain district from the Wyoming line south past Idaho Springs, including Estes Park, Lyons and Nederland",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "The district splits Boulder roughly at Broadway: east of Broadway is HD-10, west is HD-49. Check your ballot.",
+    "vote_for": 1,
+    "incumbent": "Lesley Smith",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael Sheperek",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://sheperekforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Republican nominee. No profile or questionnaire answers found in the sources collected.",
+        "own_words": [
+          {
+            "text": "No statement collected; his campaign site was not read.",
+            "is_quote": false,
+            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Lesley Smith",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.lesleyforco.com/",
+        "website_confidence": "verified",
+        "background": "Scientist (PhD, University of Maryland) who came to CU Boulder's CIRES in 1989. Served eight years on the Boulder Valley school board and was elected a CU regent in 2019. Was the Democratic nominee for this seat in 2024 and lives in Boulder.",
+        "own_words": [
+          {
+            "text": "In a 2024 interview: \"I am a huge proponent of public education.\" Wants teachers \"better paid.\"",
+            "is_quote": true,
+            "source": "https://estesvalleyvoice.com/2024/10/22/now-hiring-representative-for-house-district-49/"
+          },
+          {
+            "text": "Points to 20 years of public service on the school board, Boulder's water board after the 2013 flood, and the CU regents. (2024 interview)",
+            "is_quote": false,
+            "source": "https://estesvalleyvoice.com/2024/10/22/now-hiring-representative-for-house-district-49/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" },
+      { "name": "Boulder Reporting Lab: 2024 state legislature candidates (district geography)", "url": "https://boulderreportinglab.org/2024/06/02/meet-the-2024-boulder-county-democratic-primary-candidates-for-state-legislature/" },
+      { "name": "Estes Valley Voice: HD-49 candidates (Oct 2024)", "url": "https://estesvalleyvoice.com/2024/10/22/now-hiring-representative-for-house-district-49/" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-hd-12",
+    "state": "CO",
+    "level": "state",
+    "office": "State House of Representatives",
+    "district": "HD-12",
+    "scope_plain": "Voters in House District 12, a Boulder County district represented from Louisville. Most City of Boulder voters are in HD-10 or HD-49 instead; listed in case a Boulder-ZIP address falls here.",
+    "office_explainer": "One of 65 state representatives. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "May apply only to some addresses with Boulder ZIP codes outside city limits; check your ballot.",
+    "vote_for": 1,
+    "incumbent": "Kyle Brown",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ryan Rhatigan",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://ryan4hd12.com/",
+        "website_confidence": "verified",
+        "background": "Republican nominee. No profile found in the sources collected.",
+        "own_words": [
+          { "text": "No statement collected; his campaign site was not read.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Kyle Brown",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://kyleforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Louisville Democrat; represented HD-12 in 2024 and ran for reelection that year (Boulder Reporting Lab). Democratic nominee again in 2026.",
+        "own_words": [
+          { "text": "No statement collected; his campaign site was not read.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder Reporting Lab: 2024 state legislature candidates", "url": "https://boulderreportinglab.org/2024/06/02/meet-the-2024-boulder-county-democratic-primary-candidates-for-state-legislature/" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "co-sd-15",
+    "state": "CO",
+    "level": "state",
+    "office": "State Senate",
+    "district": "SD-15",
+    "scope_plain": "Voters in Senate District 15, which includes part of Boulder County. The City of Boulder itself is in Senate District 18, which is not on the 2026 ballot; listed in case a Boulder-ZIP address outside city limits falls here.",
+    "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Most Boulder voters have no state senate race this year. This applies only if your ballot shows it.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rob Woodward",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://woodwardforcolorado.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "No statement collected; his campaign site was not read.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Janice Marchman",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.janiceforcolorado.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "No statement collected; her campaign site was not read.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+    ],
+    "confidence": "unverified"
+  },
+  {
+    "id": "co-sd-17",
+    "state": "CO",
+    "level": "state",
+    "office": "State Senate",
+    "district": "SD-17",
+    "scope_plain": "Voters in Senate District 17, a Boulder County district. The City of Boulder itself is in Senate District 18, which is not on the 2026 ballot; listed in case a Boulder-ZIP address outside city limits falls here.",
+    "office_explainer": "One of 35 state senators. Writes state laws and the state budget at the Capitol.",
+    "why_it_matters": "Most Boulder voters have no state senate race this year. This applies only if your ballot shows it.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Katie Wallace",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.katieforco.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "No statement collected; her campaign site was not read.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Pat Miller",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [
+          { "text": "No statement collected; the county found no website or public email.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+    ],
+    "confidence": "unverified"
+  },
+  {
+    "id": "co-rtd-o",
+    "state": "CO",
+    "level": "special_district",
+    "office": "RTD Board of Directors",
+    "district": "District O",
+    "scope_plain": "Voters in RTD Director District O, which covers Boulder, Niwot, Superior, Louisville and Boulder County west of Boulder (per the district description at a candidate forum). Check your ballot.",
+    "office_explainer": "One of 15 directors who run RTD: bus and rail routes, fares, budget. Nonpartisan.",
+    "why_it_matters": "Open seat: longtime District O director Lynn Guissinger is not on the ballot. Both candidates are Democrats, but the race is nonpartisan. Both talk about train service to Boulder, reliability and safety. Four-year term.",
+    "vote_for": 1,
+    "incumbent": "Lynn Guissinger (not on the ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jack Rosenthal",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://jackforrtd.com/",
+        "website_confidence": "verified",
+        "background": "Software engineer who worked at Google in Boulder for six years; daily RTD rider and transit advocate who says he helped pass RTD policies and the state Transit Access Bill.",
+        "own_words": [
+          {
+            "text": "Running because \"I am tired of the generation of leadership at RTD that has failed us.\"",
+            "is_quote": true,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          },
+          {
+            "text": "Wants to \"build the train\" to Boulder and \"restore reliable service.\"",
+            "is_quote": true,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          },
+          {
+            "text": "Says RTD's technology is outdated, citing broken live bus tracking: \"I'd be the only technologist on the board.\"",
+            "is_quote": true,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Audrey DeBarros",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://audreyforrtd.com/",
+        "website_confidence": "verified",
+        "background": "Executive director of Commuting Solutions, a nonprofit coalition of nine local governments and employers that advocates for transportation in the northwest metro area. Lives in Louisville; 25 years in Boulder County.",
+        "own_words": [
+          {
+            "text": "Top rider problems: \"safety, first and foremost, reliability, frequency, access and service for everyday living.\"",
+            "is_quote": true,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          },
+          {
+            "text": "\"People will not ride RTD if they do not feel safe.\" Wants RTD's police force funded at least at current levels.",
+            "is_quote": true,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          },
+          {
+            "text": "Points to her work on the US 36 Express Lanes, Flatiron Flyer bus rapid transit and the Highway 119 project.",
+            "is_quote": false,
+            "source": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County candidates and ballot measures list", "url": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" },
+      { "name": "Boulder County compiled sample ballot (RTD line is OCR-garbled)", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Better Boulder / Community Cycles RTD District O candidate forum, July 27, 2026 (recording and automated transcript)", "url": "https://better-boulder-pod.castos.com/episodes/004-rtd-director-district-o-candidate-forum" },
+      { "name": "Sharing Boulder podcast: Audrey DeBarros episode", "url": "https://sharing-boulder.castos.com/episodes/055-audrey-debarros-candidate-for-rtd-board-of-directors" },
+      { "name": "Sharing Boulder podcast: Jack Rosenthal episode", "url": "https://sharing-boulder.castos.com/episodes/051-jack-rosenthal-candidate-for-rtd-board-of-directors" }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "boulder-county-commissioner-3",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Commissioner",
+    "district": "District 3",
+    "scope_plain": "Every Boulder County voter. Commissioners must live in their district but are elected by the whole county.",
+    "office_explainer": "One of three commissioners who run county government and its roughly $745 million budget.",
+    "why_it_matters": "Only one name is on the ballot. Separate from Questions 200 and 201, which would expand the board starting in 2029.",
+    "vote_for": 1,
+    "incumbent": "Ashley Stolzmann",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashley Stolzmann",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.facebook.com/ashleystolzmann/",
+        "website_confidence": "sourced",
+        "background": "Current county commissioner; she made the July 2026 motion that put Issue 1A on the ballot.",
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County TABOR notice (Resolution 2026-048 motion by Commissioner Stolzmann)", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/2026-TABOR-Notice.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-clerk",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Clerk and Recorder",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Runs Boulder County's elections and keeps official public records such as recorded property documents.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Molly Fitzpatrick",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Molly Fitzpatrick",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.mollyfitzpatrick.org/",
+        "website_confidence": "verified",
+        "background": "Current Boulder County Clerk & Recorder; signs this year's TABOR notice as the official running the election.",
+        "own_words": [
+          { "text": "Unopposed. No campaign statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County TABOR notice (clerk's letter)", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/2026-TABOR-Notice.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-treasurer",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Treasurer",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Collects property taxes and manages and invests the county's money.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rachel Friend",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://www.friendfortreasurer.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-assessor",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Assessor",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Sets the value of every property in the county, which drives property tax bills.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cynthia Braddock",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://www.cynthiabraddock.org/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-sheriff",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Sheriff",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Runs the county jail and law enforcement for unincorporated Boulder County.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Curtis Johnson",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://www.johnsonforboco.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-surveyor",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Surveyor",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Keeps the county's official land survey records and helps settle boundary questions.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kayce D. W. Keane",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://votekayce.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-county-coroner",
+    "state": "CO",
+    "level": "county",
+    "office": "Boulder County Coroner",
+    "district": null,
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "Investigates sudden or unexplained deaths and determines cause and manner of death.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff Martin",
+        "party": "Democratic",
+        "incumbent": null,
+        "website": "https://jeffmartinforcoroner.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Unopposed. No statement collected.", "is_quote": false, "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-mayor",
+    "state": "CO",
+    "level": "city",
+    "office": "Mayor of Boulder (ranked choice)",
+    "district": null,
+    "scope_plain": "Every City of Boulder voter",
+    "office_explainer": "Leads City Council meetings and is one of nine council votes; a hired city manager runs daily operations.",
+    "why_it_matters": "Ranked choice: rank up to six. If no one has more than 50% of first choices, the last-place candidate is dropped and those ballots count for their next choice, until someone has a majority. Don't skip a column or give two people the same rank. Mayor Aaron Brockett faces five challengers, including Councilmember Taishya Adams; the clearest divide is the $400 million bond (2K). The mayor's pay rises to about $51,000 a year in December.",
+    "vote_for": 1,
+    "incumbent": "Aaron Brockett",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lisa Ann Jacobs",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://lisaannjacobs.com/",
+        "website_confidence": "verified",
+        "background": "Little biographical or campaign information is public; Boulder Reporting Lab has not published a full profile. Not using city matching funds.",
+        "own_words": [
+          { "text": "Did not respond to Boulder Reporting Lab's questionnaire.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" },
+          { "text": "Boulder Reporting Lab lists her among the candidates who oppose the $400 million bond (2K).", "is_quote": false, "source": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Taishya Adams",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.adamsforboulder.com/",
+        "website_confidence": "verified",
+        "background": "City councilmember for nearly three years; she gives up her council seat either way. Founder of the Mukuyu Collective, an environmental consultancy; inaugural member of the city's Police Oversight Panel. Age 52; rents in South Boulder. Using city matching funds.",
+        "own_words": [
+          { "text": "Bonds are \"the best strategy to fund major facility needs,\" but \"the current package lacks community trust and support.\" Told BRL she'd vote NO on 2K.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/taishya-adams-2/" },
+          { "text": "\"I do not support the use of automated license plate readers at this time.\"", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/taishya-adams-2/" },
+          { "text": "Goal for year one: a \"two year participatory budgeting process\" that weighs water supply in every decision.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/taishya-adams-2/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Aaron Brockett",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": "https://brockett4mayor.org/",
+        "website_confidence": "verified",
+        "background": "Mayor since 2021 (chosen by council, then won Boulder's first direct mayoral election in 2023); councilmember from 2015 and Planning Board member before that. Previously ran a software firm. Age 53; owns a home in North Boulder. This would be his last term. Using city matching funds.",
+        "own_words": [
+          { "text": "\"We need to catch up on the facility backlog.\" If 2K fails, \"we'll need to go back to the drawing board.\" Told BRL he'd vote YES on 2K.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/aaron-brockett-2/" },
+          { "text": "On license plate readers: \"I wouldn't end them unilaterally\"; backs a community conversation in early 2027 on whether to keep them.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/aaron-brockett-2/" },
+          { "text": "Supports more housing along transit corridors and annexing the Area III Planning Reserve for middle-income ownership homes.", "is_quote": false, "source": "https://boulderreportinglab.org/govpack_profiles/aaron-brockett-2/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jameson (Jamo) Goldstein",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.jamoformayor.org/",
+        "website_confidence": "verified",
+        "background": "CU Boulder philosophy student, age 21; grew up in Arvada; has worked as a swim coach and in educational software sales. First-time candidate. Not using city matching funds.",
+        "own_words": [
+          { "text": "\"I oppose the $400 million bond as currently presented.\" Wants an independent, project-by-project audit of the backlog first.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/jamo-goldstein/" },
+          { "text": "\"I would end Boulder's Flock automated license plate reader contract.\"", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/jamo-goldstein/" },
+          { "text": "Proposes a tiered tax on corporations owning more than 75 Boulder rental units to fund rent assistance.", "is_quote": false, "source": "https://boulderreportinglab.org/govpack_profiles/jamo-goldstein/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Grateful Fred Instead",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://gratefulfredinstead.com/",
+        "website_confidence": "verified",
+        "background": "Certified by the city under the name Fred Smith; Boulder Reporting Lab lists his occupation as laborer. Not using city matching funds.",
+        "own_words": [
+          { "text": "Did not respond to Boulder Reporting Lab's questionnaire.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" },
+          { "text": "Boulder Reporting Lab lists him among the candidates who oppose the $400 million bond (2K).", "is_quote": false, "source": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Aquiles La Grave",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://boulder.vote/",
+        "website_confidence": "verified",
+        "background": "Tech entrepreneur (co-founder of Bars.com); first-time candidate. Served on Louisville's Historic Preservation Commission and BVSD's Bond Oversight Committee, and helped organize the petition behind Question 200. Came from Venezuela as a teen; U.S. citizen since 2022. Age 47. Not using city matching funds.",
+        "own_words": [
+          { "text": "Proposes \"an independent performance audit function under the direct supervision of Council.\" Told BRL he'd vote NO on 2K.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/aquiles-la-grave/" },
+          { "text": "Would put license plate readers \"on hold until council creates specific policies\" on data use.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/aquiles-la-grave/" },
+          { "text": "For downtown: \"Provide free parking in its public garages for the first two hours,\" plus faster permits.", "is_quote": true, "source": "https://boulderreportinglab.org/govpack_profiles/aquiles-la-grave/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot (ballot order and names)", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "Boulder County: ranked choice voting for the mayoral election", "url": "https://bouldercounty.gov/elections/information/ranked-choice-voting/" },
+      { "name": "City of Boulder: 2026 mayoral and council candidates", "url": "https://bouldercolorado.gov/2026-city-boulder-mayoral-and-city-council-candidates" },
+      { "name": "Boulder Reporting Lab: meet the 19 candidates", "url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/" },
+      { "name": "Boulder Reporting Lab: where candidates stand on the local measures", "url": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "boulder-council",
+    "state": "CO",
+    "level": "city",
+    "office": "Boulder City Council (five seats)",
+    "district": null,
+    "scope_plain": "Every City of Boulder voter",
+    "office_explainer": "Nine-member council, including the mayor, that passes Boulder's laws, budget and land-use rules.",
+    "why_it_matters": "Vote for up to five of 13 (not ranked); marking more than five voids your votes in this race. Only three sitting members, Tina Marquis, Ryan Schuchard and Tara Winer, are running, so at least two newcomers will join. Council pay rises to about $41,000 a year in December.",
+    "vote_for": 5,
+    "incumbent": "Tina Marquis, Ryan Schuchard and Tara Winer are running; two seats have no incumbent",
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lee Gilbert",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://lee4boulder.com/",
+        "website_confidence": "verified",
+        "background": "Engineering consultant. Not using city matching funds.",
+        "own_words": [
+          { "text": "Did not respond to Boulder Reporting Lab's questionnaire.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Sam Fuqua",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.fuquaforcouncil.com/",
+        "website_confidence": "verified",
+        "background": "Radio journalist, age 62. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab he'd vote: 2K yes, 2M yes, 2J yes, 2L yes, 1A yes, 200 no position, 201 five districts.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Ryan Schuchard",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": "https://www.ryanwithboulder.com/",
+        "website_confidence": "verified",
+        "background": "Sitting councilmember seeking reelection; climate resilience professional, age 49. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab he'd vote: 2K yes, 2M yes, 2J yes, 2L yes, 1A yes, 200 no position, 201 no position.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jamillah Richmond",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.jamillahanewvoice.com/",
+        "website_confidence": "verified",
+        "background": "Diversity and education consultant, age 42. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K no, 2M no, 2J yes, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Benita Duran",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.benitaduran.com/",
+        "website_confidence": "verified",
+        "background": "Government consultant, age 65. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K no, 2M yes, 2J no, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Tara Winer",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": "https://www.taraforboulder.com/",
+        "website_confidence": "verified",
+        "background": "Sitting councilmember and mayor pro tem seeking reelection; senior brand manager, age 68. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K yes, 2M no, 2J yes, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Rachel Rose Isaacson",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.rachelrose4boulder.com/",
+        "website_confidence": "verified",
+        "background": "Barista, age 29. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K yes, 2M yes, 2J yes, 2L yes, 1A yes, 200 yes; did not answer on 201.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Dave Martus",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://daveforboulder.com/",
+        "website_confidence": "verified",
+        "background": "Senior advisor (Boulder Reporting Lab's listing). Not using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab he'd vote: 2K no, 2M no, 2J no, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Scott Rendleman",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://rendleman4boulder.com/",
+        "website_confidence": "verified",
+        "background": "Attorney, age 58. Not using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab he'd vote: 2K no, 2M no, 2J yes, 2L yes, 1A yes, 200 yes, 201 five districts.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jill Adler Grano",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://www.jillforcouncil.com/",
+        "website_confidence": "verified",
+        "background": "Real estate agent, age 44. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K no, 2M yes, 2J yes, 2L yes, 1A yes, 200 yes, 201 five districts.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Ryan Jamieson",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": "https://rjforboulder.com/",
+        "website_confidence": "verified",
+        "background": "Cybersecurity consultant, age 46. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab he'd vote: 2K no, 2M yes, 2J no, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Lynn Segal",
+        "party": "Nonpartisan",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Ultrasonographer, age 73. Not using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K no, 2M no, 2J yes, 2L yes, 1A no, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Tina Marquis",
+        "party": "Nonpartisan",
+        "incumbent": true,
+        "website": "https://www.tinaforboulder.com/",
+        "website_confidence": "verified",
+        "background": "Sitting councilmember seeking reelection, age 55. Using city matching funds.",
+        "own_words": [
+          { "text": "Told Boulder Reporting Lab she'd vote: 2K yes, 2M yes, 2J yes, 2L yes, 1A yes, 200 yes, 201 three districts plus two at-large.", "is_quote": false, "source": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      { "name": "Boulder County compiled sample ballot (ballot order and names)", "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf" },
+      { "name": "City of Boulder: 2026 mayoral and council candidates (matching funds)", "url": "https://bouldercolorado.gov/2026-city-boulder-mayoral-and-city-council-candidates" },
+      { "name": "Boulder Reporting Lab: meet the 19 candidates", "url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/" },
+      { "name": "Boulder Reporting Lab: where candidates stand on the local measures", "url": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-salomone",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 20th Judicial District: retain Judge Nancy Woodruff Salomone?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The 20th Judicial District's commission on judicial performance rated Judge Salomone MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "Nancy Woodruff Salomone",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Nancy Woodruff Salomone",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/salomone-nancy-w-2026-evaluation",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/salomone-nancy-w-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-kotlarczyk",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 20th Judicial District: retain Judge Michael Kotlarczyk?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The 20th Judicial District's commission on judicial performance rated Judge Kotlarczyk MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "Michael Kotlarczyk",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Michael Kotlarczyk",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/kotlarczyk-michael-t-2026-evaluation",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/kotlarczyk-michael-t-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-larson-chris",
+    "state": "CO",
+    "level": "judicial",
+    "office": "District Court, 20th Judicial District: retain Judge J. Chris Larson?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "District judges handle felonies, big civil cases, divorces and juvenile or probate matters.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The 20th Judicial District's commission on judicial performance rated Judge Larson MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "J. Chris Larson",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "J. Chris Larson",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/larson-j-chris-2026-evaluation",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/larson-j-chris-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-brodsky",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Boulder County Court: retain Judge Elizabeth House Moulton Brodsky?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Boulder County Court commission on judicial performance rated Judge Brodsky MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth House Moulton Brodsky",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Elizabeth House Moulton Brodsky",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/brodsky-elizabeth-house-moulton-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "OJPE's archive also holds evaluations of her from her 2018 and 2022 retention elections.",
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/brodsky-elizabeth-house-moulton-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-haenselman",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Boulder County Court: retain Judge Monica Haenselman?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Boulder County Court commission on judicial performance rated Judge Haenselman MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "Monica Haenselman",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Monica Haenselman",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/haenselman-monica-2026-evaluation",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/haenselman-monica-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-malkinson",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Boulder County Court: retain Judge Zachary Ilya Malkinson?",
+    "district": "Boulder",
+    "scope_plain": "Every Boulder County voter",
+    "office_explainer": "County judges handle misdemeanors, traffic, small claims and civil cases under $25,000.",
+    "why_it_matters": "Yes/no question. A majority of NO votes removes the judge. The Boulder County Court commission on judicial performance rated Judge Malkinson MEETS PERFORMANCE STANDARDS. Every Boulder judge on the 2026 ballot got that rating.",
+    "vote_for": 1,
+    "incumbent": "Zachary Ilya Malkinson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Zachary Ilya Malkinson",
+        "party": null,
+        "incumbent": true,
+        "website": "https://judicialperformance.colorado.gov/malkinson-zachary-i-2026-evaluation",
+        "website_confidence": "verified",
+        "background": "OJPE's archive also holds an evaluation of him from his 2022 retention election.",
+        "own_words": [
+          { "text": "Commission rating: MEETS PERFORMANCE STANDARDS. The commission's vote, written findings and survey results were not captured for this guide; read them at the evaluation link.", "is_quote": false, "source": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      { "name": "Colorado Office of Judicial Performance Evaluation, 2026 evaluations", "url": "https://judicialperformance.colorado.gov/know-your-judges/2026-judicial-performance-evaluations" },
+      { "name": "Individual evaluation", "url": "https://judicialperformance.colorado.gov/malkinson-zachary-i-2026-evaluation" }
+    ],
+    "confidence": "verified"
+  }
+]

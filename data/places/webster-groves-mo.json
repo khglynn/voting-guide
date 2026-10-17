@@ -1,0 +1,63 @@
+{
+  "id": "webster-groves-mo",
+  "label": "Webster Groves (St. Louis County, not the City of St. Louis)",
+  "state": "MO",
+  "counties": [
+    "St. Louis County"
+  ],
+  "county_election_office": {
+    "name": "St. Louis County Board of Elections, 725 Northwest Plaza Dr., St. Ann, MO 63074 (the county board, not the City of St. Louis board downtown). Mon to Fri 8 a.m. to 4:30 p.m.",
+    "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "phone": "314-615-1800"
+  },
+  "sample_ballot_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+  "zips": [
+    "63119"
+  ],
+  "zip_caveats": "Webster Groves is in St. Louis County, NOT the City of St. Louis: you vote with the county Board of Elections in St. Ann, and on Election Day you can use any county polling place. 63119 also covers Rock Hill, Shrewsbury, Marlborough and unincorporated pockets, and it is split several ways. U.S. House (2022 lines, which govern the Nov. 3 election): Webster Groves itself is divided between the 1st District (Bell) and the 2nd (Wagner); Rock Hill is in the 1st and Shrewsbury in the 2nd. State Senate: central and southern Webster Groves sit in Senate District 1, which is NOT on the ballot this year, so many 63119 voters have no state senate race; the north and east parts (around Rock Hill, Shrewsbury and the Laclede Station Road side) are SD-4 (Mitten, unopposed); the northwest edge may be SD-24 (McCreery vs. Wrobley). State House: most of Webster Groves is HD-91 (Doll, unopposed); the east side and Shrewsbury are HD-83 (Reed vs. Bolin); the edges toward Glendale, Crestwood, Affton and Warson Woods may fall in HD-90, HD-96, HD-92 or HD-99. County Council: Webster Groves is partly in District 5 (Clancy, unopposed); other parts may be in District 3 (Osmack vs. Koenig) or an even-numbered district with no council race this year. School: Prop W appears only for addresses in the Webster Groves School District, which does not match the ZIP exactly. These district placements come from official 2022 legislative boundaries checked against points around each town, not a ZIP-level file. Use the county's Sample Ballot Lookup with your street address to see your exact ballot.",
+  "contest_ids": [
+    "mo-state-auditor",
+    "mo-retention-wilson",
+    "mo-retention-lay",
+    "mo-retention-navarro-mckelvey",
+    "mo-retention-quigless",
+    "mo-us-house-1",
+    "mo-us-house-2",
+    "mo-sd-4",
+    "mo-sd-24",
+    "mo-hd-91",
+    "mo-hd-83",
+    "mo-hd-90",
+    "mo-hd-92",
+    "mo-hd-96",
+    "mo-hd-99",
+    "stlco-county-executive",
+    "stlco-prosecuting-attorney",
+    "stlco-assessor",
+    "stlco-council-5",
+    "stlco-council-3",
+    "stlco-retention-stewart",
+    "stlco-retention-borbonus",
+    "stlco-retention-ott",
+    "stlco-retention-mcnelley",
+    "stlco-retention-mcpherson",
+    "stlco-retention-baker",
+    "stlco-retention-hearne",
+    "stlco-retention-dunne",
+    "stlco-retention-lasater",
+    "stlco-retention-klapp",
+    "stlco-retention-ruth",
+    "stlco-retention-lewis",
+    "stlco-retention-snyder",
+    "stlco-retention-ghasedi",
+    "stlco-retention-dillon-amelung",
+    "mo-prop-a",
+    "mo-amendment-3",
+    "mo-amendment-6",
+    "mo-amendment-7",
+    "mo-amendment-8",
+    "stlco-prop-a",
+    "stlco-prop-s",
+    "webster-groves-sd-prop-w"
+  ]
+}

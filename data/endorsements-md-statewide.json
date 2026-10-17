@@ -1,0 +1,1002 @@
+[
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.' No 2026 candidate endorsements appear on the editorials page.",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "Same 2024 no-candidate-endorsement policy.",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Same 2024 no-candidate-endorsement policy.",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Same 2024 no-candidate-endorsement policy.",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this question found.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this question found.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Sun's opinion section ran guest pieces against Question 3 on Oct 4 (Sen. Justin Ready), Oct 8 ('Question 3 is just another power grab') and Oct 9 ('This liberal is voting against Question 3'), but none could be confirmed as the editorial board's own position (site blocks fetches). Re-check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-question-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-question-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-question-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-retention-friedman",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Post's View editorial on this question found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Post's View editorial on this question found.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oct 1 piece 'Maryland Democrats should reject gerrymandering and set a national precedent' ran under the Post's 'Ripple' opinion vertical and was syndicated to The Hill as an individual column, so it is not counted as a board editorial. No 'Post's View' editorial on Question 3 was found.",
+    "url": "https://www.washingtonpost.com/ripple/2026/10/01/maryland-question-3-gerrymandering/",
+    "date": "2026-10-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/ballot",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/ballot",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/ballot",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
+    "url": "https://www.vote411.org/ballot",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
+    "url": "https://www.lwvmd.org/voterguides2026",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
+    "url": "https://www.lwvmd.org/voterguides2026",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
+    "url": "https://www.lwvmd.org/voterguides2026",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Party nominee.",
+    "url": "https://www.mddems.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-comptroller",
+    "status": "endorsed",
+    "choice": "Brooke Elizabeth Lierman",
+    "why": "Party nominee.",
+    "url": "https://www.mddems.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-attorney-general",
+    "status": "endorsed",
+    "choice": "Anthony G. Brown",
+    "why": "Party nominee.",
+    "url": "https://www.mddems.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-question-3",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Party chair Steuart Pittman and state Democratic leaders campaign for Question 3 as a response to mid-decade redistricting elsewhere.",
+    "url": "https://marylandmatters.org/2026/09/25/democrats-unions-advocates-push-for-support-on-question-3-on-redistricting/",
+    "date": "2026-09-25",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Dan Cox and Rob Krop",
+    "why": "Party nominee (won June 23 primary with 43%).",
+    "url": "https://mdgop.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-comptroller",
+    "status": "endorsed",
+    "choice": "Sonya Dunn",
+    "why": "Party nominee (unopposed in primary).",
+    "url": "https://mdgop.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-attorney-general",
+    "status": "endorsed",
+    "choice": "James B. Rutledge, III",
+    "why": "Party nominee (unopposed in primary).",
+    "url": "https://mdgop.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-question-3",
+    "status": "endorsed",
+    "choice": "AGAINST",
+    "why": "'The Maryland Republican Party is encouraging all Marylanders to vote NO on Question 3.' Runs the 'Save Our Voice' campaign against it.",
+    "url": "https://mdgop.org/2026/08/17/mdgop-launches-save-our-voice-campaign-to-defeat-democrats-gerrymandering-amendment/",
+    "date": "2026-08-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Listed on the Moore campaign's endorsement page; the federation's own slate is an Airtable embed that could not be read.",
+    "url": "https://wesmoore.com/endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-question-1",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Labor Votes page: 'Question 1: Strengthening Collective Bargaining for Maryland State Workers.'",
+    "url": "https://mddclabor.org/laborvotes/question-1-strengthening-collective-bargaining-maryland-state-workers",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mddc-afl-cio",
+    "target_id": "md-question-3",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Maryland Matters (Sept 25) reports unions joined Democrats in pushing for a FOR vote. Confirm on the federation's Airtable slate.",
+    "url": "https://marylandmatters.org/2026/09/25/democrats-unions-advocates-push-for-support-on-question-3-on-redistricting/",
+    "date": "2026-09-25",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Listed on the Moore campaign's endorsement page.",
+    "url": "https://wesmoore.com/endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Listed on the Moore campaign's endorsement page.",
+    "url": "https://wesmoore.com/endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "planned-parenthood-md-action",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-right-to-life",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-governor",
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "'FOP Maryland State Lodge' is listed on the Moore campaign's endorsement page.",
+    "url": "https://wesmoore.com/endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-attorney-general",
+    "status": "endorsed",
+    "choice": "James B. Rutledge, III",
+    "why": "Endorsed Rutledge as 'a genuine partner to police officers' (MDGOP release, Sept 8, 2026).",
+    "url": "https://mdgop.org/2026/09/08/maryland-fraternal-order-of-police-endorses-jim-rutledge-for-attorney-general/",
+    "date": "2026-09-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-retention-killough",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun's co-owner announced in January 2024 that the paper would stop endorsing candidates.",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-retention-killough",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner is a nonprofit newsroom and does not endorse. It publishes a voter guide instead.",
+    "url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-fop",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not found in this pass; open the endorser's page.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  }
+]

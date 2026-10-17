@@ -1,0 +1,83 @@
+[
+  {
+    "id": "fl-amendment-1",
+    "state": "FL",
+    "level": "state",
+    "jurisdiction": "Florida",
+    "number": "Amendment 1",
+    "official_title": "BUDGET STABILIZATION FUND. Proposing an amendment to the State Constitution to increase the amount of funds that may be retained in the budget stabilization fund from 10% to 25% of general revenue collections, require the legislature to transfer the lesser of $750 million or the amount required to reach 25% of the general revenue collections each year unless certain conditions are met, and allow the legislature to withdraw funds for critical state needs.",
+    "plain_summary": "Raises how much money Florida must keep in its rainy-day savings account, the Budget Stabilization Fund. Today the fund is capped at 10% of the prior year's general revenue. This raises the cap to 25% and makes the Legislature deposit $750 million a year (or whatever smaller amount reaches the cap) by June 30 of each budget year. It also adds a new way to spend the money: for a 'critical state need,' with a two-thirds vote of each chamber, as long as the fund stays above 10%.",
+    "yes_means": "The state must save more each year, up to 25% of general revenue, and may tap the savings for shortfalls, emergencies, or a 'critical state need' with a two-thirds vote.",
+    "no_means": "The current rules stay: the rainy-day fund is capped at 10% of general revenue, and the Legislature decides each year how much, if anything, to add.",
+    "current_law": "Article III, section 19(g) of the Florida Constitution requires a Budget Stabilization Fund of at least 5% and at most 10% of the last completed fiscal year's net general revenue collections. Money may be withdrawn to cover a revenue shortfall or an emergency and must be paid back in five equal yearly installments. Voters created the fund in 1992; it was last tapped in 2008.",
+    "fiscal_impact": "No Financial Impact Statement: Florida's Financial Impact Estimating Conference writes those only for citizen initiatives, not legislative referrals. Practical effect per Florida TaxWatch: a required transfer of $750 million a year from general revenue into savings until the fund reaches 25%, money that otherwise could be spent, refunded, or cut from taxes. The transfer can be skipped in years the fund is tapped, or once every five years by a two-thirds vote.",
+    "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))",
+    "referred_by": "legislature",
+    "confusing_wording_note": "This is not a tax and does not change what you pay. A YES locks more of the money the state already collects into savings. Two phrases to notice: 'unless certain conditions are met' means the deposit can be skipped, and 'critical state needs' is a new spending door that is not defined in the amendment. Sponsored by House Joint Resolution 5019 (2025 session), part of the 2025 budget deal. Needs 60% YES, not a simple majority.",
+    "supporters_case": {
+      "text": "House Speaker Daniel Perez, sponsor Rep. Lawrence McClure (R-Dover) and the Republican Party of Florida say a bigger reserve protects Florida's credit rating and forces the state to spend less so it can weather a recession or a major hurricane without cuts or tax hikes. Florida TaxWatch recommends YES, calling reserves sound fiscal practice.",
+      "source": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/"
+    },
+    "opponents_case": {
+      "text": "Gov. Ron DeSantis opposes it, calling the plan 'foolish' and arguing extra money should go to tax cuts. Newspaper editorial boards (Orlando Sentinel, Miami Herald, Sun Sentinel, TCPalm) say Florida already holds large reserves, the fund has not been needed since 2008, and a mandatory $750 million a year ties future legislatures' hands and centralizes power in Tallahassee.",
+      "source": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html"
+    },
+    "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
+    "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-amendment-2",
+    "state": "FL",
+    "level": "state",
+    "jurisdiction": "Florida",
+    "number": "Amendment 2",
+    "official_title": "EXEMPTION OF TANGIBLE PERSONAL PROPERTY ON AGRICULTURAL LAND FROM TAXATION. Proposing an amendment to the State Constitution to exempt tangible personal property habitually located or typically present on land classified as agricultural, used in the production of agricultural products or for agritourism activities, and owned by the landowner or leaseholder of the agricultural land from ad valorem taxation. If approved this amendment would first apply for tax years beginning January 1, 2027.",
+    "plain_summary": "Ends the local property tax on farm equipment and other 'tangible personal property' (tractors, irrigation gear, packing equipment, agritourism fixtures) that sits on land classified as agricultural, is used to produce farm products or run agritourism, and is owned by the farmer or the farm's leaseholder. The Legislature sets the details. Starts with the 2027 tax year.",
+    "yes_means": "Farm equipment and similar property on agricultural land becomes exempt from local property taxes starting in 2027.",
+    "no_means": "Farm equipment stays taxable as tangible personal property the way it is now (with the existing $25,000 exemption that applies to all businesses).",
+    "current_law": "Businesses, including farms, pay local ad valorem tax on tangible personal property (equipment, furniture, machinery) above a $25,000 exemption (Art. VII, s. 3(e)). Agricultural LAND is already assessed at its agricultural-use value under the 'greenbelt' law, but the equipment on it is taxed like any other business's equipment.",
+    "fiscal_impact": "Local governments and school districts would lose about $31.0 million in FY 2027-28, $32.3 million the second year and $33.6 million the third (state Revenue Estimating Conference figures as reported by Florida TaxWatch and the Tampa Bay Times). Rural counties with lots of farmland feel it most.",
+    "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))",
+    "referred_by": "legislature",
+    "confusing_wording_note": "'Tangible personal property' is a legal term for basically everything of value that is not land or buildings. 'Ad valorem' means the regular property tax. This does NOT change the tax on farmland itself. Sponsored by House Joint Resolution 1215 (2025 session), sponsors Rep. Danny Alvarez (R-Hillsborough) and Sen. Keith Truenow (R-Tavares). Needs 60% YES.",
+    "supporters_case": {
+      "text": "Agriculture Commissioner Wilton Simpson, the Florida Farm Bureau Federation and Florida TaxWatch back it, saying farms being 'choked out' by costs need relief on equipment taxes, the tax is expensive to administer and comply with, and the revenue loss is small.",
+      "source": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/"
+    },
+    "opponents_case": {
+      "text": "Rep. Anna Eskamani (D-Orlando), the lone House vote against putting it on the ballot, worries about lost revenue for rural, less-wealthy counties. The Miami Herald editorial board says big agribusiness, not mom-and-pop farms, would benefit most; the Orlando Sentinel and Sun Sentinel also recommend NO.",
+      "source": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html"
+    },
+    "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
+    "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-amendment-3",
+    "state": "FL",
+    "level": "state",
+    "jurisdiction": "Florida",
+    "number": "Amendment 3",
+    "official_title": "INCREASED HOMESTEAD EXEMPTION; LOWER CAP ON INCREASES IN NON-HOMESTEAD PROPERTY ASSESSMENTS. This amendment increases the homestead exemption, for all non-school taxes, to $150,000 in 2027 and $250,000 in 2028, and adjusts for inflation thereafter. It requires the Legislature to prescribe a uniform procedure for counties and municipalities, for their respective levies, to increase the homestead exemption up to full assessed value, and allows special districts, subject to referendum approval, to do the same. Persons who are not Florida residents on December 31, 2026, will receive the existing homestead exemption upon qualifying for a homestead exemption, with the increased homestead exemption beginning with the fifth year of exemption, to the extent permitted by the U.S. Constitution. This amendment reduces the annual cap on assessment increases for non-homestead properties from 10% to 5%. This amendment requires counties and municipalities to use property taxes solely for public safety, education and schools, infrastructure, natural resources, bond debt service, retirement benefits for employees, and operations and administration. Other expenditures may be approved by county officers or county or municipal governing bodies unless prohibited by general law, notwithstanding Article VII, Section 9(a) of the Florida Constitution, which allows counties and municipalities to levy property taxes for their respective purposes. This amendment takes effect January 1, 2027.",
+    "plain_summary": "The big property-tax measure. For your primary home, it raises the homestead exemption on non-school property taxes from $50,000 to $150,000 in 2027 and $250,000 in 2028, then grows it with inflation. It lets cities and counties go further, up to a full exemption. For rentals, second homes and businesses, it lowers the yearly cap on assessment increases from 10% to 5%. And it limits what cities and counties may spend property taxes on. School taxes are not affected. Takes effect January 1, 2027.",
+    "yes_means": "Homeowners pay much less in city, county and special-district property tax starting in 2027; local governments collect billions less and must spend property taxes only on listed purposes.",
+    "no_means": "Property taxes stay as they are: a $50,000 homestead exemption, a 10% cap for non-homestead property, and no new limits on what local governments spend property taxes on.",
+    "current_law": "Homesteads get a $50,000 exemption (the second $25,000 does not apply to school taxes) plus the 3% 'Save Our Homes' cap on yearly assessment increases. Non-homestead property has a 10% yearly assessment cap (non-school levies). Counties and cities may levy property taxes 'for their respective purposes' (Art. VII, s. 9(a)).",
+    "fiscal_impact": "State Revenue Estimating Conference, as reported by Florida TaxWatch: local government property-tax revenue falls $4.939 billion in 2027 and $8.714 billion in 2028, growing to $11.835 billion by 2031; five-year total $45.837 billion. Example county figures reported by the Tampa Bay Times: Hillsborough loses about $261 million in 2028 and $468 million the next year; Miami-Dade $357 million then $643 million. The amendment gives local governments no replacement revenue.",
+    "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))",
+    "referred_by": "legislature",
+    "confusing_wording_note": "Three things hide in the long summary. (1) 'For all non-school taxes': your school tax bill does not change, and if your home is assessed under $250,000 you get less than the full break. (2) The December 31, 2026 residency cutoff: people who move to Florida after that date wait until their fifth year to get the bigger exemption, a rule the state Supreme Court struck down in a similar form in the 1980s, which is why the summary adds 'to the extent permitted by the U.S. Constitution.' (3) The 10% to 5% cap change applies to non-homestead property, so it also helps landlords and businesses. Sponsored by HJR 1F from the 2026 special session ('Save Our Homes from Excessive Property Taxes'). Polls in October had it well under the 60% needed.",
+    "supporters_case": {
+      "text": "The Republican Party of Florida, Gov. DeSantis (who first proposed the idea) and Florida Realtors say Floridians are being priced out of their homes, that this is the biggest property-tax cut in state history, and that it makes homeownership more attainable while forcing local governments to prioritize core services.",
+      "source": "https://floridaphoenix.com/voter-guides/ballot-measures/2026-amendment-3/"
+    },
+    "opponents_case": {
+      "text": "The Florida Sheriffs Association, firefighter unions, the Florida League of Cities, the Florida Hospital Association, the Florida Democratic Party, the League of Women Voters of Florida and Florida TaxWatch oppose it, warning of deep cuts to police, fire and basic services (TaxWatch: it 'shifts the burden onto non-homestead property owners' and was 'rushed onto the ballot'). Every major newspaper editorial board that has weighed in recommends NO.",
+      "source": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/"
+    },
+    "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
+    "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
+    "confidence": "verified"
+  }
+]

@@ -1,0 +1,87 @@
+[
+ {
+  "id": "houston-chronicle-eb",
+  "name": "Houston Chronicle editorial board",
+  "type": "publication",
+  "lean": "lean_left",
+  "lean_basis": "AllSides rates the Houston Chronicle Lean Left. The board calls itself nonpartisan; in Harris County races its 2026 picks are 87 Democrats, 28 Republicans and 3 nonpartisan candidates, with most Republican picks in judicial races.",
+  "geography": [
+   "houston-tx",
+   "TX"
+  ],
+  "guide_url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "lwv-houston",
+  "name": "League of Women Voters of Houston",
+  "type": "civic_nonpartisan",
+  "lean": "neutral",
+  "lean_basis": "Nonpartisan; says it never supports or opposes candidates or parties. Publishes the Houston Voters Guide with candidates' unedited answers.",
+  "geography": [
+   "houston-tx"
+  ],
+  "guide_url": "https://www.houstonvotersguide.org/",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": false
+ },
+ {
+  "id": "the-caucus-houston",
+  "name": "Houston LGBTQ+ Political Caucus (The Caucus PAC)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "LGBTQ+ advocacy PAC. Every partisan pick on its 2026 general card is a Democrat (87 Harris County races plus 9 statewide).",
+  "geography": [
+   "houston-tx"
+  ],
+  "guide_url": "https://pac.thecaucus.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "harris-county-gop",
+  "name": "Harris County Republican Party",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county party organization. Publishes a roster of its Republican nominees and runs a joint campaign for Republican judicial candidates; no separate local endorsement slate found.",
+  "geography": [
+   "houston-tx"
+  ],
+  "guide_url": "https://hcgop.v-web.com/elections/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "tx-gulf-coast-labor-federation",
+  "name": "Texas Gulf Coast Area Labor Federation (AFL-CIO)",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Regional AFL-CIO federation of about 95 unions. The earlier-cycle endorsements still shown on its Blue Voter Guide page are all Democrats; no 2026 slate found.",
+  "geography": [
+   "houston-tx"
+  ],
+  "guide_url": "https://www.gcaflcio.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "ground-game-texas",
+  "name": "Ground Game Texas",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Sponsor of Houston Prop A. Runs marijuana-decriminalization and policing ballot campaigns in Texas cities and says it works on social justice issues (Texas Scorecard, FOX 26). No AllSides rating.",
+  "geography": [
+   "houston-tx"
+  ],
+  "guide_url": "https://www.fox26houston.com/news/houston-proposition-a-what-marijuana-enforcement-no-knock-warrant-measure-would-do",
+  "default_on": false,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ }
+]

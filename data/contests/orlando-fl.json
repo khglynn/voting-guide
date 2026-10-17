@@ -1,0 +1,1818 @@
+[
+ {
+  "id": "fl-orange-mayor",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Mayor",
+  "district": null,
+  "scope_plain": "Every Orange County voter, including all of Orlando. Nonpartisan, so no party labels on the ballot. This is the runoff between the top two finishers from the Aug 18 primary.",
+  "office_explainer": "Runs county government day to day and chairs the County Commission: budget, roads, growth, transit.",
+  "why_it_matters": "Open seat: Mayor Jerry Demings is term-limited. Orange County's strong mayor manages about 8,000 county employees and a multibillion-dollar budget, and speaks for the county on transportation, airport and tourism boards.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Chris Messina",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.chrismessina.com/",
+    "website_confidence": "sourced",
+    "background": "Winter Park tech entrepreneur with a Harvard MBA, a registered Republican making his second run for mayor (he also ran in 2022). Vice chair of Orange County Watch, 2022 to 2025. Finished second on Aug 18 with 27.1%.",
+    "own_words": [
+     {
+      "text": "\"Low median wages stifle economic opportunity for many Orange County citizens.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     },
+     {
+      "text": "\"We need to get rid of waste, fraud & bureaucracy in County government.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     },
+     {
+      "text": "On Amendment 3: \"I will vote Yes to lower property taxes by increasing the Homestead exemption.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Tiffany Moore Russell",
+    "party": null,
+    "incumbent": false,
+    "website": "https://tiffanyformayor.com/",
+    "website_confidence": "sourced",
+    "background": "Orange County Clerk of Courts for more than 12 years, and a county commissioner for eight years before that (District 6, first won in 2006). A registered Democrat. Finished first on Aug 18 with 32.0%.",
+    "own_words": [
+     {
+      "text": "\"I will expand workforce and affordable housing through public-private partnerships.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     },
+     {
+      "text": "\"Orange County needs a dedicated funding source to address a multi-modal transportation plan for the future.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     },
+     {
+      "text": "On Amendment 3: \"I would vote No on the constitutional amendment to reduce property taxes.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot (Nov 3, 2026)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 / News Collaborative voter guide: Orange County mayor (July 31, 2026)",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-mayor/"
+   },
+   {
+    "name": "VoxPopuli candidate profile: Chris Messina",
+    "url": "https://www.wintergardenvox.com/candidates/chris-messina-2026"
+   },
+   {
+    "name": "Wikipedia: 2026 Orange County mayoral election",
+    "url": "https://en.wikipedia.org/wiki/2026_Orange_County,_Florida_mayoral_election"
+   },
+   {
+    "name": "Wikipedia: Orange County Board of County Commissioners (2006 District 6 result)",
+    "url": "https://en.wikipedia.org/wiki/Orange_County_Board_of_County_Commissioners"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-clerk",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Clerk of Courts",
+  "district": null,
+  "scope_plain": "Every Orange County voter, including all of Orlando. A partisan office, so party labels appear on the ballot.",
+  "office_explainer": "Keeps Orange County's court records, collects court fines and fees, issues marriage licenses and handles passports.",
+  "why_it_matters": "Open seat: Clerk Tiffany Moore Russell is running for county mayor instead.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Roberta Walton Johnson",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://voteroberta.com/",
+    "website_confidence": "sourced",
+    "background": "General counsel of the Orange County Clerk's Office, with more than a decade in the office's leadership; earlier did legal-services work for low-income families. Won the Aug 18 Democratic primary with 53.5%.",
+    "own_words": [
+     {
+      "text": "\"Every resident deserves equal access to the courts, regardless of income or whether they have an attorney.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+     },
+     {
+      "text": "\"I will champion technology improvements that make services more efficient, accessible, and user-friendly.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+     },
+     {
+      "text": "\"Residents deserve confidence that their court records are secure, accurate, and managed responsibly.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Terrell Thomas",
+    "party": "No Party Affiliation",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "No-party candidate, so he skipped the August primary. Not part of the July voter guide; no profile or campaign website found in this run.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: Clerk of Courts Democratic primary (July 31, 2026)",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-9th-circuit-group-1",
+  "state": "FL",
+  "level": "judicial",
+  "office": "Circuit Judge, 9th Judicial Circuit, Group 1",
+  "district": "9th Judicial Circuit (Orange and Osceola counties)",
+  "scope_plain": "Every voter in Orange and Osceola counties, including all of Orlando. Nonpartisan runoff between the top two from Aug 18.",
+  "office_explainer": "Trial-court judge for Orange and Osceola counties, hearing serious criminal cases and major civil and family cases.",
+  "why_it_matters": "Circuit judges serve six-year terms, and contested judicial races are rare. Neither candidate is a sitting judge. In Orange County alone, third-place Mikaela Nix edged Hart on Aug 18, but Hart finished second once Osceola votes were counted.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 6,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Temika Hampton-Johnson",
+    "party": null,
+    "incumbent": false,
+    "website": "https://hamptonjohnson4judge.vote/",
+    "website_confidence": "sourced",
+    "background": "Attorney, described as a public defender in May 2026 coverage and a private-practice attorney in October coverage. Led the Aug 18 primary across both counties with 44.1%.",
+    "own_words": [
+     {
+      "text": "On why she is running, including her experience as a lesbian parent once barred from adopting under a since-repealed Florida law: \"I think it's important that we have that representation there.\"",
+      "is_quote": true,
+      "source": "https://watermarkoutnews.com/2026/08/19/temika-hampton-johnson-heads-to-runoff-for-ninth-circuit-judge/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Charles Hart",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.votecharleshart.com/",
+    "website_confidence": "sourced",
+    "background": "Sanford private-practice attorney (criminal and guardianship law), formerly an assistant state attorney and a public defender in the 18th Circuit. Chaired the Orange County Republican Executive Committee, 2018 to 2022. Finished second across both counties with 28.4%.",
+    "own_words": [
+     {
+      "text": "From his campaign site: \"every person who appears before the court is treated with courtesy, patience, and respect.\"",
+      "is_quote": true,
+      "source": "https://www.wintergardenvox.com/candidates/charles-hart-2026"
+     },
+     {
+      "text": "From his campaign site: \"I believe the courtroom belongs to the public.\"",
+      "is_quote": true,
+      "source": "https://www.wintergardenvox.com/candidates/charles-hart-2026"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Florida Division of Elections official results, 9th Circuit Group 1",
+    "url": "https://floridaelectionwatch.gov/CompareStateToCounty/550901"
+   },
+   {
+    "name": "VoxPopuli candidate profile: Charles Hart",
+    "url": "https://www.wintergardenvox.com/candidates/charles-hart-2026"
+   },
+   {
+    "name": "Watermark Out News: Hampton-Johnson heads to runoff (Aug 19, 2026)",
+    "url": "https://watermarkoutnews.com/2026/08/19/temika-hampton-johnson-heads-to-runoff-for-ninth-circuit-judge/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: 9th Circuit Judge Group 1 (July 31, 2026)",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-9th-circuit-judge-group-1/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-us-house-8",
+  "state": "FL",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-8",
+  "scope_plain": "Only a slice of far east Orange County, including Christmas and parts of the UCF area (the district extends beyond Orange County). Most Orlando voters are NOT in District 8.",
+  "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Mike Haridopolos",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Mike Haridopolos",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent U.S. representative for District 8.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Jennifer Jenkins",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Democratic nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots (CD 8 appears on 36 of 330 ballot styles)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Florida AFL-CIO 2026 endorsements",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-us-house-9",
+  "state": "FL",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-9",
+  "scope_plain": "Parts of south and southeast Orange County; the district extends beyond Orange County. Not downtown Orlando.",
+  "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Darren Soto",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Dan Green",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee from a seven-way primary. In Orange County's slice of the district he placed second with 21.9%; he won district-wide.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Darren Soto",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent U.S. representative for District 9.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots (CD 9 on 28 ballot styles)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-us-house-10",
+  "state": "FL",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-10",
+  "scope_plain": "Most of central Orange County, including downtown Orlando, Lake Eola and Delaney Park. This race will NOT appear on your ballot: Frost had no opponent in November, and Florida does not print uncontested races.",
+  "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
+  "why_it_matters": "If your ballot has no U.S. House race, this is why. Frost keeps the seat without a vote.",
+  "vote_for": 1,
+  "incumbent": "Maxwell Frost",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Maxwell Frost",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent U.S. representative for District 10 since 2023. Unopposed in the general election.",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots (no CD 10 contest on any of 330 ballot styles; 194 styles have no U.S. House race at all)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Florida AFL-CIO 2026 endorsements (lists Frost for CD 10)",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/"
+   },
+   {
+    "name": "Wikipedia: 2026 Orange County mayoral election (Frost, FL-10, 2023 to present)",
+    "url": "https://en.wikipedia.org/wiki/2026_Orange_County,_Florida_mayoral_election"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-us-house-11",
+  "state": "FL",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-11",
+  "scope_plain": "West and southwest Orange County (for example Windermere, Winter Garden, Dr. Phillips and Lake Buena Vista), parts of the Apopka and Ocoee area, and some south Orange precincts around Hunter's Creek. Not downtown Orlando.",
+  "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
+  "why_it_matters": "The Republican primary was close enough in Orange County to go to a recount.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Joe Strada",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "James Pericola",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Won the Democratic primary in Orange County with 43.5% over Royal Webster and Dan Williams.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Ralph Groves",
+    "party": "Libertarian",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Libertarian Party of Florida nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots (CD 11 on 72 ballot styles)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results (REP CD 11 recount notice)",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-senate-10",
+  "state": "FL",
+  "level": "state",
+  "office": "State Senator",
+  "district": "SD-10",
+  "scope_plain": "Only some north and central Orange County precincts, such as parts of College Park and the Winter Park area; the district also extends beyond Orange County. Most Orlando voters have NO state Senate race this year.",
+  "office_explainer": "One of 40 state senators: writes Florida laws and the state budget; four-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Jason Brodeur",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jason Brodeur",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent state senator for District 10.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "John Lowndes",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Won the Democratic primary with 81% of the Orange County vote over H. Alexander Duncan.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots (SD 10 on 31 ballot styles)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-35",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-35",
+  "scope_plain": "East and southeast Orange County precincts (appears on 35 ballot styles, mostly in County Commission Districts 4, 5 and 8). Not downtown Orlando.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Erika Booth",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Erika Booth",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent state representative for District 35.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Eric Gray",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Democratic nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-37",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-37",
+  "scope_plain": "East Orange County precincts (25 ballot styles, mostly County Commission District 5), including the area east of Winter Park and around UCF. Not downtown Orlando.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Robert Prater",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Jane Aman",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Democratic nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-39",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-39",
+  "scope_plain": "Northwest Orange County, around Apopka (28 ballot styles in County Commission Districts 1 and 2). Not downtown Orlando.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Doug Bankson",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Doug Bankson",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent from Apopka seeking a third term; won 91% of the Orange County vote in the Aug 18 Republican primary.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Jarod Fox",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Democratic nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "VoxPopuli profile of Charles Hart (notes Bankson is seeking his third term)",
+    "url": "https://www.wintergardenvox.com/candidates/charles-hart-2026"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-40",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-40",
+  "scope_plain": "Pine Hills, Rosemont and parts of west Orlando and College Park (County Commission Districts 2 and 7; 36 ballot styles). Probably not downtown, but the line runs close; check your sample ballot.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Ra'Shon Young",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tuan Le",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Ra'Shon Young",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent state representative for District 40.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-42",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-42",
+  "scope_plain": "Central and east Orlando. On 69 ballot styles spread across County Commission Districts 3, 5, 6 and 7, including the Lake Margaret area of 32806 and College Park. Most likely the state House race for downtown, Lake Eola and Delaney Park voters, but confirm on your sample ballot.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": "Open seat: Rep. Anna Eskamani is term-limited. The seat covers what Orlando Weekly calls 'a majority-Democrat stretch of Orlando.'",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bonnie Jackson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee. No profile or campaign site found in this run.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Felipe Sousa Lazaballet",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.felipeforflorida.com/",
+    "website_confidence": "sourced",
+    "background": "Executive director of the Hope CommUnity Center in Apopka and an immigrant-rights organizer; a former undocumented immigrant who became a U.S. citizen in 2021. Qualified for the ballot by petition.",
+    "own_words": [
+     {
+      "text": "Named the economy as his top issue, plus health-care access, the environment, education and equality.",
+      "is_quote": false,
+      "source": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/"
+     },
+     {
+      "text": "On what matters most: \"the price of everyday goods, the fact that housing is so expensive.\"",
+      "is_quote": true,
+      "source": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Orlando Weekly: Sousa-Lazaballet files for HD 42 (Feb 14, 2025)",
+    "url": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/"
+   },
+   {
+    "name": "Watermark Out News: Sousa-Lazaballet qualifies (May 20, 2026)",
+    "url": "https://watermarkoutnews.com/2026/05/20/felipe-sousa-lazaballet-qualifies-for-florida-house-raises-200k/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-43",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-43",
+  "scope_plain": "East and southeast Orlando precincts in County Commission Districts 3, 4 and 8, for example along Curry Ford Road and Chickasaw Trail and parts of the Lake Nona area (39 ballot styles). Possible for the east side of 32806; check your sample ballot.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jorge Malavet",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Samuel Vilchez Santiago",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Won the Aug 18 Democratic primary with 65.8% of the Orange County vote over Daisy Morales.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-house-45",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-45",
+  "scope_plain": "Southwest Orange County precincts in County Commission District 1 (Windermere, Dr. Phillips area; 26 ballot styles). Not downtown Orlando.",
+  "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Erin Huntley",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Republican nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Leonard Spencer",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Democratic nominee.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-orange-commission-2",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Commissioner",
+  "district": "District 2",
+  "scope_plain": "Only voters in County Commission District 2: northwest Orange County, including Apopka and Ocoee, south to State Road 408. Nonpartisan runoff.",
+  "office_explainer": "One of eight district commissioners who set county laws, taxes, budget, zoning and growth rules.",
+  "why_it_matters": "Open seat: Commissioner Christine Moore resigned in April 2026.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kamia Brown",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.kamiafororangecounty.com/",
+    "website_confidence": "sourced",
+    "background": "Finished first of five on Aug 18 with 32.2%.",
+    "own_words": [
+     {
+      "text": "\"Lengthy permitting and inspection timelines create unnecessary costs and delays for businesses.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     },
+     {
+      "text": "\"I support workforce and attainable housing initiatives, stronger workforce development partnerships.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     },
+     {
+      "text": "On Amendment 3: \"I will vote no on slashing property taxes.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Mike Crabb",
+    "party": null,
+    "incumbent": false,
+    "website": "https://ilikemikecrabb.com/",
+    "website_confidence": "sourced",
+    "background": "Says he has had a 30-year career \"protecting and serving the residents and visitors of Orange County.\" Finished second on Aug 18 with 25.4%.",
+    "own_words": [
+     {
+      "text": "\"Public Safety- Champion Quality of Life by ensuring public safety is a priority.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     },
+     {
+      "text": "\"Prioritize critical infrastructure projects, including water, wastewater, stormwater systems.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     },
+     {
+      "text": "On property taxes (no yes or no given): \"I believe in a stable, conservative approach to property taxes.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: Commission District 2",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-2/"
+   },
+   {
+    "name": "Wikipedia: Orange County Board of County Commissioners (Moore resignation)",
+    "url": "https://en.wikipedia.org/wiki/Orange_County_Board_of_County_Commissioners"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-commission-4",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Commissioner",
+  "district": "District 4",
+  "scope_plain": "Only voters in County Commission District 4, in east and southeast Orange County (includes the Vista Lakes area). The ballot also has a write-in line.",
+  "office_explainer": "One of eight district commissioners who set county laws, taxes, budget, zoning and growth rules.",
+  "why_it_matters": "Open seat: Commissioner Maribel Gomez Cordero ran for Clerk of Courts instead. This race was not on the August ballot, so Nov 3 is the only round.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Brian Jones",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "No candidate profile collected in this run.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Johanna Lopez",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "No candidate profile collected in this run.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results (no District 4 contest; Gomez Cordero in Clerk primary)",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Wikipedia: Orange County Board of County Commissioners",
+    "url": "https://en.wikipedia.org/wiki/Orange_County_Board_of_County_Commissioners"
+   }
+  ],
+  "confidence": "sourced"
+ },
+ {
+  "id": "fl-orange-commission-6",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Commissioner",
+  "district": "District 6",
+  "scope_plain": "Only voters in County Commission District 6: part of central Orange County including downtown Orlando, west Orlando, MetroWest, Holden and Oak Ridge. Nonpartisan runoff. Parts of 32806 (for example the Lake Margaret area) are in District 3, which has no commission race this year, and other central-Orlando addresses may be in Districts 3, 5 or 7.",
+  "office_explainer": "One of eight district commissioners who set county laws, taxes, budget, zoning and growth rules.",
+  "why_it_matters": "Covers downtown Orlando. Scott fell just short of the 50%-plus-one needed to win outright in August.",
+  "vote_for": 1,
+  "incumbent": "Michael \"Mike\" Scott",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Lawanna Gelzer",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.lawannagelzer.com/",
+    "website_confidence": "sourced",
+    "background": "Community organizer who says she has \"spent over forty years organizing on the ground.\" Also ran against Scott in 2022. Finished second on Aug 18 with 21.7%.",
+    "own_words": [
+     {
+      "text": "\"My first priority is to launch a unified Inter-District Neighborhood Advisory Council.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     },
+     {
+      "text": "\"Transit has been the greatest blind spot in planning in the county over the decades.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     },
+     {
+      "text": "On Amendment 3, her full answer: \"NO.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Michael \"Mike\" Scott",
+    "party": null,
+    "incumbent": true,
+    "website": "https://mymikescott.com/",
+    "website_confidence": "sourced",
+    "background": "Incumbent District 6 commissioner (first elected 2022) and the board's vice mayor since January 2025. Got 49.5% on Aug 18, just short of an outright win.",
+    "own_words": [
+     {
+      "text": "\"Continuing the investment in the affordable housing trust fund approved by voters and diversifying the housing inventory.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     },
+     {
+      "text": "\"Continue to find and attract employers to Orange County.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     },
+     {
+      "text": "On Amendment 3: \"I am still undecided on the question of property taxes.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: Commission District 6",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
+   },
+   {
+    "name": "Wikipedia: Orange County Board of County Commissioners",
+    "url": "https://en.wikipedia.org/wiki/Orange_County_Board_of_County_Commissioners"
+   },
+   {
+    "name": "Orlando Sentinel via PressReader (Aug 28, 2022): Scott to face Gelzer",
+    "url": "https://www.pressreader.com/usa/orlando-sentinel-for-pr-sunday/20220828/282750590544746"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-commission-7",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Commissioner",
+  "district": "District 7",
+  "scope_plain": "Only voters in new County Commission District 7: north-central Orange County, including Rosemont, Pine Hills, Eatonville and the Ocoee area. Some College Park (32804) precincts are also numbered in the 700s. Nonpartisan runoff.",
+  "office_explainer": "One of eight district commissioners who set county laws, taxes, budget, zoning and growth rules.",
+  "why_it_matters": "A brand-new seat: voters added Districts 7 and 8 in 2024, and the new map was adopted in October 2025.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Patricia Rumph",
+    "party": null,
+    "incumbent": false,
+    "website": "https://patriciarumph.com/",
+    "website_confidence": "sourced",
+    "background": "President of the Pine Hills Community Council and Orange County's community ambassador under Mayor Demings; nearly 30 years with the Florida Department of Corrections. Finished first of 13 on Aug 18 with 23.0%.",
+    "own_words": [
+     {
+      "text": "\"I will expand affordable and workforce housing by supporting responsible development, streamlining the permitting process.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     },
+     {
+      "text": "\"Our roads, sidewalks, and transit system must keep pace with Orange County's growth.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     },
+     {
+      "text": "On Amendment 3: \"NO. I support meaningful tax relief for homeowners, but not if it comes at the expense of the local services…\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Vicki Vargo",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.votevickivargo.com/",
+    "website_confidence": "sourced",
+    "background": "Former Orlando city commissioner and real estate attorney who says she has lived in District 7 for 32 years. Finished second on Aug 18 with 18.2%.",
+    "own_words": [
+     {
+      "text": "\"Public safety and saving lives are my first priority.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     },
+     {
+      "text": "\"Rather than expanding service, Lynx needs to focus on its core routes supporting workers.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     },
+     {
+      "text": "On Amendment 3 (no yes or no given): \"I believe there is excessive spending in Orange County government.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: Commission District 7",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
+   },
+   {
+    "name": "Central Florida Public Media: new eight-district map (Oct 14, 2025)",
+    "url": "https://www.cfpublic.org/text/politics/2025-10-14/orange-county-gets-new-elections-map-adding-2-more-districts"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-commission-8",
+  "state": "FL",
+  "level": "county",
+  "office": "Orange County Commissioner",
+  "district": "District 8",
+  "scope_plain": "Only voters in new County Commission District 8, in south and southeast Orange County (polling places include the Hunter's Creek and Lake Nona areas). Nonpartisan runoff. Not downtown Orlando.",
+  "office_explainer": "One of eight district commissioners who set county laws, taxes, budget, zoning and growth rules.",
+  "why_it_matters": "A brand-new seat: voters added Districts 7 and 8 in 2024.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jeannette Quinones Hernandez",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Finished second of six on Aug 18 with 19.9%.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Victor M. Torres Jr.",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Finished first of six on Aug 18 with 33.6%.",
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Central Florida Public Media: new eight-district map",
+    "url": "https://www.cfpublic.org/text/politics/2025-10-14/orange-county-gets-new-elections-map-adding-2-more-districts"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-school-board-3",
+  "state": "FL",
+  "level": "school",
+  "office": "Orange County School Board Member",
+  "district": "District 3",
+  "scope_plain": "Only voters in School Board District 3: much of south-central Orange County, including Hunter's Creek, Meadow Woods, Conway and Belle Isle. That reaches into parts of 32806 (for example the Lake Margaret area). Nonpartisan runoff.",
+  "office_explainer": "One of seven district members on the board that runs Orange County Public Schools: budget, policies, superintendent.",
+  "why_it_matters": "Open seat: the District 3 member, Alicia Farrant, ran for board chair and lost. The other school board seats on this year's cycle were settled in August.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Diana Moore",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votefordianamoore.com/",
+    "website_confidence": "sourced",
+    "background": "Finished second of three on Aug 18 with 29.5%. Says she has not sought endorsements.",
+    "own_words": [
+     {
+      "text": "\"Parents should have the right to choose the best learning environment for their child.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     },
+     {
+      "text": "\"We need professional pay for professional work.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     },
+     {
+      "text": "\"I support a School Resource Officer on each campus.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Susanne Peña",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.vote4pena.com/",
+    "website_confidence": "sourced",
+    "background": "Finished first of three on Aug 18 with 46.7%.",
+    "own_words": [
+     {
+      "text": "\"I will support evidence-based instruction, expand access to bilingual education, STEAM, and career pathways.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     },
+     {
+      "text": "\"Strong schools begin with great teachers.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     },
+     {
+      "text": "On book challenges, materials should be judged on \"educational value, age appropriateness, and established academic standards,\" not \"political pressure.\"",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots (SB 3 on 48 ballot styles)",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   },
+   {
+    "name": "Orange County SOE official Aug 18 primary results",
+    "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "WKMG News 6 voter guide: School Board District 3",
+    "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-soil-water-1",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Soil and Water Conservation District Supervisor",
+  "district": "District 1",
+  "scope_plain": "Only voters in Soil and Water District 1 (west, southwest and some south Orange County precincts; 46 ballot styles). Its lines do not match the commission districts. Not downtown.",
+  "office_explainer": "Board member of the county soil and water conservation district, which runs conservation and water-quality programs.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Quinnie Perez",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Vicente Rafael Perez Carreno",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Doug Sahr",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-soil-water-3",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Soil and Water Conservation District Supervisor",
+  "district": "District 3",
+  "scope_plain": "Only voters in Soil and Water District 3 (126 ballot styles, including most precincts in County Commission Districts 3 and 6 and parts of 4, 7 and 8). Likely on the ballot for most of downtown Orlando and 32806; confirm on your sample ballot.",
+  "office_explainer": "Board member of the county soil and water conservation district, which runs conservation and water-quality programs.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Chuck Drake",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Erik LaMont Melear",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "José Antonio Rodriguez",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-orange-soil-water-5",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Soil and Water Conservation District Supervisor",
+  "district": "District 5",
+  "scope_plain": "Only voters in Soil and Water District 5 (73 ballot styles, mostly County Commission Districts 5 and 7, including College Park and the Winter Park area). Some precincts just north and east of downtown may have this race instead of District 3.",
+  "office_explainer": "Board member of the county soil and water conservation district, which runs conservation and water-quality programs.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Zack Green",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Jimm Middleton",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-vista-lakes-cdd-3",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Vista Lakes Community Development District, Seat 3",
+  "district": "Seat 3",
+  "scope_plain": "Only voters who live inside the Vista Lakes Community Development District in southeast Orange County (3 ballot styles).",
+  "office_explainer": "Board member for a neighborhood special district that finances and maintains local infrastructure.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": null,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bennie Hichez",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   },
+   {
+    "name": "Frank J. Sebestyen",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "is_quote": false,
+      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/florida"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Orange County SOE composite sample ballot",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf"
+   },
+   {
+    "name": "Orange County SOE precinct ballots",
+    "url": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

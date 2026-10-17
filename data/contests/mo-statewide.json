@@ -1,0 +1,330 @@
+[
+  {
+    "id": "mo-state-auditor",
+    "state": "MO",
+    "level": "state",
+    "office": "State Auditor",
+    "district": null,
+    "scope_plain": "Every Missouri voter. This is the only statewide executive office on Missouri's 2026 ballot; governor, lieutenant governor, attorney general, secretary of state and treasurer are elected in 2028, and neither U.S. Senate seat is up this year.",
+    "office_explainer": "The state's independent watchdog. Audits state agencies, counties and local governments for waste, fraud and legal compliance.",
+    "why_it_matters": "The auditor decides which governments get audited and publishes the findings. The office also writes the fiscal notes voters see on ballot measures, so it shapes what you read about every amendment's cost. Four-year term.",
+    "vote_for": 1,
+    "incumbent": "Scott Fitzpatrick",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott Fitzpatrick",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.scottfitzpatrick.com/",
+        "website_confidence": "verified",
+        "background": "State auditor since January 2023. Before that, state treasurer (2019 to 2023) and a state representative from Shell Knob who became 'the youngest Chairman of the Budget committee in Missouri history.' Grew up on Table Rock Lake; owns a boat-dock business that now employs about 70 people. Won the August 4 Republican primary with 85.5%.",
+        "own_words": [
+          {
+            "text": "\"Where waste, fraud, and abuse occur, I will find it and root it out.\"",
+            "is_quote": true,
+            "source": "https://www.scottfitzpatrick.com/"
+          },
+          {
+            "text": "\"As Auditor, I will lead a comprehensive audit of any local government,\" and review school district administrative costs and salaries.",
+            "is_quote": true,
+            "source": "https://www.scottfitzpatrick.com/"
+          },
+          {
+            "text": "On the state budget squeeze: the auditor's role is to \"bring a level of seriousness to this to the issue that I think has not existed.\" Fixing it is \"between the legislature and the governor.\"",
+            "is_quote": true,
+            "source": "https://missouriindependent.com/2026/10/12/missouri-auditor-candidates-split-over-how-office-should-confront-state-budget-problems/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/missouri"
+      },
+      {
+        "name": "Quentin Wilson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.quentin4mo.com",
+        "website_confidence": "verified",
+        "background": "Kirkwood resident (St. Louis County). Director of the Missouri Department of Revenue starting in 1998, then cabinet director under Gov. Bob Holden from 2001; also deputy director of Economic Development and state Commissioner of Higher Education. Earlier an aide to three members of Congress. Won the August 4 Democratic primary with 67.9%.",
+        "own_words": [
+          {
+            "text": "The office should be \"a check on unlimited and unaccountable power.\" \"One party cannot police itself.\"",
+            "is_quote": true,
+            "source": "https://quentin4mo.com/"
+          },
+          {
+            "text": "\"Everybody Counts. And Every Dollar Counts.\" Wants audits that go beyond whether \"the books balance\": \"It is the auditor's job to help people streamline and improve.\"",
+            "is_quote": true,
+            "source": "https://missouriindependent.com/2026/10/12/missouri-auditor-candidates-split-over-how-office-should-confront-state-budget-problems/"
+          },
+          {
+            "text": "Says his agency streamlining work as revenue director \"saved taxpayers millions of dollars.\"",
+            "is_quote": true,
+            "source": "https://quentin4mo.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/missouri"
+      },
+      {
+        "name": "Dustin Coffell",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Chair of the Libertarian Party of Missouri. Unopposed in the August 4 Libertarian primary (6,726 votes). No campaign website was found by the state's election data feed or in this pass.",
+        "own_words": [
+          {
+            "text": "No campaign statements found. The Missouri Independent's Oct 12 candidate story notes only that he is on the ballot.",
+            "is_quote": false,
+            "source": "https://missouriindependent.com/2026/10/12/missouri-auditor-candidates-split-over-how-office-should-confront-state-budget-problems/"
+          },
+          {
+            "text": "Check Ballotpedia and VOTE411 for any questionnaire answers.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Dustin_Coffell"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/missouri"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF)",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "Delilah / Election Deets (official SOS and ENR data): 2026 MO auditor race and Aug 4 primary results",
+        "url": "https://enr.sos.mo.gov/"
+      },
+      {
+        "name": "Missouri Independent, Oct 12, 2026: Missouri auditor candidates split over how office should confront state budget problems",
+        "url": "https://missouriindependent.com/2026/10/12/missouri-auditor-candidates-split-over-how-office-should-confront-state-budget-problems/"
+      },
+      {
+        "name": "Missouri State Auditor's Office",
+        "url": "https://auditor.mo.gov/"
+      },
+      {
+        "name": "Wikipedia: 2026 Missouri State Auditor election",
+        "url": "https://en.wikipedia.org/wiki/2026_Missouri_State_Auditor_election"
+      },
+      {
+        "name": "VOTE411 (League of Women Voters of Missouri)",
+        "url": "https://www.vote411.org/missouri"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-retention-wilson",
+    "state": "MO",
+    "level": "judicial",
+    "office": "Supreme Court of Missouri: retain Judge Paul C. Wilson?",
+    "district": null,
+    "scope_plain": "Every Missouri voter. Missouri uses the 'nonpartisan court plan': the governor appoints appellate judges from a commission's list, then voters decide yes or no on keeping them. No Supreme Court judge has lost a retention vote since the plan began in 1940.",
+    "office_explainer": "Highest state court. Final say on Missouri law. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "The seven-member Supreme Court decides challenges to state laws and ballot measures; this year it put Proposition A and Amendment 6 on the ballot and ruled that the 2025 congressional map cannot take effect unless voters approve it, so the 2022 map is used for this year's U.S. House races. A judge who is retained serves another 12 years.",
+    "vote_for": 1,
+    "incumbent": "Paul C. Wilson",
+    "open_seat": false,
+    "term_years": 12,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Paul C. Wilson",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "On the Supreme Court since December 2012 (appointed by Gov. Jay Nixon); chief justice July 2021 to June 2023. Earlier a circuit judge in Cole County (19th Circuit), an assistant Missouri attorney general, and a lawyer at Sullivan & Cromwell and a Jefferson City firm. Drury College; University of Missouri law, cum laude. Retained by voters in 2014.",
+        "own_words": [
+          {
+            "text": "The Missouri Bar's Judicial Performance Review committee finds he 'should be retained.' The committee reviewed all 50 judges on the Nov 3, 2026 ballot and 'recommends all judges be retained.'",
+            "is_quote": true,
+            "source": "https://yourmissourijudges.org/judges/2026-paul-wilson/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF), judicial retention section",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "The Missouri Bar, Judicial Performance Review: 2026 Paul Wilson",
+        "url": "https://yourmissourijudges.org/judges/2026-paul-wilson/"
+      },
+      {
+        "name": "The Missouri Bar news: 2026 judicial performance reviews now available online (50 judges, all recommended)",
+        "url": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+      },
+      {
+        "name": "Ballotpedia: Missouri Supreme Court elections, 2026",
+        "url": "https://ballotpedia.org/Missouri_Supreme_Court_elections,_2026"
+      },
+      {
+        "name": "U.S. Supreme Court: People Not Politicians v. Onder, No. 26A388, order of Sept. 25, 2026 (stays lower-court orders; 2022 map used in the 2026 congressional election)",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/26a388_q86b.pdf"
+      },
+      {
+        "name": "Missouri Secretary of State: Statement from Secretary Hoskins, Sept. 10, 2026 (local election authorities to use the 2022 map)",
+        "url": "https://www.sos.mo.gov/default.aspx?PageId=10670"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-retention-lay",
+    "state": "MO",
+    "level": "judicial",
+    "office": "Missouri Court of Appeals, Eastern District: retain Judge Virginia W. Lay?",
+    "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
+    "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
+    "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years. Newly appointed judges face their first retention vote at the first general election after a year on the bench.",
+    "vote_for": 1,
+    "incumbent": "Virginia W. Lay",
+    "open_seat": false,
+    "term_years": 12,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Virginia W. Lay",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed to the Eastern District in early 2025 (formally sworn in April 4, 2025). Before that, three years as a circuit judge and two as an associate circuit judge in St. Louis County (21st Circuit). Earlier an assistant circuit attorney in St. Louis, assistant prosecutor in Jackson County, assistant attorney general, and in private practice in employment and municipal law. Washington University law. First retention vote.",
+        "own_words": [
+          {
+            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened; see the committee's Eastern District listing.",
+            "is_quote": false,
+            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF), judicial retention section",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "Missouri Courts: Appeals court to hold formal swearing-in ceremony for Judge Virginia W. Lay",
+        "url": "https://www.courts.mo.gov/page.jsp?id=218733"
+      },
+      {
+        "name": "The Missouri Bar, Judicial Performance Review (2026)",
+        "url": "https://yourmissourijudges.org/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-retention-navarro-mckelvey",
+    "state": "MO",
+    "level": "judicial",
+    "office": "Missouri Court of Appeals, Eastern District: retain Judge Rebeca Navarro-McKelvey?",
+    "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
+    "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
+    "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years.",
+    "vote_for": 1,
+    "incumbent": "Rebeca Navarro-McKelvey",
+    "open_seat": false,
+    "term_years": 12,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Rebeca Navarro-McKelvey",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed to the Court of Appeals in December 2023. Earlier an associate at Armstrong Teasdale (immigration and litigation), a white-collar prosecutor in the St. Louis Circuit Attorney's Office, chief legal counsel for the St. Charles County Juvenile Office, and a sex-crimes and child-abuse prosecutor in St. Charles County. University of Missouri-Columbia law, 2000. First retention vote.",
+        "own_words": [
+          {
+            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened.",
+            "is_quote": false,
+            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF), judicial retention section",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "Missouri Courts: Judge Rebeca Navarro-McKelvey",
+        "url": "https://www.courts.mo.gov/page.jsp?id=57710"
+      },
+      {
+        "name": "The Missouri Bar, Judicial Performance Review (2026)",
+        "url": "https://yourmissourijudges.org/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mo-retention-quigless",
+    "state": "MO",
+    "level": "judicial",
+    "office": "Missouri Court of Appeals, Eastern District: retain Judge Angela Turner Quigless?",
+    "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
+    "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
+    "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years.",
+    "vote_for": 1,
+    "incumbent": "Angela Turner Quigless",
+    "open_seat": false,
+    "term_years": 12,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Angela Turner Quigless",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Eastern District judge since 2012 (appointed by Gov. Jay Nixon); previously a St. Louis City circuit judge. Retained in 2014; her 12-year term ends Dec 31, 2026, so this is her second retention vote. Background details beyond the certified listing were not opened in this pass; confirm on the Missouri Courts site.",
+        "own_words": [
+          {
+            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened.",
+            "is_quote": false,
+            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Missouri Secretary of State: 2026 General Election certified candidates (PDF), judicial retention section",
+        "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
+      },
+      {
+        "name": "Missouri Courts: Court of Appeals, Eastern District",
+        "url": "https://www.courts.mo.gov/page.jsp?id=261"
+      },
+      {
+        "name": "The Missouri Bar, Judicial Performance Review (2026)",
+        "url": "https://yourmissourijudges.org/"
+      }
+    ],
+    "confidence": "sourced"
+  }
+]

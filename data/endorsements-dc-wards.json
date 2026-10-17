@@ -1,0 +1,1302 @@
+[
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-post-eb",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Post's Oct 11 news voter guide has no editorial picks. Its editorial page was not opened (paywall), so a ward endorsement may exist.",
+  "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-city-paper",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "City Paper's 'election 2026' archive shows June primary coverage and no general-election endorsements as of Oct 16.",
+  "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-1-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-3-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-5-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-6-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-1-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-3-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-5-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "hill-rag",
+  "target_id": "dc-ward-6-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "Hill Rag covers races but does not endorse candidates.",
+  "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-1-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-3-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-5-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-6-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-1-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-3-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-5-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lwv-dc",
+  "target_id": "dc-ward-6-sboe",
+  "status": "no_position",
+  "choice": null,
+  "why": "The League does not endorse candidates. Its VOTE411 guide (live October 2026) carries candidates' own answers.",
+  "url": "https://www.lwvdc.org/docs.ashx?id=1800443",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Party nominee: won the June 16 Democratic primary.",
+  "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+  "date": "2026-06-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-3-council",
+  "status": "endorsed",
+  "choice": "Matthew Frumin",
+  "why": "Party nominee: won the June 16 Democratic primary.",
+  "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+  "date": "2026-06-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Zachary Parker",
+  "why": "Party nominee: won the June 16 Democratic primary.",
+  "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+  "date": "2026-06-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Party nominee: won the June 16 Democratic primary.",
+  "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+  "date": "2026-06-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; no party pick found.",
+  "url": "https://www.dcdemocraticparty.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; no party pick found.",
+  "url": "https://www.dcdemocraticparty.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; no party pick found.",
+  "url": "https://www.dcdemocraticparty.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-democratic-party",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; no party pick found.",
+  "url": "https://www.dcdemocraticparty.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Jett James Jasper",
+  "why": "Party nominee, listed on the party's 'Meet DC Candidates' page (updated Oct 15, 2026).",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-15",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Jeffrey Kihien-Palza",
+  "why": "Party nominee, listed on the party's 'Meet DC Candidates' page (updated Oct 15, 2026).",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-15",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Jorge Rice",
+  "why": "Party nominee, listed on the party's 'Meet DC Candidates' page (updated Oct 15, 2026).",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-15",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-3-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The party has no candidate in this race.",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; the party's candidate page lists no school board picks.",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; the party's candidate page lists no school board picks.",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; the party's candidate page lists no school board picks.",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-republican-party",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "School board races are nonpartisan; the party's candidate page lists no school board picks.",
+  "url": "https://dcgop.com/meet-dc-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Jude Crannitch",
+  "why": "Party nominee, listed on the party's site.",
+  "url": "https://statehoodgreensofdc.org/candidate-jude-crannitch.html",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Joyce Robinson-Paul",
+  "why": "Party nominee, listed on the party's site.",
+  "url": "https://www.statehoodgreensofdc.org/leader-joyce-robinson-paul.html",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-3-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The party has no candidate in this race.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-6-council",
+  "status": "no_position",
+  "choice": null,
+  "why": "The party has no candidate in this race.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick found on the party's site.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick found on the party's site.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick found on the party's site.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "dc-statehood-green-party",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick found on the party's site.",
+  "url": "https://statehoodgreensofdc.org/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Endorsed by member vote for the June primary; its page still lists her, and Blue Voter Guide carries the pick into the general.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its page says the endorsement vote for other ward Council races is 'TBD'.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its page says the endorsement vote for other ward Council races is 'TBD'.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its page says the endorsement vote for other ward Council races is 'TBD'.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its endorsements page.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its endorsements page.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its endorsements page.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "dc-for-democracy",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its endorsements page.",
+  "url": "https://www.dcfordemocracy.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not yet listed for the general as of Oct 16. In the June primary GGWash ranked Aparna Raj first, citing housing and transit.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not listed for the general as of Oct 16. In the June primary it made no endorsement in Ward 3.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not yet listed for the general as of Oct 16. In the June primary it endorsed Zachary Parker.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not yet listed for the general as of Oct 16. In the June primary it endorsed Charles Allen.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "GGWash's 2026 hub lists no school board picks.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "GGWash's 2026 hub lists no school board picks.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "GGWash's 2026 hub lists no school board picks.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "greater-greater-washington",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "GGWash's 2026 hub lists no school board picks.",
+  "url": "https://ggwash.org/elections/2026",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Endorsed in the June primary; Raj is a former chapter chair. Blue Voter Guide lists the pick for the general.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-dc-dsa",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the chapter's 2026 endorsements as shown in our sources.",
+  "url": "https://mdcdsa.org/2026endorsements/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-chamber-of-commerce",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 endorsement page found.",
+  "url": "https://www.dcchamber.org/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "dc-police-union",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No 2026 general-election endorsements found; its site was not opened.",
+  "url": "https://www.dcpoliceunion.com/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Announced in its March 26, 2026 endorsement slate (posted as images). Wikipedia cites the pick, and Blue Voter Guide shows it for the general.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-03-26",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-6-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "metro-washington-council-afl-cio",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "Its DC picks are posted only as images; we could not confirm a pick in this race.",
+  "url": "https://www.dclabor.org/voter-guides",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Says Raj 'understands that lowering utility bills, expanding solar energy, and investing in public transit are key.' (In the primary it co-endorsed Raj and Rashida Brown.)",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-3-council",
+  "status": "endorsed",
+  "choice": "Matthew Frumin",
+  "why": "Endorsed for re-election in the spring; listed under its 2026 general-election picks.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Zachary Parker",
+  "why": "Endorsed for re-election in the spring; listed under its 2026 general-election picks.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Calls him an 'environmental champion'; endorsed for re-election and listed under its 2026 general-election picks.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board picks shown.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board picks shown.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board picks shown.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-dc",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board picks shown.",
+  "url": "https://www.sierraclub.org/dc/endorsements",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Listed for the Nov 3 general on Blue Voter Guide, which cites workingfamilies.org/candidates.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-5-council",
+  "status": "endorsed",
+  "choice": "Zachary Parker",
+  "why": "Listed for the Nov 3 general on Blue Voter Guide, which cites workingfamilies.org/candidates.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Listed for the Nov 3 general on Blue Voter Guide, which cites workingfamilies.org/candidates.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on its DC general-election list as shown by Blue Voter Guide.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its DC list as shown by Blue Voter Guide.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its DC list as shown by Blue Voter Guide.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its DC list as shown by Blue Voter Guide.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "working-families-party-dc",
+  "target_id": "dc-ward-6-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its DC list as shown by Blue Voter Guide.",
+  "url": "https://bluevoterguide.org/endorser-org/Working_Families_Party/DC/781",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-6-sboe",
+  "status": "endorsed",
+  "choice": "Joshua Wiley",
+  "why": "Listed as a Wiley endorser on Ballotpedia. The only endorsement we found in any ward school board race.",
+  "url": "https://ballotpedia.org/Joshua_Wiley",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-1-council",
+  "status": "endorsed",
+  "choice": "Aparna Raj",
+  "why": "Backed Raj in the June primary (cited on Wikipedia); Blue Voter Guide lists the pick for the general.",
+  "url": "https://bluevoterguide.org/district/DC/District_of_Columbia_Ward_1/51124/824",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-6-council",
+  "status": "endorsed",
+  "choice": "Charles Allen",
+  "why": "Backed Allen in the June primary, as cited on Wikipedia. Not confirmed on the union's own site.",
+  "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election",
+  "date": null,
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-3-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick found in our sources; the union's own endorsement page was not found.",
+  "url": "https://www.wtulocal6.net/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-5-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick found in our sources; the union's own endorsement page was not found.",
+  "url": "https://www.wtulocal6.net/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick found in our sources; the union's own endorsement page was not found.",
+  "url": "https://www.wtulocal6.net/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-3-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick found in our sources; the union's own endorsement page was not found.",
+  "url": "https://www.wtulocal6.net/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "washington-teachers-union",
+  "target_id": "dc-ward-5-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick found in our sources; the union's own endorsement page was not found.",
+  "url": "https://www.wtulocal6.net/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "ward-one-democrats",
+  "target_id": "dc-ward-1-council",
+  "status": "not_found",
+  "choice": null,
+  "why": "It endorses in Democratic primaries by two-thirds member vote. At its April 11 meeting it made no Ward 1 Council endorsement, and it has posted no general-election pick.",
+  "url": "https://ward1democrats.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ward-one-democrats",
+  "target_id": "dc-ward-1-sboe",
+  "status": "not_found",
+  "choice": null,
+  "why": "No school board pick on its endorsements page.",
+  "url": "https://ward1democrats.org/endorsements",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ }
+]

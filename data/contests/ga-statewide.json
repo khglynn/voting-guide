@@ -1,0 +1,898 @@
+[
+  {
+    "id": "ga-us-senate",
+    "state": "GA",
+    "level": "federal",
+    "office": "U.S. Senate",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names are printed: Ossoff and Collins. The Libertarian Party failed to qualify, so there is no third line. Three certified write-ins (Elbert Arthur Bartell, Christina Clement, Cassandra Easton) can be written in but are not printed. If nobody tops 50 percent there is a December 1 runoff.",
+    "office_explainer": "One of Georgia's two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Six-year term. Rated a toss-up to lean Democratic by national handicappers and one of the few 2026 Senate seats that could decide which party controls the chamber. The Senate confirms judges and cabinet members and votes on taxes, tariffs, health care and immigration.",
+    "vote_for": 1,
+    "incumbent": "Jon Ossoff",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jon Ossoff",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://electjon.com/",
+        "website_confidence": "unverified",
+        "background": "U.S. senator since January 2021. Before that he ran Insight TWI, a company that produced investigative documentaries, and worked as a congressional aide. Born in Atlanta; Georgetown and London School of Economics graduate.",
+        "own_words": [
+          {
+            "text": "\"These tariffs are crushing our state, and we'll repeal those tariffs.\"",
+            "is_quote": true,
+            "source": "https://www.fox5atlanta.com/news/jon-ossoff-mike-collins-us-senate-debate-georgia"
+          },
+          {
+            "text": "\"Georgians do expect and deserve secure borders.\" Says enforcement \"should focus on those who are convicted of or wanted for crimes.\"",
+            "is_quote": true,
+            "source": "https://www.wabe.org/?p=993114"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Mike Collins",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://mikecollinsga.com/",
+        "website_confidence": "unverified",
+        "background": "U.S. representative for Georgia's 10th District since 2023. Owner of Collins Trucking Company in Jackson, Georgia; son of former congressman Mac Collins. Won the Republican runoff on June 16 with 55.5 percent over Derek Dooley.",
+        "own_words": [
+          {
+            "text": "\"Tax cuts are the answer to keeping more money back in people's pockets.\"",
+            "is_quote": true,
+            "source": "https://www.fox5atlanta.com/news/jon-ossoff-mike-collins-us-senate-debate-georgia"
+          },
+          {
+            "text": "On farm labor: \"we need H-2a visas to be fixed.\" Blames Ossoff for border policy under President Biden.",
+            "is_quote": true,
+            "source": "https://www.fox5atlanta.com/news/jon-ossoff-mike-collins-us-senate-debate-georgia"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: November 3, 2026 General Election (certified candidate list ZIP and write-in PDF linked)",
+        "url": "https://sos.ga.gov/november-3-2026-general-election"
+      },
+      {
+        "name": "Georgia SOS: 2026 Certified Write-In Candidates (PDF)",
+        "url": "https://sos.ga.gov/sites/default/files/forms/2026%20Certified%20Write-In%20Candidates_3.pdf"
+      },
+      {
+        "name": "Georgia Republican Party: 2026 statewide candidate guide",
+        "url": "https://www.gagop.org/2025---2026-statewide-candidate-guide"
+      },
+      {
+        "name": "Fox 5 Atlanta: first Ossoff-Collins debate, Oct 8, 2026",
+        "url": "https://www.fox5atlanta.com/news/jon-ossoff-mike-collins-us-senate-debate-georgia"
+      },
+      {
+        "name": "WABE: second Ossoff-Collins debate (Atlanta Press Club), Oct 13, 2026",
+        "url": "https://www.wabe.org/?p=993114"
+      },
+      {
+        "name": "AJC: Libertarians won't be on the ballot in Georgia, meaning likely no runoffs (July 11, 2026)",
+        "url": "https://www.ajc.com/politics/2026/07/libertarians-wont-be-on-the-ballot-in-georgia-meaning-likely-no-runoffs/"
+      },
+      {
+        "name": "Delilah (Election Deets) candidate directory, GA U.S. Senate 2026",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-governor",
+    "state": "GA",
+    "level": "state",
+    "office": "Governor",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed; no Libertarian qualified. Seven certified write-ins (David C. Byrne, Jacqueline Angela DaCosta, Deb Broughton Davis, Milton J. Lofton, David Leon Moreland, Leland Jake Olinger II, Andrew Pacetti) are not printed on the ballot. Georgia elects the governor and lieutenant governor separately; there are no running mates. Majority required or it goes to a December 1 runoff.",
+    "office_explainer": "Runs state government, signs or vetoes laws, writes the budget, appoints agency heads and fills court vacancies.",
+    "why_it_matters": "Open seat: Brian Kemp is term-limited after eight years. Four-year term. Every major rater calls it a toss-up. The next governor will decide on Medicaid expansion, the state income tax, and who sits on state boards and courts for years.",
+    "vote_for": 1,
+    "incumbent": "Brian Kemp (term-limited)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Keisha Lance Bottoms",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.keishaforgovernor.com/",
+        "website_confidence": "verified",
+        "background": "Mayor of Atlanta 2018 to 2022; Atlanta City Council before that; senior adviser to President Biden 2022 to 2023. Won the May 19 Democratic primary outright with 56 percent. Endorsed by Barack Obama on Oct 8.",
+        "own_words": [
+          {
+            "text": "\"Keisha will lower health care costs for everyone by expanding Medicaid, ending the failed Georgia Pathways program.\"",
+            "is_quote": true,
+            "source": "https://www.keishaforgovernor.com/issues"
+          },
+          {
+            "text": "\"Keisha will fully fund Georgia's schools and modernize the state's outdated education funding formula.\" Has proposed a voter-approved casino to fund pre-K.",
+            "is_quote": true,
+            "source": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Rick Jackson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://rickjackson.com/",
+        "website_confidence": "verified",
+        "background": "Founder and chairman of Jackson Healthcare, an Alpharetta health-care staffing company with more than $3 billion a year in revenue. Grew up in foster care; this is his first run for office. Beat Lt. Gov. Burt Jones in the June 16 Republican runoff, 52.6 to 47.4, and was endorsed by President Trump afterward.",
+        "own_words": [
+          {
+            "text": "\"Rick Jackson will treat affordability like a crisis, because for too many families it already is.\" Pledges to freeze property taxes and cut the income tax.",
+            "is_quote": true,
+            "source": "https://rickjackson.com/action-plan"
+          },
+          {
+            "text": "\"Government assistance should be a bridge, not a lifestyle.\" On child care: \"I'll also make quality care less costly for providers and more affordable for families.\"",
+            "is_quote": true,
+            "source": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official primary and runoff results (May 19 and June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "Georgia SOS: 2026 Certified Write-In Candidates (PDF)",
+        "url": "https://sos.ga.gov/sites/default/files/forms/2026%20Certified%20Write-In%20Candidates_3.pdf"
+      },
+      {
+        "name": "WSB-TV: Georgia general election 2026 candidates for governor and other statewide races (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      },
+      {
+        "name": "Ballotpedia News: Bottoms and Jackson compete in toss-up race (June 29, 2026)",
+        "url": "https://news.ballotpedia.org/2026/06/29/keisha-bottoms-d-and-rick-jackson-r-compete-in-toss-up-race-to-succeed-term-limited-republican-governor-in-georgia/"
+      },
+      {
+        "name": "GPB: GEEARS early-education candidate forum (Sept 29, 2026)",
+        "url": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+      },
+      {
+        "name": "Fox 5 Atlanta: Georgia's 2026 midterm election, the major races and candidates (updated Oct 12, 2026)",
+        "url": "https://www.fox5atlanta.com/news/draft-georgias-2026-midterm-election-major-races-candidates"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-lt-governor",
+    "state": "GA",
+    "level": "state",
+    "office": "Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Elected separately from the governor, so you can split your ticket. Two names printed. Majority required or December 1 runoff.",
+    "office_explainer": "Presides over the state Senate and controls which bills get votes. Steps in if the governor can't serve.",
+    "why_it_matters": "Open seat: Burt Jones left it to run for governor. Four-year term. The lieutenant governor names Senate committee chairs and decides which bills reach the floor, which makes the job more powerful than its title suggests.",
+    "vote_for": 1,
+    "incumbent": "Burt Jones (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Josh McLaurin",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.joshmclaurin.com/",
+        "website_confidence": "verified",
+        "background": "State senator from Sandy Springs (District 14) since 2023; state representative 2019 to 2023. Attorney; University of Georgia and Yale Law graduate. Won the June 16 Democratic runoff with 54.9 percent over Nabilah Parkes.",
+        "own_words": [
+          {
+            "text": "\"Josh will push to reinvest state revenues into the needs of working families.\" Also: \"Josh will stand with labor to protect the right to organize.\"",
+            "is_quote": true,
+            "source": "https://www.joshmclaurin.com/priorities"
+          },
+          {
+            "text": "\"Josh will fight to expand coverage and make care accessible in every corner of the state.\" Wants to expand the CAPS child-care subsidy.",
+            "is_quote": true,
+            "source": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Greg Dolezal",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://gregdolezal.com/",
+        "website_confidence": "verified",
+        "background": "State senator from Forsyth County (District 27) since 2019; chairs the Senate Transportation Committee. Co-owner of the software company Renewed Vision; spent a decade in ministry at North Point and Passion City churches. Won the June 16 Republican runoff with 54.2 percent over John F. Kennedy. Endorsed by Gov. Kemp on Sept 24.",
+        "own_words": [
+          {
+            "text": "\"Parents, not bureaucrats, should be in charge of their children's education.\"",
+            "is_quote": true,
+            "source": "https://gregdolezal.com/"
+          },
+          {
+            "text": "\"Georgians deserve to keep more of what they earn.\" On property taxes: \"once you turn 65, you've paid your dues. Your school taxes should go away.\"",
+            "is_quote": true,
+            "source": "https://gregdolezal.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      },
+      {
+        "name": "WRDW: Kemp backs GOP nominee Dolezal (Sept 24, 2026)",
+        "url": "https://www.wrdw.com/2026/09/24/kemp-backs-gop-nominee-dolezal-race-ga-no-2-post/"
+      },
+      {
+        "name": "Ballotpedia: Josh McLaurin",
+        "url": "https://ballotpedia.org/Josh_McLaurin"
+      },
+      {
+        "name": "Ballotpedia: Greg Dolezal",
+        "url": "https://ballotpedia.org/Greg_Dolezal"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-secretary-of-state",
+    "state": "GA",
+    "level": "state",
+    "office": "Secretary of State",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed. The ballot may print the Democrat as 'Penny Reynolds' (WSB's list) or 'Penny Brown Reynolds' (her campaign and party); same person. Majority required or December 1 runoff.",
+    "office_explainer": "Runs elections and voter rolls, registers businesses and licenses many professions.",
+    "why_it_matters": "Open seat: Brad Raffensperger ran for governor and lost the primary. Four-year term. The winner will buy Georgia's next voting system (the state plans to start procurement in 2027), decide how QR-code ballots are phased out, and run the 2028 presidential election.",
+    "vote_for": 1,
+    "incumbent": "Brad Raffensperger (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Penny Brown Reynolds",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "http://pennyforgeorgia.com/",
+        "website_confidence": "verified",
+        "background": "Former Fulton County State Court judge. Her campaign cites a record across 'the Capitol, the courtroom, and every branch of government.' Won the June 16 Democratic runoff with 63.1 percent over Dana Barrett.",
+        "own_words": [
+          {
+            "text": "Top priority: \"Protecting Voting Rights & Restoring Public Trust in Elections.\"",
+            "is_quote": true,
+            "source": "http://pennyforgeorgia.com/"
+          },
+          {
+            "text": "Also lists \"Empowering Small Businesses & Entrepreneurs\" and \"Safeguarding Seniors & Vulnerable Georgians from Fraud.\"",
+            "is_quote": true,
+            "source": "http://pennyforgeorgia.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Tim Fleming",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.flemingforga.com/",
+        "website_confidence": "verified",
+        "background": "State representative from Covington (House District 114). Former deputy secretary of state and later chief of staff under Gov. Kemp; Newton County commissioner 2009 to 2013; small business owner. Won the June 16 Republican runoff with 64.5 percent over Vernon Jones.",
+        "own_words": [
+          {
+            "text": "\"Ensure our elections are secure, accessible, fair, and trusted.\" Supports moving to hand-marked paper ballots.",
+            "is_quote": true,
+            "source": "https://www.flemingforga.com/"
+          },
+          {
+            "text": "\"Streamline professional licensing to get Georgians licensed faster.\" Says renewals took one business day when he was deputy secretary.",
+            "is_quote": true,
+            "source": "https://georgiarecorder.com/voter-guides/contests/2026-runoff-secretary-of-state-republican/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "Georgia Recorder voter guide: Secretary of State (Republican runoff), Fleming questionnaire",
+        "url": "https://georgiarecorder.com/voter-guides/contests/2026-runoff-secretary-of-state-republican/"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      },
+      {
+        "name": "Fulton County Democratic Party: 2026 Democratic candidates",
+        "url": "https://fultondems.org/2026-democratic-candidates/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-attorney-general",
+    "state": "GA",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
+    "office_explainer": "The state's lawyer. Defends Georgia in court, issues legal opinions and prosecutes some crimes.",
+    "why_it_matters": "Open seat: Chris Carr ran for governor. Four-year term. The attorney general decides whether to defend state laws like the six-week abortion ban in court, joins or skips multistate lawsuits against the federal government, and runs consumer protection and gang prosecutions.",
+    "vote_for": 1,
+    "incumbent": "Chris Carr (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tanya Miller",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://tanyaforgeorgia.com/",
+        "website_confidence": "verified",
+        "background": "State representative from Atlanta (House District 62) since 2023. Former Fulton County assistant district attorney and U.S. Justice Department lawyer; now a civil rights attorney. Case Western law graduate.",
+        "own_words": [
+          {
+            "text": "\"Every Georgian deserves safety, justice and a government that works for the people, not political agendas.\"",
+            "is_quote": true,
+            "source": "https://tanyaforgeorgia.com/"
+          },
+          {
+            "text": "Will \"protect Georgians' rights, defend democracy and hold powerful interests accountable.\"",
+            "is_quote": true,
+            "source": "https://tanyaforgeorgia.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Brian Strickland",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://stricklandforgeorgia.com/",
+        "website_confidence": "verified",
+        "background": "State senator from McDonough (District 42) and chair of the Senate Judiciary Committee; in the Senate since 2018 and the state House 2013 to 2017. Attorney; grew up on a Henry County row-crop farm. Beat Bill Cowsert in the May 19 primary.",
+        "own_words": [
+          {
+            "text": "\"The same law should apply to everyone, regardless of party, wealth, influence, or connections.\"",
+            "is_quote": true,
+            "source": "https://stricklandforgeorgia.com/"
+          },
+          {
+            "text": "\"Protecting seniors, foster children, families with special needs, and consumers from abuse, scams, and fraud.\"",
+            "is_quote": true,
+            "source": "https://stricklandforgeorgia.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Ballotpedia: Tanya Miller",
+        "url": "https://ballotpedia.org/Tanya_Miller"
+      },
+      {
+        "name": "Ballotpedia: Brian Strickland",
+        "url": "https://ballotpedia.org/Brian_Strickland"
+      },
+      {
+        "name": "Rough Draft Atlanta: Election guide, Attorney General",
+        "url": "https://roughdraftatlanta.com/election-guide-attorney-general-georgia/"
+      },
+      {
+        "name": "Georgia Farm Bureau: 2026 candidates (candidate bios)",
+        "url": "https://www.gfb.org/2026-candidates"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-school-superintendent",
+    "state": "GA",
+    "level": "state",
+    "office": "State School Superintendent",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed; the ballot uses full names (Lydia Catalina Powell, Richard Lee Woods). Majority required or December 1 runoff.",
+    "office_explainer": "Runs the Department of Education, which oversees K-12 public schools, testing and standards.",
+    "why_it_matters": "Four-year term. The superintendent carries out (but does not set) state education law, including the new voucher program, literacy rules and testing, and manages the state's school funding formula debate.",
+    "vote_for": 1,
+    "incumbent": "Richard Woods",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lydia Catalina Powell",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://drlydiapowell.com/",
+        "website_confidence": "verified",
+        "background": "Educator with more than 26 years in classrooms in DeKalb, Henry, Clayton and Fayette counties and in Florida, plus 11 years in school leadership. Florida A&M and Florida State graduate. Won the May 19 Democratic primary with 50.5 percent.",
+        "own_words": [
+          {
+            "text": "\"Setting high standards for every student and providing the support needed to reach them.\"",
+            "is_quote": true,
+            "source": "https://drlydiapowell.com/"
+          },
+          {
+            "text": "On pre-K: \"We need to make sure we're collecting data on those students.\" Wants more pre-K slots.",
+            "is_quote": true,
+            "source": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Richard Lee Woods",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.woodsforsuper.com/",
+        "website_confidence": "verified",
+        "background": "State school superintendent since 2015, seeking a fourth term. Taught high school for 15 years in Irwin County and has 32 years in education. Survived a June 16 Republican runoff against Fred 'Bubba' Longgrear, 51.5 to 48.5.",
+        "own_words": [
+          {
+            "text": "\"Fighting to modernize the K-12 education formula so students have the resources and supports they need to succeed.\"",
+            "is_quote": true,
+            "source": "https://www.woodsforsuper.com/"
+          },
+          {
+            "text": "\"Pushing to expand the teacher pay scale beyond 21 years.\" Also: \"Fighting for lower class sizes and duty free lunch.\"",
+            "is_quote": true,
+            "source": "https://www.woodsforsuper.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "GPB: GEEARS early-education candidate forum (Sept 29, 2026)",
+        "url": "https://www.gpb.org/news/2026/09/29/candidate-forum-puts-early-education-policy-center-stage"
+      },
+      {
+        "name": "Rough Draft Atlanta: Election guide, State School Superintendent",
+        "url": "https://roughdraftatlanta.com/election-guide-state-school-superintendent/"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-agriculture-commissioner",
+    "state": "GA",
+    "level": "state",
+    "office": "Commissioner of Agriculture",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed (ballot prints 'Tyler J. Harper'). Majority required or December 1 runoff.",
+    "office_explainer": "Regulates farms, food safety inspections, gas pumps, pet dealers and pesticides.",
+    "why_it_matters": "Four-year term. Agriculture is Georgia's largest industry. The department inspects grocery stores and restaurants' food supply, checks every gas pump and scale, licenses pet breeders, and runs disaster response for farms after hurricanes and bird flu.",
+    "vote_for": 1,
+    "incumbent": "Tyler Harper",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Katherine E. Juhan-Arnold",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://katherineforgeorgia.com/",
+        "website_confidence": "sourced",
+        "background": "President of Baby Katie's Pharm & Kitchen, a small farm business, since 2014. Worked as an application support engineer at Cummins and in design and IT roles; associate's degrees from Atlanta Technical College and Georgia Piedmont Technical College. Beat Sedrick Rowe in the May 19 primary.",
+        "own_words": [
+          {
+            "text": "\"The future of Georgia agriculture depends on the next generation.\" Wants stronger FFA, 4-H and technical college pipelines.",
+            "is_quote": true,
+            "source": "https://www.ballotready.org/people/katherine-e-juhan-arnold"
+          },
+          {
+            "text": "Healthy food and opportunity \"should not be limited by income, zip code.\" Calls herself \"not a career politician.\"",
+            "is_quote": true,
+            "source": "https://www.gfb.org/2026-candidates"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Tyler J. Harper",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://tylerharperga.com/",
+        "website_confidence": "verified",
+        "background": "Agriculture commissioner since 2023, seeking a second term. Seventh-generation farmer from Ocilla; state senator 2013 to 2023. Endorsed by Gov. Kemp and the Georgia Chamber.",
+        "own_words": [
+          {
+            "text": "\"Fighting to protect Georgia Farmers, Georgia Families, and Georgia's Food Supply.\"",
+            "is_quote": true,
+            "source": "https://tylerharperga.com/"
+          },
+          {
+            "text": "Says he is \"fighting every single day to address the affordability crisis and lower costs\" and that \"agriculture is who I am.\"",
+            "is_quote": true,
+            "source": "https://www.gfb.org/2026-candidates"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia Farm Bureau: 2026 candidates (bios and ag questionnaire)",
+        "url": "https://www.gfb.org/2026-candidates"
+      },
+      {
+        "name": "BallotReady: Katherine E. Juhan-Arnold",
+        "url": "https://www.ballotready.org/people/katherine-e-juhan-arnold"
+      },
+      {
+        "name": "WALB: Two Democrats want to lead Georgia's No. 1 industry (April 23, 2026)",
+        "url": "https://www.walb.com/2026/04/23/two-democrats-want-lead-georgias-no-1-industry-into-future/"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-insurance-commissioner",
+    "state": "GA",
+    "level": "state",
+    "office": "Commissioner of Insurance and Safety Fire",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
+    "office_explainer": "Regulates insurance companies and rates, licenses agents and oversees fire safety codes.",
+    "why_it_matters": "Four-year term. The commissioner reviews home and auto rate increases (Georgia's have been among the steepest in the country), investigates insurance fraud, and runs the state fire marshal's office.",
+    "vote_for": 1,
+    "incumbent": "John King",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Keisha Sean Waites",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.keishawaites.org/",
+        "website_confidence": "verified",
+        "background": "Three-term state representative and former Atlanta City Council member (Post 3 at-large). Her campaign cites 15 years of federal service at FEMA and the Small Business Administration handling disaster insurance and recovery claims. Won the June 16 Democratic runoff with 58.7 percent over DeAndre Mathis.",
+        "own_words": [
+          {
+            "text": "Focused on \"delivering real relief to Georgia families facing skyrocketing Insurance Premiums.\"",
+            "is_quote": true,
+            "source": "https://www.keishawaites.org/"
+          },
+          {
+            "text": "Wants \"to ensure fair and affordable insurance premiums for every Georgian\" and to work \"for you, not the bottom line of a monopoly utility.\"",
+            "is_quote": true,
+            "source": "https://www.keishawaites.org/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "John King",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.votejohnking.com/",
+        "website_confidence": "verified",
+        "background": "Insurance and Safety Fire commissioner since 2019, appointed by Gov. Kemp and elected in 2022. Retired Army National Guard major general and former Doraville police chief; the first Hispanic Georgian elected statewide. Briefly ran for U.S. Senate in 2025 before returning to this race.",
+        "own_words": [
+          {
+            "text": "Wants to \"finish the job I started six years ago and keep up the fight for everyday Georgians.\"",
+            "is_quote": true,
+            "source": "https://www.votejohnking.com/"
+          },
+          {
+            "text": "Issue headings: \"Holding The Powerful Accountable,\" \"Recovering Taxpayer Money,\" \"Lawsuit Reform.\"",
+            "is_quote": true,
+            "source": "https://www.votejohnking.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "Wikipedia: 2026 United States Senate election in Georgia (King's exit from the Senate race)",
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-labor-commissioner",
+    "state": "GA",
+    "level": "state",
+    "office": "Commissioner of Labor",
+    "district": null,
+    "scope_plain": "Every Georgia voter. Two names printed (ballot prints 'Bárbara Yolanda Rivera Holmes'). Majority required or December 1 runoff.",
+    "office_explainer": "Runs unemployment benefits and job services and tracks workforce data.",
+    "why_it_matters": "Four-year term. The Department of Labor pays unemployment claims, runs career centers, and was widely criticized for backlogs during the pandemic. The incumbent was appointed, so this is the first time voters weigh in on her.",
+    "vote_for": 1,
+    "incumbent": "Bárbara Rivera Holmes (appointed April 2025)",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nikki Porcher",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.voteporcher4ga.com/",
+        "website_confidence": "verified",
+        "background": "U.S. Air Force veteran, former Georgia public school teacher, and founder of the nonprofit Buy From A Black Woman. Won the June 16 Democratic runoff with 61.7 percent over Michelle 'Michi' Sanchez.",
+        "own_words": [
+          {
+            "text": "\"The Department of Labor should be accessible, responsive, and focused on helping workers.\"",
+            "is_quote": true,
+            "source": "https://www.voteporcher4ga.com/"
+          },
+          {
+            "text": "\"When workers are stronger, Georgia is stronger.\" Lists fair pay, safe workplaces and affordable child care as priorities.",
+            "is_quote": true,
+            "source": "https://www.voteporcher4ga.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Bárbara Yolanda Rivera Holmes",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.barbaraforga.com/",
+        "website_confidence": "sourced",
+        "background": "Labor commissioner since April 2025, appointed by Gov. Kemp after Commissioner Bruce Thompson died. Previously president and CEO of the Albany Area Chamber of Commerce (2016 to 2025) and a former Albany Herald journalist; served on the Board of Regents.",
+        "own_words": [
+          {
+            "text": "\"I'm committed to ensuring our businesses have the talent they need to grow.\"",
+            "is_quote": true,
+            "source": "https://www.albanyherald.com/curated/news-curated/holmes-qualifies-to-run-for-labor-commissioner-post/"
+          },
+          {
+            "text": "Priorities include \"advancing workforce development and connecting Georgians to life-changing opportunities.\"",
+            "is_quote": true,
+            "source": "https://www.ballotready.org/people/barbara-yolanda-rivera-holmes"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "WABE: Kemp-appointed labor commissioner announces 2026 candidacy (May 29, 2025)",
+        "url": "https://www.wabe.org/kemp-appointed-georgia-labor-commissioner-officially-announces-2026-candidacy/"
+      },
+      {
+        "name": "Albany Herald: Holmes qualifies to run for Labor Commissioner (March 6, 2026)",
+        "url": "https://www.albanyherald.com/curated/news-curated/holmes-qualifies-to-run-for-labor-commissioner-post/"
+      },
+      {
+        "name": "BallotReady: Bárbara Yolanda Rivera Holmes",
+        "url": "https://www.ballotready.org/people/barbara-yolanda-rivera-holmes"
+      },
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-psc-district-3",
+    "state": "GA",
+    "level": "state",
+    "office": "Public Service Commission, District 3",
+    "district": "District 3",
+    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 3 (metro Atlanta: Fulton, DeKalb, Clayton). PSC seats are elected statewide. Two names printed (ballot prints 'Peter Jacob Hubbard'). Majority required or December 1 runoff.",
+    "office_explainer": "One of five regulators who set Georgia Power's rates and oversee gas and telecom utilities.",
+    "why_it_matters": "Six-year term. The PSC approves Georgia Power rate increases, the Plant Vogtle cost recovery, and how much new gas and data-center power gets built. District 3 flipped to a Democrat in a November 2025 special election for a one-year term; this race decides who holds it through 2032.",
+    "vote_for": 1,
+    "incumbent": "Peter Hubbard",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Peter Jacob Hubbard",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.peterforgeorgia.com/",
+        "website_confidence": "verified",
+        "background": "Public Service Commissioner since January 2026 after winning the November 2025 special election for a one-year term. Founded the nonprofit Georgia Center for Energy Solutions and spent six years as a consumer advocate before the PSC; earlier built utility-scale solar and storage projects.",
+        "own_words": [
+          {
+            "text": "\"Demanded an independent audit of Georgia Power's profit margin.\"",
+            "is_quote": true,
+            "source": "https://www.peterforgeorgia.com/"
+          },
+          {
+            "text": "Wants to be \"ramping up the deployment of clean energy technologies\" and has testified for consumer-protection legislation.",
+            "is_quote": true,
+            "source": "https://www.peterforgeorgia.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Fitz Johnson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://friendsforfitz.com/",
+        "website_confidence": "verified",
+        "background": "Served on the Public Service Commission from 2021 (appointed by Gov. Kemp) through December 2025, losing the seat to Hubbard in the 2025 special election. 21-year Army veteran; businessman and former owner of the Atlanta Beat women's soccer team.",
+        "own_words": [
+          {
+            "text": "\"I fight to be your voice on the Public Service Commission.\"",
+            "is_quote": true,
+            "source": "https://friendsforfitz.com/"
+          },
+          {
+            "text": "\"I will make sure that Georgians are always put first.\" Wants Georgia to stay \"a place where families and businesses can thrive.\"",
+            "is_quote": true,
+            "source": "https://friendsforfitz.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Atlanta Press Collective: Republicans seek challenger to Hubbard, successor to Pridemore (May 5, 2026)",
+        "url": "https://atlpresscollective.com/2026/05/05/georgia-psc-primaries-2026/"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      },
+      {
+        "name": "Georgia Republican Party: 2026 statewide candidate guide",
+        "url": "https://www.gagop.org/2025---2026-statewide-candidate-guide"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-psc-district-5",
+    "state": "GA",
+    "level": "state",
+    "office": "Public Service Commission, District 5",
+    "district": "District 5",
+    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 5 (west and northwest Georgia, including Cobb). PSC seats are elected statewide. Two names printed (ballot prints 'Joshua Aaron Tolbert'). Majority required or December 1 runoff.",
+    "office_explainer": "One of five regulators who set Georgia Power's rates and oversee gas and telecom utilities.",
+    "why_it_matters": "Six-year term, open seat: Republican Tricia Pridemore is not running. Together with District 3 this race decides whether Republicans keep their majority on the five-member commission that sets power bills for 2.7 million Georgia Power customers.",
+    "vote_for": 1,
+    "incumbent": "Tricia Pridemore (not running)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shelia Edwards",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://shelia4psc.com/",
+        "website_confidence": "verified",
+        "background": "Cobb County business owner and community advocate who has held leadership roles in Democratic Party organizations at the local, state and federal level.",
+        "own_words": [
+          {
+            "text": "Wants to \"stop endless rate hikes, protect consumers, and hold utility companies accountable.\"",
+            "is_quote": true,
+            "source": "https://shelia4psc.com/"
+          },
+          {
+            "text": "Campaign slogan: \"People Before Profits.\"",
+            "is_quote": true,
+            "source": "https://shelia4psc.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Joshua Aaron Tolbert",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.teamtolbert.com/",
+        "website_confidence": "verified",
+        "background": "Professional engineer with four engineering degrees including a Ph.D. in mechanical engineering; former chief technology officer at a nuclear energy company with more than 15 years in power generation. Won the June 16 Republican runoff with 59.8 percent over Bobby Mehan.",
+        "own_words": [
+          {
+            "text": "\"Utility decisions must be built on engineering, not forecasts that miss the mark.\"",
+            "is_quote": true,
+            "source": "https://www.teamtolbert.com/"
+          },
+          {
+            "text": "\"Environmental progress should be measurable, reliable, and affordable.\"",
+            "is_quote": true,
+            "source": "https://www.teamtolbert.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Georgia SOS: official runoff results (June 16, 2026)",
+        "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
+      },
+      {
+        "name": "Atlanta Press Collective: PSC primaries 2026 (May 5, 2026)",
+        "url": "https://atlpresscollective.com/2026/05/05/georgia-psc-primaries-2026/"
+      },
+      {
+        "name": "WSB-TV: statewide candidates list (Oct 14, 2026)",
+        "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
+      }
+    ],
+    "confidence": "sourced"
+  }
+]

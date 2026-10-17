@@ -1,0 +1,29 @@
+[
+ {
+  "id": "fl-orange-ocps-millage",
+  "state": "FL",
+  "level": "school",
+  "jurisdiction": "School Board of Orange County, Florida (Orange County Public Schools). Every Orange County voter, including all of Orlando, sees this question.",
+  "number": "School Board Question: The School Board of Orange County, Florida Ad Valorem Millage Election",
+  "official_title": "Shall the School Board of Orange County, Florida, continue the current one mill ad valorem millage for essential operating expenses, including compensating teachers and educational support employees, preserving academic programs, arts, athletics, and student activities, beginning July 1, 2027, and ending four fiscal years later on June 30, 2031, shared proportionately with charter schools as legally required, with annual reporting to ensure proper fiscal stewardship of these funds to the citizens of Orange County?",
+  "plain_summary": "Renews an extra school property tax that Orange County voters already pay: 1 mill, which is $1 for every $1,000 of taxable property value. It would run four more years, from July 2027 to June 2031. The school district says it raises about $255 million a year and pays for about 2,000 positions, mostly teacher and staff pay, plus arts, athletics and student activities. Charter schools get their share.",
+  "yes_means": "The extra 1-mill school tax keeps going from July 2027 through June 2031, so your school tax rate stays where it is.",
+  "no_means": "The extra 1-mill school tax ends when the current approval runs out on June 30, 2027, lowering property tax bills and cutting what the district says is about $255 million a year from the school budget.",
+  "current_law": "Orange County voters first approved this extra 1 mill in 2010 and have renewed it every time it has been on the ballot. The last renewal (August 2022) runs through June 30, 2027, so nothing changes before then whichever way this vote goes.",
+  "fiscal_impact": "District figures as reported by WKMG News 6 (Aug 24, 2026): about $255 million a year, funding about 2,000 teaching positions. For a home appraised at $355,000, the district says the tax costs about $28 a month. A school board member told The Apopka Chief that roughly 90% of the money goes to teacher and support-staff pay. No official ballot explanation or independent fiscal note was found.",
+  "pass_threshold": "simple majority",
+  "referred_by": "other",
+  "confusing_wording_note": "Three things trip people up. (1) The choices are printed as 'Yes for Approval' and 'No for Rejection,' not plain Yes and No. Yes keeps the tax; No ends it. (2) The word 'continue' matters: this is a renewal of a tax you already pay, not a new or higher tax. (3) It does not start until July 1, 2027, because the current approval already covers the next school year. Also, Amendment 3 on the same ballot raises the homestead exemption only 'for all non-school taxes,' so it would not change this school levy.",
+  "supporters_case": {
+   "text": "The school district and board say the levy pays for about 2,000 positions and supports raises; OCPS's spokesperson said 'This is not costing the taxpayers any more money. It's a continuation of what we currently have.' Board Chair Teresa Jacobs said 'the cost of educating students is rising faster than the revenue available to support them,' citing employee health-care costs.",
+   "source": "https://www.clickorlando.com/news/local/2026/08/24/ocps-speaking-to-cities-ahead-of-vote-on-renewal-of-property-tax-supporting-schools/"
+  },
+  "opponents_case": {
+   "text": "No organized campaign against the renewal turned up in our sources. The closest criticism: School Board District 3 candidate Diana Moore wrote that the levy 'was sold to the public to attract and retain quality teachers' but has no citizen oversight committee, and that a proposal to earmark part of it for teacher raises failed on the board. She did not say how she will vote on it.",
+   "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/"
+  },
+  "official_text_url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
+  "official_guide_url": null,
+  "confidence": "sourced"
+ }
+]

@@ -1,0 +1,61 @@
+{
+  "id": "clayton-mo",
+  "label": "Clayton (St. Louis County seat, not the City of St. Louis)",
+  "state": "MO",
+  "counties": [
+    "St. Louis County"
+  ],
+  "county_election_office": {
+    "name": "St. Louis County Board of Elections, 725 Northwest Plaza Dr., St. Ann, MO 63074 (the county board, not the City of St. Louis board downtown). Mon to Fri 8 a.m. to 4:30 p.m.",
+    "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "phone": "314-615-1800"
+  },
+  "sample_ballot_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+  "zips": [
+    "63105"
+  ],
+  "zip_caveats": "Clayton is the county seat of St. Louis County, NOT part of the City of St. Louis: you vote with the county Board of Elections in St. Ann, and on Election Day you can use any county polling place. U.S. House (2022 lines, which govern the Nov. 3 election): all of Clayton is in the 1st District (Bell). The 2nd District (Wagner) applies only if your 63105 address is actually in Ladue, Richmond Heights or Brentwood, which are split between the two. State Senate: most of Clayton is SD-4 (Mitten, unopposed); the north end is SD-14 (Norman vs. Proudie); the far west edge toward Ladue may be SD-24 (McCreery vs. Wrobley). State House: central and south Clayton are HD-99 (Schafer, unopposed); the north end is HD-86 (Hales, unopposed); the west edge is HD-83 (Reed vs. Bolin). County Council: Clayton is partly in District 5 (Clancy, unopposed); other parts may be District 1 (Days, unopposed) or District 3 (Osmack vs. Koenig). No City of Clayton or Clayton School District measure was found for Nov. 3. Some 63105 addresses are in the Ladue or University City school districts; no measures were found for those either. These district placements come from official 2022 legislative boundaries checked against points around Clayton, not a ZIP-level file. Use the county's Sample Ballot Lookup with your street address to see your exact ballot.",
+  "contest_ids": [
+    "mo-state-auditor",
+    "mo-retention-wilson",
+    "mo-retention-lay",
+    "mo-retention-navarro-mckelvey",
+    "mo-retention-quigless",
+    "mo-us-house-1",
+    "mo-us-house-2",
+    "mo-sd-4",
+    "mo-sd-14",
+    "mo-sd-24",
+    "mo-hd-99",
+    "mo-hd-86",
+    "mo-hd-83",
+    "stlco-county-executive",
+    "stlco-prosecuting-attorney",
+    "stlco-assessor",
+    "stlco-council-5",
+    "stlco-council-1",
+    "stlco-council-3",
+    "stlco-retention-stewart",
+    "stlco-retention-borbonus",
+    "stlco-retention-ott",
+    "stlco-retention-mcnelley",
+    "stlco-retention-mcpherson",
+    "stlco-retention-baker",
+    "stlco-retention-hearne",
+    "stlco-retention-dunne",
+    "stlco-retention-lasater",
+    "stlco-retention-klapp",
+    "stlco-retention-ruth",
+    "stlco-retention-lewis",
+    "stlco-retention-snyder",
+    "stlco-retention-ghasedi",
+    "stlco-retention-dillon-amelung",
+    "mo-prop-a",
+    "mo-amendment-3",
+    "mo-amendment-6",
+    "mo-amendment-7",
+    "mo-amendment-8",
+    "stlco-prop-a",
+    "stlco-prop-s"
+  ]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "al-com-eb",
+    "name": "AL.com / Alabama Media Group editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Alabama's largest news organization (Birmingham News, Huntsville Times, Mobile Press-Register legacy). Its opinion page could not be opened this run (site blocked), and no 2026 endorsement editorial surfaced in search. It last made a widely covered candidate call in 2017 (against Roy Moore). Treated as not endorsing in 2026 until an editorial is found.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.al.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "alabama-reflector",
+    "name": "Alabama Reflector (voter guide, no endorsements)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit newsroom (States Newsroom). Publishes a candidate-by-candidate voter guide and amendment explainers but does not endorse. Included so the guide can link its coverage.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-alabama",
+    "name": "League of Women Voters of Alabama (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; does not endorse candidates. Publishes candidate questionnaire answers on VOTE411. Its president publicly opposed Amendment 3 in October 2026.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.vote411.org/alabama",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "al-republican-party",
+    "name": "Alabama Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; certified and supports its general-election nominees.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "al-democratic-party",
+    "name": "Alabama Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization; certified and supports its general-election nominees.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "alfa-farmpac",
+    "name": "Alabama Farmers Federation (FarmPAC)",
+    "type": "advocacy",
+    "lean": "lean_right",
+    "lean_basis": "Largest farm organization in the state. Its 2026 general-election slate is all Republican; President Jimmy Parnell said he believes 'the majority of Alabama voters support family values, smaller government, lower taxes and less regulation.'",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "bca-progresspac",
+    "name": "Business Council of Alabama (ProgressPAC)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "State chamber of commerce. Its PAC describes 'a conservative approach to the bench' and its 2026 statewide picks are all Republican.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "alabama-realtors-pac",
+    "name": "Alabama Realtors PAC (ARPAC)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Trade-association PAC. Its Oct. 5, 2026 general-election slate is all Republican.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "al-afl-cio",
+    "name": "Alabama AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation; endorses through its COPE committee, historically for Democratic candidates. No 2026 general-election slate was found online this run.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://alaflcio.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "al-education-association",
+    "name": "Alabama Education Association (A-VOTE)",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Teachers' association; endorses candidates of both parties through its A-VOTE committee, with a focus on public-school funding. No 2026 general-election slate was found online this run.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://myaea.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "alabama-arise",
+    "name": "Alabama Arise",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Nonprofit coalition focused on low-income Alabamians; does not endorse candidates but publishes a voter guide and sometimes takes amendment positions. No 2026 amendment positions found this run.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "al-policy-institute",
+    "name": "Alabama Policy Institute",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Self-described conservative think tank; has published an amendment guide in past cycles. AG nominee Katherine Robertson is a former vice president. No 2026 amendment guide found this run.",
+    "geography": [
+      "AL"
+    ],
+    "guide_url": "https://alabamapolicy.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  }
+]

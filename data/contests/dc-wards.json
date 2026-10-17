@@ -1,0 +1,4417 @@
+[
+ {
+  "id": "dc-ward-1-council",
+  "state": "DC",
+  "level": "city",
+  "office": "Ward One Member of the Council of the District of Columbia",
+  "district": "Ward 1",
+  "scope_plain": "Only Ward 1 voters. Ranked choice: four candidates plus a write-in line, so you can rank up to 5. Rank as many or as few as you like; ranking more never hurts your first choice.",
+  "office_explainer": "Your ward's one seat on the 13-member DC Council, which writes city laws and passes the budget.",
+  "why_it_matters": "Open seat: Brianne Nadeau, first elected in 2014, is not running. The winner represents Adams Morgan, Columbia Heights, Mount Pleasant and nearby neighborhoods. Democrat Aparna Raj won a five-way June primary with 52% in the final ranked-choice round.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 5,
+  "incumbent": "Brianne Nadeau (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jett James Jasper",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.jettjasperfordcward1.com/",
+    "website_confidence": "sourced",
+    "background": "Nonprofit executive and community leader. His party profile says he has led nonprofit and private-sector organizations, served on local boards and commissions, and worked in hospitality and public access media.",
+    "own_words": [
+     {
+      "text": "DC GOP profile: running \"with a focus on public safety, affordability, small business support, and ensuring government works effectively for residents.\"",
+      "is_quote": true,
+      "source": "https://dcgop.com/meet-dc-candidates/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Ryan Prince",
+    "party": "Independent",
+    "incumbent": false,
+    "website": "https://ryanprincefordccouncil.com/",
+    "website_confidence": "sourced",
+    "background": "Independent candidate. Qualified for the ballot by petition (picked up petitions June 15, filed August 5, 2026, per DCBOE).",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Jude Crannitch",
+    "party": "DC Statehood Green",
+    "incumbent": false,
+    "website": "https://statehoodgreensofdc.org/candidate-jude-crannitch.html",
+    "website_confidence": "verified",
+    "background": "The DC Statehood Green Party's nominee for Ward 1; won the party's June primary unopposed.",
+    "own_words": [
+     {
+      "text": "Champions \"wage justice, green democracy, and a cultural renaissance\" for Ward 1 (party profile).",
+      "is_quote": true,
+      "source": "https://statehoodgreensofdc.org/candidate-jude-crannitch.html"
+     },
+     {
+      "text": "Party profile says he is committed to D.C. statehood and stronger neighborhood representation.",
+      "is_quote": false,
+      "source": "https://statehoodgreensofdc.org/candidate-jude-crannitch.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Aparna Raj",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.aparnafordc.com/",
+    "website_confidence": "verified",
+    "background": "Tenant organizer and former chair of Metro DC Democratic Socialists of America. Won the June 16 Democratic primary with 52.3% in the final round.",
+    "own_words": [
+     {
+      "text": "\"I will fight to expand rent stabilization to cover all multifamily properties.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w1_raj.pdf"
+     },
+     {
+      "text": "Would legalize apartments in every neighborhood, end minimum parking requirements for new buildings, and make at least one-third of new homes affordable.",
+      "is_quote": false,
+      "source": "https://ggwash.org/files/20260222_council_w1_raj.pdf"
+     },
+     {
+      "text": "On slow bus upgrades for U St and Georgia Ave: \"Bus riders should not have to wait six years for improvements to service quality.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w1_raj.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 1 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/bf78fba0-50f2-40c4-ad32-0f78255d725a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward1C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "Washington Post: D.C. voter guide for the Nov. 3 election (Oct 11, 2026)",
+    "url": "https://www.washingtonpost.com/dc-md-va/2026/10/11/dc-voter-guide-nov-3-election/"
+   },
+   {
+    "name": "Wikipedia: 2026 Council of the District of Columbia election (primary results, incumbents)",
+    "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election"
+   },
+   {
+    "name": "DC GOP: Meet DC Candidates",
+    "url": "https://dcgop.com/meet-dc-candidates/"
+   },
+   {
+    "name": "DC Statehood Green Party: Jude Crannitch",
+    "url": "https://statehoodgreensofdc.org/candidate-jude-crannitch.html"
+   },
+   {
+    "name": "GGWash 2026 questionnaire: Aparna Raj",
+    "url": "https://ggwash.org/files/20260222_council_w1_raj.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-3-council",
+  "state": "DC",
+  "level": "city",
+  "office": "Ward Three Member of the Council of the District of Columbia",
+  "district": "Ward 3",
+  "scope_plain": "Only Ward 3 voters. Pick one. One candidate plus a write-in line.",
+  "office_explainer": "Your ward's one seat on the 13-member DC Council, which writes city laws and passes the budget.",
+  "why_it_matters": "Matthew Frumin, first elected in 2022, is the only name on the ballot. No Republican or Statehood Green candidate filed. You can still write in someone else.",
+  "vote_for": 1,
+  "ranked_choice": false,
+  "rank_up_to": null,
+  "incumbent": "Matthew Frumin",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Matthew Frumin",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://frumin2026.com/",
+    "website_confidence": "verified",
+    "background": "Ward 3 councilmember since 2023 and an attorney. Before the Council he served on his local ANC and worked on affordable housing with the Washington Interfaith Network. Won the June primary unopposed.",
+    "own_words": [
+     {
+      "text": "\"I support adding housing on our commercial and transit corridors – Connecticut and Wisconsin Avenues as examples.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w3_frumin.pdf"
+     },
+     {
+      "text": "Says he is \"not there\" on ending single-family zoning, and opposes eliminating parking minimums, preferring case-by-case waivers.",
+      "is_quote": false,
+      "source": "https://ggwash.org/files/20260222_council_w3_frumin.pdf"
+     },
+     {
+      "text": "\"I would like to see aggressive implementation of the STEER Act to hold serial offenders accountable.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w3_frumin.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 3 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/0f65365f-8004-406c-9274-29ac244504a5/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward3C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "Washington Post: D.C. voter guide for the Nov. 3 election (Oct 11, 2026)",
+    "url": "https://www.washingtonpost.com/dc-md-va/2026/10/11/dc-voter-guide-nov-3-election/"
+   },
+   {
+    "name": "Wikipedia: 2026 Council of the District of Columbia election (primary results, incumbents)",
+    "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election"
+   },
+   {
+    "name": "Ward 3 VOTE! community guide (primary era)",
+    "url": "https://ward3vote.com/"
+   },
+   {
+    "name": "GGWash 2026 questionnaire: Matthew Frumin",
+    "url": "https://ggwash.org/files/20260222_council_w3_frumin.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-5-council",
+  "state": "DC",
+  "level": "city",
+  "office": "Ward Five Member of the Council of the District of Columbia",
+  "district": "Ward 5",
+  "scope_plain": "Only Ward 5 voters. Ranked choice: three candidates plus a write-in line, so you can rank up to 4. Rank as many or as few as you like.",
+  "office_explainer": "Your ward's one seat on the 13-member DC Council, which writes city laws and passes the budget.",
+  "why_it_matters": "Zachary Parker, first elected in 2022, is seeking a second term representing much of Northeast DC. He won the June Democratic primary with 78% against two challengers.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 4,
+  "incumbent": "Zachary Parker",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Zachary Parker",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://zacharyparker2026.com/",
+    "website_confidence": "verified",
+    "background": "Ward 5 councilmember since 2023; previously served on the DC State Board of Education. Won the June primary with 77.6%.",
+    "own_words": [
+     {
+      "text": "\"At least 50% of new units should be income restricted to expand deeply affordable housing.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w5_parker.pdf"
+     },
+     {
+      "text": "Wants a public rental registry to protect tenants and catch illegal leasing, plus clawbacks when subsidized developers miss affordability promises.",
+      "is_quote": false,
+      "source": "https://ggwash.org/files/20260222_council_w5_parker.pdf"
+     },
+     {
+      "text": "\"I was proud to co introduce the STEER Act to hold reckless drivers accountable.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w5_parker.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Joyce Robinson-Paul",
+    "party": "DC Statehood Green",
+    "incumbent": false,
+    "website": "https://www.statehoodgreensofdc.org/leader-joyce-robinson-paul.html",
+    "website_confidence": "verified",
+    "background": "DC Statehood Green Party steering committee member and the party's Ward 5 nominee; won its June primary unopposed.",
+    "own_words": [
+     {
+      "text": "Champions \"economic justice, green democracy, and policies that prioritize people over profit\" (party profile).",
+      "is_quote": true,
+      "source": "https://www.statehoodgreensofdc.org/leader-joyce-robinson-paul.html"
+     },
+     {
+      "text": "Party profile says she works to strengthen community representation and advance D.C. statehood.",
+      "is_quote": false,
+      "source": "https://www.statehoodgreensofdc.org/leader-joyce-robinson-paul.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Jeffrey Kihien-Palza",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://jeffward5.com/",
+    "website_confidence": "sourced",
+    "background": "Peruvian immigrant and longtime Ward 5 resident. His party profile describes him as a business leader and attorney who has led G & K Management LLC for over 15 years.",
+    "own_words": [
+     {
+      "text": "DC GOP profile: focused on \"strengthening neighborhoods, supporting economic opportunity, and serving Ward 5 residents.\"",
+      "is_quote": true,
+      "source": "https://dcgop.com/meet-dc-candidates/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 5 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/4b5fd0b9-cc8a-4ff8-9c30-6ec5096f63c8/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward5C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "Washington Post: D.C. voter guide for the Nov. 3 election (Oct 11, 2026)",
+    "url": "https://www.washingtonpost.com/dc-md-va/2026/10/11/dc-voter-guide-nov-3-election/"
+   },
+   {
+    "name": "Wikipedia: 2026 Council of the District of Columbia election (primary results, incumbents)",
+    "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election"
+   },
+   {
+    "name": "DC GOP: Meet DC Candidates",
+    "url": "https://dcgop.com/meet-dc-candidates/"
+   },
+   {
+    "name": "DC Statehood Green Party: Joyce Robinson-Paul",
+    "url": "https://www.statehoodgreensofdc.org/leader-joyce-robinson-paul.html"
+   },
+   {
+    "name": "GGWash 2026 questionnaire: Zachary Parker",
+    "url": "https://ggwash.org/files/20260222_council_w5_parker.pdf"
+   },
+   {
+    "name": "DC SBOE: CR22-36, To Honor State Board of Education Member Zachary Parker",
+    "url": "https://sboe.dc.gov/publication/cr22-36-honor-state-board-education-member-zachary-parker"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-6-council",
+  "state": "DC",
+  "level": "city",
+  "office": "Ward Six Member of the Council of the District of Columbia",
+  "district": "Ward 6",
+  "scope_plain": "Only Ward 6 voters. Pick one: two candidates plus a write-in line. Not ranked choice.",
+  "office_explainer": "Your ward's one seat on the 13-member DC Council, which writes city laws and passes the budget.",
+  "why_it_matters": "Charles Allen, first elected in 2014, is seeking a fourth term. He chairs the Council's transportation and environment committee. Ward 6 takes in Capitol Hill, Southwest, Navy Yard and Near Southeast.",
+  "vote_for": 1,
+  "ranked_choice": false,
+  "rank_up_to": null,
+  "incumbent": "Charles Allen",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Charles Allen",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.charlesallen2026.com/",
+    "website_confidence": "verified",
+    "background": "Ward 6 councilmember since 2015 (three terms) and chair of the Council's Committee on Transportation and the Environment. Won the June primary with 75.7%.",
+    "own_words": [
+     {
+      "text": "Says he \"authored the landmark STEER Act to increase accountability for dangerous drivers.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w6_allen.pdf"
+     },
+     {
+      "text": "\"I created the District's first e-bike voucher program.\"",
+      "is_quote": true,
+      "source": "https://ggwash.org/files/20260222_council_w6_allen.pdf"
+     },
+     {
+      "text": "Supports ending minimum parking requirements for new buildings and raising the federal Height Act limit near Metro stations.",
+      "is_quote": false,
+      "source": "https://ggwash.org/files/20260222_council_w6_allen.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Jorge Rice",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.jorgericeforward6.com/",
+    "website_confidence": "sourced",
+    "background": "Longtime Ward 6 resident. His party profile says he has over a decade in federal service leading Equal Employment Opportunity investigations and mediations, and holds a doctorate in conflict analysis and resolution.",
+    "own_words": [
+     {
+      "text": "Wants community violence-prevention programs, closer coordination with MPD and more mental health crisis response.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Jorge_Rice"
+     },
+     {
+      "text": "Top transportation priority: \"Improving pedestrian and cyclist safety at high-injury intersections.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Jorge_Rice"
+     },
+     {
+      "text": "\"Leadership starts with listening.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Jorge_Rice"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 6 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/99b1bd27-e974-42b5-b3e2-7c22517264d3/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward6C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "Washington Post: D.C. voter guide for the Nov. 3 election (Oct 11, 2026)",
+    "url": "https://www.washingtonpost.com/dc-md-va/2026/10/11/dc-voter-guide-nov-3-election/"
+   },
+   {
+    "name": "Wikipedia: 2026 Council of the District of Columbia election (primary results, incumbents)",
+    "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election"
+   },
+   {
+    "name": "Ballotpedia: Jorge Rice (quotes his campaign site)",
+    "url": "https://ballotpedia.org/Jorge_Rice"
+   },
+   {
+    "name": "DC GOP: Meet DC Candidates",
+    "url": "https://dcgop.com/meet-dc-candidates/"
+   },
+   {
+    "name": "GGWash 2026 questionnaire: Charles Allen",
+    "url": "https://ggwash.org/files/20260222_council_w6_allen.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-1-sboe",
+  "state": "DC",
+  "level": "school",
+  "office": "Ward One Member of the State Board of Education",
+  "district": "Ward 1",
+  "scope_plain": "Only Ward 1 voters. Nonpartisan, so no party labels. Pick one: one candidate plus a write-in line.",
+  "office_explainer": "Sets DC-wide academic standards, graduation requirements and school accountability rules. Does not run individual schools.",
+  "why_it_matters": "Ben Williams, who has held the seat since 2023, is the only name on the ballot. The board approves DC's school standards and rules; the mayor runs DC Public Schools.",
+  "vote_for": 1,
+  "ranked_choice": false,
+  "rank_up_to": null,
+  "incumbent": "Ben Williams",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Ben Williams",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ward 1 State Board of Education member since 2023 (current term 2023 to 2027), per the board's website.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 1 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/bf78fba0-50f2-40c4-ad32-0f78255d725a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward1C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "DC State Board of Education: Board Biographies (members, wards, terms)",
+    "url": "https://sboe.dc.gov/page/board-biographies"
+   },
+   {
+    "name": "LWV DC: DC Voting Explainer, U.S. Citizens (2026 General Election)",
+    "url": "https://www.lwvdc.org/docs.ashx?id=1800443"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-3-sboe",
+  "state": "DC",
+  "level": "school",
+  "office": "Ward Three Member of the State Board of Education",
+  "district": "Ward 3",
+  "scope_plain": "Only Ward 3 voters. Nonpartisan, so no party labels. Pick one: two candidates plus a write-in line.",
+  "office_explainer": "Sets DC-wide academic standards, graduation requirements and school accountability rules. Does not run individual schools.",
+  "why_it_matters": "Incumbent Eric Goulet, the board's vice president, faces Aaron Wesolowski. The board approves DC's school standards and rules; the mayor runs DC Public Schools.",
+  "vote_for": 1,
+  "ranked_choice": false,
+  "rank_up_to": null,
+  "incumbent": "Eric Goulet",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Eric Goulet",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ward 3 State Board of Education member since 2023 and the board's vice president. Ran for Ward 3 Council in 2022.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Aaron Wesolowski",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 3 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/0f65365f-8004-406c-9274-29ac244504a5/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward3C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "DC State Board of Education: Board Biographies (members, wards, terms)",
+    "url": "https://sboe.dc.gov/page/board-biographies"
+   },
+   {
+    "name": "Ward 3 VOTE! community guide (primary era)",
+    "url": "https://ward3vote.com/"
+   },
+   {
+    "name": "Wikipedia: 2026 Council of the District of Columbia election (primary results, incumbents)",
+    "url": "https://en.wikipedia.org/wiki/2026_Council_of_the_District_of_Columbia_election"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-5-sboe",
+  "state": "DC",
+  "level": "school",
+  "office": "Ward Five Member of the State Board of Education",
+  "district": "Ward 5",
+  "scope_plain": "Only Ward 5 voters. Nonpartisan, so no party labels. Pick one: two candidates plus a write-in line.",
+  "office_explainer": "Sets DC-wide academic standards, graduation requirements and school accountability rules. Does not run individual schools.",
+  "why_it_matters": "Open seat: Robert Henderson's term ends in January 2027 and he is not on the ballot. The board approves DC's school standards and rules; the mayor runs DC Public Schools.",
+  "vote_for": 1,
+  "ranked_choice": false,
+  "rank_up_to": null,
+  "incumbent": "Robert Henderson (not on the ballot)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jon Alfuth",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Lynn Jennings",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 5 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/4b5fd0b9-cc8a-4ff8-9c30-6ec5096f63c8/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward5C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "DC State Board of Education: Board Biographies (members, wards, terms)",
+    "url": "https://sboe.dc.gov/page/board-biographies"
+   },
+   {
+    "name": "BallotReady: DC State Board of Education, Ward 5 (current officeholder)",
+    "url": "https://www.ballotready.org/positions/district-of-columbia-district-of-columbia-state-board-of-education-member-ward-5"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-6-sboe",
+  "state": "DC",
+  "level": "school",
+  "office": "Ward Six Member of the State Board of Education",
+  "district": "Ward 6",
+  "scope_plain": "Only Ward 6 voters. Nonpartisan, so no party labels. Ranked choice: three candidates plus a write-in line, so you can rank up to 4.",
+  "office_explainer": "Sets DC-wide academic standards, graduation requirements and school accountability rules. Does not run individual schools.",
+  "why_it_matters": "Open seat: Brandon Best's term ends in January 2027 and he is not running. Joshua Wiley lost this seat to Best in 2022, 51% to 47%. It is the only ward school board race decided by ranked choice this year.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 4,
+  "incumbent": "Brandon Best (not running)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Amber A. Williams",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ward 6 public-school parent of two. Says she has worked as a teacher, school leader, nonprofit executive and federal education policy professional.",
+    "own_words": [
+     {
+      "text": "\"Families should have a meaningful voice in the education decisions that affect their children.\"",
+      "is_quote": true,
+      "source": "https://secure.actblue.com/donate/amberforward6"
+     },
+     {
+      "text": "Calls for \"treating educator working conditions as a student-success issue.\"",
+      "is_quote": true,
+      "source": "https://secure.actblue.com/donate/amberforward6"
+     },
+     {
+      "text": "Wants smoother transitions into kindergarten, early-grade literacy and high-quality early learning.",
+      "is_quote": false,
+      "source": "https://secure.actblue.com/donate/amberforward6"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "David Parker",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Not the same person as Ward 5 Councilmember Zachary Parker.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   },
+   {
+    "name": "Joshua Wiley",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.ward6wiley.com/",
+    "website_confidence": "sourced",
+    "background": "Assistant principal at a DC school. Ran for this seat in 2022 and lost to Brandon Best, 51.1% to 47.3%.",
+    "own_words": [
+     {
+      "text": "Priority: \"Addressing chronic absenteeism and increasing student engagement.\"",
+      "is_quote": true,
+      "source": "https://secure.actblue.com/donate/joshua-wiley-1"
+     },
+     {
+      "text": "Wants stronger literacy and math results, more advanced coursework and more career and technical education.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Joshua_Wiley"
+     },
+     {
+      "text": "On classroom tech: \"Technology Should Be a Tool, Not a Substitute.\"",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Joshua_Wiley"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/ballot"
+   }
+  ],
+  "sources": [
+   {
+    "name": "DCBOE: Sample ballot, Ward 6 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/99b1bd27-e974-42b5-b3e2-7c22517264d3/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward6C.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: General Election Candidates in Ballot Order (PDF, July 15, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+   },
+   {
+    "name": "DC State Board of Education: Board Biographies (members, wards, terms)",
+    "url": "https://sboe.dc.gov/page/board-biographies"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "Ballotpedia: Joshua Wiley (2022 result, campaign site text)",
+    "url": "https://ballotpedia.org/Joshua_Wiley"
+   },
+   {
+    "name": "Amber Williams campaign page (ActBlue)",
+    "url": "https://secure.actblue.com/donate/amberforward6"
+   },
+   {
+    "name": "Joshua Wiley campaign page (ActBlue)",
+    "url": "https://secure.actblue.com/donate/joshua-wiley-1"
+   },
+   {
+    "name": "Ward 6 Democrats: 2022 Ward 6 SBOE forum (Best vs. Wiley)",
+    "url": "https://www.ward6dems.org/post/watch-ward-6-state-board-of-education-forum"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-1-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 1: ANCs 1A, 1B, 1C, 1D, 1E)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 1 has 42 SMDs in ANCs 1A to 1E. Of those, 32 have one candidate, 7 have two, 2 have three or more and use ranked choice (1B03, 1E02), and 1 has no one on the ballot, only a write-in line (1A02).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 42,
+   "one_candidate": 32,
+   "two_candidates": 7,
+   "three_or_more": 2,
+   "no_candidate": 1
+  },
+  "smds": [
+   {
+    "smd": "1A01",
+    "anc": "1A",
+    "candidates": [
+     "Jaspal S. Bhatia"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A02",
+    "anc": "1A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "1A03",
+    "anc": "1A",
+    "candidates": [
+     "Joseph Schmitt"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A04",
+    "anc": "1A",
+    "candidates": [
+     "Jeremy S. Sherman",
+     "John Henderson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A05",
+    "anc": "1A",
+    "candidates": [
+     "Christine Miller"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A06",
+    "anc": "1A",
+    "candidates": [
+     "Anthony Thomas-Davis",
+     "Arjun Singh"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A07",
+    "anc": "1A",
+    "candidates": [
+     "Shane D. McCarthy"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A08",
+    "anc": "1A",
+    "candidates": [
+     "Shira Davidson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A09",
+    "anc": "1A",
+    "candidates": [
+     "Daniella Kelley"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1A10",
+    "anc": "1A",
+    "candidates": [
+     "Vida Rangel"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B01",
+    "anc": "1B",
+    "candidates": [
+     "Matt Fay"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B02",
+    "anc": "1B",
+    "candidates": [
+     "Frank Chauvin"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B03",
+    "anc": "1B",
+    "candidates": [
+     "David Seidman",
+     "J. Swiderski",
+     "Jamie S. Sycamore"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "1B04",
+    "anc": "1B",
+    "candidates": [
+     "Guneev Sharma"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B05",
+    "anc": "1B",
+    "candidates": [
+     "Alan Kensek",
+     "Lisa Rucker"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B06",
+    "anc": "1B",
+    "candidates": [
+     "Miguel Trindade Deramo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B07",
+    "anc": "1B",
+    "candidates": [
+     "Matthew Holden"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B08",
+    "anc": "1B",
+    "candidates": [
+     "Brittany Beekman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1B09",
+    "anc": "1B",
+    "candidates": [
+     "Stephen Hanrahan"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C01",
+    "anc": "1C",
+    "candidates": [
+     "Howard Bauleke"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C02",
+    "anc": "1C",
+    "candidates": [
+     "Sterling Speirm"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C03",
+    "anc": "1C",
+    "candidates": [
+     "Kendall Gibson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C04",
+    "anc": "1C",
+    "candidates": [
+     "Marie-Elise Diamond"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C05",
+    "anc": "1C",
+    "candidates": [
+     "Curtis Harrison"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C06",
+    "anc": "1C",
+    "candidates": [
+     "Lena Kennell"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C07",
+    "anc": "1C",
+    "candidates": [
+     "Nancy Shia"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C08",
+    "anc": "1C",
+    "candidates": [
+     "David Facillo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1C09",
+    "anc": "1C",
+    "candidates": [
+     "Malinda Frevert"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D01",
+    "anc": "1D",
+    "candidates": [
+     "Sam Bell",
+     "Maki Tazawa"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D02",
+    "anc": "1D",
+    "candidates": [
+     "Susan Patrick"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D03",
+    "anc": "1D",
+    "candidates": [
+     "Erika Núñez"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D04",
+    "anc": "1D",
+    "candidates": [
+     "Melissa Wyers"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D05",
+    "anc": "1D",
+    "candidates": [
+     "Omar Parbhoo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D06",
+    "anc": "1D",
+    "candidates": [
+     "Sapna Pandya",
+     "Keith Krosinsky"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1D07",
+    "anc": "1D",
+    "candidates": [
+     "Gary Decker"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E01",
+    "anc": "1E",
+    "candidates": [
+     "Brad Howard"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E02",
+    "anc": "1E",
+    "candidates": [
+     "Audra K. Grant",
+     "Michael McGarty",
+     "Dominique D. Satterwhite"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "1E03",
+    "anc": "1E",
+    "candidates": [
+     "Philippa Hawker",
+     "Rami Jackson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E04",
+    "anc": "1E",
+    "candidates": [
+     "Marc Poe",
+     "Rashida E. Brown"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E05",
+    "anc": "1E",
+    "candidates": [
+     "Leah Peterson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E06",
+    "anc": "1E",
+    "candidates": [
+     "Josh Jacobson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "1E07",
+    "anc": "1E",
+    "candidates": [
+     "Mark A. LeMunyon"
+    ],
+    "ranked_choice": false,
+    "note": null
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Ward 1 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/bf78fba0-50f2-40c4-ad32-0f78255d725a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward1C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-2-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 2: ANCs 2A, 2B, 2C, 2D, 2E, 2F, 2G)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 2 has 46 SMDs in ANCs 2A to 2G. Of those, 28 have one candidate, 6 have two, 1 has three or more and uses ranked choice (2B02), and 11 have no one on the ballot, only a write-in line (2A01, 2A05, 2A07, 2A09, 2C04, 2E04, 2E08, 2F02, 2F06, 2F08, 2G05). In 2E01, Aleria Elyse Butler withdrew on 10/5/26 but may still be printed on the ballot.",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 46,
+   "one_candidate": 28,
+   "two_candidates": 6,
+   "three_or_more": 1,
+   "no_candidate": 11
+  },
+  "smds": [
+   {
+    "smd": "2A01",
+    "anc": "2A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2A02",
+    "anc": "2A",
+    "candidates": [
+     "Rob Gifford"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2A03",
+    "anc": "2A",
+    "candidates": [
+     "John P. George",
+     "Trupti \"Trip\" J. Patel"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2A04",
+    "anc": "2A",
+    "candidates": [
+     "Edward Comer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2A05",
+    "anc": "2A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2A06",
+    "anc": "2A",
+    "candidates": [
+     "John H. Dolan"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2A07",
+    "anc": "2A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2A08",
+    "anc": "2A",
+    "candidates": [
+     "Jim Malec"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2A09",
+    "anc": "2A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2B01",
+    "anc": "2B",
+    "candidates": [
+     "Cameron G. Yen"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B02",
+    "anc": "2B",
+    "candidates": [
+     "Keaton Dicap",
+     "Jeffrey Rueckgauer",
+     "Zach Epstein"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "2B03",
+    "anc": "2B",
+    "candidates": [
+     "Vincent E. Slatt"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B04",
+    "anc": "2B",
+    "candidates": [
+     "Madison Crum"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B05",
+    "anc": "2B",
+    "candidates": [
+     "Alex Marshall"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B06",
+    "anc": "2B",
+    "candidates": [
+     "Matt Johnson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B07",
+    "anc": "2B",
+    "candidates": [
+     "Bill Rubin",
+     "Kendall Simonds"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B08",
+    "anc": "2B",
+    "candidates": [
+     "Zach Adams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2B09",
+    "anc": "2B",
+    "candidates": [
+     "Lynn Thompson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2C01",
+    "anc": "2C",
+    "candidates": [
+     "Michael D. Shankle"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2C02",
+    "anc": "2C",
+    "candidates": [
+     "Nancy Groth"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2C03",
+    "anc": "2C",
+    "candidates": [
+     "Thomas S. Lee",
+     "Darren Sheets"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2C04",
+    "anc": "2C",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2D01",
+    "anc": "2D",
+    "candidates": [
+     "Robyn Lipton"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2D02",
+    "anc": "2D",
+    "candidates": [
+     "Carole L. Feld"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E01",
+    "anc": "2E",
+    "candidates": [
+     "Eric Langenbacher",
+     "Aleria Elyse Butler"
+    ],
+    "ranked_choice": false,
+    "note": "Aleria Elyse Butler withdrew 10/5/26; the name may still appear on the ballot."
+   },
+   {
+    "smd": "2E02",
+    "anc": "2E",
+    "candidates": [
+     "Christopher \"Topher\" Mathews"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E03",
+    "anc": "2E",
+    "candidates": [
+     "Paul Maysak"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E04",
+    "anc": "2E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2E05",
+    "anc": "2E",
+    "candidates": [
+     "Mimsy Lindner"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E06",
+    "anc": "2E",
+    "candidates": [
+     "Stefanie Scott"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E07",
+    "anc": "2E",
+    "candidates": [
+     "Natalee S. Snider"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2E08",
+    "anc": "2E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2F01",
+    "anc": "2F",
+    "candidates": [
+     "David R. Rubenstein"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2F02",
+    "anc": "2F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2F03",
+    "anc": "2F",
+    "candidates": [
+     "Joe Florio"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2F04",
+    "anc": "2F",
+    "candidates": [
+     "Benjamin Dalley"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2F05",
+    "anc": "2F",
+    "candidates": [
+     "Christopher J. Dyer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2F06",
+    "anc": "2F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2F07",
+    "anc": "2F",
+    "candidates": [
+     "Kevin Cataldo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2F08",
+    "anc": "2F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2G01",
+    "anc": "2G",
+    "candidates": [
+     "Howard Garrett",
+     "Christian Dingus"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2G02",
+    "anc": "2G",
+    "candidates": [
+     "Alexander M. \"Alex\" Padro"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2G03",
+    "anc": "2G",
+    "candidates": [
+     "Nicole Shea"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2G04",
+    "anc": "2G",
+    "candidates": [
+     "Steven M. McCarty"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "2G05",
+    "anc": "2G",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "2G06",
+    "anc": "2G",
+    "candidates": [
+     "Shariff Washington",
+     "Katelyn McNeils"
+    ],
+    "ranked_choice": false,
+    "note": null
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Wards 2, 4, 7 and 8 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-3-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 3: ANCs 3A, 3B, 3C, 3D, 3E, 3F, 3/4G)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 3 has 40 SMDs in ANCs 3A to 3F, plus ANC 3/4G (7 SMDs), which it shares with Ward 4. Counting all 47, 37 have one candidate, 4 have two, and 6 have no one on the ballot, only a write-in line (3A02, 3A04, 3E07, 3E08, 3F02, 3F06).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 47,
+   "one_candidate": 37,
+   "two_candidates": 4,
+   "three_or_more": 0,
+   "no_candidate": 6
+  },
+  "smds": [
+   {
+    "smd": "3A01",
+    "anc": "3A",
+    "candidates": [
+     "Thaddeus Bradley-Lewis"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3A02",
+    "anc": "3A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3A03",
+    "anc": "3A",
+    "candidates": [
+     "Isaac Bowers"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3A04",
+    "anc": "3A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3A05",
+    "anc": "3A",
+    "candidates": [
+     "Ann Lane Mladinov"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B01",
+    "anc": "3B",
+    "candidates": [
+     "Kevin Lavezzo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B02",
+    "anc": "3B",
+    "candidates": [
+     "Kevin Youel Page"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B03",
+    "anc": "3B",
+    "candidates": [
+     "Melissa Lane"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B04",
+    "anc": "3B",
+    "candidates": [
+     "Richard Pollock"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B05",
+    "anc": "3B",
+    "candidates": [
+     "Gupi Howie"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3B06",
+    "anc": "3B",
+    "candidates": [
+     "S Robert Rodriguez"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C01",
+    "anc": "3C",
+    "candidates": [
+     "Ralph Ives"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C02",
+    "anc": "3C",
+    "candidates": [
+     "Adam J. Prinzo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C03",
+    "anc": "3C",
+    "candidates": [
+     "Janell Marie Pagats"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C04",
+    "anc": "3C",
+    "candidates": [
+     "Erin Beard"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C05",
+    "anc": "3C",
+    "candidates": [
+     "Peter Miles"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C06",
+    "anc": "3C",
+    "candidates": [
+     "Joshua Peacock"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C07",
+    "anc": "3C",
+    "candidates": [
+     "Gawain Kripke"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3C08",
+    "anc": "3C",
+    "candidates": [
+     "Rick Nash",
+     "Connor O'Brien"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D01",
+    "anc": "3D",
+    "candidates": [
+     "Andrew J. Heimert"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D02",
+    "anc": "3D",
+    "candidates": [
+     "Tricia Duncan"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D03",
+    "anc": "3D",
+    "candidates": [
+     "Gary Langston"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D04",
+    "anc": "3D",
+    "candidates": [
+     "Mark M. Blumenthal"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D05",
+    "anc": "3D",
+    "candidates": [
+     "Bernie Horn"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D06",
+    "anc": "3D",
+    "candidates": [
+     "Marilyn Nowalk"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3D07",
+    "anc": "3D",
+    "candidates": [
+     "J.P. Szymkowicz"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E01",
+    "anc": "3E",
+    "candidates": [
+     "Matthew Cohen"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E02",
+    "anc": "3E",
+    "candidates": [
+     "Amy B. Hall"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E03",
+    "anc": "3E",
+    "candidates": [
+     "Jonathan Bender"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E04",
+    "anc": "3E",
+    "candidates": [
+     "Tom Quinn"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E05",
+    "anc": "3E",
+    "candidates": [
+     "John J Mitchell"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E06",
+    "anc": "3E",
+    "candidates": [
+     "Alexandra Gianinno"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3E07",
+    "anc": "3E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3E08",
+    "anc": "3E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3F01",
+    "anc": "3F",
+    "candidates": [
+     "Manolis Priniotakis"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3F02",
+    "anc": "3F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3F03",
+    "anc": "3F",
+    "candidates": [
+     "Mitchell Baer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3F04",
+    "anc": "3F",
+    "candidates": [
+     "Tosha Skolnik"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3F05",
+    "anc": "3F",
+    "candidates": [
+     "Spenser H. Dettwyler",
+     "Adrian Jesus Iglesias"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "3F06",
+    "anc": "3F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "3/4G01",
+    "anc": "3/4G",
+    "candidates": [
+     "Lisa R. Gore"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G02",
+    "anc": "3/4G",
+    "candidates": [
+     "Bruce Sherman"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G03",
+    "anc": "3/4G",
+    "candidates": [
+     "Shannon Tregar",
+     "Carol Grunewald"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G04",
+    "anc": "3/4G",
+    "candidates": [
+     "Laura Phinizy"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G05",
+    "anc": "3/4G",
+    "candidates": [
+     "Karrenthya Simmons",
+     "Weiqing F. Torti"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G06",
+    "anc": "3/4G",
+    "candidates": [
+     "Peter Gosselin"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G07",
+    "anc": "3/4G",
+    "candidates": [
+     "Elizabeth \"Liz\" Nagy"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Ward 3 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/0f65365f-8004-406c-9274-29ac244504a5/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward3C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-4-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 4: ANCs 3/4G, 4A, 4B, 4C, 4D, 4E)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 4 has 38 SMDs in ANCs 4A to 4E, plus ANC 3/4G (7 SMDs), which it shares with Ward 3. Counting all 45, 29 have one candidate, 9 have two, and 7 have no one on the ballot, only a write-in line (4A01, 4A04, 4A06, 4A07, 4B03, 4B08, 4D08).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 45,
+   "one_candidate": 29,
+   "two_candidates": 9,
+   "three_or_more": 0,
+   "no_candidate": 7
+  },
+  "smds": [
+   {
+    "smd": "3/4G01",
+    "anc": "3/4G",
+    "candidates": [
+     "Lisa R. Gore"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G02",
+    "anc": "3/4G",
+    "candidates": [
+     "Bruce Sherman"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G03",
+    "anc": "3/4G",
+    "candidates": [
+     "Shannon Tregar",
+     "Carol Grunewald"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G04",
+    "anc": "3/4G",
+    "candidates": [
+     "Laura Phinizy"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G05",
+    "anc": "3/4G",
+    "candidates": [
+     "Karrenthya Simmons",
+     "Weiqing F. Torti"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G06",
+    "anc": "3/4G",
+    "candidates": [
+     "Peter Gosselin"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "3/4G07",
+    "anc": "3/4G",
+    "candidates": [
+     "Elizabeth \"Liz\" Nagy"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "4A01",
+    "anc": "4A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4A02",
+    "anc": "4A",
+    "candidates": [
+     "Joan Hoyte"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4A03",
+    "anc": "4A",
+    "candidates": [
+     "Christian X Hara"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4A04",
+    "anc": "4A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4A05",
+    "anc": "4A",
+    "candidates": [
+     "Kim Patterson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4A06",
+    "anc": "4A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4A07",
+    "anc": "4A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4B01",
+    "anc": "4B",
+    "candidates": [
+     "Dave Cooke",
+     "Carol Joyner"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B02",
+    "anc": "4B",
+    "candidates": [
+     "Christopher Sousa"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B03",
+    "anc": "4B",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4B04",
+    "anc": "4B",
+    "candidates": [
+     "Charlie Mayer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B05",
+    "anc": "4B",
+    "candidates": [
+     "Jose \"Joe\" Barrios",
+     "Wayne E. Savage"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B06",
+    "anc": "4B",
+    "candidates": [
+     "Tiffani Nichole Johnson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B07",
+    "anc": "4B",
+    "candidates": [
+     "Julie Patton Lawson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B08",
+    "anc": "4B",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4B09",
+    "anc": "4B",
+    "candidates": [
+     "Kency Nittler"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4B10",
+    "anc": "4B",
+    "candidates": [
+     "James D. Gaston III"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C01",
+    "anc": "4C",
+    "candidates": [
+     "Emily Winternitz"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C02",
+    "anc": "4C",
+    "candidates": [
+     "Josh Mahan"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C03",
+    "anc": "4C",
+    "candidates": [
+     "Mike Warburton",
+     "Petrona Xemi Tapepechul"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C04",
+    "anc": "4C",
+    "candidates": [
+     "Monica E. Arrington"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C05",
+    "anc": "4C",
+    "candidates": [
+     "Brittany Kademian"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C06",
+    "anc": "4C",
+    "candidates": [
+     "John Qua",
+     "Christen Boas Hayes"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4C07",
+    "anc": "4C",
+    "candidates": [
+     "Lionel Drips",
+     "Taunya (Richardson) Martin"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D01",
+    "anc": "4D",
+    "candidates": [
+     "Matthew Staeck"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D02",
+    "anc": "4D",
+    "candidates": [
+     "Jonathan Hogue",
+     "Abel Amene"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D03",
+    "anc": "4D",
+    "candidates": [
+     "David Brotman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D04",
+    "anc": "4D",
+    "candidates": [
+     "Eliza Cava"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D05",
+    "anc": "4D",
+    "candidates": [
+     "Stephen Marencic"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D06",
+    "anc": "4D",
+    "candidates": [
+     "Brian Haupt",
+     "Joey Baeitti"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D07",
+    "anc": "4D",
+    "candidates": [
+     "Brittany Vesce"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4D08",
+    "anc": "4D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "4E01",
+    "anc": "4E",
+    "candidates": [
+     "Aretha \"Nikki\" Jones"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4E02",
+    "anc": "4E",
+    "candidates": [
+     "Vince Micone"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4E03",
+    "anc": "4E",
+    "candidates": [
+     "Maria Barry"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4E04",
+    "anc": "4E",
+    "candidates": [
+     "Hal Gordon"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4E05",
+    "anc": "4E",
+    "candidates": [
+     "Carnie McAdams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "4E06",
+    "anc": "4E",
+    "candidates": [
+     "Sara Adland"
+    ],
+    "ranked_choice": false,
+    "note": null
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Wards 2, 4, 7 and 8 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-5-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 5: ANCs 5A, 5B, 5C, 5D, 5E, 5F)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 5 has 45 SMDs in ANCs 5A to 5F. Of those, 21 have one candidate, 15 have two, 4 have three or more and use ranked choice (5A08, 5B02, 5B05, 5E02), and 5 have no one on the ballot, only a write-in line (5A04, 5A07, 5C03, 5D06, 5D08).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 45,
+   "one_candidate": 21,
+   "two_candidates": 15,
+   "three_or_more": 4,
+   "no_candidate": 5
+  },
+  "smds": [
+   {
+    "smd": "5A01",
+    "anc": "5A",
+    "candidates": [
+     "Keith J. Sellars"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5A02",
+    "anc": "5A",
+    "candidates": [
+     "Cheryl A. Tracy"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5A03",
+    "anc": "5A",
+    "candidates": [
+     "Emily Singer Lucio",
+     "Skylar Verastequi-Diaz"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5A04",
+    "anc": "5A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "5A05",
+    "anc": "5A",
+    "candidates": [
+     "Dyanna Weston",
+     "Regina A. Smith"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5A06",
+    "anc": "5A",
+    "candidates": [
+     "April Brown",
+     "Derrick O. Holloway, Sr."
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5A07",
+    "anc": "5A",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "5A08",
+    "anc": "5A",
+    "candidates": [
+     "Dwight Davis",
+     "Elaine Alston",
+     "Debra Whitford"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "5A09",
+    "anc": "5A",
+    "candidates": [
+     "Robert T. Oliver"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5B01",
+    "anc": "5B",
+    "candidates": [
+     "Shirley Rivens Smith",
+     "Amy Enchemeyer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5B02",
+    "anc": "5B",
+    "candidates": [
+     "Andrew Davis",
+     "Ursula Higgins",
+     "Bree Ryback"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "5B03",
+    "anc": "5B",
+    "candidates": [
+     "Jingwen Sun",
+     "Elise Scott"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5B04",
+    "anc": "5B",
+    "candidates": [
+     "Rayseen Woodland",
+     "Ra Amin"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5B05",
+    "anc": "5B",
+    "candidates": [
+     "Rachel Williams",
+     "John J. Feeley",
+     "Michael Chaney"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "5B06",
+    "anc": "5B",
+    "candidates": [
+     "Maya Vizvary",
+     "Felicia Abney-Barber"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5B07",
+    "anc": "5B",
+    "candidates": [
+     "Zahid Rathore"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C01",
+    "anc": "5C",
+    "candidates": [
+     "Cierra Craig",
+     "Konyka Dunson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C02",
+    "anc": "5C",
+    "candidates": [
+     "Danielle M. Henry",
+     "Shawn Taylor"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C03",
+    "anc": "5C",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "5C04",
+    "anc": "5C",
+    "candidates": [
+     "Shawn Nelson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C05",
+    "anc": "5C",
+    "candidates": [
+     "Kris Pritchard"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C06",
+    "anc": "5C",
+    "candidates": [
+     "Harry (Tommy) Thomas Jr."
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5C07",
+    "anc": "5C",
+    "candidates": [
+     "Latoyia Allen"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D01",
+    "anc": "5D",
+    "candidates": [
+     "Austin Bowen"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D02",
+    "anc": "5D",
+    "candidates": [
+     "Pete Loftus",
+     "Sebrena L. Rhodes"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D03",
+    "anc": "5D",
+    "candidates": [
+     "Marcus C Thaw"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D04",
+    "anc": "5D",
+    "candidates": [
+     "Melba Davis"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D05",
+    "anc": "5D",
+    "candidates": [
+     "Rashema Collins",
+     "Justin McCarthy"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D06",
+    "anc": "5D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "5D07",
+    "anc": "5D",
+    "candidates": [
+     "Juan McCullum"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5D08",
+    "anc": "5D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "5D09",
+    "anc": "5D",
+    "candidates": [
+     "Crystal Green-Campbell"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5E01",
+    "anc": "5E",
+    "candidates": [
+     "Ana Rodriguez",
+     "Kyle Gardner"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5E02",
+    "anc": "5E",
+    "candidates": [
+     "Matt Malinowski",
+     "Karla M. Lewis",
+     "Ada Avitable"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "5E03",
+    "anc": "5E",
+    "candidates": [
+     "Andrew Waks",
+     "Patrick J King"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5E04",
+    "anc": "5E",
+    "candidates": [
+     "Huma Imtiaz"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5E05",
+    "anc": "5E",
+    "candidates": [
+     "Ashton DeLano"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5E06",
+    "anc": "5E",
+    "candidates": [
+     "Tristan Zoerb",
+     "Kirby Vining"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F01",
+    "anc": "5F",
+    "candidates": [
+     "Nicole Jones"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F02",
+    "anc": "5F",
+    "candidates": [
+     "Matthew Frichtl"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F03",
+    "anc": "5F",
+    "candidates": [
+     "Patricia L. Williams",
+     "Shealia Tyson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F04",
+    "anc": "5F",
+    "candidates": [
+     "Melissa Coughlin"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F05",
+    "anc": "5F",
+    "candidates": [
+     "Andrew Pendleton"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F06",
+    "anc": "5F",
+    "candidates": [
+     "Joe Bishop-Henchman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "5F07",
+    "anc": "5F",
+    "candidates": [
+     "Julia Hedlund"
+    ],
+    "ranked_choice": false,
+    "note": null
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Ward 5 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/4b5fd0b9-cc8a-4ff8-9c30-6ec5096f63c8/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward5C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-6-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 6: ANCs 6A, 6B, 6C, 6D, 6E, 6/8F)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 6 has 40 SMDs in ANCs 6A to 6E, plus ANC 6/8F (5 SMDs), which it shares with Ward 8. Counting all 45, 32 have one candidate, 2 have two, 2 have three or more and use ranked choice (6A02, 6A06), and 9 have no one on the ballot, only a write-in line (6D01, 6D02, 6E01, 6E02, 6E05, 6E07, 6E08, 6/8F01, 6/8F04). In 6D06, Julian Hunt withdrew on 10/13/26 but may still be printed on the ballot.",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 45,
+   "one_candidate": 32,
+   "two_candidates": 2,
+   "three_or_more": 2,
+   "no_candidate": 9
+  },
+  "smds": [
+   {
+    "smd": "6A01",
+    "anc": "6A",
+    "candidates": [
+     "Scott Burger"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6A02",
+    "anc": "6A",
+    "candidates": [
+     "Kimberly S. Butler",
+     "Kari Cooke",
+     "Cole Rinner"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "6A03",
+    "anc": "6A",
+    "candidates": [
+     "Roberta Shapiro"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6A04",
+    "anc": "6A",
+    "candidates": [
+     "Steve Geimann"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6A05",
+    "anc": "6A",
+    "candidates": [
+     "Morgan Conley"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6A06",
+    "anc": "6A",
+    "candidates": [
+     "Ben Hammer",
+     "Chris Kennedy",
+     "Daniel Aboagye",
+     "Ray Biggs, II"
+    ],
+    "ranked_choice": true,
+    "note": null
+   },
+   {
+    "smd": "6A07",
+    "anc": "6A",
+    "candidates": [
+     "Jeff Giertz"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B01",
+    "anc": "6B",
+    "candidates": [
+     "Jon Mandel"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B02",
+    "anc": "6B",
+    "candidates": [
+     "Gerald \"Jerry\" Sroufe"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B03",
+    "anc": "6B",
+    "candidates": [
+     "David Sobelsohn"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B04",
+    "anc": "6B",
+    "candidates": [
+     "Dana White"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B05",
+    "anc": "6B",
+    "candidates": [
+     "Samuel Pastore"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B06",
+    "anc": "6B",
+    "candidates": [
+     "Lisa Matsumoto"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B07",
+    "anc": "6B",
+    "candidates": [
+     "Rachel E Feinstein"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B08",
+    "anc": "6B",
+    "candidates": [
+     "Jeffrey Menzer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6B09",
+    "anc": "6B",
+    "candidates": [
+     "Karen Hughes"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C01",
+    "anc": "6C",
+    "candidates": [
+     "Jeremiah M Foxwell"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C02",
+    "anc": "6C",
+    "candidates": [
+     "Lea M. Crusey"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C03",
+    "anc": "6C",
+    "candidates": [
+     "Jay Adelstein"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C04",
+    "anc": "6C",
+    "candidates": [
+     "Mark Eckenwiler"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C05",
+    "anc": "6C",
+    "candidates": [
+     "Daniela Kelley McNerney"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C06",
+    "anc": "6C",
+    "candidates": [
+     "Lorenzo Cinalli"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6C07",
+    "anc": "6C",
+    "candidates": [
+     "Grayson Lewis"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6D01",
+    "anc": "6D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6D02",
+    "anc": "6D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6D03",
+    "anc": "6D",
+    "candidates": [
+     "Gail Fast",
+     "Katie L. Henke"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6D04",
+    "anc": "6D",
+    "candidates": [
+     "Manasi Raveendran"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6D05",
+    "anc": "6D",
+    "candidates": [
+     "Timothy M. Taylor"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6D06",
+    "anc": "6D",
+    "candidates": [
+     "Julian Hunt",
+     "Mitchell Calhoun"
+    ],
+    "ranked_choice": false,
+    "note": "Julian Hunt withdrew 10/13/26; the name may still appear on the ballot."
+   },
+   {
+    "smd": "6D07",
+    "anc": "6D",
+    "candidates": [
+     "Fredrica \"Rikki\" Kramer"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6D08",
+    "anc": "6D",
+    "candidates": [
+     "Rhonda Natalie Hamilton"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6E01",
+    "anc": "6E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6E02",
+    "anc": "6E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6E03",
+    "anc": "6E",
+    "candidates": [
+     "Kevin M. Rogers"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6E04",
+    "anc": "6E",
+    "candidates": [
+     "Julia Fiedler"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6E05",
+    "anc": "6E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6E06",
+    "anc": "6E",
+    "candidates": [
+     "Kevin Knight"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6E07",
+    "anc": "6E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6E08",
+    "anc": "6E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "6E09",
+    "anc": "6E",
+    "candidates": [
+     "Ritanch T. Hans"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6/8F01",
+    "anc": "6/8F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only. This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F02",
+    "anc": "6/8F",
+    "candidates": [
+     "Antonio Rossi"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F03",
+    "anc": "6/8F",
+    "candidates": [
+     "Brian Strege"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F04",
+    "anc": "6/8F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only. This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F05",
+    "anc": "6/8F",
+    "candidates": [
+     "Dayan Reynolds"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Ward 6 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/99b1bd27-e974-42b5-b3e2-7c22517264d3/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward6C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-7-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 7: ANCs 7B, 7C, 7D, 7E, 7F)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 7 has 43 SMDs in ANCs 7B to 7F. Of those, 27 have one candidate, 5 have two, and 11 have no one on the ballot, only a write-in line (7B01, 7B05, 7C08, 7D03, 7E01, 7E03, 7E04, 7E05, 7E06, 7F01, 7F08).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 43,
+   "one_candidate": 27,
+   "two_candidates": 5,
+   "three_or_more": 0,
+   "no_candidate": 11
+  },
+  "smds": [
+   {
+    "smd": "7B01",
+    "anc": "7B",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7B02",
+    "anc": "7B",
+    "candidates": [
+     "Jamaal Maurice Pearsall"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B03",
+    "anc": "7B",
+    "candidates": [
+     "Travis R. Swanson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B04",
+    "anc": "7B",
+    "candidates": [
+     "Keith R. Hasan-Towery"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B05",
+    "anc": "7B",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7B06",
+    "anc": "7B",
+    "candidates": [
+     "Cortez Johnson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B07",
+    "anc": "7B",
+    "candidates": [
+     "Jimmie Williams",
+     "Rickey Titus"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B08",
+    "anc": "7B",
+    "candidates": [
+     "Angela M. Sydnor"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7B09",
+    "anc": "7B",
+    "candidates": [
+     "Kenyatta M. Smith"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C01",
+    "anc": "7C",
+    "candidates": [
+     "Brian A. Glover"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C02",
+    "anc": "7C",
+    "candidates": [
+     "Patricia N. Williams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C03",
+    "anc": "7C",
+    "candidates": [
+     "Carlos D. Richardson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C04",
+    "anc": "7C",
+    "candidates": [
+     "Anthony Lorenzo Green"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C05",
+    "anc": "7C",
+    "candidates": [
+     "Mary L. Gaffney"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C06",
+    "anc": "7C",
+    "candidates": [
+     "LaDan W. Johnson",
+     "Devin Turner"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C07",
+    "anc": "7C",
+    "candidates": [
+     "Antawan Holmes"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7C08",
+    "anc": "7C",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7C09",
+    "anc": "7C",
+    "candidates": [
+     "Carrie N. Brown"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D01",
+    "anc": "7D",
+    "candidates": [
+     "Josh Taborn"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D02",
+    "anc": "7D",
+    "candidates": [
+     "Toya Henderson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D03",
+    "anc": "7D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7D04",
+    "anc": "7D",
+    "candidates": [
+     "Katie Murphy",
+     "Charles Boston"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D05",
+    "anc": "7D",
+    "candidates": [
+     "Nisha Patruni"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D06",
+    "anc": "7D",
+    "candidates": [
+     "Donte Dominic Massey",
+     "Dominic A. Pacheco"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D07",
+    "anc": "7D",
+    "candidates": [
+     "Sarah C. Miller"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D08",
+    "anc": "7D",
+    "candidates": [
+     "Brian Alcorn"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D09",
+    "anc": "7D",
+    "candidates": [
+     "Ashley Schapitl"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7D10",
+    "anc": "7D",
+    "candidates": [
+     "Dev Myers"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7E01",
+    "anc": "7E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7E02",
+    "anc": "7E",
+    "candidates": [
+     "Aaron Harris",
+     "Sehree M. Mickel"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7E03",
+    "anc": "7E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7E04",
+    "anc": "7E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7E05",
+    "anc": "7E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7E06",
+    "anc": "7E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7E07",
+    "anc": "7E",
+    "candidates": [
+     "Jonathan Inman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F01",
+    "anc": "7F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "7F02",
+    "anc": "7F",
+    "candidates": [
+     "Zewdi Alem"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F03",
+    "anc": "7F",
+    "candidates": [
+     "Kimory KSO Orendoff"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F04",
+    "anc": "7F",
+    "candidates": [
+     "Chanettia Nelson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F05",
+    "anc": "7F",
+    "candidates": [
+     "Brittany N. Hughes"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F06",
+    "anc": "7F",
+    "candidates": [
+     "Frieda Edwards"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F07",
+    "anc": "7F",
+    "candidates": [
+     "Shirley Thompson-Wright"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "7F08",
+    "anc": "7F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Wards 2, 4, 7 and 8 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "dc-ward-8-anc",
+  "state": "DC",
+  "level": "city",
+  "office": "Advisory Neighborhood Commissioner (Ward 8: ANCs 8A, 8B, 8C, 8D, 8E, 6/8F)",
+  "district": "Your single-member district (SMD)",
+  "scope_plain": "You vote in one ANC race: the one for your own single-member district (SMD), about 2,000 neighbors. Ward 8 has 39 SMDs in ANCs 8A to 8E, plus ANC 6/8F (5 SMDs), which it shares with Ward 6. Counting all 44, 28 have one candidate, 5 have two, and 11 have no one on the ballot, only a write-in line (8D02, 8D03, 8D05, 8D07, 8D08, 8E02, 8E05, 8E06, 8E07, 6/8F01, 6/8F04).",
+  "office_explainer": "Your unpaid neighborhood rep for about 2,000 residents. Advises the city on liquor licenses, zoning, traffic and parking.",
+  "why_it_matters": "ANCs are the closest government gets to your front door: the first stop for a new bar's liquor license, a zoning request or a traffic-safety fix. City agencies are required to give their recommendations special consideration.",
+  "vote_for": 1,
+  "ranked_choice": null,
+  "rank_up_to": null,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [],
+  "anc_explainer": [
+   "What it is: DC is cut into 345 single-member districts (SMDs) of about 2,000 people each. Each SMD elects one Advisory Neighborhood Commissioner. The SMDs are grouped into 46 commissions.",
+   "What they do: weigh in on liquor licenses, zoning and building plans, traffic, parking, trash, policing and the city budget. They advise; they cannot pass laws.",
+   "Why it matters: city agencies are required to give their recommendations special consideration, so your commissioner's vote can shape a new bar, building or bike lane on your block.",
+   "The job: a two-year term with no salary.",
+   "On your ballot: exactly one ANC race, for your own SMD, near the end, just before Initiative 86. Many have one candidate, some have none (only a write-in line), and races with three or more candidates use ranked choice.",
+   "Find yours: look up your address in the city's ANC locator. Your SMD code (like 1B05) starts with your ward number. Two commissions cross ward lines: 3/4G (Wards 3 and 4) and 6/8F (Wards 6 and 8)."
+  ],
+  "how_to_find_yours": {
+   "text": "Enter your address in the city's ANC locator to get your SMD code, then find that code below. Your mailed ballot also prints your ANC race.",
+   "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+  },
+  "smd_counts": {
+   "smds": 44,
+   "one_candidate": 28,
+   "two_candidates": 5,
+   "three_or_more": 0,
+   "no_candidate": 11
+  },
+  "smds": [
+   {
+    "smd": "8A01",
+    "anc": "8A",
+    "candidates": [
+     "Tom Donohue",
+     "Kwame T. Perry"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A02",
+    "anc": "8A",
+    "candidates": [
+     "Anthony Paul Foreman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A03",
+    "anc": "8A",
+    "candidates": [
+     "Andrea L. Davis"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A04",
+    "anc": "8A",
+    "candidates": [
+     "Fria Moore"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A05",
+    "anc": "8A",
+    "candidates": [
+     "Jason Anderson",
+     "Jared Powell"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A06",
+    "anc": "8A",
+    "candidates": [
+     "Ty'on L. Jones"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8A07",
+    "anc": "8A",
+    "candidates": [
+     "Tomora D. Redman"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B01",
+    "anc": "8B",
+    "candidates": [
+     "Malcolm Williams",
+     "Margaret Thomas"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B02",
+    "anc": "8B",
+    "candidates": [
+     "Betty Scippio"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B03",
+    "anc": "8B",
+    "candidates": [
+     "Kellie C Jackson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B04",
+    "anc": "8B",
+    "candidates": [
+     "Benita V Fundersburg"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B05",
+    "anc": "8B",
+    "candidates": [
+     "Joseph Johnson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B06",
+    "anc": "8B",
+    "candidates": [
+     "Hanna Baker"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8B07",
+    "anc": "8B",
+    "candidates": [
+     "Juanita Beltran"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C01",
+    "anc": "8C",
+    "candidates": [
+     "Sherrae Gravely"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C02",
+    "anc": "8C",
+    "candidates": [
+     "Gregory J. White"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C03",
+    "anc": "8C",
+    "candidates": [
+     "Darrell Chase"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C04",
+    "anc": "8C",
+    "candidates": [
+     "Kendall Ridley"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C05",
+    "anc": "8C",
+    "candidates": [
+     "Cheryl Moore"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C06",
+    "anc": "8C",
+    "candidates": [
+     "Collette Newby"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C07",
+    "anc": "8C",
+    "candidates": [
+     "Salim Adofo"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8C08",
+    "anc": "8C",
+    "candidates": [
+     "Rene Neal",
+     "Joy Page"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8D01",
+    "anc": "8D",
+    "candidates": [
+     "Dionne Yvette Brown"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8D02",
+    "anc": "8D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8D03",
+    "anc": "8D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8D04",
+    "anc": "8D",
+    "candidates": [
+     "Daquan Johnson"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8D05",
+    "anc": "8D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8D06",
+    "anc": "8D",
+    "candidates": [
+     "Devon Lesesne"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8D07",
+    "anc": "8D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8D08",
+    "anc": "8D",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8E01",
+    "anc": "8E",
+    "candidates": [
+     "Vickie R. Lipscomb",
+     "Deborah J. Wells"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8E02",
+    "anc": "8E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8E03",
+    "anc": "8E",
+    "candidates": [
+     "Kelly Mikel Williams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8E04",
+    "anc": "8E",
+    "candidates": [
+     "Veronica Adams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8E05",
+    "anc": "8E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8E06",
+    "anc": "8E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8E07",
+    "anc": "8E",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only."
+   },
+   {
+    "smd": "8E08",
+    "anc": "8E",
+    "candidates": [
+     "Saudia Jenkins"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "8E09",
+    "anc": "8E",
+    "candidates": [
+     "Lacy Martae Williams"
+    ],
+    "ranked_choice": false,
+    "note": null
+   },
+   {
+    "smd": "6/8F01",
+    "anc": "6/8F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only. This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F02",
+    "anc": "6/8F",
+    "candidates": [
+     "Antonio Rossi"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F03",
+    "anc": "6/8F",
+    "candidates": [
+     "Brian Strege"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F04",
+    "anc": "6/8F",
+    "candidates": [],
+    "ranked_choice": false,
+    "note": "No candidate filed; write-in line only. This commission crosses ward lines."
+   },
+   {
+    "smd": "6/8F05",
+    "anc": "6/8F",
+    "candidates": [
+     "Dayan Reynolds"
+    ],
+    "ranked_choice": false,
+    "note": "This commission crosses ward lines."
+   }
+  ],
+  "smd_names_note": "Candidate names are copied from the DCBOE list (filed as of Oct 14, 2026). The PDF text extraction can garble a letter here and there; your ballot is the final word.",
+  "sources": [
+   {
+    "name": "DCBOE: ANC Candidates in Ballot Order (PDF, as of Oct 14, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/5532a17e-37dc-4d52-a54b-a6ce21fdbe4b/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07162026.pdf?language=en"
+   },
+   {
+    "name": "DCBOE: Sample ballot, Wards 2, 4, 7 and 8 (Nov 3, 2026)",
+    "url": "https://www.dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+   },
+   {
+    "name": "City Cast DC: Your D.C. Voter Guide (Oct 16, 2026)",
+    "url": "https://dc.citycast.fm/dc-politics/dc-2026-general-election-voter-guide"
+   },
+   {
+    "name": "DC Council: Learn about Wards and ANCs",
+    "url": "https://dccouncil.gov/learn-about-wards-and-ancs/"
+   },
+   {
+    "name": "DC Office of Advisory Neighborhood Commissions (OANC) homepage",
+    "url": "https://oanc.dc.gov/"
+   },
+   {
+    "name": "GGWash: 2026 ANC voter guide (questionnaire answers and endorsements)",
+    "url": "https://ggwash.org/elections/2026/ancguide"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

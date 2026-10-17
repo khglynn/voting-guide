@@ -1,0 +1,1225 @@
+[
+  {
+    "id": "co-us-senate",
+    "state": "CO",
+    "level": "federal",
+    "office": "U.S. Senate",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "One of Colorado's two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Six-year term. Senators confirm federal judges and cabinet members and decide national spending, taxes, health care and immigration law. The winner will serve under at least two presidents.",
+    "vote_for": 1,
+    "incumbent": "John Hickenlooper",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Baisley",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://baisleyforsenate.com/",
+        "website_confidence": "verified",
+        "background": "State senator from Woodland Park since 2023; served in the state House 2019 to 2023. Worked about 30 years as an aerospace engineer, including at Raytheon and Martin Marietta.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"Reducing the cost of living (affordability) through smart, lean government,\" relief for agriculture, and health care reform.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "\"I would like to see tariffs replace income tax.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/"
+          },
+          {
+            "text": "\"Let's get back on the nuclear track and just do that very safely.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "John Hickenlooper",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://hickenlooper.com/",
+        "website_confidence": "verified",
+        "background": "U.S. senator since 2021. Denver mayor 2003 to 2011 and Colorado governor 2011 to 2019. Former geologist and brewpub owner. Says this will be his last term.",
+        "own_words": [
+          {
+            "text": "\"We need to un-rig the system and actually lower prices,\" starting with health care, housing and ending tariffs.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "\"I think the only way to battle climate change long term is to transition to clean energy.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/"
+          },
+          {
+            "text": "Supports a public health insurance option and \"total transparency\" in health care pricing.",
+            "is_quote": false,
+            "source": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Bob Chew",
+        "party": "Forward",
+        "incumbent": false,
+        "website": "https://bobchew2026.com/",
+        "website_confidence": "verified",
+        "background": "Boulder engineer and former Navy submarine officer. Co-founded and ran an engineering consulting firm from 1996 to 2021.",
+        "own_words": [
+          {
+            "text": "First priority: \"Address the national debt and deficit: We cannot keep passing the cost of today's spending to future generations.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "Wants to \"end the two-party dysfunction: put people ahead of party loyalty.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "Opposes opening more Colorado federal land to drilling without protections for water, air and wildlife.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Christopher Baum",
+        "party": "Approval Voting",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired Navy commander, former small-business owner and computer network administrator based in Denver. CPR found no campaign website or materials.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "No campaign resources found by CPR.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-us-senate-third-party-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Blake Huber",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://lpcolorado.org/wp-content/uploads/sites/26/2026/03/Huber-US-Senate.pdf",
+        "website_confidence": "sourced",
+        "background": "Denver. Former state chair of the Libertarian Party. Has run for vice president, Colorado secretary of state and president on the Approval Voting Party ticket. More than 30 years in management.",
+        "own_words": [
+          {
+            "text": "Top priority: \"improving our elections by expanding voter choice and adopting better voting methods such as Approval Voting.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "Wants \"rational immigration reform that secures our borders while providing realistic legal pathways.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          },
+          {
+            "text": "Would cut federal spending, including \"bringing American troops home and reducing unnecessary military spending.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Adam Withrow",
+        "party": "Unity",
+        "incumbent": false,
+        "website": "https://www.senatorwithrow.com/",
+        "website_confidence": "sourced",
+        "background": "Describes himself as working class, not a politician. Has worked as a ranch hand, nursing assistant, cook, contractor and detention officer.",
+        "own_words": [
+          {
+            "text": "First priority would be to raise wages and tie them to the Consumer Price Index.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-us-senate-third-party-voter-guide/"
+          },
+          {
+            "text": "Says the two-party system is \"the laughing stock of the world.\"",
+            "is_quote": true,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-us-senate-third-party-voter-guide/"
+          },
+          {
+            "text": "Lists energy, water, AI and reducing U.S. military involvement overseas as top concerns.",
+            "is_quote": false,
+            "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Colorado Sun issue guide",
+        "url": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/"
+      },
+      {
+        "name": "Denver Post candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+      },
+      {
+        "name": "CPR debate coverage",
+        "url": "https://www.cpr.org/2026/10/12/colorado-candidates-for-us-senate-face-off-in-first-debate/"
+      },
+      {
+        "name": "CPR third-party candidate guide",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-us-senate-third-party-voter-guide/"
+      },
+      {
+        "name": "KSJD statewide candidates guide",
+        "url": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-governor",
+    "state": "CO",
+    "level": "state",
+    "office": "Governor and Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Runs the state government, signs or vetoes laws, writes the budget proposal and appoints judges and agency heads.",
+    "why_it_matters": "Open seat; Gov. Jared Polis is term-limited. The next governor inherits a budget shortfall, Medicaid funding pressure, Colorado River negotiations and a legislature controlled by Democrats. You vote for the governor and lieutenant governor as one ticket.",
+    "vote_for": 1,
+    "incumbent": "Jared Polis (term-limited, not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Victor Marx / George Washington Markert",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.victor2026.com/",
+        "website_confidence": "verified",
+        "background": "Marx is a Marine veteran and founder of All Things Possible Ministries in Colorado Springs; this is his first run for office. Markert is a retired Marine colonel who moved to Broomfield about three years ago.",
+        "own_words": [
+          {
+            "text": "\"My priorities are affordability, safety and accountability.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "\"We will accelerate housing approvals and review regulations and fees that increase household costs.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+          },
+          {
+            "text": "\"I will not balance the budget through new taxes or backdoor fees.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Phil Weiser / Lesley Dahlkemper",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://philforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Weiser has been Colorado attorney general since 2019 and is term-limited; he was dean of CU Law School before that. Dahlkemper is a Jefferson County commissioner.",
+        "own_words": [
+          {
+            "text": "\"I'll lower housing costs by working to build 40,000 affordable starter homes for first-time buyers.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+          },
+          {
+            "text": "\"I'll work hard to support and strengthen Colorado's K-12 public education system.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+          },
+          {
+            "text": "\"As Governor, I'll prioritize changing TABOR so that we can protect the critical services and programs Coloradans rely on.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Stephen T. Hamilton / James K Treibert",
+        "party": "American Constitution",
+        "incumbent": false,
+        "website": "https://dot.cards/stephentay79",
+        "website_confidence": "unverified",
+        "background": "Hamilton is a truck driver and business owner from Cañon City. Treibert is his running mate; no public background found.",
+        "own_words": [
+          {
+            "text": "First priority: \"CUT THE TOP. LEAD BY EXAMPLE. First cut is my own seat.\" Would cut the governor's salary.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Wants to \"Move 90% of heavy freight back to rail\" to relieve I-25 and I-70.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Would \"ENCOURAGE federal enforcement\" of immigration law and push to repeal Colorado's limits on local cooperation.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Eric Mulder / Wayne Harlos",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://www.mulderforgovernor.org/",
+        "website_confidence": "verified",
+        "background": "Mulder is an Army veteran who served in Afghanistan, a small-business owner and security guard in Aurora, and a former Aurora Veterans Affairs commissioner.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Protecting our privacy from encroachment via the private surveillance to government agency pipeline.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Wants \"introduction of small modular reactors before 2033\" to expand nuclear power.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Would let struggling counties vote on a state sales tax holiday for infrastructure.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jeff Peckman / T.J. Cole",
+        "party": "Unity",
+        "incumbent": false,
+        "website": "https://jeffpeckman.com/",
+        "website_confidence": "sourced",
+        "background": "Peckman is an Englewood entrepreneur, author and consultant who calls himself a \"solutionist\" and has long pushed for government disclosure of UFO evidence.",
+        "own_words": [
+          {
+            "text": "Would create a \"Chief Coherence Officer\" to launch new technology industries like graphene and hydrogen.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Wants to \"Mandate results-based state budgeting that prioritizes the most affordable and effective solutions.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Supports a moratorium on new AI data center construction.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-governor-third-party-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Erik Underwood / Frank Atwood",
+        "party": "Approval Voting",
+        "incumbent": false,
+        "website": "https://www.erikunderwood.com/",
+        "website_confidence": "verified",
+        "background": "Underwood is a Denver technology CEO and patent holder, founder of the AI moderation platform Vurbil, and a former U.S. Senate staffer and junior prosecutor in Atlanta.",
+        "own_words": [
+          {
+            "text": "\"Housing first. On day one I will declare a housing emergency\" and push a statewide rent freeze.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Wants universal child care, free college and trade school, and a path to universal health care, paid for by a surcharge on the highest earners.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Would order \"an executive moratorium on new AI data centers.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Greg Lopez / Taralyn Romero",
+        "party": "Unaffiliated",
+        "incumbent": false,
+        "website": "https://greglopez.co/",
+        "website_confidence": "verified",
+        "background": "Lopez is a former Parker mayor, former Colorado SBA director and Air Force veteran who briefly served in Congress in 2024. He left the Republican Party in January 2026 and petitioned onto the ballot. Romero spent 25 years in health care.",
+        "own_words": [
+          {
+            "text": "\"My top three priorities are affordability, public safety and government accountability.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "Would let renters \"deduct their annual rent from their state income tax.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          },
+          {
+            "text": "\"People Over Politics, Do No Harm, Do What Works.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Denver Gazette candidate Q&A",
+        "url": "https://www.denvergazette.com/2026/10/02/colorado-governor-weiser-marx-and-lopez-vie-for-top-state-seat-4/"
+      },
+      {
+        "name": "Denver Post candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
+      },
+      {
+        "name": "CPR third-party candidate guide",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-governor-third-party-voter-guide/"
+      },
+      {
+        "name": "CPR governor guide",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-colorado-governor-voter-guide/"
+      },
+      {
+        "name": "9News: who is running for governor",
+        "url": "https://www.9news.com/article/news/politics/elections/candidates-colorado-governor/73-bd3e2bea-fe39-4518-bfa2-8cf23b828f21"
+      },
+      {
+        "name": "Colorado Sun on George Markert",
+        "url": "https://coloradosun.com/2026/08/11/george-markert-victor-marx-about/"
+      },
+      {
+        "name": "Colorado Politics on Taralyn Romero",
+        "url": "https://www.coloradopolitics.com/2026/10/09/property-rights-fighter-taralyn-romero-eyes-lieutenant-governor/"
+      },
+      {
+        "name": "Colorado Politics on Lesley Dahlkemper",
+        "url": "https://www.coloradopolitics.com/2026/07/22/democrat-phil-weiser-names-jeffco-commissioner-lesley-dahlkemper-as-his-gubernatorial-running-mate/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-attorney-general",
+    "state": "CO",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "The state's top lawyer. Defends state laws in court and enforces consumer protection and antitrust law.",
+    "why_it_matters": "Open seat; Phil Weiser is term-limited. The attorney general decides when Colorado sues or joins lawsuits against the federal government, handles water litigation, and oversees police certification. Weiser has sued the Trump administration more than 80 times; both candidates say they would review that approach differently.",
+    "vote_for": 1,
+    "incumbent": "Phil Weiser (term-limited, running for governor)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael J. Allen",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://michaelallenforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "District attorney for El Paso and Teller counties (4th Judicial District) since 2021, in his second term. More than 20 years as a prosecutor, including in the Kansas attorney general's consumer protection division. Navy veteran. Lives in Monument.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"protecting public safety, building an economically stronger Colorado, and defending the rule of law.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-attorney-general-candidate-qa/"
+          },
+          {
+            "text": "On suing the federal government: \"it doesn't matter who the president is,\" but would drop cases where \"the law is not on our side\" or that appear politically motivated.",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/"
+          },
+          {
+            "text": "\"We're going to fight like heck to protect our water.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jena Griswold",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.jenaforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Colorado secretary of state since 2019, term-limited. Earlier she was Gov. Hickenlooper's liaison to Washington and a voting rights attorney for the 2012 Obama campaign. Penn Law graduate. Lives in Louisville.",
+        "own_words": [
+          {
+            "text": "\"I am running for Attorney General to stand up to Trump and MAGA extremists to protect our democracy and fundamental rights.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-attorney-general-candidate-qa/"
+          },
+          {
+            "text": "\"I am going to stand with Coloradans in cracking down on the affordability crisis we're seeing,\" including price gouging and junk fees.",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/"
+          },
+          {
+            "text": "\"Addressing corporate polluters and protecting our climate has to be the top priority of the next AG.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Colorado Sun issue guide",
+        "url": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/"
+      },
+      {
+        "name": "Denver Post candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-attorney-general-candidate-qa/"
+      },
+      {
+        "name": "Denver Post debate coverage (Oct 14)",
+        "url": "https://www.denverpost.com/2026/10/14/attorney-general-debate-jena-griswold-michael-allen/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-secretary-of-state",
+    "state": "CO",
+    "level": "state",
+    "office": "Secretary of State",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Runs Colorado's elections. Also handles business filings, campaign finance reports and lobbyist registration.",
+    "why_it_matters": "Open seat; Jena Griswold is term-limited. The winner will oversee the 2028 presidential election in Colorado. The two major-party candidates disagree sharply on whether to keep the state's all-mail ballot system and machine counting.",
+    "vote_for": 1,
+    "incumbent": "Jena Griswold (term-limited, running for attorney general)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Amanda Gonzalez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.amandaforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Jefferson County clerk and recorder since 2023, running elections for nearly half a million voters. Election attorney; executive director of Colorado Common Cause from 2018 to 2021. Lives in Arvada.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"protecting Colorado's elections from federal overreach and political interference; expanding access to the ballot\" and modernizing the office.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          },
+          {
+            "text": "Wants to keep all current voting options, including mail and in-person voting.",
+            "is_quote": false,
+            "source": "https://coloradosun.com/2026/10/07/james-wiley-amanda-gonzalez-secretary-of-state-voter-guide/"
+          },
+          {
+            "text": "\"Public confidence is earned through transparency, not slogans.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "James Wiley",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.wileyforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "Former executive director of the Libertarian Party of Colorado who joined the Republican Party before this race. Lives in Holyoke. Ran unopposed in the GOP primary. Previously ran for Congress in the 3rd District.",
+        "own_words": [
+          {
+            "text": "\"I'm not here to reform. I'm here to restore.\"",
+            "is_quote": true,
+            "source": "https://www.denvergazette.com/2026/10/10/candidates-for-top-election-post-split-on-mail-voting-election-trust/"
+          },
+          {
+            "text": "Proposes moving from statewide mail ballots toward in-person precinct voting with limited absentee voting, and counting ballots by hand.",
+            "is_quote": false,
+            "source": "https://www.denvergazette.com/2026/10/10/candidates-for-top-election-post-split-on-mail-voting-election-trust/"
+          },
+          {
+            "text": "Wants to update the state's campaign finance system, TRACER, to make it more user friendly.",
+            "is_quote": false,
+            "source": "https://coloradosun.com/2026/10/07/james-wiley-amanda-gonzalez-secretary-of-state-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Sean Vadney",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://seanvadneyforsos.org/",
+        "website_confidence": "sourced",
+        "background": "Highlands Ranch; works in entertainment and hospitality. Placed on the ballot after the Libertarian primary winner withdrew; the state party won a legal challenge to get him listed.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Securing our elections, making business registration cheaper and more straightforward, and ensuring polling accessibility for voters with disabilities.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          },
+          {
+            "text": "\"I would roll back the mail-in voting system, with exceptions for those with disabilities.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          },
+          {
+            "text": "Supports alternative voting methods such as ranked-choice voting.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Amanda Campbell",
+        "party": "American Constitution",
+        "incumbent": false,
+        "website": "http://www.campbellgoodforcolorado.com/",
+        "website_confidence": "sourced",
+        "background": "Arvada. This is her sixth run for secretary of state; she has filed every cycle since 2010.",
+        "own_words": [
+          {
+            "text": "Says the secretary of state should be more than \"a glorified, overpaid file clerk\" and should actively uphold the constitution.",
+            "is_quote": true,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
+          },
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Celeste Landry",
+        "party": "Forward",
+        "incumbent": false,
+        "website": "https://www.celeste4sos.com/",
+        "website_confidence": "verified",
+        "background": "Boulder. Longtime nonpartisan volunteer lobbyist on election bills and a League of Women Voters member; an expert on voting methods and election audits.",
+        "own_words": [
+          {
+            "text": "First priority: \"Protect your right to vote in ALL elections in the face of national threats.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          },
+          {
+            "text": "Would \"Write rules for proportional ranked voting (as a 2008 statute requires) and for simple-to-implement approval voting.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+          },
+          {
+            "text": "Wants 17-year-olds who will be 18 by the general election to vote in primaries.",
+            "is_quote": false,
+            "source": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Colorado Sun issue guide",
+        "url": "https://coloradosun.com/2026/10/07/james-wiley-amanda-gonzalez-secretary-of-state-voter-guide/"
+      },
+      {
+        "name": "Denver Post candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
+      },
+      {
+        "name": "Denver Gazette debate coverage (Oct 10)",
+        "url": "https://www.denvergazette.com/2026/10/10/candidates-for-top-election-post-split-on-mail-voting-election-trust/"
+      },
+      {
+        "name": "CPR SOS guide",
+        "url": "https://www.cpr.org/2026/09/24/vg-2026-colorado-secretary-of-state-voter-guide/"
+      },
+      {
+        "name": "CPR third-party candidate guide",
+        "url": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
+      },
+      {
+        "name": "CPR interview with James Wiley",
+        "url": "https://www.cpr.org/2026/09/16/republican-secretary-of-state-candidate-james-wiley/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-treasurer",
+    "state": "CO",
+    "level": "state",
+    "office": "State Treasurer",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Manages the state's cash and $15 to $20 billion in investments, and returns unclaimed property.",
+    "why_it_matters": "Open seat; Dave Young is term-limited. The candidates differ on whether state money should be invested in Colorado housing and infrastructure or kept in a traditional conservative portfolio. The treasurer also helps oversee the pension for teachers and state workers.",
+    "vote_for": 1,
+    "incumbent": "Dave Young (term-limited, not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jeff Bridges",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://bridgesforcolorado.com/",
+        "website_confidence": "verified",
+        "background": "State senator from Greenwood Village in his second term; served two years in the state House. Member of the Joint Budget Committee since 2022 and its chair in 2024 and 2025. Holds a master of divinity from Harvard.",
+        "own_words": [
+          {
+            "text": "\"First, invest Colorado dollars in Colorado.\" Wants state investments in housing, clean energy and infrastructure.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          },
+          {
+            "text": "\"Second, protect PERA and keep our sacred promise to retired teachers and public employees.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          },
+          {
+            "text": "\"The treasurer should prioritize proactively sending out checks for the people the money belongs to.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/05/jeff-bridges-kevin-grantham-colorado-treasurer-issue-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Kevin Grantham",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://kevingrantham.com/",
+        "website_confidence": "verified",
+        "background": "Fremont County commissioner in his second term. Served two terms in the state Senate and was Senate president in 2017 and 2018. Real estate appraiser for 28 years. Lives in Cañon City.",
+        "own_words": [
+          {
+            "text": "\"Maximize taxpayer dollars and be a vocal advocate for Colorado families struggling through the affordability crisis.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          },
+          {
+            "text": "On TABOR: \"I view it entirely positively.\"",
+            "is_quote": true,
+            "source": "https://coloradosun.com/2026/10/05/jeff-bridges-kevin-grantham-colorado-treasurer-issue-guide/"
+          },
+          {
+            "text": "\"Our Unclaimed Property Trust Fund must be protected from the Legislative budget balancing process.\"",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Jodie Barr",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Lives in Littleton. No campaign website found.",
+        "own_words": [
+          {
+            "text": "Priorities, per KSJD: protecting taxpayer funds, more transparency in state investments, reforming PERA and returning unclaimed property.",
+            "is_quote": false,
+            "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
+          },
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      },
+      {
+        "name": "Marilee Langner Sturgis",
+        "party": "Approval Voting",
+        "incumbent": false,
+        "website": "https://www.facebook.com/marilee.sturgis/",
+        "website_confidence": "unverified",
+        "background": "Boulder photographer and owner of Marilee Photography. Only a Facebook page was found.",
+        "own_words": [
+          {
+            "text": "Did not return the Denver Post questionnaire.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+          },
+          {
+            "text": "No stated platform found.",
+            "is_quote": false,
+            "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/colorado"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Colorado Sun issue guide",
+        "url": "https://coloradosun.com/2026/10/05/jeff-bridges-kevin-grantham-colorado-treasurer-issue-guide/"
+      },
+      {
+        "name": "Denver Post candidate Q&A",
+        "url": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
+      },
+      {
+        "name": "Colorado Newsline voter guide",
+        "url": "https://coloradonewsline.com/voter-guides/contests/2026-general-colorado-treasurer/"
+      },
+      {
+        "name": "KSJD statewide candidates guide",
+        "url": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-hood",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Supreme Court: retain Justice William W. Hood, III?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Highest state court. Final say on Colorado law. Vote yes to keep the justice, no to remove.",
+    "why_it_matters": "The Colorado Supreme Court is the state's highest court. It has the final word on state law and the state constitution. Justices face a yes/no retention vote every 10 years.",
+    "vote_for": 1,
+    "incumbent": "William W. Hood, III",
+    "open_seat": false,
+    "term_years": 10,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "William W. Hood, III",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Justice since January 2014. Before that, seven years as a Denver District Court judge, a litigation partner at a Denver firm, and ten years as a prosecutor in the 18th Judicial District. UVA Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It said he \"demonstrates an admirable work ethic and issues decisions in a timely manner\" and his opinions have \"a clear writing style.\" Survey: 7 attorneys and 24 judges responded.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: William W. Hood, III",
+        "url": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-freyre",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Rebecca Rankin Freyre?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Rebecca Rankin Freyre",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Rebecca Rankin Freyre",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed 2015; retained by voters in 2018. Deputy Chief Judge from January 2022 to January 2026. Spent 25 years as a Deputy State Public Defender before the bench. Smith College, DU Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It called her \"an exemplary jurist\" with \"thoughtful, well-reasoned\" opinions. Every survey respondent agreed she meets standards.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Rebecca Rankin Freyre",
+        "url": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-harris",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Elizabeth L. Harris?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth L. Harris",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Elizabeth L. Harris",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed 2015. Clerked on the 10th Circuit, spent five years at the Federal Public Defender's Office, then ran her own appellate law firm. Georgetown, NYU Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It praised her preparation and writing but noted \"the length of time required for Judge Harris to issue an opinion as a weakness.\" 93% of survey respondents agreed she meets standards; only 5 attorneys and 22 judges responded.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Elizabeth L. Harris",
+        "url": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-lum",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Katharine E. Lum?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Katharine E. Lum",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Katharine E. Lum",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed 2022; first time on the ballot. Practiced family law at the trial and appellate level and clerked for Justice Gregory Hobbs Jr. Berkeley Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It called her \"an exceptional judicial writer\" with \"a clear and accessible style.\" Every survey respondent agreed she meets standards.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Katharine E. Lum",
+        "url": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-moultrie",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Pax Moultrie?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Pax Moultrie",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Pax Moultrie",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed January 2024; first time on the ballot. Former Denver Juvenile Court judge and 1st Judicial District magistrate. Washington University, DU Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It said her opinions are \"thoughtful, accessible, and well written\" and praised her plain-language writing. Every survey respondent agreed she meets standards.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Pax Moultrie",
+        "url": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-schock",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Karl L. Schock?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Karl L. Schock",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Karl L. Schock",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed 2022; first time on the ballot. Clerked on the 10th Circuit, practiced at Brownstein Hyatt, then served as an Assistant U.S. Attorney in the appellate division from 2015 to 2022. CU Law.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It said his opinions are \"clear and easy to understand\" and he is \"respectful, curious, and well-prepared\" at argument. Every survey respondent agreed he meets standards.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Karl L. Schock",
+        "url": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "co-retention-sullivan",
+    "state": "CO",
+    "level": "judicial",
+    "office": "Colorado Court of Appeals: retain Judge Grant Sullivan?",
+    "district": null,
+    "scope_plain": "Every Colorado voter",
+    "office_explainer": "Hears appeals from trial courts statewide. Vote yes to keep the judge, no to remove.",
+    "why_it_matters": "Court of Appeals judges are appointed by the governor, then face a yes/no retention vote two years in, and every eight years after. A judge who gets more no than yes votes leaves the bench. Nearly all Colorado judges are retained.",
+    "vote_for": 1,
+    "incumbent": "Grant Sullivan",
+    "open_seat": false,
+    "term_years": 8,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Grant Sullivan",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Appointed January 2024; first time on the ballot. Was a trial and appellate litigator in the Colorado Attorney General's Office handling constitutional, voting rights, election and tax cases. CU Law, UT Austin.",
+        "own_words": [
+          {
+            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It found his opinions \"consistently well-reasoned, fair, and thoughtfully articulated\" and noted \"a strong and confident transition\" to the appellate bench.",
+            "is_quote": false,
+            "source": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Colorado SOS certified candidate list",
+        "url": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
+      },
+      {
+        "name": "Office of Judicial Performance Evaluation: 2026 full list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      },
+      {
+        "name": "OJPE 2026 evaluation: Grant Sullivan",
+        "url": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation"
+      },
+      {
+        "name": "Denver Post: how to vote on judges in 2026",
+        "url": "https://www.denverpost.com/2026/10/07/colorado-judges-ballot-retention-questions-election/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

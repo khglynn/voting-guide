@@ -1,0 +1,912 @@
+[
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-mayor",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-9th-circuit-group-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-us-house-8",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-us-house-9",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-us-house-11",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-senate-10",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-35",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-37",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-39",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-40",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-42",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-house-45",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-commission-2",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-commission-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-commission-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-commission-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-commission-8",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-school-board-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "not_found",
+  "choice": null,
+  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
+  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "lwv-florida",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "not_found",
+  "choice": null,
+  "why": "No League of Women Voters of Orange County position or voter guide was found in this run. The League does take positions on some ballot measures.",
+  "url": "https://www.vote411.org/florida",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Mike Haridopolos",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Jennifer Jenkins",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Dan Green",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-us-house-11",
+  "status": "endorsed",
+  "choice": "Joe Strada",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-us-house-11",
+  "status": "endorsed",
+  "choice": "James Pericola",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "Jason Brodeur",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Erika Booth",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Robert Prater",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Doug Bankson",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Tuan Le",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Bonnie Jackson",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Jorge Malavet",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Erin Huntley",
+  "why": "Party nominee (listed as REP on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://florida.gop/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "Party nominee (listed as DEM on the official ballot). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-democratic-party",
+  "target_id": "fl-orange-clerk",
+  "status": "endorsed",
+  "choice": "Roberta Walton Johnson",
+  "why": "Party nominee (won the Aug 18 Democratic primary with 53.5%). Specific party endorsement page not opened this run.",
+  "url": "https://www.floridadems.org/",
+  "date": "2026-08-18",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "fl-republican-party",
+  "target_id": "fl-orange-clerk",
+  "status": "no_position",
+  "choice": null,
+  "why": "There is no Republican on the ballot for Clerk of Courts; the race is a Democrat vs. a no-party candidate.",
+  "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Jennifer Jenkins",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-us-house-10",
+  "status": "endorsed",
+  "choice": "Maxwell Frost",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education (the page spells it 'John Lowdnes').",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education (listed as 'Jarod Dwany Fox').",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education (listed as 'RaShon Young', marked as an early endorsement).",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education (listed as 'Felipe Sousa-Lazaballet').",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "On the Florida AFL-CIO's full 2026 endorsement list, voted by its Committee on Public Education (marked as an early endorsement).",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "fl-afl-cio",
+  "target_id": "fl-us-house-11",
+  "status": "not_found",
+  "choice": null,
+  "why": "The federation's full 2026 list names picks in Congressional Districts 8, 9 and 10 but none in District 11.",
+  "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). Listed as 'Jared Dwayne Fox.'",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). Listed as 'Felipe Sousa-Lazaballet.'",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-school-board-3",
+  "status": "endorsed",
+  "choice": "Susanne Peña",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-soil-water-1",
+  "status": "endorsed",
+  "choice": "Quinnie Perez",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-commission-2",
+  "status": "endorsed",
+  "choice": "Kamia Brown",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). The page also still lists Wes Hodge, who was eliminated Aug 18.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-commission-4",
+  "status": "endorsed",
+  "choice": "Johanna Lopez",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-commission-6",
+  "status": "endorsed",
+  "choice": "Michael \"Mike\" Scott",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). The page tags Scott 'Elected,' but he is in the Nov 3 runoff.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-commission-8",
+  "status": "endorsed",
+  "choice": "Victor M. Torres Jr.",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). Listed as 'Vic Torres.'",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-commission-7",
+  "status": "endorsed",
+  "choice": "Patricia Rumph",
+  "why": "On the PAC's endorsed-candidates list (last updated Oct 16, 2026). The page lists Rumph under District 8, but she is on the ballot in District 7 (vs. Vicki Vargo).",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-us-house-8",
+  "status": "no_position",
+  "choice": null,
+  "why": "The PAC says it does not endorse in federal races.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-us-house-9",
+  "status": "no_position",
+  "choice": null,
+  "why": "The PAC says it does not endorse in federal races.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-us-house-11",
+  "status": "no_position",
+  "choice": null,
+  "why": "The PAC says it does not endorse in federal races.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick in the Orange County section of the PAC's list that we saved. Judicial or other sections were not copied, so check the full page.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-9th-circuit-group-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick in the Orange County section of the PAC's list that we saved. Judicial or other sections were not copied, so check the full page.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-soil-water-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick in the Orange County section of the PAC's list that we saved. Judicial or other sections were not copied, so check the full page.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "eqfl-action-pac",
+  "target_id": "fl-orange-soil-water-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "No pick in the Orange County section of the PAC's list that we saved. Judicial or other sections were not copied, so check the full page.",
+  "url": "https://eqflpac.org/endorsed-candidates/",
+  "date": "2026-10-16",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orange-cta",
+  "target_id": "fl-orange-school-board-3",
+  "status": "endorsed",
+  "choice": "Susanne Peña",
+  "why": "Listed by Peña among her endorsements in the July 31 News Collaborative voter guide. Not confirmed on the union's own page.",
+  "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
+  "date": "2026-07-31",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "orange-cta",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "not_found",
+  "choice": null,
+  "why": "No position found in this run. Its own page was not opened.",
+  "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
+  "date": null,
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "maxwell-frost",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "Endorsed Moore Russell for the runoff, per Florida Politics (Sept 25, 2026) as cited by Wikipedia. Article itself not opened.",
+  "url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "date": "2026-09-25",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "jerry-demings",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "Endorsed Moore Russell for the runoff, per Florida Politics (Sept 25, 2026) as cited by Wikipedia. Article itself not opened.",
+  "url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "date": "2026-09-25",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "buddy-dyer",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "Endorsed Moore Russell for the runoff, per Florida Politics (Sept 25, 2026) as cited by Wikipedia. Article itself not opened.",
+  "url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "date": "2026-09-25",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "anna-eskamani",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "Endorsed Moore Russell for the runoff, per Florida Politics (Sept 25, 2026) as cited by Wikipedia. Article itself not opened.",
+  "url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "date": "2026-09-25",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "glenda-hood",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "Endorsed Moore Russell for the runoff, per Florida Politics (Sept 25, 2026) as cited by Wikipedia. Article itself not opened.",
+  "url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
+  "date": "2026-09-25",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "maxwell-frost",
+  "target_id": "fl-orange-school-board-3",
+  "status": "endorsed",
+  "choice": "Susanne Peña",
+  "why": "Listed by Peña among her endorsements in the July 31 voter guide.",
+  "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
+  "date": "2026-07-31",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "anna-eskamani",
+  "target_id": "fl-orange-school-board-3",
+  "status": "endorsed",
+  "choice": "Susanne Peña",
+  "why": "Listed by Peña among her endorsements in the July 31 voter guide.",
+  "url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
+  "date": "2026-07-31",
+  "confidence": "unverified"
+ },
+ {
+  "endorser_id": "anna-eskamani",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "Told Orlando Weekly he has her 'full support' and that she asked him to run for her seat.",
+  "url": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/",
+  "date": "2025-02-14",
+  "confidence": "sourced"
+ }
+]

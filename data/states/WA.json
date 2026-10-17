@@ -1,0 +1,195 @@
+{
+  "state": "WA",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "VoteWA (Washington Secretary of State)",
+    "url": "https://voter.votewa.gov/"
+  },
+  "voting_model": "all_mail",
+  "model_plain": "Every registered voter gets a ballot in the mail. Sign the envelope and put it in an official drop box by 8:00 PM on Election Day, or mail it (no stamp needed) more than a week early so it's postmarked by Election Day.",
+  "registration": {
+    "check_url": "https://voter.votewa.gov/",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-26",
+        "rule": "Register or update your address online at VoteWA.gov by Monday, October 26. The Secretary of State: 'Online and mail registrations must be received 8 days before Election Day.'",
+        "source": "https://www.sos.wa.gov/elections/elections-calendar/dates-and-deadlines"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-26",
+        "rule": "A paper registration form must be RECEIVED by your county elections office by Monday, October 26. Don't mail one in the final week; go in person instead.",
+        "source": "https://www.sos.wa.gov/elections/elections-calendar/dates-and-deadlines"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-11-03",
+        "rule": "You can register in person at your county elections office or any voting center in your county 'during business hours and any time before 8:00 p.m. on Election Day,' November 3, and vote on the spot. King County: Elections headquarters, 919 SW Grady Way, Renton (open 8:30 AM to 8:00 PM on Election Day), or any King County Vote Center.",
+        "source": "https://www.sos.wa.gov/elections/elections-calendar/dates-and-deadlines"
+      }
+    ],
+    "same_day_registration": true,
+    "same_day_notes": "Go to your county elections office or any voting center in your county through 8:00 PM on November 3. Bring your Washington driver's license, permit or state ID number, or the last four digits of your Social Security number. You will vote right there. King County Elections: 919 SW Grady Way, Renton; 206-296-VOTE (8683); Vote Centers are also open Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (until 8 PM); locations at kingcounty.gov/elections.",
+    "still_possible_now": "Yes. As of October 16 you can still register online at VoteWA.gov through Monday, October 26 and a ballot will be mailed to you. After October 26 you can still register and vote, but only in person at your county elections office or a voting center, through 8:00 PM on Election Day.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Automatic. Every active registered voter is mailed a ballot; no request or excuse is needed. Counties had to mail ballots by Friday, October 16. King County mailed its ballots on Wednesday, October 14. King County says: if you haven't received your ballot by October 19, call 206-296-8683.",
+    "request_deadline": {
+      "date": null,
+      "rule": "No request needed. If your ballot is lost, damaged, or never came, print a replacement from your MyVote page at VoteWA.gov, call your county to mail one, or get one in person at a voting center any time through 8:00 PM on Election Day.",
+      "source": "https://www.sos.wa.gov/elections/voters/helpful-information/current-election-information"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "Drop boxes and voting centers: 8:00 PM PT. Mail: must be postmarked by November 3.",
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+    },
+    "return_options": [
+      "official ballot drop box (any drop box in your county; open 24/7 until exactly 8:00 PM on Nov 3; King County has 100, open since Oct 15)",
+      "mail (USPS), no stamp needed; must be POSTMARKED by Nov 3, so mail more than a week early",
+      "any voting center in your county during its hours, until 8:00 PM on Nov 3",
+      "your county elections office (King County: 919 SW Grady Way, Renton)"
+    ],
+    "postage": "prepaid",
+    "signature_witness_rules": "Sign the declaration on the back of the return envelope. The voters' pamphlet: 'We need your signature to accept your ballot.' No witness or notary. Election workers compare your signature to the one on file from your registration or driver's license. Adding your phone number and email on the envelope is optional but lets the county reach you fast if there's a problem.",
+    "tracking_url": "https://voter.votewa.gov/",
+    "cure_process": "If your signature is missing or doesn't match, King County mails you a letter and a Signature Resolution Form within one business day, and also calls, emails or texts if it has your contact info. Fix it online (fastest; log in with your name and date of birth), by mail (postage-paid envelope included), by email to signature.resolution@kingcounty.gov, or in person. The form must be RECEIVED, not postmarked, by 4:30 PM the day before certification. For this election that is Monday, November 23, 2026 at 4:30 PM (King County certifies November 24). Check VoteWA.gov or King County's ballot tracker until your status says accepted.",
+    "mail_cutoff_advice": "The Secretary of State and King County both say: if you mail your ballot, do it MORE THAN a week before Election Day (by about Tuesday, October 27, the USPS-recommended date). USPS changed its processing in 2025 and often no longer postmarks mail the day you drop it, and Washington saw a jump in ballots rejected for late postmarks. In the final week, use a drop box. The pamphlet: 'Ballots in a drop box by 8 p.m. on November 3, Election Day, are guaranteed on time!'",
+    "drop_box_lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-16",
+    "end": "2026-11-03",
+    "hours_note": "Washington has no traditional early voting because everyone votes by mail; the 18-day voting period (Oct 16 to Nov 3) is the early voting. Voting centers open for replacement ballots, accessible voting units, and same-day registration. King County Elections headquarters in Renton: Oct 13 to 24, Mon to Fri 8:30 AM to 4:30 PM; Oct 25 to 31, Mon to Fri 8:30 AM to 6:00 PM; Election Day 8:30 AM to 8:00 PM. King County also opens additional Vote Centers on Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (closing 8 PM); locations are on the Vote Centers page.",
+    "vote_centers": true,
+    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "No neighborhood polling places. King County Elections in Renton opens 8:30 AM; other Vote Centers vary (check the list).",
+    "polls_close": "8:00 PM",
+    "in_line_rule": "Drop boxes close at '8 p.m. sharp' on Election Day (King County). If you are inside a voting center or in its line at 8:00 PM you can still register and vote. Don't plan on 7:58.",
+    "vote_centers": true,
+    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "none",
+    "accepted": [
+      "Mail ballot: no ID. Your signature on the envelope is your identification.",
+      "Registering (online, by mail or in person): your Washington driver's license, permit or state ID number, or the last four digits of your Social Security number (voters' pamphlet, page 5).",
+      "Voting in person at a voting center: state law (RCW 29A.40.160) says you either sign the ballot declaration or show photo ID such as a driver's license, state ID, student ID, tribal ID or employer ID. Bringing one speeds things up."
+    ],
+    "no_id_option": "If you vote in person and can't show ID, you sign the ballot declaration instead, or you're issued a provisional ballot that counts once your signature is matched to your registration. For the mail ballot almost everyone uses, no ID is needed at all.",
+    "confidence": "sourced"
+  },
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "No Washington law bans phones at a voting center, and nearly everyone fills out the ballot at home anyway. Using your phone to look at notes or this guide is fine. Don't photograph other voters.",
+    "notes_allowed": "allowed",
+    "notes_detail": "You can bring a printed or handwritten cheat sheet, a marked-up voters' pamphlet, or anything else to a voting center. The only limit is electioneering: you can't campaign to other voters inside a voting center or within 25 feet of a drop box (RCW 29A.84.510).",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "Washington has no specific ban on campaign buttons or shirts. What is illegal is electioneering: trying to persuade voters, handing out materials, or collecting signatures inside a voting center or within 25 feet of a ballot drop box during the 18-day voting period (RCW 29A.84.510). Keep campaign gear low-key at a voting center, and never campaign at a drop box.",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "The postmark trap. If you mail your ballot, it must be POSTMARKED by November 3, and USPS no longer reliably postmarks mail the day you send it. Late-postmark rejections jumped in 2025. The state and King County both say mail it more than a week early (by about October 27), or skip the mailbox and use any of King County's 100 official drop boxes any time before 8:00 PM on November 3. Drop boxes are free and don't depend on a postmark.",
+    "Sign the envelope, and sign the way you sign your driver's license. A missing or mismatched signature is the top reason Washington ballots get challenged. Put your phone number and email on the envelope so the county can reach you. If you get a notice, you have until 4:30 PM on Monday, November 23 to fix it (online is fastest). Check VoteWA.gov until your status says accepted.",
+    "8:00 PM is 8:00 PM. King County locks drop boxes at '8 p.m. sharp' on Election Day. Earlier is better; King County's boxes have been open since October 15 and ballots went out October 14.",
+    "You can still register. Online registration closes Monday, October 26, but you can register and vote in person through 8:00 PM on Election Day at King County Elections (919 SW Grady Way, Renton) or any Vote Center (open Oct 31, Nov 2 and Nov 3; list at kingcounty.gov/elections).",
+    "The initiatives have strange numbers and one is backwards. They're printed as IP26-645, IL26-001 and IL26-638 (a new numbering system). All three ask 'Should this measure be enacted into law?' On IP26-645, YES REPEALS the state's new 9.9% tax on income over $1 million and NO keeps it. On IL26-001, YES restores the 2024 Parents' Bill of Rights as first written. On IL26-638, YES limits girls' school sports to students verified as female by a health care provider. The old 'advisory votes' are gone (repealed in 2023), so you won't see those.",
+    "Five Supreme Court seats, not one. Positions 1, 3, 4, 5 and 7 are all on the ballot statewide, each with two candidates and no party labels. Positions 1 and 5 are two-year unexpired terms (the appointees are running to keep seats they were given in 2026). Don't skip them; a blank is a vote you didn't cast."
+  ],
+  "sources": [
+    {
+      "name": "Washington Secretary of State: Dates and Deadlines 2026 (ballots mailed Oct 16; register online/mail by Oct 26; in person through 8 PM Nov 3; drop box by 8 PM)",
+      "url": "https://www.sos.wa.gov/elections/elections-calendar/dates-and-deadlines"
+    },
+    {
+      "name": "Washington Secretary of State: General Election Fact Sheet, Nov 3, 2026 (PDF, Oct 1, 2026; postmark rule, Oct 27 USPS date, Nov 24 county certification, 5 Supreme Court races, 3 measures)",
+      "url": "https://www.sos.wa.gov/sites/default/files/2026-10/GeneralElectionFacts2026.pdf"
+    },
+    {
+      "name": "Washington Secretary of State: Current Election Information (Nov 3, 2026)",
+      "url": "https://www.sos.wa.gov/elections/voters/helpful-information/current-election-information"
+    },
+    {
+      "name": "Washington Secretary of State: certification of candidates and measures for the Nov 3, 2026 general election",
+      "url": "https://www.sos.wa.gov/about-office/news/2026/secretary-state-certifies-candidates-and-measures-november-general-election"
+    },
+    {
+      "name": "2026 General Election Voters' Pamphlet, King County / Seattle edition (PDF): deadlines, how to vote, measures, judicial candidates",
+      "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    {
+      "name": "VoteWA / MyVote: registration, ballot status, drop boxes, replacement ballots",
+      "url": "https://voter.votewa.gov/"
+    },
+    {
+      "name": "Washington Secretary of State: drop box and voting center locations",
+      "url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations"
+    },
+    {
+      "name": "King County Elections: Oct 7, 2026 media advisory (ballots mailed Oct 14, 100 drop boxes open Oct 15, Vote Center dates, cure deadline Nov 23 4:30 PM)",
+      "url": "https://kingcounty.gov/en/dept/elections/about-us/news-and-media-resources/news-releases/october-7-2026"
+    },
+    {
+      "name": "King County Elections: November 3, 2026 General Election page",
+      "url": "https://kingcounty.gov/en/dept/elections/election-information/2026/november-general"
+    },
+    {
+      "name": "King County Elections: Vote Centers",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "name": "King County Elections: Ballot drop boxes",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes.aspx"
+    },
+    {
+      "name": "King County Elections: Return my ballot (postmark by Election Day; drop box by 8 PM; no stamp)",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot.aspx"
+    },
+    {
+      "name": "King County Elections: Signature challenges (how to cure; 4:30 PM the day before certification)",
+      "url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/signature-challenges"
+    },
+    {
+      "name": "King County Elections: Contact us (extended hours through Election Day)",
+      "url": "https://kingcounty.gov/en/dept/elections/about-us/contact-us"
+    },
+    {
+      "name": "King County Elections: ballot tracker",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo/ballottracker"
+    },
+    {
+      "name": "King County Elections: Notice of Election, Nov 3, 2026 (PDF; registration deadlines, canvassing board dates, Nov 24 certification)",
+      "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/notice-of-election.pdf"
+    },
+    {
+      "name": "King County Elections: sample ballot, Nov 3, 2026 (PDF)",
+      "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+    },
+    {
+      "name": "RCW 29A.40.160: voting centers (ID or signed declaration; open 18 days before; 8 PM close)",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=29A.40.160"
+    },
+    {
+      "name": "RCW 29A.84.510: electioneering at voting centers and within 25 feet of drop boxes",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=29A.84.510"
+    },
+    {
+      "name": "KOMO: Washington sees 32% jump in ballots rejected for late postmarks after USPS rule change",
+      "url": "https://komonews.com/news/local/washington-state-sees-32-jump-in-ballots-rejected-for-late-postmarks-after-usps-ballot-voting-maga-president-trump-elections-rule-change-us-sen-maria-cantwell-secretary-of-state-steve-hobbs"
+    },
+    {
+      "name": "Washington State Standard: Voter Guide, 2026 Washington state general election",
+      "url": "https://washingtonstatestandard.com/voter-guides/2026-washington-state-general-election/"
+    }
+  ]
+}

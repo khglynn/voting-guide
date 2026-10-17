@@ -1,0 +1,74 @@
+[
+  {
+    "id": "md-question-1",
+    "state": "MD",
+    "level": "state",
+    "jurisdiction": "Maryland",
+    "number": "Question 1",
+    "official_title": "Constitutional Amendment (Ch. 155 of the 2026 Legislative Session). Arbitration Reform for State Employees Act of 2026. Providing that each budget submitted by the Governor shall include proposed expenditures necessary to implement wages, hours, fringe benefits, health benefits, and other terms and conditions of employment in each collective bargaining memorandum of understanding with State employees, whether the State and State employees reached those terms and conditions by mutual agreement or through a neutral decider's order. (Amending Article III of the Maryland Constitution)",
+    "plain_summary": "Right now, when state workers' unions negotiate a contract, the governor can still leave the pay raises or benefits out of the budget. This amendment would require the governor to put money in each year's budget to cover whatever the contract says, including terms set by a neutral arbitrator when the two sides could not agree.",
+    "yes_means": "Ballot text: 'A vote FOR this amendment means that the Governor has to include money in the proposed State budget to pay for agreements between the State and its employees... whether those terms were negotiated or decided by a neutral decision-maker.'",
+    "no_means": "Ballot text: 'A vote AGAINST the amendment means that the law about funding agreements between the State and State employees stays the same.'",
+    "current_law": "State employees bargain under the State Personnel and Pensions Article. Negotiated agreements are not binding on the budget: the governor decides what to include in the budget bill, and the General Assembly can cut or move money but cannot raise the total. Arbitration results are advisory for most state units.",
+    "fiscal_impact": "No official fiscal note is printed on the ballot or the SBE ballot questions page. The Department of Legislative Services fiscal and policy note is attached to the enabling bill, HB 604 (2026): https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0604/?ys=2026rs. Not yet read; treat as a gap.",
+    "pass_threshold": "simple majority of votes cast on the question",
+    "referred_by": "legislature",
+    "confusing_wording_note": "Maryland ballots say 'For the Constitutional Amendment' and 'Against the Constitutional Amendment,' not Yes and No. FOR = the governor must fund union contracts in the budget. AGAINST = the governor keeps discretion, as now.",
+    "supporters_case": {
+      "text": "The Maryland State and DC AFL-CIO campaigns for Question 1 as 'strengthening collective bargaining for Maryland state workers,' arguing contracts workers negotiate should be honored in the budget.",
+      "source": "https://mddclabor.org/laborvotes/question-1-strengthening-collective-bargaining-maryland-state-workers"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0604/?ys=2026rs",
+    "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
+    "confidence": "verified"
+  },
+  {
+    "id": "md-question-2",
+    "state": "MD",
+    "level": "state",
+    "jurisdiction": "Maryland",
+    "number": "Question 2",
+    "official_title": "Constitutional Amendment (Ch. 878 of the 2026 Legislative Session). Temporary Appointments on the Commission on Judicial Disabilities. Authorizing temporary substitute appointments to the Commission on Judicial Disabilities when a member is recused or disqualified, or when a member's term expires. In these situations, the Commission Chair may recall a former member of the Commission, or the Governor, at the request of the Commission Chair, may appoint a temporary substitute member or extend the term of a current member until a permanent replacement is appointed. Only individuals who meet the constitutional eligibility requirements may be recalled or appointed to the Commission. (Amending Article IV of the Maryland Constitution)",
+    "plain_summary": "The Commission on Judicial Disabilities investigates complaints against judges. When a member has to step aside from a case, or a member's term runs out before a replacement is named, the commission can get stuck. This amendment lets the chair call back a former member, or lets the governor (at the chair's request) name a temporary fill-in or extend a sitting member's term, until a permanent replacement is appointed.",
+    "yes_means": "Ballot text: 'A vote FOR this amendment means that temporary appointments to the Commission are allowed if a member is recused, disqualified, or if a member's term ends without a replacement.'",
+    "no_means": "Ballot text: 'A vote AGAINST the amendment means that current membership rules for the Commission stay the same. Temporary appointments are not allowed if a member is recused, disqualified, or if a member's term ends.'",
+    "current_law": "Article IV, Section 4A of the Maryland Constitution creates the Commission on Judicial Disabilities (judges, lawyers and public members appointed by the governor with Senate consent for fixed terms). It has no provision for temporary substitutes.",
+    "fiscal_impact": "No official fiscal note on the ballot. DLS fiscal and policy note is attached to the enabling bill, SB 933 (2026): https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0933?ys=2026RS. Likely minimal; not yet read.",
+    "pass_threshold": "simple majority of votes cast on the question",
+    "referred_by": "legislature",
+    "confusing_wording_note": "FOR = allow temporary fill-ins on the judicial discipline commission. AGAINST = keep the current rules with no fill-ins. This is the housekeeping question of the three; no organized campaign for or against was found.",
+    "supporters_case": null,
+    "opponents_case": null,
+    "official_text_url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0933?ys=2026RS",
+    "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
+    "confidence": "verified"
+  },
+  {
+    "id": "md-question-3",
+    "state": "MD",
+    "level": "state",
+    "jurisdiction": "Maryland",
+    "number": "Question 3",
+    "official_title": "Constitutional Amendment (Ch. 881 of the 2026 Legislative Session). Election Districts – General Assembly and Representatives in Congress. FOR the purpose of clarifying that certain requirements apply only to districts for the election of members of the Senate of Maryland and the House of Delegates; authorizing the General Assembly to grant original jurisdiction to the Supreme Court of Maryland to review the congressional districting plan of the State; and providing that nothing in the Maryland Constitution provides applicable criteria for the boundaries of a congressional districting plan. (Amending Article III of the Maryland Constitution)",
+    "plain_summary": "This is the redistricting question. Maryland's constitution says election districts must be compact and respect natural and county boundaries. In 2022 a judge used those rules to throw out the legislature's congressional map. This amendment says those rules apply only to state legislative districts, not to U.S. House districts, and that the constitution sets no criteria for congressional maps. It also lets the General Assembly send any challenge to a congressional map straight to the Supreme Court of Maryland. If it passes, Democratic leaders have said they intend to redraw the congressional map before 2028, which could make the 1st District (now held by Republican Andy Harris) competitive for Democrats.",
+    "yes_means": "FOR the Constitutional Amendment: state constitutional rules on compactness and boundaries no longer apply to congressional districts, and the legislature can redraw the U.S. House map mid-decade with challenges going straight to the state's top court.",
+    "no_means": "AGAINST the Constitutional Amendment: the constitution stays as it is, including the rules courts used in 2022 to strike down a congressional map, and the current eight-district map stays in place until after the 2030 census.",
+    "current_law": "Article III, Section 4 of the Maryland Constitution requires districts to be compact, contiguous, and give 'due regard' to natural and political subdivision boundaries. The 2022 Battaglia ruling applied those rules to congressional districts. The current congressional map (2022) has seven Democratic-held seats and one Republican-held seat.",
+    "fiscal_impact": "No official fiscal note on the ballot. DLS fiscal and policy note is attached to the enabling bill, HB 2100 (2026 special session): https://mgaleg.maryland.gov/2026RS/bills/hb/hb2100t.pdf. Not yet read.",
+    "pass_threshold": "simple majority of votes cast on the question",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The ballot text for Question 3 is the ONLY one of the three with no 'A vote FOR means / A vote AGAINST means' explanation, because the Supreme Court of Maryland rewrote the language on September 3, 2026 after two lower courts had blocked it. The Baltimore Sun (Oct 16) reported the ballot 'lacks guidance on what votes mean.' Polls back that up: UMBC (Sept 22 to 27, 776 likely voters) found 53% against, 25% for, 19% undecided, and that many respondents did not understand the question. Plain version: FOR = let the legislature redraw the congressional map now, with no state constitutional limits. AGAINST = keep today's map and today's rules. Also: Maryland uses FOR/AGAINST, not Yes/No.",
+    "supporters_case": {
+      "text": "Gov. Moore, Senate President Ferguson, House Speaker Peña-Melnyk, the Maryland Democratic Party, Fight Back MD and allied unions say Maryland should be able to answer mid-decade redistricting in Republican-led states and that the 2022 court ruling imposed limits the constitution's drafters never meant for congressional seats.",
+      "source": "https://marylandmatters.org/2026/09/25/democrats-unions-advocates-push-for-support-on-question-3-on-redistricting/"
+    },
+    "opponents_case": {
+      "text": "The Maryland Republican Party ('Save Our Voice'), Protect Maryland Votes, Rep. Andy Harris, former Gov. Larry Hogan and Republican legislators who sued to block it call it a license for a partisan gerrymander. Some Democrats, including 1st District candidate Dan Schwartz, also oppose it: 'People here tell me they don't want this.'",
+      "source": "https://mdgop.org/2026/08/17/mdgop-launches-save-our-voice-campaign-to-defeat-democrats-gerrymandering-amendment/"
+    },
+    "official_text_url": "https://mgaleg.maryland.gov/2026RS/bills/hb/hb2100t.pdf",
+    "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
+    "confidence": "verified"
+  }
+]

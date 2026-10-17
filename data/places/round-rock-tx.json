@@ -1,0 +1,67 @@
+{
+  "id": "round-rock-tx",
+  "label": "Round Rock",
+  "state": "TX",
+  "counties": [
+    "Williamson",
+    "Travis (small part)"
+  ],
+  "county_election_office": {
+    "name": "Williamson County Elections Department, 301 SE Inner Loop, Suite 104, Georgetown 78626",
+    "url": "https://www.wilcotx.gov/elections",
+    "phone": "512-943-1630"
+  },
+  "sample_ballot_url": "https://apps.wilcotx.gov/elections/voterlookup",
+  "zips": [
+    "78664",
+    "78665",
+    "78681"
+  ],
+  "zip_caveats": "Round Rock is almost all Williamson County; a sliver south of the county line (parts of 78664 and 78681 near 78717/78728) is Travis County and gets the Travis ballot instead. Round Rock ISD extends into Travis County and north Austin, so RRISD trustee races and the RRISD tax-rate election (Prop A) appear on both counties' ballots. Congress after the 2025 redraw: most of Round Rock is CD-31 (Carter vs. Early vs. Stoker) or CD-17 (Sessions vs. Shepard). Texas House is HD-52 (Harris Davila vs. Jimenez) or HD-136 (Bucy vs. Schramm); HD-20 (Wilson vs. Early) covers Georgetown and is not in this file. The city of Round Rock itself has no council race or proposition on the Nov 2026 ballot that we could confirm; Round Rock holds city elections in May.",
+  "contest_ids": [
+    "tx-us-senate",
+    "tx-governor",
+    "tx-lt-governor",
+    "tx-attorney-general",
+    "tx-comptroller",
+    "tx-land-commissioner",
+    "tx-agriculture-commissioner",
+    "tx-railroad-commissioner",
+    "tx-supreme-court-chief",
+    "tx-supreme-court-place-2",
+    "tx-supreme-court-place-7",
+    "tx-supreme-court-place-8",
+    "tx-cca-place-3",
+    "tx-cca-place-4",
+    "tx-cca-place-9",
+    "tx-15th-coa-chief",
+    "tx-15th-coa-place-2",
+    "tx-15th-coa-place-3",
+    "tx-us-house-10",
+    "tx-us-house-11",
+    "tx-sboe-5",
+    "tx-3rd-coa-chief",
+    "tx-acc-trustee-1",
+    "tx-acc-trustee-2",
+    "tx-acc-trustee-3",
+    "tx-rrisd-trustee-3",
+    "tx-rrisd-trustee-4",
+    "tx-rrisd-trustee-5",
+    "tx-rrisd-trustee-6",
+    "tx-wilco-county-judge",
+    "tx-wilco-county-clerk",
+    "tx-wilco-treasurer",
+    "tx-wilco-tax-assessor",
+    "tx-wilco-commissioner-2",
+    "tx-wilco-commissioner-4",
+    "tx-wilco-district-court-512",
+    "tx-us-house-31",
+    "tx-us-house-17",
+    "tx-house-52",
+    "tx-house-136"
+  ],
+  "measure_ids": [
+    "tx-rrisd-prop-a"
+  ],
+  "notes": "Williamson early voting: Oct 19 to 24 7 AM to 7 PM, Sunday Oct 25 noon to 6 PM, Oct 26 to 30 7 AM to 7 PM. Any Williamson voter can use any Williamson vote center. Leander ISD trustee races (Places 1, 2, 6, 7) and the Georgetown ISD tax election are not in this file; see the memo."
+}

@@ -1,0 +1,655 @@
+[
+  {
+    "id": "il-us-senate",
+    "state": "IL",
+    "level": "federal",
+    "office": "U.S. Senate",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Open seat: Dick Durbin is retiring after 30 years. One vote; no runoff, no ranked choice. Three names are printed; Naomi Craine (Socialist Workers Party) is a certified write-in and is not printed.",
+    "office_explainer": "One of Illinois' two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "Six-year term and the first open Illinois Senate seat since 2016. Senators confirm federal judges and cabinet members and decide national spending, taxes, health care and immigration law. The Tribune editorial board, which does not endorse in this race by corporate policy, frames it as a choice between a candidate 'on the far left of the Democratic Party' and one 'on the moderate wing' of the Republican Party.",
+    "vote_for": 1,
+    "incumbent": "Dick Durbin (retiring)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Juliana Stratton",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.julianastratton.com/",
+        "website_confidence": "verified",
+        "background": "Lieutenant governor of Illinois since 2019, the first Black woman in the job; state representative for Chicago's 5th District 2017 to 2018; former Kenwood Academy local school council member. Age 61. Won the March 17 Democratic primary with about 40% over Reps. Raja Krishnamoorthi and Robin Kelly. Endorsed by Gov. Pritzker, Sen. Duckworth, and former President Obama (Oct. 12).",
+        "own_words": [
+          {
+            "text": "\"Illinoisans deserve a leader who will go to the mat fighting for them. I am that fighter.\" (WTTW: Why are you running?)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/juliana-stratton"
+          },
+          {
+            "text": "Names cost of living as the most pressing issue; her federal proposals are a $25 minimum wage, Medicare for All, a middle-class tax cut paid for by higher taxes on incomes over $1 million, and no corporate PAC money.",
+            "is_quote": false,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/juliana-stratton"
+          },
+          {
+            "text": "Calls for abolishing ICE, ending federal immigration enforcement operations in cities, and a path to citizenship including for Dreamers.",
+            "is_quote": false,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/juliana-stratton"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Don Tracy",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://dontracyforil.com/",
+        "website_confidence": "verified",
+        "background": "Springfield lawyer, senior counsel at Brown, Hay & Stephens; chair of the Illinois Republican Party 2021 to 2024 and of the Illinois Gaming Board 2015 to 2019; co-owner of his family's Dot Foods distribution business. Age 76. Born in Urbana, raised in Mt. Sterling. Won the March 17 Republican primary with about 40%.",
+        "own_words": [
+          {
+            "text": "\"My priority in the Senate will be lowering the cost of living for working families.\" (WTTW: most pressing issue)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/don-tracy"
+          },
+          {
+            "text": "On immigration: enforce existing law and secure the border, end taxpayer benefits for non-citizens, and offer 'a structured path to legal residency for people who follow the rules.'",
+            "is_quote": false,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/don-tracy"
+          },
+          {
+            "text": "\"At my age and with my level of success, nobody is going to own me.\" Told the Tribune board he could not stand Trump personally and would represent all 102 counties.",
+            "is_quote": true,
+            "source": "https://www.yahoo.com/news/politics/articles/editorial-don-tracy-julianna-stratton-100000384.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Whitfield Harrington Jr.",
+        "party": "American Center Party",
+        "incumbent": false,
+        "website": "https://whit4ilsenate.com/",
+        "website_confidence": "sourced",
+        "background": "Pastor and former insurance professional; Mississippi native now living in Illinois. Running on a new-party line as an alternative to both major parties. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "Says both major parties have moved too far toward ideological extremes and he offers a centrist alternative.",
+            "is_quote": false,
+            "source": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+          },
+          {
+            "text": "Platform centers on economic affordability, health care reform including expanded direct primary care, and immigration changes.",
+            "is_quote": false,
+            "source": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election (compiled from State Board of Elections certifications; lists all printed and write-in candidates)",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: U.S. Senate",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/us-senate"
+      },
+      {
+        "name": "Wikipedia: 2026 United States Senate election in Illinois (primary results, general candidates)",
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
+      },
+      {
+        "name": "NPR Illinois (Mar. 17, 2026): Stratton defeats Krishnamoorthi",
+        "url": "https://www.nprillinois.org/government-politics/2026-03-17/stratton-defeats-krishnamoorthi-with-help-from-chicago-downstate-voters"
+      },
+      {
+        "name": "Chicago Tribune editorial (Oct. 2026): Don Tracy and Julianna Stratton, running for Senate in the darkening shadow of Donald Trump",
+        "url": "https://www.yahoo.com/news/politics/articles/editorial-don-tracy-julianna-stratton-100000384.html"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, Meet the Candidates Running for Statewide Office",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-governor",
+    "state": "IL",
+    "level": "state",
+    "office": "Governor and Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Governor and lieutenant governor run as one ticket; you cast one vote for the pair. Three tickets are printed. Several write-in tickets are certified but not printed (Taegun Eimer/Libertarian, Griselda Romero/Green, Mike Vick/American Solidarity, and independents Richard Mayers, Misty Metroz, Elizabeth Sebesta, Patricia Tillman, Rafael Varela). No runoff.",
+    "office_explainer": "Runs state government, signs or vetoes laws, writes the budget, and appoints agency heads and judicial vacancies.",
+    "why_it_matters": "Four-year term and a rematch of 2022 (Pritzker won by about 12 points). The governor controls a roughly $55 billion state budget, Illinois' response to federal policy, and appointments to boards that run transit, pensions and utilities. Pritzker is seeking a third term; no Illinois governor has won three straight since Jim Thompson. The Tribune does not endorse in this race by corporate policy.",
+    "vote_for": 1,
+    "incumbent": "JB Pritzker",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "JB Pritzker and Christian Mitchell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://jbpritzker.com/",
+        "website_confidence": "verified",
+        "background": "Pritzker: governor since 2019, seeking a third term; venture capitalist and Hyatt-family heir. Mitchell: former deputy governor (2019 to 2023), former state representative from Chicago's South Side, University of Chicago vice president. Replaces Juliana Stratton, who is running for Senate. Trump endorsed Bailey in September; former House GOP Leader Jim Durkin endorsed Pritzker.",
+        "own_words": [
+          {
+            "text": "Top priorities (WTTW): \"restore our state's fiscal foundation\" and \"lower costs for working families.\"",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-governor"
+          },
+          {
+            "text": "Runs on his record: legalized marijuana, a $15 minimum wage, Rebuild Illinois infrastructure, and a string of credit-rating upgrades; campaign lists affordability, jobs, growth and protecting individual rights as priorities.",
+            "is_quote": false,
+            "source": "https://jbpritzker.com/accomplishments/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Darren Bailey and Aaron B. Del Mar",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://baileyforillinois.com/",
+        "website_confidence": "verified",
+        "background": "Bailey: third-generation farmer from Clay County in southern Illinois; state representative 2019 to 2021 and state senator 2021 to 2023; the 2022 Republican nominee for governor; co-founded a private Christian school and served 17 years on a local school board. Won the March 17 primary with 53%. Del Mar: Palatine businessman and former Palatine village council member. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "Campaign priorities: lowering the cost of living, improving education, reducing property taxes, and strengthening public safety through partnerships with law enforcement.",
+            "is_quote": false,
+            "source": "https://baileyforillinois.com/issues/"
+          },
+          {
+            "text": "Campaign bio: \"Darren fought reckless spending, higher taxes, and sanctuary state policies\" and \"championed tax relief and agriculture\" as lead Republican on the Senate Agriculture Committee.",
+            "is_quote": true,
+            "source": "https://baileyforillinois.com/darren/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Collin Corbett and Carolyn Schofield",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://www.collinforil.com/",
+        "website_confidence": "sourced",
+        "background": "Corbett: Palatine political consultant and former Republican strategist who left the party in 2026 to run as an independent. Schofield: lieutenant governor running mate. Positions himself as a centrist alternative to both Pritzker and Bailey.",
+        "own_words": [
+          {
+            "text": "Top priorities (WTTW): \"put everyday Illinoisans back in charge\" and build \"a mainstream, Independent majority in Illinois.\"",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-governor"
+          },
+          {
+            "text": "Campaign focuses on lowering property taxes, reducing the cost of living, reforming school funding, and government accountability.",
+            "is_quote": false,
+            "source": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Illinois Governor",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-governor"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, statewide candidates",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-attorney-general",
+    "state": "IL",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Two names printed.",
+    "office_explainer": "The state's top lawyer. Sues on behalf of Illinois, protects consumers, and defends state laws in court.",
+    "why_it_matters": "Four-year term. The attorney general decides when Illinois sues the federal government or big companies, handles consumer complaints, and enforces civil rights, environmental and labor laws. Raoul has joined dozens of multistate suits against Trump administration actions.",
+    "vote_for": 1,
+    "incumbent": "Kwame Raoul",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kwame Raoul",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://kwameraoul.com/",
+        "website_confidence": "verified",
+        "background": "Attorney general since 2019, seeking a third term. State senator from Chicago's Hyde Park area 2004 to 2019 (appointed to Barack Obama's old seat). Former Cook County prosecutor. Son of Haitian immigrants. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "Priorities on his site: \"protecting children from sexual predators, holding criminals accountable\" and \"fighting for affordable health care and a woman's right to choose.\"",
+            "is_quote": true,
+            "source": "https://kwameraoul.com/"
+          },
+          {
+            "text": "Points to his record: defended the assault weapons ban, investigated clergy abuse, joined opioid litigation, and sued the Trump administration over tariffs, immigration and federal funding.",
+            "is_quote": false,
+            "source": "https://kwameraoul.com/ontheissues/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Robert W. \"Bob\" Fioretti",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.bobforillinois.com/",
+        "website_confidence": "verified",
+        "background": "Chicago attorney and former 2nd Ward alderman (2007 to 2015); former special assistant attorney general and special assistant state's attorney; has practiced law more than 30 years. Won the March 17 Republican primary with 99%. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "Says he would focus on fighting fraud and scams, government transparency, protecting civil rights, supporting law enforcement, and equal access to education.",
+            "is_quote": false,
+            "source": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+          },
+          {
+            "text": "Campaign site: \"a strong commitment to civil rights, education, and public safety\" and a pledge to \"lead with integrity and independence.\"",
+            "is_quote": true,
+            "source": "https://www.bobforillinois.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Attorney General",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-attorney-general"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, statewide candidates",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-secretary-of-state",
+    "state": "IL",
+    "level": "state",
+    "office": "Secretary of State",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Two names printed; Jeffrey Schiefelbein (Green) was removed from the ballot July 14 and is a write-in.",
+    "office_explainer": "Runs the DMV, issues driver's licenses and IDs, registers businesses, and oversees the state library. Does not run elections.",
+    "why_it_matters": "Four-year term. The most-used state office: about 4,000 employees, driver services facilities statewide, vehicle titles, the state library and archives. In most states the secretary runs elections; in Illinois that job belongs to the State Board of Elections. Note: Giannoulias announced a run for Chicago mayor in August 2026, so if re-elected and then elected mayor in 2027 he would leave this office early.",
+    "vote_for": 1,
+    "incumbent": "Alexi Giannoulias",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alexi Giannoulias",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://alexiforus.com/",
+        "website_confidence": "verified",
+        "background": "Secretary of state since 2023, seeking a second term. Illinois treasurer 2007 to 2011 (then the nation's youngest) and the 2010 Democratic nominee for U.S. Senate. Age 50. Announced a 2027 Chicago mayoral campaign in August 2026.",
+        "own_words": [
+          {
+            "text": "\"We've made real progress transforming the Secretary of State's office, but there is more work to do.\" (WTTW: Why are you running?)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/alexi-giannoulias"
+          },
+          {
+            "text": "Pledges to \"expand online services, so people don't have to take time off work to visit a DMV.\" Backed the 2023 law cutting grants to libraries that ban books.",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/alexi-giannoulias"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Diane M. Harris",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.harrisforsos.com/",
+        "website_confidence": "verified",
+        "background": "Former ComEd employee with 32 years in the electric utility industry; former IBEW steward, insurance agent and small-business owner; Joliet Junior College trustee and secretary of the Joliet Township Republicans. Won the March 17 primary with 53% over Walter Adamczyk.",
+        "own_words": [
+          {
+            "text": "\"To give the service back to the people by offering faster, fair service for all.\" (WTTW: Why are you running?)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/diane-m-harris"
+          },
+          {
+            "text": "Would add drive-up windows and kiosks where DMV access is limited, more mobile DMV units, lower fees for seniors and veterans, and \"a strong customer relations department to handle complaints.\"",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/diane-m-harris"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Secretary of State",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-secretary-of-state"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, statewide candidates",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-comptroller",
+    "state": "IL",
+    "level": "state",
+    "office": "Comptroller",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Open seat: Susana Mendoza is not running again (she is running for Chicago mayor). Two names printed; Anna Schiefelbein (Green) was removed from the ballot July 14 and is a write-in.",
+    "office_explainer": "Writes the state's checks. Pays Illinois' bills, tracks the bill backlog, and reports on state finances.",
+    "why_it_matters": "Four-year term and the only open statewide executive seat. The comptroller decides the order in which the state pays its bills when cash is short, publishes the state's financial reports, and can slow or speed payments to vendors, schools and social-service agencies.",
+    "vote_for": 1,
+    "incumbent": "Susana Mendoza (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Margaret Croke",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://crokeforillinois.com/",
+        "website_confidence": "verified",
+        "background": "State representative for Chicago's 12th District (Lakeview, Lincoln Park) since 2021; Democratic State Central Committeewoman for the 5th Congressional District. Age 34. Won the March 17 primary with 34.5% over Sen. Karina Villa (32.5%) and Lake County Treasurer Holly Kim.",
+        "own_words": [
+          {
+            "text": "\"Illinois needs steady, experienced fiscal leadership at a time of economic uncertainty.\" (WTTW: Why are you running?)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/margaret-croke"
+          },
+          {
+            "text": "\"Being fiscally responsible and protecting vulnerable populations are not conflicting ideals.\" Would seek clearer statutory authority for the office and enforce the Prevailing Wage Act.",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/margaret-croke"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Bryan Drew",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.drewforillinois.com/",
+        "website_confidence": "verified",
+        "background": "Southern Illinois attorney (25-plus years) and small-business owner who runs Cafe Bloom in Benton with his wife; former president of the Franklin County Bar Association and board chair of Rend Lake College. Unopposed in the March 17 Republican primary. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "\"Taxpayers deserve a watchdog who will hold politicians accountable for how they spend our tax dollars.\"",
+            "is_quote": true,
+            "source": "https://www.drewforillinois.com/"
+          },
+          {
+            "text": "Priorities: \"Stop Government Waste So We Can Lower Costs for Working Families\" and \"Increase Transparency So You Know Where Every Dollar Is Spent.\"",
+            "is_quote": true,
+            "source": "https://www.drewforillinois.com/priorities"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Comptroller",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-comptroller"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, statewide candidates",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-treasurer",
+    "state": "IL",
+    "level": "state",
+    "office": "Treasurer",
+    "district": null,
+    "scope_plain": "Every Illinois voter. Two names printed; Timothea Papas (Green) was removed from the ballot July 14 and is a write-in.",
+    "office_explainer": "The state's banker. Invests Illinois' cash, runs the college-savings plans and returns unclaimed property.",
+    "why_it_matters": "Four-year term. The treasurer manages tens of billions in state and local investments, runs the Bright Start 529 college-savings and Secure Choice retirement programs, and holds billions in unclaimed property (I-Cash) that belongs to residents.",
+    "vote_for": 1,
+    "incumbent": "Michael W. Frerichs",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Frerichs",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://mikeforillinois.com/",
+        "website_confidence": "verified",
+        "background": "Treasurer since 2015, seeking a fourth term. Former state senator from Champaign (2007 to 2015) and Champaign County auditor. Son of a truck driver and a public-sector union member. Did not participate in the WTTW voter guide.",
+        "own_words": [
+          {
+            "text": "\"Government should work for working people, not just the wealthy and well-connected.\"",
+            "is_quote": true,
+            "source": "https://mikeforillinois.com/"
+          },
+          {
+            "text": "Points to investment returns, the I-Cash unclaimed property program, college and retirement savings programs, and \"making sure powerful financial interests are held accountable.\"",
+            "is_quote": true,
+            "source": "https://mikeforillinois.com/about-mike/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      },
+      {
+        "name": "Max Solomon",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://maxsolomon.info/",
+        "website_confidence": "verified",
+        "background": "Attorney practicing in Illinois and Indiana; adjunct professor of political science and law at South Suburban College. Born in Lagos, Nigeria; immigrated in 1992. Ran in the 2022 Republican primary for governor. Won the March 17 primary with 99%.",
+        "own_words": [
+          {
+            "text": "\"The Illinois treasurer office needs more accountability, responsibility, and transparency.\" (WTTW)",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/max-solomon"
+          },
+          {
+            "text": "Would create a public dashboard to track state spending, modernize the investment strategy, and direct more state deposits to local banks and credit unions.",
+            "is_quote": false,
+            "source": "https://maxsolomon.info/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/illinois"
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Green Papers: Illinois 2026 General Election",
+        "url": "https://www.thegreenpapers.com/G26/IL"
+      },
+      {
+        "name": "Illinois State Board of Elections: certified primary vote totals (Delilah source_url)",
+        "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Treasurer",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/illinois-treasurer"
+      },
+      {
+        "name": "WCIA/WTVO: Illinois Voter Guide 2026, statewide candidates",
+        "url": "https://www.wcia.com/news/your-local-election-hq/illinois-voter-guide-2026-meet-the-candidates-running-for-statewide-office/"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-appellate-1st-hoffman-vacancy",
+    "state": "IL",
+    "level": "judicial",
+    "office": "Illinois Appellate Court, First District: Hoffman vacancy",
+    "district": "1st Judicial District (Cook County only)",
+    "scope_plain": "Cook County voters only (Chicago and the suburbs). One candidate is printed; she is unopposed. Illinois has no statewide judicial votes in 2026: Supreme Court and Appellate Court seats are elected by district, and no Supreme Court seat from the Cook County district is up this year.",
+    "office_explainer": "Hears appeals from Cook County trial courts. Ten-year term. Elected by partisan ballot, then retained by yes/no vote.",
+    "why_it_matters": "Appellate justices decide most appeals in Cook County; the Supreme Court takes only a few cases. This is an open seat vacated by Justice Thomas E. Hoffman. The winner serves ten years before facing a retention vote.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 10,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Judith C. Rice",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Cook County Circuit Court judge (she also appears on the Circuit Court retention list this year). Rated Qualified or better by all 14 bar associations in the Alliance of Bar Associations evaluation, with ratings from Qualified to Highly Recommended. Unopposed.",
+        "own_words": [
+          {
+            "text": "Judicial candidates do not campaign on issues. Bar ratings: WTTW reports an overall rating of Qualified, with no association rating her unqualified.",
+            "is_quote": false,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/races/il-appellate-court"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Illinois Appellate Court, First District",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/il-appellate-court"
+      },
+      {
+        "name": "Chicago Federation of Labor 2026 general election endorsements (lists Rice, Hoffman vacancy, Democrat)",
+        "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
+      },
+      {
+        "name": "Illinois State Bar Association: Cook County judicial evaluations",
+        "url": "https://www.isba.org/judicial-elections/counties/cook"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "il-appellate-1st-retention-lampkin",
+    "state": "IL",
+    "level": "judicial",
+    "office": "Illinois Appellate Court, First District: retain Justice Bertina E. Lampkin?",
+    "district": "1st Judicial District (Cook County only)",
+    "scope_plain": "Cook County voters only. Ballot question: 'Shall the person listed be retained in office as Justice of the Illinois Appellate Court?' Yes or no. She needs 60% yes to stay. This is the only appellate retention question on the 2026 Cook County ballot; 60 Circuit Court judges follow it (covered in the Chicago local pass).",
+    "office_explainer": "Hears appeals from Cook County trial courts. Vote yes to keep the justice, no to remove. Needs 60% yes.",
+    "why_it_matters": "Retention needs three-fifths yes, not a simple majority (Illinois Constitution, Art. VI, Sec. 12). A blank vote neither helps nor hurts. Injustice Watch researched all 61 judges on the retention ballot and does not make recommendations; all 14 bar associations in the Alliance recommended 'Yes' on Lampkin.",
+    "vote_for": 1,
+    "incumbent": "Bertina E. Lampkin",
+    "open_seat": false,
+    "term_years": 10,
+    "is_retention": true,
+    "candidates": [
+      {
+        "name": "Bertina E. Lampkin",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "verified",
+        "background": "Justice of the Illinois Appellate Court, First District. Former Cook County Circuit Court judge. Full background and ratings on her Injustice Watch profile.",
+        "own_words": [
+          {
+            "text": "All 14 bar associations evaluated by the Alliance of Bar Associations marked 'Yes' for retention (WTTW). Injustice Watch's profile flags no negative ratings.",
+            "is_quote": false,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/races/il-appellate-court"
+          },
+          {
+            "text": "Chicago Federation of Labor's retention list covers Circuit Court judges only and does not list her.",
+            "is_quote": false,
+            "source": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Injustice Watch: Check Your Judges, Cook County November 2026 Judicial Election Guide (61 retention questions; Lampkin is the only appellate justice)",
+        "url": "https://2026retention.injusticewatch.org/"
+      },
+      {
+        "name": "Injustice Watch: Bertina E. Lampkin profile",
+        "url": "https://2026retention.injusticewatch.org/candidate/bertina-e-lampkin-35640"
+      },
+      {
+        "name": "WTTW 2026 General Election Voter Guide: Illinois Appellate Court, First District (ballot question text, 14 bar ratings)",
+        "url": "https://news.wttw.com/elections/voters-guide/2026-general/races/il-appellate-court"
+      },
+      {
+        "name": "Illinois Constitution, Article VI, Section 12 (retention requires three-fifths of votes cast)",
+        "url": "https://www.ilga.gov/commission/lrb/con6.htm"
+      }
+    ],
+    "confidence": "sourced"
+  }
+]

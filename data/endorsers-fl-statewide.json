@@ -1,0 +1,240 @@
+[
+  {
+    "id": "orlando-sentinel-eb",
+    "name": "Orlando Sentinel editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. In 2026 every statewide pick went to the Democrat or against the Republican-sponsored amendments. Shares editorials on amendments with its sister paper, the South Florida Sun Sentinel.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.orlandosentinel.com/opinion/endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sun-sentinel-eb",
+    "name": "South Florida Sun Sentinel editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Sister paper of the Orlando Sentinel (same Alden ownership and the same 2022 no-endorsement policy for president, governor and Senate). Its amendment editorials were co-published with the Orlando Sentinel. Included because its 'just say no to all three' editorial is one of the four newspaper positions on the amendments.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.sun-sentinel.com/2026/09/30/just-say-no-to-all-three-state-amendments-endorsement/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "miami-herald-eb",
+    "name": "Miami Herald editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "McClatchy paper. Still endorses in statewide races, including governor (Jolly, Oct 1, 2026), and on amendments (NO on all three). Its 2026 picks went to Democrats.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "tampa-bay-times-eb",
+    "name": "Tampa Bay Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Florida's largest newspaper, owned by the nonprofit Poynter Institute. Announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or returned no body text in this run, so the picks below are not_found rather than guessed.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.tampabay.com/opinion/editorials/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "tcpalm-eb",
+    "name": "TCPalm / Treasure Coast Newspapers editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Gannett / USA TODAY Network paper (Stuart, Fort Pierce, Vero Beach). One of only two Gannett Florida papers still issuing recommendations in 2026. Its amendment picks split (NO on 1 and 3, YES on 2), which is the only non-uniform newspaper slate on the amendments.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "tallahassee-democrat-eb",
+    "name": "Tallahassee Democrat",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Gannett paper. Under Gannett's 2022 policy its local papers largely stopped endorsing. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among Gannett Florida papers offering 2026 recommendations; the Democrat is not among them.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.tallahassee.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "pensacola-news-journal-eb",
+    "name": "Pensacola News Journal",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Gannett paper, same 2022 policy. Not among the Gannett Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.pnj.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-florida",
+    "name": "League of Women Voters of Florida (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on constitutional amendments after member study; formally opposed Amendment 3 in August 2026. Publishes candidate questionnaire answers on VOTE411.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://lwvfl.org/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "florida-taxwatch",
+    "name": "Florida TaxWatch",
+    "type": "civic_nonpartisan",
+    "lean": "lean_right",
+    "lean_basis": "Nonpartisan, business-backed fiscal watchdog in Tallahassee. Publishes a taxpayer's guide to every amendment with YES/NO recommendations and the state Revenue Estimating Conference numbers. Generally favors lower taxes and spending restraint; recommended NO on Amendment 3 anyway.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-democratic-party",
+    "name": "Florida Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization; backs its general-election nominees and opposes Amendment 3.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.floridadems.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-republican-party",
+    "name": "Republican Party of Florida",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; backs its general-election nominees and supports Amendments 1 and 3.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://florida.gop/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-afl-cio",
+    "name": "Florida AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation; endorses mostly Democrats through its COPE process. Endorsed Jolly for governor in June 2026. Its 2026 list also names Rodriguez (AG), Taddeo (CFO) and Nixon (U.S. Senate).",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-chamber",
+    "name": "Florida Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide business lobby; its political arm endorses mostly Republicans. Endorsed Moody for Senate in August 2026.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.flchamber.com/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "nra-pvf",
+    "name": "NRA Political Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights group; grades and endorses candidates, almost all Republicans. Florida grades page lists Moody.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/florida/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "fl-sheriffs-assn",
+    "name": "Florida Sheriffs Association",
+    "type": "advocacy",
+    "lean": "lean_right",
+    "lean_basis": "Association of Florida's 67 elected sheriffs, most of them Republicans. Does not endorse candidates as an association. Took a public position against Amendment 3, warning of cuts to law enforcement.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.flsheriffs.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-education-assn",
+    "name": "Florida Education Association",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide teachers' union; endorses mostly Democrats. Endorsed Jolly for governor.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://feaweb.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "fl-realtors",
+    "name": "Florida Realtors",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide real-estate trade association; its PAC endorses across parties but leaned Republican in 2026 statewide races. Supports Amendment 3 and endorsed Moody for Senate.",
+    "geography": [
+      "FL"
+    ],
+    "guide_url": "https://www.floridarealtors.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

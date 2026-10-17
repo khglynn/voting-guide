@@ -1,0 +1,273 @@
+[
+ {
+  "id": "la-times-eb",
+  "name": "Los Angeles Times editorial board",
+  "type": "publication",
+  "lean": "lean_left",
+  "lean_basis": "AllSides rates LA Times news Lean Left. The board made no endorsements in the June 2026 primary, the first modern election without them, after owner Patrick Soon-Shiong blocked a 2024 presidential endorsement. As of Oct 16, 2026 City Hall Pass (checked Sept 30) found no LA Times endorsement in any LA city, county or legislative race, and the paper's endorsements page returns a 404.",
+  "geography": [
+   "CA",
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": false
+ },
+ {
+  "id": "la-daily-news-eb",
+  "name": "Los Angeles Daily News / Southern California News Group editorial board",
+  "type": "publication",
+  "lean": "lean_right",
+  "lean_basis": "One editorial board writes for the Daily News, OC Register, Daily Breeze, Pasadena Star-News and other SCNG papers. It describes its own commitments as 'limited government, economic liberty, personal freedom and free markets' (SCNG endorsement list, Oct 1, 2026). AllSides rates the OC Register Lean Right. Count the Daily News and OC Register once; they publish identical picks.",
+  "geography": [
+   "los-angeles-ca",
+   "fullerton-ca",
+   "CA"
+  ],
+  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "oc-register-eb",
+  "name": "Orange County Register editorial board (same board as the Daily News)",
+  "type": "publication",
+  "lean": "lean_right",
+  "lean_basis": "Same Southern California News Group editorial board as the LA Daily News; identical endorsement list. AllSides: Lean Right. Shown separately so Fullerton readers recognize their paper, but it is one board, not two.",
+  "geography": [
+   "fullerton-ca",
+   "CA"
+  ],
+  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "lwv-greater-la",
+  "name": "League of Women Voters of Greater Los Angeles",
+  "type": "civic_nonpartisan",
+  "lean": "neutral",
+  "lean_basis": "Nonpartisan civic organization; never endorses candidates. It takes positions on some measures after study. For November 2026 its only confirmed position is signing the argument in favor of Charter Amendment SC (city pamphlet). The LWV of LA County is listed as a supporter of county Measure E on the official ballot. Its 'Vote with the League' page still showed November 2024 content on Oct 16, 2026.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ },
+ {
+  "id": "la-forward",
+  "name": "LA Forward (LA Forward Action Fund voter guide)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Self-described 'LA Progressive Voter Guide.' Membership organization whose members vote on endorsements; its 2026 picks align with the Democratic Socialists of America slate in most LA races (Raman, Roy, Mazariegos) but not all (it recommends Luna for Sheriff and Ghobadi for judge). Sponsors the Yes on Measure E committee.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://laforwardguide.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "thrive-la",
+  "name": "Thrive LA",
+  "type": "advocacy",
+  "lean": "lean_right",
+  "lean_basis": "Self-described 'moderate, pro-Los Angeles' guide whose stated purpose is to 'identify and vote against extremist candidates backed by ... the Democratic Socialist of America.' Endorses mostly Democrats but favors police-union and business-backed candidates, opposes new taxes and rent control, and endorses Republicans with no campaign against DSA-aligned incumbents.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.thrivelosangeles.org/voter-guide",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "knock-la",
+  "name": "Knock LA",
+  "type": "publication",
+  "lean": "left",
+  "lean_basis": "Self-described progressive nonprofit news outlet (Ground Game LA). Its June 2026 primary guide is online; a November 2026 guide was not found as of Oct 16 (site returned rate-limit errors). Its primary picks are cited by campaigns (Haymon, Reitano, Bayne, Ross list Knock LA).",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "lacdp",
+  "name": "Los Angeles County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.lacdp.org/candidates",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "la-county-gop",
+  "name": "Republican Party of Los Angeles County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its 2026 voter guide page (lagop.org/voterguide2026) returned 'page not found' on Oct 16, 2026; positions below come from candidate pages and news reports.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.lagop.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "oc-dems",
+  "name": "Democratic Party of Orange County",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county Democratic Party organization.",
+  "geography": [
+   "fullerton-ca"
+  ],
+  "guide_url": "https://orangecountydemocrats.com/oc-endorsements-2",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "oc-gop",
+  "name": "Republican Party of Orange County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county Republican Party organization. Its endorsements page did not load on Oct 16, 2026; positions below come from LAist and candidate pages.",
+  "geography": [
+   "fullerton-ca"
+  ],
+  "guide_url": "https://ocgop.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "la-fed",
+  "name": "Los Angeles County Federation of Labor, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Umbrella body for about 300 unions in LA County. Endorses mostly Democrats; also backed Sheriff Luna. Its November guide page lists picks in an embedded file that could not be read; positions below are confirmed through LAist, City Hall Pass and the Fed's own press releases.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "la-chamber",
+  "name": "Los Angeles Area Chamber of Commerce (L.A. Jobs PAC)",
+  "type": "business",
+  "lean": "lean_right",
+  "lean_basis": "Regional business association; endorses through its L.A. Jobs PAC. Backs business-friendly candidates of both parties, in LA mostly moderate Democrats.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://lachamber.com/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "abundant-housing-la",
+  "name": "Abundant Housing LA",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Pro-housing ('YIMBY') 501(c)(4). Endorses across the Democratic spectrum based on housing supply positions: Raman for mayor but also Ugarte in CD9 and Sara Hernandez in SD-26. Its endorsements page did not load on Oct 16; positions come from candidate endorsement lists via City Hall Pass.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://abundanthousingla.org/endorsements/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "streets-for-all",
+  "name": "Streets For All",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Safe-streets and transit advocacy group. Endorses based on mobility questionnaires; 2026 picks are progressive Democrats plus Measures LA and PRK.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.streetsforall.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "lalcv",
+  "name": "Los Angeles League of Conservation Voters",
+  "type": "advocacy",
+  "lean": "lean_left",
+  "lean_basis": "Environmental political group that 'supports pro-environment candidates throughout Los Angeles County.' Endorsements posted as individual press releases on lalcv.org.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://lalcv.org/category/featured/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "lappl",
+  "name": "Los Angeles Police Protective League",
+  "type": "labor",
+  "lean": "lean_right",
+  "lean_basis": "Union for rank-and-file LAPD officers. Its political committees spent about $2.8 million for Bass and against Raman this year (LA Times via City Hall Pass). Backs candidates who support larger police staffing regardless of party.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.lapd.com/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "alads",
+  "name": "Association for Los Angeles Deputy Sheriffs",
+  "type": "labor",
+  "lean": "lean_right",
+  "lean_basis": "Union for LA County sheriff's deputies and DA investigators. Largest donor ($2.84 million) to the Yes on Measure A committee. Backed Villanueva in 2022 and Luna in 2026.",
+  "geography": [
+   "los-angeles-ca"
+  ],
+  "guide_url": "https://www.alads.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "measure-committees-la",
+  "name": "Official measure campaigns (Yes/No committees and argument authors)",
+  "type": "other",
+  "lean": "neutral",
+  "lean_basis": "Not a single source: each row lists the official sponsor or opponent of that measure as printed in the city pamphlet or filed with the county. Included so each measure shows who is actually campaigning for and against it.",
+  "geography": [
+   "los-angeles-ca",
+   "fullerton-ca"
+  ],
+  "guide_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ }
+]

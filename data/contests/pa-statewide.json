@@ -1,0 +1,134 @@
+[
+  {
+    "id": "pa-governor",
+    "state": "PA",
+    "level": "state",
+    "office": "Governor and Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Pennsylvania voter. Governor and lieutenant governor run as one ticket in November: one vote covers both. Pennsylvania has no fusion voting, no top-two and no runoff; the ticket with the most votes wins. This is the only statewide race on the 2026 ballot (no U.S. Senate seat, no row offices, no Supreme Court retention this year).",
+    "office_explainer": "Runs the state government, signs or vetoes laws, proposes the budget and appoints cabinet secretaries.",
+    "why_it_matters": "Four-year term. The governor negotiates the roughly $50 billion state budget with a split legislature, signs or vetoes every bill, and picks the secretaries who run transportation, education and human services. The lieutenant governor presides over the state Senate and chairs the Board of Pardons.",
+    "vote_for": 1,
+    "incumbent": "Josh Shapiro",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Josh Shapiro / Austin Davis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://joshshapiro.org/",
+        "website_confidence": "verified",
+        "background": "Shapiro, 53, has been governor since January 2023. Before that he was Pennsylvania attorney general (2017 to 2023), a Montgomery County commissioner and a state representative. Davis, the lieutenant governor since 2023, is a former state representative from McKeesport in Allegheny County. Both were unopposed in the May 19 primary.",
+        "own_words": [
+          {
+            "text": "Second-term focus: affordability, education, public safety and economic growth. Backs an \"all of the above\" energy plan (natural gas, nuclear, renewables), a $15 minimum wage, and more money for underfunded school districts.",
+            "is_quote": false,
+            "source": "https://whyy.org/articles/election-2026-pennsylvania-governor-voter-guide-shapiro-garrity/"
+          },
+          {
+            "text": "On schools: \"Graduation rates are up and truancy is down and it is working.\" On rising costs, he blamed \"tariffs and this war in Iran, two things that my opponent supports.\"",
+            "is_quote": true,
+            "source": "https://www.spotlightpa.org/news/2026/10/josh-shapiro-stacy-garrity-pennsylvania-governor-debate-elections/"
+          },
+          {
+            "text": "On the state budget, to Garrity: \"What the treasurer didn't say is, what she would cut?\"",
+            "is_quote": true,
+            "source": "https://www.spotlightpa.org/news/2026/10/josh-shapiro-stacy-garrity-pennsylvania-governor-debate-elections/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Stacy Garrity / Jason Richey",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://garrityforpa.com/",
+        "website_confidence": "verified",
+        "background": "Garrity, 62, has been Pennsylvania's state treasurer since 2021 and grew up in Bradford County. She is a retired Army Reserve colonel with three deployments and a former vice president at Global Tungsten and Powders. Richey is a Pittsburgh attorney and chair of the Allegheny County Republican Committee; he won the May 19 primary for lieutenant governor with about 66 percent. The state GOP endorsed the ticket in September 2025 and again in February 2026.",
+        "own_words": [
+          {
+            "text": "Promises to \"restrain spending, cut taxes and regulations.\" Would eliminate the state gross-receipts tax on electricity and expand natural gas production; wants to pause new data-center projects until ratepayer protections exist.",
+            "is_quote": true,
+            "source": "https://whyy.org/articles/election-2026-pennsylvania-governor-voter-guide-shapiro-garrity/"
+          },
+          {
+            "text": "On school funding: \"We can't just keep throwing more money at an issue and think you're going to get a different result.\" Supports school choice and says Shapiro \"has held not one, not two, but three positions\" on it.",
+            "is_quote": true,
+            "source": "https://www.spotlightpa.org/news/2026/10/josh-shapiro-stacy-garrity-pennsylvania-governor-debate-elections/"
+          },
+          {
+            "text": "Backs Medicaid work requirements for healthy adults without small kids as \"common sense,\" \"to make sure that Medicaid is there for the people that really need it.\" Calls herself a \"strong ally\" of President Trump, who endorsed her in January 2026.",
+            "is_quote": true,
+            "source": "https://www.spotlightpa.org/news/2026/10/josh-shapiro-stacy-garrity-pennsylvania-governor-debate-elections/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Ken Krawchuk / John Thomas",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://www.kenk4pa.com/",
+        "website_confidence": "verified",
+        "background": "Krawchuk is an information technology entrepreneur, author and Philadelphia-area talk show host from Cheltenham, Montgomery County. This is his fourth run for governor; he got 0.98 percent in 2018. The Department of State certified the ticket on August 4, 2026, after the campaign filed 5,649 signatures (5,000 required).",
+        "own_words": [
+          {
+            "text": "Education is the centerpiece: \"Privatize the public schools!\" He says that would let the state eliminate most of \"the much-hated property tax.\"",
+            "is_quote": true,
+            "source": "https://www.kenk4pa.com/"
+          },
+          {
+            "text": "Would \"veto all tax increases and pork barrel spending.\"",
+            "is_quote": true,
+            "source": "https://www.kenk4pa.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Delilah / Election Deets: 2026 PA governor race (candidates, websites, certified primary results from electionreturns.pa.gov)",
+        "url": "https://www.electionreturns.pa.gov/"
+      },
+      {
+        "name": "Delaware County unofficial UMOVA candidate list for Nov. 3, 2026 (ballot order: Shapiro/Davis, Garrity/Richey, Krawchuk/Thomas; Green ticket listed before its removal)",
+        "url": "https://www.delcopa.gov/sites/default/files/2026-08/GE2026-UMOVA-Notice_8-18-2026-rev3.pdf"
+      },
+      {
+        "name": "LNP | LancasterOnline, Aug. 21, 2026: Pa. Green Party candidates will not appear on the ballot for governor this fall (Commonwealth Court removed Dastra/Bolton for insufficient signatures)",
+        "url": "https://lancasteronline.com/news/politics/pa-green-party-candidates-will-not-appear-on-the-ballot-for-governor-this-fall/article_88ce5147-c584-4b10-b765-ada14f108b0e.html"
+      },
+      {
+        "name": "WHYY governor voter guide (Aug. 25, updated Oct. 8, 2026)",
+        "url": "https://whyy.org/articles/election-2026-pennsylvania-governor-voter-guide-shapiro-garrity/"
+      },
+      {
+        "name": "Spotlight PA: Shapiro and Garrity debate affordability, health care (Oct. 7, 2026 debate, Harrisburg)",
+        "url": "https://www.spotlightpa.org/news/2026/10/josh-shapiro-stacy-garrity-pennsylvania-governor-debate-elections/"
+      },
+      {
+        "name": "Inquirer, Feb. 7, 2026: Pa. GOP and state Dems finalize their endorsements for the 2026 governor's race",
+        "url": "https://www.inquirer.com/news/pennsylvania/pennsylvania-gop-democratic-party-shapiro-garrity-20260207.html"
+      },
+      {
+        "name": "Krawchuk campaign, Aug. 4, 2026: ballot certified",
+        "url": "https://www.kenk4pa.com/ballot-certified/"
+      },
+      {
+        "name": "Pa. Department of State: 2026 General Election Calendar (nomination paper deadline Aug. 3, objections Aug. 10)",
+        "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf"
+      },
+      {
+        "name": "VOTE411 Pennsylvania (LWV candidate guide)",
+        "url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "confidence": "sourced"
+  }
+]

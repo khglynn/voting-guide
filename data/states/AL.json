@@ -1,0 +1,183 @@
+{
+  "state": "AL",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "Alabama Votes (Alabama Secretary of State)",
+    "url": "https://www.sos.alabama.gov/alabama-votes"
+  },
+  "voting_model": "in_person_first",
+  "model_plain": "Most people vote in person at their assigned polling place on Election Day, Tuesday, November 3, 7 AM to 7 PM. Alabama has no early voting. If you can't be there that day and have one of the legal excuses, you can vote absentee by mail or in person at your county's absentee office.",
+  "registration": {
+    "check_url": "https://myinfo.alabamavotes.gov/voterview",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-19",
+        "rule": "Register or update your registration online by 11:59 PM on Monday, October 19. The official Voter Guide: 'If registering to vote electronically, registration must be submitted before 11:59 PM on the registration deadline.' Online registration only works 'if they have a valid Alabama Driver's License or Non-Driver ID card.'",
+        "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-19",
+        "rule": "A paper form 'must be postmarked no later than the registration deadline,' Monday, October 19. Forms are at Probate Judge and License Commissioner offices, libraries, schools, or printable from alabamavotes.gov; mail to your county Board of Registrars.",
+        "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-19",
+        "rule": "In person, 'registration must be received before the close of business of the registration deadline,' Monday, October 19, at your county Board of Registrars. Mobile County Board of Registrars: 151 Government St, Suite 165, Mobile 36602, (251) 574-8586.",
+        "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+      }
+    ],
+    "same_day_registration": false,
+    "same_day_notes": "Alabama has no same-day or Election Day registration. Registration is 'closed during the 14 days prior to an election and on Election Day.' If you are not registered by October 19, you cannot vote in this election. One exception: if you moved within your county and didn't update in time, you can go to your NEW polling place, update your registration there, and cast a provisional ballot.",
+    "still_possible_now": "Yes, but only through Monday, October 19. As of Friday, October 16 that is three days away. Online is fastest if you have an Alabama driver's license or non-driver ID (deadline 11:59 PM Monday). If you don't, print the form and get it postmarked by Monday, or walk it into the Board of Registrars before close of business Monday. Check your status first at myinfo.alabamavotes.gov. If you moved, update your address by the same deadline.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Nobody gets one automatically. You must apply, and you must check one of the legal excuses on the application. The excuses, per the Secretary of State: you expect to be absent from the county on Election Day; you are ill or have a physical infirmity that keeps you from your polling place; you are a registered Alabama voter living outside the county (military, overseas, students away at school, and their spouses or dependents); you are an appointed poll worker or poll watcher assigned somewhere other than your own precinct; you expect to work a required shift of at least 10 hours that overlaps the 7 AM to 7 PM polling hours; you are a caregiver for a family member (to the second degree of kinship) who is confined to their home; or you are in prison or jail and have not been convicted of a felony involving moral turpitude. Absentee voting opened September 9, 2026. Send the application to your county Absentee Election Manager, which is 'usually the Circuit Clerk.' There is no permanent absentee list for most voters; apply every election. (Voters with a permanent disability can file one physician-notarized application per calendar year.)",
+    "request_deadline": {
+      "date": "2026-10-27",
+      "rule": "Mailed applications must be RECEIVED by the Absentee Election Manager by Tuesday, October 27 (7 days before the election). The SOS press release: 'county absentee election managers must receive mail-in absentee ballot applications by Tuesday, October 27, 2026.' In-person applications: Thursday, October 29 (5 days before), returned by the voter in person. If you apply in person you can vote your absentee ballot right there in the same visit. Include a copy of your photo ID with the application. Emergency absentee, two kinds. (1) An employer unexpectedly requires you to be unavailable on Election Day, you are caregiver for someone who needs emergency treatment by a doctor within five days of the election, or a family member (to the second degree) dies within five days of the election: you can apply after the regular deadline, but 'no later than 5 PM on the day before the election,' Monday, November 2. (2) Your own medical emergency needing a doctor's treatment within five days of the election: the doctor certifies it on the application, you can name someone to handle the application and ballot for you, and 'the voted absentee ballot must be returned no later than noon on the day the election is held,' November 3.",
+      "source": "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-reminds-alabamians-november-3-general-election-absentee"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "received_by",
+      "time": "Mail: received by NOON on Tuesday, November 3. Hand delivery: in the Absentee Election Manager's office by close of business, and no later than 5 PM, on Monday, November 2. Postmarks do not count for regular absentee voters (only for military and overseas UOCAVA voters).",
+      "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+    },
+    "return_options": [
+      "Mail it (USPS or a commercial carrier like FedEx/UPS) to the Absentee Election Manager so it ARRIVES by noon on Tuesday, Nov 3",
+      "Hand-deliver your own ballot to the Absentee Election Manager's office by close of business (no later than 5 PM) on Monday, Nov 2",
+      "No drop boxes exist in Alabama",
+      "Nobody else may return your ballot for you; the only exception is a designee you name on a medical-emergency application"
+    ],
+    "postage": "You pay the postage to mail your ballot back; the pre-addressed return envelope is not prepaid. The exact amount depends on the ballot's weight. Follow the instructions in your packet or ask the Absentee Election Manager. (Amount not confirmed this run; the official Voter Guide and absentee page do not state it.)",
+    "signature_witness_rules": "Two separate steps, and both are strict. (1) With your APPLICATION: include 'a copy of valid photo identification.' Military and overseas (UOCAVA) voters are exempt. Voters 65 or older and voters with disabilities who check the 'physically incapacitated [ID Not Required]' box on the application are also exempt under the federal Voting Accessibility for the Elderly and Handicapped Act. (2) On the BALLOT affidavit envelope: fill it out completely, then sign it in front of either a notary public OR two witnesses who are 18 or older, and have the notary or both witnesses sign. The official rule: 'An absentee ballot cannot be counted unless the affidavit is notarized or has the signatures of two witnesses who are 18 years old or older. Electronic or remote notarization of absentee ballot affidavits is not allowed.' Then: ballot in the plain secrecy envelope, secrecy envelope in the affidavit envelope, affidavit envelope in the outer pre-addressed envelope.",
+    "tracking_url": "https://myinfo.alabamavotes.gov/voterview",
+    "cure_process": "No general fix-it (cure) process. If the affidavit envelope is missing a signature, a notary seal, or a second witness, the ballot is not counted and you are not contacted in time to fix it. One narrow exception: if you forgot the photo ID copy with your application, you get a provisional absentee ballot, and it counts only if you get a valid photo ID to the Board of Registrars by 5 PM on Friday, November 6. Check the envelope twice before you seal it.",
+    "mail_cutoff_advice": "Don't trust the mail in the final week. The rule is in hand by NOON on Election Day, and the Secretary of State recommends mailing 'at least two weeks before' the deadline. A ballot that arrives at 12:05 PM on November 3 is not counted. In the last few days, hand-deliver your own ballot to the Absentee Election Manager by close of business (5 PM) Monday, November 2.",
+    "drop_box_lookup_url": null,
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": false,
+    "start": null,
+    "end": null,
+    "hours_note": "Alabama has no early voting. The closest thing: if you have one of the absentee excuses, go to your county's Absentee Election Manager office (usually the Circuit Clerk; in Mobile County, confirm the location through the SOS lookup), apply in person, and vote your ballot there the same day. That option ends Thursday, October 29, during regular office hours. Without an excuse, your only option is your assigned polling place on November 3.",
+    "vote_centers": null,
+    "lookup_url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "7:00 PM",
+    "in_line_rule": "If you are in line by 7:00 PM, you get to vote. The official Voter Guide: 'Anyone who attempts to join the voting line after 7:00 P.M. shall not be permitted to vote.' Hours are local time; Mobile and nearly all of Alabama are on Central Time (a few polling places near the Georgia line run on Eastern).",
+    "vote_centers": false,
+    "lookup_url": "https://myinfo.alabamavotes.gov/voterview",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "photo",
+    "accepted": [
+      "Valid Alabama driver's license, including the ALEA Digital Driver's License (not expired, or expired less than 60 days)",
+      "Valid Alabama non-driver ID, including the ALEA Digital Non-Driver ID (not expired, or expired less than 60 days)",
+      "Alabama free Photo Voter ID card (from any county Board of Registrars; home visits available at 1-800-274-VOTE)",
+      "Valid state-issued ID from Alabama or any other state (the SOS lists examples: a pistol permit with photo, an AL Department of Corrections release temporary ID with photo, an AL jail movement/booking sheet with photo)",
+      "Valid federal-issued ID",
+      "Valid U.S. passport",
+      "Valid employee ID with photo from the federal government, State of Alabama, a county, municipality, board, or other entity of this state",
+      "Valid student or employee ID from a public or private college or university in Alabama (including postgraduate technical or professional schools)",
+      "Valid student or employee ID issued by a state institution of higher learning in any other state",
+      "Valid military ID",
+      "Valid tribal ID",
+      "NOT accepted: utility bills, bank statements, Social Security cards, or any ID without a photo"
+    ],
+    "no_id_option": "Two ways. (1) If your name is on the poll list and you are 'positively identified by at least two election officials,' you vote a regular ballot. (2) Otherwise you vote a provisional ballot, and it counts only if you bring a valid photo ID to your county Board of Registrars by 5 PM on Friday, November 6. Don't have any photo ID? A free Alabama Photo Voter ID card is available at the Board of Registrars before Election Day; call 1-800-274-VOTE (8683) for locations or a home visit.",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "Yes, with limits. The official 2026 Voter Guide FAQ (p. 16): 'CAN I TAKE A CELL PHONE INTO MY POLLING PLACE? Yes. However, use of the phone in the polling place should not disturb other voters or disrupt the polling place.' On photos: 'an individual may only take a photograph of their own ballot. Taking other photographs within the polling place may intimidate other voters and is not allowed.' Reading your notes on your phone is fine; keep it quiet and never point the camera at anyone else. Source: https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
+    "notes_allowed": "allowed",
+    "notes_detail": "Yes, explicitly. The official 2026 Voter Guide: 'Voters may take marked sample ballots into the polling place, provided these items are for personal use only and are not disruptive to others in the polling place. The voter should not leave these items in the polling place.' Print the Mobile County sample ballot, mark it at home, and bring it. Sample ballots: https://www.sos.alabama.gov/alabama-votes/2026-general-election-sample-ballots",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "You CAN wear campaign gear. The official Voter Guide FAQ: 'CAN I WEAR CAMPAIGN BUTTONS OR T-SHIRTS WITH POLITICAL ADVERTISEMENTS INTO THE POLLING PLACE? Yes. However, you should not loiter or leave any campaign materials in the polling place.' Active campaigning (signs, handing things out, talking people into votes) must stay 30 feet from the polling place entrance, or 30 feet from the building entrance if the polling place is inside a building. Source: https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf",
+    "confidence": "verified"
+  },
+  "gotchas": [
+    "The registration deadline is Monday, October 19, three days from now, and Alabama has no same-day registration. Online registration (by 11:59 PM) needs an Alabama driver's license or non-driver ID; without one, a paper form must be postmarked by October 19 or hand-delivered before close of business. Moved? Updating your address has the same deadline.",
+    "There is no early voting. If you can't vote on November 3, absentee with an excuse is the only option: your application must REACH the absentee office by Tuesday, October 27 if mailed, or Thursday, October 29 if you bring it in person. In person you can apply and vote in one trip.",
+    "An absentee ballot has two traps: a copy of your photo ID goes with the APPLICATION, and the ballot envelope needs a notary OR two adult witnesses (remote notarization not allowed). There is no fix-it process. Mail it so it ARRIVES by noon on Election Day (postmarks don't count), or hand-deliver it yourself by 5 PM Monday, November 2. No drop boxes, and nobody can drop it off for you.",
+    "Photo ID is required at the polls. A utility bill or bank statement does not work in Alabama. A driver's license expired less than 60 days is OK; the ALEA digital license is OK; a student ID from an Alabama college is OK. No ID means a provisional ballot that only counts if you show ID at the Board of Registrars by 5 PM Friday, November 6.",
+    "Straight-ticket voting: filling in one party's 'straight party' oval at the top votes for that party's candidate in every partisan race on your ballot, including the judges (Alabama elects judges with party labels). You can still override any single race by marking a different candidate there; the individual mark wins. The straight-ticket oval does NOT vote on the four statewide amendments or the Mobile County local amendments on the back of the ballot. You have to mark each one yourself or it's left blank."
+  ],
+  "sources": [
+    {
+      "name": "Alabama SOS: 2026 Voter Guide (PDF; registration rules, absentee procedure, photo ID list, provisional ballots, sample ballots in the booth, campaign apparel FAQ, polling hours, Mobile County registrar contact)",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+    },
+    {
+      "name": "Alabama SOS press release: Reminds Alabamians to Register to Vote Ahead of November 3 General Election (Oct. 19 deadline; polls 7 AM to 7 PM)",
+      "url": "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-reminds-alabamians-register-vote-ahead-november-3-general"
+    },
+    {
+      "name": "Alabama SOS press release: Reminds Alabamians of November 3 General Election Absentee Deadlines (Oct. 27 mail, Oct. 29 in person, Nov. 2 hand delivery, noon Nov. 3 by mail)",
+      "url": "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-reminds-alabamians-november-3-general-election-absentee"
+    },
+    {
+      "name": "Alabama SOS: Absentee Voting (excuses, 7-day and 5-day application rules, notary or two witnesses, emergency voting, who may return a ballot)",
+      "url": "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting"
+    },
+    {
+      "name": "Alabama SOS: Find your county Absentee Election Manager",
+      "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+    },
+    {
+      "name": "Alabama SOS: Photo Voter ID (free ID, two-poll-worker identification)",
+      "url": "https://www.sos.alabama.gov/alabama-votes/photo-voter-id"
+    },
+    {
+      "name": "Alabama SOS: Valid forms of ID",
+      "url": "https://www.sos.alabama.gov/alabama-votes/photo-voter-id/valid-ids"
+    },
+    {
+      "name": "Alabama SOS: Register to Vote (forms, address updates)",
+      "url": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote"
+    },
+    {
+      "name": "Alabama SOS: Online voter registration",
+      "url": "https://www.alabamainteractive.org/sos/voter_registration/"
+    },
+    {
+      "name": "Alabama SOS: VoterView (registration status, polling place, absentee status)",
+      "url": "https://myinfo.alabamavotes.gov/voterview"
+    },
+    {
+      "name": "Alabama SOS: 2026 General Election Sample Ballots (every county, including Mobile)",
+      "url": "https://www.sos.alabama.gov/alabama-votes/2026-general-election-sample-ballots"
+    },
+    {
+      "name": "Alabama SOS: Mobile County sample ballot, Nov. 3, 2026 (PDF)",
+      "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+    },
+    {
+      "name": "Alabama SOS: 2026 Election Information (certified candidate lists, certified amendments)",
+      "url": "https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026"
+    },
+    {
+      "name": "ACLU of Alabama: Election Timeline (secondary cross-check of all five dates)",
+      "url": "https://www.aclualabama.org/election-timeline/"
+    },
+    {
+      "name": "Alabama Political Reporter: Alabama absentee voting deadlines for 2026 General Election (Sept. 10, 2026)",
+      "url": "https://www.alreporter.com/2026/09/10/alabama-absentee-voting-deadlines-for-2026-general-election/"
+    },
+    {
+      "name": "VOTE411 (League of Women Voters): Alabama voting information",
+      "url": "https://www.vote411.org/alabama"
+    }
+  ]
+}

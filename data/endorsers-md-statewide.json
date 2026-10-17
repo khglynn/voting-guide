@@ -1,0 +1,198 @@
+[
+  {
+    "id": "baltimore-sun-eb",
+    "name": "The Baltimore Sun editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Largest Maryland daily. Bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams. Williams announced the same month that the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan 20, 2024). Semafor (Apr 5, 2026) describes the paper's shift toward an ideological focus on Democratic officials' misdeeds and a joint investigative unit with Sinclair's WBFF. Its opinion pages have run multiple guest pieces against Question 3 but no board position was found.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.baltimoresun.com/opinion/editorials/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "baltimore-banner",
+    "name": "The Baltimore Banner",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit newsroom founded 2022. Publishes a full 2026 voter guide and candidate profiles; as a 501(c)(3) it does not endorse candidates or ballot questions.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.thebanner.com/voter-guide/2026/maryland/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "washington-post-eb",
+    "name": "The Washington Post editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Covers Maryland's DC suburbs and statewide races. Owner Jeff Bezos ended presidential endorsements in October 2024 and redirected the opinion section in 2025 toward 'personal liberties and free markets.' Its 2026 practice for Maryland state races was not confirmed. The Oct 1, 2026 piece 'Maryland Democrats should reject gerrymandering' ran under the Post's 'Ripple' opinion vertical and was syndicated to The Hill as an individual opinion column, so it is not treated as a board endorsement.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-maryland",
+    "name": "League of Women Voters of Maryland (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan. Does not endorse candidates; publishes candidate questionnaire answers on VOTE411 and may take positions on ballot questions after member study.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.lwvmd.org/voterguides2026",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-democratic-party",
+    "name": "Maryland Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization; backs its nominees and campaigns FOR Question 3 (chair Steuart Pittman).",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.mddems.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-republican-party",
+    "name": "Maryland Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; backs its nominees. Runs the 'Save Our Voice' campaign to defeat Question 3.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://mdgop.org/save-our-voice/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "mddc-afl-cio",
+    "name": "Maryland State and DC AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation. Its Labor Votes site campaigns FOR Question 1; its 2026 slate (Airtable embed) endorses mostly Democrats, including Moore.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://mddclabor.org/endorsements-2026",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-state-education-association",
+    "name": "Maryland State Education Association",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State teachers union (NEA affiliate); endorses mostly Democrats. Listed among Moore's 2026 endorsers.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://marylandeducators.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-chamber-of-commerce",
+    "name": "Maryland Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide business lobby. Takes positions on fiscal ballot questions; candidate endorsements run through its PAC. 2026 positions not found.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.mdchamber.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "md-lcv",
+    "name": "Maryland League of Conservation Voters",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Environmental advocacy group; endorses candidates (nearly all Democrats) and scores legislators. Listed among Moore's 2026 endorsers.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.mdlcv.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "planned-parenthood-md-action",
+    "name": "Planned Parenthood Maryland Action Fund",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Reproductive-rights advocacy arm; endorses candidates who support abortion access, nearly all Democrats.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-maryland-action-fund",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "md-right-to-life",
+    "name": "Maryland Right to Life PAC",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-abortion advocacy group; endorses candidates opposed to abortion, nearly all Republicans.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.mdrtl.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "nra-pvf",
+    "name": "NRA Political Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican.",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/maryland",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "md-fop",
+    "name": "Maryland State Fraternal Order of Police",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Statewide police union. Splits its 2026 ticket: endorsed Democrat Wes Moore for governor (per Moore's campaign) and Republican Jim Rutledge for attorney general (Sept 8, 2026).",
+    "geography": [
+      "MD"
+    ],
+    "guide_url": "https://www.mdfop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "id": "dc-mayor",
+    "state": "DC",
+    "level": "city",
+    "office": "Mayor of the District of Columbia",
+    "district": null,
+    "scope_plain": "Every DC voter. Ranked-choice: three candidates plus a write-in line, so you can rank up to 4 choices.",
+    "office_explainer": "Runs the District's government: police, schools, housing, agencies, a $22 billion budget. Signs or vetoes Council laws.",
+    "why_it_matters": "Open seat. Muriel Bowser is retiring after three terms, so DC picks a new mayor for the first time since 2014. The winner manages the city's relationship with Congress and the White House at a time of heavy federal involvement in DC affairs.",
+    "vote_for": 1,
+    "incumbent": "Muriel Bowser (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rhonda Hamilton",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://rhondahamilton4dc.com/",
+        "website_confidence": "sourced",
+        "background": "Longtime ANC 6D commissioner (Southwest), small-business owner and mental health advocate who founded M.I. Mother's Keeper in 2015. Third-generation Washingtonian; left the Democratic Party in 2012. Ran a write-in campaign for mayor in 2022.",
+        "own_words": [
+          {
+            "text": "Wants to audit city agencies, starting with housing after a reported $52 million DC Housing Authority budget error, then MPD.",
+            "is_quote": false,
+            "source": "https://www.hunewsservice.com/politics/independent-d-c-mayoral-candidate-hits-the-streets-before-election-day/"
+          },
+          {
+            "text": "Opposes youth curfews: \"Curfew, to me, means red flag because our governing body doesn't have any solution.\"",
+            "is_quote": true,
+            "source": "https://www.hunewsservice.com/politics/independent-d-c-mayoral-candidate-hits-the-streets-before-election-day/"
+          },
+          {
+            "text": "Priorities include housing stability, health care access, repairing community-police relationships and budget transparency.",
+            "is_quote": false,
+            "source": "https://www.washingtoninformer.com/independent-d-c-statehood-green-party-candidates-stand-against-a-unified-d-c-democratic-party/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Janeese Lewis George",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://janeesefordc.com/",
+        "website_confidence": "sourced",
+        "background": "Ward 4 councilmember since 2021 and a former prosecutor in the DC Attorney General's office. Won the June 16, 2026 Democratic primary with 54% in the final ranked-choice round; Kenyan McDuffie conceded. A member of Metro DC DSA.",
+        "own_words": [
+          {
+            "text": "\"We're going to implement universal child care.\"",
+            "is_quote": true,
+            "source": "https://wtop.com/dc/2026/01/janeese-lewis-george-lays-out-priorities-of-dc-mayor-campaign-put-people-first/"
+          },
+          {
+            "text": "Campaign centers on \"addressing the real affordability crisis we have in the city,\" including housing costs.",
+            "is_quote": true,
+            "source": "https://wtop.com/dc/2026/01/janeese-lewis-george-lays-out-priorities-of-dc-mayor-campaign-put-people-first/"
+          },
+          {
+            "text": "Wants more 911 call-takers, police focused on crime rather than immigration enforcement, and to push back on federal overreach.",
+            "is_quote": false,
+            "source": "https://wtop.com/dc/2026/01/janeese-lewis-george-lays-out-priorities-of-dc-mayor-campaign-put-people-first/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Robert L. Gross",
+        "party": "DC Statehood Green",
+        "incumbent": false,
+        "website": "https://www.grossformayor.com/",
+        "website_confidence": "verified",
+        "background": "IT professional and civic activist who describes himself as a DC native, an eco-socialist and the Gen Z candidate. Won the Statehood Green primary in June.",
+        "own_words": [
+          {
+            "text": "\"A central point of my campaign is the modernization of Washington, D.C. city government,\" using technology for budgeting, permits and real-time dashboards.",
+            "is_quote": true,
+            "source": "https://www.grossformayor.com/"
+          },
+          {
+            "text": "\"We deserve a city shaped by those who live in it, not merely profit from it.\"",
+            "is_quote": true,
+            "source": "https://www.grossformayor.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      },
+      {
+        "name": "Wikipedia: 2026 Washington, D.C., mayoral election (primary results)",
+        "url": "https://en.wikipedia.org/wiki/2026_Washington,_D.C.,_mayoral_election"
+      },
+      {
+        "name": "Howard University News Service: Independent D.C. Mayoral Candidate Hits the Streets (Oct 15, 2026)",
+        "url": "https://www.hunewsservice.com/politics/independent-d-c-mayoral-candidate-hits-the-streets-before-election-day/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-council-chair",
+    "state": "DC",
+    "level": "city",
+    "office": "Chairman of the Council of the District of Columbia",
+    "district": null,
+    "scope_plain": "Every DC voter. Two candidates, so this is a regular pick-one vote, not ranked-choice.",
+    "office_explainer": "Leads the 13-member Council, sets its agenda and committees, and is next in line if the mayor leaves.",
+    "why_it_matters": "The chair decides which bills move and runs the Council's budget process. Phil Mendelson has held the job since 2012 and would work with a new mayor from the Council's progressive wing.",
+    "vote_for": 1,
+    "incumbent": "Phil Mendelson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Phil Mendelson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Council chairman since 2012; at-large councilmember from 1999. Unopposed in the June Democratic primary.",
+        "own_words": [
+          {
+            "text": "Running on his record, legislative experience and fiscal prudence (Hill Rag characterization; no 2026 general-election quote located).",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          },
+          {
+            "text": "Warned in a July 9 memo that at-large voters \"may not meaningfully participate in the selection of both At-Large members\" under the RCV count, and proposed a fix the Council later withdrew.",
+            "is_quote": true,
+            "source": "https://www.hillrag.com/2026/10/12/only-one-vote-counts-for-two-at-large-councilmembers/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Abi-Ananiah Prudent",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://prudentforchair.com",
+        "website_confidence": "sourced",
+        "background": "Nonprofit leader and community organizer who directs Concerned Women for America's DC work. Unopposed in the June Republican primary.",
+        "own_words": [
+          {
+            "text": "On keeping the IMPACT teacher evaluation system: \"It's hard for me to understand why we'd want to take away something that's benefitting kids.\"",
+            "is_quote": true,
+            "source": "https://washingtonsun.com/metro/dc-republican-candidates"
+          },
+          {
+            "text": "Campaign describes \"strengthening families, supporting safe neighborhoods, and improving how local government serves residents.\"",
+            "is_quote": true,
+            "source": "https://dcgop.com/meet-dc-candidates/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      },
+      {
+        "name": "Washington Sun: What's the Point of Running as a Republican in D.C.? (Sept 11, 2026)",
+        "url": "https://washingtonsun.com/metro/dc-republican-candidates"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-council-at-large",
+    "state": "DC",
+    "level": "city",
+    "office": "At-Large Member of the Council of the District of Columbia",
+    "district": null,
+    "scope_plain": "Every DC voter. TWO seats are filled. Ranked-choice: rank up to 5. Big gotcha: your ballot can only help elect ONE of the two winners. DCBOE counts each ballot once for your highest-ranked candidate still in the race and eliminates last place until two remain; once your top pick is one of the final two, your lower rankings never transfer. By the DC charter, only one of the two winners can be a Democrat. If you care which non-Democrat wins the second seat, rank that person first.",
+    "office_explainer": "One of four citywide Council members who write DC laws and pass the budget.",
+    "why_it_matters": "Two of four at-large seats. Anita Bonds (D) is retiring after 14 years. Elissa Silverman (I) won the June special election to finish Kenyan McDuffie's term and now seeks a full term. This is the first DC Council election counted with ranked-choice voting.",
+    "vote_for": 2,
+    "incumbent": "Elissa Silverman (I); Anita Bonds (D) retiring",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Oye Owolewa",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://vote4oye.com/",
+        "website_confidence": "sourced",
+        "background": "Pharmacist and DC's shadow U.S. representative since 2021 (elected 2020). Ward 8 resident, former ANC 8E commissioner. Won the nine-way June Democratic primary with 50.8% in the final RCV round.",
+        "own_words": [
+          {
+            "text": "\"I've dedicated my life in public service to leveling the playing field.\"",
+            "is_quote": true,
+            "source": "https://www.washingtoninformer.com/owolewa-bonds-council-run/"
+          },
+          {
+            "text": "\"Our budget needs to reflect what the 99% needs, not just the 1%.\"",
+            "is_quote": true,
+            "source": "https://www.washingtoninformer.com/owolewa-bonds-council-run/"
+          },
+          {
+            "text": "Priorities: housing, education, jobs and stronger Council oversight.",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Darryl Moch",
+        "party": "DC Statehood Green",
+        "incumbent": false,
+        "website": "https://statehoodgreensofdc.org/",
+        "website_confidence": "sourced",
+        "background": "Chair of the DC Statehood Green Party and a longtime social-justice advocate.",
+        "own_words": [
+          {
+            "text": "Priorities: housing, homelessness and LGBTQ issues (Hill Rag characterization; no direct quote located).",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          },
+          {
+            "text": "Party platform rests on a 'Human Life Standard' measuring government by outcomes in housing, safety, education and transparency.",
+            "is_quote": false,
+            "source": "https://statehoodgreensofdc.org/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Darrell Green",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://darrellgreenfordc.com/",
+        "website_confidence": "sourced",
+        "background": "Lifelong DC resident, retired Metropolitan Police officer and former co-owner of an Adams Morgan bar. Not the former Washington football player.",
+        "own_words": [
+          {
+            "text": "On his top issue, truancy and schools: \"Education, education, education.\"",
+            "is_quote": true,
+            "source": "https://washingtonsun.com/metro/dc-republican-candidates"
+          },
+          {
+            "text": "Campaign describes \"advocacy for safer communities, stronger neighborhoods, and practical leadership focused on residents' everyday concerns.\"",
+            "is_quote": true,
+            "source": "https://dcgop.com/meet-dc-candidates/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Elissa Silverman",
+        "party": "Independent",
+        "incumbent": true,
+        "website": "https://www.elissafordc.com/",
+        "website_confidence": "verified",
+        "background": "At-large councilmember 2015 to 2023, then again since winning the June 16, 2026 special election (56%) to finish McDuffie's term. Former Washington Post and City Paper reporter and DC Fiscal Policy Institute analyst. Co-authored DC's paid family leave law.",
+        "own_words": [
+          {
+            "text": "\"Elissa co-authored the District's paid family and medical leave law.\"",
+            "is_quote": true,
+            "source": "https://www.elissafordc.com/issues"
+          },
+          {
+            "text": "\"Elissa has a strong track record of ensuring the District's $22 billion budget delivers programs that work.\"",
+            "is_quote": true,
+            "source": "https://www.elissafordc.com/issues"
+          },
+          {
+            "text": "Calls herself an innovator in making homes affordable for people of all income levels.",
+            "is_quote": false,
+            "source": "https://www.elissafordc.com/issues"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (ballot order: Owolewa, Moch, Green, Silverman)",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Ranked Choice Voting (multi-seat count rules)",
+        "url": "https://dcboe.org/rcv"
+      },
+      {
+        "name": "Hill Rag: One Choice Per Ballot for Two At-Large Seats in November (Oct 12, 2026)",
+        "url": "https://www.hillrag.com/2026/10/12/only-one-vote-counts-for-two-at-large-councilmembers/"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      },
+      {
+        "name": "Delilah / DCBOE official results: June 2026 primary and special election",
+        "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-delegate",
+    "state": "DC",
+    "level": "federal",
+    "office": "Delegate to the House of Representatives from the District of Columbia",
+    "district": null,
+    "scope_plain": "Every DC voter. Ranked-choice: three candidates plus write-in, rank up to 4.",
+    "office_explainer": "DC's non-voting member of Congress. Can introduce bills and vote in committee, not on the House floor.",
+    "why_it_matters": "Open seat for the first time since 1990. Eleanor Holmes Norton is not running. The delegate is DC's main voice on statehood, home rule and federal moves against local laws.",
+    "vote_for": 1,
+    "incumbent": "Eleanor Holmes Norton (not running)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Denise Rosado",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://rosadoforcongress.com/",
+        "website_confidence": "verified",
+        "background": "Attorney and former federal advisor; has served at the FCC, as an Arizona assistant attorney general and as an administrative law judge. Unopposed in the June Republican primary.",
+        "own_words": [
+          {
+            "text": "Would de-emphasize statehood and push to exempt DC residents from federal income tax.",
+            "is_quote": false,
+            "source": "https://washingtonsun.com/metro/dc-republican-candidates"
+          },
+          {
+            "text": "Campaign aims to \"restore accountability, fiscal responsibility, and results-driven leadership to Washington, D.C.\"",
+            "is_quote": true,
+            "source": "https://dcgop.com/meet-dc-candidates/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Robert White",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.joinrobertwhite.com/",
+        "website_confidence": "verified",
+        "background": "At-large councilmember since 2016 and former legislative counsel to Rep. Norton. Won the June Democratic primary with 64%.",
+        "own_words": [
+          {
+            "text": "\"In Congress, I will fight every day to protect D.C.'s right to govern ourselves and to secure statehood.\"",
+            "is_quote": true,
+            "source": "https://joinrobertwhite.com/join-robert-white-for-congress/"
+          },
+          {
+            "text": "\"I will build coalitions, block harmful federal interference, and deliver resources that move our city forward.\"",
+            "is_quote": true,
+            "source": "https://joinrobertwhite.com/join-robert-white-for-congress/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Kymone Freeman",
+        "party": "DC Statehood Green",
+        "incumbent": false,
+        "website": "https://www.freeman4congress.com/",
+        "website_confidence": "verified",
+        "background": "Co-founder of We Act Radio in Anacostia and the party's 2024 nominee for this seat.",
+        "own_words": [
+          {
+            "text": "\"D.C. should not be paying federal income taxes in the absence of statehood.\"",
+            "is_quote": true,
+            "source": "https://www.washingtoninformer.com/independent-d-c-statehood-green-party-candidates-stand-against-a-unified-d-c-democratic-party/"
+          },
+          {
+            "text": "Wants rent capped at 30% of income and to address root causes of violence.",
+            "is_quote": false,
+            "source": "https://www.washingtoninformer.com/independent-d-c-statehood-green-party-candidates-stand-against-a-unified-d-c-democratic-party/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (ballot order: Rosado, White, Freeman)",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "Delilah / DCBOE official results: June 2026 primary (White 63.8%)",
+        "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-attorney-general",
+    "state": "DC",
+    "level": "city",
+    "office": "Attorney General for the District of Columbia",
+    "district": null,
+    "scope_plain": "Every DC voter. Two candidates, so a regular pick-one vote, not ranked-choice.",
+    "office_explainer": "DC's top lawyer. Sues on the District's behalf, prosecutes juvenile and some misdemeanor cases, enforces consumer and tenant law.",
+    "why_it_matters": "The AG decides which lawsuits DC brings, including against the federal government, and handles juvenile prosecutions. Schwalb has led several challenges to federal actions in DC.",
+    "vote_for": 1,
+    "incumbent": "Brian L. Schwalb",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Manuel Rivera",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://riverafordc.com",
+        "website_confidence": "sourced",
+        "background": "Puerto Rico-born attorney with nearly 40 years of practice in immigration, workers' rights and family law; small-business owner. A former lifelong Democrat who became a Republican after the 2024 election.",
+        "own_words": [
+          {
+            "text": "\"Public safety, government accountability, taxes, and protecting our citizens are not just Republican or Democrat issues.\"",
+            "is_quote": true,
+            "source": "https://washingtonsun.com/metro/dc-republican-candidates"
+          },
+          {
+            "text": "Names \"juvenile crime, homelessness, drug addiction, family domestic violence\" as his focus and criticizes Schwalb's lawsuits against the federal government.",
+            "is_quote": true,
+            "source": "https://wjla.com/news/local/attorney-general-dc-candidates-democrat-republican-schwalb-incumbent-legal-szymkowicz-polictics-voting-stances-public-safety-crime-youth-home-rule-homelessness-domestic-violence"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Brian L. Schwalb",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.brianfordc.com/",
+        "website_confidence": "unverified",
+        "background": "Attorney General since 2023; former partner at Venable. Won the June Democratic primary with 91%.",
+        "own_words": [
+          {
+            "text": "\"I am committed to using the law to make DC safer, stronger and more affordable.\"",
+            "is_quote": true,
+            "source": "https://wjla.com/news/local/attorney-general-dc-candidates-democrat-republican-schwalb-incumbent-legal-szymkowicz-polictics-voting-stances-public-safety-crime-youth-home-rule-homelessness-domestic-violence"
+          },
+          {
+            "text": "Will \"seek swift and certain consequences for youth who commit violent offenses.\"",
+            "is_quote": true,
+            "source": "https://wjla.com/news/local/attorney-general-dc-candidates-democrat-republican-schwalb-incumbent-legal-szymkowicz-polictics-voting-stances-public-safety-crime-youth-home-rule-homelessness-domestic-violence"
+          },
+          {
+            "text": "Priorities: consumer protection, housing and wage enforcement, juvenile justice, defending DC autonomy against federal actions.",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (ballot order: Rivera, Schwalb)",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "WJLA: Meet the candidates running for D.C. Attorney General (June 12, 2026)",
+        "url": "https://wjla.com/news/local/attorney-general-dc-candidates-democrat-republican-schwalb-incumbent-legal-szymkowicz-polictics-voting-stances-public-safety-crime-youth-home-rule-homelessness-domestic-violence"
+      },
+      {
+        "name": "Delilah / DCBOE official results: June 2026 primary (Schwalb 91.1%)",
+        "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-shadow-senator",
+    "state": "DC",
+    "level": "federal",
+    "office": "United States Senator (Shadow)",
+    "district": null,
+    "scope_plain": "Every DC voter. Two candidates, so a regular pick-one vote. The ballot just says 'United States Senator'; DC's shadow senators are not seated in the Senate.",
+    "office_explainer": "Unpaid lobbyist for DC statehood. Not seated in the Senate; no vote. One of two shadow senators.",
+    "why_it_matters": "A symbolic office DC voters created in 1990 to push for statehood. Six-year term. Paul Strauss has held it since 1997.",
+    "vote_for": 1,
+    "incumbent": "Paul Strauss",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Robert Simmons",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://robert4senate.com/",
+        "website_confidence": "sourced",
+        "background": "DC resident for more than 20 years, local business owner and founder of the nonprofit Global Alliance, Inc.",
+        "own_words": [
+          {
+            "text": "Campaign lists advocating for DC statehood and strengthening national security.",
+            "is_quote": false,
+            "source": "https://dcgop.com/meet-dc-candidates/"
+          },
+          {
+            "text": "Priorities: congressional representation, public safety, fiscal accountability and federal cooperation.",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Paul Strauss",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Shadow senator since 1997, attorney and former ANC commissioner. Unopposed in the June Democratic primary.",
+        "own_words": [
+          {
+            "text": "Priorities: statehood and building support outside DC for admission as the 51st state (Hill Rag characterization; no 2026 quote located).",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          },
+          {
+            "text": "Background and record on Ballotpedia.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Paul_Strauss"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (ballot order: Simmons, Strauss)",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dc-shadow-representative",
+    "state": "DC",
+    "level": "federal",
+    "office": "United States Representative (Shadow)",
+    "district": null,
+    "scope_plain": "Every DC voter. Two candidates, so a regular pick-one vote. The ballot says 'United States Representative'; this is the unpaid shadow seat, not the Delegate.",
+    "office_explainer": "Unpaid statehood advocate. Not seated in the House; no vote. Two-year term.",
+    "why_it_matters": "Open seat. Oye Owolewa left it to run for Council. Like the shadow senators, this office exists to lobby Congress for DC statehood.",
+    "vote_for": 1,
+    "incumbent": "Oye Owolewa (not running; running for Council at-large)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ciprian Ivanof",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://home.ivanof4dc.com/biography",
+        "website_confidence": "sourced",
+        "background": "Attorney (American University law) and former Army National Guard member, born in Romania, in DC 14 years. Second run for this seat.",
+        "own_words": [
+          {
+            "text": "Wants \"to break up the dysfunctional culture of D.C. politics\" and calls himself \"a staunch advocate for economic freedom and education.\"",
+            "is_quote": true,
+            "source": "https://dcgop.com/meet-dc-candidates/"
+          },
+          {
+            "text": "Argues the shadow delegation should scrutinize District management: public safety, education, WMATA, city finances.",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      },
+      {
+        "name": "Franklin Garcia",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://fgarciadc.com/",
+        "website_confidence": "sourced",
+        "background": "Held this seat 2015 to 2021 and founded the DC Latino Caucus. Unopposed in the June Democratic primary.",
+        "own_words": [
+          {
+            "text": "Seeking a return to the seat he held for six years to push for statehood (Hill Rag; no 2026 direct quote located).",
+            "is_quote": false,
+            "source": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+          },
+          {
+            "text": "Campaign site.",
+            "is_quote": false,
+            "source": "https://fgarciadc.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/ballot"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DCBOE: General Election Candidates in Ballot Order (PDF)",
+        "url": "https://dcboe.org/getContentAsset/1029b813-fb27-4055-9218-fbe40360aacb/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-CANDIDATES-07152026.pdf?language=en"
+      },
+      {
+        "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (ballot order: Ivanof, Garcia)",
+        "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+      },
+      {
+        "name": "Hill Rag: The Election Isn't Over Yet (Oct 13, 2026)",
+        "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

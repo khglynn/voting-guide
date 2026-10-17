@@ -1,0 +1,1302 @@
+[
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The board endorsed Fitzpatrick for the GOP nomination in July (\"State Auditor Fitzpatrick has earned GOP re-nomination\"). Its general-election pick is behind a paywall that blocked fetching; expected in October.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_be93bcee-e326-4434-8cd0-7bd52578a4a0.html",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Prop A editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "An editorial titled \"Editorial: Vote no on Amendment 3\" exists on stltoday.com, but the fetch redirected to a paywall gate and the year could not be confirmed (the board also ran a \"no on 3\"-adjacent piece in 2024). Open it to confirm.",
+    "url": "https://www.stltoday.com/opinion/editorial/editorial-vote-no-on-amendment-3/article_ac09b13d-58c4-5fd0-864b-60cbf68ef6b5.html",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-amendment-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 6 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 7 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 8 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-retention-wilson",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-retention-lay",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stl-post-dispatch-eb",
+    "target_id": "mo-retention-quigless",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.stltoday.com/opinion/editorial/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No general-election auditor endorsement surfaced as of Oct 16.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Prop A editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 3 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-amendment-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 6 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 7 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Amendment 8 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-retention-wilson",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-retention-lay",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "kc-star-eb",
+    "target_id": "mo-retention-quigless",
+    "status": "not_found",
+    "choice": null,
+    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "url": "https://www.kansascity.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. It publishes questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/missouri",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Proposition A but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
+    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Announced Sept 3, 2026: NO on Amendment 3 \"to prevent politicians from overturning the will of voters and banning abortion.\"",
+    "url": "https://my.lwv.org/missouri/article/league-women-voters-missouri-endorses-no-amendment-3-protect-will-voters",
+    "date": "2026-09-03",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-amendment-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 6 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
+    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 7 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
+    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 8 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
+    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not take positions on judicial retention; it points voters to the Missouri Bar's Judicial Performance Review.",
+    "url": "https://yourmissourijudges.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not take positions on judicial retention; it points voters to the Missouri Bar's Judicial Performance Review.",
+    "url": "https://yourmissourijudges.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not take positions on judicial retention; it points voters to the Missouri Bar's Judicial Performance Review.",
+    "url": "https://yourmissourijudges.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-missouri",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not take positions on judicial retention; it points voters to the Missouri Bar's Judicial Performance Review.",
+    "url": "https://yourmissourijudges.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-state-auditor",
+    "status": "endorsed",
+    "choice": "Quentin Wilson",
+    "why": "Party nominee. The party page: \"It is the only statewide race in 2026.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"NO on PROPOSITION A\": a no vote would block the \"gerrymandered HB1 map.\" Positions \"unanimously endorsed.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Attacks reproductive rights by reversing what Missourians just voted for in 2024.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "\"Expands and preserves the initiative and referendum process into a fundamental right.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-amendment-7",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Creates a permanent public endowment fund managed by the state without clear tools for voter oversight.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-amendment-8",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Would make it \"extremely difficult for voters to remove a bad sheriff.\"",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-09-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-democratic-party",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears on the party's 2026 page.",
+    "url": "https://www.missouridemocrats.org/2026-general-election",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-state-auditor",
+    "status": "endorsed",
+    "choice": "Scott Fitzpatrick",
+    "why": "Incumbent Republican nominee; the party backs its ticket. The Oct 8 ballot guide coverage lists measures only; the candidate endorsement is inferred from nomination.",
+    "url": "https://www.missouri.gop/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Oct 8 ballot guide: \"the revised map better protects counties and rural communities.\"",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Oct 8 ballot guide: \"a measure to protect women and children.\" The party formally partnered with Missouri Right to Life on the campaign.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Oct 8 ballot guide: \"billionaire-funded ballot campaigns could leave lawmakers unable to change voter-approved policies.\"",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-amendment-7",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Oct 8 ballot guide promotes it \"as a path toward eliminating taxes.\"",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-amendment-8",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Oct 8 ballot guide: yes; no reason quoted in coverage.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-republican-party",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Parties do not take positions on nonpartisan judicial retention in Missouri; none appears in the Oct 8 guide coverage.",
+    "url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's Oct 5 and July 8 endorsement lists cover General Assembly seats only (63 and 22 candidates). No auditor endorsement.",
+    "url": "https://mochamber.com/news-archive/election-news",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure.",
+    "url": "https://mochamber.com/news-archive/election-news",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure.",
+    "url": "https://mochamber.com/news-archive/election-news",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Oct 9, 2026: CEO Kara Corches: \"If passed, Amendment 6 will create significant risk for Missouri businesses and the stability of our state's economy.\"",
+    "url": "https://mochamber.com/news-archive/missouri-chamber-opposes-amendment-6/",
+    "date": "2026-10-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure.",
+    "url": "https://mochamber.com/news-archive/election-news",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's election-news archive (checked Oct 16) has no statement on this measure.",
+    "url": "https://mochamber.com/news-archive/election-news",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-chamber",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-state-auditor",
+    "status": "endorsed",
+    "choice": "Quentin Wilson",
+    "why": "Listed on the federation's 2026 General Election endorsement page.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"NO, OPPOSE. Citizen-led referendum on gerrymandered Congressional maps.\"",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"NO, OPPOSE. Repeals abortion rights.\"",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "\"YES, SUPPORT. Protects citizen-led votes and petition rights.\"",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-amendment-7",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"NO, OPPOSE. Allows for private funding of state government.\"",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-amendment-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Amendment 8 is not listed on the federation's endorsement page.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-afl-cio",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "MRL PAC endorsed in the August primaries (Missouri Times coverage) but a 2026 general-election auditor endorsement was not found. Fitzpatrick has had MRL backing in past races.",
+    "url": "https://missourilife.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a life issue; MRL takes no position.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Lead organizational backer. President Steve Rupp: \"we are building an unstoppable coalition\" with the Missouri GOP for the repeal.",
+    "url": "https://www.kcur.org/health/2026-03-31/missouri-abortion-ban-amendment-3-election-2026",
+    "date": "2026-03-31",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-amendment-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a life issue; MRL takes no position.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-amendment-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a life issue; MRL takes no position.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-amendment-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a life issue; MRL takes no position.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-retention-wilson",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-retention-lay",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mo-right-to-life-pac",
+    "target_id": "mo-retention-quigless",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 auditor endorsement found.",
+    "url": "https://abortionactionmissouri.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the group's 2026 work is focused on Amendment 3.",
+    "url": "https://abortionactionmissouri.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Named member of the Stop the Ban campaign (with Planned Parenthood and the ACLU of Missouri), which has raised over $1 million against the repeal.",
+    "url": "https://www.kcur.org/health/2026-03-31/missouri-abortion-ban-amendment-3-election-2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-amendment-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the group's 2026 work is focused on Amendment 3.",
+    "url": "https://abortionactionmissouri.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the group's 2026 work is focused on Amendment 3.",
+    "url": "https://abortionactionmissouri.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the group's 2026 work is focused on Amendment 3.",
+    "url": "https://abortionactionmissouri.org/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-retention-wilson",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-retention-lay",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "abortion-action-mo",
+    "target_id": "mo-retention-quigless",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "NRA-PVF grades Missouri candidates at the linked page; the 2026 auditor grade was not opened (search budget).",
+    "url": "https://www.nrapvf.org/grades/missouri",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-amendment-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-amendment-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-amendment-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not a firearms measure; NRA-PVF does not take positions on it.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not rate judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not rate judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not rate judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not rate judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"A NO vote will allow Missouri voters to pick their politicians.\" \"Proposition A would split Kansas City into three districts.\"",
+    "url": "https://peoplenotpoliticiansmo.org/home/faqs-on-proposition-a/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-amendment-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-amendment-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-amendment-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "people-not-politicians-mo",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Single-issue committee focused on the redistricting referendum.",
+    "url": "https://peoplenotpoliticiansmo.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-state-auditor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No auditor endorsement in the Oct 1 post; check the chapter's full endorsement list.",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Oct 1, 2026: \"This re-mapping was done outside the usual 10-year Census timeline for redistricting.\"",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Oct 1, 2026: \"Amendment 3 severely restricts abortion and would end transition care for minors.\"",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Oct 1, 2026: \"The Sierra Club supports IPs as a valued part of our state's democracy.\"",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-amendment-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not addressed in the Oct 1 statewide-measures post; the chapter's full list is under its Political Action menu.",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-amendment-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not addressed in the Oct 1 statewide-measures post.",
+    "url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-mo",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not weigh in on judicial retention.",
+    "url": null,
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide covers measures only; it does not mention the auditor race.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "\"Lean Yes.\" \"A close call where reasonable conservatives can land on either side.\"",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes from the anti-abortion side: it \"is not a straight repeal\" and would write permitted abortion exceptions into the Constitution.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-amendment-6",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Opposes the \"central provision\" requiring \"80% of each legislative chamber.\"",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-amendment-7",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"Amendment 7 settles none of them,\" referring to funding, fees, procurement and conflict-of-interest questions.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-amendment-8",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "\"We like the idea of a constitutional sheriff\" but opposes the exclusions and removal process; asks voters to \"ask for a clean version.\"",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide covers measures only.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide covers measures only.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide covers measures only.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "act-for-missouri",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "The guide covers measures only.",
+    "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  }
+]

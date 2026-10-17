@@ -1,0 +1,162 @@
+[
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Inquirer board endorses in governor's races (Shapiro, Oct. 9, 2022) and usually publishes statewide endorsements in the last two to three weeks before Election Day. No 2026 governor endorsement had appeared as of Oct. 16, and the City & State endorsement tracker (Oct. 13) lists no newspapers. Re-check the editorials page after Oct. 18.",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post-Gazette board still endorses in some statewide races (Oz for Senate in 2022) but skipped the 2024 presidential pick. No 2026 governor endorsement was found as of Oct. 16; the paper's Oct. 7 and Oct. 8 coverage of the race is news, not editorial. It may come late October or not at all.",
+    "url": "https://www.post-gazette.com/opinion/editorials",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review stopped endorsing candidates in 2016 and has not resumed. Expect editorials about the race but no pick.",
+    "url": "https://triblive.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. It publishes the candidates' questionnaire answers on VOTE411.",
+    "url": "https://www.vote411.org/pennsylvania",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-democratic-party",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "The Pennsylvania Democratic State Committee 'resoundingly' endorsed the Shapiro-Davis ticket for a second term at its Feb. 7, 2026 meeting in Harrisburg. Also listed on the City & State tracker.",
+    "url": "https://www.inquirer.com/news/pennsylvania/pennsylvania-gop-democratic-party-shapiro-garrity-20260207.html",
+    "date": "2026-02-07",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-republican-party",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Stacy Garrity / Jason Richey",
+    "why": "The Republican State Committee first endorsed Garrity in September 2025, an unusually early step meant to give her more time to campaign, then endorsed the Garrity-Richey ticket at its Feb. 7, 2026 meeting in Harrisburg.",
+    "url": "https://www.inquirer.com/news/pennsylvania/pennsylvania-gop-democratic-party-shapiro-garrity-20260207.html",
+    "date": "2026-02-07",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "WHYY (Aug. 18, 2026) reports Shapiro 'has also secured endorsements from the Pennsylvania AFL-CIO, the state's largest labor federation.' Listed on the City & State tracker. The AFL-CIO's own announcement page was not located; the date is the article date, not the endorsement date.",
+    "url": "https://whyy.org/articles/philadelphia-building-trades-stacy-garrity-pennsylvania-governor-campaigning-against/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "psea",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "WHYY (Aug. 18, 2026) reports PSEA, 'the state's largest teachers union,' has endorsed Shapiro. Listed on the City & State tracker. PSEA's own announcement page was not located; the date is the article date.",
+    "url": "https://whyy.org/articles/philadelphia-building-trades-stacy-garrity-pennsylvania-governor-campaigning-against/",
+    "date": "2026-08-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nfib-pa",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Stacy Garrity / Jason Richey",
+    "why": "The City & State endorsement tracker (Oct. 13, 2026) lists the National Federation of Independent Business among Garrity's backers, alongside two Associated Builders and Contractors chapters. NFIB's own announcement was not located.",
+    "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
+    "date": "2026-10-13",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "conservation-voters-pa",
+    "target_id": "pa-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "CVPA led a five-group environmental endorsement of Shapiro on April 7, 2022. No 2026 endorsement was found on its site or on the City & State tracker (Oct. 13). Likely but unconfirmed.",
+    "url": "https://www.conservationpa.org/news/leading-pa-environmental-advocates-endorse-josh-shapiro",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-pa-pac",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "Planned Parenthood Pennsylvania Advocates announced its endorsement of Shapiro (Local21 News), and 'Planned Parenthood PA PAC' appears on the City & State tracker. Date of the announcement not confirmed.",
+    "url": "https://local21news.com/news/local/planned-parent-pennsylvania-advocates-endorse-gov-shapiro-support-governor-politics-election-abortion-reproductive-rights-health-centers-health-care-pennsylvania-pa",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Stacy Garrity / Jason Richey",
+    "why": "The City & State endorsement tracker (Oct. 13, 2026) lists the Pennsylvania Pro-Life Federation and LifePAC of Southwestern Pennsylvania among Garrity's backers. The federation's own page was not opened.",
+    "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
+    "date": "2026-10-13",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "giffords",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "Giffords and Moms Demand Action both appear on Shapiro's list in the City & State tracker (Oct. 13, 2026). Giffords' own announcement was not opened.",
+    "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
+    "date": "2026-10-13",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "pa-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No NRA-PVF grade or endorsement for the 2026 Pennsylvania governor race was found, and the NRA is absent from the City & State tracker (Oct. 13). Check nrapvf.org/grades/pennsylvania closer to Election Day.",
+    "url": "https://www.nrapvf.org/grades/pennsylvania/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fop-lodge-5-philadelphia",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "Philadelphia's police union endorsed Shapiro on Sept. 1, 2026. Lodge president Roosevelt Poplar: 'The Governor has delivered on his promise to invest in public safety.' Five more FOP lodges (Chester County, City of Chester, Delaware County, SEPTA transit police, Lodge 92) followed on Sept. 2.",
+    "url": "https://www.inquirer.com/politics/election/philadelphia-police-union-endorses-josh-shapiro-20260901.html",
+    "date": "2026-09-01",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-state-troopers-assn",
+    "target_id": "pa-governor",
+    "status": "endorsed",
+    "choice": "Josh Shapiro / Austin Davis",
+    "why": "The Pennsylvania State Troopers Association backed Shapiro's re-election on Monday, Aug. 31, 2026, the day before FOP Lodge 5 (Inquirer, Sept. 1). Also on the City & State tracker.",
+    "url": "https://www.inquirer.com/politics/election/philadelphia-police-union-endorses-josh-shapiro-20260901.html",
+    "date": "2026-08-31",
+    "confidence": "sourced"
+  }
+]

@@ -1,0 +1,557 @@
+[
+  {
+    "id": "la-times-eb",
+    "name": "Los Angeles Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides Media Bias Rating: Lean Left. In 2026 the Times published a voter guide without editorial board endorsements (LA Public Press, May 2026; the Oct 1, 2026 general election guide contains explainers only). No proposition endorsements were found as of Oct 15, 2026.",
+    "geography": [
+      "CA",
+      "los-angeles-metro"
+    ],
+    "guide_url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "sf-chronicle-eb",
+    "name": "San Francisco Chronicle editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides Media Bias Rating: Lean Left. Editorial positions are the consensus of the publisher, editorial page editor and opinion staff; newsroom reporters do not participate.",
+    "geography": [
+      "CA",
+      "san-francisco"
+    ],
+    "guide_url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sacbee-eb",
+    "name": "The Sacramento Bee editorial board (McClatchy California)",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides Media Bias Rating: Lean Left. One McClatchy California editorial board writes for The Sacramento Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune. In 2026 it split from the other left-leaning boards by backing Prop 45 (CEQA) and, on a non-unanimous vote, Prop 40.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.sacbee.com/opinion/election-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sdut-eb",
+    "name": "The San Diego Union-Tribune editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Owned by MediaNews Group (Alden) since 2023 and overseen by the same opinion editor as the Southern California News Group, though it keeps a separate board. Its 2026 proposition picks track a limited-government line: no on the housing bond, the high-income tax and the billionaire tax; yes on Props 41, 42, 43 and 45. (AllSides' older Lean Left rating predates the ownership change.)",
+    "geography": [
+      "CA",
+      "san-diego"
+    ],
+    "guide_url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "scng-eb",
+    "name": "Southern California News Group editorial board (Orange County Register, LA Daily News, Press-Enterprise and sister papers)",
+    "type": "publication",
+    "lean": "right",
+    "lean_basis": "Self-described: endorsements are made 'with our commitments to limited government, economic liberty, personal freedom and free markets in mind' (SCNG, Oct 1, 2026). One board writes for the OC Register, LA Daily News, Press-Enterprise, Press-Telegram, Daily Bulletin, San Bernardino Sun, Pasadena Star-News and others. Libertarian-conservative; it split from the GOP on Prop 38 (no).",
+    "geography": [
+      "CA",
+      "los-angeles-metro",
+      "orange-county"
+    ],
+    "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "mercury-news-eb",
+    "name": "The Mercury News and East Bay Times editorial boards (Bay Area News Group)",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides Media Bias Rating for The Mercury News: Lean Left. The two boards publish joint endorsements. As of Oct 15, 2026 they had published positions on only three propositions and said more would follow.",
+    "geography": [
+      "CA",
+      "san-francisco"
+    ],
+    "guide_url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-california",
+    "name": "League of Women Voters of California",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan civic organization that never endorses candidates. It does take Support, Oppose or Neutral positions on ballot measures based on member-adopted policy positions; in practice those positions (e.g., opposing the 1979 Gann spending limit, supporting public campaign financing) align with the progressive side on fiscal and election questions. Its separate Education Fund publishes neutral explainers at cavotes.org.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://lwvc.org/ballot-recommendations/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "calmatters",
+    "name": "CalMatters",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit, nonpartisan newsroom that describes itself as 'independent from commercial, donor or political interests.' It publishes proposition explainers and campaign-finance data but does not endorse.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://calmatters.org/california-voter-guide-2026/propositions/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "ca-democratic-party",
+    "name": "California Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization. Positions adopted at the Aug 1-2, 2026 Executive Board meeting in San Diego (Resolutions Committee report). The party endorsed Prop 40 over Gov. Newsom's opposition.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://cadem.org/our-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ca-republican-party",
+    "name": "California Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization. Positions from the CRP 2026 General Statewide Voter Guide (Oct 2026). Neutral on Props 1 and 37.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://cagop.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "calchamber",
+    "name": "California Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide business lobby. Pro-business and generally anti-tax, but not partisan: in 2026 it backed the Democratic-sponsored Props 1 and 2 and took no position on the GOP-backed voter ID measure. It led the campaign to qualify Prop 45.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "ca-labor-federation",
+    "name": "California Federation of Labor Unions, AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide federation of 1,300 unions representing 2.3 million workers. Its 2026 slate is uniformly progressive and it is one of the few major groups backing both Prop 40 and Prop 44, the two SEIU-UHW measures.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "aclu-socal",
+    "name": "ACLU of Southern California",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Civil liberties advocacy organization; its 2026 guide takes progressive positions on taxes, housing and voting. ACLU California Action (the statewide 501(c)(4)) is the named opponent of Prop 39 in the official guide; ACLU of Northern California's list matches SoCal's except it takes no position on Props 40 and 45.",
+    "geography": [
+      "CA",
+      "los-angeles-metro",
+      "orange-county",
+      "san-diego"
+    ],
+    "guide_url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "hjta",
+    "name": "Howard Jarvis Taxpayers Association",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-tax advocacy group founded to defend Prop 13; sponsor of Prop 43 ('Yes on 43, a Project of the Howard Jarvis Taxpayers Association'). Its 2026 guide opposes every bond and tax measure and supports Props 39, 41, 42, 43 and 45.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.hjta.org/2026votingguide/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sierra-club-california",
+    "name": "Sierra Club California",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Environmental advocacy organization; its political committee endorses Democratic candidates and progressive measures. Statewide it took positions on only two 2026 propositions; the SF Bay Chapter added positions on Props 4, 5, 39 and 43.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "cta",
+    "name": "California Teachers Association",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "The state's largest teachers union and a major Democratic-aligned donor ($10 million to Yes on 3 per GV Wire). Notably opposes Prop 40, the billionaire tax, alongside most health care groups.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.cta.org/document/2026-november-general-election-initiative-recommendations",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ppac",
+    "name": "Planned Parenthood Affiliates of California",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Reproductive health advocacy organization, Democratic-aligned. In 2026 it opposes Prop 40 (its CEO is quoted in the official argument against) and Prop 44, both of which would affect clinics it operates.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-1",
+    "name": "Yes on Prop 1 (Californians for Veterans and Affordable Housing)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 1, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Listed supporters: US Vets, CA Federation of Teachers, Habitat for Humanity CA.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yesonprop1ca.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-2",
+    "name": "Yes on Prop 2",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 2, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Listed supporters: CA Professional Firefighters, LA Chamber of Commerce, Gov. Newsom.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.yesonprop2.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-3",
+    "name": "Yes on Prop 3 (sponsored by education and labor organizations)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 3, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Top funders include the California Teachers Association.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.yesprop3ca.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-3",
+    "name": "Vote No on Prop 3",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 3, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Led by the California Taxpayers Association and Family Business Association.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://votenoprop3.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-4",
+    "name": "Californians for Fair Elections, Yes on Prop 4 (sponsored by Government Reform Advocates)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 4, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Co-chaired by the California Clean Money Action Fund.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.cafairelections.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-4",
+    "name": "No on Prop 4 (California Taxpayers Association)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 4, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.caltax.org/prop4",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-5",
+    "name": "Fix the Recall, Yes on Prop 5",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 5, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Led by Sen. Josh Newman, the measure's author.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://fixtherecall.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-37",
+    "name": "Yes on 37",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 37, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Listed supporters: United Nurses Associations of California, CA Conference of Carpenters, Treasurer Fiona Ma.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://voteyeson37.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-38",
+    "name": "Yes on 38",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 38, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Listed supporters: Michael J. Fox Foundation, Alzheimer's Los Angeles.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yeson38.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-38",
+    "name": "No on Prop 38",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 38, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://votenoonprop38.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-39",
+    "name": "Californians for Voter ID, Yes on 39",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 39, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Major funder: Richard Uihlein ($6.5 million, per Politico).",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.voteridca.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-39",
+    "name": "Californians for Voting Rights, No on Prop 39",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 39, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Backed by ACLU California Action, Common Cause and LWV California.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://noonprop39.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-40",
+    "name": "Yes on 40, Billionaire Tax Now (sponsored by SEIU-United Healthcare Workers West)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 40, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Also runs the No on 41 and No on 42 efforts.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yeson40.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-40",
+    "name": "Golden State Promise, No on Prop 40",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 40, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Major funders include Sergey Brin; backed by CTA, CMA, CalChamber and the Building Trades.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://votenoon40.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-41",
+    "name": "Yes on Prop 41 (Building a Better California)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 41, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Building a Better California is funded by Sergey Brin and other tech executives (Sacramento Bee, CalMatters).",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yesonprop41.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-42",
+    "name": "Yes on Prop 42, Retirement and Personal Savings Protection Act (Building a Better California)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 42, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Same funder as Yes on 41 and No on 40; endorsed by Gov. Newsom Oct 9, 2026.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yesonprop42.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-43",
+    "name": "Yes on 43, a Project of the Howard Jarvis Taxpayers Association",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 43, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Committee top funder: Howard Jarvis Taxpayers Association.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.hjta.org/saveprop13/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-43",
+    "name": "No on Prop 43",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 43, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Backed by CA Professional Firefighters, CA Federation of Teachers, SEIU nurses.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.noprop43ca.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-44",
+    "name": "Yes on Proposition 44",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 44, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Sponsored by SEIU-United Healthcare Workers West.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yesonproposition44.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-44",
+    "name": "No on Prop 44",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 44, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Backed by the California Medical Association, Primary Care Association and pediatricians.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://noprop44.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "yes-on-prop-45",
+    "name": "Yes on Prop 45, Building an Affordable California",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official Yes campaign committee for Proposition 45, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Led by CalChamber; funders include PG&E and Edison (CalMatters).",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://yesonprop45.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "no-on-prop-45",
+    "name": "No on Prop 45 (Clean and Healthy California)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Official No campaign committee for Proposition 45, as listed in the state Voter Information Guide. A single-measure committee has no general lean; 'neutral' here means not assessed. Coalition of environmental groups and the State Building and Construction Trades Council.",
+    "geography": [
+      "CA"
+    ],
+    "guide_url": "https://www.noprop45ca.com/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  }
+]

@@ -1,0 +1,82 @@
+# Your Ballot, Explained (2026 voting guide)
+
+A one-page guide to the Nov 3, 2026 general election for Kevin's friends and family.
+Enter a ZIP, read your ballot in plain words, see who endorsed whom, and take a cheat
+sheet to the polls. Static site: Vite + vanilla TypeScript, no framework, no analytics,
+no accounts.
+
+## Run it
+
+```sh
+npm install
+npm run dev          # builds the data, then starts Vite at http://localhost:5173
+npm run build        # data + typecheck + production build into dist/
+npm run preview      # serve dist/ at http://localhost:4173
+npm run test:e2e     # Playwright pass at 380px against the preview (screenshots in shots/)
+```
+
+`?today=2026-10-30` on the URL pretends it's that date, for checking the plan card.
+
+## Add a place
+
+Research lives in `data/` (a copy of `../data/`, the analysts' output). Shapes are in
+`../SCHEMA.md`. To add a place, drop in its files and rebuild:
+
+1. `data/places/{place-id}.json`: label, state, counties, ZIPs, `contest_ids` (and
+   optionally `measure_ids`). ZIPs that cross into another place make the app ask
+   "Which of these is you?"
+2. `data/contests/{file}.json` and `data/measures/{file}.json` for the local items.
+3. `data/endorsers-{file}.json` and `data/endorsements-{file}.json`.
+4. `npm run build`.
+
+The state must already have `data/states/{ST}.json`. Statewide items come from
+`data/contests/{st}-statewide.json` and `data/measures/{st}-statewide.json`.
+
+To refresh from the research folder: `rm -rf data && cp -r ../data data && npm run build`.
+
+## What the data step does
+
+`scripts/build-data.mjs` reads everything in `data/`, validates each record, merges
+duplicate endorsers, matches endorsement picks to candidate names, links dueling
+measures, and writes lazily loaded bundles to `public/data/`:
+
+- `index.json`: states, places and the ZIP index (loaded first, small)
+- `state-{ST}.json`: how to vote, statewide contests and measures, endorsements
+- `place-{id}.json`: local contests and measures, endorsements, ballot order
+
+A file or record that fails validation is skipped, never fatal. Check
+`public/data/build-report.json` after a build: skipped files, skipped records and
+warnings are listed there and summarized in the console.
+
+`scripts/config.json` holds the few hand-kept joins: endorser aliases (one board, two
+mastheads), and measure pairs that collide (CO 87 vs 136, CA 40, 41 and 42). Other
+collisions are detected from the measure text.
+
+## Rules the code keeps
+
+- Every date shown comes from `data/states/{ST}.json`. The plan card formats dates and
+  labels which field they came from; rule text is shown word for word.
+- No red or blue. Party is text only. Lean is a neutral five-step scale plus words.
+- Publications and nonpartisan groups start on. Parties and advocacy groups are opt-in.
+- No addresses anywhere. The optional address lookup sends the address only to the
+  U.S. Census Geocoder (JSONP) and never stores it.
+- Picks save in `localStorage` (wrapped in try/catch) and in the save link's URL
+  fragment (`#v1~...`), which never reaches a server.
+
+## Open items for Kevin
+
+- "Report a problem" destination: `REPORT_URL` in `src/views/items.ts` (TODO).
+- Custom domain, and whether to turn on Vercel Deployment Protection before sharing.
+
+## Deploy
+
+Vercel, static: build command `npm run build`, output directory `dist`, framework
+none (see `vercel.json`).
+
+## License
+
+- **Code:** MIT (see `LICENSE`).
+- **Data we wrote** (plain-language summaries, explainers and how-to-vote notes in `data/`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Reuse it, just credit the guide.
+- **Quoted material** (candidate statements, ballot text, endorsement excerpts) belongs to its authors and is quoted with a link to the source.
+
+This is a nonpartisan guide. Always confirm deadlines with your official election office.

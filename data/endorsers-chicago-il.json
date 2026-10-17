@@ -1,0 +1,194 @@
+[
+  {
+    "id": "chicago-tribune-eb",
+    "name": "Chicago Tribune editorial board",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth'; in 2026 it endorsed Democrats in the four statewide races it weighed in on. AllSides rates Tribune news Center. No 2026 general-election endorsements in Chicago or Cook County races were located for this guide as of Oct. 16.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "chicago-sun-times-eb",
+    "name": "Chicago Sun-Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). Stopped endorsing candidates on Jan. 23, 2012 ('inform you, not spin you'); publishes voter guides and questionnaires instead. AllSides rates its news Lean Left.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://chicago.suntimes.com/elections/2026",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-chicago",
+    "name": "League of Women Voters of Chicago (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Self-described: 'We're a nonpartisan organization that empowers voters and defends democracy.' The League never endorses candidates or takes sides in judicial retention; it publishes candidate answers on VOTE411 (address-gated). No positions on the 2026 Chicago or Cook County referenda were found.",
+    "geography": [
+      "chicago-il"
+    ],
+    "guide_url": "https://vote411.org/lwvchicago",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "injustice-watch",
+    "name": "Injustice Watch: Check Your Judges",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit investigative newsroom covering Cook County courts. Its 2026 guide states: 'Injustice Watch does not make recommendations or endorsements.' It profiles every judge on the retention ballot with bar ratings, background and any controversies.",
+    "geography": [
+      "cook-county-il",
+      "chicago-il"
+    ],
+    "guide_url": "https://2026retention.injusticewatch.org/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "isba-judicial-evaluations",
+    "name": "Illinois State Bar Association, Judicial Evaluation Committee",
+    "type": "other",
+    "lean": "neutral",
+    "lean_basis": "Statewide lawyers' association and one of the bar groups in Cook County's Alliance of Bar Associations for Judicial Screening. Rates judicial candidates only, after questionnaires, a background check and interviews; candidates who do not participate are rated 'Not Recommended.' Takes no part in non-judicial races.",
+    "geography": [
+      "IL",
+      "cook-county-il",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.isba.org/judicial-elections/counties/cook",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "chicago-federation-of-labor",
+    "name": "Chicago Federation of Labor",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Central labor council for Chicago and Cook County. Its Nov. 3, 2026 slate (dated 9/16/2026) endorses the Democrat in every partisan Chicago race except House District 20, where it backs the unopposed Republican incumbent, plus 58 of the 60 Circuit Court retention judges (not Ursula Walowski or John J. Mahoney III) and named Chicago school board candidates, with 'Neutral' in four subdistricts.",
+    "geography": [
+      "cook-county-il",
+      "chicago-il"
+    ],
+    "guide_url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ift-ctu",
+    "name": "Illinois Federation of Teachers (incl. Chicago Teachers Union, Local 1)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide teachers union (AFT affiliate) that includes the Chicago Teachers Union. Hilario Dominguez, who has worked as CTU's political director, is its candidate for school board president. A full CTU general-election slate page was not located.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.ctulocal1.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "seiu-il-state-council",
+    "name": "SEIU Illinois State Council",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide council of Service Employees International Union locals. Endorsement here is as reported by FOX 32 for the school board president race.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "toni-preckwinkle",
+    "name": "Toni Preckwinkle, Cook County Board President",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic officeholder (Cook County Board President, on this ballot for re-election). Endorsement here is as reported by FOX 32.",
+    "geography": [
+      "chicago-il"
+    ],
+    "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "brandon-johnson",
+    "name": "Brandon Johnson, Mayor of Chicago",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Mayor of Chicago (city offices are elected without party labels; he is a Democrat). FOX 32 reports he 'has voiced support' for Hilario Dominguez for school board president.",
+    "geography": [
+      "chicago-il"
+    ],
+    "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "danny-davis",
+    "name": "U.S. Rep. Danny Davis (IL-7, retiring)",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic congressman for the 7th District, not seeking re-election. Endorsements as reported by FOX 32 (school board) and Wikipedia (IL-7).",
+    "geography": [
+      "chicago-il"
+    ],
+    "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "raja-krishnamoorthi",
+    "name": "U.S. Rep. Raja Krishnamoorthi (IL-8, leaving the House)",
+    "type": "elected_official",
+    "lean": "lean_left",
+    "lean_basis": "Democratic congressman who ran for U.S. Senate in 2026. Endorsement as reported by FOX 32.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "illinois-policy",
+    "name": "Illinois Policy Institute",
+    "type": "advocacy",
+    "lean": "lean_right",
+    "lean_basis": "State-focused think tank with a free-market orientation. Publishes election explainers (including a 2026 MWRD FAQ) but no candidate recommendations.",
+    "geography": [
+      "IL",
+      "chicago-il"
+    ],
+    "guide_url": "https://www.illinoispolicy.org/faq-election-for-metropolitan-water-reclamation-district-of-greater-chicago-commissioners/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  }
+]

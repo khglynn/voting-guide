@@ -1,0 +1,104 @@
+[
+  {
+    "id": "al-amendment-1",
+    "state": "AL",
+    "level": "state",
+    "jurisdiction": "Alabama",
+    "number": "Statewide Amendment 1",
+    "official_title": "Proposing an amendment to the Constitution of Alabama of 2022, to provide for the election of a Lieutenant Governor if the Office of Lieutenant Governor becomes vacant during the first two years of a term, to authorize the Legislature to set the salary of the Lieutenant Governor and officers of the Legislature, and to require any expenditure of legislative funds for travel to be approved by a legislative officer. Proposed by Act 2026-341.",
+    "plain_summary": "Three things in one. (1) If the lieutenant governor's job becomes empty in the first two years of a term (and more than 60 days before the next statewide general election), voters would pick a replacement at that election to finish the term. Right now the seat just stays empty until the next regular election for it. (2) The Legislature could set the pay of the lieutenant governor and its own officers by joint resolution instead of the Constitution fixing it. (3) Legislators' travel spending would need sign-off from an officer elected by their chamber.",
+    "yes_means": "An early vacancy in the lieutenant governor's office is filled by election; the Legislature sets that office's pay; legislative travel needs an officer's approval.",
+    "no_means": "Nothing changes: a vacancy stays open until the next regular election, and the Constitution keeps setting the pay.",
+    "current_law": "The Fair Ballot Commission: 'Current law generally provides that if the office of Lieutenant Governor becomes vacant during a term of office, the vacancy remains until the next regular election for that office. The Alabama Constitution also sets the pay of the Lieutenant Governor and certain legislative officers.' In practice, a vacancy before 2028 would leave the seat empty until 2030; under the amendment the state could fill it in 2028.",
+    "fiscal_impact": "Official statement: 'There are no costs or taxes associated with Amendment 1.'",
+    "pass_threshold": "simple majority of votes cast on the amendment",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The title bundles three unrelated changes, so there is no way to vote for one and against another. The one most people care about is the first: whether an empty lieutenant governor's seat gets filled by voters or sits empty for up to four years. Sponsor Sen. Sam Givhan (R-Huntsville) proposed it after questions about Republican governor nominee Tommy Tuberville's residency raised the possibility of a vacancy chain; he called it 'a Band-Aid approach.' Both chambers passed it unanimously.",
+    "supporters_case": {
+      "text": "Sponsor Sen. Sam Givhan said the state needed a way to fill an early vacancy rather than leave the seat empty, and described the measure as a stopgap he may revisit. It passed the Legislature without a dissenting vote.",
+      "source": "https://alabamareflector.com/2026/08/05/alabamians-to-vote-on-four-statewide-constitutional-amendments-in-november/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-1.pdf",
+    "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "al-amendment-2",
+    "state": "AL",
+    "level": "state",
+    "jurisdiction": "Alabama",
+    "number": "Statewide Amendment 2",
+    "official_title": "Proposing an amendment to the Constitution of Alabama of 2022, to provide a process for the creation of a consolidated county school system by merging two or more contiguous county boards of education; to require the State Board of Education to conduct an impact study on the potential effects of the consolidation; to require publication of the impact study; to provide a procedure for protesting a proposed consolidation of two or more county school systems; and to require the State Board of Education to adopt rules. Proposed by Act 2026-378.",
+    "plain_summary": "Creates a legal path for two or more neighboring county school boards to merge into one multi-county system, if each board votes to do it. Before any merger, the State Board of Education must study and publish the effects on students, families, programs, transportation, finances and taxes. If 25% of the voters in any affected county file a written protest, the merger must go to a vote: it needs a majority in each affected county AND an overall majority across all of them. It does not merge any specific districts by itself.",
+    "yes_means": "Neighboring county school boards get a process to merge, with a required state impact study and a voter-protest route that can force an election.",
+    "no_means": "No such process exists; county school boards stay separate as they are now.",
+    "current_law": "The Fair Ballot Commission: 'Currently, each county has a board of education that operates independently. A process allowing the merger of two or more county boards of education does not currently exist in the Alabama Constitution.'",
+    "fiscal_impact": "Official statement: 'There are no costs or taxes associated with Amendment 2.'",
+    "pass_threshold": "simple majority of votes cast on the amendment",
+    "referred_by": "legislature",
+    "confusing_wording_note": "A YES vote does not merge your school district. It only allows a merger process to exist, and only county boards can start it (city school systems like Mobile's neighbor Saraland are not mentioned). Whether any districts actually merge would be decided later by the boards, the State Board of Education, and, if voters protest, an election. Sponsor: Rep. Terri Collins (R-Decatur). Passed the House 96-2 and the Senate unanimously.",
+    "supporters_case": {
+      "text": "Fair Ballot Commission chair Patrick Moody, explaining the protest provision: 'We want people to know that there is a way for people to protest this action.' Backers framed it as a voluntary option for small rural systems that want to combine resources.",
+      "source": "https://alabamareflector.com/2026/08/05/alabamians-to-vote-on-four-statewide-constitutional-amendments-in-november/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-2.pdf",
+    "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "al-amendment-3",
+    "state": "AL",
+    "level": "state",
+    "jurisdiction": "Alabama",
+    "number": "Statewide Amendment 3",
+    "official_title": "Proposing an amendment to the Constitution of Alabama of 2022, to require local boards of education to adopt policies requiring each public K-12 school to recite The Pledge of Allegiance to the United States flag at the beginning of each school day; and to require local boards of education to adopt a policy authorizing student-initiated and student-led prayer. Proposed by Act 2026-379.",
+    "plain_summary": "Puts two school policies into the state constitution. Every local school board would have to (1) require each public K-12 school to do the Pledge of Allegiance at the start of each school day, with students free to recite it or not, and (2) adopt a policy allowing student-initiated, student-led prayer. No student can be required to join the prayer, and students can opt out of either based on their own beliefs. Complaints go to the local superintendent.",
+    "yes_means": "School boards must adopt a daily-Pledge policy and a student-led-prayer policy, both with opt-outs, and the requirement lives in the Constitution.",
+    "no_means": "The Constitution is not changed. (A 1976 state law already requires the daily Pledge, and federal law already bars forcing students to recite it.)",
+    "current_law": "The Fair Ballot Commission: 'Currently, the Alabama Constitution does not require local boards of education to adopt policies requiring each public K-12 school to conduct the Pledge of Allegiance each school day or to adopt policies allowing student-initiated and student-led prayer.' Separately, Alabama statute has required the daily Pledge in K-12 schools since 1976, and the U.S. Supreme Court (West Virginia v. Barnette, 1943) bars compelling students to recite it.",
+    "fiscal_impact": "Official statement: 'There are no costs or taxes associated with Amendment 3.'",
+    "pass_threshold": "simple majority of votes cast on the amendment",
+    "referred_by": "legislature",
+    "confusing_wording_note": "Two different ideas share one YES/NO. The Pledge half mostly restates existing state law; the sponsor says the point is to put it beyond the reach of lawsuits. The prayer half is new: it requires boards to allow student-led prayer, not merely permit it. The amendment never says who oversees the prayer or where it happens; an Auburn political scientist asked, 'What is the oversight power of the school in something like this?' and said the wording 'could run up against some U.S. Supreme Court decisions' (Santa Fe ISD v. Doe, 2000). Sponsor: Rep. Reed Ingram (R-Pike Road). Passed the House 94-4 and the Senate unanimously.",
+    "supporters_case": {
+      "text": "Sponsor Rep. Reed Ingram says a constitutional amendment would 'eliminate the litigation in the future,' that the Pledge is already law but 'a lot of schools are not doing it,' and that for students without faith at home, 'This gives them that opportunity.' He adds the prayer 'is not going to be led by any certain religion' and 'is not going to be mandatory for that child to sit and listen to it.'",
+      "source": "https://alabamareflector.com/2026/10/12/alabama-voters-to-consider-pledge-of-allegiance-national-anthem-school-prayer/"
+    },
+    "opponents_case": {
+      "text": "League of Women Voters of Alabama president Kim Bailey opposes it, saying it is 'impinging on people's rights' and not allowing people 'to make a choice.' Auburn professor Steven P. Brown raised constitutional concerns about the wording and the lack of school oversight of student-led prayer.",
+      "source": "https://alabamareflector.com/2026/10/12/alabama-voters-to-consider-pledge-of-allegiance-national-anthem-school-prayer/"
+    },
+    "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-3.pdf",
+    "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
+    "confidence": "verified"
+  },
+  {
+    "id": "al-amendment-4",
+    "state": "AL",
+    "level": "state",
+    "jurisdiction": "Alabama",
+    "number": "Statewide Amendment 4",
+    "official_title": "Proposing an amendment to the Constitution of Alabama of 2022, to require local boards of education to adopt policies requiring each public K-12 school to broadcast or sanction the performance of the first stanza of The Star-Spangled Banner at least once per week during school hours. Proposed by Act 2026-424.",
+    "plain_summary": "Every local school board would have to require each public K-12 school to play the first verse of the national anthem at least once a week during school hours. Instead of a recording, a board can allow a school-approved band, choir, group or singer to perform it, using the Library of Congress version.",
+    "yes_means": "Schools must broadcast or perform the first stanza of The Star-Spangled Banner at least weekly, and the rule is in the Constitution.",
+    "no_means": "No weekly anthem requirement is added to the Constitution.",
+    "current_law": "The Fair Ballot Commission: 'Currently, the Alabama Constitution does not require local boards of education to adopt policies requiring each public K-12 school to broadcast or allow the performance of the first stanza of The Star-Spangled Banner during school hours.'",
+    "fiscal_impact": "Official statement: 'There are no costs or taxes associated with Amendment 4.'",
+    "pass_threshold": "simple majority of votes cast on the amendment",
+    "referred_by": "legislature",
+    "confusing_wording_note": "'Broadcast or sanction the performance' just means play a recording or let students perform it. Nobody is required to sing or stand; the measure is about the school playing it, not student participation. Sponsor: Sen. Gerald Allen (R-Cottondale). This was the least unanimous of the four: it passed the Senate 22-5 and the House 75-27.",
+    "supporters_case": {
+      "text": "Rep. Reed Ingram, speaking for the measure, called it a reminder of citizenship: 'It's important for us not to forget that.' Sponsor Sen. Gerald Allen did not respond to the Reflector's requests for comment.",
+      "source": "https://www.wtvm.com/2026/10/15/alabama-voters-decide-classroom-prayer-other-amendments-nov-3/"
+    },
+    "opponents_case": {
+      "text": "No organized opposition was found. Auburn professor Steven P. Brown said he was less concerned about this one than Amendment 3 because it is 'passive, you are not requiring anybody to do anything.' 27 House members and 5 senators voted no.",
+      "source": "https://alabamareflector.com/2026/10/12/alabama-voters-to-consider-pledge-of-allegiance-national-anthem-school-prayer/"
+    },
+    "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-4.pdf",
+    "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
+    "confidence": "verified"
+  }
+]

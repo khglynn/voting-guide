@@ -1,0 +1,1712 @@
+[
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-sd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-sd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-sd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-sd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-sd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-sd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-sd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-sd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-sd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-sd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-sd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-sd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-hd-43a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-hd-43a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-hd-43a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-hd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-hd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-hd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "md-hd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "md-hd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "md-hd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-states-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-states-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-states-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-register-of-wills",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-register-of-wills",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-register-of-wills",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-orphans-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-orphans-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-orphans-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "Co-owner Armstrong Williams said in January 2024 the Sun 'will stop endorsing political candidates.'",
+    "url": "https://www.thebanner.com/community/local-news/baltimore-sun-co-owner-says-paper-will-end-political-endorsements-ZYFWUKAD65FSPOEXETL5H2CYTM/",
+    "date": "2024-01-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "Nonprofit newsroom; publishes a voter guide and does not endorse.",
+    "url": "https://www.thebanner.com/voter-guide/2026/banner-voter-guide-methodology-4ER6ZGCUQZE35NZ3HCJZSL4ZAI/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League 'does not support or oppose any political candidate'; it prints candidates' own answers.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-e",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-f",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-g",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-h",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "baltimore-sun-eb",
+    "target_id": "baltimore-question-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "url": "https://www.baltimoresun.com/opinion/editorials/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-banner",
+    "target_id": "baltimore-question-i",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Banner's explainer says what FOR and AGAINST mean without recommending a vote.",
+    "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-baltimore-city",
+    "target_id": "baltimore-question-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-us-house-2",
+    "status": "endorsed",
+    "choice": "John \"Johnny O\" Olszewski, Jr.",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-us-house-2",
+    "status": "endorsed",
+    "choice": "Dave Wallace",
+    "why": "Party nominee on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-us-house-7",
+    "status": "endorsed",
+    "choice": "Kweisi Mfume",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-us-house-7",
+    "status": "endorsed",
+    "choice": "Scott M. Collier",
+    "why": "Party nominee on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-sd-40",
+    "status": "endorsed",
+    "choice": "Antonio Hayes",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-sd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-sd-41",
+    "status": "endorsed",
+    "choice": "Malcolm P. Ruff",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-sd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-sd-43",
+    "status": "endorsed",
+    "choice": "Mary Washington",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-sd-45",
+    "status": "endorsed",
+    "choice": "Cory V. McCray",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-sd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-sd-46",
+    "status": "endorsed",
+    "choice": "Bill Ferguson",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-sd-46",
+    "status": "endorsed",
+    "choice": "Emmanuel Digman",
+    "why": "Party nominee on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-hd-40",
+    "status": "endorsed",
+    "choice": "Marlon D. Amprey; Tiffany Welch; Melissa Wells",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-hd-41",
+    "status": "endorsed",
+    "choice": "S. I. \"Sandy\" Rosenberg; Sean A. Stinnett; Ryan Turner",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-hd-43a",
+    "status": "endorsed",
+    "choice": "Regina T. Boyce; Elizabeth Embry",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-hd-43a",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-hd-45",
+    "status": "endorsed",
+    "choice": "Jackie Addison; Chanel A. Branch; Caylin Young",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-hd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "md-hd-46",
+    "status": "endorsed",
+    "choice": "Luke Clippinger; Mark Edelson; Robbyn Lewis",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "md-hd-46",
+    "status": "endorsed",
+    "choice": "Jeremy L. Amason",
+    "why": "Party nominee on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-states-attorney",
+    "status": "endorsed",
+    "choice": "Ivan J. Bates",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-states-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "endorsed",
+    "choice": "Xavier A. Conaway",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-register-of-wills",
+    "status": "endorsed",
+    "choice": "Belinda K. Conaway",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-register-of-wills",
+    "status": "endorsed",
+    "choice": "Andy Zipay",
+    "why": "Party nominee on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-orphans-court",
+    "status": "endorsed",
+    "choice": "Charles \"Chuck\" Bernstein; Lewyn Scott Garrett; Michele E. Loewenthal",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-orphans-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-sheriff",
+    "status": "endorsed",
+    "choice": "Sabrina Tapp-Harper",
+    "why": "Party nominee(s) on the certified ballot.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican on the ballot in this race.",
+    "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan contest on the general ballot; no party slate found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan contest on the general ballot; no party slate found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan contest on the general ballot; no party slate found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan contest on the general ballot; no party slate found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-democratic-party",
+    "target_id": "baltimore-question-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-republican-party",
+    "target_id": "baltimore-question-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on this city question found.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-us-house-2",
+    "status": "endorsed",
+    "choice": "John \"Johnny O\" Olszewski, Jr.",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-us-house-7",
+    "status": "endorsed",
+    "choice": "Kweisi Mfume",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-sd-40",
+    "status": "endorsed",
+    "choice": "Antonio Hayes",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-sd-43",
+    "status": "endorsed",
+    "choice": "Mary Washington",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-sd-45",
+    "status": "endorsed",
+    "choice": "Cory V. McCray",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-sd-46",
+    "status": "endorsed",
+    "choice": "Bill Ferguson",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-hd-40",
+    "status": "endorsed",
+    "choice": "Marlon D. Amprey; Melissa Wells",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions. Endorsed fewer candidates than there are seats.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-hd-41",
+    "status": "endorsed",
+    "choice": "S. I. \"Sandy\" Rosenberg; Sean A. Stinnett",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions. Endorsed fewer candidates than there are seats.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-hd-43a",
+    "status": "endorsed",
+    "choice": "Regina T. Boyce; Elizabeth Embry",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-hd-45",
+    "status": "endorsed",
+    "choice": "Jackie Addison",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions. Endorsed fewer candidates than there are seats.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-hd-46",
+    "status": "endorsed",
+    "choice": "Luke Clippinger; Mark Edelson; Robbyn Lewis",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito; Jamar Day",
+    "why": "Listed on the chapter PAC's 2026 general election endorsement list as environmental champions.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-md",
+    "target_id": "md-sd-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "No District 41 Senate pick on the Sept 17 list.",
+    "url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mayor-brandon-scott",
+    "target_id": "baltimore-question-i",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Joint statement with the campaign: sees the fund as 'a natural evolution' of his guaranteed-income pilot for young parents, after fighting the 2024 version in court.",
+    "url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
+    "date": "2026-08-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mayor-brandon-scott",
+    "target_id": "baltimore-question-h",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Co-announced the water department split after the sewer utility's credit downgrade; called it 'the best way to protect this critical city asset.'",
+    "url": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/",
+    "date": "2026-05-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "council-president-zeke-cohen",
+    "target_id": "baltimore-question-h",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Co-announced the proposal with Mayor Scott and Comptroller Henry.",
+    "url": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/",
+    "date": "2026-05-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "comptroller-bill-henry",
+    "target_id": "baltimore-question-h",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Co-announced the proposal; said a stand-alone utility makes regional water talks easier.",
+    "url": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/",
+    "date": "2026-05-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "council-president-zeke-cohen",
+    "target_id": "baltimore-question-e",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Backed the bill; said 'the low bid often does not end up being the lowest bid' because contractors come back with change orders.",
+    "url": "https://baltimorebrew.com/2026/06/08/council-advances-three-charter-bills-eliminating-the-competitive-bid-requirement-and-more/",
+    "date": "2026-06-08",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "council-president-zeke-cohen",
+    "target_id": "baltimore-question-f",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "Backed the charter package; said 2026's changes focus on 'allowing more time for the council to override a mayoral veto,' with Board of Estimates reform promised for 2028.",
+    "url": "https://foxbaltimore.com/spotlight-on-maryland/baltimore-council-promises-boe-reform-in-2028-critics-want-reform-this-year",
+    "date": "2026-04-23",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "council-president-zeke-cohen",
+    "target_id": "baltimore-question-g",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "The minor-privileges bill was carved out of the charter package he backed (Council Bill 26-0172). No separate statement on G found.",
+    "url": "https://baltimorebrew.com/2026/06/08/council-advances-three-charter-bills-eliminating-the-competitive-bid-requirement-and-more/",
+    "date": "2026-06-08",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "baltimore-teachers-union",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito",
+    "why": "Listed on Esposito's campaign website, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-baltimore-afl-cio",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito",
+    "why": "Listed on Esposito's campaign website, per The Banner; also a campaign contributor.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "progressive-maryland",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito",
+    "why": "Listed on Esposito's campaign website, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-baltimore-dsa",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito",
+    "why": "Listed on Esposito's campaign website, per The Banner. Esposito says she once held a leadership role in the chapter.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "charm-city-indivisible",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito; Domonique A. Flowers",
+    "why": "Listed on both candidates' campaign websites, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "moms-demand-action-gun-sense",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito; Domonique A. Flowers",
+    "why": "'Gun Sense Candidate' designation listed on both campaign websites, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-baby-fund-campaign",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Ashley Ash Esposito; Jamar Day",
+    "why": "Listed on both candidates' campaign websites, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "gov-wes-moore",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Jamar Day",
+    "why": "Listed on Day's campaign website, per The Banner. Day previously worked in Moore's office.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "seiu-1199",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Jamar Day",
+    "why": "Listed on Day's campaign website, per The Banner; also a contributor to Day and Esposito.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sen-antonio-hayes",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "endorsed",
+    "choice": "Kwame Jamal Kenyatta-Bey",
+    "why": "Kenyatta-Bey's only listed endorsement, per The Banner.",
+    "url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "baltimore-baby-fund-campaign",
+    "target_id": "baltimore-question-i",
+    "status": "endorsed",
+    "choice": "FOR",
+    "why": "The petition committee that put Question I on the ballot.",
+    "url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
+    "date": "2026-08-17",
+    "confidence": "verified"
+  }
+]

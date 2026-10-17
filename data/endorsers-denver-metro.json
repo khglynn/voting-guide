@@ -1,0 +1,266 @@
+[
+  {
+    "id": "denver-post-eb",
+    "name": "The Denver Post editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "AllSides Media Bias Rating: Center (news). Board is separate from the newsroom. In 2026 it opposed both the conservative Amendment 81 and the progressive Amendment 87, and endorsed Republican Michael Allen for AG.",
+    "geography": [
+      "CO",
+      "denver-co"
+    ],
+    "guide_url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "gazette-eb",
+    "name": "The Gazette editorial board (Denver Gazette and Colorado Springs Gazette; one board, two mastheads)",
+    "type": "publication",
+    "lean": "lean_right",
+    "lean_basis": "Owned by Clarity Media (Philip Anschutz). Its 2026 Denver picks: Republicans or the unaffiliated Blau in every candidate race, YES on all conservative statewide measures, NO on 87, NN, 137, 7A and 4A.",
+    "geography": [
+      "CO",
+      "denver-co"
+    ],
+    "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "colorado-sun",
+    "name": "The Colorado Sun",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit newsroom; publishes explainers and candidate guides, no editorial board and no endorsements.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "denverite",
+    "name": "Denverite (Colorado Public Radio)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Public-media newsroom; publishes a voter guide with per-measure and per-candidate pages, no endorsements.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://denverite.com/2026/09/25/vg-2026-denver-midterm-election-voter-guide/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-denver",
+    "name": "League of Women Voters of Denver",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan civic organization. Takes measure positions based on adopted League program (which critics on the right call left-leaning), never endorses candidates. Supported 5 of 7 Denver-ballot measures and took no position on 2.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://lwvdenver.org/docs.ashx?id=1820907",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "denver-democrats",
+    "name": "Democratic Party of Denver",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://www.denverdemocrats.org/vote",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "denver-gop",
+    "name": "Denver Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization. Published a Denver measure guide; no local candidate endorsements beyond the party's nominees.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://www.denvergop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "co-wfp",
+    "name": "Colorado Working Families Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Self-described progressive, multiracial, feminist populist party; endorses mostly Democrats to the left of the party mainstream.",
+    "geography": [
+      "CO",
+      "denver-co"
+    ],
+    "guide_url": "https://workingfamilies.org/state/colorado/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "denver-dsa",
+    "name": "Denver Democratic Socialists of America",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Self-described democratic socialist organization; Denver chapter of DSA.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "dalf",
+    "name": "Denver Area Labor Federation (AFL-CIO)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Federation of 114 unions representing 80,000 workers; endorses almost exclusively Democrats.",
+    "geography": [
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co"
+    ],
+    "guide_url": "https://denverlabor.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "colorado-afl-cio",
+    "name": "Colorado AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation; its 2026 guide endorses Democrats in every Denver-area race it lists.",
+    "geography": [
+      "CO",
+      "denver-co"
+    ],
+    "guide_url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "denver-metro-chamber",
+    "name": "Denver Metro Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Regional business association; historically backs tax measures for infrastructure and opposes new business regulation. No 2026 Denver positions found on its site (which did not load) or in press coverage as of Oct 16.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://denverchamber.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "downtown-denver-partnership",
+    "name": "Downtown Denver Partnership",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Center-city business membership organization. Took only two positions on local measures (support 2K, oppose 311) and 'educate' on the rest; opposed Amendment 87 and supported Proposition 136 statewide.",
+    "geography": [
+      "denver-co"
+    ],
+    "guide_url": "https://www.downtowndenver.com/post/announcing-our-2026-ballot-guide",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "bell-policy-center",
+    "name": "Bell Policy Center",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Self-described progressive policy institute focused on economic mobility.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "common-sense-institute",
+    "name": "Common Sense Institute Colorado",
+    "type": "advocacy",
+    "lean": "lean_right",
+    "lean_basis": "Free-enterprise research organization; publishes fiscal analyses rather than endorsements. No Denver-measure analysis found as of Oct 16.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://commonsenseinstituteus.org/colorado",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "kim-monson-guide",
+    "name": "Kim Monson Colorado Voter's Guide",
+    "type": "other",
+    "lean": "right",
+    "lean_basis": "Conservative radio host's guide; recommends NO on nearly every tax measure and YES on the conservative statewide initiatives.",
+    "geography": [
+      "CO",
+      "denver-co",
+      "aurora-co",
+      "lakewood-co",
+      "englewood-co"
+    ],
+    "guide_url": "https://kimmonson.com/colorado-voter-guide/2026/county-denver/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "jeffco-democrats",
+    "name": "Jefferson County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization.",
+    "geography": [
+      "lakewood-co"
+    ],
+    "guide_url": "https://www.jeffcodems.org/2026-ballot-measures",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "issue-committees-denver",
+    "name": "Official issue committees (registered campaigns for and against each measure)",
+    "type": "other",
+    "lean": "neutral",
+    "lean_basis": "Each committee is partisan for its own side; listed so voters can read the campaigns' own cases.",
+    "geography": [
+      "denver-co",
+      "lakewood-co"
+    ],
+    "guide_url": "https://bettertogetherdenver.com/2026-denver-ballot-decoder",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor; it publishes evaluations instead.",
+    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "date": "2026-10-03",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor; it publishes evaluations instead.",
+    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
+    "date": "2026-10-03",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15. Re-check.",
+    "url": "https://www.denverpost.com/opinion/editorials/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15. Re-check.",
+    "url": "https://www.denverpost.com/opinion/editorials/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15. Re-check.",
+    "url": "https://www.denverpost.com/opinion/editorials/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "co-springs-gazette-eb",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Michael J. Allen",
+    "why": "Calls Allen 'a seasoned prosecutor' who 'stands for restoring public safety and real justice' and 'will place law and order above politics and partisanship.'",
+    "url": "https://gazette.com/2026/10/07/endorsement-vote-for-michael-allen-for-attorney-general-5/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-springs-gazette-eb",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-springs-gazette-eb",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-springs-gazette-eb",
+    "target_id": "co-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-springs-gazette-eb",
+    "target_id": "co-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-gazette-eb",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Michael J. Allen",
+    "why": "Same text as the Colorado Springs Gazette: Allen is 'a leading voice against our legislature's terribly misguided \"justice reform\" policies.'",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-gazette-eb",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-gazette-eb",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-gazette-eb",
+    "target_id": "co-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-gazette-eb",
+    "target_id": "co-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Denver Gazette's Oct. 12 full ballot slate recommends in only one statewide candidate race (attorney general). This race is not listed.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
+    "url": "https://coloradosun.com/opinion/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
+    "url": "https://coloradosun.com/opinion/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
+    "url": "https://coloradosun.com/opinion/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
+    "url": "https://coloradosun.com/opinion/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
+    "url": "https://coloradosun.com/opinion/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. VOTE411 shows candidates' own answers by address.",
+    "url": "https://www.vote411.org/colorado",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. VOTE411 shows candidates' own answers by address.",
+    "url": "https://www.vote411.org/colorado",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. VOTE411 shows candidates' own answers by address.",
+    "url": "https://www.vote411.org/colorado",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. VOTE411 shows candidates' own answers by address.",
+    "url": "https://www.vote411.org/colorado",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-colorado",
+    "target_id": "co-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. VOTE411 shows candidates' own answers by address.",
+    "url": "https://www.vote411.org/colorado",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-us-senate",
+    "status": "endorsed",
+    "choice": "John Hickenlooper",
+    "why": "Official party nominee.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": "Official party nominee.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Jena Griswold",
+    "why": "Official party nominee.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": "Official party nominee.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": "Official party nominee.",
+    "url": "https://www.coloradodems.org/candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-us-senate",
+    "status": "endorsed",
+    "choice": "Mark Baisley",
+    "why": "Official party nominee.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Victor Marx / George Washington Markert",
+    "why": "Official party nominee.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Michael J. Allen",
+    "why": "Official party nominee.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "James Wiley",
+    "why": "Official party nominee.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-republican-party",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Kevin Grantham",
+    "why": "Official party nominee.",
+    "url": "https://colorado.gop/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-afl-cio",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": null,
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-afl-cio",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Jena Griswold",
+    "why": null,
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-afl-cio",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": "Listed on the AFL-CIO page as 'Amanda Gonzales' (misspelled).",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-afl-cio",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": null,
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-afl-cio",
+    "target_id": "co-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "The AFL-CIO's Aug. 19 slate lists governor, SOS, AG, treasurer and Congress but no U.S. Senate pick. A separate machinists council page lists Hickenlooper, but that is not the AFL-CIO itself.",
+    "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
+    "date": "2026-08-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-education-association",
+    "target_id": "co-us-senate",
+    "status": "endorsed",
+    "choice": "John Hickenlooper",
+    "why": "From the joint DCTA/CEA release of Sept. 22. CEA's own page was unreachable (bot check); confidence is sourced.",
+    "url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "date": "2026-09-22",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-education-association",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": "From the joint DCTA/CEA release of Sept. 22. CEA's own page was unreachable (bot check); confidence is sourced.",
+    "url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "date": "2026-09-22",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-education-association",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Jena Griswold",
+    "why": "From the joint DCTA/CEA release of Sept. 22. CEA's own page was unreachable (bot check); confidence is sourced.",
+    "url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "date": "2026-09-22",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-education-association",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": "From the joint DCTA/CEA release of Sept. 22. CEA's own page was unreachable (bot check); confidence is sourced.",
+    "url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "date": "2026-09-22",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-education-association",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": "From the joint DCTA/CEA release of Sept. 22. CEA's own page was unreachable (bot check); confidence is sourced.",
+    "url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
+    "date": "2026-09-22",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": null,
+    "url": "https://conservationco.org/press-releases/conservation-colorado-endorses-weiser-for-governor/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Jena Griswold",
+    "why": null,
+    "url": "https://conservationco.org/press-releases/2026-statewide-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": null,
+    "url": "https://conservationco.org/press-releases/2026-statewide-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": null,
+    "url": "https://conservationco.org/press-releases/2026-statewide-endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on the group's 2026 endorsement page, which covers statewide, legislative and county races.",
+    "url": "https://conservationco.org/resources/endorsements/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-votes-co",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": null,
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-votes-co",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Jena Griswold",
+    "why": null,
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-votes-co",
+    "target_id": "co-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": null,
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-votes-co",
+    "target_id": "co-treasurer",
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": null,
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "planned-parenthood-votes-co",
+    "target_id": "co-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on the group's 'full 2026 endorsement slate.'",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "co-us-senate",
+    "status": "endorsed",
+    "choice": "Mark Baisley",
+    "why": "Baisley graded A and endorsed; Hickenlooper graded F.",
+    "url": "https://www.nrapvf.org/grades/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Victor Marx / George Washington Markert",
+    "why": "Marx graded AQ (questionnaire only) and endorsed; Weiser graded F.",
+    "url": "https://www.nrapvf.org/grades/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "co-attorney-general",
+    "status": "endorsed",
+    "choice": "Michael J. Allen",
+    "why": "Allen graded AQ (questionnaire only) and endorsed; Griswold graded F.",
+    "url": "https://www.nrapvf.org/grades/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "co-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "Race not listed on the NRA-PVF Colorado grades page.",
+    "url": "https://www.nrapvf.org/grades/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "co-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Race not listed on the NRA-PVF Colorado grades page.",
+    "url": "https://www.nrapvf.org/grades/colorado",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "rocky-mountain-gun-owners",
+    "target_id": "co-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25.",
+    "url": "https://rmgo.org/endorsement/",
+    "date": "2026-09-25",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "rocky-mountain-gun-owners",
+    "target_id": "co-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25.",
+    "url": "https://rmgo.org/endorsement/",
+    "date": "2026-09-25",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "rocky-mountain-gun-owners",
+    "target_id": "co-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25.",
+    "url": "https://rmgo.org/endorsement/",
+    "date": "2026-09-25",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "rocky-mountain-gun-owners",
+    "target_id": "co-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25.",
+    "url": "https://rmgo.org/endorsement/",
+    "date": "2026-09-25",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "rocky-mountain-gun-owners",
+    "target_id": "co-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "RMGO's endorsement page lists only state House, state Senate and local races as of Sept. 25.",
+    "url": "https://rmgo.org/endorsement/",
+    "date": "2026-09-25",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-chamber-pac",
+    "target_id": "co-us-senate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "date": "2026-07-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-chamber-pac",
+    "target_id": "co-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "date": "2026-07-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-chamber-pac",
+    "target_id": "co-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "date": "2026-07-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-chamber-pac",
+    "target_id": "co-secretary-of-state",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "date": "2026-07-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-chamber-pac",
+    "target_id": "co-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber PAC's general-election endorsements cover state legislative candidates only.",
+    "url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
+    "date": "2026-07-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-fop",
+    "target_id": "co-governor",
+    "status": "endorsed",
+    "choice": "Phil Weiser / Lesley Dahlkemper",
+    "why": "FOP president Micheal Deedon: Weiser's 'record of service, integrity, and commitment to public safety has earned our endorsement,' citing academy training redesign and officer mental-health funding. Source is the campaign's release quoting the FOP; confirmed by the Denver Post.",
+    "url": "https://philforcolorado.com/endorsement-colorado-fraternal-order-of-police-endorses-phil-weiser-for-governor/",
+    "date": "2026-10-13",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-fop",
+    "target_id": "co-us-senate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located.",
+    "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-fop",
+    "target_id": "co-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located.",
+    "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-fop",
+    "target_id": "co-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located.",
+    "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "colorado-fop",
+    "target_id": "co-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No FOP endorsement found in this race. The FOP's own 2026 endorsement page was not located.",
+    "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  }
+]

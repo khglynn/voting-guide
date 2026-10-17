@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ajc-eb",
+    "name": "The Atlanta Journal-Constitution editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Georgia's largest newspaper. The AJC announced in 2009 that it would no longer endorse political candidates, saying readers 'don't need the paper to tell them how to vote' (Editor & Publisher). It publishes voter guides and explainers instead. AllSides rates its news coverage Lean Left.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.ajc.com/politics/georgia-voter-guide",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-georgia",
+    "name": "League of Women Voters of Georgia (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; never endorses candidates. Its VOTE411 Georgia page carries voting rules and candidate questionnaire answers. No 2026 positions on the three amendments were found on lwvga.org or VOTE411.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.vote411.org/georgia",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "ga-democratic-party",
+    "name": "Democratic Party of Georgia",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization. Its county affiliates (Fulton County Democrats) publish the statewide nominee slate.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://fultondems.org/2026-democratic-candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "ga-republican-party",
+    "name": "Georgia Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization; publishes a 2026 statewide candidate guide of its nominees.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.gagop.org/2025---2026-statewide-candidate-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "georgia-chamber",
+    "name": "Georgia Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Statewide business lobby. Its 2026 statewide endorsements found so far (Jackson for governor, Harper for agriculture) are both Republicans; it has backed Democrats in some legislative races in past cycles.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.atlantanewsfirst.com/2026/09/09/hispanic-political-group-endorses-rick-jackson-georgia-governors-race/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "nfib-georgia-pac",
+    "name": "NFIB Georgia PAC (National Federation of Independent Business)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Small-business lobby PAC. Its Oct 15, 2026 statewide slate is all Republicans; it says it endorses on 'positions and voting records on key small-business issues.'",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.nfib.com/news/news/nfib-georgia-pac-endorses-candidates-for-statewide-office-general-assembly/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "sierra-club-georgia",
+    "name": "Sierra Club Georgia Chapter",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Environmental advocacy group; its 2026 general election slate endorses only Democrats.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.sierraclub.org/georgia/2026Endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "planned-parenthood-action-fund",
+    "name": "Planned Parenthood Action Fund / Planned Parenthood Southeast Advocates",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Abortion-rights advocacy PAC. Its Sept 11, 2026 Georgia endorsements are all Democrats who pledge to repeal the state's six-week abortion law.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/pressroom/planned-parenthood-action-fund-endorses-keisha-lance-bottoms-in-georgia-gubernatorial-race",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "georgia-equality-pac",
+    "name": "Georgia Equality PAC",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "LGBTQ advocacy PAC; its 2026 general election slate endorses only Democrats.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://georgiaequalitypac.org/2026-election-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "fair-fight",
+    "name": "Fair Fight",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Voting-rights group founded by Stacey Abrams; its November 2026 slate endorses only Democrats.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.fairfight.com/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "georgia-fop",
+    "name": "Georgia Fraternal Order of Police",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Statewide police union. Endorsed Republican Rick Jackson for governor in October 2026 (reported by Fox 5 Atlanta via the Jackson campaign). Has endorsed candidates of both parties in past cycles.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.fox5atlanta.com/news/georgia-governor-race-bottoms-announces-law-enforcement-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "libre-state-pac",
+    "name": "LIBRE State PAC",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Hispanic political organization tied to the Koch-backed LIBRE Initiative; endorsed Republican Rick Jackson citing education, property taxes and deregulation.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.atlantanewsfirst.com/2026/09/09/hispanic-political-group-endorses-rick-jackson-georgia-governors-race/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "georgia-farm-bureau",
+    "name": "Georgia Farm Bureau",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Largest farm organization in the state. Does not endorse; publishes candidate bios and agriculture questionnaire answers for every statewide race.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.gfb.org/2026-candidates",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "page-georgia",
+    "name": "Professional Association of Georgia Educators (PAGE)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Largest educator association in Georgia (not a union). States 'PAGE does not endorse candidates or provide campaign contributions.' Hosts a superintendent candidate forum.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.pagelegislative.org/elections",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  }
+]

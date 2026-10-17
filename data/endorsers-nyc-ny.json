@@ -1,0 +1,111 @@
+[
+  {
+    "id": "citizens-union",
+    "name": "Citizens Union",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Self-described as New York City's oldest nonpartisan good-government group (founded 1897); no independent bias rating found. Used here for its 2026 ballot-proposal positions; its 2026 candidate preferences, if any, were not checked.",
+    "geography": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://citizensunion.org/document/2026-10-01/citizens-union-recommends-a-yes-vote-on-all-five-2026-charter-proposals/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "common-cause-ny",
+    "name": "Common Cause New York",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "New York chapter of the national nonpartisan watchdog Common Cause; does not endorse candidates. Says its ballot positions are based on government efficiency and checks and balances.",
+    "geography": [
+      "NY",
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://www.commoncause.org/new-york/2026-nyc-ballot-proposals/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "mas-nyc",
+    "name": "The Municipal Art Society of New York (MAS)",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit civic group focused on planning, historic preservation and public space; no partisan rating. Its positions here are about land use.",
+    "geography": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://www.mas.org/news/no-on-ballot-3/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "amny-eb",
+    "name": "amNewYork editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Unrated: no AllSides or similar bias rating was found for amNewYork (a free NYC daily owned by Schneps Media), so it is shown as neutral by default, not by evidence.",
+    "geography": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://www.amny.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "vital-city",
+    "name": "Vital City (editors)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Nonprofit NYC policy publication focused on public safety and government performance; no independent bias rating found. Its institutional view supports all five 2026 proposals; signed contributor op-eds (like Carol Kellermann's on Proposal 5) are not counted as its position.",
+    "geography": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://www.vitalcitynyc.org/nyc-mamdani-coge-government-efficiency-ballot-reform-recommendations/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "cbc-rein",
+    "name": "Andrew Rein, president of the Citizens Budget Commission (his own vote, as reported)",
+    "type": "other",
+    "lean": "neutral",
+    "lean_basis": "An individual's stated vote, reported by THE CITY. The Citizens Budget Commission is a nonpartisan, business-supported fiscal watchdog with no partisan rating; no formal CBC vote recommendation was found.",
+    "geography": [
+      "nyc-manhattan-ny",
+      "nyc-brooklyn-ny",
+      "nyc-queens-ny",
+      "nyc-bronx-ny",
+      "nyc-staten-island-ny"
+    ],
+    "guide_url": "https://www.brownstoner.com/brooklyn-life/election-ballot-questions-proposals-voting-2026/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  }
+]

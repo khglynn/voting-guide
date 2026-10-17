@@ -1,0 +1,1122 @@
+[
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-post-eb",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "washington-city-paper",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
+    "url": "https://washingtoncitypaper.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-mayor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-council-chair",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-council-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-delegate",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-shadow-senator",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-shadow-representative",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "hill-rag",
+    "target_id": "dc-initiative-86",
+    "status": "no_position",
+    "choice": null,
+    "why": "Hill Rag publishes candidate roundups and explainers but does not endorse.",
+    "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-mayor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-council-chair",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-council-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-delegate",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-shadow-senator",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-shadow-representative",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters does not endorse candidates.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dc",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No LWVDC position on Initiative 86 was found on vote411.org/lwvdc or lwvdc.org this run.",
+    "url": "https://www.vote411.org/lwvdc",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-mayor",
+    "status": "endorsed",
+    "choice": "Janeese Lewis George",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-council-chair",
+    "status": "endorsed",
+    "choice": "Phil Mendelson",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Oye Owolewa",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-delegate",
+    "status": "endorsed",
+    "choice": "Robert White",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-attorney-general",
+    "status": "endorsed",
+    "choice": "Brian L. Schwalb",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-shadow-senator",
+    "status": "endorsed",
+    "choice": "Paul Strauss",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-shadow-representative",
+    "status": "endorsed",
+    "choice": "Franklin Garcia",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+    "date": "2026-06-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-democratic-party",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on Initiative 86 found.",
+    "url": "https://www.dcdemocraticparty.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-mayor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party has no mayoral nominee; the Republican mayoral primary line was write-in only and no one qualified.",
+    "url": "https://dcgop.com/2026/06/18/dc-republican-party-celebrates-largest-candidate-slate-in-decades-as-nominees-advance-to-general-election/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-council-chair",
+    "status": "endorsed",
+    "choice": "Abi-Ananiah Prudent",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Darrell Green",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-delegate",
+    "status": "endorsed",
+    "choice": "Denise Rosado",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-attorney-general",
+    "status": "endorsed",
+    "choice": "Manuel Rivera",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-shadow-senator",
+    "status": "endorsed",
+    "choice": "Robert Simmons",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-shadow-representative",
+    "status": "endorsed",
+    "choice": "Ciprian Ivanof",
+    "why": "Party nominee. Listed on the DC GOP 'Meet DC Candidates' page and in its June 18, 2026 slate announcement.",
+    "url": "https://dcgop.com/meet-dc-candidates/",
+    "date": "2026-06-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-republican-party",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on Initiative 86 found.",
+    "url": "https://dcgop.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-mayor",
+    "status": "endorsed",
+    "choice": "Robert L. Gross",
+    "why": "Party nominee, listed on the party's site.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-council-chair",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party fielded no candidate in this race.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Darryl Moch",
+    "why": "Party nominee, listed on the party's site.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-delegate",
+    "status": "endorsed",
+    "choice": "Kymone Freeman",
+    "why": "Party nominee, listed on the party's site.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party fielded no candidate in this race.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-shadow-senator",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party fielded no candidate in this race.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-shadow-representative",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party fielded no candidate in this race.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-statehood-green-party",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No party position on Initiative 86 found on its site.",
+    "url": "https://statehoodgreensofdc.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-mayor",
+    "status": "endorsed",
+    "choice": "Janeese Lewis George",
+    "why": "Endorsed in the June Democratic primary. The page lists no separate general-election vote; an at-large special-election vote (Silverman vs. Crawford) was marked TBD.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsements page as of Oct 16.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Oye Owolewa",
+    "why": "Endorsed in the June Democratic primary. The page lists no separate general-election vote; an at-large special-election vote (Silverman vs. Crawford) was marked TBD.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-delegate",
+    "status": "endorsed",
+    "choice": "Robert White",
+    "why": "Endorsed in the June Democratic primary. The page lists no separate general-election vote; an at-large special-election vote (Silverman vs. Crawford) was marked TBD.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsements page as of Oct 16.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsements page as of Oct 16.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsements page as of Oct 16.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-for-democracy",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's 2026 endorsements page as of Oct 16.",
+    "url": "https://www.dcfordemocracy.org/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general; it says more may be posted. (Its June primary pick for mayor was Janeese Lewis George.)",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Elissa Silverman (rank #1)",
+    "why": "Says it is 'especially important that voters rank Silverman first' because under the at-large count 'your second vote will not transfer' once your first choice is one of the final two. Cites her housing and transit record.",
+    "url": "https://ggwash.org/view/105043/rank-elissa-silverman-1-for-at-large-in-the-2026-dc-general-election",
+    "date": "2026-10-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "greater-greater-washington",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
+    "url": "https://ggwash.org/elections/2026",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-mayor",
+    "status": "endorsed",
+    "choice": "Janeese Lewis George",
+    "why": "Endorsed in the June Democratic primary; she is a chapter member. The chapter's 2026 page lists no separate general-election candidate endorsements.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16. (Chapter members have argued publicly that the at-large count disadvantages Democratic voters' second choices.)",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "metro-dc-dsa",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's 2026 endorsements page as of Oct 16.",
+    "url": "https://mdcdsa.org/2026endorsements/",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-chamber-of-commerce",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement page found.",
+    "url": "https://www.dcchamber.org/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dc-police-union",
+    "target_id": "dc-initiative-86",
+    "status": "no_position",
+    "choice": null,
+    "why": "The union does not take positions on ballot measures of this kind.",
+    "url": "https://www.dcpoliceunion.com/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-mayor",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-council-at-large",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "metro-washington-council-afl-cio",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's voter guide shows DC picks only as images that could not be read; the only text entry is 'No Recommendation: DC Council, At-Large (Dem.)' from the primary.",
+    "url": "https://www.dclabor.org/voter-guides",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-mayor",
+    "status": "endorsed",
+    "choice": "Janeese Lewis George",
+    "why": "Listed under the chapter's '2026 General Election Endorsements' heading.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-council-chair",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's endorsements page as of Oct 16.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-council-at-large",
+    "status": "endorsed",
+    "choice": "Oye Owolewa and Elissa Silverman",
+    "why": "Both listed under '2026 General Election Endorsements.' The page gives no ranking advice; note that under the at-large count only one of your rankings can help elect a winner.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-delegate",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's endorsements page as of Oct 16.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-attorney-general",
+    "status": "endorsed",
+    "choice": "Brian Schwalb",
+    "why": "Listed under the chapter's '2026 General Election Endorsements' heading.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-shadow-senator",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's endorsements page as of Oct 16.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-shadow-representative",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's endorsements page as of Oct 16.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "sierra-club-dc",
+    "target_id": "dc-initiative-86",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the chapter's endorsements page as of Oct 16.",
+    "url": "https://www.sierraclub.org/dc/endorsements",
+    "date": "2026-10-16",
+    "confidence": "verified"
+  }
+]

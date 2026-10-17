@@ -1,0 +1,57 @@
+{
+  "id": "englewood-co",
+  "label": "Englewood",
+  "state": "CO",
+  "counties": [
+    "Arapahoe"
+  ],
+  "county_election_office": {
+    "name": "Arapahoe County Elections, 5334 S. Prince St., Littleton 80120",
+    "url": "https://www.arapahoevotes.gov/",
+    "phone": "303-795-4200 (Arapahoe County Clerk and Recorder main line)"
+  },
+  "sample_ballot_url": "https://myballot.coloradosos.gov/",
+  "zips": [
+    "80110",
+    "80113"
+  ],
+  "zip_caveats": "80110 and 80113 also cover Sheridan, Cherry Hills Village, Greenwood Village and unincorporated Arapahoe County, each with different city measures (Sheridan 2D, Cherry Hills 2C). 80111, 80112, 80120, 80121 and 80122 are 'Englewood' mailing addresses that are actually Centennial, Littleton, Greenwood Village or unincorporated county. Congressional district: CD-1 for most of Englewood, CD-6 for the south and east edges. State House District 3 covers part of Englewood (Denver-based district). Englewood voters are in the Front Range rail district only if their address is inside the district; Arapahoe County ballots wrongly printed 7A for some voters outside it, and clerks will sort that out. No Englewood city measures were found on the Arapahoe County list for 2026.",
+  "contest_ids": [
+    "co-us-senate",
+    "co-governor",
+    "co-attorney-general",
+    "co-secretary-of-state",
+    "co-treasurer",
+    "co-retention-hood",
+    "co-retention-freyre",
+    "co-retention-harris",
+    "co-retention-lum",
+    "co-retention-moultrie",
+    "co-retention-schock",
+    "co-retention-sullivan",
+    "co-us-house-1",
+    "co-us-house-6",
+    "co-hd-3",
+    "co-sboe-1",
+    "co-cu-regent-6",
+    "arapahoe-commissioner-2",
+    "arapahoe-commissioner-4",
+    "co-rtd-c",
+    "co-amendment-81",
+    "co-amendment-82",
+    "co-amendment-83",
+    "co-amendment-84",
+    "co-amendment-85",
+    "co-amendment-86",
+    "co-amendment-87",
+    "co-proposition-nn",
+    "co-proposition-132",
+    "co-proposition-133",
+    "co-proposition-134",
+    "co-proposition-135",
+    "co-proposition-136",
+    "co-proposition-137",
+    "littleton-schools-4a",
+    "co-frpr-7a"
+  ]
+}

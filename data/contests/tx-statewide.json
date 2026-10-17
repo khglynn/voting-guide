@@ -1,0 +1,2037 @@
+[
+  {
+    "id": "tx-us-senate",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Senator",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "One of Texas's two U.S. senators: votes on federal laws, budgets, treaties and judges.",
+    "why_it_matters": "An open seat (Sen. John Cornyn lost the Republican primary runoff). The winner serves six years and could help decide which party controls the Senate.",
+    "vote_for": 1,
+    "incumbent": "John Cornyn (not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ken Paxton",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://kenpaxton.com",
+        "website_confidence": "sourced",
+        "background": "Texas attorney general since 2015; before that a state senator and state representative. Won the May 26 Republican runoff over Sen. John Cornyn.",
+        "own_words": [
+          {
+            "text": "My plan will provide the largest tax relief in a generation and put thousands of dollars back in Texans' pockets.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I look forward to working to pass the Save America Act that will require voter ID for federal elections.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Did not answer the Texas Tribune questionnaire; the Tribune used his past public statements on energy costs, data centers and the border.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/13/talarico-paxton-texas-us-senate-2026-election-q-and-a/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "James Talarico",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://jamestalarico.com",
+        "website_confidence": "sourced",
+        "background": "State representative from Austin, serving his fourth term. Former middle school teacher in San Antonio and Presbyterian seminarian.",
+        "own_words": [
+          {
+            "text": "I'm a former middle school teacher, Presbyterian seminarian, and Texas State Representative.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I will cap campaign contributions, ban dark money groups and super PACs, and ban partisan gerrymandering.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "It's time to repeal these crazy tariffs.",
+            "is_quote": true,
+            "source": "https://www.texastribune.org/2026/10/13/talarico-paxton-texas-us-senate-2026-election-q-and-a/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Ted Brown",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://tedbrown.org",
+        "website_confidence": "sourced",
+        "background": "Independent insurance adjuster and longtime Libertarian activist; former chair of the Libertarian Party of California.",
+        "own_words": [
+          {
+            "text": "Congress needs to re-assert their constitutional role as the legislative branch.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "It should be easier to vote, both in person or by mail.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I would repeal the federal gas tax completely.",
+            "is_quote": true,
+            "source": "https://www.texastribune.org/2026/10/13/talarico-paxton-texas-us-senate-2026-election-q-and-a/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Avery Ayers",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Bradford 'Brad' Hall",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Zul Mohamed",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Jade Simmons",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot (Nov 3, 2026 results page, candidate list)",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Senate Q&A",
+        "url": "https://www.texastribune.org/2026/10/13/talarico-paxton-texas-us-senate-2026-election-q-and-a/"
+      },
+      {
+        "name": "KUT runoff results",
+        "url": "https://www.kut.org/politics/2026-05-26/texas-runoff-results-paxton-wins-gop-u-s-senate-nomination-plus-other-key-statewide-race-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-governor",
+    "state": "TX",
+    "level": "state",
+    "office": "Governor",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's chief executive: signs or vetoes bills, appoints to boards and courts, calls special sessions.",
+    "why_it_matters": "Greg Abbott is seeking a fourth term, which would make him the longest-serving governor in Texas history. Property taxes, school vouchers, data centers and the border are the big fights.",
+    "vote_for": 1,
+    "incumbent": "Greg Abbott",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Greg Abbott",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.gregabbott.com",
+        "website_confidence": "sourced",
+        "background": "Governor since 2015; before that Texas attorney general (2002 to 2015) and a Texas Supreme Court justice.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Priorities reported by the Texas Tribune: abolish school property taxes for homeowners, continue Operation Lone Star border enforcement, and pause new data center grid connections pending an audit.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
+          },
+          {
+            "text": "Campaign site states his platform; not opened during this research run.",
+            "is_quote": false,
+            "source": "https://www.gregabbott.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Gina Hinojosa",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.ginafortexas.com",
+        "website_confidence": "sourced",
+        "background": "State representative from Austin serving her fifth term; former president of the Austin ISD school board and a civil rights attorney.",
+        "own_words": [
+          {
+            "text": "I'm running for governor to build opportunity, not division.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I'll wipe clean the corrupt vendor contracts to raise teacher pay, end the voucher scam.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Supports a moratorium on new data centers until lawmakers pass community protections, per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Pat Dixon",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://patdixon.org",
+        "website_confidence": "sourced",
+        "background": "Owner of a process-automation company in Lago Vista; two-term Lago Vista city council member and 10-year chair of the Libertarian Party of Texas.",
+        "own_words": [
+          {
+            "text": "Every child would be given the same amount of money to follow them to any school.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I favor Approval Voting, where you can vote for any candidate you approve of.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Opposes tax incentive programs, including for data centers, per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Edward Earl Giles",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Jenn Mack",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Jinghpaw Majoishingra",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Mike Miller",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune governor guide",
+        "url": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-lt-governor",
+    "state": "TX",
+    "level": "state",
+    "office": "Lieutenant Governor",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Runs the Texas Senate and controls which bills get a vote. Often called the most powerful job in Texas.",
+    "why_it_matters": "The lieutenant governor sets the Senate's agenda and co-chairs the board that writes the state budget. Dan Patrick has held the office since 2015.",
+    "vote_for": 1,
+    "incumbent": "Dan Patrick",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dan Patrick",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.danpatrick.org",
+        "website_confidence": "sourced",
+        "background": "Lieutenant governor since 2015; state senator 2007 to 2015; former talk radio host and TV sportscaster. Seeking a fourth term.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Priorities reported by the Tribune: expand the school homestead exemption, expand private school vouchers, ban THC product sales, keep the abortion ban.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
+          },
+          {
+            "text": "Campaign site states his platform; not opened during this research run.",
+            "is_quote": false,
+            "source": "https://www.danpatrick.org"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Vikki Goodwin",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://goodwin4texas.com",
+        "website_confidence": "sourced",
+        "background": "State representative from southwest Austin since 2019; real estate business owner; former systems analyst at the Texas attorney general's office. Won the May 26 Democratic runoff.",
+        "own_words": [
+          {
+            "text": "I would end the voucher program in order to better fund our public schools.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Women need to be able to make their own personal, private healthcare decisions in consultation with their doctors.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Would require data center developers to disclose water and energy use and end data center sales tax exemptions.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Anthony Cristo",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "High school teacher from San Antonio; lost congressional races in 2018 and 2020.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Priorities reported by the Tribune: lower property taxes by cutting spending, legalize marijuana, embrace free markets and working immigrants.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
+          },
+          {
+            "text": "Says it's \"time to legalize marijuana in Texas,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Kevin McCormick",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://kmm2026.org",
+        "website_confidence": "sourced",
+        "background": "Holds a law degree from the University of Houston; has practiced law, worked in agriculture and taught high school math in San Antonio.",
+        "own_words": [
+          {
+            "text": "I propose ranked-choice voting, a statewide primary for four parties and independents.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I am opposed to tax breaks or incentives to data centers and they should pay for any increased capacity they require.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The voucher program is a threat to public education funding and should be repealed or at least means tested.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Arturo Espinosa",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Stephen Samuelson",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate. Write-in names are not printed on the ballot; you must write the name in.",
+        "own_words": [
+          {
+            "text": "LWV Texas lists this candidate and refers readers to VOTE411 for any responses.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Lt. Gov. guide",
+        "url": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
+      },
+      {
+        "name": "KUT runoff results",
+        "url": "https://www.kut.org/politics/2026-05-26/texas-runoff-results-paxton-wins-gop-u-s-senate-nomination-plus-other-key-statewide-race-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-attorney-general",
+    "state": "TX",
+    "level": "state",
+    "office": "Attorney General",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "The state's top lawyer: defends Texas laws in court, enforces consumer protection and collects child support.",
+    "why_it_matters": "Open seat. Ken Paxton is leaving to run for Senate. The office has about 4,000 employees and decides which lawsuits Texas files against the federal government, cities and companies.",
+    "vote_for": 1,
+    "incumbent": "Ken Paxton (not on ballot for this office)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mayes Middleton",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://mayesmiddleton.com",
+        "website_confidence": "sourced",
+        "background": "State senator from Galveston since 2023; state representative 2019 to 2023; president of Middleton Oil Company. Won the May 26 Republican runoff over U.S. Rep. Chip Roy.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Describes himself as a \"steadfast ally of President Trump and a proven champion of the America First movement,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/05/texas-attorney-general-election-2026-candidates-mayes-middleton-nathan-johnson-tom-oxford/"
+          },
+          {
+            "text": "Pledges to \"enforce President Trump's border security agenda and deportation orders,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/05/texas-attorney-general-election-2026-candidates-mayes-middleton-nathan-johnson-tom-oxford/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Nathan Johnson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.nathanfortexas.com",
+        "website_confidence": "sourced",
+        "background": "State senator from Dallas County since 2019; commercial litigator and mediator. Won the May 26 Democratic runoff over Joe Jaworski.",
+        "own_words": [
+          {
+            "text": "I will end the culture of corruption and politically-motivated investigations and lawsuits.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Enforce existing election security laws without bias or political motive.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "On suing states over abortion medication: \"Texas law does not have extra-territorial jurisdiction.\"",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Tom Oxford",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Jefferson County lawyer practicing since 1982, focused on personal injury, immigration and civil rights.",
+        "own_words": [
+          {
+            "text": "Due process applies to all of our neighbors, regardless of their legal status.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The days of back room deals and false narratives will end.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "On abortion-medication lawsuits: \"These efforts will be ended on my first day in office.\"",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune AG guide",
+        "url": "https://www.texastribune.org/2026/10/05/texas-attorney-general-election-2026-candidates-mayes-middleton-nathan-johnson-tom-oxford/"
+      },
+      {
+        "name": "KUT runoff results",
+        "url": "https://www.kut.org/politics/2026-05-26/texas-runoff-results-paxton-wins-gop-u-s-senate-nomination-plus-other-key-statewide-race-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-comptroller",
+    "state": "TX",
+    "level": "state",
+    "office": "Comptroller of Public Accounts",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's chief financial officer: collects taxes, pays the bills, and tells the Legislature how much it can spend.",
+    "why_it_matters": "Open seat. The comptroller's revenue estimate caps the state budget, and the office now runs the new $1 billion school voucher program. Don Huffines was appointed acting comptroller in 2025.",
+    "vote_for": 1,
+    "incumbent": "Don Huffines (appointed acting comptroller, 2025)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Don Huffines",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Acting comptroller, appointed by Gov. Abbott in 2025. Co-founder of Huffines Communities, a Dallas-area real estate developer; state senator 2015 to 2019.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Describes himself as a \"MAGA Republican with libertarian and Christian roots,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
+          },
+          {
+            "text": "Priorities reported by the Tribune: cut regulations, audit spending for waste, study the state cost of undocumented immigration.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Sarah Eckhardt",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://saraheckhardt.com",
+        "website_confidence": "sourced",
+        "background": "State senator for Travis County since 2020; former Travis County judge (the county's top executive) and prosecutor. Holds a master's in public affairs.",
+        "own_words": [
+          {
+            "text": "I will follow the law and follow the money.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I will honestly audit the voucher program, showing who benefits most, least or not at all.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Would tap the Rainy Day Fund to help low-income Texans with health insurance costs after ACA tax credits end.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "V. Alonzo Echavarria-Garza",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "City manager of Hearne since 2022 and the city's chief financial officer before that. Ran for comptroller as a Libertarian in 2022.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The Tribune found no candidate-specific priorities and cited the Libertarian Party platform.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
+          },
+          {
+            "text": "No campaign website located during this research run.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Shehla Faizi",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://www.faizifortexas.com",
+        "website_confidence": "sourced",
+        "background": "Podcaster and activist; volunteered for the Green Party's 2024 presidential campaign.",
+        "own_words": [
+          {
+            "text": "No more tax breaks or handouts to big donors!",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "As Comptroller I would use all legal means and public pressure to end this program [school vouchers].",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "We must divest from Texas' $280 million in Israel bonds.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune comptroller guide",
+        "url": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-land-commissioner",
+    "state": "TX",
+    "level": "state",
+    "office": "Commissioner of the General Land Office",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Manages 13 million acres of state land, the Alamo, veterans' loans and disaster recovery money. Earnings fund schools.",
+    "why_it_matters": "The General Land Office decides how federal disaster dollars reach flooded communities, how state land is leased for oil, gas and renewables, and how the Alamo is run.",
+    "vote_for": 1,
+    "incumbent": "Dawn Buckingham",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dawn Buckingham",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.dawnbuckingham.com",
+        "website_confidence": "sourced",
+        "background": "Land commissioner since 2023, the first woman to hold the office. Surgeon and former state senator.",
+        "own_words": [
+          {
+            "text": "I have generated over $6 billion for public education without raising taxes.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "As Veterans Land Board chair, I delivered nearly $2 billion in loans to over 7,200 Veterans and their families.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Priorities reported by the Tribune include energy development on state land (geothermal, small nuclear reactors, gas) and border enforcement.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/18/texas-land-commissioner-glo-2026-buckingham/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Benjamin Flores",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://letsgowithben.com",
+        "website_confidence": "sourced",
+        "background": "Bay City council member since 2023; about 30 years in cybersecurity and risk management; raises heritage pigs in Matagorda County.",
+        "own_words": [
+          {
+            "text": "I'll have recovery vendors vetted and under contract before hurricane season, not after.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The Permanent School Fund is worth over $60 billion, and it should be earning from solar, wind and geothermal, not just oil and gas.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Most veterans I meet have never heard of the Veterans Land Board. So I'd take it to them.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Neill Snider",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://voteneillsnider.com",
+        "website_confidence": "sourced",
+        "background": "Mechanical contractor for 33 years and small cattle operator from Waco.",
+        "own_words": [
+          {
+            "text": "Work with nature and not against it.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Open the Permanent School fund to all Texas school children and not only Public school children.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Get money directly to the people in need.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune land commissioner guide",
+        "url": "https://www.texastribune.org/2026/09/18/texas-land-commissioner-glo-2026-buckingham/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-agriculture-commissioner",
+    "state": "TX",
+    "level": "state",
+    "office": "Commissioner of Agriculture",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Promotes Texas farm products, regulates pesticides, runs school lunch programs, checks that gas pumps are accurate.",
+    "why_it_matters": "Open seat. Three-term incumbent Sid Miller lost the Republican primary. The office administers school meals, pesticide rules and rural disaster relief.",
+    "vote_for": 1,
+    "incumbent": "Sid Miller (not on ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nate Sheets",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://natesheets.com",
+        "website_confidence": "sourced",
+        "background": "Navy veteran and rancher who co-founded the honey company Nature Nate's and sold it in 2021. Defeated incumbent Sid Miller in the March primary.",
+        "own_words": [
+          {
+            "text": "Texas ranks 44th in school lunches under current leadership. Texans should feed Texans year-round.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Grow Food Better, Grow Better Food.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Data centers must have responsible plans for water and electricity use ... and certainly should not receive tax subsidies.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Clayton Tucker",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.claytontuckertx.com",
+        "website_confidence": "sourced",
+        "background": "Grew up on his family's ranch in Lampasas; former water and agriculture researcher for the National Science Foundation; secretary of the Texas Farmers Union.",
+        "own_words": [
+          {
+            "text": "I will fight for free school meals for every child and defend summer food assistance.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Data centers should not compete with farmers, ranchers, or families for drinking water.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Proposes local \"Ag Development Districts\" to give communities a tool against data center growth, per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/24/texas-agriculture-commissioner-2026-guide-nate-sheets-clayton-tucker/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Austin R. Kelly",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Small business owner and natural resource consultant from Comanche County; has lectured in rangeland, botany and ecology at Texas A&M.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Priorities reported by the Tribune: cut regulations on hemp and small producers, audit the department, invest in biosecurity monitoring.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/24/texas-agriculture-commissioner-2026-guide-nate-sheets-clayton-tucker/"
+          },
+          {
+            "text": "Describes his approach as \"removing the excess so the individual can thrive,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/24/texas-agriculture-commissioner-2026-guide-nate-sheets-clayton-tucker/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune agriculture commissioner guide",
+        "url": "https://www.texastribune.org/2026/09/24/texas-agriculture-commissioner-2026-guide-nate-sheets-clayton-tucker/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-railroad-commissioner",
+    "state": "TX",
+    "level": "state",
+    "office": "Railroad Commissioner",
+    "district": null,
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Regulates oil, gas, pipelines and mining. Despite the name, it has nothing to do with railroads.",
+    "why_it_matters": "One of three commissioners who oversee the Texas oil and gas industry, pipeline safety, gas utility rates and abandoned well cleanup. Incumbent Jim Wright lost the Republican runoff.",
+    "vote_for": 1,
+    "incumbent": "Jim Wright (not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bo French",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://bofrench.com",
+        "website_confidence": "sourced",
+        "background": "Former chair of the Tarrant County Republican Party; has a family oil business in Midland and decades of energy investing. Won the May 26 Republican runoff over incumbent Jim Wright by a narrow margin.",
+        "own_words": [
+          {
+            "text": "It's no secret that the Commission is painfully behind on adoption of technology.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I believe increasing natural gas electricity generation is one solution that will help address this issue.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The Tribune reports criticism of his social media posts about Jews, Muslims and Asian students; several Republican officials, including Sen. John Cornyn, have declined to support him.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/15/texas-railroad-commission-election-2026-bo-french-jon-rosenthal/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Jon Rosenthal",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://jonrosenthaltx.com",
+        "website_confidence": "sourced",
+        "background": "Four-term state representative from the Houston area; worked 25 years in oil and gas as a mechanical engineer and project manager.",
+        "own_words": [
+          {
+            "text": "Good operators ought to be expedited, bad operators disincentivized.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Require resource management plans for water and power before construction, prohibit sites near homes.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I support an \"all-of-the-above\" approach to our energy strategy.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Arthur DiBianca",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://votedibianca.com",
+        "website_confidence": "sourced",
+        "background": "Retired; longtime Libertarian activist in Austin who ran for office in 2014, 2020 and 2022.",
+        "own_words": [
+          {
+            "text": "I have no personal connections to the oil and gas industry. I have no conflicts of interest.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Oil and gas companies should also pay into a fund for remediation and capping.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "\"Free market\" means no favoritism, no cronyism, and no picking winners and losers.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Railroad Commission guide",
+        "url": "https://www.texastribune.org/2026/09/15/texas-railroad-commission-election-2026-bo-french-jon-rosenthal/"
+      },
+      {
+        "name": "KUT runoff results",
+        "url": "https://www.kut.org/politics/2026-05-26/texas-runoff-results-paxton-wins-gop-u-s-senate-nomination-plus-other-key-statewide-race-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-supreme-court-chief",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Chief Justice, Supreme Court",
+    "district": "Place 1",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest court for civil cases (money, family, business, government). Criminal cases go elsewhere.",
+    "why_it_matters": "All nine justices are Republicans, and Gov. Abbott appointed seven of them. The court has the final say on Texas civil law and writes the rules for state courts. The chief justice also runs the court's administration and the statewide court system.",
+    "vote_for": 1,
+    "incumbent": "Jimmy Blacklock",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jimmy Blacklock",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.jimmyblacklock.com",
+        "website_confidence": "sourced",
+        "background": "On the Supreme Court since 2018 (appointed by Gov. Abbott) and chief justice since 2025. Former general counsel to Abbott. Elected statewide in 2018 and 2024.",
+        "own_words": [
+          {
+            "text": "If following the law costs me an election or angers a supporter, so be it.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The text of the law and the Constitution's original meaning are my guides.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Lawsuits should be decided by who is right under the law, not who can better endure the expense and burden of litigation.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Maggie Ellis",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.maggieforjustice.com",
+        "website_confidence": "sourced",
+        "background": "Justice on the Austin-based 3rd Court of Appeals since 2025; former Travis County prosecutor and administrative law judge.",
+        "own_words": [
+          {
+            "text": "I will not bow to political pressure; and I will protect the laws that protect everyone.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "As a child who grew up transient and homeless ... I understand the need.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Describes herself as the first openly gay woman to serve as an appellate justice in Texas.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Supreme Court guide",
+        "url": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-supreme-court-place-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, Supreme Court",
+    "district": "Place 2 (unexpired term)",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest court for civil cases (money, family, business, government). Criminal cases go elsewhere.",
+    "why_it_matters": "All nine justices are Republicans, and Gov. Abbott appointed seven of them. The court has the final say on Texas civil law and writes the rules for state courts. This seat is an unexpired term; the winner finishes the term of a justice who left.",
+    "vote_for": 1,
+    "incumbent": "James P. Sullivan",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "James P. Sullivan",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Appointed to the court by Gov. Abbott in January 2025. Former Texas assistant solicitor general and general counsel to the governor; Harvard Law graduate. Has not previously stood for statewide election.",
+        "own_words": [
+          {
+            "text": "I will always remain committed to saying what the law is, not what I might like it to be.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "A good judge must have the courage to make an unpopular decision when that's what the law requires.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Has campaigned on \"bold, relentless, conservative judging,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Chari Kelly",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the 3rd Court of Appeals since 2019; former Army JAG captain, Texas assistant attorney general and assistant district attorney.",
+        "own_words": [
+          {
+            "text": "I ruled that the Texas Attorney General was not above the law in a whistleblower case.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Decide cases ... based on the law, the record, and the arguments presented, not politics, donors, pressure, or personal preference.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Authored 800+ opinions; one of 19 Texas judges board-certified in judicial administration.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Supreme Court guide",
+        "url": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-supreme-court-place-7",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, Supreme Court",
+    "district": "Place 7",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest court for civil cases (money, family, business, government). Criminal cases go elsewhere.",
+    "why_it_matters": "All nine justices are Republicans, and Gov. Abbott appointed seven of them. The court has the final say on Texas civil law and writes the rules for state courts. Note: the two candidates share a last name but are not related.",
+    "vote_for": 1,
+    "incumbent": "Kyle Hawkins",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kyle Hawkins",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Appointed to the court by Gov. Abbott in October 2025. Texas solicitor general 2018 to 2021, where he argued cases against the Affordable Care Act and Planned Parenthood. Has not previously stood for statewide election.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The Tribune describes him as a conservative litigator who has also testified to Congress about the Voting Rights Act.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+          },
+          {
+            "text": "No campaign website located during this research run.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Kristen Hawkins",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.judgehawkins.com",
+        "website_confidence": "sourced",
+        "background": "Judge of the 11th District Court in Houston since 2017, where she oversees the Astroworld lawsuits. Board certified in civil trial, personal injury and judicial administration.",
+        "own_words": [
+          {
+            "text": "I base my decisions on the facts and the law, not on campaign contributions.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The right to a trial by jury is embedded in the Texas Constitution.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Has presided over more than 200 jury and bench trials; 2021 Tex-ABOTA Judge of the Year.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Supreme Court guide",
+        "url": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-supreme-court-place-8",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, Supreme Court",
+    "district": "Place 8",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest court for civil cases (money, family, business, government). Criminal cases go elsewhere.",
+    "why_it_matters": "All nine justices are Republicans, and Gov. Abbott appointed seven of them. The court has the final say on Texas civil law and writes the rules for state courts. This is a rematch of the 2020 race for the same seat.",
+    "vote_for": 1,
+    "incumbent": "Brett Busby",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brett Busby",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "On the Supreme Court since 2019 (appointed by Gov. Abbott, elected 2020). Justice on the Houston-based 14th Court of Appeals 2012 to 2018; board-certified appellate lawyer.",
+        "own_words": [
+          {
+            "text": "Every Democrat and Republican in the Texas Senate voted unanimously in favor of my Supreme Court appointment.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Court dockets are growing quickly as more Texans try to use AI to represent themselves.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Leading efforts to let certified paraprofessionals handle simple legal needs, \"like nurse practitioners for limited legal services.\"",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Gisela D. Triana",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the 3rd Court of Appeals since 2019; a Texas judge for over 30 years at every level of trial court. Ran for this seat in 2020.",
+        "own_words": [
+          {
+            "text": "Justice should not be sold to the highest bidder and judges should not be beholden to political parties or donors.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "More now, the judiciary is and is perceived to be an extension of the other 2 branches, like a rubber stamp.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Lack of resources is the biggest barrier to access to justice.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune Supreme Court guide",
+        "url": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-cca-place-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, Court of Criminal Appeals",
+    "district": "Place 3",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest criminal court. It reviews every death sentence and decides which other criminal appeals to hear.",
+    "why_it_matters": "All nine judges are Republicans. In 2024, Attorney General Paxton backed challengers who unseated three judges after the court limited his power to prosecute election cases. Open seat: Judge Bert Richardson is not running again.",
+    "vote_for": 1,
+    "incumbent": "Bert Richardson (not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Thomas Smith",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.smithfortexas.org",
+        "website_confidence": "sourced",
+        "background": "Special assistant attorney general for criminal justice; former counsel to Ken Paxton when Paxton was a state senator; former law clerk to the chief justice of the Ohio Supreme Court. Won the May 26 Republican runoff over Alison Fox.",
+        "own_words": [
+          {
+            "text": "Rulings are grounded in the law, not politics.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Philosophy: Originalist.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Says he is running to keep \"women and children safe in an increasingly dangerous culture,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/09/29/texas-court-of-criminal-appeals-2026-election/"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Okey Anyiam",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://okeyanyiamforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Criminal defense attorney in the Dallas area for 28 years; has handled several thousand criminal cases.",
+        "own_words": [
+          {
+            "text": "I will be impartial. My rulings will be based on the law, independent of any outside influences.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Upholding the law and following its clear intent, without legislating from the bench.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Lowering the threshold to qualify for court appointed counsel will help lower income earners.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Mark Ash",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Criminal defense lawyer since 1992 and property tax arbitrator; has run statewide as a Libertarian several times since 2016.",
+        "own_words": [
+          {
+            "text": "As a Libertarian, I will keep partisan politics out of my judicial decisions.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Follow the law as the legislature intended for it to be interpreted. Be fair and just to all parties.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Court websites should be user friendly and uniform.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune CCA guide",
+        "url": "https://www.texastribune.org/2026/09/29/texas-court-of-criminal-appeals-2026-election/"
+      },
+      {
+        "name": "KUT runoff results",
+        "url": "https://www.kut.org/politics/2026-05-26/texas-runoff-results-paxton-wins-gop-u-s-senate-nomination-plus-other-key-statewide-race-results"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-cca-place-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, Court of Criminal Appeals",
+    "district": "Place 4",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest criminal court. It reviews every death sentence and decides which other criminal appeals to hear.",
+    "why_it_matters": "All nine judges are Republicans. In 2024, Attorney General Paxton backed challengers who unseated three judges after the court limited his power to prosecute election cases. Yeary is the only judge in this cycle's three CCA races who is running for reelection.",
+    "vote_for": 1,
+    "incumbent": "Kevin Patrick Yeary",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kevin Patrick Yeary",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "On the Court of Criminal Appeals since 2015. Former appellate prosecutor in Dallas, Harris and Bexar counties. Was the lone dissenter in the 2021 ruling that limited the attorney general's power to prosecute election cases.",
+        "own_words": [
+          {
+            "text": "Opinions are not the law.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Judges do not set policy and do not make law.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The text of the constitution and laws mean what they meant to reasonably educated citizens on the day they were written, nothing else.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Audra Riley",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge of Dallas County Criminal District Court No. 3 since 2021; former prosecutor, defense attorney and correctional officer.",
+        "own_words": [
+          {
+            "text": "Follow the law, be fair, and treat every person with dignity and respect.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Campaign contributions do not buy access, influence, or favorable rulings.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "A prior ruling should not stand simply because it came first.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune CCA guide",
+        "url": "https://www.texastribune.org/2026/09/29/texas-court-of-criminal-appeals-2026-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-cca-place-9",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, Court of Criminal Appeals",
+    "district": "Place 9",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "Texas's highest criminal court. It reviews every death sentence and decides which other criminal appeals to hear.",
+    "why_it_matters": "All nine judges are Republicans. In 2024, Attorney General Paxton backed challengers who unseated three judges after the court limited his power to prosecute election cases. Open seat: Judge David Newell is not running again. Neither candidate has been a judge.",
+    "vote_for": 1,
+    "incumbent": "David Newell (not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John Messinger",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://messingerforjustice.com",
+        "website_confidence": "sourced",
+        "background": "Assistant state prosecuting attorney who has represented Texas before the Court of Criminal Appeals for almost 16 years; previously in the McLennan County DA's office.",
+        "own_words": [
+          {
+            "text": "As a career prosecutor, my ethical duty has always been to seek justice rather than convictions.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Courts do not make law, legislatures do. If the CCA misinterpreted a statute, the CCA should fix it.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Judges should have the humility to accept their limited authority.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Holly Taylor",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.hollytforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Criminal and civil appeals attorney in Austin; former director of public integrity for the Travis County DA, former CCA rules attorney, and law professor. Lost the 2024 race for presiding judge.",
+        "own_words": [
+          {
+            "text": "I've seen the system from all sides.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Only a small number of my donations came from lawyers that practice in this court.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The appointment system in criminal cases can lead to overloaded lawyers and inadequate representation.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune CCA guide",
+        "url": "https://www.texastribune.org/2026/09/29/texas-court-of-criminal-appeals-2026-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-15th-coa-chief",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Chief Justice, 15th Court of Appeals",
+    "district": "Place 1",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "New statewide appeals court for lawsuits against the state and big business cases. Sits below the Supreme Court.",
+    "why_it_matters": "Created by the Legislature in 2023 and elected statewide, unlike the other 14 appeals courts. It hears challenges to state laws before they reach the Supreme Court. All three current justices were appointed by Gov. Abbott.",
+    "vote_for": 1,
+    "incumbent": "Scott Brister",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott Brister",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Chief justice since the court opened in 2024. Texas Supreme Court justice 2003 to 2009; earlier on the 1st and 14th Courts of Appeals and a Harris County district judge. Harvard Law graduate.",
+        "own_words": [
+          {
+            "text": "Did not respond to the LWV Texas questionnaire.",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Describes himself as an \"impartial judge who applies the law, not personal beliefs or political preferences,\" per the Tribune.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+          },
+          {
+            "text": "No campaign website located during this research run.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Jerry Zimmerer",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the Houston-based 14th Court of Appeals 2019 to 2024; now in private practice. Holds a J.D. and two LL.M. degrees; ran for the Supreme Court in 2020.",
+        "own_words": [
+          {
+            "text": "Stare decisis is my shield, but constitutional correctness comes first.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I call cases exactly as I see them - no fear and no favor.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Technology can make justice more affordable and accessible for all Texans.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune 15th Court guide",
+        "url": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-15th-coa-place-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, 15th Court of Appeals",
+    "district": "Place 2",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "New statewide appeals court for lawsuits against the state and big business cases. Sits below the Supreme Court.",
+    "why_it_matters": "Created by the Legislature in 2023 and elected statewide, unlike the other 14 appeals courts. It hears challenges to state laws before they reach the Supreme Court. All three current justices were appointed by Gov. Abbott.",
+    "vote_for": 1,
+    "incumbent": "Scott K. Field",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Scott K. Field",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the 15th Court since 2024. Judge of Williamson County's 480th District Court 2022 to 2024; justice on the 3rd Court of Appeals 2013 to 2018; 20 years in private practice.",
+        "own_words": [
+          {
+            "text": "I do not allow politics to play a role in deciding a case.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "To apply the law in every case as written, without regard for who wins or loses a given case.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "One barrier is the cost of the trial court record for litigants.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Tom Baker",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the 3rd Court of Appeals 2019 to 2024; 42 years of law experience; Navy Reserve veteran. Says he will not seek a second term.",
+        "own_words": [
+          {
+            "text": "I will not be concerned with running again for this office as I will not seek another term to this Court.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The biggest barrier to access to the court system is legal representation.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Even if I do not agree with the law, I will apply it as I read and understand it unless it violates the constitution.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune 15th Court guide",
+        "url": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-15th-coa-place-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, 15th Court of Appeals",
+    "district": "Place 3",
+    "scope_plain": "Every Texas voter",
+    "office_explainer": "New statewide appeals court for lawsuits against the state and big business cases. Sits below the Supreme Court.",
+    "why_it_matters": "Created by the Legislature in 2023 and elected statewide, unlike the other 14 appeals courts. It hears challenges to state laws before they reach the Supreme Court. All three current justices were appointed by Gov. Abbott.",
+    "vote_for": 1,
+    "incumbent": "April Farris",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "April Farris",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice on the 15th Court since 2024. Justice on the Houston-based 1st Court of Appeals 2021 to 2024; former appellate partner at Yetter Coleman and assistant solicitor general.",
+        "own_words": [
+          {
+            "text": "I am a textualist. I believe that words have meaning.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "My role is to call balls and strikes. It is not to rewrite the law to suit my policy preferences.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "I have donors from both parties and divergent interests.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      },
+      {
+        "name": "Marc M. Meyer",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Trial attorney board certified in administrative law; retired Houston firefighter-paramedic and registered nurse; former Montgomery County Democratic Party chair.",
+        "own_words": [
+          {
+            "text": "While I have not been a judge, I am a trial attorney, Board Certified in Administrative Law.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "Describes his approach as prudentialism: \"pragmatism, caution, and consideration of the real-world consequences of judicial decisions.\"",
+            "is_quote": false,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          },
+          {
+            "text": "The greatest barriers to access is the cost of litigation with high legal fee and steep court costs.",
+            "is_quote": true,
+            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://www.vote411.org/lwvtx"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas SOS ballot",
+        "url": "https://electionresults.sos.state.tx.us/results.html"
+      },
+      {
+        "name": "LWV Texas Voters Guide PDF",
+        "url": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+      },
+      {
+        "name": "Texas Tribune 15th Court guide",
+        "url": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

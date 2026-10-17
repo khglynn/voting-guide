@@ -1,0 +1,185 @@
+[
+  {
+    "id": "seattle-times-eb",
+    "name": "The Seattle Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Largest Washington daily. The board endorses in both parties' races and has long opposed state income taxes; in 2026 it is emphasizing fiscal restraint and endorsed an independent over a Democrat in one legislative race. AllSides rates Seattle Times news as Lean Left.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.seattletimes.com/opinion/editorials/seattle-times-editorial-board-endorsements-nov-3-2026-general-election/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "the-stranger-eb",
+    "name": "The Stranger Election Control Board",
+    "type": "publication",
+    "lean": "left",
+    "lean_basis": "Seattle alt-weekly; self-described progressive and openly partisan in tone. Its endorsement guide is widely used by Seattle voters.",
+    "geography": [
+      "WA",
+      "seattle-wa"
+    ],
+    "guide_url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-wa",
+    "name": "League of Women Voters of Washington",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan civic organization. Does not endorse candidates; takes positions on ballot measures based on member-adopted League positions. Its president co-signed the pamphlet statements against IL26-001 and IL26-638.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://lwvwa.org/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-democrats",
+    "name": "Washington State Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party organization. Its website says the state party does not endorse candidates; county and legislative-district Democratic organizations do.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://wadems.org/vote/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-gop",
+    "name": "Washington State Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party organization. In 2026 it issued 'official recommendations' in the nonpartisan Supreme Court races and urges a YES on all three initiatives.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://wagop.org/wagop-endorses-a-slate-of-ten-congressional-candidates-as-election-day-nears/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-labor-council",
+    "name": "Washington State Labor Council, AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide labor federation; endorsements are voted by delegates from affiliated unions and skew Democratic. Its president co-signed the pamphlet statement against I-645.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://wslc.org/vote/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "awb",
+    "name": "Association of Washington Business",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "The state's chamber of commerce and largest business association; opposes new taxes and endorses pro-business candidates of both parties.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-education-association",
+    "name": "Washington Education Association",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Statewide teachers' union; endorses mostly Democrats. Its president co-signed the pamphlet statement against I-645.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.washingtonea.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-state-pta",
+    "name": "Washington State PTA",
+    "type": "advocacy",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan parent-teacher association; takes positions on education-related measures through member-adopted legislative principles. Does not endorse candidates.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.wastatepta.org/focus-areas/advocacy/2026-ballot-measures/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "planned-parenthood-wa",
+    "name": "Planned Parenthood Alliance Advocates (Washington)",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Abortion-rights and LGBTQ+ advocacy arm of Planned Parenthood in Washington; endorses candidates and measures. Its state director co-signed the pamphlet statements against IL26-001 and IL26-638.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "aclu-wa",
+    "name": "ACLU of Washington",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Civil liberties organization; does not endorse candidates but takes positions on measures affecting civil rights.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://www.aclu-wa.org/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "lets-go-washington",
+    "name": "Let's Go Washington (I-645 sponsor)",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Conservative initiative committee funded largely by hedge fund manager Brian Heywood; sponsored the 2024 initiatives and gathered the signatures for I-645. Listed so readers can see the sponsor's own case.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "wa-house-republicans",
+    "name": "Washington House Republicans (caucus)",
+    "type": "elected_official",
+    "lean": "right",
+    "lean_basis": "The Republican caucus of the state House; hosts explainer pages supporting the 2026 initiatives. Does not endorse in judicial races.",
+    "geography": [
+      "WA"
+    ],
+    "guide_url": "https://houserepublicans.wa.gov/il26-638/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  }
+]

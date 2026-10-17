@@ -1,0 +1,61 @@
+{
+  "id": "ballwin-mo",
+  "label": "Ballwin area (west St. Louis County, not the City of St. Louis)",
+  "state": "MO",
+  "counties": [
+    "St. Louis County"
+  ],
+  "county_election_office": {
+    "name": "St. Louis County Board of Elections, 725 Northwest Plaza Dr., St. Ann, MO 63074 (the county board, not the City of St. Louis board downtown). Mon to Fri 8 a.m. to 4:30 p.m.",
+    "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "phone": "314-615-1800"
+  },
+  "sample_ballot_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+  "zips": [
+    "63011"
+  ],
+  "zip_caveats": "Ballwin is in west St. Louis County, NOT the City of St. Louis: you vote with the county Board of Elections in St. Ann, and on Election Day you can use any county polling place. 63011 also covers parts of Manchester, Ellisville, Winchester, Clarkson Valley, Wildwood and unincorporated areas. U.S. House (2022 lines, which govern the Nov. 3 election): all 2nd District (Wagner vs. Wellman vs. Daugherty). State Senate: essentially all of 63011 is in Senate District 15, which is NOT on the ballot this year, so most voters here have no state senate race (a sliver near Valley Park could be SD-24). State House: central Ballwin is HD-100 (Oehlerking vs. Perkins vs. Newhouse); the west side toward Ellisville is HD-88 (Jones vs. Trickey) or HD-110 (Stephens vs. Heinrich); the east side toward Manchester is HD-98 (Zimmermann vs. Bosch) or HD-89 (Hruza vs. Troop); the north edge toward Chesterfield is HD-101 (Keathley vs. Lentz vs. Coleman). County Council: incumbent Mark Harder (District 7) lives in Ballwin, so much of the area is likely District 7 (Harder vs. Kiehne); some 63011 addresses may be in District 3 (Osmack vs. Koenig). Council lines were not checked against a map. School: 63011 addresses may be in the Parkway School District (Prop P is on the ballot) or the Rockwood School District (no Nov. 3 measure found); boundaries were not checked, so confirm by address. No City of Ballwin measure was found. Legislative placements come from official 2022 boundaries checked against points around the ZIP, not a ZIP-level file. Use the county's Sample Ballot Lookup with your street address to see your exact ballot.",
+  "contest_ids": [
+    "mo-state-auditor",
+    "mo-retention-wilson",
+    "mo-retention-lay",
+    "mo-retention-navarro-mckelvey",
+    "mo-retention-quigless",
+    "mo-us-house-2",
+    "mo-sd-24",
+    "mo-hd-100",
+    "mo-hd-88",
+    "mo-hd-110",
+    "mo-hd-98",
+    "mo-hd-89",
+    "mo-hd-101",
+    "stlco-county-executive",
+    "stlco-prosecuting-attorney",
+    "stlco-assessor",
+    "stlco-council-7",
+    "stlco-council-3",
+    "stlco-retention-stewart",
+    "stlco-retention-borbonus",
+    "stlco-retention-ott",
+    "stlco-retention-mcnelley",
+    "stlco-retention-mcpherson",
+    "stlco-retention-baker",
+    "stlco-retention-hearne",
+    "stlco-retention-dunne",
+    "stlco-retention-lasater",
+    "stlco-retention-klapp",
+    "stlco-retention-ruth",
+    "stlco-retention-lewis",
+    "stlco-retention-snyder",
+    "stlco-retention-ghasedi",
+    "stlco-retention-dillon-amelung",
+    "mo-prop-a",
+    "mo-amendment-3",
+    "mo-amendment-6",
+    "mo-amendment-7",
+    "mo-amendment-8",
+    "stlco-prop-a",
+    "stlco-prop-s",
+    "parkway-sd-prop-p"
+  ]
+}

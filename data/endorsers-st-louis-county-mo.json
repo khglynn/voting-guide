@@ -1,0 +1,52 @@
+[
+  {
+    "id": "stl-post-dispatch-eb",
+    "name": "St. Louis Post-Dispatch editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Largest Missouri daily (Lee Enterprises). Still endorses: it ran primary endorsements in July 2026 (including 'State Auditor Fitzpatrick has earned GOP re-nomination'). Historically endorses mostly Democrats statewide; AllSides rates the news Lean Left. General-election endorsements are paywalled and were not readable in this pass.",
+    "geography": [
+      "MO",
+      "webster-groves-mo",
+      "clayton-mo",
+      "ballwin-mo"
+    ],
+    "guide_url": "https://www.stltoday.com/opinion/editorial/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-metro-stl",
+    "name": "League of Women Voters of Metro St. Louis (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; the League never endorses candidates. Runs the St. Louis-area VOTE411 guide with candidate answers (personalized ballot needs a street address). No positions on these local measures were found as of Oct. 16.",
+    "geography": [
+      "webster-groves-mo",
+      "clayton-mo",
+      "ballwin-mo"
+    ],
+    "guide_url": "https://www.vote411.org/mo-lwvstl",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "mobar-jpr",
+    "name": "The Missouri Bar Judicial Performance Review Committee (YourMissouriJudges.org)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Committee of lawyers and non-lawyer citizens run by The Missouri Bar, the statewide association all Missouri lawyers must belong to. It reviews only judges facing retention under the nonpartisan court plan and publishes a majority recommendation for each; it takes no part in partisan races or ballot measures. In 2026 it recommended retaining every judge it reviewed.",
+    "geography": [
+      "MO",
+      "webster-groves-mo",
+      "clayton-mo",
+      "ballwin-mo"
+    ],
+    "guide_url": "https://yourmissourijudges.org/judges/circuit/st-louis-county/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "state": "OR",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "OregonVotes.gov (Oregon Secretary of State, Elections Division)",
+    "url": "https://sos.oregon.gov/elections/pages/current-election.aspx"
+  },
+  "voting_model": "all_mail",
+  "model_plain": "Every registered voter gets a ballot in the mail. Fill it out at home, sign the envelope, and put it in any official drop box in Oregon by 8:00 PM on November 3, or mail it so it's postmarked by Election Day. There are no polling places.",
+  "registration": {
+    "check_url": "https://sos.oregon.gov/elections/Pages/myvote.aspx",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-13",
+        "rule": "Tuesday, October 13 was the last day to register online, by mail, or in person, and the last day to change party. This deadline has passed. Oregon has no same-day registration.",
+        "source": "https://sos.oregon.gov/elections/pages/current-election.aspx"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-13",
+        "rule": "Paper registration cards had to be postmarked by Tuesday, October 13. Passed.",
+        "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-10-13",
+        "rule": "In-person registration also closed October 13. Already-registered Oregon voters who moved can still update their address at My Vote and get a ballot. The state pamphlet says: if Election Day is less than 5 days away, call your county elections office for instructions on how to get your ballot.",
+        "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "same_day_registration": false,
+    "same_day_notes": "No same-day registration in Oregon. If you were already registered in Oregon (at any address) and moved, update your registration at My Vote (oregonvotes.gov/myvote). Ballots cannot be forwarded, so an old address means no ballot. Within 5 days of Election Day, call your county elections office (Multnomah: 503-988-8683) to get your ballot in person.",
+    "still_possible_now": "For most people, no. The deadline was Tuesday, October 13, and Oregon has no same-day registration. Two exceptions: (1) if you were already registered in Oregon and moved or changed your name, update your record at My Vote and you can still get a ballot; (2) if the DMV auto-registered you (Oregon Motor Voter) before October 13, you're registered even if you never filled out a form. Check at My Vote.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Automatic. Every active registered voter is mailed a ballot. No request or excuse needed. Counties began mailing Wednesday, October 14 (Multnomah County ballots started arriving that day) and must finish by October 20. Multnomah says everyone should have a ballot by October 22; the state says call your county if you don't have it by October 30.",
+    "request_deadline": {
+      "date": "2026-10-29",
+      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. October 29 is the last day Multnomah County will MAIL a replacement or absentee ballot. After that, get one in person at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
+      "source": "https://multco.us/file/vote-by-mail_facts_-_november_3,_2026_general_election/download"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "8:00 PM PT. Drop boxes and county offices: in the box or office by 8:00 PM on Nov. 3. Mail: USPS postmark by Nov. 3; the county can accept it up to 7 days later (Nov. 10).",
+      "source": "https://sos.oregon.gov/elections/pages/current-election.aspx"
+    },
+    "return_options": [
+      "any official ballot drop box anywhere in Oregon, by 8:00 PM Nov. 3 (even one in another county; it gets forwarded)",
+      "any county elections office, by 8:00 PM Nov. 3 (Multnomah: 1040 SE Morrison St., Portland, or Voting Center Express, 600 NE 8th St., Gresham)",
+      "mail (USPS), no stamp needed. The state and Multnomah County say mail by Tuesday, October 27. After that, use a drop box, or ask a post office counter for a hand postmark."
+    ],
+    "postage": "prepaid. The state pamphlet says: 'No postage needed. Use the return envelope provided with your ballot.'",
+    "signature_witness_rules": "Sign the back of the return envelope. No witness, notary, or ID copy. Election workers compare your signature to the one in your voter registration record (often your DMV signature). The state pamphlet: 'You're the only person who can sign your ballot return envelope. Power of Attorney documents do not apply to voting.' If you can't sign your name, you may use a signature stamp or other indicator; contact the county first. The secrecy sleeve is optional.",
+    "tracking_url": "https://sos.oregon.gov/elections/Pages/myvote.aspx",
+    "cure_process": "If your signature is missing or doesn't match, the county notifies you by mail (and by text or email if you signed up for ballot alerts). State pamphlet: 'You will have until 21 days after the election to prove you were the one who signed the envelope.' That is Tuesday, November 24, 2026. Fix it by signing and returning the county's form, or in person at the county elections office. Multnomah voters can get text and email alerts at multnomah.ballottrax.net; every Oregon voter can see ballot status at My Vote.",
+    "mail_cutoff_advice": "Official advice: mail your ballot at least one week before Election Day, so by Tuesday, October 27. The Secretary of State says if you haven't mailed it by then, 'use a drop box or go directly to a post office and ask for a manual postmark before you place it in a collection box.' Reason: a state test in October found USPS delivery as slow as 11 days, and a ballot postmarked on time but arriving after November 10 doesn't count. Sources: the 2026 State Voters' Pamphlet and https://oregoncapitalchronicle.com/2026/10/13/oregon-elections-chief-urges-early-voting-as-test-of-usps-service-shows-slow-mail-service/",
+    "drop_box_lookup_url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-14",
+    "end": "2026-11-03",
+    "hours_note": "Oregon has no polling places or 'early voting' in the usual sense. Once ballots go out (Oct. 14), you can vote any time. County elections offices can give you a replacement ballot, an accessible ballot, or help in another language, and you can fill out your ballot there. Multnomah County: Voting Center, 1040 SE Morrison St., Portland, and Voting Center Express, 600 NE 8th St., Gresham (weekdays 8 AM to 5 PM; opened Oct. 8). Extended hours at both: Oct. 28 to 30, 8 AM to 7 PM; Sat. Oct. 31, 10 AM to 2 PM; Mon. Nov. 2, 8 AM to 7 PM; Election Day 7 AM to 8 PM.",
+    "vote_centers": true,
+    "lookup_url": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "8:00 PM",
+    "in_line_rule": "There are no polls. Your ballot must be IN an official drop box or at a county elections office by 8:00 PM. County elections offices are open 7 AM to 8 PM on Election Day. A mailed ballot must carry a USPS postmark dated Nov. 3 or earlier, and must reach the county by Nov. 10.",
+    "vote_centers": true,
+    "lookup_url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "none",
+    "accepted": [
+      "No ID is needed to vote. Your signature on the return envelope is your identification.",
+      "One narrow exception (federal law): if you registered for the first time in Oregon by mail without an Oregon driver's license/ID number or the last four digits of your Social Security number, the county may ask you for a copy of a photo ID or a current utility bill, bank statement, paycheck, or government document showing your name and address before your first ballot counts. The county will tell you if this applies to you. (sourced, not from a 2026 official page)"
+    ],
+    "no_id_option": "Not applicable for most voters. If your eligibility can't be determined, the state pamphlet says you have the right to request a provisional ballot in person at your county elections office; it counts once the county confirms you're eligible.",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "You vote at home, so use whatever you like: your phone, a laptop, this guide. Oregon's election-crimes list in the state Voters' Pamphlet has no phone or photo rule. Source: 2026 State Voters' Pamphlet, 'It is against the law to' section, https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
+    "notes_allowed": "allowed",
+    "notes_detail": "Bring or use any notes, a marked-up Voters' Pamphlet, or a printed cheat sheet. Nothing in Oregon law restricts this. Most Oregonians fill out the ballot at the kitchen table.",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "No campaign-gear rule for voters, since there are no polling places. What IS illegal (state pamphlet): collecting voted ballots within 100 feet of an official drop site, obstructing the entrance of a building with a drop site, unduly influencing another voter, or signing anyone else's envelope. Wearing a campaign shirt to the drop box is fine; standing there handing out flyers is not.",
+    "confidence": "verified"
+  },
+  "gotchas": [
+    "Oregon counts mailed ballots POSTMARKED by November 3, but only if they reach the county by November 10. The state says mail by Tuesday, October 27. After that, use a drop box (any official one in Oregon) or ask a post office counter for a hand postmark. Drop boxes close at 8:00 PM sharp on November 3.",
+    "Sign the envelope, in your normal signature. A missing or mismatched signature is the top reason Oregon ballots don't count. Nobody can sign for you, not even with power of attorney. If the county flags your signature, you have until November 24 to fix it. Sign up for text or email ballot alerts (multnomah.ballottrax.net) so you hear about a problem right away.",
+    "Registration closed October 13 and there is no same-day registration. If you're already registered in Oregon and moved, update your address at My Vote; ballots aren't forwarded. Within 5 days of the election, call the county to get a ballot in person.",
+    "No stamp needed. The return envelope is prepaid. The secrecy sleeve is optional.",
+    "Dropping off a friend's ballot? Legal, but you must put it in a drop box or the mail within 2 days of getting it, or by Election Day, whichever comes first. Don't collect ballots within 100 feet of a drop site.",
+    "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). October 29 is the last day the county will mail a replacement; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person."
+  ],
+  "sources": [
+    {
+      "name": "Oregon Secretary of State: Upcoming Elections, November 3, 2026 General Election (return rule, key dates, 'no statewide ballot measures')",
+      "url": "https://sos.oregon.gov/elections/pages/current-election.aspx"
+    },
+    {
+      "name": "Oregon Secretary of State: 2026 General Election State Voters' Pamphlet, Multnomah County edition (Book 13, PDF)",
+      "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+    },
+    {
+      "name": "Oregon Secretary of State: Voters' Pamphlet index (all county editions)",
+      "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Pages/Voters-Pamphlet-English.aspx"
+    },
+    {
+      "name": "Oregon Secretary of State: My Vote (registration lookup, ballot tracking)",
+      "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+    },
+    {
+      "name": "Oregon Secretary of State: drop box locator",
+      "url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx"
+    },
+    {
+      "name": "Multnomah County Elections: USPS began delivering ballots Oct. 14 for the Nov. 3, 2026 General Election (drop sites, hours, dates, tracking)",
+      "url": "https://multco.us/news/us-postal-service-has-begun-delivering-ballots-today-oct-14-nov-3-2026-general-election"
+    },
+    {
+      "name": "Multnomah County Elections: Vote-by-Mail Facts, Nov. 3, 2026 General Election (PDF; statutory mailing dates, Oct. 27 advice)",
+      "url": "https://multco.us/file/vote-by-mail_facts_-_november_3,_2026_general_election/download"
+    },
+    {
+      "name": "Multnomah County Elections: Oct. 13 registration deadline; Voting Center Express opens Oct. 8",
+      "url": "https://multco.us/news/tuesday-oct-13-voter-registration-deadline-voting-center-express-opens-today-oct-8"
+    },
+    {
+      "name": "Multnomah County Elections: current and upcoming elections",
+      "url": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections"
+    },
+    {
+      "name": "Clackamas County: Oregon Vote-by-Mail Facts, Nov. 3, 2026 (any official drop site in Oregon; mail by Oct. 27)",
+      "url": "https://www.clackamas.us/elections/oregon-vote-by-mail-facts-november-3-2026-general-election"
+    },
+    {
+      "name": "League of Women Voters of Oregon / VOTE411: Oregon election information ('valid if received or postmarked by 8:00 pm on election day')",
+      "url": "https://www.vote411.org/lwvor"
+    },
+    {
+      "name": "Oregon Capital Chronicle, Oct. 13, 2026: Oregon elections chief urges early voting as test of USPS service shows slow mail service",
+      "url": "https://oregoncapitalchronicle.com/2026/10/13/oregon-elections-chief-urges-early-voting-as-test-of-usps-service-shows-slow-mail-service/"
+    },
+    {
+      "name": "OPB, June 29, 2026: Oregon and Washington can continue to accept late-arriving ballots under Supreme Court ruling (Watson v. RNC)",
+      "url": "https://www.opb.org/article/2026/06/29/mail-ballot-postmark-late-arriving-oregon-washington/"
+    },
+    {
+      "name": "Votebeat, June 29, 2026: Supreme Court allows states to accept mail ballots that arrive after Election Day",
+      "url": "https://www.votebeat.org/national/2026/06/29/supreme-court-watson-rnc-mail-ballots-absentee-deadline-grace-period/"
+    },
+    {
+      "name": "OPB, Oct. 11, 2026: Oregonians have until Tuesday to register for the Nov. 3 election",
+      "url": "https://www.opb.org/article/2026/10/11/oregonians-have-until-tuesday-to-register-for-the-nov-3-election/"
+    },
+    {
+      "name": "Central Oregon Daily, Oct. 2026: All Oregon voters can now get updates on their ballots",
+      "url": "https://www.centraloregondaily.com/news/elections/all-oregon-voters-can-now-get-updates-on-their-ballots-heres-how/article_596a193c-5278-5bcc-9902-a86e355c1718.html"
+    },
+    {
+      "name": "Ballotpedia: Voting in Oregon (first-time-voter ID exception)",
+      "url": "https://ballotpedia.org/Voting_in_Oregon"
+    }
+  ]
+}

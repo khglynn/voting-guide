@@ -1,0 +1,143 @@
+{
+  "state": "CA",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": { "name": "California Secretary of State: Elections & Voter Information", "url": "https://www.sos.ca.gov/elections" },
+  "voting_model": "mail_to_all_plus_in_person",
+  "model_plain": "Every active registered voter already got a ballot in the mail (counties mailed them by October 5; LA County mailed October 1). Fill it out at home, sign the envelope, and drop it in any official drop box, any vote center, or the mail. Or skip the mail ballot and vote in person at a vote center from October 24 (LA, Orange and San Diego counties) or at your polling place on Election Day (San Francisco).",
+
+  "registration": {
+    "check_url": "https://voterstatus.sos.ca.gov/",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-19",
+        "rule": "Register or update your registration at RegisterToVote.ca.gov by Monday, October 19, 2026 (15 days before the election). This is the last day to register and be mailed a ballot.",
+        "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-19",
+        "rule": "Paper registration forms must be postmarked or delivered by Monday, October 19, 2026 to be processed as a regular registration.",
+        "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-11-03",
+        "rule": "After October 19 you can still register and vote the same day. Same Day Voter Registration (officially 'conditional voter registration') runs October 20 through 8:00 PM on November 3 at any vote center, polling place, or county elections office. Your ballot is counted once the county verifies your registration.",
+        "source": "https://www.sos.ca.gov/elections/voter-registration/same-day-reg"
+      }
+    ],
+    "same_day_registration": true,
+    "same_day_notes": "Go to any vote center in your county (LA, Orange, San Diego) or, in San Francisco, the Department of Elections at City Hall Room 48 or any polling place on Election Day, through 8:00 PM on November 3. You register and vote in one trip. Bring something with your name and address if you have it (driver's license, utility bill, or the sample ballot booklet the county mailed you); first-time voters who registered without a DL or SSN may be asked for ID. Your ballot is held until the county verifies your eligibility, then counted. Find locations at https://caearlyvoting.sos.ca.gov/.",
+    "still_possible_now": "Yes. As of October 15 you have until Monday, October 19 to register online at RegisterToVote.ca.gov and get a ballot mailed to you. If you miss that, you can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
+    "confidence": "verified"
+  },
+
+  "mail_ballot": {
+    "who_gets_one": "Automatic. Every active registered voter in California is mailed a ballot for every election. No request and no excuse needed. Counties had to begin mailing by October 5, 2026. LA County mailed all ballots on October 1; San Francisco mailed in early October. The Secretary of State confirmed on October 6 that ballots had gone out statewide. If you registered or moved after that, a ballot goes out when your record is updated through October 19. If yours never came, request a replacement from your county (LA County: by Tuesday, October 27) or just vote in person.",
+    "request_deadline": {
+      "date": "2026-10-27",
+      "rule": "You don't need to request a ballot. If yours is lost, damaged, or never arrived, you can ask your county for a replacement. LA County's last day to request a mailed replacement is Tuesday, October 27 (the state form is at https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/replacement-application.pdf). After that, get a replacement in person at any vote center or county elections office, or just vote in person.",
+      "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "8:00 PM PT (drop box, vote center, polling place, or county office); mailed ballots must be postmarked by Nov 3 and received by Nov 10",
+      "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines"
+    },
+    "return_options": [
+      "any official ballot drop box in California (LA County has 429, open since Oct 1; San Francisco has 37, open since Oct 5; all counties opened boxes by Oct 6; boxes lock at 8:00 PM on Nov 3)",
+      "any vote center in your county (LA, Orange, San Diego: open Oct 24 or Oct 31 through Election Day)",
+      "any polling place in California on Election Day (7 AM to 8 PM)",
+      "your county elections office (SF: City Hall Room 48, early voting Oct 5 through Nov 3)",
+      "mail (USPS), postage prepaid, postmarked by Nov 3. The state recommends mailing at least 7 days before Election Day; the SOS USPS FAQ says at least 5 days."
+    ],
+    "postage": "prepaid. Every California vote-by-mail return envelope comes with First Class postage already paid. No stamp needed.",
+    "signature_witness_rules": "Sign the back of the return envelope. No witness, no notary, no ID copy for most voters. The county compares your envelope signature to the signature on file from your registration (if you registered online, that's your DMV signature). Sign the way you signed your license. Only a small group of first-time voters who registered without a California DL/ID or SSN may need to include a copy of ID; your county will tell you if that applies.",
+    "tracking_url": "https://california.ballottrax.net/voter/",
+    "cure_process": "If your signature is missing or doesn't match, the county must contact you (mail, phone, email, or a Where's My Ballot alert) and give you a chance to fix it. You fill out a signature verification form from your county's website or the notice they send and return it. The statewide deadline to fix a missing or mismatched signature is 5:00 PM on Wednesday, November 25, 2026. Sign up at WheresMyBallot.sos.ca.gov so you get the alert fast. Source: https://elections.cdn.sos.ca.gov/pdfs/trusted-info/trusted-info-missing-signature.pdf",
+    "mail_cutoff_advice": "The Secretary of State says mail at least 7 days before Election Day (so by about Tuesday, October 27). The SOS USPS FAQ says at least 5 days. From the last week of October on, use a drop box or a vote center instead of the mail. If you absolutely must mail it on Election Day, ask a postal clerk inside a post office for a hand-stamped postmark; a ballot dropped in a blue box late on Nov 3 may not get postmarked that day and would not count.",
+    "drop_box_lookup_url": "https://caearlyvoting.sos.ca.gov/",
+    "confidence": "verified"
+  },
+
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-05",
+    "end": "2026-11-02",
+    "hours_note": "Two systems. VOTE CENTER COUNTIES (LA, Orange, San Diego and 27 others under the Voter's Choice Act): a first wave of vote centers opens Saturday, October 24 (the '11-day' centers), and every vote center opens Saturday, October 31 (the '4-day' centers), all running daily through Election Day. LA County: 123 eleven-day centers and 523 four-day centers (646 total), open 10 AM to 7 PM, then 7 AM to 8 PM on Nov 3. Orange County: select centers Oct 24 to 30 and all centers Oct 31 to Nov 2, 10 AM to 6 PM, then 7 AM to 8 PM on Nov 3. You can use any vote center in your county, not an assigned one. POLLING PLACE COUNTIES (San Francisco): early voting is at the City Hall Voting Center (Room 48) from October 5 through November 3, weekdays 8 AM to 5 PM (closed Oct 12), weekends Oct 24-25 and Oct 31-Nov 1 10 AM to 4 PM, and 7 AM to 8 PM on Election Day. In-person early voting sites statewide are open Saturday, October 31. Early voting sites opened statewide October 5.",
+    "vote_centers": true,
+    "lookup_url": "https://caearlyvoting.sos.ca.gov/",
+    "confidence": "verified"
+  },
+
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "8:00 PM",
+    "in_line_rule": "If you're in line at 8:00 PM you get to vote. Drop boxes also close at 8:00 PM sharp.",
+    "vote_centers": true,
+    "lookup_url": "https://www.sos.ca.gov/elections/polling-place",
+    "confidence": "verified"
+  },
+
+  "id_rules": {
+    "required": "first_time_only",
+    "accepted": [
+      "Most voters: no ID needed. Your signature is your ID, by mail or in person.",
+      "If you're voting for the first time after registering by mail or online WITHOUT giving a California driver's license/ID number or the last 4 of your SSN, you may be asked for ID. Acceptable: driver's license or state ID, passport, student ID with photo, a recent utility bill, bank statement, government check or paycheck, or the sample ballot booklet the county mailed you.",
+      "Photo ID is NOT required. A non-photo document with your name and address works. The ID does not have to be government-issued or show your address (per the SOS poll worker standards).",
+      "Full list of acceptable documents (HAVA regulations): https://elections.cdn.sos.ca.gov/regulations/hava_id_regs_from_barclays_3_3_06.pdf"
+    ],
+    "no_id_option": "If you're one of the few voters asked for ID and don't have it, you can still vote a provisional ballot, which is counted once the county confirms your eligibility. Poll workers may not ask for ID unless the roster flags you. If voting by mail and you're flagged, include a copy of an acceptable document in your return envelope.",
+    "confidence": "verified"
+  },
+
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "Allowed. The Secretary of State's poll worker training standards say a voter 'may use an electronic device, including a smartphone, tablet, or other handheld device, at a polling place' as long as it isn't used for electioneering, intimidating others, or photographing other voters. Look up your notes or this guide on your phone all you want. Source: https://www.sos.ca.gov/elections/voting-resources/voting-california/help-strengthen-our-democracy/poll-worker-training-standards/section-two",
+    "notes_allowed": "allowed",
+    "notes_detail": "Allowed. State and federal law do not prohibit bringing the state Voter Information Guide, the county guide, a sample ballot, a printed or handwritten cheat sheet, or similar explanatory materials into the booth. The one limit: campaign materials (electioneering) cannot be displayed inside or within 100 feet of the entrance. Keep your notes to yourself and you're fine. Source: SOS poll worker training standards, Section 2, citing Elections Code 18370.",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "No electioneering within 100 feet of the entrance to a vote center or polling place, or of any drop box or curbside voting spot, or in the immediate vicinity of anyone in line. That includes wearing or displaying a candidate's name, image or logo, or anything for or against a ballot measure (hats, shirts, buttons, stickers, signs). A generic slogan with no candidate name, image or logo is not electioneering under the state definition. Take off or cover the 'Yes on 40' shirt before you walk up. Sources: Elections Code 18370 (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=18370.) and the SOS electioneering notice regulation (https://sos.ca.gov/administration/regulations/current-regulations/elections/notices-regarding-prohibition-electioneering-and-corruption-voting-process).",
+    "confidence": "verified"
+  },
+
+  "gotchas": [
+    "The registration deadline is MONDAY, OCTOBER 19. Register online at RegisterToVote.ca.gov by then to get a ballot in the mail. Missed it? You can still register and vote in person, same day, at any vote center or your county elections office through 8 PM on November 3.",
+    "Mailed ballots must be POSTMARKED by November 3 and arrive by November 10. Dropping it in a mailbox late on Election Day is risky. From the last week of October on, use a drop box or a vote center instead. They're free, they're everywhere (LA County has 429 drop boxes), and the ballot counts the moment it's in the box.",
+    "Sign the envelope, and sign it the way you signed your driver's license. A missing or mismatched signature is the top reason California ballots get rejected. If the county flags yours, you have until 5 PM on November 25 to fix it, but only if they can reach you. Sign up at WheresMyBallot.sos.ca.gov so you get a text.",
+    "You can vote at ANY vote center in your county (LA, Orange, San Diego), not an assigned one. The first wave opens Saturday, October 24, and all of them open Saturday, October 31. San Francisco is different: it still uses neighborhood polling places on Election Day, plus the City Hall voting center for early voting.",
+    "Three propositions are designed to cancel each other out. Props 41 and 42 each say that if they get more YES votes than Prop 40 (the billionaire tax), Prop 40 is blocked even if it passes. Under the state constitution, when measures conflict, the one with more YES votes wins. If you have a view on Prop 40, your votes on 41 and 42 matter just as much."
+  ],
+
+  "sources": [
+    { "name": "California SOS: Key Dates and Deadlines, November 3, 2026 General Election", "url": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines" },
+    { "name": "California SOS press release PR26-125, Oct 6, 2026: ballots mailed, vote early", "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-dr-shirley-n-weber-phd-encourages-californians-vote-early-2026-general-election" },
+    { "name": "Official Voter Information Guide: Quick Facts (vote-by-mail, same day registration, drop-off)", "url": "https://voterguide.sos.ca.gov/voter-info/quick-facts.htm" },
+    { "name": "Official Voter Information Guide: back cover key dates (PDF)", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/back-cover.pdf" },
+    { "name": "California SOS: Same Day Voter Registration", "url": "https://www.sos.ca.gov/elections/voter-registration/same-day-reg" },
+    { "name": "California SOS: USPS Vote-by-Mail FAQ (prepaid postage, postmark, 7-day receipt)", "url": "https://www.sos.ca.gov/elections/voter-registration/vote-mail/usps-frequently-asked-questions-faqs" },
+    { "name": "California SOS Trusted Info: Missing or Mismatched Signature (cure deadline Nov 25, 2026)", "url": "https://elections.cdn.sos.ca.gov/pdfs/trusted-info/trusted-info-missing-signature.pdf" },
+    { "name": "California SOS: What to Bring to Your Polling Place (ID rules)", "url": "https://www.sos.ca.gov/elections/voting-resources/voting-california/what-bring" },
+    { "name": "California SOS: Poll Worker Training Standards, Section 2 (phones, sample ballots, notes, children, ID)", "url": "https://www.sos.ca.gov/elections/voting-resources/voting-california/help-strengthen-our-democracy/poll-worker-training-standards/section-two" },
+    { "name": "California SOS: Voter Bill of Rights", "url": "https://voterguide.sos.ca.gov/voter-info/voter-bill-of-rights.htm" },
+    { "name": "Official Voter Information Guide: More Days, More Ways to Vote (Voter's Choice Act county list)", "url": "https://voterguide.sos.ca.gov/voter-info/more-ways-vca.htm" },
+    { "name": "California SOS CC/ROV memo 17014 (Feb 2017): ballot selfies legal under AB 1494, Elections Code 14291", "url": "https://elections.cdn.sos.ca.gov/ccrov/pdf/2017/february/17014jl.pdf" },
+    { "name": "Elections Code 18370 (electioneering within 100 feet)", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=18370." },
+    { "name": "California SOS regulation: notices on electioneering (what counts, incl. apparel)", "url": "https://sos.ca.gov/administration/regulations/current-regulations/elections/notices-regarding-prohibition-electioneering-and-corruption-voting-process" },
+    { "name": "California Constitution Art. II Sec. 10 (majority vote; conflicting measures)", "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=II&lawCode=CONS" },
+    { "name": "LA County RR/CC: November 3, 2026 General Election Media Kit (dates, 646 vote centers, 429 drop boxes, hours)", "url": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf" },
+    { "name": "LA County RR/CC: Aug 20, 2026 news release on outreach mailers (ballots by Oct 5, vote centers Oct 24)", "url": "https://content.lavote.gov/docs/rrcc/documents/01-20260820_news_release_outreach_mailers.pdf" },
+    { "name": "LA County: Ballot Drop Box page (electioneering notice)", "url": "https://lavote.gov/home/voting-elections/voting-options/vote-by-mail/vbm-ballot-drop-off" },
+    { "name": "Orange County Registrar of Voters: Voting and Drop-off Locations by Election (2026 General hours)", "url": "https://ocvote.org/voting/voting-and-dropoff-locations-by-election" },
+    { "name": "Orange County ROV: vote center and drop box locator", "url": "https://ocvote.gov/locate" },
+    { "name": "San Francisco Department of Elections: November 3, 2026 Consolidated General Election", "url": "https://www.sf.gov/november-3-2026-consolidated-general-election" },
+    { "name": "Sonoma County ROV: Nov 3, 2026 timeline (11-day and 4-day vote center dates, Nov 10 receipt deadline)", "url": "https://sonomacounty.gov/administrative-support-and-fiscal-services/registrar-of-voters/elections/november-3-2026-general-election-timeline" },
+    { "name": "Find early voting, vote centers and drop boxes (statewide lookup)", "url": "https://caearlyvoting.sos.ca.gov/" },
+    { "name": "Where's My Ballot (BallotTrax)", "url": "https://california.ballottrax.net/voter/" },
+    { "name": "My Voter Status (am I registered?)", "url": "https://voterstatus.sos.ca.gov/" },
+    { "name": "Register to Vote", "url": "https://registertovote.ca.gov/" }
+  ]
+}

@@ -1,0 +1,452 @@
+[
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "ny-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since August 2024: the board 'will no longer make endorsements in New York elections, including in races for governor and mayor of New York City,' and does not endorse in Senate, congressional or state legislative races in New York. No 2026 New York endorsements have appeared.",
+    "url": "https://www.editorandpublisher.com/stories/the-new-york-times-will-stop-endorsing-candidates-in-new-york-races,251404",
+    "date": "2024-08-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "ny-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since August 2024: the board 'will no longer make endorsements in New York elections, including in races for governor and mayor of New York City,' and does not endorse in Senate, congressional or state legislative races in New York. No 2026 New York endorsements have appeared.",
+    "url": "https://www.editorandpublisher.com/stories/the-new-york-times-will-stop-endorsing-candidates-in-new-york-races,251404",
+    "date": "2024-08-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "ny-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "Policy since August 2024: the board 'will no longer make endorsements in New York elections, including in races for governor and mayor of New York City,' and does not endorse in Senate, congressional or state legislative races in New York. No 2026 New York endorsements have appeared.",
+    "url": "https://www.editorandpublisher.com/stories/the-new-york-times-will-stop-endorsing-candidates-in-new-york-races,251404",
+    "date": "2024-08-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "daily-news-eb",
+    "target_id": "ny-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Daily News editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.nydailynews.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "daily-news-eb",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Daily News editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.nydailynews.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "daily-news-eb",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Daily News editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.nydailynews.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "ny-post-eb",
+    "target_id": "ny-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Post editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://nypost.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "ny-post-eb",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Post editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://nypost.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "ny-post-eb",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Post editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://nypost.com/opinion/editorials/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "newsday-eb",
+    "target_id": "ny-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Newsday editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.newsday.com/opinion/editorial",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "newsday-eb",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Newsday editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.newsday.com/opinion/editorial",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "newsday-eb",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Newsday editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.newsday.com/opinion/editorial",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "times-union-eb",
+    "target_id": "ny-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Times Union editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.timesunion.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "times-union-eb",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Times Union editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.timesunion.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "times-union-eb",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "Searched Oct 16, 2026; no Times Union editorial endorsement in this race surfaced. Ballotpedia's tracker lists no 2026 Daily News endorsements. New York papers usually publish statewide picks in the last two weeks of October. Re-check after Oct 20.",
+    "url": "https://www.timesunion.com/opinion/",
+    "date": "2026-10-16",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "ny-governor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "ny-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "ny-comptroller",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "Democratic nominee: appears on the Democratic line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "Democratic nominee: appears on the Democratic line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "Democratic nominee: appears on the Democratic line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Bruce A. Blakeman / Todd Hood",
+    "why": "Republican nominee: appears on the Republican line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Saritha Komatireddy",
+    "why": "Republican nominee: appears on the Republican line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Joseph Hernandez",
+    "why": "Republican nominee: appears on the Republican line of the state's certified ballot (Oct 7, 2026).",
+    "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "Listed on the WFP's 'Our 2026 Candidates' page and appears on the Working Families line of the certified ballot. WFP nominated Hochul on Aug 21, 2026 after declining to pick between Hochul and Delgado in February; it took no position in the June comptroller primary and backed DiNapoli after he won it.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-08-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "Listed on the WFP's 'Our 2026 Candidates' page and appears on the Working Families line of the certified ballot. WFP nominated Hochul on Aug 21, 2026 after declining to pick between Hochul and Delgado in February; it took no position in the June comptroller primary and backed DiNapoli after he won it.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-08-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "Listed on the WFP's 'Our 2026 Candidates' page and appears on the Working Families line of the certified ballot. WFP nominated Hochul on Aug 21, 2026 after declining to pick between Hochul and Delgado in February; it took no position in the June comptroller primary and backed DiNapoli after he won it.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-08-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Bruce A. Blakeman / Todd Hood",
+    "why": "Named on the Conservative Party's statewide slate announced Feb 18, 2026 after its Stony Point convention (chair Gerard Kassar: a focus on 'public safety, protecting taxpayers, and advancing policies aimed at making the state more affordable for working families'), and appears on the Conservative line of the certified ballot.",
+    "url": "https://independentpoliticalreport.com/2026/02/conservative-party-of-new-york-state-announces-2026-statewide-candidate-slate/",
+    "date": "2026-02-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Saritha Komatireddy",
+    "why": "Named on the Conservative Party's statewide slate announced Feb 18, 2026 after its Stony Point convention (chair Gerard Kassar: a focus on 'public safety, protecting taxpayers, and advancing policies aimed at making the state more affordable for working families'), and appears on the Conservative line of the certified ballot.",
+    "url": "https://independentpoliticalreport.com/2026/02/conservative-party-of-new-york-state-announces-2026-statewide-candidate-slate/",
+    "date": "2026-02-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Joseph Hernandez",
+    "why": "Named on the Conservative Party's statewide slate announced Feb 18, 2026 after its Stony Point convention (chair Gerard Kassar: a focus on 'public safety, protecting taxpayers, and advancing policies aimed at making the state more affordable for working families'), and appears on the Conservative line of the certified ballot.",
+    "url": "https://independentpoliticalreport.com/2026/02/conservative-party-of-new-york-state-announces-2026-statewide-candidate-slate/",
+    "date": "2026-02-18",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-afl-cio",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
+    "url": "https://nysaflcio.org/content/40849",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-afl-cio",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
+    "url": "https://nysaflcio.org/content/40849",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-afl-cio",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "On the NYS AFL-CIO 2026 endorsement list. The federation says its endorsed candidates 'are committed to advocating for working people in New York State government.' No candidate-specific reasoning given.",
+    "url": "https://nysaflcio.org/content/40849",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nysut",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
+    "date": "2026-05-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nysut",
+    "target_id": "ny-attorney-general",
+    "status": "endorsed",
+    "choice": "Letitia A. James",
+    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
+    "date": "2026-05-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nysut",
+    "target_id": "ny-comptroller",
+    "status": "endorsed",
+    "choice": "Thomas P. DiNapoli",
+    "why": "NYSUT Board of Directors vote, May 29, 2026. President Melinda Person: 'NYSUT is proud to support candidates who have a track record of protecting public education.'",
+    "url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
+    "date": "2026-05-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pba-nys",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "PBA of New York State press release 'endorses Governor Kathy Hochul.' The release page would not load in this pass, so the date and reasoning are not captured; the title and URL were confirmed via search.",
+    "url": "https://www.pbanys.org/pba/news-detail/press-release-the-police-benevolent-association-of-new-york-state-endorses-governor-kathy-hochul/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pba-nys",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No PBA of NYS endorsement in this race found.",
+    "url": "https://www.pbanys.org/pba/news/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pba-nys",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "No PBA of NYS endorsement in this race found.",
+    "url": "https://www.pbanys.org/pba/news/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nyscopba",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Bruce A. Blakeman / Todd Hood",
+    "why": "Sept 25, 2026: 95% of 1,478 voting members backed Blakeman in the union's first-ever governor endorsement, citing 'staffing shortages, mandatory overtime, officer safety, compensation and benefits' and the HALT Act. President Chris Summers: 'For the first time in our organization's history, we took this decision directly to our statewide membership.'",
+    "url": "https://www.fingerlakes1.com/2026/09/25/correction-officers-union-endorses-bruce-blakeman-for-governor-after-statewide-membership-vote/",
+    "date": "2026-09-25",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nyscopba",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No NYSCOPBA endorsement in this race found.",
+    "url": "https://nyscopba.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nyscopba",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "No NYSCOPBA endorsement in this race found.",
+    "url": "https://nyscopba.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pp-empire-state-votes",
+    "target_id": "ny-governor",
+    "status": "endorsed",
+    "choice": "Kathy C. Hochul / Adrienne E. Adams",
+    "why": "Announced Sept 28, 2026. Chair Robin Chappelle Golston said Hochul 'understands what is at stake during relentless federal attacks' and will 'hold the line to defend reproductive freedom.' Reported via the Hochul campaign; the PAC's own page was not opened.",
+    "url": "https://www.fingerlakes1.com/2026/09/28/hochul-campaign-says-planned-parenthood-group-backs-reelection-bid/",
+    "date": "2026-09-28",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pp-empire-state-votes",
+    "target_id": "ny-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Planned Parenthood Empire State Votes endorsement in this race found in this pass.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pp-empire-state-votes",
+    "target_id": "ny-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Planned Parenthood Empire State Votes endorsement in this race found in this pass.",
+    "url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
+    "date": null,
+    "confidence": "sourced"
+  }
+]

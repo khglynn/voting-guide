@@ -1,0 +1,212 @@
+[
+  {
+    "id": "nyt-eb",
+    "name": "The New York Times editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the Times' news Lean Left; the board endorsed Democrats in every recent statewide race it weighed in on. In August 2024 the board announced it 'will no longer make endorsements in New York elections, including in races for governor and mayor of New York City,' and would not take a stance in Senate, congressional or state legislative races. No 2026 New York endorsements have appeared.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.nytimes.com/section/opinion/editorials",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "daily-news-eb",
+    "name": "New York Daily News editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the Daily News Lean Left. The board still endorses in New York races (it endorsed in the 2025 mayoral race).",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.nydailynews.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-post-eb",
+    "name": "New York Post editorial board",
+    "type": "publication",
+    "lean": "right",
+    "lean_basis": "AllSides rates the Post Lean Right; its editorial board is consistently conservative and endorsed Republicans in recent statewide races.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://nypost.com/opinion/editorials/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "newsday-eb",
+    "name": "Newsday editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Long Island's daily; AllSides rates Newsday Center. The board endorses candidates of both parties.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.newsday.com/opinion/editorial",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "times-union-eb",
+    "name": "Times Union (Albany) editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Capital Region daily owned by Hearst; the board has leaned toward Democrats in statewide races but endorses Republicans in some local and legislative contests.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.timesunion.com/opinion/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-nys",
+    "name": "League of Women Voters of New York State (VOTE411)",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on some ballot proposals and publishes candidate questionnaire answers on VOTE411.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.vote411.org/new-york",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-democratic-party",
+    "name": "New York State Democratic Committee",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official state party. Its nominees appear on the Democratic line of the certified ballot.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://nydems.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-republican-party",
+    "name": "New York Republican State Committee",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official state party. Its nominees appear on the Republican line of the certified ballot.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.nygop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-working-families-party",
+    "name": "Working Families Party (New York)",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Progressive minor party with its own ballot line. Under fusion voting it usually cross-endorses Democrats; a WFP endorsement means the candidate also appears on the Working Families line.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://workingfamilies.org/candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-conservative-party",
+    "name": "Conservative Party of New York State",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Conservative minor party with its own ballot line. Under fusion voting it usually cross-endorses Republicans; a Conservative endorsement means the candidate also appears on the Conservative line.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.cpnys.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "ny-afl-cio",
+    "name": "New York State AFL-CIO",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State labor federation; its 2026 statewide slate is all Democrats.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://nysaflcio.org/content/40849",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "nysut",
+    "name": "NYSUT (New York State United Teachers)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "State teachers union; its 2026 statewide slate is all Democrats.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.nysut.org/news/2026/may/media-release-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "pba-nys",
+    "name": "Police Benevolent Association of New York State",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Union for state police officers outside the State Police (SUNY, park and environmental police). Has endorsed candidates of both parties; endorsed Hochul in 2022 and again in 2026.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.pbanys.org/pba/news/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "nyscopba",
+    "name": "NYSCOPBA (New York State Correctional Officers and Police Benevolent Association)",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Union for state correction officers. Its 2026 governor endorsement was its first ever for that office, decided by a 95% membership vote.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.fingerlakes1.com/2026/09/25/correction-officers-union-endorses-bruce-blakeman-for-governor-after-statewide-membership-vote/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "pp-empire-state-votes",
+    "name": "Planned Parenthood Empire State Votes",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Statewide reproductive-rights PAC; endorses Democrats.",
+    "geography": [
+      "NY"
+    ],
+    "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-empire-state-votes",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

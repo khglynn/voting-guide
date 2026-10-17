@@ -1,0 +1,187 @@
+{
+  "state": "DC",
+  "election_date": "2026-11-03",
+  "last_verified": "2026-10-16",
+  "official_site": {
+    "name": "DC Board of Elections (DCBOE)",
+    "url": "https://dcboe.org/"
+  },
+  "voting_model": "mail_to_all_plus_in_person",
+  "model_plain": "Every registered DC voter is mailed a ballot automatically. Mail it back (postage is prepaid), put it in a drop box, or skip it and vote in person at any Vote Center in the District. Most contests are ranked-choice this year: you rank candidates instead of picking one.",
+  "registration": {
+    "check_url": "https://apps.dcboe.org/VRS",
+    "deadlines": [
+      {
+        "method": "online",
+        "date": "2026-10-13",
+        "rule": "The regular deadline was Tuesday, October 13, 2026 (21 days before the election) for online and DMV registrations and updates. That date has passed. Applications received after it are held until after the election. You can still register in person and vote the same day (see below).",
+        "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+      },
+      {
+        "method": "mail",
+        "date": "2026-10-13",
+        "rule": "Paper applications had to be RECEIVED by DCBOE by Tuesday, October 13, 2026 (not postmarked). That date has passed.",
+        "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+      },
+      {
+        "method": "in_person",
+        "date": "2026-11-03",
+        "rule": "Same-day registration. You can register and vote at any Early Vote Center from Monday, October 26 through Sunday, November 1 (8:30 AM to 7:00 PM), or at any Vote Center on Election Day, November 3, from 7:00 AM to 8:00 PM. Bring proof that you live in DC.",
+        "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+      }
+    ],
+    "same_day_registration": true,
+    "same_day_notes": "Go to any Early Vote Center (Oct 26 to Nov 1) or any Vote Center on November 3. Bring ONE proof of residence showing your name and current DC address. DCBOE accepts: a current government-issued photo ID; a utility bill (water, gas, electric, cable, internet, phone or cell) issued within 90 days; a bank or credit union statement within 90 days; a paycheck or pay stub within 90 days that includes the employer's name, address and phone; a government document or check from a federal or DC agency (other than DCBOE) within 90 days; a current lease or rental agreement; an occupancy statement from a DC homeless shelter within 90 days; or a tuition or housing bill from a DC college for the current term. You must have lived in DC at least 30 days before the election (since October 4, 2026). Source: https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote",
+    "still_possible_now": "Yes. The October 13 regular deadline has passed, but DC lets you register in person and vote right then at any Early Vote Center from October 26 to November 1, or at any Vote Center on November 3 until 8:00 PM. Bring proof of your DC address. If you think you're already registered, check at apps.dcboe.org/VRS first.",
+    "confidence": "verified"
+  },
+  "mail_ballot": {
+    "who_gets_one": "Automatic. DC mails a ballot to every registered voter; no request or excuse is needed. DCBOE began mailing ballots on Monday, September 28, 2026. If yours hasn't arrived, call 1-866-DCVOTES (1-866-328-6837) or 202-727-2525, track it at votedc.ballottrax.net, or just vote in person at any Vote Center. If you got the wrong ward's ballot, DCBOE says to call immediately.",
+    "request_deadline": {
+      "date": "2026-10-19",
+      "rule": "You don't have to request a ballot; everyone gets one. The DCBOE calendar lists Monday, October 19, 2026 as the deadline for receipt of ballot requests from non-military voters (for example, to have one sent to a different address). After that, get a replacement in person or vote in person. For a lost or spoiled ballot, DCBOE says to call 1-866-DCVOTES immediately.",
+      "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+    },
+    "return_deadline": {
+      "date": "2026-11-03",
+      "rule": "postmarked_by",
+      "time": "8:00 PM ET for drop boxes, Vote Centers and the DCBOE office; mailed ballots must be postmarked by November 3 and received by Friday, November 13",
+      "source": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+    },
+    "return_options": [
+      "Any of 55 mail ballot drop boxes across all eight wards (open since Friday, October 9 at 11:00 AM; they lock at 8:00 PM on November 3)",
+      "Mail (USPS), postage prepaid, postmarked by November 3; must arrive by November 13",
+      "Any of the 25 Early Vote Centers, October 26 to November 1, 8:30 AM to 7:00 PM",
+      "Any Vote Center on Election Day, November 3, 7:00 AM to 8:00 PM",
+      "DCBOE headquarters, 1015 Half Street SE (also has a drop box)"
+    ],
+    "postage": "prepaid",
+    "signature_witness_rules": "Sign and date the Voter's Oath on the back of the return envelope. No witness or notary. DCBOE: 'You MUST sign the Voter's Oath in order for your vote to count!' Put only your own ballot in your envelope; if it contains anyone else's ballot, none of them count. Don't tape the envelope shut. First-time voters who registered by mail or online without a DC DMV or Social Security match must include a photocopy of ID (photo ID, or a utility bill, bank statement, government check or paycheck dated within 90 days) or the ballot is treated as a special (provisional) ballot. Source: https://www.dcboe.org/voters/casting-your-vote/mail-ballot-instructions",
+    "tracking_url": "https://votedc.ballottrax.net/voter/",
+    "cure_process": "DCBOE says: 'We will contact you if there is an issue with your signature.' The official calendar sets Thursday, November 19, 2026 as the deadline to cure mail ballots. Sign up for BallotTrax (text and email alerts) so the notice reaches you quickly. Special (provisional) ballot voters have until Tuesday, November 10 to present proof of eligibility; starting that day you can check whether your special ballot was counted at 1-866-DCVOTES or dcboe.org.",
+    "mail_cutoff_advice": "Postmarks count in DC, but a missing or late postmark is a real risk (DCBOE had to clarify USPS postmark rules during the June primary). Mail by about Tuesday, October 27 at the latest. From then on, use a drop box: 55 of them, open around the clock until 8:00 PM on November 3. A mailed ballot postmarked by November 3 still has to ARRIVE at DCBOE by Friday, November 13.",
+    "drop_box_lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "confidence": "verified"
+  },
+  "early_in_person": {
+    "available": true,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "hours_note": "Monday, October 26 through Sunday, November 1, 2026, every day including the weekend, 8:30 AM to 7:00 PM. 25 Early Vote Centers, two to four per ward (for example Columbia Heights Community Center, MLK Library, Cleveland Park Library, Turkey Thicket, Sherwood Rec, Deanwood Rec; note THEARC is an Election Day-only Vote Center, not an early site). Any DC voter can use any center. All 25 also operate on Election Day. You can register on the spot with proof of residence. Full list at the DCBOE PDF below or earlyvoting.dcboe.org.",
+    "vote_centers": true,
+    "lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "confidence": "verified"
+  },
+  "election_day": {
+    "polls_open": "7:00 AM",
+    "polls_close": "8:00 PM",
+    "in_line_rule": "DCBOE: 'All voters who are in line at 8:00 p.m. may cast a ballot.' Drop boxes also lock at 8:00 PM, and mailed ballots must be postmarked that day.",
+    "vote_centers": true,
+    "lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
+    "confidence": "verified"
+  },
+  "id_rules": {
+    "required": "first_time_only",
+    "accepted": [
+      "Most registered voters: no ID. You state your name and address. (ACLU of DC: 'No specific ID is required to vote in person.')",
+      "First-time voters who registered by mail or online and couldn't be matched to a DC DMV or Social Security record: a current government-issued photo ID, or a utility bill, bank statement, government check, paycheck or other government document with your name and current DC address, dated within 90 days",
+      "Same-day registrants: one proof of DC residence from the list in same_day_notes (photo ID, utility bill, bank statement, pay stub, government document, lease, shelter letter, or college housing or tuition bill)"
+    ],
+    "no_id_option": "If you're flagged as a first-time voter needing ID and don't have it, you vote a special (provisional) ballot and have until Tuesday, November 10 to bring the document to DCBOE so it counts. Most DC voters are never asked for ID. Sources: https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote and https://www.acludc.org/how-to-vote-in-the-november-3-2026-d-c-general-election/",
+    "confidence": "verified"
+  },
+  "in_the_booth": {
+    "phones": "allowed",
+    "phones_detail": "DC has no law against phones in a Vote Center, and DCBOE does not ban them. Using your phone to read your own notes or sample ballot is fine. A DCBOE spokeswoman has said officials 'discourage people from taking pictures but won't do anything to stop them' (FOX 5, 2016). Don't photograph other voters or poll workers. No 2026 DCBOE statement was found; confidence is 'sourced' for this field. Source: https://www.fox5dc.com/news/ballot-selfies-in-dc-md-va-are-they-legal",
+    "notes_allowed": "allowed",
+    "notes_detail": "Nothing in DC law or DCBOE rules bars a printed or handwritten list or a marked-up sample ballot in the booth. With ranked-choice ballots this year, a written list of your rankings is a good idea. The limit is electioneering: you can't display or hand out campaign material inside the Vote Center or within the no-campaigning zone around it. Sample ballots for every ward are on DCBOE's 2026 Elections page. Source: https://dcboe.org/elections/2026-elections",
+    "ballot_selfies": "allowed",
+    "apparel_rule": "DC bars campaigning near Vote Centers, which in practice means poll workers will ask you to cover or remove candidate shirts, hats or buttons before you go in. The exact distance and the 2026 DCBOE notice were not located this run; treat as 'sourced.' Easiest rule: leave campaign gear at home.",
+    "confidence": "sourced"
+  },
+  "gotchas": [
+    "Ranked-choice voting is on most of your ballot. In each RCV contest you'll see columns labeled 1st, 2nd, 3rd and so on. Fill in ONE oval per column: your favorite under 1st, your backup under 2nd. Don't put two candidates in the same column, don't mark the same candidate twice, and don't skip a column (skipping more than one can make your vote inactive in that contest). You can rank just one if you want. If nobody has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, round by round. Ranking a backup never hurts your first choice. Contests with only two candidates (Council Chair, Attorney General, Shadow Senator, Shadow Rep) are normal pick-one votes.",
+    "The at-large Council race fills TWO seats, but your ballot can only help elect ONE of them. DCBOE counts each ballot once, for your highest-ranked candidate still in the race, and keeps eliminating last place until two are left. Once your top pick is one of the final two, your lower rankings never transfer. By DC's charter only one of the two winners can be a Democrat. So if you want to influence which non-Democrat wins the second seat, rank that candidate FIRST. (Hill Rag, Oct 12; GGWash, Oct 1; DCBOE RCV page.)",
+    "The regular registration deadline (October 13) has passed, but you can still register and vote in person at any Early Vote Center (Oct 26 to Nov 1) or any Vote Center on November 3. Bring proof of your DC address.",
+    "Postmarks count, but don't lean on them. Mail by about October 27 or use one of 55 drop boxes (open 24 hours until 8:00 PM on November 3). No stamp needed. Sign and date the oath on the envelope or your ballot won't count. A mailed ballot must also arrive by November 13.",
+    "There IS one ballot measure this year: Initiative 86, the foie gras ban. It's at the very end of the ballot, after the ANC race. And you can vote at ANY Vote Center in the District, not just the one near you; early voting uses 25 sites and Election Day uses 75. Polls are open 7:00 AM to 8:00 PM. DC law also gives employees and students up to 2 hours of paid leave to vote."
+  ],
+  "sources": [
+    {
+      "name": "DCBOE: November 3, 2026 General Election Calendar of Important Dates and Deadlines (Rev. 10/1/2026)",
+      "url": "https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en"
+    },
+    {
+      "name": "DCBOE: 2026 Elections page (candidate lists, sample ballots, vote centers)",
+      "url": "https://dcboe.org/elections/2026-elections"
+    },
+    {
+      "name": "DCBOE: General 2026 Vote Centers and Drop Boxes (PDF: 25 early, 50 Election Day only, 55 drop boxes)",
+      "url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en"
+    },
+    {
+      "name": "DCBOE: Sample ballot, Wards 2, 4, 7, 8 (RCV instructions, Initiative 86 text)",
+      "url": "https://dcboe.org/getContentAsset/6190836f-7916-4ce3-a985-5c675ccc941e/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/Ward2478C.pdf?language=en"
+    },
+    {
+      "name": "DCBOE: Ranked Choice Voting",
+      "url": "https://dcboe.org/rcv"
+    },
+    {
+      "name": "DCBOE: Register/Update Voter Registration (same-day proof of residence list, first-time voter ID)",
+      "url": "https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote"
+    },
+    {
+      "name": "DCBOE: Mail Ballot Instructions",
+      "url": "https://www.dcboe.org/voters/casting-your-vote/mail-ballot-instructions"
+    },
+    {
+      "name": "DCBOE: Voter Registration Status lookup",
+      "url": "https://apps.dcboe.org/VRS"
+    },
+    {
+      "name": "DCBOE: Early Vote Centers (interactive map)",
+      "url": "https://earlyvoting.dcboe.org/"
+    },
+    {
+      "name": "DCBOE: Time Off to Vote, 2026 General (employees)",
+      "url": "https://dcboe.org/getmedia/9654699c-c350-4d80-8670-465b88c5aada/Time-Off-to-Vote-2026-General-EMPLOYEES.pdf"
+    },
+    {
+      "name": "DC BallotTrax (mail ballot tracking)",
+      "url": "https://votedc.ballottrax.net/voter/"
+    },
+    {
+      "name": "ACLU of DC: How to Vote in the November 3, 2026 D.C. General Election",
+      "url": "https://www.acludc.org/how-to-vote-in-the-november-3-2026-d-c-general-election/"
+    },
+    {
+      "name": "Hill Rag: One Choice Per Ballot for Two At-Large Seats in November (Oct 12, 2026)",
+      "url": "https://www.hillrag.com/2026/10/12/only-one-vote-counts-for-two-at-large-councilmembers/"
+    },
+    {
+      "name": "Hill Rag: The Election Isn't Over Yet (general election roundup, Oct 13, 2026)",
+      "url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/"
+    },
+    {
+      "name": "GGWash: Rank Elissa Silverman #1 (explains one-vote mechanics, Oct 1, 2026)",
+      "url": "https://ggwash.org/view/105043/rank-elissa-silverman-1-for-at-large-in-the-2026-dc-general-election"
+    },
+    {
+      "name": "Washington Post: A guide to the 2026 D.C. general election (Oct 11, 2026; paywalled, not opened)",
+      "url": "https://www.washingtonpost.com/dc-md-va/2026/10/11/dc-voter-guide-nov-3-election/"
+    },
+    {
+      "name": "WTOP: DC voter guide, what to know ahead of November's general election (Oct 2026; blocked by robots.txt, not opened)",
+      "url": "https://wtop.com/elections/2026/10/dc-voter-guide-what-to-know-ahead-of-novembers-general-election/"
+    },
+    {
+      "name": "FOX 5 DC: Ballot selfies in DC, MD and VA (DCBOE spokeswoman quote, 2016)",
+      "url": "https://www.fox5dc.com/news/ballot-selfies-in-dc-md-va-are-they-legal"
+    },
+    {
+      "name": "Ballotpedia: Washington, D.C., Initiative 83, Ranked-Choice Voting Initiative (November 2024)",
+      "url": "https://ballotpedia.org/Washington,_D.C.,_Initiative_83,_Ranked-Choice_Voting_Initiative_(November_2024)"
+    }
+  ]
+}

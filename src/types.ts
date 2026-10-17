@@ -1,0 +1,181 @@
+/* Shapes produced by scripts/build-data.mjs. Field names follow SCHEMA.md. */
+export type Confidence = 'verified' | 'sourced' | 'unverified';
+export type Lean = 'left' | 'lean_left' | 'neutral' | 'lean_right' | 'right';
+
+export interface Src { name: string; url: string }
+
+export interface Candidate {
+  name: string;
+  short: string;
+  party: string | null;
+  parties: string[];
+  incumbent: boolean;
+  website: string | null;
+  website_confidence: Confidence;
+  background: string | null;
+  own_words: { text: string; is_quote: boolean; source: string | null }[];
+  lwv_status: string | null;
+  lwv_url: string | null;
+}
+
+export interface Contest {
+  kind: 'contest';
+  id: string;
+  state: string;
+  level: 'federal' | 'state' | 'county' | 'city' | 'judicial' | 'school' | 'special_district';
+  office: string;
+  district: string | null;
+  scope_plain: string;
+  every: boolean;
+  office_explainer: string | null;
+  why_it_matters: string | null;
+  vote_for: number;
+  incumbent: string | null;
+  open_seat: boolean | null;
+  term_years: number | null;
+  is_retention: boolean;
+  candidates: Candidate[];
+  sources: Src[];
+  confidence: Confidence;
+}
+
+export interface Measure {
+  kind: 'measure';
+  id: string;
+  state: string;
+  level: string;
+  jurisdiction: string;
+  number: string;
+  official_title: string | null;
+  plain_summary: string | null;
+  yes_means: string | null;
+  no_means: string | null;
+  current_law: string | null;
+  fiscal_impact: string | null;
+  pass_threshold: string | null;
+  referred_by: string | null;
+  confusing_wording_note: string | null;
+  supporters_case: { text: string; source: string | null } | null;
+  opponents_case: { text: string; source: string | null } | null;
+  official_text_url: string | null;
+  official_guide_url: string | null;
+  confidence: Confidence;
+  links: string[];
+}
+
+export type Item = Contest | Measure;
+
+export interface Endorser {
+  id: string;
+  name: string;
+  short: string;
+  type: string;
+  lean: Lean | null;
+  lean_basis: string | null;
+  lean_note: string | null;
+  guide_url: string | null;
+  default_on: boolean;
+  endorses_candidates: boolean;
+  endorses_measures: boolean;
+}
+
+export interface Endorsement {
+  s: 'endorsed' | 'no_position' | 'not_found';
+  c: string[] | null;
+  note: string | null;
+  why: string | null;
+  url: string | null;
+  date: string | null;
+  conf: Confidence;
+  both?: boolean;
+}
+
+export interface Deadline { method?: string; date: string | null; rule: string; source?: string; time?: string | null }
+
+export interface HowTo {
+  state: string;
+  election_date: string;
+  last_verified: string | null;
+  official_site: Src;
+  voting_model: 'all_mail' | 'mail_to_all_plus_in_person' | 'in_person_first' | string;
+  model_plain: string | null;
+  registration: {
+    check_url: string | null;
+    deadlines: { method: string; date: string | null; rule: string; source: string | null }[];
+    same_day_registration: boolean | null;
+    same_day_notes: string | null;
+    still_possible_now: string | null;
+  };
+  mail_ballot: {
+    who_gets_one: string | null;
+    request_deadline: { date: string | null; rule: string; source: string | null } | null;
+    return_deadline: { date: string; rule: 'received_by' | 'postmarked_by' | string; time: string | null; source: string | null };
+    return_options: string[] | null;
+    postage: string | null;
+    signature_witness_rules: string | null;
+    tracking_url: string | null;
+    cure_process: string | null;
+    mail_cutoff_advice: string | null;
+    drop_box_lookup_url: string | null;
+  };
+  early_in_person: {
+    available: boolean;
+    start: string | null;
+    end: string | null;
+    hours_note: string | null;
+    vote_centers: boolean | null;
+    lookup_url: string | null;
+  };
+  election_day: {
+    polls_open: string;
+    polls_close: string;
+    in_line_rule: string | null;
+    vote_centers: boolean | null;
+    lookup_url: string | null;
+  };
+  id_rules: { required: string; accepted: string[]; no_id_option: string | null };
+  in_the_booth: {
+    phones: string;
+    phones_detail: string | null;
+    notes_allowed: string;
+    notes_detail: string | null;
+    ballot_selfies: string | null;
+    apparel_rule: string | null;
+  };
+  gotchas: string[];
+  sources: Src[];
+}
+
+export interface StateBundle {
+  state: string;
+  name: string;
+  howto: HowTo;
+  order: string[];
+  items: Item[];
+  endorsers: Endorser[];
+  endorsements: Record<string, Record<string, Endorsement>>;
+}
+
+export interface PlaceBundle {
+  id: string;
+  label: string;
+  state: string;
+  counties: string[];
+  county_election_office: { name: string; url: string | null; phone: string | null } | null;
+  sample_ballot_url: string | null;
+  zips: string[];
+  zip_caveats: string | null;
+  notes: string | null;
+  order: string[];
+  local: string[];
+  items: Item[];
+  endorsers: Endorser[];
+  endorsements: Record<string, Record<string, Endorsement>>;
+}
+
+export interface Index {
+  generated: string;
+  states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] }>;
+  places: Record<string, { label: string; state: string; counties: string[]; local_count: number }>;
+  zips: Record<string, string[]>;
+}

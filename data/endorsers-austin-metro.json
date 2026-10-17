@@ -1,0 +1,348 @@
+[
+  {
+    "id": "austin-chronicle-eb",
+    "name": "The Austin Chronicle editorial board",
+    "type": "publication",
+    "lean": "left",
+    "lean_basis": "Alt-weekly whose board endorsed the full Democratic slate statewide and describes its own politics as progressive; AllSides has no rating.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-american-statesman-eb",
+    "name": "Austin American-Statesman editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Hearst-owned daily; AllSides rates the Statesman Lean Left. Resumed endorsements in 2026; its 2026 slate is mostly Democratic with several Republican picks (Buckingham, Sheets, Teixeira, Flores, Wilson).",
+    "geography": [
+      "austin-tx",
+      "TX"
+    ],
+    "guide_url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "kut",
+    "name": "KUT News (Austin's NPR station)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Public radio newsroom; publishes candidate Q&As and voter guides and does not endorse.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.kut.org/politics/2026-10-14/austin-tx-election-voter-guide-ballot-races",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "community-impact",
+    "name": "Community Impact Newspaper",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Free local newspaper chain; publishes candidate Q&As and does not endorse.",
+    "geography": [
+      "austin-tx",
+      "round-rock-tx",
+      "pflugerville-tx",
+      "san-marcos-tx"
+    ],
+    "guide_url": "https://communityimpact.com/austin/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "lwv-austin-area",
+    "name": "League of Women Voters Austin Area",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan 501(c)(3); publishes candidates' unedited answers and never endorses candidates.",
+    "geography": [
+      "austin-tx",
+      "pflugerville-tx",
+      "round-rock-tx"
+    ],
+    "guide_url": "https://austinvotersguide.org/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "travis-county-democratic-party",
+    "name": "Travis County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization; its slate is the Democratic nominees.",
+    "geography": [
+      "austin-tx",
+      "pflugerville-tx"
+    ],
+    "guide_url": "https://www.travisturnsout.com/candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "travis-county-gop",
+    "name": "Travis County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization. Posts support for specific nominees and the Prop I petition; no full local guide found for Nov 2026.",
+    "geography": [
+      "austin-tx",
+      "pflugerville-tx"
+    ],
+    "guide_url": "https://traviscountygop.org/news",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-stonewall-democrats",
+    "name": "Stonewall Democrats of Austin",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "LGBTQ caucus affiliated with the Democratic Party.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.stonewallaustin.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "central-austin-democrats",
+    "name": "Central Austin Democrats",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Democratic club.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.traviscountydemocrats.org/democratic-clubs",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "black-austin-democrats",
+    "name": "Black Austin Democrats",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Democratic club.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.blackaustindemocrats.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-environmental-democrats",
+    "name": "Austin Environmental Democrats",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Democratic club focused on environmental issues.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.traviscountydemocrats.org/democratic-clubs",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-firefighters-association",
+    "name": "Austin Firefighters Association (IAFF Local 975)",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Public-safety union; historically endorses across party lines in city races. Lean is a judgment call.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austinfirefighters.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-police-association",
+    "name": "Austin Police Association",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Police union; backed the 2021 Save Austin Now camping ban and the police staffing initiative. Lean is a judgment call.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austinpolice.com/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-ems-association",
+    "name": "Austin EMS Association",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "EMS employees' union; Selena Xie is its former president.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://linktr.ee/AustinEMSA",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-central-labor-council",
+    "name": "Austin Central Labor Council (AFL-CIO)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "AFL-CIO regional body; endorsed only Democrats in partisan races.",
+    "geography": [
+      "austin-tx",
+      "pflugerville-tx",
+      "round-rock-tx"
+    ],
+    "guide_url": "https://austinlaborcouncil.org/news/austin-central-labor-council-2026-general-election-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "workers-defense-action-fund",
+    "name": "Workers Defense Action Fund",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Political arm of Workers Defense Project, a construction-worker advocacy group.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://workersdefense.org/en/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "aura",
+    "name": "AURA",
+    "type": "advocacy",
+    "lean": "lean_left",
+    "lean_basis": "Volunteer urbanist group for more housing, transit and bike lanes; cross-partisan on housing but its 2026 picks are all incumbents or Democratic-aligned candidates.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://aura-atx.org/austin-voter-guide-2026/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-board-of-realtors",
+    "name": "Austin Board of REALTORS (TREPAC)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Industry trade group; its PAC gives to both parties. No Nov 2026 general-election guide found.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.unlockmls.com/advocacy",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "reca",
+    "name": "Real Estate Council of Austin",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Commercial real estate trade group; 2026 guide backs Republicans in Hays and Williamson and Democrats in Travis.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "austin-apartment-association",
+    "name": "Austin Apartment Association PAC",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Landlord trade group; PAC page is members-only.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austinaptassoc.com/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "greater-austin-chamber",
+    "name": "Greater Austin Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Business association; publishes legislative agendas, not candidate endorsements.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austinchamber.com/advocacy",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "save-austin-now",
+    "name": "Save Austin Now PAC",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Co-founded by former Travis County GOP chair Matt Mackowiak; authored Prop I. Describes itself as nonpartisan.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.saveaustinnow.com/austin-proposition-i",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "travis-county-taxpayers-union",
+    "name": "Travis County Taxpayers Union",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-tax group; no 2026 page found.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://traviscountytaxpayers.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "austin-dsa",
+    "name": "Austin Democratic Socialists of America",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Socialist membership organization.",
+    "geography": [
+      "austin-tx"
+    ],
+    "guide_url": "https://www.austindsa.org/dsa-campaigns",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

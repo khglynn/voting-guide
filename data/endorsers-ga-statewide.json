@@ -177,21 +177,21 @@
       "GA"
     ],
     "guide_url": "https://www.gfb.org/2026-candidates",
-    "default_on": true,
+    "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": false
   },
   {
     "id": "page-georgia",
     "name": "Professional Association of Georgia Educators (PAGE)",
-    "type": "civic_nonpartisan",
+    "type": "advocacy",
     "lean": "neutral",
-    "lean_basis": "Largest educator association in Georgia (not a union). States 'PAGE does not endorse candidates or provide campaign contributions.' Hosts a superintendent candidate forum.",
+    "lean_basis": "Largest educator association in Georgia (not a union); a professional association that lobbies on education policy. States 'PAGE does not endorse candidates or provide campaign contributions.' Hosts a superintendent candidate forum.",
     "geography": [
       "GA"
     ],
     "guide_url": "https://www.pagelegislative.org/elections",
-    "default_on": true,
+    "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": false
   }

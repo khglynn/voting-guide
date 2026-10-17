@@ -3,8 +3,8 @@
     "id": "orlando-sentinel-eb",
     "name": "Orlando Sentinel editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. In 2026 every statewide pick went to the Democrat or against the Republican-sponsored amendments. Shares editorials on amendments with its sister paper, the South Florida Sun Sentinel.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Orlando Sentinel Center (low confidence, Oct. 2026). Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. Its 2026 statewide picks all went to Democrats or against the Republican-sponsored amendments. It shares amendment editorials with its sister paper, the South Florida Sun Sentinel.",
     "geography": [
       "FL"
     ],
@@ -17,8 +17,8 @@
     "id": "sun-sentinel-eb",
     "name": "South Florida Sun Sentinel editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Sister paper of the Orlando Sentinel (same Alden ownership and the same 2022 no-endorsement policy for president, governor and Senate). Its amendment editorials were co-published with the Orlando Sentinel. Included because its 'just say no to all three' editorial is one of the four newspaper positions on the amendments.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Sun Sentinel Center. Sister paper of the Orlando Sentinel (same Alden ownership and the same 2022 no-endorsement policy for president, governor and Senate); its amendment editorials were co-published with the Sentinel. Included because its 'just say no to all three' editorial is one of the newspaper positions on the amendments.",
     "geography": [
       "FL"
     ],
@@ -32,7 +32,7 @@
     "name": "Miami Herald editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "McClatchy paper. Still endorses in statewide races, including governor (Jolly, Oct 1, 2026), and on amendments (NO on all three). Its 2026 picks went to Democrats.",
+    "lean_basis": "AllSides rates the Miami Herald Lean Left. McClatchy paper. Still endorses in statewide races, including governor (Jolly, Oct 1, 2026), and on amendments (NO on all three). Its 2026 picks went to Democrats.",
     "geography": [
       "FL"
     ],
@@ -45,8 +45,8 @@
     "id": "tampa-bay-times-eb",
     "name": "Tampa Bay Times editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Florida's largest newspaper, owned by the nonprofit Poynter Institute. Announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or unreadable to us, so those picks are recorded as not found rather than guessed.",
+    "lean": "neutral",
+    "lean_basis": "Ad Fontes rates the Tampa Bay Times Middle (-3.28); no AllSides rating was found. Florida's largest newspaper, owned by the nonprofit Poynter Institute. It announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or unreadable, so those picks are recorded as not found rather than guessed.",
     "geography": [
       "FL"
     ],
@@ -114,14 +114,14 @@
   {
     "id": "florida-taxwatch",
     "name": "Florida TaxWatch",
-    "type": "civic_nonpartisan",
+    "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Nonpartisan, business-backed fiscal watchdog in Tallahassee. Publishes a taxpayer's guide to every amendment with YES/NO recommendations and the state Revenue Estimating Conference numbers. Generally favors lower taxes and spending restraint; recommended NO on Amendment 3 anyway.",
+    "lean_basis": "Business-backed fiscal watchdog and think tank in Tallahassee that calls itself nonpartisan. Publishes a taxpayer's guide to every amendment with yes or no recommendations and the state Revenue Estimating Conference numbers. Its stated mission centers on taxpayers and spending restraint; it recommended no on Amendment 3 anyway. No AllSides or Ad Fontes rating found.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
-    "default_on": true,
+    "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": true
   },

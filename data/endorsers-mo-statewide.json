@@ -5,7 +5,9 @@
     "type": "publication",
     "lean": "lean_left",
     "lean_basis": "Largest Missouri daily (Lee Enterprises). Still endorses: it ran primary endorsements in July 2026 (including 'State Auditor Fitzpatrick has earned GOP re-nomination'). Historically endorses mostly Democrats statewide; AllSides rates the news Lean Left. General-election endorsements are paywalled, so none are recorded.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.stltoday.com/opinion/editorial/",
     "default_on": true,
     "endorses_candidates": true,
@@ -15,9 +17,11 @@
     "id": "kc-star-eb",
     "name": "The Kansas City Star editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "McClatchy paper; the board endorsed in the August 2026 Missouri primaries and has editorialized against the mid-decade redistricting of the Kansas City 5th District. No November 2026 endorsement roundup surfaced in search as of Oct 16.",
-    "geography": ["MO"],
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Kansas City Star Center. McClatchy paper; the board endorsed in the August 2026 Missouri primaries and has editorialized against the mid-decade redistricting of the Kansas City 5th District. No November 2026 endorsement roundup surfaced in search as of Oct. 16.",
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.kansascity.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": true,
@@ -29,7 +33,9 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on ballot measures (announced NO on Amendment 3 on Sept 3, 2026). Publishes candidate questionnaire answers on VOTE411 and a 'November 2026 Amendment Information' page.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
     "default_on": true,
     "endorses_candidates": false,
@@ -41,7 +47,9 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official state party organization. Its 2026 General Election page lists 'unanimously endorsed' positions on all five measures and its auditor nominee.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.missouridemocrats.org/2026-general-election",
     "default_on": false,
     "endorses_candidates": true,
@@ -53,7 +61,9 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official state party organization. Released a ballot guide on Oct 8, 2026 with positions on all five measures; backs its nominees, including the incumbent auditor.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "default_on": false,
     "endorses_candidates": true,
@@ -65,7 +75,9 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Statewide business lobby; its PAC endorsed 63 General Assembly candidates for November (mostly Republicans) and the Chamber formally opposed Amendment 6 on Oct 9, 2026. Does not appear to endorse in the auditor race.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://mochamber.com/news-archive/election-news",
     "default_on": false,
     "endorses_candidates": true,
@@ -77,7 +89,9 @@
     "type": "labor",
     "lean": "left",
     "lean_basis": "State labor federation; its 2026 general-election slate endorses Democrats and takes positions on four of the five measures.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "default_on": false,
     "endorses_candidates": true,
@@ -89,7 +103,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Anti-abortion advocacy group; lead organizational backer of the 2026 Amendment 3 repeal and formally partnered with the Missouri GOP on it. Its PAC endorses candidates who oppose abortion (almost all Republicans).",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://missourilife.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -101,7 +117,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Abortion-rights advocacy group (formerly NARAL Pro-Choice Missouri); a lead organization in the 2024 Amendment 3 campaign and a named member of the 2026 'Stop the Ban' campaign with Planned Parenthood and the ACLU of Missouri.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://abortionactionmissouri.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -113,7 +131,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican. Does not take positions on non-firearms measures.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.nrapvf.org/grades/missouri",
     "default_on": false,
     "endorses_candidates": true,
@@ -125,7 +145,9 @@
     "type": "advocacy",
     "lean": "lean_left",
     "lean_basis": "The committee that gathered the referendum signatures against the 2025 congressional map and runs the 'No on Prop A' campaign. Describes itself as 'a coalition of Republican, Democrat, and Independent Missourians'; its top donors (Global Impact Social Welfare Fund, American Opportunity Action, UFCW) are Democratic-aligned. Single-issue.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://peoplenotpoliticiansmo.org/home/faqs-on-proposition-a/",
     "default_on": false,
     "endorses_candidates": false,
@@ -137,7 +159,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Environmental advocacy group; its Oct 1, 2026 statewide measure endorsements align with progressive positions.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
     "default_on": false,
     "endorses_candidates": true,
@@ -149,7 +173,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Volunteer-run conservative voter guide; self-describes as pro-life and praises Republican legislative supermajorities. Included because it is one of the few right-leaning sources with written positions on all five measures, and it breaks with the GOP on three of them.",
-    "geography": ["MO"],
+    "geography": [
+      "MO"
+    ],
     "guide_url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
     "default_on": false,
     "endorses_candidates": false,

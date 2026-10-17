@@ -142,71 +142,71 @@
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-governor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements. The Moore campaign's list of 'Washington Post Editorial Board' support dates to 2022.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-comptroller",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-attorney-general",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-retention-friedman",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Post ended presidential endorsements in 2024; its 2026 practice for Maryland state races was not confirmed. The Moore campaign lists 'Washington Post Editorial Board' as an endorser, but that page dates to 2022-era endorsements and no 2026 editorial was found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-1",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No Post's View editorial on this question found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-2",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No Post's View editorial on this question found.",
+    "why": "The Post's editorial board has published no endorsement in this race. Its editorial page from Sept. 26 to Oct. 17, 2026 has no DC or Maryland endorsements.",
     "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "washington-post-eb",
     "target_id": "md-question-3",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Oct 1 piece 'Maryland Democrats should reject gerrymandering and set a national precedent' ran under the Post's 'Ripple' opinion vertical and was syndicated to The Hill as an individual column, so it is not counted as a board editorial. No 'Post's View' editorial on Question 3 was found.",
-    "url": "https://www.washingtonpost.com/ripple/2026/10/01/maryland-question-3-gerrymandering/",
-    "date": "2026-10-01",
+    "why": "No board position. The Oct. 1 piece 'Maryland Democrats should reject gerrymandering' ran under the Post's Ripple opinion vertical as an individual column, not a board editorial. The board's own page from Sept. 26 to Oct. 17, 2026 has no Maryland endorsements.",
+    "url": "https://www.washingtonpost.com/opinions/the-posts-view/",
+    "date": "2026-10-17",
     "confidence": "sourced"
   },
   {
@@ -282,9 +282,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-governor",
-    "status": "endorsed",
-    "choice": "Wes Moore and Aruna Miller",
-    "why": "Party nominee.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.mddems.org/",
     "date": null,
     "confidence": "sourced"
@@ -292,9 +292,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-comptroller",
-    "status": "endorsed",
-    "choice": "Brooke Elizabeth Lierman",
-    "why": "Party nominee.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.mddems.org/",
     "date": null,
     "confidence": "sourced"
@@ -302,9 +302,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-attorney-general",
-    "status": "endorsed",
-    "choice": "Anthony G. Brown",
-    "why": "Party nominee.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.mddems.org/",
     "date": null,
     "confidence": "sourced"
@@ -352,9 +352,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-governor",
-    "status": "endorsed",
-    "choice": "Dan Cox and Rob Krop",
-    "why": "Party nominee (won June 23 primary with 43%).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://mdgop.org/",
     "date": null,
     "confidence": "sourced"
@@ -362,9 +362,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-comptroller",
-    "status": "endorsed",
-    "choice": "Sonya Dunn",
-    "why": "Party nominee (unopposed in primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://mdgop.org/",
     "date": null,
     "confidence": "sourced"
@@ -372,9 +372,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-attorney-general",
-    "status": "endorsed",
-    "choice": "James B. Rutledge, III",
-    "why": "Party nominee (unopposed in primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://mdgop.org/",
     "date": null,
     "confidence": "sourced"

@@ -4,14 +4,14 @@
     "name": "AL.com / Alabama Media Group editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Alabama's largest news organization (Birmingham News, Huntsville Times, Mobile Press-Register legacy). Its opinion page blocks automated reading, and no 2026 endorsement editorial surfaced in search. It last made a widely covered candidate call in 2017 (against Roy Moore). Treated as not endorsing in 2026 until an editorial is found.",
+    "lean_basis": "Alabama's largest news organization (Birmingham News, Huntsville Times, Mobile Press-Register legacy). Its board has made widely covered candidate endorsements in past cycles (against Roy Moore in 2017). No 2026 endorsement editorial surfaced in search; its opinion page blocks automated reading, so that is unconfirmed. No AllSides or Ad Fontes rating was checked.",
     "geography": [
       "AL"
     ],
     "guide_url": "https://www.al.com/opinion/",
     "default_on": true,
-    "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_candidates": true,
+    "endorses_measures": true
   },
   {
     "id": "alabama-reflector",

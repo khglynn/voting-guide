@@ -3,8 +3,8 @@
     "id": "baltimore-sun-eb",
     "name": "The Baltimore Sun editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Largest Maryland daily. Bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams. Williams announced the same month that the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan 20, 2024). Semafor (Apr 5, 2026) describes the paper's shift toward an ideological focus on Democratic officials' misdeeds and a joint investigative unit with Sinclair's WBFF. Its opinion pages have run multiple guest pieces against Question 3 but no board position was found. No Sun editorial on Baltimore City Questions A to I was found (site blocks automated reads).",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Baltimore Sun Center (low confidence, Oct. 2026) and Ad Fontes rates it Middle. Largest Maryland daily, bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams; Williams said that month the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan. 20, 2024). Its opinion pages have run guest pieces against Question 3, but no board position was found, and no Sun editorial on Baltimore City Questions A to I was found (the site blocks automated reads).",
     "geography": [
       "MD",
       "baltimore-md"
@@ -48,7 +48,7 @@
     "name": "Maryland Democratic Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Official state party organization; backs its nominees and campaigns FOR Question 3 (chair Steuart Pittman). Locally, every Democratic nominee on the Baltimore City ballot is counted as the party's pick. No Baltimore City Democratic Party 2026 slate page was found (its site's vote page is stale 2020 content).",
+    "lean_basis": "Official state party organization; backs its nominees and campaigns for Question 3 (chair Steuart Pittman). No Baltimore City Democratic Party 2026 slate page was found (its site's vote page is stale 2020 content).",
     "geography": [
       "MD",
       "baltimore-md"
@@ -63,7 +63,7 @@
     "name": "Maryland Republican Party",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Official state party organization; backs its nominees. Runs the 'Save Our Voice' campaign to defeat Question 3. Locally, every Republican nominee on the Baltimore City ballot is counted as the party's pick. No Baltimore City Republican slate was found.",
+    "lean_basis": "Official state party organization; backs its nominees. Runs the 'Save Our Voice' campaign to defeat Question 3. No Baltimore City Republican slate was found.",
     "geography": [
       "MD",
       "baltimore-md"

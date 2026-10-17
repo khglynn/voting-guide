@@ -1262,9 +1262,9 @@
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-us-senate-special",
-    "status": "endorsed",
-    "choice": "Angie Nixon",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1272,9 +1272,9 @@
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-governor",
-    "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1282,9 +1282,9 @@
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-attorney-general",
-    "status": "endorsed",
-    "choice": "Jose Javier Rodriguez",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1292,9 +1292,9 @@
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-cfo",
-    "status": "endorsed",
-    "choice": "Annette Taddeo",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1302,9 +1302,9 @@
   {
     "endorser_id": "fl-democratic-party",
     "target_id": "fl-agriculture-commissioner",
-    "status": "endorsed",
-    "choice": "Joey Mendoza Atkins",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1412,9 +1412,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-governor",
-    "status": "endorsed",
-    "choice": "Byron Donalds",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1422,9 +1422,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-attorney-general",
-    "status": "endorsed",
-    "choice": "James Uthmeier",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1432,9 +1432,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-cfo",
-    "status": "endorsed",
-    "choice": "Blaise Ingoglia",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1442,9 +1442,9 @@
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-agriculture-commissioner",
-    "status": "endorsed",
-    "choice": "Wilton Simpson",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"

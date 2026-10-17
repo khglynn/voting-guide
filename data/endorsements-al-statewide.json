@@ -162,9 +162,9 @@
   {
     "endorser_id": "al-com-eb",
     "target_id": "al-amendment-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "This source does not take positions on ballot measures.",
+    "why": "No 2026 amendment editorial found. AL.com's opinion page blocks automated reading, so this is unconfirmed.",
     "url": "https://www.al.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -172,9 +172,9 @@
   {
     "endorser_id": "al-com-eb",
     "target_id": "al-amendment-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "This source does not take positions on ballot measures.",
+    "why": "No 2026 amendment editorial found. AL.com's opinion page blocks automated reading, so this is unconfirmed.",
     "url": "https://www.al.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -182,9 +182,9 @@
   {
     "endorser_id": "al-com-eb",
     "target_id": "al-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "This source does not take positions on ballot measures.",
+    "why": "No 2026 amendment editorial found. AL.com's opinion page blocks automated reading, so this is unconfirmed.",
     "url": "https://www.al.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -192,9 +192,9 @@
   {
     "endorser_id": "al-com-eb",
     "target_id": "al-amendment-4",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "This source does not take positions on ballot measures.",
+    "why": "No 2026 amendment editorial found. AL.com's opinion page blocks automated reading, so this is unconfirmed.",
     "url": "https://www.al.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"

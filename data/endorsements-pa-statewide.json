@@ -12,12 +12,12 @@
   {
     "endorser_id": "pittsburgh-post-gazette-eb",
     "target_id": "pa-governor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The Post-Gazette board still endorses in some statewide races (Oz for Senate in 2022) but skipped the 2024 presidential pick. No 2026 governor endorsement was found as of Oct. 16; the paper's Oct. 7 and Oct. 8 coverage of the race is news, not editorial. It may come late October or not at all.",
-    "url": "https://www.post-gazette.com/opinion/editorials",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "Published since May 4, 2026 by a 501(c)(3) nonprofit, which cannot endorse candidates; its site has no opinion section. Its politics coverage is the place to look instead.",
+    "url": "https://www.post-gazette.com/about",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "pittsburgh-tribune-review-eb",

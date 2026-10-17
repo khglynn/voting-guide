@@ -3,8 +3,8 @@
     "id": "chicago-tribune-eb",
     "name": "Chicago Tribune editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth'; in 2026 it endorsed Democrats in the four statewide races it weighed in on. AllSides rates Tribune news Center. From Sept. 27 to Oct. 17, 2026 it published general-election endorsements in most contested Chicago and Cook County races and on three Chicago-area ballot questions; no judicial retention picks as of Oct. 17.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates Chicago Tribune news Center (low confidence, Oct. 2026); no separate rating for its editorial board was found. The board describes its principles as 'free markets, limited government, a focus on economic growth,' and in 2026 endorsed Democrats in the four statewide races it weighed in on. Largest Illinois daily (Alden Global Capital); a Tribune Publishing policy bars formal endorsements for U.S. Senate and governor, so it publishes an evaluation instead. From Sept. 27 to Oct. 17, 2026 it endorsed in most contested Chicago and Cook County races and on three Chicago-area ballot questions; no judicial retention picks as of Oct. 17.",
     "geography": [
       "IL",
       "chicago-il"
@@ -19,7 +19,7 @@
     "name": "Chicago Sun-Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). Does not endorse candidates; publishes voter guides and questionnaires instead. AllSides rates its news Lean Left.",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026).",
     "geography": [
       "IL",
       "chicago-il"
@@ -46,7 +46,7 @@
   {
     "id": "injustice-watch",
     "name": "Injustice Watch: Check Your Judges",
-    "type": "civic_nonpartisan",
+    "type": "publication",
     "lean": "neutral",
     "lean_basis": "Nonprofit investigative newsroom covering Cook County courts. Its 2026 guide states: 'Injustice Watch does not make recommendations or endorsements.' It profiles every judge on the retention ballot with bar ratings, background and any controversies.",
     "geography": [
@@ -61,7 +61,7 @@
   {
     "id": "isba-judicial-evaluations",
     "name": "Illinois State Bar Association, Judicial Evaluation Committee",
-    "type": "other",
+    "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Statewide lawyers' association and one of the bar groups in Cook County's Alliance of Bar Associations for Judicial Screening. Rates judicial candidates only, after questionnaires, a background check and interviews; candidates who do not participate are rated 'Not Recommended.' Takes no part in non-judicial races.",
     "geography": [

@@ -3,8 +3,8 @@
     "id": "seattle-times-eb",
     "name": "The Seattle Times editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Largest Washington daily. The board endorses in both parties' races and has long opposed state income taxes; in 2026 it is emphasizing fiscal restraint and endorsed an independent over a Democrat in one legislative race. AllSides rates Seattle Times news as Lean Left.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Seattle Times Center (low confidence, Oct. 2026). Largest Washington daily, owned by the Blethen family. The board endorses in both parties' races and has long opposed a state income tax; in 2026 it endorsed an independent over a Democrat in one legislative race.",
     "geography": [
       "WA"
     ],

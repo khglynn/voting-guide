@@ -3,8 +3,8 @@
   "id": "orlando-sentinel-eb",
   "name": "Orlando Sentinel editorial board",
   "type": "publication",
-  "lean": "lean_left",
-  "lean_basis": "Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. In 2026 every statewide pick went to the Democrat or against the Republican-sponsored amendments. Shares editorials on amendments with its sister paper, the South Florida Sun Sentinel.",
+  "lean": "neutral",
+  "lean_basis": "AllSides rates the Orlando Sentinel Center (low confidence, Oct. 2026). Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. Its 2026 statewide picks all went to Democrats or against the Republican-sponsored amendments. It shares amendment editorials with its sister paper, the South Florida Sun Sentinel.",
   "geography": [
    "FL"
   ],

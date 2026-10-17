@@ -18,7 +18,7 @@
     "name": "New York Daily News editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the Daily News Lean Left. The board still endorses in New York races (it endorsed in the 2025 mayoral race).",
+    "lean_basis": "Ad Fontes rates the New York Daily News Skews Left (-8.10). The board still endorses in New York races (it endorsed in the 2025 mayoral race).",
     "geography": [
       "NY"
     ],
@@ -32,7 +32,7 @@
     "name": "New York Post editorial board",
     "type": "publication",
     "lean": "right",
-    "lean_basis": "AllSides rates the Post Lean Right; its editorial board is consistently conservative and endorsed Republicans in recent statewide races.",
+    "lean_basis": "AllSides rates New York Post news Right after a June 2026 editorial review, and rates its opinion pages separately. Its editorial board endorsed Republicans in recent statewide races.",
     "geography": [
       "NY"
     ],

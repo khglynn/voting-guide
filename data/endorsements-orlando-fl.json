@@ -222,9 +222,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-us-house-8",
-  "status": "endorsed",
-  "choice": "Mike Haridopolos",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -232,9 +232,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-us-house-8",
-  "status": "endorsed",
-  "choice": "Jennifer Jenkins",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -242,9 +242,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-us-house-9",
-  "status": "endorsed",
-  "choice": "Dan Green",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -252,9 +252,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-us-house-9",
-  "status": "endorsed",
-  "choice": "Darren Soto",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -262,9 +262,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-us-house-11",
-  "status": "endorsed",
-  "choice": "Joe Strada",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -272,9 +272,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-us-house-11",
-  "status": "endorsed",
-  "choice": "James Pericola",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -282,9 +282,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-senate-10",
-  "status": "endorsed",
-  "choice": "Jason Brodeur",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -292,9 +292,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-senate-10",
-  "status": "endorsed",
-  "choice": "John Lowndes",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -302,9 +302,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-35",
-  "status": "endorsed",
-  "choice": "Erika Booth",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -312,9 +312,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-35",
-  "status": "endorsed",
-  "choice": "Eric Gray",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -322,9 +322,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-37",
-  "status": "endorsed",
-  "choice": "Robert Prater",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -332,9 +332,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-37",
-  "status": "endorsed",
-  "choice": "Jane Aman",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -342,9 +342,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-39",
-  "status": "endorsed",
-  "choice": "Doug Bankson",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -352,9 +352,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-39",
-  "status": "endorsed",
-  "choice": "Jarod Fox",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -362,9 +362,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-40",
-  "status": "endorsed",
-  "choice": "Tuan Le",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -372,9 +372,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-40",
-  "status": "endorsed",
-  "choice": "Ra'Shon Young",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -382,9 +382,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-42",
-  "status": "endorsed",
-  "choice": "Bonnie Jackson",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -392,9 +392,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-42",
-  "status": "endorsed",
-  "choice": "Felipe Sousa Lazaballet",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -402,9 +402,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-43",
-  "status": "endorsed",
-  "choice": "Jorge Malavet",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -412,9 +412,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-43",
-  "status": "endorsed",
-  "choice": "Samuel Vilchez Santiago",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -422,9 +422,9 @@
  {
   "endorser_id": "fl-republican-party",
   "target_id": "fl-house-45",
-  "status": "endorsed",
-  "choice": "Erin Huntley",
-  "why": "Party nominee: printed as REP on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -432,9 +432,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-house-45",
-  "status": "endorsed",
-  "choice": "Leonard Spencer",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"
@@ -442,9 +442,9 @@
  {
   "endorser_id": "fl-democratic-party",
   "target_id": "fl-orange-clerk",
-  "status": "endorsed",
-  "choice": "Roberta Walton Johnson",
-  "why": "Party nominee: printed as DEM on the official Orange County composite sample ballot.",
+  "status": "not_found",
+  "choice": null,
+  "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
   "url": "https://voteorangefl.gov/wp-content/uploads/2026/10/26GEN113-CB-EN-26-10-1-15-9-21.pdf",
   "date": "2026-08-18",
   "confidence": "verified"

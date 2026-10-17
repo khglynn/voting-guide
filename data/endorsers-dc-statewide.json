@@ -3,21 +3,25 @@
     "id": "washington-post-eb",
     "name": "The Washington Post editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "AllSides rates the Post's news Lean Left. In Oct 2024 the paper ended presidential endorsements only; it continued endorsing in Senate, House and Maryland races that fall. Its 2026 DC general-election editorials are paywalled, so none are recorded.",
-    "geography": ["DC"],
-    "guide_url": "https://www.washingtonpost.com/opinions/editorial-board/",
+    "lean": "lean_right",
+    "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found.",
+    "geography": [
+      "DC"
+    ],
+    "guide_url": "https://www.washingtonpost.com/opinions/the-posts-view/",
     "default_on": true,
-    "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_candidates": false,
+    "endorses_measures": false
   },
   {
     "id": "washington-city-paper",
     "name": "Washington City Paper",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Alt-weekly with a progressive editorial voice; publishes DC election coverage and, in some cycles, endorsements. No 2026 general-election endorsement page was found.",
-    "geography": ["DC"],
+    "lean": "neutral",
+    "lean_basis": "No AllSides or Ad Fontes rating was found, so it is shown as neutral. DC alt-weekly that covers local elections and has endorsed in some past cycles. No 2026 general-election endorsement page was found.",
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://washingtoncitypaper.com/",
     "default_on": true,
     "endorses_candidates": true,
@@ -29,7 +33,9 @@
     "type": "publication",
     "lean": "neutral",
     "lean_basis": "Neighborhood monthlies covering Capitol Hill and east of the river. Publish detailed candidate roundups and explainers (the Oct 12 and Oct 13, 2026 pieces are the clearest guides to the at-large count and the full ballot) but do not endorse.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
     "default_on": true,
     "endorses_candidates": false,
@@ -41,7 +47,9 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Nonpartisan civic organization. Does not endorse candidates. Supported Initiative 83 (RCV and open primaries) in 2024. VOTE411 lists DC's registration deadlines; no 2026 DC candidate questionnaire was found.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.vote411.org/lwvdc",
     "default_on": true,
     "endorses_candidates": false,
@@ -53,7 +61,9 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official party organization. Its nominees are the June primary winners. The committee opposed Initiative 83 in 2024 and sued to block it.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.dcdemocraticparty.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -65,7 +75,9 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official party organization. Chair Patrick Mara announced on June 18, 2026 'the largest candidate slate in decades': nominees in every districtwide race except mayor.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://dcgop.com/meet-dc-candidates/",
     "default_on": false,
     "endorses_candidates": true,
@@ -77,7 +89,9 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official party organization; DC affiliate of the Green Party. Fielded nominees for mayor, delegate, at-large and Wards 1 and 5 in 2026. Its chair, Darryl Moch, is its at-large nominee.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://statehoodgreensofdc.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -89,7 +103,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Self-described progressive grassroots organization; endorses by member vote. Its 2026 page covers only the June Democratic primary.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.dcfordemocracy.org/endorsements",
     "default_on": false,
     "endorses_candidates": true,
@@ -101,7 +117,9 @@
     "type": "advocacy",
     "lean": "lean_left",
     "lean_basis": "Urbanist nonprofit focused on housing, transit and land use. Its volunteer Elections Committee endorses in DC races; the newsroom does not. Published one general-election endorsement (at-large) on Oct 1, 2026 and says more may follow.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://ggwash.org/elections/2026",
     "default_on": false,
     "endorses_candidates": true,
@@ -113,7 +131,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Self-described democratic socialist organization. Endorsed Janeese Lewis George (mayor) and Aparna Raj (Ward 1) in the June primary; both are its members. Its 2026 page lists no general-election candidate endorsements.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://mdcdsa.org/2026endorsements/",
     "default_on": false,
     "endorses_candidates": true,
@@ -125,7 +145,9 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Business association. No 2026 endorsement page was found.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.dcchamber.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -137,7 +159,9 @@
     "type": "labor",
     "lean": "lean_right",
     "lean_basis": "Police labor union; has endorsed in DC mayor, Council and AG races and has clashed publicly with progressive councilmembers over public-safety legislation. No 2026 general-election endorsement was found.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.dcpoliceunion.com/",
     "default_on": false,
     "endorses_candidates": true,
@@ -149,7 +173,9 @@
     "type": "labor",
     "lean": "left",
     "lean_basis": "Regional labor federation. Announced 2026 DC endorsements on March 26, 2026 (primary cycle); its voter guide page lists 'No Recommendation' for the Democratic at-large primary and shows other picks only as images.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.dclabor.org/voter-guides",
     "default_on": false,
     "endorses_candidates": true,
@@ -161,7 +187,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Environmental advocacy organization. Its endorsements page carries a '2026 General Election Endorsements' heading listing mayor, AG, at-large and ward Council picks.",
-    "geography": ["DC"],
+    "geography": [
+      "DC"
+    ],
     "guide_url": "https://www.sierraclub.org/dc/endorsements",
     "default_on": false,
     "endorses_candidates": true,

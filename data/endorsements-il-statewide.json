@@ -402,9 +402,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-us-senate",
-    "status": "endorsed",
-    "choice": "Juliana Stratton",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -412,9 +412,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-governor",
-    "status": "endorsed",
-    "choice": "JB Pritzker and Christian Mitchell",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -422,9 +422,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-attorney-general",
-    "status": "endorsed",
-    "choice": "Kwame Raoul",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -432,9 +432,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-secretary-of-state",
-    "status": "endorsed",
-    "choice": "Alexi Giannoulias",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -442,9 +442,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-comptroller",
-    "status": "endorsed",
-    "choice": "Margaret Croke",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -452,9 +452,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-treasurer",
-    "status": "endorsed",
-    "choice": "Michael W. Frerichs",
-    "why": "Party nominee: won the March 17, 2026 Democratic primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -462,9 +462,9 @@
   {
     "endorser_id": "il-democratic-party",
     "target_id": "il-appellate-1st-hoffman-vacancy",
-    "status": "endorsed",
-    "choice": "Judith C. Rice",
-    "why": "Rice is the Democratic nominee for the Hoffman vacancy (unopposed); the Cook County Democratic Party slated her.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -482,9 +482,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-us-senate",
-    "status": "endorsed",
-    "choice": "Don Tracy",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -492,9 +492,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-governor",
-    "status": "endorsed",
-    "choice": "Darren Bailey and Aaron B. Del Mar",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -502,9 +502,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-attorney-general",
-    "status": "endorsed",
-    "choice": "Robert W. Fioretti",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -512,9 +512,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-secretary-of-state",
-    "status": "endorsed",
-    "choice": "Diane M. Harris",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -522,9 +522,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-comptroller",
-    "status": "endorsed",
-    "choice": "Bryan Drew",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"
@@ -532,9 +532,9 @@
   {
     "endorser_id": "il-republican-party",
     "target_id": "il-treasurer",
-    "status": "endorsed",
-    "choice": "Max Solomon",
-    "why": "Party nominee: won the March 17, 2026 Republican primary (certified by the State Board) and is the party's candidate on the November ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx?ID=69",
     "date": "2026-03-17",
     "confidence": "verified"

@@ -402,9 +402,9 @@
   {
     "endorser_id": "mo-republican-party",
     "target_id": "mo-state-auditor",
-    "status": "endorsed",
-    "choice": "Scott Fitzpatrick",
-    "why": "Incumbent Republican nominee; the party backs its ticket. The Oct 8 ballot guide coverage lists measures only; the candidate endorsement is inferred from nomination.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://www.missouri.gop/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -1298,5 +1298,105 @@
     "url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
     "date": "2026-10-16",
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-state-auditor",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-amendment-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-amendment-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-amendment-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-amendment-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-retention-wilson",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-retention-lay",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-retention-navarro-mckelvey",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stlpr",
+    "target_id": "mo-retention-quigless",
+    "status": "no_position",
+    "choice": null,
+    "why": "St. Louis Public Radio does not endorse candidates or ballot measures; see its November 2026 voter guide.",
+    "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "date": "2026-10-15",
+    "confidence": "sourced"
   }
 ]

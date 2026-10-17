@@ -3,22 +3,22 @@
   "id": "washington-post-eb",
   "name": "The Washington Post editorial board",
   "type": "publication",
-  "lean": "lean_left",
-  "lean_basis": "AllSides rates the Post's news Lean Left. In Oct 2024 the paper ended presidential endorsements only; it continued endorsing in Senate, House and Maryland races that fall. Its 2026 DC general-election editorials are paywalled and were not opened this run.",
+  "lean": "lean_right",
+  "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found.",
   "geography": [
    "DC"
   ],
-  "guide_url": "https://www.washingtonpost.com/opinions/editorial-board/",
+  "guide_url": "https://www.washingtonpost.com/opinions/the-posts-view/",
   "default_on": true,
-  "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_candidates": false,
+  "endorses_measures": false
  },
  {
   "id": "washington-city-paper",
   "name": "Washington City Paper",
   "type": "publication",
-  "lean": "lean_left",
-  "lean_basis": "Alt-weekly with a progressive editorial voice; publishes DC election coverage and, in some cycles, endorsements. No 2026 general-election endorsement page was found this run.",
+  "lean": "neutral",
+  "lean_basis": "No AllSides or Ad Fontes rating was found, so it is shown as neutral. DC alt-weekly that covers local elections and has endorsed in some past cycles. No 2026 general-election endorsement page was found.",
   "geography": [
    "DC"
   ],

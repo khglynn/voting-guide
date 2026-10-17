@@ -48,5 +48,22 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": false
+  },
+  {
+    "id": "stlpr",
+    "name": "St. Louis Public Radio (voter guide, no endorsements)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "Public radio newsroom (KWMU). Federal law bars noncommercial educational stations from supporting or opposing candidates (47 U.S.C. 399), and it publishes a voter guide rather than endorsements. No AllSides or Ad Fontes rating was checked.",
+    "geography": [
+      "MO",
+      "webster-groves-mo",
+      "clayton-mo",
+      "ballwin-mo"
+    ],
+    "guide_url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
   }
 ]

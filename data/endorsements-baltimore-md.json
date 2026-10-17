@@ -592,9 +592,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-a",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -622,9 +622,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-b",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -652,9 +652,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-c",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -682,9 +682,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-d",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -712,9 +712,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-e",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -742,9 +742,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-f",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -772,9 +772,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-g",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -802,9 +802,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-h",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -832,9 +832,9 @@
   {
     "endorser_id": "lwv-baltimore-city",
     "target_id": "baltimore-question-i",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The League's Baltimore City guide reprints the ballot language for this question with no position.",
+    "why": "The League's 2026 Baltimore City guide reprints the ballot language for this question and takes no position.",
     "url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "date": null,
     "confidence": "verified"
@@ -842,9 +842,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-us-house-2",
-    "status": "endorsed",
-    "choice": "John \"Johnny O\" Olszewski, Jr.",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -852,9 +852,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-us-house-2",
-    "status": "endorsed",
-    "choice": "Dave Wallace",
-    "why": "Party nominee on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -862,9 +862,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-us-house-7",
-    "status": "endorsed",
-    "choice": "Kweisi Mfume",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -872,9 +872,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-us-house-7",
-    "status": "endorsed",
-    "choice": "Scott M. Collier",
-    "why": "Party nominee on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -882,9 +882,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-sd-40",
-    "status": "endorsed",
-    "choice": "Antonio Hayes",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -902,9 +902,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-sd-41",
-    "status": "endorsed",
-    "choice": "Malcolm P. Ruff",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -922,9 +922,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-sd-43",
-    "status": "endorsed",
-    "choice": "Mary Washington",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -942,9 +942,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-sd-45",
-    "status": "endorsed",
-    "choice": "Cory V. McCray",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -962,9 +962,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-sd-46",
-    "status": "endorsed",
-    "choice": "Bill Ferguson",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -972,9 +972,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-sd-46",
-    "status": "endorsed",
-    "choice": "Emmanuel Digman",
-    "why": "Party nominee on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -982,9 +982,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-hd-40",
-    "status": "endorsed",
-    "choice": "Marlon D. Amprey; Tiffany Welch; Melissa Wells",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1002,9 +1002,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-hd-41",
-    "status": "endorsed",
-    "choice": "S. I. \"Sandy\" Rosenberg; Sean A. Stinnett; Ryan Turner",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1022,9 +1022,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-hd-43a",
-    "status": "endorsed",
-    "choice": "Regina T. Boyce; Elizabeth Embry",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1042,9 +1042,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-hd-45",
-    "status": "endorsed",
-    "choice": "Jackie Addison; Chanel A. Branch; Caylin Young",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1062,9 +1062,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "md-hd-46",
-    "status": "endorsed",
-    "choice": "Luke Clippinger; Mark Edelson; Robbyn Lewis",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1072,9 +1072,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "md-hd-46",
-    "status": "endorsed",
-    "choice": "Jeremy L. Amason",
-    "why": "Party nominee on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1082,9 +1082,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "baltimore-states-attorney",
-    "status": "endorsed",
-    "choice": "Ivan J. Bates",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1102,9 +1102,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "baltimore-clerk-circuit-court",
-    "status": "endorsed",
-    "choice": "Xavier A. Conaway",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1122,9 +1122,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "baltimore-register-of-wills",
-    "status": "endorsed",
-    "choice": "Belinda K. Conaway",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1132,9 +1132,9 @@
   {
     "endorser_id": "md-republican-party",
     "target_id": "baltimore-register-of-wills",
-    "status": "endorsed",
-    "choice": "Andy Zipay",
-    "why": "Party nominee on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1142,9 +1142,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "baltimore-orphans-court",
-    "status": "endorsed",
-    "choice": "Charles \"Chuck\" Bernstein; Lewyn Scott Garrett; Michele E. Loewenthal",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"
@@ -1162,9 +1162,9 @@
   {
     "endorser_id": "md-democratic-party",
     "target_id": "baltimore-sheriff",
-    "status": "endorsed",
-    "choice": "Sabrina Tapp-Harper",
-    "why": "Party nominee(s) on the certified ballot.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
     "url": "https://elections.maryland.gov/elections/2026/general_ballots/BaltimoreCity.pdf",
     "date": null,
     "confidence": "verified"

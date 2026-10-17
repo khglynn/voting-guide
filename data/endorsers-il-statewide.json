@@ -3,12 +3,12 @@
     "id": "chicago-tribune-eb",
     "name": "Chicago Tribune editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Largest Illinois daily (Alden Global Capital). The board describes its principles as 'free markets, limited government, a focus on economic growth' and in 2026 endorsed Democrats in all four statewide races it weighed in on. A Tribune Publishing corporate edict bars formal endorsements for U.S. Senate and governor; the board publishes an evaluation editorial instead. AllSides rates Tribune news Center.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates Chicago Tribune news Center (low confidence, Oct. 2026); no separate rating for its editorial board was found. The board describes its principles as 'free markets, limited government, a focus on economic growth,' and in 2026 endorsed Democrats in the four statewide races it weighed in on. Largest Illinois daily (Alden Global Capital); a Tribune Publishing policy bars formal endorsements for U.S. Senate and governor, so it publishes an evaluation instead. From Sept. 27 to Oct. 17, 2026 it endorsed in most contested Chicago and Cook County races and on three Chicago-area ballot questions; no judicial retention picks as of Oct. 17.",
     "geography": [
       "IL"
     ],
-    "guide_url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
+    "guide_url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -18,7 +18,7 @@
     "name": "Chicago Sun-Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Second-largest Chicago daily, owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent). The paper announced on Jan. 23, 2012 that it would stop endorsing candidates ('inform you, not spin you') and in 2026 publishes candidate questionnaires and how-to-vote guides instead. AllSides rates its news Lean Left.",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026).",
     "geography": [
       "IL"
     ],
@@ -31,8 +31,8 @@
     "id": "crains-chicago-eb",
     "name": "Crain's Chicago Business editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Business weekly; its editorials favor fiscal restraint, pension reform and pro-business policy, and it has endorsed Republicans (Rauner 2014) and Democrats. No 2026 general-election endorsements were found as of Oct. 16.",
+    "lean": "neutral",
+    "lean_basis": "No AllSides or Ad Fontes rating was found, so it is shown as neutral. Business weekly whose editorials favor fiscal restraint, pension reform and pro-business policy; it has endorsed both Republicans (Rauner, 2014) and Democrats. No 2026 general-election endorsements were found as of Oct. 16.",
     "geography": [
       "IL"
     ],
@@ -58,7 +58,7 @@
   {
     "id": "injustice-watch",
     "name": "Injustice Watch: Check Your Judges",
-    "type": "civic_nonpartisan",
+    "type": "publication",
     "lean": "neutral",
     "lean_basis": "Nonprofit investigative newsroom. Its judicial guide states: 'Injustice Watch does not make recommendations or endorsements.' It researched the Cook County judges on the 2026 retention ballot and flags controversies, reversals and bar ratings.",
     "geography": [

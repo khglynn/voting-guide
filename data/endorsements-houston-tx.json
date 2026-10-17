@@ -162,9 +162,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-senate-18",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1312,9 +1312,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-kleinisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1342,9 +1342,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-springisd-trustee-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1352,9 +1352,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1362,9 +1362,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1382,9 +1382,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-7",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1392,9 +1392,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-tomballisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1412,9 +1412,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-tomballisd-trustee-3",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1432,9 +1432,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-huffmanisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1472,9 +1472,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-newcaneyisd-trustee-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not among the 141 races on the board's Nov 3 endorsement page.",
+  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1492,9 +1492,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1502,9 +1502,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-b",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1512,9 +1512,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-c",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1522,9 +1522,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-d",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1532,9 +1532,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-e",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1542,9 +1542,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-springisd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1552,9 +1552,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-huffman-isd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1562,9 +1562,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-crosby-isd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1572,9 +1572,9 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-crosby-isd-prop-b",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The board's November page does not cover school district measures.",
+  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"

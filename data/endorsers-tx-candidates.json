@@ -3,12 +3,12 @@
     "id": "houston-chronicle-eb",
     "name": "Houston Chronicle editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "AllSides rates the Houston Chronicle Lean Left; its board calls itself nonpartisan and endorsed a mixed slate in 2026 (3 Republicans, 11 Democrats statewide).",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Houston Chronicle Center (low confidence, Oct. 2026). The board calls itself nonpartisan; in Harris County races its 2026 picks are 88 Democrats, 28 Republicans and 3 nonpartisan candidates, with most Republican picks in judicial races. Statewide it endorsed a mixed slate (3 Republicans, 11 Democrats).",
     "geography": [
       "TX"
     ],
-    "guide_url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements/",
+    "guide_url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true

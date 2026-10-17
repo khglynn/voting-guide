@@ -5,7 +5,9 @@
     "type": "publication",
     "lean": "neutral",
     "lean_basis": "Largest Oregon daily. Its editorial board has endorsed candidates of both parties for statewide office over the past decade and endorsed in the May 2026 Republican primary for governor. Whether it has published Nov. 2026 general-election endorsements was not confirmed as of Oct. 16.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.oregonlive.com/opinion/",
     "default_on": true,
     "endorses_candidates": true,
@@ -16,9 +18,12 @@
     "name": "Willamette Week endorsements",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Portland alt-weekly. Publishes an endorsement issue every election after candidate interviews; picks skew progressive but it regularly backs moderates and endorsed in the May 2026 GOP primary for governor. Its Nov. 2026 issue had not been located as of Oct. 16; it usually lands the second half of October.",
-    "geography": ["OR", "portland-or"],
-    "guide_url": "https://www.wweek.com/news/elections/",
+    "lean_basis": "Portland alt-weekly. Publishes an endorsement issue every election after candidate interviews; each newsroom member gets a vote. Picks skew progressive but it regularly backs moderates and endorsed in the May 2026 GOP primary for governor. No AllSides or Ad Fontes rating was checked; lean is from its endorsement record.",
+    "geography": [
+      "OR",
+      "portland-or"
+    ],
+    "guide_url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -29,7 +34,10 @@
     "type": "publication",
     "lean": "left",
     "lean_basis": "Portland alt-weekly whose editorial endorsements are openly progressive.",
-    "geography": ["OR", "portland-or"],
+    "geography": [
+      "OR",
+      "portland-or"
+    ],
     "guide_url": "https://www.portlandmercury.com/elections",
     "default_on": true,
     "endorses_candidates": true,
@@ -41,7 +49,9 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Nonpartisan. Does not endorse or oppose candidates. Takes positions on ballot measures only when they match adopted League policy. There are no statewide measures in Nov. 2026.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.vote411.org/lwvor",
     "default_on": true,
     "endorses_candidates": false,
@@ -53,7 +63,9 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official state party organization. Its 2026 State Voters' Pamphlet statement names the candidates it is working to elect.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "default_on": false,
     "endorses_candidates": true,
@@ -65,7 +77,9 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official state party organization. Its 2026 State Voters' Pamphlet statement urges 'VOTE REPUBLICAN' without naming candidates.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "default_on": false,
     "endorses_candidates": true,
@@ -77,7 +91,9 @@
     "type": "labor",
     "lean": "left",
     "lean_basis": "State labor federation; endorses overwhelmingly Democratic candidates.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://oraflcio.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -89,7 +105,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Abortion-rights advocacy PAC; endorses candidates who support abortion access, nearly all Democrats.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-pac-oregon",
     "default_on": false,
     "endorses_candidates": true,
@@ -101,7 +119,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Environmental advocacy group; endorsements go almost entirely to Democrats. Publishes a 2026 General Election Candidate Endorsements page.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements",
     "default_on": false,
     "endorses_candidates": true,
@@ -113,7 +133,9 @@
     "type": "advocacy",
     "lean": "lean_right",
     "lean_basis": "Statewide law-enforcement association that endorses candidates; has backed candidates of both parties but more often Republicans in statewide races.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.orcops.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -125,7 +147,9 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Statewide agriculture trade association; its PAC endorses mostly Republicans and some rural Democrats.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://oregonfb.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -137,7 +161,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Anti-abortion advocacy group; endorses candidates who oppose abortion, nearly all Republicans.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.ortl.org/",
     "default_on": false,
     "endorses_candidates": true,
@@ -149,7 +175,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Gun-rights group that rates and endorses candidates, nearly all Republicans.",
-    "geography": ["OR"],
+    "geography": [
+      "OR"
+    ],
     "guide_url": "https://www.oregonfirearms.org/",
     "default_on": false,
     "endorses_candidates": true,

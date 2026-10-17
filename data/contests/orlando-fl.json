@@ -258,7 +258,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-8",
-  "scope_plain": "Only a slice of far east Orange County, including Christmas and parts of the UCF area (the district extends beyond Orange County). Most Orlando voters are NOT in District 8.",
+  "scope_plain": "Only a slice of far east Orange County, including Christmas and parts of the UCF area (the district extends beyond Orange County). Most Orlando voters are not in District 8.",
   "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
   "why_it_matters": null,
   "vote_for": 1,
@@ -333,9 +333,9 @@
     "name": "Dan Green",
     "party": "Republican",
     "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Republican nominee from a seven-way primary. In Orange County's slice of the district he placed second with 21.9%; he won district-wide.",
+    "website": "https://dangreenfl.com/",
+    "website_confidence": "sourced",
+    "background": "Former deputy assistant secretary of Defense in President Trump's first term. Won a seven-way Republican primary district-wide (he placed second in Orange County's slice, with 21.9%).",
     "own_words": [
      {
       "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
@@ -350,9 +350,9 @@
     "name": "Darren Soto",
     "party": "Democratic",
     "incumbent": true,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Incumbent U.S. representative for District 9.",
+    "website": "https://www.darrensoto.com/",
+    "website_confidence": "sourced",
+    "background": "In the U.S. House since 2017; served in the Florida House and Senate from 2007 to 2016 (Florida Phoenix).",
     "own_words": [
      {
       "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
@@ -372,6 +372,10 @@
    {
     "name": "Orange County SOE official Aug 18 primary results",
     "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Florida Phoenix 2026 voter guide: U.S. House District 9",
+    "url": "https://floridaphoenix.com/voter-guides/contests/2026-general-u-s-house-of-representatives-cd-9/"
    }
   ],
   "confidence": "sourced"
@@ -382,7 +386,7 @@
   "level": "federal",
   "office": "U.S. Representative",
   "district": "CD-10",
-  "scope_plain": "Most of central Orange County, including downtown Orlando, Lake Eola and Delaney Park. This race will NOT appear on your ballot: Frost had no opponent in November, and Florida does not print uncontested races.",
+  "scope_plain": "Most of central Orange County, including downtown Orlando, Lake Eola and Delaney Park. This race will not appear on your ballot: Frost had no opponent in November, and Florida does not print uncontested races.",
   "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
   "why_it_matters": "If your ballot has no U.S. House race, this is why. Frost keeps the seat without a vote.",
   "vote_for": 1,
@@ -510,7 +514,7 @@
   "level": "state",
   "office": "State Senator",
   "district": "SD-10",
-  "scope_plain": "Only some north and central Orange County precincts, such as parts of College Park and the Winter Park area; the district also extends beyond Orange County. Most Orlando voters have NO state Senate race this year.",
+  "scope_plain": "Only some north and central Orange County precincts, such as parts of College Park and the Winter Park area; the district also extends beyond Orange County. Most Orlando voters have no state Senate race this year.",
   "office_explainer": "One of 40 state senators: writes Florida laws and the state budget; four-year term.",
   "why_it_matters": null,
   "vote_for": 1,
@@ -523,9 +527,9 @@
     "name": "Jason Brodeur",
     "party": "Republican",
     "incumbent": true,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Incumbent state senator for District 10.",
+    "website": "https://jasonbrodeur.com/",
+    "website_confidence": "sourced",
+    "background": "State senator since 2020 after eight years in the Florida House. No Republican primary this year (Florida Phoenix).",
     "own_words": [
      {
       "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
@@ -540,9 +544,9 @@
     "name": "John Lowndes",
     "party": "Democratic",
     "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Won the Democratic primary with 81% of the Orange County vote over H. Alexander Duncan.",
+    "website": "https://www.johnlowndesforflorida.com/",
+    "website_confidence": "sourced",
+    "background": "Attorney and mayor of Maitland since 2021; formerly worked for the Orange County attorney's office. Won the Democratic primary with 81% of the Orange County vote over H. Alexander Duncan.",
     "own_words": [
      {
       "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
@@ -562,6 +566,10 @@
    {
     "name": "Orange County SOE official Aug 18 primary results",
     "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Florida Phoenix 2026 voter guide: Florida Senate District 10",
+    "url": "https://floridaphoenix.com/voter-guides/contests/2026-general-florida-senate-sd-10/"
    }
   ],
   "confidence": "sourced"
@@ -636,10 +644,10 @@
   "district": "HD-37",
   "scope_plain": "East Orange County precincts (25 ballot styles, mostly County Commission District 5), including the area east of Winter Park and around UCF. Not downtown Orlando.",
   "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
-  "why_it_matters": null,
+  "why_it_matters": "Open seat: Rep. Susan Plasencia, in office since 2022, is not on the ballot.",
   "vote_for": 1,
-  "incumbent": null,
-  "open_seat": null,
+  "incumbent": "Susan Plasencia (Republican; not on the ballot)",
+  "open_seat": true,
   "term_years": 2,
   "is_retention": false,
   "candidates": [
@@ -686,6 +694,10 @@
    {
     "name": "Orange County SOE official Aug 18 primary results",
     "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Wikipedia: Florida's 37th House district (current member)",
+    "url": "https://en.wikipedia.org/wiki/Florida%27s_37th_House_of_Representatives_district"
    }
   ],
   "confidence": "sourced"
@@ -963,10 +975,10 @@
   "district": "HD-45",
   "scope_plain": "Southwest Orange County precincts in County Commission District 1 (Windermere, Dr. Phillips area; 26 ballot styles). Not downtown Orlando.",
   "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
-  "why_it_matters": null,
+  "why_it_matters": "Spencer is the only Florida House Democrat in a district Donald Trump won, per Florida Politics. He won the seat narrowly in 2024.",
   "vote_for": 1,
-  "incumbent": null,
-  "open_seat": null,
+  "incumbent": "Leonard Spencer",
+  "open_seat": false,
   "term_years": 2,
   "is_retention": false,
   "candidates": [
@@ -974,9 +986,9 @@
     "name": "Erin Huntley",
     "party": "Republican",
     "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Republican nominee.",
+    "website": "https://www.voteerinhuntley.com/",
+    "website_confidence": "sourced",
+    "background": "Gov. Ron DeSantis appointee to the Florida Virtual School board of trustees, and a 2024 Republican presidential elector (Florida Phoenix). No Republican primary.",
     "own_words": [
      {
       "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
@@ -990,15 +1002,15 @@
    {
     "name": "Leonard Spencer",
     "party": "Democratic",
-    "incumbent": false,
-    "website": null,
-    "website_confidence": "unverified",
-    "background": "Democratic nominee.",
+    "incumbent": true,
+    "website": "https://leonardspencerfl.com/",
+    "website_confidence": "sourced",
+    "background": "State representative for District 45 since 2024, running for a second term. Sponsored the law letting the state fund vertiports (Florida Phoenix).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "His campaign site focuses on investing in mental health services and infrastructure (as summarized by Florida Phoenix).",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://floridaphoenix.com/voter-guides/contests/2026-general-florida-house-of-representatives-hd-45/"
      }
     ],
     "lwv_status": "unknown",
@@ -1013,6 +1025,14 @@
    {
     "name": "Orange County SOE official Aug 18 primary results",
     "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Florida Phoenix 2026 voter guide: Florida House District 45",
+    "url": "https://floridaphoenix.com/voter-guides/contests/2026-general-florida-house-of-representatives-hd-45/"
+   },
+   {
+    "name": "Florida Politics: Erin Huntley files in HD 45 against Leonard Spencer",
+    "url": "https://floridapolitics.com/archives/715418-erin-huntley-files-in-hd-45-against-leonard-spencer-the-only-democrat-in-a-donald-trump-district/"
    }
   ],
   "confidence": "sourced"
@@ -1215,7 +1235,7 @@
       "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
      },
      {
-      "text": "On Amendment 3, her full answer: \"NO.\"",
+      "text": "On Amendment 3, her full answer: \"No.\"",
       "is_quote": true,
       "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-6/"
      }
@@ -1313,7 +1333,7 @@
       "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
      },
      {
-      "text": "On Amendment 3: \"NO. I support meaningful tax relief for homeowners, but not if it comes at the expense of the local services…\"",
+      "text": "On Amendment 3: \"No. I support meaningful tax relief for homeowners, but not if it comes at the expense of the local services…\"",
       "is_quote": true,
       "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-commission-district-7/"
      }

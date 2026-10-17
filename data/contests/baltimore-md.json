@@ -247,20 +247,20 @@
     "district": "SD-41",
     "scope_plain": "Voters in Legislative District 41: northwest and west Baltimore, including Roland Park, Mount Washington, Forest Park and Edmondson Village areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
-    "why_it_matters": "Unopposed: one name on the ballot.",
+    "why_it_matters": "Unopposed: one name on the ballot. Open seat: Sen. Dalya Attar is not on the ballot. Ruff is currently one of the district's delegates.",
     "vote_for": 1,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "Dalya Attar (not on the ballot)",
+    "open_seat": true,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Malcolm P. Ruff",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting delegate for District 41, running for the Senate seat.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
@@ -284,6 +284,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -296,20 +300,20 @@
     "district": "SD-43",
     "scope_plain": "Voters in Legislative District 43: north-central Baltimore (the city part of District 43, called 43A for delegates), including Charles Village, Waverly, Govans and Hamilton areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
-    "why_it_matters": "Unopposed: one name on the ballot.",
+    "why_it_matters": "Unopposed: incumbent Mary Washington is the only name on the ballot.",
     "vote_for": 1,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "Mary Washington",
+    "open_seat": false,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Mary Washington",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting state senator for District 43.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
@@ -333,6 +337,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -345,20 +353,20 @@
     "district": "SD-45",
     "scope_plain": "Voters in Legislative District 45: east and northeast Baltimore, including parts of 21202, 21205, 21206, 21213 and 21218. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
-    "why_it_matters": "Unopposed: one name on the ballot.",
+    "why_it_matters": "Unopposed: incumbent Cory V. McCray is the only name on the ballot.",
     "vote_for": 1,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "Cory V. McCray",
+    "open_seat": false,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "Cory V. McCray",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting state senator for District 45.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
@@ -382,6 +390,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -581,20 +593,20 @@
     "district": "HD-41",
     "scope_plain": "Voters in Legislative District 41 (northwest and west Baltimore). Same area as State Senate District 41. Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
-    "why_it_matters": "Three candidates for three seats. You may vote for up to 3.",
+    "why_it_matters": "Three candidates for three seats. You may vote for up to 3. Two are sitting delegates; the third seat opens because Delegate Malcolm P. Ruff is running for State Senate.",
     "vote_for": 3,
-    "incumbent": null,
-    "open_seat": null,
+    "incumbent": "S. I. \"Sandy\" Rosenberg; Sean A. Stinnett (third seat open: Delegate Malcolm P. Ruff is running for State Senate)",
+    "open_seat": false,
     "term_years": 4,
     "is_retention": false,
     "candidates": [
       {
         "name": "S. I. \"Sandy\" Rosenberg",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting delegate for District 41.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
@@ -608,10 +620,10 @@
       {
         "name": "Sean A. Stinnett",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting delegate for District 41.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
@@ -625,7 +637,7 @@
       {
         "name": "Ryan Turner",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": false,
         "website": "https://www.ryanturner41.com",
         "website_confidence": "verified",
         "background": null,
@@ -662,6 +674,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -762,7 +778,7 @@
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
     "why_it_matters": "Four candidates for three seats: three Democrats and one Green Party candidate. You may vote for up to 3; the top three win.",
     "vote_for": 3,
-    "incumbent": "Jackie Addison; Caylin Young",
+    "incumbent": "Jackie Addison; Caylin Young (third seat open: Delegate Stephanie Smith is not on the ballot)",
     "open_seat": false,
     "term_years": 4,
     "is_retention": false,
@@ -797,7 +813,7 @@
       {
         "name": "Chanel A. Branch",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
         "background": null,
@@ -872,6 +888,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -886,7 +906,7 @@
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
     "why_it_matters": "Four candidates for three seats: three Democrats and one Republican. You may vote for up to 3; the top three win.",
     "vote_for": 3,
-    "incumbent": "Mark Edelson; Robbyn Lewis",
+    "incumbent": "Luke Clippinger; Mark Edelson; Robbyn Lewis",
     "open_seat": false,
     "term_years": 4,
     "is_retention": false,
@@ -894,10 +914,10 @@
       {
         "name": "Luke Clippinger",
         "party": "Democratic",
-        "incumbent": null,
+        "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Sitting delegate for District 46.",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
@@ -996,6 +1016,10 @@
       {
         "name": "Maryland SBE: 2026 state precinct reference (district codes by precinct)",
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
+      },
+      {
+        "name": "Maryland General Assembly member rosters (sitting members by district, from mgaleg.maryland.gov), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
     "confidence": "verified"
@@ -1431,9 +1455,9 @@
     "district": null,
     "scope_plain": "Every Baltimore City voter.",
     "office_explainer": "Serves court papers and evictions, guards courtrooms, moves prisoners, and serves warrants and protective orders.",
-    "why_it_matters": "Unopposed: Sabrina Tapp-Harper is the only name on the ballot. She is not the current sheriff, so the office will change hands.",
+    "why_it_matters": "Unopposed: Sabrina Tapp-Harper is the only name on the ballot. Sheriff Samuel L. Cogen is not running, so the office will change hands.",
     "vote_for": 1,
-    "incumbent": null,
+    "incumbent": "Samuel L. Cogen (not on the ballot)",
     "open_seat": true,
     "term_years": 4,
     "is_retention": false,
@@ -1473,6 +1497,10 @@
       {
         "name": "Maryland Manual On-Line: Baltimore City candidates, Nov 3, 2026",
         "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2026.html"
+      },
+      {
+        "name": "Maryland Manual On-Line: Baltimore City government (lists Samuel L. Cogen as Sheriff)",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/html/bcitye.html"
       }
     ],
     "confidence": "verified"

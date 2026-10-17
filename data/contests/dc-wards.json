@@ -559,8 +559,14 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
-    "own_words": [],
+    "background": "Ward 5 resident for about a decade, with a background in teaching and education policy, per HU News Service (Oct 2026).",
+    "own_words": [
+     {
+      "text": "Names school safety and health, and college and career readiness, as priorities. Also wants to tackle chronic absenteeism.",
+      "is_quote": false,
+      "source": "https://www.afro.com/washington-dc/ward-5-parents-raise-concerns-about-education-as-new-board-representatives-vie-for-office-281b375a"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    },
@@ -570,8 +576,14 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
-    "own_words": [],
+    "background": "Ward 5 resident for about a decade with a Ph.D., and a background in teaching and education policy, per HU News Service (Oct 2026).",
+    "own_words": [
+     {
+      "text": "Wants more access to extracurricular activities and to pair community input with data in decisions. Also wants to tackle chronic absenteeism.",
+      "is_quote": false,
+      "source": "https://www.afro.com/washington-dc/ward-5-parents-raise-concerns-about-education-as-new-board-representatives-vie-for-office-281b375a"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    }
@@ -592,6 +604,10 @@
    {
     "name": "BallotReady: DC State Board of Education, Ward 5 (current officeholder)",
     "url": "https://www.ballotready.org/positions/district-of-columbia-district-of-columbia-state-board-of-education-member-ward-5"
+   },
+   {
+    "name": "AFRO / HU News Service: Ward 5 parents raise concerns about education as new board representatives vie for office (Oct 10, 2026)",
+    "url": "https://www.afro.com/washington-dc/ward-5-parents-raise-concerns-about-education-as-new-board-representatives-vie-for-office-281b375a"
    }
   ],
   "confidence": "verified"

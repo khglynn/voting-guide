@@ -330,10 +330,6 @@
       {
         "name": "St. Louis Public Radio: Zimmerman wins Democratic nomination (Aug. 4 county primary results)",
         "url": "https://www.stlpr.org/government-politics-issues/2026-08-04/st-louis-county-executive-zimmerman-williams-mosley"
-      },
-      {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
       }
     ],
     "confidence": "sourced"
@@ -359,7 +355,7 @@
         "incumbent": false,
         "website": "https://markosmack.com/",
         "website_confidence": "sourced",
-        "background": "Army veteran (deployed to Afghanistan; Bronze Star, per his site as summarized by The Ballot Brief); director of government relations for IAPMO, a plumbing-code and product-certification group. Most recently ran for state treasurer.",
+        "background": "Army veteran and director of government relations for IAPMO, a plumbing-code and product-certification group. Most recently ran for state treasurer.",
         "own_words": [
           {
             "text": "Pledges to improve county roads and sidewalks and to look for wasteful spending in the county budget (St. Louis Public Radio's summary).",
@@ -392,10 +388,6 @@
       {
         "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
-      },
-      {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
       }
     ],
     "confidence": "sourced"
@@ -441,10 +433,6 @@
       {
         "name": "Webster-Kirkwood Times (Oct. 31, 2022): Clancy vs. Bailey for County Council District 5 (district area)",
         "url": "https://www.timesnewspapers.com/webster-kirkwoodtimes/clancy-vs-bailey-for-st-louis-county-council-district-5/article_da1be1ea-5602-11ed-8ef5-97532721bf6a.html"
-      },
-      {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
       }
     ],
     "confidence": "sourced"
@@ -498,11 +486,6 @@
             "text": "Known for a focus on government transparency and support for the St. Louis County Police Department and other public safety agencies (St. Louis Public Radio's description).",
             "is_quote": false,
             "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
-          },
-          {
-            "text": "Campaign site, as summarized by The Ballot Brief, highlights economic development projects, veterans services including the Veterans Treatment Court, and public safety.",
-            "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
           }
         ],
         "lwv_status": "unknown",
@@ -513,10 +496,6 @@
       {
         "name": "St. Louis Public Radio: St. Louis Voter Guide, Nov. 2026 (updated through Oct. 15)",
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
-      },
-      {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
       },
       {
         "name": "St. Louis Public Radio (Oct. 15, 2026): Harder wants a fourth term; Kiehne wants to stop him",
@@ -533,7 +512,7 @@
     "district": "CD-1",
     "scope_plain": "Voters in Missouri's 1st Congressional District: all of the City of St. Louis and much of north and central St. Louis County, including all of Clayton, Rock Hill and part of Webster Groves (2022 map, used again in 2026).",
     "office_explainer": "One of Missouri's eight members of the U.S. House. Votes on federal laws, taxes and spending.",
-    "why_it_matters": "Bell is finishing his first term in a district St. Louis Public Radio calls overwhelmingly Democratic. The 2026 race uses the 2022 lines no matter how statewide Prop A turns out; a YES on Prop A would change the map starting in 2028. The U.S. Supreme Court's Sept. 25 order and the Secretary of State both say the 2022 map is used in November. Nominees were picked in the Aug. 4 primary, which used the 2025 map, so some voters now sit in a different district than in August.",
+    "why_it_matters": "Bell is finishing his first term in a district St. Louis Public Radio calls overwhelmingly Democratic. The 2026 race uses the 2022 lines no matter how statewide Prop A turns out; a yes on Prop A would change the map starting in 2028. The U.S. Supreme Court's Sept. 25 order and the Secretary of State both say the 2022 map is used in November. Nominees were picked in the Aug. 4 primary, which used the 2025 map, so some voters now sit in a different district than in August.",
     "vote_for": 1,
     "incumbent": "Wesley Bell",
     "open_seat": false,
@@ -715,9 +694,9 @@
     "district": "SD-4",
     "scope_plain": "Voters in State Senate District 4: central St. Louis City (around Forest Park and Tower Grove Park) plus Maplewood, Richmond Heights, Brentwood, most of Clayton, Rock Hill, Shrewsbury and the north and east edges of Webster Groves.",
     "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
-    "why_it_matters": "Unopposed. No Republican filed. The Ballot Brief's roster does not list Mitten as the sitting senator, so this appears to be an open seat.",
+    "why_it_matters": "Unopposed; no Republican filed. Open seat: Sen. Karla May is not on the ballot.",
     "vote_for": 1,
-    "incumbent": null,
+    "incumbent": "Karla May (not on the ballot)",
     "open_seat": true,
     "term_years": 4,
     "is_retention": false,
@@ -728,12 +707,12 @@
         "incumbent": false,
         "website": "https://ginamitten.com/",
         "website_confidence": "unverified",
-        "background": "Attorney; former Richmond Heights City Council member; served eight years in the Missouri House, including as caucus chair and assistant floor leader.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): funding first responders and community-police partnerships; universal background checks and red flag laws; public education.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -746,15 +725,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-sd-14",
@@ -764,9 +743,9 @@
     "district": "SD-14",
     "scope_plain": "Voters in State Senate District 14 (north and central St. Louis County, including University City and Olivette, and the north end of Clayton).",
     "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
-    "why_it_matters": "Neither candidate is listed as the incumbent. Only the north end of Clayton (63105) is in this district among the three towns in this guide.",
+    "why_it_matters": "Open seat: Sen. Brian Williams ran for county executive instead and is not on the ballot. Only the north end of Clayton (63105) is in this district among the three towns in this guide.",
     "vote_for": 1,
-    "incumbent": null,
+    "incumbent": "Brian Williams (not on the ballot)",
     "open_seat": true,
     "term_years": 4,
     "is_retention": false,
@@ -780,9 +759,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): stronger families, better schools, safer neighborhoods and more jobs.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -794,12 +773,12 @@
         "incumbent": false,
         "website": "https://raychelproudie.com/",
         "website_confidence": "unverified",
-        "background": "State representative from St. Louis County since 2019, with a background in education and mental health.",
+        "background": "Sitting state representative for House District 73.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): maternal health care and domestic violence services; restoring workforce programs such as the AFL-CIO MO Works program; transparency for LLCs.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -812,15 +791,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-sd-24",
@@ -830,7 +809,7 @@
     "district": "SD-24",
     "scope_plain": "Voters in State Senate District 24 (central St. Louis County, including Ladue, Kirkwood, Creve Coeur and Valley Park). Only the edges of 63105, 63119 and 63011 may fall here.",
     "office_explainer": "One of 34 state senators. Writes state laws, passes the budget and confirms the governor's appointees.",
-    "why_it_matters": "McCreery, the incumbent, faces a Republican challenger. For most Clayton, Webster Groves and Ballwin voters this race will NOT be on the ballot.",
+    "why_it_matters": "McCreery, the incumbent, faces a Republican challenger. For most Clayton, Webster Groves and Ballwin voters this race will not be on the ballot.",
     "vote_for": 1,
     "incumbent": "Tracy McCreery",
     "open_seat": false,
@@ -843,12 +822,12 @@
         "incumbent": false,
         "website": "https://www.wrobleyformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Small-business owner who founded Madyon Consulting, which works with nonprofits; finance degree from Miami University.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): literacy and keeping schools focused on education; lower taxes and fewer regulatory barriers for small businesses; supporting law enforcement and early childhood education.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -860,12 +839,12 @@
         "incumbent": true,
         "website": "https://tracymccreery.com/",
         "website_confidence": "unverified",
-        "background": "State senator for District 24 after four terms in the Missouri House. Earlier worked in sales and management, for Gov. Bob Holden's administration, and for Planned Parenthood of the St. Louis Region and Citizens for Missouri's Children.",
+        "background": "Sitting state senator for District 24.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): fully funding public schools and raising teacher pay; more property tax relief and affordable housing; expanding postpartum Medicaid.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -878,15 +857,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-83",
@@ -909,12 +888,12 @@
         "incumbent": true,
         "website": "https://www.rayreedmo.com/",
         "website_confidence": "unverified",
-        "background": "First-term state representative for District 83.",
+        "background": "Sitting state representative for District 83.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): defending reproductive freedom; protecting LGBTQ+ families; supporting public education.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -929,9 +908,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): constitutional representation; protecting liberty from government overreach.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -944,15 +923,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-86",
@@ -975,12 +954,12 @@
         "incumbent": true,
         "website": "https://halesformissouri.com/",
         "website_confidence": "unverified",
-        "background": "University City 1st Ward council member since 2018; formerly on the city's Traffic Commission.",
+        "background": "Sitting state representative for District 86.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): government transparency, including live-streamed meetings; economic development; infrastructure accountability.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -993,15 +972,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-88",
@@ -1024,12 +1003,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Worked in global logistics and as a civilian program-management contractor on Air Force, Navy and Defense Department contracts (official House biography, per The Ballot Brief).",
+        "background": "Sitting state representative for District 88.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1041,12 +1020,12 @@
         "incumbent": false,
         "website": "https://jennifertrickeyformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Mother from the Fenton, Eureka and Ellisville area who volunteers with food banks and civic engagement groups.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): holding the legislature accountable to statewide ballot measures approved by voters.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1059,15 +1038,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-89",
@@ -1077,7 +1056,7 @@
     "district": "HD-89",
     "scope_plain": "Voters in House District 89 (Frontenac and Town and Country area; may include the northeast edge of 63011).",
     "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
-    "why_it_matters": "Incumbent Republican faces a Democratic challenger; both are physicians.",
+    "why_it_matters": "Incumbent Republican faces a Democratic challenger.",
     "vote_for": 1,
     "incumbent": "George Hruza",
     "open_seat": false,
@@ -1090,12 +1069,12 @@
         "incumbent": true,
         "website": "https://hruzaformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Dermatologist and Mohs surgeon; came to the U.S. from Czechoslovakia at 14; past president of the American Academy of Dermatology and the Missouri State Medical Association.",
+        "background": "Sitting state representative for District 89.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): addressing inflation and government spending; education focused on workplace preparation; police funding and public safety.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1107,12 +1086,12 @@
         "incumbent": false,
         "website": "https://troopformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Surgeon; directed trauma services and surgical education at Mercy Hospital St. Louis for 26 years; now teaches medical ethics.",
+        "background": null,
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1125,15 +1104,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-90",
@@ -1156,12 +1135,12 @@
         "incumbent": true,
         "website": "https://markboyko.com/",
         "website_confidence": "unverified",
-        "background": "First-term representative; attorney representing workers since 2007; six years on the Kirkwood School Board.",
+        "background": "Sitting state representative for District 90.",
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): health care and abortion access; public education funding and workforce development; livable wages and labor protections.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1174,15 +1153,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-91",
@@ -1205,12 +1184,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Physical therapist before joining the legislature; vice president of the Webster Groves Board of Education (official House biography, per The Ballot Brief).",
+        "background": "Sitting state representative for District 91.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1223,15 +1202,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-92",
@@ -1254,12 +1233,12 @@
         "incumbent": false,
         "website": "https://abram4missouri.com/",
         "website_confidence": "unverified",
-        "background": "Senior manufacturing manager at Boeing; member of the St. Joseph Croatian Catholic Parish executive council.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): supporting law enforcement; improving schools.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1271,12 +1250,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Attended Lindenwood University; worked as a Broadway actor and a teacher.",
+        "background": "Sitting state representative for District 92.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1289,15 +1268,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-96",
@@ -1320,12 +1299,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Manages risk and benefits for companies; finance degree from DePaul University (official House biography, per The Ballot Brief).",
+        "background": "Sitting state representative for District 96.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1337,12 +1316,12 @@
         "incumbent": false,
         "website": "https://www.vitaleformo.com/",
         "website_confidence": "unverified",
-        "background": "Worked at the U.S. Department of Veterans Affairs helping veterans with vision loss, then as lead accessibility specialist in the U.S. Department of Education's civil rights office.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): public school funding; earned sick time and union-led apprenticeships; lower child care, health care and utility costs.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1357,9 +1336,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1372,15 +1351,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-98",
@@ -1406,9 +1385,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1420,12 +1399,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Employment lawyer in St. Louis; law degree from UMKC (official House biography, per The Ballot Brief).",
+        "background": "Sitting state representative for District 98.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1438,15 +1417,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-99",
@@ -1456,9 +1435,9 @@
     "district": "HD-99",
     "scope_plain": "Voters in House District 99: central and south Clayton plus Ladue and Olivette areas (and possibly the Rock Hill and Warson Woods edge of 63119).",
     "office_explainer": "One of 163 state representatives. Writes state laws and the state budget in Jefferson City.",
-    "why_it_matters": "Unopposed; no Republican filed. The Ballot Brief does not list Schafer as the sitting member, so this appears to be an open seat.",
+    "why_it_matters": "Unopposed; no Republican filed. Open seat: Rep. Ian Mackey is not on the ballot.",
     "vote_for": 1,
-    "incumbent": null,
+    "incumbent": "Ian Mackey (not on the ballot)",
     "open_seat": true,
     "term_years": 2,
     "is_retention": false,
@@ -1469,12 +1448,12 @@
         "incumbent": false,
         "website": "https://votetori.com/",
         "website_confidence": "unverified",
-        "background": "Attorney; director of policy and campaigns at the ACLU of Missouri.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): economic opportunity and affordable living; strong public schools; infrastructure and environmental protection.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1487,15 +1466,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-100",
@@ -1518,12 +1497,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Previously worked at the Missouri Higher Education Loan Authority (MOHELA) and the Show-Me Institute (official House biography, per The Ballot Brief).",
+        "background": "Sitting state representative for District 100.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1535,12 +1514,12 @@
         "incumbent": false,
         "website": "https://perkinsformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Fundraising professional at Washington University; spent more than 15 years working internationally with the United Nations before returning home in 2021.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): public tax dollars for public rather than private schools; earned sick leave; abortion access under the state constitution.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1552,12 +1531,12 @@
         "incumbent": false,
         "website": "https://newhouse100.com/",
         "website_confidence": "unverified",
-        "background": "Longtime Ballwin resident.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): fixing and maintaining local roads; strengthening Missouri's education system.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1570,15 +1549,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-101",
@@ -1601,12 +1580,12 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Attorney with a law practice in Chesterfield; served two terms on the Chesterfield City Council.",
+        "background": "Sitting state representative for District 101.",
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1618,12 +1597,12 @@
         "incumbent": false,
         "website": "https://paulformo.com/",
         "website_confidence": "unverified",
-        "background": "Has worked as a corporate revenue accountant, software analyst and data engineer, and small-business operator.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): fully funding public schools and universal pre-K; capping out-of-pocket costs for medications such as insulin; safer roads and public transit.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1638,9 +1617,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "No campaign statements collected in this pass.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1653,15 +1632,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "mo-hd-110",
@@ -1684,12 +1663,12 @@
         "incumbent": false,
         "website": "https://nilesformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Managing director of Missouri Tax Relief Now; helped lead efforts for the senior property tax freeze.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): working with law enforcement on neighborhood safety; continuing to lower property taxes.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1701,12 +1680,12 @@
         "incumbent": false,
         "website": "https://claireformissouri.com/",
         "website_confidence": "unverified",
-        "background": "Washington University computer science graduate and former programmer; MBA in nonprofit management; works with Civitas, a St. Louis nonprofit that mentors high school students.",
+        "background": null,
         "own_words": [
           {
-            "text": "Campaign site priorities (as summarized by The Ballot Brief): public education funding; roads and bridges; representing District 110 constituents directly.",
+            "text": "Not collected yet. An earlier summary came from an AI-written aggregator and was removed; see the campaign site.",
             "is_quote": false,
-            "source": "https://www.theballotbrief.com/state/missouri/st-louis-county"
+            "source": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1719,15 +1698,15 @@
         "url": "https://www.sos.mo.gov/CMSImages/ElectionCandidates/2026GeneralElectionCertifiedCandidates.pdf"
       },
       {
-        "name": "The Ballot Brief: St. Louis County roster (AI-assisted aggregator; backgrounds and priorities unverified)",
-        "url": "https://www.theballotbrief.com/state/missouri/st-louis-county"
-      },
-      {
         "name": "Election Deets (Delilah) district boundary data: Census TIGER Missouri House and Senate districts (2022 plans), checked by this guide against points in each town",
         "url": "https://delilahusa.com/developers/request"
+      },
+      {
+        "name": "Missouri House and Senate member rosters (sitting members by district), via the Delilah legislative-data API",
+        "url": "https://api.delilahusa.com/v1/legislators?state=MO"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "stlco-retention-stewart",

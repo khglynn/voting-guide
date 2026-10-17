@@ -9020,46 +9020,6 @@
     "confidence": "verified"
   },
   {
-    "endorser_id": "ny-democratic-party",
-    "target_id": "ny-us-house-19",
-    "status": "endorsed",
-    "choice": "Josh Riley",
-    "why": "Democratic nominee: on the Democratic line of the official ballot list.",
-    "url": "https://thegreenpapers.com/G26/NY",
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "ny-republican-party",
-    "target_id": "ny-us-house-19",
-    "status": "endorsed",
-    "choice": "Peter Karl Oberacker, Jr.",
-    "why": "Republican nominee: on the Republican line of the official ballot list.",
-    "url": "https://thegreenpapers.com/G26/NY",
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "ny-working-families-party",
-    "target_id": "ny-us-house-19",
-    "status": "endorsed",
-    "choice": "Josh Riley",
-    "why": "Working Families nominee: on the Working Families line of the official ballot list.",
-    "url": "https://thegreenpapers.com/G26/NY",
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "ny-conservative-party",
-    "target_id": "ny-us-house-19",
-    "status": "endorsed",
-    "choice": "Peter Karl Oberacker, Jr.",
-    "why": "Conservative nominee: on the Conservative line of the official ballot list.",
-    "url": "https://thegreenpapers.com/G26/NY",
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
     "endorser_id": "nyt-eb",
     "target_id": "ny-us-house-19",
     "status": "no_position",
@@ -9180,46 +9140,6 @@
     "confidence": "verified"
   },
   {
-    "endorser_id": "ny-democratic-party",
-    "target_id": "callicoon-town-supervisor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Democratic nominee found in the county filings available.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "ny-republican-party",
-    "target_id": "callicoon-town-supervisor",
-    "status": "endorsed",
-    "choice": "Thomas R. Bose",
-    "why": "Republican nominee: on the Republican line of the official ballot list.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ny-working-families-party",
-    "target_id": "callicoon-town-supervisor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Working Families nominee found in the county filings available.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "ny-conservative-party",
-    "target_id": "callicoon-town-supervisor",
-    "status": "endorsed",
-    "choice": "Thomas R. Bose",
-    "why": "Conservative nominee: on the Conservative line of the official ballot list.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "verified"
-  },
-  {
     "endorser_id": "nyt-eb",
     "target_id": "callicoon-town-supervisor",
     "status": "no_position",
@@ -9236,46 +9156,6 @@
     "choice": null,
     "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
     "url": "https://www.vote411.org/new-york",
-    "date": null,
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ny-democratic-party",
-    "target_id": "callicoon-town-highway-superintendent",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Democratic nominee found in the county filings available.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "ny-republican-party",
-    "target_id": "callicoon-town-highway-superintendent",
-    "status": "endorsed",
-    "choice": "Ryan T. Bose",
-    "why": "Republican nominee: on the Republican line of the official ballot list.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "verified"
-  },
-  {
-    "endorser_id": "ny-working-families-party",
-    "target_id": "callicoon-town-highway-superintendent",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Working Families nominee found in the county filings available.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "ny-conservative-party",
-    "target_id": "callicoon-town-highway-superintendent",
-    "status": "endorsed",
-    "choice": "Ryan T. Bose",
-    "why": "Conservative nominee: on the Conservative line of the official ballot list.",
-    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Nominations%20by%20Independent%20Petition%20or%20Caucus%2006.25.2026.pdf",
     "date": null,
     "confidence": "verified"
   },
@@ -9348,5 +9228,505 @@
     "url": "https://suozziforcongress.com/",
     "date": null,
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-us-house-19",
+    "status": "endorsed",
+    "choice": "Josh Riley",
+    "why": "Democratic nominee: on the Democratic line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-us-house-19",
+    "status": "endorsed",
+    "choice": "Peter K. Oberacker",
+    "why": "Republican nominee: on the Republican line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-us-house-19",
+    "status": "endorsed",
+    "choice": "Josh Riley",
+    "why": "Working Families nominee: on the Working Families line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-us-house-19",
+    "status": "endorsed",
+    "choice": "Peter K. Oberacker",
+    "why": "Conservative nominee: on the Conservative line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-sd-51",
+    "status": "endorsed",
+    "choice": "Michele Frazier",
+    "why": "Democratic nominee: on the Democratic line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-sd-51",
+    "status": "endorsed",
+    "choice": "Christopher W. Tague",
+    "why": "Republican nominee: on the Republican line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-sd-51",
+    "status": "endorsed",
+    "choice": "Michele Frazier",
+    "why": "Working Families nominee: on the Working Families line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-sd-51",
+    "status": "endorsed",
+    "choice": "Christopher W. Tague",
+    "why": "Conservative nominee: on the Conservative line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-ad-100",
+    "status": "endorsed",
+    "choice": "Paula Elaine Kay",
+    "why": "Democratic nominee: on the Democratic line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-ad-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-ad-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-ad-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-ad-101",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Democratic line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-ad-101",
+    "status": "endorsed",
+    "choice": "Brian M. Maher",
+    "why": "Republican nominee: on the Republican line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-ad-101",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-ad-101",
+    "status": "endorsed",
+    "choice": "Brian M. Maher",
+    "why": "Conservative nominee: on the Conservative line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "ny-supreme-court-jd3",
+    "status": "endorsed",
+    "choice": "Amy E. Joyce; Jennifer G. Sober",
+    "why": "Democratic nominee: on the Democratic line of the NYS Board of Elections certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "ny-supreme-court-jd3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "ny-supreme-court-jd3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "ny-supreme-court-jd3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Accessible%202026%20General%20Ballot%20Certification%209.17.2026.pdf",
+    "date": "2026-09-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "callicoon-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Democratic line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "callicoon-town-supervisor",
+    "status": "endorsed",
+    "choice": "Thomas R. Bose",
+    "why": "Republican nominee: on the Republican line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "callicoon-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "callicoon-town-supervisor",
+    "status": "endorsed",
+    "choice": "Thomas R. Bose",
+    "why": "Conservative nominee: on the Conservative line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "callicoon-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Democratic line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "callicoon-town-highway-superintendent",
+    "status": "endorsed",
+    "choice": "Ryan T. Bose",
+    "why": "Republican nominee: on the Republican line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "callicoon-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "callicoon-town-highway-superintendent",
+    "status": "endorsed",
+    "choice": "Ryan T. Bose",
+    "why": "Conservative nominee: on the Conservative line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "delaware-town-supervisor",
+    "status": "endorsed",
+    "choice": "Scott DuBois",
+    "why": "Democratic nominee: on the Democratic line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "delaware-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "delaware-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "delaware-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "delaware-town-clerk-tax-collector",
+    "status": "endorsed",
+    "choice": "Leila McCullough",
+    "why": "Democratic nominee: on the Democratic line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "delaware-town-clerk-tax-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "delaware-town-clerk-tax-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "delaware-town-clerk-tax-collector",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Democratic line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-democratic-party",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "endorsed",
+    "choice": "Christopher Hermann",
+    "why": "Democratic nominee: on the Democratic line of the Sullivan County certified ballot list.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-republican-party",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Republican line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-working-families-party",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Working Families line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "ny-conservative-party",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "No candidate on the Conservative line in this race.",
+    "url": "https://www.sullivanny.gov/sites/default/files/departments/boe/Sullivan%20County%20GE26%20Ballot%20Certification%20for%20website.pdf",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "delaware-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Times does not endorse in New York races (policy since August 2024).",
+    "url": "https://www.nytimes.com/section/opinion/editorials",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "delaware-town-supervisor",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Times does not endorse in New York races (policy since August 2024).",
+    "url": "https://www.nytimes.com/section/opinion/editorials",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "delaware-town-council-vacancy",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "nyt-eb",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Times does not endorse in New York races (policy since August 2024).",
+    "url": "https://www.nytimes.com/section/opinion/editorials",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-nys",
+    "target_id": "delaware-town-highway-superintendent",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League of Women Voters never endorses candidates. It publishes candidate answers on VOTE411 instead.",
+    "url": "https://www.vote411.org/new-york",
+    "date": null,
+    "confidence": "verified"
   }
 ]

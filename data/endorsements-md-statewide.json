@@ -64,7 +64,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Sun's opinion section ran guest pieces against Question 3 on Oct 4 (Sen. Justin Ready), Oct 8 ('Question 3 is just another power grab') and Oct 9 ('This liberal is voting against Question 3'), but none could be confirmed as the editorial board's own position (site blocks fetches). Re-check the editorials page.",
+    "why": "The Sun's opinion section ran guest pieces against Question 3 on Oct 4 (Sen. Justin Ready), Oct 8 ('Question 3 is just another power grab') and Oct 9 ('This liberal is voting against Question 3'), but none could be confirmed as the editorial board's own position.",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -422,19 +422,19 @@
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-governor",
-    "status": "endorsed",
-    "choice": "Wes Moore and Aruna Miller",
-    "why": "Listed on the Moore campaign's endorsement page; the federation's own slate is an Airtable embed that could not be read.",
-    "url": "https://wesmoore.com/endorsements/",
+    "status": "not_found",
+    "choice": null,
+    "why": "The federation's 2026 slate is an embedded table we could not read. The earlier source, the Moore campaign's endorsement page, is its 2022 list, so it does not show a 2026 endorsement.",
+    "url": null,
     "date": null,
-    "confidence": "sourced"
+    "confidence": "unverified"
   },
   {
     "endorser_id": "mddc-afl-cio",
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -444,7 +444,7 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -474,7 +474,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -494,157 +494,157 @@
     "target_id": "md-governor",
     "status": "endorsed",
     "choice": "Wes Moore and Aruna Miller",
-    "why": "Listed on the Moore campaign's endorsement page.",
-    "url": "https://wesmoore.com/endorsements/",
-    "date": null,
+    "why": "MSEA's Representative Assembly voted to back Moore's reelection with 89% of delegates, citing his school funding and work on the educator shortage.",
+    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
+    "date": "2025-10-21",
     "confidence": "sourced"
   },
   {
     "endorser_id": "md-state-education-association",
     "target_id": "md-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-state-education-association",
-    "target_id": "md-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-state-education-association",
-    "target_id": "md-retention-friedman",
-    "status": "no_position",
-    "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
-    "url": null,
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "md-state-education-association",
-    "target_id": "md-question-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-state-education-association",
-    "target_id": "md-question-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-state-education-association",
-    "target_id": "md-question-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-retention-friedman",
-    "status": "no_position",
-    "choice": null,
-    "why": "Does not take positions on judicial retention questions.",
-    "url": null,
-    "date": null,
-    "confidence": "sourced"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-question-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-question-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-chamber-of-commerce",
-    "target_id": "md-question-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
-  },
-  {
-    "endorser_id": "md-lcv",
-    "target_id": "md-governor",
     "status": "endorsed",
-    "choice": "Wes Moore and Aruna Miller",
-    "why": "Listed on the Moore campaign's endorsement page.",
-    "url": "https://wesmoore.com/endorsements/",
+    "choice": "Brooke Elizabeth Lierman",
+    "why": "MSEA's Representative Assembly voted to back Lierman's reelection with 95% of delegates, citing her work to close the tax gap.",
+    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
+    "date": "2025-10-21",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-attorney-general",
+    "status": "endorsed",
+    "choice": "Anthony G. Brown",
+    "why": "MSEA's Representative Assembly voted to back Brown's reelection with 95% of delegates, citing his defense of school funding.",
+    "url": "https://smnewsnet.com/archives/552713/governor-comptroller-attorney-general-receive-76000-educators-support-at-maryland-state-education-association/",
+    "date": "2025-10-21",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
     "date": null,
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-state-education-association",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-comptroller",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-retention-friedman",
+    "status": "no_position",
+    "choice": null,
+    "why": "Does not take positions on judicial retention questions.",
+    "url": null,
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-chamber-of-commerce",
+    "target_id": "md-question-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "We did not find a position from this group.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 pick found. The earlier source, the Moore campaign's endorsement page, is its 2022 list (it still names the Washington Post and Baltimore Sun boards and calls Alsobrooks county executive), so it does not show a 2026 endorsement.",
+    "url": null,
+    "date": null,
+    "confidence": "unverified"
   },
   {
     "endorser_id": "md-lcv",
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -654,7 +654,7 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -674,7 +674,7 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -684,7 +684,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -694,7 +694,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -704,7 +704,7 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -714,7 +714,7 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -724,7 +724,7 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -744,7 +744,7 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -754,7 +754,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -764,7 +764,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -774,7 +774,7 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -784,7 +784,7 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -794,7 +794,7 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -814,7 +814,7 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -824,7 +824,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -834,7 +834,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -844,7 +844,7 @@
     "target_id": "md-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -854,7 +854,7 @@
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -864,7 +864,7 @@
     "target_id": "md-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -884,7 +884,7 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -894,7 +894,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -904,7 +904,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -912,19 +912,19 @@
   {
     "endorser_id": "md-fop",
     "target_id": "md-governor",
-    "status": "endorsed",
-    "choice": "Wes Moore and Aruna Miller",
-    "why": "'FOP Maryland State Lodge' is listed on the Moore campaign's endorsement page.",
-    "url": "https://wesmoore.com/endorsements/",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 pick for governor found. The Moore campaign page that listed the FOP is its 2022 list; the FOP endorsed Moore in August 2022. In 2026 the FOP endorsed the Republican, Rutledge, for attorney general.",
+    "url": null,
     "date": null,
-    "confidence": "sourced"
+    "confidence": "unverified"
   },
   {
     "endorser_id": "md-fop",
     "target_id": "md-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -974,7 +974,7 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -984,7 +984,7 @@
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"
@@ -994,7 +994,7 @@
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this pass; open the endorser's page.",
+    "why": "We did not find a position from this group.",
     "url": null,
     "date": null,
     "confidence": "unverified"

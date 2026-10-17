@@ -4,7 +4,7 @@
     "name": "AL.com / Alabama Media Group editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Alabama's largest news organization (Birmingham News, Huntsville Times, Mobile Press-Register legacy). Its opinion page could not be opened this run (site blocked), and no 2026 endorsement editorial surfaced in search. It last made a widely covered candidate call in 2017 (against Roy Moore). Treated as not endorsing in 2026 until an editorial is found.",
+    "lean_basis": "Alabama's largest news organization (Birmingham News, Huntsville Times, Mobile Press-Register legacy). Its opinion page blocks automated reading, and no 2026 endorsement editorial surfaced in search. It last made a widely covered candidate call in 2017 (against Roy Moore). Treated as not endorsing in 2026 until an editorial is found.",
     "geography": [
       "AL"
     ],
@@ -116,7 +116,7 @@
     "name": "Alabama AFL-CIO",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "State labor federation; endorses through its COPE committee, historically for Democratic candidates. No 2026 general-election slate was found online this run.",
+    "lean_basis": "State labor federation; endorses through its COPE committee, historically for Democratic candidates. No 2026 general-election slate was found online.",
     "geography": [
       "AL"
     ],
@@ -130,7 +130,7 @@
     "name": "Alabama Education Association (A-VOTE)",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Teachers' association; endorses candidates of both parties through its A-VOTE committee, with a focus on public-school funding. No 2026 general-election slate was found online this run.",
+    "lean_basis": "Teachers' association; endorses candidates of both parties through its A-VOTE committee, with a focus on public-school funding. No 2026 general-election slate was found online.",
     "geography": [
       "AL"
     ],
@@ -144,7 +144,7 @@
     "name": "Alabama Arise",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Nonprofit coalition focused on low-income Alabamians; does not endorse candidates but publishes a voter guide and sometimes takes amendment positions. No 2026 amendment positions found this run.",
+    "lean_basis": "Nonprofit coalition focused on low-income Alabamians; does not endorse candidates but publishes a voter guide and sometimes takes amendment positions. No 2026 amendment positions found.",
     "geography": [
       "AL"
     ],
@@ -158,7 +158,7 @@
     "name": "Alabama Policy Institute",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Self-described conservative think tank; has published an amendment guide in past cycles. AG nominee Katherine Robertson is a former vice president. No 2026 amendment guide found this run.",
+    "lean_basis": "Self-described conservative think tank; has published an amendment guide in past cycles. AG nominee Katherine Robertson is a former vice president. No 2026 amendment guide found.",
     "geography": [
       "AL"
     ],

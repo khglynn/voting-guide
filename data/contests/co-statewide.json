@@ -278,7 +278,7 @@
         "background": "Hamilton is a truck driver and business owner from Cañon City. Treibert is his running mate; no public background found.",
         "own_words": [
           {
-            "text": "First priority: \"CUT THE TOP. LEAD BY EXAMPLE. First cut is my own seat.\" Would cut the governor's salary.",
+            "text": "First priority: \"Cut the top. Lead by example. First cut is my own seat.\" Would cut the governor's salary.",
             "is_quote": true,
             "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
           },
@@ -288,7 +288,7 @@
             "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
           },
           {
-            "text": "Would \"ENCOURAGE federal enforcement\" of immigration law and push to repeal Colorado's limits on local cooperation.",
+            "text": "Would \"encourage federal enforcement\" of immigration law and push to repeal Colorado's limits on local cooperation.",
             "is_quote": true,
             "source": "https://www.denverpost.com/2026/10/03/colorado-governor-candidate-qa/"
           }
@@ -871,11 +871,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Justice since January 2014. Before that, seven years as a Denver District Court judge, a litigation partner at a Denver firm, and ten years as a prosecutor in the 18th Judicial District. UVA Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It said he \"demonstrates an admirable work ethic and issues decisions in a timely manner\" and his opinions have \"a clear writing style.\" Survey: 7 attorneys and 24 judges responded.",
+            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It said he \"demonstrates an admirable work ethic and issues decisions in a timely manner\" and his opinions have \"a clear writing style.\" Survey: 7 attorneys and 24 judges responded.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation"
           }
@@ -924,11 +924,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed 2015; retained by voters in 2018. Deputy Chief Judge from January 2022 to January 2026. Spent 25 years as a Deputy State Public Defender before the bench. Smith College, DU Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It called her \"an exemplary jurist\" with \"thoughtful, well-reasoned\" opinions. Every survey respondent agreed she meets standards.",
+            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her \"an exemplary jurist\" with \"thoughtful, well-reasoned\" opinions. Every survey respondent agreed she meets standards.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation"
           }
@@ -977,11 +977,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed 2015. Clerked on the 10th Circuit, spent five years at the Federal Public Defender's Office, then ran her own appellate law firm. Georgetown, NYU Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It praised her preparation and writing but noted \"the length of time required for Judge Harris to issue an opinion as a weakness.\" 93% of survey respondents agreed she meets standards; only 5 attorneys and 22 judges responded.",
+            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her opinions \"clear, well-written, and reasonably timely,\" though lawyers surveyed \"noted the length of time required for Judge Harris to issue an opinion as a weakness.\" 93% of survey respondents agreed she meets standards; only 5 attorneys and 22 judges responded.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation"
           }
@@ -1030,11 +1030,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed 2022; first time on the ballot. Practiced family law at the trial and appellate level and clerked for Justice Gregory Hobbs Jr. Berkeley Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It called her \"an exceptional judicial writer\" with \"a clear and accessible style.\" Every survey respondent agreed she meets standards.",
+            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her \"an exceptional judicial writer\" with \"a clear and accessible style.\" Every survey respondent agreed she meets standards.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation"
           }
@@ -1083,11 +1083,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed January 2024; first time on the ballot. Former Denver Juvenile Court judge and 1st Judicial District magistrate. Washington University, DU Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found she MEETS PERFORMANCE STANDARDS, 9-0. It said her opinions are \"thoughtful, accessible, and well written\" and praised her plain-language writing. Every survey respondent agreed she meets standards.",
+            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It said her opinions are \"thoughtful, accessible, and well written\" and praised her plain-language writing. Every survey respondent agreed she meets standards.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation"
           }
@@ -1136,11 +1136,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed 2022; first time on the ballot. Clerked on the 10th Circuit, practiced at Brownstein Hyatt, then served as an Assistant U.S. Attorney in the appellate division from 2015 to 2022. CU Law.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It said his opinions are \"clear and easy to understand\" and he is \"respectful, curious, and well-prepared\" at argument. Every survey respondent agreed he meets standards.",
+            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It said his opinions are \"clear and easy to understand\" and he is \"respectful, curious, and well-prepared\" at argument. Every survey respondent agreed he meets standards.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation"
           }
@@ -1189,11 +1189,11 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed January 2024; first time on the ballot. Was a trial and appellate litigator in the Colorado Attorney General's Office handling constitutional, voting rights, election and tax cases. CU Law, UT Austin.",
         "own_words": [
           {
-            "text": "The State Commission on Judicial Performance found he MEETS PERFORMANCE STANDARDS, 9-0. It found his opinions \"consistently well-reasoned, fair, and thoughtfully articulated\" and noted \"a strong and confident transition\" to the appellate bench.",
+            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It found his opinions \"consistently well-reasoned, fair, and thoughtfully articulated\" and noted \"a strong and confident transition\" to the appellate bench.",
             "is_quote": false,
             "source": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation"
           }

@@ -164,7 +164,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -174,7 +174,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -184,7 +184,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -194,7 +194,7 @@
     "target_id": "fl-retention-muniz",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -204,7 +204,7 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -214,7 +214,7 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -224,7 +224,7 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -234,7 +234,7 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -244,7 +244,7 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "Sun Sentinel Cabinet and retention picks not opened this run; its slate is likely to mirror the Orlando Sentinel's but that is not confirmed.",
+    "why": "We could not read the Sun Sentinel's Cabinet and retention picks. Its slate may mirror the Orlando Sentinel's, but that is not confirmed.",
     "url": "https://www.sun-sentinel.com/opinion/endorsements/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -424,7 +424,7 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -434,7 +434,7 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -444,7 +444,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -454,7 +454,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -464,7 +464,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -474,7 +474,7 @@
     "target_id": "fl-retention-muniz",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -484,7 +484,7 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -494,7 +494,7 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -504,7 +504,7 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -514,7 +514,7 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -524,7 +524,7 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -534,7 +534,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -544,7 +544,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -554,7 +554,7 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages returned no readable body in this run. Open tampabay.com/opinion/editorials to record them.",
+    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
     "url": "https://www.tampabay.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -564,7 +564,7 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -574,7 +574,7 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -584,7 +584,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -594,7 +594,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -604,7 +604,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -614,7 +614,7 @@
     "target_id": "fl-retention-muniz",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -624,7 +624,7 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -634,7 +634,7 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -644,7 +644,7 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -654,7 +654,7 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -664,7 +664,7 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "TCPalm recommends mainly in Treasure Coast races; its 2026 statewide candidate picks, if any, were not opened this run.",
+    "why": "TCPalm recommends mainly in Treasure Coast races; we found no 2026 statewide candidate pick.",
     "url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1264,7 +1264,7 @@
     "target_id": "fl-us-senate-special",
     "status": "endorsed",
     "choice": "Angie Nixon",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1274,7 +1274,7 @@
     "target_id": "fl-governor",
     "status": "endorsed",
     "choice": "David Jolly",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1284,7 +1284,7 @@
     "target_id": "fl-attorney-general",
     "status": "endorsed",
     "choice": "Jose Javier Rodriguez",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1294,7 +1294,7 @@
     "target_id": "fl-cfo",
     "status": "endorsed",
     "choice": "Annette Taddeo",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1304,7 +1304,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "endorsed",
     "choice": "Joey Mendoza Atkins",
-    "why": "Party nominee (won the Aug 18, 2026 Democratic primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Democratic primary).",
     "url": "https://www.floridadems.org/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1374,7 +1374,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridadems.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1384,7 +1384,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridadems.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1414,7 +1414,7 @@
     "target_id": "fl-governor",
     "status": "endorsed",
     "choice": "Byron Donalds",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1424,7 +1424,7 @@
     "target_id": "fl-attorney-general",
     "status": "endorsed",
     "choice": "James Uthmeier",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1434,7 +1434,7 @@
     "target_id": "fl-cfo",
     "status": "endorsed",
     "choice": "Blaise Ingoglia",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1444,7 +1444,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "endorsed",
     "choice": "Wilton Simpson",
-    "why": "Party nominee (won the Aug 18, 2026 Republican primary). Specific party endorsement page not opened this run.",
+    "why": "Party nominee (won the Aug 18, 2026 Republican primary).",
     "url": "https://florida.gop/",
     "date": "2026-08-18",
     "confidence": "sourced"
@@ -1524,7 +1524,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://florida.gop/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1654,7 +1654,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1664,7 +1664,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1674,7 +1674,7 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://flaflcio.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1694,7 +1694,7 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1704,7 +1704,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1714,7 +1714,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1724,7 +1724,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1794,7 +1794,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1804,7 +1804,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1814,7 +1814,7 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.flchamber.com/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1834,7 +1834,7 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1844,7 +1844,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1854,7 +1854,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -1864,7 +1864,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.nrapvf.org/grades/florida/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2104,7 +2104,7 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2124,7 +2124,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2134,7 +2134,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2144,7 +2144,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2214,7 +2214,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2224,7 +2224,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2234,7 +2234,7 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://feaweb.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2254,7 +2254,7 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2264,7 +2264,7 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2274,7 +2274,7 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2284,7 +2284,7 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2354,7 +2354,7 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -2364,7 +2364,7 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not found in this run. Open the group's 2026 endorsement page to confirm.",
+    "why": "No 2026 endorsement found.",
     "url": "https://www.floridarealtors.org/",
     "date": "2026-10-16",
     "confidence": "unverified"

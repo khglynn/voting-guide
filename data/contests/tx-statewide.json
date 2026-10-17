@@ -5,7 +5,7 @@
     "level": "federal",
     "office": "U.S. Senator",
     "district": null,
-    "scope_plain": "Every Texas voter",
+    "scope_plain": "Every Texas voter. Texas has no straight-ticket option, so you mark each race one at a time, all the way down the ballot. Write-in names are not printed; to vote for one, write the name in.",
     "office_explainer": "One of Texas's two U.S. senators: votes on federal laws, budgets, treaties and judges.",
     "why_it_matters": "An open seat (Sen. John Cornyn lost the Republican primary runoff). The winner serves six years and could help decide which party controls the Senate.",
     "vote_for": 1,
@@ -218,8 +218,8 @@
             "source": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
           },
           {
-            "text": "Campaign site states his platform; not opened during this research run.",
-            "is_quote": false,
+            "text": "Campaign site: \"fighting for Texas families and Texas values, by creating jobs and defending our constitutional rights and freedoms.\"",
+            "is_quote": true,
             "source": "https://www.gregabbott.com"
           }
         ],
@@ -399,8 +399,8 @@
             "source": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
           },
           {
-            "text": "Campaign site states his platform; not opened during this research run.",
-            "is_quote": false,
+            "text": "Campaign site says he fights to \"lower property and business taxes, create jobs and grow our economy, strengthen our grid.\"",
+            "is_quote": true,
             "source": "https://www.danpatrick.org"
           }
         ],
@@ -748,7 +748,7 @@
             "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
           },
           {
-            "text": "No campaign website located during this research run.",
+            "text": "No campaign website found.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
           }
@@ -1349,7 +1349,7 @@
             "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
           },
           {
-            "text": "No campaign website located during this research run.",
+            "text": "No campaign website found.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
           }
@@ -1810,7 +1810,7 @@
             "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
           },
           {
-            "text": "No campaign website located during this research run.",
+            "text": "No campaign website found.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
           }

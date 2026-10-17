@@ -24,7 +24,7 @@
     "target_id": "mo-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "An editorial titled \"Editorial: Vote no on Amendment 3\" exists on stltoday.com, but the fetch redirected to a paywall gate and the year could not be confirmed (the board also ran a \"no on 3\"-adjacent piece in 2024). Open it to confirm.",
+    "why": "An editorial titled \"Editorial: Vote no on Amendment 3\" exists on stltoday.com, but it is behind a paywall and its year could not be confirmed (the board also ran a \"no on 3\"-adjacent piece in 2024).",
     "url": "https://www.stltoday.com/opinion/editorial/editorial-vote-no-on-amendment-3/article_ac09b13d-58c4-5fd0-864b-60cbf68ef6b5.html",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -605,7 +605,7 @@
     "status": "endorsed",
     "choice": "Quentin Wilson",
     "why": "Listed on the federation's 2026 General Election endorsement page.",
-    "url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
+    "url": "https://moaflcio.org/news/2026-endorsements",
     "date": "2026-10-16",
     "confidence": "verified"
   },
@@ -904,7 +904,7 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "NRA-PVF grades Missouri candidates at the linked page; the 2026 auditor grade was not opened (search budget).",
+    "why": "NRA-PVF grades Missouri candidates at the linked page; we did not find a 2026 auditor grade.",
     "url": "https://www.nrapvf.org/grades/missouri",
     "date": "2026-10-16",
     "confidence": "unverified"

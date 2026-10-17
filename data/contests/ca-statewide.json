@@ -80,12 +80,30 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates (Aug 27, 2026)", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements (neither governor candidate submitted one)", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Governor", "url": "https://calmatters.org/california-voter-guide-2026/governor/" },
-      { "name": "LAist/CalMatters: California governor", "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-governor" },
-      { "name": "Axios: Becerra's agenda", "url": "https://www.axios.com/local/san-francisco/2026/10/07/xavier-becerra-california-governor-race-2026" },
-      { "name": "Axios: Hilton's plans", "url": "https://www.axios.com/local/san-diego/2026/10/06/steve-hilton-150k-income-tax-3-dollar-gas-sunbreak-ranch" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates (Aug 27, 2026)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements (neither governor candidate submitted one)",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Governor",
+        "url": "https://calmatters.org/california-voter-guide-2026/governor/"
+      },
+      {
+        "name": "LAist/CalMatters: California governor",
+        "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-governor"
+      },
+      {
+        "name": "Axios: Becerra's agenda",
+        "url": "https://www.axios.com/local/san-francisco/2026/10/07/xavier-becerra-california-governor-race-2026"
+      },
+      {
+        "name": "Axios: Hilton's plans",
+        "url": "https://www.axios.com/local/san-diego/2026/10/06/steve-hilton-150k-income-tax-3-dollar-gas-sunbreak-ranch"
+      }
     ],
     "confidence": "verified"
   },
@@ -160,9 +178,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Lieutenant Governor", "url": "https://calmatters.org/california-voter-guide-2026/lieutenant-governor/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Lieutenant Governor",
+        "url": "https://calmatters.org/california-voter-guide-2026/lieutenant-governor/"
+      }
     ],
     "confidence": "verified"
   },
@@ -237,9 +264,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Secretary of State", "url": "https://calmatters.org/california-voter-guide-2026/secretary-of-state/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Secretary of State",
+        "url": "https://calmatters.org/california-voter-guide-2026/secretary-of-state/"
+      }
     ],
     "confidence": "verified"
   },
@@ -314,9 +350,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Controller", "url": "https://calmatters.org/california-voter-guide-2026/controller/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Controller",
+        "url": "https://calmatters.org/california-voter-guide-2026/controller/"
+      }
     ],
     "confidence": "verified"
   },
@@ -391,9 +436,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Treasurer", "url": "https://calmatters.org/california-voter-guide-2026/treasurer/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Treasurer",
+        "url": "https://calmatters.org/california-voter-guide-2026/treasurer/"
+      }
     ],
     "confidence": "verified"
   },
@@ -468,9 +522,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Attorney General", "url": "https://calmatters.org/california-voter-guide-2026/attorney-general/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Attorney General",
+        "url": "https://calmatters.org/california-voter-guide-2026/attorney-general/"
+      }
     ],
     "confidence": "verified"
   },
@@ -545,10 +608,22 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Insurance Commissioner", "url": "https://calmatters.org/california-voter-guide-2026/insurance-commissioner/" },
-      { "name": "SF Chronicle: first-ever two-Democrat insurance commissioner race", "url": "https://www.sfchronicle.com/opinion/article/insurance-commissioner-california-allen-kim-22321376.php" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Insurance Commissioner",
+        "url": "https://calmatters.org/california-voter-guide-2026/insurance-commissioner/"
+      },
+      {
+        "name": "SF Chronicle: first-ever two-Democrat insurance commissioner race",
+        "url": "https://www.sfchronicle.com/opinion/article/insurance-commissioner-california-allen-kim-22321376.php"
+      }
     ],
     "confidence": "verified"
   },
@@ -623,10 +698,22 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Superintendent", "url": "https://calmatters.org/california-voter-guide-2026/superintendent-of-public-instruction/" },
-      { "name": "CalMatters: primary results, Shaw and Barrera advance", "url": "https://calmatters.org/education/2026/06/primary-election-california-superintendent/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Superintendent",
+        "url": "https://calmatters.org/california-voter-guide-2026/superintendent-of-public-instruction/"
+      },
+      {
+        "name": "CalMatters: primary results, Shaw and Barrera advance",
+        "url": "https://calmatters.org/education/2026/06/primary-election-california-superintendent/"
+      }
     ],
     "confidence": "verified"
   },
@@ -701,9 +788,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements and BOE district map", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Board of Equalization", "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements and BOE district map",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Board of Equalization",
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"
+      }
     ],
     "confidence": "verified"
   },
@@ -778,9 +874,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements and BOE district map", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Board of Equalization", "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements and BOE district map",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Board of Equalization",
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"
+      }
     ],
     "confidence": "verified"
   },
@@ -855,10 +960,22 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements and BOE district map", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Board of Equalization", "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/" },
-      { "name": "BallotReady: Samuel P. Sukaton", "url": "https://www.ballotready.org/people/samuel-p-sukaton" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements and BOE district map",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Board of Equalization",
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"
+      },
+      {
+        "name": "BallotReady: Samuel P. Sukaton",
+        "url": "https://www.ballotready.org/people/samuel-p-sukaton"
+      }
     ],
     "confidence": "verified"
   },
@@ -933,9 +1050,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide, Candidate Statements and BOE district map", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf" },
-      { "name": "CalMatters Voter Guide: Board of Equalization", "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide, Candidate Statements and BOE district map",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/candidate-statements.pdf"
+      },
+      {
+        "name": "CalMatters Voter Guide: Board of Equalization",
+        "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"
+      }
     ],
     "confidence": "verified"
   },
@@ -945,7 +1071,7 @@
     "level": "judicial",
     "office": "Associate Justice, Supreme Court of California",
     "district": null,
-    "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the office for the term provided by law?\" Vote YES to keep her or NO to remove her. No one runs against her.",
+    "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court Kelli M. Evans be elected to the office for the term provided by law?\" Vote YES to keep her or no to remove her. No one runs against her.",
     "office_explainer": "One of seven justices on the state's highest court. The final word on California law.",
     "why_it_matters": "Retention elections are nearly always approved; no California appellate justice has lost one since the 1930s system began, though voters removed three Supreme Court justices in 1986. A majority NO vote would open the seat for the governor to fill.",
     "vote_for": 1,
@@ -959,7 +1085,7 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Associate Justice since 2023, appointed by Gov. Newsom. Previously an Alameda County Superior Court judge, chief deputy legal affairs secretary to Gov. Newsom, special assistant attorney general, and an ACLU of Northern California attorney. UC Davis Law, 1994.",
         "own_words": [
           {
@@ -978,9 +1104,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide: Justices of the Supreme Court", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/justices.pdf" },
-      { "name": "Courts of Appeal: Appellate Retention Elections", "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide: Justices of the Supreme Court",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/justices.pdf"
+      },
+      {
+        "name": "Courts of Appeal: Appellate Retention Elections",
+        "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      }
     ],
     "confidence": "verified"
   },
@@ -990,7 +1125,7 @@
     "level": "judicial",
     "office": "Associate Justice, Supreme Court of California",
     "district": null,
-    "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the office for the term provided by law?\" Vote YES to keep him or NO to remove him. No one runs against him.",
+    "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court Joshua Groban be elected to the office for the term provided by law?\" Vote YES to keep him or no to remove him. No one runs against him.",
     "office_explainer": "One of seven justices on the state's highest court. The final word on California law.",
     "why_it_matters": "Retention elections are nearly always approved; no California appellate justice has lost one since the 1930s system began, though voters removed three Supreme Court justices in 1986. A majority NO vote would open the seat for the governor to fill.",
     "vote_for": 1,
@@ -1004,7 +1139,7 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Associate Justice since 2018, appointed by Gov. Jerry Brown. Previously senior adviser to Gov. Brown (2011-2018), attorney at Munger, Tolles & Olson and Paul, Weiss, and a UCLA law lecturer. Harvard Law, 1998.",
         "own_words": [
           {
@@ -1023,9 +1158,18 @@
       }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Official Voter Information Guide: Justices of the Supreme Court", "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/justices.pdf" },
-      { "name": "Courts of Appeal: Appellate Retention Elections", "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Official Voter Information Guide: Justices of the Supreme Court",
+        "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/justices.pdf"
+      },
+      {
+        "name": "Courts of Appeal: Appellate Retention Elections",
+        "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      }
     ],
     "confidence": "verified"
   },
@@ -1035,7 +1179,7 @@
     "level": "judicial",
     "office": "Court of Appeal, Second Appellate District (retention)",
     "district": "Second Appellate District: Los Angeles, San Luis Obispo, Santa Barbara, Ventura counties",
-    "scope_plain": "Voters in Los Angeles, San Luis Obispo, Santa Barbara and Ventura counties. You vote YES or NO on every justice listed, across all eight divisions, not only the division nearest you. 18 separate yes/no questions.",
+    "scope_plain": "Voters in Los Angeles, San Luis Obispo, Santa Barbara and Ventura counties. You vote YES or no on every justice listed, across all eight divisions, not only the division nearest you. 18 separate yes/no questions.",
     "office_explainer": "Appeals court for LA and three nearby counties. Reviews trial court decisions; most cases end here.",
     "why_it_matters": "Each name is a separate yes/no vote. Justices are appointed by the governor, vetted by a state commission, then face voters at the next governor's election. No appellate justice has lost a retention vote since the system began in the 1930s.",
     "vote_for": 18,
@@ -1044,30 +1188,330 @@
     "term_years": 12,
     "is_retention": true,
     "candidates": [
-      { "name": "Michelle C. Kim", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/michelle-c-kim", "website_confidence": "verified", "background": "Associate Justice, Division One, since 2024.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Gregory J. Weingart", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/gregory-j-weingart", "website_confidence": "verified", "background": "Associate Justice, Division One, since 2022.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Steve Goorvitch", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/stephen-goorvitch", "website_confidence": "verified", "background": "Associate Justice, Division Two, since 2026. Listed as Stephen Goorvitch on the court site.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Anne Richardson", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/anne-richardson", "website_confidence": "verified", "background": "Associate Justice, Division Two, since 2024.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Rashida A. Adams", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/rashida-adams", "website_confidence": "verified", "background": "Presiding Justice, Division Three, since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Mark Hanasono", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/mark-k-hanasono", "website_confidence": "verified", "background": "Associate Justice, Division Three, since 2025.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Helen Zukin", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/helen-zukin", "website_confidence": "verified", "background": "Presiding Justice, Division Four, since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Audra M. Mori", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/audra-m-mori", "website_confidence": "verified", "background": "Associate Justice, Division Four, since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Nicholas Daum", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/nicholas-f-daum-0", "website_confidence": "verified", "background": "Associate Justice, Division Four, since 2026.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Armen Tamzarian", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/armen-tamzarian", "website_confidence": "verified", "background": "Associate Justice, Division Four, since 2025.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Brian M. Hoffstadt", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/brian-m-hoffstadt", "website_confidence": "verified", "background": "Presiding Justice, Division Five. On the court since 2014.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Tari L. Cody", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/tari-l-cody", "website_confidence": "verified", "background": "Presiding Justice, Division Six, since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Kenneth R. Yegan", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/kenneth-r-yegan", "website_confidence": "verified", "background": "Associate Justice, Division Six, since 1990.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Gonzalo C. Martinez", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/gonzalo-c-martinez", "website_confidence": "verified", "background": "Presiding Justice, Division Seven, since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Natalie Stone", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/natalie-p-stone", "website_confidence": "verified", "background": "Associate Justice, Division Seven, since 2024.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "John Wiley", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/john-shepard-wiley-jr", "website_confidence": "verified", "background": "Associate Justice, Division Eight, since 2018.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Matthew A. Scherb", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/matthew-scherb", "website_confidence": "verified", "background": "Associate Justice, Division Eight, since 2025.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Victor G. Viramontes", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/victor-viramontes", "website_confidence": "verified", "background": "Associate Justice, Division Eight, since 2022.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices" }], "lwv_status": "not_asked", "lwv_url": null }
+      {
+        "name": "Michelle C. Kim",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/michelle-c-kim",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One, since 2024.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Gregory J. Weingart",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/gregory-j-weingart",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One, since 2022.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Steve Goorvitch",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/stephen-goorvitch",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Two, since 2026. Listed as Stephen Goorvitch on the court site.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Anne Richardson",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/anne-richardson",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Two, since 2024.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Rashida A. Adams",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/rashida-adams",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Three, since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Mark Hanasono",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/mark-k-hanasono",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three, since 2025.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Helen Zukin",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/helen-zukin",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Four, since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Audra M. Mori",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/audra-m-mori",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Four, since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Nicholas Daum",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/nicholas-f-daum-0",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Four, since 2026.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Armen Tamzarian",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/armen-tamzarian",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Four, since 2025.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Brian M. Hoffstadt",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/brian-m-hoffstadt",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Five. On the court since 2014.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Tari L. Cody",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/tari-l-cody",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Six, since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Kenneth R. Yegan",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/kenneth-r-yegan",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Six, since 1990.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Gonzalo C. Martinez",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/gonzalo-c-martinez",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Seven, since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Natalie Stone",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/natalie-p-stone",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Seven, since 2024.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "John Wiley",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/john-shepard-wiley-jr",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Eight, since 2018.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Matthew A. Scherb",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/matthew-scherb",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Eight, since 2025.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Victor G. Viramontes",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/2dca/bio/victor-viramontes",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Eight, since 2022.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates (pp. 34-36)", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Second District Court of Appeal: Justices", "url": "https://appellate.courts.ca.gov/district-courts/2dca/justices" },
-      { "name": "LAist: Courts of Appeal for LA and OC", "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county" },
-      { "name": "Courts of Appeal: Appellate Retention Elections", "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates (pp. 34-36)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Second District Court of Appeal: Justices",
+        "url": "https://appellate.courts.ca.gov/district-courts/2dca/justices"
+      },
+      {
+        "name": "LAist: Courts of Appeal for LA and OC",
+        "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county"
+      },
+      {
+        "name": "Courts of Appeal: Appellate Retention Elections",
+        "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      }
     ],
     "confidence": "verified"
   },
@@ -1077,7 +1521,7 @@
     "level": "judicial",
     "office": "Court of Appeal, Fourth Appellate District (retention)",
     "district": "Fourth Appellate District: Imperial, Inyo, Orange, Riverside, San Bernardino, San Diego counties",
-    "scope_plain": "Voters in Imperial, Inyo, Orange, Riverside, San Bernardino and San Diego counties. You vote YES or NO on every justice listed across all three divisions, not only your own. Division Three sits in Santa Ana (Orange County); Division One sits in San Diego; Division Two sits in Riverside. 15 separate yes/no questions, on Fullerton and San Diego ballots.",
+    "scope_plain": "Voters in Imperial, Inyo, Orange, Riverside, San Bernardino and San Diego counties. You vote YES or no on every justice listed across all three divisions, not only your own. Division Three sits in Santa Ana (Orange County); Division One sits in San Diego; Division Two sits in Riverside. 15 separate yes/no questions, on Fullerton and San Diego ballots.",
     "office_explainer": "Appeals court for Orange, San Diego, Riverside, San Bernardino, Imperial and Inyo counties.",
     "why_it_matters": "Each name is a separate yes/no vote. One name, Lisa Rodriguez, is a San Diego Superior Court judge newly confirmed to the Division One seat; if retained, her term starts in January. No appellate justice has lost a retention vote since the 1930s.",
     "vote_for": 15,
@@ -1086,27 +1530,279 @@
     "term_years": 12,
     "is_retention": true,
     "candidates": [
-      { "name": "Eran M. Bermudez", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/eran-m-bermudez", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2026.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Jose S. Castillo", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/jose-s-castillo", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Truc T. Do", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/truc-t-do", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2021.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Lisa Rodriguez", "party": null, "incumbent": false, "website": null, "website_confidence": "verified", "background": "San Diego County Superior Court judge, confirmed in 2026 to a Division One seat. Ballot wording: \"Shall San Diego County Superior Court Judge LISA RODRIGUEZ be elected to the office for the term provided by law?\" If retained, her 12-year term begins in January.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "David M. Rubin", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/david-m-rubin", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "William S. Dato", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/william-dato", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2017.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Julia C. Kelety", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/julia-c-kelety", "website_confidence": "verified", "background": "Associate Justice, Division One (San Diego), since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Corey G. Lee", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/corey-g-lee", "website_confidence": "verified", "background": "Associate Justice, Division Two (Riverside), since 2025.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Michael J. Raphael", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/michael-j-raphael", "website_confidence": "verified", "background": "Associate Justice, Division Two (Riverside), since 2018.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Joanne Motoike", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/joanne-motoike", "website_confidence": "verified", "background": "Presiding Justice, Division Three (Santa Ana, Orange County). On the court since 2022.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Nathan R. Scott", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/nathan-r-scott", "website_confidence": "verified", "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2025.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Juliet O. Macaulay", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/juliet-o-macaulay", "website_confidence": "verified", "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2026.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Martha K. Gooding", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/martha-k-gooding", "website_confidence": "verified", "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2023.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Thomas A. Delaney", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/thomas-delaney", "website_confidence": "verified", "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2022.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null },
-      { "name": "Deborah C. Servino", "party": null, "incumbent": true, "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/deborah-c-servino", "website_confidence": "verified", "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2026.", "own_words": [{ "text": "Official bio only; justices do not campaign.", "is_quote": false, "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices" }], "lwv_status": "not_asked", "lwv_url": null }
+      {
+        "name": "Eran M. Bermudez",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/eran-m-bermudez",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2026.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Jose S. Castillo",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/jose-s-castillo",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Truc T. Do",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/truc-t-do",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2021.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Lisa Rodriguez",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "San Diego County Superior Court judge, confirmed in 2026 to a Division One seat. Ballot wording: \"Shall San Diego County Superior Court Judge Lisa Rodriguez be elected to the office for the term provided by law?\" If retained, her 12-year term begins in January.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "David M. Rubin",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/david-m-rubin",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "William S. Dato",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/william-dato",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2017.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Julia C. Kelety",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/julia-c-kelety",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division One (San Diego), since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Corey G. Lee",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/corey-g-lee",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Two (Riverside), since 2025.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Michael J. Raphael",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/michael-j-raphael",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Two (Riverside), since 2018.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Joanne Motoike",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/joanne-motoike",
+        "website_confidence": "verified",
+        "background": "Presiding Justice, Division Three (Santa Ana, Orange County). On the court since 2022.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Nathan R. Scott",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/nathan-r-scott",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2025.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Juliet O. Macaulay",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/juliet-o-macaulay",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2026.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Martha K. Gooding",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/martha-k-gooding",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2023.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Thomas A. Delaney",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/thomas-delaney",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2022.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      },
+      {
+        "name": "Deborah C. Servino",
+        "party": null,
+        "incumbent": true,
+        "website": "https://appellate.courts.ca.gov/district-courts/4dca/bio/deborah-c-servino",
+        "website_confidence": "verified",
+        "background": "Associate Justice, Division Three (Santa Ana, Orange County), since 2026.",
+        "own_words": [
+          {
+            "text": "Official bio only; justices do not campaign.",
+            "is_quote": false,
+            "source": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+          }
+        ],
+        "lwv_status": "not_asked",
+        "lwv_url": null
+      }
     ],
     "sources": [
-      { "name": "CA Secretary of State, Certified List of Candidates (pp. 38-39)", "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" },
-      { "name": "Fourth District Court of Appeal: Justices", "url": "https://appellate.courts.ca.gov/district-courts/4dca/justices" },
-      { "name": "LAist: Courts of Appeal for LA and OC", "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county" },
-      { "name": "Courts of Appeal: Appellate Retention Elections", "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections" }
+      {
+        "name": "CA Secretary of State, Certified List of Candidates (pp. 38-39)",
+        "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      },
+      {
+        "name": "Fourth District Court of Appeal: Justices",
+        "url": "https://appellate.courts.ca.gov/district-courts/4dca/justices"
+      },
+      {
+        "name": "LAist: Courts of Appeal for LA and OC",
+        "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-courts-appeal-justice-la-orange-county"
+      },
+      {
+        "name": "Courts of Appeal: Appellate Retention Elections",
+        "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      }
     ],
     "confidence": "verified"
   }

@@ -60,7 +60,7 @@
     "name": "Injustice Watch: Check Your Judges",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonprofit investigative newsroom. Its judicial guide states: 'Injustice Watch does not make recommendations or endorsements.' It researched all 61 Cook County judges on the 2026 retention ballot and flags controversies, reversals and bar ratings.",
+    "lean_basis": "Nonprofit investigative newsroom. Its judicial guide states: 'Injustice Watch does not make recommendations or endorsements.' It researched the Cook County judges on the 2026 retention ballot and flags controversies, reversals and bar ratings.",
     "geography": [
       "cook-county-il"
     ],
@@ -116,7 +116,7 @@
     "name": "Chicago Federation of Labor",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "Central labor council for Chicago and Cook County (about 300 affiliated unions). Its Nov. 3, 2026 slate endorses the Democratic ticket statewide, Judith Rice for the appellate vacancy, and recommends 'yes' on 58 of the 60 Cook County Circuit Court retention judges (it does not list Ursula Walowski or John J. Mahoney III).",
+    "lean_basis": "Central labor council for Chicago and Cook County (about 300 affiliated unions). Its Nov. 3, 2026 slate endorses the Democratic ticket statewide, Judith Rice for the appellate vacancy, and recommends 'yes' on 58 of the 59 Cook County Circuit Court retention judges on the ballot (it does not list Ursula Walowski).",
     "geography": [
       "cook-county-il"
     ],

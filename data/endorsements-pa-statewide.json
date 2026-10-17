@@ -4,7 +4,7 @@
     "target_id": "pa-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Inquirer board endorses in governor's races (Shapiro, Oct. 9, 2022) and usually publishes statewide endorsements in the last two to three weeks before Election Day. No 2026 governor endorsement had appeared as of Oct. 16, and the City & State endorsement tracker (Oct. 13) lists no newspapers. Re-check the editorials page after Oct. 18.",
+    "why": "The Inquirer board endorses in governor's races (Shapiro, Oct. 9, 2022) and usually publishes statewide endorsements in the last two to three weeks before Election Day. No 2026 governor endorsement had appeared as of Oct. 16, and the City & State endorsement tracker (Oct. 13) lists no newspapers.",
     "url": "https://www.inquirer.com/opinion/editorials/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -114,7 +114,7 @@
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Stacy Garrity / Jason Richey",
-    "why": "The City & State endorsement tracker (Oct. 13, 2026) lists the Pennsylvania Pro-Life Federation and LifePAC of Southwestern Pennsylvania among Garrity's backers. The federation's own page was not opened.",
+    "why": "The City & State endorsement tracker (Oct. 13, 2026) lists the Pennsylvania Pro-Life Federation and LifePAC of Southwestern Pennsylvania among Garrity's backers.",
     "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
     "date": "2026-10-13",
     "confidence": "sourced"
@@ -124,7 +124,7 @@
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Josh Shapiro / Austin Davis",
-    "why": "Giffords and Moms Demand Action both appear on Shapiro's list in the City & State tracker (Oct. 13, 2026). Giffords' own announcement was not opened.",
+    "why": "Giffords and Moms Demand Action both appear on Shapiro's list in the City & State tracker (Oct. 13, 2026).",
     "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
     "date": "2026-10-13",
     "confidence": "sourced"

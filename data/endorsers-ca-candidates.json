@@ -208,7 +208,7 @@
     "name": "California Business Roundtable",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Association of the state's largest employers. Historically active on ballot measures and tax policy rather than candidate endorsements. No 2026 candidate endorsements found; its site was not opened for this run (see memo).",
+    "lean_basis": "Association of the state's largest employers. Historically active on ballot measures and tax policy rather than candidate endorsements. No 2026 candidate endorsements found.",
     "geography": ["CA"],
     "guide_url": "https://www.cbrt.org/",
     "default_on": false,

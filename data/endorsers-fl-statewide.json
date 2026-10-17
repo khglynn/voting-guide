@@ -46,7 +46,7 @@
     "name": "Tampa Bay Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Florida's largest newspaper, owned by the nonprofit Poynter Institute. Announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or returned no body text in this run, so the picks below are not_found rather than guessed.",
+    "lean_basis": "Florida's largest newspaper, owned by the nonprofit Poynter Institute. Announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or unreadable to us, so those picks are recorded as not found rather than guessed.",
     "geography": [
       "FL"
     ],

@@ -4,7 +4,7 @@
     "name": "St. Louis Post-Dispatch editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Largest Missouri daily (Lee Enterprises). Still endorses: it ran primary endorsements in July 2026 (including 'State Auditor Fitzpatrick has earned GOP re-nomination'). Historically endorses mostly Democrats statewide; AllSides rates the news Lean Left. General-election endorsements are paywalled and were not readable in this pass.",
+    "lean_basis": "Largest Missouri daily (Lee Enterprises). Still endorses: it ran primary endorsements in July 2026 (including 'State Auditor Fitzpatrick has earned GOP re-nomination'). Historically endorses mostly Democrats statewide; AllSides rates the news Lean Left. General-election endorsements are paywalled, so none are recorded.",
     "geography": ["MO"],
     "guide_url": "https://www.stltoday.com/opinion/editorial/",
     "default_on": true,

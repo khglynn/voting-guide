@@ -103,7 +103,7 @@
     "level": "state",
     "office": "Governor",
     "district": null,
-    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval. Three names are printed plus a write-in line.",
+    "scope_plain": "Every Alabama voter. Partisan race; covered by the straight-party oval. Two names are printed plus a write-in line.",
     "office_explainer": "Runs the state government, signs or vetoes laws, proposes the budget and appoints agency heads and some judges.",
     "why_it_matters": "Open seat; Gov. Kay Ivey is term-limited after two full terms. The winner sets direction on the state budget, schools, prisons, Medicaid and economic development for four years. Tuberville declined to debate Jones.",
     "vote_for": 1,
@@ -165,34 +165,16 @@
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/alabama"
-      },
-      {
-        "name": "Ronald Burnette Jr.",
-        "party": "Independent",
-        "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Independent candidate who qualified by petition. No campaign website, questionnaire response, or news coverage was found this run; the Alabama Reflector voter guide does not list him.",
-        "own_words": [
-          {
-            "text": "No campaign materials found.",
-            "is_quote": false,
-            "source": "https://alabamareflector.com/voter-guides/contests/algov/"
-          },
-          {
-            "text": "No campaign materials found.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          }
-        ],
-        "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/alabama"
       }
     ],
     "sources": [
       {
-        "name": "Alabama SOS: Mobile County sample ballot (PDF; shows all three names)",
+        "name": "Alabama SOS: Mobile County sample ballot (PDF; shows Jones, Tuberville and a write-in line)",
         "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama SOS: State certification of independent candidates (Aug. 26, 2026; lists only legislative candidates, no one for governor)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElection-StateCertificationofIndependentCandidate.pdf"
       },
       {
         "name": "Alabama SOS: State certification of Republican candidates (Aug. 26, 2026)",
@@ -439,7 +421,7 @@
         "url": "https://alabamareflector.com/2026/09/28/rogers-dobson-lay-out-contrasting-plans-for-alabama-secretary-of-states-office/"
       },
       {
-        "name": "Alabama Reflector voter guide: Secretary of State (fetch failed this run)",
+        "name": "Alabama Reflector voter guide: Secretary of State",
         "url": "https://alabamareflector.com/voter-guides/contests/alsos/"
       }
     ],
@@ -815,7 +797,7 @@
     "level": "judicial",
     "office": "Associate Justice of the Supreme Court, Place 7",
     "district": null,
-    "scope_plain": "Every Alabama voter. Alabama elects its appellate judges in PARTISAN races, so this appears with a party label and is covered by the straight-party oval. Only one name is printed, plus a write-in line.",
+    "scope_plain": "Every Alabama voter. Alabama elects its appellate judges in partisan races, so this appears with a party label and is covered by the straight-party oval. Only one name is printed, plus a write-in line.",
     "office_explainer": "Alabama's highest court. Nine justices decide appeals on state law, from contracts to criminal cases to IVF rulings.",
     "why_it_matters": "Six-year term. The court issued the 2024 ruling that frozen embryos are children, and it decides death-penalty appeals and challenges to state laws. This seat is unopposed on the ballot.",
     "vote_for": 1,
@@ -833,14 +815,9 @@
         "background": "Associate justice since 2018 (appointed, then elected in 2020). Former Houston County circuit judge. No Democratic opponent qualified.",
         "own_words": [
           {
-            "text": "Unopposed; no campaign materials sought this run.",
+            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
             "is_quote": false,
             "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
-          },
-          {
-            "text": "Unopposed; no campaign materials sought this run.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -955,14 +932,9 @@
         "background": "Judge on the Court of Civil Appeals; unopposed.",
         "own_words": [
           {
-            "text": "Unopposed; no campaign materials sought this run.",
+            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
             "is_quote": false,
             "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          },
-          {
-            "text": "Unopposed; no campaign materials sought this run.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1001,14 +973,9 @@
         "background": "Judge on the Court of Civil Appeals; former state representative. Unopposed.",
         "own_words": [
           {
-            "text": "Unopposed; no campaign materials sought this run.",
+            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
             "is_quote": false,
             "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          },
-          {
-            "text": "Unopposed; no campaign materials sought this run.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1047,14 +1014,9 @@
         "background": "Presiding judge of the Court of Criminal Appeals; on the court since 2009. Unopposed.",
         "own_words": [
           {
-            "text": "Unopposed; no campaign materials sought this run.",
+            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
             "is_quote": false,
             "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          },
-          {
-            "text": "Unopposed; no campaign materials sought this run.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -1093,14 +1055,9 @@
         "background": "Former Jefferson County deputy district attorney. Unopposed.",
         "own_words": [
           {
-            "text": "Unopposed; no campaign materials sought this run.",
+            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
             "is_quote": false,
             "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          },
-          {
-            "text": "Unopposed; no campaign materials sought this run.",
-            "is_quote": false,
-            "source": "https://en.wikipedia.org/wiki/2026_Alabama_appellate_court_elections"
           }
         ],
         "lwv_status": "unknown",

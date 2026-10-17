@@ -4,7 +4,7 @@
     "target_id": "or-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary. Re-check oregonlive.com/opinion in late October.",
+    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary.",
     "url": "https://www.oregonlive.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -14,7 +14,7 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary. Re-check oregonlive.com/opinion in late October.",
+    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary.",
     "url": "https://www.oregonlive.com/opinion/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -104,7 +104,7 @@
     "target_id": "or-governor",
     "status": "endorsed",
     "choice": "Christine Drazan",
-    "why": "The state party's Voters' Pamphlet statement does not name candidates; it closes 'VOTE REPUBLICAN.' Recorded as support for the party's nominee. The party's own site was not opened.",
+    "why": "The state party's Voters' Pamphlet statement does not name candidates; it closes 'Vote Republican.' Recorded as support for the party's nominee.",
     "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -114,7 +114,7 @@
     "target_id": "or-us-senate",
     "status": "endorsed",
     "choice": "David Brock Smith",
-    "why": "The state party's Voters' Pamphlet statement does not name candidates; it closes 'VOTE REPUBLICAN.' Recorded as support for the party's nominee. The party's own site was not opened.",
+    "why": "The state party's Voters' Pamphlet statement does not name candidates; it closes 'Vote Republican.' Recorded as support for the party's nominee.",
     "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -124,7 +124,7 @@
     "target_id": "or-governor",
     "status": "endorsed",
     "choice": "Tina Kotek",
-    "why": "Listed as 'OR Labor Federation AFL-CIO' in Kotek's own Voters' Pamphlet endorsement list. Candidate-reported; the federation's own page was not opened.",
+    "why": "Listed as 'OR Labor Federation AFL-CIO' in Kotek's own Voters' Pamphlet endorsement list (candidate-reported).",
     "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -184,7 +184,7 @@
     "target_id": "or-governor",
     "status": "endorsed",
     "choice": "Christine Drazan",
-    "why": "Listed as 'Oregon Coalition of Police & Sheriffs' in Drazan's Voters' Pamphlet endorsement list. Candidate-reported; ORCOPS's own page was not opened.",
+    "why": "Listed as 'Oregon Coalition of Police & Sheriffs' in Drazan's Voters' Pamphlet endorsement list (candidate-reported).",
     "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -194,7 +194,7 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed in any Senate candidate's pamphlet statement; ORCOPS's own page was not opened.",
+    "why": "Not listed in any Senate candidate's pamphlet statement.",
     "url": "https://www.orcops.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -214,7 +214,7 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Not listed in any Senate candidate's pamphlet statement; the Farm Bureau's PAC page was not opened.",
+    "why": "Not listed in any Senate candidate's pamphlet statement.",
     "url": "https://oregonfb.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -244,7 +244,7 @@
     "target_id": "or-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not confirmed. The Oregon Firearms Federation PAC page was not opened in this pass.",
+    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC.",
     "url": "https://www.oregonfirearms.org/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -254,7 +254,7 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "Not confirmed. The Oregon Firearms Federation PAC page was not opened in this pass.",
+    "why": "No endorsement confirmed from the Oregon Firearms Federation PAC.",
     "url": "https://www.oregonfirearms.org/",
     "date": "2026-10-16",
     "confidence": "sourced"

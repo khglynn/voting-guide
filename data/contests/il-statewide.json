@@ -7,7 +7,7 @@
     "district": null,
     "scope_plain": "Every Illinois voter. Open seat: Dick Durbin is retiring after 30 years. One vote; no runoff, no ranked choice. Three names are printed; Naomi Craine (Socialist Workers Party) is a certified write-in and is not printed.",
     "office_explainer": "One of Illinois' two senators in Washington. Votes on federal laws, budgets, treaties and judges.",
-    "why_it_matters": "Six-year term and the first open Illinois Senate seat since 2016. Senators confirm federal judges and cabinet members and decide national spending, taxes, health care and immigration law. The Tribune editorial board, which does not endorse in this race by corporate policy, frames it as a choice between a candidate 'on the far left of the Democratic Party' and one 'on the moderate wing' of the Republican Party.",
+    "why_it_matters": "Six-year term and the first open Illinois Senate seat since 2010. Senators confirm federal judges and cabinet members and decide national spending, taxes, health care and immigration law.",
     "vote_for": 1,
     "incumbent": "Dick Durbin (retiring)",
     "open_seat": true,
@@ -131,7 +131,7 @@
     "district": null,
     "scope_plain": "Every Illinois voter. Governor and lieutenant governor run as one ticket; you cast one vote for the pair. Three tickets are printed. Several write-in tickets are certified but not printed (Taegun Eimer/Libertarian, Griselda Romero/Green, Mike Vick/American Solidarity, and independents Richard Mayers, Misty Metroz, Elizabeth Sebesta, Patricia Tillman, Rafael Varela). No runoff.",
     "office_explainer": "Runs state government, signs or vetoes laws, writes the budget, and appoints agency heads and judicial vacancies.",
-    "why_it_matters": "Four-year term and a rematch of 2022 (Pritzker won by about 12 points). The governor controls a roughly $55 billion state budget, Illinois' response to federal policy, and appointments to boards that run transit, pensions and utilities. Pritzker is seeking a third term; no Illinois governor has won three straight since Jim Thompson. The Tribune does not endorse in this race by corporate policy.",
+    "why_it_matters": "Four-year term and a rematch of 2022 (Pritzker won by about 12 points). The governor controls a roughly $55 billion state budget, Illinois' response to federal policy, and appointments to boards that run transit, pensions and utilities. Pritzker is seeking a third term; no Illinois governor has won three straight since Jim Thompson.",
     "vote_for": 1,
     "incumbent": "JB Pritzker",
     "open_seat": false,
@@ -263,7 +263,7 @@
         "lwv_url": "https://www.vote411.org/illinois"
       },
       {
-        "name": "Robert W. \"Bob\" Fioretti",
+        "name": "Robert W. Fioretti",
         "party": "Republican",
         "incumbent": false,
         "website": "https://www.bobforillinois.com/",
@@ -409,7 +409,7 @@
         "background": "State representative for Chicago's 12th District (Lakeview, Lincoln Park) since 2021; Democratic State Central Committeewoman for the 5th Congressional District. Age 34. Won the March 17 primary with 34.5% over Sen. Karina Villa (32.5%) and Lake County Treasurer Holly Kim.",
         "own_words": [
           {
-            "text": "\"Illinois needs steady, experienced fiscal leadership at a time of economic uncertainty.\" (WTTW: Why are you running?)",
+            "text": "\"Illinois needs steady, experienced fiscal leadership at a time of economic uncertainty and instability being caused by the Trump administration.\" (WTTW: Why are you running?)",
             "is_quote": true,
             "source": "https://news.wttw.com/elections/voters-guide/2026-general/margaret-croke"
           },
@@ -481,7 +481,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Mike Frerichs",
+        "name": "Michael W. Frerichs",
         "party": "Democratic",
         "incumbent": true,
         "website": "https://mikeforillinois.com/",
@@ -600,9 +600,9 @@
     "level": "judicial",
     "office": "Illinois Appellate Court, First District: retain Justice Bertina E. Lampkin?",
     "district": "1st Judicial District (Cook County only)",
-    "scope_plain": "Cook County voters only. Ballot question: 'Shall the person listed be retained in office as Justice of the Illinois Appellate Court?' Yes or no. She needs 60% yes to stay. This is the only appellate retention question on the 2026 Cook County ballot; 60 Circuit Court judges follow it (covered in the Chicago local pass).",
+    "scope_plain": "Cook County voters only. Ballot question: 'Shall the person listed be retained in office as Justice of the Illinois Appellate Court?' Yes or no. She needs 60% yes to stay. This is the only appellate retention question on the 2026 Cook County ballot; 59 Circuit Court judges follow it (covered in the Chicago local pass).",
     "office_explainer": "Hears appeals from Cook County trial courts. Vote yes to keep the justice, no to remove. Needs 60% yes.",
-    "why_it_matters": "Retention needs three-fifths yes, not a simple majority (Illinois Constitution, Art. VI, Sec. 12). A blank vote neither helps nor hurts. Injustice Watch researched all 61 judges on the retention ballot and does not make recommendations; all 14 bar associations in the Alliance recommended 'Yes' on Lampkin.",
+    "why_it_matters": "Retention needs three-fifths yes, not a simple majority (Illinois Constitution, Art. VI, Sec. 12). A blank vote neither helps nor hurts. Injustice Watch researched the judges on the retention ballot and does not make recommendations; all 14 bar associations in the Alliance recommended 'Yes' on Lampkin.",
     "vote_for": 1,
     "incumbent": "Bertina E. Lampkin",
     "open_seat": false,
@@ -614,7 +614,7 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Justice of the Illinois Appellate Court, First District. Former Cook County Circuit Court judge. Full background and ratings on her Injustice Watch profile.",
         "own_words": [
           {
@@ -634,7 +634,7 @@
     ],
     "sources": [
       {
-        "name": "Injustice Watch: Check Your Judges, Cook County November 2026 Judicial Election Guide (61 retention questions; Lampkin is the only appellate justice)",
+        "name": "Injustice Watch: Check Your Judges, Cook County November 2026 Judicial Election Guide (Lampkin is the only appellate justice)",
         "url": "https://2026retention.injusticewatch.org/"
       },
       {

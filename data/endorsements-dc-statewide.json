@@ -4,7 +4,7 @@
     "target_id": "dc-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -14,7 +14,7 @@
     "target_id": "dc-council-chair",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -24,7 +24,7 @@
     "target_id": "dc-council-at-large",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -34,7 +34,7 @@
     "target_id": "dc-delegate",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -44,7 +44,7 @@
     "target_id": "dc-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -54,7 +54,7 @@
     "target_id": "dc-shadow-senator",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -64,7 +64,7 @@
     "target_id": "dc-shadow-representative",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -74,7 +74,7 @@
     "target_id": "dc-initiative-86",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled and were not opened this run. Check the editorial board page.",
+    "why": "The Post's 2024 policy change covered presidential endorsements only. Its Oct 11, 2026 DC voter guide and any general-election editorials are paywalled, so we could not confirm a pick.",
     "url": "https://www.washingtonpost.com/opinions/editorial-board/",
     "date": "2026-10-16",
     "confidence": "unverified"
@@ -314,7 +314,7 @@
     "target_id": "dc-initiative-86",
     "status": "not_found",
     "choice": null,
-    "why": "No LWVDC position on Initiative 86 was found on vote411.org/lwvdc or lwvdc.org this run.",
+    "why": "No LWVDC position on Initiative 86 was found on vote411.org/lwvdc or lwvdc.org.",
     "url": "https://www.vote411.org/lwvdc",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -324,7 +324,7 @@
     "target_id": "dc-mayor",
     "status": "endorsed",
     "choice": "Janeese Lewis George",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -334,7 +334,7 @@
     "target_id": "dc-council-chair",
     "status": "endorsed",
     "choice": "Phil Mendelson",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -344,7 +344,7 @@
     "target_id": "dc-council-at-large",
     "status": "endorsed",
     "choice": "Oye Owolewa",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -354,7 +354,7 @@
     "target_id": "dc-delegate",
     "status": "endorsed",
     "choice": "Robert White",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -364,7 +364,7 @@
     "target_id": "dc-attorney-general",
     "status": "endorsed",
     "choice": "Brian L. Schwalb",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -374,7 +374,7 @@
     "target_id": "dc-shadow-senator",
     "status": "endorsed",
     "choice": "Paul Strauss",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -384,7 +384,7 @@
     "target_id": "dc-shadow-representative",
     "status": "endorsed",
     "choice": "Franklin Garcia",
-    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). The party's own general-election slate page was not opened this run; by DC law the party's nominee is its candidate.",
+    "why": "Democratic nominee (June 16, 2026 primary winner, per DCBOE results). By DC law the primary winner is the party's nominee.",
     "url": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
     "date": "2026-06-16",
     "confidence": "sourced"
@@ -884,7 +884,7 @@
     "target_id": "dc-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -894,7 +894,7 @@
     "target_id": "dc-council-chair",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -904,7 +904,7 @@
     "target_id": "dc-council-at-large",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -914,7 +914,7 @@
     "target_id": "dc-delegate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -924,7 +924,7 @@
     "target_id": "dc-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -934,7 +934,7 @@
     "target_id": "dc-shadow-senator",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"
@@ -944,7 +944,7 @@
     "target_id": "dc-shadow-representative",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement found in searches; the union's site was not opened.",
+    "why": "No 2026 general-election endorsement found.",
     "url": "https://www.dcpoliceunion.com/",
     "date": "2026-10-16",
     "confidence": "sourced"

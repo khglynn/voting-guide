@@ -74,7 +74,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Chair of the Libertarian Party of Missouri. Unopposed in the August 4 Libertarian primary (6,726 votes). No campaign website was found by the state's election data feed or in this pass.",
+        "background": "Chair of the Libertarian Party of Missouri. Unopposed in the August 4 Libertarian primary (6,726 votes). No campaign website found.",
         "own_words": [
           {
             "text": "No campaign statements found. The Missouri Independent's Oct 12 candidate story notes only that he is on the ballot.",
@@ -139,7 +139,7 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "On the Supreme Court since December 2012 (appointed by Gov. Jay Nixon); chief justice July 2021 to June 2023. Earlier a circuit judge in Cole County (19th Circuit), an assistant Missouri attorney general, and a lawyer at Sullivan & Cromwell and a Jefferson City firm. Drury College; University of Missouri law, cum laude. Retained by voters in 2014.",
         "own_words": [
           {
@@ -200,13 +200,13 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed to the Eastern District in early 2025 (formally sworn in April 4, 2025). Before that, three years as a circuit judge and two as an associate circuit judge in St. Louis County (21st Circuit). Earlier an assistant circuit attorney in St. Louis, assistant prosecutor in Jackson County, assistant attorney general, and in private practice in employment and municipal law. Washington University law. First retention vote.",
         "own_words": [
           {
-            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened; see the committee's Eastern District listing.",
+            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
             "is_quote": false,
-            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
           }
         ],
         "lwv_status": "not_asked",
@@ -249,13 +249,13 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
+        "website_confidence": "unverified",
         "background": "Appointed to the Court of Appeals in December 2023. Earlier an associate at Armstrong Teasdale (immigration and litigation), a white-collar prosecutor in the St. Louis Circuit Attorney's Office, chief legal counsel for the St. Charles County Juvenile Office, and a sex-crimes and child-abuse prosecutor in St. Charles County. University of Missouri-Columbia law, 2000. First retention vote.",
         "own_words": [
           {
-            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened.",
+            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
             "is_quote": false,
-            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
           }
         ],
         "lwv_status": "not_asked",
@@ -298,13 +298,13 @@
         "party": null,
         "incumbent": true,
         "website": null,
-        "website_confidence": "verified",
-        "background": "Eastern District judge since 2012 (appointed by Gov. Jay Nixon); previously a St. Louis City circuit judge. Retained in 2014; her 12-year term ends Dec 31, 2026, so this is her second retention vote. Background details beyond the certified listing were not opened in this pass; confirm on the Missouri Courts site.",
+        "website_confidence": "unverified",
+        "background": "Eastern District judge since 2012 (appointed by Gov. Jay Nixon); previously a St. Louis City circuit judge. Retained in 2014; her 12-year term ends Dec 31, 2026, so this is her second retention vote.",
         "own_words": [
           {
-            "text": "The Missouri Bar's Judicial Performance Review committee 'recommends all judges be retained' among the 50 on the 2026 ballot, which includes the five Court of Appeals judges. Her individual page was not opened.",
+            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
             "is_quote": false,
-            "source": "https://news.mobar.org/2026-judicial-performance-reviews-now-available-online/"
+            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
           }
         ],
         "lwv_status": "not_asked",

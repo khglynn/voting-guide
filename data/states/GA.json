@@ -58,7 +58,7 @@
     "signature_witness_rules": "No witness, no notary, and since SB 202 there is no signature matching. Instead you sign the oath on the return envelope and write your Georgia driver's license or state ID number and your date of birth. If you have no Georgia license or ID, you write the last four digits of your Social Security number; if you have none of those, you enclose a copy of an accepted ID. Keep the inner privacy sleeve: a ballot returned without the sealed oath envelope can be rejected.",
     "tracking_url": "https://georgia.ballottrax.net/voter/",
     "cure_process": "If your ID number or date of birth is missing or doesn't match, or the oath is unsigned, the county must notify you (by mail, and by phone or email if they have it) and your ballot is held as provisional. You fix it by returning a signed affidavit with a copy of an accepted ID. Georgia's cure window runs until the end of the third day after the election, Friday, November 6, 2026. SB 202 (O.C.G.A. 21-2-386) gives you 'until the end of the period for verifying provisional ballots,' and georgia.gov says provisional issues must be resolved 'within three days.' You can also check status on BallotTrax or My Voter Page.",
-    "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by 7:00 PM on Tuesday, November 3. If you decide to vote in person instead, bring the mail ballot with you so it can be canceled; without it you'll vote provisionally.",
+    "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by 7:00 PM on Tuesday, November 3. If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person.",
     "drop_box_lookup_url": "https://mvp.sos.ga.gov/",
     "confidence": "verified"
   },
@@ -85,12 +85,13 @@
       "Georgia driver's license, even if expired",
       "Georgia state ID card issued by DDS or a county registrar, including the free Georgia Voter Identification Card",
       "Valid U.S. passport",
+      "Student ID from a Georgia public college or university (private-college IDs are not on the state's list)",
       "Valid employee photo ID issued by any branch, department, agency or entity of the U.S. government, the State of Georgia, or any county, city or other Georgia government entity",
       "Valid U.S. military photo ID",
       "Valid tribal photo ID",
       "A Georgia Voter ID card is free from any county registrar's office or DDS office if you have no other photo ID"
     ],
-    "no_id_option": "In person without photo ID: you can cast a provisional ballot, but it only counts if you bring an accepted ID to your county registrar's office within three days, by Friday, November 6, 2026 (georgia.gov: 'you must resolve eligibility issues with your County Registrar within three days'). By mail: no photo ID is needed if you write your Georgia driver's license or ID number and date of birth on the application and envelope; if you have no Georgia license or ID, use the last four of your Social Security number or enclose a copy of an accepted ID (VOTE411: 'Absentee applications require a Georgia driver's license or state ID number, or a copy of an accepted ID').",
+    "no_id_option": "In person without photo ID: you can cast a provisional ballot, but it only counts if you bring an accepted ID to your county registrar's office within three days, by Friday, November 6, 2026 (georgia.gov: 'you must resolve eligibility issues with your County Registrar within three days'). By mail: no photo ID is needed if you write your Georgia driver's license or ID number and date of birth on the application and envelope; if you have no Georgia license or ID, use the last four of your Social Security number or enclose a copy of an accepted ID, or of a current utility bill, bank statement, paycheck, government check or other government document showing your name and address (Secretary of State voter ID page; VOTE411: 'Absentee applications require a Georgia driver's license or state ID number, or a copy of an accepted ID').",
     "confidence": "verified"
   },
   "in_the_booth": {
@@ -412,6 +413,14 @@
     {
       "name": "Election Protection (866-OUR-VOTE): Georgia",
       "url": "https://866ourvote.org/state/georgia/"
+    },
+    {
+      "name": "Georgia.gov: Vote by Absentee Ballot (updated June 2026; never received your absentee ballot: sign a document attesting you are only voting once, then vote in person)",
+      "url": "https://georgia.gov/vote-absentee-ballot"
+    },
+    {
+      "name": "Georgia Secretary of State: Georgia Voter Identification Requirements (in-person ID list incl. Georgia public college or university student ID; absentee ID alternatives)",
+      "url": "https://sos.ga.gov/page/georgia-voter-identification-requirements"
     }
   ]
 }

@@ -38,8 +38,8 @@
   "mail_ballot": {
     "who_gets_one": "Automatic. Every active registered voter is mailed a ballot. No request or excuse needed. Counties began mailing Wednesday, October 14 (Multnomah County ballots started arriving that day) and must finish by October 20. Multnomah says everyone should have a ballot by October 22; the state says call your county if you don't have it by October 30.",
     "request_deadline": {
-      "date": "2026-10-29",
-      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. October 29 is the last day Multnomah County will mail a replacement or absentee ballot. After that, get one in person at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
+      "date": "2026-10-28",
+      "rule": "You don't request a ballot; it comes automatically. If yours is lost, damaged, or never arrived, ask your county for a replacement. To have a replacement mailed in Multnomah County, request it by 7:00 PM on Wednesday, October 28 (county replacement page: 'The deadline to request a replacement ballot for the Nov. 3, 2026 General Election mailed to your home is Oct. 28 at 7PM'); the county's fact sheet lists October 29 as the last day it mails a replacement or absentee ballot. After that, get one in person at the Voting Center (1040 SE Morrison St., Portland) or the Voting Center Express (600 NE 8th St., Gresham), through 8:00 PM on Election Day. Phone 503-988-VOTE (8683), email elections@multco.us.",
       "source": "https://multco.us/file/vote-by-mail_facts_-_november_3,_2026_general_election/download"
     },
     "return_deadline": {
@@ -73,7 +73,7 @@
   "election_day": {
     "polls_open": "7:00 AM",
     "polls_close": "8:00 PM",
-    "in_line_rule": "There are no polls. Your ballot must be IN an official drop box or at a county elections office by 8:00 PM. County elections offices are open 7 AM to 8 PM on Election Day. A mailed ballot must carry a USPS postmark dated Nov. 3 or earlier, and must reach the county by Nov. 10.",
+    "in_line_rule": "There are no polls. Your ballot must be in an official drop box or at a county elections office by 8:00 PM, but Multnomah County says 'Voters who are in line at 8:00 PM may drop off their ballot.' County elections offices are open 7 AM to 8 PM on Election Day. A mailed ballot must carry a USPS postmark dated Nov. 3 or earlier, and must reach the county by Nov. 10.",
     "vote_centers": true,
     "lookup_url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx",
     "confidence": "verified"
@@ -102,7 +102,7 @@
     "Registration closed October 13 and there is no same-day registration. If you're already registered in Oregon and moved, update your address at My Vote; ballots aren't forwarded. Within 5 days of the election, call the county to get a ballot in person.",
     "No stamp needed. The return envelope is prepaid. The secrecy sleeve is optional.",
     "Dropping off a friend's ballot? Legal, but you must put it in a drop box or the mail within 2 days of getting it, or by Election Day, whichever comes first. Don't collect ballots within 100 feet of a drop site.",
-    "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). October 29 is the last day the county will mail a replacement; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person."
+    "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). To get a replacement by mail, ask by 7 PM on Wednesday, October 28; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person."
   ],
   "situations": [
     {
@@ -353,6 +353,14 @@
     {
       "name": "Ballotpedia: Voting in Oregon (first-time-voter ID exception)",
       "url": "https://ballotpedia.org/Voting_in_Oregon"
+    },
+    {
+      "name": "Multnomah County: Request a replacement ballot (mailed replacement must be requested by Oct. 28 at 7 PM; after that, will call in person)",
+      "url": "https://multco.us/services/request-replacement-ballot"
+    },
+    {
+      "name": "Multnomah County: Official Ballot Drop Sites (any Oregon drop site until 8:00 PM; voters in line at 8:00 PM may drop off their ballot)",
+      "url": "https://multco.us/info/official-ballot-drop-sites"
     }
   ]
 }

@@ -89,7 +89,7 @@
       "NOT accepted: student IDs (including Mizzou, WashU, SLU), out-of-state driver licenses, voter registration cards, utility bills, bank statements",
       "Need an ID? A Missouri nondriver license is free for voting purposes at any Department of Revenue license office, or call 573-526-VOTE (8683)"
     ],
-    "no_id_option": "You can cast a provisional ballot. It counts if either (a) you return to the same polling place before 7:00 PM on Election Day with an acceptable photo ID (in-person absentee voters return to the election authority office), or (b) the election authority finds the signature on your provisional envelope matches your voter registration record. You get a stub with instructions to check whether it counted. Most registered voters' provisional ballots do count on the signature match, but don't gamble if your ID is at home.",
+    "no_id_option": "On Election Day you can cast a provisional ballot. It counts if either (a) you return to the same polling place before 7:00 PM with an acceptable photo ID, or (b) the election authority finds the signature on your provisional envelope matches your voter registration record. You get a stub with instructions to check whether it counted. Most registered voters' provisional ballots do count on the signature match, but don't gamble if your ID is at home. In-person absentee voting (Oct 20 to Nov 2) is different: the Secretary of State says 'In person absentee voters are not eligible for a provisional ballot,' so bring your photo ID when you vote absentee in person.",
     "confidence": "verified"
   },
   "in_the_booth": {
@@ -105,7 +105,7 @@
     "St. Louis County is NOT the City of St. Louis. Webster Groves, Ballwin, Clayton, Kirkwood and the rest of the county vote through the St. Louis County Board of Election Commissioners (725 Northwest Plaza Dr., St. Ann; 314-615-1800; absentee desk 314-615-1833). The City has its own board downtown (300 N. Tucker Blvd.; 314-622-4336). Different sites, different ballots. Going to the wrong one wastes the trip.",
     "Registration closed October 7. There is no same-day registration in Missouri. If you're not on the rolls, you can't vote this time, but check voteroutreach.sos.mo.gov before you assume. If you moved within the state, you can still update your address and vote.",
     "Two different 'absentee' systems. In person, Oct 20 to Nov 2: no excuse, no notary, just a photo ID, at any of 21 St. Louis County sites. By mail: you need one of six legal reasons, you had to ask by 5 PM Oct 21, and the envelope usually must be notarized (free). Mailed ballots must arrive by 7 PM Nov 3; postmarks don't count; only you or a close relative can hand-deliver it.",
-    "Photo ID is required, and it has to be a Missouri or federal photo ID. Student IDs and out-of-state licenses don't count. A passport or Missouri license that expired after Nov 5, 2024 is still OK. No ID? Vote provisional. It counts if your signature matches your registration.",
+    "Photo ID is required, and it has to be a Missouri or federal photo ID. Student IDs and out-of-state licenses don't count. A passport or Missouri license that expired after Nov 5, 2024 is still OK. No ID on Election Day? Vote provisional. It counts if your signature matches your registration. In-person absentee voting has no provisional option, so bring your ID.",
     "On Election Day, St. Louis County voters can use ANY county polling place (the county runs vote centers; every county library branch is one). Polls are open 6 AM to 7 PM. That flexibility applies only inside the county; it doesn't let you vote at a City of St. Louis site."
   ],
   "situations": [
@@ -402,6 +402,10 @@
     {
       "name": "Election Protection (866-OUR-VOTE): Missouri",
       "url": "https://866ourvote.org/state/missouri/"
+    },
+    {
+      "name": "Missouri Secretary of State: FAQs, Other Voting Questions ('In person absentee voters are not eligible for a provisional ballot'; moving; name change)",
+      "url": "https://www.sos.mo.gov/elections/goVoteMissouri/votingquestions"
     }
   ]
 }

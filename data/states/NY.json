@@ -31,7 +31,7 @@
       }
     ],
     "same_day_registration": false,
-    "same_day_notes": "New York has no same-day registration. If you are not registered by October 24 you cannot vote on November 3. Separate from registration: the deadline to change your ADDRESS on an existing registration was Monday, October 19 (state calendar, Election Law 5-208(3); NYC311: 'Last day to request a change of address on your voter registration' is October 19). If you moved within your county (or within NYC) after that, go to the poll site for your NEW address and vote by affidavit ballot.",
+    "same_day_notes": "New York has no same-day registration. If you are not registered by October 24 you cannot vote on November 3. Separate from registration: the deadline to change your ADDRESS on an existing registration was Monday, October 19 (state calendar, Election Law 5-208(3); NYC311: 'Last day to request a change of address on your voter registration' is October 19). If you moved anywhere in New York after that, go to the poll site for your new address and vote by affidavit ballot; it counts and moves your registration. A 2019 law (Chapter 3, amending Election Law 5-208 and 8-302) extended this from moves within a county or NYC to moves anywhere in the state.",
     "still_possible_now": "Yes. As of October 16 you have until Saturday, October 24 to register. Fastest is online at elections.ny.gov. The address-change deadline is sooner: Monday, October 19. Check whether you're already registered first at voterlookup.elections.ny.gov.",
     "confidence": "verified"
   },
@@ -102,7 +102,7 @@
   },
   "gotchas": [
     "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are received-by, not postmarked, so don't put either in the mail this week. Register online; request your ballot online. No same-day registration in New York.",
-    "Address changes closed earlier: Monday, October 19. If you moved within your county (or within NYC) after that, vote at the poll site for your new address by affidavit ballot.",
+    "Address changes closed earlier: Monday, October 19. If you moved anywhere in New York after that, vote at the poll site for your new address by affidavit ballot.",
     "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
     "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
     "NYC: your early voting site is assigned and is often NOT your Election Day poll site. Check both at findmypollsite.vote.nyc. Early voting ends Sunday, November 1; there's no voting on Monday, November 2. NYC ballots also carry five ballot questions this year, all proposed City Charter amendments (NYC Votes: 'NYC voters will see five ballot proposals on their ballots'), usually on the back. Flip it over. There is no statewide ballot question in 2026."
@@ -401,6 +401,10 @@
     {
       "name": "New York Focus: 2026 NY election guide (Oct 16, 2026)",
       "url": "https://nysfocus.com/2026/10/16/2026-new-york-election-voter-guide"
+    },
+    {
+      "name": "NY State Senate: Bill S1099 of 2019 (signed Jan 24, 2019 as Chapter 3). Voters who move anywhere in the state can vote an affidavit ballot at the new poll site; the board transfers the registration",
+      "url": "https://www.nysenate.gov/legislation/bills/2019/S1099"
     }
   ]
 }

@@ -58,7 +58,7 @@
     "signature_witness_rules": "Sign the certification envelope. No witness or notary. A panel of three election judges compares your signature to the one on file. Date the certification: under 10 ILCS 5/19-8, if the postmark is missing or unreadable, the date you wrote on the certification can establish that you voted by Election Day.",
     "tracking_url": "https://chicagoelections.gov/voting/vote-mail",
     "cure_process": "If judges reject your ballot for a missing or mismatched signature, the election authority must notify you (by mail, and by email or phone if they have it) within 2 days, and you have until 14 days after the election, Tuesday, November 17, 2026, to fix it with a signed statement or new signature. Watch your mail and email after you return your ballot. Illinois Election Code 10 ILCS 5/19-8.",
-    "mail_cutoff_advice": "The law is on your side (postmarked by Nov. 3 counts, and the Supreme Court's June 29, 2026 Watson v. RNC ruling confirmed states may keep post-Election-Day receipt windows), but the Postal Service is not. USPS changed how it processes mail in 2025 and much of it never gets a postmark; Illinois clerks have warned since January 2026 that an unpostmarked late ballot can be rejected. The safe play: mail no later than about Tuesday, October 27, or ask a postal clerk to hand-stamp the envelope at the counter. From Oct. 28 on, use a drop box at an early voting site (through Nov. 2) or, on Election Day, a drop box at a Chicago Vote Center, so it's in official hands by 7:00 PM on Nov. 3. Precinct polling places in Chicago cannot accept mail ballots (Chicago Board of Elections).",
+    "mail_cutoff_advice": "The law is on your side (postmarked by Nov. 3 counts, and the Supreme Court's June 29, 2026 Watson v. RNC ruling confirmed states may keep post-Election-Day receipt windows), but the Postal Service is not. USPS changed how it processes mail in 2025 and much of it never gets a postmark; Illinois clerks have warned since January 2026 that an unpostmarked late ballot can be rejected; under 10 ILCS 5/19-8 it still counts if the date on your signed certification is Election Day or earlier, and an undated one does not, so always date it. The safe play: mail no later than about Tuesday, October 27, or ask a postal clerk to hand-stamp the envelope at the counter. From Oct. 28 on, use a drop box at an early voting site (through Nov. 2) or, on Election Day, a drop box at a Chicago Vote Center, so it's in official hands by 7:00 PM on Nov. 3. Precinct polling places in Chicago cannot accept mail ballots (Chicago Board of Elections).",
     "drop_box_lookup_url": "https://chicagoelections.gov/voting/drop-boxes",
     "confidence": "verified"
   },
@@ -87,7 +87,7 @@
       "Grace period (same-day) registration: two forms of ID, at least one showing your current address. Examples: Illinois driver's license or state ID, passport, student ID, utility bill, bank statement, lease or mortgage, paycheck, government mail.",
       "If you requested a mail ballot and show up in person, bring the mail ballot and surrender it (see gotchas)."
     ],
-    "no_id_option": "If you're required to show ID and don't have it, you vote a provisional ballot and have 7 days after the election (through Tuesday, November 10) to bring ID or proof to the election authority so it counts. Provisional ballots are validated by Nov. 17.",
+    "no_id_option": "If you're required to show ID and don't have it, you vote a provisional ballot and have 7 days after the election (through Tuesday, November 10) to bring ID or proof to the election authority so it counts. Provisional ballots are validated by Nov. 17. Suburban Cook County voters: the Cook County Clerk's provisional page also says ID must arrive 'by 7 p.m. the Thursday after Election Day' (November 5), so send it by then to be safe.",
     "confidence": "sourced"
   },
   "in_the_booth": {
@@ -101,8 +101,8 @@
   },
   "gotchas": [
     "Online registration closes this SUNDAY, Oct. 18 at 11:59 PM. Miss it and you can still register, but only in person, with two IDs, at an early voting site (through Nov. 2) or a polling place or vote center (Nov. 3). You vote in the same visit.",
-    "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
-    "Asked for a mail ballot but want to vote in person? Bring the mail ballot with you and surrender it to the judges (Sun-Times: voters 'must bring the mail ballot to their polling place and surrender it to receive an in-person ballot'). If you don't have it, you'll sign an affidavit and may vote a provisional ballot. Don't vote both ways: only one counts and trying is a crime.",
+    "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Your backstop: date the certification on the envelope, because state law counts a late ballot with no postmark if that date is Election Day or earlier (10 ILCS 5/19-8). Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
+    "Asked for a mail ballot but want to vote in person? Bring the mail ballot with you and surrender it to the judges (Sun-Times: voters 'must bring the mail ballot to their polling place and surrender it to receive an in-person ballot'). If you never received it, or you mailed it and were told the election office never got it, you sign an affidavit and then vote in person (Election Code 18-5 and 19A-35; Cook County Clerk affidavit form). If you received it but lost it, ask the judges what applies; you may have to vote a provisional ballot. Don't vote both ways: only one counts and trying is a crime.",
     "Judicial retention needs 60% yes, not 50%, and the Cook County ballot has 61 retention questions: 1 Appellate Court justice (Bertina E. Lampkin) and 60 Circuit Court judges. A blank vote neither helps nor hurts a judge. Use Injustice Watch's 'Check Your Judges' guide (2026retention.injusticewatch.org), which prints a take-along report, plus the Chicago Bar Association and ISBA ratings.",
     "Two election offices, not one. City of Chicago voters use the Chicago Board of Election Commissioners (chicagoelections.gov, 312-269-7900). Suburban Cook County voters (Evanston, Oak Park, Cicero, Skokie, etc.) use the Cook County Clerk (cookcountyclerkil.gov). Early voting sites, drop boxes, and mail-ballot applications are specific to your jurisdiction. Also: on Election Day the 69 W. Washington office is closed for voting; the Supersite at 137 S. State is open 6 AM to 7 PM."
   ],
@@ -380,6 +380,18 @@
     {
       "name": "VOTE411 (LWV): Illinois voting information",
       "url": "https://www.vote411.org/illinois"
+    },
+    {
+      "name": "Cook County Clerk: Special Mail Ballot Affidavit (never received a mail ballot, or returned it and the Clerk did not receive it: sign and vote in person)",
+      "url": "https://cookcountyclerkil.gov/publications/special-mail-ballot-affidavit"
+    },
+    {
+      "name": "Cook County Clerk: Provisional Voting (ID 'by 7 p.m. the Thursday after Election Day' in one place, 'within 7 days of Election Day' in another)",
+      "url": "https://www.cookcountyclerkil.gov/service/provisional-voting"
+    },
+    {
+      "name": "10 ILCS 5/19-8 (late-arriving mail ballots: counted without a postmark if the certification is dated Election Day or earlier)",
+      "url": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K19-8.htm"
     }
   ]
 }

@@ -58,7 +58,7 @@
     "postage": "prepaid",
     "signature_witness_rules": "Sign and date the Voter's Oath on the back of the return envelope. No witness or notary. DCBOE: 'You must sign the Voter's Oath in order for your vote to count!' Put only your own ballot in your envelope; if it contains anyone else's ballot, none of them count. Don't tape the envelope shut. First-time voters who registered by mail or online without a DC DMV or Social Security match must include a photocopy of ID (photo ID, or a utility bill, bank statement, government check or paycheck dated within 90 days) or the ballot is treated as a special (provisional) ballot. Source: https://www.dcboe.org/voters/casting-your-vote/mail-ballot-instructions",
     "tracking_url": "https://votedc.ballottrax.net/voter/",
-    "cure_process": "DCBOE says: 'We will contact you if there is an issue with your signature.' The official calendar sets Thursday, November 19, 2026 as the deadline to cure mail ballots. Sign up for BallotTrax (text and email alerts) so the notice reaches you quickly. Special (provisional) ballot voters have until Tuesday, November 10 to present proof of eligibility; starting that day you can check whether your special ballot was counted at 1-866-DCVOTES or dcboe.org.",
+    "cure_process": "DCBOE says: 'We will contact you if there is an issue with your signature.' Official sources disagree on the cure deadline: DCBOE's Early Voting and Election Day FAQ says it 'will accept information to cure a ballot up to seven days after the election' (Tuesday, November 10), while the 2026 calendar lists Thursday, November 19. Go by November 10. Sign up for BallotTrax (text and email alerts) so the notice reaches you quickly. Special (provisional) ballot voters who need to show proof of residence or ID should bring it to DCBOE by 5:00 PM on Thursday, November 5 to be safe (DCBOE's live ballot page and special ballot FAQ); the 2026 calendar lists Tuesday, November 10. Check whether a special ballot counted on dcboe.org's Special Ballot Status page (the FAQ says it opens the day after Election Day) or at 1-866-DCVOTES.",
     "mail_cutoff_advice": "Postmarks count in DC, but a missing or late postmark is a real risk (DCBOE had to clarify USPS postmark rules during the June primary). Mail by about Tuesday, October 27 at the latest. From then on, use a drop box: 55 of them, open around the clock until 8:00 PM on November 3. A mailed ballot postmarked by November 3 still has to arrive at DCBOE by Friday, November 13.",
     "drop_box_lookup_url": "https://dcboe.org/getContentAsset/5867b486-c4f8-4be6-83b4-60b5c589c97a/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/General-2026-Vote-Centers-and-Drop-Boxes.pdf?language=en",
     "confidence": "verified"
@@ -87,7 +87,7 @@
       "First-time voters who registered by mail or online and couldn't be matched to a DC DMV or Social Security record: a current government-issued photo ID, or a utility bill, bank statement, government check, paycheck or other government document with your name and current DC address, dated within 90 days",
       "Same-day registrants: one proof of DC residence from the list in same_day_notes (photo ID, utility bill, bank statement, pay stub, government document, lease, shelter letter, or college housing or tuition bill)"
     ],
-    "no_id_option": "If you're flagged as a first-time voter needing ID and don't have it, you vote a special (provisional) ballot and have until Tuesday, November 10 to bring the document to DCBOE so it counts. Most DC voters are never asked for ID. Sources: https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote and https://www.acludc.org/how-to-vote-in-the-november-3-2026-d-c-general-election/",
+    "no_id_option": "If you're flagged as a first-time voter needing ID and don't have it, you vote a special (provisional) ballot and must bring the document to DCBOE so it counts. Go by 5:00 PM on Thursday, November 5: DCBOE's special ballot FAQ says you have 'two days following the election to show your ID,' while the 2026 calendar lists Tuesday, November 10. Most DC voters are never asked for ID. Sources: https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote and https://www.acludc.org/how-to-vote-in-the-november-3-2026-d-c-general-election/",
     "confidence": "verified"
   },
   "in_the_booth": {
@@ -198,10 +198,10 @@
       "answer": "Most DC voters are never asked for ID. If you're a first-time voter flagged for ID and don't have it, you'll vote a special ballot and need to bring ID to DCBOE afterward so it counts.",
       "steps": [
         "Accepted: a government photo ID, or a utility bill, bank statement, paycheck, government check or government document with your name and address, dated within 90 days.",
-        "Bring it to DCBOE at 1015 Half Street SE. The 2026 calendar allows until Tuesday, November 10."
+        "Bring it to DCBOE at 1015 Half Street SE by 5 PM on Thursday, November 5 to be safe. The 2026 calendar allows until Tuesday, November 10."
       ],
-      "deadline": "2026-11-10",
-      "source": "https://dcboe.org/Voters/Register-To-Vote/Register-to-Vote",
+      "deadline": "2026-11-05",
+      "source": "https://www.dcboe.org/faqs/special-ballot-voting",
       "confidence": "verified"
     },
     {
@@ -359,6 +359,18 @@
     {
       "name": "Ballotpedia: Washington, D.C., Initiative 83, Ranked-Choice Voting Initiative (November 2024)",
       "url": "https://ballotpedia.org/Washington,_D.C.,_Initiative_83,_Ranked-Choice_Voting_Initiative_(November_2024)"
+    },
+    {
+      "name": "DCBOE FAQ: Early Voting and Election Day (cure information accepted 'up to seven days after the election'; 'Voting in Person' surrender; special ballot status from the day after Election Day). Some answers still cite 2024 dates",
+      "url": "https://dcboe.org/faqs/early-voting-and-election-day"
+    },
+    {
+      "name": "DCBOE FAQ: Special Ballot Voting ('two days following the election to show your ID'; proof-of-residence deadlines)",
+      "url": "https://www.dcboe.org/faqs/special-ballot-voting"
+    },
+    {
+      "name": "DCBOE: Voting by Live Ballot (special ballot proof of residence due 5:00 pm on the Thursday following Election Day)",
+      "url": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot"
     }
   ]
 }

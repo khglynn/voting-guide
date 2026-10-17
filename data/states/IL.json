@@ -161,11 +161,11 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "answer": "Let your election office know, then vote in person. If you never got your ballot, you sign an affidavit at the polls and vote a new ballot.",
+      "answer": "You can vote in person instead. Bring the mail ballot if you have it and hand it in; if it never came, you sign an affidavit at the polls saying so and get a regular ballot.",
       "steps": [
-        "Chicago: call 312-269-7967 or email votebymail@chicagoelections.gov. Suburban Cook: contact the Cook County Clerk.",
-        "Vote early at any site in your jurisdiction through Nov 2, or on Election Day.",
-        "If you have the ballot after all, bring it and surrender it."
+        "Tell your election office. Chicago: 312-269-7967 or votebymail@chicagoelections.gov. Suburban Cook: the Cook County Clerk's mail voting unit, 312-603-0946 or mail.voting@cookcountyil.gov.",
+        "Vote early at any site in your jurisdiction through Nov 2, or on Election Day. If the ballot got torn, bring what's left; that counts as handing it in.",
+        "Got it but lost it? The affidavit only covers a ballot that never came, or one you mailed that the office says it never got. Otherwise you'll vote a provisional ballot, which counts once the office confirms you didn't vote another way."
       ],
       "deadline": "2026-11-03",
       "source": "https://chicagoelections.gov/voting/vote-mail",
@@ -392,6 +392,18 @@
     {
       "name": "10 ILCS 5/19-8 (late-arriving mail ballots: counted without a postmark if the certification is dated Election Day or earlier)",
       "url": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K19-8.htm"
+    },
+    {
+      "name": "Illinois Election Code 10 ILCS 5/17-9 (vote in person after a mail ballot was issued: surrender it, or sign an affidavit that it never came)",
+      "url": "https://ilga.gov/ftp/ILCS/Ch%200010/Act%200005/001000050K17-9.html"
+    },
+    {
+      "name": "Cook County Clerk: Vote By Mail (mail voting unit contacts)",
+      "url": "https://www.cookcountyclerkil.gov/elections/ways-to-vote/vote-by-mail"
+    },
+    {
+      "name": "Cook County Clerk: Mail Voting Frequently Asked Questions (provisional ballot if you can't surrender your mail ballot)",
+      "url": "https://cookcountyclerkil.gov/publications/mail-ballot-frequently-asked-questions"
     }
   ]
 }

@@ -595,6 +595,33 @@
     "confidence": "unverified"
   },
   {
+    "id": "adams-broomfield-da-7e",
+    "state": "CO",
+    "level": "county",
+    "jurisdiction": "17th Judicial District (Adams County and the City and County of Broomfield)",
+    "number": "Ballot Question 7E",
+    "official_title": "Shall the term limits for District Attorney of the 17th Judicial District be limited to no more than three consecutive terms of office, consistent with other county offices in Adams County and the City and County of Broomfield?",
+    "plain_summary": "Lets the district attorney (the elected chief prosecutor) for Adams County and Broomfield serve up to three four-year terms in a row instead of two. Voters in both Adams County and Broomfield vote on it. In Aurora, only addresses in Adams County (north Aurora) see it.",
+    "yes_means": "The district attorney can serve up to three terms in a row (12 years) instead of two.",
+    "no_means": "Nothing changes: the district attorney stays limited to two terms in a row (8 years).",
+    "current_law": "Colorado's constitution limits district attorneys to two consecutive four-year terms, and voters in a judicial district can change that limit. The current DA, Brian Mason, took office in January 2021 and is in his second term.",
+    "fiscal_impact": null,
+    "pass_threshold": "simple majority of voters in the 17th Judicial District (Adams County and Broomfield)",
+    "referred_by": "council",
+    "confusing_wording_note": "The question says the term limit would be 'limited to no more than three' terms, which sounds like a tighter rule. It actually loosens today's limit of two terms. A yes vote allows one more term.",
+    "supporters_case": {
+      "text": "Broomfield's neutral ballot booklet sums up the case for: matching the DA's limit to other county offices in Adams County and Broomfield keeps term-limit rules the same across offices and may bring steadier leadership.",
+      "source": "https://broomfield.org/DocumentCenter/View/69259"
+    },
+    "opponents_case": {
+      "text": "The same booklet sums up the case against: shorter term limits mean stronger accountability, and more frequent elections keep officials responsive to the public.",
+      "source": "https://broomfield.org/DocumentCenter/View/69259"
+    },
+    "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
+    "official_guide_url": "https://broomfield.org/DocumentCenter/View/69259",
+    "confidence": "verified"
+  },
+  {
     "id": "westminster-schools-4a",
     "state": "CO",
     "level": "school",

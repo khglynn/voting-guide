@@ -208,8 +208,16 @@
         "website_confidence": "sourced",
         "background": "No-party candidate. Running mate: Joe Van Vactor. We have not found more background.",
         "own_words": [
-          { "text": "No platform statement collected yet; see his campaign site.", "is_quote": false, "source": "https://www.deanabrams.com/" },
-          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Dean_Abrams" }
+          {
+            "text": "No platform statement collected yet; see his campaign site.",
+            "is_quote": false,
+            "source": "https://www.deanabrams.com/"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Dean_Abrams"
+          }
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
@@ -222,8 +230,16 @@
         "website_confidence": "sourced",
         "background": "Former mayor of Surfside (Miami-Dade). Ran briefly as a Republican before switching to no-party. Running mate: Ruben A. Coto.",
         "own_words": [
-          { "text": "No platform statement collected yet; see his campaign site.", "is_quote": false, "source": "https://burkettforgov.com/" },
-          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Charles_Burkett_(Florida)" }
+          {
+            "text": "No platform statement collected yet; see his campaign site.",
+            "is_quote": false,
+            "source": "https://burkettforgov.com/"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Charles_Burkett_(Florida)"
+          }
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
@@ -236,8 +252,16 @@
         "website_confidence": "unverified",
         "background": "No-party candidate. Running mate: Juan Santana. No campaign website found; the state candidate page is the only listing.",
         "own_words": [
-          { "text": "No platform statement found.", "is_quote": false, "source": "https://ballotpedia.org/Jeffrey_Datto" },
-          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Jeffrey_Datto" }
+          {
+            "text": "No platform statement found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Jeffrey_Datto"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Jeffrey_Datto"
+          }
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
@@ -250,8 +274,16 @@
         "website_confidence": "sourced",
         "background": "No-party candidate. Running mate: Benjiman Rojas. We have not found more background.",
         "own_words": [
-          { "text": "No platform statement collected yet; see his campaign site.", "is_quote": false, "source": "https://nomoecorruption.com/" },
-          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Moliere_Dimanche" }
+          {
+            "text": "No platform statement collected yet; see his campaign site.",
+            "is_quote": false,
+            "source": "https://nomoecorruption.com/"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Moliere_Dimanche"
+          }
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
@@ -264,8 +296,16 @@
         "website_confidence": "sourced",
         "background": "No-party candidate. Running mate: Rachel Rodriguez. We have not found more background.",
         "own_words": [
-          { "text": "No platform statement collected yet; see his campaign site.", "is_quote": false, "source": "https://www.russo2026.com/" },
-          { "text": "No questionnaire response found.", "is_quote": false, "source": "https://ballotpedia.org/Frank_Russo" }
+          {
+            "text": "No platform statement collected yet; see his campaign site.",
+            "is_quote": false,
+            "source": "https://www.russo2026.com/"
+          },
+          {
+            "text": "No questionnaire response found.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Frank_Russo"
+          }
         ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
@@ -605,19 +645,19 @@
     "id": "fl-retention-1dca-lewis",
     "state": "FL",
     "level": "judicial",
-    "office": "First District Court of Appeal: retain Judge Joseph Lewis, Jr.?",
-    "district": "1st DCA (Panhandle and North Florida: Escambia, Santa Rosa, Okaloosa, Walton, Leon, Gadsden, Bay and 25 other counties)",
-    "scope_plain": "Only voters in the First District see this. Tallahassee (Leon) and Pensacola (Escambia) are in the 1st DCA. Orlando is NOT: Orange County is in the 6th DCA, and no 6th DCA judges are up in 2026, so Orlando voters see no DCA questions this year.",
-    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "office": "First District Court of Appeal: retain Judge Joseph Lewis Jr.?",
+    "district": "1st DCA (29 counties in the Panhandle and North Central Florida, including Escambia, Okaloosa, Leon, Bay and Alachua; not Duval)",
+    "scope_plain": "Only voters in the First District see this. Tallahassee (Leon) and Pensacola (Escambia) are in the 1st DCA. Jacksonville is not: Duval County is in the 5th DCA. Orlando is not either: Orange County is in the 6th DCA, and no 6th DCA judges are up in 2026, so Orlando voters see no DCA questions this year.",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Central Florida. Vote yes to keep the judge, no to remove.",
     "why_it_matters": "District courts of appeal are the final stop for most Florida appeals; the Supreme Court takes only a small share. The 1st DCA also hears many cases against state agencies because it sits in Tallahassee.",
     "vote_for": 1,
-    "incumbent": "Joseph Lewis, Jr.",
+    "incumbent": "Joseph Lewis Jr.",
     "open_seat": false,
     "term_years": 6,
     "is_retention": true,
     "candidates": [
       {
-        "name": "Joseph Lewis, Jr.",
+        "name": "Joseph Lewis Jr.",
         "party": null,
         "incumbent": true,
         "website": null,
@@ -635,20 +675,41 @@
       }
     ],
     "sources": [
-      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
-      { "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)", "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/" },
-      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+      {
+        "name": "Leon County Supervisor of Elections: 2026 General Election sample ballots (precinct ballots, Sept 9, 2026)",
+        "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+      },
+      {
+        "name": "Levy County Supervisor of Elections: 2026 General Election sample ballot (a 1st DCA county; same five judges district-wide)",
+        "url": "https://levy-soe.s3.amazonaws.com/uploads/2026/08/31130248/2026-General-Election-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Florida Statutes s. 35.02 (First Appellate District) and s. 26.021 (counties in each circuit)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter35/All"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)",
+        "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar: 2026 Merit Retention Election",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "fl-retention-1dca-nordby",
     "state": "FL",
     "level": "judicial",
-    "office": "First District Court of Appeal: retain Judge Rachel E. Nordby?",
-    "district": "1st DCA (Panhandle and North Florida)",
-    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no).",
-    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "office": "First District Court of Appeal: retain Judge Rachel Nordby?",
+    "district": "1st DCA (Panhandle and North Central Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Jacksonville and Orlando no).",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Central Florida. Vote yes to keep the judge, no to remove.",
     "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
     "vote_for": 1,
     "incumbent": "Rachel Nordby",
@@ -657,7 +718,7 @@
     "is_retention": true,
     "candidates": [
       {
-        "name": "Rachel E. Nordby",
+        "name": "Rachel Nordby",
         "party": null,
         "incumbent": true,
         "website": null,
@@ -675,19 +736,37 @@
       }
     ],
     "sources": [
-      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
-      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+      {
+        "name": "Leon County Supervisor of Elections: 2026 General Election sample ballots (precinct ballots, Sept 9, 2026)",
+        "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+      },
+      {
+        "name": "Levy County Supervisor of Elections: 2026 General Election sample ballot (a 1st DCA county; same five judges district-wide)",
+        "url": "https://levy-soe.s3.amazonaws.com/uploads/2026/08/31130248/2026-General-Election-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Florida Statutes s. 35.02 (First Appellate District) and s. 26.021 (counties in each circuit)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter35/All"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar: 2026 Merit Retention Election",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "fl-retention-1dca-osterhaus",
     "state": "FL",
     "level": "judicial",
-    "office": "First District Court of Appeal: retain Chief Judge Timothy D. Osterhaus?",
-    "district": "1st DCA (Panhandle and North Florida)",
-    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no).",
-    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "office": "First District Court of Appeal: retain Judge Tim Osterhaus?",
+    "district": "1st DCA (Panhandle and North Central Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Jacksonville and Orlando no).",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Central Florida. Vote yes to keep the judge, no to remove.",
     "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
     "vote_for": 1,
     "incumbent": "Tim Osterhaus",
@@ -696,7 +775,7 @@
     "is_retention": true,
     "candidates": [
       {
-        "name": "Timothy D. Osterhaus",
+        "name": "Tim Osterhaus",
         "party": null,
         "incumbent": true,
         "website": null,
@@ -714,29 +793,50 @@
       }
     ],
     "sources": [
-      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
-      { "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)", "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/" },
-      { "name": "Ballotpedia: Florida intermediate appellate court elections, 2026", "url": "https://ballotpedia.org/Florida_intermediate_appellate_court_elections,_2026" }
+      {
+        "name": "Leon County Supervisor of Elections: 2026 General Election sample ballots (precinct ballots, Sept 9, 2026)",
+        "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+      },
+      {
+        "name": "Levy County Supervisor of Elections: 2026 General Election sample ballot (a 1st DCA county; same five judges district-wide)",
+        "url": "https://levy-soe.s3.amazonaws.com/uploads/2026/08/31130248/2026-General-Election-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Florida Statutes s. 35.02 (First Appellate District) and s. 26.021 (counties in each circuit)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter35/All"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar News: Justice Muñiz and 22 DCA judges to stand for merit retention (April 29, 2026)",
+        "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/"
+      },
+      {
+        "name": "Ballotpedia: Florida intermediate appellate court elections, 2026",
+        "url": "https://ballotpedia.org/Florida_intermediate_appellate_court_elections,_2026"
+      }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "fl-retention-1dca-roberts",
     "state": "FL",
     "level": "judicial",
-    "office": "First District Court of Appeal: retain Judge L. Clayton Roberts?",
-    "district": "1st DCA (Panhandle and North Florida)",
-    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no).",
-    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "office": "First District Court of Appeal: retain Judge Clay Roberts?",
+    "district": "1st DCA (Panhandle and North Central Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Jacksonville and Orlando no).",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Central Florida. Vote yes to keep the judge, no to remove.",
     "why_it_matters": "District courts of appeal are the final stop for most Florida appeals.",
     "vote_for": 1,
-    "incumbent": "L. Clayton Roberts",
+    "incumbent": "Clay Roberts",
     "open_seat": false,
     "term_years": 6,
     "is_retention": true,
     "candidates": [
       {
-        "name": "L. Clayton Roberts",
+        "name": "Clay Roberts",
         "party": null,
         "incumbent": true,
         "website": null,
@@ -754,28 +854,46 @@
       }
     ],
     "sources": [
-      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
-      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+      {
+        "name": "Leon County Supervisor of Elections: 2026 General Election sample ballots (precinct ballots, Sept 9, 2026)",
+        "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+      },
+      {
+        "name": "Levy County Supervisor of Elections: 2026 General Election sample ballot (a 1st DCA county; same five judges district-wide)",
+        "url": "https://levy-soe.s3.amazonaws.com/uploads/2026/08/31130248/2026-General-Election-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Florida Statutes s. 35.02 (First Appellate District) and s. 26.021 (counties in each circuit)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter35/All"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar: 2026 Merit Retention Election",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "fl-retention-1dca-treadwell",
     "state": "FL",
     "level": "judicial",
-    "office": "First District Court of Appeal: retain Judge Raymond F. Treadwell?",
-    "district": "1st DCA (Panhandle and North Florida)",
-    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Orlando no). First retention vote for this judge.",
-    "office_explainer": "Mid-level appeals court for the Panhandle and North Florida. Vote yes to keep the judge, no to remove.",
+    "office": "First District Court of Appeal: retain Judge Raymond Treadwell?",
+    "district": "1st DCA (Panhandle and North Central Florida)",
+    "scope_plain": "Only voters in the First District see this (Tallahassee and Pensacola yes; Jacksonville and Orlando no). First retention vote for this judge.",
+    "office_explainer": "Mid-level appeals court for the Panhandle and North Central Florida. Vote yes to keep the judge, no to remove.",
     "why_it_matters": "District courts of appeal are the final stop for most Florida appeals. New appellate judges face voters in the first general election more than a year after appointment, then every six years.",
     "vote_for": 1,
-    "incumbent": "Raymond F. Treadwell",
+    "incumbent": "Raymond Treadwell",
     "open_seat": false,
     "term_years": 6,
     "is_retention": true,
     "candidates": [
       {
-        "name": "Raymond F. Treadwell",
+        "name": "Raymond Treadwell",
         "party": null,
         "incumbent": true,
         "website": null,
@@ -793,9 +911,27 @@
       }
     ],
     "sources": [
-      { "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)", "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/" },
-      { "name": "The Florida Bar: 2026 Merit Retention Election", "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/" }
+      {
+        "name": "Leon County Supervisor of Elections: 2026 General Election sample ballots (precinct ballots, Sept 9, 2026)",
+        "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+      },
+      {
+        "name": "Levy County Supervisor of Elections: 2026 General Election sample ballot (a 1st DCA county; same five judges district-wide)",
+        "url": "https://levy-soe.s3.amazonaws.com/uploads/2026/08/31130248/2026-General-Election-Sample-Ballot.pdf"
+      },
+      {
+        "name": "Florida Statutes s. 35.02 (First Appellate District) and s. 26.021 (counties in each circuit)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter35/All"
+      },
+      {
+        "name": "News4JAX 2026 Voter's Guide: Florida 1st District Court of Appeal merit retention (Sept 24, 2026)",
+        "url": "https://www.news4jax.com/voters-guide/2026/09/24/2026-voters-guide-florida-1st-district-court-of-appeal-merit-retention/"
+      },
+      {
+        "name": "The Florida Bar: 2026 Merit Retention Election",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   }
 ]

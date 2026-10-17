@@ -93,6 +93,10 @@
     ],
     "sources": [
       {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
         "name": "Delilah / Election Deets: 2026 PA governor race (candidates, websites, certified primary results from electionreturns.pa.gov)",
         "url": "https://www.electionreturns.pa.gov/"
       },
@@ -129,6 +133,6 @@
         "url": "https://www.vote411.org/pennsylvania"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   }
 ]

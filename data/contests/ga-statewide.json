@@ -61,6 +61,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: November 3, 2026 General Election (certified candidate list ZIP and write-in PDF linked)",
         "url": "https://sos.ga.gov/november-3-2026-general-election"
       },
@@ -89,7 +93,7 @@
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-governor",
@@ -153,6 +157,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official primary and runoff results (May 19 and June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -177,7 +185,7 @@
         "url": "https://www.fox5atlanta.com/news/draft-georgias-2026-midterm-election-major-races-candidates"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-lt-governor",
@@ -241,6 +249,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official runoff results (June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -261,7 +273,7 @@
         "url": "https://ballotpedia.org/Greg_Dolezal"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-secretary-of-state",
@@ -269,7 +281,7 @@
     "level": "state",
     "office": "Secretary of State",
     "district": null,
-    "scope_plain": "Every Georgia voter. Two names printed. The ballot may print the Democrat as 'Penny Reynolds' (WSB's list) or 'Penny Brown Reynolds' (her campaign and party); same person. Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "Runs elections and voter rolls, registers businesses and licenses many professions.",
     "why_it_matters": "Open seat: Brad Raffensperger ran for governor and lost the primary. Four-year term. The winner will buy Georgia's next voting system (the state plans to start procurement in 2027), decide how QR-code ballots are phased out, and run the 2028 presidential election.",
     "vote_for": 1,
@@ -325,6 +337,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official runoff results (June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -341,7 +357,7 @@
         "url": "https://fultondems.org/2026-democratic-candidates/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-attorney-general",
@@ -405,6 +421,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Ballotpedia: Tanya Miller",
         "url": "https://ballotpedia.org/Tanya_Miller"
       },
@@ -425,7 +445,7 @@
         "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-school-superintendent",
@@ -433,7 +453,7 @@
     "level": "state",
     "office": "State School Superintendent",
     "district": null,
-    "scope_plain": "Every Georgia voter. Two names printed; the ballot uses full names (Lydia Catalina Powell, Richard Lee Woods). Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "Runs the Department of Education, which oversees K-12 public schools, testing and standards.",
     "why_it_matters": "Four-year term. The superintendent carries out (but does not set) state education law, including the new voucher program, literacy rules and testing, and manages the state's school funding formula debate.",
     "vote_for": 1,
@@ -443,7 +463,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Lydia Catalina Powell",
+        "name": "Lydia Powell",
         "party": "Democratic",
         "incumbent": false,
         "website": "https://drlydiapowell.com/",
@@ -465,7 +485,7 @@
         "lwv_url": "https://www.vote411.org/georgia"
       },
       {
-        "name": "Richard Lee Woods",
+        "name": "Richard Woods",
         "party": "Republican",
         "incumbent": true,
         "website": "https://www.woodsforsuper.com/",
@@ -489,6 +509,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official runoff results (June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -505,7 +529,7 @@
         "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-agriculture-commissioner",
@@ -513,7 +537,7 @@
     "level": "state",
     "office": "Commissioner of Agriculture",
     "district": null,
-    "scope_plain": "Every Georgia voter. Two names printed (ballot prints 'Tyler J. Harper'). Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "Regulates farms, food safety inspections, gas pumps, pet dealers and pesticides.",
     "why_it_matters": "Four-year term. Agriculture is Georgia's largest industry. The department inspects grocery stores and restaurants' food supply, checks every gas pump and scale, licenses pet breeders, and runs disaster response for farms after hurricanes and bird flu.",
     "vote_for": 1,
@@ -545,7 +569,7 @@
         "lwv_url": "https://www.vote411.org/georgia"
       },
       {
-        "name": "Tyler J. Harper",
+        "name": "Tyler Harper",
         "party": "Republican",
         "incumbent": true,
         "website": "https://tylerharperga.com/",
@@ -569,6 +593,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia Farm Bureau: 2026 candidates (bios and ag questionnaire)",
         "url": "https://www.gfb.org/2026-candidates"
       },
@@ -585,13 +613,13 @@
         "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-insurance-commissioner",
     "state": "GA",
     "level": "state",
-    "office": "Commissioner of Insurance and Safety Fire",
+    "office": "Commissioner of Insurance",
     "district": null,
     "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "Regulates insurance companies and rates, licenses agents and oversees fire safety codes.",
@@ -649,6 +677,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official runoff results (June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -661,15 +693,15 @@
         "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-labor-commissioner",
     "state": "GA",
     "level": "state",
-    "office": "Commissioner of Labor",
+    "office": "Labor Commissioner",
     "district": null,
-    "scope_plain": "Every Georgia voter. Two names printed (ballot prints 'Bárbara Yolanda Rivera Holmes'). Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "Runs unemployment benefits and job services and tracks workforce data.",
     "why_it_matters": "Four-year term. The Department of Labor pays unemployment claims, runs career centers, and was widely criticized for backlogs during the pandemic. The incumbent was appointed, so this is the first time voters weigh in on her.",
     "vote_for": 1,
@@ -701,7 +733,7 @@
         "lwv_url": "https://www.vote411.org/georgia"
       },
       {
-        "name": "Bárbara Yolanda Rivera Holmes",
+        "name": "Bárbara Rivera Holmes",
         "party": "Republican",
         "incumbent": true,
         "website": "https://www.barbaraforga.com/",
@@ -725,6 +757,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "WABE: Kemp-appointed labor commissioner announces 2026 candidacy (May 29, 2025)",
         "url": "https://www.wabe.org/kemp-appointed-georgia-labor-commissioner-officially-announces-2026-candidacy/"
       },
@@ -741,7 +777,7 @@
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-psc-district-3",
@@ -749,7 +785,7 @@
     "level": "state",
     "office": "Public Service Commission, District 3",
     "district": "District 3",
-    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 3 (metro Atlanta: Fulton, DeKalb, Clayton). PSC seats are elected statewide. Two names printed (ballot prints 'Peter Jacob Hubbard'). Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 3 (metro Atlanta: Fulton, DeKalb, Clayton). PSC seats are elected statewide. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "One of five regulators who set Georgia Power's rates and oversee gas and telecom utilities.",
     "why_it_matters": "Six-year term. The PSC approves Georgia Power rate increases, the Plant Vogtle cost recovery, and how much new gas and data-center power gets built. District 3 flipped to a Democrat in a November 2025 special election for a one-year term; this race decides who holds it through 2032.",
     "vote_for": 1,
@@ -759,7 +795,7 @@
     "is_retention": false,
     "candidates": [
       {
-        "name": "Peter Jacob Hubbard",
+        "name": "Peter Hubbard",
         "party": "Democratic",
         "incumbent": true,
         "website": "https://www.peterforgeorgia.com/",
@@ -805,6 +841,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Atlanta Press Collective: Republicans seek challenger to Hubbard, successor to Pridemore (May 5, 2026)",
         "url": "https://atlpresscollective.com/2026/05/05/georgia-psc-primaries-2026/"
       },
@@ -817,7 +857,7 @@
         "url": "https://www.gagop.org/2025---2026-statewide-candidate-guide"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "ga-psc-district-5",
@@ -825,7 +865,7 @@
     "level": "state",
     "office": "Public Service Commission, District 5",
     "district": "District 5",
-    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 5 (west and northwest Georgia, including Cobb). PSC seats are elected statewide. Two names printed (ballot prints 'Joshua Aaron Tolbert'). Majority required or December 1 runoff.",
+    "scope_plain": "Every Georgia voter, even though the commissioner must live in District 5 (west and northwest Georgia, including Cobb). PSC seats are elected statewide. Two names printed. Majority required or December 1 runoff.",
     "office_explainer": "One of five regulators who set Georgia Power's rates and oversee gas and telecom utilities.",
     "why_it_matters": "Six-year term, open seat: Republican Tricia Pridemore is not running. Together with District 3 this race decides whether Republicans keep their majority on the five-member commission that sets power bills for 2.7 million Georgia Power customers.",
     "vote_for": 1,
@@ -857,7 +897,7 @@
         "lwv_url": "https://www.vote411.org/georgia"
       },
       {
-        "name": "Joshua Aaron Tolbert",
+        "name": "Josh Tolbert",
         "party": "Republican",
         "incumbent": false,
         "website": "https://www.teamtolbert.com/",
@@ -881,6 +921,10 @@
     ],
     "sources": [
       {
+        "name": "Fulton County Elections: consolidated sample ballot, Nov 3 2026 (Oct 8, 2026)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
         "name": "Georgia SOS: official runoff results (June 16, 2026)",
         "url": "https://results.sos.ga.gov/results/public/Georgia/elections/06162026GeneralPrimaryRunoff"
       },
@@ -893,6 +937,6 @@
         "url": "https://www.wsbtv.com/news/local/georgia-general-election-2026-candidates-governor-other-statewide-races/YEBLHIEG25FUPNENGKZXZB4QBI/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "verified"
   }
 ]

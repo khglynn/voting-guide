@@ -166,14 +166,14 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My absentee ballot never came, or I lost it.",
-      "answer": "Call your county registrar about your options, or just vote in person. If you never received it, you sign a form saying so (and that you're only voting once), and then you vote.",
+      "answer": "You can still vote in person. If you have the ballot, bring it and hand it to the poll manager; if it never came, you ask in writing to cancel it and sign a statement that you're only voting once, and the poll managers must let you vote.",
       "steps": [
-        "Check the status of your ballot on My Voter Page or BallotTrax.",
-        "Vote early at any site in your county through Oct 30, or at your precinct on Nov 3.",
-        "If there isn't time for a new one to reach you, voting in person is the safest choice."
+        "Check its status on My Voter Page (mvp.sos.ga.gov). Fulton: absentee office, 404-612-7060 or elections.absentee@fultoncountyga.gov. Other counties: your county registrar's office.",
+        "Vote early at any site in your county through Oct 30, or at your own precinct on Nov 3.",
+        "Lost it after it came? Contact the absentee office before you go. If the county already received your completed ballot, that is your vote, and you can't vote again."
       ],
       "deadline": "2026-11-03",
-      "source": "https://georgia.gov/vote-absentee-ballot",
+      "source": "https://sos.ga.gov/sites/default/files/forms/Absentee_Voting_In_Georgia_Rev_3-30-22.pdf",
       "confidence": "verified"
     },
     {
@@ -421,6 +421,14 @@
     {
       "name": "Georgia Secretary of State: Georgia Voter Identification Requirements (in-person ID list incl. Georgia public college or university student ID; absentee ID alternatives)",
       "url": "https://sos.ga.gov/page/georgia-voter-identification-requirements"
+    },
+    {
+      "name": "Georgia SOS: Absentee Voting in Georgia, a guide for registered voters (cancel an absentee ballot that never came and vote in person)",
+      "url": "https://sos.ga.gov/sites/default/files/forms/Absentee_Voting_In_Georgia_Rev_3-30-22.pdf"
+    },
+    {
+      "name": "Fulton County: Request/Return an Absentee Ballot (absentee office contacts; what to do if your ballot hasn't come)",
+      "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Absentee-Voting"
     }
   ]
 }

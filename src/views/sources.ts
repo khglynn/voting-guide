@@ -61,7 +61,12 @@ function pickerHTML(): string {
 /* ---------- the grid ---------- */
 function cellHTML(it: Item, e: Endorser): string {
   const en = endorsement(it.id, e.id);
-  if (!en) return '<td class="cell uc" title="Not checked yet">?</td>';
+  if (!en) {
+    // A source that never makes this kind of pick (LWV on candidates, newsrooms that don't endorse) is a known "no stand", not a gap.
+    const picksThis = it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates;
+    if (!picksThis) return `<td class="cell np" title="${it.kind === 'measure' ? 'Doesn’t take positions on measures' : 'Doesn’t endorse candidates'}">no stand</td>`;
+    return '<td class="cell uc" title="Not checked yet">?</td>';
+  }
   if (en.s === 'no_position') return '<td class="cell np">no stand</td>';
   if (en.s === 'not_found') return '<td class="cell nf"><span>none found</span></td>';
   let label = 'Endorsed';

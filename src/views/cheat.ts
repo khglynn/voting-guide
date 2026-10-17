@@ -48,7 +48,7 @@ export function cheatText(): string {
   let sec = '';
   for (const l of lines()) {
     if (l.unopposed) continue;
-    if (l.sec !== sec) { sec = l.sec; out.push(sec.toUpperCase()); }
+    if (l.sec !== sec) { sec = l.sec; out.push(`${sec}:`); }
     out.push(`${l.title}: ${l.label || '____'}`);
     const it = l.it;
     if (it && it.kind === 'contest' && isMultiJudge(it)) {

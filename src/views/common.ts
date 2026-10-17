@@ -50,3 +50,78 @@ export const firstSentence = (s: string): [string, string] => {
   if (!m) return [s.trim(), ''];
   return [m[1].replace(/\.$/, '').trim(), m[3].trim()];
 };
+
+/* ---------- skimmable prose ----------
+   Long research prose is split for display only: into sentences, into a lead plus "More",
+   or into bullets. Nothing is reworded, so every fact, date and URL stays as written. */
+const ABBR = /(?:\b(?:Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept?|Oct|Nov|Dec|Mon|Tues?|Wed|Thur?s?|Fri|Sat|Sun|St|Ave|Blvd|Rd|Dr|Hwy|Ste|Bldg|No|Nos|Pct|Mr|Mrs|Ms|Jr|Sr|Inc|Co|Corp|Dept|vs|approx|Gov|Sen|Rep|Lt|Ft|Mt|Gen|Prof|Hon|Rev|Art|Sec|Ch|Stat|Rev|Reg)\.|(?:^|[\s(])[A-Z]\.|\b(?:e\.g|i\.e|a\.m|p\.m|U\.S)\.)$/;
+export function sentences(text: string): string[] {
+  const s = String(text || '').trim();
+  if (!s) return [];
+  const parts = s.replace(/([.!?][)"”’']?)\s+(?=[A-Z0-9"“‘(])/g, '$1\u0000').split('\u0000');
+  const out: string[] = [];
+  for (const p of parts) {
+    if (out.length && ABBR.test(out[out.length - 1])) out[out.length - 1] += ` ${p}`;
+    else out.push(p);
+  }
+  return out;
+}
+export const wordCount = (s: string | null | undefined): number => (s ? s.trim().split(/\s+/).filter(Boolean).length : 0);
+
+/* The first sentence or two (up to `max` words), and the rest. */
+export function leadRest(text: string, max = 30): [string, string] {
+  const ss = sentences(text);
+  if (!ss.length) return ['', ''];
+  let n = wordCount(ss[0]);
+  let i = 1;
+  while (i < ss.length && n + wordCount(ss[i]) <= max) { n += wordCount(ss[i]); i++; }
+  return [ss.slice(0, i).join(' '), ss.slice(i).join(' ')];
+}
+
+/* A paragraph that shows its lead and tucks the rest behind an inline "More". */
+export function clampP(key: string, text: string | null | undefined, max = 30, cls = ''): string {
+  if (!text) return '';
+  const [lead, rest] = leadRest(text, max);
+  const c = cls ? ` class="${cls}"` : '';
+  if (!rest) return `<p${c}>${esc(text)}</p>`;
+  const open = isOpen(key);
+  return `<p${c}>${esc(lead)}${open ? ` ${esc(rest)}` : ''} <button class="more" data-act="open" data-k="${esc(key)}" aria-expanded="${open}">${open ? 'Less' : 'More'}</button></p>`;
+}
+
+/* One sentence per bullet. A sentence like "You qualify if you: a; b; or c." becomes an
+   intro with its own sub-list. With `lead`, each bullet's first sentence is bold. */
+function listify(s: string): string {
+  const m = s.match(/^(.{0,160}?):\s+(.+)$/);
+  if (m) {
+    const segs = m[2].split(/;\s+/);
+    if (segs.length >= 3) return `${esc(m[1])}:<ul>${segs.map((x) => `<li>${esc(x.replace(/;$/, ''))}</li>`).join('')}</ul>`;
+  }
+  return esc(s);
+}
+export function bulletsHTML(text: string | null | undefined, cls = 'bul'): string {
+  const ss = sentences(text || '');
+  if (!ss.length) return '';
+  return `<ul class="${cls}">${ss.map((s) => `<li>${listify(s)}</li>`).join('')}</ul>`;
+}
+export function leadBulletsHTML(items: string[], cls = 'bul bul-lead'): string {
+  if (!items.length) return '';
+  return `<ul class="${cls}">${items.map((t) => {
+    const ss = sentences(t);
+    return `<li><strong>${esc(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${esc(ss.slice(1).join(' '))}</span>` : ''}</li>`;
+  }).join('')}</ul>`;
+}
+
+/* Each phone number in a string like "512-238-VOTE (8683)" becomes a tel: link. */
+const KEYPAD: Record<string, string> = { A: '2', B: '2', C: '2', D: '3', E: '3', F: '3', G: '4', H: '4', I: '4', J: '5', K: '5', L: '5', M: '6', N: '6', O: '6', P: '7', Q: '7', R: '7', S: '7', T: '8', U: '8', V: '8', W: '9', X: '9', Y: '9', Z: '9' };
+const PHONE_RE = /(?:\+?1[-\s.]?)?\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?[0-9A-Z]{4}(?:\s\(\d{4}\))?/g;
+export function telHTML(phone: string | null | undefined): string {
+  if (!phone) return '';
+  let out = '';
+  let last = 0;
+  for (const m of phone.matchAll(PHONE_RE)) {
+    const digits = m[0].replace(/\s\(\d{4}\)$/, '').replace(/[A-Z]/g, (c) => KEYPAD[c] || '').replace(/\D/g, '');
+    out += esc(phone.slice(last, m.index)) + `<a href="tel:${digits}">${esc(m[0])}</a>`;
+    last = m.index! + m[0].length;
+  }
+  return `<span class="phone">${out}${esc(phone.slice(last))}</span>`;
+}

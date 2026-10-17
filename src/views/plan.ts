@@ -4,7 +4,7 @@
 import type { HowTo } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, daysBetween, host } from '../util';
-import { ext, isOpen, discBtn, sampleBallot } from './common';
+import { ext, isOpen, discBtn, sampleBallot, sentences, clampP, bulletsHTML, leadBulletsHTML, telHTML, srcLink } from './common';
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }
 
@@ -42,26 +42,28 @@ function rows(h: HowTo): Row[] {
   return out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
 }
 
-export function nextStep(h: HowTo): { title: string; lines: string[]; ctas: [string, string][] } {
+/* The one next action. `lines` feed the cheat sheet; `note` is the one tip the plan card
+   shows under the title (the rest of the plan card already lists the dates). */
+export function nextStep(h: HowTo): { title: string; lines: string[]; note: string | null; ctas: [string, string][] } {
   const t = todayISO();
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
   const ctas: [string, string][] = [];
-  if (t > h.election_date) return { title: 'Voting has closed', lines: [], ctas: mb.tracking_url ? [['Track your ballot', mb.tracking_url]] : [] };
+  if (t > h.election_date) return { title: 'Voting has closed', lines: [], note: null, ctas: mb.tracking_url ? [['Track your ballot', mb.tracking_url]] : [] };
   if (t === h.election_date) {
     const lines = [`Polls close at ${ed.polls_close}.`];
     if (ed.in_line_rule) lines.push(ed.in_line_rule);
     if (ed.lookup_url) ctas.push(['Find where to vote', ed.lookup_url]);
     if (isMailState(h) && mb.drop_box_lookup_url) ctas.push(['Find a drop box', mb.drop_box_lookup_url]);
-    return { title: 'Today is Election Day', lines, ctas };
+    return { title: 'Today is Election Day', lines, note: lines.join(' '), ctas };
   }
   if (isMailState(h)) {
     const lines = [returnLine(h)];
     if (mb.mail_cutoff_advice) lines.push(mb.mail_cutoff_advice);
     if (mb.drop_box_lookup_url) ctas.push(['Find a drop box', mb.drop_box_lookup_url]);
     if (mb.tracking_url) ctas.push(['Track your ballot', mb.tracking_url]);
-    return { title: 'Fill out your ballot and return it', lines, ctas };
+    return { title: 'Fill out your ballot and return it', lines, note: mb.mail_cutoff_advice || null, ctas };
   }
   const lines: string[] = [];
   let title: string;
@@ -78,7 +80,7 @@ export function nextStep(h: HowTo): { title: string; lines: string[]; ctas: [str
   lines.push(`Voting by mail instead? ${returnLine(h)}`);
   const look = ep.lookup_url || ed.lookup_url;
   if (look) ctas.push(['Find where to vote', look]);
-  return { title, lines, ctas };
+  return { title, lines, note: null, ctas };
 }
 
 function regAlert(h: HowTo): string {
@@ -90,14 +92,120 @@ function regAlert(h: HowTo): string {
   return `<p class="reg-alert"><strong>Not registered yet?</strong> The last day to register ${how} is ${fmtDate(online.date)}. ${h.registration.check_url ? ext(h.registration.check_url, 'Check your registration') : ''}</p>`;
 }
 
-const PHONES: Record<string, string> = { allowed: 'Allowed', restricted: 'Restricted', prohibited: 'Not allowed', unclear: 'Unclear' };
-const NOTES: Record<string, string> = { allowed: 'Allowed', prohibited: 'Not allowed', unclear: 'Unclear' };
+const PHONES: Record<string, string> = { allowed: 'allowed', restricted: 'restricted', prohibited: 'not allowed', unclear: 'unclear' };
+const NOTES: Record<string, string> = { allowed: 'allowed', prohibited: 'not allowed', unclear: 'unclear' };
 const IDS: Record<string, string> = {
   photo: 'Photo ID required in person', non_photo_ok: 'ID required in person; non-photo ID is OK',
   first_time_only: 'ID needed only for some first-time voters', none: 'No ID needed for most voters',
 };
 
 export function planFolded(): boolean { return S.b.planSeen && !S.ui.open.has('plan'); }
+
+/* Who can vote by mail, read from the state file's own words. */
+function mailAccess(h: HowTo): 'all' | 'anyone' | 'qualify' {
+  if (isMailState(h)) return 'all';
+  const who = sentences(h.mail_ballot.who_gets_one || '').slice(0, 3).join(' ');
+  return /no excuse|no reason|without giving a reason|for any reason|anyone|any registered/i.test(who) ? 'anyone' : 'qualify';
+}
+
+/* ---------- "The basics": one label, one short value, details one tap away ---------- */
+interface Fact { label: string; value: string; sub?: string; k?: string; more?: string; detail?: string }
+function factRow(f: Fact): string {
+  const open = !!f.k && isOpen(f.k);
+  return `<div class="fact"><dt>${esc(f.label)}</dt><dd>
+    <span class="fact-v">${f.value}</span>${f.sub ? `<span class="fact-sub">${f.sub}</span>` : ''}
+    ${f.k && f.detail ? `<button class="btn-text btn btn-xs" data-act="open" data-k="${esc(f.k)}" aria-expanded="${open}" data-fk="${esc(f.k)}">${esc(f.more || 'Details')}</button>` : ''}
+    ${open && f.detail ? `<div class="fact-more">${f.detail}</div>` : ''}</dd></div>`;
+}
+const srcLine = (...urls: (string | null | undefined)[]): string => {
+  const u = [...new Set(urls.filter(Boolean) as string[])];
+  return u.length ? `<p class="lim">Source: ${u.map((x) => srcLink(x)).join(' ')}</p>` : '';
+};
+const sub = (label: string, html: string): string => (html ? `<div class="fm-sec"><span class="kicker">${esc(label)}</span>${html}</div>` : '');
+
+function facts(): Fact[] {
+  const b = S.ballot!;
+  const h = b.howto;
+  const ep = h.early_in_person;
+  const ed = h.election_day;
+  const mb = h.mail_ballot;
+  const out: Fact[] = [];
+
+  out.push({
+    label: 'Early voting',
+    value: ep.available ? (ep.start && ep.end ? `${esc(fmtDate(ep.start))} to ${esc(fmtDate(ep.end))}` : 'Yes. Check your county for dates') : 'Not offered here',
+    k: 'pf-ep', more: 'Hours and places',
+    detail: ep.available ? `${bulletsHTML(ep.hours_note)}${ep.lookup_url ? `<p>${ext(ep.lookup_url, 'Find early voting places')}</p>` : ''}` : '',
+  });
+
+  const openShort = shortText(ed.polls_open, 12);
+  out.push({
+    label: 'Election Day',
+    value: `${esc(fmtDate(h.election_date))}`,
+    sub: openShort ? `${esc(ed.polls_open)} to ${esc(ed.polls_close)}` : `Polls close ${esc(ed.polls_close)}`,
+    k: 'pf-ed', more: 'Polling places and lines',
+    detail: `${openShort ? '' : bulletsHTML(ed.polls_open)}${bulletsHTML(ed.in_line_rule)}${ed.lookup_url ? `<p>${ext(ed.lookup_url, 'Find where to vote')}</p>` : ''}`,
+  });
+
+  const access = mailAccess(h);
+  const qual = access === 'qualify' ? (h.model_plain || '').match(/qualify:\s*([^.]+)\./i) : null;
+  const r = mb.return_deadline;
+  const timeShort = shortText(r.time);
+  const due = r.rule === 'received_by' ? 'Must arrive by' : r.rule === 'postmarked_by' ? 'Postmark by' : 'Return by';
+  const rq = mb.request_deadline;
+  const subBits = [
+    access !== 'all' && rq && rq.date ? `Request by ${fmtDate(rq.date)}` : '',
+    `${due} ${fmtDate(r.date)}${timeShort ? `, ${r.time}` : ''}`,
+  ].filter(Boolean);
+  out.push({
+    label: 'By mail',
+    value: access === 'all' ? 'Mailed to every voter' : access === 'anyone' ? 'Anyone can ask for one' : 'Only if you qualify',
+    sub: `${qual ? `<span class="fact-line">${esc(qual[1].charAt(0).toUpperCase() + qual[1].slice(1))}.</span>` : ''}<span class="fact-line">${esc(subBits.join(' · '))}</span>`,
+    k: 'pf-mail', more: access === 'qualify' ? 'Who qualifies and how' : 'How it works',
+    detail: [
+      sub(access === 'all' ? 'Who gets one' : 'Who can', bulletsHTML(mb.who_gets_one)),
+      access !== 'all' && rq ? sub('Asking for one', `${bulletsHTML(rq.rule)}${srcLine(rq.source)}`) : '',
+      sub('Sending it back', `${timeShort ? '' : bulletsHTML(r.time)}${mb.return_options && mb.return_options.length ? `<ul class="bul">${mb.return_options.map((o) => `<li>${esc(o)}</li>`).join('')}</ul>` : ''}${srcLine(r.source)}`),
+      sub('When to mail it', bulletsHTML(mb.mail_cutoff_advice)),
+      mb.tracking_url || mb.drop_box_lookup_url ? `<p class="row">${mb.tracking_url ? ext(mb.tracking_url, 'Track your ballot') : ''}${mb.drop_box_lookup_url ? ext(mb.drop_box_lookup_url, 'Find a drop box') : ''}</p>` : '',
+    ].join(''),
+  });
+
+  const idr = h.id_rules;
+  out.push({
+    label: 'Bring',
+    value: esc(IDS[idr.required] || idr.required),
+    k: 'pf-id', more: 'Which IDs count',
+    detail: `${idr.accepted.length ? `<ul class="bul">${idr.accepted.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? sub('No ID?', bulletsHTML(idr.no_id_option)) : ''}`,
+  });
+
+  const booth = h.in_the_booth;
+  out.push({
+    label: 'In the booth',
+    value: `Notes ${esc(NOTES[booth.notes_allowed] || booth.notes_allowed)}<span class="dot-sep" aria-hidden="true"> · </span><span class="vh">. </span>Phones ${esc(PHONES[booth.phones] || booth.phones)}`,
+    k: 'pf-booth', more: 'The exact rules',
+    detail: [sub('Notes and this cheat sheet', bulletsHTML(booth.notes_detail)), sub('Phones', bulletsHTML(booth.phones_detail)), sub('What to wear', bulletsHTML(booth.apparel_rule))].join(''),
+  });
+
+  const office = b.places.map((p) => p.county_election_office).find(Boolean);
+  if (office) {
+    const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/);
+    const [name, addr] = m ? [m[1], m[2]] : ((): [string, string] => { const ss = sentences(office.name); return [ss[0], ss.slice(1).join(' ')]; })();
+    out.push({
+      label: 'Your office',
+      value: office.url ? ext(office.url, name) : esc(name),
+      sub: [office.phone ? `<span class="fact-line">${telHTML(office.phone)}</span>` : '', addr ? `<span class="fact-line fact-addr">${esc(addr)}</span>` : ''].filter(Boolean).join(''),
+    });
+  }
+
+  const sb = sampleBallot();
+  out.push({
+    label: 'Your ballot',
+    value: b.hasLocal ? 'This guide has your statewide and local races.' : 'We only have statewide races for your area so far.',
+    sub: sb ? (b.hasLocal ? `Double-check with ${ext(sb.url, 'your official sample ballot')}.` : `${ext(sb.url, sb.label)}.`) : '',
+  });
+  return out;
+}
 
 export function planHTML(): string {
   const b = S.ballot!;
@@ -120,14 +228,11 @@ export function planHTML(): string {
     const label = `${esc(r.label)}${isPast ? ' <span class="badge">Passed</span>' : ''}`;
     return `<li class="${isPast ? 'past' : ''}"><span class="pd-date">${esc(fmtDate(r.date))}</span>
       <div class="pd-body">${hasMore ? `<button class="pd-btn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${label}</button>` : `<span>${label}</span>`}
-      ${hasMore && isOpen(k) ? `<p class="small">${r.detail ? esc(r.detail) : ''} ${r.source ? ext(r.source, `Source: ${host(r.source)}`) : ''}</p>` : ''}</div></li>`;
+      ${hasMore && isOpen(k) ? `<div class="small">${r.detail ? bulletsHTML(r.detail) : ''} ${r.source ? ext(r.source, `Source: ${host(r.source)}`) : ''}</div>` : ''}</div></li>`;
   };
-  const booth = h.in_the_booth;
-  const sb = sampleBallot();
-  const office = b.places.map((p) => p.county_election_office).find(Boolean);
-  const ballotLine = b.hasLocal
-    ? `This guide has your statewide and local races.${sb ? ` Double-check with ${ext(sb.url, 'your official sample ballot')}.` : ''}`
-    : `We only have statewide races for your area so far.${sb ? ` ${ext(sb.url, sb.label)}.` : ''}`;
+  const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
+  const notes = b.places.map((p) => p.notes).filter(Boolean) as string[];
+  const moreOpen = isOpen('plan-more');
   return `<section class="plan" id="plan" aria-labelledby="plan-h">
     <div class="plan-top">
       <div class="count" aria-hidden="true">${countWord}</div>
@@ -137,28 +242,18 @@ export function planHTML(): string {
     <div class="next" aria-live="polite">
       <span class="kicker">Your next step</span>
       <p class="big">${esc(step.title)}</p>
-      ${step.lines.map((l) => `<p>${esc(l)}</p>`).join('')}
+      ${step.note ? clampP('plan-note', step.note, 24) : ''}
       ${regAlert(h)}
       ${step.ctas.length ? `<div class="row">${step.ctas.map(([l, u], i) => `<a class="btn ${i === 0 ? 'btn-gold' : ''} btn-sm" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)}</a>`).join('')}</div>` : ''}
     </div>
-    <div class="plan-sec"><span class="kicker">Key dates <span class="lim">Tap one for details</span></span>
-      ${past.length ? `${discBtn('plan-past', `${past.length} earlier ${past.length === 1 ? 'date has' : 'dates have'} passed`, 'btn-text btn btn-xs')}` : ''}
-      <ol class="pdates">${isOpen('plan-past') ? past.map((r) => rowHTML(r, true)).join('') : ''}${future.map((r) => rowHTML(r, false)).join('')}</ol>
+    <div class="plan-sec"><h3 class="kicker">The basics</h3>
+      <dl class="facts">${facts().map(factRow).join('')}</dl>
     </div>
-    <div class="plan-sec"><span class="kicker">What to bring</span>
-      <ul class="bring">
-        <li><strong>ID:</strong> ${esc(IDS[h.id_rules.required] || h.id_rules.required)}. ${discBtn('plan-id', 'Which IDs count', 'btn-text btn btn-xs')}</li>
-        ${isOpen('plan-id') ? `<li class="small"><ul class="idlist">${h.id_rules.accepted.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>${h.id_rules.no_id_option ? `<p>${esc(h.id_rules.no_id_option)}</p>` : ''}</li>` : ''}
-        <li><strong>Notes or this cheat sheet:</strong> ${esc(NOTES[booth.notes_allowed] || booth.notes_allowed)}. <strong>Phones:</strong> ${esc(PHONES[booth.phones] || booth.phones)}. ${discBtn('plan-booth', 'The exact rules', 'btn-text btn btn-xs')}</li>
-        ${isOpen('plan-booth') ? `<li class="small">${[booth.notes_detail, booth.phones_detail, booth.apparel_rule].filter(Boolean).map((x) => `<p>${esc(x)}</p>`).join('')}</li>` : ''}
-      </ul>
-    </div>
-    <div class="plan-sec">
-      ${h.model_plain ? `<p class="small"><strong>How voting works here.</strong> ${esc(h.model_plain)}</p>` : ''}
-      <p class="small">${ballotLine}</p>
-      ${office ? `<p class="small">Your elections office: ${office.url ? ext(office.url, office.name) : esc(office.name)}${office.phone ? `, <span class="phone">${esc(office.phone)}</span>` : ''}.</p>` : ''}
-      ${b.places.map((p) => p.notes).filter(Boolean).map((n) => `<p class="small">${esc(n)}</p>`).join('')}
-      ${h.gotchas.length ? `${discBtn('plan-gotchas', `Things people get wrong in ${b.stateName}`)}${isOpen('plan-gotchas') ? `<ul class="gotchas">${h.gotchas.map((g) => `<li>${esc(g)}</li>`).join('')}</ul>` : ''}` : ''}
+    <div class="plan-sec plan-discs">
+      ${discBtn('plan-dates', `Every key date${past.length ? `, ${past.length} passed` : ''}`)}
+      ${isOpen('plan-dates') ? `<ol class="pdates">${past.map((r) => rowHTML(r, true)).join('')}${future.map((r) => rowHTML(r, false)).join('')}</ol>` : ''}
+      ${h.gotchas.length ? `${discBtn('plan-gotchas', `Things people get wrong in ${b.stateName}`)}${isOpen('plan-gotchas') ? leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas') : ''}` : ''}
+      ${h.model_plain || notes.length ? `${discBtn('plan-more', `More about voting in ${where}`)}${moreOpen ? `<div class="disc-bd small">${sub(`How voting works in ${b.stateName}`, bulletsHTML(h.model_plain))}${notes.map((n) => sub(`${where} notes`, bulletsHTML(n))).join('')}</div>` : ''}` : ''}
       <p class="lim">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
     </div>
     <div class="plan-ft"><button class="btn btn-sm" data-act="plan-fold" data-fk="plan-fold">Got it. Fold this up</button></div>

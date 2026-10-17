@@ -11028,5 +11028,145 @@
     "url": "https://www.austinchamber.com/advocacy",
     "date": "2026-10-16",
     "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-american-statesman-eb",
+    "target_id": "tx-house-45",
+    "status": "endorsed",
+    "choice": "Erin Zwiener",
+    "why": "Says Zwiener knows how to work across party lines on energy and climate without giving up her principles on divisive issues.",
+    "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-american-statesman-eb",
+    "target_id": "tx-house-73",
+    "status": "no_position",
+    "choice": null,
+    "why": "Explicitly 'No endorsement': faults Isaac for undermining efforts to protect Hays County's water and says Fox's record raised separate concerns about judgment.",
+    "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-chronicle-eb",
+    "target_id": "tx-house-45",
+    "status": "endorsed",
+    "choice": "Erin Zwiener",
+    "why": "On the Chronicle's Nov 3 slate.",
+    "url": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-chronicle-eb",
+    "target_id": "tx-house-73",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Chronicle's Nov 3 slate, which centers on Austin and Travis County.",
+    "url": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "kut",
+    "target_id": "tx-house-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "KUT does not endorse; it publishes Q&As and voter guides.",
+    "url": "https://www.kut.org/politics/2026-10-14/hays-county-elections-voter-guide-ballot-voting",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "community-impact",
+    "target_id": "tx-house-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "Community Impact does not endorse; it publishes candidate Q&As.",
+    "url": "https://communityimpact.com/austin/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-austin-area",
+    "target_id": "tx-house-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. Its Austin-area guide covers Travis and Williamson; Hays answers are published separately.",
+    "url": "https://austinvotersguide.org/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "kut",
+    "target_id": "tx-house-73",
+    "status": "no_position",
+    "choice": null,
+    "why": "KUT does not endorse; it publishes Q&As and voter guides.",
+    "url": "https://www.kut.org/politics/2026-10-14/hays-county-elections-voter-guide-ballot-voting",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "community-impact",
+    "target_id": "tx-house-73",
+    "status": "no_position",
+    "choice": null,
+    "why": "Community Impact does not endorse; it publishes candidate Q&As.",
+    "url": "https://communityimpact.com/austin/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-austin-area",
+    "target_id": "tx-house-73",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. Its Austin-area guide covers Travis and Williamson; Hays answers are published separately.",
+    "url": "https://austinvotersguide.org/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-central-labor-council",
+    "target_id": "tx-house-45",
+    "status": "endorsed",
+    "choice": "Erin Zwiener",
+    "why": "On the Labor Council's 2026 general election list, which notes she is a TSEU (CWA 6186) member.",
+    "url": "https://austinlaborcouncil.org/news/austin-central-labor-council-2026-general-election-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "austin-central-labor-council",
+    "target_id": "tx-house-73",
+    "status": "endorsed",
+    "choice": "Merrie Fox",
+    "why": "On the Labor Council's 2026 general election list.",
+    "url": "https://austinlaborcouncil.org/news/austin-central-labor-council-2026-general-election-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-45",
+    "status": "endorsed",
+    "choice": "Erin Zwiener",
+    "why": "On the Texas AFL-CIO COPE 2026 general election endorsement list.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-73",
+    "status": "endorsed",
+    "choice": "Merrie Fox",
+    "why": "On the Texas AFL-CIO COPE 2026 general election endorsement list.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
   }
 ]

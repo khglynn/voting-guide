@@ -5,7 +5,7 @@
     "level": "federal",
     "office": "U.S. House of Representatives",
     "district": "CD-1",
-    "scope_plain": "Voters in Colorado's 1st Congressional District: all of Denver plus small slices of Arapahoe and Jefferson counties (Glendale, parts of Englewood, Sheridan, Cherry Hills Village, Edgewater, Lakeside and nearby areas)",
+    "scope_plain": "Voters in Colorado's 1st Congressional District: all of Denver plus Glendale.",
     "office_explainer": "Denver's one seat in the U.S. House. Votes on federal laws, taxes and spending.",
     "why_it_matters": "Open seat for the first time since 1996. Rep. Diana DeGette lost the June Democratic primary to Melat Kiros. The district has not elected a Republican since 1970; about 230,000 of its 464,000 active voters are unaffiliated.",
     "vote_for": 1,
@@ -156,6 +156,10 @@
       {
         "name": "Denver Post CD-1 candidate Q&A",
         "url": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+      },
+      {
+        "name": "U.S. Census geocoder (120th Congress districts): Englewood, Sheridan and Cherry Hills Village are CD-6; Edgewater and Lakeside are CD-7",
+        "url": "https://geocoding.geo.census.gov/geocoder/"
       }
     ],
     "confidence": "verified"
@@ -1363,7 +1367,7 @@
     "level": "special_district",
     "office": "RTD Board of Directors",
     "district": "District B",
-    "scope_plain": "Voters in RTD Director District B (north and northeast Denver). Check your ballot; Denver is split among RTD districts A, B, C, D and E, and only B and C have elections this year.",
+    "scope_plain": "Voters in RTD Director District B (north and northeast Denver, including Montbello, Green Valley Ranch and DIA, plus Aurora north of Colfax in Adams County). Check your ballot; Denver is split among RTD districts A, B, C, D and E, and only B and C have elections this year.",
     "office_explainer": "One of 15 directors who run RTD: bus and rail routes, fares, budget. Nonpartisan.",
     "why_it_matters": "RTD is proposing its 2027 budget and deciding service levels and fares. Four-year term, unpaid.",
     "vote_for": 1,
@@ -1443,6 +1447,10 @@
       {
         "name": "Denver Post RTD District B candidate Q&A",
         "url": "https://www.denverpost.com/2026/10/03/rtd-director-district-b-candidate-qa/"
+      },
+      {
+        "name": "RTD Board of Directors (district descriptions and maps)",
+        "url": "https://rtd-denver.com/board-of-directors"
       }
     ],
     "confidence": "verified"
@@ -1453,7 +1461,7 @@
     "level": "special_district",
     "office": "RTD Board of Directors",
     "district": "District C",
-    "scope_plain": "Voters in RTD Director District C (west and southwest Denver, plus parts of Lakewood and Edgewater). Check your ballot.",
+    "scope_plain": "Voters in RTD Director District C (northwest, west and central Denver; it does not include Lakewood or Edgewater, which are in District M). Check your ballot.",
     "office_explainer": "One of 15 directors who run RTD: bus and rail routes, fares, budget. Nonpartisan.",
     "why_it_matters": "Only one candidate qualified, so the race is effectively decided. Four-year term, unpaid.",
     "vote_for": 1,
@@ -1502,6 +1510,10 @@
       {
         "name": "Denver Post RTD District C candidate Q&A",
         "url": "https://www.denverpost.com/2026/10/03/rtd-director-district-c-candidate-qa/"
+      },
+      {
+        "name": "RTD Board of Directors (district descriptions and maps)",
+        "url": "https://rtd-denver.com/board-of-directors"
       }
     ],
     "confidence": "verified"

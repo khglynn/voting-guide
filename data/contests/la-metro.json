@@ -2709,5 +2709,1569 @@
    }
   ],
   "confidence": "sourced"
+ },
+ {
+  "id": "ca-us-house-26",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-26 (west Valley edge: parts of West Hills and Woodland Hills; mostly Ventura County)",
+  "scope_plain": "Voters in the 26th Congressional District (new map approved with Prop 50). In the City of LA that is only parts of West Hills and Woodland Hills, about 70,500 residents. Most of the district is in Ventura County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "Open seat: Rep. Julia Brownley is not running again. A Democratic Assembly member faces a Republican pastor and former tech executive. Registration is about 43% Democratic and 28% Republican.",
+  "vote_for": 1,
+  "incumbent": "Julia Brownley (not running)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jacqui Irwin",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://jacquiirwin.com",
+    "website_confidence": "sourced",
+    "background": "State Assemblymember since 2014, now termed out; earlier a Thousand Oaks councilmember and two-term mayor. Systems engineer by training (UC San Diego). First in June with 41.3% districtwide.",
+    "own_words": [
+     {
+      "text": "On ICE: 'I would work to claw back excessive funding and get rid of untrained agents.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     },
+     {
+      "text": "Wants federal tax cuts for utilities under H.R. 1 passed on to ratepayers. Lead author of the 2025 cap-and-trade extension (AB 1207).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     },
+     {
+      "text": "Ban members of Congress and the president from trading individual stocks.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Sam Gallucci",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://samgallucci.com",
+    "website_confidence": "sourced",
+    "background": "Pastor in Oxnard and founder of The Kingdom Center women’s shelter; former IBM and PeopleSoft executive. Ran for governor in the 2021 recall (0.2%). Has not held office. Second in June with 20.9%.",
+    "own_words": [
+     {
+      "text": "On immigration: 'All these workers need to stay, and the criminals need to go.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     },
+     {
+      "text": "Says current pollution laws 'are enough' when enforced; wants more domestic energy and faster permits.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     },
+     {
+      "text": "Supports term limits for Congress and a ban on members trading individual stocks.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-26"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "City Hall Pass: CA-26",
+    "url": "https://cityhallpass.com/election-2026/races/congress-26"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-27",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-27 (northwest Valley: Granada Hills, most of Northridge, parts of Reseda, Lake Balboa, North Hills)",
+  "scope_plain": "Voters in the 27th Congressional District (new map approved with Prop 50). In the City of LA that is Granada Hills, most of Northridge and parts of Reseda, Lake Balboa and North Hills, about 144,000 residents. The rest is Santa Clarita and the Antelope Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "One of the closest House races in LA County. In June the Republican finished just ahead of the first-term Democrat, 41.0% to 40.6%.",
+  "vote_for": 1,
+  "incumbent": "George Whitesides",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "George Whitesides",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://whitesides.house.gov",
+    "website_confidence": "sourced",
+    "background": "In Congress since January 2025 after unseating Rep. Mike Garcia. Former NASA chief of staff and first CEO of Virgin Galactic; co-founded the wildfire nonprofit Megafire Action. Lives in Agua Dulce. Second in June with 40.6%.",
+    "own_words": [
+     {
+      "text": "Border security plus legal pathways to citizenship, 'especially for undocumented immigrants brought to the U.S. as children.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     },
+     {
+      "text": "Calls unilateral military action without congressional approval 'unconstitutional'; voted yes on all six 2026 Iran war powers resolutions.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     },
+     {
+      "text": "Campaign says he wants to 'ban congressional stock trading altogether.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jason Gibbs",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.jasongibbsforcongress.com",
+    "website_confidence": "sourced",
+    "background": "Santa Clarita City Councilmember since 2020 (mayor in 2023). Aerospace mechanical engineer who worked on Delta and Atlas rocket programs; Cal Poly San Luis Obispo. First in June with 41.0%.",
+    "own_words": [
+     {
+      "text": "Federal money for the I-5 and Highway 14 instead of high-speed rail: 'I will fight to fund the projects that will actually help people now.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     },
+     {
+      "text": "Border barriers, shorter visa backlogs, and removing first the people who 'pose a threat to public safety.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     },
+     {
+      "text": "Members of Congress and their households should hold only index or mutual funds, or use blind trusts.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-27"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: CA-27",
+    "url": "https://cityhallpass.com/election-2026/races/congress-27"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-28",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-28 (San Gabriel Valley; only about 150 City of LA residents, at the edge near Highland Park)",
+  "scope_plain": "Voters in the 28th Congressional District (new map approved with Prop 50). Only about 154 City of LA residents live in it, at the city’s northeast edge near Highland Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "A long-time incumbent against the Arcadia Republican she beat in 2024. Very few City of LA voters will see this race.",
+  "vote_for": 1,
+  "incumbent": "Judy Chu",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Judy Chu",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://chu.house.gov",
+    "website_confidence": "sourced",
+    "background": "In Congress since 2009, the first Chinese American woman elected to Congress. Earlier Monterey Park mayor, Assembly member and Board of Equalization member. Lives in Monterey Park.",
+    "own_words": [
+     {
+      "text": "Wants a supplemental disaster aid package for the January 2025 fires; her bill making wildfire settlements tax-free is now law.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     },
+     {
+      "text": "Says ICE 'cannot continue to exist as it is'; wants detention centers such as Adelanto closed.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     },
+     {
+      "text": "Restore Affordable Care Act premium subsidies and cap child care costs at 7% of income.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "April A. Verlato",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://verlatoforcongress.com",
+    "website_confidence": "sourced",
+    "background": "Arcadia attorney who took over her father’s law practice. Elected to the Arcadia City Council in 2016 and chosen mayor in 2019. Lost to Chu in 2024.",
+    "own_words": [
+     {
+      "text": "Work with the Trump administration and Republican leaders to get fire recovery aid.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     },
+     {
+      "text": "Border security, visas 'for all types of workers,' and a way to address long-time residents who committed no other crimes.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     },
+     {
+      "text": "Supports a 16-year limit for House members and a stock trading ban for members and their families.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-28"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "City Hall Pass: CA-28",
+    "url": "https://cityhallpass.com/election-2026/races/congress-28"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-29",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-29 (east and northeast Valley: Sylmar, Pacoima, Sun Valley, Panorama City, Van Nuys, North Hollywood, Toluca Lake)",
+  "scope_plain": "Voters in the 29th Congressional District (new map approved with Prop 50). In the City of LA that is most of the east and northeast San Fernando Valley, from Sylmar and Pacoima to Van Nuys, North Hollywood and Toluca Lake, about 735,000 residents. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "A Democrat-versus-Democrat race. A first-term incumbent backed by the party, labor and firefighters faces a progressive organizer on her fifth run for this seat. Both oppose current ICE enforcement; they differ on Medicare for All, military aid to Israel and housing.",
+  "vote_for": 1,
+  "incumbent": "Luz Maria Rivas",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Angélica María Dueñas",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://angelica4congress.com",
+    "website_confidence": "sourced",
+    "background": "Community organizer and human resources specialist from Sun Valley; former president of the Sun Valley Area Neighborhood Council. Ran for this seat in 2018 (as a Green), 2020, 2022 and 2024. Second in June with 24.9%.",
+    "own_words": [
+     {
+      "text": "Abolish ICE, and require a signed judicial warrant before ICE is deployed.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     },
+     {
+      "text": "'I will never vote to send U.S. weapons or military aid to Israel.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     },
+     {
+      "text": "Medicare for All; national rent control, a vacancy tax and a ban on Wall Street buying homes.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Luz Maria Rivas",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://rivas.house.gov",
+    "website_confidence": "sourced",
+    "background": "In Congress since January 2025; State Assembly 2018 to 2024. Pacoima native, MIT electrical engineer and founder of the nonprofit DIY Girls. Lives in North Hollywood. First in June with 51.0%.",
+    "own_words": [
+     {
+      "text": "Has 'called for the abolishment of ICE'; original cosponsor of the American Dream and Promise Act for Dreamers and TPS holders.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     },
+     {
+      "text": "Extend Affordable Care Act tax credits she says cover 31,000 residents; opposed the H.R. 1 health cuts.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     },
+     {
+      "text": "Voted for the 21st Century ROAD to Housing Act, law since July 2026; sponsors a tax credit for multigenerational home upgrades.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-29"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: CA-29",
+    "url": "https://cityhallpass.com/election-2026/races/congress-29"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-32",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-32 (south and west Valley, Bel Air, Brentwood, Pacific Palisades)",
+  "scope_plain": "Voters in the 32th Congressional District (new map approved with Prop 50). In the City of LA that is most of the south and west San Fernando Valley, from Studio City, Sherman Oaks and Encino to Woodland Hills, Chatsworth and Porter Ranch, plus Bel Air, Brentwood and Pacific Palisades, about 598,000 residents. It also covers Malibu and Simi Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "A 15-term incumbent against the Malibu Republican he beat in 2024. They differ sharply on crypto rules, immigration, voter ID and federal income taxes.",
+  "vote_for": 1,
+  "incumbent": "Brad Sherman",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Brad Sherman",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.bradsherman.com",
+    "website_confidence": "sourced",
+    "background": "In Congress since 1997 (15 terms). Earlier a CPA, tax attorney and chair of the State Board of Equalization. UCLA and Harvard Law. Lives in Sherman Oaks. First in June.",
+    "own_words": [
+     {
+      "text": "Opposes the SAVE Act proof-of-citizenship bill; says the president has no authority to run elections.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     },
+     {
+      "text": "Voted no on the GENIUS and CLARITY crypto bills.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     },
+     {
+      "text": "Wants a supplemental appropriation for underinsured homeowners after the LA fires.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Larry Thompson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.larrythompsonforcongress.com",
+    "website_confidence": "sourced",
+    "background": "Malibu entertainment lawyer who runs a talent management and production company; Army Reserve JAG officer, 1968 to 1974. Lost to Sherman in 2024. Has not held office. Second in June.",
+    "own_words": [
+     {
+      "text": "Federal law should require voter ID and proof of citizenship in all federal elections.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     },
+     {
+      "text": "Phase out federal income taxes over four years; no tax on Social Security, tips or overtime.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     },
+     {
+      "text": "Supports clear rules for digital asset businesses and self-custody of crypto.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-32"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "City Hall Pass: CA-32",
+    "url": "https://cityhallpass.com/election-2026/races/congress-32"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-43",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-43 (Watts, Harbor Gateway North, parts of South LA and Westchester; plus Inglewood, Hawthorne, Gardena, Compton)",
+  "scope_plain": "Voters in the 43th Congressional District (new map approved with Prop 50). In the City of LA that is Watts, Harbor Gateway North and parts of South LA and Westchester, about 156,000 residents. It also covers Inglewood, Compton, Hawthorne, Gardena, Lawndale and part of Torrance. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "A 35-year incumbent, the top Democrat on the House Financial Services Committee, faces a Republican with no published platform.",
+  "vote_for": 1,
+  "incumbent": "Maxine Waters",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Maxine Waters",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "In the U.S. House since 1991, after 14 years in the State Assembly. Ranking Democrat on the Financial Services Committee, which she once chaired. Founded Community Build after the 1992 unrest. First in June with 63.8%.",
+    "own_words": [
+     {
+      "text": "Sponsor of the Ending Homelessness Act of 2025 and the Housing Crisis Response Act.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-43"
+     },
+     {
+      "text": "Voted no on the GENIUS and CLARITY crypto bills; sponsored a bill on presidential conflicts of interest in crypto (H.R. 3573).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-43"
+     },
+     {
+      "text": "Bill to prevent hydrofluoric acid releases at refineries (H.R. 7384).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Cristian Morales",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Manufacturing Executive. Registered his campaign committee with a Torrance address. No campaign website, biography or news profile was found. Second in June with 16.9%.",
+    "own_words": [
+     {
+      "text": "No published positions were found.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: CA-43",
+    "url": "https://cityhallpass.com/election-2026/races/congress-43"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-44",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-44 (San Pedro, Wilmington, Harbor City, Harbor Gateway South; plus Carson, South Gate, Lynwood)",
+  "scope_plain": "Voters in the 44th Congressional District (new map approved with Prop 50). In the City of LA that is San Pedro, Wilmington, Harbor City and Harbor Gateway South, about 169,000 residents. It also covers Carson, South Gate, Lynwood, Huntington Park, Paramount and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "The incumbent Democrat against a Republican nurse practitioner. Barragán got 77.0% in June.",
+  "vote_for": 1,
+  "incumbent": "Nanette Diaz Barragan",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Nanette Diaz Barragan",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://barraganforcongress.com/",
+    "website_confidence": "sourced",
+    "background": "In Congress since 2017; earlier a Hermosa Beach councilmember and mayor. Grew up in Harbor Gateway; UCLA and USC Law. Sits on Energy and Commerce. First in June with 77.0%.",
+    "own_words": [
+     {
+      "text": "Bills to add dental benefits to Medicare and Medicaid; voted no on H.R. 1, the 2025 tax and spending law.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     },
+     {
+      "text": "Sponsor of the Chemical Disaster Prevention Act and the Clean Water Justice Act.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     },
+     {
+      "text": "Requested $4 million for Harbor Gateway street safety and $750,000 for Fire Station 38 in Wilmington.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Genevieve Angel",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.angelforcongress.com/",
+    "website_confidence": "sourced",
+    "background": "Family nurse practitioner, healthcare executive and small-business owner who has lived in Lakewood for nearly 30 years. Has not held office. Second in June with 23.0%.",
+    "own_words": [
+     {
+      "text": "Says 47,222 district residents could lose coverage because of federal cuts and premium increases.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     },
+     {
+      "text": "Lists 'Lower costs. More opportunity.' and 'Support accountability and effective enforcement' as priorities.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     },
+     {
+      "text": "On immigration: 'Secure, fair, and practical solutions.' No specific proposals were found.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/congress-44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: CA-44",
+    "url": "https://cityhallpass.com/election-2026/races/congress-44"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-state-senate-20",
+  "state": "CA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "SD-20 (north and east Valley: Sylmar, Pacoima, Sun Valley, Sunland-Tujunga, Panorama City, Van Nuys, Lake Balboa, Reseda, Canoga Park)",
+  "scope_plain": "Voters in the 20th State Senate District. About 86% of its residents (and 97% of its land) are in the City of LA: Sylmar, Pacoima, Arleta, Sun Valley, Sunland-Tujunga, Mission Hills, North Hills, Panorama City, Van Nuys, Lake Balboa, Reseda, Winnetka, Canoga Park and part of North Hollywood. Only even-numbered Senate districts vote in 2026. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget with the Assembly. Four-year term.",
+  "why_it_matters": "The incumbent Democrat faces a Republican who ran for Assembly in 2024. They split on taxes to close the budget gap, health coverage for undocumented immigrants and housing density.",
+  "vote_for": 1,
+  "incumbent": "Caroline Menjivar",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Caroline Menjivar",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.carolinemenjivar.com",
+    "website_confidence": "sourced",
+    "background": "State senator since December 2022. Marine Corps veteran (2009 to 2016), former EMT, therapist and City of LA field deputy; UCLA Master of Social Welfare. Lives in Panorama City. First in June with 62.1%.",
+    "own_words": [
+     {
+      "text": "Close the 'Water's Edge' corporate tax loophole, which she says would bring in 'a couple of billion' dollars.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     },
+     {
+      "text": "Keep and expand health coverage for undocumented immigrants, paid for by closing corporate tax loopholes.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     },
+     {
+      "text": "No support for 'density-only solutions' without affordability rules; voted no on SB 79 in 2025.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tony Rodriguez",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.tony4senate.com",
+    "website_confidence": "sourced",
+    "background": "Tujunga resident and regional recruiting manager; retired after 26 years in the Army. Lost the 2024 Assembly District 44 race to Nick Schultz. No ballot designation this year. Second in June with 27.9%.",
+    "own_words": [
+     {
+      "text": "Tax or fee increases are a 'non-starter'; cut spending first.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     },
+     {
+      "text": "Emergency care for everyone 'regardless of status,' but no 'broad, unlimited expansion' of coverage without a set funding source.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     },
+     {
+      "text": "Approve workforce housing that meets the rules within 90 days; convert empty commercial buildings to housing.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/senate-20"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: SD-20",
+    "url": "https://cityhallpass.com/election-2026/races/senate-20"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-40",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-40 (Chatsworth, Porter Ranch, Granada Hills, Northridge, part of North Hills; plus Santa Clarita)",
+  "scope_plain": "Voters in the 40th Assembly District. In the City of LA that is Chatsworth, Porter Ranch, Granada Hills, Northridge and part of North Hills, about 228,000 residents. The rest is the Santa Clarita Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A seat both parties contest: Schiavo first won it by 522 votes in 2022. She got 55.6% in June against three Republicans.",
+  "vote_for": 1,
+  "incumbent": "Pilar Schiavo",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Rickey Tracy Hayes II",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://rickeyhayesforassembly2026.com",
+    "website_confidence": "sourced",
+    "background": "Marine Corps veteran, former custody and police officer, and IBEW lineman turned energy infrastructure executive. Has lived in the Santa Clarita Valley for over a decade. Has not held office. Second in June with 22.3%.",
+    "own_words": [
+     {
+      "text": "Balance the budget 'entirely' with spending cuts and no new taxes.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Suspend the gas tax; give incentives to refineries that expand and modernize.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Change CEQA and speed up permits to build housing.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Pilar Schiavo",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.pilar4ca.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2022; chairs the Military and Veterans Affairs Committee. Former nurse advocate, small business owner and labor organizer. Lives in Chatsworth. First in June with 55.6%.",
+    "own_words": [
+     {
+      "text": "Close the deficit with 'a balance of both' cuts and revenue.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Authored AB 1715, signed in 2026, to track public money given to utilities.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     },
+     {
+      "text": "Bills to cut permit delays for housing (AB 301 and AB 2390).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-40"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-40",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-40"
+   },
+   {
+    "name": "LA Forward guide: State Assembly (2022 margin)",
+    "url": "https://laforwardguide.org/guide/state-assembly"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-42",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-42 (Pacific Palisades and Bel Air area; plus Malibu, Calabasas, Thousand Oaks, Simi Valley)",
+  "scope_plain": "Voters in the 42nd Assembly District. In the City of LA that is the Pacific Palisades and Bel Air area, about 76,000 residents. The rest runs from Malibu, Topanga and Calabasas into Ventura County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "Open seat: Jacqui Irwin is termed out and running for Congress. An Agoura Hills councilmember faces the Republican who got about 46.5% here in 2024.",
+  "vote_for": 1,
+  "incumbent": "Jacqui Irwin (termed out)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Deborah Klein Lopez",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://deborahkleinlopez.com",
+    "website_confidence": "sourced",
+    "background": "Agoura Hills councilmember since 2018 and former mayor; past board chair of Clean Power Alliance. Former financial analyst and legislative staffer; Northwestern. First in June.",
+    "own_words": [
+     {
+      "text": "New ongoing revenue, 'structural budget reform' and closing 'special interest loopholes'; opposes cuts to schools and health care.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     },
+     {
+      "text": "Keep Prop 13 limits, with changes so seniors can downsize without a tax penalty.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     },
+     {
+      "text": "Infill housing, community land trusts and faster permits for affordable housing.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ted Nordblum",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://tednordblum.com",
+    "website_confidence": "sourced",
+    "background": "Newbury Park owner of a medical device company; started as a union heavy equipment operator. Lost this seat to Irwin in 2024. Has not held office. Second in June.",
+    "own_words": [
+     {
+      "text": "'DOGE the state budget'; says the state does not have 'a revenue problem.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     },
+     {
+      "text": "Eliminate property taxes.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     },
+     {
+      "text": "Opposed more density in the Palisades because of wildfire evacuation risk.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-42"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "City Hall Pass: AD-42",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-42"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-43",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-43 (northeast Valley: Sylmar, Pacoima, Arleta, Panorama City, Sun Valley, Valley Glen; plus San Fernando)",
+  "scope_plain": "Voters in the 43rd Assembly District. In the City of LA that is Sylmar, Pacoima, Arleta, Panorama City, Sun Valley, Valley Glen and Rancho Cascades. It also covers the City of San Fernando. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A first-term Democrat against a Republican contractor. Rodriguez got 74.9% in June.",
+  "vote_for": 1,
+  "incumbent": "Celeste Rodriguez",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Ricardo Benitez",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Plumber and electrical contractor. Was the Republican nominee in the neighboring 39th Assembly District in 2018. No campaign website was found. Second in June with 25.1%.",
+    "own_words": [
+     {
+      "text": "No published positions were found.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Celeste Rodriguez",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votecelesterodriguez.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2024; former San Fernando mayor and councilmember. Ran the City of LA’s guaranteed basic income pilot in the mayor’s office. San Diego State economics. First in June with 74.9%.",
+    "own_words": [
+     {
+      "text": "Close corporate tax loopholes and use 'outcome-based budgeting.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     },
+     {
+      "text": "Opposes cooperation between local agencies and ICE; more money for legal defense and rapid response networks.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     },
+     {
+      "text": "'Health care should not depend on immigration status.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-43",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-43"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-44",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-44 (Sunland-Tujunga, North Hollywood, Studio City, Sherman Oaks, Toluca Lake, Valley Village; plus Burbank, Glendale)",
+  "scope_plain": "Voters in the 44th Assembly District. In the City of LA that is Sunland-Tujunga, Sherman Oaks, Studio City, North Hollywood, Valley Village and Toluca Lake, about 270,000 residents. It also covers Burbank and most of Glendale. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A first-term Democrat who chairs the Public Safety Committee, against a Republican former Miss America. Schultz got 71.2% in June.",
+  "vote_for": 1,
+  "incumbent": "Nicholas \"Nick\" Schultz",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Carolyn Daniels",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://daniels4assembly.com",
+    "website_confidence": "sourced",
+    "background": "Former Miss America, the first from Hawaii, with three decades of advocacy on domestic violence and education. Has lived in the district for 20 years. Has not held office. Second in June with 20.7%.",
+    "own_words": [
+     {
+      "text": "'Spending cuts are the way to go'; audit and cut 'redundant and under-performing agencies.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     },
+     {
+      "text": "Reject new taxes; supports suspending the gas tax (AB 1745).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nicholas \"Nick\" Schultz",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votenickschultz.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2024; chairs the Public Safety Committee. Former deputy attorney general who prosecuted corruption and trafficking; former Burbank mayor. Lives in Burbank. First in June with 71.2%.",
+    "own_words": [
+     {
+      "text": "Close tax loopholes for the wealthy and large corporations, including the 'water's edge' loophole.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     },
+     {
+      "text": "Keep the state’s climate goals and invest in alternative fuels.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     },
+     {
+      "text": "Optional time-based 'dynamic' electricity rates (AB 1787, held in the Senate).",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-44",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-44"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-46",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-46 (west and central Valley: Encino, Woodland Hills, West Hills, Tarzana, Reseda, Lake Balboa, Van Nuys)",
+  "scope_plain": "Voters in the 46th Assembly District. Almost all of it is in the City of LA: Woodland Hills, Encino, West Hills, Tarzana, Reseda, Lake Balboa, Van Nuys, Winnetka and Canoga Park. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "The Assembly budget chair faces a longtime LAUSD teacher in a rematch of 2024. Gabriel got 66.3% of the LA County vote in June.",
+  "vote_for": 1,
+  "incumbent": "Jesse Gabriel",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jesse Gabriel",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.jessegabriel.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2018 and Budget Committee chair since 2023; former constitutional rights attorney. UC Berkeley and Harvard Law. Lives in Encino. First in June.",
+    "own_words": [
+     {
+      "text": "Wrote the 2025 and 2026 state budgets and ACA 20 (Prop 2), which raises the rainy day fund cap.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     },
+     {
+      "text": "Authored AB 1924, a statewide homelessness prevention strategy signed in 2026.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     },
+     {
+      "text": "Authored the 2025 ban on sales of easily converted pistols (AB 1127).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tracey Schroeder",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://traceyschroeder.com/",
+    "website_confidence": "sourced",
+    "background": "Longtime LAUSD teacher (24 years as of 2022) who served in UTLA’s House of Representatives. Ran for the LAUSD board in 2022 and against Gabriel in 2024. Second in June.",
+    "own_words": [
+     {
+      "text": "Suspend the gas tax, defend Prop 13 and oppose 'any new tax increase.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     },
+     {
+      "text": "A state audit to 'track where the money went' on homelessness; more mental health and addiction treatment.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     },
+     {
+      "text": "Tougher penalties for repeat offenders; 'hold rogue DAs accountable.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-46"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "City Hall Pass: AD-46",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-46"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-52",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-52 (Eagle Rock, Highland Park, El Sereno, Echo Park, Silver Lake, Los Feliz, Glassell Park, Atwater Village)",
+  "scope_plain": "Voters in the 52nd Assembly District. In the City of LA that is El Sereno, Eagle Rock, Echo Park, Highland Park, Silver Lake, Glassell Park, Los Feliz, Atwater Village, Lincoln Heights, Cypress Park and Elysian Valley. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A first-term Democrat against a Republican musician with no ballot designation. Caloza got 85.8% in June.",
+  "vote_for": 1,
+  "incumbent": "Jessica Caloza",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Andrea Lee Anderson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.andrealeeanderson.com/",
+    "website_confidence": "sourced",
+    "background": "Musician, per a 2026 questionnaire. On the ballot with no designation and no campaign finance committee on file. Has not held office. Second in June with 14.2%.",
+    "own_words": [
+     {
+      "text": "'Lower taxes'; adding more social programs is her 'non-starter.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     },
+     {
+      "text": "The state should 'cooperate with' federal immigration agents 'rather than threaten them.'",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jessica Caloza",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.jessicacaloza.com/",
+    "website_confidence": "sourced",
+    "background": "Assemblymember since 2024. Grew up in Eagle Rock after arriving from the Philippines at 4; former LA Board of Public Works commissioner and deputy chief of staff to Attorney General Rob Bonta. First in June with 85.8%.",
+    "own_words": [
+     {
+      "text": "Wrote AB 920, a central housing application portal (law, 2025), and AB 672 on community land trusts (signed 2026).",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     },
+     {
+      "text": "Voted yes on SB 79 (housing near transit) and SB 627, the ban on masked law enforcement.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-52"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-52",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-52"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-65",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-65 (Wilmington, Harbor City, Harbor Gateway, much of San Pedro, Watts; plus Compton, Carson)",
+  "scope_plain": "Voters in the 65th Assembly District. In the City of LA that is Wilmington, Harbor City, Harbor Gateway, much of San Pedro, the Port and Watts. It also covers Compton, Carson and part of Long Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "Open seat: Mike Gipson is termed out and running for the Board of Equalization. A Compton school board member faces a Republican Long Beach teacher. Davis got 46.3% in June.",
+  "vote_for": 1,
+  "incumbent": "Mike Gipson (termed out)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Ayanna Davis",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://ayannadavis.com/",
+    "website_confidence": "sourced",
+    "background": "Compton Unified school board member since 2022 and principal of an LAUSD early education center; two decades as a teacher and administrator. USC doctorate in educational leadership. First in June with 46.3%.",
+    "own_words": [
+     {
+      "text": "Expand state health programs to cover all residents, including noncitizens, and expand Medi-Cal eligibility.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-65"
+     },
+     {
+      "text": "Regular audits of state behavioral health spending tied to Prop 36.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-65"
+     },
+     {
+      "text": "Points to Compton Unified’s plan for about 800 affordable homes on unused district land.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-65"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Lydia A. Gutiérrez",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.lydia4education.com/",
+    "website_confidence": "sourced",
+    "background": "Long Beach Unified teacher for decades after six years in aerospace. Ran for state superintendent in 2014 (third, 24.5%) and for the LAUSD board in 2015. Second in June with 19.2%.",
+    "own_words": [
+     {
+      "text": "No published positions on state issues were found in the sources checked.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-65"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-65",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-65"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-66",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-66 (northwest and coastal San Pedro; plus Torrance, Redondo Beach, Palos Verdes, Manhattan Beach)",
+  "scope_plain": "Voters in the 66th Assembly District. In the City of LA that is only northwest and coastal San Pedro. The rest is South Bay cities from Torrance and Palos Verdes to Manhattan Beach. Two Democrats. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "Open seat (Al Muratsuchi is termed out) with two Democrats. A school board president backed by teachers and housing groups faces a mayor and prosecutor backed by the state party, labor and police unions. They differ on refineries and single-payer health care.",
+  "vote_for": 1,
+  "incumbent": "Al Muratsuchi (termed out)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Sara Deen",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.saradeenforca.com/",
+    "website_confidence": "sourced",
+    "background": "Family dentist and president of the Palos Verdes Peninsula Unified board; co-owns an urgent care clinic in Torrance. Lives in Rancho Palos Verdes. Second in June with 24.6%.",
+    "own_words": [
+     {
+      "text": "Build starter homes, duplexes and workforce housing for nurses, school staff and first responders.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     },
+     {
+      "text": "Signed a pledge to work to phase out modified hydrofluoric acid at the Torrance Refinery.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     },
+     {
+      "text": "Backed single-payer before holding office; now 'agnostic' on the approach.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Paul Seo",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.paulseo.com/",
+    "website_confidence": "sourced",
+    "background": "Mayor of Rancho Palos Verdes and a state deputy attorney general prosecuting corruption; former LA County deputy DA. West Point graduate and Army officer. First in June with 26.6%.",
+    "own_words": [
+     {
+      "text": "Project labor agreements with prevailing wages on housing; stronger eviction protections.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     },
+     {
+      "text": "Says single-payer does not 'make sense'; supports Medi-Cal for all income-eligible residents regardless of status.",
+      "is_quote": true,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     },
+     {
+      "text": "Wants a state plan to phase out fossil fuels; warns that closing refineries before demand falls would raise prices.",
+      "is_quote": false,
+      "source": "https://cityhallpass.com/election-2026/races/assembly-66"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "LA County certified June primary results",
+    "url": "https://results.lavote.gov/text-results/4338"
+   },
+   {
+    "name": "City Hall Pass: AD-66",
+    "url": "https://cityhallpass.com/election-2026/races/assembly-66"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-41",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-41 (north edge of Fullerton; plus La Habra, Brea, Whittier, Downey, Bellflower)",
+  "scope_plain": "Voters in the 41st Congressional District (new map approved with Prop 50). About 17,000 Fullerton residents live in it, at the north end of the city next to La Habra and Brea. Most of the district is in southeast LA County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "Prop 50 redrew this seat into a Democratic-leaning district. A Democrat who has been in Congress since 2003 (most recently for the old 38th) faces a Republican plumbing contractor. The current CD-41 member, Ken Calvert, is running in CD-40.",
+  "vote_for": 1,
+  "incumbent": "Ken Calvert (running in CD-40)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Linda Sánchez",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://voteforlinda.com",
+    "website_confidence": "sourced",
+    "background": "In Congress since 2003, most recently for the old 38th District, so she is not the incumbent in this new seat. Former labor and employment attorney and executive director of the Orange County Central Labor Council. UC Berkeley and UCLA Law.",
+    "own_words": [
+     {
+      "text": "Campaigning on costs: 'I'm fighting to lower prices and stand up for the hardworking people who keep our communities running.'",
+      "is_quote": true,
+      "source": "https://news.ballotpedia.org/2026/07/15/u-s-rep-linda-sanchez-d-ca-38-and-mitch-clemmons-r-compete-for-californias-redrawn-41st-congressional-district/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mitch Clemmons",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Has run a plumbing company since 2002; studied aerospace engineering technology at Cal Poly Pomona. Lost the 2022 race for State Senate District 30, 61% to 39%.",
+    "own_words": [
+     {
+      "text": "Campaign says it focuses on 'addressing everyday concerns that matter most to residents.'",
+      "is_quote": true,
+      "source": "https://news.ballotpedia.org/2026/07/15/u-s-rep-linda-sanchez-d-ca-38-and-mitch-clemmons-r-compete-for-californias-redrawn-41st-congressional-district/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Ballotpedia News: Sánchez and Clemmons in the redrawn 41st (July 15, 2026)",
+    "url": "https://news.ballotpedia.org/2026/07/15/u-s-rep-linda-sanchez-d-ca-38-and-mitch-clemmons-r-compete-for-californias-redrawn-41st-congressional-district/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-46",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-46 (southern Fullerton; plus Anaheim, Santa Ana, Orange, Placentia, Stanton)",
+  "scope_plain": "Voters in the 46th Congressional District (new map approved with Prop 50). About 61,000 Fullerton residents live in it, mostly in the south of the city; the rest of the district is mainly Anaheim and Santa Ana. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "A rematch of 2024: the Democratic incumbent, in Congress since 2017, against a Republican UC Irvine professor.",
+  "vote_for": 1,
+  "incumbent": "Lou Correa",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Lou Correa",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.loucorrea.com",
+    "website_confidence": "sourced",
+    "background": "In Congress since 2017. Earlier in the State Assembly (1998 to 2004), on the Orange County Board of Supervisors (2004 to 2006) and in the State Senate (2006 to 2014). Cal State Fullerton economics; UCLA MBA and law degree.",
+    "own_words": [
+     {
+      "text": "Campaign site says 'public service should be about people, not playing partisan games.'",
+      "is_quote": true,
+      "source": "https://www.loucorrea.com"
+     },
+     {
+      "text": "No 2026 issue page or questionnaire answers were found.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Lou_Correa"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "David Pan",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.davidpanforcongress.com",
+    "website_confidence": "sourced",
+    "background": "UC Irvine professor of German since 2006; former McKinsey management consultant. Stanford and Columbia. Lost to Correa in 2024.",
+    "own_words": [
+     {
+      "text": "His 2026 site lists three priorities: ensuring public safety, school choice for parents and reforming the welfare state.",
+      "is_quote": false,
+      "source": "https://www.davidpanforcongress.com"
+     },
+     {
+      "text": "On public safety (2024 site): 'recruit more police and enforce our laws.'",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/David_Pan"
+     },
+     {
+      "text": "'Reducing the size and reach of government will put money back in the hands of families' (2024 site).",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/David_Pan"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "Statewide Database: AB 604 (Prop 50) city splits report",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Ballotpedia: David Pan",
+    "url": "https://ballotpedia.org/David_Pan"
+   },
+   {
+    "name": "Ballotpedia: Lou Correa",
+    "url": "https://ballotpedia.org/Lou_Correa"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-59",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-59 (northern Fullerton; the rest runs east through north Orange County)",
+  "scope_plain": "Voters in the 59th Assembly District. In Fullerton, roughly the area north of Chapman and Malvern avenues (the line jogs around Hillcrest Park and follows Yorba Linda Blvd to the 57). South Fullerton votes in AD-67. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "A five-term Republican incumbent against a Green Party member. Only two people filed for the June primary, so both advanced. Chen got 66.3% in June.",
+  "vote_for": 1,
+  "incumbent": "Phillip Chen",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Phillip Chen",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Assemblymember since 2016; first elected to the Walnut Valley Unified school board in 2011. Business owner and educator. Cal State Fullerton; USC master’s in public administration and doctorate. First in June with 66.3%.",
+    "own_words": [
+     {
+      "text": "No current positions were opened for this guide.",
+      "is_quote": false,
+      "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Victor Hernandez",
+    "party": "Green",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Account sales manager (ballot designation). Serves on the Green Party of Orange County Central Committee and is active in local mutual-aid events. Second in June with 33.7%.",
+    "own_words": [
+     {
+      "text": "No current positions were opened for this guide.",
+      "is_quote": false,
+      "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "Fullerton Observer: new district lines divide Fullerton (Jan 3, 2022)",
+    "url": "https://fullertonobserver.com/2022/01/03/new-federal-and-state-district-lines-divide-fullerton-in-two"
+   },
+   {
+    "name": "The Ballot Brief: Assembly District 59",
+    "url": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
+   },
+   {
+    "name": "Ballot Access News: only two filed in AD-59",
+    "url": "https://ballot-access.org/?p=93333"
+   }
+  ],
+  "confidence": "verified"
  }
 ]

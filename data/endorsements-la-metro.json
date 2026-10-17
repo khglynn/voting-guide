@@ -3578,5 +3578,1725 @@
   "url": "https://cityhallpass.com/election-2026/measures/county-measure-e",
   "date": "2026-10-16",
   "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-26",
+  "status": "endorsed",
+  "choice": "Jacqui Irwin",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-26",
+  "status": "endorsed",
+  "choice": "Sam Gallucci",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-26",
+  "status": "endorsed",
+  "choice": "Jacqui Irwin",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-27",
+  "status": "endorsed",
+  "choice": "George Whitesides",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-27",
+  "status": "endorsed",
+  "choice": "Jason Gibbs",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-27",
+  "status": "endorsed",
+  "choice": "George Whitesides",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-28",
+  "status": "endorsed",
+  "choice": "Judy Chu",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-28",
+  "status": "endorsed",
+  "choice": "April A. Verlato",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-28",
+  "status": "endorsed",
+  "choice": "Judy Chu",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-29",
+  "status": "endorsed",
+  "choice": "Luz Maria Rivas",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-29",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-29",
+  "status": "endorsed",
+  "choice": "Luz Maria Rivas",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Scott Alan Meyers",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-30",
+  "status": "endorsed",
+  "choice": "Laura Friedman",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-32",
+  "status": "endorsed",
+  "choice": "Brad Sherman",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-32",
+  "status": "endorsed",
+  "choice": "Larry Thompson",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-32",
+  "status": "endorsed",
+  "choice": "Brad Sherman",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-34",
+  "status": "endorsed",
+  "choice": "Jimmy Gomez",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-34",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-34",
+  "status": "endorsed",
+  "choice": "Jimmy Gomez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-36",
+  "status": "endorsed",
+  "choice": "Ted W. Lieu",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-36",
+  "status": "endorsed",
+  "choice": "Houston Brignano",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-36",
+  "status": "endorsed",
+  "choice": "Ted W. Lieu",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-37",
+  "status": "endorsed",
+  "choice": "Sydney Kamlager-Dove",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-37",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-37",
+  "status": "endorsed",
+  "choice": "Sydney Kamlager-Dove",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-43",
+  "status": "endorsed",
+  "choice": "Maxine Waters",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-43",
+  "status": "endorsed",
+  "choice": "Cristian Morales",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-43",
+  "status": "endorsed",
+  "choice": "Maxine Waters",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-44",
+  "status": "endorsed",
+  "choice": "Nanette Diaz Barragan",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-44",
+  "status": "endorsed",
+  "choice": "Genevieve Angel",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-44",
+  "status": "endorsed",
+  "choice": "Nanette Diaz Barragan",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Linda Sánchez",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Mitch Clemmons",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Linda Sánchez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-45",
+  "status": "endorsed",
+  "choice": "Derek Tran",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-45",
+  "status": "endorsed",
+  "choice": "Chuong V. Vo",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-45",
+  "status": "endorsed",
+  "choice": "Derek Tran",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-us-house-46",
+  "status": "endorsed",
+  "choice": "Lou Correa",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-us-house-46",
+  "status": "endorsed",
+  "choice": "David Pan",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-us-house-46",
+  "status": "endorsed",
+  "choice": "Lou Correa",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Caroline Menjivar",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Tony Rodriguez",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Caroline Menjivar",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-state-senate-24",
+  "status": "no_position",
+  "choice": null,
+  "why": "The party's general election list says 'No Consensus' for this Democrat-vs-Democrat race.",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-state-senate-24",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-state-senate-26",
+  "status": "no_position",
+  "choice": null,
+  "why": "The party's general election list says 'No Consensus' for this Democrat-vs-Democrat race.",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-state-senate-26",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-state-senate-26",
+  "status": "endorsed",
+  "choice": "Sara Hernandez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Lola Smallwood-Cuevas",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Joe Lisuzzo",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Lola Smallwood-Cuevas",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-state-senate-34",
+  "status": "endorsed",
+  "choice": "Avelino Valencia",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-state-senate-34",
+  "status": "endorsed",
+  "choice": "Rhonda Shader",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-state-senate-34",
+  "status": "endorsed",
+  "choice": "Avelino Valencia",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-40",
+  "status": "endorsed",
+  "choice": "Pilar Schiavo",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-40",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-40",
+  "status": "endorsed",
+  "choice": "Pilar Schiavo",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Deborah Klein Lopez",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Ted Nordblum",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Deborah Klein Lopez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-43",
+  "status": "endorsed",
+  "choice": "Celeste Rodriguez",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-43",
+  "status": "endorsed",
+  "choice": "Ricardo Benitez",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-43",
+  "status": "endorsed",
+  "choice": "Celeste Rodriguez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Carolyn Daniels",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-46",
+  "status": "endorsed",
+  "choice": "Jesse Gabriel",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-46",
+  "status": "endorsed",
+  "choice": "Tracey Schroeder",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-46",
+  "status": "endorsed",
+  "choice": "Jesse Gabriel",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Rick Chavez Zbur",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Jessica Caloza",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Andrea Lee Anderson",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Jessica Caloza",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-54",
+  "status": "endorsed",
+  "choice": "Mark Gonzalez",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-54",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-54",
+  "status": "endorsed",
+  "choice": "Mark Gonzalez",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-55",
+  "status": "endorsed",
+  "choice": "Isaac G. Bryan",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-55",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-55",
+  "status": "endorsed",
+  "choice": "Isaac G. Bryan",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-57",
+  "status": "endorsed",
+  "choice": "Sade Elhawary",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-57",
+  "status": "endorsed",
+  "choice": "Constance Jewel Menzies",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-57",
+  "status": "endorsed",
+  "choice": "Sade Elhawary",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-59",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Democrat is on the ballot here, and the party list names no one in this district.",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-59",
+  "status": "endorsed",
+  "choice": "Phillip Chen",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-59",
+  "status": "endorsed",
+  "choice": "Phillip Chen",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-61",
+  "status": "endorsed",
+  "choice": "Tina Simone McKinnor",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-61",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-61",
+  "status": "endorsed",
+  "choice": "Tina Simone McKinnor",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-65",
+  "status": "endorsed",
+  "choice": "Ayanna Davis",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-65",
+  "status": "endorsed",
+  "choice": "Lydia A. Gutiérrez",
+  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-65",
+  "status": "endorsed",
+  "choice": "Ayanna Davis",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Paul Seo",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-66",
+  "status": "not_found",
+  "choice": null,
+  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Paul Seo",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-democratic-party",
+  "target_id": "ca-assembly-67",
+  "status": "endorsed",
+  "choice": "Mark Pulido",
+  "why": "On the California Democratic Party 2026 General Election Endorsements list (Aug 2, 2026).",
+  "url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-republican-party",
+  "target_id": "ca-assembly-67",
+  "status": "not_found",
+  "choice": null,
+  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "url": "https://cagop.org/endorsements/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "ca-labor-fed",
+  "target_id": "ca-assembly-67",
+  "status": "endorsed",
+  "choice": "Mark Pulido",
+  "why": "On the California Federation of Labor Unions general election recommendations (September 2026 list).",
+  "url": "https://calaborfed.org/wp-content/uploads/2026/09/V2_Biennial-2026-general-election-endorsements.pdf",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-26",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-26",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-27",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-27",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-28",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-28",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-29",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-29",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-32",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-32",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-43",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-us-house-44",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-state-senate-20",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-state-senate-20",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-40",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-40",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-42",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-42",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-43",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-44",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-46",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-46",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-52",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-52",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-65",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-65",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-times-eb",
+  "target_id": "ca-assembly-66",
+  "status": "no_position",
+  "choice": null,
+  "why": "The LA Times editorial board is not endorsing this cycle. It made no endorsements in the June 2026 primary and City Hall Pass found none for November. Its newsroom voter guide is linked instead.",
+  "url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-66",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-26",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-27",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-28",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-29",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-32",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-us-house-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "LA Forward's guide covers state and local races; no congressional section was found.",
+  "url": "https://laforwardguide.org/guide/",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Caroline Menjivar",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-senate",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-40",
+  "status": "endorsed",
+  "choice": "Pilar Schiavo",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Deborah Klein Lopez",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-43",
+  "status": "endorsed",
+  "choice": "Celeste Rodriguez",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-46",
+  "status": "endorsed",
+  "choice": "Jesse Gabriel",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Jessica Caloza",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-65",
+  "status": "endorsed",
+  "choice": "Ayanna Davis",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-forward",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Sara Deen",
+  "why": "'Recommended' in the LA Forward guide.",
+  "url": "https://laforwardguide.org/guide/state-assembly",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-26",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-27",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-28",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-29",
+  "status": "endorsed",
+  "choice": "Luz Maria Rivas",
+  "why": "Endorsed Rivas as 'the practical, credible choice' against a DSA-backed opponent.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-32",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-43",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-us-house-44",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-state-senate-20",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-40",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-42",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-43",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-44",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-46",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-52",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-65",
+  "status": "no_position",
+  "choice": null,
+  "why": "Thrive LA says a race is left out of its guide when 'we have not identified a DSA-backed or affiliated candidate in that race.'",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "thrive-la",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Paul Seo",
+  "why": "Endorsed Seo as 'the proven, accountable leader the 66th District needs,' citing police and prosecutor support.",
+  "url": "https://www.thrivelosangeles.org/voter-guide",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-41",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. (Same board as the Daily News.)",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-us-house-46",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-46",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. (Same board as the Daily News.)",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-daily-news-eb",
+  "target_id": "ca-assembly-59",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. The list says more endorsements will be published.",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-59",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 17, 2026. (Same board as the Daily News.)",
+  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  }
 ]

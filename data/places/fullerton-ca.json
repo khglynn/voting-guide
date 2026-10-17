@@ -17,7 +17,7 @@
   "92833",
   "92835"
  ],
- "zip_caveats": "92831 to 92835 are Fullerton, but 92831 includes part of Placentia and the Cal State Fullerton campus area, 92833 dips into Buena Park and La Habra, and 92835 reaches toward Brea. 92834, 92836, 92837 and 92838 are PO box ZIPs. Fullerton is split between two congressional districts after Prop 50: most of the north is CD-45 (Tran vs. Vo) and the south is CD-46 (Correa vs. Pan). Fullerton elects councilmembers by district, and only Districts 3 and 5 vote this year; the district map is at cityoffullerton.com. School district lines (Fullerton School District K-8, Fullerton Joint Union High School District, and Placentia-Yorba Linda or Buena Park districts at the edges) do not follow city lines. There is no Fullerton city measure in November 2026 (the council rejected a sales tax in July) and no countywide Orange County measure; OC Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
+ "zip_caveats": "92831 to 92835 are Fullerton, but 92831 includes part of Placentia and the Cal State Fullerton campus area, 92833 dips into Buena Park and La Habra, and 92835 reaches toward Brea. 92834, 92836, 92837 and 92838 are PO box ZIPs. After Prop 50, Fullerton is split among three congressional districts: CD-45 (about 66,000 residents), CD-46 (about 61,000, mostly the south) and CD-41 (about 17,000, at the north edge by La Habra and Brea). For the Assembly, roughly north of Chapman and Malvern avenues is AD-59 and the south is AD-67. For the State Senate, the southern part is SD-34, which is on the ballot; the northern part is SD-37, an odd-numbered seat not up this year, so north Fullerton voters have no Senate race. Fullerton elects councilmembers by district, and only Districts 3 and 5 vote this year; the district map is at cityoffullerton.com. School district lines (Fullerton School District K-8, Fullerton Joint Union High School District, North Orange County Community College District) do not follow city lines. At the edges some addresses may fall in Placentia-Yorba Linda, Buena Park, La Habra City or Lowell Joint districts; their trustee races are not in this guide. There is no Fullerton city measure in November 2026 (the council rejected a sales tax in July) and no countywide Orange County measure; OC Measures A through O are all for other cities or school districts. Use the address lookup at ocvote.gov/vlt to see your exact ballot.",
  "contest_ids": [
   "ca-governor",
   "ca-lt-governor",
@@ -52,8 +52,11 @@
   "fullerton-fjuhsd-area-1",
   "fullerton-fjuhsd-area-5",
   "nocccd-area-6",
+  "ca-us-house-41",
   "ca-us-house-45",
+  "ca-us-house-46",
   "ca-state-senate-34",
+  "ca-assembly-59",
   "ca-assembly-67"
  ]
 }

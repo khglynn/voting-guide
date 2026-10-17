@@ -379,7 +379,7 @@
     "level": "state",
     "office": "State Senator",
     "district": "SD-21",
-    "scope_plain": "Voters in Texas Senate District 21 (part of southeast and eastern Travis County, south to Laredo)",
+    "scope_plain": "Voters in Texas Senate District 21 (part of southeast and eastern Travis County; all of San Marcos and Kyle and part of Buda in Hays County; south to Laredo)",
     "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
     "why_it_matters": "Sen. Judith Zaffirini has served since 1987 and is the longest-serving woman in Texas Senate history.",
     "vote_for": 1,
@@ -451,6 +451,10 @@
       {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      },
+      {
+        "name": "Texas Legislative Council: PLANS2168 cities by district (Red-125)",
+        "url": "https://data.capitol.texas.gov/dataset/70836384-f10c-423d-a36e-748d7e000872/resource/4ede4a24-5eb0-40ab-94d1-35ec6110873f/download/plans2168r125.pdf"
       }
     ],
     "confidence": "verified"
@@ -5759,6 +5763,176 @@
       {
         "name": "LWV Austin Area Voters Guide (PDF)",
         "url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-45",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-45 (all of San Marcos, Kyle and Buda; most of Hays County)",
+    "scope_plain": "Voters in Texas House District 45: all of San Marcos, Kyle and Buda, about 84% of Hays County.",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "A rematch of 2024: the Democratic incumbent, in office since 2019, against the Republican she beat last time.",
+    "vote_for": 1,
+    "incumbent": "Erin Zwiener",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Erin Zwiener",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.erinforyall.com",
+        "website_confidence": "sourced",
+        "background": "State representative since 2019. Author, educator and conservationist, and a three-time Jeopardy! champion. Natural resource conservation degree from the University of Montana. Lives in Driftwood.",
+        "own_words": [
+          {
+            "text": "'Restore state funding for public education so that all our kids get a great education without overrelying on property taxes' (2022 survey).",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Erin_Zwiener"
+          },
+          {
+            "text": "'Expand Medicaid to provide health care for another 1.5 million Texans' (2022 survey).",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Erin_Zwiener"
+          },
+          {
+            "text": "Wants an independent redistricting commission 'so that voters will choose their elected representatives' (2022 survey).",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Erin_Zwiener"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Tennyson G. Moreno",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Also the Republican nominee in 2024, when he lost to Zwiener. No campaign website or biography was found.",
+        "own_words": [
+          {
+            "text": "No published positions were found.",
+            "is_quote": false,
+            "source": "https://theballotbrief.com/candidate/tennyson-g-moreno-tx"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas Legislative Council: PLANH2316 cities by district (Red-125)",
+        "url": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/3e0434b0-c521-42fb-b703-5098f0352aba/download/planh2316r125.pdf"
+      },
+      {
+        "name": "Hays County March 3, 2026 Republican primary sample ballot (lists HD-45, HD-73, SD-21)",
+        "url": "https://www.egovlink.com/public_documents300/hayscounty/published_documents/departments/elections/2026/0303%20Primary/Sample%20Ballots/Rep%20Combined%20Sample%20Ballot%2020260303.pdf"
+      },
+      {
+        "name": "Ballotpedia: Erin Zwiener (2026 general election)",
+        "url": "https://ballotpedia.org/Erin_Zwiener"
+      },
+      {
+        "name": "The Ballot Brief: Tennyson G. Moreno",
+        "url": "https://theballotbrief.com/candidate/tennyson-g-moreno-tx"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-73",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-73 (western Hays: Wimberley, Woodcreek, Dripping Springs; plus Comal County)",
+    "scope_plain": "Voters in Texas House District 73: Comal County and western Hays County, including Wimberley, Woodcreek and Dripping Springs. The City of San Marcos is not in it; it is listed for rural Hays addresses outside the city.",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "The Republican incumbent, in office since 2023, against a Democratic retired school principal. Water, growth and school vouchers are the main issues in the candidates’ own materials.",
+    "vote_for": 1,
+    "incumbent": "Carrie Isaac",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Carrie Isaac",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.isaacfortexas.com",
+        "website_confidence": "sourced",
+        "background": "State representative since January 2023. Nonprofit executive, including executive director of DEWIT, which gives financial help to veterans. Stephen F. Austin State University. Lives in Hays County.",
+        "own_words": [
+          {
+            "text": "Cut property taxes, starting by eliminating school maintenance and operations property taxes (2022 survey).",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Carrie_Isaac"
+          },
+          {
+            "text": "Secure the border by 'building a wall and stopping magnet policies that encourage illegal immigration' (2022 survey).",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Carrie_Isaac"
+          },
+          {
+            "text": "Lists property tax reform and 'education freedom' as the policy areas she cares most about (2022 survey).",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Carrie_Isaac"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Merrie Fox",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://foxfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Retired public school teacher and principal (31 years) with a PhD in educational leadership; now a nonprofit executive director. Says she has lived in the district for 45 years.",
+        "own_words": [
+          {
+            "text": "'If elected, I will work to eliminate vouchers' and state-sponsored religious instruction in schools.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Merrie_Fox"
+          },
+          {
+            "text": "Standardize groundwater districts' authority statewide 'to help prevent over-pumping by commercial wells.'",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Merrie_Fox"
+          },
+          {
+            "text": "Give county officials power to manage growth, 'especially regarding hyperscale data centers.'",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Merrie_Fox"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Texas Legislative Council: PLANH2316 cities by district (Red-125)",
+        "url": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/3e0434b0-c521-42fb-b703-5098f0352aba/download/planh2316r125.pdf"
+      },
+      {
+        "name": "Hays County March 3, 2026 Republican primary sample ballot (lists HD-45, HD-73, SD-21)",
+        "url": "https://www.egovlink.com/public_documents300/hayscounty/published_documents/departments/elections/2026/0303%20Primary/Sample%20Ballots/Rep%20Combined%20Sample%20Ballot%2020260303.pdf"
+      },
+      {
+        "name": "Ballotpedia: Carrie Isaac (2026 general election)",
+        "url": "https://ballotpedia.org/Carrie_Isaac"
+      },
+      {
+        "name": "Ballotpedia: Merrie Fox",
+        "url": "https://ballotpedia.org/Merrie_Fox"
       }
     ],
     "confidence": "verified"

@@ -17,7 +17,7 @@
     "78666",
     "78667"
   ],
-  "zip_caveats": "78666 is mostly Hays County but reaches into Caldwell and Guadalupe counties; voters there get a different county ballot. Texas State students registered at campus addresses vote in Hays County. Congress after the 2025 redraw: San Marcos is in CD-21 (Teixeira vs. Hook); the Labor Council lists Kyle under CD-27. Texas House is HD-45 (Zwiener) or HD-73 (Isaac vs. Fox). State Senate 21 reaches into Hays. HD-45 and HD-73 are not yet in this file; CD-21 has only basic candidate info. San Marcos city races (mayor; council Places 3, 4, 6) and Kyle (mayor; Districts 2 and 4) are nonpartisan. Buda elects an at-large seat and District B.",
+  "zip_caveats": "78666 is mostly Hays County but reaches into Caldwell and Guadalupe counties; voters there get a different county ballot. Texas State students registered at campus addresses vote in Hays County. Congress after the 2025 redraw: San Marcos is in CD-21 (Teixeira vs. Hook); the Labor Council lists Kyle under CD-27. Texas Legislature: the Texas Legislative Council's district reports put all of the City of San Marcos (and all of Kyle) in House District 45 (Zwiener vs. Moreno) and Senate District 21 (Zaffirini vs. Dahlberg). House District 73 (Isaac vs. Fox) covers western Hays County (Wimberley, Woodcreek, Dripping Springs); it is listed only for rural addresses outside the city, so most San Marcos voters should pick HD-45. Four San Marcos residents live in the Caldwell County part, which is House District 17 (not in this guide). Senate District 25, which covers western Hays and part of Buda, has no race this year. San Marcos city races (mayor; council Places 3, 4, 6) and Kyle (mayor; Districts 2 and 4) are nonpartisan. Buda elects an at-large seat and District B.",
   "contest_ids": [
     "tx-us-senate",
     "tx-governor",
@@ -39,6 +39,8 @@
     "tx-15th-coa-place-3",
     "tx-us-house-27",
     "tx-senate-21",
+    "tx-house-45",
+    "tx-house-73",
     "tx-3rd-coa-chief",
     "tx-hays-county-judge",
     "tx-hays-commissioner-2",

@@ -13,7 +13,7 @@
     "fiscal_impact": "City Department of Finance: no anticipated fiscal impact, because the Auditor's Office already performs this function.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "The question says 'may continue to enforce,' which sounds like the enforcement might stop without it. It won't. A NO vote does not end wage enforcement; it leaves the charter's wording unchanged. Supporters say the amendment 'does not expand the Auditor's Office's authority.' Note the Denver Democrats' page labels this 'Auditor Oversight and Subpoena Authority,' but the ballot text and official booklet say nothing about subpoenas.",
+    "confusing_wording_note": "The question says 'may continue to enforce,' which sounds like enforcement might stop without it. It won't: a no vote leaves the charter's wording as is, and the Auditor keeps enforcing wage laws under existing ordinances. Supporters say the change 'does not expand the Auditor's Office's authority.' The Denver Democrats' page calls this 'Auditor Oversight and Subpoena Authority,' but the ballot text and official booklet say nothing about subpoenas.",
     "supporters_case": {
       "text": "Supporters say the Auditor's Office has collected about $10 million in restitution and enforced the rights of more than 15,000 workers in the last decade, and that putting the duty in the charter removes any legal uncertainty about the city's enforcement authority. They call it a good-governance cleanup that aligns the charter with existing law and practice.",
       "source": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf"
@@ -33,14 +33,14 @@
     "jurisdiction": "City and County of Denver",
     "number": "Referred Question 2I",
     "official_title": "Shall the Charter of the City and County of Denver be amended to adjust the City and County's budget and appropriation process, and in connection therewith, allowing the City Council to adopt a two-year budget planning and adoption process and modernizing or repealing certain charter sections?",
-    "plain_summary": "Changes how Denver builds its budget. It lets City Council choose (by ordinance) a two-year budget instead of the current one-year budget, moves the Mayor's proposed budget up to the first Friday in September, requires a public input process reported by the third Monday in July, and forces budget-cut plans when spending runs 2% over or revenue 5% under projections. It does not require a two-year budget; Council would still have to vote to adopt one.",
-    "yes_means": "Council gains the option of a two-year budget cycle, budget deadlines move earlier, a public-input step is added, and automatic budget-reduction triggers kick in when revenue or spending miss projections.",
+    "plain_summary": "Lets City Council choose a two-year budget instead of a one-year one, but doesn't require it. It also moves budget deadlines earlier, adds a required public-input step, and requires spending cuts when revenue or spending runs well off projections.",
+    "yes_means": "Council may switch to a two-year budget by ordinance, budget deadlines move earlier, a public-input step is added, and budget-cut triggers apply when revenue or spending misses projections.",
     "no_means": "Denver keeps its current annual budget process and calendar.",
     "current_law": "The charter sets a one-year budget. Agencies submit estimates by July 1, the Mayor briefs Council by September 15, proposes a budget by the third Monday in October, and Council adopts it by its second regular November meeting. State law requires Denver to pass a balanced budget every year.",
     "fiscal_impact": "City Budget and Management Office: about $50,000 in one-time costs to reconfigure budget software for a two-year term ($30,000 for the budget development system, $20,000 for the publishing system). No cost to move the proposed-budget date earlier.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "The title says 'allowing' a two-year budget, not requiring one. Even if 2I passes, Council must separately pass an ordinance by January 31 of the year before a two-year term starts, and the second year still gets its own annual appropriation and a mid-cycle review. The phrase 'modernizing or repealing certain charter sections' hides the other real changes: earlier deadlines, a required public-engagement process, and the 2% and 5% budget-reduction triggers. The ballot question does not mention any of those.",
+    "confusing_wording_note": "The title says 'allowing' a two-year budget, not requiring one. Council would still have to pass an ordinance by January 31 of the year before a two-year term starts. 'Modernizing or repealing certain charter sections' covers changes the question doesn't spell out: earlier deadlines, a required public-input process, and triggers that make the Mayor propose cuts when revenue or spending is 2% or more off projections, and make Council cut spending at 5% or more.",
     "supporters_case": {
       "text": "Sponsoring council members say a two-year option lets the city and its partners plan long-term projects, frees staff time in year two for program evaluation, adds a required community-input process, gives Council and the public more time to review the budget, and builds in triggers so projected spending cannot outrun revenue by large amounts. Denver could still use a one-year budget in uncertain times.",
       "source": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf"
@@ -60,7 +60,7 @@
     "jurisdiction": "City and County of Denver",
     "number": "Referred Question 2J",
     "official_title": "Shall the Charter of the City and County of Denver be amended to modernize the Civil Service Commission and Department of Safety by removing outdated language, giving City Council the ability to add duties via code, and providing for an extension of probation when required for medical, military, or other approved leave?",
-    "plain_summary": "Updates the charter sections that govern hiring, promotion and discipline for Denver police and firefighters. It moves operational details from the charter into city code (so Council can change them without a public vote), removes the caps on police and fire command staff (currently 18 police and 7 fire command assignments), lets probation be extended when a new officer takes medical or military leave, drops the citizenship requirement to serve on the Civil Service Commission, moves the public safety cadet program under the Manager of Safety, updates timelines for disciplinary review, and makes the language gender-neutral.",
+    "plain_summary": "Updates the charter rules for Denver police and fire hiring, promotion and discipline. It moves details into city code (so Council can change them without a public vote), removes the caps on police and fire command staff, drops the citizenship rule for commissioners, and lets probation be extended for medical or military leave.",
     "yes_means": "The charter is rewritten as described; Council would then pass an ordinance moving the operational details into city code.",
     "no_means": "The current charter rules for the Civil Service Commission, including the command-staff caps and existing probation and discipline timelines, stay in place.",
     "current_law": "The Civil Service Commission (five civilian commissioners) runs the merit system for police and fire hiring, promotion and disciplinary appeals under charter rules that date to 1904 and have been amended piecemeal. The charter caps fire command assignments at 7 and police command assignments at 18, requires commissioners to be citizens, and fixes probation and discipline timelines.",
@@ -73,8 +73,8 @@
       "source": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf"
     },
     "opponents_case": {
-      "text": "No comments were submitted against this measure to the official Ballot Information Booklet, and the League of Women Voters of Denver reports no known opposition. Context: in 2025 the Civil Service Commission's executive director was fired after alleging hiring standards had been lowered, which is the background some critics cite when discussing changes to the commission.",
-      "source": "https://www.cbsnews.com/amp/colorado/news/denver-civil-service-commission-director-fired-alleging-hiring-standards-lowered"
+      "text": "No comments against this measure were submitted to the official Ballot Information Booklet, and the League of Women Voters of Denver says there is no known opposition.",
+      "source": "https://lwvdenver.org/content.aspx?page_id=22&club_id=550279&module_id=362853"
     },
     "official_text_url": "https://www.denvergov.org/Government/Elections/Denver-Decides/Municipal/Measures/Referred-Question-2J",
     "official_guide_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf",
@@ -87,14 +87,14 @@
     "jurisdiction": "City and County of Denver",
     "number": "Referred Question 2K",
     "official_title": "Shall the City and County of Denver approve the terms of a twenty-year franchise contract, starting January 1, 2027, with Public Service Company of Colorado (Xcel Energy) to continue its program for undergrounding overhead electrical lines, maintaining infrastructure safety, and partnering with the City for emergency management coordination, and to require that Xcel Energy continue to pay the City for reasonable use of public rights-of-way and other City property necessary to provide safe and reliable utility services for the benefit of the City, its residents, and its businesses?",
-    "plain_summary": "Approves a new 20-year deal (2027 to 2046) letting Xcel Energy keep using Denver's streets and public property for its electric and gas lines. In exchange Xcel keeps paying a 3% franchise fee (about $32 to $34 million a year, which Xcel passes through to Denver customers on their bills), sets aside about $10 million a year to bury overhead power lines where the city directs, and pays to move its lines when city projects require it. The current deal expires December 31, 2026. The charter requires a public vote on any franchise.",
-    "yes_means": "Denver signs the 20-year franchise and companion partnership agreement with Xcel starting January 1, 2027.",
-    "no_means": "The current franchise expires at the end of 2026 with no replacement; Xcel would still be required by state law to serve Denver, but the city and Xcel would have to negotiate (and possibly litigate) utility relocations project by project, and the franchise fee's future is disputed.",
-    "current_law": "Denver has had a franchise with Xcel (and its predecessors) since 1947; the current 20-year agreement runs through December 31, 2026 and charges a 3% franchise fee on Xcel's Denver electric and gas revenues. The existing contract says that if the franchise is not renewed, Xcel must keep paying an amount equal to the fee as long as it uses city rights-of-way; a former PUC chairman disputes whether Xcel could legally keep collecting it from customers. City Council voted 7-6 in 2025 against sending an earlier version to voters, then renegotiated after a working group process.",
+    "plain_summary": "Approves a new 20-year deal (2027 to 2046) letting Xcel Energy use Denver's streets and public land for its power and gas lines. Xcel keeps paying the city a 3% fee (about $32 million a year, which shows up on customers' bills), sets aside about $10 million a year to bury power lines, and pays to move its lines for city projects.",
+    "yes_means": "Denver signs the 20-year franchise and companion partnership with Xcel starting January 1, 2027, keeping the 3% fee and the undergrounding money.",
+    "no_means": "The current deal ends December 31, 2026 with no replacement. Xcel still serves Denver, but the city would have to pay to move lines for its own projects.",
+    "current_law": "The Mayor's office says the 3% fee has been in place since 1947. The current 20-year agreement runs through December 31, 2026 and charges a 3% franchise fee on Xcel's Denver electric and gas revenues. The existing contract says that if the franchise is not renewed, Xcel must keep paying an amount equal to the fee as long as it uses city rights-of-way; a former PUC chairman disputes whether Xcel could legally keep collecting it from customers. City Council voted 7-6 in 2025 against sending an earlier version to voters, then renegotiated after a working group process.",
     "fiscal_impact": "City Department of Finance: franchise fee revenue projected at about $34.3 million in 2027 (plus a one-time $2.5 million payment for utility assistance), of which $2 million a year goes to the Energy Efficiency Assistance Fund and the rest to the General Fund. Over 20 years the city projects $808 million to $902 million in total fees depending on growth. Separately, an estimated $150 million a year in utility relocation costs that Xcel covers under a franchise, and about $10 million a year (1% of electric revenue) that Xcel holds and spends on undergrounding at the city's direction. The fee does not increase; it stays at 3%.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "The question is written as a list of benefits ('undergrounding,' 'safety,' 'emergency management,' 'require that Xcel Energy continue to pay the City'). What you are actually voting on is a 20-year contract giving Xcel access to public property. Two things are easy to miss: the 3% 'franchise fee' Xcel 'pays the City' shows up on your utility bill, because state rules let Xcel recover it from Denver customers; and voting NO does not end Xcel service, but it does end the contract on December 31, 2026 with no clear replacement. The opponents' main argument (shorter term, more affordability money, keep public-power options open) is not reflected anywhere in the ballot language, and no one filed a for or against statement in the official booklet.",
+    "confusing_wording_note": "The question lists benefits ('undergrounding,' 'safety,' 'emergency management'), but the decision is whether to sign a 20-year contract giving Xcel use of public property. Two things are easy to miss. The 3% fee Xcel 'pays the City' is collected from Denver customers on their bills, and the ballot doesn't mention the 3% figure. And a no vote doesn't end Xcel service; it ends the contract on December 31, 2026 with no replacement. No one filed a for or against comment in the official booklet.",
     "supporters_case": {
       "text": "The Johnston administration and the Yes on 2K campaign say the deal is 'a better deal for Denver than it is for Xcel': it locks in about $32 million a year for the General Fund, saves the city an estimated $150 million a year in relocation costs, funds undergrounding, adds a $2.5 million bill-assistance payment and $125,000 a year for income-qualified programs, lets Denver intervene in rate cases, and creates a community advisory structure. Without it the city would pay Xcel to move lines for its own projects.",
       "source": "https://www.denvergazette.com/2026/09/19/denver-voters-could-reject-xcel-deal-but-still-pay-3-fee/"
@@ -114,14 +114,14 @@
     "jurisdiction": "City and County of Denver",
     "number": "Initiated Ordinance 311",
     "official_title": "Shall the voters of the City and County of Denver adopt an ordinance prohibiting the force-feeding of birds and, in connection therewith, prohibiting the sale of products derived from force-feeding birds, including foie gras?",
-    "plain_summary": "Bans force-feeding birds in Denver and bans restaurants and stores from selling, importing or distributing foie gras and other 'fattened bird liver products' made from force-fed ducks or geese. Fines run $1,000 to $5,000 per violation per day, with a mandatory license suspension of up to six months for repeat violations within 12 months. Denver's health department would enforce it starting July 1, 2027. Personal possession and eating are not restricted. Veterinarians may tube-feed sick birds.",
+    "plain_summary": "Bans force-feeding birds in Denver and bans selling foie gras and other products from force-fed birds, starting July 1, 2027. Fines run $1,000 to $5,000 per violation, with each day counting separately, and repeat violators can lose their business license for up to six months. Eating or owning it isn't banned.",
     "yes_means": "Starting July 1, 2027, no one may force-feed birds in Denver or sell force-fed bird liver products (foie gras and similar) in Denver.",
     "no_means": "No change; Denver restaurants and stores may keep selling foie gras.",
     "current_law": "No Denver or Colorado law restricts force-feeding birds or selling foie gras. No foie gras is produced in Denver; some Denver restaurants serve it. California, New York City, Pittsburgh, Portland and Washington, D.C. have bans (D.C. voters also decide one this November).",
     "fiscal_impact": "City Department of Finance, after consulting the Department of Public Health and Environment: no anticipated fiscal impact; any added workload is minimal and absorbed by existing inspectors.",
     "pass_threshold": "simple majority",
     "referred_by": "citizen_initiative",
-    "confusing_wording_note": "The question reads like it is only about 'force-feeding,' which no one does in Denver. The real effect is the sales ban: restaurants and grocers could not sell foie gras, duck-liver pâté or similar products. Two definitions are broader than the headline: 'fattened bird liver products' includes 'duck fat, pâtés, spreads, cured products' derived from fattened livers, and 'bird' covers all poultry. The penalties ($1,000 to $5,000 per day, license suspension for repeat violations) are not in the ballot question.",
+    "confusing_wording_note": "The question sounds like it's only about force-feeding, which no one does in Denver. The real effect is the sales ban: restaurants and stores couldn't sell foie gras, duck-liver pâté or similar products. 'Fattened bird liver products' includes 'duck fat, pâtés, spreads' made from fattened livers. The penalties aren't in the ballot question.",
     "supporters_case": {
       "text": "Pro-Animal Colorado and the volunteer-led campaign say force-feeding ducks and geese until their livers swell to ten times normal size is 'cruel and unnecessary,' that foie gras is a luxury item sold as a seasonal dish rather than a revenue source for any business, that enforcement costs almost nothing because inspections already happen, and that a CSU poll found 85% of Colorado voters support ending sales from force-feeding farms.",
       "source": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-eng-ballot-info-book_accessible.pdf"
@@ -140,21 +140,21 @@
     "level": "school",
     "jurisdiction": "Denver Public Schools (School District No. 1)",
     "number": "Ballot Issue 4A",
-    "official_title": "SHALL DENVER PUBLIC SCHOOLS (SCHOOL DISTRICT NO. 1) TAXES BE INCREASED UP TO $44 MILLION IN 2026 (FOR COLLECTION IN 2027) AND ANNUALLY THEREAFTER FOR EDUCATIONAL PURPOSES, INCLUDING, BUT NOT LIMITED TO: INCREASING EDUCATOR PAY; OFFERING STUDENTS MORE CAREER AND TECHNICAL EDUCATION COURSES IN HIGH DEMAND FIELDS; STUDENT MENTAL HEALTH AND SPECIAL EDUCATION; WITH ALL SPENDING OF SUCH REVENUES REPORTED IN THE DISTRICT'S ANNUAL INDEPENDENT AUDIT PUBLISHED ON THE DISTRICT'S WEBSITE; BY THE IMPOSITION OF A MILL LEVY THAT, WHEN COMBINED WITH OTHER MILL LEVY OVERRIDES APPROVED BY DENVER VOTERS FOR THE DISTRICT'S GENERAL FUND, EQUALS THE AMOUNT PERMITTED BY SECTION 22-54-108(3)(B)(VI), BY THE LEVY OF PROPERTY TAXES AT A RATE SUFFICIENT TO PRODUCE SUCH AMOUNTS; WHICH TAXES SHALL BE DEPOSITED INTO THE GENERAL FUND OF THE DISTRICT AND SHALL BE IN ADDITION TO THE PROPERTY TAXES THAT OTHERWISE WOULD BE LEVIED FOR THE GENERAL FUND; AND SHALL INVESTMENT EARNINGS ON THE PROCEEDS OF SUCH TAXES BE TREATED AS A VOTER-APPROVED REVENUE CHANGE UNDER ARTICLE X, SECTION 20 OF THE COLORADO CONSTITUTION?",
-    "plain_summary": "A property tax increase (a 'mill levy override') of about 4 mills that raises $44 million a year for Denver Public Schools, every year, with no end date. DPS plans to spend $25.8 million on a flat $1,750 raise for every full-time employee (prorated for part-time), $4 million on career and technical education, $2.9 million on student mental health, $2 million on special education, and $9.3 million passed to DPS charter schools as state law requires. Cost: about $11.50 a year per $100,000 of home value, or about $72 a year on the median Denver home ($624,800).",
+    "official_title": "Shall Denver Public Schools (School District No. 1) taxes be increased up to $44 million in 2026 (for collection in 2027) and annually thereafter for educational purposes, including, but not limited to: increasing educator pay; offering students more career and technical education courses in high demand fields; student mental health and special education; with all spending of such revenues reported in the district's annual independent audit published on the district's website; by the imposition of a mill levy that, when combined with other mill levy overrides approved by Denver voters for the district's general fund, equals the amount permitted by Section 22-54-108(3)(B)(VI), by the levy of property taxes at a rate sufficient to produce such amounts; which taxes shall be deposited into the general fund of the district and shall be in addition to the property taxes that otherwise would be levied for the general fund; and shall investment earnings on the proceeds of such taxes be treated as a voter-approved revenue change under Article X, Section 20 of the Colorado Constitution?",
+    "plain_summary": "A permanent property tax increase (a 'mill levy override') raising $44 million a year for Denver Public Schools, starting with 2027 tax bills. DPS plans a $1,750 raise for every full-time employee, plus money for career and technical classes, mental health and special education. About $9.3 million goes to charter schools under state law.",
     "yes_means": "DPS property taxes rise by up to $44 million a year starting with taxes collected in 2027, for the purposes listed.",
     "no_means": "DPS property tax rates stay as they are; no new override revenue.",
     "current_law": "Denver voters last approved a DPS mill levy override in 2020 ($32 million) and a $975 million bond in 2024. Colorado's TABOR requires voter approval for any tax increase, and state law caps total overrides at a share of the district's program funding (C.R.S. 22-54-108(3)(b)(VI)). Overrides pay for operations such as salaries; bonds can only pay for buildings and equipment. DPS enrollment is declining, which reduces state per-pupil funding.",
-    "fiscal_impact": "TABOR notice: maximum $44,000,000 in the first full fiscal year (2026-27). DPS estimates 2026-27 spending of $1,732,617,232 without the increase, up 18.12% from 2022-23. Supporters' estimate: $11.50 per $100,000 of home value per year.",
+    "fiscal_impact": "TABOR notice: maximum $44,000,000 in the first full fiscal year (2026-27). DPS estimates 2026-27 spending of $1,732,617,232 without the increase, up 18.12% from 2022-23. Planned split (Chalkbeat): $25.8 million for raises, $4 million career and technical education, $2.9 million mental health, $2 million special education, $9.3 million to charter schools. Supporters' estimate in the TABOR notice: $11.50 a year per $100,000 of home value, about $72 on the median Denver home ($624,800).",
     "pass_threshold": "simple majority",
     "referred_by": "other",
-    "confusing_wording_note": "TABOR requires the title to start 'SHALL ... TAXES BE INCREASED' in all caps, which looks alarming but is standard. 'Up to $44 million in 2026 (for collection in 2027)' means the first bill arrives in early 2027. 'Annually thereafter' means it is permanent unless voters repeal it. The spending list says 'including, but not limited to,' so the three named priorities are not legally binding allocations; the $1,750 raise is a board plan, not ballot text. About $9.3 million of the $44 million goes to charter schools by state law, which the ballot does not mention.",
+    "confusing_wording_note": "Tax questions in Colorado must open with 'Shall ... taxes be increased,' so that wording is standard, not a warning sign. 'Up to $44 million in 2026 (for collection in 2027)' means the first bill arrives in 2027. 'Annually thereafter' means it has no end date unless voters repeal it. The spending list says 'including, but not limited to,' so the named priorities aren't fixed amounts; the $1,750 raise is the district's plan, not ballot text. About $9.3 million of the $44 million goes to charter schools under state law, which the ballot doesn't mention.",
     "supporters_case": {
-      "text": "DPS, the Denver Classroom Teachers Association and the Yes on 4A committee say a $1,750 base raise for all staff, including bus drivers, custodians and food service workers, keeps DPS competitive with surrounding districts as housing and health costs outpace pay; that $4 million funds programming for the career and technical education hubs built with the 2024 bond; and that $5 million adds counselors, mental health staff and special education support. 'The cost to homeowners is modest and predictable.'",
+      "text": "The comment filed for 4A in the TABOR notice says a $1,750 base raise for all staff, including bus drivers, custodians and food service workers, keeps DPS competitive with surrounding districts as housing and health costs outpace pay; that $4 million funds programming for the career and technical education hubs built with the 2024 bond; and that $5 million adds counselors, mental health staff and special education support. 'The cost to homeowners is modest and predictable.'",
       "source": "https://denvergov.org/files/assets/public/v/2/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/tabor_eng-text.pdf"
     },
     "opponents_case": {
-      "text": "No comments against were filed with the TABOR notice by the deadline. The Denver Gazette editorial board urges NO, saying DPS 'has lost the confidence of the public and can't be trusted with the extra money' after years of board feuding. LWV Denver summarizes opponents: property taxes have already risen sharply (statewide collections from $7.18 billion in 2015 to $15.3 billion in 2024), people risk being taxed out of their homes, and results have not matched spending.",
+      "text": "No comments against were filed with the TABOR notice by the deadline. The Denver Gazette editorial board urges no, saying DPS 'has lost the confidence of the public and can't be trusted with the extra money' after years of board feuding. LWV Denver summarizes opponents: property taxes have already risen sharply (statewide collections from $7.18 billion in 2015 to $15.3 billion in 2024), people risk being taxed out of their homes, and results have not matched spending.",
       "source": "https://www.denvergazette.com/2026/10/02/editorial-no-on-denvers-4a-dps-has-sown-only-mistrust/"
     },
     "official_text_url": "https://denvergov.org/files/assets/public/v/2/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/tabor_eng-text.pdf",
@@ -165,26 +165,26 @@
     "id": "co-frpr-7a",
     "state": "CO",
     "level": "special_district",
-    "jurisdiction": "Front Range Passenger Rail District (13 Front Range counties, including Denver, Arapahoe, Jefferson and Adams)",
+    "jurisdiction": "Front Range Passenger Rail District (29 cities and towns and 7 metro districts near planned stations, including all of Denver)",
     "number": "Ballot Issue 7A",
-    "official_title": "SHALL FRONT RANGE PASSENGER RAIL DISTRICT TAXES BE INCREASED $295,000,000 ANNUALLY AND BY WHATEVER AMOUNTS ARE RAISED ANNUALLY THEREAFTER, AND SHALL FRONT RANGE PASSENGER RAIL DISTRICT DEBT BE INCREASED $580,000,000, WITH A REPAYMENT COST OF $785,000,000; TO CONSTRUCT, OPERATE, AND MAINTAIN COLORADO CONNECTOR (COCO) PASSENGER RAIL SERVICE ON COLORADO'S FRONT RANGE AND CONNECT COMMUNITIES, INCLUDING PUEBLO, COLORADO SPRINGS, STERLING RANCH, LITTLETON, DENVER, WESTMINSTER, BROOMFIELD, LOUISVILLE, BOULDER, LONGMONT, LOVELAND, AND FORT COLLINS; IN ORDER TO: REMOVE VEHICLES FROM HIGHWAYS AND INCREASE TRAVEL CAPACITY; CONNECT TRAVELERS TO EMPLOYMENT CENTERS, COLLEGES, SPORTS ARENAS, AND ENTERTAINMENT HUBS ALONG THE FRONT RANGE; AND INVEST IN STATION AREA IMPROVEMENTS AND LOCAL CONNECTIONS TO RAIL STATIONS; BY ESTABLISHING A 0.333% SALES AND USE TAX (EQUAL TO ONE THIRD OF A PENNY ON A $1 PURCHASE), WITH EXEMPTIONS PROVIDED UNDER COLORADO LAW, INCLUDING THOSE FOR GASOLINE, FOOD, RESIDENTIAL ELECTRICITY AND GAS, PRESCRIPTION DRUGS, AND MEDICAL SUPPLIES; AND TO RETAIN ALL SUCH REVENUES, PUBLIC AND PRIVATE CONTRIBUTIONS, AND ANY INVESTMENT INCOME ON REVENUES AND DEBT PROCEEDS, AS A VOTER-APPROVED REVENUE CHANGE UNDER SECTION 20 OF ARTICLE X OF THE COLORADO CONSTITUTION; AND REQUIRING THAT ALL SUCH DEDICATED REVENUES BE REVIEWED ANNUALLY BY AN INDEPENDENT AUDITOR AND A ROTATING GROUP OF CITIZEN TAXPAYERS WHO LIVE IN THE DISTRICT?",
-    "plain_summary": "A new 0.333% sales tax (33 cents on $100) across 13 Front Range counties to build and run the 'Colorado Connector' (CoCo) passenger train from Pueblo through Colorado Springs, Denver and Boulder to Fort Collins, plus up to $580 million in borrowing. Groceries, gas, home utilities and medicine are exempt. Denver voters are in the district, so this is on every Denver ballot. It is a regional measure, not a Denver measure, and passes or fails on the combined vote of the whole district.",
-    "yes_means": "The 0.333% sales tax starts, the district may borrow up to $580 million, and the money goes to building and operating Front Range passenger rail.",
-    "no_means": "No new sales tax; the district keeps planning with existing state funds but has no dedicated local revenue to build the line.",
-    "current_law": "The legislature created the Front Range Passenger Rail District in 2021 with authority to ask voters for a sales tax of up to 0.8%. The state has spent more than $300 million on planning and related work. No dedicated tax exists today. Some service between Denver and the north is planned to start on existing freight tracks; the full Pueblo-to-Fort Collins line would take years to build.",
-    "fiscal_impact": "Ballot title: up to $295 million a year in new tax, $580 million in debt with a $785 million repayment cost. The exact fiscal notice is in the district's TABOR notice mailed to voters in the 13 counties; the Denver notice includes it on the ballot but Denver's own TABOR mailer covers only 4A.",
-    "pass_threshold": "simple majority of all voters in the 13-county district combined",
+    "official_title": "Shall Front Range Passenger Rail District taxes be increased $295,000,000 annually and by whatever amounts are raised annually thereafter, and shall Front Range Passenger Rail District debt be increased $580,000,000, with a repayment cost of $785,000,000; to construct, operate, and maintain Colorado Connector (CoCo) passenger rail service on Colorado's Front Range and connect communities, including Pueblo, Colorado Springs, Sterling Ranch, Littleton, Denver, Westminster, Broomfield, Louisville, Boulder, Longmont, Loveland, and Fort Collins; in order to: remove vehicles from highways and increase travel capacity; connect travelers to employment centers, colleges, sports arenas, and entertainment hubs along the Front Range; and invest in station area improvements and local connections to rail stations; by establishing a 0.333% sales and use tax (equal to one third of a penny on a $1 purchase), with exemptions provided under Colorado law, including those for gasoline, food, residential electricity and gas, prescription drugs, and medical supplies; and to retain all such revenues, public and private contributions, and any investment income on revenues and debt proceeds, as a voter-approved revenue change under Section 20 of Article X of the Colorado Constitution; and requiring that all such dedicated revenues be reviewed annually by an independent auditor and a rotating group of citizen taxpayers who live in the district?",
+    "plain_summary": "A new 0.333% sales tax (33 cents on $100) and up to $580 million in borrowing to extend the Colorado Connector (CoCo) passenger train south from Denver to Pueblo and add trips north to Fort Collins. Groceries, gas, home utilities and medicine are exempt. Voters across the whole rail district decide it together.",
+    "yes_means": "The 0.333% sales tax starts, the district may borrow up to $580 million, and the money goes to building and running Front Range passenger rail.",
+    "no_means": "No new sales tax. Limited Denver-to-Fort Collins service is still planned for 2029 with existing funding, but there's no dedicated money to extend it.",
+    "current_law": "The legislature created the district in 2021. A 2026 law shrank it to 29 cities and towns and 7 metro districts near planned stations, including Pueblo, Colorado Springs, Littleton, Denver, Westminster, Broomfield, Boulder, Longmont and Fort Collins. Existing funding covers three daily round trips between Fort Collins and Denver starting in 2029.",
+    "fiscal_impact": "Ballot title: up to $295 million a year in new sales tax, plus $580 million in debt with a repayment cost of up to $785 million. Bell Policy Center says the money would build and run Denver-to-Pueblo service (two daily round trips by 2032) and add a fourth daily Fort Collins round trip.",
+    "pass_threshold": "simple majority of voters in the rail district",
     "referred_by": "other",
-    "confusing_wording_note": "Two things trip people up. First, 'TAXES BE INCREASED $295,000,000 ANNUALLY AND BY WHATEVER AMOUNTS ARE RAISED ANNUALLY THEREAFTER' is TABOR's required format; it means the first-year estimate is $295 million and later years float with sales. Second, a printing error put 7A on about 800,000 ballots in Adams, Arapahoe, Douglas and Weld counties for voters who live outside the district. The state's guidance is: do not request a replacement; clerks will hand-review and set aside ineligible 7A votes. Denver ballots are correct; every Denver voter is in the district. If you live in Aurora, Lakewood, Englewood or Thornton, you may or may not be in the district depending on your exact address; vote it anyway and the clerk will sort it out.",
+    "confusing_wording_note": "Two things to know. First, 'taxes be increased $295,000,000 annually and by whatever amounts are raised annually thereafter' is TABOR's required wording: $295 million is the first-year estimate, and later years rise or fall with sales. Second, about 800,000 ballots in Adams, Arapahoe, Douglas and Weld counties include 7A by mistake, for voters who live outside the district, because the district's 2026 boundary change didn't reach county clerks. State and county election officials say to vote the ballot you got; only votes from eligible voters will be counted, and a small number may be counted by hand. Denver ballots aren't affected, and every Denver voter is in the district.",
     "supporters_case": {
-      "text": "Supporters (the district, Colorado Rail Passenger Association, Bell Policy Center, LWV Denver, Denver Democrats) say the train would take cars off I-25, connect job centers, colleges and stadiums, and that the tax is small and exempts necessities. Bell Policy Center calls it a long-needed investment in a corridor where highway widening cannot keep up with growth.",
-      "source": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/"
+      "text": "The League of Women Voters of Denver summarizes supporters: the rail line has backing from CDOT, RTD, the Governor and the legislature after years of planning, would connect job centers, colleges and stadiums, and would give an alternative to congested I-25, replacing over 1,000 car trips a day.",
+      "source": "https://lwvdenver.org/content.aspx?page_id=22&club_id=550279&module_id=362853"
     },
     "opponents_case": {
-      "text": "The Denver Gazette editorial board calls it 'a white elephant on rails,' arguing it will not relieve I-25 traffic and that the state's $300 million already spent 'would have been better spent on our highways.' Opponents have also asked that the measure be thrown out because of the ballot printing error in four counties.",
+      "text": "The Denver Gazette editorial board calls it 'a white elephant on rails' that 'hasn't a chance of alleviating traffic along I-25,' and says the more than $300 million the state has already spent 'would have been better spent on our highways.'",
       "source": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/"
     },
-    "official_text_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2026/documents/26-general-election/2026-general-sample-ballot_ru.pdf",
+    "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
     "confidence": "sourced"
   },
@@ -194,8 +194,8 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3A",
-    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.129% starting on Jan. 1, 2027, to provide for the operation of and repairs, maintenance and improvements to community facilities, including without limitation libraries, recreation and community centers... (ballot language as quoted by the Denver Gazette from Aurora's ballot information site; full TABOR title not captured)",
-    "plain_summary": "A new 0.129% Aurora sales tax (about 13 cents on $100) from 2027 through 2057, and up to $105 million in bonds, for libraries, recreation centers and parks. One of three companion tax questions (3A, 3B, 3C) that together would raise Aurora's sales tax by 0.325%, the city's first sales tax increase since 1993.",
+    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.129% starting on Jan. 1, 2027, to provide for the operation of and repairs, maintenance and improvements to community facilities, including without limitation libraries, recreation and community centers ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
+    "plain_summary": "A new 0.129% Aurora sales tax (about 13 cents on $100) from 2027 through 2057, plus up to $105 million in bonds, for libraries, recreation centers and parks. It's one of three separate tax questions (3A, 3B, 3C) that together would raise Aurora's sales tax 0.325%, its first increase since 1993.",
     "yes_means": "Aurora's sales tax rises 0.129% starting Jan 1, 2027 and the city may borrow up to $105 million for community facilities.",
     "no_means": "No new tax for community facilities; Aurora's sales tax rate stays the same.",
     "current_law": "Aurora's city sales tax has not increased since 1993. Combined rate today: 8.5% in the Adams County part of Aurora, 8% in the Arapahoe County part. A city task force identified $2.08 billion in infrastructure needs and narrowed to 65 projects costing $264.5 million.",
@@ -204,12 +204,12 @@
     "referred_by": "council",
     "confusing_wording_note": "3A, 3B and 3C are separate yes/no votes that look like one package. You can vote yes on some and no on others. Each includes bond authority through 2057 that the short description does not mention.",
     "supporters_case": {
-      "text": "Supporters say the three measures address long-deferred infrastructure needs identified by a citizen task force, and that Aurora has not raised its sales tax in more than 30 years. Denver DSA backs 3A as 'an investment in our community.'",
-      "source": "https://www.denvergazette.com/2026/10/11/aurora-ballot-measures-raise-sales-taxes/"
+      "text": "The Build Up Aurora committee says much of the city's infrastructure is old and strained by growth, and that Aurora hasn't raised its sales tax since 1993. Denver DSA also backs 3A as 'an investment in our community.'",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
     "opponents_case": {
-      "text": "Kim Monson's conservative guide recommends NO on all three, citing a new tax with 30-year bonds. Protesters at council meetings objected mainly to the police portion (3B), not 3A.",
-      "source": "https://kimmonson.com/colorado-voter-guide/2026/county-arapahoe/"
+      "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Kim Monson's conservative guide recommends no on all three.",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
     "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
     "official_guide_url": null,
@@ -221,11 +221,11 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3B",
-    "official_title": "Shall the City of Aurora raise the sales and use tax by 0.064% starting on Jan. 1, 2027, to provide for public safety needs, including without limitation the operation, repair, maintenance and improvements to police, fire and other public safety infrastructure and facilities... (as quoted by the Denver Gazette)",
+    "official_title": "Shall the City of Aurora raise the sales and use tax by 0.064% starting on Jan. 1, 2027, to provide for public safety needs, including without limitation the operation, repair, maintenance and improvements to police, fire and other public safety infrastructure and facilities ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
     "plain_summary": "A new 0.064% Aurora sales tax (about 6 cents on $100) from 2027 through 2057, and up to $53 million in bonds, for fire stations, 911 and police facilities.",
     "yes_means": "Aurora's sales tax rises 0.064% starting Jan 1, 2027 and the city may borrow up to $53 million for public safety facilities.",
-    "no_means": "No new tax for public safety facilities.",
-    "current_law": "See 3A. Aurora police operate under a state consent decree.",
+    "no_means": "No new tax for public safety facilities; Aurora's sales tax rate stays the same.",
+    "current_law": "See 3A. The Aurora Police Department is under a consent decree with the state.",
     "fiscal_impact": "Up to $6.27 million a year (DSA figure) and up to $53 million in bonds through 2057.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
@@ -235,8 +235,8 @@
       "source": "https://www.denvergazette.com/2026/10/11/aurora-ballot-measures-raise-sales-taxes/"
     },
     "opponents_case": {
-      "text": "Protesters at Aurora council meetings said they understand the need for infrastructure but 'don't want police projects funded.' Denver DSA recommends NO, citing the department's consent decree and a recent roughly 41% officer raise.",
-      "source": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/"
+      "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Protesters at council meetings said they 'don't want police projects funded,' and Denver DSA recommends no, citing the police consent decree and a recent roughly 41% officer raise.",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
     "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
     "official_guide_url": null,
@@ -248,10 +248,10 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3C",
-    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.132% beginning on Jan. 1, 2027, to provide for transportation infrastructure needs, including without limitation the operation of and repairs, maintenance and improvements to city transportation infrastructure and facilities... (as quoted by the Denver Gazette)",
+    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.132% beginning on Jan. 1, 2027, to provide for transportation infrastructure needs, including without limitation the operation of and repairs, maintenance and improvements to city transportation infrastructure and facilities ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
     "plain_summary": "A new 0.132% Aurora sales tax (about 13 cents on $100) from 2027 through 2057, and up to $108 million in bonds, for roads, bridges, intersections and pedestrian safety.",
     "yes_means": "Aurora's sales tax rises 0.132% starting Jan 1, 2027 and the city may borrow up to $108 million for transportation.",
-    "no_means": "No new tax for transportation.",
+    "no_means": "No new tax for transportation; Aurora's sales tax rate stays the same.",
     "current_law": "See 3A. The task force identified $596 million in transportation needs.",
     "fiscal_impact": "Up to $12.94 million a year (DSA figure) and up to $108 million in bonds through 2057.",
     "pass_threshold": "simple majority",
@@ -262,8 +262,8 @@
       "source": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/"
     },
     "opponents_case": {
-      "text": "Kim Monson's guide recommends NO, citing a new tax with bonds through 2057. No organized opposition found.",
-      "source": "https://kimmonson.com/colorado-voter-guide/2026/county-arapahoe/"
+      "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Kim Monson's guide also recommends no.",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
     "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
     "official_guide_url": null,
@@ -276,25 +276,25 @@
     "jurisdiction": "City of Aurora",
     "number": "Ballot Question 3D",
     "official_title": null,
-    "plain_summary": "Moves Aurora's regular city elections (mayor and council) from odd-numbered years to even-numbered years, when turnout is much higher, with one-time shortened terms to make the switch.",
-    "yes_means": "Aurora city elections move to even years; some current terms are shortened once to line up the calendar.",
+    "plain_summary": "Moves Aurora's mayor and council elections from odd-numbered years to even-numbered years, when turnout is higher. To make the switch, seats elected in 2027 and 2029 would get three-year terms instead of four, and the first even-year city election would be in 2030.",
+    "yes_means": "Aurora city elections move to even-numbered years, with some terms shortened once to make the switch.",
     "no_means": "Aurora keeps electing its mayor and council in odd-numbered years.",
-    "current_law": "Aurora holds regular municipal elections in November of odd years (most recently November 2025).",
-    "fiscal_impact": "Likely saves money by combining with state and federal elections; no official figure captured.",
+    "current_law": "Aurora holds regular city elections in November of odd-numbered years (most recently November 2025). City Council referred 3D to the ballot 6-2.",
+    "fiscal_impact": "No official cost figure. The city says even-year elections cost it more to run because of coordination with Arapahoe County (for example, $121,286 for one ballot question in 2024 vs. $71,903 for five council seats and five questions in 2025), per the Denver Post.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "The title (as summarized) reads as a 'direction' to move elections. Check the full charter language on Aurora's site for how terms are shortened and which seats are affected.",
+    "confusing_wording_note": null,
     "supporters_case": {
-      "text": "Denver DSA calls it 'the most consequential of the Aurora ballot measures' because even-year turnout is far higher, and says it could save money. Kim Monson's conservative guide also recommends YES.",
-      "source": "https://denverdsa.org/voter-guide/2026-november-ballot-measures/"
+      "text": "Supporters say turnout in even-year elections is much higher than in odd years, so more people would vote in city races. Denver DSA calls it 'the most consequential of the Aurora ballot measures,' and Kim Monson's conservative guide also recommends yes.",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-ballot-question-3d-elections/"
     },
     "opponents_case": {
-      "text": "No organized opposition found. Critics of such changes elsewhere argue local issues get buried under federal races on a long ballot.",
-      "source": "https://kimmonson.com/colorado-voter-guide/2026/county-arapahoe/"
+      "text": "Opponents cited by the Denver Post say even-year elections cost the city more, that Aurora races would sit at the bottom of long ballots where voters burn out, and that campaigning in a busier season costs candidates more.",
+      "source": "https://www.denverpost.com/2026/10/03/aurora-ballot-question-3d-elections/"
     },
-    "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
+    "official_text_url": "https://www.denverpost.com/2026/10/03/aurora-ballot-question-3d-elections/",
     "official_guide_url": null,
-    "confidence": "unverified"
+    "confidence": "sourced"
   },
   {
     "id": "lakewood-2g",
@@ -302,21 +302,21 @@
     "level": "city",
     "jurisdiction": "City of Lakewood",
     "number": "Ballot Issue 2G",
-    "official_title": "SHALL CITY OF LAKEWOOD TAXES BE INCREASED BY UP TO $17,600,000 IN THE FIRST FULL FISCAL YEAR (COMMENCING JANUARY 1, 2027) AND BY WHATEVER ADDITIONAL AMOUNTS AS ARE RAISED ANNUALLY IN EACH SUBSEQUENT YEAR, THROUGH THE IMPOSITION OF AN ADDITIONAL SALES AND USE TAX OF 0.5% (INCREASING CITY'S SALES AND USE TAX RATE FROM THREE PERCENT (3%) TO THREE AND A HALF PERCENT (3.5%)), PROVIDED THAT: FOOD, AS DEFINED IN LAKEWOOD MUNICIPAL CODE SECTION 3.01.430 (WHICH INCLUDES GROCERIES), SHALL BE EXEMPT FROM SUCH ADDITIONAL HALF-PERCENT SALES AND USE TAX, AND SHALL THE TAX REVENUES FROM SUCH ADDITIONAL HALF PERCENT SALES TAX BE USED ONLY FOR THE FOLLOWING SPECIFIC PURPOSES: PUBLIC SAFETY PURPOSES, INCLUDING INVESTING IN CRIME PREVENTION AND HOMELESSNESS RESPONSE; AND TRAFFIC SAFETY IMPROVEMENTS, INCLUDING MAINTENANCE AND CONSTRUCTION OF STREETS AND SIDEWALKS, ROAD IMPROVEMENTS TO REDUCE VEHICLE SPEEDS, AND PEDESTRIAN AND BICYCLE SAFETY ENHANCEMENTS...",
-    "plain_summary": "Raises Lakewood's city sales tax from 3% to 3.5% starting Jan 1, 2027 (groceries exempt), raising up to $17.6 million in the first year, restricted to crime prevention, homelessness response, sidewalks, street maintenance, traffic calming, and bike and pedestrian safety. Lakewood's first sales tax increase in 20 years.",
+    "official_title": "Shall City of Lakewood taxes be increased by up to $17,600,000 in the first full fiscal year (commencing January 1, 2027) and by whatever additional amounts as are raised annually in each subsequent year, through the imposition of an additional sales and use tax of 0.5% (increasing city's sales and use tax rate from three percent (3%) to three and a half percent (3.5%)), provided that: food, as defined in Lakewood Municipal Code Section 3.01.430 (which includes groceries), shall be exempt from such additional half-percent sales and use tax, and shall the tax revenues from such additional half percent sales tax be used only for the following specific purposes: public safety purposes, including investing in crime prevention and homelessness response; and traffic safety improvements, including maintenance and construction of streets and sidewalks, road improvements to reduce vehicle speeds, and pedestrian and bicycle safety enhancements. And shall such additional half percent sales and use tax be collected, retained and spent as a voter approved revenue change notwithstanding any revenue or expenditure limit contained within Article X, Section 20, of the Colorado Constitution or any other law?",
+    "plain_summary": "Raises Lakewood's city sales tax from 3% to 3.5% starting January 1, 2027 (groceries exempt), raising up to $17.6 million in the first year. The money can be used only for crime prevention, homelessness response, streets and sidewalks, traffic calming, and bike and pedestrian safety.",
     "yes_means": "Lakewood's sales tax rises half a percent (not on groceries) and the money goes to a dedicated fund for the listed safety and street purposes.",
     "no_means": "Lakewood's sales tax stays at 3%.",
-    "current_law": "Lakewood's city sales tax has been 3% for 20 years. Food is already exempt from city sales tax.",
+    "current_law": "Lakewood's city sales tax is 3%, and the Yes on 2G campaign says it hasn't risen in 20 years. Food is already exempt from city sales tax.",
     "fiscal_impact": "Up to $17.6 million in the first full year, growing with sales. Revenue goes to a dedicated fund with annual external audits.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "'Public safety purposes' sounds like police funding. The Yes campaign and DSA both say the money is for crime prevention, homelessness outreach, mental health crisis response and lighting, and that policing and enforcement are 'intentionally and explicitly not included.' Read the ballot text: it does not say 'police.'",
+    "confusing_wording_note": "'Public safety purposes' can sound like police funding. The ballot text names crime prevention and homelessness response and doesn't mention police. Denver DSA says policing and enforcement are 'intentionally and explicitly not included.'",
     "supporters_case": {
       "text": "Our Lakewood (Yes on 2G) says at current funding it would take 200 years to finish Lakewood's missing sidewalks, that groceries stay exempt, and that Lakewood will still have one of the lowest sales tax rates in the area. Jeffco Dems and Denver DSA support.",
       "source": "https://ourlakewood.org/"
     },
     "opponents_case": {
-      "text": "Kim Monson's guide recommends NO as a new tax. No organized opposition committee found; the city collected statements for and against through an online form.",
+      "text": "Kim Monson's guide recommends no as a new tax. No organized opposition committee found; the city collected statements for and against through an online form.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-jefferson/"
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -337,7 +337,7 @@
     "fiscal_impact": "None.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "Not confusing; a technical fix.",
+    "confusing_wording_note": null,
     "supporters_case": null,
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -358,7 +358,7 @@
     "fiscal_impact": "None.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "A YES vote tightens the rule in writing; it does not create a new tax. Some voters read 'repealed and replaced' as loosening it.",
+    "confusing_wording_note": "'Repealed and replaced' can sound like loosening a rule. Here a yes vote removes an old clause TABOR already blocks and writes in that property tax increases need voter approval. It doesn't create a tax.",
     "supporters_case": null,
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -379,7 +379,7 @@
     "fiscal_impact": "None stated.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "Kim Monson's guide reads this as giving the city more time to delay a citizen vote; supporters frame it as aligning with state election calendars. The ballot does not say what the current window is.",
+    "confusing_wording_note": "The ballot says the window is being 'extended' but doesn't say what the current window is.",
     "supporters_case": null,
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -392,21 +392,21 @@
     "level": "special_district",
     "jurisdiction": "Arvada Fire Protection District (most of Arvada)",
     "number": "Ballot Issue 6C",
-    "official_title": "SHALL ARVADA FIRE PROTECTION DISTRICT TAXES BE INCREASED BY $23,100,000 THE FIRST FISCAL YEAR, BEGINNING JANUARY 1, 2027, AND BY SUCH AMOUNTS AS ARE RAISED ANNUALLY THEREAFTER, BY A SALES TAX OF 1.0% (ONE PERCENT) EXCLUDING ON SALES OF FOOD FOR DOMESTIC HOME CONSUMPTION, PRESCRIPTION MEDICINES, DIAPERS, SCHOOL ACTIVITIES AND ALL OTHER CATEGORIES EXEMPT FROM STATE SALES TAX COLLECTIONS, FOR THE PURPOSES OF PROVIDING FIRE PROTECTION, AMBULANCE, EMERGENCY MEDICAL RESPONSE, RESCUE, SAFETY, AND SUPPORT SERVICES...",
+    "official_title": "Shall Arvada Fire Protection District taxes be increased by $23,100,000 the first fiscal year, beginning January 1, 2027, and by such amounts as are raised annually thereafter, by a sales tax of 1.0% (one percent) excluding on sales of food for domestic home consumption, prescription medicines, diapers, school activities and all other categories exempt from state sales tax collections, for the purposes of providing fire protection, ambulance, emergency medical response, rescue, safety, and support services for the residents, property owners, and businesses served by the district, including: maintaining firefighter and paramedic staffing levels to safely and efficiently respond to emergencies. Provide and maintain emergency vehicles and equipment and modernize facilities to better protect the public and first responders. The ability to retain and attract highly qualified first responders and other essential personnel. Improving firefighter health and wellness with programs such as early detection and treatment for cardiovascular conditions and cancer; mental health support; and mandatory fitness training and standards. With such sales tax to be in addition to all other taxes levied by the district and all spending of such revenues reported in the district's annual independent audit published on the district website and reviewed by an external auditor, as well as the audit and finance committee; and shall all revenue and any earnings on this tax constitute permanent voter-approved revenue change within the meaning of Article X, Section 20 of the Colorado Constitution and an exception to the limitations set forth in Section 29-1-301 of the Colorado Revised Statutes, and any other law?",
     "plain_summary": "A new 1% sales tax (groceries, prescriptions and diapers exempt) for the Arvada Fire Protection District, raising about $23.1 million in the first year for firefighter and paramedic staffing, vehicles and stations. This is the fire district, not the City of Arvada; Arvada has no city measures this year.",
     "yes_means": "A 1% fire district sales tax starts Jan 1, 2027.",
     "no_means": "No new fire district sales tax.",
-    "current_law": "The district is funded mainly by property tax today.",
+    "current_law": null,
     "fiscal_impact": "$23.1 million in year one, growing with sales.",
     "pass_threshold": "simple majority",
     "referred_by": "other",
-    "confusing_wording_note": "Numbered 6C and labeled 'Arvada Fire Protection District,' so some voters think it is a city tax. It is not. Also note the West Metro Fire district (Lakewood area) has its own 0.75% sales tax, 7C, on the same ballot.",
+    "confusing_wording_note": "It's numbered 6C and run by the Arvada Fire Protection District, so some voters think it's a city tax. It isn't. The West Metro Fire district (Lakewood area) has its own 0.75% sales tax, 7C, on the same ballot.",
     "supporters_case": {
       "text": "The district says the money maintains firefighter and paramedic staffing and modernizes equipment and stations. Jeffco Dems support.",
       "source": "https://www.jeffcodems.org/2026-ballot-measures"
     },
     "opponents_case": {
-      "text": "Kim Monson's guide recommends NO. No organized opposition found.",
+      "text": "Kim Monson's guide recommends no. No organized opposition found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-jefferson/"
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -419,12 +419,12 @@
     "level": "school",
     "jurisdiction": "Jeffco Public Schools (Jefferson County School District R-1, incl. Lakewood, Arvada, Golden)",
     "number": "Ballot Issue 5A",
-    "official_title": "SHALL JEFFERSON COUNTY SCHOOL DISTRICT R-1 TAXES BE INCREASED $73 MILLION IN 2026 FOR COLLECTION IN 2027, AND BY SUCH AMOUNTS IN SUBSEQUENT YEARS THAT WILL PRODUCE, WHEN COMBINED WITH PRIOR MILL LEVY OVERRIDE AMOUNTS, UP TO THE LIMIT ESTABLISHED FOR THE DISTRICT BY SECTION 22-54-108(3)(B)(VI), C.R.S.... ATTRACTING AND KEEPING HIGH-QUALITY STAFF BY RAISING COMPENSATION CLOSER TO THE MARKET AVERAGE... CAREER AND TECHNICAL EDUCATION PROGRAMS...",
-    "plain_summary": "A $73 million a year property tax increase (mill levy override) for Jeffco Public Schools, mainly to raise teacher and staff pay toward the metro average, plus career and technical education. Costs the median Jeffco homeowner (about $632,000 home) roughly $145 a year.",
+    "official_title": "Shall Jefferson County School District R-1 taxes be increased $73 million in 2026 for collection in 2027, and by such amounts in subsequent years that will produce, when combined with prior mill levy override amounts, up to the limit established for the district by Section 22-54-108(3)(B)(VI), C.R.S., with such funds to be used for the purposes authorized by Section 22-54-108, C.R.S., such as the following: attracting and keeping high-quality staff by raising compensation closer to the market average for teachers, education support professionals, support staff and school leaders; providing students with the instruction, skills, and hands-on learning necessary for success in college and the workplace through career and technical education programs; and shall the spending of such taxes be reviewed by a board-appointed citizens' committee for accountability, summarized in annual public reports, and posted publicly on a website for full transparency; and shall a mill levy be imposed at a rate which will generate revenues up to the limit established for the district by Section 22-54-108(3)(B)(VI), C.R.S., and shall the additional revenues be deposited in the general fund and used for educational purposes as provided herein, as previously approved by the district voters pursuant to Section 22-54-108(V), C.R.S., and as authorized by state law; and shall the revenue from such taxes and any earnings from the investment thereon be collected and spent as voter-approved revenue change under Article X, Section 20 of the Colorado Constitution and any other law?",
+    "plain_summary": "A $73 million a year property tax increase (a 'mill levy override') for Jeffco Public Schools, mainly to raise teacher and staff pay toward the metro average, plus career and technical education. A citizens' committee would review spending.",
     "yes_means": "Jeffco school property taxes rise $73 million a year starting with 2027 collections.",
     "no_means": "No new override revenue; the district says it would face more cuts.",
-    "current_law": "Jeffco cut $40 million and 350 positions in September 2026. The district says it ranks 9th of 10 metro districts for midpoint teacher salary.",
-    "fiscal_impact": "$73 million in the first year; about $3.50 per month per $100,000 of home value for 5A and 5B combined ($145 a year for 5A alone on the median home).",
+    "current_law": "Jeffco cut $40 million and 350 positions in September 2026. The district says it ranks 9th of 10 metro districts for midpoint teacher salary; the Denver Gazette reports it ranks 6th of 10 for average salary.",
+    "fiscal_impact": "$73 million in the first year, and later years can rise to the state cap. Denver Gazette: about $145 a year on the median Jeffco home (about $632,000), or $265 a year for 5A and 5B together (about $3.50 a month per $100,000 of home value).",
     "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "5A and 5B are separate votes. 5A is for operating costs (pay); 5B is for buildings and technology. 'Up to the limit established by Section 22-54-108' means later years can rise to the state cap, not just $73 million.",
@@ -433,7 +433,7 @@
       "source": "https://www.denvergazette.com/2026/10/11/jeffco-ballot-issues-5a-5b-raise-133-million/"
     },
     "opponents_case": {
-      "text": "Tom Coyne (notyetjeffco.org) argues 89% of the 2018 bond projects ran over budget, that raises should be tied to student performance, and that the district has not earned public trust. Kim Monson recommends NO.",
+      "text": "Tom Coyne (notyetjeffco.org) argues 89% of the 2018 bond projects ran over budget, that raises should be tied to student performance, and that the district has not earned public trust. Kim Monson recommends no.",
       "source": "https://www.denvergazette.com/2026/10/11/jeffco-ballot-issues-5a-5b-raise-133-million/"
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -446,12 +446,12 @@
     "level": "school",
     "jurisdiction": "Jeffco Public Schools (Jefferson County School District R-1)",
     "number": "Ballot Issue 5B",
-    "official_title": "SHALL JEFFERSON COUNTY SCHOOL DISTRICT R-1 TAXES BE INCREASED $60 MILLION IN 2026 FOR COLLECTION IN 2027, AND ANNUALLY THEREAFTER AND UTILIZED FOR THE PURPOSES AUTHORIZED AND IN ACCORDANCE WITH SECTION 22-54-108.7, C.R.S. (THE DEBT FREE SCHOOLS ACT)... CAPITAL CONSTRUCTION, TECHNOLOGY AND MAINTENANCE...",
-    "plain_summary": "A $60 million a year property tax (a 'special purpose mill levy' under the Debt Free Schools Act) for Jeffco school building repairs: roofs, plumbing, heating and cooling, security and technology. Adjusts for inflation. Costs the median homeowner about $120 a year.",
+    "official_title": "Shall Jefferson County School District R-1 taxes be increased $60 million in 2026 for collection in 2027, and annually thereafter, and utilized for the purposes authorized and in accordance with Section 22-54-108.7, C.R.S., (the Debt Free Schools Act), provided that such revenue may be increased annually (after the first full fiscal year) for inflation based on the annual changes in the consumer price index; with such revenue to be deposited into a dedicated fund only to be used for capital construction, technology, and maintenance, and utilized for authorized purposes such as: critical upgrades and maintenance of schools such as plumbing improvements, parking lot repairs, and replacing or repairing faulty, dangerous, and leaking roofs; providing and repairing cooling, heating, and ventilation systems for a better learning environment; replacing and updating aging infrastructure and technology; safety and security investments such as secure access and monitoring; and shall the spending of such taxes be reviewed by a board-appointed citizens' committee for accountability, summarized in annual public reports, and posted publicly on a website for full transparency; and shall a mill levy be imposed at a rate sufficient to generate revenues up to such amount specified above, and shall the revenues from such taxes and any earnings from the investment of such revenues be collected and spent as a voter-approved revenue change under Article X, Section 20 of the Colorado Constitution and any other law?",
+    "plain_summary": "A $60 million a year property tax for Jeffco school building repairs and technology: roofs, plumbing, heating and cooling, security and tech. It's pay-as-you-go instead of borrowing, rises with inflation, and has no end date.",
     "yes_means": "Jeffco school property taxes rise $60 million a year for building and technology needs, pay-as-you-go rather than bonds.",
-    "no_means": "No new building levy.",
+    "no_means": "No new building levy; Jeffco school property taxes don't rise for this purpose.",
     "current_law": "Jeffco last passed a bond in 2018. The Debt Free Schools Act lets districts levy for capital needs without borrowing.",
-    "fiscal_impact": "$60 million in year one, inflation-adjusted after; about $120 a year on the median home.",
+    "fiscal_impact": "$60 million in year one, then adjusted for inflation. Denver Gazette: about $120 a year on the median Jeffco home.",
     "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "Unlike a bond, this tax does not end when a project is paid off; it continues and rises with inflation. The district publishes a 'facilities explorer' site showing needs.",
@@ -460,7 +460,7 @@
       "source": "https://www.denvergazette.com/2026/10/11/jeffco-ballot-issues-5a-5b-raise-133-million/"
     },
     "opponents_case": {
-      "text": "Opponents cite the 2018 bond's cost overruns and affordability. Kim Monson recommends NO.",
+      "text": "Opponents cite the 2018 bond's cost overruns and affordability. Kim Monson recommends no.",
       "source": "https://www.denvergazette.com/2026/10/11/jeffco-ballot-issues-5a-5b-raise-133-million/"
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
@@ -474,11 +474,11 @@
     "jurisdiction": "Littleton Public Schools",
     "number": "Ballot Issue 4A",
     "official_title": null,
-    "plain_summary": "A $10.3 million a year property tax increase (mill levy override) for Littleton Public Schools for teacher pay, career and technical education and school security. The district entered 2026-27 with a $10.6 million gap. Costs about $25 a year per $100,000 of home value, about $150 a year on a $600,000 home. Caps future increases at one mill a year.",
+    "plain_summary": "A $10.3 million a year property tax increase (a 'mill levy override') for Littleton Public Schools, for teacher pay, career and technical education and school security. The district started 2026-27 with a $10.6 million budget gap. Later increases are capped at one mill a year.",
     "yes_means": "LPS property taxes rise $10.3 million a year starting with 2027 collections.",
     "no_means": "No new override; the district has already frozen wages and scheduled a furlough day.",
     "current_law": "LPS cut central office staff, froze wages and scheduled a districtwide furlough day before referring the measure.",
-    "fiscal_impact": "$10,289,724 in 2027; about $25 per $100,000 of home value per year.",
+    "fiscal_impact": "$10,289,724 in 2027. District estimate reported by the Denver Gazette: $25 a year per $100,000 of property value, about $150 a year on a $600,000 home.",
     "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "Numbered 4A, the same number as the Denver Public Schools measure, but a different district. Littleton (city) voters in LPS see this; Littleton residents in other districts do not.",
@@ -487,7 +487,7 @@
       "source": "https://www.denvergazette.com/2026/10/06/littleton-election-10-million-mill-levy-override/"
     },
     "opponents_case": {
-      "text": "Kim Monson recommends NO. No organized opposition found.",
+      "text": "Kim Monson recommends no. No organized opposition found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-arapahoe/"
     },
     "official_text_url": "https://www.arapahoevotes.gov/",
@@ -503,15 +503,18 @@
     "official_title": null,
     "plain_summary": "Charter change: a Thornton council member, including the mayor, gives up their seat when they formally declare candidacy for any other elected office (a 'resign to run' rule).",
     "yes_means": "Council members and the mayor must resign on declaring for another office.",
-    "no_means": "No resign-to-run rule.",
+    "no_means": "No resign-to-run rule is added to Thornton's charter.",
     "current_law": null,
     "fiscal_impact": "None.",
     "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "Summary only; full text not captured. Check Thornton's city clerk page.",
-    "supporters_case": null,
+    "confusing_wording_note": null,
+    "supporters_case": {
+      "text": "Kim Monson's conservative guide recommends yes. No other published case for it was found.",
+      "source": "https://kimmonson.com/colorado-voter-guide/2026/county-adams/"
+    },
     "opponents_case": {
-      "text": "Kim Monson recommends YES; no organized opposition found.",
+      "text": "No published opposition was found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-adams/"
     },
     "official_text_url": "https://www.thorntonco.gov/",
@@ -532,10 +535,10 @@
     "fiscal_impact": "About $2 million more a year by supporters' figures.",
     "pass_threshold": "simple majority",
     "referred_by": "other",
-    "confusing_wording_note": "Another '4A' (Denver, Littleton and Westminster each have one). Summary only; full text not captured.",
+    "confusing_wording_note": "Another '4A': Denver, Littleton and Westminster school districts each have one. Your ballot shows only yours.",
     "supporters_case": null,
     "opponents_case": {
-      "text": "Kim Monson recommends NO; no organized opposition found.",
+      "text": "Kim Monson recommends no; no organized opposition found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-adams/"
     },
     "official_text_url": "https://www.adamsvotes.gov/",

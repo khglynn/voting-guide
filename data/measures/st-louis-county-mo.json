@@ -5,15 +5,15 @@
     "level": "county",
     "jurisdiction": "St. Louis County (not the City of St. Louis)",
     "number": "Proposition A (St. Louis County)",
-    "official_title": null,
-    "plain_summary": "Removes the line in the St. Louis County Charter that gives the county auditor a fixed four-year term. Today the County Council appoints the auditor to a term that runs alongside the county executive's, and can remove the auditor by a two-thirds vote. Supporters say the fixed term is what keeps the auditor from getting yearly raises like other county employees.",
-    "yes_means": "The charter no longer sets a four-year term for the county auditor, which supporters say lets the council give the auditor regular raises.",
-    "no_means": "The auditor keeps a fixed four-year term; County Executive Sam Page says a raise can still take effect when the next term starts Jan. 1, 2027.",
+    "official_title": "Shall Sections 2.200 and 2.210 of the Charter of St. Louis County be amended to remove the term of office from the position of County Auditor and as set forth in Exhibit A of Ordinance No. 29,627, on file with the St. Louis County Administrative Director and the St. Louis County Board of Election Commissioners?",
+    "plain_summary": "Removes the fixed four-year term for the county auditor from the St. Louis County Charter. The County Council appoints the auditor. Supporters say the fixed term is what keeps the auditor from getting regular raises.",
+    "yes_means": "The charter no longer gives the county auditor a fixed four-year term.",
+    "no_means": "The county auditor keeps a fixed four-year term in the charter.",
     "current_law": "The county charter sets the auditor's term at four years, running concurrently with the county executive's. The council appoints the auditor and can remove the auditor by a two-thirds vote (St. Louis Public Radio). Page's veto letter says the Missouri Constitution and the charter allow a pay raise only before a new term begins, and the auditor's next term starts Jan. 1, 2027.",
     "fiscal_impact": null,
-    "pass_threshold": "simple majority (expected for a county charter change; not confirmed in official county text this pass)",
+    "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "Two different Proposition A's are on St. Louis County ballots this year: the statewide Prop A (the congressional map) and this county Prop A (the auditor's term). They have nothing to do with each other, so read the heading above each one. On substance, the measure is pitched as a pay fix, but what it actually changes is the auditor's term. Page vetoed the bills behind it, writing that it would 'eliminate the constitutional protection securing the Auditor's term' and make the auditor 'a traditional employee of the Council, rather than an independent officer.' We could not get the exact ballot wording; check your sample ballot.",
+    "confusing_wording_note": "Two different Proposition A's are on St. Louis County ballots: the statewide Prop A (the congressional map) and this county Prop A (the auditor's term). They have nothing to do with each other, so read the heading above each one. The ballot doesn't mention pay, but supporters pitch it as a pay fix; what it actually changes is the auditor's term. County Executive Sam Page vetoed it, writing that it would make the auditor 'a traditional employee of the Council, rather than an independent officer.'",
     "supporters_case": {
       "text": "Supporters say that because the charter sets a fixed term, the auditor can't receive the yearly raises other county employees get. St. Louis Public Radio reports no organized opposition campaign.",
       "source": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
@@ -22,9 +22,9 @@
       "text": "County Executive Sam Page vetoed the legislation (Aug. 12). He wrote that he supports a raise, that the council can already approve one to take effect Jan. 1, 2027, and that the measure trades a roughly six-week head start on a raise for the auditor's independence from the council.",
       "source": "https://stlouisco.civicweb.net/filepro/document/461206/08.18.26~OC-7.pdf"
     },
-    "official_text_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "stlco-prop-s",
@@ -32,15 +32,15 @@
     "level": "county",
     "jurisdiction": "St. Louis County (not the City of St. Louis)",
     "number": "Proposition S",
-    "official_title": null,
-    "plain_summary": "Raises county property taxes on homes, businesses and personal property (like cars) by 5 cents per $100 of assessed value to create a Senior Citizens Service Fund. A seven-member board appointed by the county would give the money as grants to groups that help people 60 and older keep living at home, such as rides, meals, home repairs and caregiver support.",
+    "official_title": "Shall St. Louis County levy a tax of five cents per each one hundred dollars ($100.00) of assessed valuation for the purpose of providing services to persons sixty years of age or older?",
+    "plain_summary": "Adds a county property tax of 5 cents per $100 of assessed value on homes, businesses and personal property like cars. The money would go to a senior services fund, run by a seven-member board, that pays for services for people 60 and older, like rides, meals and home repairs.",
     "yes_means": "County property taxes go up 5 cents per $100 of assessed value (about $19 a year on a $200,000 home) to pay for services for residents 60 and older.",
     "no_means": "No new senior services tax is created, and county property tax rates stay where they are.",
     "current_law": "St. Louis County has no dedicated senior services property tax. The City of St. Louis has had one since 2016, and 56 Missouri counties have one (St. Louis Public Radio). County voters turned down a similar proposal in 2016 by about 13,000 votes.",
     "fiscal_impact": "5 cents per $100 of assessed value on real and personal property: about $19 a year on a $200,000 home. Revenue estimates differ by source: about $15 million a year (West Newsmagazine, Sept. 7), $16 million (St. Louis Public Radio, Oct. 5) or $17 million (St. Louis Public Radio voter guide). The county would start collecting in 2027 and the first grants would go out in 2028 (St. Louis Public Radio). No official county fiscal note was retrieved.",
-    "pass_threshold": "simple majority (expected under Missouri's senior-services-fund law; not confirmed in official county text this pass)",
+    "pass_threshold": "simple majority",
     "referred_by": "council",
-    "confusing_wording_note": "Unlike the school tax measures (Parkway Prop P, Webster Groves Prop W), seniors enrolled in the county's property tax freeze WOULD pay this tax, figured on their frozen home value, according to St. Louis Public Radio and campaign leader Jamie Opsal. A Show-Me Institute critic quoted in West Newsmagazine argues the opposite, that frozen seniors wouldn't really pay for it. Also, 'Prop S' was the name of Rockwood schools' 2025 levy and an earlier Parkway bond; neither is on this ballot. We could not get the exact ballot wording; check your sample ballot.",
+    "confusing_wording_note": "Unlike the school tax measures (Parkway Prop P, Webster Groves Prop W), seniors in the county's property tax freeze would pay this tax, figured on their frozen home value, according to St. Louis Public Radio. Also, 'Prop S' was the name of Rockwood schools' 2025 levy and an earlier Parkway bond; neither is on this ballot.",
     "supporters_case": {
       "text": "Backers, led by the Seniors Count St. Louis coalition, say federal and state cuts are shrinking help for older adults (Meals on Wheels lost $2 million last year) and the levy would let people age at home instead of moving to institutions. Councilmember Gretchen Bangert says it would 'support older folks in our community so that they can stay in their homes.'",
       "source": "https://www.westnewsmagazine.com/news/proposition-s-coming-to-st-louis-county-ballot-in-november/article_09b92533-1812-4093-bc5e-7ef550b2c36d.html"
@@ -49,9 +49,9 @@
       "text": "David Stokes of the Show-Me Institute, a free-market think tank, argues it makes little sense to raise property taxes for senior services while seniors in the county tax freeze are shielded from increases, and says school and fire districts already hurt by the freeze would be 'hit even harder.' St. Louis Public Radio reports no organized opposition campaign; concern about affordability is the main hurdle.",
       "source": "https://www.westnewsmagazine.com/news/proposition-s-coming-to-st-louis-county-ballot-in-november/article_09b92533-1812-4093-bc5e-7ef550b2c36d.html"
     },
-    "official_text_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+    "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "webster-groves-sd-prop-w",
@@ -65,7 +65,7 @@
     "no_means": "The tax rate stays the same, and the district says it will make cuts such as larger classes, fewer staff and fewer electives and activities.",
     "current_law": "The district's 2025 operating tax rate is $3.3905 per $100 of assessed value. Its overall (blended) rate is $3.9604, with a residential rate of $3.6547 and a debt service levy of $0.5699 (district figures).",
     "fiscal_impact": "Per the district: +$0.65 per $100 of assessed value. Missouri homes are assessed at 19% of market value, so a $400,000 home (about $76,000 assessed) would pay about $494 more a year ($41.17 a month), or roughly $125 per $100,000 of market value. Seniors approved for the county's tax freeze won't see an increase on their eligible bill. The district estimates it raises roughly $9 million. The ballot puts the new total operating levy at an estimated $4.0448.",
-    "pass_threshold": "simple majority (Missouri school operating-levy increase; threshold not stated on the district page)",
+    "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "The '$4.0448' at the end of the ballot question is the estimated new total operating rate, not the size of the increase; the increase is 65 cents. Your cost depends on your home's assessed value (19% of market value), not its sale price. Seniors in the county tax freeze won't pay more under this levy (different from county Prop S). Prop W appears only for addresses inside the Webster Groves School District, which does not line up exactly with the 63119 ZIP.",
     "supporters_case": {
@@ -89,7 +89,7 @@
     "no_means": "The rate stays the same, and the district says further cuts could hit staffing, programs, transportation and classroom resources.",
     "current_law": "Parkway's 2025 residential operating rate is $2.6736 per $100 of assessed value, which the district says is the second-lowest among St. Louis County school districts. Voters last approved an operating levy increase 20 years ago.",
     "fiscal_impact": "From the ballot question: residential operating rate rises from $2.6736 to $3.1336 per $100 of assessed value (commercial $4.4173 to $4.8773; agricultural $3.1038 to $3.5638; personal property $3.7709 to $4.2309). The district's calculator puts a $400,000 home at about $349.60 more a year (about $7 a week); St. Louis Public Radio's guide says about $364. Seniors in the county tax freeze would not pay more.",
-    "pass_threshold": "simple majority (Missouri school operating-levy increase; threshold not stated on the district page)",
+    "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "The ballot says 'operating tax levy ceiling,' meaning the most the district may charge; the district's own estimate shows the full 46 cents being used. The increase is tied to the 2027 assessment, so it would show up on future bills, not this year's. Prop P appears only for addresses in the Parkway School District; much of Ballwin is in the Rockwood School District instead, and we found no Rockwood measure on this ballot.",
     "supporters_case": {
@@ -98,6 +98,27 @@
     },
     "opponents_case": null,
     "official_text_url": "https://www.parkwayschools.net/about-parkway/proposition-p-2026",
+    "official_guide_url": null,
+    "confidence": "verified"
+  },
+  {
+    "id": "webster-groves-city-amendment-1",
+    "state": "MO",
+    "level": "city",
+    "jurisdiction": "City of Webster Groves (St. Louis County)",
+    "number": "Amendment 1 (City of Webster Groves)",
+    "official_title": "Shall Article 3 Section 3.1 of the Charter of the City of Webster Groves be amended by removing the residency requirement for the City Manager?",
+    "plain_summary": "Webster Groves' city charter requires the city manager to live in the city. This removes that requirement.",
+    "yes_means": "The city manager would no longer have to live in Webster Groves.",
+    "no_means": "The city manager would still have to live in Webster Groves.",
+    "current_law": "Article 3, Section 3.1 of the Webster Groves City Charter includes a residency requirement for the city manager (per the ballot question).",
+    "fiscal_impact": null,
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "This is a city question, different from Webster Groves School District Prop W. It appears only for addresses inside the City of Webster Groves.",
+    "supporters_case": null,
+    "opponents_case": null,
+    "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
     "confidence": "verified"
   }

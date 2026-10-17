@@ -4,7 +4,7 @@
 import type { HowTo } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, daysBetween, host } from '../util';
-import { ext, isOpen, discBtn, sampleBallot, sentences, clampP, bulletsHTML, leadBulletsHTML, telHTML, srcLink } from './common';
+import { ext, isOpen, discBtn, sampleBallot, sentences, clampP, bulletsHTML, leadBulletsHTML, telHTML, srcLink, escP } from './common';
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }
 
@@ -165,7 +165,7 @@ function facts(): Fact[] {
     detail: [
       sub(access === 'all' ? 'Who gets one' : 'Who can', bulletsHTML(mb.who_gets_one)),
       access !== 'all' && rq ? sub('Asking for one', `${bulletsHTML(rq.rule)}${srcLine(rq.source)}`) : '',
-      sub('Sending it back', `${timeShort ? '' : bulletsHTML(r.time)}${mb.return_options && mb.return_options.length ? `<ul class="bul">${mb.return_options.map((o) => `<li>${esc(o)}</li>`).join('')}</ul>` : ''}${srcLine(r.source)}`),
+      sub('Sending it back', `${timeShort ? '' : bulletsHTML(r.time)}${mb.return_options && mb.return_options.length ? `<ul class="bul">${mb.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${srcLine(r.source)}`),
       sub('When to mail it', bulletsHTML(mb.mail_cutoff_advice)),
       mb.tracking_url || mb.drop_box_lookup_url ? `<p class="row">${mb.tracking_url ? ext(mb.tracking_url, 'Track your ballot') : ''}${mb.drop_box_lookup_url ? ext(mb.drop_box_lookup_url, 'Find a drop box') : ''}</p>` : '',
     ].join(''),
@@ -176,7 +176,7 @@ function facts(): Fact[] {
     label: 'Bring',
     value: esc(IDS[idr.required] || idr.required),
     k: 'pf-id', more: 'Which IDs count',
-    detail: `${idr.accepted.length ? `<ul class="bul">${idr.accepted.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? sub('No ID?', bulletsHTML(idr.no_id_option)) : ''}`,
+    detail: `${idr.accepted.length ? `<ul class="bul">${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? sub('No ID?', bulletsHTML(idr.no_id_option)) : ''}`,
   });
 
   const booth = h.in_the_booth;

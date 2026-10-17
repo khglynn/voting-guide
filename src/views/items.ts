@@ -7,7 +7,7 @@ import {
   contestDistrict,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
-import { confLabel, discBtn, ext, firstSentence, isOpen, sampleBallot, srcLink } from './common';
+import { confLabel, discBtn, ext, firstSentence, isOpen, sampleBallot, srcLink, clampP, escP } from './common';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
    The two entry ids prefill "Which race or measure?" and "Where are you voting?". */
@@ -73,7 +73,7 @@ function endorseHTML(it: Item): string {
     if (e && en) {
       const head = en.both ? `${e.name} lists campaigns on both sides.` : `${e.name}: ${choiceLabel(it, en)}${en.note && en.c ? ` (${en.note})` : ''}.`;
       why = `<div class="why" role="region" aria-label="Why ${esc(e.short)}"><strong>${esc(head)}</strong>
-        ${en.why ? `<p>${esc(en.why)}</p>` : '<p class="muted">They didn’t give a reason.</p>'}
+        ${en.why ? clampP(`why-${key}-${e.id}`, en.why, 40) : '<p class="muted">They didn’t give a reason.</p>'}
         <div class="meta">${en.url ? ext(en.url, 'Read their endorsement') : ''}${en.date ? `<span>${esc(en.date)}</span>` : ''}${confLabel(en.conf) ? `<span>${confLabel(en.conf)}</span>` : ''}</div></div>`;
     }
   }
@@ -91,7 +91,7 @@ function endorseHTML(it: Item): string {
 function ownWordsHTML(c: Candidate, label: string): string {
   if (!c.own_words.length) return '';
   return `<div class="stack-xs"><span class="kicker">${esc(label)}</span><ul class="ow">${c.own_words.map((o) =>
-    `<li>${o.is_quote && !/["“”]/.test(o.text) ? `“${esc(o.text)}”` : esc(o.text)}${srcLink(o.source)}</li>`).join('')}</ul></div>`;
+    `<li>${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}${srcLink(o.source)}</li>`).join('')}</ul></div>`;
 }
 function webHTML(c: Candidate): string {
   const bits: string[] = [];
@@ -132,7 +132,7 @@ function mayApplyHTML(it: Contest): string {
   const b = S.ballot!;
   if (!b.mayApply.has(it.id) && !(b.groupOf[it.id] && S.b.districts[b.groupOf[it.id]] === '*')) return '';
   const canHide = b.mayApply.has(it.id);
-  return `<div class="mayapply"><p><strong>Only some voters see this.</strong> ${esc(it.scope_plain)}</p>
+  return `<div class="mayapply"><p><strong>Only some voters see this.</strong> ${escP(it.scope_plain)}</p>
     ${canHide ? `<button class="btn btn-sm" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button>` : ''}</div>`;
 }
 
@@ -153,7 +153,7 @@ function candHTML(it: Contest, c: Candidate): string {
       <button class="btn btn-sm ${picked ? 'btn-primary' : ''}" data-act="${multi ? 'mpick' : 'pick'}" data-id="${esc(it.id)}" data-v="${esc(c.name)}" aria-pressed="${picked}" data-fk="pk-${esc(it.id)}-${hash(c.name, 4)}">${picked ? `Your pick: ${esc(c.short)}` : `Pick ${esc(c.short)}`}</button>
       ${c.background ? `<button class="btn-text btn btn-sm" data-act="open" data-k="${esc(bgK)}" aria-expanded="${isOpen(bgK)}">Background</button>` : ''}
     </div>
-    ${c.background && isOpen(bgK) ? `<p class="small">${esc(c.background)}</p>` : ''}
+    ${c.background && isOpen(bgK) ? `<p class="small">${escP(c.background)}</p>` : ''}
   </div>`;
 }
 function retentionHTML(it: Contest): string {
@@ -161,7 +161,7 @@ function retentionHTML(it: Contest): string {
   const v = S.b.picks[it.id];
   return `<div class="cand-c">
       <div class="nm"><h4 class="cand-name">${esc(j.name)}</h4>${j.incumbent ? '<span class="badge">Now serving</span>' : ''}</div>
-      ${j.background ? `<p class="small">${esc(j.background)}</p>` : ''}
+      ${j.background ? clampP(`bgj-${it.id}`, j.background, 30, 'small') : ''}
       ${ownWordsHTML(j, 'About this judge')}${webHTML(j)}
     </div>
     <div class="pickbar" role="group" aria-label="Keep ${esc(j.name)}?">
@@ -181,7 +181,7 @@ function multiJudgeHTML(it: Contest): string {
         <div class="yn-inline" role="group" aria-label="Keep ${esc(c.name)}?">
           <button data-act="jpick" data-k="${esc(k)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="jp-${hash(k)}-y">Yes</button>
           <button data-act="jpick" data-k="${esc(k)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="jp-${hash(k)}-n">No</button></div>
-        ${isOpen(bgK) ? `<div class="j-bg">${c.background ? `<p class="small">${esc(c.background)}</p>` : ''}${ownWordsHTML(c, 'About this judge')}</div>` : ''}</li>`;
+        ${isOpen(bgK) ? `<div class="j-bg">${c.background ? `<p class="small">${escP(c.background)}</p>` : ''}${ownWordsHTML(c, 'About this judge')}</div>` : ''}</li>`;
     }).join('')}</ul>`;
 }
 function contestCard(it: Contest): string {
@@ -203,9 +203,9 @@ function contestCard(it: Contest): string {
   return `<article class="card-r" id="i-${esc(it.id)}" data-item="${esc(it.id)}" ${s === 'open' ? 'data-undecided' : ''} aria-labelledby="h-${esc(it.id)}">
     ${headHTML(it, kicker)}
     ${mayApplyHTML(it)}
-    ${it.office_explainer ? `<p class="explainer">${esc(it.office_explainer)}</p>` : ''}
-    ${it.every && rest ? `<p class="small muted">${esc(rest)}</p>` : ''}
-    ${it.why_it_matters ? `<p class="r-why">${esc(it.why_it_matters)}</p>` : ''}
+    ${it.office_explainer ? `<p class="explainer">${escP(it.office_explainer)}</p>` : ''}
+    ${it.every && rest ? clampP(`scope-${it.id}`, rest, 24, 'small muted') : ''}
+    ${it.why_it_matters ? clampP(`wim-${it.id}`, it.why_it_matters, 28, 'r-why') : ''}
     ${!isPartisan(it) && !it.is_retention ? '<p class="lim">Nonpartisan race: no party labels on the ballot.</p>' : ''}
     ${endorseHTML(it)}
     ${body}
@@ -237,12 +237,12 @@ function measureCard(m: Measure): string {
   return `<article class="card-r" id="i-${esc(m.id)}" data-item="${esc(m.id)}" ${s === 'open' ? 'data-undecided' : ''} aria-labelledby="h-${esc(m.id)}">
     ${headHTML(m, m.jurisdiction)}
     <div class="row">${thresholdBadge(m)}${m.referred_by === 'citizen_initiative' ? '<span class="badge">Citizen initiative</span>' : m.referred_by === 'legislature' ? '<span class="badge">From the legislature</span>' : ''}</div>
-    ${m.plain_summary ? `<p class="summary">${esc(m.plain_summary)}</p>` : ''}
+    ${m.plain_summary ? clampP(`sum-${m.id}`, m.plain_summary, 32, 'summary') : ''}
     <div class="yn">
-      <div class="yn-box ${v === 'YES' ? 'is-picked' : ''}"><span class="yn-label">A YES vote means</span><p>${esc(m.yes_means || 'Not written up yet. See the official text.')}</p></div>
-      <div class="yn-box ${v === 'NO' ? 'is-picked' : ''}"><span class="yn-label">A NO vote means</span><p>${esc(m.no_means || 'Not written up yet. See the official text.')}</p></div>
+      <div class="yn-box ${v === 'YES' ? 'is-picked' : ''}"><span class="yn-label">A YES vote means</span><p>${escP(m.yes_means || 'Not written up yet. See the official text.')}</p></div>
+      <div class="yn-box ${v === 'NO' ? 'is-picked' : ''}"><span class="yn-label">A NO vote means</span><p>${escP(m.no_means || 'Not written up yet. See the official text.')}</p></div>
     </div>
-    ${m.confusing_wording_note ? `<div class="heads-up"><span class="kicker">Heads up: confusing wording</span><p>${esc(m.confusing_wording_note)}</p></div>` : ''}
+    ${m.confusing_wording_note ? `<div class="heads-up"><span class="kicker">Heads up: confusing wording</span>${clampP(`cw-${m.id}`, m.confusing_wording_note, 28)}</div>` : ''}
     ${linkedHTML(m)}
     ${endorseHTML(m)}
     <div class="pickbar" role="group" aria-label="Your vote on ${esc(m.number)}">
@@ -253,11 +253,11 @@ function measureCard(m: Measure): string {
     ${isOpen(k) ? `<div class="disc-bd">
       ${m.official_title ? `<div class="ballot-lang" tabindex="0">${esc(m.official_title)}</div>` : ''}
       ${m.supporters_case || m.opponents_case ? `<div class="C-sides">
-        ${m.supporters_case ? `<div class="C-side"><span class="kicker">Supporters say</span><p>${esc(m.supporters_case.text)} ${srcLink(m.supporters_case.source)}</p></div>` : ''}
-        ${m.opponents_case ? `<div class="C-side"><span class="kicker">Opponents say</span><p>${esc(m.opponents_case.text)} ${srcLink(m.opponents_case.source)}</p></div>` : ''}</div>` : ''}
-      ${m.current_law ? `<p class="small"><strong>Current law:</strong> ${esc(m.current_law)}</p>` : ''}
-      ${m.fiscal_impact ? `<p class="small"><strong>Cost and money:</strong> ${esc(m.fiscal_impact)}</p>` : ''}
-      ${m.pass_threshold ? `<p class="small"><strong>To pass:</strong> ${esc(m.pass_threshold)}</p>` : ''}
+        ${m.supporters_case ? `<div class="C-side"><span class="kicker">Supporters say</span><p>${escP(m.supporters_case.text)} ${srcLink(m.supporters_case.source)}</p></div>` : ''}
+        ${m.opponents_case ? `<div class="C-side"><span class="kicker">Opponents say</span><p>${escP(m.opponents_case.text)} ${srcLink(m.opponents_case.source)}</p></div>` : ''}</div>` : ''}
+      ${m.current_law ? `<p class="small"><strong>Current law:</strong> ${escP(m.current_law)}</p>` : ''}
+      ${m.fiscal_impact ? `<p class="small"><strong>Cost and money:</strong> ${escP(m.fiscal_impact)}</p>` : ''}
+      ${m.pass_threshold ? `<p class="small"><strong>To pass:</strong> ${escP(m.pass_threshold)}</p>` : ''}
       <p class="small">${[m.official_text_url ? ext(m.official_text_url, 'Official text') : '', m.official_guide_url ? ext(m.official_guide_url, 'Official voter guide') : ''].filter(Boolean).join(' · ')}</p>
     </div>` : ''}</div>
     ${footHTML(m, false)}
@@ -287,7 +287,7 @@ function infoHTML(it: Contest): string {
   return `<article class="card-r is-info" id="i-${esc(it.id)}" aria-labelledby="h-${esc(it.id)}">
     ${headHTML(it, 'Depends on your address')}
     ${it.office_explainer ? `<p class="explainer">${esc(it.office_explainer)}</p>` : ''}
-    <p class="small">${esc(it.scope_plain)}</p>
+    <p class="small">${escP(it.scope_plain)}</p>
     <p class="small muted">The candidates depend on your exact address, so they aren’t in this guide.${sb ? ` ${ext(sb.url, sb.label)}.` : ''}</p>
   </article>`;
 }

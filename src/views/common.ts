@@ -51,6 +51,37 @@ export const firstSentence = (s: string): [string, string] => {
   return [m[1].replace(/\.$/, '').trim(), m[3].trim()];
 };
 
+/* ---------- no shouting ----------
+   Research notes sometimes stress a word in capitals ("must be RECEIVED", "NOT in the
+   district"). Kevin asked for no all caps, so those words show in lower case. Acronyms
+   (USPS, DCBOE) stay, and anything inside quotation marks stays word for word, because
+   quoted ballot language is printed in capitals on purpose. */
+const SHOUT = new Set(('NOT ONE TWO THREE ANY YOUR ONLY MORE LESS AFTER BEFORE NOON RECEIVED ARRIVE ARRIVES POSTMARKED ' +
+  'WITH NEW EVERY SIGN AND DATE MONDAY TUESDAY OCTOBER NOVEMBER PROVISIONAL APPLICATION BALLOT VOTE CENTER COUNTIES ' +
+  'POLLING PLACE EVERYTHING ELSE REPEALS NOTE HAVE IMPORTANT EARLY MAIL ABSENTEE MEETS PERFORMANCE STANDARDS NEVER ' +
+  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS').split(' '));
+const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])('[^']*')(?=[\s.,;:)!?]|$)/g;
+export function deshout(text: string): string {
+  if (!text || !/[A-Z]{3}/.test(text)) return text;
+  const fix = (seg: string, atStart: boolean) => seg.replace(/\b[A-Z]{2,}\b/g, (w, i: number) => {
+    if (!SHOUT.has(w) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
+    const lower = w.toLowerCase();
+    const before = seg.slice(0, i);
+    const start = (atStart && /^\s*$/.test(before)) || /[.!?:]\s+$/.test(before);
+    return start ? lower.charAt(0).toUpperCase() + lower.slice(1) : lower;
+  });
+  let out = '';
+  let last = 0;
+  for (const m of text.matchAll(QUOTED)) {
+    const at = m.index! + (m[2] ? m[1].length : 0);
+    const q = m[2] || m[0];
+    out += fix(text.slice(last, at), last === 0) + q;
+    last = at + q.length;
+  }
+  return out + fix(text.slice(last), last === 0);
+}
+export const escP = (s: string | null | undefined): string => esc(deshout(s || ''));
+
 /* ---------- skimmable prose ----------
    Long research prose is split for display only: into sentences, into a lead plus "More",
    or into bullets. Nothing is reworded, so every fact, date and URL stays as written. */
@@ -83,9 +114,9 @@ export function clampP(key: string, text: string | null | undefined, max = 30, c
   if (!text) return '';
   const [lead, rest] = leadRest(text, max);
   const c = cls ? ` class="${cls}"` : '';
-  if (!rest) return `<p${c}>${esc(text)}</p>`;
+  if (!rest) return `<p${c}>${escP(text)}</p>`;
   const open = isOpen(key);
-  return `<p${c}>${esc(lead)}${open ? ` ${esc(rest)}` : ''} <button class="more" data-act="open" data-k="${esc(key)}" aria-expanded="${open}">${open ? 'Less' : 'More'}</button></p>`;
+  return `<p${c}>${escP(lead)}${open ? ` ${escP(rest)}` : ''} <button class="more" data-act="open" data-k="${esc(key)}" aria-expanded="${open}">${open ? 'Less' : 'More'}</button></p>`;
 }
 
 /* One sentence per bullet. A sentence like "You qualify if you: a; b; or c." becomes an
@@ -94,9 +125,9 @@ function listify(s: string): string {
   const m = s.match(/^(.{0,160}?):\s+(.+)$/);
   if (m) {
     const segs = m[2].split(/;\s+/);
-    if (segs.length >= 3) return `${esc(m[1])}:<ul>${segs.map((x) => `<li>${esc(x.replace(/;$/, ''))}</li>`).join('')}</ul>`;
+    if (segs.length >= 3) return `${escP(m[1])}:<ul>${segs.map((x) => `<li>${escP(x.replace(/;$/, ''))}</li>`).join('')}</ul>`;
   }
-  return esc(s);
+  return escP(s);
 }
 export function bulletsHTML(text: string | null | undefined, cls = 'bul'): string {
   const ss = sentences(text || '');
@@ -107,7 +138,7 @@ export function leadBulletsHTML(items: string[], cls = 'bul bul-lead'): string {
   if (!items.length) return '';
   return `<ul class="${cls}">${items.map((t) => {
     const ss = sentences(t);
-    return `<li><strong>${esc(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${esc(ss.slice(1).join(' '))}</span>` : ''}</li>`;
+    return `<li><strong>${escP(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${escP(ss.slice(1).join(' '))}</span>` : ''}</li>`;
   }).join('')}</ul>`;
 }
 

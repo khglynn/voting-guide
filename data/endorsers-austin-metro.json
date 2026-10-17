@@ -4,7 +4,7 @@
     "name": "The Austin Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "Alt-weekly whose board endorsed the full Democratic slate statewide and describes its own politics as progressive; AllSides has no rating.",
+    "lean_basis": "AllSides Media Bias Rating: Left (independent review, low confidence, Oct 2026). Alt-weekly whose endorsements reflect its news staff and editors; its 2026 guide tells readers to 'Vote Democrat' in every statewide race.",
     "geography": [
       "austin-tx"
     ],
@@ -17,8 +17,8 @@
     "id": "austin-american-statesman-eb",
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Hearst-owned daily; AllSides rates the Statesman Lean Left. Resumed endorsements in 2026; its 2026 slate is mostly Democratic with several Republican picks (Buckingham, Sheets, Teixeira, Flores, Wilson).",
+    "lean": "neutral",
+    "lean_basis": "Hearst-owned daily that resumed endorsements in 2026. AllSides' current page rates its news Center (independent review, low confidence, Aug 2026); an older duplicate AllSides page says Lean Left. Neither rates the editorial board, so under this guide's rule (a media-bias rating wins where one exists) it is labeled neutral. Its 2026 slate is mostly Democrats, with five Republican picks (Buckingham, Sheets, Teixeira, Pete Flores, Wilson) and no pick in TX-17, TX-31 or HD-73.",
     "geography": [
       "austin-tx",
       "TX"
@@ -47,14 +47,14 @@
     "name": "Community Impact Newspaper",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Free local newspaper chain; publishes candidate Q&As and does not endorse.",
+    "lean_basis": "Free local newspaper chain; publishes candidate Q&As and a Nov 2026 voter guide with ballot language, and does not endorse.",
     "geography": [
       "austin-tx",
       "round-rock-tx",
       "pflugerville-tx",
       "san-marcos-tx"
     ],
-    "guide_url": "https://communityimpact.com/austin/",
+    "guide_url": "https://communityimpact.com/northwest-austin/voter-guide/",
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": false

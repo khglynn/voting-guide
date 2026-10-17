@@ -490,16 +490,6 @@
   "confidence": "verified"
  },
  {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "oc-supervisor-4",
-  "status": "endorsed",
-  "choice": "Tim Shaw",
-  "why": "Endorsed Shaw on April 16, 2026 and kept him on its Nov 3 endorsement list (updated Oct 15, 2026). Shaw's candidate statement quotes the board praising his \"history of protecting the taxpayers' dollars.\"",
-  "url": "https://www.ocregister.com/2026/04/16/endorsement-tim-shaw-for-orange-countys-4th-district/",
-  "date": "2026-04-16",
-  "confidence": "verified"
- },
- {
   "endorser_id": "oc-register-eb",
   "target_id": "oc-supervisor-4",
   "status": "endorsed",
@@ -507,16 +497,6 @@
   "why": "Endorsed Shaw on April 16, 2026 and kept him on its Nov 3 endorsement list (updated Oct 15, 2026). Shaw's candidate statement quotes the board praising his \"history of protecting the taxpayers' dollars.\" (Same board as the Daily News.)",
   "url": "https://www.ocregister.com/2026/04/16/endorsement-tim-shaw-for-orange-countys-4th-district/",
   "date": "2026-04-16",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-us-house-45",
-  "status": "endorsed",
-  "choice": "Derek Tran",
-  "why": "Found Tran \"thoughtful, focused and conversant in the key issues\" this time and backed him on deficits, tariffs and ICE; said Vo \"either retreated to slogans or ignorance\" on key questions.",
-  "url": "https://www.ocregister.com/2026/09/17/endorsement-re-elect-derek-tran-in-the-45th-congressional-district/",
-  "date": "2026-09-17",
   "confidence": "verified"
  },
  {
@@ -530,16 +510,6 @@
   "confidence": "verified"
  },
  {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-state-senate-34",
-  "status": "endorsed",
-  "choice": "Rhonda Shader",
-  "why": "Called both candidates reasonable and said the district \"can do far worse than Valencia,\" but backed Shader as a fiscal conservative who \"would offer needed balance\" in Sacramento.",
-  "url": "https://www.ocregister.com/2026/09/16/endorsement-elect-rhonda-shader-in-the-34th-senate-district/",
-  "date": "2026-09-16",
-  "confidence": "verified"
- },
- {
   "endorser_id": "oc-register-eb",
   "target_id": "ca-state-senate-34",
   "status": "endorsed",
@@ -547,16 +517,6 @@
   "why": "Called both candidates reasonable and said the district \"can do far worse than Valencia,\" but backed Shader as a fiscal conservative who \"would offer needed balance\" in Sacramento. (Same board as the Daily News.)",
   "url": "https://www.ocregister.com/2026/09/16/endorsement-elect-rhonda-shader-in-the-34th-senate-district/",
   "date": "2026-09-16",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-assembly-67",
-  "status": "endorsed",
-  "choice": "Mark Pulido",
-  "why": "Called it \"an easy call\": praised Pulido's pro-housing record and said Republican Paulo Morales ignored the board's interview invitations.",
-  "url": "https://www.ocregister.com/2026/10/09/endorsement-mark-pulido-for-the-67th-assembly-district/",
-  "date": "2026-10-09",
   "confidence": "verified"
  },
  {
@@ -1602,222 +1562,222 @@
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-mayor",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Nithya Raman",
+  "why": "Says Bass has failed as mayor and backs Raman, citing her tenant protections and her team's treatment of unhoused people 'with dignity.'",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-attorney",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Marissa Roy",
+  "why": "Says Roy has the litigation experience and a plan to cut the city's liability payouts, and that McKinney has no civil law experience.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-council-3",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Barri Worth Girvan",
+  "why": "Calls neither candidate what the Valley deserves, but picks Girvan over Gaspar, citing Gaspar's 'absolute adoration of LAPD.'",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-council-9",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Estuardo Mazariegos",
+  "why": "Backs the ACCE co-director for his decades of tenant and worker organizing; says Ugarte is 'cut from the same cloth' as Curren Price.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-sheriff",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Robert G. Luna",
+  "why": "Says Luna has failed in many respects but Villanueva 'should never be allowed a scintilla of authority ever again.'",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-judge-64",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked. Some judicial candidates list Knock LA on their own endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Rhonda A. Haymon",
+  "why": "Recommends the 25-year public defender, noting both praise for her grit and criticism of how she works with others.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-judge-65",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked. Some judicial candidates list Knock LA on their own endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Anna Slotky Reitano or Justin Allen Clayton",
+  "why": "Calls it 'a race with no bad choices': both are longtime public defenders. It backed Reitano in the primary.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-judge-87",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked. Some judicial candidates list Knock LA on their own endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Anthony (A.J.) Bayne",
+  "why": "Cites Bayne's quarter century at the public defender's office, including 19 years at the Compton courthouse.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-judge-131",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked. Some judicial candidates list Knock LA on their own endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "David Ross",
+  "why": "Backs the alternate public defender of 25-plus years and raises misconduct allegations against Tryfman from her school board run.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-laccd-seat-2",
   "status": "not_found",
   "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "Knock LA's Nov 2026 guide lists this race as 'Coming soon' (checked Oct 17).",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-laccd-seat-4",
   "status": "not_found",
   "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "Knock LA's Nov 2026 guide lists this race as 'Coming soon' (checked Oct 17).",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-laccd-seat-6",
   "status": "not_found",
   "choice": null,
-  "why": "No November 2026 Knock LA voter guide was found as of Oct 16, 2026. Its June primary guide is linked.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "Knock LA's Nov 2026 guide lists this race as 'Coming soon' (checked Oct 17).",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-prop-te",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says the exemption would let wealthy Palisades owners skip the ULA tax, relief not offered to Eaton Fire victims in Altadena.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-la",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Supports capital infrastructure planning and a two-year budget cycle.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-pl",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Calls it technical and limited; notes the city planners' union supports it.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-ee",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Likes the stronger LAPD Inspector General and LAFD assessor; says the higher referendum threshold is a downside but small.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-prk",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'More money for parks!' Says Los Angeles 'desperately needs this.'",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-prt",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Calls it not very consequential; it funds waterfront public-access projects and changes airport commission rules.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-ordinance-fd",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "A 'reserved yes': more fire funding is needed, though a sales tax is regressive.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-city-charter-sc",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Says matching school board campaign finance rules to the mayor's rules is fine.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-measure-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says binding arbitration would let the sheriff's and fire unions force contracts that ignore the county's finances.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "knock-la",
   "target_id": "la-county-measure-e",
-  "status": "not_found",
-  "choice": null,
-  "why": "No November 2026 Knock LA guide was found as of Oct 16, 2026 (the site returned rate-limit errors). Its June primary guide is linked. Candidates Haymon (Office 64), Reitano (Office 65, primary), Bayne (Office 87) and Ross (Office 131) list Knock LA on their endorsement pages.",
-  "url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Calls it 'vitally important': it locks in the Ethics Commission's independence and funding and restores Measure J.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
@@ -1942,102 +1902,102 @@
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-prop-te",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure TE: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-la",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "The party's 2026 ballot measure table lists Measure LA: NO.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-pl",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "The party's 2026 ballot measure table lists Measure PL as 'No Endorsement.'",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-ee",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "The party's 2026 ballot measure table lists Measure EE: NO.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-prk",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure PRK: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-prt",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure PRT: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-ordinance-fd",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure FD: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-city-charter-sc",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "The party's 2026 ballot measure table lists Measure SC as 'No Endorsement.'",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-county-measure-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure A: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
   "target_id": "la-county-measure-e",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Democratic Party position on this measure as of Sept 30, 2026.",
-  "url": "https://cityhallpass.com/election-2026/measures/county-measure-a",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The party's 2026 ballot measure table lists Measure E: YES.",
+  "url": "https://www.lacdp.org/candidates",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "lacdp",
@@ -2222,102 +2182,102 @@
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-prop-te",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure TE: YES.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-la",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure LA: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-pl",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PL: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-ee",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure EE: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-prk",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PRK: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-prt",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PRT: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-ordinance-fd",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure FD: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-city-charter-sc",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure SC: NO.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-county-measure-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure A: YES.",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-county-gop",
   "target_id": "la-county-measure-e",
-  "status": "not_found",
-  "choice": null,
-  "why": "The party's 2026 voter guide page returned 'not found' on Oct 16, 2026, and City Hall Pass found no published County Republican position as of Sept 30.",
-  "url": "https://www.lagop.org/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Its lookup tool says no, describing E as an 'ethics commission measure that reaffirms wasteful programs.'",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "oc-dems",
@@ -2602,102 +2562,102 @@
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-prop-te",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-la",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-pl",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-ee",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-prk",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Listed as 'Measure PRK - Yes' in the LA Fed's November 2026 voter guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-prt",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-ordinance-fd",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-sc",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-county-measure-a",
-  "status": "not_found",
-  "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "Listed as 'Measure A - Yes' in the LA Fed's November 2026 voter guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-county-measure-e",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "City Hall Pass found no published County Federation of Labor position on this measure as of Sept 30, 2026, and the Fed's November guide file could not be read.",
+  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-chamber",
@@ -2854,80 +2814,90 @@
   "target_id": "la-city-mayor",
   "status": "endorsed",
   "choice": "Nithya Raman",
-  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own endorsements page did not load on Oct 16.",
+  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own 2026 endorsements page, read Oct 17, lists statewide and state Senate picks only and does not show this race.",
   "url": "https://cityhallpass.com/election-2026/races/mayor",
   "date": "2026-10-16",
-  "confidence": "sourced"
+  "confidence": "unverified"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "la-city-council-9",
   "status": "endorsed",
   "choice": "Jose Ugarte",
-  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own endorsements page did not load on Oct 16.",
+  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own 2026 endorsements page, read Oct 17, lists statewide and state Senate picks only and does not show this race.",
   "url": "https://cityhallpass.com/election-2026/races/council-district-9",
   "date": "2026-10-16",
-  "confidence": "sourced"
+  "confidence": "unverified"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "ca-state-senate-24",
   "status": "endorsed",
   "choice": "John M. Erickson",
-  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own endorsements page did not load on Oct 16.",
-  "url": "https://cityhallpass.com/election-2026/races/senate-24",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "Listed on AHLA's own 2026 endorsements page (read Oct 17, 2026).",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "ca-state-senate-26",
   "status": "endorsed",
   "choice": "Sara Hernandez",
-  "why": "Abundant Housing LA appears on the candidate's endorsement list (City Hall Pass, Sept 30). AHLA's own endorsements page did not load on Oct 16.",
-  "url": "https://cityhallpass.com/election-2026/races/senate-26",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "why": "Listed on AHLA's own 2026 endorsements page (read Oct 17, 2026).",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "la-city-attorney",
   "status": "not_found",
   "choice": null,
-  "why": "Not on either candidate's endorsement list as read by City Hall Pass; AHLA's page did not load.",
-  "url": "https://abundanthousingla.org/endorsements/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "AHLA's own 2026 endorsements page (read Oct 17, 2026) lists no pick in this race.",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "la-city-council-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on either candidate's endorsement list as read by City Hall Pass; AHLA's page did not load.",
-  "url": "https://abundanthousingla.org/endorsements/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "AHLA's own 2026 endorsements page (read Oct 17, 2026) lists no pick in this race.",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "ca-assembly-51",
   "status": "not_found",
   "choice": null,
-  "why": "Not on either candidate's endorsement list as read by City Hall Pass; AHLA's page did not load.",
-  "url": "https://abundanthousingla.org/endorsements/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "AHLA's own 2026 endorsements page (read Oct 17, 2026) lists no pick in this race.",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "abundant-housing-la",
   "target_id": "ca-assembly-55",
   "status": "not_found",
   "choice": null,
-  "why": "Not on either candidate's endorsement list as read by City Hall Pass; AHLA's page did not load.",
-  "url": "https://abundanthousingla.org/endorsements/",
-  "date": "2026-10-16",
-  "confidence": "unverified"
+  "why": "AHLA's own 2026 endorsements page (read Oct 17, 2026) lists no pick in this race.",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "abundant-housing-la",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Lola Smallwood-Cuevas",
+  "why": "Listed on AHLA's own 2026 endorsements page (read Oct 17, 2026).",
+  "url": "https://www.abundanthousingla.org/2026-endorsements",
+  "date": "2026-10-17",
+  "confidence": "verified"
  },
  {
   "endorser_id": "streets-for-all",
@@ -5240,16 +5210,6 @@
   "confidence": "verified"
  },
  {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-us-house-41",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
   "endorser_id": "oc-register-eb",
   "target_id": "ca-us-house-41",
   "status": "not_found",
@@ -5260,31 +5220,11 @@
   "confidence": "verified"
  },
  {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-us-house-46",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
   "endorser_id": "oc-register-eb",
   "target_id": "ca-us-house-46",
   "status": "not_found",
   "choice": null,
   "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
-  "confidence": "verified"
- },
- {
-  "endorser_id": "la-daily-news-eb",
-  "target_id": "ca-assembly-59",
-  "status": "not_found",
-  "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
   "date": "2026-10-17",
   "confidence": "verified"
@@ -6017,6 +5957,316 @@
   "why": "No recommendation in this Democrat-vs-Democrat race. The party's lookup tells voters not to vote for Mota, citing DSA-LA backing (checked Oct 17, 2026).",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
   "date": "2026-10-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Caroline Menjivar",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "John M. Erickson",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-state-senate-26",
+  "status": "endorsed",
+  "choice": "Sarah Rascón",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Lola Smallwood-Cuevas",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-40",
+  "status": "endorsed",
+  "choice": "Pilar Schiavo",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-43",
+  "status": "endorsed",
+  "choice": "Celeste Rodriguez",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Nicholas \"Nick\" Schultz",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-51",
+  "status": "endorsed",
+  "choice": "Colin D. Hernandez",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Jessica Caloza",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-55",
+  "status": "endorsed",
+  "choice": "Isaac G. Bryan",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-57",
+  "status": "endorsed",
+  "choice": "Sade Elhawary",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-61",
+  "status": "endorsed",
+  "choice": "Tina Simone McKinnor",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-66",
+  "status": "endorsed",
+  "choice": "Sara Deen",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-28",
+  "status": "endorsed",
+  "choice": "Judy Chu",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-29",
+  "status": "endorsed",
+  "choice": "Angélica María Dueñas",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-34",
+  "status": "endorsed",
+  "choice": "Angela Gonzales-Torres",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-37",
+  "status": "endorsed",
+  "choice": "Samantha Mota",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-43",
+  "status": "endorsed",
+  "choice": "Maxine Waters",
+  "why": "Recommended in Knock LA's Nov 2026 progressive voter guide.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-42",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-46",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-54",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-65",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-assembly-67",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-26",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-27",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-30",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-32",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-36",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-41",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-44",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-us-house-45",
+  "status": "no_position",
+  "choice": null,
+  "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "date": "2026-10-11",
   "confidence": "verified"
  }
 ]

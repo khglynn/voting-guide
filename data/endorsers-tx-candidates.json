@@ -45,8 +45,8 @@
     "id": "austin-american-statesman-eb",
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Resumed candidate endorsements under Hearst ownership in 2026 after not endorsing in general elections since 2016 (Gannett era). Its statewide slate is 6 Democrats and 2 Republicans.",
+    "lean": "neutral",
+    "lean_basis": "Hearst-owned daily that resumed endorsements in 2026. AllSides' current page rates its news Center (independent review, low confidence, Aug 2026); an older duplicate AllSides page says Lean Left. Neither rates the editorial board, so under this guide's rule (a media-bias rating wins where one exists) it is labeled neutral. Its 2026 slate is mostly Democrats, with five Republican picks (Buckingham, Sheets, Teixeira, Pete Flores, Wilson) and no pick in TX-17, TX-31 or HD-73.",
     "geography": [
       "TX"
     ],

@@ -4,9 +4,9 @@
     "target_id": "co-us-senate",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor; it publishes evaluations instead.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-    "date": "2026-10-03",
+    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor. Its Oct 16 roundup offers evaluations of the candidates instead.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-16",
     "confidence": "verified"
   },
   {
@@ -14,40 +14,40 @@
     "target_id": "co-governor",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor; it publishes evaluations instead.",
-    "url": "https://www.denverpost.com/2026/10/03/colorado-election-2026-voter-guide-candidates-ballot-measures/",
-    "date": "2026-10-03",
+    "why": "Policy since 2022: the Post does not make formal endorsements for U.S. Senate or governor. Its Oct 16 roundup offers evaluations of the candidates instead.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-16",
     "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15.",
-    "url": "https://www.denverpost.com/opinion/editorials/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Michael J. Allen",
+    "why": "Calls Allen a moderate Republican who has twice stood up to his party's extremes as El Paso County DA, and cites his integrity and record running a large office. Faults Griswold's management and limited courtroom experience.",
+    "url": "https://www.denverpost.com/2026/10/16/colorado-ballot-attorney-general-endorsement-michael-allen-jena-griswold/",
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-secretary-of-state",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15.",
-    "url": "https://www.denverpost.com/opinion/editorials/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Amanda Gonzalez",
+    "why": "Says Gonzalez, Jefferson County's clerk since 2022 and a former Common Cause staffer, is well qualified to run elections. Calls Republican James Wiley, who wants to end mail ballots, a threat to Colorado's democracy.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-treasurer",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Post said it would publish endorsements for 'most statewide offices' the week of Oct. 12. None had appeared on its editorials page as of Oct. 15.",
-    "url": "https://www.denverpost.com/opinion/editorials/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Jeff Bridges",
+    "why": "Praises Bridges' plans to return unclaimed property, protect that fund and push for prudence on the PERA board. Says Republican Kevin Grantham also would do a good job.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "co-springs-gazette-eb",
@@ -154,9 +154,9 @@
     "target_id": "co-us-senate",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
-    "url": "https://coloradosun.com/opinion/",
-    "date": "2026-10-15",
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its issue guide lays out where the candidates stand.",
+    "url": "https://coloradosun.com/2026/10/05/colorado-senate-race-candidate-guide/",
+    "date": "2026-10-05",
     "confidence": "verified"
   },
   {
@@ -164,9 +164,9 @@
     "target_id": "co-governor",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
-    "url": "https://coloradosun.com/opinion/",
-    "date": "2026-10-15",
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its issue guide lays out where the candidates stand.",
+    "url": "https://coloradosun.com/2026/10/10/colorado-governor-phil-weiser-victor-marx-voter-guide/",
+    "date": "2026-10-10",
     "confidence": "verified"
   },
   {
@@ -174,9 +174,9 @@
     "target_id": "co-attorney-general",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
-    "url": "https://coloradosun.com/opinion/",
-    "date": "2026-10-15",
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its issue guide lays out where the candidates stand.",
+    "url": "https://coloradosun.com/2026/10/06/michael-allen-jena-griswold-colorado-attorney-general-election-voter-guide/",
+    "date": "2026-10-06",
     "confidence": "verified"
   },
   {
@@ -184,9 +184,9 @@
     "target_id": "co-secretary-of-state",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
-    "url": "https://coloradosun.com/opinion/",
-    "date": "2026-10-15",
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its issue guide lays out where the candidates stand.",
+    "url": "https://coloradosun.com/2026/10/07/james-wiley-amanda-gonzalez-secretary-of-state-voter-guide/",
+    "date": "2026-10-07",
     "confidence": "verified"
   },
   {
@@ -194,9 +194,9 @@
     "target_id": "co-treasurer",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun has no editorial board and does not endorse candidates. It publishes side-by-side issue guides instead.",
-    "url": "https://coloradosun.com/opinion/",
-    "date": "2026-10-15",
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its issue guide lays out where the candidates stand.",
+    "url": "https://coloradosun.com/2026/10/05/jeff-bridges-kevin-grantham-colorado-treasurer-issue-guide/",
+    "date": "2026-10-05",
     "confidence": "verified"
   },
   {
@@ -392,12 +392,12 @@
   {
     "endorser_id": "co-afl-cio",
     "target_id": "co-us-senate",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The AFL-CIO's Aug. 19 slate lists governor, SOS, AG, treasurer and Congress but no U.S. Senate pick. A separate machinists council page lists Hickenlooper, but that is not the AFL-CIO itself.",
+    "why": "The AFL-CIO's 2026 slate (Aug. 19, unchanged when re-read Oct. 17) lists governor, the other statewide offices and Congress but makes no U.S. Senate pick.",
     "url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
-    "date": "2026-08-19",
-    "confidence": "sourced"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-education-association",
@@ -492,9 +492,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-us-senate",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not listed on the group's 2026 endorsement page, which covers statewide, legislative and county races.",
+    "why": "Not on the group's 2026 endorsement page, which covers statewide, legislative and county races; it made no U.S. Senate pick.",
     "url": "https://conservationco.org/resources/endorsements/",
     "date": "2026-10-13",
     "confidence": "verified"
@@ -542,9 +542,9 @@
   {
     "endorser_id": "planned-parenthood-votes-co",
     "target_id": "co-us-senate",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not listed on the group's 'full 2026 endorsement slate.'",
+    "why": "Not on the group's 'full 2026 endorsement slate'; it made no U.S. Senate pick.",
     "url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
     "date": null,
     "confidence": "verified"
@@ -582,9 +582,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-secretary-of-state",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Race not listed on the NRA-PVF Colorado grades page.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
     "url": "https://www.nrapvf.org/grades/colorado",
     "date": null,
     "confidence": "verified"
@@ -592,9 +592,9 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "co-treasurer",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Race not listed on the NRA-PVF Colorado grades page.",
+    "why": "The NRA-PVF Colorado grades page does not grade this race, so it made no pick.",
     "url": "https://www.nrapvf.org/grades/colorado",
     "date": null,
     "confidence": "verified"

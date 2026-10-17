@@ -4,7 +4,7 @@
     "name": "The Denver Post editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides Media Bias Rating: Center (news). Board is separate from the newsroom. In 2026 it opposed both the conservative Amendment 81 and the progressive Amendment 87, and endorsed Republican Michael Allen for AG.",
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low confidence, Oct 2026) and Ad Fontes rates it Middle (-2.86); neither rates the editorial board separately. The board's 2026 general-election picks split by party: Republican Michael Allen for attorney general, Democrats Amanda Gonzalez and Jeff Bridges for secretary of state and treasurer, and No on both the conservative-sponsored Amendment 81 and the graduated income tax in Amendment 87. Under a 2022 company-wide policy it does not endorse for U.S. Senate or governor; it said U.S. House picks would run the week of Oct. 19.",
     "geography": [
       "CO",
       "denver-co"
@@ -18,8 +18,8 @@
     "id": "gazette-eb",
     "name": "The Gazette editorial board (Denver Gazette and Colorado Springs Gazette; one board, two mastheads)",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Owned by Clarity Media (Philip Anschutz). Its 2026 Denver picks: Republicans or the unaffiliated Blau in every candidate race, YES on all conservative statewide measures, NO on 87, NN, 137, 7A and 4A.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low confidence, Oct 2026) and does not rate the editorial board, so under this guide's rule (a media-bias rating wins where one exists) the board is labeled neutral. Its 2026 record runs one way: every candidate it picked is a Republican or, in CD-1, the unaffiliated Shimon Blau, and it backed all eleven conservative-sponsored statewide measures while opposing Amendment 87, Proposition NN, Proposition 137, Issue 7A and Denver's 4A. The Colorado Springs Gazette and Denver Gazette share one board and publish identical picks, so they count as one source.",
     "geography": [
       "CO",
       "denver-co"
@@ -34,11 +34,11 @@
     "name": "The Colorado Sun",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit newsroom; publishes explainers and candidate guides, no editorial board and no endorsements.",
+    "lean_basis": "Nonprofit, nonpartisan newsroom with no editorial board. Its ethics policy says journalists must not 'create the impression that The Colorado Sun, as an institution, endorses' candidates, parties or initiatives. It publishes issue guides for the biggest races and explainers on every statewide measure and Issue 7A, not endorsements. No AllSides rating found (Oct 17, 2026).",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
+    "guide_url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": false
@@ -90,7 +90,7 @@
     "name": "Denver Republican Party",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Official county party organization. Published a Denver measure guide; no local candidate endorsements beyond the party's nominees.",
+    "lean_basis": "Official county party organization. Its home page lists its 2026 endorsed candidates (including the at-large council race) and its Denver and statewide measure positions.",
     "geography": [
       "denver-co"
     ],
@@ -150,7 +150,7 @@
     "name": "Colorado AFL-CIO",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "State labor federation; its 2026 guide endorses Democrats in every Denver-area race it lists.",
+    "lean_basis": "State labor federation. Its 2026 guide endorses only Democratic candidates, backs Amendment 87, Proposition NN and Issue 7A, and says no on eight other measures, including Amendments 81 and 84.",
     "geography": [
       "CO",
       "denver-co"
@@ -193,11 +193,11 @@
     "name": "Bell Policy Center",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive policy institute focused on economic mobility.",
+    "lean_basis": "Describes itself as a non-partisan research and advocacy group taking 'a progressive, research-focused approach to public policy change in Colorado' (bellpolicy.org/about). Its 2026 guide backs Amendment 87, Proposition NN and Proposition 137, opposes eight other statewide measures, and takes no position on 83, 86, 133 or Issue 7A.",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "guide_url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": true
@@ -207,11 +207,11 @@
     "name": "Common Sense Institute Colorado",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Free-enterprise research organization; publishes fiscal analyses rather than endorsements. No Denver-measure analysis found as of Oct 16.",
+    "lean_basis": "Self-described 'non-partisan research organization dedicated to the protection and promotion of Colorado's economy'; its research is routinely cited by the conservative side (the Gazette calls it nonpartisan; Chalkbeat and the Sun describe it as conservative-leaning). It publishes fiscal analysis, including its 2026 ballot guide and an Oct 8 analysis of Issue 7A, not vote recommendations.",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://commonsenseinstituteus.org/colorado",
+    "guide_url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": false

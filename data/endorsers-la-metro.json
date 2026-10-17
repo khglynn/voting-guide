@@ -19,10 +19,9 @@
   "name": "Los Angeles Daily News / Southern California News Group editorial board",
   "type": "publication",
   "lean": "lean_right",
-  "lean_basis": "One editorial board writes for the Daily News, OC Register, Daily Breeze, Pasadena Star-News and other SCNG papers. It describes its own commitments as 'limited government, economic liberty, personal freedom and free markets' (SCNG endorsement list, Oct 1, 2026). AllSides rates the OC Register Lean Right. Count the Daily News and OC Register once; they publish identical picks.",
+  "lean_basis": "One editorial board writes for the Daily News, OC Register, Daily Breeze, Pasadena Star-News and other SCNG papers. It describes its own commitments as 'limited government, economic liberty, personal freedom and free markets' (SCNG endorsement list, Oct 1, 2026). AllSides rates the OC Register Lean Right and says SCNG papers 'share editorials and speak as one voice.' Listed here for Los Angeles races; the same board appears as the OC Register for Orange County races, so count it once.",
   "geography": [
    "los-angeles-ca",
-   "fullerton-ca",
    "CA"
   ],
   "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
@@ -40,7 +39,7 @@
    "fullerton-ca",
    "CA"
   ],
-  "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
   "default_on": true,
   "endorses_candidates": true,
   "endorses_measures": true
@@ -78,7 +77,7 @@
   "name": "Thrive LA",
   "type": "advocacy",
   "lean": "lean_right",
-  "lean_basis": "Self-described 'moderate, pro-Los Angeles' guide whose stated purpose is to 'identify and vote against extremist candidates backed by ... the Democratic Socialist of America.' Endorses mostly Democrats but favors police-union and business-backed candidates, opposes new taxes and rent control, and endorses Republicans with no campaign against DSA-aligned incumbents.",
+  "lean_basis": "Describes itself as 'a pragmatic, nonpartisan voter guide' meant to help voters 'vote against extremist candidates backed by ideological special interests, including the Democratic Socialist of America.' Endorses mostly Democrats, favors candidates who oppose rent-control expansion, and backs Republicans in a few races against DSA-aligned incumbents. Lean right is relative to LA's Democratic field and is a judgment call; it supports the FD sales tax and Measure A.",
   "geography": [
    "los-angeles-ca"
   ],
@@ -92,12 +91,12 @@
   "name": "Knock LA",
   "type": "publication",
   "lean": "left",
-  "lean_basis": "Self-described progressive nonprofit news outlet (Ground Game LA). Its June 2026 primary guide is online; a November 2026 guide was not found as of Oct 16 (site returned rate-limit errors). Its primary picks are cited by campaigns (Haymon, Reitano, Bayne, Ross list Knock LA).",
+  "lean_basis": "Self-described news outlet 'by and for Los Angeles progressives,' a project of Ground Game LA. Its November 2026 progressive voter guide was published Oct 11, 2026 and covers LA city and county races, judges, measures, the legislature and Congress.",
   "geography": [
    "los-angeles-ca"
   ],
-  "guide_url": "https://knock-la.com/knock-la-progressive-voter-guide-june-2026-primary-election/",
-  "default_on": false,
+  "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "default_on": true,
   "endorses_candidates": true,
   "endorses_measures": true
  },
@@ -106,7 +105,7 @@
   "name": "Los Angeles County Democratic Party",
   "type": "party",
   "lean": "left",
-  "lean_basis": "Official county Democratic Party organization.",
+  "lean_basis": "Official county Democratic Party organization. Its candidates page lists its Nov 2026 candidate endorsements and a table of positions on statewide and local measures (read Oct 17, 2026).",
   "geography": [
    "los-angeles-ca"
   ],
@@ -120,7 +119,7 @@
   "name": "Republican Party of Los Angeles County",
   "type": "party",
   "lean": "right",
-  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 picks are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some picks as recommended rather than formally endorsed.",
+  "lean_basis": "Official county Republican Party organization. Its Nov 3, 2026 candidate picks and its positions on LA city and county measures are published in an address-lookup tool linked from lagop.org (read Oct 17, 2026). It marks some candidate picks as recommended rather than formally endorsed.",
   "geography": [
    "los-angeles-ca"
   ],
@@ -162,7 +161,7 @@
   "name": "Los Angeles County Federation of Labor, AFL-CIO",
   "type": "labor",
   "lean": "lean_left",
-  "lean_basis": "Umbrella body for about 300 unions in LA County. Endorses mostly Democrats; also backed Sheriff Luna. Positions come from its November 2026 voter guide, read in full on Oct 17, 2026.",
+  "lean_basis": "Umbrella body for about 300 unions in LA County. Endorses mostly Democrats; also backed Sheriff Luna. Positions come from its November 2026 voter guide (images, read in full on Oct 17, 2026), which takes positions on two LA-area measures in this guide: County Measure A and LA City PRK, both yes.",
   "geography": [
    "los-angeles-ca"
   ],
@@ -190,11 +189,11 @@
   "name": "Abundant Housing LA",
   "type": "advocacy",
   "lean": "lean_left",
-  "lean_basis": "Pro-housing ('YIMBY') 501(c)(4). Endorses across the Democratic spectrum based on housing supply positions: Raman for mayor but also Ugarte in CD9 and Sara Hernandez in SD-26. Its endorsements page did not load on Oct 16; positions come from candidate endorsement lists via City Hall Pass.",
+  "lean_basis": "Pro-housing ('YIMBY') 501(c)(4). Endorses across the Democratic spectrum based on housing-supply positions. Its own 2026 endorsements page (read Oct 17, 2026) lists statewide and state Senate picks only; its mayor and council picks come from candidates' endorsement lists via City Hall Pass and are marked unconfirmed.",
   "geography": [
    "los-angeles-ca"
   ],
-  "guide_url": "https://abundanthousingla.org/endorsements/",
+  "guide_url": "https://www.abundanthousingla.org/2026-endorsements",
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": false
@@ -266,7 +265,7 @@
    "fullerton-ca"
   ],
   "guide_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
-  "default_on": true,
+  "default_on": false,
   "endorses_candidates": false,
   "endorses_measures": true
  }

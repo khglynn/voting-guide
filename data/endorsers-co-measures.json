@@ -4,8 +4,10 @@
     "name": "The Denver Post editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides Media Bias Rating: Center (news). The board itself describes its members as Post employees separate from the newsroom. In 2026 it opposed both the conservative Amendment 81 and the progressive Amendment 87.",
-    "geography": ["CO"],
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low confidence, Oct 2026) and Ad Fontes rates it Middle (-2.86); neither rates the editorial board separately. The board's 2026 general-election picks split by party: Republican Michael Allen for attorney general, Democrats Amanda Gonzalez and Jeff Bridges for secretary of state and treasurer, and No on both the conservative-sponsored Amendment 81 and the graduated income tax in Amendment 87. Under a 2022 company-wide policy it does not endorse for U.S. Senate or governor; it said U.S. House picks would run the week of Oct. 19.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "default_on": true,
     "endorses_candidates": true,
@@ -15,10 +17,12 @@
     "id": "gazette-eb",
     "name": "The Gazette editorial board (Colorado Springs Gazette and Denver Gazette)",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "AllSides rates the Colorado Springs Gazette's news coverage Center, but the editorial board is reliably conservative: in 2026 it backed all eleven conservative-sponsored measures and opposed all three progressive ones. The Colorado Springs Gazette and Denver Gazette share one editorial board and publish identical picks, so they are one endorser here.",
-    "geography": ["CO"],
-    "guide_url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low confidence, Oct 2026) and does not rate the editorial board, so under this guide's rule (a media-bias rating wins where one exists) the board is labeled neutral. Its 2026 record runs one way: every candidate it picked is a Republican or, in CD-1, the unaffiliated Shimon Blau, and it backed all eleven conservative-sponsored statewide measures while opposing Amendment 87, Proposition NN, Proposition 137, Issue 7A and Denver's 4A. The Colorado Springs Gazette and Denver Gazette share one board and publish identical picks, so they count as one source.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -28,8 +32,10 @@
     "name": "The Colorado Sun",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit newsroom. Its ethics policy says journalists must not 'create the impression that The Colorado Sun, as an institution, endorses' candidates, parties or initiatives; it publishes explainers, not endorsements.",
-    "geography": ["CO"],
+    "lean_basis": "Nonprofit, nonpartisan newsroom with no editorial board. Its ethics policy says journalists must not 'create the impression that The Colorado Sun, as an institution, endorses' candidates, parties or initiatives. It publishes issue guides for the biggest races and explainers on every statewide measure and Issue 7A, not endorsements. No AllSides rating found (Oct 17, 2026).",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
     "default_on": true,
     "endorses_candidates": false,
@@ -40,8 +46,10 @@
     "name": "League of Women Voters of Colorado",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization that does not endorse candidates. It does take Support, Oppose or No Stance positions on ballot measures based on its long-standing published policy positions (which include supporting a graduated income tax and opposing TABOR), so its measure stances tend to align with the progressive side on fiscal questions.",
-    "geography": ["CO"],
+    "lean_basis": "Nonpartisan civic organization that never endorses candidates; candidates' own answers are on VOTE411. It takes Support, Oppose or No Stance positions on ballot measures based on its published policy positions (which include supporting a graduated income tax and opposing TABOR), so its measure stances tend to align with the progressive side on fiscal questions.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://lwvcolorado.org/wtls",
     "default_on": true,
     "endorses_candidates": false,
@@ -52,9 +60,11 @@
     "name": "Colorado Democratic Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Official state party organization. Positions set by its State Central Committee in May and September 2026.",
-    "geography": ["CO"],
-    "guide_url": "https://www.coloradodems.org/2026-ballot-initiatives",
+    "lean_basis": "Official state party organization. Its candidates page lists its nominees, and its State Central Committee voted positions on the 2026 statewide measures and Issue 7A.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://www.coloradodems.org/candidates",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -64,9 +74,11 @@
     "name": "Colorado Republican Party (state party)",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Official state party organization. As of October 16, 2026 we could not find any published state-party positions on the 2026 measures; see the Weld County GOP entry for a county-party proxy.",
-    "geography": ["CO"],
-    "guide_url": "https://colorado.gop/",
+    "lean_basis": "Official state party organization; its candidates page lists its nominees. As of Oct 17, 2026 we found no state-party positions on the 2026 measures (the site blocks automated reads); see the Weld County GOP entry for a county-party proxy.",
+    "geography": [
+      "CO"
+    ],
+    "guide_url": "https://colorado.gop/candidates/",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": false
@@ -77,7 +89,9 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official county Republican Party. Adopted positions on all 14 statewide measures by resolution on September 15, 2026. Used here because the state party has published no positions.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://weldcountygop.com/weld-gop-adopts-positions-on-colorados-2026-ballot-measures/",
     "default_on": false,
     "endorses_candidates": false,
@@ -88,8 +102,10 @@
     "name": "Bell Policy Center",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive policy organization; co-leads the Protect Colorado's Future coalition behind Amendment 87.",
-    "geography": ["CO"],
+    "lean_basis": "Describes itself as a non-partisan research and advocacy group taking 'a progressive, research-focused approach to public policy change in Colorado' (bellpolicy.org/about). Its 2026 guide backs Amendment 87, Proposition NN and Proposition 137, opposes eight other statewide measures, and takes no position on 83, 86, 133 or Issue 7A.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "default_on": false,
     "endorses_candidates": false,
@@ -101,7 +117,9 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Progressive fiscal policy group; a lead backer of Amendment 87 and a member of the Protect Colorado's Future coalition.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://coloradofiscal.org/2026-ballot-guide/",
     "default_on": false,
     "endorses_candidates": false,
@@ -112,8 +130,10 @@
     "name": "Independence Institute",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Self-described free-market think tank. Its 2026 voter guide is paid for by Affordable Colorado, an issue committee registered against Amendment 87 and Proposition NN.",
-    "geography": ["CO"],
+    "lean_basis": "Self-described free-market think tank. Its 2026 voter guide is paid for by Affordable Colorado, an issue committee registered against Amendment 87 and Proposition NN. Besides the statewide measures, the guide says no on Issue 7A and on school mill levy overrides 'without measurable outcomes' in Denver, Jefferson County and other districts.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://i2i.org/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": false,
@@ -124,8 +144,10 @@
     "name": "Common Sense Institute Colorado",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Self-described 'non-partisan research organization dedicated to the protection and promotion of Colorado's economy'; its research is routinely cited by the conservative side (the Gazette calls it nonpartisan; Chalkbeat and the Sun describe it as conservative-leaning). Its 2026 ballot guide publishes analysis and 'bottom line' summaries, not vote recommendations.",
-    "geography": ["CO"],
+    "lean_basis": "Self-described 'non-partisan research organization dedicated to the protection and promotion of Colorado's economy'; its research is routinely cited by the conservative side (the Gazette calls it nonpartisan; Chalkbeat and the Sun describe it as conservative-leaning). It publishes fiscal analysis, including its 2026 ballot guide and an Oct 8 analysis of Issue 7A, not vote recommendations.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "default_on": false,
     "endorses_candidates": false,
@@ -137,7 +159,9 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Statewide business association. Its board took positions only on the three tax measures (Amendment 87, Propositions NN and 136), all on the business/anti-tax side.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
     "default_on": false,
     "endorses_candidates": false,
@@ -148,8 +172,10 @@
     "name": "Colorado AFL-CIO",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "State labor federation. Its 2026 guide endorses only Democratic candidates and supports the two progressive fiscal measures.",
-    "geography": ["CO"],
+    "lean_basis": "State labor federation. Its 2026 guide endorses only Democratic candidates, backs Amendment 87, Proposition NN and Issue 7A, and says no on eight other measures, including Amendments 81 and 84.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
     "default_on": false,
     "endorses_candidates": true,
@@ -160,8 +186,10 @@
     "name": "Conservation Colorado",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described 'largest environmental advocacy organization' in the state; endorses candidates (almost all Democrats) and describes the conservative-sponsored measures as coming from 'a network of far-right interests.'",
-    "geography": ["CO"],
+    "lean_basis": "Describes itself as the state's 'largest environmental advocacy organization.' It endorses candidates (almost all Democrats), and its 2026 guide backs Amendment 87, Proposition NN, Proposition 137 and Issue 7A and opposes Amendments 81, 82 and 84 and Propositions 134, 135 and 136.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://conservationco.org/resources/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": true,
@@ -172,8 +200,10 @@
     "name": "ACLU of Colorado",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Civil liberties organization; states it is nonpartisan and does not endorse candidates. Its measure positions are limited to civil-rights questions and all five are 'No' on conservative-sponsored measures.",
-    "geography": ["CO"],
+    "lean_basis": "Civil liberties organization; states it is non-partisan and does not endorse candidates. Its 2026 guide urges a no vote on five conservative-sponsored statewide measures (81, 84, 132, 134, 135) and on Aurora's police-funding question 3B, and takes no other positions.",
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://www.aclu-co.org/voterguide2026/",
     "default_on": false,
     "endorses_candidates": false,
@@ -185,7 +215,9 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Self-described 'leading conservative policy and advocacy organization in Colorado.' Its executive director Michael Fields and attorney Suzanne Taheri are the designated representatives of Amendments 81, 82, 85 and 86 and Propositions 132 and 136, and its allied committees Brighter Colorado and 'No on 87, Yes on 136' are registered against Amendment 87 and Proposition NN.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/ballot/contacts/2026.html",
     "default_on": false,
     "endorses_candidates": false,
@@ -197,7 +229,9 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Alliance of Colorado CEOs that lobbies on business-climate issues. We could not find a published 2026 measure position list as of October 16, 2026.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://coloradoconcern.com/",
     "default_on": false,
     "endorses_candidates": false,
@@ -209,7 +243,9 @@
     "type": "other",
     "lean": "neutral",
     "lean_basis": "Not an endorser with a lean. This is the Colorado Secretary of State's official list of the campaign committees registered to support or oppose each measure. Each committee's own lean follows the side it is on.",
-    "geography": ["CO"],
+    "geography": [
+      "CO"
+    ],
     "guide_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/ballot/contacts/2026.html",
     "default_on": false,
     "endorses_candidates": false,

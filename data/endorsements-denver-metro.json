@@ -14,60 +14,60 @@
     "target_id": "denver-2h",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "why": "Checked Oct 17: the Post's full roundup (updated Oct 16) covers Denver Public Schools 4A and Issue 7A but none of the five Denver city questions.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "denver-2i",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "why": "Checked Oct 17: the Post's full roundup (updated Oct 16) covers Denver Public Schools 4A and Issue 7A but none of the five Denver city questions.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "denver-2j",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "why": "Checked Oct 17: the Post's full roundup (updated Oct 16) covers Denver Public Schools 4A and Issue 7A but none of the five Denver city questions.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "denver-2k",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "why": "Checked Oct 17: the Post's full roundup (updated Oct 16) covers Denver Public Schools 4A and Issue 7A but none of the five Denver city questions.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "denver-311",
     "status": "not_found",
     "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "why": "Checked Oct 17: the Post's full roundup (updated Oct 16) covers Denver Public Schools 4A and Issue 7A but none of the five Denver city questions.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-frpr-7a",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Post's free voter guide lists no editorial on this measure as of Oct 16; the paywalled Oct 7 roundup (updated Oct 15) may contain one.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Calls it a once-in-a-lifetime chance to fund a shovel-ready project for fast, frequent train service from Pueblo to Fort Collins, paid for with a 0.333% sales tax in the district.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
@@ -234,79 +234,79 @@
     "target_id": "denver-council-at-large-b",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list; the paper ran a candidate Q&A instead.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures. It ran a candidate Q&A for this race instead.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sd-32",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sd-34",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-hd-6",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-rtd-b",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-sboe-1",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
     "target_id": "co-cu-regent-6",
     "status": "no_position",
     "choice": null,
-    "why": "Not on the Gazette's picks list.",
+    "why": "Not on the Gazette's Oct 12 picks list, which is complete: CD-8, CD-3, CD-1, attorney general and the ballot measures.",
     "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "date": "2026-10-12",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-sun",
     "target_id": "denver-2h",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "denver-2i",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -344,9 +344,9 @@
     "target_id": "denver-2j",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "denver-2k",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -384,9 +384,9 @@
     "target_id": "denver-311",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -404,9 +404,9 @@
     "target_id": "denver-dps-4a",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -424,9 +424,9 @@
     "target_id": "co-frpr-7a",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/09/30/ballot-issue-7a-explained-colorado-train-tax/",
+    "date": "2026-09-30",
     "confidence": "verified"
   },
   {
@@ -444,9 +444,9 @@
     "target_id": "co-us-house-1",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -464,9 +464,9 @@
     "target_id": "denver-council-at-large-b",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -484,9 +484,9 @@
     "target_id": "co-rtd-b",
     "status": "no_position",
     "choice": null,
-    "why": "The Colorado Sun does not make endorsements.",
-    "url": "https://coloradosun.com/2026/05/28/colorado-primary-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. It has no guide for this item; its statewide election guide is linked.",
+    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
+    "date": "2026-10-13",
     "confidence": "verified"
   },
   {
@@ -1882,20 +1882,20 @@
   {
     "endorser_id": "bell-policy-center",
     "target_id": "co-frpr-7a",
-    "status": "endorsed",
-    "choice": "YES",
-    "why": "Calls Front Range rail a long-needed investment in a corridor where highway widening cannot keep up with growth.",
+    "status": "no_position",
+    "choice": null,
+    "why": "Bell's Oct 12 analysis lays out arguments for and against 7A and makes no recommendation.",
     "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-12",
+    "confidence": "verified"
   },
   {
     "endorser_id": "bell-policy-center",
     "target_id": "denver-2h",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1904,8 +1904,8 @@
     "target_id": "denver-2i",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1914,8 +1914,8 @@
     "target_id": "denver-2j",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1924,8 +1924,8 @@
     "target_id": "denver-2k",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1934,8 +1934,8 @@
     "target_id": "denver-311",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1944,8 +1944,8 @@
     "target_id": "denver-dps-4a",
     "status": "not_found",
     "choice": null,
-    "why": "Bell focuses on statewide fiscal measures; no Denver-measure analysis found.",
-    "url": "https://bellpolicy.org/on-the-ballot-front-range-passenger-rail/",
+    "why": "Bell's 2026 guide covers statewide measures; we found no Bell position on this local question.",
+    "url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1954,8 +1954,8 @@
     "target_id": "denver-2h",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1964,8 +1964,8 @@
     "target_id": "denver-2i",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1974,8 +1974,8 @@
     "target_id": "denver-2j",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1984,8 +1984,8 @@
     "target_id": "denver-2k",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -1994,8 +1994,8 @@
     "target_id": "denver-311",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -2004,8 +2004,8 @@
     "target_id": "denver-dps-4a",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
+    "why": "CSI publishes fiscal analysis, not vote recommendations; its 2026 ballot guide has no report on this local question.",
+    "url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "date": null,
     "confidence": "sourced"
   },
@@ -2014,10 +2014,10 @@
     "target_id": "co-frpr-7a",
     "status": "no_position",
     "choice": null,
-    "why": "CSI publishes fiscal research, not endorsements; no Denver-measure report found.",
-    "url": "https://commonsenseinstituteus.org/colorado",
-    "date": null,
-    "confidence": "sourced"
+    "why": "CSI publishes fiscal analysis, not vote recommendations. Its Oct 8 report on 7A lays out key findings and takes no side.",
+    "url": "https://commonsenseinstituteus.org/research/ballot-issue-7a-proposed-tax-for-front-range-rail/",
+    "date": "2026-10-08",
+    "confidence": "verified"
   },
   {
     "endorser_id": "kim-monson-guide",
@@ -2378,5 +2378,265 @@
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "date": null,
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "conservation-colorado",
+    "target_id": "co-frpr-7a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Lists 7A among its priority measures: 'We support an accessible transit system that gives Coloradans more ways to get where they need to go.'",
+    "url": "https://conservationco.org/resources/2026-voter-guide/",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-fiscal-institute",
+    "target_id": "co-frpr-7a",
+    "status": "endorsed",
+    "choice": "YES, AND",
+    "why": "Its 2026 ballot guide marks 7A 'Yes, And,' the same rating it gives Proposition NN and Proposition 137.",
+    "url": "https://coloradofiscal.org/2026-ballot-guide/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "co-democratic-party",
+    "target_id": "co-frpr-7a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The State Central Committee voted to support Issue 7A, along with Amendment 87 and Proposition NN.",
+    "url": "https://www.coloradodems.org/2026-ballot-initiatives",
+    "date": "2026-09-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "aclu-colorado",
+    "target_id": "aurora-3b",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says 3B would give Aurora police $8.5 million with no restrictions, likely for surveillance: 'Aurora voters must vote NO on Aurora Ballot Measure 3B.'",
+    "url": "https://www.aclu-co.org/voterguide2026/",
+    "date": "2026-10-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "co-frpr-7a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says Denver to Fort Collins service starts in 2029 whether or not 7A passes, and that by the project's own estimates the tax amounts to more than a $300-per-trip subsidy.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-dps-4a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Names Denver among districts asking for property tax hikes and says voters should reject mill levy overrides that tie no money to measurable outcomes.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "jeffco-schools-5a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Singles out Jeffco: says a promised 2018 oversight committee never formed, enrollment is down, and raises should come from budget discipline, not new taxes.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "littleton-schools-4a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Its 'Vote NO on mill levy overrides without measurable outcomes' recommendation names Littleton among the districts; 4A is Littleton Public Schools' mill levy override.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-2h",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-2i",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-2j",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-2k",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "denver-311",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "aurora-3a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "aurora-3b",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "aurora-3c",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "aurora-3d",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "lakewood-2g",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "lakewood-2h",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "lakewood-2i",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "lakewood-2j",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "arvada-fire-6c",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "thornton-2a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "independence-institute",
+    "target_id": "adams-broomfield-da-7e",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not in the Independence Institute's 2026 guide, which covers every statewide measure and a few local ones; it took no position here.",
+    "url": "https://i2i.org/2026-voter-guide/",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-sboe-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its guide to the three State Board of Education races has candidates' answers.",
+    "url": "https://coloradosun.com/2026/10/07/colorado-state-board-of-education-candidates-school-safety-tests-questions/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "colorado-sun",
+    "target_id": "co-cu-regent-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its guide to the three CU Regent races has candidates' answers.",
+    "url": "https://coloradosun.com/2026/10/07/cu-board-of-regents-candidates-on-tuition-ai-and-federal-oversight/",
+    "date": "2026-10-07",
+    "confidence": "verified"
   }
 ]

@@ -3,8 +3,8 @@
     "id": "denver-post-eb",
     "name": "The Denver Post editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Largest Colorado daily; editorial board has endorsed Democrats and Republicans. Since a 2022 company-wide decision it does not endorse for U.S. Senate or governor. AllSides rates the Denver Post news as Lean Left.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low confidence, Oct 2026) and Ad Fontes rates it Middle (-2.86); neither rates the editorial board separately. The board's 2026 general-election picks split by party: Republican Michael Allen for attorney general, Democrats Amanda Gonzalez and Jeff Bridges for secretary of state and treasurer, and No on both the conservative-sponsored Amendment 81 and the graduated income tax in Amendment 87. Under a 2022 company-wide policy it does not endorse for U.S. Senate or governor; it said U.S. House picks would run the week of Oct. 19.",
     "geography": [
       "CO"
     ],
@@ -17,12 +17,12 @@
     "id": "co-springs-gazette-eb",
     "name": "The Gazette (Colorado Springs) editorial board",
     "type": "publication",
-    "lean": "right",
-    "lean_basis": "Owned by Clarity Media (Anschutz); the editorial board is consistently conservative and endorsed Republicans in every 2026 candidate race it weighed in on.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low confidence, Oct 2026) and does not rate the editorial board, so under this guide's rule (a media-bias rating wins where one exists) the board is labeled neutral. Its 2026 record runs one way: every candidate it picked is a Republican or, in CD-1, the unaffiliated Shimon Blau, and it backed all eleven conservative-sponsored statewide measures while opposing Amendment 87, Proposition NN, Proposition 137, Issue 7A and Denver's 4A. The Colorado Springs Gazette and Denver Gazette share one board and publish identical picks, so they count as one source.",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://gazette.com/2026/10/12/gazette-editorial-board-recommendations-nov-3-ballot/",
+    "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true
@@ -31,8 +31,8 @@
     "id": "denver-gazette-eb",
     "name": "The Denver Gazette editorial board",
     "type": "publication",
-    "lean": "right",
-    "lean_basis": "Sister paper of the Colorado Springs Gazette (Clarity Media); shares the same editorial board picks on statewide races and measures.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low confidence, Oct 2026) and does not rate the editorial board, so under this guide's rule (a media-bias rating wins where one exists) the board is labeled neutral. Its 2026 record runs one way: every candidate it picked is a Republican or, in CD-1, the unaffiliated Shimon Blau, and it backed all eleven conservative-sponsored statewide measures while opposing Amendment 87, Proposition NN, Proposition 137, Issue 7A and Denver's 4A. The Colorado Springs Gazette and Denver Gazette share one board and publish identical picks, so they count as one source.",
     "geography": [
       "CO"
     ],
@@ -46,7 +46,7 @@
     "name": "The Colorado Sun",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit newsroom with no editorial board. Its opinion page states: 'The Sun will not publish candidate endorsement submissions, analysis of individual races or columns submitted by candidates in any race.'",
+    "lean_basis": "Nonprofit, nonpartisan newsroom with no editorial board. Its ethics policy says journalists must not 'create the impression that The Colorado Sun, as an institution, endorses' candidates, parties or initiatives. It publishes issue guides for the biggest races and explainers on every statewide measure and Issue 7A, not endorsements. No AllSides rating found (Oct 17, 2026).",
     "geography": [
       "CO"
     ],
@@ -60,11 +60,11 @@
     "name": "League of Women Voters of Colorado (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; does not endorse candidates. Publishes candidate questionnaire answers on VOTE411.",
+    "lean_basis": "Nonpartisan civic organization that never endorses candidates; candidates' own answers are on VOTE411. It takes Support, Oppose or No Stance positions on ballot measures based on its published policy positions (which include supporting a graduated income tax and opposing TABOR), so its measure stances tend to align with the progressive side on fiscal questions.",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://www.vote411.org/colorado",
+    "guide_url": "https://lwvcolorado.org/wtls",
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": true
@@ -74,7 +74,7 @@
     "name": "Colorado Democratic Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Official state party organization; lists its general-election nominees.",
+    "lean_basis": "Official state party organization. Its candidates page lists its nominees, and its State Central Committee voted positions on the 2026 statewide measures and Issue 7A.",
     "geography": [
       "CO"
     ],
@@ -88,21 +88,21 @@
     "name": "Colorado Republican Party",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Official state party organization; lists its general-election nominees.",
+    "lean_basis": "Official state party organization; its candidates page lists its nominees. As of Oct 17, 2026 we found no state-party positions on the 2026 measures (the site blocks automated reads); see the Weld County GOP entry for a county-party proxy.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://colorado.gop/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": false
   },
   {
     "id": "co-afl-cio",
     "name": "Colorado AFL-CIO",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "State labor federation; its 2026 slate endorses only Democrats.",
+    "lean_basis": "State labor federation. Its 2026 guide endorses only Democratic candidates, backs Amendment 87, Proposition NN and Issue 7A, and says no on eight other measures, including Amendments 81 and 84.",
     "geography": [
       "CO"
     ],
@@ -130,11 +130,11 @@
     "name": "Conservation Colorado",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Environmental advocacy group; its 2026 endorsements are all Democrats.",
+    "lean_basis": "Describes itself as the state's 'largest environmental advocacy organization.' It endorses candidates (almost all Democrats), and its 2026 guide backs Amendment 87, Proposition NN, Proposition 137 and Issue 7A and opposes Amendments 81, 82 and 84 and Propositions 134, 135 and 136.",
     "geography": [
       "CO"
     ],
-    "guide_url": "https://conservationco.org/resources/endorsements/",
+    "guide_url": "https://conservationco.org/resources/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": true

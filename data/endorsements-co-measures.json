@@ -83,61 +83,61 @@
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-nn",
     "status": "endorsed",
-    "choice": "NO (board divided; majority position)",
-    "why": "The paywalled roundup says 'The Denver Post editorial board was divided on this issue, with a majority of the board feeling strongly that we should not increase taxes by...' (search excerpt; full text not read). Treat as a majority No pending a page check.",
+    "choice": "NO",
+    "why": "The board was divided. A majority opposed giving up TABOR refunds for schools, saying the middle class already carries the heaviest tax load and taxes should not rise amid inflation and a housing crisis.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": "2026-10-07",
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-132",
-    "status": "not_found",
-    "choice": null,
-    "why": "No stand-alone editorial found as of Oct 15, and the Post's own voter guide lists editorials only for Amendments 81 through 87 and Proposition 134. The Oct 7 roundup (paywalled, updated Oct 15) may contain a position; the Oct 14 'Proposition 132 is the wrong answer' piece is a guest column by two district attorneys, not the board.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Backs raising the minimum sentence for distributing any amount of fentanyl to 8 years, noting people convicted of possession can still get a reduced sentence by completing treatment.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-133",
-    "status": "not_found",
-    "choice": null,
-    "why": "No stand-alone editorial found as of Oct 15, and the Post's own voter guide lists editorials only for Amendments 81 through 87 and Proposition 134. The Oct 7 roundup (paywalled, updated Oct 15) may contain a position; the Oct 14 'Proposition 132 is the wrong answer' piece is a guest column by two district attorneys, not the board.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says mandatory life without parole for trafficking a minor is unreasonable; judges need discretion for victims who were forced to take part.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-135",
-    "status": "not_found",
-    "choice": null,
-    "why": "No stand-alone editorial found as of Oct 15, and the Post's own voter guide lists editorials only for Amendments 81 through 87 and Proposition 134. The Oct 7 roundup (paywalled, updated Oct 15) may contain a position; the Oct 14 'Proposition 132 is the wrong answer' piece is a guest column by two district attorneys, not the board.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says doctors, parents and transgender kids should decide on care, and the government should stay out of doctors' offices.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-136",
-    "status": "not_found",
-    "choice": null,
-    "why": "No stand-alone editorial found as of Oct 15, and the Post's own voter guide lists editorials only for Amendments 81 through 87 and Proposition 134. The Oct 7 roundup (paywalled, updated Oct 15) may contain a position; the Oct 14 'Proposition 132 is the wrong answer' piece is a guest column by two district attorneys, not the board.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Says a cap is not needed because TABOR already requires a vote of the people to raise the income tax rate.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "denver-post-eb",
     "target_id": "co-proposition-137",
-    "status": "not_found",
-    "choice": null,
-    "why": "No stand-alone editorial found as of Oct 15, and the Post's own voter guide lists editorials only for Amendments 81 through 87 and Proposition 134. The Oct 7 roundup (paywalled, updated Oct 15) may contain a position; the Oct 14 'Proposition 132 is the wrong answer' piece is a guest column by two district attorneys, not the board.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Supports wildfire mitigation and conservation but says voters should not be asked to raise taxes on the middle class by reducing TABOR refunds.",
     "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "gazette-eb",
@@ -284,9 +284,9 @@
     "target_id": "co-amendment-81",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/09/29/amendment-81-explained-colorado-immigration/",
+    "date": "2026-09-29",
     "confidence": "verified"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "co-amendment-82",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/09/30/amendment-82-explained-colorado-natural-gas/",
+    "date": "2026-09-30",
     "confidence": "verified"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "co-amendment-83",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/01/amendment-83-explained-colorado-right-hunt-fish/",
+    "date": "2026-10-01",
     "confidence": "verified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "co-amendment-84",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/03/amendment-84-explained-ballot-id-numbers/",
+    "date": "2026-10-03",
     "confidence": "verified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "co-amendment-85",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/03/amendment-85-explained-plain-ballot-language/",
+    "date": "2026-10-03",
     "confidence": "verified"
   },
   {
@@ -334,9 +334,9 @@
     "target_id": "co-amendment-86",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/09/29/amendment-86-explained-colorado-redistricting/",
+    "date": "2026-09-29",
     "confidence": "verified"
   },
   {
@@ -344,9 +344,9 @@
     "target_id": "co-amendment-87",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/02/amendment-87-graduated-income-tax-colorado-voters-guide/",
+    "date": "2026-10-02",
     "confidence": "verified"
   },
   {
@@ -354,9 +354,9 @@
     "target_id": "co-proposition-nn",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/03/proposition-nn-colorado-tabor-refunds-would-be-diverted-to-k-12-education/",
+    "date": "2026-10-03",
     "confidence": "verified"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "co-proposition-132",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/02/proposition-132-explained-colorado-fentanyl/",
+    "date": "2026-10-02",
     "confidence": "verified"
   },
   {
@@ -374,9 +374,9 @@
     "target_id": "co-proposition-133",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/01/proposition-133-child-sex-trafficking-colorado/",
+    "date": "2026-10-01",
     "confidence": "verified"
   },
   {
@@ -384,9 +384,9 @@
     "target_id": "co-proposition-134",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/01/proposition-134-explaine-colorado-transgender-kids-sports/",
+    "date": "2026-10-01",
     "confidence": "verified"
   },
   {
@@ -394,9 +394,9 @@
     "target_id": "co-proposition-135",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/04/proposition-135-colorado-transgender-surgeries-kids/",
+    "date": "2026-10-04",
     "confidence": "verified"
   },
   {
@@ -404,9 +404,9 @@
     "target_id": "co-proposition-136",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/10/02/proposition-136-income-tax-limit-explained-voter-guide/",
+    "date": "2026-10-02",
     "confidence": "verified"
   },
   {
@@ -414,9 +414,9 @@
     "target_id": "co-proposition-137",
     "status": "no_position",
     "choice": null,
-    "why": "The Sun does not make endorsements. Its ethics policy bars creating 'the impression that The Colorado Sun, as an institution, endorses' candidates or initiatives. It published a neutral explainer on this measure instead.",
-    "url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
-    "date": null,
+    "why": "The Sun does not endorse; its ethics policy rules out institutional endorsements. Its explainer covers this measure.",
+    "url": "https://coloradosun.com/2026/09/30/proposition-137-colorado-conservation-wildfire-funding/",
+    "date": "2026-09-30",
     "confidence": "verified"
   },
   {
@@ -1174,90 +1174,90 @@
     "target_id": "co-amendment-82",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it would put power 'in the hands of utility companies' and could tie governments and consumers up in litigation for years.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-84",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it 'would create new barriers to voting' in a mail-ballot system it calls secure and accessible.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-85",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it would restrict voters' access to 'important context about the fiscal impact of ballot measures.'",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-proposition-nn",
     "status": "endorsed",
-    "choice": "YES",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "choice": "YES, AND",
+    "why": "Backs keeping surplus revenue for K-12 schools rather than 'regressive rebates,' but says raising the cap alone does not fix the underlying funding problem.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-proposition-133",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it removes judicial discretion and adds costs for the criminal legal system without addressing evidence-based prevention.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-proposition-134",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it could subject students to sex-verification processes, with no appeals process specified.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-proposition-136",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Position as compiled by Better Together Denver from CFI's Fiscal Voter guide; the specific entry was not read directly.",
+    "why": "Says it would lock in the current flat income tax without addressing the budget, and that it conflicts with Amendment 87.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-83",
     "status": "no_position",
     "choice": null,
-    "why": "Not addressed in CFI's Fiscal Voter guide (per Better Together Denver's compilation).",
+    "why": "Not addressed in CFI's 2026 ballot guide, which lists its position measure by measure.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "colorado-fiscal-institute",
     "target_id": "co-amendment-86",
     "status": "no_position",
     "choice": null,
-    "why": "Not addressed in CFI's Fiscal Voter guide (per Better Together Denver's compilation).",
+    "why": "Not addressed in CFI's 2026 ballot guide, which lists its position measure by measure.",
     "url": "https://coloradofiscal.org/2026-ballot-guide/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "independence-institute",
@@ -1912,9 +1912,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-83",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not included in Conservation Colorado's 2026 voter guide, which covers 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1922,9 +1922,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-85",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not included in Conservation Colorado's 2026 voter guide, which covers 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1932,9 +1932,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-amendment-86",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not included in Conservation Colorado's 2026 voter guide, which covers 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1942,9 +1942,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-proposition-132",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not included in Conservation Colorado's 2026 voter guide, which covers 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"
@@ -1952,9 +1952,9 @@
   {
     "endorser_id": "conservation-colorado",
     "target_id": "co-proposition-133",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "Not included in Conservation Colorado's 2026 voter guide, which covers 'the measures that matter most for Colorado's climate, air, land, water and communities.'",
+    "why": "Not in Conservation Colorado's 2026 voter guide, which lists its positions on 'the measures that matter most for Colorado's climate, air, land, water and communities.' It took no position on this one.",
     "url": "https://conservationco.org/resources/2026-voter-guide/",
     "date": "2026-09-24",
     "confidence": "verified"

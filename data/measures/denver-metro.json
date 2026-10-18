@@ -636,7 +636,10 @@
     "pass_threshold": "simple majority",
     "referred_by": "other",
     "confusing_wording_note": "Another '4A': Denver, Littleton and Westminster school districts each have one. Your ballot shows only yours.",
-    "supporters_case": null,
+    "supporters_case": {
+      "text": "The district, whose board placed it on the ballot, says the roughly $2 million a year would fund safety and security, career and technical education, attracting and keeping teachers, and academic achievement.",
+      "source": "https://www.wps.org/community/mill-levy"
+    },
     "opponents_case": {
       "text": "Kim Monson recommends no; no organized opposition found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-adams/"

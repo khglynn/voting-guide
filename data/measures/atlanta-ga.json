@@ -18,7 +18,10 @@
       "text": "Fulton County Schools, whose board voted unanimously to ask voters for the extension, says the tax is a pay-as-you-go way to fund its capital plan with no interest costs, and that it spreads the cost across everyone who shops in Fulton instead of relying on bonds or a higher property tax rate.",
       "source": "https://www.fultonschools.org/fs/pages/41555"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+    },
     "official_text_url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf",
     "official_guide_url": "https://www.fultonschools.org/fs/pages/41555",
     "confidence": "verified"
@@ -63,7 +66,10 @@
       "text": "Fulton County says TSPLOST projects \"have improved safety, reduced congestion, and enhanced quality of life\" and \"have been delivered on time and within budget.\"",
       "source": "https://fultoncountyga.gov/tsplost/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+    },
     "official_text_url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf",
     "official_guide_url": "https://fultoncountyga.gov/tsplost/",
     "confidence": "verified"

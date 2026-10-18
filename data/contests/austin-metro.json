@@ -4925,9 +4925,9 @@
         "name": "Harmon Rhea",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
+        "website": "https://harmonrhea.com",
+        "website_confidence": "verified",
+        "background": "Business owner and longtime Williamson County resident (campaign site; Branch).",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire.",
@@ -4972,8 +4972,24 @@
         "incumbent": true,
         "website": "https://www.mooreforwilco.com",
         "website_confidence": "verified",
-        "background": null,
-        "own_words": [],
+        "background": "Judge of the 512th since spring 2026, after almost 20 years as a trial attorney with over 100 felony jury trials, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "No person is above or beneath the law: all are bound and protected by it in the same way.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Says her years as both a prosecutor and a defense attorney mean she weighs all sides of an issue, with the law at the forefront.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Sometimes, giving a person access to mental health and/or substance abuse treatment can treat the underlying issue(s)",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
         "lwv_status": "responded",
         "lwv_url": "https://austinvotersguide.org/"
       },
@@ -4983,8 +4999,24 @@
         "incumbent": false,
         "website": "https://booker4judge.com",
         "website_confidence": "verified",
-        "background": null,
-        "own_words": [],
+        "background": "Felony trial lawyer for over 25 years, as both a chief felony prosecutor and a defense lawyer, per the LWV answers.",
+        "own_words": [
+          {
+            "text": "When it comes to violent crime, we have to be tough as public safety is a priority.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants to be smarter about nonviolent crime and would bring in community organizations to help reduce reoffending.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "would make certain that no one gets special favors due to their socio-economic status or connections with the fortunate",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
         "lwv_status": "responded",
         "lwv_url": "https://austinvotersguide.org/"
       }
@@ -5294,7 +5326,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Attorney in private practice and former Hays County assistant district attorney; past president of the Hays County Bar Association. Ran for 207th District judge in 2022 (Hays Free Press).",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": null
@@ -5355,7 +5387,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Lists experience in construction, design and project management, plus local community involvement (Community Impact Q&A).",
         "own_words": [
           {
             "text": "Priorities: roads and traffic, reliable water and wastewater, responsible growth, protecting taxpayers.",
@@ -5552,7 +5584,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Hosts the podcast Colonial Outcasts and has worked as a political commentator; Army special operations veteran with four combat deployments to Afghanistan (Branch).",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire.",
@@ -5618,7 +5650,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Waco criminal defense attorney who has practiced in Central Texas since 2011, mostly in indigent defense; first run for office (Branch).",
         "own_words": [
           {
             "text": "Did not respond to the League of Women Voters questionnaire.",
@@ -6033,10 +6065,26 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Educator for 23 years, including 8 as Del Valle High School head football coach; a former Del Valle parent and employee, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "I support expanding CTE, dual enrollment, and certifications, for example in welding, IT, and healthcare",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Facility decisions, closures or new construction, must be driven by real enrollment trends and what we can sustainably afford",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Says teacher pay and classroom resources stay protected, with the budget balanced through planning, grants and partnerships.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Claire Campos-O'Neal",
@@ -6044,10 +6092,26 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Founding president of the Del Valle ISD Education Foundation, PTA fundraiser and longtime district volunteer, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "My goal: lighten teachers’ load and give them back the gift of time.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I want schools to be places kids want to be, because belonging drives engagement and attendance",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Would study comparable districts and local nonprofit partnerships to find savings, and says trustees must push for better state funding.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -6123,12 +6187,28 @@
         "name": "Susanna Ledesma Woody",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://votesusanna.net",
+        "website_confidence": "sourced",
+        "background": "Del Valle ISD trustee for 15 years, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "I have helped make Del Valle ISD the highest-paying district in Region 13",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "We have avoided school closures and massive layoffs by identifying efficiencies and planning ahead.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants every dollar judged by whether it improves results for students.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -6164,10 +6244,26 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Lists finance, service as a PTA treasurer, communication skills and attention to detail as qualifications, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "Safety, attendance, and ensuring the level of education matches the grade the student is in.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I would dive into the details such as contracts and agreements to ensure everything that was agreed-upon was fair",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "On the budget, would find which students need extra support and direct more resources to them.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Darla Wegner",
@@ -6175,10 +6271,26 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Del Valle ISD trustee since May 2011, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "consistently voting for the highest starting salaries and annual pay increases while covering medical insurance for every employee",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Says the district has never closed a school or laid off teachers, and keeping it that way would stay a priority.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "My priority is using data driven tracking to ensure every dollar directly supports strong instruction",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -6218,10 +6330,26 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Parent of two Del Valle ISD students, founder of the Gilbert PTO and a talent-development leader by profession, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "More than a third are chronically absent, and no one grows from an empty seat.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I’ll protect the classroom first, making cuts start furthest from students.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Supports Prop A, the district's tax rate increase, which he puts at about $9 a year on the average home.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Gloria Vera-Bedolla",
@@ -6240,10 +6368,26 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Del Valle ISD alumna and parent who attended five of the district's campuses, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "I want DVISD to be a place where teachers feel heard, feel valued, and feel fairly compensated.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Says parents are the foundation of student success and wants to welcome them back into the schools.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "We need to be transparent about our financial position",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -6277,12 +6421,28 @@
         "name": "Serenity Coats",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://www.serenity4lisd.com",
+        "website_confidence": "sourced",
+        "background": "Accredited Financial Counselor with a master's in school counseling and two decades in education, military family and community advocacy, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "I’ll advocate for manageable workloads and adequate state funding to support competitive pay.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Top priorities: early intervention, fair access to AP, dual credit and gifted programs, and career and financial education.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Would plan for uneven growth using enrollment data, the open transfer policy and repurposing of underused space.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Gerald Prater",
@@ -6331,34 +6491,82 @@
         "name": "Meg Dean",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://megdean.org",
+        "website_confidence": "sourced",
+        "background": "Trained in qualitative and quantitative research and spent 10 years making complex information easier to use, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "I would not close schools; if student populations are imbalanced, I would consider rezoning.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I want to ensure that class room sizes do not rise substantially.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Calls herself a lifelong Independent and would press state leaders on the district's funding gap, comparing per-student funding with charter schools.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Perla Muñoz Hopkins",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://www.perla4lisd.com",
+        "website_confidence": "sourced",
+        "background": "Educator, Air Force veteran and former Leander ISD teacher and parent, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "Let’s offer guaranteed annual raises and incentives for Personnel to meet or exceed the national average",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Families should never be threatened with their schools closing.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants to cut the budget, give families tax relief and use volunteer experts to root out fraud, waste and abuse.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Chitra Nedun",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://www.chitraforlisd.com",
+        "website_confidence": "sourced",
+        "background": "Leander ISD parent and volunteer; technology leader with a master's degree and 20+ years of experience, per her LWV answers.",
+        "own_words": [
+          {
+            "text": "I will champion creative partnerships to address local affordability, ensuring teachers can live in the community they serve.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "I will implement rigorous program evaluations to optimize spending, keeping resources in the classroom.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants more pathways from advanced STEM and arts to skilled trades, plus early reading help and protected special education services.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -6439,12 +6647,28 @@
         "name": "Jason Embry",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "website": "https://jasonembry.com",
+        "website_confidence": "sourced",
+        "background": "Professional communicator specializing in state public policy; has served on district committees and as a PTA officer, with children in Leander ISD for 10 years, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "Closing schools often does not achieve the cost savings that is promised",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "We need to reduce screen time during the school day.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants teacher pay and benefits competitive with or better than nearby districts, and says growing enrollment is the best way to bring in state dollars.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Paul Gauthier",
@@ -6452,10 +6676,26 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "background": "Current Leander ISD board member, per his LWV answers.",
+        "own_words": [
+          {
+            "text": "Wants every neighborhood school kept open and says a partly open school is better than a closed one.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Give the Teachers the support they need without sacrificing the education of the Students.",
+            "is_quote": true,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          },
+          {
+            "text": "Wants schools to go back to teaching methods that work and stop newer approaches he calls failures.",
+            "is_quote": false,
+            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -7712,7 +7952,7 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "On the San Marcos City Council since 2020; reelected to Place 3 unopposed in 2023 (University Star).",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": null

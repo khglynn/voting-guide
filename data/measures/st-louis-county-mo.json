@@ -91,7 +91,10 @@
       "text": "The district's official page says the levy would close a projected $5 million gap driven by a $1.423 million rise in insurance premiums, a projected $1.7 million drop in state funding for 2027 and about $500,000 lost to the senior tax freeze. It says its tax rate would stay in the bottom half of the county's 22 traditional school districts.",
       "source": "https://www.webster.k12.mo.us/prop-w"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf"
+    },
     "official_text_url": "https://www.webster.k12.mo.us/prop-w",
     "official_guide_url": null,
     "explainers": [
@@ -122,7 +125,10 @@
       "text": "The district says it has cut $15.4 million in two years and raised employee health premiums 15%, but state rollback rules and the senior tax freeze (about $30 million in lost revenue growth over a decade) keep revenue from keeping up with costs. It says state money covers only 5% of its operating budget and its rate would stay below 2016's.",
       "source": "https://www.parkwayschools.net/about-parkway/proposition-p-2026"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf"
+    },
     "official_text_url": "https://www.parkwayschools.net/about-parkway/proposition-p-2026",
     "official_guide_url": null,
     "explainers": [

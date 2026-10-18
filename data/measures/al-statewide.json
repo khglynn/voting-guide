@@ -18,7 +18,10 @@
       "text": "Sponsor Sen. Sam Givhan said the state needed a way to fill an early vacancy rather than leave the seat empty, and described the measure as a stopgap he may revisit. It passed the Legislature without a dissenting vote.",
       "source": "https://alabamareflector.com/2026/08/05/alabamians-to-vote-on-four-statewide-constitutional-amendments-in-november/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.sos.alabama.gov/alabama-votes/voter/ballot-measures/statewide"
+    },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-1.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
     "confidence": "verified"
@@ -39,10 +42,13 @@
     "referred_by": "legislature",
     "confusing_wording_note": "A yes vote doesn't merge any school district. It only creates a process county boards could use later. Whether any districts merge would be decided by the boards, the State Board of Education, and, if voters protest, an election.",
     "supporters_case": {
-      "text": "Fair Ballot Commission chair Patrick Moody, explaining the protest provision: 'We want people to know that there is a way for people to protest this action.' Backers framed it as a voluntary option for small rural systems that want to combine resources.",
+      "text": "Sponsored by Rep. Terri Collins, it passed the House 96-2 and the Senate unanimously. Lawmakers paired the merger process with a required state impact study and a voter-protest route that can force an election.",
       "source": "https://alabamareflector.com/2026/08/05/alabamians-to-vote-on-four-statewide-constitutional-amendments-in-november/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.sos.alabama.gov/alabama-votes/voter/ballot-measures/statewide"
+    },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-2.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
     "confidence": "verified"

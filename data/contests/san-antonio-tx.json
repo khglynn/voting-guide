@@ -164,7 +164,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Listed as a mediator; UTEP criminal justice graduate who was earlier a regional director in Newsweek's education division and owned a formal-wear shop (Branch). Ran for El Paso mayor in 2024, El Paso City Council in 2023 and Congress in 2016 and 2018 (Ballotpedia). No campaign website found.",
         "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
@@ -373,10 +373,26 @@
         "name": "Jose Menendez",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Incumbent state senator (per the San Antonio AFL-CIO). Did not answer the League questionnaire.",
-        "own_words": [],
+        "website": "https://josemenendez.net/",
+        "website_confidence": "sourced",
+        "background": "State senator since winning a 2015 special election; earlier served in the Texas House (HD-124) and on San Antonio City Council for District 6 (San Antonio Report). Did not answer the League questionnaire.",
+        "own_words": [
+          {
+            "text": "Top priorities: \"Fully funding our public schools, addressing the affordability crisis for families, and restoring control back to our local government\".",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/jose-menendez-2026-candidate-for-texas-senate-district-26/"
+          },
+          {
+            "text": "\"The fastest way to reduce property taxes is to fully fund public schools.\"",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/jose-menendez-2026-candidate-for-texas-senate-district-26/"
+          },
+          {
+            "text": "\"I have always opposed the voucher program and will request a full audit as we work to repeal this scheme.\"",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/jose-menendez-2026-candidate-for-texas-senate-district-26/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
       },
@@ -706,8 +722,24 @@
         "incumbent": false,
         "website": "https://melvafortexas.com",
         "website_confidence": "sourced",
-        "background": null,
-        "own_words": [],
+        "background": "Retired from the U.S. Army in 2023 after 28 and a half years, including service in Iraq and in the Texas Military Department's inspector general office (San Antonio Report questionnaire). Did not answer the League questionnaire.",
+        "own_words": [
+          {
+            "text": "Says \"supporting first responders must remain a top responsibility of state government.\"",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/melva-rivera-perez-2026-candidate-for-texas-house-district-119/"
+          },
+          {
+            "text": "Wants to keep taxes low and have the state pay a bigger share of school and public-service costs to reduce reliance on local property taxes.",
+            "is_quote": false,
+            "source": "https://sanantonioreport.org/profile/melva-rivera-perez-2026-candidate-for-texas-house-district-119/"
+          },
+          {
+            "text": "\"Growth should be planned, balanced, and aligned with infrastructure, public safety, and community needs.\"",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/melva-rivera-perez-2026-candidate-for-texas-house-district-119/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
       },
@@ -2010,10 +2042,26 @@
         "name": "Jason Wolff",
         "party": "Independent",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Did not answer the League questionnaire and did not meet Texas Public Radio's criteria for its DA interviews.",
-        "own_words": [],
+        "website": "https://www.tiredofthiscrap.com",
+        "website_confidence": "verified",
+        "background": "Criminal defense attorney; earlier a Bexar County prosecutor for 10 years and judge of County Court at Law No. 2 for 8 years, elected as a Republican in 2010 and 2014 (San Antonio Report; campaign site). Did not answer the League questionnaire.",
+        "own_words": [
+          {
+            "text": "\"I will bring the talent and training back to the courthouse.\"",
+            "is_quote": true,
+            "source": "https://www.tiredofthiscrap.com/platform"
+          },
+          {
+            "text": "Would \"give discretion to the Assistant District Attorneys and support our local law enforcement officers\".",
+            "is_quote": true,
+            "source": "https://www.tiredofthiscrap.com/platform"
+          },
+          {
+            "text": "\"I just want justice and accountability and to get back to the basics of law enforcement.\"",
+            "is_quote": true,
+            "source": "https://www.tiredofthiscrap.com/platform"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
       }

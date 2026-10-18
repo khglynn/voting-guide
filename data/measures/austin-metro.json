@@ -96,7 +96,10 @@
       "text": "The Chronicle: the process was always meant to be independent of political control and the other changes sound beneficial.",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://publicinput.com/charter2026"
+    },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://publicinput.com/charter2026",
     "explainers": [
@@ -123,7 +126,10 @@
     "pass_threshold": "simple majority",
     "referred_by": "council",
     "confusing_wording_note": null,
-    "supporters_case": null,
+    "supporters_case": {
+      "text": "The Austin American-Statesman editorial board backs it, calling the weekly-meeting rule \"a relic the council has been scheduling around for years.\"",
+      "source": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/"
+    },
     "opponents_case": {
       "text": "The Chronicle opposes: \"So that they can do even more of their business off the dais, out of public view?\"",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
@@ -154,7 +160,10 @@
     "pass_threshold": "simple majority",
     "referred_by": "council",
     "confusing_wording_note": null,
-    "supporters_case": null,
+    "supporters_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://publicinput.com/charter2026"
+    },
     "opponents_case": {
       "text": "The Chronicle opposes for the same reason as Prop D: less open process.",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
@@ -189,7 +198,10 @@
       "text": "The Chronicle: \"This sounds logical.\"",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://publicinput.com/charter2026"
+    },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://publicinput.com/charter2026",
     "explainers": [
@@ -254,7 +266,10 @@
       "text": "The Chronicle: better that city legal staff answer to elected officials who answer to voters.",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://publicinput.com/charter2026"
+    },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://publicinput.com/charter2026",
     "explainers": [
@@ -324,7 +339,10 @@
       "text": "The Chronicle: no policy impact and no reason to oppose it.",
       "source": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://publicinput.com/charter2026"
+    },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://publicinput.com/charter2026",
     "explainers": [
@@ -355,7 +373,10 @@
       "text": "The Statesman endorsed a vote for: lower tuition and wider access to job training make annexation a smart investment for Pflugerville despite the higher tax bill.",
       "source": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://offices.austincc.edu/community-and-government-affairs/annexation/pflugerville-annexation-election/"
+    },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
     "confidence": "verified"

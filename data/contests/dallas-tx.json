@@ -18,10 +18,26 @@
         "name": "Lance Gooden",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.lancegooden.com",
+        "website_confidence": "verified",
         "background": "Republican incumbent from Terrell. Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "People are sick of the swamp and the growing calls for socialism in America.",
+            "is_quote": true,
+            "source": "https://www.lancegooden.com/"
+          },
+          {
+            "text": "I have proudly worked alongside President Trump to secure our southern border and remove criminal illegal aliens from our country.",
+            "is_quote": true,
+            "source": "https://gooden.house.gov/border-security-immigration"
+          },
+          {
+            "text": "I will continue to advocate for policies that prioritize American families and businesses over special interests and foreign governments.",
+            "is_quote": true,
+            "source": "https://gooden.house.gov/jobs-economy"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -92,10 +108,26 @@
         "name": "Jake Ellzey",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://ellzeyfortexas.com",
+        "website_confidence": "verified",
         "background": "Current U.S. representative for District 6 (Texas Secretary of State). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "pass real legislation to secure the border, finish the wall, and give Border Patrol agents the resources they need",
+            "is_quote": true,
+            "source": "https://ellzeyfortexas.com/issues/"
+          },
+          {
+            "text": "As your Congressman, I have protected the rights of Texans to keep, manage, and use their own property.",
+            "is_quote": true,
+            "source": "https://ellzeyfortexas.com/issues/"
+          },
+          {
+            "text": "Our schools should be places to equip the next generation of leaders, not run social experiments on our children.",
+            "is_quote": true,
+            "source": "https://ellzeyfortexas.com/issues/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -162,10 +194,26 @@
         "name": "Beth Van Duyne",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://bethfortexas.com",
+        "website_confidence": "verified",
         "background": "Republican incumbent from Irving. Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "working to slash burdensome federal regulations and create a pro-growth tax code",
+            "is_quote": true,
+            "source": "https://vanduyne.house.gov/economy"
+          },
+          {
+            "text": "She is working to expand our ability to produce energy at home through a strong all-of-the-above approach.",
+            "is_quote": true,
+            "source": "https://vanduyne.house.gov/energy"
+          },
+          {
+            "text": "Congress needs to be focused on expanding health insurance options to lower costs",
+            "is_quote": true,
+            "source": "https://vanduyne.house.gov/health"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -294,10 +342,26 @@
         "name": "Jace Yarbrough",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.jaceforcongress.com",
+        "website_confidence": "verified",
         "background": "Constitutional lawyer and military veteran from Rockwall (Dallas County GOP; The Ellis Insight). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Would \"ban insider trading by members of Congress and make Washington DC work for us again\".",
+            "is_quote": true,
+            "source": "https://www.jaceforcongress.com/priorities"
+          },
+          {
+            "text": "Supports President Trump's mass deportation efforts and \"will oppose all amnesty efforts whether they come from the left or right\".",
+            "is_quote": true,
+            "source": "https://www.jaceforcongress.com/priorities"
+          },
+          {
+            "text": "Would \"take a buzzsaw to federal spending and oppose any effort to increase taxes\".",
+            "is_quote": true,
+            "source": "https://www.jaceforcongress.com/priorities"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -477,10 +541,26 @@
         "name": "Kason Huddleston",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://huddlestonfortexas.com",
+        "website_confidence": "verified",
         "background": "Senior pastor of Freedom Place Church in Rowlett for more than 20 years (Dallas Morning News). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "\"I want to raise the bar and make our children the smartest in the nation\".",
+            "is_quote": true,
+            "source": "https://huddlestonfortexas.com"
+          },
+          {
+            "text": "\"On the State Board of Education, I will fight for high standards and result-based learning.\"",
+            "is_quote": true,
+            "source": "https://huddlestonfortexas.com"
+          },
+          {
+            "text": "Says \"I will always defend parental rights over their child's education.\"",
+            "is_quote": true,
+            "source": "https://huddlestonfortexas.com"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -547,10 +627,26 @@
         "name": "Carlos (Charlie) Garza",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://charliegarza.com",
+        "website_confidence": "verified",
         "background": "Retired U.S. Navy veteran and former educator who served on the SBOE for District 1 from 2011 to 2013 (Dallas Morning News; Dallas County GOP). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Require schools to reassess and reduce classroom technology.",
+            "is_quote": true,
+            "source": "https://charliegarza.com/results/"
+          },
+          {
+            "text": "It requires a civics course grounded in the Constitution, the Declaration of Independence, and other founding documents",
+            "is_quote": true,
+            "source": "https://charliegarza.com/results/"
+          },
+          {
+            "text": "Schools should expand dual-credit so at least half of high school students complete college-level coursework before graduation.",
+            "is_quote": true,
+            "source": "https://charliegarza.com/results/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -621,10 +717,26 @@
         "name": "Mindy Bumgarner",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://mindybumgarner.com",
+        "website_confidence": "verified",
         "background": "Republican nominee; did not answer the LWV or Dallas Morning News questionnaires. Married to state Rep. Ben Bumgarner (Dallas Morning News).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "every child deserves a strong education built on the basics, not politics.",
+            "is_quote": true,
+            "source": "https://mindybumgarner.com/"
+          },
+          {
+            "text": "I'll stand up for school choice and public charter schools",
+            "is_quote": true,
+            "source": "https://mindybumgarner.com/"
+          },
+          {
+            "text": "The STAAR test has taken over too much of the classroom, and it's holding back both students and teachers.",
+            "is_quote": true,
+            "source": "https://mindybumgarner.com/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -691,10 +803,26 @@
         "name": "Bob Hall",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://senatorbobhall.com",
+        "website_confidence": "verified",
         "background": "Incumbent state senator; veteran and engineer (Dallas County GOP). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Lists election integrity first among his priorities; says the Texas election process lacks transparency, accountability and verifiable accuracy.",
+            "is_quote": false,
+            "source": "https://senatorbobhall.com/priorities/priorities-2/"
+          },
+          {
+            "text": "On the power grid: \"it is time for Texas to take steps to ensure the safety of all Texans by addressing grid vulnerabilities.\"",
+            "is_quote": true,
+            "source": "https://senatorbobhall.com/priorities/priorities-2/"
+          },
+          {
+            "text": "\"Our government should not spend money it does not have.\"",
+            "is_quote": true,
+            "source": "https://senatorbobhall.com/priorities/priorities-2/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -941,10 +1069,26 @@
         "name": "Melanie Medley-Thomas",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://melanie4texas.com/",
+        "website_confidence": "verified",
         "background": "Career in the health insurance industry (Dallas County GOP). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "\"Support small businesses and entrepreneurs with reduced regulations and tax incentives\"",
+            "is_quote": true,
+            "source": "https://melanie4texas.com/"
+          },
+          {
+            "text": "\"Expand school choice options to give families more control over their children's education\"",
+            "is_quote": true,
+            "source": "https://melanie4texas.com/"
+          },
+          {
+            "text": "\"Strengthen border security to protect Texas communities and uphold the rule of law\"",
+            "is_quote": true,
+            "source": "https://melanie4texas.com/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -1144,10 +1288,26 @@
         "name": "Morgan Meyer",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://morganmeyerfortexas.com",
+        "website_confidence": "sourced",
         "background": "Incumbent since 2015; chairs the House Ways and Means Committee (Dallas Morning News). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "my number one priority has been providing as much property tax relief as possible by using our state's surpluses responsibly.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-108/"
+          },
+          {
+            "text": "I've drafted and helped pass some of the nation's toughest laws against human trafficking",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-108/"
+          },
+          {
+            "text": "helped write new laws requiring Texas summer camps to have emergency plans, weather radios, and evacuation training.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/texas-house-district-108/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -1245,10 +1405,26 @@
         "name": "Aicha Davis",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Incumbent (Texas AFL-CIO). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "website": "https://www.davisfortexas.com",
+        "website_confidence": "verified",
+        "background": "State representative since 2025 and a former science teacher; served six years on the State Board of Education (campaign site; Branch). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Fully fund our public schools and repeal Texas' voucher scheme",
+            "is_quote": true,
+            "source": "https://www.davisfortexas.com/on-the-issues"
+          },
+          {
+            "text": "Aicha supports policies that will cut costs at the grocery store, the gas pump, and the pharmacy.",
+            "is_quote": true,
+            "source": "https://www.davisfortexas.com/on-the-issues"
+          },
+          {
+            "text": "Aicha believes that healthcare is a human right and supports a federal Medicare for All plan.",
+            "is_quote": true,
+            "source": "https://www.davisfortexas.com/on-the-issues"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       }
@@ -1378,10 +1554,26 @@
         "name": "Angie Chen Button",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.angiebutton.com",
+        "website_confidence": "verified",
         "background": "Incumbent since 2009; chairs the House Trade, Workforce and Economic Development Committee (Dallas Morning News). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "\"She will always put the people she represents before partisan politics.\"",
+            "is_quote": true,
+            "source": "https://www.angiebutton.com/issues/"
+          },
+          {
+            "text": "Wants to exempt perishable food and prescription and over-the-counter medicine from the state's business inventory tax; she authored House Bill 4083 to do that.",
+            "is_quote": false,
+            "source": "https://www.angiebutton.com/issues/"
+          },
+          {
+            "text": "On her app store age-verification law: \"Parents, not platforms, decide what their children can access.\"",
+            "is_quote": true,
+            "source": "https://www.angiebutton.com/issues/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -1542,10 +1734,26 @@
         "name": "Tim McDonough",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://timforhouse.com/",
+        "website_confidence": "verified",
         "background": "Clinical professor at SMU's Cox School of Business (Dallas County GOP). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Wants \"the abolition of eternal property taxes, a tyranny on all households.\"",
+            "is_quote": true,
+            "source": "https://timforhouse.com/"
+          },
+          {
+            "text": "\"We need deep reform of the criminal bail system.\"",
+            "is_quote": true,
+            "source": "https://timforhouse.com/"
+          },
+          {
+            "text": "\"I support the deployment of the Texas National Guard … to defend our international border.\"",
+            "is_quote": true,
+            "source": "https://timforhouse.com/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -2655,8 +2863,24 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "background": "Justice of the Peace for this precinct for 34 years; earlier served five years on the Dallas ISD board (Dallas Morning News questionnaire). Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "experience, fairness, and sound judgment matter when court decisions affect people's homes, families, finances, and livelihoods.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-1/"
+          },
+          {
+            "text": "The court must remain neutral and decide every case based on the law and the evidence",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-1/"
+          },
+          {
+            "text": "I support making legal-aid and self-help resources accessible",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-1/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       }
@@ -3015,10 +3239,21 @@
         "name": "Fred Van Liew",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.vanliewforjp.com",
+        "website_confidence": "verified",
         "background": "Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "\"I'm committed to resolving disputes with fairness, intelligence, and common sense\".",
+            "is_quote": true,
+            "source": "https://www.vanliewforjp.com"
+          },
+          {
+            "text": "Wants the court to run \"efficiently, transparently, and always in the best interest of the people it serves.\"",
+            "is_quote": true,
+            "source": "https://www.vanliewforjp.com"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },

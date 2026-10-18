@@ -40,9 +40,25 @@
     "party": "Independent",
     "incumbent": false,
     "website": "https://ryanprincefordccouncil.com/",
-    "website_confidence": "sourced",
-    "background": "Independent candidate. Qualified for the ballot by petition (picked up petitions June 15, filed August 5, 2026, per DCBOE).",
-    "own_words": [],
+    "website_confidence": "verified",
+    "background": "Independent candidate; describes himself as a bartender and community organizer (campaign site). Qualified for the ballot by petition (picked up petitions June 15, filed August 5, 2026, per DCBOE).",
+    "own_words": [
+     {
+      "text": "I will implement every voter-approved initiative and restore those the Council has overturned.",
+      "is_quote": true,
+      "source": "https://ryanprincefordccouncil.com/"
+     },
+     {
+      "text": "safe streets and sidewalks, enforcing the youth curfew, and keeping people from living on our streets.",
+      "is_quote": true,
+      "source": "https://ryanprincefordccouncil.com/"
+     },
+     {
+      "text": "I'll exempt city employees earning under $100,000 from DC income tax",
+      "is_quote": true,
+      "source": "https://ryanprincefordccouncil.com/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    },

@@ -198,7 +198,10 @@
       "text": "This change was split out of the charter package backed by Council President Zeke Cohen. It removes the requirement that the Board of Estimates approve minor privileges, 'requests for structures like sandwich boards or outdoor seating' in the public right-of-way. Baltimore Brew reports the bills were 'pushed as a way to streamline government and improve efficiency.'",
       "source": "https://baltimorebrew.com/2026/06/08/council-advances-three-charter-bills-eliminating-the-competitive-bid-requirement-and-more/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://elections.maryland.gov/elections/2026/ballot_questions.html"
+    },
     "official_text_url": "https://www.elections.maryland.gov/elections/2026/Baltimore_City_Proposed_Charter_Amendment_Text.pdf",
     "official_guide_url": null,
     "explainers": [
@@ -229,7 +232,10 @@
       "text": "Mayor Brandon Scott, Council President Zeke Cohen and Comptroller Bill Henry jointly backed the split after S&P cut the city wastewater utility's rating from A+ to A- in February 2026. Scott: a stand-alone agency 'is the best way to protect this critical city asset.' A 2024 regional water task force also recommended a separate utility.",
       "source": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://elections.maryland.gov/elections/2026/ballot_questions.html"
+    },
     "official_text_url": "https://baltimore.legistar.com/View.ashx?M=F&ID=15669172&GUID=0ED62BB8-387B-4043-A7C6-9B56503A4260",
     "official_guide_url": null,
     "explainers": [

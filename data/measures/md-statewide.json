@@ -18,7 +18,10 @@
       "text": "The Maryland State and DC AFL-CIO campaigns for Question 1 as 'strengthening collective bargaining for Maryland state workers,' arguing contracts workers negotiate should be honored in the budget.",
       "source": "https://mddclabor.org/laborvotes/question-1-strengthening-collective-bargaining-maryland-state-workers"
     },
-    "opponents_case": null,
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://elections.maryland.gov/elections/2026/ballot_questions.html"
+    },
     "official_text_url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0604/?ys=2026rs",
     "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
     "confidence": "verified"

@@ -1,0 +1,1556 @@
+[
+ {
+  "id": "sd-city-council-2",
+  "state": "CA",
+  "level": "city",
+  "office": "San Diego City Council",
+  "district": "Council District 2",
+  "scope_plain": "Voters in City Council District 2, which runs from Clairemont to Point Loma (Times of San Diego). Only Districts 2, 4, 6 and 8 vote for council this year; check your sample ballot for your district. The office is nonpartisan, so no party appears on the ballot.",
+  "office_explainer": "One of nine council members. Passes city laws and the city budget, and checks the mayor.",
+  "why_it_matters": "An open seat: Councilmember Jennifer Campbell is termed out. A former Coronado mayor who left the Republican Party in 2026 faces a deputy city attorney backed by Democrats and labor.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Richard Bailey",
+    "party": null,
+    "incumbent": false,
+    "website": "http://richardbailey.com",
+    "website_confidence": "verified",
+    "background": "Elected to the Coronado City Council in 2012 and mayor of Coronado in 2016; former financial analyst and USD adjunct economics professor who owns two San Diego businesses. Registered with no party preference since leaving the Republican Party in February 2026 (KPBS). Ballot designation: San Diego Business Owner.",
+    "own_words": [
+     {
+      "text": "\"Restructuring City Hall to 2015 staffing levels would save $220M, completely closing the City's operational deficit.\"",
+      "is_quote": true,
+      "source": "http://richardbailey.com/issues"
+     },
+     {
+      "text": "\"Balboa Park parking fees must be repealed entirely.\" He also wants downtown parking rates rolled back to early-2025 levels.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Wants to \"limit the number of ADUs and require parking for new developments.\"",
+      "is_quote": true,
+      "source": "http://richardbailey.com/issues"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nicole Crosby",
+    "party": null,
+    "incumbent": false,
+    "website": "https://nicoleforsandiego.com",
+    "website_confidence": "verified",
+    "background": "Deputy city attorney who led the City Attorney's Gun Violence Response Unit; past president of the Clairemont Town Council and a former PTA president. Ballot designation: Deputy City Attorney.",
+    "own_words": [
+     {
+      "text": "Proposes \"a 100-day waiting period for large corporate bidders\" on homes and opposes short-term vacation rentals that displace families.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "\"I will ensure full police and firefighter staffing, keep illegal guns off our streets.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Wants to \"strengthen San Diego's sanctuary city policies\" and keep city police resources out of ICE operations that violate residents' rights.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City Clerk notice of nominees",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-08/notice-of-nominees-2026-11-03-english.pdf"
+   },
+   {
+    "name": "City Clerk notice of election",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-07/1-2026-07-notice-of-election-general-eng.pdf"
+   },
+   {
+    "name": "KPBS City Council explainer",
+    "url": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-city-council-4",
+  "state": "CA",
+  "level": "city",
+  "office": "San Diego City Council",
+  "district": "Council District 4",
+  "scope_plain": "Voters in City Council District 4 in southeastern San Diego (neighborhoods such as Valencia Park, per the candidates). Only Districts 2, 4, 6 and 8 vote for council this year; check your sample ballot. Nonpartisan office. Note: one Times of San Diego guide calls this District 5; the City Clerk and Registrar list it as District 4.",
+  "office_explainer": "One of nine council members. Passes city laws and the city budget, and checks the mayor.",
+  "why_it_matters": "The incumbent, who won a 2024 special election, led his challenger by just 12 votes in the June primary (Times of San Diego). Both candidates are Democrats.",
+  "vote_for": 1,
+  "incumbent": "Henry Foster III",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Henry Foster III",
+    "party": null,
+    "incumbent": true,
+    "website": "http://henryfoster4sd.com",
+    "website_confidence": "verified",
+    "background": "Councilmember since winning a 2024 special election. Before that, chief of staff to then-Councilmember and later Supervisor Monica Montgomery Steppe, the city's Equal Opportunity Contracting Program manager, and more than 25 years in construction. Raised in Valencia Park; Lincoln High and Hampton University graduate.",
+    "own_words": [
+     {
+      "text": "Plans to keep prioritizing \"the Black Arts & Culture District\" and investment in District 4 commercial corridors.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "After the January 2024 floods, redirected Community Equity Fund money to affected families and sought federal money for the Jamacha drainage channel.",
+      "is_quote": false,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "On the budget: \"we need to get over the fear of having uncomfortable conversations.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Martha Abraham",
+    "party": null,
+    "incumbent": false,
+    "website": "http://martha4sandiego.com",
+    "website_confidence": "verified",
+    "background": "Neonatal ICU nurse and community organizer; describes herself as an immigrant and single mother. Trailed Foster by 12 votes in the June primary. Ballot designation: Neonatal ICU Nurse/Mother.",
+    "own_words": [
+     {
+      "text": "\"As a Nurse, I took an oath to do no harm. I intend to continue that oath at City Hall.\"",
+      "is_quote": true,
+      "source": "http://martha4sandiego.com"
+     },
+     {
+      "text": "Would hold \"a town hall within the first 30 days\" to set priorities with residents.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Wants policies that \"preserve affordable housing, tenant protections\" and protect communities from displacement.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City Clerk notice of nominees",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-08/notice-of-nominees-2026-11-03-english.pdf"
+   },
+   {
+    "name": "City Clerk notice of election",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-07/1-2026-07-notice-of-election-general-eng.pdf"
+   },
+   {
+    "name": "KPBS City Council explainer",
+    "url": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-city-council-6",
+  "state": "CA",
+  "level": "city",
+  "office": "San Diego City Council",
+  "district": "Council District 6",
+  "scope_plain": "Voters in City Council District 6, from University City to Scripps Ranch, including Mira Mesa (Times of San Diego, KPBS). Only Districts 2, 4, 6 and 8 vote for council this year; check your sample ballot. Nonpartisan office.",
+  "office_explainer": "One of nine council members. Passes city laws and the city budget, and checks the mayor.",
+  "why_it_matters": "The council president pro tem, who won 59% in June, faces a Republican real estate broker who served on the County Board of Education.",
+  "vote_for": 1,
+  "incumbent": "Kent Lee",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kent Lee",
+    "party": null,
+    "incumbent": true,
+    "website": "https://kentleeforsd.com",
+    "website_confidence": "verified",
+    "background": "Incumbent councilmember, council president pro tem and chair of the Land Use & Housing Committee. Former executive director of the nonprofit Pacific Arts Movement and former Mira Mesa Community Planning Group member. Ballot designation: City Councilmember.",
+    "own_words": [
+     {
+      "text": "Focus on \"streamlining permitting, updating land use policies, and encouraging smart growth\" to add housing.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Has proposed \"re-establishing a chief operating officer\" to improve how the city carries out council policy.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "On the stormwater gap, the city \"must also seriously consider dedicated local revenue.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mark Powell",
+    "party": null,
+    "incumbent": false,
+    "website": "https://markpowellforcitycouncil.com/",
+    "website_confidence": "verified",
+    "background": "Real estate broker; former classroom teacher, vice principal and National University professor; former San Diego Police reserve officer and former elected member of the County Board of Education. A Republican (KPBS). Ballot designation: Business Owner/Educator.",
+    "own_words": [
+     {
+      "text": "\"Restore free parking in Balboa Park\" and \"reduce or repeal the costly trash tax.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Would remove \"under-used bike lanes\" and keep four car lanes on Governor Drive, Genesee Avenue and Mira Mesa Blvd.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "\"New taxes or fees should be a last resort, not City Hall's first solution.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City Clerk notice of nominees",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-08/notice-of-nominees-2026-11-03-english.pdf"
+   },
+   {
+    "name": "City Clerk notice of election",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-07/1-2026-07-notice-of-election-general-eng.pdf"
+   },
+   {
+    "name": "KPBS City Council explainer",
+    "url": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-city-council-8",
+  "state": "CA",
+  "level": "city",
+  "office": "San Diego City Council",
+  "district": "Council District 8",
+  "scope_plain": "Voters in City Council District 8 in the south of the city, including Shelltown, Southcrest and the border community of San Ysidro (KPBS, candidates). Only Districts 2, 4, 6 and 8 vote for council this year; check your sample ballot. Nonpartisan office.",
+  "office_explainer": "One of nine council members. Passes city laws and the city budget, and checks the mayor.",
+  "why_it_matters": "An open seat: Councilmember Vivian Moreno is termed out. Her chief of staff faces a San Ysidro school board member; both are Democrats. Independent committees funded by local unions (for Martinez) and tied to the Regional Chamber of Commerce (for Ramirez) are spending in the race (KPBS).",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Antonio Martinez",
+    "party": null,
+    "incumbent": false,
+    "website": "https://antoniomartinezsd.com",
+    "website_confidence": "verified",
+    "background": "Fifth-generation San Ysidro resident; San Ysidro School District board member since 2012 (four terms); former staffer for Rep. Juan Vargas and former health educator. Finished first in the four-person June primary (KPBS). Ballot designation: Governing Board Member, San Ysidro School District.",
+    "own_words": [
+     {
+      "text": "On Tijuana River sewage: \"The city needs to play a bigger role, request emergency funds.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "On flooding in Shelltown and Southcrest: \"we cannot have another flood like the disaster that happened in 2024.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "On the deficit: \"we have to do an independent audit\" of the city budget.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Gerardo Ramirez",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votegerardoramirez.com",
+    "website_confidence": "verified",
+    "background": "Chief of staff to District 8 Councilmember Vivian Moreno; his campaign cites nine years working for the district. Ballot designation: Chief of Staff, District 8.",
+    "own_words": [
+     {
+      "text": "Would restructure the street-resurfacing formula \"to ensure failing streets actually get fixed.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "Would \"codify the Climate Equity Fund by ordinance\" so the money cannot be diverted.",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     },
+     {
+      "text": "\"City Hall has to spend smarter before asking residents for more.\"",
+      "is_quote": true,
+      "source": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "City Clerk notice of nominees",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-08/notice-of-nominees-2026-11-03-english.pdf"
+   },
+   {
+    "name": "City Clerk notice of election",
+    "url": "https://www.sandiego.gov/sites/default/files/2026-07/1-2026-07-notice-of-election-general-eng.pdf"
+   },
+   {
+    "name": "KPBS City Council explainer",
+    "url": "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-san-diego-city-council-races-explainer-districts-2-4-6-8"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-county-supervisor-4",
+  "state": "CA",
+  "level": "county",
+  "office": "San Diego County Board of Supervisors",
+  "district": "Supervisorial District 4",
+  "scope_plain": "Voters in Supervisorial District 4, which includes much of the City of San Diego plus Lemon Grove and La Mesa (Times of San Diego). City voters in other supervisor districts have no supervisor race this year: only Districts 4 and 5 are up, and the Registrar's precinct map puts no city precinct in District 5. Nonpartisan office.",
+  "office_explainer": "One of five supervisors running county government: health, social services, sheriff, jails, elections, unincorporated areas.",
+  "why_it_matters": "The incumbent, a Democrat, faces a Republican former La Mesa councilmember. With only two candidates, the race skipped the June vote and goes straight to November.",
+  "vote_for": 1,
+  "incumbent": "Monica Montgomery Steppe",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Monica Montgomery Steppe",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent supervisor and former San Diego City Council member (Times of San Diego). A Democrat. Ballot designation: San Diego County Supervisor.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kristine C. Alessio",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Land use attorney and former La Mesa City Council member (Times of San Diego). A Republican. Ballot designation: Attorney.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "ROV precinct map service (districts for each precinct, Aug 3, 2026)",
+    "url": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Find_Your_Dist_Map_AUG_2026_MIL1/MapServer/20"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-county-treasurer",
+  "state": "CA",
+  "level": "county",
+  "office": "San Diego County Treasurer-Tax Collector",
+  "district": null,
+  "scope_plain": "Every voter in San Diego County. Nonpartisan office.",
+  "office_explainer": "Collects county property taxes and invests and manages the county's money.",
+  "why_it_matters": "The appointed incumbent seeks his first full term against a CPA endorsed by the county Republican Party.",
+  "vote_for": 1,
+  "incumbent": "Larry Cohen",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Larry Cohen",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Appointed interim treasurer-tax collector when Dan McAllister retired; former chief of staff to Rep. Juan Vargas. A Democrat (Times of San Diego). Ballot designation: Appointed Treasurer Tax Collector San Diego County.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Shirley Nakawatase",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Certified public accountant, endorsed by the San Diego County Republican Party (Times of San Diego). Ballot designation: Businesswoman/Treasurer/CPA.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-county-assessor",
+  "state": "CA",
+  "level": "county",
+  "office": "San Diego County Assessor/Recorder/County Clerk",
+  "district": null,
+  "scope_plain": "Every voter in San Diego County. Nonpartisan office. Unopposed.",
+  "office_explainer": "Sets property values for tax bills, keeps property records, and issues marriage licenses.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Jordan Z. Marks",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jordan Z. Marks",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent seeking a second four-year term, unopposed (Times of San Diego). Ballot designation: Assessor/Recorder/County Clerk.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-county-board-of-ed-3",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego County Board of Education",
+  "district": "Trustee Area 3",
+  "scope_plain": "City of San Diego voters in Trustee Area 3: much of eastern San Diego inside San Diego Unified, mostly in Council Districts 7 and 9 and part of 4 (all of ZIPs 92105, 92115, 92119, 92120, 92124 and 92182 and parts of 92102, 92104, 92108, 92114, 92116 and 92131), plus a few Grossmont-area slices. That is about a fifth of the city's voting precincts (Registrar's precinct map). The rest of Area 3 is East County. City voters in Areas 1, 2 and 4 have no race this year. Nonpartisan.",
+  "office_explainer": "Oversees the County Office of Education budget and hears charter school and student expulsion appeals.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Alicia Muñoz",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Alicia Muñoz",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Ballot designation: Governing Board Member, San Diego County Board of Education.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Cory Brown",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Parent/Business Owner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "ROV precinct map service (districts for each precinct, Aug 3, 2026)",
+    "url": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Find_Your_Dist_Map_AUG_2026_MIL1/MapServer/20"
+   },
+   {
+    "name": "SDCOE trustee area map",
+    "url": "https://resources.finalsite.net/images/v1655159099/sdcoenet/f3jffeuh8u3pbogmq1of/SDCOEDist-Map-ADA-22.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sd-county-board-of-ed-5",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego County Board of Education",
+  "district": "Trustee Area 5",
+  "scope_plain": "Only City of San Diego voters in the San Dieguito Union High School District area (the Del Mar Union and Solana Beach school districts; about 67,000 city residents in the northwest corner of the city, mostly ZIPs 92130 and 92014). Area 5 is mainly north coastal county. Nonpartisan.",
+  "office_explainer": "Oversees the County Office of Education budget and hears charter school and student expulsion appeals.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Rick Shea",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Rick Shea",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Ballot designation: Governing Board Member, SD County Board of Education.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Bianca Ragonesi-Lasche",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Retired Accountant.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "ROV precinct map service (districts for each precinct, Aug 3, 2026)",
+    "url": "https://gis-public.sandiegocounty.gov/arcgis/rest/services/Find_Your_Dist_Map_AUG_2026_MIL1/MapServer/20"
+   },
+   {
+    "name": "SDCOE trustee area map",
+    "url": "https://resources.finalsite.net/images/v1655159099/sdcoenet/f3jffeuh8u3pbogmq1of/SDCOEDist-Map-ADA-22.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sdccd-district-a",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego Community College District Board of Trustees",
+  "district": "District A",
+  "scope_plain": "Voters in SDCCD trustee District A. The board is elected by district and only Districts A and C are on this ballot; check your sample ballot. Nonpartisan.",
+  "office_explainer": "Sets policy and the budget for the San Diego Community College District's public two-year colleges.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Maria Nieto Senour",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Maria Nieto Senour",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Ballot designation: Governing Board Member, San Diego Community College District.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jonny Brown",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Student Advocate/Writer.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "ROV composite reference ballot",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/facsimile-reference-ballot/english-reference-ballot.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sdccd-district-c",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego Community College District Board of Trustees",
+  "district": "District C",
+  "scope_plain": "Voters in SDCCD trustee District C. Only Districts A and C are on this ballot; check your sample ballot. Nonpartisan.",
+  "office_explainer": "Sets policy and the budget for the San Diego Community College District's public two-year colleges.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Craig Milgrim",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Craig Milgrim",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Ballot designation: Governing Board Member, San Diego Community College District.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Samantha Ely",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Appointed Program Manager.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "ROV composite reference ballot",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/facsimile-reference-ballot/english-reference-ballot.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sdusd-district-b",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego Unified School District Board of Education",
+  "district": "District B",
+  "scope_plain": "Voters in SDUSD trustee District B. Unopposed. Only Districts B and C are on this ballot. Nonpartisan.",
+  "office_explainer": "Sets policy and budget for San Diego Unified, the city's main K-12 school district, and hires the superintendent.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Shana Hazan",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Shana Hazan",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent, unopposed (Times of San Diego). Ballot designation: Board Member, San Diego Unified School District.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sdusd-district-c",
+  "state": "CA",
+  "level": "school",
+  "office": "San Diego Unified School District Board of Education",
+  "district": "District C",
+  "scope_plain": "Voters in SDUSD trustee District C. Unopposed. Only Districts B and C are on this ballot. Nonpartisan.",
+  "office_explainer": "Sets policy and budget for San Diego Unified, the city's main K-12 school district, and hires the superintendent.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Hayden Gore",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Classroom teacher and union organizer, running unopposed for an open seat (Times of San Diego). Ballot designation: Classroom Teacher/Father.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-49",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-49",
+  "scope_plain": "Voters in the 49th Congressional District. About 165,000 City of San Diego residents live in CD-49 under the Prop 50 map; the rest of the district is north coastal San Diego County and south Orange County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+  "why_it_matters": "A four-term Democrat against a Republican newcomer.",
+  "vote_for": 1,
+  "incumbent": "Mike Levin",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Mike Levin",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://mikelevin.org",
+    "website_confidence": "sourced",
+    "background": "In Congress since 2019 (four terms); former environmental attorney (Times of San Diego). Ballot designation: U.S. Representative, 49th District.",
+    "own_words": [
+     {
+      "text": "His campaign cites $1.19 billion in federal funding secured for the district since 2019 and \"dozens of bipartisan bills\" signed into law.",
+      "is_quote": true,
+      "source": "https://mikelevin.org"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Armen Kurdian",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://armenkurdian.com",
+    "website_confidence": "unverified",
+    "background": "Retired Navy captain and political newcomer (Times of San Diego). Ballot designation: Retired Navy Captain.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Statewide Database AB 604 city splits",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-50",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-50",
+  "scope_plain": "Voters in the 50th Congressional District, the largest slice of the city (about 534,000 residents under the Prop 50 map), plus Coronado, Poway, Santee and part of Escondido. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+  "why_it_matters": "A seven-term Democrat against a Republican former TV news director.",
+  "vote_for": 1,
+  "incumbent": "Scott Peters",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Scott Peters",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://scottpeters.com",
+    "website_confidence": "sourced",
+    "background": "Seven-term congressman known for the bipartisan Problem Solvers Caucus; earlier San Diego's first City Council president and chair of the Port (Times of San Diego, campaign). Ballot designation: Member of Congress.",
+    "own_words": [
+     {
+      "text": "\"San Diegans can't afford San Diego. Sewage from Mexico continues to close our beaches.\"",
+      "is_quote": true,
+      "source": "https://scottpeters.com"
+     },
+     {
+      "text": "Priorities listed: lower housing costs and bills, protect Medicare, end the cross-border sewage crisis, and cleaner energy and infrastructure.",
+      "is_quote": false,
+      "source": "https://scottpeters.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Steve Cohen",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "76-year-old former KUSI news director (Times of San Diego). Ballot designation: Television News Consultant.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Statewide Database AB 604 city splits",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-51",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-51",
+  "scope_plain": "Voters in the 51st Congressional District (about 369,000 City of San Diego residents under the Prop 50 map), plus El Cajon, La Mesa and Lemon Grove. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+  "why_it_matters": "A three-term Democrat against a Republican newcomer.",
+  "vote_for": 1,
+  "incumbent": "Sara Jacobs",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Sara Jacobs",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Three-term congresswoman (Times of San Diego). Ballot designation: U.S. Representative.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ricardo Cabrera",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Owner of a cybersecurity company and political newcomer (Times of San Diego). Ballot designation: Business Owner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Statewide Database AB 604 city splits",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-us-house-52",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-52",
+  "scope_plain": "Voters in the 52nd Congressional District along the border (about 322,000 City of San Diego residents under the Prop 50 map), plus Chula Vista, National City and Imperial Beach. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 435 House members. Writes federal laws and votes on the budget and taxes. Two-year term.",
+  "why_it_matters": "A seven-term Democrat against a Republican the county party did not endorse.",
+  "vote_for": 1,
+  "incumbent": "Juan Vargas",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Juan Vargas",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Seven-term congressman (Times of San Diego). Ballot designation: Member of Congress.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jeff Belle",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Running as a Republican but not endorsed by the party (Times of San Diego). Ballot designation: Business Owner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "Statewide Database AB 604 city splits",
+    "url": "https://statewidedatabase.org/pub/data/d25/AB%20604%20City%20Splits%20Report.pdf"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-state-senate-18",
+  "state": "CA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "SD-18",
+  "scope_plain": "Voters in the 18th Senate District along the border. In the city (about 197,000 residents, 2020 census) that is all of ZIPs 92136, 92154 and 92173 and parts of 92102, 92104, 92105 and 92113. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Only even-numbered Senate seats are up this year, so about half the city (State Senate District 39, roughly 688,000 residents in central San Diego) has no Senate race.",
+  "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget. Four-year term.",
+  "why_it_matters": "A first-term Democrat and former Chula Vista mayor against a Republican pastor.",
+  "vote_for": 1,
+  "incumbent": "Steve Padilla",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Steve Padilla",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "State senator seeking a second four-year term; former Chula Vista mayor (Times of San Diego). Ballot designation: California State Senator.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Art Hodges",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Pentecostal bishop (Times of San Diego). Ballot designation: CEO/Educator/Pastor.",
+    "own_words": [
+     {
+      "text": "Opposes abortion and \"environmental extremism,\" per Times of San Diego.",
+      "is_quote": true,
+      "source": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Senate map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-state-senate-38",
+  "state": "CA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "SD-38",
+  "scope_plain": "Voters in the 38th Senate District along the coast. In the city (about 189,000 residents) that is all of ZIPs 92014, 92092, 92093 and 92109 and parts of 92037, 92108, 92110, 92111, 92117, 92129 and 92130. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Only even-numbered Senate seats are up this year, so about half the city (State Senate District 39, roughly 688,000 residents in central San Diego) has no Senate race.",
+  "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget. Four-year term.",
+  "why_it_matters": "The incumbent Democrat won 58.4% in June against a Republican business owner.",
+  "vote_for": 1,
+  "incumbent": "Catherine S. Blakespear",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Catherine S. Blakespear",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://catherineblakespear.com",
+    "website_confidence": "sourced",
+    "background": "State senator; lawyer and former three-term Encinitas mayor (Times of San Diego, campaign). Ballot designation: California State Senator.",
+    "own_words": [
+     {
+      "text": "Says she authored \"24 bills that were signed into law\" in her first term.",
+      "is_quote": true,
+      "source": "https://catherineblakespear.com"
+     },
+     {
+      "text": "Lists closing developer loopholes, expanding the LOSSAN rail corridor, gun safety and making the medical aid-in-dying law permanent.",
+      "is_quote": false,
+      "source": "https://catherineblakespear.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Laura Bassett",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Oceanside business owner and community volunteer (Times of San Diego). Ballot designation: Small Business Owner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Senate map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-state-senate-40",
+  "state": "CA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "SD-40",
+  "scope_plain": "Voters in the 40th Senate District, inland north county and north city. In the city (about 317,000 residents) that is all of ZIPs 92121, 92122, 92126, 92127, 92128, 92131 and 92145 and parts of 92037, 92129 and 92130: University City, Mira Mesa, Scripps Ranch, Rancho Bernardo and Rancho Peñasquitos. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Only even-numbered Senate seats are up this year, so about half the city (State Senate District 39, roughly 688,000 residents in central San Diego) has no Senate race.",
+  "office_explainer": "One of 40 state senators. Writes California laws and passes the state budget. Four-year term.",
+  "why_it_matters": "An open seat (Republican Brian Jones is termed out). Elliott led June with 48%; Bruce-Lane had 27.7%, but she and another Republican together topped 50% (Times of San Diego).",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Mara Elliott",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://maraelliott.com",
+    "website_confidence": "sourced",
+    "background": "Two-term San Diego city attorney (Times of San Diego, campaign). Ballot designation: Ethics Attorney.",
+    "own_words": [
+     {
+      "text": "Calls herself a leader in \"gun violence prevention, consumer advocacy, and support for victims of domestic violence.\"",
+      "is_quote": true,
+      "source": "https://maraelliott.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kristie Bruce-Lane",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://kristiebrucelane.com",
+    "website_confidence": "sourced",
+    "background": "Businesswoman and former Olivenhain Municipal Water District director; ran for Assembly in 2022 and 2024 (Times of San Diego, campaign). Ballot designation: Businesswoman/Victims Advocate.",
+    "own_words": [
+     {
+      "text": "\"Reduce the cost of living and cut taxes for hardworking San Diego families.\"",
+      "is_quote": true,
+      "source": "https://kristiebrucelane.com"
+     },
+     {
+      "text": "\"Shelters should be used as a tool, not a goal.\"",
+      "is_quote": true,
+      "source": "https://kristiebrucelane.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Senate map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-75",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-75",
+  "scope_plain": "Voters in the 75th Assembly District, mostly East County. In the city (about 47,000 residents) that is all of ZIP 92131 (Scripps Ranch) and part of 92128. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Republican incumbent, founder of Reform California, against a Democratic veteran.",
+  "vote_for": 1,
+  "incumbent": "Carl DeMaio",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Carl DeMaio",
+    "party": "Republican",
+    "incumbent": true,
+    "website": "https://carldemaio.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember and founder of Reform California (Times of San Diego, campaign); author of the Prop 39 voter ID initiative. Ballot designation: Businessman/State Legislator.",
+    "own_words": [
+     {
+      "text": "Says California's cost of living, homelessness and crime leave voters a choice to \"fight or flee,\" and his answer is to \"stand and fight.\"",
+      "is_quote": true,
+      "source": "https://carldemaio.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Gerald C. Boursiquot",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Navy and Air Force veteran who volunteers with veteran support groups (Times of San Diego). Ballot designation: IT Contractor/Father.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-76",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-76",
+  "scope_plain": "Voters in the 76th Assembly District, from Torrey Hills to Valley Center. In the city (about 152,000 residents) that is all of ZIPs 92127 and 92129 and parts of 92128 and 92130. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Democratic incumbent against a Republican newcomer.",
+  "vote_for": 1,
+  "incumbent": "Darshana Patel",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Darshana Patel",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Assemblymember; biotech scientist who served on the Poway Unified school board (Times of San Diego). Ballot designation: California State Assemblymember.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Carrie S. Espinoza Villanueva",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Political newcomer (Times of San Diego). Ballot designation: College Administration Support.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-77",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-77",
+  "scope_plain": "Voters in the 77th Assembly District along the north coast. In the city (about 290,000 residents) that is all of ZIPs 92014, 92037, 92092, 92093, 92106, 92107, 92109, 92122 and 92140 and parts of 92101, 92110, 92113, 92121 and 92130. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Democratic incumbent against the executive director of Reform California.",
+  "vote_for": 1,
+  "incumbent": "Tasha Boerner",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tasha Boerner",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://tashaboerner.com",
+    "website_confidence": "sourced",
+    "background": "Assemblymember representing coastal San Diego County since 2018; former PTA leader (campaign). Ballot designation: California State Assemblymember.",
+    "own_words": [
+     {
+      "text": "Says she is \"fighting for affordability, sustainability, equality, opportunity and public safety in our coastal communities.\"",
+      "is_quote": true,
+      "source": "https://tashaboerner.com"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Trinity Hannaway",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Executive director of Carl DeMaio's Reform California (Times of San Diego). Ballot designation: Taxpayer Advocate.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-78",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-78",
+  "scope_plain": "Voters in the 78th Assembly District in central San Diego, the largest slice of the city (about 480,000 residents): all of ZIPs 92103, 92108, 92111, 92116, 92117, 92119, 92120, 92123, 92124, 92126 and 92145 and parts of 92101, 92102, 92104, 92110, 92115, 92121 and 92129. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Democratic incumbent against a Republican staffer for Carl DeMaio.",
+  "vote_for": 1,
+  "incumbent": "Chris Ward",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Chris Ward",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Assemblymember and former San Diego City Council member (Times of San Diego). Ballot designation: Member of the State Assembly, 78th District.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Payton Galvez",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Staffer for Carl DeMaio (Times of San Diego). Ballot designation: Constituent Services Manager.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-79",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-79",
+  "scope_plain": "Voters in the 79th Assembly District, from southeastern San Diego to El Cajon. In the city (about 275,000 residents) that is all of ZIPs 92105, 92114 and 92139 and parts of 92102, 92104, 92113 and 92115. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Democratic incumbent against a Republican community planning group member.",
+  "vote_for": 1,
+  "incumbent": "LaShae Sharp-Collins",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "LaShae Sharp-Collins",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Assemblymember and educator (Times of San Diego). Ballot designation: Incumbent.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Andrew Lawson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Member of the Spring Valley Community Planning Group (Times of San Diego). Ballot designation: Spring Valley Community Planning Group Member.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-80",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-80",
+  "scope_plain": "Voters in the 80th Assembly District, from Barrio Logan to the border. In the city (about 145,000 residents) that is all of ZIPs 92136, 92154 and 92173 and parts of 92102 and 92113. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget. Two-year term.",
+  "why_it_matters": "The Democratic incumbent against a Republican small business owner.",
+  "vote_for": 1,
+  "incumbent": "David A. Alvarez",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "David A. Alvarez",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Assemblymember (Times of San Diego). Ballot designation: Assemblymember.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alejandro Galicia",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Small business owner without a campaign website, per Times of San Diego. Ballot designation: Business Owner/Commissioner.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "ROV candidate list",
+    "url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/candidate-list.pdf"
+   },
+   {
+    "name": "CRC 2021 final Assembly map equivalency (Statewide Database)",
+    "url": "https://statewidedatabase.org/pub/data/D20/FINAL_MAPS/"
+   },
+   {
+    "name": "Times of San Diego voter guide",
+    "url": "https://timesofsandiego.com/politics/2026/09/27/voter-guide-november-3-general-election-san-diego-county/"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

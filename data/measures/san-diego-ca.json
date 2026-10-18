@@ -1,0 +1,104 @@
+[
+  {
+    "id": "sd-county-measure-a",
+    "state": "CA",
+    "level": "county",
+    "jurisdiction": "County of San Diego",
+    "number": "Measure A",
+    "official_title": "A transparent, accountable, modern county government. Shall the San Diego County Charter be amended to establish an Independent Ethics Commission, Independent Budget Analyst, Independent Program Auditor, confirmation of certain senior County leaders, and optional Board of Supervisors appointment of the Public Defender; increase term limits from two to three terms for the Board of Supervisors members; require public disclosure of spending and performance data; clarify non-interference provisions; and update terminology and structure?",
+    "plain_summary": "A package of changes to the county's charter (its constitution). It lets county supervisors serve three four-year terms instead of two, including the supervisors in office now. It also requires an ethics commission, lets supervisors appoint an independent budget analyst and program auditor, lets supervisors confirm and remove some top county managers, and requires more public reporting on spending and results.",
+    "yes_means": "Supervisors could serve up to 12 years instead of 8, the county must set up an ethics commission and may add a budget analyst and auditor, and supervisors get more say over senior staff.",
+    "no_means": "The two-term limit voters set in 2010 stays, and the charter stays as it is, with no new ethics commission, budget analyst or auditor created by this measure.",
+    "current_law": "The County Charter limits supervisors to two four-year terms; voters added that limit in 2010 (there was no limit before). The chief administrative officer, not the board, hires and fires senior county staff. The charter has no independent ethics commission, budget analyst or program auditor.",
+    "fiscal_impact": "No fiscal impact statement was supplied to the Registrar by the Board of Supervisors (per the League of Women Voters' analysis). The county staff report called it intended to be cost-neutral, and Supervisor Lawson-Remer's office says it relies on existing resources.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "One yes or no covers everything, so you cannot vote for the ethics commission and auditors without also voting to lengthen supervisor term limits, or the reverse. The term-limit change sits in the middle of a long list and applies to current supervisors too: two of them (Terra Lawson-Remer and Joel Anderson) would no longer be termed out in 2028. The question says the charter would \"establish\" a budget analyst and program auditor, but County Counsel's analysis says the board \"may appoint\" them. Opposition comes from both ends: Reform California and Supervisors Desmond and Anderson, and also the Progressive California Voter Guide.",
+    "supporters_case": {
+      "text": "Board Chair Terra Lawson-Remer, who proposed it, says it modernizes county government, adds oversight and makes officials more accountable. Supporters say the charter is outdated, keeps the public from holding county bureaucrats accountable, and that three terms matches the state Legislature. Listed supporters include the San Diego and Imperial Counties Labor Council, CAL FIRE Local 2881 and the San Diego Deputy Sheriffs Association.",
+      "source": "https://drive.google.com/file/d/1MmkHi2UQ5T1-KE5qEpJcEFh6WqnzdB5-/view?usp=sharing"
+    },
+    "opponents_case": {
+      "text": "Supervisors Jim Desmond and Joel Anderson backed some of the oversight pieces but said supervisors should not pass a charter change that benefits themselves by extending their own term limits outside the citizen initiative process. Opponents say voters set two terms in 2010 and the county can create an ethics commission and auditors without a charter change. Listed opponents include Desmond, Carl DeMaio of Reform California, and Steven Esparza of the Progressive California Voter Guide.",
+      "source": "https://www.kpbs.org/news/politics/2026/09/30/measure-a-extending-supervisor-term-limits-and-other-county-charter-reforms"
+    },
+    "official_text_url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/san-diego-county-measure-a-transpansparent-accountable-modern-county-government.pdf",
+    "official_guide_url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html",
+    "explainers": [
+      {
+        "source": "KPBS",
+        "title": "Measure A: Extending supervisor term limits and other county charter reforms",
+        "url": "https://www.kpbs.org/news/politics/2026/09/30/measure-a-extending-supervisor-term-limits-and-other-county-charter-reforms"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "sd-county-measure-b",
+    "state": "CA",
+    "level": "county",
+    "jurisdiction": "County of San Diego",
+    "number": "Measure B",
+    "official_title": "Measure to fund San Diego County health & safety services. To clean-up sewage pollution in Tijuana River Valley, improve wildfire prevention, emergency response, access to healthcare, food assistance, childhood development services, and authorized administrative expenses; shall the measure authorizing a half-cent sales tax raising an estimated $400,000,000 to $450,000,000 annually, requiring citizen oversight, public spending disclosure, and independent annual audits, and lasting until ended by voters, be adopted?",
+    "plain_summary": "Adds a half-cent (0.5%) sales tax everywhere in San Diego County, including the City of San Diego, with no end date. The money goes into a locked fund: up to 60% for health care, food aid and child care, up to 22.5% for the Tijuana River sewage crisis, 17.5% for wildfire prevention and emergency response, and no more than 1.5% for administration. A citizen oversight committee (11 members appointed by supervisors, plus the county auditor) and yearly independent audits check the spending.",
+    "yes_means": "Sales tax in the county goes up by half a cent per dollar, starting a dedicated fund of roughly $400 million to $450 million a year for health, child care, food aid, sewage cleanup and fire safety.",
+    "no_means": "No new county sales tax; these programs keep relying on existing federal, state and county money.",
+    "current_law": "There is no county sales tax dedicated to these programs. The county pays for health, fire and environmental services from federal, state and local general funds; the League of Women Voters' analysis cites about $300 million in expected federal and state cuts.",
+    "fiscal_impact": "The ballot question estimates $400 million to $450 million a year. In cities at the base 7.75% rate, the total sales tax would become 8.25% (cities already at 8.75% would go to 9.25%). The measure caps general administration at 1.5% and allows up to $300,000 a year for the oversight committee. It lasts until voters end it.",
+    "pass_threshold": "simple majority, 50% plus one (Registrar's voter pamphlet; it is a special tax for set purposes, but because citizens put it on the ballot, a majority is enough)",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The title says \"fund health and safety services\" and never says \"tax\"; the half-cent sales tax appears only in the question. \"Lasting until ended by voters\" means it has no end date. The Tijuana River share is set aside for sewage fixes, but KPBS notes the specific projects are not named. State Prop 43, also on this ballot, would require two-thirds for citizen-initiative special taxes only starting January 1, 2027.",
+    "supporters_case": {
+      "text": "Supporters say it creates dependable local money as federal cuts threaten Medi-Cal and CalFresh, warning more than 300,000 residents could lose health care and food help, and it secures long-term funding for the Tijuana River pollution crisis. They argue a sunset date would not fit long-term commitments like water infrastructure. Backers include SEIU Local 221, CAL FIRE Local 2881, Children First San Diego and the Hospital Association of San Diego and Imperial Counties.",
+      "source": "https://drive.google.com/file/d/1PXs20rAqABwShH1hyW30yjEcv-bXtcto/view?usp=sharing"
+    },
+    "opponents_case": {
+      "text": "The official ballot argument against, signed by San Diego County Taxpayers Association CEO Mark Kersey, says it would raise the average household's taxes by hundreds of dollars a year with no end date and no yearly performance targets, lets groups that receive the money sit on the oversight committee, and adds permanent revenue to a budget the group calls unsustainable. It also says county officials will not say whether it would reopen county labor contracts. Reform California and the Republican Party of San Diego County also oppose it.",
+      "source": "https://www.dropbox.com/scl/fo/wwr7fmxxnmh98e4adfga8/ACfhDeIHqixM-DdWGpF8PRQ?rlkey=xjm50g1hcmm2j7lv6lz9siwyw&dl=0"
+    },
+    "official_text_url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/san-diego-county-fund-health-and-safety-services.pdf",
+    "official_guide_url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html",
+    "explainers": [
+      {
+        "source": "KPBS",
+        "title": "Measure B: San Diego County Health & Safety Act",
+        "url": "https://www.kpbs.org/news/politics/2026/10/01/measure-b-san-diego-county-health-safety-act"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "sdusd-measure-m",
+    "state": "CA",
+    "level": "school",
+    "jurisdiction": "San Diego Unified School District (voted on by SDUSD voters only)",
+    "number": "Measure M",
+    "official_title": "San Diego Unified School District repair, student safety, no tax rate increase measure. To repair/upgrade all public schools, help retain/attract teachers by: Repairing deteriorating roofs, plumbing, restrooms; Providing safe drinking water; Removing asbestos, lead paint, mold; Upgrading outdated career/vocational, science, technology, engineering classrooms; shall San Diego Unified School District's measure authorizing $3,500,000,000 in bonds at legal rates, levying $32 per $100,000 of assessed value, providing $204,000,000 annually while bonds are outstanding, requiring public spending disclosure, audits, citizens oversight, be adopted?",
+    "plain_summary": "Lets San Diego Unified borrow $3.5 billion by selling bonds for school repairs and upgrades, paid back with a property tax over about 36 years. The project list also includes housing for teachers and staff and a share (about 16%) for charter school facilities. A citizens' oversight committee and yearly audits are required, and the money cannot pay salaries.",
+    "yes_means": "SDUSD can sell up to $3.5 billion in new school construction bonds, repaid by property owners in the district.",
+    "no_means": "SDUSD cannot sell these new bonds; it keeps using money left from earlier bonds (Measure YY's last bonds are expected in 2028) and other funds.",
+    "current_law": "SDUSD voters have approved five earlier bonds: Prop MM (1998, $1.51 billion), Prop S (2008, $2.1 billion), Prop Z (2012, $2.8 billion), Measure YY (2018, $3.5 billion) and Measure U (2022, $3.2 billion). Property owners are still paying for them.",
+    "fiscal_impact": "District estimates, as stated in County Counsel's impartial analysis: average tax for this measure about $32 per $100,000 of assessed value (about $204 million a year), highest about $59.18 per $100,000, collected through fiscal year 2062-63 (about 36 years). Total repayment, principal plus interest, about $8.1 billion. The district says it will only sell bonds if the combined Measure YY and Measure M rate stays at or below the current Measure YY rate. Estimates are not binding.",
+    "pass_threshold": "55% (school bond under Prop 39)",
+    "referred_by": "other",
+    "confusing_wording_note": "\"No tax rate increase\" is in the title, but this is still a new property tax: it keeps an existing tax rate going for decades longer instead of letting it fall as older bonds are paid off. The promise is that the combined rate will not go above today's Measure YY rate. The \"$32 per $100,000\" is the estimated average; the estimate for the highest year is about $59. NBC 7 described it as extending the $32 rate \"for another 10 years,\" while County Counsel's analysis says the tax would be collected through fiscal year 2062-63. Only voters inside SDUSD see it; about one in four City of San Diego residents live in other school districts and will not.",
+    "supporters_case": {
+      "text": "School board President Richard Barrera says the money continues repairs to aging schools, such as plumbing and roofs, and that delay costs more: \"if we do no work on improving our facilities, the depreciation in our facilities is about $400 million a year.\" The San Diego Education Association, the San Diego County Democratic Party and the Labor Council back it, and the San Diego County Taxpayers Association supports eight of the nine school bonds on the county ballot, objecting only to one in Jamul-Dulzura. The official ballot argument for is signed by leaders of the Taxpayers Association and the teachers union, among others.",
+      "source": "https://www.nbcsandiego.com/elections/san-diego-school-bonds-november-ballot-districts-seek-billions-for-campus-upgrades/4086962/"
+    },
+    "opponents_case": {
+      "text": "The Republican Party of San Diego County calls it a property tax increase and says it \"imposes a new costly property tax despite massive levels of wasteful spending, giving government workers massive salary hikes and pension spikes.\" The Union-Tribune editorial board and Reform California also recommend no. No official ballot argument against Measure M was filed with the Registrar (voter pamphlet).",
+      "source": "https://www.sandiegorepublicans.org/voter-guides/san-diego"
+    },
+    "official_text_url": "https://www.sdvote.com/content/dam/rov/en/election/nov-3-2026-gubernatorial-general-election/san-diego-unified-school-district.pdf",
+    "official_guide_url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html",
+    "explainers": [
+      {
+        "source": "NBC 7 San Diego",
+        "title": "San Diego school bonds on November ballot as districts seek billions for campus upgrades",
+        "url": "https://www.nbcsandiego.com/elections/san-diego-school-bonds-november-ballot-districts-seek-billions-for-campus-upgrades/4086962/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

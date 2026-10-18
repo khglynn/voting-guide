@@ -1,0 +1,100 @@
+[
+ {
+  "id": "lwv-san-diego",
+  "name": "League of Women Voters of San Diego",
+  "type": "civic_nonpartisan",
+  "lean": "neutral",
+  "lean_basis": "Its own statement (Vote with the League page, https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890): \"a non-partisan, grassroots organization that supports and opposes issues, but not candidates or political parties.\" No outside rating.",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+  "default_on": true,
+  "endorses_candidates": false,
+  "endorses_measures": true
+ },
+ {
+  "id": "sd-county-democratic-party",
+  "name": "San Diego County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official party organization: the Democratic Party's county committee for San Diego County (FPPC ID 741906).",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.sddemocrats.org/candidates.html",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sd-county-gop",
+  "name": "Republican Party of San Diego County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official party organization: the Republican Party's county committee for San Diego County (FPPC ID 741949).",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sd-imperial-labor-council",
+  "name": "San Diego & Imperial Counties Labor Council, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Labor federation with no AllSides or Ad Fontes rating, so it is labeled lean_left under this guide's rule for unions. Its stated mission (About page, https://www.unionyes.org/about): its members \"improve the lives of all working people by standing together and fighting for each other.\"",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.unionyes.org/2026-endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sd-democrats-for-equality",
+  "name": "San Diego Democrats for Equality (LGBTQ+ Democratic club)",
+  "type": "advocacy",
+  "lean": "left",
+  "lean_basis": "Its name identifies it as a Democratic club. Self-description on its Blue Voter Guide listing: \"Serving as one of the oldest active LGBTQ organizations in the United States.\" Its own site (democratsforequality.org) blocked our reader, so its About page is not quoted. No outside rating.",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.democratsforequality.org/endorsements",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "sd-regional-chamber",
+  "name": "San Diego Regional Chamber of Commerce",
+  "type": "business",
+  "lean": "lean_right",
+  "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating, so it is labeled lean_right under this guide's rule for chambers. Its About page (sdchamber.org) blocked our reader, so its mission is not quoted here.",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://sdchamber.org/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "reform-california",
+  "name": "Reform California",
+  "type": "advocacy",
+  "lean": "right",
+  "lean_basis": "Its own stated mission (About page, https://www.reformcalifornia.org/about): \"dedicated to taking back our state from the far-Left politicians and special interests,\" and it runs campaigns against \"tax increases\" (it says it has defeated \"over 300 tax hike proposals\"). No AllSides or Ad Fontes rating found. Its About page also says it is led by Carl DeMaio and funded as a project of his Assembly campaign committee; DeMaio is on the ballot in AD-75.",
+  "geography": [
+   "san-diego-ca"
+  ],
+  "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ }
+]

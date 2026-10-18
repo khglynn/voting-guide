@@ -246,7 +246,7 @@ const noSideScroll = async (page, label) => {
   await shot(page, '15-seattle-top');
   const sections = await page.$$eval('.sec', (els) => els.map((e) => e.dataset.sec));
   check('Seattle: statewide sections only', !sections.includes('city') && !sections.includes('county'), sections.join(','));
-  await shotEl(page, '#sec-state', '16-seattle-ballot');
+  await shotEl(page, '.sec', '16-seattle-ballot');
   check('Seattle: no console errors', page.errors.length === 0, page.errors.slice(0, 3).join(' | '));
   await ctx.close();
 }

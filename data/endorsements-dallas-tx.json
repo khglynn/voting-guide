@@ -1,0 +1,3592 @@
+[
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-county-judge",
+    "status": "endorsed",
+    "choice": "Clay Jenkins",
+    "why": "The board cites Jenkins's greater experience running county operations and crisis response; it calls Immler a serious candidate with good ideas on procurement.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dallas-county-judge-clay-jenkins-mike-immler-22453281.php",
+    "date": "2026-09-28",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-108",
+    "status": "endorsed",
+    "choice": "Morgan Meyer",
+    "why": "The board credits Meyer's work on property tax cuts as Ways and Means chair and his flood-safety work; it calls Mitchell capable but not his match.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/district-108-morgan-meyer-allison-mitchell-22459908.php",
+    "date": "2026-10-05",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-112",
+    "status": "endorsed",
+    "choice": "Angie Chen Button",
+    "why": "The board cites Button's experience and independence from her party; it calls Herbert well prepared but less developed on education.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-house-district-112-button-22460083.php",
+    "date": "2026-10-05",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-115",
+    "status": "endorsed",
+    "choice": "Cassandra Hernandez",
+    "why": "The board says Hernandez has learned the House quickly and written useful bills on housing, insurance and health; her opponent skipped its interview.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-house-district-115-recommendation-22459980.php",
+    "date": "2026-10-04",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-sboe-13",
+    "status": "endorsed",
+    "choice": "Tiffany Clark",
+    "why": "The board prefers Clark's focus on literacy and her experience, while saying it disagrees with her on vouchers; it worries Garza would add religious instruction.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-sboe-district-13-race-22459455.php",
+    "date": "2026-10-03",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-sboe-14",
+    "status": "endorsed",
+    "choice": "Amy Taylor",
+    "why": "The board cites Taylor's classroom experience and practical views; it says Bumgarner did not respond to its questionnaire or interview.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/state-board-education-14-taylor-bumgarner-22458404.php",
+    "date": "2026-10-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Amanda Reichek",
+    "why": "The board says Reichek, who served on this court from 2019 to 2024, would restore needed experience; it calls Kolodoski qualified but outmatched.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/5th-district-court-appeals-place-3-election-22468489.php",
+    "date": "2026-10-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Ben Smith",
+    "why": "The board calls both judges strong and \"tips toward\" Smith for his judicial philosophy and broader general-jurisdiction experience.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/5th-court-appeals-place-6-purdy-smith-22470270.php",
+    "date": "2026-10-10",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board, which says it usually opposes tax increases, backs Housing Forward's plan to scale its downtown results countywide and promises to hold it accountable.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dallas-county-tax-election-homeless-services-22453333.php",
+    "date": "2026-09-29",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-cda",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board explicitly declined to recommend either Amber Givens or write-in Eric Reed, citing concerns about both.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/dallas-county-district-attorney-givens-reed-22458435.php",
+    "date": "2026-10-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-sboe-9",
+    "status": "no_position",
+    "choice": null,
+    "why": "The board explicitly offered no recommendation, saying neither Huddleston nor Ledferd is the serious, outcome-focused member the board wants.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-state-board-education-huddleston-ledferd-22460108.php",
+    "date": "2026-10-03",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-24",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-30",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-32",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-us-house-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-senate-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-100",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-102",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-103",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-109",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-113",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-house-114",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-constable-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-dallas-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the board's We Recommend index as of Oct 17, 2026; the board was still publishing recommendations.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-30",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-32",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-us-house-33",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-sboe-9",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-sboe-13",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-sboe-14",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-senate-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-102",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-103",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-104",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-105",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-107",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-108",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-109",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-110",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-111",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-112",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-113",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-114",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-house-115",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-cda",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-county-judge",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-commissioner-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-1-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-2-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-4-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-5-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-jp-5-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-constable-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-constable-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-constable-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-constable-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-constable-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-5",
+    "status": "endorsed",
+    "choice": "Chelsey Hockett",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-6",
+    "status": "endorsed",
+    "choice": "Danny Minton",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-24",
+    "status": "endorsed",
+    "choice": "Kevin Burge",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-30",
+    "status": "endorsed",
+    "choice": "Frederick D. Haynes III",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-32",
+    "status": "endorsed",
+    "choice": "Dan Barrios",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-us-house-33",
+    "status": "endorsed",
+    "choice": "Colin Allred",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-sboe-9",
+    "status": "endorsed",
+    "choice": "Ericka Ledferd",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-sboe-13",
+    "status": "endorsed",
+    "choice": "Tiffany Clark",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-sboe-14",
+    "status": "endorsed",
+    "choice": "Amy Taylor",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-senate-2",
+    "status": "endorsed",
+    "choice": "Keenen Colbert",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-100",
+    "status": "endorsed",
+    "choice": "Venton Jones",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-102",
+    "status": "endorsed",
+    "choice": "Ana-Maria Rodriguez Ramos",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-103",
+    "status": "endorsed",
+    "choice": "Rafael Anchia",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-104",
+    "status": "endorsed",
+    "choice": "Jessica Gonzalez",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-105",
+    "status": "endorsed",
+    "choice": "Terry Meza",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-107",
+    "status": "endorsed",
+    "choice": "Linda Garcia",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-108",
+    "status": "endorsed",
+    "choice": "Allison Mitchell",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-109",
+    "status": "endorsed",
+    "choice": "Aicha Davis",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-110",
+    "status": "endorsed",
+    "choice": "Toni Rose",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-111",
+    "status": "endorsed",
+    "choice": "Yvonne Davis",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-112",
+    "status": "endorsed",
+    "choice": "Zach Herbert",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-113",
+    "status": "endorsed",
+    "choice": "Rhetta Andrews Bowers",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-114",
+    "status": "endorsed",
+    "choice": "John Bryant",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-house-115",
+    "status": "endorsed",
+    "choice": "Cassandra Hernandez",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Amanda Reichek",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Monica Purdy",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "endorsed",
+    "choice": "Andrea D. Plumlee",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "endorsed",
+    "choice": "Ashley Smith",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-cda",
+    "status": "endorsed",
+    "choice": "Amber Givens",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-county-judge",
+    "status": "endorsed",
+    "choice": "Clay Jenkins",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "endorsed",
+    "choice": "Felicia Pitre",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "endorsed",
+    "choice": "Damarcus L Offord",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-treasurer",
+    "status": "endorsed",
+    "choice": "Pauline Medrano",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "endorsed",
+    "choice": "Andy Sommerman",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-commissioner-4",
+    "status": "endorsed",
+    "choice": "Elba Garcia",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "endorsed",
+    "choice": "Thomas G. Jones",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-1-2",
+    "status": "endorsed",
+    "choice": "Valencia Nash",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "endorsed",
+    "choice": "Margaret O'Brien",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-2-2",
+    "status": "endorsed",
+    "choice": "Antoinette N Harris",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "endorsed",
+    "choice": "Adam M. Swartz",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "endorsed",
+    "choice": "Paula M Rosales",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "endorsed",
+    "choice": "Mike Jones",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-4-2",
+    "status": "endorsed",
+    "choice": "Sasha Moreno",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-5-1",
+    "status": "endorsed",
+    "choice": "Sara Martinez",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-jp-5-2",
+    "status": "endorsed",
+    "choice": "Omar Narvaez",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-constable-1",
+    "status": "endorsed",
+    "choice": "Tracey Gulley",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-constable-2",
+    "status": "endorsed",
+    "choice": "Deanna Hammond",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-constable-3",
+    "status": "endorsed",
+    "choice": "Henry Curry",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-constable-4",
+    "status": "endorsed",
+    "choice": "Eddie Brown, Jr",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-constable-5",
+    "status": "endorsed",
+    "choice": "Michael Orozco",
+    "why": "Listed on the party's \"Democrats on the ballot in November\" roster (its own nominee list, not a separate endorsement vote).",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Lance Gooden is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Jake Ellzey is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-24",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Beth Van Duyne is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-30",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Everett Jackson on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-32",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Jace Yarbrough on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-us-house-33",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Patrick David Gillespie on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-sboe-9",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Kason Huddleston on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-sboe-13",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Carlos (Charlie) Garza on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-sboe-14",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Mindy Bumgarner is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-senate-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Bob Hall on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Jordan Scott Hoffnagle on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-102",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Bonnie Abadie on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-103",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Melanie Medley-Thomas on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-104",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-105",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-107",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-108",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Morgan Meyer on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-109",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Will Campbell on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-110",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-111",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-112",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Angie Chen Button on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-113",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Stephen W. Stanley on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-114",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Tim McDonough on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-house-115",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Danny Rosellini on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Matthew Kolodoski is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Ben Smith is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Republican nominee Ashley Wysocki is not on the party's Meet the Candidates page, and no party slate was found.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Clark B. Will on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-cda",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-county-judge",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Mike Immler on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Dave Muehlhaeusler on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Skye Garcia on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Corsandra Brigham Phelps on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Barry Wernick on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-commissioner-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Lizbeth Diaz on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-1-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot. The party lists write-in candidate Jayla Godbolt on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Vickie Whiteside on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-2-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Lynn A. Benedetto on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Michael L. Geller on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Fred Van Liew on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-4-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-5-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-jp-5-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-constable-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-constable-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Lists Republican nominee Chad Calvert on its Meet the Candidates page, which says \"These are not endorsements.\"",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-constable-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-constable-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-constable-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-5",
+    "status": "endorsed",
+    "choice": "Chelsey Hockett",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-24",
+    "status": "endorsed",
+    "choice": "Kevin Burge",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-30",
+    "status": "endorsed",
+    "choice": "Frederick D. Haynes III",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-32",
+    "status": "endorsed",
+    "choice": "Dan Barrios",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-33",
+    "status": "endorsed",
+    "choice": "Colin Allred",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-sboe-9",
+    "status": "endorsed",
+    "choice": "Ericka Ledferd",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-sboe-13",
+    "status": "endorsed",
+    "choice": "Tiffany Clark",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-sboe-14",
+    "status": "endorsed",
+    "choice": "Amy Taylor",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-senate-2",
+    "status": "endorsed",
+    "choice": "Keenen Colbert",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-100",
+    "status": "endorsed",
+    "choice": "Venton Jones",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-102",
+    "status": "endorsed",
+    "choice": "Ana-Maria Rodriguez Ramos",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-103",
+    "status": "endorsed",
+    "choice": "Rafael Anchia",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-104",
+    "status": "endorsed",
+    "choice": "Jessica Gonzalez",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-105",
+    "status": "endorsed",
+    "choice": "Terry Meza",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-107",
+    "status": "endorsed",
+    "choice": "Linda Garcia",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-108",
+    "status": "endorsed",
+    "choice": "Allison Mitchell",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-109",
+    "status": "endorsed",
+    "choice": "Aicha Davis",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-110",
+    "status": "endorsed",
+    "choice": "Toni Rose",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-111",
+    "status": "endorsed",
+    "choice": "Yvonne Davis",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-112",
+    "status": "endorsed",
+    "choice": "Zach Herbert",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-113",
+    "status": "endorsed",
+    "choice": "Rhetta Andrews Bowers",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-114",
+    "status": "endorsed",
+    "choice": "John Bryant",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-house-115",
+    "status": "endorsed",
+    "choice": "Cassandra Hernandez",
+    "why": "On the Texas AFL-CIO COPE 2026 general election slate.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-us-house-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "texas-afl-cio",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the Texas AFL-CIO slate, which says an unlisted race means delegates made no recommendation.",
+    "url": "https://texasaflcio.org/news/2026-general-election-endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-constable-5",
+    "status": "endorsed",
+    "choice": "Michael Orozco",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "endorsed",
+    "choice": "Damarcus L Offord",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "endorsed",
+    "choice": "Paula M Rosales",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-4-2",
+    "status": "endorsed",
+    "choice": "Sasha Moreno",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-5-1",
+    "status": "endorsed",
+    "choice": "Sara Martinez",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-5-2",
+    "status": "endorsed",
+    "choice": "Omar Narvaez",
+    "why": "On the federation's 2026 local endorsement list for Dallas County.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-cda",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-county-judge",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-treasurer",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-commissioner-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-1-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-2-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-constable-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-constable-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-constable-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-constable-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-5",
+    "status": "endorsed",
+    "choice": "Chelsey Hockett",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-6",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-24",
+    "status": "endorsed",
+    "choice": "Kevin Burge",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-30",
+    "status": "endorsed",
+    "choice": "Frederick D. Haynes III",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-32",
+    "status": "endorsed",
+    "choice": "Dan Barrios",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-us-house-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-sboe-9",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-sboe-13",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-sboe-14",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-senate-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-100",
+    "status": "endorsed",
+    "choice": "Venton Jones",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-102",
+    "status": "endorsed",
+    "choice": "Ana-Maria Rodriguez Ramos",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-103",
+    "status": "endorsed",
+    "choice": "Rafael Anchia",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-104",
+    "status": "endorsed",
+    "choice": "Jessica Gonzalez",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-105",
+    "status": "endorsed",
+    "choice": "Terry Meza",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-107",
+    "status": "endorsed",
+    "choice": "Linda Garcia",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-108",
+    "status": "endorsed",
+    "choice": "Allison Mitchell",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-109",
+    "status": "endorsed",
+    "choice": "Aicha Davis",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-110",
+    "status": "endorsed",
+    "choice": "Toni Rose",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-111",
+    "status": "endorsed",
+    "choice": "Yvonne Davis",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-112",
+    "status": "endorsed",
+    "choice": "Zach Herbert",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-113",
+    "status": "endorsed",
+    "choice": "Rhetta Andrews Bowers",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-114",
+    "status": "endorsed",
+    "choice": "John Bryant",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-house-115",
+    "status": "endorsed",
+    "choice": "Cassandra Hernandez",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-5th-coa-place-3",
+    "status": "endorsed",
+    "choice": "Amanda Reichek",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-5th-coa-place-6",
+    "status": "endorsed",
+    "choice": "Monica Purdy",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-5th-coa-place-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "endorsed",
+    "choice": "Ashley Smith",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-cda",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-county-judge",
+    "status": "endorsed",
+    "choice": "Clay Jenkins",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "endorsed",
+    "choice": "Felicia Pitre",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "endorsed",
+    "choice": "Damarcus L Offord",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-treasurer",
+    "status": "endorsed",
+    "choice": "Pauline Medrano",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "endorsed",
+    "choice": "Andy Sommerman",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-commissioner-4",
+    "status": "endorsed",
+    "choice": "Elba Garcia",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-1-2",
+    "status": "endorsed",
+    "choice": "Valencia Nash",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-2-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the group's Nov 3, 2026 slate as shown by Blue Voter Guide; its own site was not checked.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "endorsed",
+    "choice": "Adam M. Swartz",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "endorsed",
+    "choice": "Paula M Rosales",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "endorsed",
+    "choice": "Mike Jones",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-4-2",
+    "status": "endorsed",
+    "choice": "Sasha Moreno",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-5-1",
+    "status": "endorsed",
+    "choice": "Sara Martinez",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-jp-5-2",
+    "status": "endorsed",
+    "choice": "Omar Narvaez",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-constable-1",
+    "status": "endorsed",
+    "choice": "Tracey Gulley",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-constable-2",
+    "status": "endorsed",
+    "choice": "Deanna Hammond",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-constable-3",
+    "status": "endorsed",
+    "choice": "Henry Curry",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-constable-4",
+    "status": "endorsed",
+    "choice": "Eddie Brown, Jr",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-constable-5",
+    "status": "endorsed",
+    "choice": "Michael Orozco",
+    "why": "Listed on Stonewall Democrats of Dallas's Nov 3, 2026 slate as mirrored by Blue Voter Guide (citing the group's Facebook posts).",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "FOX 4 reports the chamber supports Prop A, calling homelessness a community priority and an economic necessity; the chamber's own post makes the case for scaling the downtown model and notes it belongs to Safe in the City, which helped design it.",
+    "url": "https://www.dallaschamber.org/blog/2026-dallas-county-proposition-a/",
+    "date": "2026-10-09",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-dallas-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its Oct 9 post describes the five projects and repeats the city's no-rate-increase statement but states no position; it notes the chamber backed police academy funding in 2023, 2024 and 2025.",
+    "url": "https://www.dallaschamber.org/blog/2026-dallas-city-proposition-a/",
+    "date": "2026-10-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No post or position found.",
+    "url": "https://www.dallaschamber.org/drc-news/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-prop-a",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "FOX 4 reports DPA representatives joined Council Member Maxie Johnson's Oct. 15 news conference backing Prop A. A month earlier, DPA President Sean Pease had said he could not support it without clearer ballot language.",
+    "url": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond",
+    "date": "2026-10-15",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-county-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-mesquite-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-district-court-298th",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-county-judge",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-district-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-county-clerk",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-treasurer",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-commissioner-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-jp-1-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-jp-2-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-jp-3-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-jp-3-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-jp-4-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-constable-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-dallas-cda",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-dallas-uncontested-judges",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never supports or opposes candidates or parties; its guide prints the candidates' own answers.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-dallas-uncontested-judges",
+    "status": "endorsed",
+    "choice": "Vote for All",
+    "why": "The party's \"Democrats on the ballot in November\" roster lists all 53 judges in this box as its nominees. The page does not mention the box itself.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-dallas-uncontested-judges",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican is in this box.",
+    "url": "https://dallasgop.org/meet-the-candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-dallas-uncontested-judges",
+    "status": "no_position",
+    "choice": null,
+    "why": "Recommends 6 of the 53 judges by name (Erin Nowell, Tifanee Baker, Angela M King, Carrie Singleton, Alexandra Guio and Cheryl Williams) and makes no recommendation on the rest or on the box itself.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-dallas-uncontested-judges",
+    "status": "not_found",
+    "choice": null,
+    "why": "Its slate, as shown by Blue Voter Guide, lists 42 of the 53 judges by name but takes no position on the box itself.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board says $952 million is too much, too soon, and that academic gains should come first. It backs replacing Irving High School (Prop B) and urges a no vote on A, C and D.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/irving-isd-bond-election-taxes-22456658.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No post or position found.",
+    "url": "https://www.dallaschamber.org/drc-news/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-irving-isd-prop-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board says $952 million is too much, too soon, and that academic gains should come first. It backs replacing Irving High School (Prop B) and urges a no vote on A, C and D.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/irving-isd-bond-election-taxes-22456658.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No post or position found.",
+    "url": "https://www.dallaschamber.org/drc-news/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-irving-isd-prop-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board says $952 million is too much, too soon, and that academic gains should come first. It backs replacing Irving High School (Prop B) and urges a no vote on A, C and D.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/irving-isd-bond-election-taxes-22456658.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No post or position found.",
+    "url": "https://www.dallaschamber.org/drc-news/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-irving-isd-prop-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-morning-news-eb",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board says $952 million is too much, too soon, and that academic gains should come first. It backs replacing Irving High School (Prop B) and urges a no vote on A, C and D.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/irving-isd-bond-election-taxes-22456658.php",
+    "date": "2026-09-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-dallas",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League's guide lists reasons to vote for and against without recommending a vote.",
+    "url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-democrats",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's November page lists candidates only; no position on this measure was found.",
+    "url": "https://www.dallasdemocrats.org/elections/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-county-gop",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found on the party's site or in its press releases.",
+    "url": "https://dallasgop.org/category/press-release-statement/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "north-texas-area-labor-federation",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on its list; the federation says an unlisted race means delegates made no recommendation.",
+    "url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "date": "2026-09-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "stonewall-democrats-dallas",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure appears on the group's Nov 3, 2026 slate as shown by Blue Voter Guide.",
+    "url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "dallas-regional-chamber",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No post or position found.",
+    "url": "https://www.dallaschamber.org/drc-news/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "dallas-police-association",
+    "target_id": "tx-irving-isd-prop-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the association's website could not be reached.",
+    "url": null,
+    "date": null,
+    "confidence": "verified"
+  }
+]

@@ -1,0 +1,435 @@
+[
+  {
+    "id": "tx-san-antonio-prop-a",
+    "state": "TX",
+    "level": "city",
+    "jurisdiction": "City of San Antonio",
+    "number": "City of San Antonio Proposition A",
+    "official_title": "Pre K 4 SA sales & use tax 20 year reauthorization. \"Reauthorization of the Pre-K 4 SA Early Childhood Education Program and renewed adoption of a sales and use tax at the rate of one eighth of one percent for the purpose of continued financing of authorized programs of the San Antonio Early Childhood Education Municipal Development corporation for a maximum period of twenty (20) years following the expiration of the current reauthorization of the Pre-K 4 SA Program in 2029.\"",
+    "plain_summary": "Keeps the city's 1/8-cent sales tax that pays for Pre-K 4 SA, San Antonio's free preschool program, for up to 20 more years. The current approval runs out in 2029, so a yes would carry it to 2049. The tax rate does not change. Program staff say they would add toddler seats and care for families who work nights and weekends.",
+    "yes_means": "A YES vote keeps the 1/8-cent sales tax and Pre-K 4 SA funded from 2029 through 2049.",
+    "no_means": "A NO vote lets the tax and the program's funding end in mid-2029, unless the city brings a new plan to voters before then and they approve it.",
+    "current_law": "Voters created Pre-K 4 SA and its 1/8-cent sales tax in 2012 and renewed it in 2020 for eight years (73% voted yes). The current approval ends June 30, 2029, per the League of Women Voters guide.",
+    "fiscal_impact": "Keeps an existing sales and use tax of 0.125% (one-eighth of one percent) inside the city for 20 more years. No new tax and no rate change. Pre-K 4 SA's budget is about $62 million a year, a figure cited at a September council briefing and not disputed by the program's CEO (TPR and San Antonio Report). We did not find an official yearly revenue estimate for the tax.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "The ballot prints its heading in capitals. \"Renewed adoption\" of the tax means keeping a tax you already pay, not adding a new one. The 20 years start when the current approval ends in 2029, so a YES runs to 2049. The program keeps running until 2029 either way. Only people who live inside San Antonio city limits vote on this; a San Antonio mailing address in unincorporated Bexar County does not count.",
+    "supporters_case": {
+      "text": "Twenty years of funding allows long-term planning and expansion of child care and family services, at the same 1/8-cent rate as in 2012. Studies found Pre-K 4 SA graduates closed the kindergarten readiness gap and needed less remediation later (arguments for, as listed in the League guide).",
+      "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+    },
+    "opponents_case": {
+      "text": "Twenty years may not allow timely oversight of the program's money and results. A sales tax weighs more on low-income families. School districts already offer pre-K for 4-year-olds, and expansion beyond that could be left to private providers (arguments against, as listed in the League guide).",
+      "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+    },
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the City of San Antonio's 2026 PreK 4 SA reauthorization election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-prek-4-sa-reauthorization-vote/"
+      },
+      {
+        "source": "League of Women Voters of the San Antonio Area",
+        "title": "2026 Voters Guide (Proposition A explanation and arguments)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "source": "Texas Public Radio / San Antonio Report",
+        "title": "Pre-K 4 SA says it will increase toddler access, affordability if city funding reauthorized by voters",
+        "url": "https://www.tpr.org/education/2026-09-03/pre-k-4-sa-says-it-will-increase-toddler-access-affordability-if-city-funding-reauthorized-by-voters"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-saisd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "San Antonio ISD (central San Antonio)",
+    "number": "San Antonio ISD Proposition A",
+    "official_title": "This is a tax increase. \"Ratifying the ad valorem tax rate of $0.7869 per $100 valuation in San Antonio Independent School District for the current year, a rate that will result in an increase of 2.92% in maintenance and operations tax revenue for the District for the current year as compared to the preceding year, which is an additional $5,541,056.00.\"",
+    "plain_summary": "Asks SAISD voters to approve a higher tax rate for day-to-day school costs. The San Antonio Report says it is a 3.17-cent rise in the operating part of the rate, bringing in about $5.5 million more a year. The district says the money would pay for one-time staff bonuses, teacher pipeline programs and career and technical education.",
+    "yes_means": "A YES vote approves SAISD's $0.7869 operating rate, which the ballot says brings in $5.5 million more than last year.",
+    "no_means": "A NO vote lowers the rate to the highest one SAISD can set without an election, so it does not get the 3.17-cent increase.",
+    "current_law": "SAISD's board adopted this rate, but state law makes a rise this large go to voters. SAISD serves about 44,000 students and faces a $23 million deficit, per the San Antonio Report.",
+    "fiscal_impact": "An additional $5,541,056 a year in operating revenue, a 2.92% increase, per the ballot. If all four SAISD props pass, the San Antonio Report says the district's total rate would go from $1.1552 to $1.2469 per $100 by 2030, about $90 more a year on an average $240,000 home.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "\"Ratifying\" means approving a rate the board already set. State law makes every school tax rate election start with \"This is a tax increase.\" The 2.92% and $5,541,056 compare this year's operating money with last year's; they are not the change in your bill. The San Antonio Report's copy of this text misprints \"Ratifying\" as \"Fatiguing\" and the dollar figure; the official ballot wording is shown here. Prop A is separate from the three bond questions (B, C and D).",
+    "supporters_case": {
+      "text": "The district says the new money would fund one-time staff supplements, teacher pipeline initiatives and career and technical education.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 San Antonio ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-saisd-prop-b",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "San Antonio ISD (central San Antonio)",
+    "number": "San Antonio ISD Proposition B",
+    "official_title": "This is a property tax increase. \"The issuance of an amount not to exceed $492,000,000 school building bonds for the construction, renovation, acquisition, and equipment of school buildings in the District, the purchase of the necessary sites for school buildings, the purchase of new school buses and other new vehicles to be used for student transportation and the purchase or retrofitting of vehicles to be used for emergency, safety, or security purposes, and the levying and imposition of taxes sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements.\"",
+    "plain_summary": "Lets SAISD borrow up to $492 million for building repairs and upgrades, buses and safety vehicles, repaid with property taxes. The district lists new chillers and boilers, plumbing, roofs, security upgrades, school buses with three-point seat belts and renovated classrooms. It says most projects are not yet tied to specific campuses.",
+    "yes_means": "A YES vote lets SAISD borrow up to $492 million for buildings, buses and safety vehicles and raise property taxes to repay it.",
+    "no_means": "A NO vote means SAISD cannot borrow this money.",
+    "current_law": "SAISD's last tax measure was a $1.3 billion bond in 2020. That bond is under a forensic audit, with about $420 million unspent, per the Express-News editorial board.",
+    "fiscal_impact": "Up to $492 million in bonds plus interest. Props B, C and D together ($600 million) would raise SAISD's debt tax rate by 6 cents, phased in over three years, per the San Antonio Report.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase.\" Each bond prop (B, C, D) passes or fails on its own, and each is separate from the Prop A tax rate.",
+    "supporters_case": {
+      "text": "The district says the money would modernize schools and replace aging systems: chillers, bus fleets with three-point seat belts, police vehicles, safety and security upgrades and renovated classrooms.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+    },
+    "opponents_case": {
+      "text": "The Express-News board says voters should first get answers on the 2020 bond, now under a forensic audit, and that this package is too vague because most projects are not assigned to campuses.",
+      "source": "https://www.expressnews.com/opinion/editorial/article/san-antonio-isd-bond-package-22470519.php"
+    },
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 San Antonio ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-saisd-prop-c",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "San Antonio ISD (central San Antonio)",
+    "number": "San Antonio ISD Proposition C",
+    "official_title": "This is a property tax increase. \"The issuance of an amount not to exceed $102,000,000 school building bonds for the acquisition and update of technology equipment and the levying and imposition of taxes sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements.\"",
+    "plain_summary": "Lets SAISD borrow up to $102 million for technology, such as network equipment, cybersecurity and student and teacher devices, repaid with property taxes.",
+    "yes_means": "A YES vote lets SAISD borrow up to $102 million for technology and raise property taxes to repay it.",
+    "no_means": "A NO vote means SAISD cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $102 million in bonds plus interest. Part of the $600 million package (B, C and D) that would raise the debt tax rate 6 cents over three years if all pass, per the San Antonio Report.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "Texas puts technology bonds on their own line, separate from building bonds. \"This is a property tax increase\" is required wording on every school bond question.",
+    "supporters_case": {
+      "text": "The district says the money would pay for IT improvements such as network infrastructure and teaching and learning devices.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 San Antonio ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-saisd-prop-d",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "San Antonio ISD (central San Antonio)",
+    "number": "San Antonio ISD Proposition D",
+    "official_title": "This is a property tax increase. \"The issuance of an amount not to exceed $6,000,000 school building bonds for the construction, renovation, and equipment of Alamo Stadium and the Alamo Convocation Center, and the levying and imposition of taxes sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements.\"",
+    "plain_summary": "Lets SAISD borrow up to $6 million to renovate and equip Alamo Stadium and the Alamo Convocation Center on Tuleta Drive, repaid with property taxes.",
+    "yes_means": "A YES vote lets SAISD borrow up to $6 million for Alamo Stadium and the Convocation Center and raise property taxes to repay it.",
+    "no_means": "A NO vote means SAISD cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $6 million in bonds plus interest. Part of the $600 million package (B, C and D), per the San Antonio Report.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "Texas law puts stadium projects on their own ballot line. \"This is a property tax increase\" is required wording on every school bond question.",
+    "supporters_case": {
+      "text": "The district says the money would pay for improvements to its Alamo Stadium and Convocation Center.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+    },
+    "opponents_case": {
+      "text": "The Express-News board recommends against, saying it can back only items it is confident directly support students until questions about the 2020 bond are answered.",
+      "source": "https://www.expressnews.com/opinion/editorial/article/san-antonio-isd-bond-package-22470519.php"
+    },
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 San Antonio ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-nisd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Northside ISD (northwest and west Bexar County, including much of northwest and west San Antonio)",
+    "number": "Northside ISD Proposition A",
+    "official_title": "This is a tax increase. \"Ratifying the ad valorem tax rate of $1.0349 per $100 valuation in Northside Independent School District for the current year, a rate that will result in an increase of 4.49% in maintenance and operations tax revenue for the district for the current year as compared to the preceding year, which is an additional $21,533,914.\"",
+    "plain_summary": "Asks Northside ISD voters to approve a 3-cent rise in the tax rate for day-to-day school costs, from $1.0049 to $1.0349 per $100 of value. That brings in about $21.5 million more a year, which the district says would go mainly to raises for teachers and staff.",
+    "yes_means": "A YES vote approves Northside's 3-cent increase, to $1.0349, which the ballot says brings in $21.5 million more than last year.",
+    "no_means": "A NO vote lowers the rate to the highest one Northside can set without an election, so it does not get the 3-cent increase.",
+    "current_law": "Northside, the area's largest district with about 97,000 students, projected a deficit over $30 million for 2026-27, per the San Antonio Report.",
+    "fiscal_impact": "An additional $21,533,914 a year in operating revenue, a 4.49% increase, per the ballot. The district says that is roughly $30 more a year for every $100,000 of home value.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "\"Ratifying\" means approving a rate the board already set. \"This is a tax increase\" is required wording. The ballot's $21,533,914 compares this year's operating money with last year's. The Express-News editorial says district officials put the 3-cent increase at about $45.5 million; we could not confirm which figure a NO vote would cost. Prop A is separate from the three bond questions (B, C and D).",
+    "supporters_case": {
+      "text": "The district says the money would go mainly to pay raises for teachers and support staff, some of whom make less than $15 an hour.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": "https://www.nisd.net/community/bond/2026",
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 Northside ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-nisd-prop-b",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Northside ISD (northwest and west Bexar County, including much of northwest and west San Antonio)",
+    "number": "Northside ISD Proposition B",
+    "official_title": "This is a property tax increase. \"The issuance of not to exceed $764,745,000 of Northside Independent School District school building bonds for the purposes of designing, constructing, renovating, improving, upgrading, updating, acquiring, and equipping school facilities in the District, the purchase of the necessary sites for school facilities, the purchase of new buses and vehicles, and the retrofitting of buses and vehicles with emergency, safety, or security equipment, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the cost of any credit agreements.\"",
+    "plain_summary": "Lets Northside ISD borrow up to $764.7 million for renovations, roofs, air conditioning, new buses and safety upgrades, repaid with property taxes. Examples the district gives include secure lobbies at 22 middle and high schools, fencing, chiller replacements and new gyms, cafeterias and fine arts spaces.",
+    "yes_means": "A YES vote lets Northside borrow up to $764.7 million for buildings, buses and safety upgrades, repaid with property taxes.",
+    "no_means": "A NO vote means Northside cannot borrow this money.",
+    "current_law": "Northside voters last passed a bond in 2022 ($992 million), per the San Antonio Report.",
+    "fiscal_impact": "Up to $764,745,000 in bonds plus interest. Props B, C and D total about $886 million. The San Antonio Report says the district is not proposing any change to its debt (I&S) tax rate.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase,\" even though Northside says it does not plan to raise its debt tax rate for these bonds. Each bond prop passes or fails on its own.",
+    "supporters_case": {
+      "text": "The district says the bonds would pay for building renovations, roofing, new school buses, safety and security upgrades and HVAC replacements.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": "https://www.nisd.net/community/bond/2026",
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 Northside ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-nisd-prop-c",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Northside ISD (northwest and west Bexar County, including much of northwest and west San Antonio)",
+    "number": "Northside ISD Proposition C",
+    "official_title": "This is a property tax increase. \"The issuance of not to exceed $56,000,000 of Northside Independent School District school building bonds for the purposes of acquiring and updating instructional technology equipment and the levying of a tax sufficient to pay the principal of and interest on the bonds and the cost of any credit agreements.\"",
+    "plain_summary": "Lets Northside ISD borrow up to $56 million to replace classroom technology for students and teachers, repaid with property taxes.",
+    "yes_means": "A YES vote lets Northside borrow up to $56 million for classroom technology, repaid with property taxes.",
+    "no_means": "A NO vote means Northside cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $56 million in bonds plus interest. The San Antonio Report says the district is not proposing a change to its debt tax rate.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "\"This is a property tax increase\" is required wording on every school bond question. Technology bonds go on their own line.",
+    "supporters_case": {
+      "text": "The district says the money would replace classroom technology.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": "https://www.nisd.net/community/bond/2026",
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 Northside ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-nisd-prop-d",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Northside ISD (northwest and west Bexar County, including much of northwest and west San Antonio)",
+    "number": "Northside ISD Proposition D",
+    "official_title": "This is a property tax increase. \"The issuance of not to exceed $65,500,000 of Northside Independent School District school building bonds for the purposes of designing, constructing, renovating, improving, upgrading, updating, expanding, replacing, acquiring, and equipping natatoriums in the District (and any necessary or related removal of existing facilities), including replacing the George Block Aquatics Center, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the cost of any credit agreements.\"",
+    "plain_summary": "Lets Northside ISD borrow up to $65.5 million for indoor pools (\"natatoriums\"), including replacing the George Block Aquatics Center, repaid with property taxes. The Express-News says the center is nearly 50 years old and its roof no longer opens and closes.",
+    "yes_means": "A YES vote lets Northside borrow up to $65.5 million to replace and renovate its pool facilities, repaid with property taxes.",
+    "no_means": "A NO vote means Northside cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $65.5 million in bonds plus interest. The San Antonio Report says the district is not proposing a change to its debt tax rate.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "A natatorium is an indoor swimming facility. Texas law puts pool projects on their own ballot line. \"This is a property tax increase\" is required wording.",
+    "supporters_case": {
+      "text": "The district says the money would replace and renovate the George Block Aquatics Center.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": "https://www.nisd.net/community/bond/2026",
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 Northside ISD bond and VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-southsan-isd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "South San Antonio ISD (part of south San Antonio)",
+    "number": "South San Antonio ISD Proposition A",
+    "official_title": "This is a tax increase. \"Ratifying the ad valorem tax rate of 1.1970 for $100 valuation in South San Antonio Independent School District for the current year, a rate that will result in an increase of 14.8 percent in maintenance and operations tax revenue for the district for the current year as compared to the preceding year, which is additional $2,564,791.\"",
+    "plain_summary": "Asks South San ISD voters to approve a 7-cent rise in the tax rate for day-to-day costs, part of it shifted over from the debt side of the rate. The district says the money would pay for urgent roof repairs and 5% raises for aides and paraprofessionals.",
+    "yes_means": "A YES vote approves South San's $1.1970 rate, which the ballot says brings in $2.6 million more for operations than last year.",
+    "no_means": "A NO vote lowers the rate to the highest one South San can set without an election, so it does not get the 7-cent operating increase.",
+    "current_law": "South San ISD is run by a state-appointed board of managers and superintendent, per the San Antonio Report.",
+    "fiscal_impact": "An additional $2,564,791 a year in operating revenue, a 14.8% increase, per the official ballot. The San Antonio Report printed different figures (11.44%, $2,776,267, and \"$2.7 million\"); the ballot wording is what you will see.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "The ballot must say \"This is a tax increase,\" but the Express-News editorial board says the total rate stays at $1.197 per $100: the vote shifts part of the rate from paying debt to day-to-day operations. \"Ratifying\" means approving a rate the board already set. The ballot prints this question in capitals.",
+    "supporters_case": {
+      "text": "District officials say the money would pay for urgent roof repairs and 5% raises for paraprofessionals and teaching aides, many of whom make less than $15 an hour.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-south-san-vatre-election/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding South San Antonio ISD's 2026 VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-south-san-vatre-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-ecisd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "East Central ISD (southeast Bexar County, including part of east and southeast San Antonio)",
+    "number": "East Central ISD Proposition A",
+    "official_title": "Proposition A: This is a property tax increase. \"Ratifying the ad valorem tax rate of $0.9320 per $100 valuation in the East Central Independent School District for the current year, a rate that will result in an increase of 8.98 percent in maintenance and operations tax revenue for the District for the current year as compared to the preceding year, which is an additional $8,470,660.\"",
+    "plain_summary": "Asks East Central ISD voters to approve a 3.72-cent rise in the operating part of the tax rate, worth about $8.47 million a year. The board cut the debt part by 3.71 cents, so the total rate goes from $0.9319 to $0.9320 per $100. The district says it would keep up with inflation, keep its performance pay plan, hire armed security officers and hire teachers to hold class sizes down.",
+    "yes_means": "A YES vote approves East Central's $0.9320 rate, which the ballot says brings in $8.5 million more for operations than last year.",
+    "no_means": "A NO vote lowers the operating rate to the highest one East Central can set without an election, so it does not get the 3.72-cent increase.",
+    "current_law": "East Central is growing (about 11,500 students last year) and projected a $7.5 million deficit for 2026-27, per the San Antonio Report.",
+    "fiscal_impact": "An additional $8,470,660 a year in operating revenue, an 8.98% increase, per the ballot. The San Antonio Report says the total rate rises by one hundredth of a cent, less than $1 a year for the average homeowner.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires tax-increase wording at the top, and this ballot says \"This is a property tax increase,\" but the total rate barely moves ($0.9319 to $0.9320) because the debt part was cut almost as much as the operating part rises. What changes is how much the district can spend on daily costs.",
+    "supporters_case": {
+      "text": "District officials say the money would help keep up with inflation, maintain performance-based pay, hire armed security officers and keep class sizes down.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-ecisd-vatre-election/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding East Central ISD's 2026 VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-ecisd-vatre-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-scucisd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Schertz-Cibolo-Universal City ISD (far northeast Bexar County and Guadalupe County, mostly outside San Antonio)",
+    "number": "Schertz-Cibolo-Universal City ISD Proposition A",
+    "official_title": "Proposition A: This is a tax increase. \"Ratifying the ad valorem tax rate of $1.1969 per $100 valuation in the Schertz-Cibolo-Universal City Independent School District for the current year, a rate that will result in an increase of 18 percent in maintenance and operations tax revenue for the District for the current year as compared to the preceding year, which is an additional $8,256,727 for the purpose of recruiting and retaining staff and maintaining program offerings for students.\"",
+    "plain_summary": "Asks SCUCISD voters to approve a 12-cent rise in the tax rate for day-to-day costs, from $1.0769 to $1.1969 per $100. The district says the money would go to staff pay and retention and to programs like fine arts, career and technical education and athletics.",
+    "yes_means": "A YES vote approves SCUCISD's 12-cent increase, to $1.1969, for staff pay and student programs.",
+    "no_means": "A NO vote lowers the rate to the highest one SCUCISD can set without an election, so it does not get the 12-cent increase.",
+    "current_law": "Voters rejected a smaller (6-cent) tax rate election for this district last year. It faces a $14 million deficit, per the San Antonio Report.",
+    "fiscal_impact": "An additional $8,256,727 in operating revenue, an 18% increase, per the ballot. The San Antonio Report estimates about $216 more a year on an average $317,335 home after homestead exemptions, and says the 12 cents could raise about $15 million a year; the ballot's $8,256,727 compares this year's operating money with last year's.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "\"Ratifying\" means approving a rate the board already set. Census maps show only a sliver of the City of San Antonio (about 0.3 square kilometers) inside this district, so very few San Antonio voters, if any, will see this. Check your sample ballot.",
+    "supporters_case": {
+      "text": "District officials say the money would go toward employee pay, staff retention and student programs like fine arts, career and technical education and athletics.",
+      "source": "https://sanantonioreport.org/voter-guide-2026-scucisd-vatre-election/"
+    },
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "San Antonio Report",
+        "title": "Voter Guide: Understanding the 2026 Schertz-Cibolo-Universal City ISD VATRE election",
+        "url": "https://sanantonioreport.org/voter-guide-2026-scucisd-vatre-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-comal-isd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Comal ISD (mostly Comal County; reaches a small part of far north Bexar County)",
+    "number": "Comal ISD Proposition A",
+    "official_title": "This is a property tax increase. \"The issuance of bonds in an amount not to exceed $539,955,000 by the Comal Independent School District for the design, construction, rehabilitation, renovation, expansion, improvement, acquisition, and equipment of school facilities, the necessary sites for school facilities, and the purchase of school buses and vehicles, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the cost of any credit agreements executed in connection with the bonds.\"",
+    "plain_summary": "Lets Comal ISD borrow up to $540 million to build, renovate and equip schools, buy land for schools, and buy buses and vehicles, repaid with property taxes.",
+    "yes_means": "A YES vote lets Comal ISD borrow up to $540 million for schools and buses, repaid with property taxes.",
+    "no_means": "A NO vote means Comal ISD cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $539,955,000 in bonds plus interest, per the ballot. We did not find the district's tax-rate estimate.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "Most of Comal ISD is in Comal County; only voters in its small Bexar County part see this on a Bexar ballot. Census maps show about 2.8 square kilometers of the City of San Antonio, at its far north edge, inside Comal ISD. \"This is a property tax increase\" is required wording on every school bond question.",
+    "supporters_case": null,
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-comal-isd-prop-b",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Comal ISD (mostly Comal County; reaches a small part of far north Bexar County)",
+    "number": "Comal ISD Proposition B",
+    "official_title": "This is a property tax increase. \"The issuance of bonds in an amount not to exceed $27,045,000 by the Comal Independent School District for the acquisition, improvement, and updates of technology equipment, systems, and infrastructure (including new classroom computers and devices), and the levying of a tax sufficient to pay the principal of and interest on the bonds and the cost of any credit agreements executed in connection with the bonds.\"",
+    "plain_summary": "Lets Comal ISD borrow up to $27 million for technology, including new classroom computers and devices, repaid with property taxes.",
+    "yes_means": "A YES vote lets Comal ISD borrow up to $27 million for technology, repaid with property taxes.",
+    "no_means": "A NO vote means Comal ISD cannot borrow this money.",
+    "current_law": null,
+    "fiscal_impact": "Up to $27,045,000 in bonds plus interest, per the ballot.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "Only voters in Comal ISD's small Bexar County part see this on a Bexar ballot. Census maps show about 2.8 square kilometers of the City of San Antonio, at its far north edge, inside Comal ISD. Technology bonds go on their own line.",
+    "supporters_case": null,
+    "opponents_case": null,
+    "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
+    "official_guide_url": null,
+    "confidence": "verified"
+  }
+]

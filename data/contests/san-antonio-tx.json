@@ -1,0 +1,3970 @@
+[
+  {
+    "id": "tx-us-house-20",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-20",
+    "scope_plain": "Voters in Congressional District 20 (part of San Antonio)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Rep. Joaquin Castro has held the seat since 2013. The district voted for Kamala Harris by 16 points in 2024, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Joaquin Castro",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Edgardo Rafael Baez",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://drbaezforcongress.com",
+        "website_confidence": "verified",
+        "background": "Army veteran (combat medic, paratrooper, drill sergeant) and former ICU nurse; has practiced law in Texas for over 20 years. Has also been a pastor.",
+        "own_words": [
+          {
+            "text": "Lists working-family economic opportunity, public safety, and schools that teach basic skills as his top three priorities.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "I would treat cost of living as a production problem, not a press-release problem.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants merit-based legal immigration \"that puts American first, not open borders.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Joaquin Castro",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://castroforcongress.com/",
+        "website_confidence": "verified",
+        "background": "U.S. representative for San Antonio since 2013; now in his eighth term.",
+        "own_words": [
+          {
+            "text": "Every American should be able to receive the care they need without fear of financial ruin.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants to protect the Affordable Care Act, extend health insurance tax credits and expand Medicaid in Texas.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "I support comprehensive immigration reform that balances fairness and security and reflects our values.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: profile of Edgardo Baez (TX-20)",
+        "url": "https://sanantonioreport.org/congressional-district-20-midterm-election-edgardo-baez-profile/"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-23",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-23",
+    "scope_plain": "Voters in Congressional District 23 (Northwest San Antonio west to El Paso, 27 counties)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Open seat: Rep. Tony Gonzales (R) resigned in April. National Democrats are spending here even though the district voted for Trump by nearly 15 points in 2024, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Vacant (Tony Gonzales resigned)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brandon Herrera",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://brandonherreraforcongress.com",
+        "website_confidence": "verified",
+        "background": "Gun manufacturer, Second Amendment activist and YouTube creator (\"the AK Guy\"). Grew up in a military family in North Carolina and moved to Texas in 2020.",
+        "own_words": [
+          {
+            "text": "Pledges no new taxes, to cut waste and to back the REINS Act, which would give Congress a vote on major federal rules.",
+            "is_quote": false,
+            "source": "https://brandonherreraforcongress.com"
+          },
+          {
+            "text": "Fighting for national concealed carry reciprocity",
+            "is_quote": true,
+            "source": "https://brandonherreraforcongress.com"
+          },
+          {
+            "text": "In the race's one debate, called veteran suicide an \"epidemic\" and said he would expand Tricare and VA Community Care.",
+            "is_quote": false,
+            "source": "https://sanantonioreport.org/congressional-district-23-midterm-election-brandon-herrera-profile/"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Katy Padilla Stout",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.katyforcongress.com/",
+        "website_confidence": "verified",
+        "background": "Former public school teacher, now a child welfare and education lawyer. On the Bexar County Child Welfare Board since 2017.",
+        "own_words": [
+          {
+            "text": "Top priorities: lowering costs for working families, affordable health care and investing in public education.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Health care is a human right.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Backs comprehensive immigration reform with a path to citizenship: \"Security and humanity are not opposites.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Ben Mendoza",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: profile of Brandon Herrera (TX-23)",
+        "url": "https://sanantonioreport.org/congressional-district-23-midterm-election-brandon-herrera-profile/"
+      },
+      {
+        "name": "San Antonio Report: Democrats target TX-23 and TX-35",
+        "url": "https://sanantonioreport.org/house-majority-san-antonio-congressional-races-tx23-tx35/"
+      },
+      {
+        "name": "Brandon Herrera campaign site",
+        "url": "https://brandonherreraforcongress.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-35",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-35",
+    "scope_plain": "Voters in Congressional District 35 (San Antonio's South and Southeast sides, east to Seguin and Karnes City)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Redrawn in 2025 into a new seat Trump would have carried by more than 10 points. Neither nominee is an incumbent, and national Democrats are spending here, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Carlos De La Cruz",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://carlosforcongress.com",
+        "website_confidence": "verified",
+        "background": "Served 20 years in the U.S. Air Force, including at Lackland and a Middle East deployment; business owner, per his campaign.",
+        "own_words": [
+          {
+            "text": "His campaign says he will fight corruption and hold Washington accountable.",
+            "is_quote": false,
+            "source": "https://carlosforcongress.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Johnny C. Garcia",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.votejohnnygarcia.com/",
+        "website_confidence": "verified",
+        "background": "Bexar County sheriff's deputy for nearly 20 years, including as a SWAT hostage negotiator. Lifelong San Antonian and a renter.",
+        "own_words": [
+          {
+            "text": "Top priorities: making life more affordable, cheaper health care and securing the border.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Has pledged to ban members of Congress from trading stocks.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports \"a bipartisan approach to comprehensive immigration reform that includes border security and enforcement.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: Democrats target TX-23 and TX-35",
+        "url": "https://sanantonioreport.org/house-majority-san-antonio-congressional-races-tx23-tx35/"
+      },
+      {
+        "name": "Carlos De La Cruz campaign site",
+        "url": "https://carlosforcongress.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-senate-19",
+    "state": "TX",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-19",
+    "scope_plain": "Voters in Texas Senate District 19 (part of San Antonio, west to Uvalde)",
+    "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Sen. Roland Gutierrez, first elected in 2020, faces a Republican small-business owner.",
+    "vote_for": 1,
+    "incumbent": "Roland Gutierrez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marcus Cardenas",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.marcusfortexas.com/",
+        "website_confidence": "verified",
+        "background": "Small-business owner for more than 15 years; calls himself a blue-collar worker.",
+        "own_words": [
+          {
+            "text": "Priorities: \"Economic Opportunity, Education, Public Safety.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Absolutely in favor of having to provide proof of identity.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Fix the major issue of leaking pipes, that's the biggest waste.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Roland Gutierrez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://rolandfortexas.com/",
+        "website_confidence": "verified",
+        "background": "Attorney; state senator first elected in 2020. His district runs from San Antonio to Uvalde.",
+        "own_words": [
+          {
+            "text": "Campaign site: \"Fighting for working families, gun violence prevention, education, and healthcare from San Antonio to Uvalde.\"",
+            "is_quote": false,
+            "source": "https://rolandfortexas.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "Roland Gutierrez campaign site",
+        "url": "https://rolandfortexas.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-senate-26",
+    "state": "TX",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-26",
+    "scope_plain": "Voters in Texas Senate District 26 (part of San Antonio)",
+    "office_explainer": "One of 31 state senators: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "No Republican is running; the incumbent Democrat faces a Green Party candidate.",
+    "vote_for": 1,
+    "incumbent": "Jose Menendez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jose Menendez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent state senator (per the San Antonio AFL-CIO). Did not answer the League questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Julián Villarreal",
+        "party": "Green",
+        "incumbent": false,
+        "website": "https://www.julianfortxsenate.org/",
+        "website_confidence": "verified",
+        "background": "Engineer, researcher and university lecturer with an MIT bachelor's and a UT Austin PhD in materials science; Bexar County election judge for 10 years.",
+        "own_words": [
+          {
+            "text": "I support a statewide moratorium on data centers and ending tax breaks for data centers.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Voting by mail should be an option for all voters.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants automatic and Election Day voter registration.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio AFL-CIO 2026 endorsements (marks incumbents)",
+        "url": "https://texasaflcio.org/sanantonio/news/san-antonio-afl-cio-2026-general-election-endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-116",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-116",
+    "scope_plain": "Voters in Texas House District 116 (part of San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Trey Martinez Fischer is finishing his 12th term.",
+    "vote_for": 1,
+    "incumbent": "Trey Martinez Fischer",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rhett Rosenquest Smith",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.vote4rhett.org/",
+        "website_confidence": "verified",
+        "background": "Political strategist and former State Board of Education candidate; UT Austin graduate (1973).",
+        "own_words": [
+          {
+            "text": "Top priority: property tax reform.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports religious freedom \"but within the limits of a Christian based code of law in Texas.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Backs requiring an ID or Social Security number on mail ballots.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Trey Martinez Fischer",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://treymartinezfischer.com/",
+        "website_confidence": "verified",
+        "background": "State representative for almost 25 years; UTSA graduate who grew up in San Antonio.",
+        "own_words": [
+          {
+            "text": "Says big corporations, not Texans, should pay for the water and energy their data centers use.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "I trust our teachers, librarians, and support staff to educate our kids more than I trust anyone at the Capitol.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Opposes requiring proof of citizenship to register or vote, calling it voter suppression.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-117",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-117",
+    "scope_plain": "Voters in Texas House District 117 (part of San Antonio, over the Edwards Aquifer)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Philip Cortez, a former city councilman, faces a Republican combat veteran.",
+    "vote_for": 1,
+    "incumbent": "Philip Cortez",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ben Mostyn",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://mostynfortexas.com/",
+        "website_confidence": "verified",
+        "background": "Combat veteran with a master's in international security; Defense Department certified master instructor.",
+        "own_words": [
+          {
+            "text": "My #1 Priority is Education.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports requiring documentary proof of citizenship and photo ID to vote.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants desalination plants for brackish groundwater, starting on state-owned land.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Philip Cortez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://philipcortez.com/",
+        "website_confidence": "sourced",
+        "background": "State representative, first elected in 2012; San Antonio City Council, District 4, 2007 to 2011.",
+        "own_words": [
+          {
+            "text": "Expects education, elections and data center growth to dominate the next session.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "School district policies are best kept at the local level.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Opposes a proof-of-citizenship requirement to vote.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-118",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-118",
+    "scope_plain": "Voters in Texas House District 118 (wraps around San Antonio's South Side)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Open seat: Rep. John Lujan (R) left to run for Congress. One of the state's few swing House districts, and a Democratic target, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "John Lujan (not on ballot)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jorge Borrego",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://jorgefortexas.com",
+        "website_confidence": "verified",
+        "background": "First-time candidate and small-business owner; first in his family to graduate from college, per his campaign.",
+        "own_words": [
+          {
+            "text": "Fighting to lower costs, cut property taxes, keep violent criminals off our streets, and protect kids from fentanyl.",
+            "is_quote": true,
+            "source": "https://jorgefortexas.com"
+          },
+          {
+            "text": "Raise pay for public school librarians, counselors, nurses, and teachers.",
+            "is_quote": true,
+            "source": "https://jorgefortexas.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Kristian Carranza",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://kristianfortexas.com/",
+        "website_confidence": "sourced",
+        "background": "Community organizer who helped families sign up for health insurance; 2024 Democratic nominee here.",
+        "own_words": [
+          {
+            "text": "Priorities: lowering costs, restoring trust in state government and \"protecting public education from voucher schemes.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports expanding mail-in voting to all eligible Texans who want it.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants to stop \"reckless promises to data centers\" and invest in water conservation.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "San Antonio Report: HD-118 and HD-121 races",
+        "url": "https://sanantonioreport.org/national-democrats-target-state-legislative-races-in-san-antonio-hd118-hd121/"
+      },
+      {
+        "name": "Jorge Borrego campaign site",
+        "url": "https://jorgefortexas.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-119",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-119",
+    "scope_plain": "Voters in Texas House District 119 (South Side of San Antonio, looping northeast to China Grove, Converse and Live Oak)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Liz Campos (D) faces a Republican challenger who did not answer the League questionnaire.",
+    "vote_for": 1,
+    "incumbent": "Elizabeth \"Liz\" Campos",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melva Perez",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://melvafortexas.com",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Elizabeth \"Liz\" Campos",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.lizcampos.com/",
+        "website_confidence": "verified",
+        "background": "State representative; named \"Freshman of the Year\" in her first term. Lifelong resident of the district.",
+        "own_words": [
+          {
+            "text": "I'll pursue lower property taxes, affordable healthcare, and fully funded public schools.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants online mail-ballot requests and no yearly reapplication for voters 65 and older.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Opposes a proof-of-citizenship requirement, saying it would keep millions of citizens from voting.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-120",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-120",
+    "scope_plain": "Voters in Texas House District 120 (part of San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Barbara Gervin-Hawkins",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Barbara Gervin-Hawkins",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.barbaragervin.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-121",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-121",
+    "scope_plain": "Voters in Texas House District 121 (north from Alamo Heights toward Bulverde)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Marc LaHood (R), seeking a second term, faces a Democratic prosecutor. He won by more than 5 points in 2024, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Marc Lahood",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marc Lahood",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://marclahood.com",
+        "website_confidence": "verified",
+        "background": "First-term state representative. His campaign spells the name LaHood; the ballot prints it as Lahood.",
+        "own_words": [
+          {
+            "text": "I believe the American Dream should be something our kids can own",
+            "is_quote": true,
+            "source": "https://marclahood.com"
+          },
+          {
+            "text": "Says he worked with House Republicans to invest in the Texas State Guard and mental health help for veterans.",
+            "is_quote": false,
+            "source": "https://marclahood.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Zack Dunn",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://zackdunn.com/",
+        "website_confidence": "verified",
+        "background": "Special Victims Unit prosecutor in the Bexar County District Attorney's Office for nearly four years; son of two military veterans.",
+        "own_words": [
+          {
+            "text": "Biggest issues: veteran support, economic security and affordability, community safety and public education.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Elected school boards are in the best position to determine the policies needed to educate students.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants automatic voter registration and Election Day as a state holiday.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "San Antonio Report: HD-118 and HD-121 races",
+        "url": "https://sanantonioreport.org/national-democrats-target-state-legislative-races-in-san-antonio-hd118-hd121/"
+      },
+      {
+        "name": "Marc LaHood campaign site",
+        "url": "https://marclahood.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-122",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-122",
+    "scope_plain": "Voters in Texas House District 122 (part of San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Mark Dorazio (R) faces a Democratic physician.",
+    "vote_for": 1,
+    "incumbent": "Mark Dorazio",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Dorazio",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://markdorazio.com",
+        "website_confidence": "verified",
+        "background": "State representative and general contractor.",
+        "own_words": [
+          {
+            "text": "His campaign calls him a grassroots conservative who represents the people, not special interests.",
+            "is_quote": false,
+            "source": "https://markdorazio.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Shelly Nickels",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://shellynickels.com/",
+        "website_confidence": "verified",
+        "background": "Board-certified internal medicine physician with a master's in health care administration.",
+        "own_words": [
+          {
+            "text": "Priorities: health care including protecting IVF, data centers' effect on water and the grid, and opposing private school vouchers.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Anyone should be allowed to vote by mail for any reason.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "We should NOT be mandating the Ten Commandments or other religious teachings in public schools.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "Mark Dorazio campaign site",
+        "url": "https://markdorazio.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-123",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-123",
+    "scope_plain": "Voters in Texas House District 123 (part of San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Diego Bernal",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Diego Bernal",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-124",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-124",
+    "scope_plain": "Voters in Texas House District 124 (parts of the West and Southwest sides, including JBSA-Lackland and Port San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Rep. Josey Garcia (D), the first female active-duty veteran elected to the Texas House, faces a Republican teacher and business owner. L.D. Howard is a declared write-in candidate: the name is not printed, so you would write it in.",
+    "vote_for": 1,
+    "incumbent": "Josey Garcia",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sylvia Soto",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Bilingual math and science teacher and small-business owner; daughter of Mexican immigrants; Bexar County election judge for over a decade.",
+        "own_words": [
+          {
+            "text": "I support eliminating property taxes for seniors 62+ so they can remain in their homes with dignity.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Top priorities: affordability, education and public safety.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants data centers to reuse treated water instead of drinking water when possible.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Josey Garcia",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.joseygarcia.com/",
+        "website_confidence": "verified",
+        "background": "Retired military; state representative for two sessions.",
+        "own_words": [
+          {
+            "text": "Says she has spent two sessions fighting for veterans, working families and Texans who have been overlooked.",
+            "is_quote": false,
+            "source": "https://www.joseygarcia.com"
+          }
+        ],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "L.D. Howard",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate (Texas Secretary of State): the name is not printed; you would write it in. We found no other information.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      },
+      {
+        "name": "Josey Garcia campaign site",
+        "url": "https://www.joseygarcia.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-125",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-125",
+    "scope_plain": "Voters in Texas House District 125 (part of San Antonio)",
+    "office_explainer": "One of 150 state representatives: writes and votes on Texas laws and the state budget.",
+    "why_it_matters": "Open seat: neither candidate is the incumbent.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ricardo \"Rick\" Martinez",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.voterickfortexas.com/",
+        "website_confidence": "verified",
+        "background": "Entrepreneur, business executive and philanthropist.",
+        "own_words": [
+          {
+            "text": "Biggest issues: property-tax relief, managing growth and infrastructure, and education and workforce readiness.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports mail voting for those who need it, with stronger ID and chain-of-custody checks.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Texas must protect existing resources like the Edwards Aquifer.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Adrian Reyna",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://voteadrianreyna.com/",
+        "website_confidence": "sourced",
+        "background": "Former SAISD history teacher and legislative aide; former executive vice president of his teachers union.",
+        "own_words": [
+          {
+            "text": "The legislature sets the 'what,' and the districts determine the 'how.'",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Priorities: fully funded public schools without taxing people out of their homes, affordable health care, and help for working families.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Water is not a commodity; it is essential.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-4th-coa-chief",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Chief Justice, 4th Court of Appeals",
+    "district": "4th Court of Appeals District",
+    "scope_plain": "Every Bexar County voter (the 4th Court of Appeals covers Bexar and other South Texas counties)",
+    "office_explainer": "Leads the regional appeals court that reviews trial-court rulings from Bexar and nearby counties.",
+    "why_it_matters": "Neither candidate now sits on this court: Richardson is a judge on the Texas Court of Criminal Appeals, and Arteaga is a longtime Bexar County trial judge.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bert Richardson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electjudgerichardson.com/",
+        "website_confidence": "verified",
+        "background": "Judge on the Texas Court of Criminal Appeals since 2015; longtime state district judge; former assistant district attorney and assistant U.S. attorney.",
+        "own_words": [
+          {
+            "text": "I believe judges should follow the constitution and apply the law according to its original meaning.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Says cost is the biggest barrier to court; favors paying appointed lawyers or public defender offices.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Antonia \"Toni\" Arteaga",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://judgearteaga.com/",
+        "website_confidence": "sourced",
+        "background": "More than 20 years as a judge; past president of the Texas Association of District Judges. Calls herself the most senior judge at the Bexar County Courthouse.",
+        "own_words": [
+          {
+            "text": "Judges must apply the law as written.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Consistency and precedent are invaluable in the rule of law.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-45th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "45th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Mary Lou Alvarez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mary Lou Alvarez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.judgealvarez.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-144th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "144th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael De Leon",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://judgedeleon.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-150th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "150th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Monique Diaz",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Monique Diaz",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgemoniquediaz.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-186th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "186th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Kristina Escalona",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kristina Escalona",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.escalonaforjudge.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-187th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "187th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stephanie Franco",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://stephaniefrancoforjudge.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-224th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "224th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Marisa Flores",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Marisa Flores",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.marisaforjudge.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-225th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "225th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "The only contested district court race on the Bexar ballot. The candidates disagree on how Bexar's civil courts should share cases.",
+    "vote_for": 1,
+    "incumbent": "Christine Vasquez Hortick",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Benjamin Robertson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.votebenrobertson.com/",
+        "website_confidence": "verified",
+        "background": "District judge since September 2024; earlier worked for a justice on the 4th Court of Appeals and as a commercial and energy litigator.",
+        "own_words": [
+          {
+            "text": "Says he cleared the backlog at his current court by showing up daily, setting cases promptly and ruling quickly.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Would return the 225th to the shared \"presiding\" docket system and push reforms from within it.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Christine Vasquez Hortick",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://votechristine.com/",
+        "website_confidence": "sourced",
+        "background": "Judge of the 225th since 2022; before that, 17 years as a solo lawyer and mediator in family, probate, civil and criminal cases.",
+        "own_words": [
+          {
+            "text": "Wants judges to set cases themselves and require scheduling orders so cases move on time.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Favors each judge keeping an individual docket, which she says \"would provide for continuity and consistent rulings.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Republican Party of Bexar County: 2026 general election candidates",
+        "url": "https://bexargop.org/our-county-party/republican-candidates-in-general-election-and-bexar-county-texas/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Express-News Editorial Board: 2026 recommendations (marks incumbents)",
+        "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-226th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "226th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Anastacia \"Ana\" Ochoa Nelson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://anaochoanelson.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-227th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "227th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Christine Del Prado",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Christine Del Prado",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://christinedelprado.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-285th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "285th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Nadine Melissa Nieto",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nadine Melissa Nieto",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgenadinenieto.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-288th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Civil District Judge",
+    "district": "288th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for lawsuits, family cases like divorce and custody, and land disputes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Cynthia Marie Chapa",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cynthia Marie Chapa",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgecynthiachapa.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-289th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "289th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A state trial judge in Bexar County.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Rose Sosa",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rose Sosa",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-290th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "290th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Jennifer Pena",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jennifer Pena",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-436th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "436th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A state trial judge in Bexar County.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Raymond A. Villareal",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-court-437th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Criminal District Judge",
+    "district": "437th Judicial District",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "A trial judge for felony criminal cases, the most serious crimes.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Joel Perez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joel Perez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-criminal-district-attorney",
+    "state": "TX",
+    "level": "county",
+    "office": "Criminal District Attorney",
+    "district": null,
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Bexar County's chief felony prosecutor. Also seeks protective orders and removes children from abusive homes.",
+    "why_it_matters": "Open seat: DA Joe Gonzales is retiring. The office has a case backlog, prosecutor vacancies and a strained relationship with local police, per Texas Public Radio.",
+    "vote_for": 1,
+    "incumbent": "Joe Gonzales (retiring)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashley Foster",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://ashleyfosterforda.com/",
+        "website_confidence": "verified",
+        "background": "Felony prosecutor in the Bexar DA's office for more than 11 years, including capital murder and white-collar cases; civil trial lawyer in private practice since 2012.",
+        "own_words": [
+          {
+            "text": "Would \"focus resources on repeat and violent offenders\" and assign one prosecutor to each case from start to finish.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Promises to study the backlog's causes in her first 30 days and work to fix them within 60.",
+            "is_quote": false,
+            "source": "https://www.tpr.org/government-politics/2026-10-14/bexar-county-da-candidates-differ-on-death-penalty-staffing-and-diversion-programs"
+          },
+          {
+            "text": "Supports diversion programs if they are voluntary and show results: \"the diversion program needs to work.\"",
+            "is_quote": false,
+            "source": "https://www.tpr.org/government-politics/2026-10-14/bexar-county-da-candidates-differ-on-death-penalty-staffing-and-diversion-programs"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Luz Elena Chapa",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://chapaforda.com/",
+        "website_confidence": "verified",
+        "background": "Justice on the 4th Court of Appeals for 12 years, then a visiting judge; civil litigator for 12 years before that. Has not worked as a prosecutor.",
+        "own_words": [
+          {
+            "text": "Top changes: tackle the backlog, especially family violence cases; repair ties with police; prioritize jailing dangerous offenders.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "It shouldn't be a criminal crime or considered a crime to have a severe mental illness.",
+            "is_quote": true,
+            "source": "https://www.tpr.org/government-politics/2026-10-14/bexar-county-da-candidates-differ-on-death-penalty-staffing-and-diversion-programs"
+          },
+          {
+            "text": "Would form a committee to review possible death penalty cases and seek it \"very sparingly.\"",
+            "is_quote": false,
+            "source": "https://www.tpr.org/government-politics/2026-10-14/bexar-county-da-candidates-differ-on-death-penalty-staffing-and-diversion-programs"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Jason Wolff",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the League questionnaire and did not meet Texas Public Radio's criteria for its DA interviews.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Texas Public Radio: DA candidates differ on death penalty, staffing and diversion",
+        "url": "https://www.tpr.org/government-politics/2026-10-14/bexar-county-da-candidates-differ-on-death-penalty-staffing-and-diversion-programs"
+      },
+      {
+        "name": "San Antonio Report: Ashley Foster profile",
+        "url": "https://sanantonioreport.org/profile/ashley-foster-2026-candidate-for-bexar-county-district-attorney/"
+      },
+      {
+        "name": "San Antonio Report: Luz Elena Chapa profile",
+        "url": "https://sanantonioreport.org/profile/luz-elena-chapa-2026-candidate-for-bexar-county-district-attorney/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-county-judge",
+    "state": "TX",
+    "level": "county",
+    "office": "County Judge",
+    "district": null,
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Leads Commissioners Court and county emergency management. Not a courtroom job.",
+    "why_it_matters": "Open seat: Judge Peter Sakai lost the March Democratic primary to former Mayor Ron Nirenberg. Jail conditions, spending and growth are the main issues, per Texas Public Radio.",
+    "vote_for": 1,
+    "incumbent": "Peter Sakai (not on ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Patrick Von Dohlen",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://votepatrick.net/",
+        "website_confidence": "verified",
+        "background": "Financial adviser for over 27 years and conservative activist who runs the San Antonio Family Association PAC. Ran for City Council District 9 in 2017, 2019 and 2021.",
+        "own_words": [
+          {
+            "text": "Priorities: fiscal discipline, protecting the Edwards Aquifer recharge zone, and more jail beds and accountability at the jail.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Would publish \"a plain language county balance sheet\" and audit contracts and consulting fees.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Growth must pay for itself.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Ron Nirenberg",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://voteron.com/",
+        "website_confidence": "verified",
+        "background": "San Antonio mayor 2017 to 2025 and City Council District 8 before that; now a professor of practice at Trinity University.",
+        "own_words": [
+          {
+            "text": "Priorities: public safety and a faster justice system, a regional growth and readiness plan, and economic opportunity.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants to \"stop using the jail as a mental health facility and homeless shelter.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Says he will do everything in his power to keep data centers from raising power bills or draining water supplies.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Texas Public Radio: Von Dohlen vs. Nirenberg",
+        "url": "https://www.tpr.org/podcast/the-source/2026-10-06/von-dohlen-vs-nirenberg-bexar-county-judge-race-puts-jail-spending-and-growth-in-focus"
+      },
+      {
+        "name": "San Antonio Report: Patrick Von Dohlen profile",
+        "url": "https://sanantonioreport.org/profile/patrick-von-dohlen-2026-candidate-for-bexar-county-judge/"
+      },
+      {
+        "name": "San Antonio Report: Ron Nirenberg profile",
+        "url": "https://sanantonioreport.org/profile/ron-nirenberg-2026-candidate-for-bexar-county-judge/"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 1",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanor criminal cases, like DWI, where fines and jail time are smaller than for felonies.",
+    "why_it_matters": "A rematch of 2022.",
+    "vote_for": 1,
+    "incumbent": "Helen Petry Stowe",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bob Behrens",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge of County Court at Law No. 15 from 2015 to 2018; trial lawyer for over 33 years.",
+        "own_words": [
+          {
+            "text": "Would be efficient \"by concentrating on the docket instead of other activities such as marriage ceremonies.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Says he cut pretrial and trial dockets by 90% as a judge from 2015 to 2018.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Believes Bexar already has enough specialty courts.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Helen Petry Stowe",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgehelenpetrystowe.com/",
+        "website_confidence": "verified",
+        "background": "Judge of this court since 2018; former prosecutor for over 10 years and public school teacher.",
+        "own_words": [
+          {
+            "text": "Has run TRAC-D, a DWI specialty court, since 2020.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Would like a similar specialty court for felony offenders.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News: courts-at-law recommendations",
+        "url": "https://www.expressnews.com/opinion/editorial/article/bexar-county-courts-at-law-recommendations-22477152.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 2",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Melissa Saenz",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melissa Saenz",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://melissaforjudge.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 3",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "David J. Rodriguez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David J. Rodriguez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgedavidrodriguez.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 4",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanor criminal cases, like DWI, where fines and jail time are smaller than for felonies.",
+    "why_it_matters": "A third matchup between the same two candidates.",
+    "vote_for": 1,
+    "incumbent": "Alfredo Ximenez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason Roland Garrahan",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former judge of this court; lost it to Ximenez in 2018 and again in 2022, per the Express-News.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Alfredo Ximenez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://judgeximenez.com/",
+        "website_confidence": "sourced",
+        "background": "Judge of this court for two terms (8 years); before that, a criminal defense lawyer for most of his 24-year career.",
+        "own_words": [
+          {
+            "text": "Runs REFLEJO, a family-violence court for first-time offenders with drug or alcohol problems.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Directs Bexar Gives Back, which lets offenders complete sentences through community service.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News: courts-at-law recommendations",
+        "url": "https://www.expressnews.com/opinion/editorial/article/bexar-county-courts-at-law-recommendations-22477152.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-5",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 5",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Andrea Arevalos",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Andrea Arevalos",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.arevalosforjudge.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-6",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 6",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Erica Dominguez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Erica Dominguez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.dominguez4judge.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-7",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 7",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Melanie M. Lira",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melanie M. Lira",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.melanielira.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-8",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 8",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanor criminal cases, like DWI, where fines and jail time are smaller than for felonies.",
+    "why_it_matters": "Open seat: neither candidate is the sitting judge.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Celeste Brown",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://celesteforjudge.com/",
+        "website_confidence": "verified",
+        "background": "Judge of this court from 2015 to 2018; criminal defense lawyer for more than 30 years; alternate justice of the peace.",
+        "own_words": [
+          {
+            "text": "Says she cut a backlog of hundreds of jury trials to fewer than 50 during her term.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Specialty courts are needed because I have seen firsthand that they work.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Victoria Cruz",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.votevictoriacruz.com/",
+        "website_confidence": "verified",
+        "background": "Criminal, immigration and family trial lawyer for 10 years, with bail bond experience.",
+        "own_words": [
+          {
+            "text": "Would set firm timelines for both sides to share evidence and resolve cases without delay.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Believes a youth specialty court is needed.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News: courts-at-law recommendations",
+        "url": "https://www.expressnews.com/opinion/editorial/article/bexar-county-courts-at-law-recommendations-22477152.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-9",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 9",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanor criminal cases, like DWI, where fines and jail time are smaller than for felonies.",
+    "why_it_matters": "Open seat: neither candidate is the sitting judge.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Daphne Previti Austin",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electdaphne.com/",
+        "website_confidence": "sourced",
+        "background": "Former judge of the 289th District Court and former juvenile law referee; prosecutor and defense lawyer.",
+        "own_words": [
+          {
+            "text": "Plans to work full days and schedule jail dockets on time to cut costs to the county.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "I don't believe Bexar County \"needs\" another Specialty Court.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Jessica A. Gonzalez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.jessicagonzalezforjudge.com/",
+        "website_confidence": "verified",
+        "background": "Bexar County prosecutor from 2004 to 2012, then criminal defense lawyer; executive board member of the San Antonio Criminal Defense Lawyers Association.",
+        "own_words": [
+          {
+            "text": "Says this court has a large backlog and it will take case management and a team \"dedicated to start on day one.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Supports specialty courts that take only voluntary participants.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News: courts-at-law recommendations",
+        "url": "https://www.expressnews.com/opinion/editorial/article/bexar-county-courts-at-law-recommendations-22477152.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-10",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 10",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Cesar Garcia",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Cesar Garcia",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-11",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 11",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Erica Peña",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Erica Peña",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-12",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 12",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanor criminal cases, like DWI, where fines and jail time are smaller than for felonies.",
+    "why_it_matters": "Open seat: the sitting judge lost the Democratic primary to Zamora, per the Express-News.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Deborah Dietzmann",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://deborahdietzmannforjudge.com/",
+        "website_confidence": "verified",
+        "background": "Prosecutor, private lawyer and public defender over 25-plus years; Bexar County resident for 30 years.",
+        "own_words": [
+          {
+            "text": "Would improve efficiency by \"limiting unnecessary continuances, and setting firm deadlines.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "More specialty courts aren't necessarily the answer.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Lauren Zamora",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.zamoraforjudge.com/",
+        "website_confidence": "verified",
+        "background": "Prosecutor in the Bexar DA's Conviction Integrity Unit; earlier a public defender, defense lawyer and child welfare lawyer. Beat the sitting judge in the Democratic primary.",
+        "own_words": [
+          {
+            "text": "Would divert people with low-level, nonviolent charges and mental health or addiction problems into treatment.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Would \"eliminate blanket policies that force jury trials and discourage plea bargains.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Express-News: courts-at-law recommendations",
+        "url": "https://www.expressnews.com/opinion/editorial/article/bexar-county-courts-at-law-recommendations-22477152.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-13",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 13",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alicia \"Ali\" Perez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://aliciaperez4judge.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-14",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 14",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Audrey Martinez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.audreymartinezforjudge.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-ccl-15",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, County Court at Law",
+    "district": "County Court at Law No. 15",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Hears misdemeanors or smaller civil cases, plus appeals from justice of the peace and city courts.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Melissa Vara",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melissa Vara",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.votemelissavara.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-probate-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, Probate Court",
+    "district": "Probate Court No. 1",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Handles wills, estates, guardianships and mental health commitments.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Oscar J. Kazen",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Oscar J. Kazen",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.kazenforjudge.com/",
+        "website_confidence": "sourced",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-probate-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Judge, Probate Court",
+    "district": "Probate Court No. 2",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Handles wills, estates, guardianships and mental health commitments.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Veronica Vasquez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Veronica Vasquez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://voteveronicavasquez.com/",
+        "website_confidence": "verified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-district-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "District Clerk",
+    "district": null,
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Keeps the official records and filings for the district courts.",
+    "why_it_matters": "Only one name is on the ballot. The current clerk, Gloria A. Martinez, is not on it.",
+    "vote_for": 1,
+    "incumbent": "Gloria A. Martinez (not on ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Christine \"Chris\" Castillo",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://votechriscastillo.com/",
+        "website_confidence": "verified",
+        "background": "Worked in the Bexar County District Clerk's office for 33 years before retiring in 2019.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-county-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "County Clerk",
+    "district": null,
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Keeps public records like property deeds, marriage licenses and county court files.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Lucy Adame-Clark",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lucy Adame-Clark",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://votelucyadameclark.com/",
+        "website_confidence": "sourced",
+        "background": "County Clerk since 2018; started her career in the Sheriff's Office.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-commissioner-2",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 2",
+    "scope_plain": "Voters in Bexar County Commissioner Precinct 2 (about a quarter of the county)",
+    "office_explainer": "One of four commissioners who adopt the county budget and tax rate and approve county contracts.",
+    "why_it_matters": "Commissioner Justin Rodriguez (D), on the court since 2019, faces a Republican business owner. Precincts 1 and 3 are not on the ballot this year.",
+    "vote_for": 1,
+    "incumbent": "Justin Rodriguez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Sherwood Hill",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://davidsherwoodhill.com/",
+        "website_confidence": "verified",
+        "background": "Civil engineer and business leader (Procter & Gamble, NIBCO) and founder of AI and leadership businesses; Holmes High graduate who grew up in Precinct 2.",
+        "own_words": [
+          {
+            "text": "Priorities: cut taxes through disciplined budgeting, back law enforcement and courts, and fix roads and drainage.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Taxpayers deserve measurable results for every dollar government spends.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Welcomes data centers if they meet clear standards and do not shift costs to residents.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Justin Rodriguez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://votejrod.com/",
+        "website_confidence": "verified",
+        "background": "Commissioner since 2019; former state representative (HD-125), San Antonio councilman and SAISD trustee; began as a juvenile prosecutor.",
+        "own_words": [
+          {
+            "text": "Priorities: roads and drainage for growth, jail accountability with more diversion and treatment, and closer-to-home health care.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Growth should pay for growth.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Says falling property values mean reviewing new spending carefully and protecting core services.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: David Sherwood Hill profile",
+        "url": "https://sanantonioreport.org/profile/david-sherwood-hill-2026-candidate-for-bexar-county-commissioner-precinct-2/"
+      },
+      {
+        "name": "San Antonio Report: Justin Rodriguez profile",
+        "url": "https://sanantonioreport.org/profile/justin-rodriguez-2026-candidate-for-bexar-county-commissioner-precinct-2/"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-commissioner-4",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 4",
+    "scope_plain": "Voters in Bexar County Commissioner Precinct 4 (about a quarter of the county)",
+    "office_explainer": "One of four commissioners who adopt the county budget and tax rate and approve county contracts.",
+    "why_it_matters": "Commissioner Tommy Calvert (D), the longest-serving member of the court, faces an independent who petitioned onto the ballot. No Republican is running.",
+    "vote_for": 1,
+    "incumbent": "Tommy Calvert Jr.",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tommy Calvert Jr.",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://tommycalvert.com/",
+        "website_confidence": "verified",
+        "background": "County commissioner first elected in 2014 and dean of Commissioners Court; former neighborhood leader, nonprofit head and small-business owner.",
+        "own_words": [
+          {
+            "text": "Priorities: public safety and mental health including a psychiatric hospital, flood control, and lower living costs.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Has called for delaying a $10 million county payment toward a minor league ballpark.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants data centers regulated so they do not use up the county's water and power.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Roy Anthony II",
+        "party": "Independent",
+        "incumbent": false,
+        "website": "https://voteroy.us/",
+        "website_confidence": "verified",
+        "background": "UTSA business graduate; founder of the LEAD10 youth civic leadership program. Gathered over 500 signatures to get on the ballot.",
+        "own_words": [
+          {
+            "text": "Priorities: flood control and drainage, careful use of tax dollars, and an accessible county government.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Data centers should be responsible for the infrastructure costs they create.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-jp-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1",
+    "scope_plain": "Voters in Bexar County Justice of the Peace Precinct 1",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": "Open seat: Judge Sylvia Ruiz is not running. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Armando Cruz Jr.",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Certified criminal court clerk.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-jp-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 3",
+    "scope_plain": "Voters in Bexar County Justice of the Peace Precinct 3",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": "Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Julie Bray Patterson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Julie Bray Patterson",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Justice of the peace since 2022; former attorney in the Bexar County court administration office.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      },
+      {
+        "name": "Republican Party of Bexar County: 2026 general election candidates",
+        "url": "https://bexargop.org/our-county-party/republican-candidates-in-general-election-and-bexar-county-texas/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bexar-jp-4",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 4",
+    "scope_plain": "Voters in Bexar County Justice of the Peace Precinct 4",
+    "office_explainer": "A local judge for evictions, small claims, traffic tickets and truancy. No law degree required.",
+    "why_it_matters": "Open seat: Judge Michele Garcia died in December 2025. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Anna Campos",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.annaforjp4.com/",
+        "website_confidence": "verified",
+        "background": "Business consultant with a business degree from the University of the Incarnate Word.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: Meet the candidates running for office in Bexar County",
+        "url": "https://sanantonioreport.org/meet-the-candidates-running-for-office-in-bexar-county-in-2026/"
+      },
+      {
+        "name": "Bexar County Democratic Party slate (Lift the Slate)",
+        "url": "https://lift-the-slate.com"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bcad-place-1",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Bexar Central Appraisal District",
+    "district": "Place 1",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Sets the appraisal district's budget and hires the chief appraiser. It does not set your home's value.",
+    "why_it_matters": "Nonpartisan, but both parties are backing candidates after elected appraisal boards elsewhere pushed big changes, per the San Antonio Report. Open seat.",
+    "vote_for": 1,
+    "incumbent": "Naomi Elizabeth Miller (not running)",
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Susan Bayne",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.susanbayne.com/",
+        "website_confidence": "verified",
+        "background": "Retired psychotherapist and grassroots activist with Infuse SA; has helped with property tax protest workshops.",
+        "own_words": [
+          {
+            "text": "One primary goal: \"Be a Citizen Advocate for all the people in Bexar County regarding their property tax issues.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Diana Arévalo",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.dianaarevalo.com/",
+        "website_confidence": "verified",
+        "background": "Former state representative; now directs state advocacy for the ALS Association.",
+        "own_words": [
+          {
+            "text": "Wants \"an appraisal system that treats every property owner fairly, regardless of their neighborhood or zip code.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants clearer communication so taxpayers understand the appraisal and protest process.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: 2026 Bexar Central Appraisal District candidates",
+        "url": "https://sanantonioreport.org/2026-bexar-central-appraisal-district-candidates-voter-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bcad-place-2",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Bexar Central Appraisal District",
+    "district": "Place 2",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Sets the appraisal district's budget and hires the chief appraiser. It does not set your home's value.",
+    "why_it_matters": "The only one of the three first elected members running again in a contested race. She led the board to approve a one-year appraisal reprieve, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Erika Hizel",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Leticia Anguiano",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Grew up in the Edgewood community and lives in a multigenerational home on the West Side.",
+        "own_words": [
+          {
+            "text": "I'm running to help my community, not profit off their struggles.",
+            "is_quote": true,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants to close the information gap so working families and seniors know how to protest their values.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "Erika Hizel",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.erikahizel.com/",
+        "website_confidence": "verified",
+        "background": "Real estate investor who runs a nonprofit representing small landlords; former bilingual homebuyer counselor.",
+        "own_words": [
+          {
+            "text": "Points to a rule she helped win: \"settle a protest and your value carries forward a year.\"",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          },
+          {
+            "text": "Wants more transparency and modern processes, and says she won evening, streamed board meetings.",
+            "is_quote": false,
+            "source": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "League of Women Voters of the San Antonio Area, 2026 Voters Guide (PDF)",
+        "url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      },
+      {
+        "name": "San Antonio Report: 2026 Bexar Central Appraisal District candidates",
+        "url": "https://sanantonioreport.org/2026-bexar-central-appraisal-district-candidates-voter-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-bcad-place-3",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Bexar Central Appraisal District",
+    "district": "Place 3",
+    "scope_plain": "Every Bexar County voter",
+    "office_explainer": "Sets the appraisal district's budget and hires the chief appraiser. It does not set your home's value.",
+    "why_it_matters": "Only one name is on the ballot. The board appointed him to fill the seat after Robert Bruce died.",
+    "vote_for": 1,
+    "incumbent": "Jon Melendez (appointed)",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jon Melendez",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Conservative grassroots organizer and U.S. Marine Corps veteran.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Bexar Central Appraisal District candidates",
+        "url": "https://sanantonioreport.org/2026-bexar-central-appraisal-district-candidates-voter-guide/"
+      },
+      {
+        "name": "Republican Party of Bexar County: 2026 general election candidates",
+        "url": "https://bexargop.org/our-county-party/republican-candidates-in-general-election-and-bexar-county-texas/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-edgewoodisd-trustee-1",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Edgewood ISD",
+    "district": "Place 1",
+    "scope_plain": "Voters in Edgewood ISD (San Antonio's West Side); every district voter picks each seat",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Edgewood serves about 8,000 students, projected a $3.7 million deficit and has a D rating from the state, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "James Hernandez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dora Maldonado",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Content creator and health peer specialist.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "James Hernandez",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Education consultant; first elected in 2018.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Edgewood ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-edgewood-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-edgewoodisd-trustee-2",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Edgewood ISD",
+    "district": "Place 2",
+    "scope_plain": "Voters in Edgewood ISD (San Antonio's West Side); every district voter picks each seat",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Edgewood serves about 8,000 students, projected a $3.7 million deficit and has a D rating from the state, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Frank Espinosa",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Frank Espinosa",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Owns a logistics company and leads the district's alumni association.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Elias Hernandez",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Full-time dad with a background in construction.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Jose \"Joe\" Gallegos II",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Previously ran for the Alamo Colleges board.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Edgewood ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-edgewood-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-edgewoodisd-trustee-3",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Edgewood ISD",
+    "district": "Place 3",
+    "scope_plain": "Voters in Edgewood ISD (San Antonio's West Side); every district voter picks each seat",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Edgewood serves about 8,000 students, projected a $3.7 million deficit and has a D rating from the state, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Richard Santoyo",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dorothy Borjas",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Edgewood ISD parent with a background in tax preparation and customer service.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Richard Santoyo",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired San Antonio firefighter.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Edgewood ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-edgewood-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-edgewoodisd-trustee-6",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Edgewood ISD",
+    "district": "Place 6",
+    "scope_plain": "Voters in Edgewood ISD (San Antonio's West Side); every district voter picks each seat",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Edgewood serves about 8,000 students, projected a $3.7 million deficit and has a D rating from the state, per the San Antonio Report.",
+    "vote_for": 1,
+    "incumbent": "Michael Valdez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael Valdez",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "UTSA student; first elected in 2022.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Joey Cipriano",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Leader in the Thompson Neighborhood Association.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Edgewood ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-edgewood-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-somersetisd-trustee-3",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Somerset ISD",
+    "district": "Single-Member District 3",
+    "scope_plain": "Voters in Somerset ISD single-member District 3 (far southwest Bexar County)",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Open seat. Somerset ISD is in the far southwest corner of Bexar County.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Albert Herrera",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Bus driver (listed by the San Antonio Report as Albert Ray Herrera).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Doug Black",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Business owner (listed as Douglas Ray Black).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Somerset ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-somerset-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-somersetisd-trustee-7",
+    "state": "TX",
+    "level": "school",
+    "office": "Trustee, Somerset ISD",
+    "district": "Single-Member District 7",
+    "scope_plain": "Voters in Somerset ISD single-member District 7 (far southwest Bexar County)",
+    "office_explainer": "Sets school district policy and budget, hires the superintendent and adopts the tax rate.",
+    "why_it_matters": "Open seat. Somerset ISD is in the far southwest corner of Bexar County.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Robert A. Casias",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired from the U.S. Army; served on the State Republican Executive Committee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Emilio G. Arcos",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Senior office services manager at Zachary Industrial.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "San Antonio Report: 2026 Somerset ISD board candidates",
+        "url": "https://sanantonioreport.org/2026-somerset-isd-school-board-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-eaa-district-1",
+    "state": "TX",
+    "level": "special_district",
+    "office": "Director, Edwards Aquifer Authority",
+    "district": "District 1",
+    "scope_plain": "Voters in Edwards Aquifer Authority District 1 (part of Bexar County; check your sample ballot)",
+    "office_explainer": "Helps manage pumping from the Edwards Aquifer, the region's main underground water supply.",
+    "why_it_matters": "Nonpartisan. Director Carol Patterson has served on the EAA board since it began in 1996. It is the only EAA race on the Bexar ballot.",
+    "vote_for": 1,
+    "incumbent": "Carol G. Patterson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joey Groff",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      },
+      {
+        "name": "Carol G. Patterson",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "EAA director since 1996; earlier on the board of its predecessor, the Edwards Underground Water District. President of the Regional Clean Air and Water Association.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "Bexar County generic sample ballot, Nov 3, 2026 (official PDF)",
+        "url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot"
+      },
+      {
+        "name": "Edwards Aquifer Authority: Board of Directors",
+        "url": "https://www.edwardsaquifer.org/about/board-of-directors/"
+      },
+      {
+        "name": "Edwards Aquifer Authority: Nov 2026 election notice",
+        "url": "https://www.edwardsaquifer.org/wp-content/uploads/2026/06/Notice-of-Deadline-to-File-Application-Eng_Span.pdf"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

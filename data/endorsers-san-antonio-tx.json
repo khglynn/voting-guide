@@ -1,0 +1,74 @@
+[
+  {
+    "id": "san-antonio-express-news-eb",
+    "name": "San Antonio Express-News editorial board",
+    "type": "publication",
+    "lean": "lean_left",
+    "lean_basis": "Hearst paper; AllSides rates it Lean Left. In San Antonio-area races its 2026 picks are 19 Democrats and 5 Republicans (DA, a county court, the 4th Court of Appeals, CD-21 and HD-122). It opposed City Prop A and two SAISD bonds and backed the other school measures it reviewed. It says it recommends only in contested races with major-party candidates.",
+    "geography": ["TX", "san-antonio-tx"],
+    "guide_url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-san-antonio",
+    "name": "League of Women Voters of the San Antonio Area",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; its guide says it \"does not support or oppose any political party or candidate.\" Prints candidates' own answers and lists arguments for and against City Prop A.",
+    "geography": ["san-antonio-tx"],
+    "guide_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "bexar-county-gop",
+    "name": "Republican Party of Bexar County",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization. Its candidate roster and two-page Conservative Voter Guide list only Republican nominees, plus picks in two nonpartisan appraisal board seats. Takes no stand on local propositions in either document.",
+    "geography": ["san-antonio-tx"],
+    "guide_url": "https://bexargop.org/wp-content/uploads/2026/10/Conservative_Voter_Guide_LETTER_8.5x11_EDITABLE.pdf",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "bexar-county-democratic-party",
+    "name": "Bexar County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization. Its Lift the Slate site lists only Democratic nominees and no local propositions.",
+    "geography": ["san-antonio-tx"],
+    "guide_url": "https://lift-the-slate.com",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "san-antonio-afl-cio",
+    "name": "San Antonio AFL-CIO (Central Labor Council)",
+    "type": "labor",
+    "lean": "left",
+    "lean_basis": "Regional labor council. Every candidate on its 2026 slate is a Democrat; it took \"no action\" in HD-122. Backs all SAISD, Northside ISD and South San ISD measures and took no position on City Prop A.",
+    "geography": ["san-antonio-tx"],
+    "guide_url": "https://texasaflcio.org/sanantonio/news/san-antonio-afl-cio-2026-general-election-endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "sapoa-pac",
+    "name": "San Antonio Police Officers' Association PAC (SAPOA)",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Police union PAC; picks cross party lines. In contested races it backs 9 Republicans (all its congressional, governor and lieutenant governor picks, three Texas House candidates and one county court candidate) and 5 Democrats. Most of its other Democratic picks are unopposed.",
+    "geography": ["san-antonio-tx"],
+    "guide_url": "https://sapoa.org/about/political-action",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

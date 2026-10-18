@@ -1,0 +1,115 @@
+[
+  {
+    "id": "dallas-morning-news-eb",
+    "name": "Dallas Morning News editorial board",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the paper Center. Historically center-right board that recommends candidates of both parties; in Dallas County races its 2026 picks so far are 5 Democrats and 3 Republicans, with no pick in two races (DA and SBOE 9).",
+    "geography": [
+      "dallas-tx",
+      "TX"
+    ],
+    "guide_url": "https://www.dallasnews.com/opinion/we-recommend/",
+    "default_on": true,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "lwv-dallas",
+    "name": "League of Women Voters of Dallas",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Nonpartisan; its guide says the League never supports or opposes any candidate or political party. Prints candidates' unedited answers and lists reasons for and against each measure.",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "dallas-county-democrats",
+    "name": "Dallas County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization. Its November page lists the Democrats on the ballot (a nominee roster, not a separate endorsement vote).",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://www.dallasdemocrats.org/elections/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "dallas-county-gop",
+    "name": "Dallas County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization. Its Meet the Candidates page lists Republican nominees but states \"These are not endorsements.\"",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://dallasgop.org/meet-the-candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "north-texas-area-labor-federation",
+    "name": "North Texas Area Labor Federation (AFL-CIO)",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Regional AFL-CIO federation (the old Dallas AFL-CIO Council links now point to it). All 12 of its Dallas County local picks are Democrats; it says an unlisted race means delegates made no recommendation.",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "stonewall-democrats-dallas",
+    "name": "Stonewall Democrats of Dallas",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "LGBTQ+ Democratic club. Every pick on its 2026 general slate (as mirrored by Blue Voter Guide, citing the group's Facebook posts) is a Democrat.",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "dallas-regional-chamber",
+    "name": "Dallas Regional Chamber",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Regional business chamber; no AllSides rating. This guide rates big-city chambers lean right (as with the Greater Austin Chamber). No candidate endorsements were found; its 2026 posts cover the two Dallas Prop A measures.",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://www.dallaschamber.org/priorities/public-policy/dfw-voter-resources/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": true
+  },
+  {
+    "id": "dallas-police-association",
+    "name": "Dallas Police Association",
+    "type": "labor",
+    "lean": "lean_right",
+    "lean_basis": "Police officers' union; no AllSides rating. This guide rates big-city police associations lean right (as with the Austin Police Association). Its own site could not be reached; its 2026 position comes from FOX 4 reporting.",
+    "geography": [
+      "dallas-tx"
+    ],
+    "guide_url": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

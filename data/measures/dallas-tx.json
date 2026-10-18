@@ -1,0 +1,215 @@
+[
+  {
+    "id": "tx-dallas-county-prop-a",
+    "state": "TX",
+    "level": "county",
+    "jurisdiction": "Dallas County",
+    "number": "Dallas County Proposition A",
+    "official_title": "This is a tax increase. \"Approving the ad valorem tax rate of $0.248650 per $100 valuation in County of Dallas for the current year, a rate that is $0.02400 higher per $100 valuation than the voter-approval tax rate of the County of Dallas, for the purpose of funding programs that measurably reduce homelessness and resolve encampments to improve neighborhood vibrancy, support homeless people to achieve self-sufficiency, increase access to mental health treatment and support programs that provide stable housing. Last year, the ad valorem tax rate in Dallas County was $0.215500 per $100 valuation.\"",
+    "plain_summary": "Asks you to approve the county property tax rate the Commissioners Court adopted: about 24.9 cents per $100 of value. That is 2.4 cents more than the most the county can charge without asking voters. The extra 2.4 cents would raise about $102.9 million a year for homelessness programs: clearing encampments, mental health treatment and stable housing. The county says programs would start Jan. 1, 2027.",
+    "yes_means": "A YES vote keeps the county tax rate at $0.248650 per $100 of value, and the extra 2.4 cents pays for homelessness, mental health and housing programs.",
+    "no_means": "A NO vote lowers the county tax rate to $0.224650 per $100 (the most allowed without a vote), and the roughly $100 million a year for these homelessness programs is not raised.",
+    "current_law": "Last year's county rate was $0.215500 per $100. Texas law caps how fast a county's property tax revenue can grow. If the county adopts a rate above the state-formula \"voter-approval rate\" ($0.224650 this year), voters must approve it, and if they say no, the rate drops to the voter-approval rate (Texas Tax Code 26.07). In January 2026 the county gave $10 million to Housing Forward, matching the City of Dallas, for downtown homeless outreach (LWV Dallas). County Judge Jenkins says the extra tax has no end date, though a future Commissioners Court could wind it down (Community Impact).",
+    "fiscal_impact": "About $102.9 million a year from the extra 2.4 cents (county fact sheet). The extra 2.4 cents costs $24 a year for each $100,000 of taxable value after exemptions: $60 on $250,000 and $84 on $350,000 (county fact sheet). For a home at the county's median taxable value, officials put it at about $64 a year (Dallas Morning News); Community Impact gives that median homestead value as $268,056. Measured against last year's rate instead, the full new rate adds $116.03 a year to the county bill on a $350,000 home (county order). The Commissioners Court voted 3-2 on Aug. 11, 2026: County Judge Clay Jenkins and Commissioners Theresa Daniel and Andrew Sommerman for; Commissioners John Wiley Price and Elba Garcia against.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "There are two different \"Prop A\" items on Dallas ballots: this county homelessness tax and the City of Dallas $443 million public safety bond. They are separate votes. \"This is a tax increase\" is wording state law requires on this kind of vote; the ballot prints it in capitals. A NO vote does not bring back last year's rate: if Prop A fails, the county rate is $0.224650, which is still higher than last year's $0.215500. This vote is only about the extra 2.4 cents. News stories quote different yearly costs (for example $64 or $89 on a median home) because some compare against the voter-approval rate and some against last year's rate. The \"voter-approval tax rate\" is a number set by a state formula, not a rate voters approved before. The ballot does not say who runs the programs. The county plans to work through Housing Forward, a nonprofit, but Commissioner Price notes that contracts and spending still need separate Commissioners Court votes. Court Order 2026-0879 has a typo in one place ($0.226450); the voter-approval rate on the ballot, in the signed election order and on the county fact sheet is $0.224650.",
+    "supporters_case": {
+      "text": "County Judge Clay Jenkins and the Dallas Regional Chamber say it would take the downtown homelessness response, which they say has shown measurable results, to the whole county. Housing Forward estimates it could help 4,500 more households a year leave homelessness. Jenkins: \"I know a good investment when I see it.\" The chamber also asks for public reporting on results.",
+      "source": "https://www.fox4news.com/news/proposition-proposes-tax-hike-expand-homelessness-response-dallas-county"
+    },
+    "opponents_case": {
+      "text": "No organized \"vote no\" campaign was found. Commissioner John Wiley Price, who voted against calling the election, says voters lack clear information on the total cost and expected results, wants reporting on returns to homelessness, and says the county should first check whether federal, state or behavioral-health money could pay instead of a recurring property tax.",
+      "source": "https://www.fox4news.com/news/proposition-proposes-tax-hike-expand-homelessness-response-dallas-county"
+    },
+    "official_text_url": "https://www.dallascounty.org/Assets/uploads/docs/budget/tax-rate-info/Election-Order-Signed-by-County-Judge.pdf",
+    "official_guide_url": "https://www.dallascounty.org/about-us/hot-links/ty2026-taxrate-election.php",
+    "explainers": [
+      {
+        "source": "FOX 4 Dallas-Fort Worth",
+        "title": "Prop A proposes tax hike to expand homelessness response in Dallas County",
+        "url": "https://www.fox4news.com/news/proposition-proposes-tax-hike-expand-homelessness-response-dallas-county"
+      },
+      {
+        "source": "Community Impact",
+        "title": "Dallas County voters to decide on Proposition A",
+        "url": "https://communityimpact.com/richardson/election/dallas-county-voters-to-decide-on-proposition-to-address-homelessness/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-prop-a",
+    "state": "TX",
+    "level": "city",
+    "jurisdiction": "City of Dallas",
+    "number": "City of Dallas Proposition A",
+    "official_title": "This is a tax increase. The issuance of $443,000,000 general obligation bonds for public safety improvements and facilities, including fire, police and emergency services; the levying of a tax sufficient to pay principal and interest thereon; the estimated amount of repayment, including principal and interest based on current market conditions being $629,618,180.",
+    "plain_summary": "Lets the city borrow $443 million, repaid from property taxes over up to 20 years (about $629.6 million with interest), for police, fire and emergency buildings. The city's list: $82 million to finish the police academy at UNT Dallas, $149 million for a police field-training complex at Dallas Executive Airport, $150 million for a police evidence building and crime lab, $40 million to move the 911 center and emergency operations center out of City Hall, and $22 million to replace downtown Fire Station No. 4. It is the only City of Dallas item on this ballot.",
+    "yes_means": "A YES vote lets the city borrow up to $443 million for police, fire and emergency facilities and collect property taxes to repay it.",
+    "no_means": "A NO vote means the city cannot sell these bonds; the projects would need other money or a new bond election.",
+    "current_law": "Voters approved a $1.25 billion bond program (10 propositions) in May 2024. It gave the police academy (the Law Enforcement Training Center) $50 million. With $25 million in state grants, $31.5 million in committed private gifts and $38.5 million more expected, the $227 million academy is still $82 million short. The other four projects were not in the 2024 bonds. Groundbreaking for the academy was Sept. 3, 2026.",
+    "fiscal_impact": "$443,000,000 borrowed plus about $186.6 million in interest: $629,618,180 to repay over no more than 20 years (Voter Information Document, assuming one issue at 4.012%). The city estimates its debt tax rate would rise by about $0.0002 per $100 of value, at most $0.14 a year on a $100,000 homestead. The city's bond office says the city tax rate will not go up because of these bonds. The city already owes about $2.8 billion in principal on tax-supported debt ($4.0 billion with interest).",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "Do not mix this up with Dallas County Prop A (the homelessness tax): same letter, different government, separate vote. \"This is a tax increase\" is wording state law requires on every bond proposition; the ballot prints it in capitals. The city says its tax rate will not rise because of these bonds, though its own Voter Information Document estimates a very small rise in the debt part of the rate ($0.14 a year on a $100,000 home). The ballot and the city ordinance describe the money only as being for \"public safety\" facilities; the five projects come from the city's bond package, not the ballot words. Opponents say that means the council could spend it on other public safety projects. One YES or NO covers all five projects, including moving 911 out of City Hall; a council motion to change the proposition failed 8-7.",
+    "supporters_case": {
+      "text": "Council Member Maxie Johnson, joined by the Dallas Police Association, the Black Police Association and the Black Firefighters Association, says the money is needed to finish police training facilities that were underfunded from the start. The city manager calls it an important step to modernize public safety operations.",
+      "source": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond"
+    },
+    "opponents_case": {
+      "text": "Bust the Bond, a committee joined by Council Member Cara Mendelsohn, says $629 million in new debt is too much with too little accountability, that the ballot does not require the money to go to the listed projects, and that moving 911 out of City Hall is a first step to abandoning the building. It says it supports the police academy and wants a narrower bond in May 2027.",
+      "source": "https://bustthebonddallas.com/"
+    },
+    "official_text_url": "https://citysecretary2.dallascityhall.com//pdf/Elections/2026/ORDINANCE_33494.pdf",
+    "official_guide_url": "https://citysecretary2.dallascityhall.com//pdf/Elections/2026/VID.pdf",
+    "explainers": [
+      {
+        "source": "FOX 4 Dallas-Fort Worth",
+        "title": "Dallas city leaders split on support for $443 million public safety bond",
+        "url": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-mesquite-isd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Mesquite ISD (most of Mesquite, plus small parts of Dallas, Balch Springs, Garland and Seagoville)",
+    "number": "Mesquite ISD Proposition A",
+    "official_title": "This is a tax increase. \"Ratifying the ad valorem tax rate of $1.1762 per $100 valuation in the Mesquite Independent School District for the current year, a rate that will result in an increase of 16.3 percent in maintenance and operations tax revenue for the District for the current year as compared to the preceding year, which is an additional $16,009,008.\"",
+    "plain_summary": "Asks Mesquite ISD voters to approve the school tax rate the board adopted: $1.1762 per $100 of value. That is 9 cents above the most the district can charge without a vote ($1.0862) and higher than last year's $1.1069. The district says the extra money, about $16 million more this year for operations, would go to student programs, staff pay and campus safety and help balance its budget. Only for homes inside Mesquite ISD; most of Dallas is in Dallas ISD, which has nothing on this ballot.",
+    "yes_means": "A YES vote keeps Mesquite ISD's tax rate at $1.1762 per $100, bringing in about $16 million more this year for school operations.",
+    "no_means": "A NO vote lowers the rate to $1.0862 per $100 (the most allowed without a vote), which is also below last year's $1.1069.",
+    "current_law": "Last year's Mesquite ISD rate was $1.1069. State formulas limit how much a school district's operations tax revenue can grow; a rate above the voter-approval rate needs voters' OK, which is called a voter-approval tax rate election (VATRE). The district says it cut $24 million from its 2026-27 budget and expects deficits starting in 2027-28 without more revenue (LWV Dallas).",
+    "fiscal_impact": "About $16,009,008 more in maintenance and operations revenue this year, 16.3% more than last year (ballot language). No per-home cost estimate was found in our sources.",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires the words \"This is a tax increase\" at the top (the ballot prints them in capitals). \"Ratifying\" means approving a rate the school board already adopted. The 16.3% is growth in the district's operations revenue, not the change in your own bill. Unlike the county vote, a NO here sets a rate below last year's. This only appears for addresses inside Mesquite ISD.",
+    "supporters_case": {
+      "text": "Reasons to vote for, as listed by LWV Dallas: operating costs rose nearly 20% in recent years, state formulas cap revenue growth without a vote, the district already cut $24 million and hundreds of positions, and good schools help attract residents and businesses.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "opponents_case": {
+      "text": "Reasons to vote against, as listed by LWV Dallas: the 2027 Legislature may add school money, taxpayers already face higher costs, and enrollment fell from 40,900 in 2017 to 36,700 in 2025 while staff grew.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-irving-isd-prop-a",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Irving ISD (most of Irving, plus small parts of Grand Prairie and West Dallas)",
+    "number": "Irving ISD Proposition A",
+    "official_title": "This is a property tax increase. “The issuance of $552,173,783 of bonds for the construction, acquisition, renovation and equipment of school buildings in the District, including equipment used for school safety and security purposes, a new Lively Elementary School, a new T. Haley Elementary School, a new J.O. Davis Elementary School, and a new Travis Middle School, and for the purchase of the necessary sites for school buildings, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements executed in connection with the bonds.”",
+    "plain_summary": "Lets Irving ISD borrow up to $552.2 million, repaid with property taxes, to replace Lively, T. Haley and J.O. Davis elementary schools and Travis Middle School, plus security upgrades and renovations across the district. Only for addresses inside Irving ISD, which includes two small parts of West Dallas; most of Dallas is in Dallas ISD, which has nothing on this ballot.",
+    "yes_means": "A YES vote lets Irving ISD borrow up to $552.2 million for four replacement schools and districtwide upgrades, repaid with property taxes.",
+    "no_means": "A NO vote means Irving ISD cannot borrow this money.",
+    "current_law": "Irving ISD voters approved $573.75 million in bonds in May 2023, the district's first bond since 2007 (LWV Dallas). Two other 2023 propositions, totaling $128 million, failed (Dallas Morning News).",
+    "fiscal_impact": "$552,173,783 in bonds plus interest. The district estimates this prop would raise the tax rate about 7.2 cents per $100 of value (LWV Dallas). If all four Irving ISD props pass, the district projects its tax rate would rise about 12.5 cents per $100 of value: about $20.83 a month on a $340,000 home with a $140,000 homestead exemption (district figures, as reported by LWV Dallas).",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase\" (the ballot prints it in capitals). Irving ISD has four separate bond props, A to D; each passes or fails on its own.",
+    "supporters_case": {
+      "text": "Reasons to vote for, as listed by LWV Dallas: the campuses to be replaced average 68 years old, Irving High was built in 1961, the package adds campus security and cybersecurity upgrades, and indoor facilities would help students practice under new heat rules for outdoor activities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "opponents_case": {
+      "text": "Reasons to vote against, as listed by LWV Dallas: nearly $1 billion is a large commitment, all four props would raise the tax rate 12.5 cents, enrollment is falling (two elementary schools closed in 2024), and some spending is on facilities that are not classroom necessities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-irving-isd-prop-b",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Irving ISD (most of Irving, plus small parts of Grand Prairie and West Dallas)",
+    "number": "Irving ISD Proposition B",
+    "official_title": "This is a property tax increase. “The issuance of $300,000,000 of bonds for the construction, acquisition, and equipment of a new Irving High School, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements executed in connection with the bonds.”",
+    "plain_summary": "Lets Irving ISD borrow up to $300 million, repaid with property taxes, to build a new Irving High School to replace the current campus, which opened in 1961. Only for addresses inside Irving ISD, which includes two small parts of West Dallas; most of Dallas is in Dallas ISD, which has nothing on this ballot.",
+    "yes_means": "A YES vote lets Irving ISD borrow up to $300 million for a new Irving High School, repaid with property taxes.",
+    "no_means": "A NO vote means Irving ISD cannot borrow this money.",
+    "current_law": "Irving ISD voters approved $573.75 million in bonds in May 2023, the district's first bond since 2007 (LWV Dallas). Two other 2023 propositions, totaling $128 million, failed (Dallas Morning News).",
+    "fiscal_impact": "$300,000,000 in bonds plus interest. The district estimates this prop would raise the tax rate about 3.9 cents per $100 of value (LWV Dallas). If all four Irving ISD props pass, the district projects its tax rate would rise about 12.5 cents per $100 of value: about $20.83 a month on a $340,000 home with a $140,000 homestead exemption (district figures, as reported by LWV Dallas).",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase\" (the ballot prints it in capitals). Irving ISD has four separate bond props, A to D; each passes or fails on its own.",
+    "supporters_case": {
+      "text": "Reasons to vote for, as listed by LWV Dallas: the campuses to be replaced average 68 years old, Irving High was built in 1961, the package adds campus security and cybersecurity upgrades, and indoor facilities would help students practice under new heat rules for outdoor activities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "opponents_case": {
+      "text": "Reasons to vote against, as listed by LWV Dallas: nearly $1 billion is a large commitment, all four props would raise the tax rate 12.5 cents, enrollment is falling (two elementary schools closed in 2024), and some spending is on facilities that are not classroom necessities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-irving-isd-prop-c",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Irving ISD (most of Irving, plus small parts of Grand Prairie and West Dallas)",
+    "number": "Irving ISD Proposition C",
+    "official_title": "This is a property tax increase. “The issuance of $40,000,000 of bonds for the acquisition or update of technology equipment, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements executed in connection with the bonds.”",
+    "plain_summary": "Lets Irving ISD borrow up to $40 million, repaid with property taxes, for technology updates and cybersecurity. Only for addresses inside Irving ISD, which includes two small parts of West Dallas; most of Dallas is in Dallas ISD, which has nothing on this ballot.",
+    "yes_means": "A YES vote lets Irving ISD borrow up to $40 million for technology and cybersecurity, repaid with property taxes.",
+    "no_means": "A NO vote means Irving ISD cannot borrow this money.",
+    "current_law": "Irving ISD voters approved $573.75 million in bonds in May 2023, the district's first bond since 2007 (LWV Dallas). Two other 2023 propositions, totaling $128 million, failed (Dallas Morning News).",
+    "fiscal_impact": "$40,000,000 in bonds plus interest. The district estimates this prop would raise the tax rate about 0.5 cents per $100 of value (LWV Dallas). If all four Irving ISD props pass, the district projects its tax rate would rise about 12.5 cents per $100 of value: about $20.83 a month on a $340,000 home with a $140,000 homestead exemption (district figures, as reported by LWV Dallas).",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase\" (the ballot prints it in capitals). Irving ISD has four separate bond props, A to D; each passes or fails on its own.",
+    "supporters_case": {
+      "text": "Reasons to vote for, as listed by LWV Dallas: the campuses to be replaced average 68 years old, Irving High was built in 1961, the package adds campus security and cybersecurity upgrades, and indoor facilities would help students practice under new heat rules for outdoor activities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "opponents_case": {
+      "text": "Reasons to vote against, as listed by LWV Dallas: nearly $1 billion is a large commitment, all four props would raise the tax rate 12.5 cents, enrollment is falling (two elementary schools closed in 2024), and some spending is on facilities that are not classroom necessities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "sourced"
+  },
+  {
+    "id": "tx-irving-isd-prop-d",
+    "state": "TX",
+    "level": "school",
+    "jurisdiction": "Irving ISD (most of Irving, plus small parts of Grand Prairie and West Dallas)",
+    "number": "Irving ISD Proposition D",
+    "official_title": "This is a property tax increase. “The issuance of $60,162,278 of bonds for the construction, acquisition and equipment of three multi-purpose indoor facilities at Irving High School, MacArthur High School and Nimitz High School for ROTC, athletics and marching band, and the levying of a tax sufficient to pay the principal of and interest on the bonds and the costs of any credit agreements executed in connection with the bonds.”",
+    "plain_summary": "Lets Irving ISD borrow up to $60.2 million, repaid with property taxes, for three indoor practice buildings at Irving, MacArthur and Nimitz high schools, for ROTC, athletics and marching band. Only for addresses inside Irving ISD, which includes two small parts of West Dallas; most of Dallas is in Dallas ISD, which has nothing on this ballot.",
+    "yes_means": "A YES vote lets Irving ISD borrow up to $60.2 million for three indoor practice buildings at its high schools, repaid with property taxes.",
+    "no_means": "A NO vote means Irving ISD cannot borrow this money.",
+    "current_law": "Irving ISD voters approved $573.75 million in bonds in May 2023, the district's first bond since 2007 (LWV Dallas). Two other 2023 propositions, totaling $128 million, failed (Dallas Morning News).",
+    "fiscal_impact": "$60,162,278 in bonds plus interest. The district estimates this prop would raise the tax rate about 0.8 cents per $100 of value (LWV Dallas). If all four Irving ISD props pass, the district projects its tax rate would rise about 12.5 cents per $100 of value: about $20.83 a month on a $340,000 home with a $140,000 homestead exemption (district figures, as reported by LWV Dallas).",
+    "pass_threshold": "simple majority",
+    "referred_by": "other",
+    "confusing_wording_note": "State law requires every school bond question to say \"This is a property tax increase\" (the ballot prints it in capitals). Irving ISD has four separate bond props, A to D; each passes or fails on its own.",
+    "supporters_case": {
+      "text": "Reasons to vote for, as listed by LWV Dallas: the campuses to be replaced average 68 years old, Irving High was built in 1961, the package adds campus security and cybersecurity upgrades, and indoor facilities would help students practice under new heat rules for outdoor activities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "opponents_case": {
+      "text": "Reasons to vote against, as listed by LWV Dallas: nearly $1 billion is a large commitment, all four props would raise the tax rate 12.5 cents, enrollment is falling (two elementary schools closed in 2024), and some spending is on facilities that are not classroom necessities.",
+      "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+    },
+    "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "sourced"
+  }
+]

@@ -1,0 +1,3442 @@
+[
+  {
+    "id": "tx-us-house-5",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-5",
+    "scope_plain": "Voters in Congressional District 5 (part of Dallas County; the district also includes the Terrell and Palestine areas)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Lance Gooden",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lance Gooden",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican incumbent from Terrell. Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Chelsey Hockett",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://chelseyhockettforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Texas Woman's University marketing graduate and a parent of two young children (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants Congress to cut what families pay for child care, housing, health care, groceries and gas, and to drop tariffs.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "I believe passing the Medicare-for-All bill will be the next step in lowering these costs",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would shift money from ICE enforcement to a well-staffed immigration court system.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "The Ellis Insight, May 26, 2026 (names Gooden and Van Duyne as incumbents; CD-30 and CD-32 open)",
+        "url": "https://www.ellisinsight.com/2026/05/26/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-6",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-6",
+    "scope_plain": "Voters in Congressional District 6 (part of Dallas County; lines redrawn in 2025)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Jake Ellzey",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jake Ellzey",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Current U.S. representative for District 6 (Texas Secretary of State). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Danny Minton",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://dannyfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Surgical technology specialist with 30-plus years in health care; B.S. in zoology, University of Oklahoma (LWV guide).",
+        "own_words": [
+          {
+            "text": "Health care is a right, not a privilege. I support Medicare for All",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants Congress to check the president through oversight and investigations; says no leader is above the law.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports a strong border managed with compassion and a clear path to citizenship.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-24",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-24",
+    "scope_plain": "Voters in Congressional District 24 (part of Dallas County; the district also covers Grapevine and North Richland Hills)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Beth Van Duyne",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Beth Van Duyne",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican incumbent from Irving. Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Kevin Burge",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.burgeforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Cybersecurity professional at Caterpillar Inc. (LWV guide).",
+        "own_words": [
+          {
+            "text": "Would repeal blanket tariffs, expand FHA home-loan eligibility and fund affordable home construction.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports the John Lewis Voting Rights Advancement Act and auditable paper ballots; promises regular town halls.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Opposes building AI data centers without federal standards for water, pollution and noise.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "The Ellis Insight, May 26, 2026 (names Gooden and Van Duyne as incumbents; CD-30 and CD-32 open)",
+        "url": "https://www.ellisinsight.com/2026/05/26/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-30",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-30",
+    "scope_plain": "Voters in Congressional District 30 (parts of Dallas, Balch Springs, Duncanville, Cedar Hill and Lancaster)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Open seat: no incumbent is on the ballot. District lines were redrawn in 2025.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Everett Jackson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Small business owner and community organizer (Dallas County GOP). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Frederick D. Haynes III",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Dallas pastor (The Ellis Insight). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "The Ellis Insight, May 26, 2026 (names Gooden and Van Duyne as incumbents; CD-30 and CD-32 open)",
+        "url": "https://www.ellisinsight.com/2026/05/26/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-32",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-32",
+    "scope_plain": "Voters in Congressional District 32 (parts of Dallas and Collin counties, then east through Rockwall to East Texas)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Open seat: no incumbent is on the ballot. District lines were redrawn in 2025.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jace Yarbrough",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Constitutional lawyer and military veteran from Rockwall (Dallas County GOP; The Ellis Insight). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dan Barrios",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.danbarriosforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Sales executive and teacher; MBA, Western Governors University (LWV guide).",
+        "own_words": [
+          {
+            "text": "Supports congressional term limits, a ban on members trading individual stocks and enforceable Supreme Court ethics rules.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants a secure border plus legal pathways, with enforcement focused on criminals, gangs and human traffickers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Backs expanding the Child Tax Credit and Earned Income Tax Credit.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "The Ellis Insight, May 26, 2026 (names Gooden and Van Duyne as incumbents; CD-30 and CD-32 open)",
+        "url": "https://www.ellisinsight.com/2026/05/26/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-us-house-33",
+    "state": "TX",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "CD-33",
+    "scope_plain": "Voters in Congressional District 33 (parts of Dallas, Irving, Grand Prairie, Carrollton, Farmers Branch and Fort Worth)",
+    "office_explainer": "Your voice in the U.S. House: votes on federal laws, taxes and spending.",
+    "why_it_matters": "Neither nominee holds this seat now; lines were redrawn in 2025. Michelle Craig is a declared write-in candidate: her name is not printed, so you would write it in.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Patrick David Gillespie",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://patrickgillespie4congress33.com",
+        "website_confidence": "sourced",
+        "background": "Customs brokerage representative at UPS (LWV guide).",
+        "own_words": [
+          {
+            "text": "Pass DOGE into law.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says enforcing immigration laws already on the books is enough, and that citizens' rights come first.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Opposes U.S. spending on pollution he says comes mostly from China, Korea and India.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Colin Allred",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://colinallred.com",
+        "website_confidence": "sourced",
+        "background": "Attorney and retired NFL linebacker; former six-year congressman and the 2024 Democratic U.S. Senate nominee. Won the May runoff over Rep. Julie Johnson.",
+        "own_words": [
+          {
+            "text": "Affordability is my top priority",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would repeal the Trump tariffs, ban grocery price gouging and let Medicare negotiate all drug prices.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says ICE should be abolished and enforcement rebuilt around accountability and due process; supports a path to citizenship.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Michelle Craig",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate (Texas Secretary of State): her name is not printed; you would write it in. Lists her job as rideshare driver.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "The Ellis Insight, May 26, 2026 (names Gooden and Van Duyne as incumbents; CD-30 and CD-32 open)",
+        "url": "https://www.ellisinsight.com/2026/05/26/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-sboe-9",
+    "state": "TX",
+    "level": "state",
+    "office": "Member, State Board of Education",
+    "district": "SBOE District 9",
+    "scope_plain": "Voters in SBOE District 9 (an eastern slice of Dallas County, plus Rockwall, Kaufman and much of East Texas)",
+    "office_explainer": "Sets what Texas public schools teach, approves textbooks and oversees the school endowment fund.",
+    "why_it_matters": "Open seat: the current member, Keven Ellis, did not seek reelection.",
+    "vote_for": 1,
+    "incumbent": "Keven Ellis (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kason Huddleston",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Senior pastor of Freedom Place Church in Rowlett for more than 20 years (Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Ericka Ledferd",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Twelve years in public education, plus college teaching and small business experience (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants competitive teacher pay, strong preparation, manageable workloads and a voice for teachers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would teach AI literacy, ethics, privacy, bias and fact-checking.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would choose required reading for quality, age-appropriateness and diverse perspectives while respecting parental rights.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: no recommendation in SBOE District 9",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-state-board-education-huddleston-ledferd-22460108.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-sboe-13",
+    "state": "TX",
+    "level": "state",
+    "office": "Member, State Board of Education",
+    "district": "SBOE District 13",
+    "scope_plain": "Voters in SBOE District 13 (school districts in Dallas, Arlington, Grand Prairie, Duncanville, Cedar Hill, DeSoto, Lancaster, Mesquite, Irving and more)",
+    "office_explainer": "Sets what Texas public schools teach, approves textbooks and oversees the school endowment fund.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Tiffany Clark",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Carlos (Charlie) Garza",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired U.S. Navy veteran and former educator who served on the SBOE for District 1 from 2011 to 2013 (Dallas Morning News; Dallas County GOP). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Tiffany Clark",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://tiffanyclark4stateofeducation.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent, first elected in 2024; school counselor and former DeSoto ISD trustee (Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Texas students should be AI literate, not simply AI users.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants civics to teach how local, state and federal government work, not to replace civics with patriotism.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports one required book per grade with local control, more women, Black and Hispanic authors, and no mandated religious texts.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      },
+      {
+        "name": "Dallas Morning News editorial: SBOE District 13",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-sboe-district-13-race-22459455.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-sboe-14",
+    "state": "TX",
+    "level": "state",
+    "office": "Member, State Board of Education",
+    "district": "SBOE District 14",
+    "scope_plain": "Voters in SBOE District 14 (a C-shaped district across parts of 19 counties, from the Oklahoma border to Waco and Waxahachie)",
+    "office_explainer": "Sets what Texas public schools teach, approves textbooks and oversees the school endowment fund.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mindy Bumgarner",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee; did not answer the LWV or Dallas Morning News questionnaires. Married to state Rep. Ben Bumgarner (Dallas Morning News).",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Amy Taylor",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Classroom teacher in Denton with 17 years in Title I schools (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Wants the SBOE to trust teachers' professional judgment instead of scripting instruction.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says the long required reading list \"handcuffs teachers and students.\"",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants dedicated civics time in every grade.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: SBOE District 14",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/state-board-education-14-taylor-bumgarner-22458404.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-senate-2",
+    "state": "TX",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-2",
+    "scope_plain": "Voters in State Senate District 2 (part of Dallas County, plus Wills Point, Canton and Corsicana). It is the only Senate seat on the Dallas County ballot this year.",
+    "office_explainer": "One of 31 state senators who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Bob Hall",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bob Hall",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent state senator; veteran and engineer (Dallas County GOP). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Keenen Colbert",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://colbertfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Logistics manager and Marine veteran (LWV guide).",
+        "own_words": [
+          {
+            "text": "Supports fully funding public schools and ending the private school voucher program.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would support a statewide moratorium on data centers until the state has a plan.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports raising the minimum wage to $20 an hour.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-100",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-100",
+    "scope_plain": "Voters in Texas House District 100 (South Dallas, including Oak Cliff, Joppa and Fair Park)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Venton Jones",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jordan Scott Hoffnagle",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://hoffnaglefortexas.org",
+        "website_confidence": "sourced",
+        "background": "Network field services worker (LWV guide). The LWV guide spells his first name \"Jordon\"; the ballot says \"Jordan.\"",
+        "own_words": [
+          {
+            "text": "Supports school choice but not at the expense of weakening public schools; wants more career and technical education.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "The three central issues of my campaign are 50/50 shared parenting, workforce education, and property-tax reform.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would cap a homeowner's taxable value at the original purchase price.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Venton Jones",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.ventonfor100.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; nonprofit CEO and Realtor, vice chair of the House Corrections Committee (LWV guide).",
+        "own_words": [
+          {
+            "text": "I adamantly oppose vouchers.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports universal background checks, raising the age to buy semi-automatic assault weapons to 21 and red flag laws.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants flat-dollar homestead exemptions and an end to nonviolent cannabis prosecutions.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-102",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-102",
+    "scope_plain": "Voters in Texas House District 102 (parts of Dallas, Garland and Richardson)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Ana-Maria Rodriguez Ramos",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bonnie Abadie",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://colorfulconservative.com",
+        "website_confidence": "sourced",
+        "background": "Owner of North Dallas Martial Arts (LWV guide).",
+        "own_words": [
+          {
+            "text": "Repealing the vouchers will be my first order of business",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says data centers must pay their own way, with no tax abatements.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Backs a grassroots plan to eliminate property taxes and replace them with a flat sales tax.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Ana-Maria Rodriguez Ramos",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.ramos4texas.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; family law attorney (LWV guide).",
+        "own_words": [
+          {
+            "text": "Filed a bill to raise the basic school allotment 45%, to $8,974 per student; calls the education savings account program a voucher scam.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants an immediate moratorium on AI data center construction until regulations pass.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports safe storage, raise-the-age, universal background check and red flag laws.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-103",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-103",
+    "scope_plain": "Voters in Texas House District 103 (West Dallas, North Oak Cliff, Bishop Arts, the Medical District, Love Field south and nearby areas)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Rafael Anchia",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Melanie Medley-Thomas",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Career in the health insurance industry (Dallas County GOP). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Rafael Anchia",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://rafaelanchia.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; former Dallas ISD trustee; works at Civitas Capital and Haynes and Boone (LWV guide).",
+        "own_words": [
+          {
+            "text": "Will keep filing bills to raise the basic school allotment for inflation; wants the voucher law repealed.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports closing the gun show loophole and a bill to curb celebratory gunfire.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "The most pressing issue for Texans is affordability.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-104",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-104",
+    "scope_plain": "Voters in Texas House District 104 (part of Dallas)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Jessica Gonzalez",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jessica Gonzalez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Unopposed; the LWV did not send a questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-105",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-105",
+    "scope_plain": "Voters in Texas House District 105 (Irving and part of Dallas County)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Terry Meza",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Terry Meza",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Unopposed; the LWV did not send a questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-107",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-107",
+    "scope_plain": "Voters in Texas House District 107 (Mesquite and part of Dallas County)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Linda Garcia",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Linda Garcia",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Unopposed; the LWV did not send a questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-108",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-108",
+    "scope_plain": "Voters in Texas House District 108 (the Park Cities, Preston Hollow, Bluffview, Uptown, Downtown, Lakewood and Lake Highlands)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Morgan Meyer",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Morgan Meyer",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent since 2015; chairs the House Ways and Means Committee (Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Allison Mitchell",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://allisonmitchellfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Small business owner and the parent of a child with disabilities (LWV guide).",
+        "own_words": [
+          {
+            "text": "Supports a higher basic school allotment; opposes public dollars for private-school tuition.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants the state to require data centers to disclose resource use and pay their share of infrastructure costs.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports stronger red flag laws and safe-storage practices.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Dallas Morning News editorial: Texas House District 108",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/district-108-morgan-meyer-allison-mitchell-22459908.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-109",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-109",
+    "scope_plain": "Voters in Texas House District 109 (Cedar Hill, Lancaster, Hutchins, Wilmer, Seagoville and part of South Dallas)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Aicha Davis",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Will Campbell",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.willcampbellfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Vice president of operations and technology; Marine veteran (LWV guide; Dallas County GOP).",
+        "own_words": [
+          {
+            "text": "Would fund every school district by enrollment, $10,000 per student for operations, with money following the student to public or private school.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "There is not a need for additional laws regarding firearms.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants to replace property taxes with a 3.25% sales tax on non-necessities.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Aicha Davis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-110",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-110",
+    "scope_plain": "Voters in Texas House District 110 (part of Dallas)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Toni Rose",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Toni Rose",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Unopposed; the LWV did not send a questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-111",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-111",
+    "scope_plain": "Voters in Texas House District 111 (part of Dallas)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Yvonne Davis",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Yvonne Davis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent (Texas AFL-CIO). Unopposed; the LWV did not send a questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-112",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-112",
+    "scope_plain": "Voters in Texas House District 112 (northern Dallas, Richardson, Garland, Sachse, Rowlett and Sunnyvale)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Angie Chen Button",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Angie Chen Button",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent since 2009; chairs the House Trade, Workforce and Economic Development Committee (Dallas Morning News). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Zach Herbert",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://zach4texas.com",
+        "website_confidence": "sourced",
+        "background": "Attorney and Marine Corps veteran (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Wants the basic school allotment raised to the national average, based on enrollment and tied to inflation; wants vouchers repealed.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports raising the purchase age for semi-automatic rifles to 21 and closing the private-sale loophole.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports expanding Medicaid and raising the minimum wage.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Dallas Morning News editorial: Texas House District 112",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-house-district-112-button-22460083.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-113",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-113",
+    "scope_plain": "Voters in Texas House District 113 (parts of Garland, Mesquite, Rowlett and Dallas County)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Rhetta Andrews Bowers",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stephen W. Stanley",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://stanleyfortexashouse.com",
+        "website_confidence": "sourced",
+        "background": "Realtor; former Sachse and Garland city council member (LWV guide; Dallas County GOP).",
+        "own_words": [
+          {
+            "text": "Supports a strong basic school allotment and parent choice; says any voucher program should be accountable and funded separately.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says data centers should pay their fair share and show they have enough power and water before approval.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports lasting property-tax relief with appraisal transparency.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Rhetta Andrews Bowers",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.rhettabowers.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent state representative (LWV guide; Texas AFL-CIO).",
+        "own_words": [
+          {
+            "text": "Strongly supports raising the basic school allotment and repealing the education savings account program.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports comprehensive background checks, waiting periods and secure-storage requirements.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants to expand Medicaid.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-114",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-114",
+    "scope_plain": "Voters in Texas House District 114 (White Rock Lake neighborhoods, the Arts District, part of Highland Park and Vickery Meadow)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "John Bryant",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tim McDonough",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Clinical professor at SMU's Cox School of Business (Dallas County GOP). Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "John Bryant",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://johnbryantfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; attorney and associate pastor (LWV guide; Texas AFL-CIO).",
+        "own_words": [
+          {
+            "text": "Firmly opposes vouchers; says the basic school allotment rose less than 1% while inflation topped 20%.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports a moratorium on data centers until enforceable laws pass.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports raising the age to buy all firearms to 21, an assault weapons ban and a red flag law.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-house-115",
+    "state": "TX",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-115",
+    "scope_plain": "Voters in Texas House District 115 (parts of Dallas, Addison, Coppell, Irving, Carrollton and Farmers Branch)",
+    "office_explainer": "One of 150 state House members who write Texas laws and the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Cassandra Hernandez",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Danny Rosellini",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.rosellinifortx.com",
+        "website_confidence": "sourced",
+        "background": "Retired corporate executive (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants teacher pay closer to administrator pay and fewer administrative staff.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says data centers should get no tax abatements and should generate their own power.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants to eliminate property taxes by ending many business tax exemptions.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Cassandra Hernandez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.cassandrafortexas.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; lawyer who served on the House Appropriations Committee (LWV guide; Dallas Morning News, which calls her Cassandra Garcia Hernandez).",
+        "own_words": [
+          {
+            "text": "Supports raising the basic school allotment with flexible per-student dollars before money goes to vouchers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Authored HB 956 to keep guns from people legally barred from having them; supports safe storage.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says the Legislature keeps overriding cities, counties and school boards; local control matters.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas AFL-CIO COPE 2026 general endorsements (marks Democratic incumbents)",
+        "url": "https://texasaflcio.org/news/endorsements"
+      },
+      {
+        "name": "Dallas Morning News editorial: Texas House District 115",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-house-district-115-recommendation-22459980.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-5th-coa-place-3",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, 5th Court of Appeals",
+    "district": "Place 3",
+    "scope_plain": "Every voter in the 5th Court of Appeals district: Dallas, Collin, Grayson, Hunt, Kaufman and Rockwall counties",
+    "office_explainer": "An appeals judge who reviews trial court rulings from Dallas and five nearby counties.",
+    "why_it_matters": "Open seat: Justice Bonnie Lee Goldstein is leaving. The 5th Court of Appeals is the busiest of the state's 15 appeals courts; Republicans won seven of the eight seats on the 2024 ballot (Dallas Morning News).",
+    "vote_for": 1,
+    "incumbent": "Bonnie Lee Goldstein (not running)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Matthew Kolodoski",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Dallas civil lawyer, board certified in consumer and commercial law and in insurance law; former federal judicial law clerk (LWV guide; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Says political pressure, public opinion and campaign money will not affect his decisions.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would write clear opinions that explain the court's reasoning.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says precedent should not change merely because the court's membership changes.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Amanda Reichek",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Served on this court from 2019 until losing her seat in 2024; more than 23 years litigating in state courts (Dallas Morning News; LWV guide).",
+        "own_words": [
+          {
+            "text": "I believe in judicial independence.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants opinions and rulings issued as quickly as possible.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants more resources for people without lawyers and more pro bono help.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: 5th Court of Appeals, Place 3",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/5th-district-court-appeals-place-3-election-22468489.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-5th-coa-place-6",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, 5th Court of Appeals",
+    "district": "Place 6",
+    "scope_plain": "Every voter in the 5th Court of Appeals district: Dallas, Collin, Grayson, Hunt, Kaufman and Rockwall counties",
+    "office_explainer": "An appeals judge who reviews trial court rulings from Dallas and five nearby counties.",
+    "why_it_matters": "Open seat. The 5th Court of Appeals is the busiest of the state's 15 appeals courts; Republicans won seven of the eight seats on the 2024 ballot (Dallas Morning News).",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ben Smith",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge of Collin County's 380th District Court since 2012 (Dallas Morning News; LWV guide).",
+        "own_words": [
+          {
+            "text": "I am an originalist who believes in the rule of law and judicial restraint.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says a judge should follow the original text over clearly wrong precedent.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Notes people without lawyers are at a real disadvantage and legal aid is scarce.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Monica Purdy",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Judge of Dallas County's 95th Civil District Court since 2020; earlier an associate judge and a Dallas municipal judge (Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Commits to ruling with fairness and independence for everyone, regardless of donor status.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports remote access for routine hearings and courthouse self-help centers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says precedent must yield when higher courts require it or to fix clear legal error.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: 5th Court of Appeals, Place 6",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/5th-court-appeals-place-6-purdy-smith-22470270.php"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-5th-coa-place-8",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice, 5th Court of Appeals",
+    "district": "Place 8",
+    "scope_plain": "Every voter in the 5th Court of Appeals district: Dallas, Collin, Grayson, Hunt, Kaufman and Rockwall counties",
+    "office_explainer": "An appeals judge who reviews trial court rulings from Dallas and five nearby counties.",
+    "why_it_matters": "The 5th Court of Appeals is the busiest of the state's 15 appeals courts; Republicans won seven of the eight seats on the 2024 ballot (Dallas Morning News).",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashley Wysocki",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Andrea D. Plumlee",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-district-court-298th",
+    "state": "TX",
+    "level": "judicial",
+    "office": "District Judge",
+    "district": "298th Judicial District",
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "A trial judge for big lawsuits over money, property, injuries and contracts.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Clark B. Will",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://clarkwillforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Attorney for more than 47 years in state and federal courts; former U.S. Army JAG officer (LWV guide).",
+        "own_words": [
+          {
+            "text": "Justice delayed is justice denied.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would manage the docket with firm, realistic scheduling and early identification of issues.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says the bench should serve the people, not politics.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Ashley Smith",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://ashleysmithforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Civil litigator and partner at Fee, Smith & Sharp (LWV guide).",
+        "own_words": [
+          {
+            "text": "Has a day-one plan: status updates on pending cases, regular discovery dockets and online hearing scheduling.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants clear, consistent procedures and better communication with litigants and lawyers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says efficiency should never come at the expense of fairness.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-uncontested-judges",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Uncontested Races (53 judges)",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "One box on the ballot lists 53 judges who have no opponent. One choice covers all of them.",
+    "why_it_matters": "You can't mark these judges one by one. \"Vote for All\" votes for every judge in the box and \"Vote for None\" votes for none of them; tap Background on \"Vote for All\" for the full list.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Vote for All",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Marks every judge in the box. All 53 are Democrats with no opponent. \"Incumbent\" means the Texas Secretary of State lists them as the current judge. 44th District Court: Veretta Frazier (incumbent); 68th District Court: Martin Hoffman (incumbent); 101st District Court: Staci Williams (incumbent); 116th District Court: Tonya Parker (incumbent); 134th District Court: Dale Tillery (incumbent); 160th District Court: Aiesha Redmond (incumbent); 191st District Court: Elizabeth Ginsberg; 192nd District Court: Maria Aceves (incumbent); 193rd District Court: Bridgett Whitmore (incumbent); 194th District Court: Kim Cooks; 195th District Court: Etta Jeanette Mullin; 203rd District Court: Raquel \"Rocky\" Jones (incumbent); 204th District Court: Tammy Kemp (incumbent); 254th District Court: Kim Brown (incumbent); 255th District Court: Vonda Bailey (incumbent); 256th District Court: Heather Nicole Johnson; 265th District Court: Jennifer Bennett (incumbent); 282nd District Court: Alison Grinter Allen; 283rd District Court: Lela Lawrence Mays (incumbent); 291st District Court: Stephanie N Mitchell Huff (incumbent); 292nd District Court: Brandon Birmingham (incumbent); 363rd District Court: Cynthia Garza; 301st Family District Court: Danielle Clark; 302nd Family District Court: Sandra Jackson (incumbent); 303rd Family District Court: LaDeitra Adkins (incumbent); 304th Family District Court: Andrea Martin (incumbent); 305th Family District Court: Cheryl Lee Shannon (incumbent); 330th Family District Court: Tamika Jones; Criminal District Court No. 1: Stephanie Hudson; Criminal District Court No. 5: Lakesha Smith; Criminal District Court No. 6: Nancy Mulder (incumbent); Criminal District Court No. 7: Chika Anyiam (incumbent); County Court at Law No. 1: Erin Nowell; County Court at Law No. 2: Melissa J. Bellan (incumbent); County Court at Law No. 3: Sally Montgomery (incumbent); County Court at Law No. 4: Dianne Jones (incumbent); County Court at Law No. 5: Nicole Taylor (incumbent); County Criminal Court of Appeals No. 1: Alexandra Guio; County Criminal Court of Appeals No. 2: Cheryl Williams; County Criminal Court No. 1: Tifanee Baker; County Criminal Court No. 2: Julia Hayes; County Criminal Court No. 3: Audrey Faye Moorehead (incumbent); County Criminal Court No. 4: Dominique Torres Williams (incumbent); County Criminal Court No. 5: Lisa Green (incumbent); County Criminal Court No. 6: Angela M King (incumbent); County Criminal Court No. 7: Remeko Tranisha Edwards (incumbent); County Criminal Court No. 8: Carmen White (incumbent); County Criminal Court No. 9: Carrie Singleton; County Criminal Court No. 10: Monique J Bracey Huff (incumbent); County Criminal Court No. 11: Shequitta D Kelly; Probate Court No. 1: Julia Malveaux (incumbent); Probate Court No. 2: Ingrid Michelle Warren (incumbent); Probate Court No. 3: Margaret Jones-Johnson (incumbent).",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Vote for None",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Marks none of the 53 judges. The box has no way to vote for some of them and not others.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF), page 4: the Uncontested Races box and its instructions",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Democratic Party: Democrats on the November ballot",
+        "url": "https://www.dallasdemocrats.org/elections/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-cda",
+    "state": "TX",
+    "level": "county",
+    "office": "Criminal District Attorney",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "The county's top prosecutor: decides which criminal cases to bring and how to try them.",
+    "why_it_matters": "Open seat: the incumbent lost the primary. Only one name is printed, with a write-in line for a declared write-in candidate.",
+    "vote_for": 1,
+    "incumbent": "John Creuzot (lost the primary)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Amber Givens",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former state district judge who beat incumbent DA John Creuzot in the March Democratic primary (Dallas Morning News). Unopposed on the printed ballot, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Eric Reed",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate: his name is not printed; you would write it in. Solo attorney and former Dallas County prosecutor (Dallas Morning News).",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: no recommendation for Dallas County DA",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/dallas-county-district-attorney-givens-reed-22458435.php"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-county-judge",
+    "state": "TX",
+    "level": "county",
+    "office": "County Judge",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "Runs county government and leads Commissioners Court. Not a courtroom job.",
+    "why_it_matters": "The county judge leads the Commissioners Court, which sets the county budget and tax rate and put the homelessness tax (County Prop A) on this ballot.",
+    "vote_for": 1,
+    "incumbent": "Clay Jenkins",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Immler",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.mikeimmler.com",
+        "website_confidence": "verified",
+        "background": "Retired Air Force colonel (30 years active and reserve) and attorney; former executive with the Army & Air Force Exchange Service (campaign site; Dallas Morning News).",
+        "own_words": [
+          {
+            "text": "Would bring zero-based budgeting to the county.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants strict Commissioners Court oversight of court spending to cut case backlogs and jail costs.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would review and, if needed, replace voting machines, and insist on paper ballots overseen by independent third parties.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Clay Jenkins",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.jenkinsfordallascounty.com",
+        "website_confidence": "verified",
+        "background": "County judge since he was first elected in 2010, seeking a fifth term; attorney (Dallas Morning News; LWV guide).",
+        "own_words": [
+          {
+            "text": "I know a good investment when I see one.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports the county tax rate election (County Prop A) to fund homelessness, mental health and housing programs.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants a \"Miami Model\" that steers people with mental illness or addiction to treatment instead of jail, and a new jail built around safety and treatment.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas Morning News editorial: Dallas County judge",
+        "url": "https://www.dallasnews.com/opinion/we-recommend/article/dallas-county-judge-clay-jenkins-mike-immler-22453281.php"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-district-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "District Clerk",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "Keeps district court records, collects court fees and processes child support payments.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Felicia Pitre",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dave Muehlhaeusler",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.dmdcdc.org",
+        "website_confidence": "verified",
+        "background": "Retired mechanical engineer (LWV guide).",
+        "own_words": [
+          {
+            "text": "Would focus on accurate filing and coding of court records and fewer processing delays.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says his review found court records that did not match across county systems.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports layered cybersecurity: multi-factor login, encryption, monitoring and regular testing.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Felicia Pitre",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.facebook.com/reelectpitre",
+        "website_confidence": "sourced",
+        "background": "District clerk since January 2015; earlier held management jobs in the same office (LWV guide).",
+        "own_words": [
+          {
+            "text": "Says she has led a new criminal case management system and a phased AI rollout.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Has set aside money in the 2027 budget for quality-assurance staff to catch errors that can delay jail releases.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Notes that jury selection is run by district judges, not her office.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-county-clerk",
+    "state": "TX",
+    "level": "county",
+    "office": "County Clerk",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "Keeps county court records, marriage licenses, birth and death records, and property records.",
+    "why_it_matters": "Open seat: longtime County Clerk John Warren did not run again.",
+    "vote_for": 1,
+    "incumbent": "John Warren (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Skye Garcia",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.skyegarciafortexas.com",
+        "website_confidence": "sourced",
+        "background": "Licensed Medicare benefits advisor; UT Dallas graduate (LWV guide).",
+        "own_words": [
+          {
+            "text": "Dallas County currently processes documents far too slowly, and at far too great an expense to the taxpayer.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants better employee training against scam emails, which she calls the biggest cyber risk.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants election fairness and a lower tax burden to be the cornerstone of the office.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Damarcus L Offord",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.damarcusoffordcampaign.com",
+        "website_confidence": "verified",
+        "background": "Senior manager of state relations at a large Texas transit agency (DART, per Wikipedia); former staffer to the late Rep. Eddie Bernice Johnson (LWV guide).",
+        "own_words": [
+          {
+            "text": "Would expand the Virtual Clerk's Office and online access to records and applications.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would set measurable performance standards and work with judges to improve court services.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would strengthen access controls, monitoring, encryption and backups for public records.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-treasurer",
+    "state": "TX",
+    "level": "county",
+    "office": "County Treasurer",
+    "district": null,
+    "scope_plain": "Every Dallas County voter",
+    "office_explainer": "Holds, invests and pays out county money as Commissioners Court directs.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Pauline Medrano",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Corsandra Brigham Phelps",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://phelpshelpsdallas.com",
+        "website_confidence": "sourced",
+        "background": "Financial services manager; 13 years in banking at Bank of America (LWV guide).",
+        "own_words": [
+          {
+            "text": "Would set strict internal controls and meet account reconciliation deadlines.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Calls for a forensic audit to find out where the county's money is.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would hold quarterly financial literacy classes.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Pauline Medrano",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "County treasurer for 12 years (LWV guide).",
+        "own_words": [
+          {
+            "text": "Says the county is rated AAA by Moody's and S&P and was projected to earn $43 million in interest by September 2026.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Is upgrading the cashiering system to centralize county deposits.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Names cybersecurity training as the top issue ahead.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-commissioner-2",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 2",
+    "scope_plain": "Voters in Commissioners Court Precinct 2 (northern Dallas County: parts of Dallas, Addison, Carrollton, Coppell, Farmers Branch, Highland Park, Irving, Richardson and University Park)",
+    "office_explainer": "One of four commissioners who, with the county judge, set the county budget and tax rate.",
+    "why_it_matters": "The two candidates split on County Prop A: Sommerman moved to put it on the ballot; Wernick opposes it. Only Precincts 2 and 4 elect a commissioner this year.",
+    "vote_for": 1,
+    "incumbent": "Andy Sommerman",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Barry Wernick",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://wernickfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Attorney, mediator and arbitrator (LWV guide).",
+        "own_words": [
+          {
+            "text": "Opposes County Prop A, calling it \"a reckless tax.\"",
+            "is_quote": false,
+            "source": "https://dallasexpress.com/opinion/opinion-dallas-cant-afford-proposition-a/"
+          },
+          {
+            "text": "Says the county has a spending problem; would order a forensic audit, rebid long-running contracts and cut the rate below no-new-revenue.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants a return to precinct-based voting on hand-marked, hand-counted paper ballots.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Andy Sommerman",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://commissionersommerman.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent commissioner and lawyer (LWV guide). He made the motion to put County Prop A on the ballot (county order).",
+        "own_words": [
+          {
+            "text": "Says treating mental illness, addiction and homelessness keeps people out of jail and lets police focus on real threats.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says he made the central vote count viewable by camera and backed public testing of voting equipment.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Wants a strong business climate as the county's population growth stalls.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      },
+      {
+        "name": "Barry Wernick op-ed against County Prop A (The Dallas Express, Oct 9, 2026)",
+        "url": "https://dallasexpress.com/opinion/opinion-dallas-cant-afford-proposition-a/"
+      },
+      {
+        "name": "Dallas County Court Order 2026-0879 (Sommerman motion)",
+        "url": "https://www.dallascounty.org/Assets/uploads/docs/budget/tax-rate-info/2026-0879-Tax-Rate-Election-Order.pdf"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-commissioner-4",
+    "state": "TX",
+    "level": "county",
+    "office": "County Commissioner",
+    "district": "Precinct 4",
+    "scope_plain": "Voters in Commissioners Court Precinct 4",
+    "office_explainer": "One of four commissioners who, with the county judge, set the county budget and tax rate.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Elba Garcia",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Elba Garcia",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent commissioner; unopposed, so the LWV sent no questionnaire. She voted against putting County Prop A on the ballot (county order).",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Wikipedia: 2026 Dallas County elections (secondary; primary results, incumbents)",
+        "url": "https://en.wikipedia.org/wiki/2026_Dallas_County_elections"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-1-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1, Place 1",
+    "scope_plain": "Voters in Dallas County JP Precinct 1 (southern Dallas County: South Dallas, DeSoto, Duncanville, Glenn Heights, Hutchins, Lancaster, Seagoville and Wilmer, per the county GOP)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Thomas G. Jones",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lizbeth Diaz",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.diazforjp.com",
+        "website_confidence": "sourced",
+        "background": "Paralegal for more than 15 years (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants to cut case backlogs and resolve cases on time.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says she would balance property owners' lawful rights with tenants' legal protections.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Thomas G. Jones",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-1-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 1, Place 2",
+    "scope_plain": "Voters in Dallas County JP Precinct 1 (southern Dallas County: South Dallas, DeSoto, Duncanville, Glenn Heights, Hutchins, Lancaster, Seagoville and Wilmer, per the county GOP)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Only one name is printed, with a write-in line for a declared write-in candidate.",
+    "vote_for": 1,
+    "incumbent": "Valencia Nash",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Valencia Nash",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed on the printed ballot, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Jayla Godbolt",
+        "party": "Write-in",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Declared write-in candidate: her name is not printed; you would write it in. In law enforcement since 2013 (Dallas County GOP page).",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-2-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 2, Place 1",
+    "scope_plain": "Voters in Dallas County JP Precinct 2 (far East Dallas, Balch Springs, Garland, Mesquite, Rowlett, Sachse and Sunnyvale, per the county GOP)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Margaret O'Brien",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Vickie Whiteside",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://whiteside4jp.com",
+        "website_confidence": "sourced",
+        "background": "Bus driver; former clerk and reserve deputy in a constable's office (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants a county program to help people stay in their homes by covering back rent.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says anyone should be able to plead their case and win without the cost of a lawyer.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Margaret O'Brien",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.mo4jp.com",
+        "website_confidence": "sourced",
+        "background": "Justice of the peace since her 2018 election; licensed real estate broker (LWV guide).",
+        "own_words": [
+          {
+            "text": "Uses e-filing, video hearings and a help website for people without lawyers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Gives eviction defendants a sheet of legal and rental-help resources before trial.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-2-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 2, Place 2",
+    "scope_plain": "Voters in Dallas County JP Precinct 2 (far East Dallas, Balch Springs, Garland, Mesquite, Rowlett, Sachse and Sunnyvale, per the county GOP)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Antoinette N Harris",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-3-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 3, Place 1",
+    "scope_plain": "Voters in Dallas County JP Precinct 3",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Adam M. Swartz",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lynn A. Benedetto",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Adam M. Swartz",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://keepjudgeswartz.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent for four years; chosen by fellow JPs as chief administrative judge; attorney since 2014 (LWV guide).",
+        "own_words": [
+          {
+            "text": "Supports e-filing for everyone, text reminders for court dates and kiosks for people without lawyers.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "No one should be pre-judged when walking into the Courthouse.",
+            "is_quote": true,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-3-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 3, Place 2",
+    "scope_plain": "Voters in Dallas County JP Precinct 3",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael L. Geller",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Paula M Rosales",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://rosalesforjustice.com",
+        "website_confidence": "sourced",
+        "background": "Managing attorney at a personal injury firm; serves as a visiting JP, including on this bench; former Dallas County Court at Law judge (LWV guide).",
+        "own_words": [
+          {
+            "text": "Would hold some evening sessions and allow virtual hearings for people who work or study during the day.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Would add low-cost mediation in eviction cases, such as phased move-outs or deferred rent.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-4-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 4, Place 1",
+    "scope_plain": "Voters in Dallas County JP Precinct 4 (Irving, Carrollton, Coppell, Grand Prairie and Cedar Hill, per the county GOP; it may include little or none of the City of Dallas)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Mike Jones",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Fred Van Liew",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Mike Jones",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.judgemikejones.com",
+        "website_confidence": "sourced",
+        "background": "Justice of the peace for Precinct 4, Place 1 since 2019 (LWV guide).",
+        "own_words": [
+          {
+            "text": "Supports plain-language forms, interpreters, e-filing, text reminders and virtual hearings.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Says judges must apply new Texas eviction laws consistently while making sure both sides understand the process.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-4-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 4, Place 2",
+    "scope_plain": "Voters in Dallas County JP Precinct 4 (Irving, Carrollton, Coppell, Grand Prairie and Cedar Hill, per the county GOP; it may include little or none of the City of Dallas)",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Sasha Moreno",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sasha Moreno",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-5-1",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 5, Place 1",
+    "scope_plain": "Voters in Dallas County JP Precinct 5",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Sara Martinez",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sara Martinez",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-jp-5-2",
+    "state": "TX",
+    "level": "judicial",
+    "office": "Justice of the Peace",
+    "district": "Precinct 5, Place 2",
+    "scope_plain": "Voters in Dallas County JP Precinct 5",
+    "office_explainer": "A local judge for evictions, small claims up to $20,000, traffic tickets and fine-only crimes.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Omar Narvaez",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Dallas County Republican Party: Meet the Candidates (district descriptions)",
+        "url": "https://dallasgop.org/meet-the-candidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-constable-1",
+    "state": "TX",
+    "level": "county",
+    "office": "Constable",
+    "district": "Precinct 1",
+    "scope_plain": "Voters in Dallas County Constable Precinct 1",
+    "office_explainer": "A county law officer who serves warrants and court papers and works as bailiff for JP courts.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Tracey Gulley",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tracey Gulley",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-constable-2",
+    "state": "TX",
+    "level": "county",
+    "office": "Constable",
+    "district": "Precinct 2",
+    "scope_plain": "Voters in Dallas County Constable Precinct 2",
+    "office_explainer": "A county law officer who serves warrants and court papers and works as bailiff for JP courts.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Deanna Hammond",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chad Calvert",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not answer the LWV questionnaire.",
+        "own_words": [],
+        "lwv_status": "declined",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Deanna Hammond",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://hammondforconstable.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent constable with more than 23 years in law enforcement (LWV guide).",
+        "own_words": [
+          {
+            "text": "Wants more staffing; says current levels strain deputies and raise overtime and burnout.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          },
+          {
+            "text": "Supports modernizing procedures with technology, standardized training and better data tracking.",
+            "is_quote": false,
+            "source": "https://lwvdallas.org/docs.ashx?id=1831284"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-constable-3",
+    "state": "TX",
+    "level": "county",
+    "office": "Constable",
+    "district": "Precinct 3",
+    "scope_plain": "Voters in Dallas County Constable Precinct 3",
+    "office_explainer": "A county law officer who serves warrants and court papers and works as bailiff for JP courts.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Henry Curry",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Henry Curry",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-constable-4",
+    "state": "TX",
+    "level": "county",
+    "office": "Constable",
+    "district": "Precinct 4",
+    "scope_plain": "Voters in Dallas County Constable Precinct 4",
+    "office_explainer": "A county law officer who serves warrants and court papers and works as bailiff for JP courts.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Eddie Brown, Jr",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Eddie Brown, Jr",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "tx-dallas-constable-5",
+    "state": "TX",
+    "level": "county",
+    "office": "Constable",
+    "district": "Precinct 5",
+    "scope_plain": "Voters in Dallas County Constable Precinct 5",
+    "office_explainer": "A county law officer who serves warrants and court papers and works as bailiff for JP courts.",
+    "why_it_matters": "Unopposed. Only one name is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Michael Orozco",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michael Orozco",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Unopposed, so the LWV sent no questionnaire.",
+        "own_words": [],
+        "lwv_status": "not_asked",
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Dallas County official sample ballot, Nov 3, 2026 (PDF; names checked against the page images)",
+        "url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf"
+      },
+      {
+        "name": "League of Women Voters of Dallas Voters Guide, Nov 3, 2026 (PDF, candidate answers)",
+        "url": "https://lwvdallas.org/docs.ashx?id=1831284"
+      },
+      {
+        "name": "Texas Secretary of State qualified candidate list, Nov 3, 2026 general (incumbent flags and declared write-ins)",
+        "url": "https://goelect.txelections.civixapps.com/ivis-cbp-ui/candidate-information"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

@@ -1,0 +1,381 @@
+[
+  {
+    "id": "sf-prop-a",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition A",
+    "official_title": "Charter Changes Affecting Various City Departments and Commissions. Shall the City amend the Charter to align it with how some City departments currently operate, change some processes, eliminate or reorganize certain commissions and advisory bodies, and require the Board of Supervisors to amend voter-approved laws to enact some of these changes?",
+    "plain_summary": "A big cleanup of the City Charter, San Francisco's constitution. It rewrites outdated sections on how departments work, changes some procedures (for example, letting supervisors approve legal settlements by resolution), eliminates or merges some commissions and advisory bodies, and moves others out of the Charter into regular city law so supervisors can change them without a citywide vote. A task force would review commissions every 10 years.",
+    "yes_means": "The Charter gets these cleanups, and some commissions are cut, merged or moved into regular law that supervisors can change.",
+    "no_means": "The Charter stays as it is, and changing those commissions still takes a citywide vote.",
+    "current_law": "The Charter and other voter-approved laws create many commissions and advisory bodies and set their powers, members, removal rules and reporting duties. Some of these rules are obsolete, and most can only be changed by voters.",
+    "fiscal_impact": "City Controller: saves about $365,000 to $450,000 a year, mainly by eliminating the Sanitation and Streets Commission, the Public Works Commission and the Street Artists and Craftsmen Examiners Advisory Committee. Lifting the ban on paying Youth Commission members could later cost $5,000 to $85,000 a year if the City chooses to pay them.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "It sounds like pure housekeeping, and much of it is. Supporters count about 110 changes. A few are substantive: some voter-created oversight bodies, including the one for 2018's Prop C homelessness tax, could be changed by the Board without a citywide vote, and the Controller notes it removes Charter language allowing discipline of striking city workers other than police and firefighters.",
+    "supporters_case": {
+      "text": "Mayor Daniel Lurie, Board President Rafael Mandelman, seven more supervisors, Sen. Scott Wiener and Assemblymembers Catherine Stefani and Matt Haney say it makes '110 small fixes' to 'old, broken, and conflicting parts' of the Charter: dropping rules like requiring a city bookbinder, ending duplicate reports, and removing 'zombie commissions' that oversee departments that no longer exist. Their rebuttal says none of the five commissions overseeing homeless services is removed.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=68"
+    },
+    "opponents_case": {
+      "text": "The Coalition on Homelessness says Prop A would 'threaten participatory democracy by removing commissions put in place by voters,' including letting a Board majority remove the independent oversight body for the 2018 Prop C homelessness tax. A paid argument by columnist Patrick Monette-Shaw says it turns required commissioner qualifications into suggestions and drops annual reports.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=69"
+    },
+    "official_text_url": "https://api.sf.gov/documents/60913/Nov2026_CA_DepartmentBoardCommissionandAdvisoryBodyUpdates_LegalText.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=66",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition A",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-a"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-b",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition B",
+    "official_title": "Establishing a Municipal Finance Corporation and a Public Bank. Shall the City amend the Charter to authorize the City to establish a municipal finance corporation and a public bank?",
+    "plain_summary": "Lets the City set up a city-owned nonprofit lender (a municipal finance corporation) if the Treasurer finds enough funding. After three years it could seek state and federal approval to become a public bank that also takes deposits. Both would lend for affordable housing, homeownership, small businesses and environmental projects, each run by a board under its own oversight commission. It puts no money into either one.",
+    "yes_means": "The City is allowed to create a city-owned lender, which could later become a public bank.",
+    "no_means": "The City still has no local authority to create a city lender or a public bank.",
+    "current_law": "No local law authorizes the City to create a municipal finance corporation (a government-owned nonprofit that lends but takes no deposits) or a public bank (one that lends and takes deposits).",
+    "fiscal_impact": "City Controller (amended Aug. 20, 2026): no direct cost, because it doesn't require the City to create anything. If the City does move ahead, a 2023 city working group estimated $310 million to $460 million over eight years to fund and run the lender and later the bank, possibly much more or less. The oversight commissions would cost about $550,000 to $600,000 a year, and the City would have limited control over the lender's or bank's financial decisions.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "A YES vote only gives permission. It doesn't fund a bank, and the lender can't start until the Treasurer finds enough money. It is not a tax. The two sides disagree about the future cost and risk.",
+    "supporters_case": {
+      "text": "Supervisors Chyanne Chen, Bilal Mahmood, Myrna Melgar, Rafael Mandelman, Jackie Fielder and Shamann Walton, the SF Labor Council, the San Francisco Foundation and tenant and climate groups say a public bank 'puts the people of San Francisco over private profits,' would be 'run by banking professionals, not politicians,' and takes advantage of a time-limited state law. They stress that it 'is not a tax.'",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=74"
+    },
+    "opponents_case": {
+      "text": "The No on Prop B committee (Leslie Huang and three others) says it creates 'a City Hall-controlled public bank' with no dedicated funding or proven demand during large budget shortfalls, leaving 'taxpayers holding the bag later.' Attorney Larry Marso's rebuttal cites the Controller's $310 million to $460 million estimate and past public-bank failures.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=75"
+    },
+    "official_text_url": "https://api.sf.gov/documents/60915/Nov2026_CA_Municipal_Finance_Corporation_and_Public_Bank_LegalText.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=72",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition B",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-b"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-c",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition C",
+    "official_title": "Contributions to the Housing Trust Fund. Shall the City amend the Charter to change how the City's annual contributions to the Housing Trust Fund are set, increase funding and expand programs for affordable housing, and extend the Fund to 2058?",
+    "plain_summary": "Raises the City's yearly payment into its affordable-housing fund, growing from about $51 million toward $125 million, and keeps the fund going until 2058 instead of 2043. It raises the income limit for down-payment loans from 120% to 200% of area median income and lets the money pay for housing-related streets, sidewalks and utilities. The City could freeze payments in a deficit over $250 million or cut them up to 10% in a Rainy Day year. No new tax: the money comes from the existing budget.",
+    "yes_means": "The City must put more of its existing budget into affordable housing each year, through 2058.",
+    "no_means": "The fund keeps today's formula (about $51 million last year) and ends in 2043.",
+    "current_law": "The Housing Trust Fund pays for building, buying and fixing affordable housing, down-payment loans for households up to 120% of area median income and first responders, help for households at risk of losing housing, and some neighborhood grants. The City's yearly payment rises or falls with General Fund revenue; last year it was $50.8 million. The fund expires in 2043.",
+    "fiscal_impact": "City Controller: about $6 million more from the General Fund in 2028-29, growing to about $60 million more a year by 2034-35 (a $125 million yearly contribution, versus about $65 million under current law). It does not follow the City's non-binding policy against new spending mandates; voter-mandated set-asides already take about 30% of the roughly $7 billion General Fund.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "It doesn't raise taxes, but it reserves more of the existing budget for housing, which leaves less for other services unless revenue grows. The Board of Supervisors could also change the down-payment income limit by ordinance.",
+    "supporters_case": {
+      "text": "Mayor Daniel Lurie, Supervisor Myrna Melgar, Asm. Catherine Stefani and affordable-housing leaders call it 'a true consensus measure,' placed on the ballot 11-0, that renews the city's biggest local affordable-housing source, funds down-payment help for teachers and first responders, and 'does not raise anyone's taxes,' with pauses allowed during a real deficit.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=82"
+    },
+    "opponents_case": {
+      "text": "The San Francisco Republican Party says the fund 'has failed,' with unit costs near $1 million, and that C doubles it, extends it 30 years and spreads it across new uses with 'no unit target' or benchmark. It also objects that supervisors could raise the homebuyer income cap again without a vote.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=83"
+    },
+    "official_text_url": "https://api.sf.gov/documents/60917/Nov2026_CA_HousingTrustFund_LegalText.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=80",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "The San Francisco Standard",
+        "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
+        "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-d",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition D",
+    "official_title": "Changes to Ballot Measure Process. Shall the City amend the Charter to increase the requirements for signature initiatives from 2% to 8% of registered voters in San Francisco (currently from about 10,600 to about 42,500 signatures), increase the requirements for calling special elections, allow signature initiatives to be withdrawn before an election, and remove the ability of a minority of Board of Supervisors members or the Mayor to place measures on the ballot?",
+    "plain_summary": "Makes it harder to put local measures on the ballot. Petitions for new city laws would need signatures from 8% of registered voters instead of 2% (about 42,500 instead of 10,600). Petitions calling a special election would need 10% of registered voters (about 53,100). The Mayor alone, or four supervisors, could no longer place measures on the ballot; it would take a Board majority. Petition backers could withdraw a qualified measure up to 102 days before the election.",
+    "yes_means": "Fewer ways onto the ballot: more signatures needed, and no solo placement by the Mayor or four supervisors.",
+    "no_means": "The Mayor, any four supervisors, a Board majority or a 2% petition can still put measures on the ballot.",
+    "current_law": "Measures reach the ballot by a Board majority, by four or more supervisors without a Board vote, by the Mayor alone, or by a petition signed by 2% of registered voters (about 10,600 of more than 530,000). A petition for a special election needs 10% of the votes cast in the last mayor's race (about 39,000). Once submitted, a petition can't be withdrawn.",
+    "fiscal_impact": "City Controller: minimal impact. Fewer measures could save money (each pamphlet page costs about $11,400 to print and mail; a citywide special election costs at least $5 million), while checking more signatures and handling withdrawals could add work.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The 2%-to-8% jump is for petitions proposing city laws and policy statements. Citizen petitions to amend the Charter already need 10% of registered voters (53,076 signatures this year, the number Props D, E and F each had to reach), and D doesn't change that.",
+    "supporters_case": {
+      "text": "Mayor Lurie, Board President Mandelman, Speaker Emerita Nancy Pelosi, Nancy Tung of the SF Democratic Party, former city officials, Teamsters Local 665, several union leaders and merchant groups say today 'a minority of supervisors, just 2% of voters or the mayor acting alone' can put anything on the ballot, which is why SF has 'the longest and most confusing ballots in the state.' They note 8% is still below the state's 10%.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=88"
+    },
+    "opponents_case": {
+      "text": "The SF Labor Council, United Educators of SF, the Tenants Union, Senior & Disability Action, Indivisible SF and others say D would 'quadruple the signatures required,' a level 'so high only the very wealthy can reach it,' pricing out neighborhood groups and unions. They say backers raised $8.6 million from a small number of wealthy donors.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=89"
+    },
+    "official_text_url": "https://api.sf.gov/documents/53002/Legal_Text_Changes_to_Ballot_Measure_Process.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=86",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition D",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-d"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-e",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition E",
+    "official_title": "City Administrator's Authority and Changes to City Contracting. Shall the City amend the Charter to give the City Administrator more authority by centralizing the City's purchasing rules and processes, changing how the City approves purchasing rules, changing when contracts and leases require Board of Supervisors approval, and extending the City Administrator's term?",
+    "plain_summary": "Puts the City Administrator in charge of one set of purchasing and contracting rules that nearly all departments must follow, including ones like Muni, the Public Utilities Commission and the Port that now partly set their own. Only the City Administrator could propose contracting ordinances; the Board and Mayor could approve or reject them within 60 days but not amend them. Contracts would need Board approval at $25 million in cost (now $10 million) or $4.5 million in revenue (now $1 million). The Administrator's term goes from 5 to 10 years.",
+    "yes_means": "The City Administrator writes the city's contracting rules, and the Board reviews fewer, larger contracts.",
+    "no_means": "Contracting rules stay split among the Board, Mayor, City Administrator and some departments, with today's approval limits.",
+    "current_law": "The Board of Supervisors sets purchasing rules by ordinance and must approve contracts costing $10 million or more and contracts or leases bringing in $1 million or more. The City Administrator, appointed by the Mayor for five years with Board approval, sets rules for most goods and services, except some at Muni, the Public Utilities Commission, the Port and arts departments.",
+    "fiscal_impact": "City Controller: minimal impact, at a level that can't be determined. A more unified purchasing system may lower costs and save staff time over the long run, and higher approval limits would reduce time spent on Board contract reviews.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "Rules mainly about wages, workplace safety, local-business preferences or labor agreements stay with the Board. A contracting rule the Administrator proposes takes effect automatically if neither the Board nor the Mayor acts within 60 days. The $25 million and $4.5 million limits rise with inflation every five years starting in 2032.",
+    "supporters_case": {
+      "text": "Mayor Lurie, Board President Mandelman, Nancy Pelosi, former Controller Ben Rosenfield, Firefighters Local 798, the SF Building Trades and merchant groups say the city awards more than $5 billion in contracts a year in a wasteful system, and that a 'professional City Administrator' setting 'transparent standards' would curb waste and corrupt dealmaking. Their rebuttal cites the $1.7 million Noe Valley public toilet.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=98"
+    },
+    "opponents_case": {
+      "text": "Attorney Larry Marso, a Nob Hill resident, argues the Mayor should build a Board majority instead of treating 'the system of checks and balances itself as the enemy,' and that E, D and F together concentrate power. His is the only printed argument against; no paid arguments against E were submitted.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=99"
+    },
+    "official_text_url": "https://api.sf.gov/documents/53470/LT_ModernizingCityContracting.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=96",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition E",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-e"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-f",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition F",
+    "official_title": "Changes to Executive Branch Management. Shall the City amend the Charter to expand the Mayor's authority to transfer responsibilities between departments, hire deputy mayors, and hire some and fire most department heads; and to allow City officials to remove members of boards and commissions without cause?",
+    "plain_summary": "Gives the Mayor more direct control of city government. The Mayor could hire some and fire most department heads without their commissions, hire deputy mayors to supervise departments, and move duties between most departments or combine them under one head unless the Board objects. Officials who appoint commissioners could remove most of them at any time, without cause. Watchdogs like the Controller, Elections, Ethics and police accountability are exempt.",
+    "yes_means": "The Mayor can hire and fire most department heads, use deputy mayors and reorganize departments; most commissioners can be removed at will.",
+    "no_means": "Commissions keep their role in picking and removing most department heads, and commissioners can only be removed for misconduct.",
+    "current_law": "The Mayor supervises nearly 50 departments but usually must pick a department head from a commission's nominees, and usually only the commission can fire that person. The Mayor can't use deputy mayors over most Charter departments or move duties between Charter departments. Commissioners can usually be removed only for official misconduct or certain felonies.",
+    "fiscal_impact": "City Controller: minimal, at a level that can't be determined. A deputy mayor would cost about $250,000 a year. Merging departments could save money; for example, merging Sanitation and Streets into Public Works in 2022-23 saved an estimated $3.5 million the first year.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "'Remove members of boards and commissions without cause' applies to every appointing official, including the Board of Supervisors, not only the Mayor. The Board of Appeals, Civil Service Commission and Ethics Commission are excluded. The Mayor can't eliminate duties or commissions set by the Charter.",
+    "supporters_case": {
+      "text": "Mayor Lurie, Board President Mandelman, Nancy Pelosi, former Controller Ben Rosenfield, firefighters and building trades say departments operate as 'independent fiefdoms,' six department heads were indicted or investigated for corruption in a decade, and letting the Mayor hire and remove most department heads creates 'clear lines of accountability.' They say a Board majority can still reject changes and Ethics and police oversight stay independent.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=104"
+    },
+    "opponents_case": {
+      "text": "Small Business Forward says F 'removes essential checks & balances,' letting the Mayor fire commissioners for any reason, replace department heads without hearings and merge departments with only 60 days for the Board to object. DSA San Francisco, Supervisor Jackie Fielder and former Supervisor Dean Preston add that tech billionaires spent over $8 million to put D, E and F on the ballot.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=105"
+    },
+    "official_text_url": "https://api.sf.gov/documents/53467/LT_ExecutiveBranchAccountablility.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=102",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "The San Francisco Standard",
+        "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
+        "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-g",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition G",
+    "official_title": "Allowing Private Vehicles on the Upper Great Highway in Sunset Dunes Park. Shall the City close Sunset Dunes Park from Monday at 4:00 a.m. through Friday at 6:00 p.m., unless a holiday falls on a weekday, in order to reopen the roadway known as the Upper Great Highway to private vehicles during that time?",
+    "plain_summary": "Reopens the Upper Great Highway, now Sunset Dunes Park between Lincoln Way and Sloat Boulevard, to private cars on weekdays: Monday 4 a.m. to Friday 6 p.m., except holidays. The park would close during those hours and stay car-free on weekends and holidays. The City would first need a California Coastal Act permit and any other required approvals.",
+    "yes_means": "Cars return to the Upper Great Highway on weekdays, and Sunset Dunes Park is open only on weekends and holidays.",
+    "no_means": "The road stays closed to private cars, and Sunset Dunes Park stays open every day.",
+    "current_law": "Sunset Dunes Park replaced the Upper Great Highway and is closed to private vehicles at all times (emergency, official and shuttle vehicles allowed). Voters approved that closure in November 2024 (Prop K) after rejecting a 2022 measure to keep cars on the road.",
+    "fiscal_impact": "Controller's office: about $9.8 million in one-time costs, mostly $8.8 million for new traffic signals at 8 intersections plus removing park features and restoring the road, and $500,000 to $1.9 million a year more, largely for sand removal. Weekday park staffing (about $300,000 a year) would drop. A coastal permit could add costs.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The question asks whether to 'close Sunset Dunes Park' on weekdays. Voting YES closes the park on weekdays and reopens the road to cars. Voting NO keeps the park open and the road car-free. Even if it passes, cars can't return until the Coastal Commission and other agencies sign off.",
+    "supporters_case": {
+      "text": "Retired SFPD Commander Richard Corriea, writing for Westside neighbors who gathered about 16,000 signatures, says traffic injuries in Sunset neighborhoods 'have risen sharply' since the closure, and that G 'restores the compromise in place from 2021 to 2024': the road open on weekdays and a park on weekends.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=112"
+    },
+    "opponents_case": {
+      "text": "Sen. Scott Wiener, Supervisors Matt Dorsey, Bilal Mahmood, Rafael Mandelman, Myrna Melgar and Danny Sauter, and the Sierra Club say G 'would destroy Sunset Dunes park,' which has had over 2 million visits, nearly 60% on weekdays, and that three independent analyses found traffic impacts minimal (the most affected trips 2 to 4 minutes longer at rush hour).",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=113"
+    },
+    "official_text_url": "https://api.sf.gov/documents/51994/20260220_Legal_Text.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=110",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition G",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-g"
+      },
+      {
+        "source": "Local News Matters (Bay City News)",
+        "title": "SF's Proposition G to allow cars back on the Great Highway heads to voters",
+        "url": "https://localnewsmatters.org/2026/09/30/prop-g-great-highway-san-francisco/"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-h",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition H",
+    "official_title": "Parcel Tax to Fund Muni Operations. Shall the City fund Muni service through a new annual parcel tax on real estate at rates ranging from $129 per parcel up to a maximum of $400,000 per parcel, depending on the type of property and its size and adjusted annually for inflation, for estimated revenue of $177 million a year for 15 years?",
+    "plain_summary": "A new yearly property tax for 15 years (July 2027 to June 2042) to pay for Muni service. It's based on property type and building size, not value: $129 for a single-family home up to 3,000 sq ft, a $249 base for apartment buildings (capped at $50,000), and a $799 base for commercial and mixed-use (capped at $400,000), plus more per square foot for bigger buildings. Rates rise with inflation. Most homeowners 65 and older living in their home pay less or nothing.",
+    "yes_means": "Property owners pay a new yearly tax for 15 years, raising about $177 million a year for Muni service.",
+    "no_means": "No new parcel tax; Muni has to close its budget gap some other way.",
+    "current_law": "Muni runs buses, light rail, streetcars and cable cars, with over 500,000 rides each weekday. It is funded by fares and local, state and federal money, but not by a parcel tax.",
+    "fiscal_impact": "City Controller: about $177 million a year starting in 2027-28, rising with inflation. Running the tax would cost about $2 million to $3 million to start and $4 million to $6 million a year. Total revenue depends on how many exemptions are granted.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "Landlords of rent-controlled units can pass up to half the tax to tenants, capped at $65 per unit per year, for rents set before June 1, 2027. Prop H and the regional sales tax (RTM) are separate; either, both or neither can pass.",
+    "supporters_case": {
+      "text": "Mayor Lurie, every member of the Board of Supervisors, Nancy Pelosi, the SF Labor Council, the SF Chamber of Commerce, the Tenants Union and transit unions say Covid relief money is gone and 'without Prop H, service could be cut by 30%,' with at least 20 bus routes eliminated. They cite $137 million in yearly savings Muni already made and say the money goes only to Muni service, with audits.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=128"
+    },
+    "opponents_case": {
+      "text": "The San Francisco Republican Party says H funds Muni's '$300 million deficit for 15 years with no strings attached': no required cost cuts or efficiency targets, an efficiency review that SFMTA doesn't have to follow, and a tax based on size rather than value that renters partly pay through pass-throughs.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=129"
+    },
+    "official_text_url": "https://api.sf.gov/documents/52842/Legal_Text_3X0F1JU.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=126",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition H",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-h"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-i",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition I",
+    "official_title": "Changes to Real Property Transfer Tax. Shall the City permanently dedicate half of the transfer tax revenues collected when certain real estate with a value or sales price of more than $10,000,000 changes hands, which will continue to be taxed at rates of 5.5% to 6%, to be spent only on affordable housing, including social housing developments and housing assistance, and exempt certain sales from the dedicated portion of the tax, for an estimated annual revenue decrease of approximately $1 million?",
+    "plain_summary": "Keeps today's tax rates on property sales of $10 million or more (5.5% to 6%) but splits them in half: half stays in the General Fund, and half becomes a new 'House SF' tax that can only be spent on affordable housing. At least 60% goes to building it (half of that to social housing), 25% to buying or fixing existing housing, and 10% to tenant protection and homelessness prevention. New apartment buildings sold within 5 years are exempt from the new half. The Board could change the tax only in ways that fit its housing purpose; other changes would need voter approval.",
+    "yes_means": "About $120 million a year from big property sales is reserved for affordable housing instead of the general budget.",
+    "no_means": "That money stays in the General Fund, where the Mayor and Board decide each year how to spend it.",
+    "current_law": "The City taxes most property sales. The top rates, set by voters in 2020, are 5.5% for $10 million to under $25 million and 6% for $25 million or more. The money can be spent on anything. The Board can reduce, suspend or repeal the tax without a vote; only voters can raise it.",
+    "fiscal_impact": "City Controller: total city revenue drops about $1 million a year (from the new-construction exemption), but $120 million a year moves out of the flexible General Fund into the House SF Fund. That adds $120 million a year to the projected General Fund deficit, now $741.7 million for 2028-29. It would be the City's 24th voter-mandated spending requirement.",
+    "pass_threshold": "simple majority",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "The title and the '$1 million' revenue decrease understate the main effect. No tax rate goes up, but about $120 million a year now available for general services would be reserved for housing programs. Prop J, a separate measure, raises new transfer-tax money from foreclosures.",
+    "supporters_case": {
+      "text": "DSA San Francisco, the Tenants Union, SEIU 1021, United Educators of SF, Small Business Forward and other housing groups say voters approved the 2020 tax 'specifically so that money could fund affordable housing and rent relief,' but 'in the past two years, none of this revenue has gone to affordable housing.' They say I raises no taxes and adds yearly Controller audits.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=136"
+    },
+    "opponents_case": {
+      "text": "Quentin Kopp of the San Francisco Taxpayers Association says locking the money into set-asides is 'fiscal mismanagement' that drains the General Fund for police, fire and street cleaning and relies on volatile real estate revenue. The SF Building and Construction Trades Council's rebuttal says I 'doesn't guarantee new housing.'",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=137"
+    },
+    "official_text_url": "https://api.sf.gov/documents/55542/05042026_LT_AfordableHousing.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=134",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "The San Francisco Standard",
+        "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
+        "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
+      }
+    ]
+  },
+  {
+    "id": "sf-prop-j",
+    "state": "CA",
+    "level": "city",
+    "jurisdiction": "City and County of San Francisco",
+    "number": "Proposition J",
+    "official_title": "Removal of Foreclosure Exemption for Real Property Transfer Tax. Shall the City permanently apply a transfer tax of between 0.5% and 6% of a property's fair market value, on the transfer of properties such as commercial, industrial, and large residential properties, that are transferred to a lender because of foreclosure or to avoid foreclosure, for estimated annual revenue of $100 million to $150 million?",
+    "plain_summary": "Ends a tax break when lenders take over larger properties through foreclosure, or when an owner hands one over to avoid foreclosure. Starting March 1, 2027, office, industrial and apartment buildings with five or more units would be taxed on full market value, like any sale. The break stays for single-family homes, buildings with fewer than five units and small mixed-use buildings. The money goes to the General Fund.",
+    "yes_means": "Lenders who take over big buildings through foreclosure pay the regular transfer tax.",
+    "no_means": "Those lenders keep paying tax only on the gap between the sale price and what's still owed.",
+    "current_law": "The City taxes most property sales. When a lender takes a property through foreclosure, or an owner hands it over to avoid one, the lender pays tax only on the difference between what the property sold for and what is still owed, including interest and costs.",
+    "fiscal_impact": "City Controller: about $100 million to $150 million a year on average over the first five years, but very unpredictable. It would have raised $3.2 million in 2021-22 and $232.5 million in 2025-26. Revenue will likely fall as foreclosures return to normal, and some years could bring in almost nothing.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "The '0.5% and 6%' in the question is the existing transfer-tax scale; J creates no new rates, it removes an exemption for large properties. Homeowners and small buildings keep the break. Prop I, a separate measure, also changes the transfer tax; both can pass.",
+    "supporters_case": {
+      "text": "Supervisor Bilal Mahmood and Mayor Lurie, who wrote it, joined by Sen. Wiener, Assemblymembers Haney and Stefani, SEIU locals and the SF Democratic Party, say a 1984 break meant for struggling homeowners now benefits 'corporate lenders' taking 'office towers, mega apartment complexes, and industrial buildings,' and that ending it brings $100 million to $150 million a year for city services during a budget shortfall.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=148"
+    },
+    "opponents_case": {
+      "text": "Quentin Kopp of the San Francisco Taxpayers Association calls it 'a misguided tax hike' that could make lending in San Francisco costlier, slow the downtown recovery and leave distressed buildings empty, and says the money is 'a blank check' because it isn't dedicated to any service.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=149"
+    },
+    "official_text_url": "https://api.sf.gov/documents/61295/Nov2026_LT_RealPropertyTransferTaxForeclosureExemption.pdf",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=146",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 San Francisco Voter Guide: Proposition J",
+        "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-j"
+      }
+    ]
+  },
+  {
+    "id": "bay-area-rtm",
+    "state": "CA",
+    "level": "special_district",
+    "jurisdiction": "Public Transit Revenue Measure District: Alameda, Contra Costa, San Mateo and Santa Clara counties and the City and County of San Francisco",
+    "number": "Regional Measure RTM",
+    "official_title": "Regional Transit Measure. To prevent major service cuts to BART and other transit, avoid increased traffic, and reduce pollution by: Preserving BART, Caltrain, VTA, SamTrans, AC Transit, Muni, other transit for everyone, including workers, students, seniors, persons with disabilities; Supporting transit safety, cleanliness, affordability, reliability; Repairing targeted roads/potholes; Requiring financial transparency, oversight, accountability; shall the measure enacting a 0.5% (Alameda, Contra Costa, San Mateo, Santa Clara counties), and 1% (San Francisco) sales tax for 14 years generating approximately $980,000,000 annually, be adopted?",
+    "plain_summary": "A 14-year sales tax for Bay Area transit: 1% in San Francisco and 0.5% in Alameda, Contra Costa, San Mateo and Santa Clara counties, raising about $980 million a year. Money collected in San Francisco is split about 63% to Muni, 29% to BART and 4% to Caltrain, with the rest to ferries, Golden Gate Transit, fare discounts, accessibility and transit-priority projects. BART, Muni, AC Transit and Caltrain must complete efficiency reviews to keep getting the money.",
+    "yes_means": "Sales tax in San Francisco goes up 1 cent per dollar for 14 years to fund BART, Muni, Caltrain and other transit.",
+    "no_means": "No new regional sales tax; the transit agencies face their deficits without it.",
+    "current_law": "State law (SB 63, 2025) created the five-county Public Transit Revenue Measure District, run by the Metropolitan Transportation Commission's board, so voters could approve a transit sales tax. The measure's findings say BART, Muni, AC Transit and Caltrain face combined operating deficits of more than $800 million a year starting in 2027-28.",
+    "fiscal_impact": "District legal counsel's impartial analysis: about $980 million a year across the five counties for 14 years, outside the state cap on combined local sales tax rates. There is no City Controller statement for regional measures. In the other four counties some money can repave roads used by transit; in San Francisco it cannot.",
+    "pass_threshold": "simple majority of all votes cast across the five counties combined",
+    "referred_by": "citizen_initiative",
+    "confusing_wording_note": "San Francisco pays double the rate of the other four counties (1% vs 0.5%). The vote is counted region-wide, not county by county: it passes if more than half of all voters across the five counties vote yes, whatever San Francisco's own result. It's separate from Prop H, the Muni parcel tax.",
+    "supporters_case": {
+      "text": "Mayor Lurie, Sen. Wiener, City Attorney David Chiu, the SF Democratic Party and the League of Women Voters of the Bay Area say that without it Muni 'could cut service by at least 30%,' cancel at least 20 bus routes and end cable cars, BART could close 15 stations and cut service 70%, and Caltrain could run one train an hour. They say it doesn't tax rent, utilities, prescriptions or most groceries.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=56"
+    },
+    "opponents_case": {
+      "text": "The San Francisco Taxpayers Association (NoNewTransitTax.com) calls it the largest sales tax increase in San Francisco history, says it would raise the city's rate to 9.625% and that SF 'unfairly pays double the tax rate of other counties,' and argues BART and Muni shouldn't get more money until they stop wasteful spending.",
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=57"
+    },
+    "official_text_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=58",
+    "official_guide_url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=54",
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "KQED",
+        "title": "2026 Bay Area Voter Guide: Regional Measure RTM",
+        "url": "https://www.kqed.org/voterguide/california/regional-measure-rtm"
+      }
+    ]
+  }
+]

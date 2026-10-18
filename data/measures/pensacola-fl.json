@@ -1,0 +1,36 @@
+[
+  {
+    "id": "fl-escambia-lost",
+    "state": "FL",
+    "level": "county",
+    "jurisdiction": "Escambia County. Every Escambia County voter sees this question, including everyone in the City of Pensacola.",
+    "number": "County Referendum: Continue the County-Wide One-Cent Sales Tax (LOST)",
+    "official_title": "CONTINUE THE COUNTY-WIDE ONE-CENT (1¢) SALES TAX FOR INFRASTRUCTURE / PUBLIC FACILITIES. Shall the one-cent (1¢) sales tax first approved by the voters in 1992 and renewed in 1997, 2006 and 2014, continue to be collected from January 1, 2029, through December 31, 2038, to provide for law enforcement/fire and public safety facilities and equipment, transportation and drainage improvements, infrastructure projects/public facilities, recreation/natural resources, jail/court facilities, capital equipment, community services, and economic development projects per section 212.055(2)(d)3., Florida Statutes? [ ] FOR THE ONE-CENT (1¢) SALES TAX [ ] AGAINST THE ONE-CENT (1¢) SALES TAX",
+    "plain_summary": "Keeps Escambia County's existing extra 1-cent sales tax (the Local Option Sales Tax, or LOST) for 10 more years, 2029 through 2038. The money pays for things that get built or bought, like roads, drainage, fire stations and trucks, parks, and jail and court buildings, and up to 15% can go to economic development projects.",
+    "yes_means": "Voting \"For the one-cent sales tax\" keeps the same 1-cent county sales tax for another 10 years (Jan. 1, 2029 to Dec. 31, 2038), at the same rate you pay now.",
+    "no_means": "Voting \"Against the one-cent sales tax\" means the 1-cent county sales tax ends after Dec. 31, 2028, unless voters approve it at a later election.",
+    "current_law": "Voters first approved the 1-cent tax in 1992 and renewed it in 1997, 2006 and 2014. The 2014 approval (Ordinance 2014-32) runs through Dec. 31, 2028, so the tax is collected either way until then. The money must go to the voter-approved purposes and cannot pay day-to-day costs like employee salaries. On July 23, 2026 the County Commission unanimously adopted Ordinance 2026-26, which put this renewal on the Nov. 3 ballot.",
+    "fiscal_impact": "The County Attorney's memo says the tax brings in about $69 million a year on average. A UWF Haas Center study done for the county forecasts about $70.2 million in 2026, rising about 3% a year to about $75.2 million in 2028, and says about 84.7% goes to the county with the rest split between Pensacola and Century. The same study estimates that tourism and recreation make up about 22% of taxable sales on average (close to 28% in July and August). WEAR-TV reported that more than $108 million went to City of Pensacola projects over the last 10 years. No independent fiscal note was found.",
+    "pass_threshold": "simple majority of Escambia County voters voting on the question",
+    "referred_by": "council",
+    "confusing_wording_note": "Three things to know. (1) The choices are not Yes and No. The ballot prints \"For the one-cent (1¢) sales tax\" and \"Against the one-cent (1¢) sales tax\" (in capital letters). For keeps the tax; Against ends it after 2028. (2) \"Continue\" means this renews a tax you already pay. It is not a new tax and does not raise the rate. (3) The last item, \"economic development projects per section 212.055(2)(d)3., Florida Statutes,\" is legal shorthand: state law lets up to 15% of the money go to economic development projects, and the county's ballot language allows that. Separately, statewide Amendment 3 (property taxes) is a different question; county leaders have said they are watching how the two votes together would affect the budget.",
+    "supporters_case": {
+      "text": "The Penny for Progress Committee, the registered political committee backing renewal, says renewing 'this tax that's already in place' keeps funding roads, drainage, parks and public safety, that 'up to 28%' is paid by visitors, and that the tax has helped the county avoid bigger property-tax increases. Pensacola Mayor D.C. Reeves told WEAR-TV that losing it 'would be pretty much a decapitation of significant revenue streams.'",
+      "source": "https://www.pennyforescambia.com/"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?c=escambia&el=9"
+    },
+    "official_text_url": "https://civicclerk.blob.core.windows.net/stream/ESCAMBIACOFL/74808baa-44e8-44a7-a911-31db4fa83e1a.pdf",
+    "official_guide_url": null,
+    "explainers": [
+      {
+        "source": "WUWF Public Media",
+        "title": "Explainer: How Escambia County's L.O.S.T. works and what happens next",
+        "url": "https://www.wuwf.org/local-news/2026-07-22/explainer-how-escambia-countys-l-o-s-t-works-and-what-happens-next"
+      }
+    ],
+    "confidence": "sourced"
+  }
+]

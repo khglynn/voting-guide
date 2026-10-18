@@ -1,0 +1,49 @@
+{
+  "id": "pensacola-fl",
+  "label": "Pensacola",
+  "state": "FL",
+  "counties": [
+    "Escambia"
+  ],
+  "county_election_office": {
+    "name": "Escambia County Supervisor of Elections, 213 Palafox Place, 2nd Floor, Pensacola",
+    "url": "https://escambiavotes.gov/",
+    "phone": "(850) 595-3900"
+  },
+  "sample_ballot_url": "https://escambiavotes.gov/sample-ballots",
+  "zips": [
+    "32501",
+    "32502",
+    "32503",
+    "32504",
+    "32505",
+    "32507"
+  ],
+  "zip_caveats": "ZIPs don't map to ballots here, so check your exact ballot with the Escambia SOE's sample ballot lookup or the sample ballot mailed to you in October. Same for every Escambia voter: the statewide races and Amendments 1 to 3, the Supreme Court and five 1st District Court of Appeal retention questions, U.S. House District 1, and the county's 1-cent sales tax renewal (LOST). Not on the Nov. 3 ballot: Pensacola mayor (D.C. Reeves won outright on Aug. 18), the three school board seats (all decided Aug. 18), circuit and county judges (unopposed), and state Senate (Escambia's seat isn't up until 2028). What depends on your address: (1) City Council. Only Districts 2 and 4 have races. District 2 is city precincts 64 (polling place: Asbury Place) and 106 (Holy Cross Episcopal Church). District 4 is precincts 35 (East Pensacola Heights Community Center), 46 (Trinity Presbyterian Church) and 72 (Bayview Community Center; precincts 40 and 41 vote there too but have no council race). All five of these precincts are also County Commission and ECUA District 4. Every other city precinct has no council race this year, and voters outside city limits never see one. (2) County Commission and ECUA use the same district lines, so you get both races or neither. City precincts 15 and 32 (polling place: Pensacola City Hall) are District 2. City precincts 30, 35, 40, 41, 42, 46, 58, 64, 72, 97, 106 and 107 are District 4; their polling places include Bayview Community Center, Vickrey Resource Center, East Pensacola Heights Community Center, Hillcrest Church, Trinity Presbyterian Church, Brit Ahm Messianic Synagogue, Asbury Place, Holy Cross Episcopal Church and Faith Baptist Church. City precincts 14, 29, 31, 56, 90 and 98 (Fricker Community Center, Mt Olive Missionary Baptist, Christ Church, Legion Field Resource Center, St John Divine Baptist, Bethel A.M.E.) are District 3, which has no county commission or ECUA race this year. Your precinct number and polling place are on your voter information card and sample ballot. (3) State House. Every city precinct is in House District 2, except that part of precinct 90 is in District 1. ZIP notes: we could not match ZIPs to districts reliably. 32505 and 32507 reach well outside city limits (Brownsville, Warrington, Myrtle Grove), where voters see no city races and many are in County Commission and ECUA District 2. 32514 and 32526 are largely outside the city; voters there see no city races and could be in County Commission and ECUA District 1, 4 or 5 and state House District 1 or 2. Polling places can change, especially after Hurricane Isaias, so confirm yours before Election Day.",
+  "contest_ids": [
+    "fl-us-senate-special",
+    "fl-governor",
+    "fl-attorney-general",
+    "fl-cfo",
+    "fl-agriculture-commissioner",
+    "fl-retention-muniz",
+    "fl-retention-1dca-lewis",
+    "fl-retention-1dca-nordby",
+    "fl-retention-1dca-osterhaus",
+    "fl-retention-1dca-roberts",
+    "fl-retention-1dca-treadwell",
+    "fl-amendment-1",
+    "fl-amendment-2",
+    "fl-amendment-3",
+    "fl-us-house-1",
+    "fl-house-1",
+    "fl-house-2",
+    "fl-escambia-lost",
+    "fl-escambia-commission-2",
+    "fl-escambia-commission-4",
+    "fl-escambia-ecua-2",
+    "fl-escambia-ecua-4",
+    "fl-pensacola-council-2",
+    "fl-pensacola-council-4"
+  ]
+}

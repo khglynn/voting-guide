@@ -1,0 +1,58 @@
+[
+  {
+    "id": "escambia-gop",
+    "name": "Republican Party of Escambia County (Escambia County Republican Executive Committee)",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county organization of the Republican Party, listed on the Escambia Supervisor of Elections' political parties page (https://escambiavotes.gov/political-parties).",
+    "geography": [
+      "pensacola-fl"
+    ],
+    "guide_url": "https://escambiarepublican.com/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "escambia-dems",
+    "name": "Escambia County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county organization of the Democratic Party, listed on the Escambia Supervisor of Elections' political parties page (https://escambiavotes.gov/political-parties).",
+    "geography": [
+      "pensacola-fl"
+    ],
+    "guide_url": "https://www.escambiademocrats.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "greater-pensacola-chamber",
+    "name": "Greater Pensacola Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating; lean reflects its stated mission. It says it 'promotes and endeavors to improve the region's quality of life by promoting and fostering the growth, success, and civic engagement of the business community' (About page, https://www.pensacolachamber.com/about-us/).",
+    "geography": [
+      "pensacola-fl"
+    ],
+    "guide_url": "https://www.pensacolachamber.com/government-affairs",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "nwfl-clc-aflcio",
+    "name": "AFL-CIO Northwest Florida Central Labor Council",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Regional AFL-CIO labor council with no AllSides or Ad Fontes rating; lean reflects its stated labor mission. We found no site or About page of its own, so the mission wording comes from its Blue Voter Guide listing, which describes it as 'dedicated to advocating for the rights and interests of workers across Northwest Florida' (https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671).",
+    "geography": [
+      "pensacola-fl"
+    ],
+    "guide_url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

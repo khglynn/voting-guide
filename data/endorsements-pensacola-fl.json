@@ -1,0 +1,832 @@
+[
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-escambia-commission-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-escambia-commission-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-pensacola-council-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-pensacola-council-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pensacola-news-journal-eb",
+    "target_id": "fl-escambia-lost",
+    "status": "no_position",
+    "choice": null,
+    "why": "Gannett paper. It is not among the Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations, and our search found no PNJ editorial pick on this item.",
+    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-escambia-commission-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-escambia-commission-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-pensacola-council-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-pensacola-council-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. The League of Women Voters of the Pensacola Bay Area held a school board candidate forum in July but publishes no picks.",
+    "url": "https://www.vote411.org/florida",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-florida",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League position on the Escambia sales tax renewal was found (state League or Pensacola Bay Area League).",
+    "url": "https://lwvfl.org/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-us-house-1",
+    "status": "endorsed",
+    "choice": "Jimmy Patronis",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-house-1",
+    "status": "endorsed",
+    "choice": "Michelle Salzman",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-house-2",
+    "status": "endorsed",
+    "choice": "Jon Fay",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-escambia-commission-2",
+    "status": "endorsed",
+    "choice": "Mike Kohler",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-escambia-commission-4",
+    "status": "endorsed",
+    "choice": "Ashlee Hofberger",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "endorsed",
+    "choice": "Lois Benson",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "endorsed",
+    "choice": "Greg Litton",
+    "why": "The Republican Party of Florida's voter guide for Escambia (the page its county picker opens) says 'U.S. House, State Legislature, County and Local: Vote Republican.' It names no local candidates; this is the Republican on the ballot in this race.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan race with no party labels; the party's Escambia voter guide names no candidate here.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan race with no party labels; the party's Escambia voter guide names no candidate here.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-republican-party",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's Escambia voter guide covers the state amendments but says nothing about the county sales tax.",
+    "url": "https://florida.gop/county-guide",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida Democratic Party's voter guide is an address lookup; we could not view its Escambia list, so no pick is shown.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida Democratic Party's voter guide is an address lookup; we could not view its Escambia list, so no pick is shown.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida Democratic Party's voter guide is an address lookup; we could not view its Escambia list, so no pick is shown.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-escambia-commission-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida Democratic Party's voter guide is an address lookup; we could not view its Escambia list, so no pick is shown.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida Democratic Party's voter guide is an address lookup; we could not view its Escambia list, so no pick is shown.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-escambia-commission-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Democrat is on the ballot in this race, and no party pick for another candidate was found.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Democrat is on the ballot in this race, and no party pick for another candidate was found.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan race; no party pick found.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Nonpartisan race; no party pick found.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-democratic-party",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "The party's voter guide says it lists local measures endorsed by the county party, but the Escambia list could not be viewed without an address and no position was found elsewhere.",
+    "url": "https://floridadems.org/vote/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-escambia-commission-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-escambia-commission-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-escambia-commission-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-escambia-commission-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-escambia-commission-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-escambia-commission-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-escambia-commission-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-escambia-commission-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-escambia-ecua-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-escambia-ecua-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-pensacola-council-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-pensacola-council-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-gop",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "The county party's website shows only a general 'Vote Republican!' message, with no candidate slate or position on the sales tax (checked Oct 17).",
+    "url": "https://escambiarepublican.com/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "escambia-dems",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists no Nov 3, 2026 endorsements for the county party, and the party's own site did not load for us (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/Escambia_County_(FL)_Democratic_Party_/FL/4577",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "greater-pensacola-chamber",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 endorsement or sales tax position found on the Chamber's website or in a news search (Oct 17).",
+    "url": "https://www.pensacolachamber.com/government-affairs",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nwfl-clc-aflcio",
+    "target_id": "fl-escambia-lost",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide shows this labor council's picks for 2024 only, with no 2026 list; no 2026 picks found elsewhere (Oct 17).",
+    "url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida AFL-CIO's 2026 endorsement list names no candidate in this race; the list says it does not cover every race considered.",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida AFL-CIO's 2026 endorsement list names no candidate in this race; the list says it does not cover every race considered.",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fl-afl-cio",
+    "target_id": "fl-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Florida AFL-CIO's 2026 endorsement list names no candidate in this race; the list says it does not cover every race considered.",
+    "url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  }
+]

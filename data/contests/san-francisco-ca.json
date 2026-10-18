@@ -1,0 +1,2024 @@
+[
+ {
+  "id": "ca-us-house-11",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-11 (most of San Francisco)",
+  "scope_plain": "Voters in the 11th Congressional District, which covers most of San Francisco. A small part of southern San Francisco is in CD-15 instead; your ballot shows one or the other. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. Two Democrats.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "Open seat: the race to succeed Speaker Emerita Nancy Pelosi, who is not on the ballot and has endorsed Connie Chan. Two San Francisco Democrats: State Sen. Scott Wiener and Supervisor Connie Chan. Unions and the city's party establishment split between them.",
+  "vote_for": 1,
+  "incumbent": "Nancy Pelosi (not running)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Connie Chan",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://conniechansf.com",
+    "website_confidence": "verified",
+    "background": "San Francisco supervisor for District 1 (Richmond) since 2021 and chair of the Board's budget committee. Came to Chinatown at 13. Ballot designation: San Francisco Supervisor.",
+    "own_words": [
+     {
+      "text": "I am the only candidate who has never taken corporate money, because I only work for you.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     },
+     {
+      "text": "Reverse Trump cuts to health care and pass Medicare for All",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     },
+     {
+      "text": "Abolish ICE and pass immigration reform",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Scott Wiener",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.scottwiener.com",
+    "website_confidence": "verified",
+    "background": "State senator for San Francisco (Senate District 11); former San Francisco supervisor. Ballot designation: State Senator.",
+    "own_words": [
+     {
+      "text": "Says he wrote state laws building tens of thousands of homes, including 5,000+ affordable homes in San Francisco, and will push national housing legislation.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     },
+     {
+      "text": "I passed the nation's first law to unmask ICE agents",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     },
+     {
+      "text": "In Congress, I'll ban congressional stock trading and get dark money out of elections.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, CD-11 statements (p. 24)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=26"
+   },
+   {
+    "name": "SF Republican Party Nov 2026 page ('the race to succeed Nancy Pelosi')",
+    "url": "https://sfgop.org/nov-2026-endorsements"
+   }
+  ],
+  "confidence": "verified",
+  "explainers": [
+   {
+    "source": "KQED",
+    "title": "2026 California Voter Guide for U.S. House District 11",
+    "url": "https://www.kqed.org/voterguide/sanfrancisco/congress-11th-district"
+   }
+  ]
+ },
+ {
+  "id": "ca-us-house-15",
+  "state": "CA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-15 (a small part of southern San Francisco; mostly San Mateo County)",
+  "scope_plain": "Only voters in the small part of southern San Francisco that sits in the 15th Congressional District; most of the district is in San Mateo County. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. A Democrat and a Republican.",
+  "office_explainer": "One of 435 members of the U.S. House. Writes federal laws, votes on the federal budget and taxes. Two-year term.",
+  "why_it_matters": "Democratic incumbent Kevin Mullin, first elected in 2022, faces Republican Charles Hoelter. Most San Franciscans have CD-11 instead.",
+  "vote_for": 1,
+  "incumbent": "Kevin Mullin",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kevin Mullin",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.kevinmullinforcongress.com",
+    "website_confidence": "verified",
+    "background": "In Congress since the 2022 election, after ten years in the State Assembly (GrowSF). Sits on the House Energy and Commerce Committee. Ballot designation: U.S. Representative.",
+    "own_words": [
+     {
+      "text": "Says he voted against Republican budget bills that cut safety-net programs while cutting taxes for corporations and billionaires.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=27"
+     },
+     {
+      "text": "Co-chairs the House Task Force on Anti-Corruption and Democracy Reform and says he will protect vote-by-mail from the Trump administration.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=27"
+     },
+     {
+      "text": "ensure our communities are ready for climate change, push for an affordable economy that works for all",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=27"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Charles Hoelter",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.hoelterforuscongress.com",
+    "website_confidence": "sourced",
+    "background": "Retired UPS supervisor and Peninsula resident of more than 30 years (SF Republican Party); SF State graduate (BallotReady). Ballot designation: Retired Training Supervisor. He filed no statement in the SF voter pamphlet.",
+    "own_words": [
+     {
+      "text": "believes in smaller government, stronger communities, secure borders, and a future where families can thrive",
+      "is_quote": true,
+      "source": "https://www.hoelterforuscongress.com/"
+     },
+     {
+      "text": "Lists his key priorities as secure borders, lower taxes, protecting the Constitution and supporting law enforcement.",
+      "is_quote": false,
+      "source": "https://www.hoelterforuscongress.com/"
+     },
+     {
+      "text": "Supports more American energy production to lower costs and reduce reliance on foreign nations.",
+      "is_quote": false,
+      "source": "https://www.hoelterforuscongress.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, CD-15 statement (p. 25)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=27"
+   },
+   {
+    "name": "GrowSF voter guide (district covers a small piece of southern SF)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-17",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-17 (eastern San Francisco)",
+  "scope_plain": "Voters in the 17th Assembly District, the eastern side of San Francisco. Western San Francisco is AD-19; your ballot shows one or the other. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. A Democrat and a Republican.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "Incumbent Matt Haney, chair of the Assembly Housing Committee, faces Republican Manuel Noris-Barrera, who reached the ballot as a June write-in candidate.",
+  "vote_for": 1,
+  "incumbent": "Matt Haney",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Matt Haney",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.matthaney.com",
+    "website_confidence": "verified",
+    "background": "Assemblymember for four years; chairs the Assembly Housing Committee and select committees on downtown recovery and on fentanyl and overdose prevention. Ballot designation: Assemblymember.",
+    "own_words": [
+     {
+      "text": "Capped security deposits at one month's rent and stood up to Wall Street landlords.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=28"
+     },
+     {
+      "text": "Expanded addiction treatment, mobile pharmacies, overdose prevention, and recovery housing.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=28"
+     },
+     {
+      "text": "Cut red tape to build more housing and convert vacant offices into homes.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=28"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Manuel Noris-Barrera",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Realtor (eXp Realty) and small business owner (BallotReady). The SF Republican Party says he ran as a write-in in June so east-side voters would have a choice; GrowSF says he got 15% against Haney in 2024. No ballot designation, and no statement in the SF voter pamphlet.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, AD-17 statement (p. 26)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=28"
+   },
+   {
+    "name": "SF Republican Party Nov 2026 endorsements",
+    "url": "https://sfgop.org/nov-2026-endorsements"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-assembly-19",
+  "state": "CA",
+  "level": "state",
+  "office": "Member of the State Assembly",
+  "district": "AD-19 (western San Francisco)",
+  "scope_plain": "Voters in the 19th Assembly District, the western side of San Francisco. Eastern San Francisco is AD-17; your ballot shows one or the other. California uses top-two: the two highest vote-getters from the June 2 primary advance regardless of party. Party preference is printed on the ballot. A Democrat and a Republican.",
+  "office_explainer": "One of 80 Assembly members. Writes California laws and passes the state budget with the Senate. Two-year term.",
+  "why_it_matters": "First-term Assemblymember Catherine Stefani faces Republican Philip Louis Wing, a retired financial advisor.",
+  "vote_for": 1,
+  "incumbent": "Catherine Stefani",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Catherine Stefani",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votecatherinestefani.com",
+    "website_confidence": "verified",
+    "background": "Assemblymember finishing her first term. Ballot designation: Assemblymember.",
+    "own_words": [
+     {
+      "text": "Seven of my bills were signed into law in my first year",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=29"
+     },
+     {
+      "text": "I authored Wyland's Law to close a dangerous gap in our gun violence prevention system.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=29"
+     },
+     {
+      "text": "Says she will fight for resources to tackle the drug crisis, hold fentanyl dealers accountable and prevent homelessness.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=29"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Philip Louis Wing",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Retired financial advisor (ballot designation). He filed no statement in the SF voter pamphlet; answered part of GrowSF's questionnaire.",
+    "own_words": [
+     {
+      "text": "Make HSAs State Tax Deductible",
+      "is_quote": true,
+      "source": "https://growsf.org/voter-guide/questionnaires/november-2026/louis-wing/"
+     },
+     {
+      "text": "Local control of expanding housing supply, including creation of new communities rather than overloading current ones.",
+      "is_quote": true,
+      "source": "https://growsf.org/voter-guide/questionnaires/november-2026/louis-wing/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, AD-19 statement (p. 27)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=29"
+   },
+   {
+    "name": "GrowSF questionnaire: Philip Wing",
+    "url": "https://growsf.org/voter-guide/questionnaires/november-2026/louis-wing/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "ca-coa-1d-retention",
+  "state": "CA",
+  "level": "judicial",
+  "office": "Court of Appeal, First Appellate District (retention)",
+  "district": "First Appellate District: San Francisco, Alameda, Contra Costa, Marin, San Mateo, Solano, Sonoma, Napa and four North Coast counties",
+  "scope_plain": "Every San Francisco voter, plus voters in 11 other counties. You vote YES or NO on each of 11 justices, across all five divisions, not just one. 11 separate yes/no questions.",
+  "office_explainer": "Appeals court for San Francisco and 11 nearby counties. Reviews trial court decisions; most cases end here.",
+  "why_it_matters": "Each name is a separate yes/no vote on whether that justice keeps the seat for a 12-year term. Justices are appointed by the governor and don't run against anyone. Every SF ballot has this list.",
+  "vote_for": 11,
+  "incumbent": null,
+  "open_seat": false,
+  "term_years": 12,
+  "is_retention": true,
+  "candidates": [
+   {
+    "name": "Charles A. Smiley",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/charles-smiley",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division One, since 2025.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Kathleen M. Banke",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/kathleen-m-banke",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division One, since 2009.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Monique Langhorne Wilson",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/monique-langhorne-wilson",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division One, since 2024.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Therese M. Stewart",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/therese-m-stewart",
+    "website_confidence": "verified",
+    "background": "Presiding Justice, Division Two; the court site lists her service since 2014.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tara M. Desautels",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/tara-m-desautels",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Two, since 2024.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ioana Petrou",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/ioana-petrou",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Three, since 2018.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Victor A. Rodriguez",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/victor-rodriguez",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Three, since 2021. Listed as Victor Rodriguez on the court site.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tracie L. Brown",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/tracie-l-brown",
+    "website_confidence": "verified",
+    "background": "Presiding Justice, Division Four; the court site lists her service since 2018.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mark Simons",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/mark-b-simons",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Five, since 2001. Listed as Mark B. Simons on the court site.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Danny Y. Chou",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/danny-y-chou",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Five, since 2023.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Gordon Burns",
+    "party": null,
+    "incumbent": true,
+    "website": "https://appellate.courts.ca.gov/district-courts/1dca/bio/gordon-b-burns",
+    "website_confidence": "verified",
+    "background": "Associate Justice, Division Five, since 2018. Listed as Gordon B. Burns on the court site.",
+    "own_words": [
+     {
+      "text": "Official bio only; justices do not campaign.",
+      "is_quote": false,
+      "source": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "CA Secretary of State certified list of candidates (Aug 27, 2026)",
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+   },
+   {
+    "name": "SF Voter Information Pamphlet ballot worksheet (p. 246-247)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=248"
+   },
+   {
+    "name": "First District Court of Appeal: current justices",
+    "url": "https://appellate.courts.ca.gov/district-courts/1dca/justices"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-board-of-education",
+  "state": "CA",
+  "level": "school",
+  "office": "Member, Board of Education",
+  "district": null,
+  "scope_plain": "Every San Francisco voter. Vote for up to 3; this race is not ranked. Some non-citizen parents and guardians of San Francisco children can also register to vote in this one race.",
+  "office_explainer": "Seven-member board that governs San Francisco's public schools (SFUSD), kindergarten through 12th grade.",
+  "why_it_matters": "Three of seven seats, eight candidates. Board President Phil Kim and Commissioner Alida Fisher are running again, so at least one seat has no incumbent. Budgets, enrollment and the school-assignment lottery come up in most statements.",
+  "vote_for": 3,
+  "incumbent": "Phil Kim and Alida Fisher (running); no incumbent on the ballot for the third seat",
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Autumn Brown Garibay",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.autumnforschoolboard.com",
+    "website_confidence": "verified",
+    "background": "PTA vice president with three children in SFUSD schools. Ballot designation: Public School Parent.",
+    "own_words": [
+     {
+      "text": "Every child in SFUSD should be reading by third grade and doing grade-level math by eighth.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=30"
+     },
+     {
+      "text": "What are we paying for, and who is it helping?",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=30"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Virginia Cheung",
+    "party": null,
+    "incumbent": false,
+    "website": "https://virginiacheung.com",
+    "website_confidence": "verified",
+    "background": "Nonprofit executive and early-education advocate; daughter of refugees and single mother of an SFUSD student. Ballot designation: Nonprofit Executive / Mother.",
+    "own_words": [
+     {
+      "text": "I'll strengthen early intervention to improve literacy, math, attendance, and student engagement",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=30"
+     },
+     {
+      "text": "restore fiscal accountability, rebuild trust",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=30"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alida Fisher",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.alidafisher.com",
+    "website_confidence": "verified",
+    "background": "Board of Education member running for re-election; SFUSD parent, former foster parent and special education advocate. Ballot designation: School Board Member.",
+    "own_words": [
+     {
+      "text": "Balanced SFUSD's budget, putting the district on a path to long-term financial stability",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=31"
+     },
+     {
+      "text": "every decision must center students and families, with a focus on early intervention, inclusion, and meaningful support",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=31"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ryan Hazelton",
+    "party": null,
+    "incumbent": false,
+    "website": "https://ryanforsfschools.com",
+    "website_confidence": "verified",
+    "background": "Executive director of Mariposa Kids, an after-school nonprofit in the Mission and Bernal Heights; chairs the SF Childcare Planning and Advisory Council. Ballot designation: Children's Nonprofit Director.",
+    "own_words": [
+     {
+      "text": "Make SFUSD easier to join by reforming the lottery system",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=31"
+     },
+     {
+      "text": "Address chronic absenteeism - children cannot learn if they aren't in schools.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=31"
+     },
+     {
+      "text": "Pay them fairly and on-time",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=31"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Phil Kim",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.philkim.org",
+    "website_confidence": "verified",
+    "background": "Board of Education president; former 7th grade science teacher. Ballot designation: School Board President.",
+    "own_words": [
+     {
+      "text": "We need educators on the School Board who understand instruction, curriculum, and what it takes to help students grow.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=32"
+     },
+     {
+      "text": "engage students, support teachers, and ensure resources reach the kids who need them",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=32"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Laurance Lee",
+    "party": null,
+    "incumbent": false,
+    "website": "https://lauranceleesf.com",
+    "website_confidence": "verified",
+    "background": "General contractor and SF public schools graduate (Argonne, Presidio, Lowell); vice chair of the Citizens' Bond Oversight Committee for school construction. Ballot designation: General Contractor.",
+    "own_words": [
+     {
+      "text": "I helped restore eighth-grade Algebra 1",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=32"
+     },
+     {
+      "text": "Families across San Francisco want great neighborhood schools their kids can walk to",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=32"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Reina Tello",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.reinaforschoolboard.org",
+    "website_confidence": "verified",
+    "background": "Community organizer; born and raised in San Francisco, SFUSD graduate and parent. Ballot designation: Community Organizer / Parent.",
+    "own_words": [
+     {
+      "text": "I will not use the board as a stepping-stone for political office",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=33"
+     },
+     {
+      "text": "the only person running who has the perspective as a student of SFUSD",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=33"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tim Tung",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.timtung.com",
+    "website_confidence": "verified",
+    "background": "Public finance analyst; 12 years at S&P Global Ratings; chairs the Citizens' General Obligation Bond Oversight Committee; SFUSD parent. Ballot designation: Public Finance Analyst.",
+    "own_words": [
+     {
+      "text": "I will protect a balanced budget, deliver on the student assignment system, and insist on transparent data.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=33"
+     },
+     {
+      "text": "Our enrollment lottery is unpredictable and drives families away.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=33"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, Board of Education statements (p. 28-31)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=30"
+   },
+   {
+    "name": "SF Voter Information Pamphlet ballot worksheet ('Vote for no more than Three')",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=248"
+   },
+   {
+    "name": "SF Department of Elections: non-citizen voting in Board of Education elections",
+    "url": "https://www.sf.gov/non-citizen-voting-in-local-board-of-education-elections"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   }
+  ],
+  "confidence": "verified",
+  "explainers": [
+   {
+    "source": "KQED",
+    "title": "2026 San Francisco Voter Guide for Board of Education",
+    "url": "https://www.kqed.org/voterguide/sanfrancisco/school"
+   }
+  ]
+ },
+ {
+  "id": "sf-community-college-board",
+  "state": "CA",
+  "level": "school",
+  "office": "Trustee, Community College Board",
+  "district": "Four-year term ending January 8, 2031",
+  "scope_plain": "Every San Francisco voter. Vote for up to 3; this race is not ranked. There is a separate one-seat race for a shorter term on the same ballot.",
+  "office_explainer": "Seven-member board that runs City College of San Francisco and its adult learning centers.",
+  "why_it_matters": "Three seats and eight candidates, none of them a current trustee. City College's budget, enrollment and keeping Free City College come up in nearly every statement.",
+  "vote_for": 3,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Elijah Ball",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.elijahforcitycollege.com",
+    "website_confidence": "verified",
+    "background": "College campus planner who has worked with seven colleges and three California community college districts; first in his family to graduate from college (SFSU). Ballot designation: College Campus Planner.",
+    "own_words": [
+     {
+      "text": "with a vision and a plan, we can make City College one of the best community colleges in the country",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=34"
+     },
+     {
+      "text": "Says he has helped colleges increase enrollment, build facilities that work and create financial stability.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=34"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Rome Moses Jones",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Nonprofit executive; City College (AA) and SFSU graduate and lifelong SFUSD student. Ballot designation: Non-profit Executive.",
+    "own_words": [
+     {
+      "text": "committed to strengthening CCSF, expanding opportunity, and ensuring every student has the support needed",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=34"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Monroe Lace",
+    "party": null,
+    "incumbent": false,
+    "website": "https://monroelace.org",
+    "website_confidence": "verified",
+    "background": "Public school teacher; community college and trade school graduate. Ballot designation: Public School Teacher.",
+    "own_words": [
+     {
+      "text": "We must return to the basics: balance the budget, increase enrollment, and put student success first.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=35"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Leah LaCroix",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Administrative analyst who started at City College as a dual-enrolled high school student; 20-plus-year Ingleside resident. Ballot designation: Administrative Analyst.",
+    "own_words": [
+     {
+      "text": "Bring stability and a long-term vision to the Board",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=35"
+     },
+     {
+      "text": "Re-establish trust in the college by ensuring the courses students need are offered",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=35"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jeremy Lee",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.jeremyleesf.com",
+    "website_confidence": "verified",
+    "background": "Asset manager and third-generation San Franciscan who worked in City Hall on Free City College in 2017. Ballot designation: Asset Manager.",
+    "own_words": [
+     {
+      "text": "Strengthen CCSF's Cantonese program",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=36"
+     },
+     {
+      "text": "Protect Free City College",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=36"
+     },
+     {
+      "text": "I refuse money from big tech, corporations, and billionaires.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=36"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Bunny McFadden",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Educator and journalist with a doctorate in education; former community college instructor and SF public school parent. Ballot designation: Nonprofit Manager / Writer.",
+    "own_words": [
+     {
+      "text": "It's free for every resident. No age limit, no income check, no limits to potential.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=36"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Erwin Tam",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.erwintam.com",
+    "website_confidence": "sourced",
+    "background": "Municipal financial advisor who says he has worked with BART, Muni and more than 30 community colleges. Ballot designation: Municipal Financial Advisor.",
+    "own_words": [
+     {
+      "text": "CCSF is in a cycle of waste and mismanagement that threatens closure.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=37"
+     },
+     {
+      "text": "Students deserve an accredited and safe place to learn.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=37"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Lisa P Wynn II",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Equity researcher; City College associate degree (2024); four years on San Francisco's Behavioral Health Commission. Printed on the ballot as Lisa P Wynn II; her pamphlet statement uses Lisa Palagi Wynn II and the Department of Elections candidate page lists Lisa Wynn. Ballot designation: Health Equity Researcher.",
+    "own_words": [
+     {
+      "text": "My 4 years serving as a Behavior Health Commissioner for SF.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=37"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, Community College Board statements (p. 32-35)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=34"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "SF Voter Information Pamphlet ballot worksheet ('Vote for no more than Three')",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=248"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-community-college-board-partial",
+  "state": "CA",
+  "level": "school",
+  "office": "Trustee, Community College Board (partial term)",
+  "district": "Remainder of the current term, ending January 8, 2029",
+  "scope_plain": "Every San Francisco voter. Vote for 1. One candidate.",
+  "office_explainer": "Seven-member board that runs City College of San Francisco and its adult learning centers.",
+  "why_it_matters": "Unopposed. Fills the last two years of a vacated seat.",
+  "vote_for": 1,
+  "incumbent": "Ruth Ferguson",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Ruth Ferguson",
+    "party": null,
+    "incumbent": true,
+    "website": "https://ruthferguson.com",
+    "website_confidence": "sourced",
+    "background": "City College trustee since January 2026; former state legislative staffer on housing and student homelessness; UC Berkeley master's in public policy. Ballot designation: Appointed Trustee, Community College.",
+    "own_words": [
+     {
+      "text": "I'm protecting Free City, growing enrollment and keeping the college financially stable.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=38"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, partial-term statement (p. 36)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=38"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "bart-director-8",
+  "state": "CA",
+  "level": "special_district",
+  "office": "BART Director",
+  "district": "BART District 8 (part of San Francisco)",
+  "scope_plain": "Only San Francisco voters in BART District 8. Voters in BART Districts 7 and 9 have no BART race this year; they vote in 2028. Check your district in the Voter Portal (sfelections.gov/voterportal).",
+  "office_explainer": "One of BART's elected directors. Sets BART's budget, fares and service.",
+  "why_it_matters": "Unopposed, open seat. The next board faces big budget choices tied to the regional transit tax (RTM) on this ballot.",
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Sara Barz",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.sarabarz.com",
+    "website_confidence": "verified",
+    "background": "Transportation planner and product manager who has worked on regional transit connections and transfer discounts; San Francisco parent. Ballot designation: Transportation Planning Manager.",
+    "own_words": [
+     {
+      "text": "Riders deserve reliable service, safe and clean stations, and working elevators, escalators, and fare gates.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=39"
+     },
+     {
+      "text": "implement all of the cost-saving and transparency measures recommended by independent auditors",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=39"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, BART District 8 statement (p. 37) and office list (p. 8)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=39"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-assessor-recorder",
+  "state": "CA",
+  "level": "county",
+  "office": "Assessor-Recorder",
+  "district": null,
+  "scope_plain": "Every San Francisco voter. This office normally uses ranked-choice voting, but with one candidate there is only one choice to mark.",
+  "office_explainer": "Decides which San Francisco property is taxable and what it's worth, and keeps official records like deeds.",
+  "why_it_matters": "Unopposed. Joaquín Torres has held the office since 2022.",
+  "vote_for": 1,
+  "incumbent": "Joaquín Torres",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Joaquín Torres",
+    "party": null,
+    "incumbent": true,
+    "website": "https://joaquintorressf.com",
+    "website_confidence": "verified",
+    "background": "Assessor-Recorder since 2022. Ballot designation: Incumbent.",
+    "own_words": [
+     {
+      "text": "Modernized a 30-year-old property tax assessment system",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=40"
+     },
+     {
+      "text": "Built the first free public records viewing system of its kind in California",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=40"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, Assessor-Recorder statement (p. 38) and office description (p. 23)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=40"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-public-defender",
+  "state": "CA",
+  "level": "county",
+  "office": "Public Defender",
+  "district": null,
+  "scope_plain": "Every San Francisco voter. This office normally uses ranked-choice voting, but with one candidate there is only one choice to mark.",
+  "office_explainer": "Runs the city office that provides lawyers to people charged with crimes who can't afford one.",
+  "why_it_matters": "Unopposed. Mano Raju has led the office since 2019.",
+  "vote_for": 1,
+  "incumbent": "Mano Raju",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Mano Raju",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.manoraju.com",
+    "website_confidence": "sourced",
+    "background": "San Francisco Public Defender since 2019 (listed as Manohar Raju on the Department of Elections candidate page). Ballot designation: Public Defender.",
+    "own_words": [
+     {
+      "text": "true public safety requires facilitation of appropriate social services and robust constitutional defense",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=41"
+     },
+     {
+      "text": "Says he expanded the office's immigration, mental health and youth defense services and post-conviction relief.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=41"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, Public Defender statement (p. 39)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=41"
+   },
+   {
+    "name": "GrowSF voter guide (in office since 2019)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-supervisor-2",
+  "state": "CA",
+  "level": "city",
+  "office": "Member, Board of Supervisors",
+  "district": "District 2 (Marina, Cow Hollow, Pacific Heights, Presidio Heights, Laurel Heights, the Presidio, Lower Pacific Heights, Cathedral Hill, part of Russian Hill)",
+  "scope_plain": "Only voters in Supervisor District 2. Ranked choice: you can rank up to 4 candidates, first choice in the first column. If no one has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, until someone has a majority. Nonpartisan, so no party labels.",
+  "office_explainer": "One of 11 supervisors, San Francisco's city council. Passes city laws and the city budget.",
+  "why_it_matters": "Incumbent Stephen Sherrill won a June special election for the rest of the old term; this vote is for a full four-year term. Three challengers, including SF Republican Party chair Nicholas Berg.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 4,
+  "winners": 1,
+  "rcv_url": "https://www.sf.gov/rcv-information",
+  "incumbent": "Stephen Sherrill",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Nicholas Berg",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Property management executive and chairman of the San Francisco Republican Party, which endorsed him. He filed no statement in the voter pamphlet. Ballot designation: Property Management Executive.",
+    "own_words": [
+     {
+      "text": "Fully staff SFPD to its recommended level, return officers to proactive beat policing",
+      "is_quote": true,
+      "source": "https://growsf.org/voter-guide/questionnaires/november-2026/nicholas-berg/"
+     },
+     {
+      "text": "Change the cite-and-release policy so officers can actually book suspects for misdemeanors like shoplifting and car break-ins.",
+      "is_quote": true,
+      "source": "https://growsf.org/voter-guide/questionnaires/november-2026/nicholas-berg/"
+     },
+     {
+      "text": "Names one measure of success: the number of people living unsheltered on San Francisco's streets.",
+      "is_quote": false,
+      "source": "https://growsf.org/voter-guide/questionnaires/november-2026/nicholas-berg/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Guy McCoy",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Manager and retired military; 23-year District 2 resident and former federal law enforcement officer. No ballot designation (his pamphlet statement gives his occupation as Manager / Retired Military).",
+    "own_words": [
+     {
+      "text": "Wants homeless agencies judged on resolving homelessness, and people who refuse help held to the same laws as everyone.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=42"
+     },
+     {
+      "text": "Get repeat offenders and career criminals off the streets.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=42"
+     },
+     {
+      "text": "Wants new housing aimed at working San Franciscans at market rates and below instead of high-end housing.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=42"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Monthanus Ratanapakdee",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Community advocate and member of the city's Immigrant Rights Commission; founded the Justice for Vicha Foundation after her father was killed in an unprovoked attack. Ballot designation: Community Advocate / Mother.",
+    "own_words": [
+     {
+      "text": "not backed by political party machines or big-money interests",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=42"
+     },
+     {
+      "text": "Supports safer streets, cleaner neighborhoods, help for small businesses and consequences for repeat violent offenders.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=42"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Stephen Sherrill",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.votestephensherrill.com",
+    "website_confidence": "verified",
+    "background": "District 2 supervisor since his appointment in December 2024; won the June 2026 special election with 69%. Former director of the Mayor's Office of Innovation. Ballot designation: Appointed Member, Board of Supervisors.",
+    "own_words": [
+     {
+      "text": "As Supervisor, my focus is public safety and neighborhood needs.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=43"
+     },
+     {
+      "text": "Wrote the law to fill vacant storefronts faster on Van Ness",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=43"
+     },
+     {
+      "text": "Championing Muni funding to keep San Francisco moving",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=43"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, District 2 statements",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "SF Department of Elections: ranked-choice voting",
+    "url": "https://www.sf.gov/rcv-information"
+   },
+   {
+    "name": "SF Charter Sec. 13.102 (rank as many choices as there are candidates, up to the equipment limit of 10)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_charter/0-0-0-1181"
+   },
+   {
+    "name": "GrowSF supervisor district map (neighborhood lists; 2022 district lines)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF voter guide (appointment and June result)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-supervisor-4",
+  "state": "CA",
+  "level": "city",
+  "office": "Member, Board of Supervisors",
+  "district": "District 4 (Central and Outer Sunset, Parkside, Outer Parkside, Pine Lake Park, Lakeshore, Merced Manor)",
+  "scope_plain": "Only voters in Supervisor District 4. Ranked choice: you can rank up to 3 candidates, first choice in the first column. If no one has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, until someone has a majority. Nonpartisan, so no party labels.",
+  "office_explainer": "One of 11 supervisors, San Francisco's city council. Passes city laws and the city budget.",
+  "why_it_matters": "The district at the center of the Great Highway fight (Prop G). Alan Wong was appointed after voters recalled Supervisor Joel Engardio and won a June special election; this vote is for a full term. Wong backs reopening the road to cars on weekdays; Greco wants to keep Sunset Dunes park.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 3,
+  "winners": 1,
+  "rcv_url": "https://www.sf.gov/rcv-information",
+  "incumbent": "Alan Wong",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Albert Chow",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.albertchowsf.com",
+    "website_confidence": "verified",
+    "background": "Owner of Great Wall Hardware, founded by his parents in 1983 and rebuilt after an arson fire; 50-year Sunset resident; co-founded People of Parkside Sunset. Ballot designation: Hardware Store Owner.",
+    "own_words": [
+     {
+      "text": "improve public safety, support our schools, create housing that protects working families",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=44"
+     },
+     {
+      "text": "strengthen small businesses, improve traffic and pedestrian safety, invest in neighborhood infrastructure",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jeremy Julian Greco",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Campus coordinator and producer of Sunset Solos; 26-year Outer Sunset resident and former worker-owner of the Other Avenues food co-op. Ballot designation: Campus Coordinator / Monologist.",
+    "own_words": [
+     {
+      "text": "I will permanently protect Sunset Dunes, our coastline, the Westside groundwater basin, and reduce Ocean Beach pollution.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=44"
+     },
+     {
+      "text": "Supports Slow Streets near schools, safer bike corridors, beat cops and cleaner, more reliable Muni.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=44"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alan Wong",
+    "party": null,
+    "incumbent": true,
+    "website": "https://alanwong.com",
+    "website_confidence": "verified",
+    "background": "District 4 supervisor since his appointment in December 2025; won the June 2026 special election. National Guard officer, former union organizer and former City College Board president. Ballot designation: Appointed Member, Board of Supervisors.",
+    "own_words": [
+     {
+      "text": "Reopening the Great Highway to vehicles on weekdays.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=45"
+     },
+     {
+      "text": "Hiring more police officers, justice for crime victims",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=45"
+     },
+     {
+      "text": "Eighth-grade algebra and neighborhood zone-based public school assignments.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=45"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, District 4 statements",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "SF Department of Elections: ranked-choice voting",
+    "url": "https://www.sf.gov/rcv-information"
+   },
+   {
+    "name": "SF Charter Sec. 13.102 (rank as many choices as there are candidates, up to the equipment limit of 10)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_charter/0-0-0-1181"
+   },
+   {
+    "name": "GrowSF supervisor district map (neighborhood lists; 2022 district lines)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF voter guide (appointment and June result)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   },
+   {
+    "name": "Prop G proponent argument (Engardio recall)",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=112"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-supervisor-6",
+  "state": "CA",
+  "level": "city",
+  "office": "Member, Board of Supervisors",
+  "district": "District 6 (SoMa, Mid-Market, Rincon Hill/East Cut, South Beach, Mission Bay, Treasure Island, Yerba Buena Island)",
+  "scope_plain": "Only voters in Supervisor District 6. Ranked choice: you can rank up to 2 candidates, first choice in the first column. If no one has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, until someone has a majority. Nonpartisan, so no party labels.",
+  "office_explainer": "One of 11 supervisors, San Francisco's city council. Passes city laws and the city budget.",
+  "why_it_matters": "Incumbent Matt Dorsey faces one challenger.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 2,
+  "winners": 1,
+  "rcv_url": "https://www.sf.gov/rcv-information",
+  "incumbent": "Matt Dorsey",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Alex Behrend",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Ballot designation: Laborer / Community Organizer.",
+    "own_words": [
+     {
+      "text": "support those who aren't backed by the billionaires and massive corporations exploiting us",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=46"
+     },
+     {
+      "text": "Would use existing criminal penalties against landlords who neglect buildings and enforce criminal codes on corporations over working conditions and wages.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=46"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Matt Dorsey",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.mattdorsey.org",
+    "website_confidence": "verified",
+    "background": "District 6 supervisor since 2022 (appointed in May, elected in November). Speaks openly about his recovery from drug addiction. Ballot designation: San Francisco Supervisor.",
+    "own_words": [
+     {
+      "text": "Authored the Recovery First Ordinance, making long-term recovery from addiction the goal of city drug policy.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=46"
+     },
+     {
+      "text": "by balancing compassionate support with accountability, people can change for the better",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=46"
+     },
+     {
+      "text": "Says he has worked to revitalize downtown, expand housing, encourage office-to-housing conversions and improve traffic safety.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=46"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, District 6 statements",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "SF Department of Elections: ranked-choice voting",
+    "url": "https://www.sf.gov/rcv-information"
+   },
+   {
+    "name": "SF Charter Sec. 13.102 (rank as many choices as there are candidates, up to the equipment limit of 10)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_charter/0-0-0-1181"
+   },
+   {
+    "name": "GrowSF supervisor district map (neighborhood lists; 2022 district lines)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF supervisor map (Dorsey appointed May 2022, elected Nov 2022)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "sf-supervisor-8",
+  "state": "CA",
+  "level": "city",
+  "office": "Member, Board of Supervisors",
+  "district": "District 8 (Castro, Noe Valley, Diamond Heights, Glen Park, Eureka Valley, Dolores Heights, Mission Dolores, Duboce Triangle, Cole Valley, part of Twin Peaks)",
+  "scope_plain": "Only voters in Supervisor District 8. Ranked choice: you can rank up to 4 candidates, first choice in the first column. If no one has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, until someone has a majority. Nonpartisan, so no party labels.",
+  "office_explainer": "One of 11 supervisors, San Francisco's city council. Passes city laws and the city budget.",
+  "why_it_matters": "Open seat: Board President Rafael Mandelman is termed out. Manny Yekutiel ended his campaign on Oct. 1, but his name is still printed on the ballot. Three candidates are still running.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 4,
+  "winners": 1,
+  "rcv_url": "https://www.sf.gov/rcv-information",
+  "incumbent": "Rafael Mandelman (termed out)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Gary McCoy",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.garymccoysf.com",
+    "website_confidence": "verified",
+    "background": "Healthcare policy advocate; campaign manager for Nancy Pelosi's Save Our Health Care campaign; former aide to Sen. Scott Wiener and Recreation and Parks policy staffer. Has led the Alice B. Toklas and Harvey Milk LGBTQ clubs. Ballot designation: Healthcare Policy Advocate.",
+    "own_words": [
+     {
+      "text": "Streamline housing approvals to build more homes faster",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     },
+     {
+      "text": "Expand mental health crisis response teams and fund substance use treatment and recovery",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     },
+     {
+      "text": "I rebuilt my own life through San Francisco's systems of care after experiencing homelessness.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Michael T. Nguyen",
+    "party": null,
+    "incumbent": false,
+    "website": "https://michaelnguyen4sf.com",
+    "website_confidence": "verified",
+    "background": "Patent attorney and drag performer; son of refugees. Ballot designation: Attorney / Drag Producer.",
+    "own_words": [
+     {
+      "text": "My platform is built on three things: affordability, housing production for working families, and good governance.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     },
+     {
+      "text": "a truly independent voice who won't cater to special interests",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     },
+     {
+      "text": "Says he will make sure potholes are filled and basic services like Muni aren't cut.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=47"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Darshini Patel",
+    "party": null,
+    "incumbent": false,
+    "website": "https://votedarshini.com",
+    "website_confidence": "verified",
+    "background": "Community advocate; served on the Obama White House Domestic Policy Council and helped a tech company grow from 15 to more than 7,000 cities. Ballot designation: Community Advocate.",
+    "own_words": [
+     {
+      "text": "San Francisco doesn't have a values problem. We have a delivery problem.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=48"
+     },
+     {
+      "text": "Enforce the vacancy tax: 236 District 8 properties never filed",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=48"
+     },
+     {
+      "text": "I take no corporate or legacy PAC money.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=48"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Emanuel \"Manny\" Yekutiel",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Owner of Manny's, co-founder of the Civic Joy Fund and former SFMTA board director. He ended his campaign on Oct. 1, 2026, but his name is still printed on the ballot (Bay City News; GrowSF, citing Mission Local). Ballot designation: Small Business Owner.",
+    "own_words": [
+     {
+      "text": "From his pamphlet statement, filed before he withdrew: \"I'm running to deliver 10,000 new homes, zero vacant storefronts, and streets that are safe, clean and joyful.\"",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=48"
+     },
+     {
+      "text": "a city government that provides excellent customer service and follows through",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=48"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, District 8 statements",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+   },
+   {
+    "name": "SF Department of Elections: ranked-choice voting",
+    "url": "https://www.sf.gov/rcv-information"
+   },
+   {
+    "name": "SF Charter Sec. 13.102 (rank as many choices as there are candidates, up to the equipment limit of 10)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_charter/0-0-0-1181"
+   },
+   {
+    "name": "GrowSF supervisor district map (neighborhood lists; 2022 district lines)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF voter guide (Yekutiel withdrawal, citing Mission Local)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   },
+   {
+    "name": "Bay City News: Yekutiel drops out of District 8 race (Oct. 2, 2026)",
+    "url": "https://localnewsmatters.org/2026/10/02/manny-yekutiel-drops-out-sf-supe-race-election-2026/"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "GrowSF supervisor map (Mandelman termed out in 2026)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   }
+  ],
+  "confidence": "verified",
+  "explainers": [
+   {
+    "source": "KQED",
+    "title": "2026 San Francisco Voter Guide for Board of Supervisors, District 8",
+    "url": "https://www.kqed.org/voterguide/sanfrancisco/supervisor-8th-district"
+   }
+  ]
+ },
+ {
+  "id": "sf-supervisor-10",
+  "state": "CA",
+  "level": "city",
+  "office": "Member, Board of Supervisors",
+  "district": "District 10 (Bayview-Hunters Point, Potrero Hill, Dogpatch, Central Waterfront, India Basin, Visitacion Valley, Sunnydale, Candlestick Point, McLaren Park)",
+  "scope_plain": "Only voters in Supervisor District 10. Ranked choice: you can rank up to 10 candidates, first choice in the first column. If no one has a majority of first choices, the last-place candidate is dropped and those ballots move to their next choice, until someone has a majority. Nonpartisan, so no party labels.",
+  "office_explainer": "One of 11 supervisors, San Francisco's city council. Passes city laws and the city budget.",
+  "why_it_matters": "Open seat with 10 candidates, the most crowded race on San Francisco ballots. Supervisor Shamann Walton is termed out. With this many names, second and later rankings may decide who wins.",
+  "vote_for": 1,
+  "ranked_choice": true,
+  "rank_up_to": 10,
+  "winners": 1,
+  "rcv_url": "https://www.sf.gov/rcv-information",
+  "incumbent": "Shamann Walton (termed out)",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Pearci \"PJ\" Bastiany III",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Master of Public Administration student at USF; small business owner, martial arts instructor, and founder and CEO of MAFH. Ballot designation: MPA Graduate Student.",
+    "own_words": [
+     {
+      "text": "Promotes his Martial Arts Community Protection Initiative, combining mentorship, education, public safety and workforce development.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=49"
+     },
+     {
+      "text": "committed to restoring confidence in San Francisco",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=49"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Dionjay (DJ) Brookter",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.dj4d10.com",
+    "website_confidence": "verified",
+    "background": "Community advocate who has spent 16 years connecting residents to jobs and workforce training; grew up in the Central Valley. Ballot designation: Community Organizer.",
+    "own_words": [
+     {
+      "text": "My commitment is to listen, serve, and work every day to build a stronger District 10.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=49"
+     },
+     {
+      "text": "Says families are struggling with the cost of living, seniors worry about staying, and small businesses are fighting to stay open.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=49"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Deandra Bryant",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Lifelong Bayview Hunters Point resident; in-home care (IHSS) provider and housing and parent advocate; mother of a child with autism. Ballot designation: Housing Advocate.",
+    "own_words": [
+     {
+      "text": "expanding homeownership opportunities, improving housing stability, increasing support for children with disabilities",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=50"
+     },
+     {
+      "text": "Wants stronger public safety and more investment and resources for District 10.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=50"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Theo Ellington",
+    "party": null,
+    "incumbent": false,
+    "website": "https://theoellington.com",
+    "website_confidence": "verified",
+    "background": "Executive director of the Bayview Opera House; former city commissioner, Golden State Warriors public affairs director and Salvation Army homeless-services leader; third-generation San Franciscan. Ballot designation: Public Policy Director.",
+    "own_words": [
+     {
+      "text": "our southeast neighborhoods receive the same focus, urgency, and investment as the rest of San Francisco",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=50"
+     },
+     {
+      "text": "affordable housing without displacement, clean streets and parks, real community policing",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=50"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "J.R. Eppler",
+    "party": null,
+    "incumbent": false,
+    "website": "https://jreppler.com",
+    "website_confidence": "verified",
+    "background": "Small-business attorney; former president of the Potrero Boosters Neighborhood Association. Ballot designation: Small Business Attorney.",
+    "own_words": [
+     {
+      "text": "Public safety grounded in proven crime reduction tactics, like community policing and foot patrols.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=51"
+     },
+     {
+      "text": "A community-centered approach to housing that serves working families.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=51"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Ellsworth \"Ell\" M. Jennison, Jr.",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Carpenter who has lived on a houseboat on India Basin since 1980. Ballot designation: Union Carpenter.",
+    "own_words": [
+     {
+      "text": "Keep existing open space open, test Pier 68 for toxicity, and turn undeveloped bayfront land near Innes Avenue into a park.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=51"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mike Trouble Lin",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Small business consultant. His statement is two lines. Ballot designation: Small Business Consultant.",
+    "own_words": [
+     {
+      "text": "Speak Now to bring Taylor Swift to San Francisco",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=52"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jamo Muhammad",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "CEO of the We Got Winners Big Brother Program (KQED). He filed no statement in the voter pamphlet. Ballot designation: Father.",
+    "own_words": [
+     {
+      "text": "Says residents' 'legitimate concerns' are often overlooked by developers or city interests, and he would represent community needs as development pressures grow.",
+      "is_quote": false,
+      "source": "https://www.kqed.org/voterguide/sanfrancisco/supervisor-10th-district"
+     },
+     {
+      "text": "Says his family has been affected by contamination at the Hunters Point Shipyard and the city must get serious about whether it can be fully cleaned up.",
+      "is_quote": false,
+      "source": "https://www.kqed.org/voterguide/sanfrancisco/supervisor-10th-district"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jessica Pessecow",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Says she regularly attends City Hall commission and Board meetings; built a website pulling together city services and resources. Ballot designation: Nurse / Legal Representative.",
+    "own_words": [
+     {
+      "text": "I turn participation into practical action for District 10.",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=52"
+     },
+     {
+      "text": "Wants funding for neighborhood infrastructure around Jackson Playground and the MLK Jr. Pool, and for SF General Hospital.",
+      "is_quote": false,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=52"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Shawn M. Richard",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Founder and leader of Brothers Against Guns; more than 31 years of work in the Bayview. No ballot designation (his pamphlet statement gives his occupation as CEO / Executive Director).",
+    "own_words": [
+     {
+      "text": "committed to addressing critical issues such as youth violence, education, and homelessness",
+      "is_quote": true,
+      "source": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf#page=53"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "SF Department of Elections: qualified candidates, Nov 3, 2026",
+    "url": "https://www.sf.gov/candidates-november-3-2026-general-election"
+   },
+   {
+    "name": "SF Voter Information Pamphlet, District 10 statements",
+    "url": "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+   },
+   {
+    "name": "SF Department of Elections: local candidate names and ballot designations, Nov 2026",
+    "url": "https://api.sf.gov/documents/63094/November_2026_Local_Office_Names_and_Ballot_Designations.pdf"
+   },
+   {
+    "name": "SF Department of Elections: ranked-choice voting",
+    "url": "https://www.sf.gov/rcv-information"
+   },
+   {
+    "name": "SF Charter Sec. 13.102 (rank as many choices as there are candidates, up to the equipment limit of 10)",
+    "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_charter/0-0-0-1181"
+   },
+   {
+    "name": "GrowSF supervisor district map (neighborhood lists; 2022 district lines)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF supervisor map (Walton termed out in 2026)",
+    "url": "https://growsf.org/sf-supervisor-map/"
+   },
+   {
+    "name": "GrowSF voter guide (candidate list and contact status)",
+    "url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/"
+   }
+  ],
+  "confidence": "verified",
+  "explainers": [
+   {
+    "source": "KQED",
+    "title": "2026 San Francisco Voter Guide for Board of Supervisors, District 10",
+    "url": "https://www.kqed.org/voterguide/sanfrancisco/supervisor-10th-district"
+   }
+  ]
+ }
+]

@@ -1,0 +1,914 @@
+[
+  {
+    "id": "fl-us-house-1",
+    "state": "FL",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "FL-1",
+    "scope_plain": "Every Escambia County voter, including all of Pensacola. The whole county is in Congressional District 1.",
+    "office_explainer": "Votes on federal laws, taxes and spending as this district's one member of the U.S. House.",
+    "why_it_matters": "This is your only vote for the U.S. House. The winner serves a two-year term starting in January 2027.",
+    "vote_for": 1,
+    "incumbent": "Jimmy Patronis",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jimmy Patronis",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "The current U.S. representative for District 1 (term ends January 2027) and a former Florida Chief Financial Officer. Studied at Gulf Coast Community College and Florida State University. Won the Aug. 18 Republican primary with 74.6% of the Escambia vote. Did not answer the WUWF voter guide questions; the guide compiled his past statements.",
+        "own_words": [
+          {
+            "text": "On ending homestead property taxes: \"if you exempt homestead: then you will have a massive shift in my opinion to assessing non-homestead (properties)\" (to WPTV, Feb. 2026, as quoted in the WUWF guide)",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On immigration, as state CFO: \"Illegal immigration has created a terrible financial burden on taxpayers\" (as quoted in the WUWF guide)",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On abortion: \"We must continue to defend the lives of children in the womb.\" (post on X, as quoted in the WUWF guide)",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Gay Valimont",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former athletic trainer for Children's Healthcare of Atlanta and Emory Sports Medicine, with a bachelor's from Georgia Southern and a master's in education from Troy State (her WUWF guide answers). The Democratic nominee; no primary opponent.",
+        "own_words": [
+          {
+            "text": "On property taxes: \"No, I support meaningful property tax relief, but I do not support eliminating property taxes without a responsible plan\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On immigration: \"We need secure borders and a fair immigration system that is orderly and humane.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On abortion: \"Florida's abortion restrictions should be less strict.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Tyler L. Davis",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://www.tylerdavisforcongress.com/",
+        "website_confidence": "sourced",
+        "background": "No-party candidate. His campaign site says he is \"not a career politician\" and lives, works and is raising a family in the district, and that he spoke against data centers at a county commission meeting in June 2026. He is not in the WUWF voter guide.",
+        "own_words": [
+          {
+            "text": "\"I'm running for Congress to bring servant leadership back to District 1.\"",
+            "is_quote": true,
+            "source": "https://www.tylerdavisforcongress.com/"
+          },
+          {
+            "text": "\"If progress disrespects the planet, it isn't progress.\"",
+            "is_quote": true,
+            "source": "https://www.tylerdavisforcongress.com/about-tyler"
+          },
+          {
+            "text": "\"No one should lose their livelihood simply because industries change.\"",
+            "is_quote": true,
+            "source": "https://www.tylerdavisforcongress.com/about-tyler"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Florida Division of Elections candidate list, Nov 3, 2026 general (Escambia)",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ESC&elecid=20261103-GEN"
+      },
+      {
+        "name": "Escambia SOE official Aug 18, 2026 primary results",
+        "url": "https://enr.electionsfl.org/ESC/3976/Summary/"
+      },
+      {
+        "name": "WUWF: the field is set as qualifying closes (June 12, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-06-12/the-field-is-set-as-candidate-qualifying-closes-for-floridas-2026-election"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Escambia SOE: elected officials (term dates)",
+        "url": "https://escambiavotes.gov/elected-officials-in-escambia-county"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-house-1",
+    "state": "FL",
+    "level": "state",
+    "office": "Florida House of Representatives",
+    "district": "HD-1",
+    "scope_plain": "Only voters in state House District 1, which is mostly northern and western Escambia County outside Pensacola. Almost every Pensacola voter is in District 2 instead; only part of city precinct 90 (votes at St John Divine Baptist Church) is in District 1.",
+    "office_explainer": "One of 120 members of the Florida House; writes state laws and helps pass the state budget.",
+    "why_it_matters": "Few Pensacola voters will see this race. Check your sample ballot to see whether you are in District 1 or 2.",
+    "vote_for": 1,
+    "incumbent": "Michelle Salzman",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michelle Salzman",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://michellesalzmanforhouse.com/",
+        "website_confidence": "sourced",
+        "background": "U.S. Army veteran and small-business owner; holds degrees from Pensacola State College and the University of West Florida (WUWF guide). State representative for District 1; her campaign site posts accomplishment reports from 2021 on. She did not answer the WUWF guide questions and pointed to her list of sponsored bills.",
+        "own_words": [
+          {
+            "text": "\"I'm dedicated to defending our panhandle values, securing our borders, fighting corruption\"",
+            "is_quote": true,
+            "source": "https://michellesalzmanforhouse.com/"
+          },
+          {
+            "text": "Backs term limits at every level of government; her site says she limited how long Escambia's utility authority (ECUA) members can serve and filed a bill for county commission term limits.",
+            "is_quote": false,
+            "source": "https://michellesalzmanforhouse.com/"
+          },
+          {
+            "text": "Founded the Mental Health Task Force of Northwest Florida, which her site says funded a study of the area's mental health needs.",
+            "is_quote": false,
+            "source": "https://michellesalzmanforhouse.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Francesca Yabraian",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.vote4francesca.com/",
+        "website_confidence": "sourced",
+        "background": "Former emergency manager for USDA and Department of Homeland Security headquarters, a current FEMA reservist and an information technology professional for more than 20 years (WUWF guide). Her parents came to the U.S. from Argentina. No primary opponent.",
+        "own_words": [
+          {
+            "text": "On local issues: \"two urgent concerns are Ban on AI data centers and Ban on Flock cameras\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On the property tax amendment: \"I oppose this amendment because it places a one-size-fits-all tax policy into the state constitution\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "\"Affordable housing is one of the most urgent issues in District 1.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Florida Division of Elections candidate list, Nov 3, 2026 general (Escambia)",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ESC&elecid=20261103-GEN"
+      },
+      {
+        "name": "WUWF: the field is set as qualifying closes (June 12, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-06-12/the-field-is-set-as-candidate-qualifying-closes-for-floridas-2026-election"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Escambia SOE precinct results export used to place city precincts in House districts",
+        "url": "https://enr.electionsfl.org/ESC/3976/Reports/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-house-2",
+    "state": "FL",
+    "level": "state",
+    "office": "Florida House of Representatives",
+    "district": "HD-2",
+    "scope_plain": "Voters in state House District 2, which includes all of Pensacola (part of city precinct 90 is in District 1). Open seat: Rep. Alex Andrade is term-limited.",
+    "office_explainer": "One of 120 members of the Florida House; writes state laws and helps pass the state budget.",
+    "why_it_matters": "Open seat with no incumbent, covering all of Pensacola. The winner serves a two-year term.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jon Fay",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired in 2024 as a Navy commander after 24 years as a naval flight officer; U.S. Naval Academy graduate (WUWF guide). Won the Aug. 18 Republican primary with 78.6% over Trei McMullen. He did not answer most WUWF guide questions; the guide quoted an interview he gave Florida Politics.",
+        "own_words": [
+          {
+            "text": "\"My priorities are to make Florida more affordable; protect our military installations and veterans; strengthen public safety\" (to Florida Politics, as quoted in the WUWF guide)",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "\"I support meaningful property-tax relief while protecting law enforcement, fire services and schools\" (to Florida Politics, as quoted in the WUWF guide)",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "Said at a June 12 candidate forum that he supports the statewide property tax amendment (as reported in the WUWF guide).",
+            "is_quote": false,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Johnny Austin Thompson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Law and public health student at Harvard (J.D. and M.P.H. candidate) and a high school and middle school debate coach; economics degree from the University of Alabama; age 25 (WUWF guide). No primary opponent.",
+        "own_words": [
+          {
+            "text": "\"The most pressing issue in our district is affordability.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On the property tax amendment: \"No. Homeowners need relief, but eliminating property taxes would threaten funding for police, fire protection, roads, drainage\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On mental health: \"I support more crisis-stabilization capacity, school-based mental health services, better provider reimbursement\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Florida Division of Elections candidate list, Nov 3, 2026 general (Escambia)",
+        "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ESC&elecid=20261103-GEN"
+      },
+      {
+        "name": "Escambia SOE official Aug 18, 2026 primary results",
+        "url": "https://enr.electionsfl.org/ESC/3976/Summary/"
+      },
+      {
+        "name": "WUWF: primary takeaways (Aug 18, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-08-18/takeaways-from-tuesdays-primary-election"
+      },
+      {
+        "name": "WUWF: the field is set as qualifying closes (June 12, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-06-12/the-field-is-set-as-candidate-qualifying-closes-for-floridas-2026-election"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-escambia-commission-2",
+    "state": "FL",
+    "level": "county",
+    "office": "Escambia County Commission",
+    "district": "District 2",
+    "scope_plain": "Only voters in County Commission District 2. Its precincts vote mostly in southwest Escambia (Warrington, Myrtle Grove, Pleasant Grove, Brownsville). Inside Pensacola, only precincts 15 and 32 are in District 2; both vote at Pensacola City Hall. Partisan race. The ballot also has a blank write-in line because EErica King Pleas Sims Riley qualified as a write-in candidate; Florida does not print write-in candidates' names.",
+    "office_explainer": "Five-member board that sets the county budget and tax rate and runs county services like EMS and roads.",
+    "why_it_matters": "The board decides how the county's share of the 1-cent sales tax (about 85%) is spent, and it would have to rebalance the budget if statewide Amendment 3 cuts property taxes.",
+    "vote_for": 1,
+    "incumbent": "Mike Kohler",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mike Kohler",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.votekohler.com/",
+        "website_confidence": "verified",
+        "background": "District 2 commissioner since November 2022 and board chair in 2024-25. Retired Navy captain after 33 years and a registered nurse for more than 34 years. Vice chair of the Escambia County Republican Party from 2011 to 2015 (his site). Won the Aug. 18 Republican primary with 62.2% over Glenn Dorsey.",
+        "own_words": [
+          {
+            "text": "On beach access: \"I, like many fellow Commissioners across the state, believe customary use should be protected.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On his top priority, the Navy bases: \"I am passionate to make sure we protect our largest economic engine to the county.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On Amendment 3: it \"would cut $43 million out of the Escambia County budget\" starting in 2027.",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Mathious Robinson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Describes himself as a community advocate and entrepreneur focused on community engagement and connecting residents with local government (his SOE candidate statement). The Democratic nominee; no primary opponent. No campaign website found.",
+        "own_words": [
+          {
+            "text": "On beach access: \"Before spending taxpayer dollars on costly litigation, I believe the county should prioritize communication, mediation, and practical solutions\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On his top priority: \"the first thing would be infrastructure: poor drainage, roads, and no sidewalks.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "If Amendment 3 passes: \"I will go through the budget sheet and get rid of anything that's wasteful spending\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (qualified candidates, statuses)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "Escambia SOE official Aug 18, 2026 primary results",
+        "url": "https://enr.electionsfl.org/ESC/3976/Summary/"
+      },
+      {
+        "name": "WUWF: primary takeaways (Aug 18, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-08-18/takeaways-from-tuesdays-primary-election"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Escambia SOE precinct results export (which precincts are in District 2)",
+        "url": "https://enr.electionsfl.org/ESC/3976/Reports/"
+      },
+      {
+        "name": "Mike Kohler campaign site: who is Mike",
+        "url": "https://www.votekohler.com/who-is-mike/"
+      },
+      {
+        "name": "Mathious Robinson SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=836&rellevel=4&committee=N"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-escambia-commission-4",
+    "state": "FL",
+    "level": "county",
+    "office": "Escambia County Commission",
+    "district": "District 4",
+    "scope_plain": "Only voters in County Commission District 4. In Pensacola that is precincts 30, 35, 40, 41, 42, 46, 58, 64, 72, 97, 106 and 107, which vote at places including Bayview Community Center, Vickrey Resource Center, East Pensacola Heights Community Center, Trinity Presbyterian Church and Asbury Place. Outside the city it includes Pensacola Beach. Partisan race.",
+    "office_explainer": "Five-member board that sets the county budget and tax rate and runs county services like EMS and roads.",
+    "why_it_matters": "District 4 covers much of east Pensacola and Pensacola Beach. The board is weighing the Pensacola Bay Center's future, beach access and how to handle a possible property tax cut.",
+    "vote_for": 1,
+    "incumbent": "Ashlee Hofberger",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashlee Hofberger",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://voteashlee.com/",
+        "website_confidence": "verified",
+        "background": "Appointed to the commission by Gov. Ron DeSantis in October 2024, elected that November, and board chair for 2025-26. Pensacola native and UWF graduate who co-founded a restoration company and The Wash Room laundromats (her SOE statement and site).",
+        "own_words": [
+          {
+            "text": "On her top priority: \"We need to place a much higher priority on building infrastructure, better roads and stronger neighborhoods\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "If Amendment 3 passes: \"protecting funding for public safety and our first responders remains non-negotiable.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On license-plate cameras: \"data should be retained for only 30-90 days unless tied to an active investigation\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Joe Vinson",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": "https://joepensacola.com/",
+        "website_confidence": "verified",
+        "background": "Pensacola historian who founded the Pensapedia wiki in 2006 and has a master's in public history from UWF. Raised in Cordova Park and East Hill; registered as an independent since 18 (his site). No party, so he had no primary.",
+        "own_words": [
+          {
+            "text": "On the top issue: \"The most pressing issue facing Escambia County is a fundamental crisis of trust.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "If Amendment 3 passes: \"I will not allow important, front-line services to be gutted while high-salary administrators remain completely unaffected.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On license-plate cameras: wants Flock data \"purged no more than 72 hours after collection\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (qualified candidates, statuses)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "WUWF: the field is set as qualifying closes (June 12, 2026)",
+        "url": "https://www.wuwf.org/local-news/2026-06-12/the-field-is-set-as-candidate-qualifying-closes-for-floridas-2026-election"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Escambia SOE Nov 2024 precinct results export (which precincts are in District 4)",
+        "url": "https://enr.electionsfl.org/ESC/3682/Reports/"
+      },
+      {
+        "name": "Ashlee Hofberger SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=810&rellevel=4&committee=N"
+      },
+      {
+        "name": "Joe Vinson campaign site: about",
+        "url": "https://joepensacola.com/about/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-escambia-ecua-2",
+    "state": "FL",
+    "level": "special_district",
+    "office": "Emerald Coast Utilities Authority (ECUA) Board",
+    "district": "District 2",
+    "scope_plain": "Only voters in ECUA District 2, which has the same lines as County Commission District 2. Inside Pensacola, that is precincts 15 and 32 (both vote at Pensacola City Hall). Partisan race.",
+    "office_explainer": "Board that runs the public water, sewer, garbage and recycling utility and sets its rates.",
+    "why_it_matters": "ECUA sets the water, sewer and trash rates on your bill and decides which aging pipes and lift stations get fixed first.",
+    "vote_for": 1,
+    "incumbent": "Lois Benson",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lois Benson",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "ECUA District 2 board member (ECUA). Wikipedia says she was appointed to the board by Gov. Jeb Bush in 2004 and earlier served on the Pensacola City Council (1988-90) and in the Florida House (1992-94). She did not answer the WUWF guide questions or post an SOE statement, and we found no campaign website.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Gloria Horning",
+        "party": "Independent Party of Florida",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Environmental and flood-justice advocate with a Ph.D. from Florida State. Came to Pensacola in 2010 after the BP oil spill as an AmeriCorps VISTA and leads Higher Ground Pensacola, part of the Anthropocene Alliance flood-survivor network (her SOE statement).",
+        "own_words": [
+          {
+            "text": "\"The ECUA board continues to raise our rates without any accountability of where those monies are actually going.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On missed trash pickups: \"Utilize GPS tracking on the trucks.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "\"I will NOT be a twice a month board member.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (qualified candidates, statuses)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "ECUA board page",
+        "url": "https://ecua.fl.gov/255/Board-Citizens-Advisory-Committee"
+      },
+      {
+        "name": "Escambia SOE active voters by district (ECUA and County Commission districts match)",
+        "url": "https://escambiavotes.gov/docs/soelibraries/stats/active-voters-by-districtf0e962f915a36cfab4b5ff0200ad5567.pdf"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Gloria Horning SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=847&rellevel=4&committee=N"
+      },
+      {
+        "name": "Escambia SOE: qualified candidates, June 10, 2026 (Horning listed as IND)",
+        "url": "https://escambiavotes.gov/news/2026/06/10/qualified-candidates-wednesday-june-10"
+      },
+      {
+        "name": "Florida Division of Elections: political parties (IND is the Independent Party of Florida, a minor party)",
+        "url": "https://dos.fl.gov/elections/candidates-committees/political-parties/"
+      },
+      {
+        "name": "Wikipedia: Lois Benson",
+        "url": "https://en.wikipedia.org/wiki/Lois_Benson"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-escambia-ecua-4",
+    "state": "FL",
+    "level": "special_district",
+    "office": "Emerald Coast Utilities Authority (ECUA) Board",
+    "district": "District 4",
+    "scope_plain": "Only voters in ECUA District 4, which has the same lines as County Commission District 4: in Pensacola, precincts 30, 35, 40, 41, 42, 46, 58, 64, 72, 97, 106 and 107, plus areas outside the city such as Pensacola Beach. Partisan race with three candidates.",
+    "office_explainer": "Board that runs the public water, sewer, garbage and recycling utility and sets its rates.",
+    "why_it_matters": "Open seat: longtime member Dale Perkins, who served from 1994 until 2026, has died, and ECUA lists the seat as vacant. The winner helps set rates and repair priorities.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Greg Litton",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electlitton.com/",
+        "website_confidence": "verified",
+        "background": "Lifelong Pensacola resident and businessman, according to his campaign site. He did not answer the WUWF guide questions or post an SOE statement.",
+        "own_words": [
+          {
+            "text": "Wants ECUA to keep rates as affordable as possible and to explain costs clearly before any rate increase is considered (campaign site).",
+            "is_quote": false,
+            "source": "https://electlitton.com/issues/"
+          },
+          {
+            "text": "Wants aging water and sewer lines upgraded before they fail, rather than waiting for emergency repairs (campaign site).",
+            "is_quote": false,
+            "source": "https://electlitton.com/issues/"
+          },
+          {
+            "text": "Wants stronger hurricane preparedness, including backup systems and storm-hardened infrastructure (campaign site).",
+            "is_quote": false,
+            "source": "https://electlitton.com/issues/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Jacob Cavender",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Qualified as the Democratic candidate. SOE records show no campaign money raised or spent and no candidate statement, and we found no website or questionnaire answers.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Ralph Schofield, Jr.",
+        "party": "No Party Affiliation",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Public health attorney (with M.P.H. and Certified in Public Health credentials) who advises county health departments in the western Panhandle; also a certified mediator (his SOE statement).",
+        "own_words": [
+          {
+            "text": "\"Affordability and infrastructure are not competing goals.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On sewer spills: \"ECUA should move from reacting to failures to preventing them.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "\"every rate increase must be necessary, justified, and connected to measurable results.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (qualified candidates, statuses)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "ECUA board page (District 4 vacant; Dale Perkins in memoriam)",
+        "url": "https://ecua.fl.gov/255/Board-Citizens-Advisory-Committee"
+      },
+      {
+        "name": "Escambia SOE active voters by district (ECUA and County Commission districts match)",
+        "url": "https://escambiavotes.gov/docs/soelibraries/stats/active-voters-by-districtf0e962f915a36cfab4b5ff0200ad5567.pdf"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (candidate answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Ralph Schofield, Jr. SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=828&rellevel=4&committee=N"
+      },
+      {
+        "name": "Jacob Cavender SOE filing page",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=852&rellevel=4&committee=N"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-pensacola-council-2",
+    "state": "FL",
+    "level": "city",
+    "office": "Pensacola City Council",
+    "district": "District 2",
+    "scope_plain": "Only City of Pensacola voters in Council District 2: precincts 64 (votes at Asbury Place) and 106 (votes at Holy Cross Episcopal Church), the area Myers's campaign calls Uptown. Your precinct number is on your voter information card and sample ballot. Nonpartisan, so no party labels. With two candidates, this seat was not on the August ballot and is decided Nov. 3.",
+    "office_explainer": "Seven-member council that passes city laws and the budget; the mayor runs day-to-day city operations.",
+    "why_it_matters": "The council approves the city budget and zoning rules, including the land development code rewrite now under way. Two people who have both held this seat are running.",
+    "vote_for": 1,
+    "incumbent": "Charles Bare",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Charles Bare",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "District 2 council member since November 2022; earlier the council's last at-large member (2012-16) and council president in 2015. CEO of Keep Pensacola Beautiful; Army Reserve civil affairs officer deployed to Iraq in 2003 (City of Pensacola bio). No campaign website found.",
+        "own_words": [
+          {
+            "text": "On sanitation: \"I believe the council needs to do a complete review of the department\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On housing: \"City governments are not capable of providing attainable housing.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "If a big property tax cut passes: \"Public safety is my highest priority.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Sherri Myers",
+        "party": null,
+        "incumbent": false,
+        "website": "https://myersforuptownd2.com/",
+        "website_confidence": "verified",
+        "background": "Served 12 years on the council in District 2 and calls herself \"Council Emeritus\"; has a legal background (her SOE statement). She did not answer the WUWF guide questions and pointed to her website.",
+        "own_words": [
+          {
+            "text": "Says District 2 \"has received only approximately 1.3% of the city's collected LOST funds\" over 20 years.",
+            "is_quote": true,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=843&rellevel=4&committee=N"
+          },
+          {
+            "text": "Priorities she lists: more sidewalks and street lighting, ADA updates, affordable family and senior housing, tree replanting and Carpenter Creek restoration.",
+            "is_quote": false,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=843&rellevel=4&committee=N"
+          },
+          {
+            "text": "Points to \"my commitment to separation of powers under the mayor/council form of government\"",
+            "is_quote": true,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=843&rellevel=4&committee=N"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (both Active-Qualified for Nov 3)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "Escambia SOE official Aug 18, 2026 primary results (no council races on that ballot)",
+        "url": "https://enr.electionsfl.org/ESC/3976/Summary/"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (City Council D2 race and answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "City of Pensacola: Charles Bare",
+        "url": "https://www.cityofpensacola.com/3407/Charles-Bare"
+      },
+      {
+        "name": "Sherri Myers SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=843&rellevel=4&committee=N"
+      },
+      {
+        "name": "Escambia SOE: precinct maps of City Council Districts 1-7",
+        "url": "https://escambiavotes.gov/docs/soelibraries/maps/precincts_city_council_district_1_7.pdf"
+      },
+      {
+        "name": "Escambia SOE qualified voters by precinct, Sept 30, 2026 (precincts 64 and 106 add up to the District 2 total)",
+        "url": "https://escambiavotes.gov/docs/soelibraries/stats/qualified-voters-by-precinct27e962f915a36cfab4b5ff0200ad5567.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fl-pensacola-council-4",
+    "state": "FL",
+    "level": "city",
+    "office": "Pensacola City Council",
+    "district": "District 4",
+    "scope_plain": "Only City of Pensacola voters in Council District 4: precincts 35 (votes at East Pensacola Heights Community Center), 46 (Trinity Presbyterian Church) and 72 (Bayview Community Center). Precincts 40 and 41 also vote at Bayview Community Center but are not in District 4, so go by your precinct number, which is on your voter information card and sample ballot. White's statement places Cordova Park in District 4. Nonpartisan, so no party labels. With two candidates, this seat was not on the August ballot and is decided Nov. 3.",
+    "office_explainer": "Seven-member council that passes city laws and the budget; the mayor runs day-to-day city operations.",
+    "why_it_matters": "Current council member Jared Moore is not on the ballot, so District 4 gets a new representative.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brian Cole",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.briancoled4.com/",
+        "website_confidence": "verified",
+        "background": "Licensed property-restoration contractor, youth sports coach, former volunteer firefighter and father of two; lifelong Pensacola resident (his site and SOE statement).",
+        "own_words": [
+          {
+            "text": "\"The most pressing issue is that Pensacola needs more good jobs and a stronger local economy.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "On growth: \"Growth has to be managed by planning for the full cost of development\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          },
+          {
+            "text": "If a big property tax cut passes: \"My first priorities would be public safety, basic infrastructure, stormwater, and existing legal or debt obligations.\"",
+            "is_quote": true,
+            "source": "https://www.wuwf.org/election-2026"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      },
+      {
+        "name": "Boyce T. White",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Third-generation Pensacolian who grew up in Cordova Park. On the city's Zoning Board of Adjustments since 1999 and its chair since 2022; past president of the East Hill Neighborhood Association (his SOE statement). He did not answer the WUWF guide questions; no campaign website found.",
+        "own_words": [
+          {
+            "text": "On jobs: \"ensuring that Pensacola creates quality jobs so our children can stay local while pursuing and fulfilling their career goals\"",
+            "is_quote": true,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=833&rellevel=4&committee=N"
+          },
+          {
+            "text": "On public safety: \"supporting our Police & Firefighters initiatives\"",
+            "is_quote": true,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=833&rellevel=4&committee=N"
+          },
+          {
+            "text": "On quality of life: \"including our parks, drinking water and protecting water quality of our bays and bayous\"",
+            "is_quote": true,
+            "source": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=833&rellevel=4&committee=N"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/florida"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Escambia SOE campaign finance database (both Active-Qualified for Nov 3)",
+        "url": "https://www.voterfocus.com/ws/wscand/candidate_pr.php?c=escambia"
+      },
+      {
+        "name": "Escambia SOE official Aug 18, 2026 primary results (no council races on that ballot)",
+        "url": "https://enr.electionsfl.org/ESC/3976/Summary/"
+      },
+      {
+        "name": "WUWF / Florida public media 2026 voter guide (City Council D4 race and answers)",
+        "url": "https://www.wuwf.org/election-2026"
+      },
+      {
+        "name": "Brian Cole campaign site",
+        "url": "https://www.briancoled4.com/"
+      },
+      {
+        "name": "Boyce T. White SOE candidate statement",
+        "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=833&rellevel=4&committee=N"
+      },
+      {
+        "name": "Escambia SOE: elected officials (Jared Moore, District 4, term expires 11/2026)",
+        "url": "https://escambiavotes.gov/elected-officials-in-escambia-county"
+      },
+      {
+        "name": "Escambia SOE: precinct maps of City Council Districts 1-7",
+        "url": "https://escambiavotes.gov/docs/soelibraries/maps/precincts_city_council_district_1_7.pdf"
+      },
+      {
+        "name": "Escambia SOE qualified voters by precinct, Sept 30, 2026 (precincts 35, 46 and 72 add up to the District 4 total)",
+        "url": "https://escambiavotes.gov/docs/soelibraries/stats/qualified-voters-by-precinct27e962f915a36cfab4b5ff0200ad5567.pdf"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

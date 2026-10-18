@@ -1,0 +1,1709 @@
+[
+  {
+    "id": "ga-us-house-5",
+    "state": "GA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "GA-5",
+    "scope_plain": "Most City of Atlanta voters, including everyone on the DeKalb side (east of Moreland Avenue). Buckhead and parts of west and northwest Atlanta vote in the 6th District instead. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of Georgia's 14 seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Nikema Williams",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nikema Williams",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Current U.S. representative for the 5th District; marked as the incumbent on both the Fulton and DeKalb ballots. Won the Democratic nomination in May.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "John \"Bongo\" Salvesen",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Won the Republican nomination in May. Fulton's ballot prints his nickname as \"BONGO\"; DeKalb's prints \"Bongo.\"",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "WSB-TV: 2026 nominees for U.S. Senate and all 14 U.S. House seats",
+        "url": "https://wsbtv.com/news/local/georgia-general-election-2026-candidates-us-senate-all-14-us-house-seats/TCGX3E477BG7FCEATCR67KRDBQ"
+      },
+      {
+        "name": "FOX 5 Atlanta: Georgia's 2026 midterm races and candidates",
+        "url": "https://www.fox5atlanta.com/news/draft-georgias-2026-midterm-election-major-races-candidates"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-us-house-6",
+    "state": "GA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "GA-6",
+    "scope_plain": "Fulton-side Atlanta voters in Buckhead and parts of west and northwest Atlanta, plus suburbs to the north, west and south of the city. Not on any DeKalb ballot. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of Georgia's 14 seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Lucy McBath",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lucy McBath",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Current U.S. representative for the 6th District (marked incumbent on Fulton's ballot). Won the Democratic nomination in May.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Kevin E. Martin",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Won the Republican nomination in May.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WSB-TV: 2026 nominees for U.S. Senate and all 14 U.S. House seats",
+        "url": "https://wsbtv.com/news/local/georgia-general-election-2026-candidates-us-senate-all-14-us-house-seats/TCGX3E477BG7FCEATCR67KRDBQ"
+      },
+      {
+        "name": "FOX 5 Atlanta: Georgia's 2026 midterm races and candidates",
+        "url": "https://www.fox5atlanta.com/news/draft-georgias-2026-midterm-election-major-races-candidates"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-sd-35",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia State Senate",
+    "district": "Senate District 35",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 56 Georgia state senators. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Jaha V. Howard",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jaha V. Howard",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-sd-36",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia State Senate",
+    "district": "Senate District 36",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 56 Georgia state senators. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Nan Grogan Orrock",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nan Grogan Orrock",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Katie Corkren",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-sd-38",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia State Senate",
+    "district": "Senate District 38",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 56 Georgia state senators. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Rashaun Kemp",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rashaun Kemp",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Eric Helvy",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-sd-39",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia State Senate",
+    "district": "Senate District 39",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 56 Georgia state senators. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Sonya Halpern",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sonya Halpern",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "John F. Guest, Jr.",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-sd-44",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia State Senate",
+    "district": "Senate District 44",
+    "scope_plain": "Voters on Atlanta's DeKalb side (district map data puts all of it here), plus Decatur and more of central and south DeKalb. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 56 Georgia state senators. Writes state laws and passes the state budget.",
+    "why_it_matters": "Open seat: Sen. Elena Parent is retiring (WABE).",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Saira Draper",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Currently the state representative for House District 90 (WABE).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Ngozi Orabueze",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed by the DeKalb County GOP as its SD 44 nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      },
+      {
+        "name": "DeKalb County GOP June 2026 chairman's letter (party source)",
+        "url": "https://dekalbgop.org/?p=4613"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-53",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 53",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). It also reaches into North Fulton. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Deborah Silcox",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Deborah Silcox",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Beth Fuller",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-54",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 54",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). It also reaches into North Fulton. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Betsy Holland",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Betsy Holland",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Greg Miller",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-55",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 55",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Inga S Willis",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Inga S Willis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Samuel S. Lenaeus",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-56",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 56",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Bryce Berry",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bryce Berry",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Fulton's sample ballot doesn't mark him as the incumbent, but the Fulton Democrats' card stars him as one and Maggie Goldman's endorsement page lists him as a sitting state representative.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-hd-57",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 57",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Stacey Evans",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Stacey Evans",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Helmut Lucero Love",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-58",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 58",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Open seat: Rep. Park Cannon is stepping down (WABE).",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mathewos Samson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Torrey Balam",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-59",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 59",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Phil A. Olaleye",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Phil A. Olaleye",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Devanta \"Sully\" Sullivan",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-60",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 60",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Sheila Jones",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sheila Jones",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-61",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 61",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). It also covers parts of South Fulton cities. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Mekyah McQueen",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mekyah McQueen",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Damita Bishop",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-62",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 62",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). It also covers parts of South Fulton cities. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Open seat: Rep. Tanya Miller is running for attorney general (WABE). Unopposed.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kenn Collier",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-63",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 63",
+    "scope_plain": "Voters in this district, which covers part of Atlanta's Fulton side (the Fulton Democrats list it on their Atlanta-area card). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Kim Schofield",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kim Schofield",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-84",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 84",
+    "scope_plain": "Mostly Decatur and Druid Hills in DeKalb. District map data shows it touching the City of Atlanta only at the edges of Emory and East Lake, so most Atlanta voters won't see it. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Mary Margaret Oliver",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mary Margaret Oliver",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "ga-hd-89",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 89",
+    "scope_plain": "Voters on Atlanta's DeKalb side in and around Lake Claire, Kirkwood, East Lake and Emory (district map data), plus nearby DeKalb. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "Omari Crawford",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Omari Crawford",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "ga-hd-90",
+    "state": "GA",
+    "level": "state",
+    "office": "Georgia House of Representatives",
+    "district": "House District 90",
+    "scope_plain": "Voters on Atlanta's DeKalb side just east of Moreland Avenue, including Little Five Points, Candler Park, Edgewood and East Atlanta Village (district map data), plus unincorporated DeKalb to the south. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "One of 180 Georgia state representatives. Writes state laws and passes the state budget.",
+    "why_it_matters": "Open seat: Rep. Saira Draper is running for Senate District 44 (WABE).",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bentley Hudgins",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Georgia state director of the Human Rights Campaign, per the candidate's statement to Georgia Equality PAC.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Samantha Boston",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed by the DeKalb County GOP as its HD 90 nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      },
+      {
+        "name": "DeKalb County GOP June 2026 chairman's letter (party source)",
+        "url": "https://dekalbgop.org/?p=4613"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-commission-chair",
+    "state": "GA",
+    "level": "county",
+    "office": "Fulton County Commission Chair",
+    "district": "Countywide",
+    "scope_plain": "Every Fulton County voter, including all of Atlanta's Fulton side. Not on DeKalb ballots.",
+    "office_explainer": "Leads the Fulton County Commission, which funds the jail and courts, runs elections and libraries, and sets county taxes.",
+    "why_it_matters": "Open seat: Commissioner Mo Ivory beat longtime Chair Robb Pitts in the June 16 Democratic runoff. The county jail's conditions and county finances are central issues in the race.",
+    "vote_for": 1,
+    "incumbent": "Robb Pitts (lost the Democratic runoff; not on the ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mo Ivory",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://moivory.com/",
+        "website_confidence": "verified",
+        "background": "Fulton County commissioner for District 4 until she resigned to run for chair; attorney, law professor and media personality. Lived in Atlanta since 1987; attended Spelman College.",
+        "own_words": [
+          {
+            "text": "On the county jail: \"It's a crisis. It's a humanitarian crisis.\"",
+            "is_quote": true,
+            "source": "https://www.atlantanewsfirst.com/2026/06/17/next-fulton-county-board-chair-could-raise-taxes-fund-jail-improvements/"
+          },
+          {
+            "text": "\"One of the very first things that I plan to do is a forensic audit\" of county finances.",
+            "is_quote": true,
+            "source": "https://www.atlantanewsfirst.com/2026/06/17/next-fulton-county-board-chair-could-raise-taxes-fund-jail-improvements/"
+          },
+          {
+            "text": "Campaign priorities: \"Fix the Jail, Fund the Courts,\" \"Build Hospitals, Better Healthcare,\" \"Free & Fair Elections\" and \"Increase Budget Transparency.\"",
+            "is_quote": true,
+            "source": "https://moivory.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Eric J. Tatum",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Attorney. Won the Republican primary unopposed. No campaign website found.",
+        "own_words": [
+          {
+            "text": "\"I'm focused on uniting our community, restoring trust, and fixing what's failing so we can secure our future.\"",
+            "is_quote": true,
+            "source": "https://www.atlantanewsfirst.com/2026/06/17/next-fulton-county-board-chair-could-raise-taxes-fund-jail-improvements/"
+          },
+          {
+            "text": "\"Fulton County has real problems that need real solutions.\"",
+            "is_quote": true,
+            "source": "https://www.atlantanewsfirst.com/2026/06/17/next-fulton-county-board-chair-could-raise-taxes-fund-jail-improvements/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Atlanta News First: chair race quotes (June 17)",
+        "url": "https://www.atlantanewsfirst.com/2026/06/17/next-fulton-county-board-chair-could-raise-taxes-fund-jail-improvements/"
+      },
+      {
+        "name": "Atlanta News First: runoff result (June 17)",
+        "url": "https://www.atlantanewsfirst.com/2026/06/17/mo-ivory-ousts-rob-pitts-democratic-fulton-commission-chair-runoff-election/"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      },
+      {
+        "name": "Wikipedia: 2026 Fulton County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_Fulton_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-commission-1",
+    "state": "GA",
+    "level": "county",
+    "office": "Fulton County Commission",
+    "district": "District 1",
+    "scope_plain": "Voters in Fulton Commission District 1 in North Fulton. Not on City of Atlanta ballots (the Fulton Democrats list it only on their North Fulton card).",
+    "office_explainer": "A Fulton County commissioner. The commission funds the jail and courts, runs elections and sets county taxes.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Bridget Thorne",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bridget Thorne",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent District 1 commissioner.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Maggie Goldman",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.maggie4fulton.com/platform",
+        "website_confidence": "verified",
+        "background": "Realtor and the Democratic nominee for this seat in 2022. Former chair of the Fulton County Continuum of Care Board; has helped homeowners with property tax appeals since 2015.",
+        "own_words": [
+          {
+            "text": "\"Fulton County is leaving hundreds of millions of dollars uncollected due to undervaluation of commercial property.\"",
+            "is_quote": true,
+            "source": "https://www.maggie4fulton.com/platform"
+          },
+          {
+            "text": "Wants \"elections that are accessible, secure, and follow the law.\"",
+            "is_quote": true,
+            "source": "https://www.maggie4fulton.com/platform"
+          },
+          {
+            "text": "\"Fulton County residents deserve a jail that meets constitutional standards.\"",
+            "is_quote": true,
+            "source": "https://www.maggie4fulton.com/platform"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: North Fulton card (party source)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-north-candidate-list.pdf"
+      },
+      {
+        "name": "Wikipedia: 2026 Fulton County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_Fulton_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-commission-3",
+    "state": "GA",
+    "level": "county",
+    "office": "Fulton County Commission",
+    "district": "District 3",
+    "scope_plain": "Voters in Fulton Commission District 3, which takes in part of Atlanta and part of North Fulton (the Fulton Democrats list it on both their Atlanta-area and North Fulton cards). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A Fulton County commissioner. The commission funds the jail and courts, runs elections and sets county taxes.",
+    "why_it_matters": "Open seat: Commissioner Dana Barrett is not on the ballot (she has endorsed Merriday).",
+    "vote_for": 1,
+    "incumbent": "Dana Barrett (not on the ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jodi Merriday",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://jodimerriday.com/",
+        "website_confidence": "verified",
+        "background": "Ombudsman who has handled constituent concerns for Atlanta Public Schools and the City of Atlanta; former college lecturer and Spelman administrator. Ph.D. from Temple University. Won the June 16 Democratic runoff.",
+        "own_words": [
+          {
+            "text": "Priorities include \"Protecting your Vote through secure and fair elections\" and \"Strengthening Public Safety to Decrease Crime.\"",
+            "is_quote": true,
+            "source": "https://jodimerriday.com/"
+          },
+          {
+            "text": "\"Reducing Property Taxes to support home owners.\"",
+            "is_quote": true,
+            "source": "https://jodimerriday.com/"
+          },
+          {
+            "text": "\"Building hospitals and increasing mental health and senior services.\"",
+            "is_quote": true,
+            "source": "https://jodimerriday.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Paul Burton",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://burton4fulton3.com",
+        "website_confidence": "sourced",
+        "background": "Army veteran who worked at IBM Asia Pacific; lives in Sandy Springs. First run for office (third-party Branch profile).",
+        "own_words": [
+          {
+            "text": "Says \"residents deserve transparency and a seat at the table when they trust the county with their hard-earned tax dollars.\"",
+            "is_quote": true,
+            "source": "https://www.branch.vote/races/2026-georgia-general-election-ga-state-county-commissioner-ga-fulton-3/candidates/paul-burton"
+          },
+          {
+            "text": "Wants to speed up the county jail renovation and reduce \"unnecessary incarcerations.\"",
+            "is_quote": true,
+            "source": "https://www.branch.vote/races/2026-georgia-general-election-ga-state-county-commissioner-ga-fulton-3/candidates/paul-burton"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County Democrats: Mid Fulton candidate card (party source; used to tell which Fulton districts cover Atlanta)",
+        "url": "https://fultondems.org/wp-content/uploads/2026/09/guide-2026-mid-candidate-list.pdf"
+      },
+      {
+        "name": "Wikipedia: 2026 Fulton County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_Fulton_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-commission-4-special",
+    "state": "GA",
+    "level": "county",
+    "office": "Fulton County Commission (special election)",
+    "district": "District 4",
+    "scope_plain": "Voters in Fulton Commission District 4, which covers parts of Atlanta, East Point, Hapeville and College Park (per candidate Rohit Malhotra's site). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A Fulton County commissioner. The commission funds the jail and courts, runs elections and sets county taxes.",
+    "why_it_matters": "Fills the rest of Mo Ivory's term after she resigned to run for chair. All four candidates qualified as Democrats and share one ballot; if no one gets more than half the vote, the top two go to a December 1 runoff, which FOX 5's analysts expect. Only voters registered by Oct 5 can vote in that runoff; the later Nov 2 runoff registration date is for federal races only.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Natalie Hall",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Held this District 4 seat before losing to Mo Ivory in 2024; earlier chief of staff to Commissioner Joan P. Garner. Lists her occupation as information technology director. Fulton's Oct 8 sample ballot prints no party next to her name; the official qualifying list says Democratic.",
+        "own_words": [
+          {
+            "text": "Plans to attract jobs that pay above a living wage and increase affordable housing (Branch summary of her website).",
+            "is_quote": false,
+            "source": "https://branch.vote/races/2026-georgia-general-election-ga-state-county-commissioner-ga-fulton-4-special/candidates/natalie-hall"
+          },
+          {
+            "text": "Plans to expand access to fresh produce in neighborhoods without it (Branch summary).",
+            "is_quote": false,
+            "source": "https://branch.vote/races/2026-georgia-general-election-ga-state-county-commissioner-ga-fulton-4-special/candidates/natalie-hall"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Rohit Malhotra",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.voterohit.com/",
+        "website_confidence": "verified",
+        "background": "Founder and executive director of the Center for Civic Innovation; former White House budget office fellow under President Obama; ran for Atlanta City Council president.",
+        "own_words": [
+          {
+            "text": "\"Protecting and strengthening local democracy and elections.\"",
+            "is_quote": true,
+            "source": "https://www.voterohit.com/"
+          },
+          {
+            "text": "\"Strengthening healthcare, justice, and public safety systems (Grady Hospital + mental health services).\"",
+            "is_quote": true,
+            "source": "https://www.voterohit.com/"
+          },
+          {
+            "text": "\"Increasing transparency and fairness in the County's $1.5B budget and the tax system.\"",
+            "is_quote": true,
+            "source": "https://www.voterohit.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Karen Rene",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Served 10 years on the East Point City Council; attorney and nonprofit health care executive (Branch profile). The qualifying list spells her name Karen Rene'. Fulton's sample ballot prints no party next to her name; the qualifying list says Democratic. No campaign website found.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Aaron A. Sampson Jr",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Lists his occupation as nonprofit executive on the official qualifying list; FOX 5 describes him as a local attorney. No campaign website found.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County: qualified candidates, District 4 special (May 1)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/LIst-Qualified-Candidates-Final--Fulton-County-Commisson-District-4---Nov-3-2026--Special-Election.pdf"
+      },
+      {
+        "name": "FOX 5 Atlanta: District 4 race (Oct 12)",
+        "url": "https://www.fox5atlanta.com/news/fulton-county-district-4-race-4-candidates-run-open-seat.amp"
+      },
+      {
+        "name": "Fulton County: Election Key Dates (runoff registration: Oct 5, or Nov 2 for federal races only)",
+        "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Election-Key-Dates"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-commission-5",
+    "state": "GA",
+    "level": "county",
+    "office": "Fulton County Commission",
+    "district": "District 5",
+    "scope_plain": "Voters in Fulton Commission District 5, which covers part of Atlanta and part of South Fulton (the Fulton Democrats list it on both their Atlanta-area and South Fulton cards). Two certified write-in candidates, Mark Baker and Lynn King, are not printed on the ballot; to vote for one, write the name in. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A Fulton County commissioner. The commission funds the jail and courts, runs elections and sets county taxes.",
+    "why_it_matters": "Open seat: Commissioner Marvin Arrington ran for chair instead (WABE). WABE's list shows no Republican, but Fulton's official ballot lists Tiffany A. Henyard.",
+    "vote_for": 1,
+    "incumbent": "Marvin Arrington (ran for chair; not on the ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Helen Zenobia Willis",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.helenzwillis.com/",
+        "website_confidence": "verified",
+        "background": "Member of the South Fulton City Council. Won the June 16 Democratic runoff.",
+        "own_words": [
+          {
+            "text": "\"District 5 deserves a commissioner who is unafraid to lead.\"",
+            "is_quote": true,
+            "source": "https://www.helenzwillis.com/"
+          },
+          {
+            "text": "Will push for \"criminal justice reform at our courts and jail, stronger water and sewer infrastructure, thriving businesses.\"",
+            "is_quote": true,
+            "source": "https://www.helenzwillis.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Tiffany A. Henyard",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former mayor of Dolton, Illinois (2021 to 2025). Moved to Georgia after leaving office; Fulton's elections board accepted her May 2025 South Fulton lease as proof of residency and let her run. Lists her occupation as business owner. Won the Republican primary unopposed. No campaign website found.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      },
+      {
+        "name": "Fulton County: certified write-in candidates, District 5",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Write-In-Candidate--Comm-District-5---November-3-2026.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      },
+      {
+        "name": "Wikipedia: 2026 Fulton County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_Fulton_County_elections"
+      },
+      {
+        "name": "Atlanta News First: former Dolton, Illinois mayor running for Fulton District 5 (Mar 13)",
+        "url": "https://www.atlantanewsfirst.com/2026/03/13/former-illinois-super-mayor-running-fulton-commission-seat/"
+      },
+      {
+        "name": "FOX 32 Chicago: Henyard cleared to run in Fulton County",
+        "url": "https://www.fox32chicago.com/news/tiffany-henyard-cleared-to-run-for-county-board-race-in-georgia"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "fulton-soil-water",
+    "state": "GA",
+    "level": "special_district",
+    "office": "Fulton County Soil and Water Conservation District Supervisor",
+    "district": null,
+    "scope_plain": "Every Fulton County voter. Nonpartisan. Fulton's consolidated sample ballot text doesn't show how many to pick; two incumbents are running, and DeKalb's matching race says \"Vote for Two,\" so this is likely two seats. Check your own ballot.",
+    "office_explainer": "Board member for the county's soil and water conservation district, which works on erosion, runoff and conservation.",
+    "why_it_matters": null,
+    "vote_for": 2,
+    "incumbent": "Walter S. Rekuc Jr. and Jason Ulseth",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Walter S. Rekuc Jr.",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Jason Ulseth",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Zane Placie",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Fulton County consolidated sample ballot, Nov 3 2026 (Oct 8)",
+        "url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf"
+      }
+    ],
+    "confidence": "sourced"
+  },
+  {
+    "id": "dekalb-commission-2",
+    "state": "GA",
+    "level": "county",
+    "office": "DeKalb County Commission",
+    "district": "District 2",
+    "scope_plain": "Voters in DeKalb Commission District 2. On Atlanta's DeKalb side, that's the northern part: Little Five Points (east side), Candler Park, Lake Claire, the Druid Hills pieces inside the city, Emory and the CDC (county parcel data). Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A DeKalb County commissioner. The commission passes the county budget, sets property tax rates and decides zoning.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Michelle Long Spears",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Michelle Long Spears",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Ben Pepper",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed by the DeKalb County GOP as its District 2 nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "DeKalb County GOP June 2026 chairman's letter (party source)",
+        "url": "https://dekalbgop.org/?p=4613"
+      },
+      {
+        "name": "Wikipedia: 2026 DeKalb County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_DeKalb_County,_Georgia,_elections"
+      },
+      {
+        "name": "DeKalb County GIS address-district lookup (commission districts by parcel; checked Oct 17)",
+        "url": "https://dcgis.dekalbcountyga.gov/arcgis/rest/services/Interface/AddressDistrictGeocode/GeocodeServer"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dekalb-commission-3",
+    "state": "GA",
+    "level": "county",
+    "office": "DeKalb County Commission",
+    "district": "District 3",
+    "scope_plain": "Voters in DeKalb Commission District 3. On Atlanta's DeKalb side, that's the southern part: Edgewood, Kirkwood, East Lake and East Atlanta Village (county parcel data), plus unincorporated south DeKalb. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A DeKalb County commissioner. The commission passes the county budget, sets property tax rates and decides zoning.",
+    "why_it_matters": "Open seat: Keyanna Jones Moore beat Commissioner Nicole Massiah in the June 16 Democratic runoff (Wikipedia).",
+    "vote_for": 1,
+    "incumbent": "Nicole Massiah (lost the Democratic runoff; not on the ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Keyanna Jones Moore",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Environmental policy aide (Wikipedia). Won the June 16 Democratic runoff.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Andrea Bass Smith",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed by the DeKalb County GOP as its District 3 nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "DeKalb County GOP June 2026 chairman's letter (party source)",
+        "url": "https://dekalbgop.org/?p=4613"
+      },
+      {
+        "name": "Wikipedia: 2026 DeKalb County elections (secondary)",
+        "url": "https://en.wikipedia.org/wiki/2026_DeKalb_County,_Georgia,_elections"
+      },
+      {
+        "name": "DeKalb County GIS address-district lookup (commission districts by parcel; checked Oct 17)",
+        "url": "https://dcgis.dekalbcountyga.gov/arcgis/rest/services/Interface/AddressDistrictGeocode/GeocodeServer"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dekalb-commission-7",
+    "state": "GA",
+    "level": "county",
+    "office": "DeKalb County Commission",
+    "district": "Super District 7",
+    "scope_plain": "Voters in DeKalb's Super District 7, the eastern half of the county. It reaches the City of Atlanta only at a few blocks just south of East Lake (county parcel data); almost all of Atlanta's DeKalb side is in Super District 6, which isn't on the ballot this year. Check My Voter Page (mvp.sos.ga.gov) to see whether it's on your ballot.",
+    "office_explainer": "A DeKalb County commissioner. The commission passes the county budget, sets property tax rates and decides zoning.",
+    "why_it_matters": "Unopposed.",
+    "vote_for": 1,
+    "incumbent": "LaDena Bolton",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "LaDena Bolton",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      },
+      {
+        "name": "WABE: 2026 Georgia midterm candidates",
+        "url": "https://www.wabe.org/2026georgiacandidates/"
+      },
+      {
+        "name": "DeKalb County GIS address-district lookup (commission districts by parcel; checked Oct 17)",
+        "url": "https://dcgis.dekalbcountyga.gov/arcgis/rest/services/Interface/AddressDistrictGeocode/GeocodeServer"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "dekalb-soil-water",
+    "state": "GA",
+    "level": "special_district",
+    "office": "DeKalb County Soil and Water Conservation District Supervisor",
+    "district": null,
+    "scope_plain": "Every DeKalb County voter, including Atlanta's DeKalb side. Nonpartisan. Vote for two; only two candidates are running.",
+    "office_explainer": "Board member for the county's soil and water conservation district, which works on erosion, runoff and conservation.",
+    "why_it_matters": null,
+    "vote_for": 2,
+    "incumbent": "Jan Dunaway and Carol Hayes",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jan Dunaway",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      },
+      {
+        "name": "Carol Hayes",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Incumbent.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/georgia"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DeKalb County composite sample ballot, Nov 3 2026",
+        "url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

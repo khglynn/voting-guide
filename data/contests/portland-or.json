@@ -612,7 +612,7 @@
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           },
           {
-            "text": "PORTLAND OVER PARTY. RESULTS OVER POLITICS.",
+            "text": "Portland over party. Results over politics.",
             "is_quote": true,
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           }
@@ -661,12 +661,12 @@
         "background": "State representative; former Nike community and corporate leader and Portland Community College board member. First Japanese American woman in the Oregon Legislature.",
         "own_words": [
           {
-            "text": "REQUIRED data centers to pay their fair share of electricity through the POWER ACT",
+            "text": "Required data centers to pay their fair share of electricity through the POWER Act",
             "is_quote": true,
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           },
           {
-            "text": "SUPPORTED Moda Center funding to keep the Trail Blazers in Oregon",
+            "text": "Supported Moda Center funding to keep the Trail Blazers in Oregon",
             "is_quote": true,
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           }
@@ -1262,7 +1262,7 @@
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           },
           {
-            "text": "LOWERING HOUSING COSTS by cutting the red tape and costs and speeding up housing production.",
+            "text": "Lowering housing costs by cutting the red tape and costs and speeding up housing production.",
             "is_quote": true,
             "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
           }
@@ -2204,7 +2204,7 @@
         "background": "Branding, marketing and events specialist who produced the Legendary Makers Market; in the city's Small Donor Elections program; has avoided endorsements from leading political groups (OPB).",
         "own_words": [
           {
-            "text": "LET'S MAKE LOCAL GOVERNMENT BORING.",
+            "text": "Let's make local government boring.",
             "is_quote": true,
             "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
           },
@@ -2245,7 +2245,7 @@
         "incumbent": true,
         "website": "https://www.teachertiffanyforthepeople.com",
         "website_confidence": "verified",
-        "background": "Incumbent councilor and the council's first vice president; former Portland Public Schools teacher; a democratic socialist and Working Families Party leader.",
+        "background": "Incumbent councilor; served as council vice president in 2025; former Portland Public Schools teacher; a democratic socialist and Working Families Party leader.",
         "own_words": [
           {
             "text": "I bring Portlanders into the rooms where decisions are made.",
@@ -2314,8 +2314,8 @@
             "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
           },
           {
-            "text": "JUST SAY NO TO BAT LANES ON 82nd AVENUE",
-            "is_quote": true,
+            "text": "Opposes BAT lanes (bus and turn lanes) on 82nd Avenue, which he says \"could divert as many as 5000 vehicles a day.\"",
+            "is_quote": false,
             "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
           },
           {
@@ -2332,7 +2332,7 @@
         "party": null,
         "incumbent": false,
         "website": "https://www.theprinceofpeace.net",
-        "website_confidence": "unverified",
+        "website_confidence": "sourced",
         "background": "Lists his occupation as city council candidate; master's degree in political science. Calls himself 'A Progressive Republican along the lines of Abraham Lincoln.'",
         "own_words": [
           {

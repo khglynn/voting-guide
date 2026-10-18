@@ -1,0 +1,30 @@
+[
+  {
+    "id": "fulton-dems",
+    "name": "Fulton County Democratic Party",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county committee of the Democratic Party of Georgia. Its Nov 2026 region cards list only Democratic candidates.",
+    "geography": [
+      "atlanta-ga"
+    ],
+    "guide_url": "https://fultondems.org/voting-guides/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "dekalb-gop",
+    "name": "DeKalb County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county Republican Party. Its June 2026 chairman's letter lists the party's 2026 Republican nominees; no November ballot-measure positions found.",
+    "geography": [
+      "atlanta-ga"
+    ],
+    "guide_url": "https://dekalbgop.org/?p=4613",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

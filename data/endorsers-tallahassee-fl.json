@@ -1,0 +1,86 @@
+[
+ {
+  "id": "leon-dems",
+  "name": "Leon County Democratic Party",
+  "type": "party",
+  "lean": "left",
+  "lean_basis": "Official county party organization (the Leon County Democratic Executive Committee). Its site says it is \"dedicated to electing Democrats\" (https://www.leondems.com/voting-info).",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://www.leondems.com/voting-info",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "leon-gop",
+  "name": "Republican Party of Leon County",
+  "type": "party",
+  "lean": "right",
+  "lean_basis": "Official county party organization (the Leon County Republican Party). Its site asks supporters to help \"elect strong Republican leaders\" (https://leongop.com/).",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://leongop.com/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "tallahassee-reports",
+  "name": "Tallahassee Reports",
+  "type": "publication",
+  "lean": "neutral",
+  "lean_basis": "Its About page describes a nonprofit news site that \"publishes watchdog reports on local government, politics, consumer affairs, business and public policy,\" with no stated ideology (https://tallahasseereports.com/aboutus/). No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://tallahasseereports.com/",
+  "default_on": true,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "tallahassee-chamber",
+  "name": "Tallahassee Chamber of Commerce",
+  "type": "business",
+  "lean": "lean_right",
+  "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating, so it is labeled lean_right under this guide's rule for chambers. Its stated mission: \"to lead and promote the success of business,\" and its advocacy page says it is \"driven by a pro-business agenda\" (https://www.talchamber.com/about-the-chamber/mission/). Its 2026 voter guides and candidate fact sheets each say the document \"does not advocate for or against.\"",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://www.talchamber.com/business-advocacy/",
+  "default_on": false,
+  "endorses_candidates": false,
+  "endorses_measures": false
+ },
+ {
+  "id": "big-bend-labor-council",
+  "name": "Big Bend Labor Council, AFL-CIO",
+  "type": "labor",
+  "lean": "lean_left",
+  "lean_basis": "Regional AFL-CIO labor council with no AllSides or Ad Fontes rating, so it is labeled lean_left under this guide's rule for unions. Its own website was not found. Its 2026 release describes it as representing over 5,300 workers in eight North Florida counties (Tallahassee Reports, May 1, 2026).",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://tallahasseereports.com/2026/05/01/big-bend-labor-council-endorses-jeremy-matlow-for-mayor/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ },
+ {
+  "id": "big-bend-pba",
+  "name": "Florida PBA, Big Bend Chapter (police union)",
+  "type": "labor",
+  "lean": "neutral",
+  "lean_basis": "Police officers' union with no AllSides or Ad Fontes rating. Under this guide's rule, a police union is labeled lean_right only if its own words support it. Its stated aim in a 2024 release, to \"protect our rights as essential first responders\" (https://flpba.org/news/press-release-from-the-big-bend-chapter-and-the-leon-county-chapter-of-the-florida-pba), does not, so it is shown as neutral. No outside rating found; lean reflects its stated mission.",
+  "geography": [
+   "tallahassee-fl"
+  ],
+  "guide_url": "https://www.tallahassee.com/story/news/local/2026/04/27/police-union-endorses-ausley-edwards-williams-cox-tallahassee-city-commisison-mayor/89822868007/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": false
+ }
+]

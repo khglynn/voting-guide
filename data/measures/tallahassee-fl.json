@@ -1,0 +1,268 @@
+[
+ {
+  "id": "fl-leon-charter-county-ordinances-prevail",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Charter Amendment: County Ordinances to Prevail",
+  "official_title": "County Ordinances to Prevail Over Municipal Ordinances as Proposed by the Board of County Commissioners. Shall the Leon County Charter be amended to provide that County ordinances adopted after January 1, 2027, shall prevail over conflicting municipal ordinances in the event of conflict, to the extent permitted by law, so that the County may establish regulations and standards on matters affecting residents in both incorporated and unincorporated areas?",
+  "plain_summary": "Today, when a county rule and a city rule clash inside Tallahassee city limits, the city rule wins (except for the county's minimum environmental rules). This flips that for county ordinances passed after January 1, 2027: they would win over conflicting city ordinances, as far as state law allows.",
+  "yes_means": "County ordinances passed from 2027 on would override conflicting City of Tallahassee ordinances, even inside city limits.",
+  "no_means": "City ordinances keep winning over conflicting county ordinances inside city limits, as they do now.",
+  "current_law": "Leon County Charter Sec. 1.6: municipal ordinances prevail over county ordinances to the extent of any conflict within the city's boundaries. The exception is countywide minimum environmental standards, which apply everywhere (a city may adopt stricter ones). Leon is one of 10 of Florida's 20 charter counties that let city ordinances take precedence (WTXL).",
+  "fiscal_impact": "No cost estimate was published with the ordinance.",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. City and unincorporated votes are counted together; there is no separate city-only count.",
+  "referred_by": "council",
+  "confusing_wording_note": "The question never tells you the current rule (city wins inside city limits), so it's easy to miss that a YES shifts this power from the City Commission to the County Commission for anyone living in Tallahassee. 'To the extent permitted by law' means state law still limits what the county can override. The proposal followed a 2025 dispute between the city and county over fire-service fees (WCTV, WTXL). A separate question on this ballot covers street naming only; the two can pass or fail independently.",
+  "supporters_case": {
+   "text": "County Commission Chair Christian Caban, who backed sending it to voters, said residents inside and outside city limits see the County Commission \"as the leading body across the county\" and voters should decide whether to \"formalize that.\" No organized campaign was found.",
+   "source": "https://www.wtxl.com/downtown-tallahassee/leon-county-commission-approves-charter-amendment-to-expand-county-authority"
+  },
+  "opponents_case": {
+   "text": "When the commission voted 4-3 in Sept. 2025 to study the idea, Commissioner Rick Minor compared overriding city ordinances to a \"bull in a china shop,\" and Commissioner David O'Keefe said \"a temporary dispute\" shouldn't drive charter changes. No organized campaign was found.",
+   "source": "https://www.wctv.tv/2025/09/24/leon-county-commission-debates-charter-changes-that-would-see-its-ordinances-outweigh-citys"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Provide%20for%20County%20Ordinances%20to%20Prevail%20Over%20Municipal%20Ordinances-1.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "explainers": [
+   {
+    "source": "WCTV",
+    "title": "Leon County Commission debates charter changes that would see its ordinances outweigh the city's",
+    "url": "https://www.wctv.tv/2025/09/24/leon-county-commission-debates-charter-changes-that-would-see-its-ordinances-outweigh-citys"
+   },
+   {
+    "source": "WTXL",
+    "title": "Leon County commission advances charter amendment to expand county authority",
+    "url": "https://www.wtxl.com/downtown-tallahassee/leon-county-commission-approves-charter-amendment-to-expand-county-authority"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-charter-street-naming",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Charter Amendment: Uniform Street Naming",
+  "official_title": "Uniform Street Naming, Renaming, and Property Numbering Standards Proposed by the Board of County Commissioners. Shall the Leon County Charter be amended to provide for uniform countywide street naming, renaming, and property numbering standards to be established by county ordinance, which would prevail in the event of a conflict with municipal ordinances, as permitted by law, to support emergency response needs throughout the County?",
+  "plain_summary": "Lets the County Commission set one set of rules for naming and renaming streets, numbering addresses and street signs across all of Leon County, including inside Tallahassee. Where the county's rules clash with the city's, the county's would win.",
+  "yes_means": "The county sets street-naming, renaming and address rules countywide, and the city would have to follow them.",
+  "no_means": "The City of Tallahassee keeps its own authority over street names and addresses inside city limits.",
+  "current_law": "City ordinances prevail over conflicting county ordinances inside city limits (Charter Sec. 1.6), so the city sets its own street-naming rules there.",
+  "fiscal_impact": "No cost estimate was published with the ordinance.",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. City and unincorporated votes are counted together; there is no separate city-only count.",
+  "referred_by": "council",
+  "confusing_wording_note": "This is a narrow version of the 'county ordinances prevail' question, limited to street names, address numbers and signs. It can pass even if that broader question fails. WCTV reported that if it passes, the City of Tallahassee 'would have to follow Leon County's rules to rename streets.'",
+  "supporters_case": {
+   "text": "The County Commission, which voted 6-1 to put it on the ballot, says uniform countywide street and address standards are needed \"to support emergency response needs throughout the County.\" No organized campaign was found.",
+   "source": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+  },
+  "opponents_case": {
+   "text": "No organized campaign was found. When the commission voted 6-1 to send it to voters, Commissioner David O'Keefe said he opposed it because the ballot would already be full and that this is something the county should work out with the city.",
+   "source": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Provide%20for%20Uniform%20Countywide%20Street%20Naming%2C%20Renaming%2C%20and%20Addressing%20Standards.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "explainers": [
+   {
+    "source": "WCTV",
+    "title": "Voters to decide if they support consolidation, functioning under Leon County government (also covers the street-naming vote)",
+    "url": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-charter-human-dignity",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Charter Amendment: Affirmation of Human Dignity",
+  "official_title": "Affirmation of Human Dignity as Proposed by the Board of County Commissioners. Shall the Preamble of the Leon County Home Rule Charter be amended to reflect the esteemed humanity of all residents by affirming shared dignity that is inherent and deserving of consideration in public affairs, while preserving the Charter's existing framework for local self-governance and citizen empowerment?",
+  "plain_summary": "Adds two sentences to the charter's preamble (its opening statement of purpose): residents 'affirm the esteemed humanity of all residents' and recognize 'a shared dignity, not granted by government, but inherent.' The ordinance changes only the preamble, no other section.",
+  "yes_means": "The new dignity language is added to the opening statement of the county charter.",
+  "no_means": "The charter's preamble stays as it is now.",
+  "current_law": "The preamble says county decisions on local interests should be made locally and that the charter empowers the people to change their own government. It has no dignity statement.",
+  "fiscal_impact": "No cost estimate was published with the ordinance.",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. City and unincorporated votes are counted together; there is no separate city-only count.",
+  "referred_by": "council",
+  "confusing_wording_note": null,
+  "supporters_case": {
+   "text": "The County Commission, which proposed it, says it would \"reflect the esteemed humanity of all residents\" while keeping the charter's framework for local self-government. No organized campaign was found.",
+   "source": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Reflect%20the%20Esteemed%20Humanity%20of%20All%20Residents%20of%20Leon%20County.pdf"
+  },
+  "opponents_case": {
+   "text": "We found no organized campaign or official argument on this side.",
+   "source": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Reflect%20the%20Esteemed%20Humanity%20of%20All%20Residents%20of%20Leon%20County.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-charter-statutory-references",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Charter Amendment: Remove and Replace Outdated Statutory References",
+  "official_title": "Remove and Replace Outdated Statutory References as Proposed by the Board of County Commissioners. Shall the Leon County Charter be amended to remove outdated statutory references related to the establishment of a Charter, specify public hearing and notice requirements to consider amending the Charter, and require the Citizen Charter Review Committee to submit its recommendations 150 days before the general election to provide additional time for the Board and residents of Leon County to consider proposed charter amendments?",
+  "plain_summary": "Changes the rules for the citizen committee that reviews the charter every 8 years: three public hearings, proposals due 150 days before the election instead of 90, and newspaper notice of the vote 30 to 45 days ahead. It also deletes references to two state laws.",
+  "yes_means": "The charter review committee must hold three public hearings and finish its proposals 150 days (not 90) before the election.",
+  "no_means": "The current process stays: the committee's deadline is 90 days before the election and the charter keeps its references to state statutes.",
+  "current_law": "Charter Sec. 5.2(2): the Citizen Charter Review Committee must deliver proposals at least 90 days before the general election, with public hearings 'as provided by F.S. § 125.63' and ballot placement 'in accordance with F.S. § 125.64.'",
+  "fiscal_impact": "No cost estimate was published with the ordinance.",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. City and unincorporated votes are counted together; there is no separate city-only count.",
+  "referred_by": "council",
+  "confusing_wording_note": "The title only mentions outdated references, but the bigger changes are to the process: an earlier deadline (150 days before the election instead of 90), a set number of hearings (three) and a newspaper-notice window. The question mentions these, but the title doesn't. As now, the committee is dissolved if it misses its deadline.",
+  "supporters_case": {
+   "text": "The County Commission, which proposed it, says the earlier deadline gives \"additional time for the Board and residents of Leon County to consider proposed charter amendments.\" No organized campaign was found.",
+   "source": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Update%20Subsection%205.2(2)%20of%20the%20Leon%20County%20Charter-1.pdf"
+  },
+  "opponents_case": {
+   "text": "We found no organized campaign or official argument on this side.",
+   "source": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Update%20Subsection%205.2(2)%20of%20the%20Leon%20County%20Charter-1.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-charter-community-impact",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Charter Amendment: Commitment to Historically Underserved and Vulnerable Populations",
+  "official_title": "Affirmation of County's Commitment to Historically Underserved and Vulnerable Populations. Shall the Home Rule Charter of Leon County, Florida, be amended to provide for a periodic Community Impact Assessment process, public reporting, and Board of County Commissioners' review and consideration regarding adverse community conditions related to the County's historic laws, policies, and practices?",
+  "plain_summary": "Adds a charter article requiring the county to periodically study bad conditions in parts of the county linked to its past laws, policies and practices, then publish the findings and review them at a public County Commission meeting. The studies depend on the commission funding them. The commission must pass a county law to carry it out by April 1, 2027.",
+  "yes_means": "The county must set up periodic community impact studies, publish them and review them in public, when funding allows.",
+  "no_means": "No charter requirement for these studies; the county could still choose to do them on its own.",
+  "current_law": "The charter has no community impact assessment requirement.",
+  "fiscal_impact": "No cost estimate was published. The text makes each assessment 'subject to appropriation and funding availability.'",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. City and unincorporated votes are counted together; there is no separate city-only count.",
+  "referred_by": "council",
+  "confusing_wording_note": "The title talks about a 'commitment' to underserved populations, but the text only requires studies, public reports and a public review. It says it 'does not mandate specific policy outcomes, funding allocations, or preferential treatment for any individual or group,' and the studies depend on the commission funding them. The county's own file name calls it the 'Historic Harm' amendment.",
+  "supporters_case": {
+   "text": "The County Commission, which proposed it, says it would inform county decisions by reviewing \"adverse community conditions in historically underserved and vulnerable populations related to the County's historic laws, policies, and practices.\" No organized campaign was found.",
+   "source": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Place%20Proposed%20Historic%20Harm%20Charter%20Amendment%20on%20General%20Election%20Ballot%20to%20Establish%20.pdf"
+  },
+  "opponents_case": {
+   "text": "We found no organized campaign or official argument on this side.",
+   "source": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Place%20Proposed%20Historic%20Harm%20Charter%20Amendment%20on%20General%20Election%20Ballot%20to%20Establish%20.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-school-surtax",
+  "state": "FL",
+  "level": "school",
+  "jurisdiction": "Leon County (School District of Leon County)",
+  "number": "School Board Referendum: Continuing Half-Cent Sales Surtax",
+  "official_title": "School District Referendum Continuing Sales Surtax to Fund School Safety, Technology, Transportation and Facilities Improvements. To provide resources to improve safety and security and maintain high-quality education by expanding, constructing, and improving school facilities, technology and transportation, with collected revenues shared with eligible charter schools based on their proportionate share of total school district enrollment, shall the school district of Leon County continue to levy a one-half cent sales surtax for fifteen years to fund such activities for such schools, with review by a School Board appointed citizen advisory committee?",
+  "plain_summary": "Keeps Leon County's existing half-cent sales tax for schools for 15 more years, from January 1, 2028 (the current one ends December 31, 2027). The money can only pay for buildings, repairs, security, technology and buses, not salaries or day-to-day costs. Charter schools get a share based on enrollment, and a citizen committee reviews spending.",
+  "yes_means": "The half-cent school sales tax continues for 15 years starting in 2028, so the total sales tax stays at 7.5%.",
+  "no_means": "The school half-cent sales tax ends after December 31, 2027, unless voters approve one later, and the total sales tax falls by half a cent.",
+  "current_law": "Voters approved this half-cent school surtax in 2002 (10 years) and renewed it in 2012 (15 years, January 1, 2013 to December 31, 2027). Leon's total sales tax is 7.5%: 6% state, 1% Blueprint infrastructure surtax and this 0.5% school surtax.",
+  "fiscal_impact": "WTXL, citing district documents, reported that a renewal could raise more than $500 million over 15 years. The school district says it would face a $620 million shortfall if the tax isn't renewed (district website; WCTV quoted district officials at $621.7 million). The tax raised about $400 million from 2012 to 2027 (district website).",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it.",
+  "referred_by": "council",
+  "confusing_wording_note": "It says 'continue,' so this is a renewal, not a new tax. The elections office's ballot-questions web page shows a garbled summary that says 'ten years,' but the printed sample ballot in the elections office's 2026 Election Guide says fifteen years, matching the County Commission's July 14, 2026 resolution. Fifteen years is correct.",
+  "supporters_case": {
+   "text": "The school district, which asked for it, says the tax brings in money from \"tourism, visitors to the state capital, and game day sales\" and pays for roofs, air conditioning, security and buses \"without increasing property taxes.\" No separate campaign committee was found.",
+   "source": "https://www.leonschools.net/halfpenny"
+  },
+  "opponents_case": {
+   "text": "We found no organized campaign or official argument on this side.",
+   "source": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/Fd9Wd9mKP0SAEveRJkG_yg/Text/Resolution%20of%20the%20Leon%20County%20BOCC%20repealing%20and%20replacing%20the%20Leon%20County%20Schools%20Surtax%20Referendum.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "explainers": [
+   {
+    "source": "WTXL",
+    "title": "Leon County school leaders push to renew half-cent sales tax before 2027 expiration",
+    "url": "https://www.wtxl.com/northwest-tallahassee/leon-county-school-leaders-push-to-renew-half-cent-sales-tax-before-2027-expiration"
+   },
+   {
+    "source": "WCTV",
+    "title": "Leon County Schools seek extension of half-cent sales tax, increase in property tax rate",
+    "url": "https://www.wctv.tv/2026/05/08/leon-county-schools-seek-extension-half-cent-sales-tax-increase-property-tax-rate/"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-school-millage",
+  "state": "FL",
+  "level": "school",
+  "jurisdiction": "Leon County (School District of Leon County)",
+  "number": "School Board Referendum: One-Mill Property Tax for Teacher Pay, Safety and Programs",
+  "official_title": "School Board Ad Valorem Levy to Improve Teacher Compensation, School Safety and School Enrichment Programs. To increase compensation for teachers and staff, enhance school security operations, and fund essential school programs including arts education and athletics, shall the Leon County School Board authorize an annual ad valorem operating millage of one mill annually from July 1, 2027 through June 30, 2031, with revenues collected to be shared with eligible charter schools pursuant to Florida law, and with expenditures reviewed by a citizen's advisory committee?",
+  "plain_summary": "Adds a new school property tax of 1 mill ($1 for every $1,000 of a property's taxable value) for four years, July 2027 to June 2031. The money goes to teacher and staff pay, school security, and arts and athletics. Charter schools get a share, and a citizen committee reviews spending.",
+  "yes_means": "Property owners pay an extra 1 mill in school tax for four years, starting July 2027, for teacher pay, security, arts and sports.",
+  "no_means": "No new school property tax; school tax rates stay where state law and the School Board set them.",
+  "current_law": "The 2025 school tax rates were 3.118 mills (required by state law), 1.5 (capital outlay) and 0.748 (discretionary), with no voter-approved operating levy listed (Leon County Property Appraiser, as quoted by the Chamber).",
+  "fiscal_impact": "No revenue estimate was published with the resolution. One mill is $1 for every $1,000 of a property's taxable value (Chamber guide). The School Board may repeal or reduce the levy early without another vote (resolution Sec. 4).",
+  "pass_threshold": "Simple majority of all Leon County voters who vote on it. State law caps this kind of levy at four years.",
+  "referred_by": "council",
+  "confusing_wording_note": "This is a new tax, unlike the sales-tax question, which continues an old one. The two are separate: you can vote yes on one and no on the other. The Chamber's June guide prints older draft wording (mentioning mental health and career education); the wording above is the final version printed on the elections office's sample ballot.",
+  "supporters_case": {
+   "text": "The School Board, which asked voters with one dissenting vote (WCTV), says the district has a \"significant vacancy rate\" and can't keep teachers and staff because pay trails other districts and the private sector. No separate campaign committee was found.",
+   "source": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/Fd9Wd9mKP0SAEveRJkG_yg/Text/Resolution%20of%20the%20Leon%20County%20Board%20of%20County%20Commissioners%20to%20place%20the%20Leon%20County%20Schools%20Operati.pdf"
+  },
+  "opponents_case": {
+   "text": "No organized campaign was found. School Board member Laurie Lawson Cox said she prefers a sales tax: \"I wish we could do sales tax rather than property tax increase... because then everyone gets to contribute.\"",
+   "source": "https://www.wtxl.com/northwest-tallahassee/leon-county-school-leaders-push-to-renew-half-cent-sales-tax-before-2027-expiration"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/Fd9Wd9mKP0SAEveRJkG_yg/Text/Resolution%20of%20the%20Leon%20County%20Board%20of%20County%20Commissioners%20to%20place%20the%20Leon%20County%20Schools%20Operati.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "explainers": [
+   {
+    "source": "WCTV",
+    "title": "Leon County Schools approve increase in property tax rates, voters could decide in November",
+    "url": "https://www.wctv.tv/2026/05/27/leon-county-schools-approve-increase-property-tax-rates-voters-could-decide-november/"
+   },
+   {
+    "source": "WTXL",
+    "title": "Leon County school leaders push to renew half-cent sales tax before 2027 expiration",
+    "url": "https://www.wtxl.com/northwest-tallahassee/leon-county-school-leaders-push-to-renew-half-cent-sales-tax-before-2027-expiration"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-consolidation-straw-ballot",
+  "state": "FL",
+  "level": "county",
+  "jurisdiction": "Leon County",
+  "number": "County Straw Ballot: County-City Consolidation Plan",
+  "official_title": "Advisory Referendum to Pursue County-City Consolidation Plan Under Leon County Government Structure and Leadership. Shall Leon County pursue development of a plan to consolidate the governments of Leon County and the City of Tallahassee into a single consolidated government, under the Leon County government structure and leadership, through the constitutional process requiring a special act of the Florida Legislature and voter approval? This nonbinding referendum only gauges voter sentiment and does not create a consolidated government.",
+  "plain_summary": "A nonbinding opinion poll. It asks whether the county should start drafting a plan to merge Leon County and the City of Tallahassee into one government run under the county's structure and leadership. Nothing changes either way: an actual merger would need a special act of the Florida Legislature and another public vote.",
+  "yes_means": "You tell county leaders you want them to pursue a plan for one merged government under Leon County's structure and leadership.",
+  "no_means": "You tell county leaders you don't want them to pursue that plan.",
+  "current_law": "Leon County and the City of Tallahassee are separate governments. Voters rejected consolidation proposals four times (1971, 1973, 1976 and 1992). The Florida Constitution (Art. VIII, Sec. 3) requires a special act of the Legislature and a public vote to consolidate.",
+  "fiscal_impact": "None directly; the vote is advisory.",
+  "pass_threshold": "Nonbinding. A majority signals support, but the result changes no law either way.",
+  "referred_by": "council",
+  "confusing_wording_note": "It isn't a neutral 'should we merge?' question. It asks about a merger 'under the Leon County government structure and leadership,' so a NO could mean you oppose any merger or that you'd support one only on different terms. Commissioners debated a neutral version and chose this one 6-1 (WCTV). The question comes amid a city-county dispute over fire-service fees (Tallahassee Chamber guide).",
+  "supporters_case": {
+   "text": "County Commission Chair Christian Caban backed the county-led wording: \"This protects our rural communities.\" No organized campaign was found.",
+   "source": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+  },
+  "opponents_case": {
+   "text": "No organized campaign was found. Commissioner Carolyn Cummings said she doesn't support consolidation, worrying people will lose jobs, though she voted to let voters weigh in; Commissioner David O'Keefe cast the lone vote against the straw poll.",
+   "source": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+  },
+  "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/mp0MyrerRkeqIvRWqYz7Tw/Text/Resolution_Consolidation_Straw_Ballot_Nov2026_FINAL-1.pdf",
+  "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
+  "explainers": [
+   {
+    "source": "WCTV",
+    "title": "Voters to decide if they support consolidation, functioning under Leon County government",
+    "url": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

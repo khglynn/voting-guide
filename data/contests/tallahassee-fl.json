@@ -1,0 +1,1421 @@
+[
+ {
+  "id": "fl-tallahassee-mayor",
+  "state": "FL",
+  "level": "city",
+  "office": "Mayor (City Commission Seat 4)",
+  "district": null,
+  "scope_plain": "Only voters who live inside Tallahassee city limits; the whole city votes on each seat. If you live outside city limits (even with a Tallahassee mailing address), these races aren't on your ballot.",
+  "office_explainer": "Chairs the five-member City Commission and votes with it on city laws, the budget and city services.",
+  "why_it_matters": "Open seat: Mayor John Dailey did not run. WFSU calls the runoff \"an ideological battle\": Matlow is part of the commission's progressive minority bloc, and Ausley is \"a Democratic moderate.\"",
+  "vote_for": 1,
+  "incumbent": "John Dailey",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Loranne Ausley",
+    "party": null,
+    "incumbent": false,
+    "website": "https://ausleyformayor.com/",
+    "website_confidence": "verified",
+    "background": "Former state senator (2020 to 2022) and state representative; 14 years in the Legislature. Attorney and founder of Whole Child Leon. Finished second on Aug 18 with 33.7% (13,988 votes).",
+    "own_words": [
+     {
+      "text": "\"We continue with our message of civility and working together to find common ground to move this community forward.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/2026-08-18/jerey-matlow-loranne-ausley-are-headed-to-a-runoff-in-the-tallahassee-mayor-race"
+     },
+     {
+      "text": "\"People want progress without division. They want opportunity without losing what makes this place special.\"",
+      "is_quote": true,
+      "source": "https://ausleyformayor.com/"
+     },
+     {
+      "text": "Says Tallahassee should expand private-sector jobs so young people have reasons to stay after graduating.",
+      "is_quote": false,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-07-22/loranne-ausley-talks-tallahassee-mayoral-campaign-on-wfsus-candidate-convos"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Jeremy Matlow",
+    "party": null,
+    "incumbent": false,
+    "website": "https://jeremymatlow.com/",
+    "website_confidence": "verified",
+    "background": "City commissioner (Seat 3) since 2018 and owner of local restaurants, including Gaines Street Pies. Finished first on Aug 18 with 36.0% (14,934 votes).",
+    "own_words": [
+     {
+      "text": "\"We're ready for a government that looks after everyday people, doesn't bend over for the same special interests.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/2026-08-18/jerey-matlow-loranne-ausley-are-headed-to-a-runoff-in-the-tallahassee-mayor-race"
+     },
+     {
+      "text": "\"Add affordable housing by building 500 municipal units available to all income brackets.\"",
+      "is_quote": true,
+      "source": "https://jeremymatlow.com/"
+     },
+     {
+      "text": "\"We have to make our community something that young people want to be a part of.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/state-news/2026-07-23/jeremy-matlow-talks-tallahassee-mayoral-bid-on-wfsus-candidate-convos"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: Aug 18, 2026 primary results (Matlow 14,934; Ausley 13,988; Parks 10,483; Foust 2,042)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26Primary/Results/ElectionSummaryReport.pdf"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot (Ausley and Matlow on the Nov 3 ballot)",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   },
+   {
+    "name": "Leon County SOE: 2026 offices up for election (term, salary, incumbent)",
+    "url": "https://www.leonvotes.gov/Candidates/Candidates/Offices-Up-for-Election"
+   },
+   {
+    "name": "WFSU: Matlow, Ausley are headed to a runoff",
+    "url": "https://news.wfsu.org/2026-08-18/jerey-matlow-loranne-ausley-are-headed-to-a-runoff-in-the-tallahassee-mayor-race"
+   }
+  ],
+  "explainers": [
+   {
+    "source": "WFSU",
+    "title": "Jeremy Matlow, Loranne Ausley are headed to a runoff in the Tallahassee Mayor race",
+    "url": "https://news.wfsu.org/2026-08-18/jerey-matlow-loranne-ausley-are-headed-to-a-runoff-in-the-tallahassee-mayor-race"
+   },
+   {
+    "source": "WFSU",
+    "title": "Daryl Parks endorses Loranne Ausley for Tallahassee Mayor",
+    "url": "https://news.wfsu.org/wfsu-local-news/2026-08-27/daryl-parks-endorses-loranne-ausley-for-tallahassee-mayor"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-tallahassee-commission-3",
+  "state": "FL",
+  "level": "city",
+  "office": "City Commissioner",
+  "district": "Seat 3",
+  "scope_plain": "Only voters who live inside Tallahassee city limits; the whole city votes on each seat. If you live outside city limits (even with a Tallahassee mailing address), these races aren't on your ballot.",
+  "office_explainer": "One of five citywide commissioners who pass city laws and the budget and hire the city manager.",
+  "why_it_matters": "Open seat: Matlow is leaving it to run for mayor. Perez was part of Matlow's \"progressive coalition\" on primary night (WFSU); Derzypolski says he wants to end \"teams and factions and 3-2 votes.\" With the mayor's seat and Seat 5 also on the ballot, the result helps decide the commission's often-discussed 3-2 split (WFSU).",
+  "vote_for": 1,
+  "incumbent": "Jeremy Matlow",
+  "open_seat": true,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tom Derzypolski",
+    "party": null,
+    "incumbent": false,
+    "website": "https://tomfortallahassee.com/",
+    "website_confidence": "verified",
+    "background": "Co-founder and owner of BowStern, a Tallahassee communications firm; eight years as a U.S. Navy corpsman; former local Red Cross chair. Finished second on Aug 18 with 10,533 votes, 15 ahead of Talethia Edwards after a manual recount.",
+    "own_words": [
+     {
+      "text": "\"It's time for a new way of governing where we do so leading with respect.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-08-19/city-commission-seat-3-race-goes-to-runoff-and-recount"
+     },
+     {
+      "text": "\"You can't stay here if there's not a career here for you.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-04-14/tom-derzypolski-kicks-off-tallahassee-commission-bid"
+     },
+     {
+      "text": "\"Lower bills. Fewer unnecessary fees. More money left over at the end of the month.\"",
+      "is_quote": true,
+      "source": "https://tomfortallahassee.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "P.J. Perez",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.pjfortallahassee.com/",
+    "website_confidence": "verified",
+    "background": "Public school teacher for about 15 years, now at Tallahassee Collegiate Academy; after graduating from FSU he worked with neighborhoods on Tallahassee's south side. Finished first on Aug 18 with 11,634 votes (29.1%).",
+    "own_words": [
+     {
+      "text": "On the commission's 3-2 split: \"most people just want to know... how we're going to tackle affordability.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-07-17/pj-perez-talks-tallahassee-commission-bid-on-wfsus-candidate-convos"
+     },
+     {
+      "text": "\"You can't have just copy-paste national chains all around.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-07-17/pj-perez-talks-tallahassee-commission-bid-on-wfsus-candidate-convos"
+     },
+     {
+      "text": "\"I support a moratorium on large AI data centers.\"",
+      "is_quote": true,
+      "source": "https://www.pjfortallahassee.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: Seat 3 manual and machine recount results (Perez 11,634; Derzypolski 10,533; Edwards 10,518)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26Primary/Results/ElectionSummaryReport_CityComm3.pdf"
+   },
+   {
+    "name": "Leon County SOE: candidate name report (Derzypolski 'Advanced', Edwards 'Defeated', updated 8/31/2026)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Candidates/ElectionFilers.html"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot (Derzypolski and Perez on the Nov 3 ballot)",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (City Commissioner Seat 3: Tom Derzypolski, P.J. Perez)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   },
+   {
+    "name": "Tallahassee Chamber: city commission candidate fact sheets (links each campaign site)",
+    "url": "https://www.talchamber.com/wp-content/uploads/2026/10/Tallahassee-City-Commission-Candidate-Fact-Sheets.pdf"
+   },
+   {
+    "name": "WTXL: Seat 3 race heads to November runoff after 15-vote margin",
+    "url": "https://www.wtxl.com/northeast-tallahassee/tallahassee-city-commission-seat-3-race-heads-to-november-runoff-after-15-vote-margin"
+   }
+  ],
+  "explainers": [
+   {
+    "source": "WTXL",
+    "title": "Tallahassee City Commission Seat 3 race heads to November runoff after 15-vote margin",
+    "url": "https://www.wtxl.com/northeast-tallahassee/tallahassee-city-commission-seat-3-race-heads-to-november-runoff-after-15-vote-margin"
+   },
+   {
+    "source": "WFSU",
+    "title": "City commission seat 3 race goes to runoff and recount",
+    "url": "https://news.wfsu.org/wfsu-local-news/2026-08-19/city-commission-seat-3-race-goes-to-runoff-and-recount"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-tallahassee-commission-5",
+  "state": "FL",
+  "level": "city",
+  "office": "City Commissioner",
+  "district": "Seat 5",
+  "scope_plain": "Only voters who live inside Tallahassee city limits; the whole city votes on each seat. If you live outside city limits (even with a Tallahassee mailing address), these races aren't on your ballot.",
+  "office_explainer": "One of five citywide commissioners who pass city laws and the budget and hire the city manager.",
+  "why_it_matters": "Incumbent Williams-Cox faces former mayor Dot Inman-Johnson, who shared Matlow's primary-night watch party as part of his \"progressive coalition\" (WFSU). Along with the mayor and Seat 3, it's one of three seats on the five-member commission up this year.",
+  "vote_for": 1,
+  "incumbent": "Dianne Williams-Cox",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Dot Inman-Johnson",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.dotfortally.com/",
+    "website_confidence": "verified",
+    "background": "Former city commissioner (eight years) and two-term mayor, the first Black woman in either office, per her campaign. Finished second on Aug 18 with 36.7% (14,482 votes).",
+    "own_words": [
+     {
+      "text": "\"I'll be talking about the Lake Jackson annexation and that I do not support it.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-08-19/dianne-williams-cox-and-dot-inman-johnson-will-face-off-for-city-commission-seat-5"
+     },
+     {
+      "text": "\"How we reduce the 25% poverty rate in this community.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-08-19/dianne-williams-cox-and-dot-inman-johnson-will-face-off-for-city-commission-seat-5"
+     },
+     {
+      "text": "\"Put an end to the corrupt backroom deals for special interests and put integrity on the commission!\"",
+      "is_quote": true,
+      "source": "https://www.dotfortally.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Dianne Williams-Cox",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.diannewilliamscoxcampaign.com/",
+    "website_confidence": "verified",
+    "background": "Incumbent; first won Seat 5 in 2018. Finished first on Aug 18 with 39.7% (15,652 votes).",
+    "own_words": [
+     {
+      "text": "Wants to \"find creative ways to allow residents to be able to afford to live in Tallahassee.\"",
+      "is_quote": true,
+      "source": "https://www.wctv.tv/2026/08/11/candidates-tallahassee-commission-seat-5-share-priorities-ahead-primary-election/"
+     },
+     {
+      "text": "\"You have to make hard decisions and you have to be able to live with yourself.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-07-10/dianne-williams-cox-talks-tallahassee-commission-reelection-bid-on-wfsus-candidate-convos"
+     },
+     {
+      "text": "\"My pitch to young people is, please stay here and help us grow.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2026-07-10/dianne-williams-cox-talks-tallahassee-commission-reelection-bid-on-wfsus-candidate-convos"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: Aug 18, 2026 primary results (Williams-Cox 15,652; Inman-Johnson 14,482; Hill 9,335)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26Primary/Results/ElectionSummaryReport.pdf"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   },
+   {
+    "name": "WFSU: Williams-Cox and Inman-Johnson will face off for Seat 5",
+    "url": "https://news.wfsu.org/wfsu-local-news/2026-08-19/dianne-williams-cox-and-dot-inman-johnson-will-face-off-for-city-commission-seat-5"
+   }
+  ],
+  "explainers": [
+   {
+    "source": "WCTV",
+    "title": "Candidates for Tallahassee Commission Seat 5 share priorities ahead of primary election",
+    "url": "https://www.wctv.tv/2026/08/11/candidates-tallahassee-commission-seat-5-share-priorities-ahead-primary-election/"
+   },
+   {
+    "source": "WTXL",
+    "title": "Tallahassee Seat 5 city commission race headed to November runoff",
+    "url": "https://www.wtxl.com/news/local-news/in-your-neighborhood/south-tallahassee/tallahassee-seat-5-city-commission-race-headed-to-november-runoff-between-williams-cox-and-inman-johnson"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-commission-at-large-2",
+  "state": "FL",
+  "level": "county",
+  "office": "Board of County Commissioners",
+  "district": "At Large, Group 2",
+  "scope_plain": "Every Leon County voter, inside and outside Tallahassee.",
+  "office_explainer": "One of seven county commissioners who set county laws, taxes and the budget for all of Leon County.",
+  "why_it_matters": "The ballot shows one printed name, Nick Maddox, plus a blank write-in line. Mehwish Rashid qualified as a write-in candidate, so that name isn't printed.",
+  "vote_for": 1,
+  "incumbent": "Nick Maddox",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Nick Maddox",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent at-large county commissioner (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Mehwish Rashid (write-in)",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Qualified write-in candidate. The name is not printed on the ballot: to vote for this candidate, fill in the write-in oval and write the name.",
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Portals/0/Files/Candidates/ElectionFilers.html"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates (Maddox; Rashid, write-in)",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot (Maddox and a write-in line)",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   },
+   {
+    "name": "Leon County SOE: 2026 offices up for election",
+    "url": "https://www.leonvotes.gov/Candidates/Candidates/Offices-Up-for-Election"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-commission-1",
+  "state": "FL",
+  "level": "county",
+  "office": "Board of County Commissioners",
+  "district": "District 1",
+  "scope_plain": "Only County Commission District 1 voters (precinct numbers starting with 1, including precincts that vote at FSU, FAMU and Southwood). This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "One of seven county commissioners who set county laws, taxes and the budget for all of Leon County.",
+  "why_it_matters": "If your ballot has no district commission race, this may be why.",
+  "vote_for": 1,
+  "incumbent": "Bill Proctor",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Bill Proctor",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Elected without opposition (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates (elected without opposition)",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "Leon County SOE: 2026 precinct list (district codes)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26General/Miscellaneous/PrecinctListbyNumber.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-commission-3",
+  "state": "FL",
+  "level": "county",
+  "office": "Board of County Commissioners",
+  "district": "District 3",
+  "scope_plain": "Only County Commission District 3 voters: the county's northwest, including parts of northwest Tallahassee (precinct numbers starting with 3). 13 of the city's 78 precincts are in District 3.",
+  "office_explainer": "One of seven county commissioners who set county laws, taxes and the budget for all of Leon County.",
+  "why_it_matters": "Incumbent Rick Minor seeks a third term against first-time candidate C.B. Lorch, who says Minor's North Monroe Street work hasn't met expectations (WFSU).",
+  "vote_for": 1,
+  "incumbent": "Rick Minor",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "C.B. Lorch",
+    "party": null,
+    "incumbent": false,
+    "website": "https://cbfor3.com/",
+    "website_confidence": "verified",
+    "background": "Video producer who has owned a Tallahassee business for 20 years; Leon High graduate. First run for office. Listed on the SOE report as Charles Bryan Lorch.",
+    "own_words": [
+     {
+      "text": "\"As adversarial as it's gotten, we really just need to get away from that.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2025-08-24/video-producer-c-b-lorch-is-running-for-leon-county-commission"
+     },
+     {
+      "text": "\"I'm C.B. Lorch, and I'm not a politician.\"",
+      "is_quote": true,
+      "source": "https://cbfor3.com/"
+     },
+     {
+      "text": "Says Minor's efforts to revive the North Monroe Street corridor haven't met expectations.",
+      "is_quote": false,
+      "source": "https://news.wfsu.org/wfsu-local-news/2025-08-24/video-producer-c-b-lorch-is-running-for-leon-county-commission"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Rick Minor",
+    "party": null,
+    "incumbent": true,
+    "website": "https://rickminor.com/",
+    "website_confidence": "verified",
+    "background": "Incumbent District 3 commissioner, in office since 2018 and seeking a third term. Listed on the SOE report as William \"Rick\" Minor.",
+    "own_words": [
+     {
+      "text": "\"People in Leon County want a workhorse in their county commissioner, not a show horse.\"",
+      "is_quote": true,
+      "source": "https://news.wfsu.org/wfsu-local-news/2025-12-04/leon-county-commissioner-rick-minor-launches-reelection-bid"
+     },
+     {
+      "text": "Points to the $31 million North Monroe Gateway project, passenger rail advocacy and protecting Lake Jackson.",
+      "is_quote": false,
+      "source": "https://news.wfsu.org/wfsu-local-news/2025-12-04/leon-county-commissioner-rick-minor-launches-reelection-bid"
+     },
+     {
+      "text": "Focused on \"creating higher paying jobs; improving neighborhoods, parks and roads; reducing crime; protecting the environment.\"",
+      "is_quote": true,
+      "source": "https://rickminor.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election (County Commissioner District 3 on Nov 3)",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (County Commission District 3: C.B. Lorch, Rick Minor)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 precinct list (district codes)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26General/Miscellaneous/PrecinctListbyNumber.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-commission-5",
+  "state": "FL",
+  "level": "county",
+  "office": "Board of County Commissioners",
+  "district": "District 5",
+  "scope_plain": "Only County Commission District 5 voters (precinct numbers starting with 5). 23 of the city's 78 precincts are in District 5.",
+  "office_explainer": "One of seven county commissioners who set county laws, taxes and the budget for all of Leon County.",
+  "why_it_matters": "Incumbent David O'Keefe, first elected in 2022, faces David T. Hawkins, who has run for the commission several times before (WCTV).",
+  "vote_for": 1,
+  "incumbent": "David O'Keefe",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "David T. Hawkins",
+    "party": null,
+    "incumbent": false,
+    "website": "https://hawkins2026.com/",
+    "website_confidence": "verified",
+    "background": "State employee of 36 years and Tallahassee resident of nearly 60 years, per his campaign site. Has filed for the commission in past cycles, including an unsuccessful 2024 at-large run (WCTV).",
+    "own_words": [
+     {
+      "text": "Wants to \"improve county governance by way of fiscal responsibility.\"",
+      "is_quote": true,
+      "source": "https://hawkins2026.com/platform"
+     },
+     {
+      "text": "Would work \"without the unnecessary spending and over budget projects of the past, but with simple and logical solutions.\"",
+      "is_quote": true,
+      "source": "https://hawkins2026.com/about-david-t-hawkins-1"
+     },
+     {
+      "text": "His goal: \"to make Leon County a safer home for its citizens.\"",
+      "is_quote": true,
+      "source": "https://hawkins2026.com/about-david-t-hawkins-1"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "David T. O'Keefe",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.davidforleon.com/",
+    "website_confidence": "verified",
+    "background": "Incumbent District 5 commissioner, first elected in 2022; a CPA.",
+    "own_words": [
+     {
+      "text": "\"Every decision, every day, I am putting people first.\"",
+      "is_quote": true,
+      "source": "https://www.davidforleon.com/"
+     },
+     {
+      "text": "\"I led the way on our new annual GAP financing program for affordable rental housing.\"",
+      "is_quote": true,
+      "source": "https://www.davidforleon.com/"
+     },
+     {
+      "text": "\"As a CPA, I have focused on exposing Blueprint project cost overruns.\"",
+      "is_quote": true,
+      "source": "https://www.davidforleon.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election (County Commissioner District 5 on Nov 3)",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "WCTV: first candidate files for District 5",
+    "url": "https://www.wctv.tv/2025/09/03/first-candidate-files-district-5-county-commission"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (County Commission District 5: David T. Hawkins, David T. O'Keefe)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   },
+   {
+    "name": "Tallahassee Chamber: County Commission District 3 and 5 candidate fact sheets",
+    "url": "https://www.talchamber.com/wp-content/uploads/2026/10/Leon-County-Commission-Races-Candidate-Fact-Sheets.pdf"
+   },
+   {
+    "name": "David T. Hawkins campaign: About",
+    "url": "https://hawkins2026.com/about-david-t-hawkins-1"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-school-board-1",
+  "state": "FL",
+  "level": "school",
+  "office": "School Board",
+  "district": "District 1",
+  "scope_plain": "Only School Board District 1 voters (precinct numbers whose second digit is 1). 15 of the city's 78 precincts are in District 1.",
+  "office_explainer": "One of five members who set Leon County Schools' budget and policies; the superintendent is elected separately.",
+  "why_it_matters": "Your ballot shows one printed name plus a write-in line. This is not a runoff: no School Board runoffs remain, because District 5 was decided outright on Aug 18 and District 3 was unopposed.",
+  "vote_for": 1,
+  "incumbent": "Alva Swafford Smith",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Alva \"Striplin\" Smith",
+    "party": null,
+    "incumbent": true,
+    "website": "http://alvastriplin.com/",
+    "website_confidence": "verified",
+    "background": "Incumbent since 2014 (re-elected 2018 and 2022); former math teacher at Deerlake Middle School; public engagement director at HNTB and former CEO of Big Brothers Big Sisters of the Big Bend (Tallahassee Chamber fact sheet).",
+    "own_words": [
+     {
+      "text": "\"I have continued to advocate for teacher raises.\"",
+      "is_quote": true,
+      "source": "http://alvastriplin.com/"
+     },
+     {
+      "text": "\"My priority is to support the mental wellness issues of our students.\"",
+      "is_quote": true,
+      "source": "http://alvastriplin.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "James Billingsley (write-in)",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Qualified write-in candidate; former Florida House and Senate employee who previously ran for Leon Soil and Water District 5 (Tallahassee Chamber fact sheet). His name is not printed on the ballot: fill in the write-in oval and write his name.",
+    "own_words": [
+     {
+      "text": "No platform collected for this race: the Chamber fact sheet lists no campaign site.",
+      "is_quote": false,
+      "source": "https://www.talchamber.com/wp-content/uploads/2026/07/Leon-County-School-Board-Races-District-1-Candidate-Fact-Sheets.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates (Smith; Billingsley, write-in)",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election (School Board Districts 1, 3, 5)",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (School Board District 1: Alva \"Striplin\" Smith and a write-in line; no other School Board race)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   },
+   {
+    "name": "Leon County SOE: Aug 18 primary (School Board District 5 decided: Nicolas 4,460, Reilly 1,771)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26Primary/Results/ElectionSummaryReport.pdf"
+   },
+   {
+    "name": "Tallahassee Chamber: School Board District 1 candidate fact sheets",
+    "url": "https://www.talchamber.com/wp-content/uploads/2026/07/Leon-County-School-Board-Races-District-1-Candidate-Fact-Sheets.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-school-board-3",
+  "state": "FL",
+  "level": "school",
+  "office": "School Board",
+  "district": "District 3",
+  "scope_plain": "Only School Board District 3 voters (precinct numbers whose second digit is 3). This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "One of five members who set Leon County Schools' budget and policies; the superintendent is elected separately.",
+  "why_it_matters": "If your ballot has no School Board race, this may be why.",
+  "vote_for": 1,
+  "incumbent": "Darryl Jones",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Darryl E. Jones",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Elected without opposition (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates (elected without opposition)",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-county-judge-5",
+  "state": "FL",
+  "level": "judicial",
+  "office": "County Judge",
+  "district": "Group 5",
+  "scope_plain": "Every Leon County voter. This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and smaller civil lawsuits in Leon County.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Nina Ashenafi-Richardson",
+  "open_seat": false,
+  "term_years": 6,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Nina Ashenafi-Richardson",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Elected without opposition (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates (elected without opposition)",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "Leon County SOE: 2026 offices up for election",
+    "url": "https://www.leonvotes.gov/Candidates/Candidates/Offices-Up-for-Election"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-2nd-circuit-group-4",
+  "state": "FL",
+  "level": "judicial",
+  "office": "Circuit Judge, 2nd Judicial Circuit",
+  "district": "Group 4",
+  "scope_plain": "Every voter in the 2nd Judicial Circuit (Leon, Gadsden, Jefferson, Wakulla, Franklin and Liberty counties). This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "Hears felonies, family and juvenile cases, and big civil lawsuits across the six-county 2nd Circuit.",
+  "why_it_matters": "No circuit judge races are on the Nov 3 ballot. Groups 7 and 13 were decided circuit-wide on Aug 18 (Jason Jones and J. Lee Marsh kept their seats).",
+  "vote_for": 1,
+  "incumbent": "Tiffany Baker",
+  "open_seat": false,
+  "term_years": 6,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tiffany Baker",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Unopposed (Florida Division of Elections).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County (Group 4 unopposed)",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election (Circuit Judge Groups 4, 6, 7, 9, 13, 16)",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-2nd-circuit-group-9",
+  "state": "FL",
+  "level": "judicial",
+  "office": "Circuit Judge, 2nd Judicial Circuit",
+  "district": "Group 9",
+  "scope_plain": "Every voter in the 2nd Judicial Circuit (Leon, Gadsden, Jefferson, Wakulla, Franklin and Liberty counties). This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "Hears felonies, family and juvenile cases, and big civil lawsuits across the six-county 2nd Circuit.",
+  "why_it_matters": "No circuit judge races are on the Nov 3 ballot. Groups 7 and 13 were decided circuit-wide on Aug 18 (Jason Jones and J. Lee Marsh kept their seats).",
+  "vote_for": 1,
+  "incumbent": "Stephen S. Everett",
+  "open_seat": false,
+  "term_years": 6,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Stephen S. Everett",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Unopposed (Florida Division of Elections).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County (Group 9 unopposed)",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election (Circuit Judge Groups 4, 6, 7, 9, 13, 16)",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-us-house-2",
+  "state": "FL",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "CD-2",
+  "scope_plain": "Every Leon County voter: the whole county is in Congressional District 2, per the elections office.",
+  "office_explainer": "Represents this district in the U.S. House: votes on federal laws, taxes and spending.",
+  "why_it_matters": "Open seat: Rep. Neal Dunn (R), who has held it since 2017, is not seeking a sixth term. FL-2 is the only U.S. House district that covers Leon County, per the elections office.",
+  "vote_for": 1,
+  "incumbent": "Neal Dunn (not running)",
+  "open_seat": true,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Austin Rogers",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://rogersforflorida.com/",
+    "website_confidence": "verified",
+    "background": "Panama City attorney and former general counsel to U.S. Sen. Rick Scott; Duke law graduate. Won the eight-way Republican primary.",
+    "own_words": [
+     {
+      "text": "Running \"to be a strong, reliable vote for President Donald Trump's America First agenda.\"",
+      "is_quote": true,
+      "source": "https://rogersforflorida.com/"
+     },
+     {
+      "text": "Running \"to secure the border, defend Florida values, back law enforcement and the military.\"",
+      "is_quote": true,
+      "source": "https://rogersforflorida.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Amanda Marie Green",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.amgforcongress.com/",
+    "website_confidence": "verified",
+    "background": "Spent about a decade as an operations director and pricing expert with the largest contractor for USAID, per her campaign; studied at Florida State. Won the four-way Democratic primary.",
+    "own_words": [
+     {
+      "text": "\"I'll vote to ban individual stock trading by members of Congress and support term limits.\"",
+      "is_quote": true,
+      "source": "https://www.amgforcongress.com/"
+     },
+     {
+      "text": "\"I'll hold regular in-person town halls across District 2.\"",
+      "is_quote": true,
+      "source": "https://www.amgforcongress.com/"
+     },
+     {
+      "text": "\"We must get money out of politics.\"",
+      "is_quote": true,
+      "source": "https://www.amgforcongress.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County (District 2: Rogers and Green qualified, primary 'Won')",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot (Austin Rogers REP, Amanda Marie Green DEM)",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   },
+   {
+    "name": "Leon County SOE: maps page (Leon remains wholly in Congressional District 2)",
+    "url": "https://www.leonvotes.gov/Records/Maps"
+   },
+   {
+    "name": "Amanda Marie Green campaign: About",
+    "url": "https://www.amgforcongress.com/about"
+   },
+   {
+    "name": "WFSU: Florida panhandle congressman Neal Dunn won't seek reelection (Jan 13, 2026)",
+    "url": "https://news.wfsu.org/wfsu-local-news/2026-01-13/florida-panhandle-congressman-neal-dunn-wont-seek-reelection"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-house-7",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-7",
+  "scope_plain": "Only five Leon precincts, all outside city limits (they vote at Woodville, Fort Braden and Crossway Baptist Church), plus areas in other counties. No precinct inside Tallahassee is in HD 7. This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "One of 120 Florida House members who write state laws and pass the state budget.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": "Jason Shoaf",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Jason Shoaf",
+    "party": "Republican",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Unopposed in the primary and general (Florida Division of Elections).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "Leon County SOE: 2026 precinct list (5 precincts in HD 7, all outside the city)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26General/Miscellaneous/PrecinctListbyNumber.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-house-8",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-8",
+  "scope_plain": "About half of Tallahassee (38 of the city's 78 precincts), plus nearby areas. This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "One of 120 Florida House members who write state laws and pass the state budget.",
+  "why_it_matters": "If your ballot has no state House race, you are probably in HD 8.",
+  "vote_for": 1,
+  "incumbent": "Gallop P. Franklin",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Gallop P. Franklin",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Unopposed in the primary and general (Florida Division of Elections).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "Leon County SOE: 2026 precinct list (district codes)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26General/Miscellaneous/PrecinctListbyNumber.pdf"
+   },
+   {
+    "name": "Leon County SOE: precinct 1203 sample ballot (an HD 8 precinct with no state House race)",
+    "url": "https://lcsoe.sharefile.com/public/share/web-s7282a52e23fc4c458015a1019c9bcab2"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-house-9",
+  "state": "FL",
+  "level": "state",
+  "office": "State Representative",
+  "district": "HD-9",
+  "scope_plain": "About half of Tallahassee (40 of the city's 78 precincts), plus other parts of Leon, all of Madison County and most of Jefferson County.",
+  "office_explainer": "One of 120 Florida House members who write state laws and pass the state budget.",
+  "why_it_matters": "The only contested state legislative race in Leon County this year. There is no Florida Senate race here: all of Leon is in Senate District 3, which isn't on the 2026 ballot.",
+  "vote_for": 1,
+  "incumbent": "Allison Tant",
+  "open_seat": false,
+  "term_years": 2,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Tracy Robinson",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Florida A&M graduate who has worked in emergency management, law enforcement and technology, per Tallahassee Reports (as summarized by The Ballot Brief; not checked against a primary source). Won the Republican primary over Jibri Knight.",
+    "own_words": [
+     {
+      "text": "Restoring communities and expanding economic opportunity (as reported by Tallahassee Reports, via The Ballot Brief).",
+      "is_quote": false,
+      "source": "https://theballotbrief.com/state/florida/leon-county/florida-house-district-9"
+     },
+     {
+      "text": "Investing in infrastructure and supporting veterans and public safety (as reported by Tallahassee Reports, via The Ballot Brief).",
+      "is_quote": false,
+      "source": "https://theballotbrief.com/state/florida/leon-county/florida-house-district-9"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Allison Tant",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://allisontant.com/",
+    "website_confidence": "verified",
+    "background": "Incumbent since 2020; former chair of the Florida Democratic Party; founded Keys to Exceptional Youth Success and Independence Landing in Tallahassee (Ballotpedia).",
+    "own_words": [
+     {
+      "text": "Running because people \"without a voice or facing great odds can and should have a fair and fighting chance.\"",
+      "is_quote": true,
+      "source": "https://allisontant.com/"
+     },
+     {
+      "text": "Her site features news coverage of her work on hands-free driving, seniors left without power after storms, and hurricane recovery.",
+      "is_quote": false,
+      "source": "https://allisontant.com/"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Florida Division of Elections: 2026 general candidate list, Leon County (HD 9: Robinson won the REP primary; Tant qualified)",
+    "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (State Representative District 9: Tracy Robinson, Allison Tant; no other state legislative race)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   },
+   {
+    "name": "Leon County SOE: Aug 18 primary (HD 9 REP: Robinson 8,879, Knight 6,188 in Leon)",
+    "url": "https://www.leonvotes.gov/Portals/0/Files/Reports/Election%20Results/26Primary/Results/ElectionSummaryReport.pdf"
+   },
+   {
+    "name": "Ballotpedia: Allison Tant (secondary)",
+    "url": "https://ballotpedia.org/Allison_Tant"
+   },
+   {
+    "name": "The Ballot Brief: Florida House District 9 (secondary, AI-written)",
+    "url": "https://theballotbrief.com/state/florida/leon-county/florida-house-district-9"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-soil-water-1",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Leon Soil and Water Conservation District Supervisor",
+  "district": "District 1",
+  "scope_plain": "Every Leon County voter. This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "Unpaid board member who promotes soil and water conservation in Leon County.",
+  "why_it_matters": "Seat 3 is also up, but no candidate qualified for it.",
+  "vote_for": 1,
+  "incumbent": "Laura LaChappelle",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Laura LaChappelle",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Elected without opposition (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "Leon County SOE: 2026 offices up for election (salary $0)",
+    "url": "https://www.leonvotes.gov/Candidates/Candidates/Offices-Up-for-Election"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-leon-soil-water-5",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Leon Soil and Water Conservation District Supervisor",
+  "district": "District 5",
+  "scope_plain": "Every Leon County voter. This race will not appear on your ballot: only one candidate qualified, and Florida does not print uncontested races. The candidate takes office after the general election.",
+  "office_explainer": "Unpaid board member who promotes soil and water conservation in Leon County.",
+  "why_it_matters": "Seat 3 is also up, but no candidate qualified for it.",
+  "vote_for": 1,
+  "incumbent": "Donald M. Axelrad",
+  "open_seat": false,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Donald M. Axelrad",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Incumbent. Elected without opposition (Leon County SOE).",
+    "own_words": [
+     {
+      "text": "Not on the ballot; no platform collected.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "Leon County SOE: 2026 offices up for election (salary $0)",
+    "url": "https://www.leonvotes.gov/Candidates/Candidates/Offices-Up-for-Election"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-canopy-cdd-1",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Canopy Community Development District Supervisor",
+  "district": "Seat 1",
+  "scope_plain": "Only voters who live inside the Canopy Community Development District, a planned neighborhood in the Tallahassee area. Most Tallahassee voters won't see this race. We did not save the district's boundaries.",
+  "office_explainer": "Board for a special taxing district that runs shared roads, ponds and amenities in one planned community.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Rhod Jean Michlet Fenelus",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Teegan Fiedler",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (lists this community development district seat; it appears only on ballots inside the district)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-capital-region-cdd-5",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Capital Region Community Development District Supervisor",
+  "district": "Seat 5",
+  "scope_plain": "Only voters who live inside the Capital Region Community Development District, a planned neighborhood in the Tallahassee area. Most Tallahassee voters won't see this race. We did not save the district's boundaries.",
+  "office_explainer": "Board for a special taxing district that runs shared roads, ponds and amenities in one planned community.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Kurt V. Christensen",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Jennifer Jankowski Green",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (lists this community development district seat; it appears only on ballots inside the district)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   }
+  ],
+  "confidence": "verified"
+ },
+ {
+  "id": "fl-piney-z-cdd-3",
+  "state": "FL",
+  "level": "special_district",
+  "office": "Piney Z Community Development District Supervisor",
+  "district": "Seat 3",
+  "scope_plain": "Only voters who live inside the Piney Z Community Development District, a planned neighborhood in the Tallahassee area. Most Tallahassee voters won't see this race. We did not save the district's boundaries.",
+  "office_explainer": "Board for a special taxing district that runs shared roads, ponds and amenities in one planned community.",
+  "why_it_matters": null,
+  "vote_for": 1,
+  "incumbent": null,
+  "open_seat": null,
+  "term_years": 4,
+  "is_retention": false,
+  "candidates": [
+   {
+    "name": "Rick Hays",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   },
+   {
+    "name": "Diane K. Lamb",
+    "party": null,
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": null,
+    "own_words": [
+     {
+      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
+      "is_quote": false,
+      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": "https://www.vote411.org/"
+   }
+  ],
+  "sources": [
+   {
+    "name": "Leon County SOE: qualified local candidates",
+    "url": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+   },
+   {
+    "name": "FL Secretary of State: Notice of General Election",
+    "url": "https://www.leonvotes.gov/Portals/0/Notice%20of%20General%20Election%20-%202026.pdf"
+   },
+   {
+    "name": "Leon County SOE: 2026 General Election Guide, generic sample ballot (lists this community development district seat; it appears only on ballots inside the district)",
+    "url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/5TL4Ho5Fb0qhfqfwpr-PcQ/Text/2026%20GEN%20Election%20Guide.pdf"
+   }
+  ],
+  "confidence": "verified"
+ }
+]

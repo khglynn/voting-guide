@@ -37,6 +37,9 @@ const str = (v) => (isStr(v) ? v.trim() : null);
 const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
 const conf = (v) => (CONF.includes(v) ? v : 'unverified');
 const safeUrl = (u) => (isStr(u) && /^https?:\/\//i.test(u.trim()) ? u.trim() : null);
+const NOT_WORDS = /^(no (\d{4} )?(statements?|platform|own words|positions?|campaign (site|website|statements?|resources)|public statement|issue (statement|page)|questionnaire (response|answers)|published positions|stated platform|voters'? pamphlet statement)\b|we found no|none found|not collected)/i;
+// A research note, not the candidate's words: every sentence is a "nothing found" note (a trailing "See ..." is fine).
+const notWords = (t) => NOT_WORDS.test(t) && t.split(/(?<=[.;])\s+/).slice(1).filter((x) => !/^(see|\(|per |as of)/i.test(x)).every((x) => NOT_WORDS.test(x));
 
 /* ---------- file loading ---------- */
 function listJson(dir) {
@@ -86,7 +89,9 @@ function normContest(c, file) {
       website: safeUrl(k.website),
       website_confidence: conf(k.website_confidence),
       background: str(k.background),
-      own_words: (Array.isArray(k.own_words) ? k.own_words : []).filter((o) => o && isStr(o.text))
+      // Research notes like "No statement collected yet" are not the candidate's words: drop them so
+      // the card shows its empty state instead of a fake bullet under "In their own words".
+      own_words: (Array.isArray(k.own_words) ? k.own_words : []).filter((o) => o && isStr(o.text) && !(o.is_quote !== true && notWords(o.text.trim())))
         .map((o) => ({ text: o.text.trim(), is_quote: !!o.is_quote, source: safeUrl(o.source) })),
       lwv_status: str(k.lwv_status),
       lwv_url: safeUrl(k.lwv_url),

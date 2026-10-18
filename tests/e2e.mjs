@@ -233,21 +233,21 @@ const noSideScroll = async (page, label) => {
   await ctx.close();
 }
 
-/* ---------- Atlanta 30303 ---------- */
+/* ---------- Seattle 98101 (statewide only; Atlanta got local data Oct 17) ---------- */
 {
   const { ctx, page } = await newPage();
-  await openZip(page, '30303');
-  await noSideScroll(page, 'Atlanta');
+  await openZip(page, '98101');
+  await noSideScroll(page, 'Seattle');
   const txt = await page.textContent('#plan');
-  check('Atlanta: says statewide only, honestly', txt.includes('We only have statewide races for your area so far.'));
-  check('Atlanta: links an official ballot lookup', !!(await page.$('#plan .plan-sec a')));
+  check('Seattle: says statewide only, honestly', txt.includes('We only have statewide races for your area so far.'));
+  check('Seattle: links an official ballot lookup', !!(await page.$('#plan .plan-sec a')));
   const gWalls = await planWalls(page);
-  check('Atlanta: no plan-card paragraph over 40 words by default', gWalls.length === 0, gWalls.join(' | '));
-  await shot(page, '15-atlanta-top');
+  check('Seattle: no plan-card paragraph over 40 words by default', gWalls.length === 0, gWalls.join(' | '));
+  await shot(page, '15-seattle-top');
   const sections = await page.$$eval('.sec', (els) => els.map((e) => e.dataset.sec));
-  check('Atlanta: statewide sections only', !sections.includes('city') && !sections.includes('county'), sections.join(','));
-  await shotEl(page, '#sec-federal', '16-atlanta-ballot');
-  check('Atlanta: no console errors', page.errors.length === 0, page.errors.slice(0, 3).join(' | '));
+  check('Seattle: statewide sections only', !sections.includes('city') && !sections.includes('county'), sections.join(','));
+  await shotEl(page, '#sec-state', '16-seattle-ballot');
+  check('Seattle: no console errors', page.errors.length === 0, page.errors.slice(0, 3).join(' | '));
   await ctx.close();
 }
 

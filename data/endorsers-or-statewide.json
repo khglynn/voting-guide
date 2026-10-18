@@ -4,7 +4,7 @@
     "name": "The Oregonian / OregonLive editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Largest Oregon daily. Its editorial board has endorsed candidates of both parties for statewide office over the past decade and endorsed in the May 2026 Republican primary for governor. Whether it has published Nov. 2026 general-election endorsements was not confirmed as of Oct. 16.",
+    "lean_basis": "AllSides rates The Oregonian Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "OR"
     ],
@@ -17,8 +17,8 @@
     "id": "willamette-week-eb",
     "name": "Willamette Week endorsements",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Portland alt-weekly. Publishes an endorsement issue every election after candidate interviews; each newsroom member gets a vote. Picks skew progressive but it regularly backs moderates and endorsed in the May 2026 GOP primary for governor. No AllSides or Ad Fontes rating was checked; lean is from its endorsement record.",
+    "lean": null,
+    "lean_basis": "No AllSides or Ad Fontes rating found. The Portland alt-weekly's About page (https://www.wweek.com/about/) states no ideological mission, so it is shown as not rated.",
     "geography": [
       "OR",
       "portland-or"
@@ -32,8 +32,8 @@
     "id": "portland-mercury-eb",
     "name": "Portland Mercury endorsements",
     "type": "publication",
-    "lean": "left",
-    "lean_basis": "Portland alt-weekly whose editorial endorsements are openly progressive.",
+    "lean": null,
+    "lean_basis": "No AllSides or Ad Fontes rating found, and no About page could be read (https://www.portlandmercury.com/about returned 404 on Oct. 17, 2026). With no stated mission, the alt-weekly is shown as not rated.",
     "geography": [
       "OR",
       "portland-or"
@@ -48,7 +48,7 @@
     "name": "League of Women Voters of Oregon (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan. Does not endorse or oppose candidates. Takes positions on ballot measures only when they match adopted League policy. There are no statewide measures in Nov. 2026.",
+    "lean_basis": "League of Women Voters state chapter that calls itself 'a grassroots, nonpartisan political organization' (https://lwvor.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -89,8 +89,8 @@
     "id": "oregon-afl-cio",
     "name": "Oregon AFL-CIO (Oregon Labor Federation)",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation; endorses overwhelmingly Democratic candidates.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation that calls itself 'The Voice of Labor in Oregon' (https://oraflcio.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -104,7 +104,7 @@
     "name": "Planned Parenthood Action Fund / PP PAC of Oregon",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Abortion-rights advocacy PAC; endorses candidates who support abortion access, nearly all Democrats.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood in Oregon. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -117,8 +117,8 @@
     "id": "sierra-club-oregon",
     "name": "Sierra Club Oregon Chapter",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy group; endorsements go almost entirely to Democrats. Publishes a 2026 General Election Candidate Endorsements page.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Oregon chapter.",
     "geography": [
       "OR"
     ],
@@ -131,8 +131,8 @@
     "id": "oregon-coalition-police-sheriffs",
     "name": "Oregon Coalition of Police & Sheriffs (ORCOPS)",
     "type": "advocacy",
-    "lean": "lean_right",
-    "lean_basis": "Statewide law-enforcement association that endorses candidates; has backed candidates of both parties but more often Republicans in statewide races.",
+    "lean": "neutral",
+    "lean_basis": "Law enforcement group that calls itself 'the only law enforcement advocacy group in Oregon with a proven history of influence and representation in the State Legislature' (https://www.orcops.org/about), with no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -146,7 +146,7 @@
     "name": "Oregon Farm Bureau PAC",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide agriculture trade association; its PAC endorses mostly Republicans and some rural Democrats.",
+    "lean_basis": "Farm lobby that calls itself 'Oregon’s largest general agriculture advocacy organization' (https://oregonfb.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -160,7 +160,7 @@
     "name": "Oregon Right to Life PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-abortion advocacy group; endorses candidates who oppose abortion, nearly all Republicans.",
+    "lean_basis": "Anti-abortion group whose programs train 'current and future pro-life advocates' (https://www.ortl.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],
@@ -174,7 +174,7 @@
     "name": "Oregon Firearms Federation PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Gun-rights group that rates and endorses candidates, nearly all Republicans.",
+    "lean_basis": "Gun-rights group that calls itself 'Oregon's Only No Compromise Gun Rights Organization' (https://www.oregonfirearms.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "OR"
     ],

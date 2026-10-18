@@ -4,7 +4,7 @@
     "name": "Citizens Union",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Self-described as New York City's oldest nonpartisan good-government group (founded 1897); no independent bias rating found. Used here for its 2026 ballot-proposal positions; its 2026 candidate preferences, if any, were not checked.",
+    "lean_basis": "Calls itself 'a nonpartisan and independent good-government group' (https://citizensunion.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -22,7 +22,7 @@
     "name": "Common Cause New York",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "New York chapter of the national nonpartisan watchdog Common Cause; does not endorse candidates. Says its ballot positions are based on government efficiency and checks and balances.",
+    "lean_basis": "New York chapter of Common Cause, which describes 'our nonpartisan approach' (https://www.commoncause.org/new-york/about/) and does not endorse candidates. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY",
       "nyc-manhattan-ny",
@@ -41,7 +41,7 @@
     "name": "The Municipal Art Society of New York (MAS)",
     "type": "advocacy",
     "lean": "neutral",
-    "lean_basis": "Nonprofit civic group focused on planning, historic preservation and public space; no partisan rating. Its positions here are about land use.",
+    "lean_basis": "Civic group founded, in its words, 'to work towards the creation of a livable city' (https://www.mas.org/about/); its positions here are about land use. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -58,8 +58,8 @@
     "id": "amny-eb",
     "name": "amNewYork editorial board",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Unrated: no AllSides or similar bias rating was found for amNewYork (a free NYC daily owned by Schneps Media), so it is shown as neutral by default, not by evidence.",
+    "lean": null,
+    "lean_basis": "No AllSides or Ad Fontes rating found. Free NYC daily owned by Schneps Media; its site (https://www.amny.com/) states no ideological mission, so it is shown as not rated.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -76,8 +76,8 @@
     "id": "vital-city",
     "name": "Vital City (editors)",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Nonprofit NYC policy publication focused on public safety and government performance; no independent bias rating found. Its institutional view supports all five 2026 proposals; signed contributor op-eds (like Carol Kellermann's on Proposal 5) are not counted as its position.",
+    "lean": null,
+    "lean_basis": "Nonprofit publication that calls itself 'a platform for ideas about how to improve civic life' (https://www.vitalcitynyc.org/about). No outside rating found, so it is shown as not rated.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -95,7 +95,7 @@
     "name": "Andrew Rein, president of the Citizens Budget Commission (his own vote, as reported)",
     "type": "other",
     "lean": "neutral",
-    "lean_basis": "An individual's stated vote, reported by THE CITY. The Citizens Budget Commission is a nonpartisan, business-supported fiscal watchdog with no partisan rating; no formal CBC vote recommendation was found.",
+    "lean_basis": "An individual's stated vote, reported by The City; he leads the Citizens Budget Commission, which calls itself 'a nonpartisan, nonprofit civic think tank and watchdog' (https://cbcny.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",

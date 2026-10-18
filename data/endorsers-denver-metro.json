@@ -4,7 +4,7 @@
     "name": "The Denver Post editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low confidence, Oct 2026) and Ad Fontes rates it Middle (-2.86); neither rates the editorial board separately. The board's 2026 general-election picks split by party: Republican Michael Allen for attorney general, Democrats Amanda Gonzalez and Jeff Bridges for secretary of state and treasurer, and No on both the conservative-sponsored Amendment 81 and the graduated income tax in Amendment 87. Under a 2022 company-wide policy it does not endorse for U.S. Senate or governor; it said U.S. House picks would run the week of Oct. 19.",
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low or initial confidence, Oct. 2026) and Ad Fontes rates it Middle (-2.86). Neither rates the editorial board separately.",
     "geography": [
       "CO",
       "denver-co"
@@ -19,7 +19,7 @@
     "name": "The Gazette editorial board (Denver Gazette and Colorado Springs Gazette; one board, two mastheads)",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low confidence, Oct 2026) and does not rate the editorial board, so under this guide's rule (a media-bias rating wins where one exists) the board is labeled neutral. Its 2026 record runs one way: every candidate it picked is a Republican or, in CD-1, the unaffiliated Shimon Blau, and it backed all eleven conservative-sponsored statewide measures while opposing Amendment 87, Proposition NN, Proposition 137, Issue 7A and Denver's 4A. The Colorado Springs Gazette and Denver Gazette share one board and publish identical picks, so they count as one source.",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes.",
     "geography": [
       "CO",
       "denver-co"
@@ -33,8 +33,8 @@
     "id": "colorado-sun",
     "name": "The Colorado Sun",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Nonprofit, nonpartisan newsroom with no editorial board. Its ethics policy says journalists must not 'create the impression that The Colorado Sun, as an institution, endorses' candidates, parties or initiatives. It publishes issue guides for the biggest races and explainers on every statewide measure and Issue 7A, not endorsements. No AllSides rating found (Oct 17, 2026).",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates The Colorado Sun Lean Left (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom has no editorial board and does not endorse.",
     "geography": [
       "CO"
     ],
@@ -47,8 +47,8 @@
     "id": "denverite",
     "name": "Denverite (Colorado Public Radio)",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Public-media newsroom; publishes a voter guide with per-measure and per-candidate pages, no endorsements.",
+    "lean": null,
+    "lean_basis": "Colorado Public Radio's Denver newsroom calls itself 'a member-supported news organization for the curious and concerned in our ever-changing city' (https://denverite.com/about-denverite-staff/) and does not endorse. No outside rating found, so it is shown as not rated.",
     "geography": [
       "denver-co"
     ],
@@ -62,7 +62,7 @@
     "name": "League of Women Voters of Denver",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization. Takes measure positions based on adopted League program (which critics on the right call left-leaning), never endorses candidates. Supported 5 of 7 Denver-ballot measures and took no position on 2.",
+    "lean_basis": "League of Women Voters chapter that says 'The League is strictly nonpartisan' (https://lwvdenver.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "denver-co"
     ],
@@ -104,7 +104,7 @@
     "name": "Colorado Working Families Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Self-described progressive, multiracial, feminist populist party; endorses mostly Democrats to the left of the party mainstream.",
+    "lean_basis": "Minor party that calls itself 'a multiracial party that fights for workers over bosses and people over the powerful' (https://workingfamilies.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CO",
       "denver-co"
@@ -119,7 +119,7 @@
     "name": "Denver Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described democratic socialist organization; Denver chapter of DSA.",
+    "lean_basis": "Self-described socialist group: 'a local chapter of the Democratic Socialists of America, the largest socialist organization in the United States' (https://denverdsa.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "denver-co"
     ],
@@ -132,8 +132,8 @@
     "id": "dalf",
     "name": "Denver Area Labor Federation (AFL-CIO)",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Federation of 114 unions representing 80,000 workers; endorses almost exclusively Democrats.",
+    "lean": "lean_left",
+    "lean_basis": "AFL-CIO labor federation for metro Denver whose officers are 'dedicated to represent the interests of working people at the state and local level' (https://denverlabor.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "denver-co",
       "aurora-co",
@@ -149,8 +149,8 @@
     "id": "colorado-afl-cio",
     "name": "Colorado AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation. Its 2026 guide endorses only Democratic candidates, backs Amendment 87, Proposition NN and Issue 7A, and says no on eight other measures, including Amendments 81 and 84.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation whose stated focus is 'building power for working people and fighting for a fair and just economy for all' (https://coaflcio.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CO",
       "denver-co"
@@ -165,7 +165,7 @@
     "name": "Denver Metro Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Regional business association; historically backs tax measures for infrastructure and opposes new business regulation. No 2026 Denver positions found on its site (which did not load) or in press coverage as of Oct 16.",
+    "lean_basis": "Regional chamber of commerce (https://denverchamber.org/about/); chambers map to lean_right (business climate, lower regulation and taxes). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "denver-co"
     ],
@@ -179,7 +179,7 @@
     "name": "Downtown Denver Partnership",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Center-city business membership organization. Took only two positions on local measures (support 2K, oppose 311) and 'educate' on the rest; opposed Amendment 87 and supported Proposition 136 statewide.",
+    "lean_basis": "Business group that says it is 'leading the voice for private sector businesses in Downtown Denver' (https://www.downtowndenver.com/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "denver-co"
     ],
@@ -193,7 +193,7 @@
     "name": "Bell Policy Center",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Describes itself as a non-partisan research and advocacy group taking 'a progressive, research-focused approach to public policy change in Colorado' (bellpolicy.org/about). Its 2026 guide backs Amendment 87, Proposition NN and Proposition 137, opposes eight other statewide measures, and takes no position on 83, 86, 133 or Issue 7A.",
+    "lean_basis": "Self-described progressive group: it takes 'a progressive, research-focused approach to public policy change in Colorado' (https://bellpolicy.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CO"
     ],
@@ -207,7 +207,7 @@
     "name": "Common Sense Institute Colorado",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Self-described 'non-partisan research organization dedicated to the protection and promotion of Colorado's economy'; its research is routinely cited by the conservative side (the Gazette calls it nonpartisan; Chalkbeat and the Sun describe it as conservative-leaning). It publishes fiscal analysis, including its 2026 ballot guide and an Oct 8 analysis of Issue 7A, not vote recommendations.",
+    "lean_basis": "Research group that calls itself 'a leading voice for free enterprise' (https://commonsenseinstituteus.org/about/) and non-partisan. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CO"
     ],
@@ -221,7 +221,7 @@
     "name": "Kim Monson Colorado Voter's Guide",
     "type": "other",
     "lean": "right",
-    "lean_basis": "Conservative radio host's guide; recommends NO on nearly every tax measure and YES on the conservative statewide initiatives.",
+    "lean_basis": "Voter guide by Kim Monson (https://kimmonson.com/colorado-voter-guide/2026/county-denver/); the pages read state no mission, and its home page blocked automated reads. No outside rating found; lean kept pending a stated mission.",
     "geography": [
       "CO",
       "denver-co",

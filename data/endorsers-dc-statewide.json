@@ -18,7 +18,7 @@
     "name": "Washington City Paper",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "No AllSides or Ad Fontes rating was found, so it is shown as neutral. DC alt-weekly that covers local elections and has endorsed in some past cycles. No 2026 general-election endorsement page was found.",
+    "lean_basis": "AllSides rates Washington City Paper Center (independent review, low or initial confidence, as of Oct. 2026).",
     "geography": [
       "DC"
     ],
@@ -31,8 +31,8 @@
     "id": "hill-rag",
     "name": "Hill Rag / East of the River (Capital Community News)",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Neighborhood monthlies covering Capitol Hill and east of the river. Publish detailed candidate roundups and explainers (the Oct 12 and Oct 13, 2026 pieces are the clearest guides to the at-large count and the full ballot) but do not endorse.",
+    "lean": null,
+    "lean_basis": "Its publisher calls itself 'Washington DC’s number 1 hyper-local news publisher since 1976' (https://www.capitalcommunitynews.com/about/); the monthlies do not endorse. No outside rating found, so it is shown as not rated.",
     "geography": [
       "DC"
     ],
@@ -46,7 +46,7 @@
     "name": "League of Women Voters of the District of Columbia (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization. Does not endorse candidates. Supported Initiative 83 (RCV and open primaries) in 2024. VOTE411 lists DC's registration deadlines; no 2026 DC candidate questionnaire was found.",
+    "lean_basis": "League of Women Voters chapter that calls itself 'a nonpartisan political organization' (https://lwvdc.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -102,7 +102,7 @@
     "name": "DC for Democracy",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive grassroots organization; endorses by member vote. Its 2026 page covers only the June Democratic primary.",
+    "lean_basis": "Self-described progressive group; its bylaws mission says it will 'support progressive issues and candidates' (https://www.dcfordemocracy.org/mission-and-values). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -116,7 +116,7 @@
     "name": "Greater Greater Washington (GGWash) Elections Committee",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Urbanist nonprofit focused on housing, transit and land use. Its volunteer Elections Committee endorses in DC races; the newsroom does not. Published one general-election endorsement (at-large) on Oct 1, 2026 and says more may follow.",
+    "lean_basis": "Urbanist group whose stated mission is 'to advance racial, economic, and environmental justice in land use, transportation, and housing' (https://ggwash.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -130,7 +130,7 @@
     "name": "Metro DC Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described democratic socialist organization. Endorsed Janeese Lewis George (mayor) and Aparna Raj (Ward 1) in the June primary; both are its members. Its 2026 page lists no general-election candidate endorsements.",
+    "lean_basis": "Self-described socialist group: 'a chapter of the national Democratic Socialists of America, the largest socialist organization in the United States' (https://mdcdsa.org/about-us/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -144,7 +144,7 @@
     "name": "DC Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Business association. No 2026 endorsement page was found.",
+    "lean_basis": "Business association for the District (https://www.dcchamber.org/about); chambers map to lean_right (business climate, lower regulation and taxes). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -157,8 +157,8 @@
     "id": "dc-police-union",
     "name": "DC Police Union (FOP Metropolitan Police Department Labor Committee)",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Police labor union; has endorsed in DC mayor, Council and AG races and has clashed publicly with progressive councilmembers over public-safety legislation. No 2026 general-election endorsement was found.",
+    "lean": "neutral",
+    "lean_basis": "Police union (FOP Lodge 2) whose own description, 'Representing 3,000 officers, detectives and sergeants of the District of Columbia’s Metropolitan Police Department' (https://www.dcpoliceunion.com/about), uses no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -171,8 +171,8 @@
     "id": "metro-washington-council-afl-cio",
     "name": "Metropolitan Washington Council, AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Regional labor federation. Announced 2026 DC endorsements on March 26, 2026 (primary cycle); its voter guide page lists 'No Recommendation' for the Democratic at-large primary and shows other picks only as images.",
+    "lean": "lean_left",
+    "lean_basis": "Regional AFL-CIO council that says it works 'to advocate, educate, and organize to improve the lives of all working people in our region' (https://www.dclabor.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "DC"
     ],
@@ -185,8 +185,8 @@
     "id": "sierra-club-dc",
     "name": "Sierra Club, DC Chapter",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy organization. Its endorsements page carries a '2026 General Election Endorsements' heading listing mayor, AG, at-large and ward Council picks.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its DC chapter.",
     "geography": [
       "DC"
     ],

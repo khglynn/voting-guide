@@ -4,7 +4,7 @@
     "name": "Houston Chronicle editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Houston Chronicle Center (low confidence, Oct. 2026). The board calls itself nonpartisan; in Harris County races its 2026 picks are 88 Democrats, 28 Republicans and 3 nonpartisan candidates, with most Republican picks in judicial races. Statewide it endorsed a mixed slate (3 Republicans, 11 Democrats).",
+    "lean_basis": "AllSides rates the Houston Chronicle Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "TX"
     ],
@@ -18,7 +18,7 @@
     "name": "Dallas Morning News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Historically center-right board that has recommended candidates of both parties; its 2026 statewide slate so far is 4 Republicans and 6 Democrats. AllSides rates the paper Center.",
+    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "TX"
     ],
@@ -31,8 +31,8 @@
     "id": "san-antonio-express-news-eb",
     "name": "San Antonio Express-News editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Hearst paper; AllSides rates it Lean Left. Its 2026 statewide slate is mostly Democrats with Republican picks on the courts and one no-recommendation.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the San Antonio Express-News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "TX"
     ],
@@ -46,7 +46,7 @@
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Hearst-owned daily that resumed endorsements in 2026. AllSides' current page rates its news Center (independent review, low confidence, Aug 2026); an older duplicate AllSides page says Lean Left. Neither rates the editorial board, so under this guide's rule (a media-bias rating wins where one exists) it is labeled neutral. Its 2026 slate is mostly Democrats, with five Republican picks (Buckingham, Sheets, Teixeira, Pete Flores, Wilson) and no pick in TX-17, TX-31 or HD-73.",
+    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board.",
     "geography": [
       "TX"
     ],
@@ -59,8 +59,8 @@
     "id": "fort-worth-star-telegram-eb",
     "name": "Fort Worth Star-Telegram editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "McClatchy paper; opinion section has a conservative editor and the board endorsed in both party primaries. No general-election statewide endorsements found as of Oct 16.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the Fort Worth Star-Telegram Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "TX"
     ],
@@ -74,7 +74,7 @@
     "name": "El Paso Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Gannett paper. Gannett ended most candidate endorsements; the El Paso Times published a candidate questionnaire guide rather than recommendations in 2026.",
+    "lean_basis": "AllSides rates the El Paso Times Center (independent review, low or initial confidence, as of Sept. 2026). The Gannett paper published a candidate questionnaire guide, not recommendations, in 2026.",
     "geography": [
       "TX"
     ],
@@ -87,8 +87,8 @@
     "id": "texas-tribune",
     "name": "The Texas Tribune",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Nonprofit, nonpartisan newsroom. Does not endorse candidates or measures; publishes race guides and candidate Q&As.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates The Texas Tribune Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse candidates or measures.",
     "geography": [
       "TX"
     ],
@@ -102,7 +102,7 @@
     "name": "The Austin Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "Alt-weekly whose endorsements reflect its news staff and editors; endorsed the full Democratic statewide slate in 2026 and said so explicitly.",
+    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found.",
     "geography": [
       "austin-tx",
       "TX"
@@ -117,7 +117,7 @@
     "name": "League of Women Voters of Texas",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan 501(c)(3). Never supports or opposes candidates or parties; publishes candidate Q&As in its Voters Guide and on VOTE411.",
+    "lean_basis": "League of Women Voters state chapter that calls itself 'a nonpartisan, grassroots civic organization' (https://www.lwvtexas.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -186,8 +186,8 @@
     "id": "texas-afl-cio",
     "name": "Texas AFL-CIO COPE",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation; its 2026 general-election slate is entirely Democratic.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation whose site is headed 'Fighting for Texas Workers' (https://texasaflcio.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -200,8 +200,8 @@
     "id": "tsta",
     "name": "Texas State Teachers Association",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "NEA-affiliated teachers' union; 2026 endorsements are all Democrats.",
+    "lean": "lean_left",
+    "lean_basis": "NEA-affiliated teachers' union that says 'TSTA is a movement to change the way public schools, their students and employees are treated' (https://tsta.org/about-tsta/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -215,7 +215,7 @@
     "name": "Texas Association of Business (TXBIZ PAC)",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "State chamber of commerce PAC; describes endorsees as 'pro-business.' Announced general-election endorsements Oct 6, 2026; the public list page was empty when checked.",
+    "lean_basis": "State chamber of commerce that says it advances 'policies that support a competitive, free market business climate' (https://www.txbiz.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -228,8 +228,8 @@
     "id": "texans-for-lawsuit-reform",
     "name": "Texans for Lawsuit Reform PAC",
     "type": "business",
-    "lean": "right",
-    "lean_basis": "Tort-reform PAC; 2026 primary endorsements were overwhelmingly Republican.",
+    "lean": "lean_right",
+    "lean_basis": "Tort-reform group backed by businesses and professions whose stated mission is 'to foster freedom, innovation and job creation by advocating for a fair, efficient and predictable civil justice system' (https://www.tortreform.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -243,7 +243,7 @@
     "name": "Texas Farm Bureau AGFUND",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Farm Bureau PAC; endorses in both parties but its 2026 statewide endorsements were all Republicans.",
+    "lean_basis": "PAC of Texas Farm Bureau, a farm lobby that says 'We believe private property rights are worth protecting, water should be used wisely and government should be responsive and responsible' (https://texasfarmbureau.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -257,7 +257,7 @@
     "name": "Texas Parent PAC",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Bipartisan public-education PAC that historically endorsed in both parties; in 2026 it endorsed only one candidate statewide (for governor).",
+    "lean_basis": "Public-education PAC whose guiding principles include opposing 'taxpayer financing of private school vouchers' (https://txparentpac.com/guiding-principles/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -271,7 +271,7 @@
     "name": "NRA Political Victory Fund",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "National Rifle Association's PAC; grades and endorses on gun-rights record.",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -285,7 +285,7 @@
     "name": "Texas State Rifle Association PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "NRA state affiliate PAC.",
+    "lean_basis": "Gun-rights PAC of the Texas State Rifle Association that works to 'preserve the rights of law-abiding Texans' (https://www.tsra.com/tsrapac/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -299,7 +299,7 @@
     "name": "Texas Right to Life PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-abortion PAC; requires a survey and interview; 2026 endorsements are all Republicans.",
+    "lean_basis": "Anti-abortion group that says 'We’re Pro-Life Christians Saving Babies From Abortion' (https://texasrighttolife.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -313,7 +313,7 @@
     "name": "Planned Parenthood Texas Votes",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Abortion-rights advocacy PAC; 2026 endorsements are all Democrats.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood in Texas. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -327,7 +327,7 @@
     "name": "Equality Texas Action",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ advocacy group's political arm; endorsements favor Democrats and out LGBTQ candidates.",
+    "lean_basis": "LGBTQIA+ rights group that calls itself 'the leading statewide nonprofit fighting for LGBTQIA+ rights in Texas' (https://equalitytexas.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -341,7 +341,7 @@
     "name": "Texas Values Action",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Social-conservative advocacy group; 2026 endorsements are all Republicans.",
+    "lean_basis": "Social-conservative group that says it 'directly advocates for faith, family, and freedom in the political arena' (https://txvaluesaction.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -354,8 +354,8 @@
     "id": "cleat",
     "name": "Combined Law Enforcement Associations of Texas (CLEAT PAC)",
     "type": "advocacy",
-    "lean": "lean_right",
-    "lean_basis": "Largest Texas police union PAC; endorses in both parties but mostly Republicans statewide.",
+    "lean": "neutral",
+    "lean_basis": "Police union that says 'When our members need representation, CLEAT answers' (https://www.cleat.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],
@@ -368,8 +368,8 @@
     "id": "sierra-club-lone-star",
     "name": "Sierra Club Lone Star Chapter (Sierra Club Political Committee of Texas)",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental group's political arm; 2026 endorsements found are all Democrats.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Texas (Lone Star) chapter.",
     "geography": [
       "TX"
     ],
@@ -383,7 +383,7 @@
     "name": "Texas Freedom Network / Texas Rising Action",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Progressive advocacy group; self-described.",
+    "lean_basis": "Self-described progressive group that works on 'mobilizing Texans for progressive change at the Capitol and in local municipalities' (https://tfn.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "TX"
     ],

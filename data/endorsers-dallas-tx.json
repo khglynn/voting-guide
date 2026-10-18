@@ -4,7 +4,7 @@
     "name": "Dallas Morning News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the paper Center. Historically center-right board that recommends candidates of both parties; in Dallas County races its 2026 picks so far are 5 Democrats and 3 Republicans, with no pick in two races (DA and SBOE 9).",
+    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "dallas-tx",
       "TX"
@@ -19,7 +19,7 @@
     "name": "League of Women Voters of Dallas",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; its guide says the League never supports or opposes any candidate or political party. Prints candidates' unedited answers and lists reasons for and against each measure.",
+    "lean_basis": "League of Women Voters chapter that says it is 'part of a nonpartisan political organization operating at the local, state, and national level' (https://lwvdallas.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "dallas-tx"
     ],
@@ -61,7 +61,7 @@
     "name": "North Texas Area Labor Federation (AFL-CIO)",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Regional AFL-CIO federation (the old Dallas AFL-CIO Council links now point to it). All 12 of its Dallas County local picks are Democrats; it says an unlisted race means delegates made no recommendation.",
+    "lean_basis": "Regional AFL-CIO federation that describes itself as 'a unified regional body bringing together all affiliated unions across the area' (https://northtxlabor.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "dallas-tx"
     ],
@@ -75,7 +75,7 @@
     "name": "Stonewall Democrats of Dallas",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ+ Democratic club. Every pick on its 2026 general slate (as mirrored by Blue Voter Guide, citing the group's Facebook posts) is a Democrat.",
+    "lean_basis": "LGBTQ+ Democratic club whose stated mission includes to 'Educate Democratic leaders on LGBTQ+ political priorities' (https://www.stonewalldemocratsofdallas.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "dallas-tx"
     ],
@@ -89,7 +89,7 @@
     "name": "Dallas Regional Chamber",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Regional business chamber; no AllSides rating. This guide rates big-city chambers lean right (as with the Greater Austin Chamber). No candidate endorsements were found; its 2026 posts cover the two Dallas Prop A measures.",
+    "lean_basis": "Regional chamber of commerce that says it is 'the voice of business in the Dallas Region' (https://www.dallaschamber.org/about/), advocating pro-growth policies. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "dallas-tx"
     ],
@@ -102,8 +102,8 @@
     "id": "dallas-police-association",
     "name": "Dallas Police Association",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Police officers' union; no AllSides rating. This guide rates big-city police associations lean right (as with the Austin Police Association). Its own site could not be reached; its 2026 position comes from FOX 4 reporting.",
+    "lean": "neutral",
+    "lean_basis": "Police union that says 'The sole purpose of the DPA is to represent Dallas Police Officers in matters relating to employment, benefits and general well-being' (https://dallaspa.org/about/who-we-are). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "dallas-tx"
     ],

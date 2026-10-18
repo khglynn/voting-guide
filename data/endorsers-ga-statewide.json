@@ -18,7 +18,7 @@
     "name": "League of Women Voters of Georgia (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; never endorses candidates. Its VOTE411 Georgia page carries voting rules and candidate questionnaire answers. No 2026 positions on the three amendments were found on lwvga.org or VOTE411.",
+    "lean_basis": "League of Women Voters chapter that describes itself as 'a nonpartisan, grassroots nonprofit dedicated to empowering everyone to fully participate in our democracy' (https://lwvga.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -60,7 +60,7 @@
     "name": "Georgia Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide business lobby. Its 2026 statewide endorsements found so far (Jackson for governor, Harper for agriculture) are both Republicans; it has backed Democrats in some legislative races in past cycles.",
+    "lean_basis": "Statewide chamber of commerce whose stated mission is 'To empower and support Georgia’s businesses and communities, driving prosperity and growth through unwavering advocacy' (https://www.gachamber.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -74,7 +74,7 @@
     "name": "NFIB Georgia PAC (National Federation of Independent Business)",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Small-business lobby PAC. Its Oct 15, 2026 statewide slate is all Republicans; it says it endorses on 'positions and voting records on key small-business issues.'",
+    "lean_basis": "AllSides rates the National Federation of Independent Business Lean Right (think tank/policy group; low or initial confidence, as of Oct. 2026). This is NFIB's Georgia PAC.",
     "geography": [
       "GA"
     ],
@@ -87,8 +87,8 @@
     "id": "sierra-club-georgia",
     "name": "Sierra Club Georgia Chapter",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy group; its 2026 general election slate endorses only Democrats.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Georgia chapter.",
     "geography": [
       "GA"
     ],
@@ -102,7 +102,7 @@
     "name": "Planned Parenthood Action Fund / Planned Parenthood Southeast Advocates",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Abortion-rights advocacy PAC. Its Sept 11, 2026 Georgia endorsements are all Democrats who pledge to repeal the state's six-week abortion law.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood. It says it works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -116,7 +116,7 @@
     "name": "Georgia Equality PAC",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ advocacy PAC; its 2026 general election slate endorses only Democrats.",
+    "lean_basis": "LGBTQ+ rights PAC of Georgia Equality, which says it is 'dedicated to advancing the rights of LGBTQ+ Georgians and all those living with HIV throughout Georgia' (https://georgiaequality.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -130,7 +130,7 @@
     "name": "Fair Fight",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Voting-rights group founded by Stacey Abrams; its November 2026 slate endorses only Democrats.",
+    "lean_basis": "Voting-rights group whose site is headed 'Fighting Voter Suppression & Protecting Voting Rights' (https://www.fairfight.com/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -143,8 +143,8 @@
     "id": "georgia-fop",
     "name": "Georgia Fraternal Order of Police",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Statewide police union. Endorsed Republican Rick Jackson for governor in October 2026 (reported by Fox 5 Atlanta via the Jackson campaign). Has endorsed candidates of both parties in past cycles.",
+    "lean": "neutral",
+    "lean_basis": "Police union whose own description, that it is 'committed to improving the working conditions of law enforcement officers and the safety of those we serve' (https://www.georgiafop.org/about), uses no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -158,7 +158,7 @@
     "name": "LIBRE State PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Hispanic political organization tied to the Koch-backed LIBRE Initiative; endorsed Republican Rick Jackson citing education, property taxes and deregulation.",
+    "lean_basis": "State PAC of the LIBRE Initiative, which says it works to 'vigorously advocate for freedom-minded solutions' (https://thelibreinitiative.com/about-us/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -171,8 +171,8 @@
     "id": "georgia-farm-bureau",
     "name": "Georgia Farm Bureau",
     "type": "advocacy",
-    "lean": "neutral",
-    "lean_basis": "Largest farm organization in the state. Does not endorse; publishes candidate bios and agriculture questionnaire answers for every statewide race.",
+    "lean": "lean_right",
+    "lean_basis": "Farm lobby whose stated charge is 'to be a voice for Georgia agriculture' (https://www.gfb.org/); it does not endorse. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],
@@ -186,7 +186,7 @@
     "name": "Professional Association of Georgia Educators (PAGE)",
     "type": "advocacy",
     "lean": "neutral",
-    "lean_basis": "Largest educator association in Georgia (not a union); a professional association that lobbies on education policy. States 'PAGE does not endorse candidates or provide campaign contributions.' Hosts a superintendent candidate forum.",
+    "lean_basis": "Educators' professional association (not a union) that says it was 'established as an independent, non-partisan association' (https://www.pageinc.org/about-page) and does not endorse candidates. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "GA"
     ],

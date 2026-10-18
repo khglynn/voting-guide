@@ -3,8 +3,8 @@
     "id": "nyt-eb",
     "name": "The New York Times editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "AllSides rates the Times' news Lean Left; the board endorsed Democrats in every recent statewide race it weighed in on. In August 2024 the board announced it 'will no longer make endorsements in New York elections, including in races for governor and mayor of New York City,' and would not take a stance in Senate, congressional or state legislative races. No 2026 New York endorsements have appeared.",
+    "lean": "left",
+    "lean_basis": "AllSides rates New York Times (Opinion) Left (small group editorial review Feb. 2025; high confidence as of Oct. 2026). The board stopped endorsing in New York races in August 2024.",
     "geography": [
       "NY"
     ],
@@ -32,7 +32,7 @@
     "name": "New York Post editorial board",
     "type": "publication",
     "lean": "right",
-    "lean_basis": "AllSides rates New York Post news Right after a June 2026 editorial review, and rates its opinion pages separately. Its editorial board endorsed Republicans in recent statewide races.",
+    "lean_basis": "AllSides rates New York Post (Opinion) Right (split out July 2020; low or initial confidence as of Oct. 2026) and its news Right (June 2026 editorial review).",
     "geography": [
       "NY"
     ],
@@ -46,7 +46,7 @@
     "name": "Newsday editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Long Island's daily; AllSides rates Newsday Center. The board endorses candidates of both parties.",
+    "lean_basis": "AllSides rates Newsday Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "NY"
     ],
@@ -59,8 +59,8 @@
     "id": "times-union-eb",
     "name": "Times Union (Albany) editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Capital Region daily owned by Hearst; the board has leaned toward Democrats in statewide races but endorses Republicans in some local and legislative contests.",
+    "lean": null,
+    "lean_basis": "No usable rating: AllSides rates a 'Times Union' Center but does not say whether it is Albany's or Jacksonville's, and no Ad Fontes rating was found. The Hearst daily's site states no ideological mission, so it is shown as not rated.",
     "geography": [
       "NY"
     ],
@@ -74,7 +74,7 @@
     "name": "League of Women Voters of New York State (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on some ballot proposals and publishes candidate questionnaire answers on VOTE411.",
+    "lean_basis": "League of Women Voters state chapter that calls the League 'a strictly nonpartisan citizen activist organization' (https://www.lwvny.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],
@@ -116,7 +116,7 @@
     "name": "Working Families Party (New York)",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Progressive minor party with its own ballot line. Under fusion voting it usually cross-endorses Democrats; a WFP endorsement means the candidate also appears on the Working Families line.",
+    "lean_basis": "Official party organization with its own New York ballot line; a WFP endorsement puts the candidate on the Working Families line.",
     "geography": [
       "NY"
     ],
@@ -130,7 +130,7 @@
     "name": "Conservative Party of New York State",
     "type": "party",
     "lean": "right",
-    "lean_basis": "Conservative minor party with its own ballot line. Under fusion voting it usually cross-endorses Republicans; a Conservative endorsement means the candidate also appears on the Conservative line.",
+    "lean_basis": "Official party organization (the Conservative Party of New York State) with its own ballot line; its endorsement puts the candidate on the Conservative line.",
     "geography": [
       "NY"
     ],
@@ -144,7 +144,7 @@
     "name": "New York State AFL-CIO",
     "type": "labor",
     "lean": "left",
-    "lean_basis": "State labor federation; its 2026 statewide slate is all Democrats.",
+    "lean_basis": "Self-described progressive labor federation: 'the New York State AFL-CIO is a force for progressive change' (https://nysaflcio.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],
@@ -157,8 +157,8 @@
     "id": "nysut",
     "name": "NYSUT (New York State United Teachers)",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State teachers union; its 2026 statewide slate is all Democrats.",
+    "lean": "lean_left",
+    "lean_basis": "State teachers' union that describes itself as 'a federation of more than 1,200 local unions' (https://www.nysut.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],
@@ -171,8 +171,8 @@
     "id": "pba-nys",
     "name": "Police Benevolent Association of New York State",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Union for state police officers outside the State Police (SUNY, park and environmental police). Has endorsed candidates of both parties; endorsed Hochul in 2022 and again in 2026.",
+    "lean": "neutral",
+    "lean_basis": "Police union whose stated aim is 'To protect and preserve our police officers’ rights and freedoms and improve their working conditions' (https://www.pbanys.org/pba/about/), with no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],
@@ -185,8 +185,8 @@
     "id": "nyscopba",
     "name": "NYSCOPBA (New York State Correctional Officers and Police Benevolent Association)",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Union for state correction officers. Its 2026 governor endorsement was its first ever for that office, decided by a 95% membership vote.",
+    "lean": "neutral",
+    "lean_basis": "Correction officers' union whose stated objectives are 'to improve the terms and conditions of employment, protect our members contractual rights' (https://www.nyscopba.org/about), with no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],
@@ -200,7 +200,7 @@
     "name": "Planned Parenthood Empire State Votes",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Statewide reproductive-rights PAC; endorses Democrats.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood in New York. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "NY"
     ],

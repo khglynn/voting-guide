@@ -4,7 +4,7 @@
     "name": "The Seattle Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Seattle Times Center (low confidence, Oct. 2026). Largest Washington daily, owned by the Blethen family. The board endorses in both parties' races and has long opposed a state income tax; in 2026 it endorsed an independent over a Democrat in one legislative race.",
+    "lean_basis": "AllSides rates The Seattle Times Center (low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-7.06). No separate editorial-board rating was found.",
     "geography": [
       "WA"
     ],
@@ -18,7 +18,7 @@
     "name": "The Stranger Election Control Board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "Seattle alt-weekly; self-described progressive and openly partisan in tone. Its endorsement guide is widely used by Seattle voters.",
+    "lean_basis": "Ad Fontes rates The Stranger Hyper-Partisan Left (-18.18). No AllSides rating was found.",
     "geography": [
       "WA",
       "seattle-wa"
@@ -33,7 +33,7 @@
     "name": "League of Women Voters of Washington",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization. Does not endorse candidates; takes positions on ballot measures based on member-adopted League positions. Its president co-signed the pamphlet statements against IL26-001 and IL26-638.",
+    "lean_basis": "League of Women Voters state chapter that says 'The League of Women Voters is a nonpartisan political organization' (https://lwvwa.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -74,8 +74,8 @@
     "id": "wa-labor-council",
     "name": "Washington State Labor Council, AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide labor federation; endorsements are voted by delegates from affiliated unions and skew Democratic. Its president co-signed the pamphlet statement against I-645.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation that calls itself 'the largest labor organization in Washington state' (https://wslc.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -89,7 +89,7 @@
     "name": "Association of Washington Business",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "The state's chamber of commerce and largest business association; opposes new taxes and endorses pro-business candidates of both parties.",
+    "lean_basis": "The state chamber of commerce, which calls itself 'Washington State's Premier Business Organization' (https://www.awb.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -102,8 +102,8 @@
     "id": "wa-education-association",
     "name": "Washington Education Association",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide teachers' union; endorses mostly Democrats. Its president co-signed the pamphlet statement against I-645.",
+    "lean": "lean_left",
+    "lean_basis": "Statewide teachers' union that calls itself 'a union that elevates the collective voice of professional public school educators' (https://www.washingtonea.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -117,7 +117,7 @@
     "name": "Washington State PTA",
     "type": "advocacy",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan parent-teacher association; takes positions on education-related measures through member-adopted legislative principles. Does not endorse candidates.",
+    "lean_basis": "Parent-teacher association that calls itself 'an innovative, forward-thinking, and effective advocate for children' (https://www.wastatepta.org/about/) and does not endorse candidates. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -131,7 +131,7 @@
     "name": "Planned Parenthood Alliance Advocates (Washington)",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Abortion-rights and LGBTQ+ advocacy arm of Planned Parenthood in Washington; endorses candidates and measures. Its state director co-signed the pamphlet statements against IL26-001 and IL26-638.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood in Washington. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],
@@ -145,7 +145,7 @@
     "name": "ACLU of Washington",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Civil liberties organization; does not endorse candidates but takes positions on measures affecting civil rights.",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Washington affiliate.",
     "geography": [
       "WA"
     ],
@@ -159,7 +159,7 @@
     "name": "Let's Go Washington (I-645 sponsor)",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Conservative initiative committee funded largely by hedge fund manager Brian Heywood; sponsored the 2024 initiatives and gathered the signatures for I-645. Listed so readers can see the sponsor's own case.",
+    "lean_basis": "Initiative committee whose 2026 measures include one to 'repeal the income tax' (https://letsgowashington.com/faqs/), an anti-tax cause. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "WA"
     ],

@@ -3,8 +3,8 @@
     "id": "stl-post-dispatch-eb",
     "name": "St. Louis Post-Dispatch editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "Largest Missouri daily (Lee Enterprises). Still endorses: it ran primary endorsements in July 2026 (including 'State Auditor Fitzpatrick has earned GOP re-nomination'). Historically endorses mostly Democrats statewide; AllSides rates the news Lean Left. General-election endorsements are paywalled, so none are recorded.",
+    "lean": "neutral",
+    "lean_basis": "AllSides rates the St. Louis Post-Dispatch Center (staff review Sept. 2021; low or initial confidence as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "MO"
     ],
@@ -32,7 +32,7 @@
     "name": "League of Women Voters of Missouri (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on ballot measures (announced NO on Amendment 3 on Sept 3, 2026). Publishes candidate questionnaire answers on VOTE411 and a 'November 2026 Amendment Information' page.",
+    "lean_basis": "League of Women Voters state chapter; it offers 'a statewide nonpartisan voting guide' (https://my.lwv.org/missouri/nonpartisan-policy) and never endorses candidates. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -74,7 +74,7 @@
     "name": "Missouri Chamber of Commerce and Industry (Missouri Chamber PAC)",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide business lobby; its PAC endorsed 63 General Assembly candidates for November (mostly Republicans) and the Chamber formally opposed Amendment 6 on Oct 9, 2026. Does not appear to endorse in the auditor race.",
+    "lean_basis": "Statewide chamber of commerce that works 'to reduce taxes, limit regulation, improve education and foster positive economic development opportunities for Missouri employers' (https://mochamber.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -87,8 +87,8 @@
     "id": "mo-afl-cio",
     "name": "Missouri AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation; its 2026 general-election slate endorses Democrats and takes positions on four of the five measures.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation that calls itself 'A federation of unions in Missouri that are affiliated with the national American Federation of Labor' (https://moaflcio.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -102,7 +102,7 @@
     "name": "Missouri Right to Life (and its PAC)",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-abortion advocacy group; lead organizational backer of the 2026 Amendment 3 repeal and formally partnered with the Missouri GOP on it. Its PAC endorses candidates who oppose abortion (almost all Republicans).",
+    "lean_basis": "Anti-abortion group whose stated mission is 'to uphold and promote the sanctity of all innocent life from inception to natural death' (https://missourilife.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -116,7 +116,7 @@
     "name": "Abortion Action Missouri (Stop the Ban coalition)",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Abortion-rights advocacy group (formerly NARAL Pro-Choice Missouri); a lead organization in the 2024 Amendment 3 campaign and a named member of the 2026 'Stop the Ban' campaign with Planned Parenthood and the ACLU of Missouri.",
+    "lean_basis": "Abortion-rights group that 'envisions a world with stigma-free abortion access and reproductive freedom for all' (https://abortionactionmissouri.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -130,7 +130,7 @@
     "name": "NRA Political Victory Fund",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican. Does not take positions on non-firearms measures.",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -143,8 +143,8 @@
     "id": "people-not-politicians-mo",
     "name": "People Not Politicians Missouri",
     "type": "advocacy",
-    "lean": "lean_left",
-    "lean_basis": "The committee that gathered the referendum signatures against the 2025 congressional map and runs the 'No on Prop A' campaign. Describes itself as 'a coalition of Republican, Democrat, and Independent Missourians'; its top donors (Global Impact Social Welfare Fund, American Opportunity Action, UFCW) are Democratic-aligned. Single-issue.",
+    "lean": "neutral",
+    "lean_basis": "Single-measure committee (No on Prop A) that says Missourians deserve representation 'not advancing a specific partisan political agenda' (https://peoplenotpoliticiansmo.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],
@@ -157,8 +157,8 @@
     "id": "sierra-club-mo",
     "name": "Sierra Club Missouri Chapter",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy group; its Oct 1, 2026 statewide measure endorsements align with progressive positions.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Missouri chapter.",
     "geography": [
       "MO"
     ],
@@ -172,7 +172,7 @@
     "name": "Act for Missouri",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Volunteer-run conservative voter guide; self-describes as pro-life and praises Republican legislative supermajorities. Included because it is one of the few right-leaning sources with written positions on all five measures, and it breaks with the GOP on three of them.",
+    "lean_basis": "Volunteer voter guide that says 'We are unapologetically pro-life' and backs 'the Second Amendment as written' (https://new-site.act4mo.org/about.html). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MO"
     ],

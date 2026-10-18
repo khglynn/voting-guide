@@ -4,7 +4,7 @@
     "name": "Los Angeles Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides Media Bias Rating: Lean Left. In 2026 the Times published a voter guide without editorial board endorsements (LA Public Press, May 2026; the Oct 1, 2026 general election guide contains explainers only). No proposition endorsements were found as of Oct 15, 2026.",
+    "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found.",
     "geography": [
       "CA",
       "los-angeles-metro"
@@ -18,8 +18,8 @@
     "id": "sf-chronicle-eb",
     "name": "San Francisco Chronicle editorial board",
     "type": "publication",
-    "lean": "lean_left",
-    "lean_basis": "AllSides Media Bias Rating: Lean Left. Editorial positions are the consensus of the publisher, editorial page editor and opinion staff; newsroom reporters do not participate.",
+    "lean": "left",
+    "lean_basis": "AllSides rates the San Francisco Chronicle Left (-4.00; last review May 2022, low or initial confidence as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "CA",
       "san-francisco"
@@ -34,7 +34,7 @@
     "name": "The Sacramento Bee editorial board (McClatchy California)",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides Media Bias Rating: Lean Left. One McClatchy California editorial board writes for The Sacramento Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune. In 2026 it split from the other left-leaning boards by backing Prop 45 (CEQA) and, on a non-unanimous vote, Prop 40.",
+    "lean_basis": "AllSides rates The Sacramento Bee Lean Left (independent review, low or initial confidence, as of Oct. 2026). One McClatchy board writes for the Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune.",
     "geography": [
       "CA"
     ],
@@ -47,8 +47,8 @@
     "id": "sdut-eb",
     "name": "The San Diego Union-Tribune editorial board",
     "type": "publication",
-    "lean": "lean_right",
-    "lean_basis": "Owned by MediaNews Group (Alden) since 2023 and overseen by the same opinion editor as the Southern California News Group, though it keeps a separate board. Its 2026 proposition picks track a limited-government line: no on the housing bond, the high-income tax and the billionaire tax; yes on Props 41, 42, 43 and 45. (AllSides' older Lean Left rating predates the ownership change.)",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the San Diego Union-Tribune Lean Left (independent review, August 2020; low or initial confidence as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found. Since 2023 it has been owned by MediaNews Group and shares an opinion editor with the Southern California News Group, while keeping its own board.",
     "geography": [
       "CA",
       "san-diego"
@@ -62,8 +62,8 @@
     "id": "scng-eb",
     "name": "Southern California News Group editorial board (Orange County Register, LA Daily News, Press-Enterprise and sister papers)",
     "type": "publication",
-    "lean": "right",
-    "lean_basis": "Self-described: endorsements are made 'with our commitments to limited government, economic liberty, personal freedom and free markets in mind' (SCNG, Oct 1, 2026). One board writes for the OC Register, LA Daily News, Press-Enterprise, Press-Telegram, Daily Bulletin, San Bernardino Sun, Pasadena Star-News and others. Libertarian-conservative; it split from the GOP on Prop 38 (no).",
+    "lean": "lean_right",
+    "lean_basis": "AllSides rates the Orange County Register, this board's flagship, Lean Right (2.00; low or initial confidence, as of Oct. 2026) and notes the Southern California News Group papers share one editorial voice. The board says it endorses 'with our commitments to limited government, economic liberty, personal freedom and free markets in mind.'",
     "geography": [
       "CA",
       "los-angeles-metro",
@@ -79,7 +79,7 @@
     "name": "The Mercury News and East Bay Times editorial boards (Bay Area News Group)",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides Media Bias Rating for The Mercury News: Lean Left. The two boards publish joint endorsements. As of Oct 15, 2026 they had published positions on only three propositions and said more would follow.",
+    "lean_basis": "AllSides rates the San Jose Mercury News Lean Left (independent review, low or initial confidence, as of Oct. 2026). It publishes joint endorsements with the East Bay Times board.",
     "geography": [
       "CA",
       "san-francisco"
@@ -94,7 +94,7 @@
     "name": "League of Women Voters of California",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization that never endorses candidates. It does take Support, Oppose or Neutral positions on ballot measures based on member-adopted policy positions; in practice those positions (e.g., opposing the 1979 Gann spending limit, supporting public campaign financing) align with the progressive side on fiscal and election questions. Its separate Education Fund publishes neutral explainers at cavotes.org.",
+    "lean_basis": "League of Women Voters state chapter that says 'We are a nonpartisan organization, which means that we do not support or oppose candidates or political parties' (https://lwvc.org/about-us/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],
@@ -108,7 +108,7 @@
     "name": "CalMatters",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit, nonpartisan newsroom that describes itself as 'independent from commercial, donor or political interests.' It publishes proposition explainers and campaign-finance data but does not endorse.",
+    "lean_basis": "AllSides rates CalMatters Center (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse.",
     "geography": [
       "CA"
     ],
@@ -150,7 +150,7 @@
     "name": "California Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide business lobby. Pro-business and generally anti-tax, but not partisan: in 2026 it backed the Democratic-sponsored Props 1 and 2 and took no position on the GOP-backed voter ID measure. It led the campaign to qualify Prop 45.",
+    "lean_basis": "Statewide business lobby that calls itself 'California’s largest broad-based business advocate' and says it 'fights for policies that lower costs and cut through regulatory red tape' (https://www.calchamber.com/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],
@@ -163,8 +163,8 @@
     "id": "ca-labor-federation",
     "name": "California Federation of Labor Unions, AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide federation of 1,300 unions representing 2.3 million workers. Its 2026 slate is uniformly progressive and it is one of the few major groups backing both Prop 40 and Prop 44, the two SEIU-UHW measures.",
+    "lean": "lean_left",
+    "lean_basis": "Federation of about 1,300 unions; its About page says 'Unions are working people standing together' (https://calaborfed.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],
@@ -177,8 +177,8 @@
     "id": "aclu-socal",
     "name": "ACLU of Southern California",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Civil liberties advocacy organization; its 2026 guide takes progressive positions on taxes, housing and voting. ACLU California Action (the statewide 501(c)(4)) is the named opponent of Prop 39 in the official guide; ACLU of Northern California's list matches SoCal's except it takes no position on Props 40 and 45.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Southern California affiliate.",
     "geography": [
       "CA",
       "los-angeles-metro",
@@ -195,7 +195,7 @@
     "name": "Howard Jarvis Taxpayers Association",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-tax advocacy group founded to defend Prop 13; sponsor of Prop 43 ('Yes on 43, a Project of the Howard Jarvis Taxpayers Association'). Its 2026 guide opposes every bond and tax measure and supports Props 39, 41, 42, 43 and 45.",
+    "lean_basis": "Anti-tax group that calls itself 'the legal and political watchdog for Proposition 13 and a staunch defender of California taxpayers' (https://www.hjta.org/about-hjta/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],
@@ -208,8 +208,8 @@
     "id": "sierra-club-california",
     "name": "Sierra Club California",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy organization; its political committee endorses Democratic candidates and progressive measures. Statewide it took positions on only two 2026 propositions; the SF Bay Chapter added positions on Props 4, 5, 39 and 43.",
+    "lean": "lean_left",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its California chapter.",
     "geography": [
       "CA"
     ],
@@ -222,8 +222,8 @@
     "id": "cta",
     "name": "California Teachers Association",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "The state's largest teachers union and a major Democratic-aligned donor ($10 million to Yes on 3 per GV Wire). Notably opposes Prop 40, the billionaire tax, alongside most health care groups.",
+    "lean": "lean_left",
+    "lean_basis": "The state's largest teachers' union; its site says 'We believe our public schools are worth fighting for' (https://www.cta.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],
@@ -237,7 +237,7 @@
     "name": "Planned Parenthood Affiliates of California",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Reproductive health advocacy organization, Democratic-aligned. In 2026 it opposes Prop 40 (its CEO is quoted in the official argument against) and Prop 44, both of which would affect clinics it operates.",
+    "lean_basis": "Planned Parenthood Affiliates of California, the abortion-rights advocacy arm of the state's Planned Parenthood affiliates. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CA"
     ],

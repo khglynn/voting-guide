@@ -4,7 +4,7 @@
     "name": "Orlando Sentinel editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Orlando Sentinel Center (low confidence, Oct. 2026). Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. Its 2026 statewide picks all went to Democrats or against the Republican-sponsored amendments. It shares amendment editorials with its sister paper, the South Florida Sun Sentinel.",
+    "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate.",
     "geography": [
       "FL"
     ],
@@ -32,7 +32,7 @@
     "name": "Miami Herald editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the Miami Herald Lean Left. McClatchy paper. Still endorses in statewide races, including governor (Jolly, Oct 1, 2026), and on amendments (NO on all three). Its 2026 picks went to Democrats.",
+    "lean_basis": "AllSides rates the Miami Herald Lean Left (checked Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "FL"
     ],
@@ -46,7 +46,7 @@
     "name": "Tampa Bay Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Ad Fontes rates the Tampa Bay Times Middle (-3.28); no AllSides rating was found. Florida's largest newspaper, owned by the nonprofit Poynter Institute. It announced changes to its recommendation policy in July 2026 (column by CEO Conan Gallaty); its site lists 2026 recommendations on the governor's race, U.S. Senate and Amendment 3, but those pages were paywalled or unreadable, so those picks are recorded as not found rather than guessed.",
+    "lean_basis": "AllSides rates the Tampa Bay Times Center (independent review, low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-3.28). It is owned by the nonprofit Poynter Institute.",
     "geography": [
       "FL"
     ],
@@ -59,8 +59,8 @@
     "id": "tcpalm-eb",
     "name": "TCPalm / Treasure Coast Newspapers editorial board",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Gannett / USA TODAY Network paper (Stuart, Fort Pierce, Vero Beach). One of only two Gannett Florida papers still issuing recommendations in 2026. Its amendment picks split (NO on 1 and 3, YES on 2), which is the only non-uniform newspaper slate on the amendments.",
+    "lean": null,
+    "lean_basis": "No AllSides or Ad Fontes rating found. Gannett paper whose site blocked automated reads on Oct. 17, 2026, so no mission statement could be quoted; shown as not rated.",
     "geography": [
       "FL"
     ],
@@ -74,7 +74,7 @@
     "name": "Tallahassee Democrat",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Gannett paper. Under Gannett's 2022 policy its local papers largely stopped endorsing. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among Gannett Florida papers offering 2026 recommendations; the Democrat is not among them.",
+    "lean_basis": "AllSides rates the Tallahassee Democrat Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations.",
     "geography": [
       "FL"
     ],
@@ -88,7 +88,7 @@
     "name": "Pensacola News Journal",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Gannett paper, same 2022 policy. Not among the Gannett Florida papers the USA TODAY Network's Oct 14, 2026 roundup lists as offering 2026 recommendations.",
+    "lean_basis": "AllSides rates the Pensacola News Journal Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations.",
     "geography": [
       "FL"
     ],
@@ -102,7 +102,7 @@
     "name": "League of Women Voters of Florida (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on constitutional amendments after member study; formally opposed Amendment 3 in August 2026. Publishes candidate questionnaire answers on VOTE411.",
+    "lean_basis": "League of Women Voters state chapter that calls itself 'a nonpartisan, activist, grassroots organization that believes voters should play a critical role in democracy' (https://lwvfl.org/about-us/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -116,7 +116,7 @@
     "name": "Florida TaxWatch",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "Business-backed fiscal watchdog and think tank in Tallahassee that calls itself nonpartisan. Publishes a taxpayer's guide to every amendment with yes or no recommendations and the state Revenue Estimating Conference numbers. Its stated mission centers on taxpayers and spending restraint; it recommended no on Amendment 3 anyway. No AllSides or Ad Fontes rating found.",
+    "lean_basis": "Taxpayer watchdog that calls itself 'the state’s leading independent voice for taxpayer accountability' (https://floridataxwatch.org/about/) and nonpartisan. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -157,8 +157,8 @@
     "id": "fl-afl-cio",
     "name": "Florida AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation; endorses mostly Democrats through its COPE process. Endorsed Jolly for governor in June 2026. Its 2026 list also names Rodriguez (AG), Taddeo (CFO) and Nixon (U.S. Senate).",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation that says 'We work to provide better lives for all workers, members or not, through political and legislative action, grassroots mobilization and education' (https://flaflcio.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -172,7 +172,7 @@
     "name": "Florida Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide business lobby; its political arm endorses mostly Republicans. Endorsed Moody for Senate in August 2026.",
+    "lean_basis": "Statewide business lobby that says it has been 'fighting for greater economic opportunity and job creation since 1916' (https://www.flchamber.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -186,7 +186,7 @@
     "name": "NRA Political Victory Fund",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Gun-rights group; grades and endorses candidates, almost all Republicans. Florida grades page lists Moody.",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -199,8 +199,8 @@
     "id": "fl-sheriffs-assn",
     "name": "Florida Sheriffs Association",
     "type": "advocacy",
-    "lean": "lean_right",
-    "lean_basis": "Association of Florida's 67 elected sheriffs, most of them Republicans. Does not endorse candidates as an association. Took a public position against Amendment 3, warning of cuts to law enforcement.",
+    "lean": "neutral",
+    "lean_basis": "Association of Florida's 67 elected sheriffs; it does not endorse as an association. Its About page (https://www.flsheriffs.org/about) lists services and states no ideological mission, so under this guide's rule for law enforcement groups it is neutral. No outside rating found.",
     "geography": [
       "FL"
     ],
@@ -213,8 +213,8 @@
     "id": "fl-education-assn",
     "name": "Florida Education Association",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide teachers' union; endorses mostly Democrats. Endorsed Jolly for governor.",
+    "lean": "lean_left",
+    "lean_basis": "Statewide teachers' union that calls itself 'the largest labor union in the Southeast' (https://feaweb.org/about-fea/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],
@@ -228,7 +228,7 @@
     "name": "Florida Realtors",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide real-estate trade association; its PAC endorses across parties but leaned Republican in 2026 statewide races. Supports Amendment 3 and endorsed Moody for Senate.",
+    "lean_basis": "Real estate trade group that calls itself 'the state's largest trade association' (https://www.floridarealtors.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "FL"
     ],

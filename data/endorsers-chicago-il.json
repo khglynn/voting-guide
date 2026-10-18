@@ -4,7 +4,7 @@
     "name": "Chicago Tribune editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates Chicago Tribune news Center (low confidence, Oct. 2026); no separate rating for its editorial board was found. The board describes its principles as 'free markets, limited government, a focus on economic growth,' and in 2026 endorsed Democrats in the four statewide races it weighed in on. Largest Illinois daily (Alden Global Capital); a Tribune Publishing policy bars formal endorsements for U.S. Senate and governor, so it publishes an evaluation instead. From Sept. 27 to Oct. 17, 2026 it endorsed in most contested Chicago and Cook County races and on three Chicago-area ballot questions; no judicial retention picks as of Oct. 17.",
+    "lean_basis": "AllSides rates the Chicago Tribune Center (online news; low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
     "geography": [
       "IL",
       "chicago-il"
@@ -34,7 +34,7 @@
     "name": "League of Women Voters of Chicago (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Self-described: 'We're a nonpartisan organization that empowers voters and defends democracy.' The League never endorses candidates or takes sides in judicial retention; it publishes candidate answers on VOTE411 (address-gated). No positions on the 2026 Chicago or Cook County referenda were found.",
+    "lean_basis": "League of Women Voters chapter that describes itself as 'a nonpartisan, grassroots organization working to protect and expand voting rights' (https://www.lwvchicago.org/mission). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "chicago-il"
     ],
@@ -47,8 +47,8 @@
     "id": "injustice-watch",
     "name": "Injustice Watch: Check Your Judges",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Nonprofit investigative newsroom covering Cook County courts. Its 2026 guide states: 'Injustice Watch does not make recommendations or endorsements.' It profiles every judge on the retention ballot with bar ratings, background and any controversies.",
+    "lean": null,
+    "lean_basis": "Nonprofit newsroom that calls itself 'the only newsroom in Cook County dedicated to reporting on the court system' (https://www.injusticewatch.org/) and makes no endorsements. No outside rating found, so it is shown as not rated.",
     "geography": [
       "cook-county-il",
       "chicago-il"
@@ -63,7 +63,7 @@
     "name": "Illinois State Bar Association, Judicial Evaluation Committee",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Statewide lawyers' association and one of the bar groups in Cook County's Alliance of Bar Associations for Judicial Screening. Rates judicial candidates only, after questionnaires, a background check and interviews; candidates who do not participate are rated 'Not Recommended.' Takes no part in non-judicial races.",
+    "lean_basis": "Statewide lawyers' association that rates judicial candidates only and takes no part in other races. Its site (https://www.isba.org/) returned errors on Oct. 17, 2026, so no mission statement could be quoted; shown as neutral, as a professional group.",
     "geography": [
       "IL",
       "cook-county-il",
@@ -78,8 +78,8 @@
     "id": "chicago-federation-of-labor",
     "name": "Chicago Federation of Labor",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Central labor council for Chicago and Cook County. Its Nov. 3, 2026 slate (dated 9/16/2026) endorses the Democrat in every partisan Chicago race except House District 20, where it backs the unopposed Republican incumbent, plus 58 of the 59 Circuit Court retention judges on the ballot (not Ursula Walowski) and named Chicago school board candidates, with 'Neutral' in four subdistricts.",
+    "lean": "lean_left",
+    "lean_basis": "Central labor council for Chicago and Cook County that says it 'fights to support workers in Chicago, Cook County, and beyond' (https://chicagolabor.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "cook-county-il",
       "chicago-il"
@@ -93,8 +93,8 @@
     "id": "ift-ctu",
     "name": "Illinois Federation of Teachers (incl. Chicago Teachers Union, Local 1)",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide teachers union (AFT affiliate) that includes the Chicago Teachers Union. Hilario Dominguez, who has worked as CTU's political director, is its candidate for school board president. A full CTU general-election slate page was not located.",
+    "lean": "lean_left",
+    "lean_basis": "Statewide teachers' union (AFT affiliate, includes the Chicago Teachers Union) whose stated vision is 'Members fighting powerfully for a strong union and the future we all deserve' (https://www.ift-aft.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "IL",
       "chicago-il"
@@ -108,8 +108,8 @@
     "id": "seiu-il-state-council",
     "name": "SEIU Illinois State Council",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Statewide council of Service Employees International Union locals. Endorsement here is as reported by FOX 32 for the school board president race.",
+    "lean": "lean_left",
+    "lean_basis": "Statewide council of SEIU locals. Its site (https://www.seiuillinois.org/) could not be read on Oct. 17, 2026, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "IL",
       "chicago-il"
@@ -181,7 +181,7 @@
     "name": "Illinois Policy Institute",
     "type": "advocacy",
     "lean": "lean_right",
-    "lean_basis": "State-focused think tank with a free-market orientation. Publishes election explainers (including a 2026 MWRD FAQ) but no candidate recommendations.",
+    "lean_basis": "Free-market research group that calls itself 'the strongest voice for taxpayers in the state' and 'a nonpartisan 501(c)(3) research organization' (https://www.illinoispolicy.org/about-us/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "IL",
       "chicago-il"

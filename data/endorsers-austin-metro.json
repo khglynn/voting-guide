@@ -4,7 +4,7 @@
     "name": "The Austin Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "AllSides Media Bias Rating: Left (independent review, low confidence, Oct 2026). Alt-weekly whose endorsements reflect its news staff and editors; its 2026 guide tells readers to 'Vote Democrat' in every statewide race.",
+    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found.",
     "geography": [
       "austin-tx"
     ],
@@ -18,7 +18,7 @@
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Hearst-owned daily that resumed endorsements in 2026. AllSides' current page rates its news Center (independent review, low confidence, Aug 2026); an older duplicate AllSides page says Lean Left. Neither rates the editorial board, so under this guide's rule (a media-bias rating wins where one exists) it is labeled neutral. Its 2026 slate is mostly Democrats, with five Republican picks (Buckingham, Sheets, Teixeira, Pete Flores, Wilson) and no pick in TX-17, TX-31 or HD-73.",
+    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board.",
     "geography": [
       "austin-tx",
       "TX"
@@ -32,8 +32,8 @@
     "id": "kut",
     "name": "KUT News (Austin's NPR station)",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Public radio newsroom; publishes candidate Q&As and voter guides and does not endorse.",
+    "lean": null,
+    "lean_basis": "Public radio newsroom that does not endorse; it describes its guides as 'Non-partisan voter guides that help Central Texans stay civically engaged and make informed decisions' (https://www.kut.org/about). No outside rating found, so it is shown as not rated.",
     "geography": [
       "austin-tx"
     ],
@@ -46,8 +46,8 @@
     "id": "community-impact",
     "name": "Community Impact Newspaper",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Free local newspaper chain; publishes candidate Q&As and a Nov 2026 voter guide with ballot language, and does not endorse.",
+    "lean": null,
+    "lean_basis": "AllSides lists Community Impact as Not Rated. Free local newspaper chain that does not endorse; its stated mission is 'to build communities of informed citizens and thriving businesses' (https://communityimpact.com/about/). No outside rating found, so it is shown as not rated.",
     "geography": [
       "austin-tx",
       "round-rock-tx",
@@ -64,7 +64,7 @@
     "name": "League of Women Voters Austin Area",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan 501(c)(3); publishes candidates' unedited answers and never endorses candidates.",
+    "lean_basis": "League of Women Voters chapter that says it is nonpartisan, 'neither supporting nor opposing candidates or political parties at any level of government' (https://lwvaustin.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx",
       "pflugerville-tx",
@@ -80,7 +80,7 @@
     "name": "Travis County Democratic Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Official county party organization; its slate is the Democratic nominees.",
+    "lean_basis": "Official county party organization.",
     "geography": [
       "austin-tx",
       "pflugerville-tx"
@@ -110,7 +110,7 @@
     "name": "Stonewall Democrats of Austin",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ caucus affiliated with the Democratic Party.",
+    "lean_basis": "LGBTQ Democratic club that says 'National Stonewall Democrats support the Democratic Party and Democratic candidates who support our mission' (https://www.stonewallaustin.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -124,7 +124,7 @@
     "name": "Central Austin Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club.",
+    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Central Austin Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -138,7 +138,7 @@
     "name": "Black Austin Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club.",
+    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Black Austin Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -152,7 +152,7 @@
     "name": "Austin Environmental Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club focused on environmental issues.",
+    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Austin Environmental Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -166,7 +166,7 @@
     "name": "Austin Firefighters Association (IAFF Local 975)",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Public-safety union; historically endorses across party lines in city races. Lean is a judgment call.",
+    "lean_basis": "Firefighters' union (IAFF Local 975); its international union calls itself 'a union that is proud to fight for you, your family, and your community' (https://www.iaff.org/local/975). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -179,8 +179,8 @@
     "id": "austin-police-association",
     "name": "Austin Police Association",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Police union; backed the 2021 Save Austin Now camping ban and the police staffing initiative. Lean is a judgment call.",
+    "lean": "neutral",
+    "lean_basis": "Police union whose stated mission, 'To Support And Advocate For All Members Of The Austin Police Association, Their Families And Austin’s Diverse Community' (https://www.austinpolice.com/about), uses no ideological language. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -194,7 +194,7 @@
     "name": "Austin EMS Association",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "EMS employees' union; Selena Xie is its former president.",
+    "lean_basis": "EMS workers' union that says it works to 'empower medics to advocate for a rewarding, safe, and healthy career with strong benefits' (https://www.austinemsa.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -207,8 +207,8 @@
     "id": "austin-central-labor-council",
     "name": "Austin Central Labor Council (AFL-CIO)",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "AFL-CIO regional body; endorsed only Democrats in partisan races.",
+    "lean": "lean_left",
+    "lean_basis": "AFL-CIO labor council that calls itself 'dedicated to represent the interests of working people at the state and local level' (https://austinlaborcouncil.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx",
       "pflugerville-tx",
@@ -224,7 +224,7 @@
     "name": "Workers Defense Action Fund",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Political arm of Workers Defense Project, a construction-worker advocacy group.",
+    "lean_basis": "Political arm of Workers Defense Project, which describes its work as 'building power with latine workers in Texas for immigrant and worker justice' (https://workersdefense.org/en/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -238,7 +238,7 @@
     "name": "AURA",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Volunteer urbanist group for more housing, transit and bike lanes; cross-partisan on housing but its 2026 picks are all incumbents or Democratic-aligned candidates.",
+    "lean_basis": "Volunteer urbanist group 'dedicated to building an Austin with abundant affordable homes in walkable neighborhoods' (https://aura-atx.org/about/), with more transit, bike lanes and sidewalks. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -252,7 +252,7 @@
     "name": "Austin Board of REALTORS (TREPAC)",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Industry trade group; its PAC gives to both parties. No Nov 2026 general-election guide found.",
+    "lean_basis": "Real estate trade group that calls itself 'the largest real estate trade organization in Central Texas' (https://www.abor.com/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -266,7 +266,7 @@
     "name": "Real Estate Council of Austin",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Commercial real estate trade group; 2026 guide backs Republicans in Hays and Williamson and Democrats in Travis.",
+    "lean_basis": "Commercial real estate group that calls itself 'the premiere policy and networking professional group for commercial real estate in Central Texas' (https://www.reca.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -280,7 +280,7 @@
     "name": "Austin Apartment Association PAC",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Landlord trade group; PAC page is members-only.",
+    "lean_basis": "Landlord trade group that calls itself 'a trade association serving anyone who owns or manages rental property' (https://www.austinaptassoc.com/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -294,7 +294,7 @@
     "name": "Greater Austin Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Business association; publishes legislative agendas, not candidate endorsements.",
+    "lean_basis": "Regional chamber of commerce whose stated mission is 'To provide leadership that facilitates the creation of a prosperous regional economy and results in effective advocacy for our members' (https://www.austinchamber.com/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -308,7 +308,7 @@
     "name": "Save Austin Now PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Co-founded by former Travis County GOP chair Matt Mackowiak; authored Prop I. Describes itself as nonpartisan.",
+    "lean_basis": "Prop I campaign group whose site is headed 'Audit Austin City Spending' (https://www.saveaustinnow.com/), with pages on property taxes and government waste. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -322,7 +322,7 @@
     "name": "Travis County Taxpayers Union",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-tax group; no 2026 page found.",
+    "lean_basis": "Anti-tax group (its name states its cause). Its website, traviscountytaxpayers.org, did not resolve on Oct. 17, 2026, so no mission statement could be quoted. No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],
@@ -336,7 +336,7 @@
     "name": "Austin Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Socialist membership organization.",
+    "lean_basis": "Self-described socialist group: 'We’re the Austin chapter of the Democratic Socialists of America' (https://www.austindsa.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "austin-tx"
     ],

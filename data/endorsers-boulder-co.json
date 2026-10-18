@@ -3,8 +3,8 @@
     "id": "daily-camera-eb",
     "name": "Boulder Daily Camera editorial board",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Boulder's daily newspaper. No independent media-bias rating was captured. Its 2026 local picks split: NO on the city bond (2K), debt-limit change (2M) and vacancy tax (2J); YES on the county child care tax (1A), firefighter bargaining (2L) and a bigger county commission (200). Its candidate endorsements, if any, were not captured.",
+    "lean": null,
+    "lean_basis": "AllSides lists the Daily Camera as Not Rated, and no Ad Fontes rating was found. Its stated mission is 'To deliver essential, informed and relevant news to our readers' (https://www.dailycamera.com/about-us/). No outside rating found, so it is shown as not rated.",
     "geography": [
       "boulder-co"
     ],
@@ -18,7 +18,7 @@
     "name": "League of Women Voters of Boulder County",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan civic organization. Takes measure positions based on its adopted local, state and national League positions (critics on the right call those left-leaning) and may stay neutral; never endorses candidates. In 2026 it supported 1A, 200, 2K and 2M, picked option 2 on 201, and was neutral on 2J and 2L.",
+    "lean_basis": "League of Women Voters chapter; its site describes the League as 'a nonpartisan, grassroots organization' (https://www.lwvbc.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -31,8 +31,8 @@
     "id": "boulder-reporting-lab",
     "name": "Boulder Reporting Lab",
     "type": "publication",
-    "lean": "neutral",
-    "lean_basis": "Local nonprofit newsroom. Publishes candidate profiles and questionnaires (including how each city candidate says they'd vote on the seven local measures); no endorsements were found. Its questionnaire answers appear in candidates' own words, not as endorsements.",
+    "lean": null,
+    "lean_basis": "Nonprofit newsroom (no endorsements) that promises 'Quality, non-partisan reporting that digs beneath the surface on issues of public importance' (https://boulderreportinglab.org/about-us/). No outside rating found, so it is shown as not rated.",
     "geography": [
       "boulder-co"
     ],
@@ -46,7 +46,7 @@
     "name": "PLAN-Boulder County",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Self-described citizen-led advocacy group founded in 1959; historically focused on open space and environmental protection (Boulder Reporting Lab). In Boulder's nonpartisan city politics it is usually on the slower-growth side, often opposite Boulder Progressives. Its 2026 mayoral picks cross Boulder's factions (La Grave first, Adams second). 'Lean left' reflects its environmental platform; it is not a party group and the national left-right scale fits Boulder's local divides poorly.",
+    "lean_basis": "Environmental group whose stated aims include 'Reduce our carbon footprint and environmental impact' (https://www.planboulder.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -60,7 +60,7 @@
     "name": "Better Boulder",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Local 501(c)(6) group that endorses city candidates and measures (per its own podcast). Six of its eight 2026 city picks overlap with Boulder Progressives' slate; the other two (Winer, Jamieson) are also PLAN-Boulder or Open Boulder picks. No self-described or third-party national lean found; 'lean left' is an approximation within Boulder's Democratic-leaning politics.",
+    "lean_basis": "Urbanist group that says it advocates for 'Environmental stewardship' and 'Progressive and innovative elected officials' (https://betterboulder.com/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -74,7 +74,7 @@
     "name": "Boulder Progressives",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Boulder Reporting Lab describes it as 'a progressive political organization.' Endorses in Boulder's nonpartisan city races. Its 2026 picks are taken from Boulder Reporting Lab's candidate listing; its own announcement page was not opened.",
+    "lean_basis": "Self-described progressive political group, named Boulder Progressives (https://www.boulderprogressives.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -87,8 +87,8 @@
     "id": "open-boulder",
     "name": "Open Boulder",
     "type": "advocacy",
-    "lean": "lean_left",
-    "lean_basis": "Boulder Reporting Lab describes it as associated with Boulder's 'more moderate bloc.' No national-party lean found; 'lean left' is an approximation for the moderate end of Boulder's Democratic-leaning politics. Picks taken from Boulder Reporting Lab's candidate listing; Open Boulder's own page was not captured.",
+    "lean": "neutral",
+    "lean_basis": "Local group that calls itself 'a nonpartisan organization dedicated to pragmatic, results-oriented local governance' (https://openboulder.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -102,7 +102,7 @@
     "name": "Boulder Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Local chapter of a self-described democratic socialist organization. Picks taken from Boulder Reporting Lab's candidate listing; the chapter's own page was not captured.",
+    "lean_basis": "Self-described socialist group: 'a chapter of the Democratic Socialists of America, the largest socialist organization in United States history' (https://www.boulderdsa.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -116,7 +116,7 @@
     "name": "Colorado Working Families Party",
     "type": "party",
     "lean": "left",
-    "lean_basis": "Self-described progressive, multiracial, feminist populist party; endorses mostly Democrats to the left of the party mainstream. Boulder picks taken from Boulder Reporting Lab's candidate listing.",
+    "lean_basis": "Minor party that calls itself 'a multiracial party that fights for workers over bosses and people over the powerful' (https://workingfamilies.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "CO",
       "boulder-co"
@@ -130,8 +130,8 @@
     "id": "boulder-area-labor-council",
     "name": "Boulder Area Labor Council",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "Regional federation of labor unions. Like the Denver Area Labor Federation and Colorado AFL-CIO elsewhere in this guide, labor federations here back Democrats in partisan races; in Boulder's nonpartisan council race it backed three candidates also endorsed by Boulder Progressives. Picks taken from Boulder Reporting Lab's candidate listing; the council's own 2026 slate was not found.",
+    "lean": "lean_left",
+    "lean_basis": "AFL-CIO labor council that calls itself 'dedicated to represent the interests of working people at the state and local level' (https://coaflcio.org/boulder-area-labor-council-afl-cio/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "boulder-co"
     ],
@@ -173,7 +173,7 @@
     "name": "Boulder County Board of Commissioners (official board positions)",
     "type": "elected_official",
     "lean": "left",
-    "lean_basis": "Elected partisan board. Commissioner Ashley Stolzmann is on the 2026 ballot as a Democrat, and all three commissioners endorsed candidates in the June 2026 Democratic CU Regent primary (Boulder Reporting Lab). On every 2026 measure where both took a stand, the board's position matches the Boulder County Democratic Party's. This is a government body's official position, not a campaign endorsement.",
+    "lean_basis": "Elected partisan county board; Commissioner Ashley Stolzmann is on the 2026 ballot as a Democrat. This is a government body's official position, not a campaign endorsement.",
     "geography": [
       "boulder-co"
     ],

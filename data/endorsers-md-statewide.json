@@ -18,7 +18,7 @@
     "name": "The Baltimore Banner",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit newsroom founded 2022. Publishes a full 2026 voter guide and candidate profiles; as a 501(c)(3) it does not endorse candidates or ballot questions.",
+    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions.",
     "geography": [
       "MD"
     ],
@@ -46,7 +46,7 @@
     "name": "League of Women Voters of Maryland (VOTE411)",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan. Does not endorse candidates; publishes candidate questionnaire answers on VOTE411 and may take positions on ballot questions after member study.",
+    "lean_basis": "League of Women Voters state chapter that describes the League as 'a nonpartisan organization' (https://www.lwvmd.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -87,8 +87,8 @@
     "id": "mddc-afl-cio",
     "name": "Maryland State and DC AFL-CIO",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State labor federation. Its Labor Votes site campaigns FOR Question 1; its 2026 slate (Airtable embed) endorses mostly Democrats, including Moore.",
+    "lean": "lean_left",
+    "lean_basis": "State labor federation (AFL-CIO) that calls itself 'dedicated to represent the interests of working people at the state and local level' (https://mddclabor.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -101,8 +101,8 @@
     "id": "md-state-education-association",
     "name": "Maryland State Education Association",
     "type": "labor",
-    "lean": "left",
-    "lean_basis": "State teachers union (NEA affiliate); endorses mostly Democrats. Listed among Moore's 2026 endorsers.",
+    "lean": "lean_left",
+    "lean_basis": "State teachers' union that calls itself 'a democratic, member-driven organization of school employees' (https://marylandeducators.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -116,7 +116,7 @@
     "name": "Maryland Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Statewide business lobby. Takes positions on fiscal ballot questions; candidate endorsements run through its PAC. 2026 positions not found.",
+    "lean_basis": "Statewide chamber of commerce that says it advocates 'for pro-business policies that drive economic growth' (https://www.mdchamber.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -129,8 +129,8 @@
     "id": "md-lcv",
     "name": "Maryland League of Conservation Voters",
     "type": "advocacy",
-    "lean": "left",
-    "lean_basis": "Environmental advocacy group; endorses candidates (nearly all Democrats) and scores legislators. Listed among Moore's 2026 endorsers.",
+    "lean": "lean_left",
+    "lean_basis": "Environmental group that says 'We use political action and education to fight for clean water, healthy air, and a resilient climate for everyone in Maryland' (https://www.mdlcv.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -144,7 +144,7 @@
     "name": "Planned Parenthood Maryland Action Fund",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Reproductive-rights advocacy arm; endorses candidates who support abortion access, nearly all Democrats.",
+    "lean_basis": "Abortion-rights political arm of Planned Parenthood of Maryland. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -158,7 +158,7 @@
     "name": "Maryland Right to Life PAC",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Anti-abortion advocacy group; endorses candidates opposed to abortion, nearly all Republicans.",
+    "lean_basis": "Anti-abortion group that says it 'defends the unalienable right to life for vulnerable human beings threatened by abortion' (https://www.mdrtl.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -172,7 +172,7 @@
     "name": "NRA Political Victory Fund",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Gun-rights PAC; grades candidates A through F and endorses the higher-graded candidate, nearly always a Republican.",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],
@@ -185,8 +185,8 @@
     "id": "md-fop",
     "name": "Maryland State Fraternal Order of Police",
     "type": "labor",
-    "lean": "lean_right",
-    "lean_basis": "Statewide police union. Splits its 2026 ticket: endorsed Democrat Wes Moore for governor (per Moore's campaign) and Republican Jim Rutledge for attorney general (Sept 8, 2026).",
+    "lean": "neutral",
+    "lean_basis": "Maryland lodge of the Fraternal Order of Police; mdfop.org did not resolve on Oct. 17, 2026. The FOP's standard description, as posted by its Illinois lodge, says it is 'committed to improving the working conditions of law enforcement officers and the safety of those we serve' (https://www.ilfop.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD"
     ],

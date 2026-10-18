@@ -19,7 +19,7 @@
     "name": "The Baltimore Banner",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Nonprofit newsroom founded 2022. Publishes a full 2026 voter guide and candidate profiles; as a 501(c)(3) it does not endorse candidates or ballot questions. Its Baltimore City ballot-question explainer explains each question and what FOR and AGAINST mean, without taking positions.",
+    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -34,7 +34,7 @@
     "name": "League of Women Voters of Baltimore City",
     "type": "civic_nonpartisan",
     "lean": "neutral",
-    "lean_basis": "Nonpartisan. Its 2026 general election guide prints candidates' verbatim answers and says the League 'does not support or oppose any political candidate.' For Baltimore City Questions A to I, the guide reprints the ballot language with no position.",
+    "lean_basis": "League of Women Voters chapter; its page describes the League as 'a nonpartisan political organization' (https://my.lwv.org/maryland/baltimore-city). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -78,7 +78,7 @@
     "name": "Sierra Club Maryland Chapter PAC",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Environmental group's PAC. Its Sept 17, 2026 Maryland list endorses nearly all Democrats in partisan races; every Baltimore City pick is a Democrat or a nonpartisan school board candidate.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Maryland chapter.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -164,7 +164,7 @@
     "name": "Baltimore Teachers Union",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Baltimore City teachers union (American Federation of Teachers affiliate). Labeled lean_left by analogy with Maryland's statewide teachers union, which endorses mostly Democrats; the school board race itself is nonpartisan.",
+    "lean_basis": "Teachers' union for Baltimore City schools, an AFT affiliate (https://www.baltimoreteachers.org/about). Its page gives no mission text, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -178,7 +178,7 @@
     "name": "Metropolitan Baltimore Council of AFL-CIO Unions",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Regional labor federation. Labeled lean_left by analogy with the state AFL-CIO, whose 2026 slate endorses mostly Democrats.",
+    "lean_basis": "AFL-CIO central labor council for the Baltimore area. Its site (https://www.metrobaltimoreaflcio.org/) could not be read on Oct. 17, 2026, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -192,7 +192,7 @@
     "name": "1199SEIU United Healthcare Workers East",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "Healthcare workers union; signed the May 2026 coalition letter backing the City Council's budget and procurement charter reforms.",
+    "lean_basis": "Healthcare workers' union whose stated mission is 'to stand up for quality healthcare, good jobs and social justice for all' (https://www.1199seiu.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -206,7 +206,7 @@
     "name": "Progressive Maryland",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive organizing group ('building power for working families').",
+    "lean_basis": "Self-described progressive group that says it is 'leading the fight for progressive change in Maryland' (https://www.progressivemaryland.org/about). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -221,7 +221,7 @@
     "name": "Greater Baltimore Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Local chapter of the Democratic Socialists of America.",
+    "lean_basis": "Local chapter of the Democratic Socialists of America; it works 'for a socialist future in Greater Baltimore' (https://baltimoredsa.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -235,7 +235,7 @@
     "name": "Charm City Indivisible",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Baltimore chapter of the progressive Indivisible network ('building political power to advance justice in our city').",
+    "lean_basis": "Baltimore chapter of the Indivisible movement that describes itself as 'building political power to strengthen democracy and advance justice in our city and beyond' (https://charmcityindivisible.org/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "baltimore-md"
     ],
@@ -248,8 +248,8 @@
     "id": "moms-demand-action-gun-sense",
     "name": "Moms Demand Action / Everytown 'Gun Sense Candidate'",
     "type": "advocacy",
-    "lean": "lean_left",
-    "lean_basis": "Gun-safety group; calls itself non-partisan, but its candidate designations go mostly to Democrats.",
+    "lean": "left",
+    "lean_basis": "Gun-safety group, part of Everytown for Gun Safety, that calls itself 'a grassroots movement of Americans fighting for public safety measures that can protect people from gun violence' (https://momsdemandaction.org/about/). No outside rating found; lean reflects its stated mission.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -263,8 +263,8 @@
     "id": "baltimore-baby-fund-campaign",
     "name": "Baltimore Baby Fund campaign",
     "type": "advocacy",
-    "lean": "lean_left",
-    "lean_basis": "Ballot committee behind Question I (cash-style support for families with newborns); joint campaign with Mayor Scott.",
+    "lean": "neutral",
+    "lean_basis": "Ballot committee for Question I only (a joint campaign with Mayor Scott). A single-measure committee has no general ideological mission, so 'neutral' here means not assessed.",
     "geography": [
       "baltimore-md"
     ],

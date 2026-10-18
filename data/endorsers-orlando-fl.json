@@ -4,7 +4,7 @@
   "name": "Orlando Sentinel editorial board",
   "type": "publication",
   "lean": "neutral",
-  "lean_basis": "AllSides rates the Orlando Sentinel Center (low confidence, Oct. 2026). Largest Central Florida daily (Tribune Publishing / Alden). Under a 2022 company-wide policy it no longer endorses for president, governor or U.S. Senate, but it still recommends in Cabinet, judicial retention, legislative and local races and on amendments. Its 2026 statewide picks all went to Democrats or against the Republican-sponsored amendments. It shares amendment editorials with its sister paper, the South Florida Sun Sentinel.",
+  "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate.",
   "geography": [
    "FL"
   ],
@@ -18,7 +18,7 @@
   "name": "League of Women Voters of Florida (VOTE411)",
   "type": "civic_nonpartisan",
   "lean": "neutral",
-  "lean_basis": "Nonpartisan; never endorses candidates. Takes positions on constitutional amendments after member study; formally opposed Amendment 3 in August 2026. Publishes candidate questionnaire answers on VOTE411.",
+  "lean_basis": "League of Women Voters state chapter that calls itself 'a nonpartisan, activist, grassroots organization that believes voters should play a critical role in democracy' (https://lwvfl.org/about-us/). No outside rating found; lean reflects its stated mission.",
   "geography": [
    "FL"
   ],
@@ -31,8 +31,8 @@
   "id": "fl-afl-cio",
   "name": "Florida AFL-CIO",
   "type": "labor",
-  "lean": "left",
-  "lean_basis": "State labor federation; endorses mostly Democrats through its COPE process. Endorsed Jolly for governor in June 2026.",
+  "lean": "lean_left",
+  "lean_basis": "State labor federation that says 'We work to provide better lives for all workers, members or not, through political and legislative action, grassroots mobilization and education' (https://flaflcio.org/about/). No outside rating found; lean reflects its stated mission.",
   "geography": [
    "FL"
   ],
@@ -74,7 +74,7 @@
   "name": "Equality Florida Action PAC",
   "type": "advocacy",
   "lean": "left",
-  "lean_basis": "LGBTQ civil-rights PAC. Every pick it made in an Orange County partisan race in 2026 (state Senate and House) is a Democrat; it says it does not endorse in federal races. Lean is our label from that pattern, not an outside rating.",
+  "lean_basis": "LGBTQ civil-rights PAC of Equality Florida, whose stated mission is 'to empower and uplift the LGBTQ community through advocacy, education, and support' (https://www.eqfl.org/about). No outside rating found; lean reflects its stated mission.",
   "geography": [
    "FL",
    "orlando-fl"
@@ -89,7 +89,7 @@
   "name": "Orange County Classroom Teachers Association",
   "type": "labor",
   "lean": "lean_left",
-  "lean_basis": "Teachers' union for Orange County Public Schools. Its only pick we recorded (Peña) is shared with Democratic officials and groups. Its own endorsement page was not opened; lean is our label, not an outside rating.",
+  "lean_basis": "Teachers' union for Orange County Public Schools that offers members 'A Voice On The Job' (https://orangecta.org/). No outside rating found; lean reflects its stated mission.",
   "geography": [
    "orlando-fl"
   ],

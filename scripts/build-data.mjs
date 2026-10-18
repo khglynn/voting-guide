@@ -366,11 +366,14 @@ for (const f of listJson('').filter((x) => /^endorsements-.*\.json$/.test(path.b
     const prev = endorsementByKey.get(key);
     if (prev) {
       if (ePrefer[rec.s] < ePrefer[prev.s]) continue;
-      // One "endorser" that lists both campaigns (official issue committees): keep both sides.
+      // Same endorser, same file, different picks: an issue committee listing both campaigns (measure),
+      // or a slate or ranked order (race).
       if (rec.s === 'endorsed' && prev.s === 'endorsed' && prev.f === f && rec.c && prev.c && JSON.stringify(rec.c) !== JSON.stringify(prev.c)) {
         prev.c = [...new Set([...prev.c, ...rec.c])];
-        prev.why = [prev.why, rec.why].filter(Boolean).join(' ');
-        prev.both = true;
+        prev.why = [...new Set([prev.why, rec.why].filter(Boolean))].join(' ');
+        // Both sides only makes sense for a measure. In a race, several rows from one file are a slate
+        // (vote for 5) or a ranked order, so keep them in file order and don't call it both sides.
+        if (target.kind === 'measure') prev.both = true;
         continue;
       }
       if (rec.s === 'endorsed' && prev.s === 'endorsed' && JSON.stringify(rec.c) !== JSON.stringify(prev.c)) warn(`${eid} on ${target.id}: two files disagree (${prev.c} vs ${rec.c}); kept ${f}`);

@@ -1,0 +1,2666 @@
+[
+ {
+  "id": "wa-us-house-7",
+  "state": "WA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "WA-7",
+  "scope_plain": "Voters in Congressional District 7: most of Seattle (about 83% of city voters) plus nearby areas",
+  "office_explainer": "Writes federal laws and votes on the national budget for this district. Two-year term.",
+  "why_it_matters": "All 435 House seats are on the ballot; together they decide which party controls the House.",
+  "incumbent": "Pramila Jayapal",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Pramila Jayapal",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.pramilaforcongress.com",
+    "website_confidence": "verified",
+    "background": "U.S. Representative since 2017; state senator 2015-2017. Founded and led the immigrant-rights group OneAmerica.",
+    "own_words": [
+     {
+      "text": "I'm leading the fight for the Medicare for All Act",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says she works to raise wages, lower costs, build affordable housing, protect abortion rights and fight climate change.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I have never taken corporate PAC money",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nirav Sheth",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.shethforcongress.com",
+    "website_confidence": "verified",
+    "background": "Chief financial officer of Sheth Groups (Meineke franchises); former Lakewood police officer and U.S. Marine (2011-2014). No previous elected office.",
+    "own_words": [
+     {
+      "text": "My goal is to create sustainable & affordable housing to solve homelessness",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "bringing law & order back to Seattle & cheaper cost of living for everyone",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I will treat your tax dollars with that same sacred respect.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-us-house-9",
+  "state": "WA",
+  "level": "federal",
+  "office": "U.S. Representative",
+  "district": "WA-9",
+  "scope_plain": "Voters in Congressional District 9: Southeast Seattle (Rainier Valley, Beacon Hill, parts of the Central District and Chinatown-International District) plus suburbs to the south and east",
+  "office_explainer": "Writes federal laws and votes on the national budget for this district. Two-year term.",
+  "why_it_matters": "All 435 House seats are on the ballot; together they decide which party controls the House.",
+  "incumbent": "Adam Smith",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Adam Smith",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.electadamsmith.com",
+    "website_confidence": "verified",
+    "background": "U.S. Representative since 1997; state senator 1991-1996; former Seattle city prosecutor. Past chairman and top Democrat on the House Armed Services Committee.",
+    "own_words": [
+     {
+      "text": "We must bring down the cost of housing and make homeownership achievable again.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Our healthcare system needs to be restructured to create a path to a single-payer plan like Medicare for All.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Wants to protect unions, expand job training and create good-paying jobs.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Doug Basler",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://dougbasler.com",
+    "website_confidence": "verified",
+    "background": "Founder and president of Prologue Digital, an advertising and video production company; former King County Republican Party vice chairman; former youth pastor.",
+    "own_words": [
+     {
+      "text": "We need an opportunity revolution.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says the Climate Commitment Act and one of the nation's highest gas taxes drive up energy, food and transportation costs.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I will be a voice of common sense, moderation, and practical solutions",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-32",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-32",
+  "scope_plain": "Voters in Legislative District 32: a corner of far-north Seattle (parts of 98133 and 98177) plus Shoreline and part of south Snohomish County",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose. The challenger, Cindy Ryu, now holds this district's House Position 1 seat.",
+  "incumbent": "Jesse Salomon",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Cindy Ryu",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.cindyryu.com/",
+    "website_confidence": "verified",
+    "background": "State representative since 2011; chairs the House Technology, Economic Development and Veterans Committee. Former Shoreline mayor and councilmember.",
+    "own_words": [
+     {
+      "text": "I will continue to fight for a fairer tax system that asks the wealthiest to pay their share",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "In the Senate, her priorities are the environment, public schools and consumer protections against predatory practices.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "worked to bring broadband access to every corner of our state",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jesse Salomon",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://votesalomon.com",
+    "website_confidence": "verified",
+    "background": "State senator since 2019; former Shoreline deputy mayor; former child-welfare prosecutor and public defense attorney.",
+    "own_words": [
+     {
+      "text": "Washington deserves Democratic leaders who deliver on promises.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I'll audit spending, expand senior property-tax relief, stand up to ICE, and stop Trump chaos in our state.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "We must confront the crisis on Aurora with compassion and accountability",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-32-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-32 Position 1",
+  "scope_plain": "Voters in Legislative District 32: a corner of far-north Seattle (parts of 98133 and 98177) plus Shoreline and part of south Snohomish County",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose. Open seat: Rep. Cindy Ryu is running for state Senate.",
+  "incumbent": "Cindy Ryu",
+  "open_seat": true,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Keith Scully",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://keithscully.org",
+    "website_confidence": "verified",
+    "background": "Shoreline City Council member since 2016 (mayor 2022-24); intellectual property attorney; former paramedic, King County deputy prosecutor and UN war crimes prosecutor.",
+    "own_words": [
+     {
+      "text": "I'll make housing, energy, and childcare affordable.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Reform our tax code to be fair, progressive, and sustainable.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Demand real climate action.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Danica Noble",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.electdanica.com",
+    "website_confidence": "verified",
+    "background": "Antitrust attorney in the Federal Trade Commission's technology enforcement division; PTA advocacy chair and parent of three public school students. No elected experience listed.",
+    "own_words": [
+     {
+      "text": "I've spent 20 years taking on monopolies, scammers, grocery giants, and big tech.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "putting guardrails on technology targeting kids and workers",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says she will focus on lowering costs and fighting for schools.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-32-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-32 Position 2",
+  "scope_plain": "Voters in Legislative District 32: a corner of far-north Seattle (parts of 98133 and 98177) plus Shoreline and part of south Snohomish County",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose.",
+  "incumbent": "Lauren Davis",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Lauren Davis",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.electlaurendavis.com",
+    "website_confidence": "verified",
+    "background": "State representative since 2019; founded the Washington Recovery Alliance; former UW School of Social Work lecturer.",
+    "own_words": [
+     {
+      "text": "To fight addiction, I passed Ricky's Law, created the Recovery Navigator Program",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I'm committed to tackling affordability, education funding, homelessness, and gun violence.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says she has championed healthcare for immigrants and protections against ICE.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Imraan Siddiqi",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://peopleforimraan.com",
+    "website_confidence": "verified",
+    "background": "Executive director of CAIR-Washington; civil rights advocate and former small business owner. No prior elected office.",
+    "own_words": [
+     {
+      "text": "I'll fight for housing affordability, lower everyday costs, and a Washington that stands up to federal overreach.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "one of the original plaintiffs against Trump's Muslim Ban",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says wages aren't keeping up with bills and immigrants face federal targeting.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-34",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-34",
+  "scope_plain": "Voters in Legislative District 34: West Seattle, small parts of the 98104, 98108 and 98134 ZIPs, and areas outside the city to the south and west",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Emily Alvarado",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Emily Alvarado",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://emilyalvarado.com/",
+    "website_confidence": "verified",
+    "background": "State senator since 2025 and state representative 2023-2025; former director of Seattle's Office of Housing; attorney.",
+    "own_words": [
+     {
+      "text": "I will continue to push for a fair economy with good-paying jobs",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Lists public schools, affordable housing, childcare and healthcare as her focus.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-34-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-34 Position 1",
+  "scope_plain": "Voters in Legislative District 34: West Seattle, small parts of the 98104, 98108 and 98134 ZIPs, and areas outside the city to the south and west",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Brianna K. Thomas",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Brianna K. Thomas",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://briannathomas.org",
+    "website_confidence": "verified",
+    "background": "State representative since 2025; senior policy advisor at Seattle's Human Services Department; former chief of staff to the Seattle City Council president.",
+    "own_words": [
+     {
+      "text": "This biennium, I contributed to passing the Millionaires Tax",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says she passed bills guaranteeing meal and rest breaks for healthcare workers and protections for domestic workers.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-34-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-34 Position 2",
+  "scope_plain": "Voters in Legislative District 34: West Seattle, small parts of the 98104, 98108 and 98134 ZIPs, and areas outside the city to the south and west",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose.",
+  "incumbent": "Joe Fitzgibbon",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Joe Fitzgibbon",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.joefitzgibbon.com",
+    "website_confidence": "verified",
+    "background": "State representative since 2010 and House majority leader since 2022; chaired the House Environment & Energy Committee 2014-2022.",
+    "own_words": [
+     {
+      "text": "I passed the nation's strongest climate laws",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says he led passage of a millionaires' tax paired with tax cuts for working families and small businesses.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Mary Anito",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://maryforwa.com",
+    "website_confidence": "verified",
+    "background": "Engineer and operations executive (REI, Wayfair, Caterpillar); home renovator; public school parent of three. No public office held.",
+    "own_words": [
+     {
+      "text": "Fiscal responsibility and strong public investment are not mutually exclusive.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Wants to balance the budget while funding infrastructure, education and healthcare.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-36",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-36",
+  "scope_plain": "Voters in Legislative District 36: Ballard, Magnolia, Queen Anne, Greenwood, Phinney Ridge and part of Fremont",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": null,
+  "incumbent": "Noel C. Frame",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Noel C. Frame",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.noelframe.com",
+    "website_confidence": "verified",
+    "background": "State senator since 2023 (state representative 2016-2023); vice chair of finance on the Senate Ways & Means Committee; owner of the consulting firm Uncommon Bridges.",
+    "own_words": [
+     {
+      "text": "As a tax policy leader, I helped pass the Millionaires Tax",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Points to expanding the working families tax credit and the senior property tax exemption.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I'll fight every day for the working people of our community.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Jillian England",
+    "party": "Republican",
+    "incumbent": false,
+    "website": "https://www.jillianengland.com",
+    "website_confidence": "verified",
+    "background": "Computer science and health care operations professional; Republican precinct committee officer since 2007 and vice chair of the 36th District Republicans.",
+    "own_words": [
+     {
+      "text": "restore fiscal sanity and constitutional government in Olympia",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says repealing the 9.9% 'Millionaires Tax' and the Climate Commitment Act are top priorities.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "clear encampments, restore public safety in our neighborhoods",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-36-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-36 Position 1",
+  "scope_plain": "Voters in Legislative District 36: Ballard, Magnolia, Queen Anne, Greenwood, Phinney Ridge and part of Fremont",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Julia Grant Reed",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Julia Grant Reed",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votejuliareed.com",
+    "website_confidence": "verified",
+    "background": "State representative; consultant at Kinetic West; former senior policy advisor for the City of Seattle and Obama administration staffer.",
+    "own_words": [
+     {
+      "text": "I'll advance pro-housing policies to meet Seattle's urgent and long-term needs",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Also lists youth and workforce development, apprenticeships, climate-friendly transportation and the maritime economy.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-36-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-36 Position 2",
+  "scope_plain": "Voters in Legislative District 36: Ballard, Magnolia, Queen Anne, Greenwood, Phinney Ridge and part of Fremont",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Liz Berry",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Liz Berry",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.lizberry.com",
+    "website_confidence": "verified",
+    "background": "State representative since 2021 and House Labor Committee chair; former legislative director for Congresswoman Gabby Giffords.",
+    "own_words": [
+     {
+      "text": "I passed groundbreaking legislation to require a permit to purchase a firearm.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Supports tax cuts on everyday essentials and a fairer tax system to fund schools, childcare, housing and health care.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-37",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-37",
+  "scope_plain": "Voters in Legislative District 37: Southeast Seattle (Rainier Valley, Beacon Hill and parts of the Central District) plus Skyway and part of Renton",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose. Open seat: Sen. Rebecca Saldaña is running for King County Council.",
+  "incumbent": "Rebecca Saldaña",
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Chipalo Street",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://electchipalo.com/",
+    "website_confidence": "verified",
+    "background": "State representative since 2023 (37th District, Position 2); works at Microsoft on technology safety and security; small business owner.",
+    "own_words": [
+     {
+      "text": "I'm the only candidate who has turned progressive values into policy and investment.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says he championed the millionaires tax and tenant protections such as rent stabilization.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I secured $131 million to invest in our district",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Tatiana Brown",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://www.tatianaforwa.org",
+    "website_confidence": "verified",
+    "background": "Co-chair of the Washington Environmental Justice Council; community organizer. First run for elected office.",
+    "own_words": [
+     {
+      "text": "I'm running for State Senate to bring community voices directly into Olympia",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Priorities: affordable housing, stronger public schools, safer neighborhoods and reliable transit.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "ensure our tax system is structured so the wealthiest pay their fair share",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-37-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-37 Position 1",
+  "scope_plain": "Voters in Legislative District 37: Southeast Seattle (Rainier Valley, Beacon Hill and parts of the Central District) plus Skyway and part of Renton",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose.",
+  "incumbent": "Sharon Tomiko Santos",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Kelabe Tewolde",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://kelabeforwashington.com",
+    "website_confidence": "verified",
+    "background": "Associate director of leadership development at Rainier Scholars; Seattle Planning Commissioner since 2020. First-time candidate.",
+    "own_words": [
+     {
+      "text": "It's time for change in Olympia, to address urgent needs and restore hope",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Priorities: housing affordability, childcare for working parents, interest limits on medical debt and early help that keeps kids learning.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Sharon Tomiko Santos",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "State representative and chair of the House Education Committee; founded three nonprofit organizations.",
+    "own_words": [
+     {
+      "text": "I am working to lower the cost of living while protecting the essential services upon which we all rely.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Focus on modernizing the workforce, increasing housing supply and tax fairness for working families.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-37-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-37 Position 2",
+  "scope_plain": "Voters in Legislative District 37: Southeast Seattle (Rainier Valley, Beacon Hill and parts of the Central District) plus Skyway and part of Renton",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Open seat: Rep. Chipalo Street is running for state Senate.",
+  "incumbent": "Chipalo Street",
+  "open_seat": true,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Jaelynn Scott",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://votejaelynn.com",
+    "website_confidence": "verified",
+    "background": "Executive director of the Lavender Rights Project; ordained minister and former union member. No prior elected office.",
+    "own_words": [
+     {
+      "text": "I will fight for compassionate public-safety, a fairer tax code, universal healthcare",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says she helped redirect $16 million from jails into supportive housing.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Evon McCorkle",
+    "party": "Independent",
+    "incumbent": false,
+    "website": "https://evonmccorkle.com",
+    "website_confidence": "verified",
+    "background": "College student studying mathematics and physics. No prior elected office.",
+    "own_words": [
+     {
+      "text": "I'm not backed by powerful insiders or political machines",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Campaign focuses on education, affordable housing, community safety and restoring trust between people and leaders.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-43",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-43",
+  "scope_plain": "Voters in Legislative District 43: Capitol Hill, downtown, Wallingford, Montlake and the UW campus area",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose. Pedersen is the Senate majority leader.",
+  "incumbent": "Jamie Pedersen",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Jamie Pedersen",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://peopleforpedersen.org/",
+    "website_confidence": "verified",
+    "background": "State senator since 2013 and Senate Democratic majority leader since 2025; general counsel at McKinstry, a Seattle engineering and construction firm.",
+    "own_words": [
+     {
+      "text": "Says he led the effort to pass the Millionaires Tax and a capital gains tax.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "building the full light rail system approved by voters",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Committed to funding schools and tackling housing affordability.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Hannah Sabio-Howell",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://hannahforwashington.com",
+    "website_confidence": "verified",
+    "background": "Communications director at Working Washington; former legislative staffer in the state House and Senate. No prior elected office.",
+    "own_words": [
+     {
+      "text": "we're the only campaign in this race not taking corporate PAC money",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "reduce rent and put homeownership within reach by building more housing",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Wants the ultra-wealthy to pay more to fund schools, healthcare and universal childcare.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-43-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-43 Position 1",
+  "scope_plain": "Voters in Legislative District 43: Capitol Hill, downtown, Wallingford, Montlake and the UW campus area",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose.",
+  "incumbent": "Nicole Macri",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Nicole Macri",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://www.votenicole.org/",
+    "website_confidence": "verified",
+    "background": "State representative since 2017; deputy director of DESC (Downtown Emergency Service Center), which runs supportive housing and services.",
+    "own_words": [
+     {
+      "text": "Says she has led on abortion access, climate change, and affordable housing and healthcare.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I've championed landmark laws to prevent rent gouging",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "I'm voting no on all statewide initiatives",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Alby Clendennin",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Resident director at the University of Washington. No elected experience listed; the pamphlet lists only an email.",
+    "own_words": [
+     {
+      "text": "I consider myself a pragmatic progressive Democrat.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Priorities: reducing corporate influence in politics, regulating AI to prevent unfair pricing, and strengthening public services.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-43-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-43 Position 2",
+  "scope_plain": "Voters in Legislative District 43: Capitol Hill, downtown, Wallingford, Montlake and the UW campus area",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Shaun Scott",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Shaun Scott",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://bolderwashington.org",
+    "website_confidence": "verified",
+    "background": "State representative since 2025; executive director of Got Green; member of Seattle Democratic Socialists of America since 2017.",
+    "own_words": [
+     {
+      "text": "I've worked to end corporate tax breaks",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "the first open socialist in the Washington State Legislature since 1914",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-sd-46",
+  "state": "WA",
+  "level": "state",
+  "office": "State Senator",
+  "district": "LD-46",
+  "scope_plain": "Voters in Legislative District 46: Northeast Seattle (Ravenna, Green Lake, Maple Leaf, Lake City and part of the U District) and nearby areas",
+  "office_explainer": "One of 49 state senators who write Washington's laws and budget. Four-year term.",
+  "why_it_matters": null,
+  "incumbent": "Javier Valdez",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Javier Valdez",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://javiervaldez.com",
+    "website_confidence": "verified",
+    "background": "State senator and chair of the Senate State Government, Tribal Affairs and Elections Committee; former state representative; City of Seattle employee for more than 20 years.",
+    "own_words": [
+     {
+      "text": "Points to laws banning ICE agents from wearing masks and backfilling Planned Parenthood money cut by the Trump administration.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "he wants to pass legislation to prohibit carrying guns in our parks and fairgrounds",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says he supported zoning reform, a cap on rent increases and taxing millionaires.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Sandra Stephens",
+    "party": "Republican",
+    "incumbent": false,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Retired registered nurse; charge nurse at UW Northwest Hospital for her last 16 years. The pamphlet lists only an email.",
+    "own_words": [
+     {
+      "text": "I believe in the sacredness of life",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "The financial base for this is the theft of taxpayers funds through unaudited nonprofits",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-46-1",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-46 Position 1",
+  "scope_plain": "Voters in Legislative District 46: Northeast Seattle (Ravenna, Green Lake, Maple Leaf, Lake City and part of the U District) and nearby areas",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": "Both candidates list a preference for the Democratic Party, so the party label won't help you choose.",
+  "incumbent": "Gerry Pollet",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Gerry Pollet",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://gerrypollet.com",
+    "website_confidence": "verified",
+    "background": "State representative since 2012; UW School of Public Health faculty; public interest attorney and director of Heart of America Northwest (Hanford cleanup).",
+    "own_words": [
+     {
+      "text": "I championed the Millionaires and capital gains taxes",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Says he is working on affordable housing, cutting sales tax and making college free.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Will Dreher",
+    "party": "Democratic",
+    "incumbent": false,
+    "website": "https://willdreher.com",
+    "website_confidence": "verified",
+    "background": "Attorney suing oil, tobacco and AI companies; former federal prosecutor; former 4th-grade public school teacher. First-time candidate.",
+    "own_words": [
+     {
+      "text": "I'm the only candidate promising to aggressively regulate tech",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Plans to fully fund schools, add social-media safeguards for kids, and fund affordable housing, childcare and transit.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-hd-46-2",
+  "state": "WA",
+  "level": "state",
+  "office": "State Representative",
+  "district": "LD-46 Position 2",
+  "scope_plain": "Voters in Legislative District 46: Northeast Seattle (Ravenna, Green Lake, Maple Leaf, Lake City and part of the U District) and nearby areas",
+  "office_explainer": "One of 98 state representatives who write Washington's laws and budget. Two-year term.",
+  "why_it_matters": null,
+  "incumbent": "Darya Farivar",
+  "open_seat": false,
+  "term_years": 2,
+  "candidates": [
+   {
+    "name": "Darya Farivar",
+    "party": "Democratic",
+    "incumbent": true,
+    "website": "https://daryaforhouse.com",
+    "website_confidence": "verified",
+    "background": "State representative; ADA and disability equity specialist in the King County Executive's Office; first Middle Eastern woman elected to the Legislature.",
+    "own_words": [
+     {
+      "text": "After Lake City lost a major grocery store, she passed a law to stop stores from blocking new grocers and pharmacies.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "practical, solutions-focused leadership",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Rodney 'Star' Thornley",
+    "party": "Independent",
+    "incumbent": false,
+    "website": "https://rthornley.com",
+    "website_confidence": "verified",
+    "background": "Member of the Lake Washington Education Association for 35 years; water-ski association leader. No prior elected office.",
+    "own_words": [
+     {
+      "text": "I'm running as an independent because Olympia needs a culture change.",
+      "is_quote": true,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     },
+     {
+      "text": "Priorities: state citizenship for undocumented residents, a three-year college path, and fiscal accountability.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-coa-1-1-pos-5",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Court of Appeals, Division 1, District 1, Judge Position 5",
+  "district": "Division 1, District 1",
+  "scope_plain": "Every King County voter",
+  "office_explainer": "Decides appeals from Superior Court trials; Division I sits in Seattle. Six-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "David S. Mann",
+  "open_seat": false,
+  "term_years": 6,
+  "candidates": [
+   {
+    "name": "David S. Mann",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Court of Appeals judge since 2016 (appointed by Gov. Jay Inslee); former chief judge of Division I; earlier an environmental and land use lawyer and a geophysicist.",
+    "own_words": [
+     {
+      "text": "Says he writes more than 65 opinions a year and is endorsed by most of the state's appellate judges and justices.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "wa-coa-1-1-pos-6",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Court of Appeals, Division 1, District 1, Judge Position 6",
+  "district": "Division 1, District 1",
+  "scope_plain": "Every King County voter",
+  "office_explainer": "Decides appeals from Superior Court trials; Division I sits in Seattle. Six-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Bill A. Bowman",
+  "open_seat": false,
+  "term_years": 6,
+  "candidates": [
+   {
+    "name": "Bill A. Bowman",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Court of Appeals judge since January 2020 (appointed by Gov. Jay Inslee); acting chief judge of Division One; King County Superior Court judge 2011-2020.",
+    "own_words": [
+     {
+      "text": "Points to his Superior Court work to bring resources to underserved parts of King County and safely reduce pretrial incarceration.",
+      "is_quote": false,
+      "source": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "Washington State Voters' Pamphlet, King-Seattle edition (Secretary of State)",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-prosecutor",
+  "state": "WA",
+  "level": "county",
+  "office": "King County Prosecuting Attorney",
+  "district": null,
+  "scope_plain": "Every King County voter",
+  "office_explainer": "The county's lawyer; charges and prosecutes criminal cases. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Leesa Manion",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Leesa Manion",
+    "party": null,
+    "incumbent": true,
+    "website": "https://leesamanion.com",
+    "website_confidence": "verified",
+    "background": "King County Prosecuting Attorney for the past four years, the first woman and first person of color in the job; formerly the office's chief of staff and a deputy prosecutor.",
+    "own_words": [
+     {
+      "text": "My commitment to reducing gun violence shows in a nearly 50% reduction in gun homicides since 2023.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Says she expanded support for domestic violence and sexual assault survivors and alternative sentencing for veterans, youth and people with behavioral health needs.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-assessor",
+  "state": "WA",
+  "level": "county",
+  "office": "King County Assessor",
+  "district": null,
+  "scope_plain": "Every King County voter",
+  "office_explainer": "Sets the value of every property in the county, which shapes each owner's property tax bill.",
+  "why_it_matters": "Open seat: former Assessor John Arthur Wilson is not on the ballot. The office's values decide how property taxes are shared among owners.",
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Rob Foxcurran",
+    "party": null,
+    "incumbent": false,
+    "website": "https://voterobfoxcurran.com",
+    "website_confidence": "verified",
+    "background": "Senior appraiser for the City of Seattle and certified general real estate appraiser; former hearing examiner on the King County Board of Appeals and Equalization; PROTEC17 union shop steward.",
+    "own_words": [
+     {
+      "text": "King County needs an accurate, fair, and transparent Assessor's office that works for everyone.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Will push in Olympia for homestead protections for primary residences and a renter's tax credit.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "the only candidate in this race who has actually done the valuation work",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   },
+   {
+    "name": "Dominique M Scarimbolo",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.domscarimboloforassessor.com",
+    "website_confidence": "verified",
+    "background": "Small family business owner; president of the King County chapter of CAPR (Citizens' Alliance for Property Rights). B.A. in criminal justice from Washington State University.",
+    "own_words": [
+     {
+      "text": "My campaign isn't about making minor adjustments to the status quo.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Wants parcel-by-parcel breakdowns of each property's value, timely appeals and stronger taxpayer protections.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Government works best being fully transparent and accountable",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-elections-director",
+  "state": "WA",
+  "level": "county",
+  "office": "King County Director of Elections",
+  "district": null,
+  "scope_plain": "Every King County voter",
+  "office_explainer": "Runs King County elections: voter registration, ballots, counting and results. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Julie Wise",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Julie Wise",
+    "party": null,
+    "incumbent": true,
+    "website": "https://facebook.com/ElectJulieWise",
+    "website_confidence": "verified",
+    "background": "King County Director of Elections for the past decade; 26-year election administrator; certified national and Washington election administrator.",
+    "own_words": [
+     {
+      "text": "Points to adding more than 80 drop boxes, in-person vote centers, materials in four more languages and ballot alerts.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "maintaining a steadfast, transparent, and nonpartisan elections department",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-council-2",
+  "state": "WA",
+  "level": "county",
+  "office": "Metropolitan King County Council (short and full term)",
+  "district": "District 2",
+  "scope_plain": "King County Council District 2 voters: mainly central and southeast Seattle and the University District area",
+  "office_explainer": "Makes King County's laws and adopts its budget, including Metro transit and public health.",
+  "why_it_matters": "Open seat: Rhonda Lewis was appointed to hold the seat until this election and is not on the ballot. 'Short and full term' means one vote does two things: the winner finishes the current term right away and then serves the next four years. Neither candidate is listed with a party.",
+  "incumbent": "Rhonda Lewis (appointed; not on the ballot)",
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Rebecca Saldaña",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.rebeccasaldana.com",
+    "website_confidence": "verified",
+    "background": "State senator for the 37th District since 2017 and former chair of the Senate Labor Committee; former executive director of Puget Sound Sage.",
+    "own_words": [
+     {
+      "text": "build more housing that is affordable at any income, raise wages, improve transit, and make universal childcare a reality",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Pledges to protect communities from 'masked ICE agents' and to expand behavioral health and crisis response.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   },
+   {
+    "name": "Toshiko Grace Hasegawa",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.votetoshiko.com",
+    "website_confidence": "verified",
+    "background": "Port of Seattle commissioner; small business owner and agency executive director; served on transition teams for Gov. Ferguson, Executive Zahilay and Mayor Wilson.",
+    "own_words": [
+     {
+      "text": "I'll champion anti-displacement protections for renters and home owners alike.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Wants affordable childcare, transportation safety investments, and full funding for mental health and community-led gun violence prevention.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   },
+   {
+    "name": "King County Council: Rhonda Lewis, District 2 (appointed Dec. 9, 2025, until the Nov. 2026 election is certified)",
+    "url": "https://kingcounty.gov/en/dept/council/governance-leadership/county-council/councilmembers-districts/rhonda-lewis"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-council-4",
+  "state": "WA",
+  "level": "county",
+  "office": "Metropolitan King County Council",
+  "district": "District 4",
+  "scope_plain": "King County Council District 4 voters: northwest Seattle (Ballard, Fremont, Queen Anne, Magnolia, Wallingford and nearby)",
+  "office_explainer": "Makes King County's laws and adopts its budget, including Metro transit and public health.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Jorge L. Barón",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Jorge L. Barón",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.electjorgebaron.com",
+    "website_confidence": "verified",
+    "background": "King County Councilmember, first elected in 2023; former executive director of the Northwest Immigrant Rights Project.",
+    "own_words": [
+     {
+      "text": "Priorities: fair and effective legal systems, homelessness response, public health clinics and Harborview, and safer, more reliable Metro transit.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "uncompromising in defending and advancing our community's values",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "king-county-council-8",
+  "state": "WA",
+  "level": "county",
+  "office": "Metropolitan King County Council",
+  "district": "District 8",
+  "scope_plain": "King County Council District 8 voters: West Seattle, downtown and part of the Central District, plus areas outside the city to the south and west",
+  "office_explainer": "Makes King County's laws and adopts its budget, including Metro transit and public health.",
+  "why_it_matters": "County races are nonpartisan, so neither candidate is listed with a party.",
+  "incumbent": "Teresa Mosqueda",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Teresa Mosqueda",
+    "party": null,
+    "incumbent": true,
+    "website": "https://teamteresa.org",
+    "website_confidence": "verified",
+    "background": "King County Councilmember for District 8; former Seattle City Councilmember; earlier worked at the Washington State Labor Council and the Children's Alliance.",
+    "own_words": [
+     {
+      "text": "My priorities remain expanding affordable housing and preventing displacement",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Also lists community safety through behavioral health and gun violence prevention, and transit, childcare, healthcare and union jobs.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   },
+   {
+    "name": "Nick Duda",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.nickduda.com",
+    "website_confidence": "verified",
+    "background": "Former data analytics consultant; recently a policy lead for a Seattle City Councilmember.",
+    "own_words": [
+     {
+      "text": "Progress isn't just about spending more; progress is about delivering better results.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "compassionate, treatment-required paths off the street",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "kc-district-court-west-1",
+  "state": "WA",
+  "level": "judicial",
+  "office": "King County District Court, West Electoral District, Judge Position 1 (short and full term)",
+  "district": "West Electoral District",
+  "scope_plain": "Voters in the King County District Court West Electoral District, which includes all of Seattle",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and protection orders. Four-year term.",
+  "why_it_matters": "Judge Martin was appointed by the County Council and now faces voters for the first time. 'Short and full term' means the winner finishes the current term and serves the next four years.",
+  "incumbent": "Bardi Martin",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Bardi Martin",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.retainjudgebardi.com",
+    "website_confidence": "verified",
+    "background": "King County District Court judge, appointed unanimously by the County Council; 19 years in King County courts, starting as a public defender; former judge pro tem.",
+    "own_words": [
+     {
+      "text": "experience on the bench matters more than ever",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Presides over Shoreline and Kenmore's Community Court, which connects people charged with low-level offenses to housing and treatment.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   },
+   {
+    "name": "Nyjat Rose-Akins",
+    "party": null,
+    "incumbent": false,
+    "website": "https://electnyjatforjudge.com",
+    "website_confidence": "verified",
+    "background": "King County court judge pro tem; former assistant Seattle city attorney; 16 years practicing law in King County.",
+    "own_words": [
+     {
+      "text": "My philosophy is simple: listen first, decide last.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Says she is rated 'Exceptionally Well-Qualified' by five bar groups and has presided over thousands of cases as a judge pro tem.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "King County GIS electoral district maps (district areas)",
+    "url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Districts/KingCo_Electoral_Districts/MapServer"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "kc-district-court-west-2",
+  "state": "WA",
+  "level": "judicial",
+  "office": "King County District Court, West Electoral District, Judge Position 2",
+  "district": "West Electoral District",
+  "scope_plain": "Voters in the King County District Court West Electoral District, which includes all of Seattle",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and protection orders. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Kuljinder K. Dhillon",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Kuljinder K. Dhillon",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "District Court judge since 2021; former public defender, private defense attorney and domestic violence victim advocate.",
+    "own_words": [
+     {
+      "text": "everyone who comes before the court should be treated with respect, fairness, and impartiality",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "kc-district-court-west-3",
+  "state": "WA",
+  "level": "judicial",
+  "office": "King County District Court, West Electoral District, Judge Position 3",
+  "district": "West Electoral District",
+  "scope_plain": "Voters in the King County District Court West Electoral District, which includes all of Seattle",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and protection orders. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Rebecca Robertson",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Rebecca Robertson",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "District Court judge since 2021 (a judge since 2010) and the court's chief presiding judge; former Federal Way municipal judge and prosecutor.",
+    "own_words": [
+     {
+      "text": "Teaches court budgeting, judicial independence, and law and procedure to judges and other officials.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "kc-district-court-west-4",
+  "state": "WA",
+  "level": "judicial",
+  "office": "King County District Court, West Electoral District, Judge Position 4 (short and full term)",
+  "district": "West Electoral District",
+  "scope_plain": "Voters in the King County District Court West Electoral District, which includes all of Seattle",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and protection orders. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Yvonne Chin",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Yvonne Chin",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "District Court judge, appointed unanimously by the County Council in 2026; former legal director of the Sexual Violence Law Center and senior staff attorney at the ACLU of Washington.",
+    "own_words": [
+     {
+      "text": "Her independence, careful preparation, and respect for every person's dignity help ensure our courts are fair",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "kc-district-court-west-5",
+  "state": "WA",
+  "level": "judicial",
+  "office": "King County District Court, West Electoral District, Judge Position 5",
+  "district": "West Electoral District",
+  "scope_plain": "Voters in the King County District Court West Electoral District, which includes all of Seattle",
+  "office_explainer": "Hears misdemeanors, traffic cases, small claims and protection orders. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Kristin Shotwell",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Kristin Shotwell",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "District Court judge since 2021 (elected 2022); former public defender; state-certified Spanish interpreter for more than 25 years.",
+    "own_words": [
+     {
+      "text": "committed to reducing criminal recidivism to improve public safety",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-council-5",
+  "state": "WA",
+  "level": "city",
+  "office": "Seattle City Council (unexpired 1-year term)",
+  "district": "District 5",
+  "scope_plain": "Seattle voters in City Council District 5 (North Seattle: Greenwood to Bitter Lake, Crown Hill to Lake City)",
+  "office_explainer": "Votes on Seattle's budget and laws; this winner serves one year, then the seat is up again.",
+  "why_it_matters": "Seattle's only City Council race this year. Cathy Moore resigned in 2025 and Debora Juarez was appointed to finish the term; she is not running. KUOW reports the result could shift the council's political balance.",
+  "incumbent": "Debora Juarez (appointed; not on the ballot)",
+  "open_seat": true,
+  "term_years": 1,
+  "candidates": [
+   {
+    "name": "Nilu Jenks",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.neighborsfornilu.org",
+    "website_confidence": "verified",
+    "background": "Political and partnerships director at FairVote Washington, which promotes ranked choice voting; former PTA advocacy chair at John Rogers Elementary; Lake City resident.",
+    "own_words": [
+     {
+      "text": "My priorities are straightforward: build more affordable housing, improve safety on Lake City Way and Aurora",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Her platform pledges 1,000 new affordable homes in District 5.",
+      "is_quote": false,
+      "source": "https://www.neighborsfornilu.org/platform"
+     },
+     {
+      "text": "make sure ranked choice voting is successfully implemented in 2027",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   },
+   {
+    "name": "Julie Kang",
+    "party": null,
+    "incumbent": false,
+    "website": "https://julieforseattle.com",
+    "website_confidence": "verified",
+    "background": "Director and faculty member at Seattle University and the University of Washington; helped found a community bank; 30-year District 5 resident.",
+    "own_words": [
+     {
+      "text": "My first priority is affordability.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "I support police staffing, gun violence prevention, and enforcement focused on violent crime and trafficking.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Her priorities page backs moving forward with a second police precinct in District 5.",
+      "is_quote": false,
+      "source": "https://julieforseattle.com/priorities/"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "KUOW: District 5 candidates debate public safety (Sept. 24, 2026)",
+    "url": "https://www.kuow.org/governing/2026-09-24/what-should-be-done-about-seattles-aurora-ave-district-5-council-candidates-debate-public-safety"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-1",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 1",
+  "district": "Position 1",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Cat McDowall",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Cat McDowall",
+    "party": null,
+    "incumbent": true,
+    "website": "https://judgecatmcdowall.com",
+    "website_confidence": "verified",
+    "background": "Seattle Municipal Court judge since 2020; former senior deputy prosecuting attorney and civil attorney.",
+    "own_words": [
+     {
+      "text": "Presides over the Domestic Violence Intervention Project and co-directs Seattle Youth Traffic Court.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-2",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 2",
+  "district": "Position 2",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot. The current judge in this position is not running.",
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Katharine Edwards",
+    "party": null,
+    "incumbent": false,
+    "website": "https://edwardsforsmc.com",
+    "website_confidence": "verified",
+    "background": "Supervising public defender; 16 years in Seattle Municipal Court and other King County courtrooms.",
+    "own_words": [
+     {
+      "text": "Accountability should fit the offense and leave the person better able to stay out of court.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-3",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 3",
+  "district": "Position 3",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Pooja Vaddadi",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Pooja Vaddadi",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Seattle Municipal Court judge; ran for this seat in 2022 as a career public defender. She submitted no statement for the voters' pamphlet.",
+    "own_words": [],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   },
+   {
+    "name": "The Urbanist (2022 guest opinion): Vaddadi ran for Position 3 against the incumbent",
+    "url": "https://www.theurbanist.org/2022/10/24/opinion-pooja-vaddadi-municipal-court/"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-4",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 4",
+  "district": "Position 4",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Anita Crawford-Willis",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Anita Crawford-Willis",
+    "party": null,
+    "incumbent": true,
+    "website": null,
+    "website_confidence": "unverified",
+    "background": "Presiding judge of Seattle Municipal Court; appointed in 2017 and re-elected in 2018 and 2022; former public defender and administrative law judge.",
+    "own_words": [
+     {
+      "text": "I believe accountability and compassion are complementary values",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-5",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 5",
+  "district": "Position 5",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "The only contested Seattle Municipal Court race; neither candidate is the current judge. A career public defender faces a former prosecutor and city attorney.",
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Gabe Rothstein",
+    "party": null,
+    "incumbent": false,
+    "website": "https://www.gabeforjudge.com",
+    "website_confidence": "verified",
+    "background": "Public defender since 2005 and judge pro tem; chairs the Washington State Bar Association's Character and Fitness Board.",
+    "own_words": [
+     {
+      "text": "Seattle Municipal Court is the people's court, and everyone deserves to be listened to and heard.",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Says he believes in treatment, recovery, redemption and second chances.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   },
+   {
+    "name": "Garmon Newsom",
+    "party": null,
+    "incumbent": false,
+    "website": "https://newsomforjudge.com",
+    "website_confidence": "verified",
+    "background": "Seattle Municipal Court judge pro tem; 34 years as a felony and misdemeanor prosecutor, municipal attorney and civil litigator; former King County Ethics Board member.",
+    "own_words": [
+     {
+      "text": "Seattle Municipal Court needs experienced judges with sound judgment",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     },
+     {
+      "text": "Focused on protecting the community while giving defendants a chance at diversion, services and treatment.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "responded",
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-6",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 6",
+  "district": "Position 6",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot. The current judge in this position is not running.",
+  "incumbent": null,
+  "open_seat": true,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Shantrice Anderson",
+    "party": null,
+    "incumbent": false,
+    "website": "https://andersonforjudge.com",
+    "website_confidence": "verified",
+    "background": "Civil attorney and Seattle Municipal Court judge pro tem and magistrate; former public defender in King County and Colorado.",
+    "own_words": [
+     {
+      "text": "everyone who walks through Seattle Municipal Court's doors deserves to be treated with fairness, dignity, and respect",
+      "is_quote": true,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ },
+ {
+  "id": "seattle-muni-court-7",
+  "state": "WA",
+  "level": "judicial",
+  "office": "Seattle Municipal Court Judge, Position 7",
+  "district": "Position 7",
+  "scope_plain": "Every City of Seattle voter",
+  "office_explainer": "Hears misdemeanor cases charged under Seattle city law. Four-year term.",
+  "why_it_matters": "Only one candidate is on the ballot.",
+  "incumbent": "Damon Shadid",
+  "open_seat": false,
+  "term_years": 4,
+  "candidates": [
+   {
+    "name": "Damon Shadid",
+    "party": null,
+    "incumbent": true,
+    "website": "https://www.shadidforseattle.com",
+    "website_confidence": "verified",
+    "background": "Seattle Municipal Court judge; presided over Seattle's Mental Health Court for four years and is helping build the new Connection Court.",
+    "own_words": [
+     {
+      "text": "Believes the Municipal Court should play a central role in improving access to housing, substance abuse treatment and mental health care.",
+      "is_quote": false,
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+     }
+    ],
+    "lwv_status": "unknown",
+    "lwv_url": null
+   }
+  ],
+  "sources": [
+   {
+    "name": "King County Local Voters' Pamphlet, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+   },
+   {
+    "name": "King County sample ballot, Nov. 3, 2026",
+    "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/current-election/2026/11/sample-ballot.pdf"
+   }
+  ],
+  "vote_for": 1,
+  "is_retention": false,
+  "confidence": "verified"
+ }
+]

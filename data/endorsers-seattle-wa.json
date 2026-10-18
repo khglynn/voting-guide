@@ -1,0 +1,62 @@
+[
+  {
+    "id": "king-county-democrats",
+    "name": "King County Democrats",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county Democratic Party organization. Its homepage: 'We are a community of Democrats across 17 Legislative Districts, working together to elect progressive leaders' (https://www.kcdems.org/).",
+    "geography": ["seattle-wa"],
+    "guide_url": "https://www.kcdems.org/our-party/e/2026-endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "king-county-republicans",
+    "name": "King County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county Republican Party organization. Its guide says picks were made 'to represent our voters on issues like taxes and public safety,' with input from its 17 legislative district organizations (https://kcgop.org/votersguide/).",
+    "geography": ["seattle-wa"],
+    "guide_url": "https://kcgop.org/votersguide/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "mlk-labor",
+    "name": "MLK Labor (Martin Luther King, Jr. County Labor Council)",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Labor council with no outside bias rating, labeled lean_left like other unions in this guide. Its stated mission: 'to unify all labor organizations in King County to build power and strength for all workers,' including working 'to elect pro-worker candidates' (https://www.mlklabor.org/about/). Represents more than 150 unions.",
+    "geography": ["seattle-wa"],
+    "guide_url": "https://www.mlklabor.org/endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "seattle-metro-chamber",
+    "name": "Seattle Metropolitan Chamber of Commerce (CASE PAC)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Chamber of commerce with no outside bias rating, labeled lean_right like other chambers in this guide. Its stated belief: 'a thriving community depends on vibrant business'; it calls itself 'the largest and most diverse business association in the region' (https://www.seattlechamber.com/about/). Its political committee is the Civic Alliance for a Sound Economy (CASE).",
+    "geography": ["seattle-wa"],
+    "guide_url": "https://www.seattlechamber.com/advocacy",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "fuse-washington",
+    "name": "Fuse Washington (Progressive Voters Guide)",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Self-described progressive advocacy group with no outside bias rating. Its homepage: 'Join the largest progressive organization in Washington' (https://fusewashington.org/). Its Progressive Voters Guide recommends candidates based on endorsements from its progressive partner groups.",
+    "geography": ["WA", "seattle-wa"],
+    "guide_url": "https://www.progressivevotersguide.com/washington/2026/general",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  }
+]

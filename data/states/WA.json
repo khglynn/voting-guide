@@ -66,7 +66,7 @@
     "available": true,
     "start": "2026-10-16",
     "end": "2026-11-03",
-    "hours_note": "Washington has no traditional early voting because everyone votes by mail; the 18-day voting period (Oct 16 to Nov 3) is the early voting. Voting centers open for replacement ballots, accessible voting units, and same-day registration. King County Elections headquarters in Renton: Oct 13 to 24, Mon to Fri 8:30 AM to 4:30 PM; Oct 25 to 31, Mon to Fri 8:30 AM to 6:00 PM; Election Day 8:30 AM to 8:00 PM. King County also opens additional Vote Centers on Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (closing 8 PM); locations are on the Vote Centers page.",
+    "hours_note": "Washington has no traditional early voting because everyone votes by mail; the 18-day voting period (Oct 16 to Nov 3) is the early voting. Voting centers open for replacement ballots, accessible voting units, and same-day registration. King County Elections headquarters in Renton: weekdays Oct 14 to 23, 8:30 AM to 4:30 PM; weekdays Oct 26 to 30, 8:30 AM to 6:00 PM; Sat Oct 31, 10 AM to 4 PM; Mon Nov 2, 8:30 AM to 6 PM; Election Day 8:30 AM to 8:00 PM. King County also opens additional Vote Centers on Sat Oct 31 (10 AM to 4 PM), Mon Nov 2 (8:30 AM to 6 PM) and Election Day (closing 8 PM); locations are on the Vote Centers page.",
     "vote_centers": true,
     "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "confidence": "verified"
@@ -306,6 +306,10 @@
     {
       "name": "2026 General Election Voters' Pamphlet, King County / Seattle edition (PDF): deadlines, how to vote, measures, judicial candidates",
       "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+    },
+    {
+      "name": "King County Local Voters' Pamphlet, Nov 3, 2026 (PDF, King County Elections): Vote Center locations and hours, including Renton HQ (p. 6); drop boxes open the day after ballots are mailed (Oct 15)",
+      "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
     },
     {
       "name": "VoteWA / MyVote: registration, ballot status, drop boxes, replacement ballots",

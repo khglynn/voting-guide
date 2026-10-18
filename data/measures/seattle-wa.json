@@ -1,0 +1,36 @@
+[
+  {
+    "id": "seattle-prop-1",
+    "state": "WA",
+    "level": "city",
+    "jurisdiction": "City of Seattle",
+    "number": "Proposition No. 1 (Seattle Transit Measure)",
+    "official_title": "The City of Seattle adopted Ordinance No. 127474 concerning funding for transit service and related transportation needs in Seattle. The City of Seattle's Proposition 1 would dedicate funding to transit services benefiting Seattle residents, including more frequent service; affordable fare programs for qualifying individuals; reliability, access, and climate projects; enhanced service on RapidRide and routes serving regional centers and high equity priority areas; facilitation of Sound Transit expansion; and others as provided in Ordinance 127474. It authorizes a 0.3% sales and use tax for up to ten years to replace the current voter-approved 0.15% sales tax expiring March 31, 2027. Should this Proposition be approved?",
+    "plain_summary": "Lets Seattle replace its expiring 0.15% transit sales tax with a new one of up to 0.3% (as much as double) for up to 10 years, starting no earlier than April 1, 2027. The city estimates about $138 million a year, mostly for more King County Metro bus service and the Seattle Streetcar, plus free or reduced-fare passes, safety and access projects, transit repairs and city staff for Sound Transit projects.",
+    "yes_means": "Seattle can keep a transit sales tax after March 2027 at up to 0.3% (double today's 0.15%) for up to 10 years, paying for more frequent buses, free and reduced-fare passes and related projects.",
+    "no_means": "The current 0.15% transit sales tax ends March 31, 2027, and the city says the bus trips it buys from Metro (about 7% of Seattle's bus service), its transit pass programs and streetcar money would be cut unless it finds other funding.",
+    "current_law": "Seattle voters approved a 0.15% sales tax for transit in 2020 (Ordinance 126115; the tax was set by Ordinance 126250). It pays for added Metro bus service, transit passes, the Seattle Streetcar and related programs in Seattle, and expires March 31, 2027.",
+    "fiscal_impact": "City estimate (SDOT fiscal note): about $138 million a year on average over 10 years, about double what the expiring 0.15% tax would collect. Collections would start April 1, 2027: slightly under $90 million in 2027 and about $120 million in 2028, the first full year. In the 2028 spend plan, about $93 million of $110 million goes to transit service. Putting the measure on the ballot costs the city an estimated $1 million to $1.25 million. KUOW, citing SDOT, reports the tax would cost a two-person, median-income household about $58 a year. The pamphlet's supporters say '$29 more per year per household' and '$17 a year' for a low-income household; the opponent says Seattle's total sales tax would reach 10.7%. None of those three figures comes from the city's fiscal note.",
+    "pass_threshold": "Simple majority (more than 50% yes). The pamphlet cites RCW 36.73.065(1).",
+    "referred_by": "council",
+    "confusing_wording_note": "The ballot says the 0.3% tax will 'replace' the current 0.15% tax. That is true, but it means the rate can double, from 0.15% to as much as 0.3%; it is not a renewal at the same rate. The ballot also says it 'authorizes a 0.3%' tax, while the county's explanatory statement says the council would set the tax by a later ordinance at no more than 0.3%. Finally, Seattle's August 4 primary ballot had a different 'Proposition 1' (the library levy), and the King County Democrats' list still shows that one as 'Seattle Proposition 1.' The November Prop 1 is only the transit measure.",
+    "supporters_case": {
+      "text": "Pamphlet statement in favor (Kirk Hovenkotter, Kathryn Ricchiuto and Nick Sattele):the 2020 measure 'has delivered' more frequent buses and free passes for 10,000 people, and the funding 'runs out in 2027 unless we renew it.' For 'just $29 more per year per household,' buses would come more often, later at night and on weekends, and free passes for low-income residents would double. Their rebuttal says a no vote 'cuts bus service working people rely on.' Endorsers listed include Mayor Katie Wilson, King County Executive Girmay Zahilay, Seattle councilmembers Hollingsworth, Saka, Foster, Juarez, Kettle, Lin, Rinck and Rivera, MLK Labor, ATU 587 and the King County Democrats.",
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+    },
+    "opponents_case": {
+      "text": "Pamphlet statement in opposition (Ari Hoffman): the measure would 'double the Seattle Transit Measure sales tax' and push Seattle's sales tax to 10.7%, which falls hardest on lower-income households. He argues some money is tied to Sound Transit while its light-rail plans face money problems, and that government should 'demonstrate accountability' and collect unpaid fares before asking for more. His rebuttal: 'Doubling this regressive tax is not affordability.'",
+      "source": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044"
+    },
+    "official_text_url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf?rev=926b9e2568fe4c6891e38e8f76ec69c0&hash=76502C08517AE6A6AFACA229F59B2044",
+    "official_guide_url": "https://www.seattle.gov/documents/Departments/SDOT/TransitProgram/STM/Summary_and_Fiscal_Note.pdf",
+    "explainers": [
+      {
+        "source": "KUOW (Seattle's NPR station)",
+        "title": "Seattle City Council approves transit tax, voters get say in November",
+        "url": "https://www.kuow.org/governing/2026-07-21/seattle-city-council-approves-transit-tax-voters-get-say-in-november"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

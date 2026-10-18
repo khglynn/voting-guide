@@ -1,0 +1,2712 @@
+[
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-us-house-2",
+    "status": "endorsed",
+    "choice": "Brendan F. Boyle",
+    "why": "Says Boyle is \"serious about the business of governing,\" knows the federal budget well and has delivered federal money for Philadelphia; it found Arriaga could not \"convey a coherent vision\" in her board interview.",
+    "url": "https://www.inquirer.com/opinion/editorials/brendan-boyle-2nd-congressional-district-endorsement-20261015.html",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No general-election editorial on the board's index as of Oct 17. Rabb's campaign site says the board endorsed him in the May primary; that is not a November pick.",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-sd-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-sd-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-sd-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-170",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-172",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-173",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-174",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-175",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-177",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-179",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-180",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-181",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-182",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-184",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-185",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-186",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-188",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-190",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-191",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-192",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-194",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-195",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-197",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-198",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-200",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-201",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-202",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "pa-hd-203",
+    "status": "not_found",
+    "choice": null,
+    "why": "No endorsement on the board's editorial index as of Oct 17. The board says it focuses on races \"where its analysis can best clarify the choices facing voters\" and that \"the lack of an endorsement is not a judgment.\"",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the charter-change questions on the board's editorial index as of Oct 17. Check again closer to Nov 3.",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-inquirer-eb",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the charter-change questions on the board's editorial index as of Oct 17. Check again closer to Nov 3.",
+    "url": "https://www.inquirer.com/opinion/editorials/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-us-house-2",
+    "status": "endorsed",
+    "choice": "Brendan F. Boyle",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-us-house-3",
+    "status": "endorsed",
+    "choice": "Chris Rabb",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-us-house-5",
+    "status": "endorsed",
+    "choice": "Mary Gay Scanlon",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-sd-2",
+    "status": "endorsed",
+    "choice": "Christine M. Tartaglione",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-sd-4",
+    "status": "endorsed",
+    "choice": "Art Haywood",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-sd-8",
+    "status": "endorsed",
+    "choice": "Anthony Hardy Williams",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-10",
+    "status": "endorsed",
+    "choice": "Amen Brown",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-170",
+    "status": "endorsed",
+    "choice": "Martina White",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list. Here the federation backs the Republican incumbent, Martina White.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-172",
+    "status": "endorsed",
+    "choice": "Sean M. Dougherty",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-173",
+    "status": "endorsed",
+    "choice": "Pat Gallagher",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-174",
+    "status": "endorsed",
+    "choice": "Ed Neilson",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-175",
+    "status": "endorsed",
+    "choice": "MaryLouise Isaacson",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-177",
+    "status": "endorsed",
+    "choice": "Joe Hohenstein",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-179",
+    "status": "endorsed",
+    "choice": "Jason T. Dawkins",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-180",
+    "status": "endorsed",
+    "choice": "Jose A. Giral",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-181",
+    "status": "endorsed",
+    "choice": "Malcolm Kenyatta",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-182",
+    "status": "endorsed",
+    "choice": "Ben Waxman",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-184",
+    "status": "endorsed",
+    "choice": "Elizabeth Fiedler",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-185",
+    "status": "endorsed",
+    "choice": "Regina Young",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-186",
+    "status": "endorsed",
+    "choice": "Jordan A. Harris",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-188",
+    "status": "endorsed",
+    "choice": "Rick Krajewski",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-190",
+    "status": "endorsed",
+    "choice": "Roni Green",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list. Listed there as \"Gwendolyn Green,\" the same candidate the ballot prints as Roni Green.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-191",
+    "status": "endorsed",
+    "choice": "Joanna E. McClinton",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-192",
+    "status": "endorsed",
+    "choice": "Morgan Cephas",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-194",
+    "status": "endorsed",
+    "choice": "Tarik Khan",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-195",
+    "status": "endorsed",
+    "choice": "Sierra McNeil",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-197",
+    "status": "endorsed",
+    "choice": "Danilo Burgos",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-198",
+    "status": "endorsed",
+    "choice": "Darisha K. Parker",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-200",
+    "status": "endorsed",
+    "choice": "Chris Johnson",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-201",
+    "status": "endorsed",
+    "choice": "Andre D. Carroll",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-202",
+    "status": "endorsed",
+    "choice": "Jared Solomon",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-203",
+    "status": "endorsed",
+    "choice": "Anthony Bellmon",
+    "why": "On the Pennsylvania AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Labor 2026 list covers candidates only; no position on the Philadelphia charter questions was found.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Labor 2026 list covers candidates only; no position on the Philadelphia charter questions was found.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-us-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-sd-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-sd-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-sd-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-170",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-172",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-173",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-174",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-175",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-177",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-179",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-180",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-181",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-182",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-184",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-185",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-186",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-188",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-190",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-191",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-192",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-194",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-195",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-197",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-198",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-200",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-201",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-202",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "pa-hd-203",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "philadelphia-council-afl-cio",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Council's own 2026 voting page (checked Oct 17) lists no endorsements. The statewide Pennsylvania AFL-CIO list is shown as a separate source.",
+    "url": "https://phillyaflcio.org/vote26",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-us-house-2",
+    "status": "endorsed",
+    "choice": "Brendan F. Boyle",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-us-house-3",
+    "status": "endorsed",
+    "choice": "Chris Rabb",
+    "why": "Chairman Bob Brady said the day after the May primary that he backs Rabb as the nominee. The party had backed Sharif Street in that primary (Inquirer).",
+    "url": "https://www.inquirer.com/politics/philadelphia/chris-rabb-progressive-win-democratic-party-20260520.html",
+    "date": "2026-05-20",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-us-house-5",
+    "status": "endorsed",
+    "choice": "Mary Gay Scanlon",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-sd-2",
+    "status": "endorsed",
+    "choice": "Christine M. Tartaglione",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-sd-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-sd-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-10",
+    "status": "endorsed",
+    "choice": "Amen Brown",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-170",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-172",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-173",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-174",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-175",
+    "status": "endorsed",
+    "choice": "MaryLouise Isaacson",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-177",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-179",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-180",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-181",
+    "status": "endorsed",
+    "choice": "Malcolm Kenyatta",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-182",
+    "status": "endorsed",
+    "choice": "Ben Waxman",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-184",
+    "status": "endorsed",
+    "choice": "Elizabeth Fiedler",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-185",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-186",
+    "status": "endorsed",
+    "choice": "Jordan A. Harris",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-188",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-190",
+    "status": "endorsed",
+    "choice": "Roni Green",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-191",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-192",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-194",
+    "status": "endorsed",
+    "choice": "Tarik Khan",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-195",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-197",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-198",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-200",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-201",
+    "status": "endorsed",
+    "choice": "Andre D. Carroll",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Democratic Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-202",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "pa-hd-203",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed among this candidate's endorsements in the Philadelphia Citizen's guide, and the committee's own 2026 general-election list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the committee's general-election sample ballot was not located.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-democratic-city-committee",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the committee's general-election sample ballot was not located.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-us-house-2",
+    "status": "endorsed",
+    "choice": "Jessica Arriaga",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-us-house-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-us-house-5",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Citizen's guide lists no Philadelphia GOP endorsement for Manganaro, whose campaign page is on the Delaware County GOP site.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-sd-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-sd-4",
+    "status": "endorsed",
+    "choice": "Todd Johnson",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-sd-8",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-10",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-170",
+    "status": "endorsed",
+    "choice": "Martina White",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-172",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-173",
+    "status": "endorsed",
+    "choice": "Bill Griffin",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-174",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-175",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-177",
+    "status": "endorsed",
+    "choice": "Robyn Bird",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-179",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-180",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-181",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-182",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-184",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-185",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-186",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-188",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-190",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-191",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-192",
+    "status": "endorsed",
+    "choice": "Tiffany Vann Brown",
+    "why": "The Philadelphia Citizen's guide lists the Philadelphia Republican Party among this candidate's endorsements. The committee's own 2026 list was not found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-09-18",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-194",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-195",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-197",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-198",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-200",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-201",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-202",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "pa-hd-203",
+    "status": "not_found",
+    "choice": null,
+    "why": "No Republican is on the ballot in this race, and no Philadelphia GOP position was found.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the committee's own 2026 materials were not located.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "phila-republican-city-committee",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the committee's own 2026 materials were not located.",
+    "url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-us-house-3",
+    "status": "endorsed",
+    "choice": "Chris Rabb",
+    "why": "Listed on the WFP's own 2026 candidates page.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-us-house-5",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-sd-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-sd-4",
+    "status": "endorsed",
+    "choice": "Art Haywood",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-sd-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-10",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-170",
+    "status": "endorsed",
+    "choice": "Rob Gurtcheff",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-172",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-173",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-174",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-175",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-177",
+    "status": "endorsed",
+    "choice": "Joe Hohenstein",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-179",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-180",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-181",
+    "status": "endorsed",
+    "choice": "Malcolm Kenyatta",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-182",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-184",
+    "status": "endorsed",
+    "choice": "Elizabeth Fiedler",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-185",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-186",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-188",
+    "status": "endorsed",
+    "choice": "Rick Krajewski",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-190",
+    "status": "endorsed",
+    "choice": "Roni Green",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-191",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-192",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-194",
+    "status": "endorsed",
+    "choice": "Tarik Khan",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-195",
+    "status": "endorsed",
+    "choice": "Sierra McNeil",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-197",
+    "status": "endorsed",
+    "choice": "Danilo Burgos",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-198",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-200",
+    "status": "endorsed",
+    "choice": "Chris Johnson",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-201",
+    "status": "endorsed",
+    "choice": "Andre D. Carroll",
+    "why": "On the WFP's own 2026 Pennsylvania candidate list (its candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-202",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-203",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the WFP's full 2026 Pennsylvania candidate list (its own candidates page, including the rows behind \"View More\"), checked Oct 17.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the Philadelphia charter questions found on the WFP candidates page.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the Philadelphia charter questions found on the WFP candidates page.",
+    "url": "https://workingfamilies.org/candidates/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-us-house-2",
+    "status": "endorsed",
+    "choice": "Brendan F. Boyle",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-us-house-3",
+    "status": "endorsed",
+    "choice": "Chris Rabb",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-us-house-5",
+    "status": "endorsed",
+    "choice": "Mary Gay Scanlon",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-sd-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-sd-4",
+    "status": "endorsed",
+    "choice": "Art Haywood",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-sd-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-10",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-170",
+    "status": "endorsed",
+    "choice": "Rob Gurtcheff",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-172",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-173",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-174",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-175",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-177",
+    "status": "endorsed",
+    "choice": "Joe Hohenstein",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-179",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-180",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-181",
+    "status": "endorsed",
+    "choice": "Malcolm Kenyatta",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-182",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-184",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-185",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-186",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-188",
+    "status": "endorsed",
+    "choice": "Rick Krajewski",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-190",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-191",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-192",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the club's current graphic (file name \"v3\"). Blue Voter Guide lists a Liberty City endorsement of Morgan Cephas, citing the same page; it may come from an earlier version. Unresolved.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-194",
+    "status": "endorsed",
+    "choice": "Tarik Khan",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-195",
+    "status": "endorsed",
+    "choice": "Sierra McNeil",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-197",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-198",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-200",
+    "status": "endorsed",
+    "choice": "Chris Johnson",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-201",
+    "status": "endorsed",
+    "choice": "Andre D. Carroll",
+    "why": "On the club's own 2026 general-election endorsement graphic.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-202",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "pa-hd-203",
+    "status": "no_position",
+    "choice": null,
+    "why": "Not on the club's published 2026 general-election slate, which names 13 races.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "philadelphia-question-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The club's 2026 slate covers candidates only and takes no stand on the charter questions.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "liberty-city-lgbtq-dems",
+    "target_id": "philadelphia-question-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The club's 2026 slate covers candidates only and takes no stand on the charter questions.",
+    "url": "https://www.libertycity.org/endorsements",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "committee-of-seventy",
+    "target_id": "philadelphia-question-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "Seventy explains both questions (\"Seventy Says\") without a recommendation. It describes itself as nonpartisan and says it does not \"represent any special interests.\"",
+    "url": "https://seventy.org/get-informed/voter-guide/2026-general-ballot-questions/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "committee-of-seventy",
+    "target_id": "philadelphia-question-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "Seventy explains both questions (\"Seventy Says\") without a recommendation. It describes itself as nonpartisan and says it does not \"represent any special interests.\"",
+    "url": "https://seventy.org/get-informed/voter-guide/2026-general-ballot-questions/",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "philadelphia-question-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League position on Philadelphia's charter questions was found. The League of Women Voters of Philadelphia's own guide was not located.",
+    "url": "https://www.vote411.org/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "philadelphia-question-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "No League position on Philadelphia's charter questions was found. The League of Women Voters of Philadelphia's own guide was not located.",
+    "url": "https://www.vote411.org/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-sd-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-sd-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-sd-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-10",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-170",
+    "status": "endorsed",
+    "choice": "Martina White",
+    "why": "On ChamberPAC's full 2026 state legislative slate (announced Sept. 9), the business PAC's list of \"pro-jobs, pro-growth candidates.\"",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-172",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-173",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-174",
+    "status": "endorsed",
+    "choice": "Ed Neilson",
+    "why": "On ChamberPAC's full 2026 state legislative slate (announced Sept. 9), the business PAC's list of \"pro-jobs, pro-growth candidates.\"",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-175",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-177",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-179",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-180",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-181",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-182",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-184",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-185",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-186",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-188",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-190",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-191",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-192",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-194",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-195",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-197",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-198",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-200",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-201",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-202",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-203",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  }
+]

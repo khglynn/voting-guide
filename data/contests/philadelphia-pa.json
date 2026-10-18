@@ -1,0 +1,1869 @@
+[
+  {
+    "id": "pa-us-house-2",
+    "state": "PA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-2 (Northeast Philly, River Wards, parts of North Philly and Center City)",
+    "scope_plain": "Voters in U.S. House District 2: Northeast Philadelphia, the River Wards and parts of North Philadelphia and Center City (Philadelphia Citizen). In Philadelphia, ballots in state House districts 170, 172, 173, 174, 175, 177, 179, 180, 181, 182, 195, 197, 198, 202 and 203 can fall in this district; some of those House districts are split between two congressional districts. Printed on the ballot as \"Representative in Congress.\"",
+    "office_explainer": "One of Pennsylvania's 17 members of the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Boyle is the top Democrat on the House Budget Committee. The Inquirer notes he would chair it if Democrats win the House in November.",
+    "vote_for": 1,
+    "incumbent": "Brendan F. Boyle",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brendan F. Boyle",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://voteboyle.com/",
+        "website_confidence": "verified",
+        "background": "In Congress since 2015 and in the 2nd District since 2019; top Democrat on the House Budget Committee and co-founder of the Democratic Blue Collar Caucus. Grew up in Olney; elected to the state House from Northeast Philadelphia in 2008.",
+        "own_words": [
+          {
+            "text": "Says he will focus on affordability and fight Trump policies he blames for higher prices, and wants to reform the debt-ceiling rules behind shutdown fights (as described to the Inquirer Editorial Board).",
+            "is_quote": false,
+            "source": "https://www.inquirer.com/opinion/editorials/brendan-boyle-2nd-congressional-district-endorsement-20261015.html"
+          },
+          {
+            "text": "Built a Budget Committee dashboard that uses local data to track how tariffs and other legislation affect the cost of living (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Jessica Arriaga",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://jessforcongress.com/",
+        "website_confidence": "verified",
+        "background": "Operating room technician, community health leader and entrepreneur, born and raised in North Philadelphia; Republican leader of the 37th Ward.",
+        "own_words": [
+          {
+            "text": "I'm not a career politician, and I'm not backed by political insiders.",
+            "is_quote": true,
+            "source": "https://jessforcongress.com/"
+          },
+          {
+            "text": "Higher costs. Less safety. Fewer opportunities.",
+            "is_quote": true,
+            "source": "https://jessforcongress.com/"
+          },
+          {
+            "text": "Priorities: curbing government spending, cutting taxes, improving public safety and quality education (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-177",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/f637c7f7-ea41-408e-8e4d-fcdc49fa0172.pdf"
+      },
+      {
+        "name": "Committee of Seventy: U.S. House candidates, 2026 general",
+        "url": "https://seventy.org/get-informed/voter-guide/us-house-of-representatives/"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "Inquirer Editorial Board: Brendan Boyle for PA-2 (Oct 15, 2026)",
+        "url": "https://www.inquirer.com/opinion/editorials/brendan-boyle-2nd-congressional-district-endorsement-20261015.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-us-house-3",
+    "state": "PA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-3 (most of Center City, Northwest, West and much of South Philly)",
+    "scope_plain": "Voters in U.S. House District 3: most of Center City, Fairmount, Northwest Philadelphia and much of West and South Philadelphia (Philadelphia Citizen). In Philadelphia, ballots in state House districts 10, 175, 181, 182, 184, 185, 186, 188, 190, 191, 192, 194, 195, 198, 200 and 201 can fall in this district; some of those House districts are split between two congressional districts. Printed on the ballot as \"Representative in Congress.\"",
+    "office_explainer": "One of Pennsylvania's 17 members of the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Open seat: Rep. Dwight Evans is retiring. Rabb beat the party-backed Sharif Street by nearly 15 points in the May Democratic primary (Inquirer). No Republican is on the ballot.",
+    "vote_for": 1,
+    "incumbent": "Dwight Evans (retiring)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chris Rabb",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.chrisrabb.com/",
+        "website_confidence": "verified",
+        "background": "Five-term state representative for the 200th District in Northwest Philadelphia, first elected in 2016. Did not run for re-election to the state House this year.",
+        "own_words": [
+          {
+            "text": "It is time to put community over commerce, expand democracy, strengthen workers' rights.",
+            "is_quote": true,
+            "source": "https://www.chrisrabb.com/"
+          },
+          {
+            "text": "I'm running because we're ready for a movement-aligned approach to governance, not another establishment ally.",
+            "is_quote": true,
+            "source": "https://www.chrisrabb.com/"
+          },
+          {
+            "text": "Backs universal health care, guaranteed housing and jobs, and fully funded public schools; takes no corporate PAC money (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Dennis Mahoney",
+        "party": "The Independent Party",
+        "incumbent": false,
+        "website": "https://mahoneyforcongress.com/",
+        "website_confidence": "verified",
+        "background": "Founder of AOI Solutions, a disaster relief and international development group; two master's degrees from Penn. First run for office. Listed on the ballot as \"The Independent Party\"; his campaign calls him an independent.",
+        "own_words": [
+          {
+            "text": "Service before politics. Neighborhoods before parties.",
+            "is_quote": true,
+            "source": "https://mahoneyforcongress.com/"
+          },
+          {
+            "text": "Platform: phase out the \"benefits cliff,\" expand affordable housing, neighborhood-based services, child- and family-centered programs, and building wealth through home ownership and small business (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-4-194",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/9af08aa3-c9bc-4efd-8c5a-b7b9717283a4.pdf"
+      },
+      {
+        "name": "Committee of Seventy: U.S. House candidates, 2026 general",
+        "url": "https://seventy.org/get-informed/voter-guide/us-house-of-representatives/"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "Inquirer, May 20, 2026: Rabb wins PA-3 primary",
+        "url": "https://www.inquirer.com/politics/philadelphia/chris-rabb-progressive-win-democratic-party-20260520.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-us-house-5",
+    "state": "PA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-5 (parts of South and West Philly, plus Delaware County)",
+    "scope_plain": "Voters in U.S. House District 5: Delaware County, parts of South Philadelphia and parts of Chester and Montgomery counties (Philadelphia Citizen). In Philadelphia, ballots in state House districts 184, 185, 186 and 191 can fall in this district; some of those House districts are split between two congressional districts. Printed on the ballot as \"Representative in Congress.\"",
+    "office_explainer": "One of Pennsylvania's 17 members of the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Mary Gay Scanlon",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mary Gay Scanlon",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.scanlonforcongress.com/",
+        "website_confidence": "verified",
+        "background": "In Congress for the 5th District since 2019; serves on the Rules and Judiciary committees. Former attorney at Ballard Spahr and the Education Law Center of Pennsylvania.",
+        "own_words": [
+          {
+            "text": "Introduced the \"Take Back Our Hospitals Act\" to bar private equity firms from owning hospitals or nursing facilities, after the Crozer Health closure in her district (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          },
+          {
+            "text": "Says she has worked to preserve Medicaid, voting rights and public education (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Nick Manganaro",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.delawarecountygop.org/nick-manganaro-congress",
+        "website_confidence": "verified",
+        "background": "Finance professional (J.P. Morgan Chase, Merrill Lynch, BlackRock, Glenmede) and former power-industry analyst from Haverford; math degree from Reed College and a finance degree from MIT. First run for office. His campaign page is on the Delaware County GOP site.",
+        "own_words": [
+          {
+            "text": "I am an America First, Constitutionally and fiscally Conservative Republican.",
+            "is_quote": true,
+            "source": "https://www.delawarecountygop.org/nick-manganaro-congress"
+          },
+          {
+            "text": "Working across the aisle on a credible path to balance the budget and for long-term solvency",
+            "is_quote": true,
+            "source": "https://www.delawarecountygop.org/nick-manganaro-congress"
+          },
+          {
+            "text": "Opposing new entitlement expansions that widen the structural deficit",
+            "is_quote": true,
+            "source": "https://www.delawarecountygop.org/nick-manganaro-congress"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 5-8-185",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/c3a03c5b-02c7-421e-a33f-e91397958c62.pdf"
+      },
+      {
+        "name": "Committee of Seventy: U.S. House candidates, 2026 general",
+        "url": "https://seventy.org/get-informed/voter-guide/us-house-of-representatives/"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-sd-2",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania State Senate",
+    "district": "SD-2 (River Wards, Juniata, Frankford, parts of the Northeast)",
+    "scope_plain": "Voters in state Senate District 2: the River Wards, Juniata, Frankford and parts of Northeast Philadelphia (Philadelphia Citizen). On Philadelphia ballots it appears with U.S. House District 2 and state House districts 177, 179, 180, 197, 202 and 203. Only Senate districts 2, 4 and 8 are on Philadelphia ballots this year; 30 of the city's 48 ballot styles have no state Senate race. Printed on the ballot as \"Senator in the General Assembly.\"",
+    "office_explainer": "One of 50 state senators. Writes state laws and the budget, and confirms the governor's nominees.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Christine M. Tartaglione",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Christine M. Tartaglione",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://senatortartaglione.com/",
+        "website_confidence": "verified",
+        "background": "State senator for eight terms and the first woman to serve as Senate Democratic Whip. Earlier worked for City Councilmember Joan Krajewski and State Treasurer Catherine Baker Knoll.",
+        "own_words": [
+          {
+            "text": "Long-time advocate for raising the minimum wage (she authored a 2006 bill) and for safe nurse staffing levels (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-177",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/f637c7f7-ea41-408e-8e4d-fcdc49fa0172.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-sd-4",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania State Senate",
+    "district": "SD-4 (seven Philly wards in the Northwest, plus eastern Montgomery County)",
+    "scope_plain": "Voters in state Senate District 4: seven wards in Philadelphia plus Abington, Cheltenham, Jenkintown, Rockledge and Springfield in Montgomery County (Philadelphia Citizen). On Philadelphia ballots it appears with U.S. House District 3 and state House districts 194, 198, 200 and 201. Only Senate districts 2, 4 and 8 are on Philadelphia ballots this year; 30 of the city's 48 ballot styles have no state Senate race. Printed on the ballot as \"Senator in the General Assembly.\"",
+    "office_explainer": "One of 50 state senators. Writes state laws and the budget, and confirms the governor's nominees.",
+    "why_it_matters": "The only contested state Senate race on Philadelphia ballots this year.",
+    "vote_for": 1,
+    "incumbent": "Art Haywood",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Art Haywood",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.haywoodstatesenate.com/",
+        "website_confidence": "verified",
+        "background": "State senator since 2014; Democratic chair of the Senate Health and Human Services Committee. Former Cheltenham commissioner and Community Legal Services lawyer; University of Michigan law degree.",
+        "own_words": [
+          {
+            "text": "We stand for dignity for all.",
+            "is_quote": true,
+            "source": "https://www.haywoodstatesenate.com/"
+          },
+          {
+            "text": "Lists $100 million a year for affordable housing, child care help for moderate-income families and $30 million in gun violence prevention grants among his results (campaign site).",
+            "is_quote": false,
+            "source": "https://www.haywoodstatesenate.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Todd Johnson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://friendsoftoddjohnson.godaddysites.com/",
+        "website_confidence": "sourced",
+        "background": "Pastor of First Immanuel Baptist Church, Republican leader of the 17th Ward, a block captain and a former president of the Belfield Area Neighbors Association; Frankford High School and Geneva College graduate.",
+        "own_words": [
+          {
+            "text": "Help us campaign to bring civility and consciousness to State Senate!",
+            "is_quote": true,
+            "source": "https://friendsoftoddjohnson.godaddysites.com/"
+          },
+          {
+            "text": "Calls himself a \"middle-of-the-road\" candidate. Priorities, per the Philadelphia Citizen: school choice, opposing drag queen story hours, fighting crime, a free-market economy and more abortion restrictions.",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-4-194",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/9af08aa3-c9bc-4efd-8c5a-b7b9717283a4.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "Art Haywood campaign site",
+        "url": "https://www.haywoodstatesenate.com/"
+      },
+      {
+        "name": "Todd Johnson campaign site (linked by the Citizen; footer dated 2022)",
+        "url": "https://friendsoftoddjohnson.godaddysites.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-sd-8",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania State Senate",
+    "district": "SD-8 (nine West, Southwest and South Philly wards, plus eastern Delaware County)",
+    "scope_plain": "Voters in state Senate District 8: nine wards in Philadelphia plus Collingdale, Colwyn, Darby, Darby Township, Folcroft, Norwood, Sharon Hill, Tinicum and Yeadon in Delaware County (Philadelphia Citizen). On Philadelphia ballots it appears with U.S. House District 3 or 5, depending on address, and state House districts 10, 185, 186, 188 and 191. Only Senate districts 2, 4 and 8 are on Philadelphia ballots this year; 30 of the city's 48 ballot styles have no state Senate race. Printed on the ballot as \"Senator in the General Assembly.\"",
+    "office_explainer": "One of 50 state senators. Writes state laws and the budget, and confirms the governor's nominees.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Anthony Hardy Williams",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Anthony Hardy Williams",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.senatoranthonyhwilliams.com/",
+        "website_confidence": "verified",
+        "background": "State senator since 1998; earlier represented the 191st District in the state House.",
+        "own_words": [
+          {
+            "text": "Has backed the Philadelphia Illegal Gun Task Force, the state's Clean Slate law for people with old records, and expanding school choice (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-10",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/b724bf6e-ce0c-4066-8c6c-df24734bf290.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-10",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-10 (West Philadelphia)",
+    "scope_plain": "Voters in state House District 10: seven wards in West Philadelphia (Philadelphia Citizen). Same ballot: U.S. House District 3; state Senate District 8 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Amen Brown",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Amen Brown",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://amenforphilly.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2020. Before office he ran day cares and after-school programs; he also ran unsuccessfully for mayor.",
+        "own_words": [
+          {
+            "text": "Has backed affordable housing, food banks, public safety and economic development, plus tougher mandatory minimum sentences and school vouchers; worked to end ghost-gun sales at gun shows (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-10",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/b724bf6e-ce0c-4066-8c6c-df24734bf290.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-170",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-170 (Somerton, Parkwood)",
+    "scope_plain": "Voters in state House District 170: parts of Somerton and Parkwood in the Far Northeast (Philadelphia Citizen). Same ballot: U.S. House District 2; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "One of four contested state House races in Philadelphia this year. It is the only Philadelphia state House seat held by a Republican.",
+    "vote_for": 1,
+    "incumbent": "Martina White",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rob Gurtcheff",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.robgurtcheff4philly.com/",
+        "website_confidence": "verified",
+        "background": "Former U.S. Army counterintelligence special agent who grew up in Northeast Philadelphia; Temple graduate. Has worked as a hospital fraud examiner and a Social Security claims representative.",
+        "own_words": [
+          {
+            "text": "Rob is ready to be a voice for Northeast Philly as State Representative.",
+            "is_quote": true,
+            "source": "https://www.robgurtcheff4philly.com/"
+          },
+          {
+            "text": "Platform: raise the minimum wage, fully fund SEPTA, fix roads and bridges, and recognize PTSD as an injury for first responders (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Martina White",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://votemartina.com/",
+        "website_confidence": "verified",
+        "background": "State representative since winning a 2015 special election; House Republican Caucus chair and SEPTA board member. Former financial advisor.",
+        "own_words": [
+          {
+            "text": "From the Northeast. For the Northeast.",
+            "is_quote": true,
+            "source": "https://votemartina.com/about/"
+          },
+          {
+            "text": "focuses on the issues WE care about instead of partisan rancor",
+            "is_quote": true,
+            "source": "https://votemartina.com/about/"
+          },
+          {
+            "text": "Running on lower prescription drug costs, career and technical education, and a hard line on the opioid epidemic (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-170",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/cdc2d853-0a95-40b7-8fe4-6b3ce24daca9.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "Philadelphia Magazine, Mar 25, 2015: Martina White wins 170th District special election",
+        "url": "https://www.phillymag.com/citified/2015/03/25/republican-martina-white-wins-election/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-172",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-172 (Fox Chase, Bustleton, Rhawnhurst)",
+    "scope_plain": "Voters in state House District 172: parts of Fox Chase, Bustleton and Rhawnhurst (Philadelphia Citizen). Same ballot: U.S. House District 2; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Sean M. Dougherty",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sean M. Dougherty",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Won the seat in 2024 after beating seven-term Rep. Kevin Boyle in the Democratic primary. Former Philadelphia public defender.",
+        "own_words": [
+          {
+            "text": "Prime sponsor of four bills this session, including one to help schools and nonprofits hurt by last year's state budget impasse (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-172",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/3b130ff0-8a20-4ae4-aea4-7536737eea48.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-173",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-173 (Holmesburg, Tacony, Torresdale, Mayfair)",
+    "scope_plain": "Voters in state House District 173: parts of Northeast Philadelphia including Holmesburg, Tacony, Torresdale, Wissinoming and Mayfair (Philadelphia Citizen). Same ballot: U.S. House District 2; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "One of four contested state House races in Philadelphia this year.",
+    "vote_for": 1,
+    "incumbent": "Pat Gallagher",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Pat Gallagher",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Elected in 2022; earlier chief of staff to Rep. Mike Driscoll for eight years.",
+        "own_words": [
+          {
+            "text": "Campaigns on higher wages, more affordable and accessible health care, and support for unions (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          },
+          {
+            "text": "Sponsored bills to require insurance coverage of colorectal cancer screening from age 45 and to create a waterfront redevelopment grant program (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Bill Griffin",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electbillgriffin.com/",
+        "website_confidence": "verified",
+        "background": "Retired Philadelphia special education teacher and principal (35 years, including Austin Meehan Middle School); now a real estate agent and substitute principal.",
+        "own_words": [
+          {
+            "text": "He believes government should make life easier, not harder.",
+            "is_quote": true,
+            "source": "https://electbillgriffin.com/"
+          },
+          {
+            "text": "Confront criminals. Support police. Stand with victims. Demand accountability.",
+            "is_quote": true,
+            "source": "https://electbillgriffin.com/"
+          },
+          {
+            "text": "Wants a focus on \"safe blocks, good schools, reliable health care, and a fair shot for seniors and working families\" (campaign site).",
+            "is_quote": false,
+            "source": "https://electbillgriffin.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-173",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/206c6e44-1ff6-4528-ac5a-f657f3218837.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-174",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-174 (Rhawnhurst, Pennypack, Morrell Park)",
+    "scope_plain": "Voters in state House District 174: parts of Rhawnhurst, Pennypack, Aston-Woodbridge and Morrell Park (Philadelphia Citizen). Same ballot: U.S. House District 2; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Ed Neilson",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ed Neilson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://edneilson.com/",
+        "website_confidence": "verified",
+        "background": "State representative since a 2015 special election; former deputy state labor secretary, City Council member and IBEW Local 98 member.",
+        "own_words": [
+          {
+            "text": "Priorities: job creation, infrastructure improvements and clean energy investment (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-174",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/beedb896-06a4-404a-bb7e-297ced2c1012.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-175",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-175 (Society Hill, Old City, Northern Liberties, Fishtown)",
+    "scope_plain": "Voters in state House District 175: parts of Society Hill, Old City, Northern Liberties, Callowhill, Fishtown and Lower Kensington (Philadelphia Citizen). Same ballot: U.S. House District 2 or 3 (this House district is split; your sample ballot shows which); no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "MaryLouise Isaacson",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "MaryLouise Isaacson",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://maryisaacson.org/",
+        "website_confidence": "verified",
+        "background": "State representative since 2019; earlier chief of staff to the late Rep. Mike O'Brien and a long-time Democratic committee member.",
+        "own_words": [
+          {
+            "text": "Has focused on women's rights, LGBTQ rights, gun laws and affordable health care (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-175",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/99ec87f3-f457-4007-8dc5-461bc274393e.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-177",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-177 (Bridesburg, Fishtown, Richmond, Wissinoming)",
+    "scope_plain": "Voters in state House District 177: parts of Bridesburg, Fishtown, Richmond and Wissinoming (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "One of four contested state House races in Philadelphia this year.",
+    "vote_for": 1,
+    "incumbent": "Joe Hohenstein",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joe Hohenstein",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.votehohenstein.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2019; former immigration lawyer who started Temple Law School's first immigration clinic.",
+        "own_words": [
+          {
+            "text": "continue the work of educational, environmental, and economic justice",
+            "is_quote": true,
+            "source": "https://www.votehohenstein.com/"
+          },
+          {
+            "text": "Campaign themes: a safer and cleaner community and fair school funding (campaign site).",
+            "is_quote": false,
+            "source": "https://www.votehohenstein.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Robyn Bird",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.voterobynbird.com/",
+        "website_confidence": "verified",
+        "background": "Public relations and government affairs director for Philadelphia Firefighters Union Local 22; earlier a political coordinator for Donald Trump's 2024 campaign. Fourth-generation Port Richmond resident.",
+        "own_words": [
+          {
+            "text": "I'm running because residents who live, work and raise their family in the River Wards deserve to come first.",
+            "is_quote": true,
+            "source": "https://www.voterobynbird.com/"
+          },
+          {
+            "text": "Priorities: public safety and support for first responders, affordability, access to affordable health care and prescription drugs, and resources for public schools (campaign site); the Citizen adds expanding school choice.",
+            "is_quote": false,
+            "source": "https://www.voterobynbird.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-177",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/f637c7f7-ea41-408e-8e4d-fcdc49fa0172.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-179",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-179 (Frankford, Northwood, Summerdale)",
+    "scope_plain": "Voters in state House District 179: parts of Frankford, Northwood and Summerdale (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Jason T. Dawkins",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason T. Dawkins",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2014; chairs the House Labor and Industry Committee. Former aide to Councilmember Maria Quiñones Sánchez.",
+        "own_words": [
+          {
+            "text": "Has pushed to raise the minimum wage, reform criminal justice, regulate corner stores and hold recovery houses to disability-access rules (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-179",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/b9813ae7-6c1a-4ff6-87ae-da16244af8bf.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-180",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-180 (Fairhill, Harrowgate, Juniata, Kensington)",
+    "scope_plain": "Voters in state House District 180: Fairhill, Harrowgate, Juniata, Port Richmond and Kensington (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Jose A. Giral",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jose A. Giral",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2022; former small business owner and Democratic 33rd Ward leader.",
+        "own_words": [
+          {
+            "text": "Sponsored bills on removing obstacles to nuclear energy, more lead testing for children and pharmacy drug take-back programs (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-180",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/0a09637b-2e80-4d76-a427-c1faa1cc2a7c.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-181",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-181 (Yorktown, Cecil B. Moore, Poplar, Lower Kensington)",
+    "scope_plain": "Voters in state House District 181: parts of Yorktown, Cecil B. Moore, East and West Poplar and Lower Kensington (Philadelphia Citizen). Same ballot: U.S. House District 2 or 3 (this House district is split; your sample ballot shows which); no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Malcolm Kenyatta",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Malcolm Kenyatta",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://malcolmkenyatta.com/",
+        "website_confidence": "verified",
+        "background": "First elected in 2018; vice chair of the Democratic National Committee. Ran for U.S. Senate in 2022 and auditor general in 2024.",
+        "own_words": [
+          {
+            "text": "Has worked on raising the minimum wage, criminal justice reform and affordable health care (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-181",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/bd795364-d048-4e46-bc44-869e8a5e73b7.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-182",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-182 (Center City)",
+    "scope_plain": "Voters in state House District 182: parts of Center City (Philadelphia Citizen). Same ballot: U.S. House District 2 or 3 (this House district is split; your sample ballot shows which); no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Ben Waxman",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ben Waxman",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Elected in 2022; former communications director for District Attorney Larry Krasner.",
+        "own_words": [
+          {
+            "text": "Has pushed for more public transit funding, cryptocurrency consumer protections and higher-education reform after the University of the Arts closed (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-182",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/f7406eba-86dd-49e6-be3a-917b7d32361c.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-184",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-184 (South Philly, East Passyunk, Stadium District, Navy Yard)",
+    "scope_plain": "Voters in state House District 184: parts of South Philadelphia, East Passyunk, the Stadium District and the Navy Yard (Philadelphia Citizen). Same ballot: U.S. House District 3 or 5 (this House district is split; your sample ballot shows which); no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Elizabeth Fiedler",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Elizabeth Fiedler",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://elizabethfiedler.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2019; former WHYY journalist.",
+        "own_words": [
+          {
+            "text": "Platform: quality schools, quality health care and safe, stable housing; sponsored bills on junk fees and solar access for low- and moderate-income households (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-xx-184",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/d264e847-7381-4ec9-8166-0fb4535c7fe0.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-185",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-185 (Southwest Philly, Eastwick, Girard Estates)",
+    "scope_plain": "Voters in state House District 185: parts of Southwest Philadelphia, the Navy Yard, Eastwick, Clearview and Girard Estates (Philadelphia Citizen). Same ballot: U.S. House District 3 or 5 (this House district is split; your sample ballot shows which); state Senate District 8 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Regina Young",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Regina Young",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2020; former Community Schools coordinator in the mayor's education office and social worker.",
+        "own_words": [
+          {
+            "text": "Worked to raise penalties for child labor law violations; supports congressional term limits (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-185",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/5681e96a-146b-4289-89d3-bed4211eedad.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-186",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-186 (Point Breeze, Grays Ferry, Girard Estates)",
+    "scope_plain": "Voters in state House District 186: parts of Point Breeze, Grays Ferry, Girard Estates and Bartram Village (Philadelphia Citizen). Same ballot: U.S. House District 3 or 5 (this House district is split; your sample ballot shows which); state Senate District 8 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Jordan A. Harris",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jordan A. Harris",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://jordanharrisforpa.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2012 and House Appropriations Committee chair; former educator and Philadelphia Youth Commission director.",
+        "own_words": [
+          {
+            "text": "Known for criminal justice reform; co-authored Pennsylvania's Clean Slate law (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-186",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/2bab4104-a0cd-4a34-a8fa-d8ae205e20ee.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-188",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-188 (West Philly, Cedar Park, Spruce Hill)",
+    "scope_plain": "Voters in state House District 188: parts of West Philadelphia, Cedar Park and Spruce Hill (Philadelphia Citizen). Same ballot: U.S. House District 3; state Senate District 8 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Rick Krajewski",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rick Krajewski",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.rickforphilly.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2020, seeking a fourth term. Former software engineer and Reclaim Philadelphia community organizer.",
+        "own_words": [
+          {
+            "text": "Platform: ending mass incarceration, fully funding public schools and protecting affordable housing; won $2.5 million for a statewide tenants' right to counsel; takes no corporate PAC money (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-188",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/b27eef41-fd70-4e4a-825c-6a2af9697118.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "PA House Democrats: Rep. Rick Krajewski biography",
+        "url": "https://www.pahouse.com/Krajewski/About/Biography"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-190",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-190 (Strawberry Mansion, Nicetown, Tioga)",
+    "scope_plain": "Voters in state House District 190: parts of Strawberry Mansion, Nicetown and Tioga (Philadelphia Citizen). Same ballot: U.S. House District 3; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Roni Green",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Roni Green",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://gronigreenfor190.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2022 (she also held the seat briefly in 2020); former SEIU Local 668 business agent and community organizer.",
+        "own_words": [
+          {
+            "text": "Priorities: workers' rights, living wages, affordable housing and gun reform (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-xx-190",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/83c38994-8f1b-4a6d-9c66-9076724f2fb1.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-191",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-191 (West and Southwest Philly, plus parts of Delaware County)",
+    "scope_plain": "Voters in state House District 191: parts of West Philadelphia plus parts of Darby, Upper Darby and Yeadon in Delaware County (Philadelphia Citizen). Same ballot: U.S. House District 3 or 5 (this House district is split; your sample ballot shows which); state Senate District 8. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Joanna E. McClinton",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joanna E. McClinton",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.mcclintonforpa.com/",
+        "website_confidence": "verified",
+        "background": "Speaker of the Pennsylvania House, the first woman in that role. Worked at the District Attorney's Office and the Defender Association, and as chief counsel to Sen. Anthony Hardy Williams.",
+        "own_words": [
+          {
+            "text": "Has worked to expand voting rights and protect the rights of workers and people accused of crimes (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-8-191",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/653c491b-3693-46db-b57d-1dbf32a530e0.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-192",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-192 (West Philadelphia)",
+    "scope_plain": "Voters in state House District 192: parts of West Philadelphia (Philadelphia Citizen). Same ballot: U.S. House District 3; no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "One of four contested state House races in Philadelphia this year.",
+    "vote_for": 1,
+    "incumbent": "Morgan Cephas",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Morgan Cephas",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.morgancephas.com/",
+        "website_confidence": "verified",
+        "background": "State representative for five terms; chairs the House's Philadelphia delegation and co-chairs its Women's Health Caucus. Ran for the 3rd Congressional District until late March 2026.",
+        "own_words": [
+          {
+            "text": "Lists her record: close to 500 new affordable housing units, $25 million to tackle Black maternal mortality, and a law to track maternal deaths (campaign site).",
+            "is_quote": false,
+            "source": "https://www.morgancephas.com/"
+          },
+          {
+            "text": "Moved legislation to ban access to Ghost Guns",
+            "is_quote": true,
+            "source": "https://www.morgancephas.com/"
+          },
+          {
+            "text": "Platform includes bringing down the cost of living and standing up for democratic laws and ideals (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Tiffany Vann Brown",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://tiffanyforstaterep.com/",
+        "website_confidence": "verified",
+        "background": "West Philadelphia native and former Americans for Prosperity organizer who started a media company and a youth mentoring program. Campaigns as \"Tiffany Vann\"; the ballot prints \"Tiffany Vann Brown.\"",
+        "own_words": [
+          {
+            "text": "This isn't about party. This is about people.",
+            "is_quote": true,
+            "source": "https://tiffanyforstaterep.com/"
+          },
+          {
+            "text": "Lower property taxes so longtime residents aren't pushed out of their own neighborhoods",
+            "is_quote": true,
+            "source": "https://tiffanyforstaterep.com/"
+          },
+          {
+            "text": "Also lists fair wages, paid family and medical leave, and better public schools (campaign site).",
+            "is_quote": false,
+            "source": "https://tiffanyforstaterep.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-xx-192",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/118c9f84-13c6-4a38-8c75-2baa21d002f0.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "Morgan Cephas campaign site",
+        "url": "https://www.morgancephas.com/"
+      },
+      {
+        "name": "Tiffany Vann campaign site",
+        "url": "https://tiffanyforstaterep.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-194",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-194 (East Falls, Manayunk, Wissahickon)",
+    "scope_plain": "Voters in state House District 194: parts of East Falls, Manayunk and Wissahickon (Philadelphia Citizen). Same ballot: U.S. House District 3; state Senate District 4 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Tarik Khan",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tarik Khan",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.tarikforpa.com/",
+        "website_confidence": "verified",
+        "background": "Two-term state representative and former family nurse practitioner.",
+        "own_words": [
+          {
+            "text": "Passed bills on safe nurse staffing and canceling medical debt; also works on health care access, climate and gun reform (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-4-194",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/9af08aa3-c9bc-4efd-8c5a-b7b9717283a4.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-195",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-195 (Fairmount, Francisville, Spring Garden)",
+    "scope_plain": "Voters in state House District 195: parts of Fairmount, Francisville, Spring Garden and Stanton (Philadelphia Citizen). Same ballot: U.S. House District 2 or 3 (this House district is split; your sample ballot shows which); no state Senate race. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Open seat: McNeil beat one-term Rep. Keith Harris in the May primary and is unopposed in November (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Keith Harris (lost primary)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sierra McNeil",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.sierraforpa.com/",
+        "website_confidence": "verified",
+        "background": "Social worker and president of the National Association of Social Workers-Pennsylvania; beat the incumbent in the May primary.",
+        "own_words": [
+          {
+            "text": "Priorities: mental health support, safe and stable housing, strong public services and a state government that works for residents \"not corporate interests\" (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-195",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/fe57e765-5cc0-4fc1-9793-dc5934590e8d.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-197",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-197 (Kensington, Feltonville, Nicetown)",
+    "scope_plain": "Voters in state House District 197: parts of Kensington, Feltonville and Nicetown (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Danilo Burgos",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Danilo Burgos",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2018, the first Dominican American in the state House; chairs the Consumer Protection, Technology and Utilities Committee. Former grocery owner.",
+        "own_words": [
+          {
+            "text": "Sponsored bills to decriminalize cannabis, expand access to fresh produce and let people without a Social Security number apply for a driver's license (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-197",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/5fa63b04-cb86-4daa-941f-2b7c2d48ebb0.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-198",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-198 (Germantown, Nicetown, Olney)",
+    "scope_plain": "Voters in state House District 198: parts of Southwest Germantown, Nicetown and Olney (Philadelphia Citizen). Same ballot: U.S. House District 2 or 3 (this House district is split; your sample ballot shows which); state Senate District 4 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Darisha K. Parker",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Darisha K. Parker",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative; former legislative assistant to her predecessor, Rosita Youngblood.",
+        "own_words": [
+          {
+            "text": "Focus on menstrual equity (period products in schools and through SNAP and WIC), outdoor spaces and rec centers, affordable health care, criminal justice reform and seniors (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-xx-198",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/3cabab7e-36a1-4aff-8fbe-8b93e205e2aa.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-200",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-200 (Mt. Airy)",
+    "scope_plain": "Voters in state House District 200: parts of West and East Mt. Airy (Philadelphia Citizen). Same ballot: U.S. House District 3; state Senate District 4 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Open seat: Rep. Chris Rabb is running for Congress. Johnson is unopposed in November (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Chris Rabb (running for Congress)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chris Johnson",
+        "party": "Democratic",
+        "incumbent": false,
+        "website": "https://www.chrisjohnsonpa.com/",
+        "website_confidence": "verified",
+        "background": "Director of state and federal government relations for the School District of Philadelphia; former aide to Sen. Bob Casey and House Speaker Joanna McClinton.",
+        "own_words": [
+          {
+            "text": "Priorities: public schools, transit and infrastructure, affordability, environmental justice, housing, and arts and culture; wants to raise the minimum wage and increase housing supply (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-4-200",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/c086b5e0-fa68-4b4c-9b4d-f97f6cab5a9c.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-201",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-201 (Germantown, Nicetown, Tioga)",
+    "scope_plain": "Voters in state House District 201: parts of Germantown, East Germantown, Nicetown and Tioga (Philadelphia Citizen). Same ballot: U.S. House District 3; state Senate District 4 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Andre D. Carroll",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Andre D. Carroll",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.andredcarroll.com/",
+        "website_confidence": "verified",
+        "background": "State representative since a 2024 special election; former campaign manager for Councilmember Nicolas O'Rourke and community liaison for Sen. Anthony Hardy Williams.",
+        "own_words": [
+          {
+            "text": "Campaigns on neighborhood investment, criminal justice reform, affordable and reproductive health care, education and workers' rights (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 3-4-201",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/eb6a770f-f591-414b-990f-54f4b21f2752.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-202",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-202 (Castor Gardens, Lawncrest, Rhawnhurst, Fox Chase)",
+    "scope_plain": "Voters in state House District 202: parts of Castor Gardens, Lawncrest, Rhawnhurst and Fox Chase (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Jared Solomon",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jared Solomon",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.jaredsolomon.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2016; chairs the House Veterans Affairs and Emergency Preparedness Committee. Former Army Reserve JAG officer; ran for attorney general in 2024.",
+        "own_words": [
+          {
+            "text": "Backs term limits, open primaries and recall elections, opposes gifts to legislators, and supports more affordable housing (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-202",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/b40c5626-e73b-4188-8a04-0ed576bcdf4e.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-203",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-203 (Olney, Lawncrest, Lawndale, Oxford Circle)",
+    "scope_plain": "Voters in state House District 203: parts of Olney, Lawncrest, Lawndale, Castor Gardens and Oxford Circle (Philadelphia Citizen). Same ballot: U.S. House District 2; state Senate District 2 for some voters and no state Senate race for the rest. Printed on the ballot as \"Representative in the General Assembly.\"",
+    "office_explainer": "One of 203 state representatives. Writes state laws and the state budget in Harrisburg.",
+    "why_it_matters": "Unopposed on the ballot (a write-in line is available).",
+    "vote_for": 1,
+    "incumbent": "Anthony Bellmon",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Anthony Bellmon",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://bellmonforpa.com/",
+        "website_confidence": "unverified",
+        "background": "State representative since 2022, seeking a third term; former senior adviser to U.S. Rep. Brendan Boyle and a former educator.",
+        "own_words": [
+          {
+            "text": "Focus on education and juvenile justice, including a statewide youth ombudsman and counting time children spend in detention toward their sentences (Philadelphia Citizen).",
+            "is_quote": false,
+            "source": "https://thephiladelphiacitizen.org/pa-election-guide/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Philadelphia City Commissioners: Candidates for Office, Nov 3 2026 (official list and Sample Ballots by Split)",
+        "url": "https://vote.phila.gov/voting/candidates-for-office"
+      },
+      {
+        "name": "Official sample ballot, split 2-2-203",
+        "url": "https://vote.phila.gov/files/SampleBallot/2026_General/fe662a8b-afc5-4cbc-aa1b-d456b3fb9e87.pdf"
+      },
+      {
+        "name": "The Philadelphia Citizen: Your Guide to the 2026 General Election (Sep 18, 2026)",
+        "url": "https://thephiladelphiacitizen.org/pa-election-guide/"
+      },
+      {
+        "name": "PA House Democrats: Rep. Anthony Bellmon biography",
+        "url": "https://www.pahouse.com/Bellmon/About/Biography"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

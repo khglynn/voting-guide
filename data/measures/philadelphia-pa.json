@@ -1,0 +1,80 @@
+[
+  {
+    "id": "philadelphia-question-1",
+    "state": "PA",
+    "level": "city",
+    "jurisdiction": "City and County of Philadelphia",
+    "number": "Question #1",
+    "official_title": "Should the Philadelphia Home Rule Charter be amended to revise the City’s contracting procedures to allow for bid preferences and set-asides for small businesses; modify the threshold and standards for contracts that can be set aside for small and local businesses; and grant the Procurement Department and the City Solicitor discretion on bond requirements for certain construction projects?",
+    "plain_summary": "Changes the city charter so the City can favor small businesses and Philadelphia businesses on City contracts. City Council could then let contracts of $75,000 to $500,000 go to them even if they aren't the lowest bidder (Committee of Seventy, Philadelphia Citizen). It also lets the Procurement Department and the City Solicitor decide bond requirements (a contractor's guarantee that it will finish the job) on some construction projects.",
+    "yes_means": "The charter changes so the City can give contracting preferences and set-asides to small businesses, expand them for local businesses, and decide bond requirements case by case on some construction projects.",
+    "no_means": "The charter's contracting rules stay as they are now, without the new small-business preferences, the new set-aside range or the bond discretion.",
+    "current_law": "Under the charter, City contracts for construction and for services other than professional services generally go to the lowest bidder (the Citizen says \"lowest reputable\" bidder). For decades the City set goals for awarding contracts to minority-, women- and disabled-owned businesses (35 percent since 2016). A 2025 settlement of a federal lawsuit brought by America First Legal required that policy to end, and in November 2025 Mayor Cherelle Parker signed an executive order favoring small and local businesses instead. Per the Citizen, this question would write that approach into the charter.",
+    "fiscal_impact": null,
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "One yes or no covers three separate changes: preferences and set-asides for small businesses, a new dollar range and new standards for contracts set aside for small and local businesses, and bond discretion on some construction projects. You can't approve one and reject another. The question never gives the dollar range ($75,000 to $500,000, per Committee of Seventy and the Citizen; the Citizen adds that it rises $1,000 a year), and 'allow' means Council would still pass ordinances to put the preferences in place. It also skips the background: in a 2025 lawsuit settlement the City agreed to drop its race- and gender-based contracting goals, and this uses business size and location instead. The Citizen calls it 'somewhat strangely worded.'",
+    "supporters_case": {
+      "text": "The Council legislation behind the question, as quoted by the Philadelphia Citizen, says the City and its quasi-public partners spend over $1 billion a year on goods, services and construction, and that helping small and Philadelphia-based businesses compete for City contracts \"contributes to local job creation, lifting residents from poverty.\" Introduced by Councilmember Katherine Gilmore Richardson for Council President Kenyatta Johnson.",
+      "source": "https://thephiladelphiacitizen.org/ballot-questions/"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf"
+    },
+    "official_text_url": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf",
+    "official_guide_url": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf",
+    "explainers": [
+      {
+        "source": "Committee of Seventy",
+        "title": "2026 General Ballot Questions",
+        "url": "https://seventy.org/get-informed/voter-guide/2026-general-ballot-questions/"
+      },
+      {
+        "source": "The Philadelphia Citizen",
+        "title": "Ballot Questions for the November 3 2026 General Election",
+        "url": "https://thephiladelphiacitizen.org/ballot-questions/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "philadelphia-question-2",
+    "state": "PA",
+    "level": "city",
+    "jurisdiction": "City and County of Philadelphia",
+    "number": "Question #2",
+    "official_title": "Shall the Philadelphia Home Rule Charter be amended to establish and define the functions of Creative Philadelphia, an office headed by the Chief Cultural Officer to promote the City’s arts, culture, and creative economy sector?",
+    "plain_summary": "Makes Creative Philadelphia, the City's arts and culture office, a permanent part of the city charter. Today it exists only by a mayor's executive order. Its head, the Chief Cultural Officer, would join the mayor's cabinet at the same $205,000 salary; the office would also oversee Mural Arts and Public Art, and staff could grow from about 10 to 15 (Philadelphia Citizen, Committee of Seventy).",
+    "yes_means": "Creative Philadelphia becomes a formal, permanent part of city government under the charter, headed by the Chief Cultural Officer.",
+    "no_means": "The charter isn't changed, and Creative Philadelphia keeps running under a mayor's executive order, which a future mayor could change or end.",
+    "current_law": "Creative Philadelphia (formerly the Office of Arts, Culture and the Creative Economy) runs under an executive order, so a mayor could eliminate it. It has about 10 staff. The current Chief Cultural Officer is Valerie Gay.",
+    "fiscal_impact": null,
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "'Establish' sounds like a brand-new office, but Creative Philadelphia already exists. A yes makes it permanent in the charter instead of depending on a mayor's order. The question doesn't mention that Mural Arts and Public Art would move under it or that staff could grow to 15, and it says nothing about arts funding.",
+    "supporters_case": {
+      "text": "Sponsor Councilmember Isaiah Thomas's office: \"We want to codify Philadelphia's commitment to the arts.\" Committee of Seventy reports that the Philadelphia Cultural Alliance supports it; the Alliance, per the Citizen, says the arts sector generates $3 billion in regional economic activity, and noted the City's 2027 budget cut the Philadelphia Cultural Fund from $5 million to $3.5 million.",
+      "source": "https://thephiladelphiacitizen.org/ballot-questions/"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf"
+    },
+    "official_text_url": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf",
+    "official_guide_url": "https://vote.phila.gov/media/2026G_Ballot_Questions.pdf",
+    "explainers": [
+      {
+        "source": "Committee of Seventy",
+        "title": "2026 General Ballot Questions",
+        "url": "https://seventy.org/get-informed/voter-guide/2026-general-ballot-questions/"
+      },
+      {
+        "source": "The Philadelphia Citizen",
+        "title": "Ballot Questions for the November 3 2026 General Election",
+        "url": "https://thephiladelphiacitizen.org/ballot-questions/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

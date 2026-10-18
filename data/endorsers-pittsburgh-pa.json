@@ -1,0 +1,72 @@
+[
+  {
+    "id": "allegheny-county-democratic-committee",
+    "name": "Allegheny County Democratic Committee",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization of the Democratic Party in Allegheny County. Its voter guide says it does not take positions on ballot questions.",
+    "geography": [
+      "pittsburgh-pa"
+    ],
+    "guide_url": "https://www.alleghenydems.com/voter-guide",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "allegheny-county-gop",
+    "name": "Republican Committee of Allegheny County",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization of the Republican Party in Allegheny County. Its own website and 2026 candidate slate were not found; its ballot-question position comes from a party email quoted by WESA (Oct. 12, 2026).",
+    "geography": [
+      "pittsburgh-pa"
+    ],
+    "guide_url": "https://www.wesanews.org/politics-government/2026-10-12/allegheny-county-council-ballot-question",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "allegheny-fayette-clc",
+    "name": "Allegheny-Fayette Central Labor Council (AFL-CIO)",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Labor council with no AllSides or Ad Fontes rating. Its About page (https://paaflcio.org/alleghenyco/about-us) says it \"represents the collective interest of its affiliated unions and of the working people of Allegheny County\" and works \"to advocate for social and economic justice.\"",
+    "geography": [
+      "pittsburgh-pa"
+    ],
+    "guide_url": "https://paaflcio.org/alleghenyco/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "steel-city-stonewall-democrats",
+    "name": "Steel City Stonewall Democrats",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Pittsburgh's LGBTQ Democratic club. Its stated mission (https://www.steel-city.org/) is to \"advance equal rights for all people, regardless of sexual orientation or gender identity or expression\" and to \"help elect qualified Democratic candidates\" who support LGBT equal rights.",
+    "geography": [
+      "pittsburgh-pa"
+    ],
+    "guide_url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "pa-chamberpac",
+    "name": "ChamberPAC (Pennsylvania Chamber of Business and Industry)",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Political action committee of a statewide chamber of commerce; no AllSides or Ad Fontes rating. Describes itself as \"the political arm of the PA Chamber in support of pro-jobs, pro-growth candidates\" (https://www.pachamber.org/advocacy/chamber_pac/). Endorses only in state legislative races.",
+    "geography": [
+      "PA"
+    ],
+    "guide_url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  }
+]

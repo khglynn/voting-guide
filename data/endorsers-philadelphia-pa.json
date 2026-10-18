@@ -1,0 +1,88 @@
+[
+  {
+    "id": "phila-democratic-city-committee",
+    "name": "Philadelphia Democratic City Committee (Philadelphia Democratic Party)",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official party organization: the Democratic Party's Philadelphia County committee, chaired by Bob Brady (Inquirer, May 20, 2026).",
+    "geography": [
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "phila-republican-city-committee",
+    "name": "Republican City Committee of Philadelphia (Philadelphia Republican Party)",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official party organization: the Republican Party's Philadelphia County committee.",
+    "geography": [
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://thephiladelphiacitizen.org/pa-election-guide/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "pa-working-families-party",
+    "name": "Working Families Party (Pennsylvania)",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Its own stated mission (About page, https://workingfamilies.org/about/): \"We’re a multiracial party that fights for workers over bosses and people over the powerful.\" No AllSides or Ad Fontes rating.",
+    "geography": [
+      "PA",
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://workingfamilies.org/candidates/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "liberty-city-lgbtq-dems",
+    "name": "Liberty City LGBTQ Democratic Club",
+    "type": "advocacy",
+    "lean": "left",
+    "lean_basis": "Its own stated mission (About page, https://www.libertycity.org/about): it \"builds political power for the Philadelphia area ... (LGBTQ+) community through involvement within the Democratic Party\" and \"aims to build progressive power.\" No outside rating.",
+    "geography": [
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://www.libertycity.org/endorsements",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "philadelphia-council-afl-cio",
+    "name": "Philadelphia Council AFL-CIO",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "Labor federation with no AllSides or Ad Fontes rating, so it is labeled lean_left under this guide's rule for unions. Its stated mission (About page, https://phillyaflcio.org/about-us): \"to bring social and economic justice to working people by giving them a voice on the job, in politics, and in the community.\"",
+    "geography": [
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://phillyaflcio.org/vote26",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": true
+  },
+  {
+    "id": "committee-of-seventy",
+    "name": "Committee of Seventy",
+    "type": "civic_nonpartisan",
+    "lean": "neutral",
+    "lean_basis": "Its own stated mission (About page, https://seventy.org/about-us/): \"A nonprofit and nonpartisan organization, Seventy does not endorse candidates or represent any special interests.\" No outside rating.",
+    "geography": [
+      "PA",
+      "philadelphia-pa"
+    ],
+    "guide_url": "https://seventy.org/get-informed/voter-guide/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  }
+]

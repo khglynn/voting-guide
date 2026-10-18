@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mobile-county-democrats",
+    "name": "Mobile County Democratic Party (Mobile County Democratic Executive Committee)",
+    "type": "party",
+    "lean": "left",
+    "lean_basis": "Official county party organization. Its site: \"The Mobile County Democratic Executive Committee (MCDEC) is the official Democratic Party organization for Mobile County, Alabama\" (https://mobiledemocrats.org/).",
+    "geography": [
+      "mobile-al"
+    ],
+    "guide_url": "https://mobiledemocrats.org/candidates-for-county-office",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "mobile-county-gop",
+    "name": "Mobile County Republican Party",
+    "type": "party",
+    "lean": "right",
+    "lean_basis": "Official county party organization (the county unit of the Alabama Republican Party). Its website (mobilegop.org) blocked automated reading, so no slate page was read.",
+    "geography": [
+      "mobile-al"
+    ],
+    "guide_url": "https://www.mobilegop.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "lagniappe",
+    "name": "Lagniappe (Mobile weekly newspaper)",
+    "type": "publication",
+    "lean": "neutral",
+    "lean_basis": "No AllSides or Ad Fontes rating found. Its About page states no political mission, only that it is \"the largest independently owned weekly newspaper in Mobile\" (https://www.lagniappemobile.com/site/about.html).",
+    "geography": [
+      "mobile-al"
+    ],
+    "guide_url": "https://www.lagniappemobile.com/",
+    "default_on": true,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  },
+  {
+    "id": "mobile-chamber",
+    "name": "Mobile Area Chamber of Commerce",
+    "type": "business",
+    "lean": "lean_right",
+    "lean_basis": "Chamber of commerce. Stated mission: \"A member-driven, nonprofit organization promoting the area through business and commercial commerce\" (About the Chamber, https://thebusinessview.com/). Its 2026 guide says it \"does not endorse any specific candidate.\"",
+    "geography": [
+      "mobile-al"
+    ],
+    "guide_url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "default_on": false,
+    "endorses_candidates": false,
+    "endorses_measures": false
+  }
+]

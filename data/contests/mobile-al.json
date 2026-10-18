@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "al-us-house-1",
+    "state": "AL",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "CD-1",
+    "scope_plain": "Every Mobile County voter. For 2026 all of Mobile County, including the whole City of Mobile, is in the 1st Congressional District; no part of the county votes in District 2.",
+    "office_explainer": "Mobile's seat in the U.S. House. Votes on federal laws, taxes and spending; two-year term.",
+    "why_it_matters": "Open seat: neither nominee holds it now. The map changed mid-year after the U.S. Supreme Court let Alabama use the Legislature's 2023 map, which put all of Mobile County back in District 1 and forced an Aug. 11 special primary. Under the 2024 map the City of Mobile was split between Districts 1 and 2 (about half each by area, per Census boundaries); now it is all in District 1.",
+    "vote_for": 1,
+    "incumbent": "Barry Moore (running for U.S. Senate; not in this race)",
+    "open_seat": true,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Clyde Jones",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Democratic nominee; qualified for the race as Clyde W. Jones, Jr. (WKRG). We found no campaign site or biography in our sources.",
+        "own_words": [
+          {
+            "text": "\"Our constituents deserve to know our positions on the issues. I am challenging Mr. Carl to at least one debate, if not more.\"",
+            "is_quote": true,
+            "source": "https://www.lagniappemobile.com/news/alabama/election_2026/al-1-race-heating-up/article_d8ff4e2c-429c-48a3-ad77-bca090822b6d.amp.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Jerry Carl",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former member of the U.S. House and former president of the Mobile County Commission (2016). Won the Aug. 11, 2026 special Republican primary.",
+        "own_words": [
+          {
+            "text": "Says a vote for him is a vote for \"years of trusted experience\" in Congress (Lagniappe's paraphrase of Carl).",
+            "is_quote": false,
+            "source": "https://www.lagniappemobile.com/news/alabama/election_2026/carl-pushing-for-al-1-comeback/article_7f83338d-9c27-4a57-bcd3-53043bd40dc0.amp.html"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "Mobile County: Congressional Districts map, created June 17, 2026 (whole county shaded District 1)",
+        "url": "https://benchmark.probate.mobilecountyal.gov/uploads/Districts/CongressionalDistricts2026.pdf"
+      },
+      {
+        "name": "League of Women Voters: statement on the Supreme Court letting Alabama use its 2023 congressional map in 2026",
+        "url": "https://www.lwv.org/local-leagues/lwv-mobile"
+      },
+      {
+        "name": "Lagniappe: Carl pushing for AL-1 comeback (Aug. 5, 2026)",
+        "url": "https://www.lagniappemobile.com/news/alabama/election_2026/carl-pushing-for-al-1-comeback/article_7f83338d-9c27-4a57-bcd3-53043bd40dc0.amp.html"
+      },
+      {
+        "name": "Lagniappe: AL-1 race heating up (Aug. 12, 2026)",
+        "url": "https://www.lagniappemobile.com/news/alabama/election_2026/al-1-race-heating-up/article_d8ff4e2c-429c-48a3-ad77-bca090822b6d.amp.html"
+      },
+      {
+        "name": "Alabama Republican Party special-primary certification (in the SOS Republican certification PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+      },
+      {
+        "name": "Alabama Democratic Party amended certification, Aug. 24, 2026 (in the SOS Democratic certification PDF)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf"
+      },
+      {
+        "name": "FOX10: Supreme Court rules Alabama can use 2023 congressional map for 2026 election cycle (June 3, 2026)",
+        "url": "https://fox10tv.com/2026/06/03/supreme-court-rules-alabama-can-use-2023-congressional-map-2026-election-cycle/"
+      },
+      {
+        "name": "Rep. Barry Moore's official House site (AL-01, current holder of the seat)",
+        "url": "https://barrymoore.house.gov/"
+      },
+      {
+        "name": "WKRG: qualified candidates for 2026 (Jan. 24, 2026)",
+        "url": "https://digital-release.wkrg.com/news/your-local-election-hq/qualified-candidates-for-alabama-2026-elections-released/amp/"
+      }
+    ],
+    "explainers": [
+      {
+        "source": "Alabama Reflector",
+        "title": "Former U.S. Rep. Jerry Carl wins GOP nomination in 1st Alabama Congressional District",
+        "url": "https://alabamareflector.com/2026/08/11/former-u-s-rep-jerry-carl-wins-gop-nomination-in-al-01-special-primary/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-sd-22",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama State Senate",
+    "district": "SD-22",
+    "scope_plain": "Voters in State Senate District 22. In Mobile County it covers the Saraland, Satsuma and Chickasaw areas and parts of north Mobile County, and the district reaches into other counties. Census boundaries put only a small slice of the City of Mobile (under a tenth of its area) in it. Check your address.",
+    "office_explainer": "One of 35 state senators. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": "Open seat: Sen. Greg Albritton faced Terry L. Waters in the May Republican primary, and Waters is the nominee. One of the few contested legislative races on the Mobile County ballot.",
+    "vote_for": 1,
+    "incumbent": "Greg Albritton (lost primary; not on ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ashley Sharpe",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Terry L. Waters",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.terrywaters.com/",
+        "website_confidence": "unverified",
+        "background": "Republican nominee; FOX10 reported he challenged Sen. Greg Albritton in the May Republican primary.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "FOX10: Mobile County sheriff's race highlights area races (Jan. 23, 2026)",
+        "url": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-sd-33",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama State Senate",
+    "district": "SD-33",
+    "scope_plain": "Voters in State Senate District 33, which covers downtown and most of central and north Mobile, including ZIPs 36602 to 36607, 36610, 36617 and much of 36618.",
+    "office_explainer": "One of 35 state senators. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Vivian Davis Figures",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Vivian Davis Figures",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting senator for District 33. In 2026 she offered the Senate amendments that added the $50,000 income limit to Mobile County Local Amendment 1.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "HB308 Senate amendment offered by Sen. Figures (Local Amendment 1 history)",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/ZQ6EJWK-1.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-sd-34",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama State Senate",
+    "district": "SD-34",
+    "scope_plain": "Voters in State Senate District 34: parts of midtown and west Mobile plus Semmes and northwest Mobile County. Check your address.",
+    "office_explainer": "One of 35 state senators. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": "Open seat: FOX10 reported that Sen. Jack Williams is leaving to run for agriculture commissioner. Rusty Glover, who held this seat from 2006 to 2018, is unopposed.",
+    "vote_for": 1,
+    "incumbent": "Jack Williams (left to run for agriculture commissioner; not on this ballot)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rusty Glover",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://electrustyglover.com/",
+        "website_confidence": "verified",
+        "background": "Taught U.S. history and coached at Mary G. Montgomery High School in Semmes for 25 years. Served four years in the Alabama House and represented District 34 in the Senate from 2006 to 2018.",
+        "own_words": [
+          {
+            "text": "Says he \"has never voted for a tax increase\" and never will, and that government \"should live within its means.\"",
+            "is_quote": true,
+            "source": "https://electrustyglover.com/"
+          },
+          {
+            "text": "\"He'll always protect funding for our classrooms and advocate for teachers and students.\"",
+            "is_quote": true,
+            "source": "https://electrustyglover.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "Rusty Glover campaign site",
+        "url": "https://electrustyglover.com/"
+      },
+      {
+        "name": "FOX10: Mobile County sheriff's race highlights area races (Jan. 23, 2026)",
+        "url": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-sd-35",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama State Senate",
+    "district": "SD-35",
+    "scope_plain": "Voters in State Senate District 35: southwest Mobile and south Mobile County, from Tillmans Corner and Theodore to Bayou La Batre and Dauphin Island. Check your address.",
+    "office_explainer": "One of 35 state senators. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "David Sessions",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "David Sessions",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting senator for District 35.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-97",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-97",
+    "scope_plain": "Voters in House District 97: downtown and central Mobile (ZIPs 36602, 36603 and most of 36604) and parts of 36605, 36606, 36610 and 36611. Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Adline C. Clarke",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Adline C. Clarke",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.voteadline.com/",
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 97. FOX10 reported a Democratic primary challenge from activist Shalela Dowdy; Clarke is the nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "FOX10: Mobile County sheriff's race highlights area races (Jan. 23, 2026)",
+        "url": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-98",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-98",
+    "scope_plain": "Voters in House District 98: Prichard, Chickasaw, Saraland and Satsuma areas and parts of north Mobile (ZIPs 36610, 36617, 36618). Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Napoleon Bracy, Jr.",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Napoleon Bracy, Jr.",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 98.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-99",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-99",
+    "scope_plain": "Voters in House District 99: north-central and northwest Mobile, mainly ZIPs 36607, 36617 and 36618. Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": "One of the few contested legislative races in the city. Sam Jones holds the seat.",
+    "vote_for": 1,
+    "incumbent": "Sam Jones",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sam Jones",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://samjones.info/",
+        "website_confidence": "verified",
+        "background": "Sitting representative for District 99.",
+        "own_words": [
+          {
+            "text": "\"Proven leadership and real results for education, infrastructure, veterans, and economic growth in Mobile.\"",
+            "is_quote": true,
+            "source": "https://samjones.info/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Charlie Watts",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "Sam Jones campaign site",
+        "url": "https://samjones.info/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-100",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-100",
+    "scope_plain": "Voters in House District 100: west Mobile and nearby unincorporated areas (much of ZIP 36695 and parts of 36608 and 36619). Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Mark Shirey",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Shirey",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 100. Lead sponsor of HB308, which became Mobile County Local Amendment 1.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "HB308 enrolled (Local Amendment 1), sponsors listed",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-101",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-101",
+    "scope_plain": "Voters in House District 101: parts of midtown and west Mobile (ZIPs 36608, 36609 and a bit of 36695) and part of Semmes. Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": "Contested for the first time in years: Friedlander says the incumbent \"has run unopposed every November election since taking office in 2014.\" Pringle is the House's speaker pro tempore.",
+    "vote_for": 1,
+    "incumbent": "Chris Pringle",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Joan Friedlander",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Dentist and small-business owner; a University of Alabama School of Dentistry graduate who has practiced in the Mobile area since 1994.",
+        "own_words": [
+          {
+            "text": "Points to lost federal pandemic money and an \"$800 million decrease in Medicaid funding\" as coming budget strains.",
+            "is_quote": true,
+            "source": "https://www.alreporter.com/2026/02/09/dr-joan-friedlander-launches-campaign-for-alabama-house"
+          },
+          {
+            "text": "Says inflation is outpacing 2027 raises for teachers, police and firefighters; promises to \"work with representatives of both parties.\"",
+            "is_quote": true,
+            "source": "https://www.alreporter.com/2026/02/09/dr-joan-friedlander-launches-campaign-for-alabama-house"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Chris Pringle",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.votechrispringle.com/",
+        "website_confidence": "unverified",
+        "background": "House speaker pro tempore since 2022. Returned to the House in 2014 after representing District 101 from 1994 to 2002.",
+        "own_words": [
+          {
+            "text": "After the primary: \"I'm excited that voters overwhelmingly voted to make me the Republican nominee and send me back to Montgomery.\"",
+            "is_quote": true,
+            "source": "https://1819news.com/news/item/chris-pringle-wins-primary-in-a-landslide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "Alabama Political Reporter: Friedlander launches campaign (Feb. 9, 2026)",
+        "url": "https://www.alreporter.com/2026/02/09/dr-joan-friedlander-launches-campaign-for-alabama-house"
+      },
+      {
+        "name": "1819 News: Pringle wins primary in a landslide (May 19, 2026)",
+        "url": "https://1819news.com/news/item/chris-pringle-wins-primary-in-a-landslide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-102",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-102",
+    "scope_plain": "Voters in House District 102: northwest Mobile County (Semmes, Wilmer and Citronelle area). Census boundaries show it touching ZIP 36608 outside the city limits but not the City of Mobile itself. Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Shane Stringer",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shane Stringer",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 102. Co-sponsor of HB308 (Local Amendment 1).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "HB308 enrolled (Local Amendment 1), sponsors listed",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-103",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-103",
+    "scope_plain": "Voters in House District 103: south-central Mobile (parts of ZIPs 36605, 36606, 36609 and 36693). Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Barbara Drummond",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Barbara Drummond",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 103.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-104",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-104",
+    "scope_plain": "Voters in House District 104: southwest and west Mobile, Tillmans Corner and nearby areas (parts of ZIPs 36609, 36619, 36693 and 36695). Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Margie Wilcox",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Margie Wilcox",
+        "party": "Republican",
+        "incumbent": true,
+        "website": "https://www.margiewilcox.com/",
+        "website_confidence": "verified",
+        "background": "Sitting representative for District 104; co-sponsor of HB308 (Local Amendment 1). Her site says she built the largest privately owned transportation company in South Alabama.",
+        "own_words": [
+          {
+            "text": "\"I will continue to support smaller government and commonsense, pro-jobs policies that help our district's hardworking families.\"",
+            "is_quote": true,
+            "source": "https://www.margiewilcox.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "Margie Wilcox campaign site",
+        "url": "https://www.margiewilcox.com/"
+      },
+      {
+        "name": "HB308 enrolled (Local Amendment 1), sponsors listed",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "al-hd-105",
+    "state": "AL",
+    "level": "state",
+    "office": "Alabama House of Representatives",
+    "district": "HD-105",
+    "scope_plain": "Voters in House District 105: south Mobile County (Theodore, Grand Bay, Bayou La Batre, Dauphin Island) plus parts of ZIPs 36605, 36619 and 36695. Check your address.",
+    "office_explainer": "One of 105 state representatives. Writes Alabama's laws and state budgets; four-year term.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Chip Brown",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Chip Brown",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sitting representative for District 105; co-sponsor of HB308 (Local Amendment 1).",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "US Census Bureau TIGERweb: 2026 state legislative district boundaries (analyst overlay with City of Mobile and ZIP areas)",
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer"
+      },
+      {
+        "name": "Alabama Legislature member roster (via the Delilah legislative data service, Oct. 2026)",
+        "url": "https://www.legislature.state.al.us/"
+      },
+      {
+        "name": "HB308 enrolled (Local Amendment 1), sponsors listed",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-district-judge-3",
+    "state": "AL",
+    "level": "judicial",
+    "office": "District Court Judge, Mobile County, Place 3",
+    "district": "Place 3",
+    "scope_plain": "Every Mobile County voter.",
+    "office_explainer": "A county trial judge for smaller cases, like misdemeanors, traffic tickets and small claims.",
+    "why_it_matters": "Unopposed. Alabama elects judges with party labels, so a straight-party Republican vote counts here.",
+    "vote_for": 1,
+    "incumbent": "C. Zackery Moore (per Wikipedia; not confirmed in an official source)",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "C. Zackery Moore",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed as the incumbent judge on Wikipedia's 2026 Mobile County elections page; Lagniappe's January candidate story notes he is running for Place 3. Certified as the Republican nominee.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Alabama SOS: Republican candidate certification, Aug. 2026 (District Judge Mobile, Place 3)",
+        "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+      },
+      {
+        "name": "Wikipedia: 2026 Mobile County elections",
+        "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
+      },
+      {
+        "name": "Lagniappe: Who is running for election in Baldwin, Mobile counties (Jan. 27, 2026)",
+        "url": "https://www.lagniappemobile.com/news/who-is-running-for-election-in-baldwin-mobile-counties/article_ebef1298-ff73-4a30-af14-b623fa89822b.html"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-revenue-commissioner",
+    "state": "AL",
+    "level": "county",
+    "office": "Mobile County Revenue Commissioner",
+    "district": null,
+    "scope_plain": "Every Mobile County voter.",
+    "office_explainer": "Sets property values for tax purposes and collects property taxes in Mobile County.",
+    "why_it_matters": "Unopposed. If Local Amendment 1 passes, seniors would file their written assessment-freeze claims with this office, between October 1 and December 31.",
+    "vote_for": 1,
+    "incumbent": "Kim Hastie",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kim Hastie",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "The sitting Revenue Commissioner, named on the Revenue Commission's official site.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Revenue Commission (official site)",
+        "url": "https://mobilecopropertytax.com/"
+      },
+      {
+        "name": "HB308 enrolled (Local Amendment 1): claims filed with the Revenue Commissioner",
+        "url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-sheriff",
+    "state": "AL",
+    "level": "county",
+    "office": "Mobile County Sheriff",
+    "district": null,
+    "scope_plain": "Every Mobile County voter, including the City of Mobile.",
+    "office_explainer": "Runs county law enforcement, the Mobile County Metro Jail, and delivery of court papers.",
+    "why_it_matters": "The main contested county race. The office has about 730 employees and a budget of about $75 million a year (FOX10). Sheriff Paul Burch seeks a second four-year term.",
+    "vote_for": 1,
+    "incumbent": "Paul Burch",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Pamela J. Laffitte",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": "https://www.laffitteforsheriff.com",
+        "website_confidence": "verified",
+        "background": "Retired Mobile County Sheriff's Office corrections sergeant (26 years, 6 months) and U.S. Air Force Reserve veteran; substitute teacher for Mobile County schools. Earlier a Prichard public safety dispatcher. A Democratic statewide nominee in 2022.",
+        "own_words": [
+          {
+            "text": "\"Equipping all deputies and corrections officers with body-worn cameras (BWCs) to bring transparency.\"",
+            "is_quote": true,
+            "source": "https://www.laffitteforsheriff.com/platform"
+          },
+          {
+            "text": "Find budget room for more deputy positions, and make corrections officers sworn, certified \"Deputy Corrections Officers.\"",
+            "is_quote": false,
+            "source": "https://www.laffitteforsheriff.com/platform"
+          },
+          {
+            "text": "\"Establishing Public Oversight Committees comprised of constituents from each municipality within Mobile County.\" Also wants 24-hour bond hearings.",
+            "is_quote": true,
+            "source": "https://www.laffitteforsheriff.com/platform"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Paul Burch",
+        "party": "Republican",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Sheriff seeking a second term. Started as a police officer in Montgomery, then spent three decades rising through the Mobile County Sheriff's Office. Beat former Mobile Police Chief Paul Prine in the May Republican primary.",
+        "own_words": [
+          {
+            "text": "\"Crime is really down, double digits.\" Credits partnerships with local and federal agencies.",
+            "is_quote": true,
+            "source": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+          },
+          {
+            "text": "\"Protecting our children is our #1 priority,\" citing school resource deputies and Internet Crimes Against Children work.",
+            "is_quote": true,
+            "source": "https://www.wkrg.com/news/your-local-election-hq/mobile-county-sheriff-paul-burch-incumbent-wins-republican-nomination-in-alabama-primary-election/amp/"
+          },
+          {
+            "text": "Points to a new rural crime unit and deputies answering major crimes in Prichard: \"I want to build on that.\"",
+            "is_quote": true,
+            "source": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "FOX10: Mobile County sheriff's race highlights area races (Jan. 23, 2026)",
+        "url": "https://www.fox10tv.com/2026/01/24/mobile-county-sheriffs-race-highlights-area-races-four-month-sprint-primary"
+      },
+      {
+        "name": "WKRG: Sheriff Paul Burch wins Republican nomination (May 20, 2026)",
+        "url": "https://www.wkrg.com/news/your-local-election-hq/mobile-county-sheriff-paul-burch-incumbent-wins-republican-nomination-in-alabama-primary-election/amp/"
+      },
+      {
+        "name": "Pamela J. Laffitte campaign site: platform",
+        "url": "https://www.laffitteforsheriff.com/platform"
+      },
+      {
+        "name": "Wikipedia: 2026 Mobile County elections",
+        "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-school-board-3",
+    "state": "AL",
+    "level": "school",
+    "office": "Member, Mobile County Board of Education (Board of School Commissioners)",
+    "district": "District 3",
+    "scope_plain": "Only voters in Mobile County school board District 3, which takes in much of central Mobile. Only Districts 3 and 4 are on the ballot this year. Check your sample ballot.",
+    "office_explainer": "Sets policy and the budget for Mobile County Public Schools and oversees the superintendent.",
+    "why_it_matters": "Contested: a Democrat and an independent. The ballot calls it the Board of Education; the Democratic Party lists it as the Board of School Commissioners, Place 3.",
+    "vote_for": 1,
+    "incumbent": "Reginald Crenshaw (per Wikipedia)",
+    "open_seat": false,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Reginald Crenshaw",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Listed as the incumbent District 3 board member on Wikipedia's 2026 Mobile County elections page; the Mobile County Democratic Party lists him as Dr. Reginald Crenshaw.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Meika Gordon Gardner",
+        "party": "Independent",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": null,
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "Mobile County Democratic Party: 2026 qualified candidates for county office",
+        "url": "https://mobiledemocrats.org/candidates-for-county-office"
+      },
+      {
+        "name": "Wikipedia: 2026 Mobile County elections",
+        "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-school-board-4",
+    "state": "AL",
+    "level": "school",
+    "office": "Member, Mobile County Board of Education (Board of School Commissioners)",
+    "district": "District 4",
+    "scope_plain": "Only voters in Mobile County school board District 4, which takes in parts of central and south Mobile. Check your sample ballot.",
+    "office_explainer": "Sets policy and the budget for Mobile County Public Schools and oversees the superintendent.",
+    "why_it_matters": "Contested between a Democrat and a Republican. We could not confirm who holds the seat now.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sherry Dillihay McDade",
+        "party": "Democrat",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Democratic nominee (the party spells it Sherry Dillihay-McDade). We found no campaign site or biography in our sources.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      },
+      {
+        "name": "Michael Fasano",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee (listed as Mike Fasano on Wikipedia). We found no campaign site or biography in our sources.",
+        "own_words": [],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/alabama"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Mobile County Probate Court: official sample ballot, Nov. 3, 2026",
+        "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf"
+      },
+      {
+        "name": "Mobile County Probate Court: 2026 precinct listing with district assignments",
+        "url": "https://probate.mobilecountyal.gov/uploads/PrecinctListing.pdf"
+      },
+      {
+        "name": "Mobile County Democratic Party: 2026 qualified candidates for county office",
+        "url": "https://mobiledemocrats.org/candidates-for-county-office"
+      },
+      {
+        "name": "Wikipedia: 2026 Mobile County elections",
+        "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

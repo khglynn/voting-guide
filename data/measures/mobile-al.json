@@ -1,0 +1,64 @@
+[
+  {
+    "id": "mobile-county-local-amendment-1",
+    "state": "AL",
+    "level": "county",
+    "jurisdiction": "Mobile County, Alabama",
+    "number": "Local Amendment 1",
+    "official_title": "Relating to Mobile County, proposing an amendment to the Constitution of Alabama of 2022, to authorize a qualified taxpayer 65 years of age or older to claim a senior property tax exemption for real property under certain conditions; and to raise the income limit for certain homestead exemptions to $50,000. (Proposed by Act 2026-258)",
+    "plain_summary": "Two changes, only in Mobile County. Homeowners 65 or older who have lived in their single-family home at least five years could freeze its assessed value, so a rising home value stops raising their tax bill. And the income cap for an existing county homestead exemption for older residents rises to $50,000 a year.",
+    "yes_means": "Mobile County homeowners 65 and older who have lived in their home five or more years can freeze its assessed value (first claims open October 1, 2027), and seniors earning up to $50,000 can qualify for the county's age-and-income homestead exemption.",
+    "no_means": "There is no senior assessment freeze in Mobile County, and the county's age-and-income homestead exemption keeps its current, lower income limit.",
+    "current_law": "Mobile County has no freeze on seniors' assessed home values. It does have a homestead exemption based on age and income. A Senate committee amendment during the bill's passage described the existing limit as $12,000 of taxable income; the final bill text does not state the current limit.",
+    "fiscal_impact": "No official estimate found. The bill text carries no cost figure, and the Alabama Secretary of State's local ballot measures page lists no Fair Ballot Commission statement for this amendment (the commission's 2026 statements cover the four statewide amendments only).",
+    "pass_threshold": "simple majority of Mobile County voters voting on it",
+    "referred_by": "legislature",
+    "confusing_wording_note": "The ballot calls it a \"senior property tax exemption,\" but the amendment's own text says it \"shall freeze the assessed value\" of the home. It is a freeze, not a full exemption: your tax bill can still go up if tax rates (millage) change, and any addition you build is taxed. The ballot names the age (65 or older) but sums up the rest as \"certain conditions\": a single-family home you own and live in, five years in that home before you first claim it, and a written claim filed with the Mobile County Revenue Commissioner between October 1 and December 31. The \"$50,000 income limit\" part applies to a separate, existing exemption, not to the freeze. This question sits under the heading \"Proposed Amendments of Local Application\" and appears only on Mobile County ballots.",
+    "supporters_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.sos.alabama.gov/alabama-votes/voter/ballot-measures/local"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.sos.alabama.gov/alabama-votes/voter/ballot-measures/local"
+    },
+    "official_text_url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf",
+    "official_guide_url": null,
+    "explainers": [],
+    "confidence": "verified"
+  },
+  {
+    "id": "mobile-county-payg-bonds",
+    "state": "AL",
+    "level": "county",
+    "jurisdiction": "Mobile County, Alabama",
+    "number": "Special County Election (2026 Pay-As-You-Go roads, bridges and drainage)",
+    "official_title": "Shall Mobile County in the State of Alabama be authorized to issue from time to time and in one or more series its Pay-As-You-Go Road, Bridge and Drainage Facilities Bonds, not exceeding $82,000,000 in principal amount, for the purpose of raising funds for the construction and improvement, or either, of hard surfaced roads, hard surfaced bridges, and surface water drainage facilities, or any thereof in the county, which bonds shall bear interest at a rate or rates to be fixed when they are sold, not exceeding eight percent (8%) per annum, payable semiannually until their respective maturities, and shall mature and become payable on December 1 in the aggregate principal amount of $8,200,000 in each of the years 2030 through 2039, and shall the said county be authorized to continue to levy annually a special tax, on all taxable property in the county, at a rate not exceeding six and one-half mills on each dollar of the assessed valuation of such property, for the purpose of paying at their respective maturities the principal of and interest on the said bonds and all other bonds at any time outstanding which may be payable out of or constitute a charge on the said special tax, all pursuant to the provisions of the Constitution of Alabama of 2022, Local Provisions Section 49-3.00, as amended, and Section 49-3.11? FOR said proposed Mobile County Pay-As-You-Go Road, Bridge and Drainage Facilities Bonds and the said proposed continued levy of the said special tax. AGAINST said proposed Mobile County Pay-As-You-Go Road, Bridge and Drainage Facilities Bonds and the said proposed continued levy of the said special tax.",
+    "plain_summary": "Mobile County's every-two-years road vote. It lets the county keep its existing countywide road tax of up to 6.5 mills and spend up to $82 million on 39 listed road, bridge and drainage projects (about 90 miles of road and six bridges). About $30.9 million goes to 12 City of Mobile street projects, such as Dauphin Street downtown and widening Azalea Road.",
+    "yes_means": "The county gets approval for up to $82 million in road bonds and for continuing its existing 6.5-mill road tax to pay them, so the 39 listed road, bridge and drainage projects are funded.",
+    "no_means": "The county does not get approval for these $82 million in road bonds or for continuing the special tax to pay them, so the 39 listed projects lose this funding.",
+    "current_law": "Mobile County already levies this 6.5-mill property tax; voters first approved it in 1924. Since 1977 the county has put specific two-year project lists paid from it before voters; this is the 21st. The county says voters have approved the program all 20 times it has been on the ballot, most recently in November 2024.",
+    "fiscal_impact": "From the ballot: up to $82,000,000 in bonds at no more than 8% interest, repaid $8,200,000 a year from 2030 through 2039, paid from a continued special tax of up to 6.5 mills (that is, up to $6.50 for every $1,000 of a property's assessed value). The county says this is \"no new taxes and no new debt\" because the money is collected before each two-year program starts. From the county Engineering Department's report: $40 million for 16 countywide projects and $14 million for each of the three County Commission districts; City of Mobile projects are capped reimbursements to the city totaling about $30.9 million.",
+    "pass_threshold": "simple majority of Mobile County voters voting on it",
+    "referred_by": "other",
+    "confusing_wording_note": "The choices are \"FOR\" and \"AGAINST,\" not yes and no. The ballot asks to approve up to $82 million in bonds, at up to 8% interest, repaid from 2030 through 2039 out of the road tax. The county's own materials call the program \"no new taxes and no new debt,\" because, it says, the money is collected before each two-year program starts. The county's materials do not explain how the bond wording fits that claim. For context, the Commission's July 9, 2026 agenda listed both a bank's purchase of $30 million of the 2024 program's bonds and a call to pay off that same $30 million. \"Continue to levy\" means the tax already exists; a FOR vote does not add a new tax. It is the last item on the ballot, titled \"Special County Election,\" so it is easy to miss.",
+    "supporters_case": {
+      "text": "The Mobile County Commission says the program funds 39 projects with \"no new taxes and no new debt,\" puts at least one project in each of the county's 11 cities and towns, and has a record of more than 700 projects and nearly 1,600 miles of road since 1977.",
+      "source": "https://thebusinessview.com/pay-as-you-go-mobile-countys-flagship-transportation-improvement-program-on-nov-3-ballot/"
+    },
+    "opponents_case": {
+      "text": "We found no organized campaign or official argument on this side.",
+      "source": "https://www.sos.alabama.gov/alabama-votes/voter/ballot-measures/local"
+    },
+    "official_text_url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "official_guide_url": "https://www.mobilecountyal.gov/uploads/2026PAYGOINTERNETRELEASE.pdf",
+    "explainers": [
+      {
+        "source": "WALA FOX10",
+        "title": "Mobile County pay-as-you-go road plan on Nov. 3 ballot",
+        "url": "https://www.fox10tv.com/2026/10/13/mobile-county-pay-as-you-go-road-plan-nov-3-ballot/"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

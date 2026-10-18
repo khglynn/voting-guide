@@ -1,0 +1,1932 @@
+[
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-us-house-1",
+    "status": "endorsed",
+    "choice": "Jerry Carl",
+    "why": "Party nominee; won the Aug. 11, 2026 special primary, certified by the Alabama Republican Party on Aug. 20 and filed with the Secretary of State.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-us-house-1",
+    "status": "endorsed",
+    "choice": "Clyde Jones",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-sd-22",
+    "status": "endorsed",
+    "choice": "Terry L. Waters",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-sd-22",
+    "status": "endorsed",
+    "choice": "Ashley Sharpe",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-sd-33",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-sd-33",
+    "status": "endorsed",
+    "choice": "Vivian Davis Figures",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-sd-34",
+    "status": "endorsed",
+    "choice": "Rusty Glover",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-sd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-sd-35",
+    "status": "endorsed",
+    "choice": "David Sessions",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-sd-35",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-97",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-97",
+    "status": "endorsed",
+    "choice": "Adline C. Clarke",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-98",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-98",
+    "status": "endorsed",
+    "choice": "Napoleon Bracy, Jr.",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-99",
+    "status": "endorsed",
+    "choice": "Charlie Watts",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-99",
+    "status": "endorsed",
+    "choice": "Sam Jones",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-100",
+    "status": "endorsed",
+    "choice": "Mark Shirey",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-101",
+    "status": "endorsed",
+    "choice": "Chris Pringle",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-101",
+    "status": "endorsed",
+    "choice": "Joan Friedlander",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-102",
+    "status": "endorsed",
+    "choice": "Shane Stringer",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-102",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-103",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-103",
+    "status": "endorsed",
+    "choice": "Barbara Drummond",
+    "why": "Party nominee, in the Alabama Democratic Party's amended certification to the Secretary of State (Aug. 24, 2026) and on the official Mobile County sample ballot.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-104",
+    "status": "endorsed",
+    "choice": "Margie Wilcox",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-104",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "al-hd-105",
+    "status": "endorsed",
+    "choice": "Chip Brown",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "al-hd-105",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "mobile-district-judge-3",
+    "status": "endorsed",
+    "choice": "C. Zackery Moore",
+    "why": "Party nominee, certified to the Secretary of State in August 2026.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-08-26",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "mobile-district-judge-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-republican-party",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-democratic-party",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-sheriff",
+    "status": "endorsed",
+    "choice": "Pamela J. Laffitte",
+    "why": "Democratic nominee on the official ballot. The party's own 2026 qualified-candidates page has a Sheriff heading with no name under it, and Blue Voter Guide lists no sheriff pick, so this rests on the ballot label.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Democratic nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-school-board-3",
+    "status": "endorsed",
+    "choice": "Reginald Crenshaw",
+    "why": "Listed on the party's own 2026 qualified-candidates page (Board of School Commissioners Place 3). Blue Voter Guide, a progressive aggregator, records it as a Nov. 3 endorsement.",
+    "url": "https://mobiledemocrats.org/candidates-for-county-office",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-school-board-4",
+    "status": "endorsed",
+    "choice": "Sherry Dillihay McDade",
+    "why": "Listed on the party's own 2026 qualified-candidates page as Sherry Dillihay-McDade (Place 4). Blue Voter Guide, a progressive aggregator, records it as a Nov. 3 endorsement.",
+    "url": "https://mobiledemocrats.org/candidates-for-county-office",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-sheriff",
+    "status": "endorsed",
+    "choice": "Paul Burch",
+    "why": "Republican nominee on the official ballot. The county party's own site blocked automated reading, so no slate page was checked.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "endorsed",
+    "choice": "Kim Hastie",
+    "why": "Republican nominee on the official ballot. The county party's own site blocked automated reading, so no slate page was checked.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-school-board-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "No Republican nominee in this race.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-school-board-4",
+    "status": "endorsed",
+    "choice": "Michael Fasano",
+    "why": "Republican nominee on the official ballot. The county party's own site blocked automated reading, so no slate page was checked.",
+    "url": "https://probate.mobilecountyal.gov/uploads/Mobile-SampleBallot.pdf",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure found on the party's site.",
+    "url": "https://mobiledemocrats.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the party's site blocked automated reading.",
+    "url": "https://www.mobilegop.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mobile-county-democrats",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on this measure found on the party's site.",
+    "url": "https://mobiledemocrats.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mobile-county-gop",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position found; the party's site blocked automated reading.",
+    "url": "https://www.mobilegop.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "ARPAC (state) did not endorse for U.S. House; the same article notes the National Association of Realtors' RPAC backed Jerry Carl.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-sd-22",
+    "status": "endorsed",
+    "choice": "Terry L. Waters",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-sd-33",
+    "status": "endorsed",
+    "choice": "Vivian Davis Figures",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-sd-34",
+    "status": "endorsed",
+    "choice": "Rusty Glover",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-sd-35",
+    "status": "endorsed",
+    "choice": "David Sessions",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-97",
+    "status": "endorsed",
+    "choice": "Adline C. Clarke",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-98",
+    "status": "endorsed",
+    "choice": "Napoleon Bracy, Jr.",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-99",
+    "status": "endorsed",
+    "choice": "Sam Jones",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-100",
+    "status": "endorsed",
+    "choice": "Mark Shirey",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-101",
+    "status": "endorsed",
+    "choice": "Chris Pringle",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-102",
+    "status": "endorsed",
+    "choice": "Shane Stringer",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-103",
+    "status": "endorsed",
+    "choice": "Barbara Drummond",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-104",
+    "status": "endorsed",
+    "choice": "Margie Wilcox",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "al-hd-105",
+    "status": "endorsed",
+    "choice": "Chip Brown",
+    "why": "On ARPAC's Oct. 5, 2026 general-election slate for the Legislature.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-district-judge-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on ARPAC's Oct. 5, 2026 slate, which covers state offices.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on ARPAC's Oct. 5, 2026 slate, which covers state offices.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on ARPAC's Oct. 5, 2026 slate, which covers state offices.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-school-board-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on ARPAC's Oct. 5, 2026 slate, which covers state offices.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-school-board-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on ARPAC's Oct. 5, 2026 slate, which covers state offices.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "alabama-realtors-pac",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-sd-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-sd-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-sd-35",
+    "status": "endorsed",
+    "choice": "David Sessions",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-97",
+    "status": "endorsed",
+    "choice": "Adline C. Clarke",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-98",
+    "status": "endorsed",
+    "choice": "Napoleon Bracy, Jr.",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-99",
+    "status": "endorsed",
+    "choice": "Sam Jones",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-100",
+    "status": "endorsed",
+    "choice": "Mark Shirey",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-101",
+    "status": "endorsed",
+    "choice": "Chris Pringle",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-102",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-103",
+    "status": "endorsed",
+    "choice": "Barbara Drummond",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-104",
+    "status": "endorsed",
+    "choice": "Margie Wilcox",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "al-hd-105",
+    "status": "endorsed",
+    "choice": "Chip Brown",
+    "why": "Listed on BCA's ProgressPAC 2026-cycle endorsement page.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": null,
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-district-judge-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-school-board-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-school-board-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not listed on BCA's ProgressPAC endorsement page as of Oct. 17, 2026.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "bca-progresspac",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published position on this Mobile County measure found.",
+    "url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-sd-22",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-sd-33",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-sd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-sd-35",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-97",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-98",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-99",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-101",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-102",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-103",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-104",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "al-hd-105",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-district-judge-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-school-board-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-school-board-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Chamber's 2026 General Election Guide says it \"does not endorse any specific candidate.\"",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's 2026 guide describes the measure in the county's words (\"no new taxes and no new debt\") but does not say how to vote.",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "mobile-chamber",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Chamber's 2026 guide does not mention Local Amendment 1.",
+    "url": "https://thebusinessview.com/mobile-chamber-2026-general-election-guide/",
+    "date": "2026-10-14",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-us-house-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-sd-22",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-sd-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-sd-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-sd-33",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-sd-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-sd-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-sd-34",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-sd-35",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-sd-35",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-sd-35",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-97",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-97",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-97",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-98",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-98",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-98",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-99",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-99",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-99",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-100",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-100",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-100",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-101",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-101",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-101",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-102",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-102",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-102",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-103",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-103",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-103",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-104",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-104",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-104",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "al-hd-105",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "al-hd-105",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "al-hd-105",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-district-judge-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-district-judge-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-district-judge-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-sheriff",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-school-board-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-school-board-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-school-board-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-school-board-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-school-board-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-school-board-4",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-com-eb",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 AL.com endorsement found in search on Oct. 17. Its opinion page blocks automated reading, so this is unconfirmed.",
+    "url": "https://www.al.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lagniappe",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 Lagniappe endorsement found in search on Oct. 17; much of its election coverage is behind a paywall.",
+    "url": "https://www.lagniappemobile.com/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "al-afl-cio",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "Blue Voter Guide lists the Alabama AFL-CIO as a Nov. 3 endorser, but its list points only to a Facebook post we could not read, and no other copy turned up.",
+    "url": "https://alaflcio.org/",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-us-house-1",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-sd-22",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-sd-33",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-sd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-sd-35",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-97",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-98",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-99",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-100",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-101",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-102",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-103",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-104",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "al-hd-105",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-district-judge-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-revenue-commissioner",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-school-board-3",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-school-board-4",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not endorse candidates. The Mobile league has no 2026 local guide online; VOTE411 has candidate answers where submitted.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-county-local-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published League position on this Mobile County measure found.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-alabama",
+    "target_id": "mobile-county-payg-bonds",
+    "status": "not_found",
+    "choice": null,
+    "why": "No published League position on this Mobile County measure found.",
+    "url": "https://www.vote411.org/alabama",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  }
+]

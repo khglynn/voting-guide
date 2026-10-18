@@ -1,0 +1,1402 @@
+[
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-us-house-12",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-us-house-12",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-us-house-12",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "Summer Lee",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "Summer Lee",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "Summer Lee",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "Summer Lee",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-sd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-sd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-sd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-sd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-sd-42",
+    "status": "endorsed",
+    "choice": "Wayne D. Fontana",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-sd-42",
+    "status": "endorsed",
+    "choice": "Wayne D. Fontana",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-sd-42",
+    "status": "endorsed",
+    "choice": "Wayne D. Fontana",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-sd-42",
+    "status": "endorsed",
+    "choice": "Wayne D. Fontana",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-19",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-19",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-19",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-19",
+    "status": "endorsed",
+    "choice": "Aerion Andrew Abney",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-19",
+    "status": "endorsed",
+    "choice": "Aerion Andrew Abney",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-19",
+    "status": "endorsed",
+    "choice": "Aerion Andrew Abney",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-19",
+    "status": "endorsed",
+    "choice": "Aerion Andrew Abney",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-19",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-21",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-21",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-21",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-21",
+    "status": "endorsed",
+    "choice": "Lindsay Powell",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-21",
+    "status": "endorsed",
+    "choice": "Lindsay Powell",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-21",
+    "status": "endorsed",
+    "choice": "Lindsay Powell",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-21",
+    "status": "endorsed",
+    "choice": "Lindsay Powell",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-21",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-23",
+    "status": "endorsed",
+    "choice": "Dan Frankel",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-23",
+    "status": "endorsed",
+    "choice": "Dan Frankel",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-23",
+    "status": "endorsed",
+    "choice": "Dan Frankel",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-23",
+    "status": "endorsed",
+    "choice": "Dan Frankel",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-24",
+    "status": "endorsed",
+    "choice": "La'Tasha D. Mayes",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-24",
+    "status": "endorsed",
+    "choice": "La'Tasha D. Mayes",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-24",
+    "status": "endorsed",
+    "choice": "La'Tasha D. Mayes",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-24",
+    "status": "endorsed",
+    "choice": "La'Tasha D. Mayes",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-27",
+    "status": "endorsed",
+    "choice": "Dan Deasy",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-27",
+    "status": "endorsed",
+    "choice": "Dan Deasy",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-27",
+    "status": "endorsed",
+    "choice": "Dan Deasy",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-27",
+    "status": "endorsed",
+    "choice": "Dan Deasy",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-34",
+    "status": "endorsed",
+    "choice": "Abigail Salisbury",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-34",
+    "status": "endorsed",
+    "choice": "Abigail Salisbury",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-34",
+    "status": "endorsed",
+    "choice": "Abigail Salisbury",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-34",
+    "status": "endorsed",
+    "choice": "Abigail Salisbury",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Jessica Benham",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Jessica Benham",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Jessica Benham",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Jessica Benham",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "Published since May 4, 2026 by the Venetoulis Institute, a 501(c)(3) nonprofit, and federal tax law bars 501(c)(3) groups from endorsing candidates. No 2026 endorsements found and no policy statement of its own located.",
+    "url": "https://www.post-gazette.com/give",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The Tribune-Review's editorial board says it \"has not endorsed a candidate for years and has no intention of changing that\" (Nov. 2022). Its opinion page showed no 2026 endorsements on Oct. 17.",
+    "url": "https://triblive.com/opinion/editorial-why-we-dont-endorse-political-candidates/",
+    "date": "2022-11-01",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League never endorses candidates. LWV of Greater Pittsburgh lists the candidates and links their VOTE411 answers and videos.",
+    "url": "https://lwvpgh.org/PAcandidates",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "pa-hd-38",
+    "status": "endorsed",
+    "choice": "John Inglis",
+    "why": "Marked \"Endorsed by ACDC\" in the county Democratic committee's 2026 voter guide; the committee held its 2026 endorsement meeting on March 8.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "pa-hd-38",
+    "status": "endorsed",
+    "choice": "John Inglis",
+    "why": "On the labor council's 2026 general-election list. It says it \"evaluated the candidates based on the issues that impact workers.\"",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "pa-hd-38",
+    "status": "endorsed",
+    "choice": "John Inglis",
+    "why": "On the club's 2026 general-election slate card (Oct. 6). Picks are made at the club's annual member endorsement meeting. A QBurgh report of the February meeting headed the same list \"2025\"; the slate card confirms these are the November 2026 picks.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-afl-cio",
+    "target_id": "pa-hd-38",
+    "status": "endorsed",
+    "choice": "John Inglis",
+    "why": "On the state AFL-CIO's \"Labor 2026\" endorsed-candidates list.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-chamberpac",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "ChamberPAC's full 2026 state legislative slate (announced Sept. 9) has no pick in this district.",
+    "url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "pa-us-house-12",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate slate or endorsement page from the county Republican committee was found. The Republican candidate is the party's nominee.",
+    "url": null,
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "pa-sd-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate slate or endorsement page from the county Republican committee was found. The Republican candidate is the party's nominee.",
+    "url": null,
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "pa-hd-20",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate slate or endorsement page from the county Republican committee was found. The Republican candidate is the party's nominee.",
+    "url": null,
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "pa-hd-36",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate slate or endorsement page from the county Republican committee was found. The Republican candidate is the party's nominee.",
+    "url": null,
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "pa-hd-38",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 candidate slate or endorsement page from the county Republican committee was found. The Republican candidate is the party's nominee.",
+    "url": null,
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "nfib-pa",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Thomas West",
+    "why": "West lists the Pennsylvania chapter of the National Federation of Independent Business among his supporters, per WESA's voter guide. NFIB's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-pa-pac",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "WESA lists \"Planned Parenthood PA Advocates\" among Williams's endorsers. Planned Parenthood's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-pa-pac",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "WESA lists Planned Parenthood Pennsylvania PAC among Kinkead's backers. Planned Parenthood's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-pa-pac",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Jessica Benham",
+    "why": "WESA lists Planned Parenthood PA PAC among Benham's backers. Planned Parenthood's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "planned-parenthood-pa-pac",
+    "target_id": "pa-hd-38",
+    "status": "endorsed",
+    "choice": "John Inglis",
+    "why": "WESA says Inglis is backed by \"the political branch of the state's Planned Parenthood chapter.\" Planned Parenthood's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "conservation-voters-pa",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "WESA lists Conservation Voters of PA among Williams's endorsers. CVPA's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "conservation-voters-pa",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Emily Kinkead",
+    "why": "WESA lists Conservation Voters of PA among Kinkead's backers. CVPA's own announcement was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pittsburgh-post-gazette-eb",
+    "target_id": "allegheny-charter-7c",
+    "status": "not_found",
+    "choice": null,
+    "why": "A 501(c)(3) may take positions on ballot questions, but no Post-Gazette editorial on this question was found. Its editorials page loads by script and could not be read on Oct. 17.",
+    "url": "https://www.post-gazette.com/opinion/editorials",
+    "date": "2026-10-17",
+    "confidence": "unverified"
+  },
+  {
+    "endorser_id": "pittsburgh-tribune-review-eb",
+    "target_id": "allegheny-charter-7c",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Trib's no-endorsement policy covers candidates, not ballot questions. Its opinion page on Oct. 17 showed no editorial on this question.",
+    "url": "https://triblive.com/opinion/",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-pennsylvania",
+    "target_id": "allegheny-charter-7c",
+    "status": "no_position",
+    "choice": null,
+    "why": "LWV of Greater Pittsburgh's ballot-question page explains the question and lists what supporters and opponents say, without a recommendation.",
+    "url": "https://www.lwvpgh.org/ballot",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-democratic-committee",
+    "target_id": "allegheny-charter-7c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The committee's voter guide says \"ACDC doesn't take positions on ballot questions\" and points voters to the League's pros and cons.",
+    "url": "https://www.alleghenydems.com/voter-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "allegheny-county-gop",
+    "target_id": "allegheny-charter-7c",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "WESA reports the party urged a no vote in an email to supporters: \"There is no reason to turn a 15-member citizen council into a group of 15 community activists.\"",
+    "url": "https://www.wesanews.org/politics-government/2026-10-12/allegheny-county-council-ballot-question",
+    "date": "2026-10-12",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "allegheny-fayette-clc",
+    "target_id": "allegheny-charter-7c",
+    "status": "no_position",
+    "choice": null,
+    "why": "The labor council's complete 2026 general-election list covers candidates only and takes no stand on the ballot question.",
+    "url": "https://paaflcio.org/system/files/2026-08/ACLC-%202026%20General%20Endorsements.pdf",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "steel-city-stonewall-democrats",
+    "target_id": "allegheny-charter-7c",
+    "status": "not_found",
+    "choice": null,
+    "why": "The 2026 slate card prints no yes-or-no position. Its \"Ballot Question\" QR code, and the ballot-question link on the club's candidate page, both open the League of Women Voters' neutral explainer.",
+    "url": "https://www.steel-city.org/2026-general-election-slate-card/",
+    "date": "2026-10-06",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "Summer Lee",
+    "why": "Listed under \"Our Candidates\" on the Pennsylvania Working Families Party page.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-sd-38",
+    "status": "endorsed",
+    "choice": "Lindsey Williams",
+    "why": "Listed under \"Our Candidates\" on the Pennsylvania Working Families Party page (in the part that opens with \"View More\"). WESA also lists the Working Families Party among Williams's endorsers.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-19",
+    "status": "endorsed",
+    "choice": "Aerion Andrew Abney",
+    "why": "Listed under \"Our Candidates\" on the Pennsylvania Working Families Party page.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-21",
+    "status": "endorsed",
+    "choice": "Lindsay Powell",
+    "why": "Listed under \"Our Candidates\" on the Pennsylvania Working Families Party page.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-24",
+    "status": "endorsed",
+    "choice": "La'Tasha D. Mayes",
+    "why": "Listed under \"Our Candidates\" on the Pennsylvania Working Families Party page.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-36",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The party's full 2026 Pennsylvania candidate list on its own page (including the part behind \"View More\") has no pick in this race.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-working-families-party",
+    "target_id": "allegheny-charter-7c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No position on the county charter question found on the party's Pennsylvania page, which lists candidates only.",
+    "url": "https://workingfamilies.org/state/pennsylvania",
+    "date": "2026-10-17",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lifepac-western-pa",
+    "target_id": "pa-hd-20",
+    "status": "endorsed",
+    "choice": "Joseph Aguglia",
+    "why": "WESA's voter guide lists the \"anti-abortion-rights group LifePAC\" among Aguglia's supporters. LifePAC's own 2026 list was not found.",
+    "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead",
+    "date": "2026-10-05",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-us-house-12",
+    "status": "endorsed",
+    "choice": "James Hayes",
+    "why": "The federation's 2026 general-election guide, paid for by its PAC, rates Hayes \"Pro-Life\" and prints him in bold, its mark for pro-life candidates. It rates Lee \"Pro-Abortion.\"",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-sd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide rates West \"No response / Unknown\" and Williams \"Pro-Abortion,\" and marks no one in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-sd-42",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-19",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-20",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide rates Aguglia \"No response / Unknown\" and Kinkead \"Pro-Abortion,\" and marks no one in this race as pro-life. The LifePAC that backs Aguglia is a separate group.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-21",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-23",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-24",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-27",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-34",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide marks no candidate in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-36",
+    "status": "endorsed",
+    "choice": "Timothy McCune",
+    "why": "The federation's 2026 general-election guide, paid for by its PAC, rates McCune \"Pro-Life\" and prints him in bold, its mark for pro-life candidates. It rates Benham \"Pro-Abortion.\"",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "pa-pro-life-federation",
+    "target_id": "pa-hd-38",
+    "status": "no_position",
+    "choice": null,
+    "why": "The federation's 2026 guide rates Sobieralski \"No response / Unknown\" and Inglis \"Pro-Abortion,\" and marks no one in this race as pro-life.",
+    "url": "https://paprolife.org/wp-content/uploads/2026/09/2026-Fall-Voter-Guide.pdf",
+    "date": "2026-09-24",
+    "confidence": "verified"
+  }
+]

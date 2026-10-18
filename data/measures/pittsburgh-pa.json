@@ -1,0 +1,36 @@
+[
+  {
+    "id": "allegheny-charter-7c",
+    "state": "PA",
+    "level": "county",
+    "jurisdiction": "Allegheny County",
+    "number": "Proposed Amendment to the County of Allegheny Home Rule Charter",
+    "official_title": "Shall Article III, Subsection 7(c) of Allegheny County's Home Rule Charter be repealed in order to remove restrictions on County Council members' ability to receive County funding for personal staff, district offices, and fringe benefits?",
+    "plain_summary": "Deletes the line in the county charter that bans County Council members from getting county money for personal staff, district offices, and benefits like health insurance, pensions and cars. It does not give them any of those things by itself: council would have to pass a separate law, and the charter's cap on council's total budget stays in place.",
+    "yes_means": "The ban comes out of the charter, so County Council could later vote to give its members personal staff, district offices or benefits like health insurance, as long as it stays under its existing budget cap.",
+    "no_means": "The ban stays: council members keep getting only their part-time stipend and expense money, with no county-paid personal staff, district offices or benefits.",
+    "current_law": "Charter Article III, Section 7(c) says council members 'shall not be entitled to receive any County funding for personal staff, local district offices or fringe benefits including, but not limited to, health and life insurance, pensions and personal motor vehicles.' The 15 members are part-time and get no salary, only per-meeting stipends (about $11,000 a year) plus repayment of work expenses (the charter caps that at $3,000 a year and lets council raise it a little every five years), and they share a staff of three. The county's official explanation says the county's other elected officers do get these benefits.",
+    "fiscal_impact": "No official fiscal note was found. The county's official explanation says a yes vote 'does not immediately create a budget or funding allocation' for these benefits. A separate charter section, which this question does not change, caps council's whole budget (stipends, expenses, staff and office costs) at 0.4% of the county's locally levied tax revenue; WESA reports that came to about $1.1 million in 2026, out of a county budget of more than $1 billion. Any new staff or benefits would have to fit under that cap.",
+    "pass_threshold": "simple majority",
+    "referred_by": "council",
+    "confusing_wording_note": "The question asks whether to 'remove restrictions,' so a yes vote lifts the ban and a no vote keeps it. A yes vote does not by itself give anyone health insurance, staff or an office; council would still have to vote on that, and its 0.4% budget cap stays either way. Some guides write 'Article 3' instead of 'Article III'; it is the same section. This is the only question on City of Pittsburgh ballots: the county term-limit questions you may have heard about were removed by a court in August.",
+    "supporters_case": {
+      "text": "Supporters say council is the only elected part of county government barred from benefits and personal staff, and that staff would make it a stronger check on the county executive. They say benefits such as health insurance would let more people afford to run, while the job stays part-time with the same stipend.",
+      "source": "https://www.lwvpgh.org/docs.ashx?id=1823754"
+    },
+    "opponents_case": {
+      "text": "Opponents say the charter meant council to be a low-cost, part-time body of ordinary citizens, and that paying for benefits and staff would strain a tight county budget and open the door to more spending later. Some say voters should first hear from the government study commission now reviewing the charter.",
+      "source": "https://www.lwvpgh.org/docs.ashx?id=1823754"
+    },
+    "official_text_url": "https://alleghenycounty.legistar.com/View.ashx?M=F&ID=15692093&GUID=4986B2B5-E30B-45A6-B4C2-7823C54F92C9",
+    "official_guide_url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/ballot-questions-november-2026-general-election-8-19-2026.pdf",
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "A guide to Allegheny County's November 2026 ballot question",
+        "url": "https://www.wesanews.org/politics-government/2026-10-12/allegheny-county-council-ballot-question"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

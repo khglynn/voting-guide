@@ -1,0 +1,942 @@
+[
+  {
+    "id": "pa-us-house-12",
+    "state": "PA",
+    "level": "federal",
+    "office": "U.S. House of Representatives",
+    "district": "PA-12",
+    "scope_plain": "Every City of Pittsburgh voter. The whole city is in the 12th District, along with eastern and southern Allegheny County suburbs and part of Westmoreland County.",
+    "office_explainer": "Pittsburgh's one seat in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "A rematch of 2024, when Lee beat Hayes by nearly 13 points. Republicans hold the House 218 to 214, so each seat counts toward which party controls it.",
+    "vote_for": 1,
+    "incumbent": "Summer Lee",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Summer Lee",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://summerforpa.com/",
+        "website_confidence": "verified",
+        "background": "U.S. representative since 2023; before that, three terms in the state House. First Black woman to represent Pennsylvania in Congress. Law degree from Howard University; lives in Swissvale.",
+        "own_words": [
+          {
+            "text": "On costs: Congress must \"crack down on price-gouging, stop Wall Street from buying up homes, lower prescription costs.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          },
+          {
+            "text": "On immigration: \"I've also called to abolish ICE and end its detention apparatus.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          },
+          {
+            "text": "On data centers: growth \"cannot mean handing corporations a blank check on our electricity, water, environment, or wallets.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "James Hayes",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://jameshayesforpa.com/",
+        "website_confidence": "verified",
+        "background": "Chief financial officer of Gulf Coast Sand LLC; about 30 years in finance and industry, including six years at the Federal Reserve. The Republican nominee against Lee in 2024. Lives in Shadyside.",
+        "own_words": [
+          {
+            "text": "On costs: \"Congress should focus on the cost of producing the things American families need.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          },
+          {
+            "text": "On immigration: \"Enforcement should be firm, consistent and focused on public safety rather than political theater.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          },
+          {
+            "text": "On data centers: Congress should \"encourage American innovation while making sure growth does not overwhelm our electrical grid.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: congressional district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-us-congress"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "90.5 WESA voter guide: US House 12th District, Hayes v. Lee",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+      }
+    ],
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "US House 12th District election: Hayes v. Lee",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/us-house-12th-district-hayes-lee"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-sd-38",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania State Senate",
+    "district": "SD-38",
+    "scope_plain": "City of Pittsburgh voters in Wards 10, 11 and 12 (East End neighborhoods including Highland Park, Morningside, Garfield, East Liberty and Lincoln-Lemington-Belmar), plus North Hills and Allegheny River suburbs. Only even-numbered Senate seats are up this year; city voters in the 43rd District (Wards 4, 5, 7, 8, 13 to 18 and 29 to 31) have no state Senate race.",
+    "office_explainer": "One of 50 state senators. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": "Williams, the top Democrat on the Senate Education Committee, is seeking a third four-year term. Republicans have controlled the state Senate for more than 30 years.",
+    "vote_for": 1,
+    "incumbent": "Lindsey Williams",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lindsey Williams",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://lindseyforpa.com/",
+        "website_confidence": "verified",
+        "background": "State senator since winning the seat in 2018; minority chair of the Senate Education Committee and a Pittsburgh Regional Transit board member. Lawyer and former political director for the Pittsburgh Federation of Teachers. Lives in West View.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: \"how unaffordable everything is right now.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          },
+          {
+            "text": "On data centers: her bill SB 724 \"would require developers to invest no less than 10% of the total project cost back into the community.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          },
+          {
+            "text": "On new state revenue: \"I'm the prime sponsor of the digital advertisement tax in the Senate.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.lwvpgh.org/docs.ashx?id=1823803"
+      },
+      {
+        "name": "Thomas West",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://westforpa.com/",
+        "website_confidence": "verified",
+        "background": "Has owned TRIM Pittsburgh, a men's clothing store in Lawrenceville, for about 12 years; former TV news producer. Ran in the 2025 Republican primary for Pittsburgh mayor. Lives in Highland Park.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: property taxes and reassessment. \"I support statewide standards for regular, predictable reassessments.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          },
+          {
+            "text": "On data centers: \"I support a temporary pause on new hyperscale data centers while Pennsylvania establishes clear rules.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          },
+          {
+            "text": "On new state revenue: backs legal adult-use marijuana and taxing skill games, but \"I do not support a new digital-advertising tax.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.lwvpgh.org/docs.ashx?id=1823803"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state Senate district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-state-senate"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "90.5 WESA voter guide: Pa. State Senate 38 District, West v. Williams",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+      }
+    ],
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "Pa. State Senate 38 District election: West v. Williams",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-senate-38-district-west-williams"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-sd-42",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania State Senate",
+    "district": "SD-42",
+    "scope_plain": "City of Pittsburgh voters in Wards 1, 2, 3, 6, 9, 19 to 28 and 32 (including Downtown, the Strip, Lawrenceville, the North Side, the West End, Mount Washington, Beechview and Brookline), plus western and southern suburbs from Mt. Lebanon to Bellevue. City voters in the 43rd District (Wards 4, 5, 7, 8, 13 to 18 and 29 to 31) have no state Senate race this year.",
+    "office_explainer": "One of 50 state senators. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Wayne D. Fontana",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Wayne D. Fontana",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://votefontana.com/",
+        "website_confidence": "verified",
+        "background": "Longtime state senator for the 42nd District. A realtor by trade and a former member of the Boilermakers and Teamsters unions, per his campaign site. No Republican filed.",
+        "own_words": [
+          {
+            "text": "On lead pipes: \"The City of Pittsburgh alone has been able to replace more than 14,000 lead service lines due to my legislation.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          },
+          {
+            "text": "Going forward: \"I will continue supporting policies that create family-sustaining jobs, lower costs, increase housing stock.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state Senate district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-state-senate"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Wayne Fontana campaign site",
+        "url": "https://votefontana.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-19",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-19",
+    "scope_plain": "Part of the City of Pittsburgh (Wards 1, 3, 21, 22, 25 and 30, and parts of 10 others): Downtown, Uptown and the Bluff, most of the North Side, South Oakland, Hazelwood, Glen Hazel, Allentown, Knoxville, Esplen and Chartiers, and parts of Beltzhoover, Elliott, Sheraden, Mount Washington and the South Side Flats.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Aerion Andrew Abney",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Aerion Andrew Abney",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://voteaerionabney.com/",
+        "website_confidence": "verified",
+        "background": "State representative since April 2022. Social worker; formerly Pennsylvania director of special projects for a national voting-rights group and a program officer at the POISE Foundation. No Republican filed.",
+        "own_words": [
+          {
+            "text": "On schools: more resources so \"students' access to quality education is not determined by zip code.\"",
+            "is_quote": true,
+            "source": "https://voteaerionabney.com/"
+          },
+          {
+            "text": "On development: \"Support responsible development in our neighborhoods that respect the people and the culture without displacing our residents.\"",
+            "is_quote": true,
+            "source": "https://voteaerionabney.com/"
+          },
+          {
+            "text": "On jails: \"No cash bail, accountability for jail administrators, and a more efficient system for pre-trial detention.\"",
+            "is_quote": true,
+            "source": "https://voteaerionabney.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Allegheny County Democratic Committee voter guide (candidate-supplied text)",
+        "url": "https://www.alleghenydems.com/voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-20",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-20",
+    "scope_plain": "A small part of the City of Pittsburgh (parts of Wards 26 and 27: Brighton Heights, Perry North and some of Summer Hill), plus Ross Township, Avalon, Bellevue and West View.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": "Kinkead has held the seat since 2021. Aguglia got on the ballot through a write-in campaign in the May primary. Democrats hold the state House 103 to 100, so every seat counts toward control.",
+    "vote_for": 1,
+    "incumbent": "Emily Kinkead",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Emily Kinkead",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://emily4pa20.com/",
+        "website_confidence": "verified",
+        "background": "First elected to the state House in 2020. Lawyer and former Commonwealth Court law clerk; chairs Allegheny County's sewer authority. Lives in Brighton Heights.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: landslides. She wants to expand state mine-subsidence insurance \"to include landslides or create a free-standing insurance program.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          },
+          {
+            "text": "On new revenue from cannabis, digital ads and skill games: \"I support all of them.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          },
+          {
+            "text": "On private-school tax credits: \"Public money for public schools unless private schools submit to the same transparency and regulation.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Joseph Aguglia",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://joeagugliaforstatehouse20.com/",
+        "website_confidence": "verified",
+        "background": "Senior legal compliance officer at a transportation brokerage; former assistant district attorney and former director of the Erie County Human Relations Commission. Won the Republican nomination by write-in in May. Lives in Ross Township.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: \"I would propose property tax reform and relief as being the #1 local issue not addressed by Harrisburg.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          },
+          {
+            "text": "On new revenue: tax skill games at 20% and use \"100% of this tax ... in place of property taxes.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          },
+          {
+            "text": "On private-school tax credits: \"I am not in favor of cutting funding for EITC, or putting up excessive barriers to funding.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "90.5 WESA voter guide: Pa. State House 20th District, Aguglia v. Kinkead",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+      }
+    ],
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "Pa. State House 20th District election: Aguglia v. Kinkead",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-20th-district-augulia-kinkead"
+      }
+    ]
+  },
+  {
+    "id": "pa-hd-21",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-21",
+    "scope_plain": "Part of the City of Pittsburgh (Wards 6, 9 and 24, and parts of 2, 10, 23 and 26): Lawrenceville, the Strip District, Troy Hill, Spring Garden, East Allegheny and parts of Bloomfield, Morningside and Spring Hill-City View, plus Reserve, Shaler, Etna and Millvale.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Lindsay Powell",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lindsay Powell",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.lindsaypowellforpa.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2023. Former City of Pittsburgh assistant chief of staff; public policy master's degree from Carnegie Mellon and a Fulbright scholar. Lives in Lawrenceville. No Republican filed.",
+        "own_words": [
+          {
+            "text": "Campaign bio lists her key issues as \"safe and dignified housing for all, helping working families, assisting small businesses and strengthening the local economy.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          },
+          {
+            "text": "Campaign bio says she oversaw the city's first citywide digital equity initiative and Avenues of Hope, a program to help small businesses open on main streets.",
+            "is_quote": false,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Allegheny County Democratic Committee voter guide (candidate-supplied text)",
+        "url": "https://www.alleghenydems.com/voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-23",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-23",
+    "scope_plain": "Part of the City of Pittsburgh (parts of Wards 4, 7, 14 and 15): Squirrel Hill, Greenfield, Swisshelm Park, Regent Square, Central Oakland and parts of North and South Oakland, Shadyside and Point Breeze.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Dan Frankel",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dan Frankel",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://electdanfrankel.com/",
+        "website_confidence": "verified",
+        "background": "State representative for the 23rd District since 1999 and Democratic chair of the House Health Committee. Lives in Squirrel Hill. No Republican filed.",
+        "own_words": [
+          {
+            "text": "Backs the Pennsylvania Fairness Act, which would bar denying people housing, jobs or service because of sexual orientation or gender identity.",
+            "is_quote": false,
+            "source": "https://electdanfrankel.com/"
+          },
+          {
+            "text": "Campaign bio: works \"to reduce gun violence through common-sense, evidence-based policies.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Allegheny County Democratic Committee voter guide (candidate-supplied text)",
+        "url": "https://www.alleghenydems.com/voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-24",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-24",
+    "scope_plain": "Part of the City of Pittsburgh (Wards 8, 11 and 12, and parts of 4, 5, 7, 10 and 13): East Liberty, Garfield, Highland Park, Larimer, Lincoln-Lemington-Belmar, Bloomfield, Friendship, the Hill District, East Hills and parts of Homewood, Oakland, Shadyside and Stanton Heights.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "La'Tasha D. Mayes",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "La'Tasha D. Mayes",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.latashaforpa.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2023, after 25 years of leadership in reproductive health and rights groups. Co-founded the Pennsylvania Black Maternal Health Caucus. No Republican filed.",
+        "own_words": [
+          {
+            "text": "Running for re-election \"with a focus on healthcare, childcare and an economy for working people.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          },
+          {
+            "text": "Campaign bio: prime sponsor of the CROWN Act, signed in November 2025, which bans discrimination based on hair type, texture or style.",
+            "is_quote": false,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Allegheny County Democratic Committee voter guide (candidate-supplied text)",
+        "url": "https://www.alleghenydems.com/voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-27",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-27",
+    "scope_plain": "Part of the City of Pittsburgh (Ward 28 and parts of 19 and 20): the West End, Westwood, Crafton Heights, Banksville, Duquesne Heights, Fairywood, Windgap, Oakwood, Ridgemont and parts of Beechview, Elliott, Mount Washington and Sheraden, plus Scott, Crafton, Green Tree, Ingram and nearby boroughs.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Dan Deasy",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dan Deasy",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since first winning in 2008; former Pittsburgh city councilman and city Public Works supervisor. Democratic chair of the House Liquor Control Committee. No Republican filed.",
+        "own_words": [
+          {
+            "text": "Campaign bio lists priorities including \"expanding access to health care; supporting funding for education; strengthening penalties for crimes against children.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          },
+          {
+            "text": "Also \"expanding services for senior citizens and veterans; and addressing blight and abandoned properties.\"",
+            "is_quote": true,
+            "source": "https://www.alleghenydems.com/voter-guide"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Allegheny County Democratic Committee voter guide (candidate-supplied text)",
+        "url": "https://www.alleghenydems.com/voter-guide"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-34",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-34",
+    "scope_plain": "A small part of the City of Pittsburgh (parts of Wards 13 and 14: Point Breeze North and parts of Homewood and Point Breeze), plus Wilkinsburg, Swissvale, Edgewood, Forest Hills, Braddock and other eastern boroughs.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": null,
+    "vote_for": 1,
+    "incumbent": "Abigail Salisbury",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Abigail Salisbury",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://salisburyforpa.com/",
+        "website_confidence": "verified",
+        "background": "State representative since a February 2023 special election; former Swissvale Borough Council member and attorney for nonprofits and small businesses. Chairs the PA Autism Caucus. No Republican filed.",
+        "own_words": [
+          {
+            "text": "On infrastructure: \"stormwater management, combined sewer overflow, and land subsidence may not be exciting to many, but they sure do matter.\"",
+            "is_quote": true,
+            "source": "https://salisburyforpa.com/"
+          },
+          {
+            "text": "On schools: \"Our public schools need our support.\" Wants pathways that include skilled trade training, not only college.",
+            "is_quote": true,
+            "source": "https://salisburyforpa.com/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "Abigail Salisbury campaign site",
+        "url": "https://salisburyforpa.com/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "pa-hd-36",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-36",
+    "scope_plain": "Part of the City of Pittsburgh (Wards 16, 29 and 32, and parts of 17, 18 and 19): Carrick, Brookline, Overbrook, Arlington, St. Clair, the South Side Slopes and parts of Beechview, Beltzhoover, Mount Washington and the South Side Flats, plus Brentwood and Mount Oliver.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": "Benham has held the seat since 2021 and ran unopposed in the spring primary. Democrats hold the state House 103 to 100, so every seat counts toward control.",
+    "vote_for": 1,
+    "incumbent": "Jessica Benham",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jessica Benham",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "https://www.benhamforpa.com/",
+        "website_confidence": "verified",
+        "background": "State representative since 2021; former development director of the Pittsburgh Center for Autistic Advocacy. Ph.D. from the University of Pittsburgh. Lives in the South Side Slopes.",
+        "own_words": [
+          {
+            "text": "Top focus: \"continue to make it easier for people to afford to live a good life in the Commonwealth.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          },
+          {
+            "text": "On new revenue: \"I do support the taxation of recreational cannabis.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          },
+          {
+            "text": "On private-school tax credits: \"Public money, public schools.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Timothy McCune",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://mccuneforpa.com/",
+        "website_confidence": "verified",
+        "background": "Pediatric home health aide and a volunteer firefighter from 2005 to 2023; founded the nonprofit Safety Net of Hope. First-time candidate. Lives in Brentwood.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: aging roads, stormwater and volunteer emergency services; wants more \"state grants for municipal infrastructure and Fire/EMS operations.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          },
+          {
+            "text": "On new revenue: favors legal cannabis, skill games and digital-ad taxes, but the money \"must directly offset state-imposed fees.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          },
+          {
+            "text": "On private-school tax credits: supports \"targeted educational choice for students with IEPs.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "90.5 WESA voter guide: Pa. State House 36th District, Benham v. McCune",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+      }
+    ],
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "Pa. State House 36th District election: Benham v. McCune",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-36th-district-benhan-mccune"
+      }
+    ]
+  },
+  {
+    "id": "pa-hd-38",
+    "state": "PA",
+    "level": "state",
+    "office": "Pennsylvania House of Representatives",
+    "district": "HD-38",
+    "scope_plain": "A small part of the City of Pittsburgh (Ward 31: Hays, Lincoln Place and New Homestead), plus Baldwin, Whitehall, Dravosburg, Glassport and part of West Mifflin.",
+    "office_explainer": "One of 203 state representatives. Writes Pennsylvania laws and votes on the state budget.",
+    "why_it_matters": "A rematch of 2024, when Inglis won the open seat by 11 points. Democrats hold the state House 103 to 100, so every seat counts toward control.",
+    "vote_for": 1,
+    "incumbent": "John Inglis",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John Inglis",
+        "party": "Democratic",
+        "incumbent": true,
+        "website": "http://inforinglis.com/",
+        "website_confidence": "verified",
+        "background": "First elected to the state House in 2024; former teacher and school counselor in the West Mifflin Area School District and West Mifflin borough councilman (2018 to 2024). Lives in West Mifflin.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: \"The biggest issue facing most of my constituents, Pennsylvanians, and Americans is affordability.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          },
+          {
+            "text": "On new revenue: \"I am a prime sponsor of the digital advertising tax aimed at making mega corporations pay their fair share.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          },
+          {
+            "text": "On private-school tax credits: \"I am opposed to school vouchers.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      },
+      {
+        "name": "Stone Sobieralski",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Stonemason; served one term on Whitehall borough council and on its planning commission. Lost to Inglis in 2024 and won this year's Republican nomination by write-in. Lives in Whitehall. Campaign is on Facebook and Instagram (stoneforpa); no website found.",
+        "own_words": [
+          {
+            "text": "Biggest local concern: \"Our most pressing local concern is fair school funding.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          },
+          {
+            "text": "On new revenue: \"I do not and will never support creating new taxes simply to give Harrisburg more money to spend.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          },
+          {
+            "text": "On private-school tax credits: \"I am a strong supporter of school choice.\"",
+            "is_quote": true,
+            "source": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/pennsylvania"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PA Dept. of State: state House district descriptions (2022 map)",
+        "url": "https://www.pa.gov/agencies/vote/resources/redistricting/pennsylvania-redistricting-house-of-representative"
+      },
+      {
+        "name": "Allegheny County unofficial general election candidate list (Aug 27, 2026)",
+        "url": "https://www.alleghenycounty.us/files/assets/county/v/4/government/elections/documents/unofficial_general_election_candidate_list_08272026.xlsx"
+      },
+      {
+        "name": "Allegheny County official sample ballots (all 402 City of Pittsburgh voting districts checked Oct 17, 2026)",
+        "url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx"
+      },
+      {
+        "name": "League of Women Voters of Greater Pittsburgh: 2026 PA House and Senate candidates",
+        "url": "https://lwvpgh.org/PAcandidates"
+      },
+      {
+        "name": "90.5 WESA voter guide: Pa. State House 38th District, Inglis v. Sobieralski",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+      }
+    ],
+    "confidence": "verified",
+    "explainers": [
+      {
+        "source": "90.5 WESA",
+        "title": "Pa. State House 38th District election: Inglis v. Sobieralski",
+        "url": "https://www.wesanews.org/wesa-voter-guide/2026-10-05/pa-state-house-38th-district-inglis-sobieralski"
+      }
+    ]
+  }
+]

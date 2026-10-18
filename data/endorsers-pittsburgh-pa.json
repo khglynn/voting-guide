@@ -68,5 +68,19 @@
     "default_on": false,
     "endorses_candidates": true,
     "endorses_measures": false
+  },
+  {
+    "id": "lifepac-western-pa",
+    "name": "LifePAC (Western Pennsylvania)",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Anti-abortion political action committee in Western Pennsylvania, founded in 1980; no AllSides or Ad Fontes rating. Its stated aim, as quoted by WESA (Apr. 28, 2026), is to \"identify and support candidates for public office who are dedicated to the sanctity of human life.\" A separate group from the Pennsylvania Pro-Life Federation. Its own website and 2026 list were not found.",
+    "geography": [
+      "pittsburgh-pa"
+    ],
+    "guide_url": "https://www.wesanews.org/politics-government/2026-04-28/anti-abortion-groups-support-catena-pa-house-race-controversy",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
   }
 ]

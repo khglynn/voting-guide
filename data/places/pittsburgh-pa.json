@@ -1,0 +1,59 @@
+{
+  "id": "pittsburgh-pa",
+  "label": "Pittsburgh",
+  "state": "PA",
+  "counties": [
+    "Allegheny"
+  ],
+  "county_election_office": {
+    "name": "Allegheny County Elections Division, County Office Building, 542 Forbes Ave., Pittsburgh 15219",
+    "url": "https://www.alleghenycounty.us/Government/Elections",
+    "phone": "412-350-4500"
+  },
+  "sample_ballot_url": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx",
+  "zips": [
+    "15201",
+    "15203",
+    "15204",
+    "15205",
+    "15206",
+    "15207",
+    "15208",
+    "15210",
+    "15211",
+    "15212",
+    "15213",
+    "15214",
+    "15216",
+    "15217",
+    "15219",
+    "15220",
+    "15221",
+    "15222",
+    "15224",
+    "15226",
+    "15227",
+    "15232",
+    "15233",
+    "15260",
+    "15282"
+  ],
+  "zip_caveats": "This page covers only the City of Pittsburgh, and the ZIP list comes from a commercial ZIP table, not an official source. Many listed ZIPs also cover suburbs that vote a different ballot: Dormont and Mt. Lebanon (15216, 15226, 15220), Green Tree, Crafton, Ingram and Thornburg (15204, 15205, 15220), Wilkinsburg, Edgewood, Forest Hills, Swissvale, Churchill and Braddock Hills (15221), Penn Hills (15206, 15208, 15221), Baldwin, Brentwood and Whitehall (15210, 15227), and Mount Oliver borough (15210). If you live in one of those towns, this page is not your ballot. Some city neighborhoods sit in mostly suburban ZIPs that are not listed here: Brighton Heights (15202), Troy Hill (15209), Regent Square and Swisshelm Park (15218), Brookline and Overbrook (15234), East Hills and Lincoln-Lemington (15235), Hays and Lincoln Place (15120, 15122, 15236), Esplen and Windgap (15136) and East Carnegie and Oakwood (15106); if your address is inside the city, this page applies. Inside the city, everyone votes for governor, U.S. House District 12 and the county charter question. Your state House race (one of nine: 19, 20, 21, 23, 24, 27, 34, 36 or 38) depends on your ward and voting division, and most city ZIPs touch two or more House districts. Only Wards 10 to 12 (State Senate District 38) and Wards 1 to 3, 6, 9, 19 to 28 and 32 (District 42) have a state Senate race this year; Wards 4, 5, 7, 8, 13 to 18 and 29 to 31 are in District 43, which is not up until 2028, so those voters have no Senate race. To see your exact districts, look yourself up at vote.pa.gov (it shows your ward, division and districts) or use the county sample-ballot lookup.",
+  "notes": "No city, school board, judicial or county-office races are on the November 3, 2026 ballot in Pittsburgh, and the city has no ballot question of its own (its charter question was on the May primary ballot). The only local question is the county charter amendment. The county term-limit questions were removed by a court in August.",
+  "contest_ids": [
+    "pa-governor",
+    "pa-us-house-12",
+    "pa-sd-38",
+    "pa-sd-42",
+    "pa-hd-19",
+    "pa-hd-20",
+    "pa-hd-21",
+    "pa-hd-23",
+    "pa-hd-24",
+    "pa-hd-27",
+    "pa-hd-34",
+    "pa-hd-36",
+    "pa-hd-38",
+    "allegheny-charter-7c"
+  ]
+}

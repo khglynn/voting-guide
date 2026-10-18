@@ -1404,60 +1404,60 @@
     "target_id": "fl-us-senate-special",
     "status": "endorsed",
     "choice": "Ashley Moody",
-    "why": "Formal party endorsement, September 2025, before the primary.",
-    "url": "https://floridianpress.com/2025/09/republican-party-of-florida-formally-endorses-ashley-moody-for-senate/",
-    "date": "2025-09-01",
-    "confidence": "sourced"
+    "why": "The Republican Party of Florida voter guide lists this pick (county guide page, fetched Oct 17, 2026).",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
-    "url": "https://florida.gop/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Byron Donalds",
+    "why": "The Republican Party of Florida voter guide lists this pick (county guide page, fetched Oct 17, 2026).",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
-    "url": "https://florida.gop/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "The Republican Party of Florida voter guide lists this pick (county guide page, fetched Oct 17, 2026).",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-cfo",
-    "status": "not_found",
-    "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
-    "url": "https://florida.gop/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Blaise Ingoglia",
+    "why": "The Republican Party of Florida voter guide lists this pick (county guide page, fetched Oct 17, 2026).",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "Party nominee on the certified ballot, but no party slate or page endorsing this candidate was found, so it is not counted as an endorsement.",
-    "url": "https://florida.gop/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "The Republican Party of Florida voter guide lists this pick (county guide page, fetched Oct 17, 2026).",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
-    "choice": null,
-    "why": "Parties and advocacy groups in Florida do not, as a rule, take positions on appellate judicial retention; none found for 2026.",
-    "url": "https://florida.gop/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Its voter guide says YES on retaining Justice Carlos G. Muniz.",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
@@ -1514,30 +1514,30 @@
     "target_id": "fl-amendment-1",
     "status": "endorsed",
     "choice": "YES",
-    "why": "The Republican Party of Florida backs Amendment 1 (Tampa Bay Times explainer, Sept 27, 2026).",
-    "url": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html",
-    "date": "2026-09-27",
-    "confidence": "sourced"
+    "why": "Its voter guide says YES on raising the rainy-day fund cap.",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-amendment-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 endorsement found.",
-    "url": "https://florida.gop/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Its voter guide says YES on the farm equipment tax exemption.",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-republican-party",
     "target_id": "fl-amendment-3",
     "status": "endorsed",
     "choice": "YES",
-    "why": "The Florida GOP backs Amendment 3 as the largest property-tax cut in state history (Tampa Bay Times and Florida Phoenix).",
-    "url": "https://floridaphoenix.com/voter-guides/ballot-measures/2026-amendment-3/",
-    "date": "2026-09-27",
-    "confidence": "sourced"
+    "why": "Its voter guide says YES on the homestead exemption increase.",
+    "url": "https://florida.gop/county-guide",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fl-afl-cio",

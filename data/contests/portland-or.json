@@ -1,0 +1,3549 @@
+[
+  {
+    "id": "or-us-house-1",
+    "state": "OR",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "OR-1",
+    "scope_plain": "Voters in Oregon's 1st Congressional District. In Portland that is mostly the west side (Northwest, Southwest, downtown) plus a few inner Southeast precincts. Check your ballot to see which House race you have.",
+    "office_explainer": "One of Oregon's six seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Two-year term. Incumbent Suzanne Bonamici has held the seat since 2012. Axios reports the Cook Political Report rates every Oregon House race safe for the incumbent.",
+    "vote_for": 1,
+    "incumbent": "Suzanne Bonamici",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Barbara J Kahl",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://drkahlforcongress.com",
+        "website_confidence": "verified",
+        "background": "Veterinarian and business owner; says she spent two decades in corporate accounting and finance and two in veterinary medicine. Served as a public member of the Oregon Department of Agriculture's CAFO advisory committee.",
+        "own_words": [
+          {
+            "text": "Cut redundant federal regulations and taxes, revive our timber, tech, agriculture, and maritime industries",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Track taxpayer dollars, no more blank checks for NGOs or special interests.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Restore top standards in reading, math, STEM, civics, and the trades so every child has a future.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Suzanne Bonamici",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://www.bonamiciforcongress.com",
+        "website_confidence": "verified",
+        "background": "U.S. Representative since 2012. Former consumer protection attorney at the Federal Trade Commission and Oregon state legislator.",
+        "own_words": [
+          {
+            "text": "Suzanne supports lowering skyrocketing premiums, Medicare for All, and access to contraception and abortion care.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "We must restore trust and accountability in government by banning Congressional stock trading",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Data centers shouldn't be able to raise costs or exploit Oregon's natural resources for profit.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Multnomah County sample ballots (district by precinct)",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      },
+      {
+        "name": "Axios Portland",
+        "url": "https://www.axios.com/local/portland/2026/10/14/2026-election-voter-guide-races-ballot-measure"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-us-house-3",
+    "state": "OR",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "OR-3",
+    "scope_plain": "Voters in Oregon's 3rd Congressional District, which covers most of Portland east of the Willamette River plus east Multnomah County and Hood River. Check your ballot to see which House race you have.",
+    "office_explainer": "One of Oregon's six seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Two-year term. Incumbent Maxine Dexter is finishing her first term. Axios reports the Cook Political Report rates every Oregon House race safe for the incumbent.",
+    "vote_for": 1,
+    "incumbent": "Maxine Dexter",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Maxine E Dexter",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.maxinefororegon.com",
+        "website_confidence": "verified",
+        "background": "U.S. Representative since 2025. Pulmonary and critical care physician; former state representative for House District 33.",
+        "own_words": [
+          {
+            "text": "Healthcare is a human right",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Impeach Trump, abolish ICE, release the Epstein files.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Working families, not billionaires: Good schools, living wages, union jobs, affordable housing and childcare.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Loran Ayles",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement; the Multnomah County Republican Party guide links only a Facebook page.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "SOS list of offices (district counties)",
+        "url": "https://multco.us/file/oregon_secretary_of_state_list_of_public_offices_-_november_3,_2026_general_election/download"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-us-house-5",
+    "state": "OR",
+    "level": "federal",
+    "office": "U.S. Representative",
+    "district": "OR-5",
+    "scope_plain": "Voters in Oregon's 5th Congressional District, which runs from South Portland to Bend. In Portland that means some Southwest and Southeast neighborhoods (for example the Sellwood area). Check your ballot to see which House race you have. Adair is nominated by both the Republican and Libertarian parties.",
+    "office_explainer": "One of Oregon's six seats in the U.S. House. Votes on federal laws, taxes and spending.",
+    "why_it_matters": "Two-year term. Willamette Week calls this Oregon's purplest district; Janelle Bynum won it in 2024 by about 2% of votes cast.",
+    "vote_for": 1,
+    "incumbent": "Janelle Bynum",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Janelle S Bynum",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.janellebynum.com",
+        "website_confidence": "verified",
+        "background": "U.S. Representative since 2025; state representative 2016 to 2024. Electrical engineer and former local business owner.",
+        "own_words": [
+          {
+            "text": "Janelle puts results over politics and will work with whoever is serious about tackling problems",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Janelle is focused on lowering costs, from groceries to housing to healthcare",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Standing up to Trump and ICE",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Andrea Townsend",
+        "party": "Pacific Green",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Pacific Green Party nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Patti Adair",
+        "party": "Republican, Libertarian",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Deschutes County Commissioner since 2019; small business owner and accountant.",
+        "own_words": [
+          {
+            "text": "Ban Members of Congress from being paid during government shutdowns",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Make no tax on tips, overtime, and Social Security permanent, and increase the limits",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "help make healthcare more accessible and affordable for working-class families",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week federal endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-federal/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-sd-17",
+    "state": "OR",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-17",
+    "scope_plain": "Only voters in Senate District 17: Northwest Portland, a sliver of North Portland and part of Washington County (Bethany). Check your ballot.",
+    "office_explainer": "One of 30 state senators. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Four-year term. Incumbent Lisa Reynolds was appointed to the Senate in 2024.",
+    "vote_for": 1,
+    "incumbent": "Lisa Reynolds",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John A N Chee",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Former tech worker with no experience in public office (Willamette Week). Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement. Told Willamette Week he wants to lower taxes and deregulate industries that employ men.",
+            "is_quote": false,
+            "source": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Lisa Reynolds",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.lisafororegon.com",
+        "website_confidence": "verified",
+        "background": "Pediatrician at The Children's Clinic since 1995; state representative 2021 to 2024 and state senator since 2024.",
+        "own_words": [
+          {
+            "text": "Supported the highest K-12 budget expenditure in Oregon history, including funding for early literacy programs.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Kept vaccines widely available in our state in the face of federal threats.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Established the Oregon Child Tax Credit and fought for affordable childcare.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-sd-19",
+    "state": "OR",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-19",
+    "scope_plain": "Only voters in Senate District 19: Lake Oswego, West Linn, Tualatin and parts of South and Southwest Portland. Check your ballot.",
+    "office_explainer": "One of 30 state senators. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Four-year term. Incumbent Rob Wagner is Senate President, the chamber's top leader.",
+    "vote_for": 1,
+    "incumbent": "Rob Wagner",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Rob Wagner",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://robwagnerfororegon.com",
+        "website_confidence": "verified",
+        "background": "Oregon Senate President; state senator since 2018. Former associate vice president at Portland Community College and Lake Oswego school board member.",
+        "own_words": [
+          {
+            "text": "As Senate President, I work hard for Oregonians in every corner of our state.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "we must protect health care for Oregonians, including seniors, low-income families, and children",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "We must invest in Oregon: education, infrastructure, public safety, jobs, and economic development",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Mary Dirksen",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://marydirksen.com",
+        "website_confidence": "verified",
+        "background": "Senior policy analyst at the Oregon Department of Transportation (24 years at ODOT). Has served on state and federal anti-trafficking advisory committees.",
+        "own_words": [
+          {
+            "text": "Public safety: putting victims first, supporting law enforcement, and holding repeat offenders accountable.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "delivering meaningful tax relief so working families can keep more of what they earn.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I believe government should serve people, not the other way around.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-sd-24",
+    "state": "OR",
+    "level": "state",
+    "office": "State Senator",
+    "district": "SD-24",
+    "scope_plain": "Only voters in Senate District 24: outer East Portland and part of Clackamas County. Check your ballot. Unopposed.",
+    "office_explainer": "One of 30 state senators. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Four-year term. Incumbent Kayse Jama, the Senate Majority Leader, has no opponent.",
+    "vote_for": 1,
+    "incumbent": "Kayse Jama",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Kayse Jama",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://www.kaysejama.com",
+        "website_confidence": "verified",
+        "background": "Oregon Senate Majority Leader and chair of the Senate housing committee; longtime nonprofit leader and organizer.",
+        "own_words": [
+          {
+            "text": "I'm focused on lowering everyday costs, building more affordable housing, expanding access to healthcare",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Secured millions for affordable housing and economic development in our district",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-28",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-28",
+    "scope_plain": "Only voters in House District 28: Southwest Portland and part of Beaverton. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Willamette Week calls it a comfortably blue district; Dacia Grayber seeks a fourth term.",
+    "vote_for": 1,
+    "incumbent": "Dacia Grayber",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Dacia Grayber",
+        "party": "Democrat, Independent, Working Families",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative; professional firefighter-paramedic for about 25 years, many with Tualatin Valley Fire & Rescue.",
+        "own_words": [
+          {
+            "text": "Fighting back against utility price increases by ensuring data centers pay their fair share.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I'm fighting for the neighborhood schools our kids deserve, ensuring needed funding and accountability to deliver results.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Randall Fryer",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired physician (emergency and family medicine) and former software integration manager; U.S. Army combat medic.",
+        "own_words": [
+          {
+            "text": "Government overreach, tax increases, and new fees are outpacing what SW Portland families earn.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Sobriety centers and detox should be required, not optional, for those cycling through our streets.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-33",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-33",
+    "scope_plain": "Only voters in House District 33: Northwest Portland, much of downtown and Southwest Portland, plus a piece of North Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Incumbent Shannon Jones Isadore is finishing her first term.",
+    "vote_for": 1,
+    "incumbent": "Shannon Jones Isadore",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shannon Jones Isadore",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative; family psychotherapist and Marine Corps veteran who founded the Oregon Change Clinic, an addiction treatment program; 15 years in finance.",
+        "own_words": [
+          {
+            "text": "Secured a generational investment of $10 million in downtown Portland's James Beard Market",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Passed legislation to fund major renovations to the MODA Center to support the Blazers remaining in Portland",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Ciatta R Thompson",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Hotel front office manager in downtown Portland; former second vice chair of the Multnomah County Democrats (2025).",
+        "own_words": [
+          {
+            "text": "We can have compassion and accountability.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "We can fully staff first responders and build a world-class behavioral health system",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "PORTLAND OVER PARTY. RESULTS OVER POLITICS.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-34",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-34",
+    "scope_plain": "Only voters in House District 34: mostly Washington County (Bethany and Cedar Mill area) with a small piece of Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term.",
+    "vote_for": 1,
+    "incumbent": "Mari Watanabe",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mari Watanabe",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://mariwatanabe.com",
+        "website_confidence": "verified",
+        "background": "State representative; former Nike community and corporate leader and Portland Community College board member. First Japanese American woman in the Oregon Legislature.",
+        "own_words": [
+          {
+            "text": "REQUIRED data centers to pay their fair share of electricity through the POWER ACT",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "SUPPORTED Moda Center funding to keep the Trail Blazers in Oregon",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Shaunie Cousins",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-38",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-38",
+    "scope_plain": "Only voters in House District 38: Lake Oswego and a slice of Southwest Portland. Unopposed; Nguyen is nominated by both the Democratic and Republican parties. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Incumbent Daniel Loc Nguyen has no opponent.",
+    "vote_for": 1,
+    "incumbent": "Daniel Loc Nguyen",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Daniel Loc Nguyen",
+        "party": "Democrat, Republican",
+        "incumbent": true,
+        "website": "https://www.danielfororegon.com",
+        "website_confidence": "verified",
+        "background": "State representative and restaurant owner; former Lake Oswego city councilor; son of refugees.",
+        "own_words": [
+          {
+            "text": "Strengthen laws protecting Oregonians from ICE at the door, in hospitals, and on the street",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Balance the state budget to protect education and avoid agency cuts and mass layoffs",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-41",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-41",
+    "scope_plain": "Only voters in House District 41: Milwaukie, Oak Grove and part of Southeast Portland (the Sellwood area). Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Mark Gamba, a former Milwaukie mayor, faces Elvis Clark, who has run before on stopping new taxes (Willamette Week).",
+    "vote_for": 1,
+    "incumbent": "Mark Gamba",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Mark Gamba",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2023; former Milwaukie mayor and National Geographic photographer.",
+        "own_words": [
+          {
+            "text": "Climate change is the main reason Mark first ran for office. It remains his top priority.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "kick off a massive program to build thousands of new affordable homes to be purchased by working families",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Elvis Clark",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.emilwaukieor.org",
+        "website_confidence": "verified",
+        "background": "Retired economist; former senior economist at the Oregon Public Utility Commission; Milwaukie public safety committee member.",
+        "own_words": [
+          {
+            "text": "Excessive state taxation threatens liberty and the pursuit of happiness",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I want to pump you up with more liberty and more happiness by holding the line against taxes and regulations.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-42",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-42",
+    "scope_plain": "Only voters in House District 42: inner Southeast and inner Northeast Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Rob Nosse, chair of the House Health Care Committee, has held the seat since 2014.",
+    "vote_for": 1,
+    "incumbent": "Rob Nosse",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Morey Straus",
+        "party": "Libertarian",
+        "incumbent": false,
+        "website": "https://vote.stra.us",
+        "website_confidence": "verified",
+        "background": "Information security executive with 30-plus years in security and technology engineering; no prior government experience.",
+        "own_words": [
+          {
+            "text": "Nobody in Salem owns your life or your labor.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Homelessness, addiction, mental illness, and unaffordable housing are one system.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I have no PAC money, no union endorsements, no establishment behind me.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Rob Nosse",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.robnosse.com",
+        "website_confidence": "verified",
+        "background": "State representative since 2014; former labor representative for the Oregon Nurses Association and SEIU staff director.",
+        "own_words": [
+          {
+            "text": "Work toward a universal healthcare system so that everyone can have affordable medical and mental healthcare.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Advocate for more mental health, addiction, and homeless services.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-43",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-43",
+    "scope_plain": "Only voters in House District 43: much of Northeast Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Tawna Sanchez co-chairs the Joint Ways and Means (budget) Committee.",
+    "vote_for": 1,
+    "incumbent": "Tawna Sanchez",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Tawna Sanchez",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": "https://www.tawnasanchez.com",
+        "website_confidence": "verified",
+        "background": "State representative since 2017 and co-chair of the Joint Ways and Means Committee; director of family services at the NAYA Family Center.",
+        "own_words": [
+          {
+            "text": "As Co-Chair of Ways and Means, I have a duty to make prudent funding decisions",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Passed HB 2134, letting tenants give 30 days' notice to move out during a landlord's 90-day notice to vacate.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Tim LeMaster",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired Marine Corps major (22 years) and youth camp counselor.",
+        "own_words": [
+          {
+            "text": "Vote for me. Demand results. Restore accountability. Fix Oregon.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "restore the checks and balances that have been missing in Oregon government for more than 20 years.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-44",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-44",
+    "scope_plain": "Only voters in House District 44: North and Northeast Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term.",
+    "vote_for": 1,
+    "incumbent": "Travis Nelson",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Travis Nelson",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://www.nelsonfororegon.com",
+        "website_confidence": "verified",
+        "background": "State representative since 2022; ER and ICU nurse and Oregon Nurses Association vice president.",
+        "own_words": [
+          {
+            "text": "I've brought real resources back to North and Northeast Portland while standing up for working families.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I'm the first Black, LGBTQ+ member of the state legislature.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Margo Logan",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-45",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-45",
+    "scope_plain": "Only voters in House District 45: part of Northeast and outer East Portland (Parkrose area). Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term.",
+    "vote_for": 1,
+    "incumbent": "Thuy Tran",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Jason Boyce",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Thuy Tran",
+        "party": "Democrat, Independent, Working Families",
+        "incumbent": true,
+        "website": "https://www.tranfororegon.com",
+        "website_confidence": "verified",
+        "background": "State representative; optometrist and owner of Rose City Vision Care; lieutenant colonel in the Air National Guard; former Parkrose school board member.",
+        "own_words": [
+          {
+            "text": "Thuy passed legislation preventing employers from stealing wages",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Thuy cracked down on illegal massage businesses linked to trafficking",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-46",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-46",
+    "scope_plain": "Only voters in House District 46: Southeast Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term.",
+    "vote_for": 1,
+    "incumbent": "Willy Chotzen",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Willy Chotzen",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": "https://chotzenfororegon.com",
+        "website_confidence": "verified",
+        "background": "State representative and attorney; former public defender and public middle school math teacher.",
+        "own_words": [
+          {
+            "text": "I spearheaded the legislature's immigrant justice package",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "prioritize affordability, strengthen our schools, hold data centers accountable",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Leo Morley",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-47",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-47",
+    "scope_plain": "Only voters in House District 47: outer East Portland. Unopposed. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Incumbent Andrea Valderrama has no opponent.",
+    "vote_for": 1,
+    "incumbent": "Andrea Valderrama",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Andrea Valderrama",
+        "party": "Democrat",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative and nonprofit director; former chair of the David Douglas School Board; Hazelwood resident.",
+        "own_words": [
+          {
+            "text": "I fight for practical results for outer East Portland: lowering healthcare and food costs, improving safety",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-48",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-48",
+    "scope_plain": "Only voters in House District 48: the easternmost part of Multnomah County, including part of outer East Portland, and much of Clackamas County (Happy Valley, Damascus). Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Willamette Week calls it a swing district; Lamar Wise was appointed after Rep. Hoa Nguyen died.",
+    "vote_for": 1,
+    "incumbent": "Lamar Wise",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Lamar Wise",
+        "party": "Democrat, Independent, Working Families",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative (appointed); project director at Oregon AFSCME; former executive director of the Oregon Student Association.",
+        "own_words": [
+          {
+            "text": "I closed corporate tax loopholes and expanded a tax cut for more than 200,000 hard-working families.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "LOWERING HOUSING COSTS by cutting the red tape and costs and speeding up housing production.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Andrew Morrison",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://www.andrewmorrisonfororegon.com",
+        "website_confidence": "verified",
+        "background": "Software executive; volunteer captain for the referendum petition against the state transportation tax.",
+        "own_words": [
+          {
+            "text": "Support law enforcement and first responders to keep neighborhoods, schools, and businesses safe.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Ensure students receive a quality education that prepares them for the future and offers parents choice",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-49",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-49",
+    "scope_plain": "Only voters in House District 49: from the Sandy River to Portland's eastern edge, including Parkrose, Troutdale and part of Gresham. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term. Zach Hudson chairs the House Education Committee.",
+    "vote_for": 1,
+    "incumbent": "Zach Hudson",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ann Walker",
+        "party": "Republican",
+        "incumbent": false,
+        "website": "https://friendsofannwalker.com",
+        "website_confidence": "verified",
+        "background": "Wildfire consultant and small business owner; former fire and forestry policy director at the Western Governors' Association; retired from the Oregon Department of Forestry.",
+        "own_words": [
+          {
+            "text": "Relief from rising gas, groceries, and housing costs",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Increased Public Safety resources for all Neighborhoods, Schools, Seniors and First Responders",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Zach Hudson",
+        "party": "Democrat, Working Families",
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "State representative since 2021 and substitute teacher; former Troutdale city councilor.",
+        "own_words": [
+          {
+            "text": "residents and small businesses shouldn't have to foot the energy bill for data centers and crypto operations.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I believe everyone deserves access to safe and affordable healthcare, including reproductive care.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week legislature endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "or-hd-50",
+    "state": "OR",
+    "level": "state",
+    "office": "State Representative",
+    "district": "HD-50",
+    "scope_plain": "Only voters in House District 50: mostly Gresham, plus a small piece of outer East Portland. Check your ballot.",
+    "office_explainer": "One of 60 state representatives. Writes Oregon laws and votes on the state budget.",
+    "why_it_matters": "Two-year term.",
+    "vote_for": 1,
+    "incumbent": "Ricki Ruiz",
+    "open_seat": false,
+    "term_years": 2,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Brian Gray",
+        "party": "Republican",
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Ricki Ruiz",
+        "party": "Democrat, Independent",
+        "incumbent": true,
+        "website": "https://ricki4oregon.com",
+        "website_confidence": "verified",
+        "background": "State representative; works in parks and recreation; former Reynolds School Board member.",
+        "own_words": [
+          {
+            "text": "Improve Oregon's school funding distribution model so that our highest-poverty districts are not left behind.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Lengthen the school year so our kids aren't shorted their opportunity to learn.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-circuit-judge-2",
+    "state": "OR",
+    "level": "judicial",
+    "office": "Judge of the Circuit Court, 4th District (Multnomah), Position 2",
+    "district": "Position 2",
+    "scope_plain": "Every Multnomah County voter. Nonpartisan; vote for one.",
+    "office_explainer": "Trial judge for Multnomah County Circuit Court, which hears criminal, civil, family and juvenile cases.",
+    "why_it_matters": "Open seat: Judge Nan Waller, who presides over the Mental Health Court, is retiring (Willamette Week). This is a runoff from the May primary. Six-year term.",
+    "vote_for": 1,
+    "incumbent": "Nan Waller (retiring; not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Diane S Sykes",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.dianesykesforjudge.com",
+        "website_confidence": "verified",
+        "background": "Civil rights attorney; former senior assistant attorney general at the Oregon Department of Justice; earlier at Legal Aid Services of Oregon, the Oregon Law Center and as a public defender.",
+        "own_words": [
+          {
+            "text": "As the only bilingual candidate in this race, I understand the barriers that people face",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "I am committed to ensuring equal access to justice, treating people with dignity, and faithfully applying the rule of law.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Laura Maurer Rowan",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.laurarowanforjudge.com",
+        "website_confidence": "verified",
+        "background": "Senior assistant attorney general at the Oregon Department of Justice; Multnomah County's first mental health deputy district attorney; formerly at the Portland City Attorney's Office.",
+        "own_words": [
+          {
+            "text": "Her pamphlet statement is made up of endorser quotes; Judge Celia Howes notes she 'was the County's first Mental Health DA.'",
+            "is_quote": false,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Told Willamette Week the crime victims she worked with as a prosecutor were mostly from marginalized communities and that building their trust shaped her approach.",
+            "is_quote": false,
+            "source": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-circuit-judges/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week circuit judge endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-circuit-judges/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-circuit-judge-14",
+    "state": "OR",
+    "level": "judicial",
+    "office": "Judge of the Circuit Court, 4th District (Multnomah), Position 14",
+    "district": "Position 14",
+    "scope_plain": "Every Multnomah County voter. Nonpartisan; vote for one.",
+    "office_explainer": "Trial judge for Multnomah County Circuit Court, which hears criminal, civil, family and juvenile cases.",
+    "why_it_matters": "Open seat: a family law judgeship (divorce, custody, juvenile, restraining orders) vacated when Judge Amy Holmes Hehn retired. Runoff from May, when Hagedorn got 38% and Savage 25% (Willamette Week). Six-year term.",
+    "vote_for": 1,
+    "incumbent": "Amy Holmes Hehn (retired; not on ballot)",
+    "open_seat": true,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Elizabeth Savage",
+        "party": null,
+        "incumbent": false,
+        "website": "https://savageforjudge.org",
+        "website_confidence": "verified",
+        "background": "Family law attorney and part-time judge pro tem in Washington County; former teacher and Peace Corps volunteer.",
+        "own_words": [
+          {
+            "text": "This is a family law position. Elizabeth has the most experience in family law.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "Elizabeth understands the challenges facing our communities.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Joseph Hagedorn",
+        "party": null,
+        "incumbent": false,
+        "website": "https://hagedornforjudge.com",
+        "website_confidence": "verified",
+        "background": "Full-time judge pro tem and referee in Multnomah County juvenile court for six years; public defender and legal aid lawyer 2002 to 2020. Endorsed by every judge on the county's family law bench, per his statement.",
+        "own_words": [
+          {
+            "text": "The justice system must protect our most vulnerable and be a partner in empowering communities.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          },
+          {
+            "text": "it has been my honor to serve children and families for the past 6+ years in juvenile court.",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      },
+      {
+        "name": "Willamette Week circuit judge endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-circuit-judges/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-circuit-judge-6",
+    "state": "OR",
+    "level": "judicial",
+    "office": "Judge of the Circuit Court, 4th District (Multnomah), Position 6",
+    "district": "Position 6",
+    "scope_plain": "Every Multnomah County voter. Unopposed.",
+    "office_explainer": "Trial judge for Multnomah County Circuit Court, which hears criminal, civil, family and juvenile cases.",
+    "why_it_matters": "Six-year term. Judge Sonia Montalbano, appointed to the court, is running unopposed.",
+    "vote_for": 1,
+    "incumbent": "Sonia A Montalbano",
+    "open_seat": false,
+    "term_years": 6,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Sonia A Montalbano",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Multnomah County Circuit Court judge (appointed); practiced law for more than 25 years in employment, business, criminal, civil and appellate cases.",
+        "own_words": [
+          {
+            "text": "I deeply believe that justice should be within reach for everyone",
+            "is_quote": true,
+            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Oregon State Voters' Pamphlet, Multnomah edition",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-chair",
+    "state": "OR",
+    "level": "county",
+    "office": "Multnomah County Chair",
+    "district": null,
+    "scope_plain": "Every Multnomah County voter. Ranked choice: rank up to 4 in order (three candidates plus a write-in line). If nobody has a majority of first choices, the last-place candidate is dropped and those ballots count for their next choice, until someone has a majority. Nonpartisan, so no party labels. This race is on the separate ranked-choice ballot page; return both pages.",
+    "office_explainer": "Runs Multnomah County's government, proposes its budget and leads the five-member Board of Commissioners.",
+    "why_it_matters": "Open seat: Chair Jessica Vega Pederson is not on the ballot. The county runs homeless services, behavioral health, jails, libraries and Preschool for All. This is the county's first race decided by ranked choice. Four-year term.",
+    "vote_for": 1,
+    "ranked_choice": true,
+    "rank_up_to": 4,
+    "winners": 1,
+    "rcv_url": "https://multco.us/info/ranked-choice-voting-rcv",
+    "incumbent": "Jessica Vega Pederson (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Shannon Singleton",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.shannonsingleton.org",
+        "website_confidence": "verified",
+        "background": "Multnomah County Commissioner (District 2) since late 2024; former housing policy director, executive director of JOIN and social worker; was interim director of the Joint Office of Homeless Services for eight months.",
+        "own_words": [
+          {
+            "text": "I'll build better systems by drawing in people closest to the problem",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "That's how we find real, lasting solutions to our homelessness crisis, lower costs, and support families.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Julia Brim-Edwards",
+        "party": null,
+        "incumbent": false,
+        "website": "https://juliabrim-edwards.com",
+        "website_confidence": "verified",
+        "background": "Multnomah County Commissioner since 2023; retired Nike senior director; three terms on the Portland Public Schools board; former U.S. Senate staff.",
+        "own_words": [
+          {
+            "text": "Reduce layers of local taxes and fees, making life more affordable.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Act with urgency: Connect more people struggling with mental health and addiction to treatment, services, and housing.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Stand up to the Trump administration: Protect healthcare, food assistance and our immigrant neighbors.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Sharon Meieran",
+        "party": null,
+        "incumbent": false,
+        "website": "https://fixmultco.com",
+        "website_confidence": "verified",
+        "background": "Emergency room doctor and founder of Fixing Multnomah County; Multnomah County Commissioner for District 1 for two terms. Not seeking organizational endorsements (Willamette Week).",
+        "own_words": [
+          {
+            "text": "Multnomah County is broken.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Highest spending. Worst results.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Her 23-page turnaround plan would tie each county dollar to a tracked outcome and shift power away from the chair, possibly via a county manager.",
+            "is_quote": false,
+            "source": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-multnomah-county/"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Multnomah County candidate guide",
+        "url": "https://multco.us/file/november_2026_multnomah_county_candidate_guide/download"
+      },
+      {
+        "name": "Willamette Week county endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-multnomah-county/"
+      },
+      {
+        "name": "Axios Portland",
+        "url": "https://www.axios.com/local/portland/2026/10/14/2026-election-voter-guide-races-ballot-measure"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-commissioner-2",
+    "state": "OR",
+    "level": "county",
+    "office": "Multnomah County Commissioner",
+    "district": "District 2",
+    "scope_plain": "Only voters in County Commission District 2, which covers most of North and Northeast Portland. Ranked choice: rank up to 6 candidates in order. If nobody has a majority of first choices, the last-place candidate is dropped and those ballots count for their next choice, until someone has a majority. Nonpartisan, so no party labels. This race is on the separate ranked-choice ballot page; return both pages.",
+    "office_explainer": "One of four district seats on the county board; votes on the county budget, health, homeless and jail policy.",
+    "why_it_matters": "Open seat: Commissioner Shannon Singleton is running for chair. Seven candidates. Four-year term.",
+    "vote_for": 1,
+    "ranked_choice": true,
+    "rank_up_to": 6,
+    "winners": 1,
+    "rcv_url": "https://multco.us/info/ranked-choice-voting-rcv",
+    "incumbent": "Shannon Singleton (running for chair)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Bruce Broussard",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired executive administrator of No Veteran Left Behind Oregon; Marine Corps veteran (Vietnam); former owner and publisher of the Portland Observer; built a 38-unit affordable senior housing complex in NE Portland.",
+        "own_words": [
+          {
+            "text": "The right resources need to be managed properly to address homeless camps, the mentally ill and drug affected individuals.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "the rising cost of living has greatly outpaced wage increases and our low-income residents need better resources.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Herman Greene",
+        "party": null,
+        "incumbent": false,
+        "website": "https://hermangreene.com",
+        "website_confidence": "verified",
+        "background": "Senior pastor, Abundant Life PDX Church; small business owner; Portland Public Schools board member 2021 to 2025.",
+        "own_words": [
+          {
+            "text": "District 2 deserves a county government that delivers.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "The strongest housing policy is a paycheck.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Wants measurable housing-retention goals, performance-based contracts, and published timelines, spending and results.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Bri Williams",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.voteforbri.com",
+        "website_confidence": "sourced",
+        "background": "Culturally specific mental health consultant for Multnomah County; social worker with Preschool for All and Albina Head Start; lifelong District 2 resident.",
+        "own_words": [
+          {
+            "text": "Affordable housing with stronger eviction prevention so families aren't pushed out.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Responsible budgeting that prioritizes essential services and programs that deliver measurable results.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Serena Cruz",
+        "party": null,
+        "incumbent": false,
+        "website": "https://serenacruz.com",
+        "website_confidence": "verified",
+        "background": "Founder of Adelante Impact; held this commission seat 1999 to 2006; later Multnomah County's chief operating officer; co-founded an affordable-housing construction company.",
+        "own_words": [
+          {
+            "text": "Local government CAN work better for people in North and Northeast Portland.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I will align housing, treatment, and support services to get people off the streets and on a path to stability.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Nathan Ong Norris",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.nathanongnorris.com",
+        "website_confidence": "verified",
+        "background": "Hazardous waste technician; former carpenter and stagehand; master's in emergency management from Portland State. Running as a Democratic Socialist.",
+        "own_words": [
+          {
+            "text": "A Democratic Socialist standing up for you, and your neighbors",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Priorities include the county's Climate Justice Plan, holding polluters accountable, Preschool for All and social housing.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Nabil Zaghloul",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.electnabil.com",
+        "website_confidence": "verified",
+        "background": "Program director at Multnomah County's Bienestar de la Familia; more than 32 years at the county in community justice and health and human services.",
+        "own_words": [
+          {
+            "text": "I will introduce the Multnomah County Homelessness Reduction Act to disrupt the path to homelessness.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Promises often expire after Election Day. Results shouldn't.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Tony Robertson",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.tonyrobertson.org",
+        "website_confidence": "verified",
+        "background": "Civil rights division manager at the Oregon Bureau of Labor and Industries; former homeless housing connector and small business owner; born in North Portland.",
+        "own_words": [
+          {
+            "text": "Electing another politician isn't going to fix things.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Ensure Greater Transparency on the Use of Tax Dollars",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Multnomah County candidate guide",
+        "url": "https://multco.us/file/november_2026_multnomah_county_candidate_guide/download"
+      },
+      {
+        "name": "Sample RCV ballot with District 2",
+        "url": "https://multco.us/file/4501-2-rcv-non-en.pdf-0/download"
+      },
+      {
+        "name": "Willamette Week county endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-multnomah-county/"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-auditor",
+    "state": "OR",
+    "level": "county",
+    "office": "Multnomah County Auditor",
+    "district": null,
+    "scope_plain": "Every Multnomah County voter. Only one candidate filed, so this is a regular vote-for-one race, not ranked.",
+    "office_explainer": "Independent elected watchdog who audits county programs and spending and reports problems publicly.",
+    "why_it_matters": "Four-year term. The only candidate is not the current auditor, so a new auditor takes office in January.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nicole Pexton",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.pextonforauditor.com",
+        "website_confidence": "verified",
+        "background": "Chief audit executive; first auditor at the Oregon Liquor and Cannabis Commission; earlier audit work at Metro, the City of Portland and the Secretary of State; Certified Internal Auditor.",
+        "own_words": [
+          {
+            "text": "I will shorten the audit process so our audits can improve as many services as possible.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I will develop a public report card that shows what has been audited, what the results were",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Multnomah County candidate guide",
+        "url": "https://multco.us/file/november_2026_multnomah_county_candidate_guide/download"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "multnomah-sheriff",
+    "state": "OR",
+    "level": "county",
+    "office": "Multnomah County Sheriff",
+    "district": null,
+    "scope_plain": "Every Multnomah County voter. Only one candidate filed, so this is a regular vote-for-one race, not ranked.",
+    "office_explainer": "Elected head of the Sheriff's Office, which runs the county jails and provides law enforcement.",
+    "why_it_matters": "Four-year term. Sheriff Nicole Morrisey O'Donnell is running unopposed.",
+    "vote_for": 1,
+    "incumbent": "Nicole Morrisey O'Donnell",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nicole Morrisey O'Donnell",
+        "party": null,
+        "incumbent": true,
+        "website": "https://nicoleforsheriff2026.com",
+        "website_confidence": "verified",
+        "background": "Multnomah County Sheriff for four years; former undersheriff; about 30 years in law enforcement and corrections.",
+        "own_words": [
+          {
+            "text": "Reduced gun violence incidents and property crime, person crime trending downward.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Ensuring a safe, accountable corrections system.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Multnomah County candidate guide",
+        "url": "https://multco.us/file/november_2026_multnomah_county_candidate_guide/download"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "portland-auditor",
+    "state": "OR",
+    "level": "city",
+    "office": "Portland City Auditor",
+    "district": null,
+    "scope_plain": "Every City of Portland voter. One candidate; it appears on the ranked-choice ballot page.",
+    "office_explainer": "Portland's independent elected watchdog: audits city bureaus and spending and reports results publicly.",
+    "why_it_matters": "Four-year term. Auditor Simone Rede is running unopposed.",
+    "vote_for": 1,
+    "ranked_choice": true,
+    "rank_up_to": 2,
+    "winners": 1,
+    "rcv_url": "https://multco.us/info/ranked-choice-voting-rcv",
+    "incumbent": "Simone Rede",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Simone Rede",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.simoneforauditor.com",
+        "website_confidence": "verified",
+        "background": "Portland City Auditor; former state and Metro performance auditor; Certified Internal Auditor.",
+        "own_words": [
+          {
+            "text": "Sustain improvements to 911 call wait times for our community.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Call attention to Portland's roads, parks, and asset maintenance backlogs.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "portland-council-3",
+    "state": "OR",
+    "level": "city",
+    "office": "Portland City Council",
+    "district": "District 3",
+    "scope_plain": "Only voters in Portland City Council District 3: most of the city east of the Willamette, west of I-205 and south of Sandy Blvd. Ranked choice with 3 winners: rank up to 6 candidates in order; if your top pick is knocked out or already has enough votes to win, your vote moves to your next choice. You can rank just one. Nonpartisan, so no party labels. This race is on the separate ranked-choice ballot page; return both pages.",
+    "office_explainer": "One of 12 councilors who write city laws and set Portland's budget; three represent each district.",
+    "why_it_matters": "All three incumbents are running against 18 challengers. The council often splits 6-6 between a progressive caucus and the other six councilors, and each side hopes to gain a seat this year. District 3 covers most of Southeast Portland and a small part of Northeast. Four-year term.",
+    "vote_for": 3,
+    "ranked_choice": true,
+    "rank_up_to": 6,
+    "winners": 3,
+    "rcv_url": "https://multco.us/info/ranked-choice-voting-rcv",
+    "incumbent": "Tiffany Koyama Lane, Angelita Morillo, Steve Novick",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "John Sweeney",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Mechanical designer; worked 33 years for Portland Parks, including as a park supervisor; 28 years in the Oregon Army National Guard and Army Reserve; former Multnomah Education Service District director.",
+        "own_words": [
+          {
+            "text": "Save as many city services as possible.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Says the county should run homeless services as agreed in 1983 and that cities and Metro 'should take back one third of the money given to Multnomah County.'",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Tom Sollitt",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.tomforpdx.com",
+        "website_confidence": "verified",
+        "background": "Branding, marketing and events specialist who produced the Legendary Makers Market; in the city's Small Donor Elections program; has avoided endorsements from leading political groups (OPB).",
+        "own_words": [
+          {
+            "text": "LET'S MAKE LOCAL GOVERNMENT BORING.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "permits get processed, streets and parks are maintained, calls and emails get answered",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Larry Kelly",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Chef with 20 years in restaurants; degree in biochemistry; moved to Portland about two years ago.",
+        "own_words": [
+          {
+            "text": "People who work in Portland should be able to afford to live in Portland.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Local government should be a partner, not an obstacle.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Tiffany Koyama Lane",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.teachertiffanyforthepeople.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor and the council's first vice president; former Portland Public Schools teacher; a democratic socialist and Working Families Party leader.",
+        "own_words": [
+          {
+            "text": "I bring Portlanders into the rooms where decisions are made.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Organized Portland's Trump response, passing legislation to prevent collaboration with ICE",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Secured millions for rental assistance and social housing and banned AI-driven rent price fixing.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Ali Beaudoin",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Heart Free Pham",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Also ran for this seat in 2024 (OPB). Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Terry Parker",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired; former customer relationship manager; chaired ODOT's Banfield Transitway citizen committee in the 1970s; neighborhood association board member. Also ran in 2024 (OPB).",
+        "own_words": [
+          {
+            "text": "City streets and parks should be maintained before new projects are undertaken.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "JUST SAY NO TO BAT LANES ON 82nd AVENUE",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Increase funding to add police officers and ensure every fire station is fully staffed.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Martin Ward",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.theprinceofpeace.net",
+        "website_confidence": "unverified",
+        "background": "Lists his occupation as city council candidate; master's degree in political science. Calls himself 'A Progressive Republican along the lines of Abraham Lincoln.'",
+        "own_words": [
+          {
+            "text": "Install video cameras at every intersection",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Have an estimated 1-1.5 billion dollars of budget cuts, mainly by cutting construction projects",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Under 'Sex Crime,' says he 'Will work to stop atrocities such as abortions, transsexual surgery' and 'homo sexuality.'",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Joel Corcoran",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.corcoranforportland.org",
+        "website_confidence": "verified",
+        "background": "Small business and nonprofit attorney; former policy counsel for Councilor Loretta Smith; former state counsel for U.S. Sen. Jeff Merkley.",
+        "own_words": [
+          {
+            "text": "Enough with performative politics and partisan posturing.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Establish clear Council meeting guidelines through a structured 'Session Zero' work session",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Darren McCormick",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Angelita Morillo",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.angelitaforportland.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor, the youngest person ever elected to the council; former policy advocate at Partners for a Hunger-Free Oregon; a democratic socialist and Working Families Party member.",
+        "own_words": [
+          {
+            "text": "Banned AI rent price fixing.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "She'll push to create shelters by and for unhoused people.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "working to shut down oil trains and Data Center expansion",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Steve Novick",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.novickforportland.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor; city commissioner 2013 to 2016; environmental lawyer for the U.S. and Oregon Justice Departments.",
+        "own_words": [
+          {
+            "text": "Being progressive matters only if you make progress. I'll work with anyone to make Portland better.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Steve is pushing to shift 911 'welfare check' calls from police officers to less expensive unarmed personnel.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Patrick Hilton",
+        "party": null,
+        "incumbent": false,
+        "website": "https://patrickhilton4pdx.org",
+        "website_confidence": "verified",
+        "background": "Building operations manager and architectural designer; former state park ranger; also ran in 2024 (OPB).",
+        "own_words": [
+          {
+            "text": "Preserve, don't demolish.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Defend destination streets like Hawthorne and Belmont from generic corporate development",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Matthias Hallett",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.matthiashallett.com",
+        "website_confidence": "verified",
+        "background": "Estate planning attorney; former deputy probate clerk in Muscogee County, Georgia.",
+        "own_words": [
+          {
+            "text": "Public Safety is Non-Negotiable",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "We cannot tax our way out of a shrinking base; we must grow it back.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Don't rank the incumbents!",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Kellie Torres",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.kellietorresforportland.com",
+        "website_confidence": "verified",
+        "background": "External affairs and partnerships manager at Portland Parks & Recreation; chief of staff to Commissioner Dan Ryan 2020 to 2024.",
+        "own_words": [
+          {
+            "text": "Protect public services.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Demand accountability for every dollar.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Support small businesses and make it easier to engage with City Hall.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Kimberly Tucker",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Cristal Otero",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.cristalforportland.com",
+        "website_confidence": "verified",
+        "background": "Senior program specialist in Multnomah County homeless services; AFSCME Local 88 member; also ran in 2024 (OPB).",
+        "own_words": [
+          {
+            "text": "We should not need a year to see a policy fail.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "PCEF should fund climate work, not budget gaps.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Guy Frankenstein",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Keir Legree",
+        "party": null,
+        "incumbent": false,
+        "website": "https://keir4pdx.com",
+        "website_confidence": "verified",
+        "background": "General manager of Savoy Studios, an art glass company, for 30 years; founder of PlanXT.com; lives in Brooklyn.",
+        "own_words": [
+          {
+            "text": "Bring back safer communities by hiring more police officers and 911 dispatchers to improve response times",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I will work to reduce ongoing infrastructure project costs and lower our bills.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Esther León",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.estherforportland.com",
+        "website_confidence": "verified",
+        "background": "Physical therapist who works with people in Oregon prisons; community college professor.",
+        "own_words": [
+          {
+            "text": "Implement a vacancy tax on corporate landlords that funnels into affordable housing",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Full funding of Portland Street Response for 24/7, city-wide dispatch",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Kenneth (Kent) R Landgraver III",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Scientific instrument technician for the State of Oregon; Oregon Army National Guard veteran; has lived in what is now District 3 for 43 years. Also ran in 2024 (OPB).",
+        "own_words": [
+          {
+            "text": "Council votes affecting the city should be unanimous.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I will fight for a council full of legislators not politicians.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Sample RCV ballot, District 3 ([3 candidates elected])",
+        "url": "https://multco.us/file/4104-1-rcv-non-en.pdf-0/download"
+      },
+      {
+        "name": "OPB: What to know about District 3",
+        "url": "https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/"
+      },
+      {
+        "name": "City of Portland Small Donor Elections 2026",
+        "url": "https://www.portland.gov/smalldonorelections/all-about-2026-election"
+      },
+      {
+        "name": "Willamette Week council endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/"
+      },
+      {
+        "name": "Axios Portland",
+        "url": "https://www.axios.com/local/portland/2026/10/14/2026-election-voter-guide-races-ballot-measure"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "portland-council-4",
+    "state": "OR",
+    "level": "city",
+    "office": "Portland City Council",
+    "district": "District 4",
+    "scope_plain": "Only voters in Portland City Council District 4: all of Portland west of the Willamette, plus Sellwood-Moreland, Eastmoreland, Reed and Ardenwald in Southeast. Ranked choice with 3 winners: rank up to 6 candidates in order; if your top pick is knocked out or already has enough votes to win, your vote moves to your next choice. You can rank just one. Nonpartisan, so no party labels. This race is on the separate ranked-choice ballot page; return both pages.",
+    "office_explainer": "One of 12 councilors who write city laws and set Portland's budget; three represent each district.",
+    "why_it_matters": "All three incumbents are running against nine challengers. Business groups are spending to unseat Councilor Mitch Green, while progressive groups hope to flip one of the moderates' seats (OPB, Willamette Week). Four-year term.",
+    "vote_for": 3,
+    "ranked_choice": true,
+    "rank_up_to": 6,
+    "winners": 3,
+    "rcv_url": "https://multco.us/info/ranked-choice-voting-rcv",
+    "incumbent": "Olivia Clark, Eric Zimmerman, Mitch Green",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Matt Schulte",
+        "party": null,
+        "incumbent": false,
+        "website": "https://mattschulte.org",
+        "website_confidence": "verified",
+        "background": "Musician, filmmaker and adjunct professor; founder of Lower Boom and Clarosophy; lives downtown.",
+        "own_words": [
+          {
+            "text": "Downtown Portland is not just a problem to be solved. It is, in fact, a resource we should develop.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Proposes a 'Grid-Connected Core' that would turn empty downtown buildings' existing power hookups into regional energy infrastructure.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Jeremy Beausoleil Smith",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.jeremy4pdx.com",
+        "website_confidence": "verified",
+        "background": "Capital projects and construction manager at Portland State University; former project engineer at Kiewit.",
+        "own_words": [
+          {
+            "text": "I'm running on a platform of Housing as a Human Right, a Green New Deal for Portland",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I support a 4 Year AI Data Center Ban",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "John J Goldsmith",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Mitch Green",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.mitch4portland.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor; PhD economist and U.S. Army veteran; formerly at the Bonneville Power Administration; a democratic socialist.",
+        "own_words": [
+          {
+            "text": "Make the biggest corporations pay their fair share",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Kickstarted Portland's Social Housing program",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Protect taxpayers in the Moda deal",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Olivia Clark",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.oliviaforportland.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor and council vice president; TriMet public affairs director for 24 years; policy director for Gov. John Kitzhaber.",
+        "own_words": [
+          {
+            "text": "improve 9-1-1 response times",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "End street camping and open-air drug use",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Clear obstacles to housing production",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Jayne Cronlund",
+        "party": null,
+        "incumbent": false,
+        "website": "https://jayneforaflourishingfuture.com",
+        "website_confidence": "verified",
+        "background": "Small business owner advising nonprofits; former executive director of Three Rivers Land Conservancy; lawyer.",
+        "own_words": [
+          {
+            "text": "Your vote if you believe we should recruit companies that will bring good jobs to Portland",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Sustained investment in safe, shared common spaces like parks, trails, natural areas and business districts.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "John McDonald",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "TriMet hydro technician and former journalist; member of ATU Local 757.",
+        "own_words": [
+          {
+            "text": "Ensure the Interstate Bridge Replacement Project stays on track.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Limit new contracts and demand accountability from current providers.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Keep the Trail Blazers in Portland",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Eric Zimmerman",
+        "party": null,
+        "incumbent": true,
+        "website": "https://www.ez4pdx.com",
+        "website_confidence": "verified",
+        "background": "Incumbent councilor; lieutenant colonel in the Oregon National Guard; former chief of staff to Commissioner Julia Brim-Edwards and deputy city manager.",
+        "own_words": [
+          {
+            "text": "Portland should be the City that says YES.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I passed tax cuts, and voted against tax increases like the Arts Tax 42% hike and new street fee.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Jamey Evenstar",
+        "party": null,
+        "incumbent": false,
+        "website": "https://evenstarforportland.com",
+        "website_confidence": "verified",
+        "background": "City council chief of staff, policy director and analyst (most recently for Councilor Candace Avalos); former policy adviser to Commissioner Chloe Eudaly.",
+        "own_words": [
+          {
+            "text": "All it takes is one new progressive leader to break the deadlock on Council",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Tenant protections to increase access to housing.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Timothy (TJ) Anderson",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.linkedin.com/in/timjandersonjr/",
+        "website_confidence": "verified",
+        "background": "Portland State University student and disability rights advocate; TriMet LIFT reservationist; has served on Multnomah County budget and disability advisory committees.",
+        "own_words": [
+          {
+            "text": "running not as a career politician, but as someone with a record of showing up and doing the work",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I believe public service starts with listening.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Eli Arnold",
+        "party": null,
+        "incumbent": false,
+        "website": "https://eliforportland.com",
+        "website_confidence": "verified",
+        "background": "Portland police bicycle officer; Army Black Hawk pilot and intelligence analyst; narrowly lost a District 4 seat in 2024.",
+        "own_words": [
+          {
+            "text": "starting with the 1,900 affordable units sitting empty",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I support using existing clean energy resources to move toward fareless transit",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I will not support raising taxes and fees.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Josh Leake",
+        "party": null,
+        "incumbent": false,
+        "website": "https://joshforportland.com",
+        "website_confidence": "verified",
+        "background": "Finance executive; founder and executive director of the Portland Film Festival; ran for mayor in 2024.",
+        "own_words": [
+          {
+            "text": "We must address property crime and public disorder through effective, data-informed enforcement",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "You should not need to make a donation to get your councilor's attention.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County RCV ballot content",
+        "url": "https://multco.us/file/ballot_content_rcv_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County ranked choice voting page",
+        "url": "https://multco.us/info/ranked-choice-voting-rcv"
+      },
+      {
+        "name": "Sample RCV ballot, District 4 ([3 candidates elected])",
+        "url": "https://multco.us/file/2801-1-rcv-non-en.pdf-0/download"
+      },
+      {
+        "name": "OPB: District 4 race",
+        "url": "https://opb.org/article/2026/10/07/portland-city-council-race-district-4"
+      },
+      {
+        "name": "City of Portland Small Donor Elections 2026",
+        "url": "https://www.portland.gov/smalldonorelections/all-about-2026-election"
+      },
+      {
+        "name": "Willamette Week council endorsements",
+        "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/"
+      },
+      {
+        "name": "Axios Portland",
+        "url": "https://www.axios.com/local/portland/2026/10/14/2026-election-voter-guide-races-ballot-measure"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "emswcd-at-large-2",
+    "state": "OR",
+    "level": "special_district",
+    "office": "East Multnomah Soil & Water Conservation District Director, At-Large Position 2",
+    "district": "At-Large Position 2",
+    "scope_plain": "Voters in the East Multnomah Soil & Water Conservation District. On Portland ballots, that is addresses east of the Willamette River. Nonpartisan; vote for one.",
+    "office_explainer": "Elected board that funds conservation: help for farmers and landowners, stream and soil health, and urban green space.",
+    "why_it_matters": "Open seat: the current holder, board chair Jasmine Zimmer-Stucky, is not on the ballot. Four-year term.",
+    "vote_for": 1,
+    "incumbent": "Jasmine Zimmer-Stucky (not running)",
+    "open_seat": true,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Alex Parise",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Jeremy Wood",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Senior contracts manager at American Forests; formerly managed a water conservation program portfolio.",
+        "own_words": [
+          {
+            "text": "Durable conservation work is only as strong as the contracts and budgets behind it.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "this district deserves steady financial stewardship alongside its conservation mission.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Daniel Newberry",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Fish and wildlife administrator at the Bonneville Power Administration; former executive director of the Johnson Creek Watershed Council; Portland Urban Forestry Commission 2017 to 2023.",
+        "own_words": [
+          {
+            "text": "Climate justice is one of the most important issues of our time.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I want to help the SWCD continue their long-time efforts to preserve farm land and support farmers.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Steph Routh",
+        "party": null,
+        "incumbent": false,
+        "website": "https://www.stephfororegon.com",
+        "website_confidence": "verified",
+        "background": "Small-business owner and educator; former executive director of Oregon Walks; chair of the Portland Planning & Sustainability Commission.",
+        "own_words": [
+          {
+            "text": "Guard our water from data centers demanding more of it",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Protect the farmland that feeds us",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "emswcd-zone-3",
+    "state": "OR",
+    "level": "special_district",
+    "office": "East Multnomah Soil & Water Conservation District Director, Zone 3",
+    "district": "Zone 3",
+    "scope_plain": "Voters in the East Multnomah Soil & Water Conservation District. On Portland ballots, that is addresses east of the Willamette River. Nonpartisan; vote for one. Every East Multnomah sample ballot we checked for Portland includes this zone race.",
+    "office_explainer": "Elected board that funds conservation: help for farmers and landowners, stream and soil health, and urban green space.",
+    "why_it_matters": "Four-year term. Brad Hunter was appointed Zone 3 director in January 2026.",
+    "vote_for": 1,
+    "incumbent": "Brad Hunter (appointed 2026)",
+    "open_seat": false,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Silas Morgan",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Farmer at Morgan Family Vineyards in Corbett and director of business development at TechForm; geology degree and MBA.",
+        "own_words": [
+          {
+            "text": "In Corbett, I farm regeneratively and manage a no-till vineyard on my family's land",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "ensure district resources support effective conservation and healthy soil and water for generations to come",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Brad Hunter",
+        "party": null,
+        "incumbent": true,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Senior lender at Craft3 and former professional forester; appointed Zone 3 director in January 2026; Corbett resident.",
+        "own_words": [
+          {
+            "text": "Protect farmland and provide farmers with the tools they need to be successful",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "Increase investments in green space/parks and opportunities for access to nature for everyone in East County",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wmswcd-at-large-2",
+    "state": "OR",
+    "level": "special_district",
+    "office": "West Multnomah Soil & Water Conservation District Director, At-Large Position 2",
+    "district": "At-Large Position 2",
+    "scope_plain": "Voters in the West Multnomah Soil & Water Conservation District. On Portland ballots, that is addresses west of the Willamette River. Nonpartisan; vote for one. Unopposed.",
+    "office_explainer": "Elected board that funds conservation: help for farmers and landowners, stream and soil health, and urban green space.",
+    "why_it_matters": "Four-year term. One candidate.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Ronda Zakocs",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Founder and principal of Insight for Action; former associate professor at Boston University School of Public Health; lives on Vermont Creek in Southwest Portland.",
+        "own_words": [
+          {
+            "text": "As a trained public health researcher, I will support evidence-based approaches for water and land management practices.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wmswcd-zone-4",
+    "state": "OR",
+    "level": "special_district",
+    "office": "West Multnomah Soil & Water Conservation District Director, Zone 4",
+    "district": "Zone 4",
+    "scope_plain": "Voters in the West Multnomah Soil & Water Conservation District. On Portland ballots, that is addresses west of the Willamette River. Nonpartisan; vote for one. Unopposed; every West Multnomah sample ballot we checked includes this zone race.",
+    "office_explainer": "Elected board that funds conservation: help for farmers and landowners, stream and soil health, and urban green space.",
+    "why_it_matters": "Four-year term. One candidate.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Elizabeth Offensend",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Outreach manager and sustainability consultant; appointed, non-voting associate director on the district board; lives on a rural 20-acre property in West Multnomah County.",
+        "own_words": [
+          {
+            "text": "make conservation programs useful, accessible, and relevant to the people who live and work on the land",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "wmswcd-zone-5",
+    "state": "OR",
+    "level": "special_district",
+    "office": "West Multnomah Soil & Water Conservation District Director, Zone 5",
+    "district": "Zone 5",
+    "scope_plain": "Voters in the West Multnomah Soil & Water Conservation District. On Portland ballots, that is addresses west of the Willamette River. Nonpartisan; vote for one. Every West Multnomah sample ballot we checked includes this zone race.",
+    "office_explainer": "Elected board that funds conservation: help for farmers and landowners, stream and soil health, and urban green space.",
+    "why_it_matters": "Four-year term. Three candidates.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Terri Preeg Riggsby",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Executive director of the Network of Oregon Watershed Councils; former senior performance auditor for the Secretary of State; current West Multnomah SWCD board chair (her statement does not say whether she now holds the Zone 5 seat).",
+        "own_words": [
+          {
+            "text": "I will use my auditing skills to make sure our public dollars are spent wisely and transparently",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I pride myself in being the voice of reason",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Joy VanDervort Fields",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Principal planner for Clackamas County; certified floodplain manager; master's in biology.",
+        "own_words": [
+          {
+            "text": "I am applying to be on the Soil and Water Conservation board so I can support staff",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "we can restore our important urban streams for wild salmon, lamprey, and other fish",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      },
+      {
+        "name": "Shari Freshman",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Retired family nurse practitioner (45 years) and former owner of Pearl Health Center; has lived on a half acre in Multnomah Village for 47 years.",
+        "own_words": [
+          {
+            "text": "As a Board of Director my focus will be on clean water, healthy soil and accessible greenspaces.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          },
+          {
+            "text": "I strongly believe that one person, one salamander, one tree can make a difference for the better.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "rockwood-pud-2",
+    "state": "OR",
+    "level": "special_district",
+    "office": "Rockwood Water People's Utility District Director, Sub-District 2",
+    "district": "Sub-District 2",
+    "scope_plain": "Only voters in Rockwood Water PUD Sub-District 2, a small part of outer East Portland and Gresham. Unopposed.",
+    "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
+    "why_it_matters": "Four-year term. One candidate.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Colby E Riley",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "rockwood-pud-4",
+    "state": "OR",
+    "level": "special_district",
+    "office": "Rockwood Water People's Utility District Director, Sub-District 4",
+    "district": "Sub-District 4",
+    "scope_plain": "Only voters in Rockwood Water PUD Sub-District 4, a small part of outer East Portland and Gresham. Unopposed.",
+    "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
+    "why_it_matters": "Fills the rest of an unexpired term. One candidate.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": null,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Nicholas Engels",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Did not file a Voters' Pamphlet statement.",
+        "own_words": [
+          {
+            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "is_quote": false,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  },
+  {
+    "id": "rockwood-pud-5",
+    "state": "OR",
+    "level": "special_district",
+    "office": "Rockwood Water People's Utility District Director, Sub-District 5",
+    "district": "Sub-District 5",
+    "scope_plain": "Only voters in Rockwood Water PUD Sub-District 5, a small part of outer East Portland and Gresham. Unopposed.",
+    "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
+    "why_it_matters": "Four-year term. One candidate.",
+    "vote_for": 1,
+    "incumbent": null,
+    "open_seat": null,
+    "term_years": 4,
+    "is_retention": false,
+    "candidates": [
+      {
+        "name": "Christine E Brown",
+        "party": null,
+        "incumbent": false,
+        "website": null,
+        "website_confidence": "unverified",
+        "background": "Public drinking water outreach and conservation program coordinator; state-certified Level 2 water distribution operator; Rockwood PUD budget committee member since 2012.",
+        "own_words": [
+          {
+            "text": "I have a passion for educating and helping communities understand how their water systems work.",
+            "is_quote": true,
+            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+          }
+        ],
+        "lwv_status": "unknown",
+        "lwv_url": "https://www.vote411.org/lwvor"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Multnomah County official ballot content (E-019)",
+        "url": "https://multco.us/file/ballot_content_-_nov._2026/download"
+      },
+      {
+        "name": "Multnomah County Voters' Pamphlet",
+        "url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+      },
+      {
+        "name": "Multnomah County sample ballots",
+        "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
+      }
+    ],
+    "confidence": "verified"
+  }
+]

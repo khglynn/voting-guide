@@ -196,7 +196,31 @@ export const isPartisan = (c: Contest): boolean => c.candidates.some((k) => k.pa
 /* ---------- statuses ---------- */
 export type Status = 'info' | 'unopposed' | 'open' | 'decided' | 'auto' | 'skipped';
 export const isMultiJudge = (c: Contest): boolean => c.is_retention && c.candidates.length > 1;
-export const isMultiSeat = (c: Contest): boolean => !c.is_retention && c.vote_for > 1;
+/* Ranked choice: the voter ranks candidates in order. Multi-seat ranked races (Portland
+   council, DC at-large) are ranked, not "mark up to N". */
+export const isRCV = (c: Contest): boolean => c.ranked_choice && !c.is_retention;
+export const isMultiSeat = (c: Contest): boolean => !c.is_retention && !c.ranked_choice && c.vote_for > 1;
+/* How many ranks this guide can fill: the ballot's limit, or every candidate if fewer
+   (the ballot's extra column is a write-in line). */
+export const rankMax = (c: Contest): number => Math.min(c.rank_up_to || c.candidates.length, c.candidates.length);
+export const ranksOf = (id: string): string[] => S.b.ranks[id] || [];
+export const ordinal = (n: number): string => {
+  const t = n % 100 >= 11 && n % 100 <= 13 ? 'th' : (['th', 'st', 'nd', 'rd'][n % 10] || 'th');
+  return `${n}${t}`;
+};
+
+/* The candidates (or YES/NO) this voter chose on an item, in order: one pick, the marked
+   seats, or the ranking, 1st choice first. */
+export function myChoices(it: Item): string[] {
+  const p = S.b.picks;
+  const v = p[it.id];
+  if (v === 'SKIP') return [];
+  if (it.kind === 'measure') return v ? [v] : [];
+  if (isRCV(it)) return ranksOf(it.id);
+  if (isMultiSeat(it)) return it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'PICK').map((c) => c.name);
+  if (isMultiJudge(it)) return [];
+  return v && v !== 'DONE' ? [v] : [];
+}
 
 export function status(it: Item): Status {
   const p = S.b.picks;
@@ -205,6 +229,11 @@ export function status(it: Item): Status {
   if (!it.is_retention && it.candidates.length === 1) return 'unopposed';
   if (p[it.id] === 'SKIP') return 'skipped';
   if (isMultiJudge(it)) return it.candidates.every((c) => p[`${it.id}|${c.name}`]) ? 'decided' : 'open';
+  if (isRCV(it)) {
+    // Decided once every rank this guide can fill is used, or the voter says they're done.
+    const n = ranksOf(it.id).length;
+    return n > 0 && (n >= rankMax(it) || p[it.id] === 'DONE') ? 'decided' : 'open';
+  }
   if (isMultiSeat(it)) {
     const n = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'PICK').length;
     return n >= it.vote_for || (n > 0 && p[it.id] === 'DONE') ? 'decided' : 'open';
@@ -309,7 +338,8 @@ export function autoCandidates(): { c: Contest; name: string; why: string }[] {
     for (const e of entries) {
       if (e.t !== 'item') continue;
       const it = S.ballot!.byId.get(e.id)!;
-      if (it.kind !== 'contest' || it.is_retention || isMultiSeat(it) || it.candidates.length < 2) continue;
+      // Never for ranked races: one candidate left after filters is not a ranking.
+      if (it.kind !== 'contest' || it.is_retention || isMultiSeat(it) || isRCV(it) || it.candidates.length < 2) continue;
       if (status(it) !== 'open' || S.b.noAuto.includes(it.id)) continue;
       const f = filterCands(it);
       if (f.shown.length === 1 && f.hidden > 0) out.push({ c: it, name: f.shown[0].name, why: autoReason(it, f) });

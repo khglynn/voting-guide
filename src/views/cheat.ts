@@ -1,7 +1,8 @@
 /* Cheat sheet: picks and notes in ballot order, plus the plan essentials. Print, copy, save link. */
 import type { Item } from '../types';
 import { S, encodeShare } from '../state';
-import { SECTIONS, entriesBySection, status, isDecision, itemTitle, isMultiJudge } from '../ballot';
+import type { Contest } from '../types';
+import { SECTIONS, entriesBySection, status, isDecision, itemTitle, isMultiJudge, isRCV, ranksOf, ordinal } from '../ballot';
 import { esc, fmtDate } from '../util';
 import { pickLabel } from './items';
 import { nextStep } from './plan';
@@ -9,6 +10,9 @@ import { nextStep } from './plan';
 interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean }
 
 const cheatTitle = (it: Item): string => (it.kind === 'measure' && it.level !== 'state' ? `${it.number} (${it.jurisdiction})` : itemTitle(it));
+/* A ranked race with a ranking (and not skipped): the ranks, in order, to copy onto the ballot. */
+const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' && isRCV(it) && S.b.picks[it.id] !== 'SKIP' ? ranksOf(it.id) : []);
+const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
 
 function lines(): Line[] {
   const b = S.ballot!;
@@ -49,8 +53,15 @@ export function cheatText(): string {
   for (const l of lines()) {
     if (l.unopposed) continue;
     if (l.sec !== sec) { sec = l.sec; out.push(`${sec}:`); }
-    out.push(`${l.title}: ${l.label || '____'}`);
     const it = l.it;
+    const ranks = rankedList(it);
+    if (ranks.length) {
+      out.push(`${l.title} (${rankNote(it as Contest).toLowerCase()}):`);
+      ranks.forEach((n, i) => out.push(`  ${ordinal(i + 1)}: ${n}`));
+      if (l.note) out.push(`  Note: ${l.note}`);
+      continue;
+    }
+    out.push(`${l.title}: ${l.label || '____'}`);
     if (it && it.kind === 'contest' && isMultiJudge(it)) {
       it.candidates.forEach((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; out.push(`  ${c.name}: ${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '____'}`); });
     }
@@ -67,6 +78,15 @@ function tableHTML(forPrint: boolean): string {
     if (l.unopposed && !forPrint) continue;
     if (l.sec !== sec) { sec = l.sec; rows.push(`<tr class="cs-sec"><th colspan="2" scope="colgroup">${esc(sec)}</th></tr>`); }
     const it = l.it;
+    const ranks = rankedList(it);
+    if (it && it.kind === 'contest' && isRCV(it) && (ranks.length || !l.label)) {
+      const body = ranks.length
+        ? `<ol class="cs-ranks">${ranks.map((n, i) => `<li><span class="cs-rk">${ordinal(i + 1)}</span> ${esc(n)}</li>`).join('')}</ol>`
+        : '<span class="screen-only">Not decided</span><span class="print-only">________________</span>';
+      rows.push(`<tr data-cs="${esc(it.id)}"><th scope="row">${esc(l.title)}<span class="cs-sub">${esc(rankNote(it))}</span>${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}</th>
+        <td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
+      continue;
+    }
     const multi = !!it && it.kind === 'contest' && isMultiJudge(it);
     const sub = it && it.kind === 'contest' && multi ? `<ul class="cs-judges">${it.candidates.map((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; return `<li>${esc(c.name)}: <strong>${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '<span class="print-only">____</span><span class="screen-only">not decided</span>'}</strong></li>`; }).join('')}</ul>` : '';
     rows.push(`<tr><th scope="row">${esc(l.title)}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}</th>

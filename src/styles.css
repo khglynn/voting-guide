@@ -319,6 +319,31 @@ ul, ol { margin: 0; padding: 0; }
 .web { font-size: var(--t-sm); display: flex; flex-wrap: wrap; gap: 4px; align-items: baseline; }
 .web-flag { font-size: var(--t-xs); font-family: var(--f-mono); border: 1px dashed var(--ink); padding: 1px 6px; }
 
+/* ---------- ranked choice ---------- */
+.rcv { border: 1px solid var(--rule); background: var(--paper); padding: var(--s-2) var(--s-3); display: grid; gap: 4px; }
+.rcv .lim { white-space: nowrap; }
+.rank-n {
+  flex: none; width: 28px; height: 28px; display: inline-grid; place-items: center; align-self: center;
+  background: var(--accent); color: #1A1814; border: 1.5px solid #1A1814;
+  font-family: var(--f-mono); font-size: var(--t-sm); font-weight: 700; line-height: 1;
+}
+.cand-c .nm .rank-n { align-self: center; }
+.rank-empty { color: var(--muted); border: 1px dashed var(--rule); padding: var(--s-2) var(--s-3); }
+.rank-panel { border: 1.5px solid var(--ink); background: var(--paper); padding: var(--s-3); display: grid; gap: var(--s-2); justify-items: start; }
+.rank-list { list-style: none; display: grid; width: 100%; }
+.rank-row { display: grid; grid-template-columns: auto minmax(0, 1fr) 44px 44px; gap: 0 var(--s-2); align-items: center; min-height: 48px; border-top: 1px solid var(--rule); }
+.rank-row:first-child { border-top: 0; }
+.rank-nm { font-family: var(--f-display); font-size: var(--t-md); font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; padding-block: 4px; }
+.ibtn {
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 1.5px solid var(--ink); border-radius: 0;
+  background: transparent; color: var(--ink); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.ibtn.is-pressed { transform: translateY(1px); }
+.cs-sub { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--muted); margin-top: 2px; }
+.cs-ranks { list-style: none; display: grid; gap: 2px; }
+.cs-ranks li { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); align-items: baseline; }
+.cs-rk { font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 700; color: var(--accent-ink); }
+
 .judges { list-style: none; display: grid; }
 .judges li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px var(--s-3); align-items: center; padding: 8px 0; border-top: 1px solid var(--rule); }
 .j-nm { display: flex; flex-wrap: wrap; gap: 0 6px; align-items: baseline; font-weight: 600; min-width: 0; }
@@ -447,6 +472,8 @@ textarea.copy-fallback { width: 100%; min-height: 160px; font-family: var(--f-mo
   .cheat-ft { padding: 6pt 10pt; }
   .p-url::after { content: " (" attr(data-url) ")"; font-family: var(--f-mono); font-size: 8pt; }
   .lim { color: #333; }
+  .cs-rk { color: #000; }
+  .cs-sub { color: #333; font-size: 8pt; }
 }
 
 /* "What if…" situations in the plan card (Oct 17) */

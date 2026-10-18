@@ -30,6 +30,14 @@ export interface Contest {
   office_explainer: string | null;
   why_it_matters: string | null;
   vote_for: number;
+  /* Ranked choice: the voter ranks up to rank_up_to candidates (the ballot's own number,
+     write-in line included) and `winners` seats are filled. rcv_how is a race-specific
+     counting sentence when the default would be wrong (DC at-large). */
+  ranked_choice: boolean;
+  rank_up_to: number | null;
+  winners: number;
+  rcv_how: string | null;
+  rcv_url: string | null;
   incumbent: string | null;
   open_seat: boolean | null;
   term_years: number | null;

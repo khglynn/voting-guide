@@ -2,7 +2,7 @@
    side-by-side grid opens inside the shelf from there. */
 import type { Contest, Endorser, Item } from '../types';
 import { S } from '../state';
-import { chosen, chosenIds, endorsement, entriesBySection, status, isDecision, shortTitle, isMultiJudge, isMultiSeat, filterCands } from '../ballot';
+import { chosen, chosenIds, endorsement, entriesBySection, status, isDecision, shortTitle, isMultiJudge, isMultiSeat, isRCV, filterCands, myChoices } from '../ballot';
 import { esc, plural } from '../util';
 import { leanHTML, isOpen, ext, choiceWord, deshout } from './common';
 
@@ -78,13 +78,13 @@ function cellHTML(it: Item, e: Endorser): string {
       return c ? c.short : x;
     }).join(' + ');
   } else if (en.note) { const n = deshout(en.note); label = n.length > 14 ? `${n.slice(0, 12)}...` : n; }
-  const mine = S.b.picks[it.id];
-  const match = !!mine && mine !== 'SKIP' && !!en.c && en.c.includes(mine);
+  const mine = myChoices(it);
+  const match = !!en.c && mine.some((x) => en.c!.includes(x));
   return `<td class="cell en ${match ? 'match' : ''}">${esc(label)}${match ? '<span class="vh"> (matches your pick)</span>' : ''}${en.conf === 'unverified' ? '<span class="unv">unconfirmed</span>' : ''}</td>`;
 }
 function pickCellHTML(it: Item): string {
   const p = S.b.picks[it.id];
-  if (it.kind === 'contest' && (isMultiJudge(it) || isMultiSeat(it))) return `<td class="pickcell"><button class="btn-text btn btn-xs" data-act="jump" data-id="${esc(it.id)}">Open race</button></td>`;
+  if (it.kind === 'contest' && (isMultiJudge(it) || isMultiSeat(it) || isRCV(it))) return `<td class="pickcell"><button class="btn-text btn btn-xs" data-act="jump" data-id="${esc(it.id)}">Open race</button></td>`;
   if (it.kind === 'measure' || (it.kind === 'contest' && it.is_retention)) {
     return `<td class="pickcell"><div class="yn-inline" role="group" aria-label="Your pick for ${esc(shortTitle(it))}">
       <button data-act="pick" data-id="${esc(it.id)}" data-v="YES" aria-pressed="${p === 'YES'}" data-fk="g-${esc(it.id)}-y">Yes</button>

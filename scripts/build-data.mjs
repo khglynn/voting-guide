@@ -93,6 +93,14 @@ function normContest(c, file) {
     });
   }
   const scope = str(c.scope_plain) || '';
+  const voteFor = Number.isInteger(c.vote_for) && c.vote_for > 0 ? c.vote_for : 1;
+  // Ranked choice only when the research says so, with the ballot's own "rank up to" number.
+  const rcv = c.ranked_choice === true && !c.is_retention;
+  let rankUpTo = null;
+  if (rcv) {
+    rankUpTo = Number.isInteger(c.rank_up_to) && c.rank_up_to >= 2 ? c.rank_up_to : null;
+    if (!rankUpTo) { rankUpTo = Math.max(2, cands.length); warn(`${file}: ${c.id} is ranked choice with no usable rank_up_to; using ${rankUpTo}`); }
+  }
   return {
     kind: 'contest',
     id: c.id.trim(),
@@ -104,7 +112,12 @@ function normContest(c, file) {
     every: /^every\b/i.test(scope),
     office_explainer: str(c.office_explainer),
     why_it_matters: str(c.why_it_matters),
-    vote_for: Number.isInteger(c.vote_for) && c.vote_for > 0 ? c.vote_for : 1,
+    vote_for: voteFor,
+    ranked_choice: rcv,
+    rank_up_to: rankUpTo,
+    winners: Number.isInteger(c.winners) && c.winners > 0 ? c.winners : voteFor,
+    rcv_how: rcv ? str(c.rcv_how) : null,
+    rcv_url: rcv ? safeUrl(c.rcv_url) : null,
     incumbent: str(c.incumbent),
     open_seat: typeof c.open_seat === 'boolean' ? c.open_seat : null,
     term_years: typeof c.term_years === 'number' ? c.term_years : null,

@@ -104,3 +104,20 @@ export function scrollToEl(el: Element | null): void {
   if (!el) return;
   el.scrollIntoView({ block: 'start', behavior: 'auto' });
 }
+
+/* A quiet screen-reader announcement (a persistent, visually hidden live region), for
+   changes that don't move focus, like a ranking renumbering. */
+export function announce(msg: string): void {
+  let el = document.getElementById('sr-live');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'sr-live';
+    el.className = 'vh screen-only';
+    el.setAttribute('aria-live', 'polite');
+    el.setAttribute('aria-atomic', 'true');
+    document.body.appendChild(el);
+  }
+  el.textContent = '';
+  const target = el;
+  window.setTimeout(() => { target.textContent = msg; }, 30);
+}

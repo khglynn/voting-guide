@@ -4,9 +4,9 @@ import { S } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, itemTitle, shortTitle,
   relevantChosen, weighedIn, endorsement, backers, filterCands, isPartisan, isMultiJudge, isMultiSeat, chosen, sectionOf,
-  contestDistrict,
+  contestDistrict, isRCV, rankMax, ranksOf, ordinal,
 } from '../ballot';
-import { esc, hash, plural } from '../util';
+import { esc, hash, host, plural } from '../util';
 import { confLabel, discBtn, ext, firstSentence, isOpen, sampleBallot, srcLink, clampP, escP, deshout, choiceWord } from './common';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
@@ -32,6 +32,10 @@ export function pickLabel(it: Item): string | null {
     const left = it.candidates.length - y - n;
     if (!y && !n) return null;
     return `Yes on ${y}, No on ${n}${left ? `, ${left} blank` : ''}`;
+  }
+  if (isRCV(it)) {
+    const list = ranksOf(it.id);
+    return list.length ? list.map((n, i) => `${i + 1}. ${n}`).join(', ') : null;
   }
   if (isMultiSeat(it)) {
     const names = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'PICK');
@@ -104,9 +108,11 @@ function footHTML(it: Item, canSkip: boolean): string {
   const hasNote = !!(S.b.notes[it.id] || '').trim();
   const noteOpen = S.ui.noteOpen.has(it.id) || hasNote;
   const decidedOpen = (s === 'decided' || s === 'auto') && S.ui.expanded.has(it.id);
+  const rcv = it.kind === 'contest' && isRCV(it);
   return `<div class="r-ft">
     ${canSkip ? `<button class="btn btn-sm" data-act="skip" data-id="${esc(it.id)}" aria-pressed="${s === 'skipped'}">${s === 'skipped' ? 'Skipped. Undo' : 'Skip'}</button>` : ''}
-    ${decidedOpen ? `<button class="btn btn-sm" data-act="fold" data-id="${esc(it.id)}">Done</button><button class="btn-text btn btn-sm" data-act="clear" data-id="${esc(it.id)}">Clear my pick</button>` : ''}
+    ${decidedOpen && !rcv ? `<button class="btn btn-sm" data-act="fold" data-id="${esc(it.id)}">Done</button><button class="btn-text btn btn-sm" data-act="clear" data-id="${esc(it.id)}">Clear my pick</button>` : ''}
+    ${rcv && ranksOf(it.id).length ? `<button class="btn-text btn btn-sm" data-act="clear" data-id="${esc(it.id)}" data-fk="rc-${esc(it.id)}">Clear my ranking</button>` : ''}
     ${noteOpen ? '' : `<button class="btn-text btn btn-sm" data-act="note" data-id="${esc(it.id)}">Add note</button>`}
     ${it.kind === 'contest' && it.sources.length ? `<button class="btn-text btn btn-sm" data-act="open" data-k="srcs-${esc(it.id)}" aria-expanded="${isOpen(`srcs-${it.id}`)}">Sources (${it.sources.length})</button>` : ''}
     <button class="btn-text btn btn-sm" data-act="open" data-k="rep-${esc(it.id)}" aria-expanded="${isOpen(`rep-${it.id}`)}">Report a problem</button>
@@ -140,20 +146,76 @@ function mayApplyHTML(it: Contest): string {
 function candHTML(it: Contest, c: Candidate): string {
   const p = S.b.picks;
   const multi = isMultiSeat(it);
-  const picked = multi ? p[`${it.id}|${c.name}`] === 'PICK' : p[it.id] === c.name;
+  const rcv = isRCV(it);
+  const list = rcv ? ranksOf(it.id) : [];
+  const rank = rcv ? list.indexOf(c.name) + 1 : 0;
+  const picked = rcv ? rank > 0 : multi ? p[`${it.id}|${c.name}`] === 'PICK' : p[it.id] === c.name;
   const by = backers(it, c.name).map((e) => e.short);
   const bgK = `bg-${it.id}-${c.name}`;
   const partisan = isPartisan(it);
+  const fk = `pk-${esc(it.id)}-${hash(c.name, 4)}`;
+  let btn: string;
+  if (rcv) {
+    // Tap to give the next rank; tap a ranked candidate to take them out (the rest move up).
+    const label = rank ? `Your ${ordinal(rank)}: ${esc(c.short)}<span class="vh">. Tap to remove.</span>`
+      : list.length < rankMax(it) ? `Rank ${esc(c.short)} ${ordinal(list.length + 1)}` : `Rank ${esc(c.short)}`;
+    btn = `<button class="btn btn-sm ${rank ? 'btn-primary' : ''}" data-act="rank" data-id="${esc(it.id)}" data-v="${esc(c.name)}" aria-pressed="${rank > 0}" data-fk="${fk}">${label}</button>`;
+  } else {
+    btn = `<button class="btn btn-sm ${picked ? 'btn-primary' : ''}" data-act="${multi ? 'mpick' : 'pick'}" data-id="${esc(it.id)}" data-v="${esc(c.name)}" aria-pressed="${picked}" data-fk="${fk}">${picked ? `Your pick: ${esc(c.short)}` : `Pick ${esc(c.short)}`}</button>`;
+  }
   return `<div class="cand-c ${picked ? 'is-picked' : ''}">
-    <div class="nm"><h4 class="cand-name">${esc(c.name)}</h4>${partisan ? `<span class="party">${esc(c.party || 'No party listed')}</span>` : ''}${c.incumbent ? '<span class="badge">Incumbent</span>' : ''}</div>
+    <div class="nm">${rank ? `<span class="rank-n" aria-hidden="true">${rank}</span>` : ''}<h4 class="cand-name">${esc(c.name)}</h4>${partisan ? `<span class="party">${esc(c.party || 'No party listed')}</span>` : ''}${c.incumbent ? '<span class="badge">Incumbent</span>' : ''}</div>
     ${by.length ? `<div class="endby"><span class="kicker">Backed by</span>${by.map((x) => `<span class="badge badge-fill">${esc(x)}</span>`).join('')}</div>` : ''}
     ${ownWordsHTML(c, 'In their own words')}
     ${webHTML(c)}
     <div class="row">
-      <button class="btn btn-sm ${picked ? 'btn-primary' : ''}" data-act="${multi ? 'mpick' : 'pick'}" data-id="${esc(it.id)}" data-v="${esc(c.name)}" aria-pressed="${picked}" data-fk="pk-${esc(it.id)}-${hash(c.name, 4)}">${picked ? `Your pick: ${esc(c.short)}` : `Pick ${esc(c.short)}`}</button>
+      ${btn}
       ${c.background ? `<button class="btn-text btn btn-sm" data-act="open" data-k="${esc(bgK)}" aria-expanded="${isOpen(bgK)}">Background</button>` : ''}
     </div>
     ${c.background && isOpen(bgK) ? `<p class="small">${escP(c.background)}</p>` : ''}
+  </div>`;
+}
+
+/* ---------- ranked choice ---------- */
+const WINNERS = ['', 'One person wins.', 'Two people win.', 'Three people win.', 'Four people win.', 'Five people win.', 'Six people win.'];
+const HOW_ONE = 'If no one has a majority of first choices, last place is dropped and those ballots count for their next choice, until someone has a majority.';
+const HOW_MANY = 'Your vote counts for your top choice; if they’re knocked out, or already have enough votes to win, your vote (or the extra part of it) moves to your next choice.';
+export function rcvURL(it: Contest): string | null {
+  return it.rcv_url || it.sources.find((x) => /ranked.choice|\brcv\b/i.test(`${x.name} ${x.url}`))?.url || null;
+}
+/* The calm header: how many to rank, how many win, how the count works, where it says so. */
+function rcvHeadHTML(it: Contest): string {
+  const url = rcvURL(it);
+  const win = WINNERS[it.winners] || `${it.winners} people win.`;
+  return `<div class="rcv">
+    <p><strong>Ranked choice: rank up to ${it.rank_up_to}.</strong> ${win}</p>
+    <p class="small">${esc(it.rcv_how || (it.winners > 1 ? HOW_MANY : HOW_ONE))}${url ? ` ${ext(url, 'How the count works')} <span class="lim">${esc(host(url))}</span>` : ''}</p>
+  </div>`;
+}
+const UP = '<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M10 4l-6 6.5M10 4l6 6.5M10 4v12.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
+const X = '<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
+/* The voter's ranking, in ballot order, with move-up and remove on each row. */
+function rankPanelHTML(it: Contest): string {
+  const list = ranksOf(it.id);
+  const max = rankMax(it);
+  const id = esc(it.id);
+  const extra = (it.rank_up_to || 0) > it.candidates.length ? ' The ballot also has a write-in line you can rank.' : '';
+  if (!list.length) return `<p class="rank-empty small">Tap <strong>Rank</strong> on candidates in the order you like them. You can rank just one. Ranking more never hurts your first choice.${extra}</p>`;
+  const rows = list.map((name, i) => {
+    const h = hash(name, 4);
+    return `<li class="rank-row"><span class="rank-n" aria-hidden="true">${i + 1}</span>
+      <span class="rank-nm"><span class="vh">${ordinal(i + 1)}: </span>${esc(name)}</span>
+      ${i > 0 ? `<button class="ibtn" data-act="rup" data-id="${id}" data-v="${esc(name)}" aria-label="Move ${esc(name)} up to ${ordinal(i)}" title="Move up" data-fk="ru-${id}-${h}">${UP}</button>` : '<span class="ibtn-ph" aria-hidden="true"></span>'}
+      <button class="ibtn" data-act="rx" data-id="${id}" data-v="${esc(name)}" aria-label="Remove ${esc(name)} from your ranking" title="Remove" data-fk="rx-${id}-${h}">${X}</button></li>`;
+  }).join('');
+  const s = status(it);
+  const left = list.length < max ? `${list.length} of ${max} ranked. Tap Rank on another candidate to add them ${ordinal(list.length + 1)}.` : `All ${max} ranked.`;
+  const done = s === 'open' || S.ui.expanded.has(it.id);
+  return `<div class="rank-panel" role="group" aria-labelledby="rk-${id}">
+    <span class="kicker" id="rk-${id}">Your ranking</span>
+    <ol class="rank-list">${rows}</ol>
+    <p class="small muted">${left}${list.length < max ? extra : ''}</p>
+    ${done ? `<button class="btn btn-sm btn-primary" data-act="rdone" data-id="${id}" data-fk="rd-${id}">Done ranking</button>` : ''}
   </div>`;
 }
 function retentionHTML(it: Contest): string {
@@ -197,6 +259,7 @@ function contestCard(it: Contest): string {
     const hidden = f.hidden ? `<p class="hidden-note">${plural(f.hidden, 'candidate')} hidden by your filters. <button class="btn-text btn btn-sm" data-act="showall" data-id="${esc(it.id)}">Show all</button></p>` : '';
     const shownAll = S.ui.showAll.has(it.id) ? `<p class="hidden-note">Showing everyone. <button class="btn-text btn btn-sm" data-act="showall" data-id="${esc(it.id)}">Apply my filters</button></p>` : '';
     body = `${isMultiSeat(it) ? `<p class="small"><strong>This race fills ${it.vote_for} seats.</strong> You can mark up to ${it.vote_for} here for your cheat sheet.</p>` : ''}
+      ${isRCV(it) ? rankPanelHTML(it) : ''}
       <div class="C-cands">${cands}</div>${hidden}${shownAll}
       ${isMultiSeat(it) && s === 'open' && it.candidates.some((c) => S.b.picks[`${it.id}|${c.name}`] === 'PICK') ? `<button class="btn btn-sm" data-act="mdone" data-id="${esc(it.id)}">I’m done with this race</button>` : ''}`;
   }
@@ -205,6 +268,7 @@ function contestCard(it: Contest): string {
     ${mayApplyHTML(it)}
     ${it.office_explainer ? `<p class="explainer">${escP(it.office_explainer)}</p>` : ''}
     ${it.every && rest ? clampP(`scope-${it.id}`, rest, 24, 'small muted') : ''}
+    ${isRCV(it) ? rcvHeadHTML(it) : ''}
     ${it.why_it_matters ? clampP(`wim-${it.id}`, it.why_it_matters, 28, 'r-why') : ''}
     ${!isPartisan(it) && !it.is_retention ? '<p class="lim">Nonpartisan race: no party labels on the ballot.</p>' : ''}
     ${endorseHTML(it)}
@@ -270,7 +334,11 @@ function foldedHTML(it: Item): string {
   const s = status(it);
   const label = pickLabel(it) || '';
   let agree = '';
-  if (s !== 'skipped') {
+  if (s !== 'skipped' && it.kind === 'contest' && isRCV(it)) {
+    const first = ranksOf(it.id)[0];
+    const by = first ? backers(it, first).map((e) => e.short) : [];
+    if (by.length) agree = `<span class="fold-agree">${esc(by.join(', '))} ${by.length === 1 ? 'backs' : 'back'} your 1st choice</span>`;
+  } else if (s !== 'skipped') {
     const v = S.b.picks[it.id];
     const by = v && v !== 'SKIP' ? backers(it, v).map((e) => e.short) : [];
     if (by.length) agree = `<span class="fold-agree">${esc(by.join(', '))} ${by.length === 1 ? 'agrees' : 'agree'}</span>`;

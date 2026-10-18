@@ -61,7 +61,10 @@ collisions are detected from the measure text.
 - No addresses anywhere. The optional address lookup sends the address only to the
   U.S. Census Geocoder (JSONP) and never stores it.
 - Picks save in `localStorage` (wrapped in try/catch) and in the save link's URL
-  fragment (`#v1~...`), which never reaches a server.
+  fragment (`#v1~...`, or `#v2~...` when it holds a ranked-choice ranking), which never
+  reaches a server. Old v1 links still restore.
+- Ranked-choice races come only from the data (`ranked_choice`, `rank_up_to`, `winners`),
+  flagged from official sample ballots; `../research/rcv.md` logs each one.
 
 ## Open items for Kevin
 

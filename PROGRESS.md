@@ -1,6 +1,6 @@
 # Voting Guide v2: progress
 
-Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (v2.1 pass).
+Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (ranked choice pass).
 
 ## Done
 - Vite + vanilla TS app in this folder, local git history (branch `main`).
@@ -9,7 +9,7 @@ Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (v2.
 - One-page flow: ZIP, place question, plan card, sources line (picker + grid in the Filter shelf), ballot
   sections, district questions, Census address lookup, filters + auto-pick offer,
   notes, cheat sheet with print, copy and save link, "How this guide works".
-- `tests/e2e.mjs`: 41 checks at 380px (Denver, Austin, Atlanta, uncovered state). All pass.
+- `tests/e2e.mjs`: 89 checks at 380px (Denver, Austin, Atlanta, uncovered state, Portland and DC ranked choice, old v1 link). All pass.
   Screenshots in `shots/`.
 - Smoke pass over every place: no console errors, no sideways scroll at 380px.
 
@@ -41,6 +41,29 @@ Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (v2.
 - e2e now 41 checks. Screenshots: `shots/v2.1-before-*` and `shots/v2.1-after-*`.
 - Coordinator note: fact-checkers are editing `../data/measures/*.json`; they re-copy data
   and push after. This pass made no data edits.
+
+## Ranked choice (Sat Oct 17)
+- Data: 12 contests flagged from official sample ballots (`../research/rcv.md`): DC Mayor,
+  Delegate, At-large (rank 5, 2 winners, one vote per ballot), Ward 1 and 5 Council, Ward 6
+  State Board; Boulder Mayor (6); Multnomah Chair (4, the research said 6), Commissioner D2 (6);
+  Portland Auditor (2, shows as unopposed), Council D3 and D4 (6, 3 winners). Fields:
+  `ranked_choice`, `rank_up_to`, `winners`, `rcv_url`, `rcv_how` (SCHEMA Contest).
+- Card: a calm box under the explainer ("Ranked choice: rank up to 6. Three people win.", one
+  counting sentence, official link). Tap Rank to give the next rank; tap a ranked candidate to
+  take them out and the rest renumber. "Your ranking" panel lists ranks with Move up and Remove
+  (44px, keyboard friendly; focus follows the row). The card stays open while ranking, even
+  when every rank is used; "Done ranking" folds it to "1. Name, 2. Name".
+- Status: decided when every rank this guide can fill is used, or after Done ranking. The
+  guide fills up to min(rank_up_to, candidates); the extra ballot column is a write-in line.
+- Cheat sheet and print list ranks in order (1st, 2nd...) with "Ranked choice: rank up to N".
+- Save link: `#v2~...` adds a ranks field (hash5(id) + hash3 per name, in order), written only
+  when a ranking exists, so other ballots still get byte-identical v1 links. v1 links restore:
+  a pick-one choice on a now-ranked race becomes the 1st choice; old "mark up to N" seat marks
+  on DC at-large can't become an order without guessing, so they drop (reported) and it reopens.
+- Auto-pick never touches ranked races. Non-ranked multi-seat races keep "mark up to N".
+- e2e: 89 checks (Portland D3 ranking, renumbering, keyboard move up, note, link round trip,
+  filters; DC Ward 1; a real v1 link captured from the live site before this change).
+  Screenshots `shots/rcv-*.png`.
 
 ## (Resolved) GitHub repo and Vercel deploy
 Repo `khglynn/voting-guide` exists; pushes to `main` deploy to https://voting-guide-silk.vercel.app.
@@ -78,10 +101,10 @@ Notes below kept for history.
   single such race shows "May apply" with its scope and a "Not on my ballot" button,
   unless the place listed it and its scope names the place's county with no district.
 - Unopposed = one candidate and not a retention vote. Folded per section, not counted.
-- Multi-judge retention (CA appeals courts) gets per-judge Yes/No. Multi-seat races
-  (DC at-large) allow up to `vote_for` marks.
+- Multi-judge retention (CA appeals courts) gets per-judge Yes/No. Non-ranked multi-seat
+  races (Boulder council, Chicago MWRD) allow up to `vote_for` marks. Ranked races rank.
 - Special districts get their own section after School (the brief listed 7 sections).
-- Save link: `#v1~ST~places~zip~picks~districts~notes~sources`, hashes not indexes, so a
-  data refresh drops (and reports) unmatched picks instead of mis-restoring them.
+- Save link: `#v1~ST~places~zip~picks~districts~notes~sources` (v2 adds `~ranks`), hashes
+  not indexes, so a data refresh drops (and reports) unmatched picks instead of mis-restoring them.
 - Plan "next step" is computed from `voting_model` and dates in the state file.
 - Smooth scroll is off (FOUNDATION: it failed on phones last cycle).

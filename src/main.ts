@@ -1,13 +1,13 @@
 /* Boot, data loading, rendering and actions. One page, one flow. */
 import './styles.css';
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
-import { S, emptyBallotState, persist, readSaved, savedBallot, forgetLast, parseShareHead, decodeShare } from './state';
+import { S, emptyBallotState, persist, readSaved, savedBallot, forgetLast, parseShareHead, decodeShare, normalizeRanks, type BallotState } from './state';
 import {
   buildBallot, autoCandidates, chosenIds, decisionItems, filterSig, sectionOf, contestDistrict,
-  type SectionKey, SECTIONS, entriesBySection,
+  type SectionKey, SECTIONS, entriesBySection, status, rankMax, ordinal,
 } from './ballot';
 import { zipState, censusLookup } from './geo';
-import { toast, copyText, scrollToEl } from './util';
+import { toast, copyText, scrollToEl, announce, hash } from './util';
 import { mastHTML, restoreHTML, offerHTML, barHTML, sheetHTML, trustHTML } from './views/chrome';
 import { planHTML } from './views/plan';
 import { sourcesHTML } from './views/sources';
@@ -135,6 +135,8 @@ function applyAuto(): number {
 }
 
 /* ---------- opening a ballot ---------- */
+/* Picks plus rankings, counting a ranked race once. */
+const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Object.keys(b.ranks || {}).filter((k) => !(k in b.picks)).length;
 async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead> } = {}): Promise<void> {
   S.view = 'loading';
   S.loadErr = null;
@@ -145,14 +147,18 @@ async function openBallot(st: string, placeIds: string[], zip: string, opts: { s
     const ballot = buildBallot(sb, pbs);
     S.ballot = ballot;
     const existing = savedBallot(ballot.key);
+    const reopened = existing ? normalizeRanks(ballot, existing) : 0;
     S.b = existing || emptyBallotState(zip);
     if (zip) S.b.zip = zip;
     S.pending = null;
+    if (reopened && !opts.share) toast(`${reopened === 1 ? 'A race you marked is' : `${reopened} races you marked are`} ranked choice now. Rank your picks there again.`);
     if (opts.share) {
       const { state, dropped } = decodeShare(ballot, opts.share);
-      const n = Object.keys(state.picks).length;
-      const m = existing ? Object.keys(existing.picks).length : 0;
-      const same = existing && JSON.stringify(existing.picks) === JSON.stringify(state.picks) && JSON.stringify(existing.notes) === JSON.stringify(state.notes);
+      normalizeRanks(ballot, state);
+      const n = countPicks(state);
+      const m = existing ? countPicks(existing) : 0;
+      const same = existing && JSON.stringify(existing.picks) === JSON.stringify(state.picks) && JSON.stringify(existing.notes) === JSON.stringify(state.notes)
+        && JSON.stringify(existing.ranks) === JSON.stringify(state.ranks);
       if (existing && m > 0 && !same) {
         S.pending = { kind: 'restore', key: ballot.key, incoming: state, summary: `This link has ${n} ${n === 1 ? 'pick' : 'picks'}. This device already has ${m} saved for this ballot. Which do you want to keep?` };
       } else {
@@ -286,11 +292,12 @@ A.skip = (d) => {
 A.clear = (d) => {
   const id = d.id!;
   const it = S.ballot!.byId.get(id);
-  delete S.b.picks[id]; delete S.b.auto[id];
+  delete S.b.picks[id]; delete S.b.auto[id]; delete S.b.ranks[id];
   if (it && it.kind === 'contest') it.candidates.forEach((c) => { delete S.b.picks[`${id}|${c.name}`]; });
   if (!S.b.noAuto.includes(id)) S.b.noAuto.push(id);
   S.ui.expanded.delete(id);
   afterPick(id);
+  if (d.fk === `rc-${id}`) document.querySelector<HTMLElement>(`#i-${CSS.escape(id)} [data-act="rank"]`)?.focus({ preventScroll: true });
 };
 A.change = (d) => { S.ui.expanded.add(d.id!); afterPick(d.id!); };
 A.fold = (d) => { S.ui.expanded.delete(d.id!); afterPick(d.id!); };
@@ -321,6 +328,74 @@ A.mpick = (d) => {
   afterPick(id);
 };
 A.mdone = (d) => { S.b.picks[d.id!] = 'DONE'; afterPick(d.id!); };
+
+/* ---------- ranked choice ----------
+   Tap a candidate to give them the next rank; tap again (or Remove) to take them out, and
+   the ranks below move up. Move up swaps a row with the one above it. While the voter is
+   working, the card stays open even once every rank is used; "Done ranking" folds it. */
+const shortOf = (c: Contest, name: string): string => (c.candidates.find((k) => k.name === name) || { short: name }).short;
+function setRanks(id: string, list: string[]): void {
+  const c = S.ballot!.byId.get(id) as Contest;
+  const showing = status(c) === 'open' || S.ui.expanded.has(id);
+  if (list.length) S.b.ranks[id] = list;
+  else { delete S.b.ranks[id]; if (S.b.picks[id] === 'DONE') delete S.b.picks[id]; }
+  if (S.b.picks[id] === 'SKIP') delete S.b.picks[id];
+  delete S.b.auto[id];
+  if (showing && status(c) !== 'open') S.ui.expanded.add(id);
+  afterPick(id);
+}
+const rkFk = (id: string, name: string, kind: 'rx' | 'ru'): string => `${kind}-${id}-${hash(name, 4)}`;
+const focusFk = (fk: string): void => { document.querySelector<HTMLElement>(`[data-fk="${CSS.escape(fk)}"]`)?.focus({ preventScroll: true }); };
+A.rank = (d) => {
+  const id = d.id!; const name = d.v!;
+  const c = S.ballot!.byId.get(id) as Contest;
+  const list = [...(S.b.ranks[id] || [])];
+  const at = list.indexOf(name);
+  if (at >= 0) {
+    list.splice(at, 1);
+    setRanks(id, list);
+    announce(`Removed ${shortOf(c, name)}.${list[at] ? ` ${shortOf(c, list[at])} is now ${ordinal(at + 1)}.` : ''}`);
+    return;
+  }
+  const max = rankMax(c);
+  if (list.length >= max) { toast(`You’ve ranked ${max}, the most ${max === c.rank_up_to ? 'this ballot allows' : 'there are'}. Remove one first.`); return; }
+  list.push(name);
+  setRanks(id, list);
+  announce(`${shortOf(c, name)} ranked ${ordinal(list.length)}.`);
+};
+A.rx = (d) => {
+  const id = d.id!; const name = d.v!;
+  const c = S.ballot!.byId.get(id) as Contest;
+  const list = [...(S.b.ranks[id] || [])];
+  const at = list.indexOf(name);
+  if (at < 0) return;
+  list.splice(at, 1);
+  setRanks(id, list);
+  announce(`Removed ${shortOf(c, name)}.${list[at] ? ` ${shortOf(c, list[at])} is now ${ordinal(at + 1)}.` : ''}`);
+  // Focus the row that took its place, else the one above, else the first Rank button.
+  const next = list[at] || list[at - 1];
+  if (next) focusFk(rkFk(id, next, 'rx'));
+  else document.querySelector<HTMLElement>(`#i-${CSS.escape(id)} [data-act="rank"]`)?.focus({ preventScroll: true });
+};
+A.rup = (d) => {
+  const id = d.id!; const name = d.v!;
+  const c = S.ballot!.byId.get(id) as Contest;
+  const list = [...(S.b.ranks[id] || [])];
+  const at = list.indexOf(name);
+  if (at <= 0) return;
+  [list[at - 1], list[at]] = [list[at], list[at - 1]];
+  setRanks(id, list);
+  announce(`${shortOf(c, name)} moved up to ${ordinal(at)}.`);
+  if (at - 1 === 0) focusFk(rkFk(id, name, 'rx'));
+};
+A.rdone = (d) => {
+  const id = d.id!;
+  if (!(S.b.ranks[id] || []).length) return;
+  S.b.picks[id] = 'DONE';
+  S.ui.expanded.delete(id);
+  afterPick(id);
+  focusFk(`chg-${id}`);
+};
 A.note = (d) => { S.ui.noteOpen.add(d.id!); const it = S.ballot!.byId.get(d.id!); if (it) renderSection(sectionOf(it)); $(`[data-note="${CSS.escape(d.id!)}"]`)?.focus(); };
 A.why = (d) => { S.ui.why[d.k!] = S.ui.why[d.k!] === d.e ? null : d.e!; const it = S.ballot!.byId.get(d.k!); if (it) renderSection(sectionOf(it)); };
 A.showall = (d) => { const id = d.id!; S.ui.showAll.has(id) ? S.ui.showAll.delete(id) : S.ui.showAll.add(id); afterPick(id); };

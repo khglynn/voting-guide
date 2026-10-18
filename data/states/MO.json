@@ -74,7 +74,7 @@
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "7:00 PM",
-    "in_line_rule": "SOS: 'polling PLACES ARE OPEN FROM 6:00 AM TO 7:00 PM on election day.' If you are in line at 7:00 PM, you still have the right to vote.",
+    "in_line_rule": "SOS: 'polling places are open from 6:00 AM to 7:00 PM on Election Day.' If you are in line at 7:00 PM, you still have the right to vote.",
     "vote_centers": true,
     "lookup_url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
     "confidence": "verified"

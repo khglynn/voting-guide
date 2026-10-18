@@ -69,12 +69,22 @@
         "incumbent": false,
         "website": "https://thefreedomtrain.com/",
         "website_confidence": "sourced",
-        "background": "Libertarian nominee. No profile or questionnaire answers found in the sources collected.",
+        "background": "Libertarian nominee. Navy veteran and past commander of an American Legion post; ran for Congress in 2012 and U.S. Senate in 2014 (his iVoterGuide profile). Did not return the Denver Post questionnaire.",
         "own_words": [
           {
-            "text": "No statement collected. The county lists thefreedomtrain.com as his site; it was not read.",
-            "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "text": "We deserve an America at peace.",
+            "is_quote": true,
+            "source": "https://thefreedomtrain.com/newfrontpage-2/"
+          },
+          {
+            "text": "It’s time for a flat tax and a one-page income tax return.",
+            "is_quote": true,
+            "source": "https://thefreedomtrain.com/newfrontpage-2/"
+          },
+          {
+            "text": "We have executed innocent people. It is time to abolish the death penalty.",
+            "is_quote": true,
+            "source": "https://thefreedomtrain.com/newfrontpage-2/"
           }
         ],
         "lwv_status": "unknown",
@@ -125,9 +135,14 @@
         "background": "Republican nominee; unopposed in the June primary.",
         "own_words": [
           {
-            "text": "No statement collected. His campaign site was not read, and no questionnaire answers were found.",
+            "text": "Reduce dependence on federal grants by expanding partnerships with industry, philanthropy, foundations, and state-supported innovation programs.",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-2-candidate-qa/"
+          },
+          {
+            "text": "Lists his priorities as a safe, high-quality and affordable education for students and helping pass a College Sports Act.",
             "is_quote": false,
-            "source": "https://www.cpr.org/2026/06/30/cu-board-of-regents-primary-election-2026-results/"
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-2-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -161,12 +176,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Libertarian nominee. No campaign site or information found.",
+        "background": "Libertarian nominee. Retired utility worker from Evergreen with welding and nuclear power station training; says he has no political experience (Denver Post questionnaire). No campaign site found.",
         "own_words": [
           {
-            "text": "No statement collected; the county found no website or public email.",
+            "text": "Too much spending on sports and not enough on education and not enough diversity in thought",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-2-candidate-qa/"
+          },
+          {
+            "text": "Says his priorities are reducing government waste, increasing productivity and guiding more effective budgets.",
             "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-2-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -263,12 +283,17 @@
         "incumbent": false,
         "website": "https://sheperekforcolorado.com/",
         "website_confidence": "verified",
-        "background": "Republican nominee. No profile or questionnaire answers found in the sources collected.",
+        "background": "Republican nominee from Berthoud. Electrical engineer (CU Boulder) who leads teams building computer memory and storage systems; lists more than 40 patents (Denver Post questionnaire).",
         "own_words": [
           {
-            "text": "No statement collected; his campaign site was not read.",
+            "text": "Affordability (property taxes and Insurance premiums are out of control).",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-49-candidate-qa/"
+          },
+          {
+            "text": "Sees common ground with Democrats on civil asset forfeiture, Flock camera policy, water policy and forest management.",
             "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-49-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -283,14 +308,14 @@
         "background": "Scientist (PhD, University of Maryland) who came to CU Boulder's CIRES in 1989. Served eight years on the Boulder Valley school board and was elected a CU regent in 2019. Was the Democratic nominee for this seat in 2024 and lives in Boulder.",
         "own_words": [
           {
-            "text": "In a 2024 interview: \"I am a huge proponent of public education.\" Wants teachers \"better paid.\"",
+            "text": "I will support efforts to force data centers to pay for the electric infrastructure required to power their operations",
             "is_quote": true,
-            "source": "https://estesvalleyvoice.com/2024/10/22/now-hiring-representative-for-house-district-49/"
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-49-candidate-qa/"
           },
           {
-            "text": "Points to 20 years of public service on the school board, Boulder's water board after the 2013 flood, and the CU regents. (2024 interview)",
+            "text": "Says her district's top concerns are wildfire mitigation, the pine beetle outbreak and the cost of home insurance, and wants to move Colorado toward clean energy.",
             "is_quote": false,
-            "source": "https://estesvalleyvoice.com/2024/10/22/now-hiring-representative-for-house-district-49/"
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-49-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -338,12 +363,22 @@
         "incumbent": false,
         "website": "https://ryan4hd12.com/",
         "website_confidence": "verified",
-        "background": "Republican nominee. No profile found in the sources collected.",
+        "background": "Republican nominee. His campaign's stated motto is \"Accountability of Governance.\"",
         "own_words": [
           {
-            "text": "No statement collected; his campaign site was not read.",
+            "text": "Contracts funded by Colorado taxpayers should release payment in stages against verified progress",
+            "is_quote": true,
+            "source": "https://ryan4hd12.com/"
+          },
+          {
+            "text": "A government accountable to the people it serves.",
+            "is_quote": true,
+            "source": "https://ryan4hd12.com/"
+          },
+          {
+            "text": "Wants to educate people on emerging energy such as thorium and micro-nuclear reactors and give each county more say over its energy mix.",
             "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "source": "https://ryan4hd12.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -358,9 +393,19 @@
         "background": "Louisville Democrat; represented HD-12 in 2024 and ran for reelection that year (Boulder Reporting Lab). Democratic nominee again in 2026.",
         "own_words": [
           {
-            "text": "No statement collected; his campaign site was not read.",
+            "text": "I believe health care is a right, not a privilege.",
+            "is_quote": true,
+            "source": "https://kyleforcolorado.com/"
+          },
+          {
+            "text": "I support ending TABOR so Colorado can fully fund public education, improve infrastructure, expand housing opportunities",
+            "is_quote": true,
+            "source": "https://kyleforcolorado.com/"
+          },
+          {
+            "text": "Says he has championed bills to expand clean energy, modernize the electric grid and regulate data centers.",
             "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "source": "https://kyleforcolorado.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -479,6 +524,16 @@
         "background": "State senator since March 2025, chosen by a vacancy committee. Previously worked on Democratic campaigns and in the congressional offices of Joe Neguse and Yadira Caraveo (Colorado Newsline).",
         "own_words": [
           {
+            "text": "I fight to ensure that the wealthy and corporations pay their fair share to support the public good",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-senate-district-17-candidate-qa/"
+          },
+          {
+            "text": "Lists her priorities as protecting the integrity of elections, addressing climate change and the environment, and affordability and good government.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-senate-district-17-candidate-qa/"
+          },
+          {
             "text": "At her 2025 selection, named environmental protection, affordable housing, and keeping education and Medicaid funding as her priorities.",
             "is_quote": false,
             "source": "https://coloradonewsline.com/briefs/katie-wallace-replace-jaquez-lewis-colorado/"
@@ -493,12 +548,22 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Has worked as an author (Ballotpedia, which lists her as Patricia Miller).",
+        "background": "Has worked as an author (Ballotpedia, which lists her as Patricia Miller). Told the Denver Post she is a former state representative and led Citizens for Excellence in Education and Citizens for Responsible Government.",
         "own_words": [
           {
-            "text": "No statement collected; the county found no website or public email.",
-            "is_quote": false,
-            "source": "https://bouldercounty.gov/elections/information/2026-general-election-candidates-and-ballot-measures/"
+            "text": "We are being property taxed out of our homes.",
+            "is_quote": true,
+            "source": "https://patforyou.com/issues"
+          },
+          {
+            "text": "I support an education voucher.",
+            "is_quote": true,
+            "source": "https://patforyou.com/issues"
+          },
+          {
+            "text": "I would abolish mail-in voting and restore election integrity and voter ID.",
+            "is_quote": true,
+            "source": "https://patforyou.com/issues"
           }
         ],
         "lwv_status": "unknown",

@@ -101,17 +101,22 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Retired Navy commander, former small-business owner and computer network administrator based in Denver. CPR found no campaign website or materials.",
+        "background": "Retired Navy commander, former small-business owner and computer network administrator based in Denver. CPR found no campaign website or materials, and he did not return the Denver Post questionnaire.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-senate-candidate-qa/"
+            "text": "Ensure budgets are balanced every year.",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/72980/race/32757/election/1475"
           },
           {
-            "text": "No campaign resources found by CPR.",
-            "is_quote": false,
-            "source": "https://www.cpr.org/2026/09/25/vg-2026-us-senate-third-party-voter-guide/"
+            "text": "Medical care is an individual responsibility.",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/72980/race/32757/election/1475"
+          },
+          {
+            "text": "Anyone should be allowed to immigrate if they pass screening to insure they will not subvert our principles.",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/72980/race/32757/election/1475"
           }
         ],
         "lwv_status": "unknown",
@@ -810,19 +815,8 @@
         "incumbent": false,
         "website": "https://www.facebook.com/marilee.sturgis/",
         "website_confidence": "unverified",
-        "background": "Boulder photographer and owner of Marilee Photography. Only a Facebook page was found.",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
-          },
-          {
-            "text": "No stated platform found.",
-            "is_quote": false,
-            "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
-          }
-        ],
+        "background": "Boulder photographer and owner of Marilee Photography. Only a Facebook page was found. She did not return the Denver Post questionnaire, and KSJD's statewide guide found no stated platform.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }

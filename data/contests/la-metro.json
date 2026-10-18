@@ -536,7 +536,7 @@
       "source": "https://www.rhondahaymon4judge.com"
      },
      {
-      "text": "says justice must honor “both the spirit and the letter of the law” and points to more than 26 years as a public defender",
+      "text": "Says justice must honor “both the spirit and the letter of the law” and points to more than 26 years as a public defender.",
       "is_quote": true,
       "source": "https://www.rhondahaymon4judge.com"
      }
@@ -673,7 +673,7 @@
     "background": "Law professor and attorney; directs the Disaster Relief Clinic at Pepperdine law school. Former assistant U.S. attorney for 11 years and vice president of litigation at Sony Pictures. Notre Dame, Harvard Law. LA County Bar rating: Qualified. Second in June with 31.3%.",
     "own_words": [
      {
-      "text": "his work as an assistant U.S. attorney, law professor, wildfire legal clinic director and Sony Pictures litigation head has “more than prepared him to serve”",
+      "text": "Says his work as an assistant U.S. attorney, law professor, wildfire legal clinic director and Sony Pictures litigation head has “more than prepared him to serve.”",
       "is_quote": true,
       "source": "https://www.dejuteforjudge.com"
      }
@@ -795,12 +795,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Educator. Filed a form saying she expects to raise and spend under $2,000.",
+    "background": "Ballot designation: Educator. Filed a form saying she expects to raise and spend under $2,000. Says she is a first-generation college graduate raised in South Central Los Angeles who has worked in college admissions outreach and for the city's Department of Neighborhood Empowerment (her Ballotpedia survey).",
     "own_words": [
      {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
+      "text": "Students cannot thrive academically when they are hungry, housing insecure, struggling with transportation, or unable to find childcare.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Adriana_Cabrera"
+     },
+     {
+      "text": "Wants a \"Local First\" plan so more district spending stays in nearby neighborhoods, business incubators on all nine campuses, and a say for students and workers before major budget decisions.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
+      "source": "https://ballotpedia.org/Adriana_Cabrera"
      }
     ],
     "lwv_status": "unknown",
@@ -812,12 +817,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Real estate agent. Ran as a Republican for State Senate District 24 in June 2026 and finished fourth (14.1%). Ballot designation: Parent/Business Owner.",
+    "background": "Real estate agent. Ran as a Republican for State Senate District 24 in June 2026 and finished fourth (14.1%). Ballot designation: Parent/Business Owner. Thrive LA lists her as an acceptable alternative to Veres (City Hall Pass).",
     "own_words": [
      {
-      "text": "No LACCD platform found. Thrive LA lists her as an acceptable alternative to Veres.",
+      "text": "Strengthening pathways to good-paying careers in the skilled trades, technology, healthcare, business, and other fields essential to our region.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Kristina_Irwin"
+     },
+     {
+      "text": "Says the board should be independent and practical, with colleges that are safe, accountable and affordable.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
+      "source": "https://ballotpedia.org/Kristina_Irwin"
      }
     ],
     "lwv_status": "unknown",
@@ -829,14 +839,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Disabled Student Advocate. Filed a form saying he expects to raise and spend under $2,000.",
-    "own_words": [
-     {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-2"
-     }
-    ],
+    "background": "Ballot designation: Disabled Student Advocate. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -929,14 +933,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Fire Department Employee. Filed a form saying he expects to raise and spend under $2,000.",
-    "own_words": [
-     {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-4"
-     }
-    ],
+    "background": "Ballot designation: Fire Department Employee. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -963,14 +961,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "No ballot designation. Filed a form saying he expects to raise and spend under $2,000.",
-    "own_words": [
-     {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-4"
-     }
-    ],
+    "background": "No ballot designation. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -1014,12 +1006,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: ASL Educational Interpreter. Filed a form saying she expects to raise and spend under $2,000.",
+    "background": "Ballot designation: ASL Educational Interpreter. Filed a form saying she expects to raise and spend under $2,000. Says she has worked as an educational ASL interpreter in Los Angeles schools for eight years (her Ballotpedia survey).",
     "own_words": [
      {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
+      "text": "Makes affordability her top goal: more affordable student housing, food pantries, emergency aid and transportation help so students can stay enrolled.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-4"
+      "source": "https://ballotpedia.org/Priscilla_Umana"
+     },
+     {
+      "text": "quality education should be accessible to every student, regardless of disability, language, financial circumstances, or personal challenges",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Priscilla_Umana"
      }
     ],
     "lwv_status": "unknown",
@@ -1063,12 +1060,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Calabasas Realtor who ran for County Supervisor District 3 in June 2026 (second, 16.3%). Ballot designation: Realtor.",
+    "background": "Calabasas Realtor who ran for County Supervisor District 3 in June 2026 (second, 16.3%). Ballot designation: Realtor. Opposed the county's June half-cent health care sales tax in that race; Thrive LA lists her as an acceptable alternative to Winston (City Hall Pass).",
     "own_words": [
      {
-      "text": "No LACCD platform found. Opposed the county's June half-cent health care sales tax in her supervisor race. Thrive LA lists her as an acceptable alternative to Winston.",
+      "text": "Students and employees cannot succeed unless they feel safe.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Tonia_Arey"
+     },
+     {
+      "text": "Wants to judge colleges by retention, completion, transfer and job placement rather than enrollment numbers, and says she will respect collective bargaining.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-6"
+      "source": "https://ballotpedia.org/Tonia_Arey"
      }
     ],
     "lwv_status": "unknown",
@@ -1097,14 +1099,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "North Hollywood community college professor who ran as a Democrat for State Senate District 20 in June 2026 (10.1%). Ballot designation: Community College Professor.",
-    "own_words": [
-     {
-      "text": "No campaign website, questionnaire or news coverage of this candidacy was found (City Hall Pass, Sept 30, 2026).",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/laccd-seat-6"
-     }
-    ],
+    "background": "North Hollywood community college professor who ran as a Democrat for State Senate District 20 in June 2026 (10.1%). Ballot designation: Community College Professor. No campaign website, questionnaire or news coverage found for this race (City Hall Pass, Sept 30, 2026); his Senate campaign domain no longer works.",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -1276,12 +1272,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Technology Executive. Campaign committee lists a Lomita address. No campaign website, biography or news profile was found. Second in June with 15.3%.",
+    "background": "Ballot designation: Technology Executive. South Bay native and Marine veteran who served two tours in Iraq (his campaign site). Second in June with 15.3%.",
     "own_words": [
      {
-      "text": "No published positions were found (City Hall Pass, Sept 30, 2026).",
+      "text": "I'm running to bring radical transparency to every dollar spent.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Houston_Brignano"
+     },
+     {
+      "text": "I'll create innovation zones for technology, manufacturing, and energy to generate high-paying jobs right here.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Houston_Brignano"
+     },
+     {
+      "text": "Wants portable health savings accounts, insurance competition across state lines and upfront prices for medical procedures.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/congress-36"
+      "source": "https://ballotpedia.org/Houston_Brignano"
      }
     ],
     "lwv_status": "unknown",
@@ -1838,12 +1844,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Write-in candidate in June who received 137 votes, enough for second place. No ballot designation, website or news coverage found.",
+    "background": "Write-in candidate in June who received 137 votes, enough for second place. No ballot designation. Electrical engineer who works in utility legislative affairs; chairs a civil service commission and formerly chaired a planning commission (her Ballotpedia survey).",
     "own_words": [
      {
-      "text": "No published positions were found.",
+      "text": "Says she will focus on properly equipping law enforcement, expanding parks in working-class areas, housing policy that respects local control, and strict accountability for tax dollars.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-54"
+      "source": "https://ballotpedia.org/Alexandra_Briseno"
+     },
+     {
+      "text": "forcing high-density housing mandates without addressing neighborhood infrastructure leaves communities gridlocked",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Alexandra_Briseno"
      }
     ],
     "lwv_status": "unknown",
@@ -2000,12 +2011,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Write-in candidate in June who received 1,104 votes. No ballot designation, website, questionnaire or news coverage found. Thrive LA endorsed him as an alternative to McKinnor.",
+    "background": "Write-in candidate in June who received 1,104 votes. No ballot designation. Works in finance and property management and is communications director for the Republican Party of Los Angeles County (his Ballotpedia survey). Thrive LA endorsed him as an alternative to McKinnor.",
     "own_words": [
      {
-      "text": "No published positions were found.",
+      "text": "The law is the law and we just need to enforce it.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Brian_Lockwood"
+     },
+     {
+      "text": "we must reduce and remove the restrictive taxes & red tape on our citizens",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Brian_Lockwood"
+     },
+     {
+      "text": "Says cutting crime, taxes and fraud would free up money to improve infrastructure.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-61"
+      "source": "https://ballotpedia.org/Brian_Lockwood"
      }
     ],
     "lwv_status": "unknown",
@@ -2076,12 +2097,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: In-Home Care Provider. Endorsed by the California Republican Party and Thrive LA. No website, questionnaire or campaign committee found. Second in June with 14.3%.",
+    "background": "Ballot designation: In-Home Care Provider. Endorsed by the California Republican Party and Thrive LA. Describes herself as a mother, postal worker, nurse and caregiver (her Ballotpedia survey). Second in June with 14.3%.",
     "own_words": [
      {
-      "text": "No published positions were found.",
+      "text": "Every family deserves to feel safe in their neighborhood.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Constance_Jewel_Menzies"
+     },
+     {
+      "text": "Would cut unnecessary regulations and support small businesses to make California more affordable for working families and seniors.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-57"
+      "source": "https://ballotpedia.org/Constance_Jewel_Menzies"
+     },
+     {
+      "text": "Supports strong schools, parental involvement and workforce training for college and the skilled trades.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Constance_Jewel_Menzies"
      }
     ],
     "lwv_status": "unknown",
@@ -2900,12 +2931,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Former Cypress mayor and city councilmember. Ballot designation: Law Enforcement Officer. Second in June (LA County portion: 22.5%).",
+    "background": "Former Cypress mayor and city councilmember. Ballot designation: Law Enforcement Officer. Second in June (LA County portion: 22.5%). The OC Register says he did not respond to its editorial board's interview invitations.",
     "own_words": [
      {
-      "text": "No published positions found. The OC Register says he did not respond to its editorial board's interview invitations.",
-      "is_quote": false,
-      "source": "https://www.ocregister.com/2026/10/09/endorsement-mark-pulido-for-the-67th-assembly-district/"
+      "text": "We must reevaluate how the government spends money and stop funding programs that do not deliver results.",
+      "is_quote": true,
+      "source": "https://www.paulomoralesca.com/"
+     },
+     {
+      "text": "I will work across the aisle to empower local governments and promote responsible development",
+      "is_quote": true,
+      "source": "https://www.paulomoralesca.com/"
      }
     ],
     "lwv_status": "unknown",
@@ -3418,12 +3454,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Ballot designation: Manufacturing Executive. Registered his campaign committee with a Torrance address. No campaign website, biography or news profile was found. Second in June with 16.9%.",
+    "background": "Ballot designation: Manufacturing Executive. Born in Guatemala; degrees from Cornell and Purdue and a 20-plus-year career in manufacturing (his Ballotpedia survey). Second in June with 16.9%.",
     "own_words": [
      {
-      "text": "No published positions were found.",
+      "text": "We don’t need a bigger government to solve every problem.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Cristian_Morales"
+     },
+     {
+      "text": "Says his campaign, \"ForAllVoices,\" is about getting people with different views talking and working together again on hard problems.",
       "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/congress-43"
+      "source": "https://ballotpedia.org/Cristian_Morales"
+     },
+     {
+      "text": "Lists immigration, ending generational poverty and protecting constitutional rights as the issues he cares most about.",
+      "is_quote": false,
+      "source": "https://ballotpedia.org/Cristian_Morales"
      }
     ],
     "lwv_status": "unknown",
@@ -3846,14 +3892,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Plumber and electrical contractor. Was the Republican nominee in the neighboring 39th Assembly District in 2018. No campaign website was found. Second in June with 25.1%.",
-    "own_words": [
-     {
-      "text": "No published positions were found.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-43"
-     }
-    ],
+    "background": "Plumber and electrical contractor. Was the Republican nominee in the neighboring 39th Assembly District in 2018. Second in June with 25.1%. No campaign website, survey answers or published positions found (City Hall Pass; Ballotpedia survey not completed).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -4161,14 +4201,8 @@
     "incumbent": false,
     "website": "https://www.lydia4education.com/",
     "website_confidence": "sourced",
-    "background": "Long Beach Unified teacher for decades after six years in aerospace. Ran for state superintendent in 2014 (third, 24.5%) and for the LAUSD board in 2015. Second in June with 19.2%.",
-    "own_words": [
-     {
-      "text": "No published positions on state issues were found in the sources checked.",
-      "is_quote": false,
-      "source": "https://cityhallpass.com/election-2026/races/assembly-65"
-     }
-    ],
+    "background": "Long Beach Unified teacher for decades after six years in aerospace. Ran for state superintendent in 2014 (third, 24.5%) and for the LAUSD board in 2015. Second in June with 19.2%. No published positions on state issues found; her listed website now opens only a login page.",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -4372,11 +4406,6 @@
       "text": "Campaign site says “public service should be about people, not playing partisan games.”",
       "is_quote": true,
       "source": "https://www.loucorrea.com"
-     },
-     {
-      "text": "No 2026 issue page or questionnaire answers were found.",
-      "is_quote": false,
-      "source": "https://ballotpedia.org/Lou_Correa"
      }
     ],
     "lwv_status": "unknown",
@@ -4458,9 +4487,14 @@
     "background": "Assemblymember since 2016; first elected to the Walnut Valley Unified school board in 2011. Business owner and educator. Cal State Fullerton; USC master’s in public administration and doctorate. First in June with 66.3%.",
     "own_words": [
      {
-      "text": "No published positions were found as of Oct 17, 2026.",
+      "text": "Campaign site: \"A proven, principled leader fighting for safer neighborhoods, stronger schools, and a more affordable California\"",
+      "is_quote": true,
+      "source": "https://phillipchen.org/"
+     },
+     {
+      "text": "Points to his school board record: says he helped turn the Walnut Valley district's budget deficit into a surplus and set up a rainy-day fund.",
       "is_quote": false,
-      "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
+      "source": "https://phillipchen.org/meet-phillip"
      }
     ],
     "lwv_status": "unknown",
@@ -4475,9 +4509,14 @@
     "background": "Account sales manager (ballot designation). Serves on the Green Party of Orange County Central Committee and is active in local mutual-aid events. Second in June with 33.7%.",
     "own_words": [
      {
-      "text": "No published positions were found as of Oct 17, 2026.",
+      "text": "In his official statement, pledges to take no corporate or super PAC money and backs the CalCare universal health care bill.",
       "is_quote": false,
-      "source": "https://theballotbrief.com/state/california/orange-county/california-assembly-district-59"
+      "source": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/1300-2.pdf"
+     },
+     {
+      "text": "Ranked Choice Voting and proportional representation are steps toward a more robust democracy.",
+      "is_quote": true,
+      "source": "https://ballotpedia.org/Victor_Hernandez_(California)"
      }
     ],
     "lwv_status": "unknown",

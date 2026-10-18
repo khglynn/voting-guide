@@ -735,24 +735,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "City manager of Hearne since 2022 and the city's chief financial officer before that. Ran for comptroller as a Libertarian in 2022.",
-        "own_words": [
-          {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
-          {
-            "text": "The Tribune found no candidate-specific priorities and cited the Libertarian Party platform.",
-            "is_quote": false,
-            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
-          },
-          {
-            "text": "No campaign website found.",
-            "is_quote": false,
-            "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
-          }
-        ],
+        "background": "City manager of Hearne since 2022 and the city's chief financial officer before that. Ran for comptroller as a Libertarian in 2022. The Texas Tribune found no campaign website or candidate-specific priorities, and he did not answer the Community Impact or Dallas Morning News questionnaires.",
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://www.vote411.org/lwvtx"
       },
@@ -1334,24 +1318,19 @@
         "name": "Kyle Hawkins",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Appointed to the court by Gov. Abbott in October 2025. Texas solicitor general 2018 to 2021, where he argued cases against the Affordable Care Act and Planned Parenthood. Has not previously stood for statewide election.",
+        "website": "https://justicekylehawkins.com/",
+        "website_confidence": "sourced",
+        "background": "Appointed to the court by Gov. Abbott in October 2025. Texas solicitor general 2018 to 2021, where he argued cases against the Affordable Care Act and Planned Parenthood. Has also testified to Congress about the Voting Rights Act (Texas Tribune). Has not previously stood for statewide election.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+            "text": "The Court’s work demands humility, diligence, and a commitment to applying the law as written.",
+            "is_quote": true,
+            "source": "https://justicekylehawkins.com/"
           },
           {
-            "text": "The Tribune describes him as a conservative litigator who has also testified to Congress about the Voting Rights Act.",
+            "text": "Says he brings the same respect for the Constitution and the rule of law that has guided his whole career.",
             "is_quote": false,
-            "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
-          },
-          {
-            "text": "No campaign website found.",
-            "is_quote": false,
-            "source": "https://www.texastribune.org/2026/10/01/2026-texas-supreme-court-elections-guide/"
+            "source": "https://justicekylehawkins.com/"
           }
         ],
         "lwv_status": "declined",
@@ -1795,24 +1774,24 @@
         "name": "Scott Brister",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://justicescottbrister.com/",
+        "website_confidence": "sourced",
         "background": "Chief justice since the court opened in 2024. Texas Supreme Court justice 2003 to 2009; earlier on the 1st and 14th Courts of Appeals and a Harris County district judge. Harvard Law graduate.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
+            "text": "every party deserves an impartial judge who applies the law, not personal beliefs or political preferences.",
+            "is_quote": true,
+            "source": "https://justicescottbrister.com/"
           },
           {
-            "text": "Describes himself as an \"impartial judge who applies the law, not personal beliefs or political preferences,\" per the Tribune.",
-            "is_quote": false,
-            "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+            "text": "Judges are not lawmakers. Our job is to apply the law faithfully and efficiently",
+            "is_quote": true,
+            "source": "https://justicescottbrister.com/"
           },
           {
-            "text": "No campaign website found.",
-            "is_quote": false,
-            "source": "https://www.texastribune.org/2026/10/02/texas-15th-court-of-appeals-2026-elections-guide/"
+            "text": "Fairness, clarity, and fidelity to the law. That’s what Texans deserve",
+            "is_quote": true,
+            "source": "https://justicescottbrister.com/"
           }
         ],
         "lwv_status": "declined",

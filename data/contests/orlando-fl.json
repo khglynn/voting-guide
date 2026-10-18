@@ -145,12 +145,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "No-party candidate, so he skipped the August primary. Not part of the July voter guide; no profile or campaign website found in this run.",
+    "background": "No-party candidate, so he skipped the August primary. Says he has nearly 30 years in Florida's court system, starting at the Orange County Clerk's Office (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: a stronger workplace culture for clerk employees, mobile community services to widen access, and modernized technology and cybersecurity.",
       "is_quote": false,
-      "source": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-clerk-of-courts-democratic-primary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-clerk-of-courts/"
+     },
+     {
+      "text": "Every resident should have convenient access to Clerk services.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-clerk-of-courts/"
      }
     ],
     "lwv_status": "unknown",
@@ -276,9 +281,19 @@
     "background": "Incumbent U.S. representative for District 8.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "His campaign site lists stopping illegal immigration, fixing the economy, reducing the national debt, protecting the Indian River Lagoon and supporting space exploration as top issues.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
+     },
+     {
+      "text": "Mike will stand against federal mandates that hurt small businesses and families.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
+     },
+     {
+      "text": "Favors free-market pricing in health care and opposes any single-payer system (campaign site, as quoted by News 6; he did not answer the questionnaire).",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
      }
     ],
     "lwv_status": "unknown",
@@ -290,12 +305,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Democratic nominee.",
+    "background": "Democratic nominee. Former Brevard County School Board member (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Stabilize Florida's property insurance market through bipartisan federal reinsurance and catastrophe backstops.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
+     },
+     {
+      "text": "Expand Medicaid so Floridians aren't forced into emergency care or medical debt.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
+     },
+     {
+      "text": "Wants to protect the U.S. Department of Education and fully fund special education (campaign site, as quoted by News 6; she did not answer the questionnaire).",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-8/"
      }
     ],
     "lwv_status": "unknown",
@@ -338,9 +363,19 @@
     "background": "Former deputy assistant secretary of Defense in President Trump's first term. Won a seven-way Republican primary district-wide (he placed second in Orange County's slice, with 21.9%).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordability (fewer regulations, more competition), balancing the budget and cutting the debt, and peace through strength.",
       "is_quote": false,
-      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
+     },
+     {
+      "text": "The most significant national security threat to our nation is the People's Republic of China.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
+     },
+     {
+      "text": "Will vote yes on the state property tax amendment, saying people spend their own money better than government does.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
      }
     ],
     "lwv_status": "unknown",
@@ -355,9 +390,19 @@
     "background": "In the U.S. House since 2017; served in the Florida House and Senate from 2007 to 2016 (Florida Phoenix).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "The 3 C's: Lower Costs, Protect our care and stop Corruption.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
+     },
+     {
+      "text": "We must reverse the ACA, Medicaid and SNAP cuts to lower healthcare costs for all Central Floridians",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
+     },
+     {
+      "text": "Says data center siting should be a local decision and points to his vote for the Ratepayer Protection Act.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-9/"
      }
     ],
     "lwv_status": "unknown",
@@ -450,12 +495,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Republican nominee.",
+    "background": "Republican nominee. Grew the Central Florida home services company Strada Services, which he sold in 2021. Did not answer the News Collaborative of Central Florida questionnaire (Vox Populi).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Washington works for insiders. Your bills prove it.",
+      "is_quote": true,
+      "source": "https://votestrada.com/"
+     },
+     {
+      "text": "Washington already has plenty of politicians. What it needs are more people who have signed the front of a paycheck",
+      "is_quote": true,
+      "source": "https://votestrada.com/"
+     },
+     {
+      "text": "Says his first reform would be investigating insider trading by members of Congress, to make Congress less profitable and accountable for its spending.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://votestrada.com/"
      }
     ],
     "lwv_status": "unknown",
@@ -470,9 +525,19 @@
     "background": "Won the Democratic primary in Orange County with 43.5% over Royal Webster and Dan Williams.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Affordability is the number one issue facing families in Florida's 11th District.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
+     },
+     {
+      "text": "Would protect Medicare and Social Security, restore Medicaid funding and strengthen the Affordable Care Act.",
       "is_quote": false,
-      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
+     },
+     {
+      "text": "Wants to pass the John Lewis Voting Rights Act and end partisan gerrymandering.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
      }
     ],
     "lwv_status": "unknown",
@@ -487,9 +552,19 @@
     "background": "Libertarian Party of Florida nominee.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: fraud in federal benefit programs, especially Medicare; upholding the War Powers Act; and promoting a culture that respects life.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
+     },
+     {
+      "text": "Data Centers should be established on military bases.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
+     },
+     {
+      "text": "Supports cutting property taxes gradually over several years so local services can adjust.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-us-house-district-11/"
      }
     ],
     "lwv_status": "unknown",
@@ -532,9 +607,19 @@
     "background": "State senator since 2020 after eight years in the Florida House. No Republican primary this year (Florida Phoenix).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
-      "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "text": "My focus is delivering property-tax relief for homesteaded families",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
+     },
+     {
+      "text": "Keeping families safe is the most basic job the government has.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
+     },
+     {
+      "text": "As someone who is adopted, I will always support life.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
      }
     ],
     "lwv_status": "unknown",
@@ -549,9 +634,19 @@
     "background": "Attorney and mayor of Maitland since 2021; formerly worked for the Orange County attorney's office. Won the Democratic primary with 81% of the Orange County vote over H. Alexander Duncan.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Would create a statewide public-option windstorm insurance program and cap the return-on-equity part of utility rate hikes at the national average.",
       "is_quote": false,
-      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
+     },
+     {
+      "text": "Wants higher teacher pay and voucher-funded schools held to the same standards as public schools.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
+     },
+     {
+      "text": "I support protecting access to abortion because these are deeply personal healthcare decisions",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-senate-district-10/"
      }
     ],
     "lwv_status": "unknown",
@@ -598,9 +693,19 @@
     "background": "Incumbent state representative for District 35.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "I listen, and then I go do the work.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
+     },
+     {
+      "text": "Wants Florida's excess-profit law extended to homeowners insurance, and says growth should pay for its roads, schools and drainage.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
+     },
+     {
+      "text": "Will vote yes on the property tax amendment and says she intends to help write the implementing bill so police and fire are not defunded.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
      }
     ],
     "lwv_status": "unknown",
@@ -612,12 +717,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Democratic nominee.",
+    "background": "Democratic nominee. President of the Christian Service Center for the Homeless (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "My focus is simple: make Florida affordable again and make Florida leaders accountable again.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
+     },
+     {
+      "text": "Proposes a statewide plan to make it easier to build starter homes, townhomes, duplexes and apartments near jobs and transit.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
+     },
+     {
+      "text": "Will vote no on the property tax amendment, saying it cuts billions from local services without a plan to pay for them.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-35/"
      }
     ],
     "lwv_status": "unknown",
@@ -657,12 +772,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Republican nominee.",
+    "background": "Republican nominee. Orange County Public Schools teacher (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordability (more industry, insurance and toll relief), expanding career and technical education, and access to mental health and addiction recovery care.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
+     },
+     {
+      "text": "I would expand career and technical education so every student has more than one pathway to a successful future.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
+     },
+     {
+      "text": "Says Florida's abortion restrictions should stay the same.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
      }
     ],
     "lwv_status": "unknown",
@@ -674,12 +799,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Democratic nominee.",
+    "background": "Democratic nominee. English lecturer at UCF (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "I believe we should approach property taxes with a scalpel, not a baseball bat.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
+     },
+     {
+      "text": "Wants higher per-student funding and better pay for teachers and school support staff.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
+     },
+     {
+      "text": "We need to relax abortion restrictions.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-37/"
      }
     ],
     "lwv_status": "unknown",
@@ -726,9 +861,19 @@
     "background": "Incumbent from Apopka seeking a third term; won 91% of the Orange County vote in the Aug 18 Republican primary.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordability (lower property and auto insurance costs through tort reform and tougher insurer oversight), pro-business policies, and transportation.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
+     },
+     {
+      "text": "Will vote yes on the property tax amendment, saying homesteads should be protected and government waste cut to make up lost revenue.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
+     },
+     {
+      "text": "I have a passion to see Lake Apopka restored to its pristine beauty for future generations.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
      }
     ],
     "lwv_status": "unknown",
@@ -740,12 +885,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Democratic nominee.",
+    "background": "Democratic nominee. Infectious disease physician at Orlando Health (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordable housing and homelessness (more use of the Sadowski housing trust fund), expanding Medicaid, and infrastructure that keeps pace with growth.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
+     },
+     {
+      "text": "Will vote no on the property tax amendment, citing pressure on local governments, first responders and public health.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
+     },
+     {
+      "text": "I strongly oppose the overuse of preemption by the Florida Legislature.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-39/"
      }
     ],
     "lwv_status": "unknown",
@@ -789,12 +944,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Republican nominee.",
+    "background": "Republican nominee. Engineer; lost the 2025 special election for this seat to Ra'Shon Young (Vox Populi, via News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Says a homeowner's first, primary home should not be taxed, while additional and investment properties would be (Vox Populi interview).",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-40/"
+     },
+     {
+      "text": "Supports school choice personally but says public money should not simply flow to private schools.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-40/"
+     },
+     {
+      "text": "Says Medicaid has too much fraud and wants it cleaned up so people who truly need care get it.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-40/"
      }
     ],
     "lwv_status": "unknown",
@@ -806,12 +971,17 @@
     "incumbent": true,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Incumbent state representative for District 40.",
+    "background": "Incumbent state representative for District 40, first elected in a September 2025 special election. Did not answer the News Collaborative questionnaire (Vox Populi).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Democracy works best when participation is high and barriers are low.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-40/"
+     },
+     {
+      "text": "Opposed the Florida SAVE Act's new voter ID and citizenship-proof rules in House debate and proposed a state voting rights act in its place.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-40/"
      }
     ],
     "lwv_status": "unknown",
@@ -851,12 +1021,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Republican nominee. No profile or campaign site found in this run.",
+    "background": "Republican nominee. Attorney (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordability (property tax relief, faster permitting), artificial intelligence, and water quality and conservation.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-42/"
+     },
+     {
+      "text": "Artificial Intelligence can be addressed with a human bill of rights.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-42/"
+     },
+     {
+      "text": "Supports letting the tourist development tax also pay for transportation, infrastructure and public safety.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-42/"
      }
     ],
     "lwv_status": "unknown",
@@ -926,12 +1106,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "Republican nominee.",
+    "background": "Republican nominee. Retired Navy officer and former manager at U.S. Citizenship and Immigration Services (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "I believe education should be rigorous, merit-based, and accessible to every student willing to put in the effort.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
+     },
+     {
+      "text": "Supports a lawful immigration system that welcomes people pursuing the American dream while keeping communities secure (campaign site, as quoted by News 6).",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
+     },
+     {
+      "text": "Would cut red tape for small businesses and push for better wages, lower taxes and insurance reform.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
      }
     ],
     "lwv_status": "unknown",
@@ -946,9 +1136,19 @@
     "background": "Won the Aug 18 Democratic primary with 65.8% of the Orange County vote over Daisy Morales.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "The most pressing issue facing families in House District 43 is affordability.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
+     },
+     {
+      "text": "Opposes the property tax amendment but supports targeted relief such as bigger homestead exemptions for seniors.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
+     },
+     {
+      "text": "Wants to expand Medicaid, restore toll relief programs and hold insurance companies accountable for rising premiums.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-43/"
      }
     ],
     "lwv_status": "unknown",
@@ -991,9 +1191,19 @@
     "background": "Gov. Ron DeSantis appointee to the Florida Virtual School board of trustees, and a 2024 Republican presidential elector (Florida Phoenix). No Republican primary.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: affordability (homestead property tax cuts, debt-free career paths, fighting insurance fraud), education including vocational training, and infrastructure.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-45/"
+     },
+     {
+      "text": "I'm running for State House to be a voice for the families of District 45.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-45/"
+     },
+     {
+      "text": "Supports reducing homestead property taxes while protecting schools, emergency services and infrastructure.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-house-district-45/"
      }
     ],
     "lwv_status": "unknown",
@@ -1152,12 +1362,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "No candidate profile collected in this run.",
+    "background": "East Orange County community volunteer and civic leader, by his own account (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: governance and communication (a District 4 advisory network and quarterly town halls), public safety, and well-being for all residents.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-4-election/"
+     },
+     {
+      "text": "Water quality is the most significant environmental issue facing Florida.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-4-election/"
+     },
+     {
+      "text": "Will vote yes on the property tax amendment; would look for efficiencies and cut waste before considering new fees.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-4-election/"
      }
     ],
     "lwv_status": "unknown",
@@ -1169,12 +1389,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": "No candidate profile collected in this run.",
+    "background": "Former member of the Florida House, where she voted against the property tax amendment (News 6 voter guide). Did not answer the newsroom questionnaire.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Expanding safe, affordable housing for working families and seniors.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-4-election/"
+     },
+     {
+      "text": "Lists housing access, supporting small business, and accessibility and transparency as her top issues (campaign site, as reported by News 6).",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-4-election/"
      }
     ],
     "lwv_status": "unknown",
@@ -1417,9 +1642,19 @@
     "background": "Finished second of six on Aug 18 with 19.9%.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: traffic and road capacity, flooding and wetlands protection, and attainable housing.",
       "is_quote": false,
-      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
+     },
+     {
+      "text": "Affordability starts with controlling government spending and lowering the cost of living.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
+     },
+     {
+      "text": "Will vote yes on the property tax amendment, replacing lost revenue mainly through efficiencies and cutting waste.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
      }
     ],
     "lwv_status": "unknown",
@@ -1434,9 +1669,19 @@
     "background": "Finished first of six on Aug 18 with 33.6%.",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Hard work should be enough to build a good life in Orange County.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
+     },
+     {
+      "text": "Top issues: affordability and workforce housing, traffic and transit (more LYNX service and SunRail), and flooding and responsible growth.",
       "is_quote": false,
-      "source": "https://enr.electionsfl.org/ORA/3998/Summary/"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
+     },
+     {
+      "text": "Opposes the property tax amendment without a plan to replace the revenue, and would oppose new data centers that strain the grid.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-commission-district-8-runoff/"
      }
     ],
     "lwv_status": "unknown",
@@ -1574,12 +1819,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Works in the agricultural sector; daughter of Mexican farmworkers (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: support for farmworkers, protecting water and flood resilience, and curbing sprawl while bringing conservation education into schools.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "I will fight for fair wages, safe conditions, and stable housing for the essential laborers who feed us.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "Wants data centers required to use closed-loop, water-free cooling and to pay their share of infrastructure.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
      }
     ],
     "lwv_status": "unknown",
@@ -1591,12 +1846,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Lawyer; currently an associate supervisor and treasurer of the Orange Soil and Water Conservation District (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: water conservation and water quality, flooding and stormwater, and public education about what the district does.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "I believe that conservation must be practical and community-oriented.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "Undecided on the property tax amendment; says any big cut in local revenue needs a realistic replacement.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
      }
     ],
     "lwv_status": "unknown",
@@ -1608,12 +1873,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Native of rural West Orange County; community volunteer (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: stormwater from rapid development, declining water quality in lakes, and loss of farmland and conservation know-how.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "I'm running because I feel called to serve and give a voice to the community I'm rooted in.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
+     },
+     {
+      "text": "Wants stronger erosion control enforcement on construction sites and closer work with the St. Johns River Water Management District.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-1/"
      }
     ],
     "lwv_status": "unknown",
@@ -1653,12 +1928,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Licensed Florida professional geologist; hydrogeologist since 1982 for water utilities (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Names water conservation as his top issue, and water supply and quality as Florida's biggest environmental issue.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
+     },
+     {
+      "text": "Water conservation helps save money in water bills.",
+      "is_quote": true,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
+     },
+     {
+      "text": "Will vote no on the property tax amendment.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
      }
     ],
     "lwv_status": "unknown",
@@ -1670,12 +1955,22 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Professional engineer and senior project manager for the City of Orlando; associate supervisor of the Orange Soil and Water Conservation District (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Top issues: public education and outreach, stormwater and flood resilience, and water quality.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
+     },
+     {
+      "text": "Supports rigorous enforcement of the rural boundary to protect farms, wildlife habitat and groundwater.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
+     },
+     {
+      "text": "Would start an internship program for students and push stronger enforcement of stormwater rules.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-3/"
      }
     ],
     "lwv_status": "unknown",
@@ -1687,14 +1982,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
-    "own_words": [
-     {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
-      "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
-     }
-    ],
+    "background": "Did not respond to the News Collaborative of Central Florida questionnaire (News 6 voter guide).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/florida"
    }
@@ -1732,14 +2021,8 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
-    "own_words": [
-     {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
-      "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
-     }
-    ],
+    "background": "Did not respond to the News Collaborative of Central Florida questionnaire (News 6 voter guide).",
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/florida"
    },
@@ -1749,12 +2032,17 @@
     "incumbent": false,
     "website": null,
     "website_confidence": "unverified",
-    "background": null,
+    "background": "Has held leadership roles at Fortune 500 companies and in consulting, by his own account (News 6 voter guide).",
     "own_words": [
      {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
+      "text": "Says his key objective is educating the public about what the district does, through an outreach campaign to landowners.",
       "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-5/"
+     },
+     {
+      "text": "Wants more public input on district projects and closer work with conservation groups and government agencies on flood prevention.",
+      "is_quote": false,
+      "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-orange-county-soil-and-water-conservation-district-seat-5/"
      }
     ],
     "lwv_status": "unknown",
@@ -1795,13 +2083,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
-      "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/florida"
    },
@@ -1812,13 +2094,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform statement collected in this run (no questionnaire answers or campaign site found).",
-      "is_quote": false,
-      "source": "https://voteorangefl.gov/wp-content/uploads/2026/09/Gen26CombinedBallots.pdf"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/florida"
    }

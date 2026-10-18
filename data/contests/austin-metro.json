@@ -5313,10 +5313,21 @@
         "name": "Chris Johnson",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.chrisjohnsonforjudge.com/",
+        "website_confidence": "sourced",
         "background": "Incumbent; won the Democratic runoff 50.9% to 49.1%.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Duty. Honor. Justice. That’s more than a campaign slogan, it’s my commitment to the people of Hays County",
+            "is_quote": true,
+            "source": "https://www.chrisjohnsonforjudge.com/"
+          },
+          {
+            "text": "Wants a dedicated juvenile master and a full-time courtroom at the juvenile detention facility as the juvenile docket grows.",
+            "is_quote": false,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -5327,7 +5338,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Attorney in private practice and former Hays County assistant district attorney; past president of the Hays County Bar Association. Ran for 207th District judge in 2022 (Hays Free Press).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I cover all those areas that are practiced in Hays County Court-at-Law.",
+            "is_quote": true,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          },
+          {
+            "text": "Wants an automated system for scheduling hearings, saying the current process is lengthy.",
+            "is_quote": false,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -5697,10 +5719,26 @@
         "name": "Mark Teixeira",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.teixeiraforcongress.com",
+        "website_confidence": "sourced",
         "background": "Former Major League Baseball first baseman.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "First, we must cap federal spending and reduce the national debt.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          },
+          {
+            "text": "Wants to cut red tape on small businesses and pass tax cuts for working families.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          },
+          {
+            "text": "I support Governor Abbott’s decision to pause data center development.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -5708,10 +5746,26 @@
         "name": "Kristin Hook",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "http://www.drkristinhook.org",
+        "website_confidence": "sourced",
         "background": "Scientist; was the 2024 Democratic nominee in this district.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I support raising the minimum wage and lowering the cost of housing, groceries, and healthcare.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          },
+          {
+            "text": "I'll work to lower taxes and make billionaires and corporations pay their share.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          },
+          {
+            "text": "Favors a moratorium on data centers, citing water use, air pollution and electric bills.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/southwest-austin-dripping-springs/election/meet-the-candidates-for-us-house-of-representatives-district-21/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -5917,14 +5971,24 @@
         "name": "Tennyson Moreno",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Also the Republican nominee in 2024, when he lost to Zwiener. No campaign website or biography was found.",
+        "website": "https://www.tennysonmoreno.com/",
+        "website_confidence": "sourced",
+        "background": "Also the Republican nominee in 2024, when he lost to Zwiener.",
         "own_words": [
           {
-            "text": "No published positions were found.",
+            "text": "Affordability, infrastructure, and environment & water",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-district-45-of-the-texas-house-of-representatives/"
+          },
+          {
+            "text": "Wants to cut government spending and taxes, eliminate property taxes, and encourage basic, lower-cost homes for young families.",
             "is_quote": false,
-            "source": "https://theballotbrief.com/candidate/tennyson-g-moreno-tx"
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-district-45-of-the-texas-house-of-representatives/"
+          },
+          {
+            "text": "I believe in local governments' control of local issues.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-district-45-of-the-texas-house-of-representatives/"
           }
         ],
         "lwv_status": "unknown",
@@ -6180,8 +6244,8 @@
         "website_confidence": "unverified",
         "background": null,
         "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_status": "declined",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Susanna Ledesma Woody",
@@ -6359,8 +6423,8 @@
         "website_confidence": "unverified",
         "background": null,
         "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_status": "declined",
+        "lwv_url": "https://austinvotersguide.org/"
       },
       {
         "name": "Stephanie Arellano",
@@ -6450,10 +6514,10 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "The League of Women Voters Austin Area guide lists him as deceased.",
         "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": null
+        "lwv_status": "not_asked",
+        "lwv_url": "https://austinvotersguide.org/"
       }
     ],
     "sources": [
@@ -7569,10 +7633,26 @@
         "name": "Alfonso O. Salazar",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.alfonso4haysda.com/",
+        "website_confidence": "sourced",
+        "background": "Criminal defense and civil rights attorney and former Air Force military police officer; won the March Democratic primary (Community Impact).",
+        "own_words": [
+          {
+            "text": "Criminal cases are about people, not numbers.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/meet-the-democratic-candidates-for-hays-county-criminal-district-attorney/"
+          },
+          {
+            "text": "Some defendants deserve a second chance; others leave no choice but to remove them from the community.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/meet-the-democratic-candidates-for-hays-county-criminal-district-attorney/"
+          },
+          {
+            "text": "Would strengthen intake so defendants with mental illness get help sooner, with oversight of police interactions with the community.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/meet-the-democratic-candidates-for-hays-county-criminal-district-attorney/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -7580,10 +7660,26 @@
         "name": "Kirsta Melton",
         "party": "Independent",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://kirstamelton.com",
+        "website_confidence": "sourced",
+        "background": "Felony prosecutor for 25 years, running as an independent; lives in Dripping Springs (campaign site).",
+        "own_words": [
+          {
+            "text": "I’m running because it’s time that the people, not the party elites, speak up and are heard.",
+            "is_quote": true,
+            "source": "https://kirstamelton.com/"
+          },
+          {
+            "text": "I commit to ethical prosecution and decision-making, based solely on the facts and the law.",
+            "is_quote": true,
+            "source": "https://kirstamelton.com/policy"
+          },
+          {
+            "text": "Promises a public dashboard of office data, town halls twice a year and a conviction review unit.",
+            "is_quote": false,
+            "source": "https://kirstamelton.com/policy"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -7627,10 +7723,26 @@
         "name": "Paul Still",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://stillforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Former Harris County prosecutor and former law clerk and staff counsel at the Texas Court of Criminal Appeals (campaign site).",
+        "own_words": [
+          {
+            "text": "I am not here procedurally to reinvent the wheel or to sweep in some massive procedural changes",
+            "is_quote": true,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          },
+          {
+            "text": "Would use special dockets to help with the backlog of civil cases.",
+            "is_quote": false,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          },
+          {
+            "text": "Says a judge should apply the law as written, without politics, pressure or personal agendas.",
+            "is_quote": false,
+            "source": "https://stillforjudge.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -7638,10 +7750,26 @@
         "name": "Cassie Benoist-Templeton",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://cassieforjudge.com",
+        "website_confidence": "sourced",
+        "background": "Prosecutor of serious crimes against women and children at the Caldwell County DA's office for about 12 years; Texas State graduate (campaign site).",
+        "own_words": [
+          {
+            "text": "You need a judge who’s willing to come up with inventive ways to move cases",
+            "is_quote": true,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          },
+          {
+            "text": "First-year goals: expand the drug court program and address the backlog of civil cases.",
+            "is_quote": false,
+            "source": "https://www.haysfreepress.com/article/26124,hays-county-bar-association-hosts-judicial-candidate-forum"
+          },
+          {
+            "text": "Says everyone in court, whether victim, defendant, witness or attorney, should be treated with fairness, dignity and respect.",
+            "is_quote": false,
+            "source": "https://cassieforjudge.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -7953,7 +8081,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "On the San Marcos City Council since 2020; reelected to Place 3 unopposed in 2023 (University Star).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I believe local government can be imaginative, courageous and genuinely connected to community.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          },
+          {
+            "text": "I supported prohibiting data centers because the potential benefits did not justify costs to our water, energy and environment.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          },
+          {
+            "text": "Names affordability, infrastructure, public safety and responsible growth as priorities, and wants city government easier to navigate.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -7961,10 +8105,26 @@
         "name": "Jane Garnette Hughson",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.janehughson.org",
+        "website_confidence": "sourced",
         "background": "Current mayor of San Marcos.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Since most of our council is relatively new, my institutional knowledge will help provide continuity",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          },
+          {
+            "text": "Top priorities: protecting the river, environment and neighborhoods, managing growth to add housing and good-paying jobs, and job training.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          },
+          {
+            "text": "While protecting our people and environment, we need businesses for tax relief and good paying jobs.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-3/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -8002,8 +8162,24 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Current San Marcos City Council member for Place 4 (Community Impact).",
+        "own_words": [
+          {
+            "text": "Removing red tape and addressing the utility cost on payers.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          },
+          {
+            "text": "I voted against data centers and was concerned about how much power and water they use.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          },
+          {
+            "text": "Names affordable housing as the city's greatest challenge over the next five years.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -8011,10 +8187,26 @@
         "name": "Heather Hunter",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.heatherforsanmo.com",
+        "website_confidence": "sourced",
+        "background": "Project manager specializing in grants, with degrees in political science and political management (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities are the environment, affordable housing, and supporting local and small businesses.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          },
+          {
+            "text": "No economic benefit outweighs protecting our river and aquifer.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          },
+          {
+            "text": "Says her grant-writing experience would help the city go after outside money it is now leaving on the table.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-4/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -8052,8 +8244,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Small business owner and former San Marcos City Council member (Community Impact).",
+        "own_words": [
+          {
+            "text": "Protecting the Edwards Aquifer, our springs, and the San Marcos River.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "Making growth pay for itself instead of raising residents’ rates.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "Would defend the city's ban on data centers and wants any large water or energy user to cover its own infrastructure costs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -8063,8 +8271,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Served 10.5 years in the U.S. Coast Guard; business owner and farmer/rancher (Community Impact).",
+        "own_words": [
+          {
+            "text": "my top priorities would be food security, protecting our natural resources, and affordable housing",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "I will never agree with having data centers inside the city of San Marcos.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "Worries the city will not keep up with population growth and wants growth balanced with protecting what makes it great.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       },
@@ -8074,8 +8298,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "United Way CEO, San Marcos CISD trustee, Housing Authority commissioner and former legislative chief of staff (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are affordability and stronger neighborhoods.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "I support the city’s prohibition on data centers.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          },
+          {
+            "text": "Would focus on safe, affordable housing, utility and basic-needs help, good-paying jobs, and streets, sidewalks and drainage.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/san-marcos-buda-kyle/election/qa-meet-the-candidates-running-for-san-marcos-council-place-6/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }

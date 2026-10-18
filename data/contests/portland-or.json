@@ -137,14 +137,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement; the Multnomah County Republican Party guide links only a Facebook page.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
-          }
-        ],
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement; the Multnomah County Republican Party guide links only a Facebook page. No campaign website or survey answers found (Ballotpedia, iVoterGuide).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       }
@@ -213,14 +207,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Pacific Green Party nominee. Did not file a state Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
-          }
-        ],
+        "background": "Pacific Green Party nominee. Did not file a state Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia, iVoterGuide).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -292,9 +280,19 @@
         "background": "Former tech worker with no experience in public office (Willamette Week). Did not file a state Voters' Pamphlet statement.",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement. Told Willamette Week he wants to lower taxes and deregulate industries that employ men.",
+            "text": "I will fight to dramatically reduce property taxes, eliminate taxes on family inheritances, and cut burdensome regulations",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/John_Chee"
+          },
+          {
+            "text": "I stand without apology for biblical marriage between one man and one woman, the sanctity of innocent human life",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/John_Chee"
+          },
+          {
+            "text": "Says his top priority is young men: support for the trades, fewer barriers for home builders and first-time buyers, and prosecuting vagrancy and open drug use.",
             "is_quote": false,
-            "source": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-oregon-legislature/"
+            "source": "https://ballotpedia.org/John_Chee"
           }
         ],
         "lwv_status": "unknown",
@@ -680,12 +678,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement. Describes herself as a mother of eight and military spouse with a background in human services, health care policy and regulatory work (her Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+            "text": "we need to take a hard look at how government is managing the money it already has",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Shaunie_Cousins"
+          },
+          {
+            "text": "Government should make it easier to live and work in Oregon, not harder.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Shaunie_Cousins"
           }
         ],
         "lwv_status": "unknown",
@@ -1030,12 +1033,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement; no 2026 campaign website or survey answers found. Former foster-youth counselor and child protective services investigator (her 2021 Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "text": "From her 2021 Ballotpedia survey: \"Time to return to school choice both public and private options.\"",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Margo_Logan"
+          },
+          {
+            "text": "In the same 2021 survey, named transparency in government and public schools as the issue she cares most about.",
             "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+            "source": "https://ballotpedia.org/Margo_Logan"
           }
         ],
         "lwv_status": "unknown",
@@ -1075,12 +1083,12 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement. Background in business management and electronics repair (campaign page).",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "text": "His campaign page says he wants education reform and economic growth to work together, with a focus on local businesses, job creation and workforce training.",
             "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+            "source": "https://www.robertneuman.org/jason-boyce-for-house-district-45/"
           }
         ],
         "lwv_status": "unknown",
@@ -1164,14 +1172,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
-          }
-        ],
+        "background": "Republican nominee. Did not file a state Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       }
@@ -1409,9 +1411,14 @@
         "background": "Republican nominee. Did not file a state Voters' Pamphlet statement.",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+            "text": "I will seek to protect the peoples' interest in proper use of their tax funds.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Brian_Gray"
+          },
+          {
+            "text": "I will represent all the citizens of my district of whatever party affiliation.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Brian_Gray"
           }
         ],
         "lwv_status": "unknown",
@@ -2272,12 +2279,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not file a Voters' Pamphlet statement.",
+        "background": "Did not file a Voters' Pamphlet statement. Owns a Portland tax advisory practice and teaches business at Portland Community College (his Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+            "text": "Portland should make it easier; not harder, to start, operate, and grow a business.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Ali_Beaudoin"
+          },
+          {
+            "text": "What does it cost? What are we getting? Is it working?",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Ali_Beaudoin"
           }
         ],
         "lwv_status": "unknown",
@@ -2289,12 +2301,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Also ran for this seat in 2024 (OPB). Did not file a Voters' Pamphlet statement.",
+        "background": "Also ran for this seat in 2024 (OPB). Did not file a Voters' Pamphlet statement, and his campaign website no longer loads.",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "text": "From his 2024 KATU questionnaire: \"As a city councilor, I would introduce the use of hempblocks to address the housing crisis.\"",
+            "is_quote": true,
+            "source": "https://www.katu.com/news/know-your-candidates/heart-free-pham-portland-city-council-district-3"
+          },
+          {
+            "text": "In 2024, opposed the \"Housing First\" approach to homelessness and proposed a regional, state-sponsored enterprise to build non-market housing, rehab centers and psychiatric facilities.",
             "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+            "source": "https://www.katu.com/news/know-your-candidates/heart-free-pham-portland-city-council-district-3"
           }
         ],
         "lwv_status": "unknown",
@@ -2382,14 +2399,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "background": "Did not file a Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -2527,9 +2538,14 @@
         "background": "Did not file a Voters' Pamphlet statement.",
         "own_words": [
           {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
+            "text": "At the root of many of our most complex issues is a mental healthcare desert.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Kimberly_Tucker_(Oregon)"
+          },
+          {
+            "text": "Wants plain-language, publicly available cost-benefit reviews of every city-funded program, with accountability plans for ones that fall short.",
             "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
+            "source": "https://ballotpedia.org/Kimberly_Tucker_(Oregon)"
           }
         ],
         "lwv_status": "unknown",
@@ -2563,14 +2579,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "background": "Did not file a Voters' Pamphlet statement. His campaign website says it is \"under deconstruction\" and lists only links, including to Democratic Socialists of America; no survey answers found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -2746,14 +2756,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "background": "Did not file a Voters' Pamphlet statement or submit any information to the county guide (OPB). No campaign website or survey answers found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -3033,14 +3037,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "background": "Did not file a Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },

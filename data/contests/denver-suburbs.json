@@ -1750,14 +1750,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Ran for the RTD board in 2022 but was disqualified, per the Denver Gazette. No campaign website.",
-        "own_words": [
-          {
-            "text": "No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/09/what-jefferson-county-voters-can-expect-to-see-on-their-ballots/"
-          }
-        ],
+        "background": "Ran for the RTD board in 2022 but was disqualified, per the Denver Gazette. No campaign website or published statement found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -2138,9 +2132,14 @@
         "background": "Incumbent treasurer.",
         "own_words": [
           {
-            "text": "No issue statement reviewed as of Oct 17; see his campaign site.",
-            "is_quote": false,
-            "source": "https://www.WesterbergforTreasurer.com"
+            "text": "Invest wisely and responsibly in our community.",
+            "is_quote": true,
+            "source": "https://westerbergfortreasurer.com/"
+          },
+          {
+            "text": "Develop new financial tools to carry Arapahoe County into the future.",
+            "is_quote": true,
+            "source": "https://westerbergfortreasurer.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2155,7 +2154,12 @@
         "background": "Has worked in public service, information technology and risk and compliance systems; bachelor's degree from the University of Arizona (Ballotpedia).",
         "own_words": [
           {
-            "text": "No issue statement reviewed as of Oct 17; see his campaign site.",
+            "text": "Campaign theme: \"No New Debt\"",
+            "is_quote": true,
+            "source": "https://bennettrutledge.info/"
+          },
+          {
+            "text": "Promises to work to repeal laws not worth the trouble and expense of enforcing, and to listen to and work with anyone willing to talk.",
             "is_quote": false,
             "source": "https://bennettrutledge.info/"
           }
@@ -2226,9 +2230,14 @@
         "background": "Software engineer. Did not answer the Littleton Independent questionnaire.",
         "own_words": [
           {
-            "text": "No issue statement reviewed as of Oct 17; see his campaign site.",
-            "is_quote": false,
-            "source": "https://jesselindforassessor.com"
+            "text": "The burden of proof for an appeal should rest on the county, not you",
+            "is_quote": true,
+            "source": "https://jesselindforassessor.com/"
+          },
+          {
+            "text": "Appraisers must show their work so you are not left to reverse-engineer a black box alone.",
+            "is_quote": true,
+            "source": "https://jesselindforassessor.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2243,7 +2252,12 @@
         "background": "Worked as a property appraiser in the Arapahoe County Assessor's Office from 1995 to 2005; Arapahoe County resident since 1983 (Libertarian Party candidate page).",
         "own_words": [
           {
-            "text": "No issue statement reviewed as of Oct 17.",
+            "text": "I can help property owners understand how they can work to decrease their tax burden",
+            "is_quote": true,
+            "source": "https://lp.org/candidate/lee-ormiston/"
+          },
+          {
+            "text": "Says he believes in small, effective and affordable government with much lower taxes, and urges voters to reject bond issues.",
             "is_quote": false,
             "source": "https://lp.org/candidate/lee-ormiston/"
           }
@@ -2425,9 +2439,14 @@
         "background": "Incumbent clerk and recorder.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Platform theme: \"Transparency, Efficiency, Accessibility\"",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Josh_Zygielbaum"
+          },
+          {
+            "text": "Points to added drop boxes, more vote centers and curbside ballot replacement since he took office, and pledges to keep improving voter access and security.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://ballotpedia.org/Josh_Zygielbaum"
           }
         ],
         "lwv_status": "unknown",
@@ -2439,12 +2458,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "2022 Republican nominee for clerk.",
+        "background": "2022 Republican nominee for clerk. Works on the business innovation team at the Colorado Department of Labor and Employment; served on the Mapleton school board from 2011 to 2015 (her Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Elections that are accessible, more transparent, and secure with faster election results reporting.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Karen_Hoopes"
+          },
+          {
+            "text": "Promises motor vehicle service with short or no waits, and recording services that are secure and easier to use, with no surprise fees.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://ballotpedia.org/Karen_Hoopes"
           }
         ],
         "lwv_status": "unknown",
@@ -2529,12 +2553,17 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Incumbent assessor.",
+        "background": "Incumbent assessor. Colorado-licensed appraiser with more than 20 years in the Adams County Assessor's Office (his Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "My goal is simple: keep the office fair, transparent, accessible, and responsive",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Thomas_Swingle"
+          },
+          {
+            "text": "Wants to keep modernizing the office with GIS, data analytics and other tools so assessments are more accurate and easier to understand.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://ballotpedia.org/Thomas_Swingle"
           }
         ],
         "lwv_status": "unknown",
@@ -2549,9 +2578,14 @@
         "background": "Qualified by petition; the clerk found her petition sufficient on Sept 2.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Saving Adams County taxpayers from inflated property taxes.",
+            "is_quote": true,
+            "source": "https://www.zavalaforassessor.com/"
+          },
+          {
+            "text": "Says her 28 years in the industry prepare her to apply state valuation guidelines responsibly and treat residents fairly.",
             "is_quote": false,
-            "source": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-Zavala-Candidate-Petition-Sufficient-090226.pdf"
+            "source": "https://www.zavalaforassessor.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2591,12 +2625,22 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Deputy chief in Broomfield, per Critical Report.",
+        "background": "Deputy chief in Broomfield, per Critical Report. In full-time law enforcement since 1994, starting at the Adams County Sheriff's Office (his Ballotpedia survey).",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Keeping our community safe starts long before a 911 call.",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Mark_Goodell"
+          },
+          {
+            "text": "accountability applies to everyone, including those who wear the badge",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Mark_Goodell"
+          },
+          {
+            "text": "Would expand partnerships with mental health professionals so people in crisis get the right help.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://ballotpedia.org/Mark_Goodell"
           }
         ],
         "lwv_status": "unknown",
@@ -2611,9 +2655,19 @@
         "background": "Sheriff since 2023; former division chief over the Adams County Jail, per the Sentinel's 2022 coverage.",
         "own_words": [
           {
-            "text": "No 2026 campaign statement reviewed as of Oct 17.",
+            "text": "Work in close partnership with mental health providers across Adams County to expand service capabilities, improve crisis response",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Gene_Claps"
+          },
+          {
+            "text": "Strengthen connections with neighborhoods through regular meetings, events, and outreach initiatives",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Gene_Claps"
+          },
+          {
+            "text": "Pledges to work with elected officials to use resources efficiently and stay within budget limits.",
             "is_quote": false,
-            "source": "https://sentinelcolorado.com/uncategorized/colorado-votes-2022-adams-county-sheriffs-race-pits-two-former-deputies-against-each-other/"
+            "source": "https://ballotpedia.org/Gene_Claps"
           }
         ],
         "lwv_status": "unknown",
@@ -2787,14 +2841,8 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Incumbent clerk and recorder.",
-        "own_words": [
-          {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
-          }
-        ],
+        "background": "Incumbent clerk and recorder since 2023. Earlier worked in the Douglas County clerk's office as elections deputy (1997 to 2017) and motor vehicle deputy (2017 to 2022), per BallotReady. No campaign site or published statement found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -2804,14 +2852,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Product manager, per Critical Report.",
-        "own_words": [
-          {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
-          }
-        ],
+        "background": "Product manager, per Critical Report. No campaign site or published statement found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -2852,9 +2894,14 @@
         "background": "Castle Rock town council member, per Critical Report.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Ensuring every taxpayer dollar is accounted for and managed with the highest standards of integrity and transparency.",
+            "is_quote": true,
+            "source": "https://www.votetim.org/"
+          },
+          {
+            "text": "Promises to open the books to the public and keep clear, accessible records of how county money is handled.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://www.votetim.org/"
           }
         ],
         "lwv_status": "unknown",
@@ -2866,12 +2913,17 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Financial professional, per Critical Report.",
+        "background": "Financial professional, per Critical Report. Says he has 20 years in corporate finance at large banks and brokerages (campaign site).",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Treasurer isn’t a political job, and it shouldn’t be a partisan job.",
+            "is_quote": true,
+            "source": "https://www.dan4dougco.com/"
+          },
+          {
+            "text": "Wants taxpayers to be able to see how their property taxes compare with others' and where the money goes; says that information doesn't exist today.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://www.dan4dougco.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2911,14 +2963,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Public administrator, per Critical Report.",
-        "own_words": [
-          {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
-          }
-        ],
+        "background": "Public administrator, per Critical Report. No campaign site or published statement found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -2928,12 +2974,17 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Incumbent assessor.",
+        "background": "Incumbent assessor, elected in 2022 after more than 25 years in the Douglas County Assessor's Office, eight as chief deputy (campaign site).",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
+            "text": "Accurate values, clear answers and a fair appeal for every property owner.",
+            "is_quote": true,
+            "source": "https://www.tobydamisch.com/"
+          },
+          {
+            "text": "Says he returned more than $1 million from his office budget to the county general fund in his first three years.",
             "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "source": "https://www.tobydamisch.com/"
           }
         ],
         "lwv_status": "unknown",

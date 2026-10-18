@@ -607,14 +607,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee.",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
-          }
-        ],
+        "background": "Republican nominee. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -656,14 +650,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Nonprofit director. Won the June Democratic primary with 69% over Andrés Carrera. Listed as Graciela \"Chela\" Garcia Irlando by the state party. Did not participate in the Denver Gazette voter guide.",
-        "own_words": [
-          {
-            "text": "Did not answer the Denver Gazette questionnaire. No campaign site located as of Oct 16.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/05/chela-irlando-jennifer-qualteri-senate-district-34/"
-          }
-        ],
+        "background": "Nonprofit director. Won the June Democratic primary with 69% over Andrés Carrera. Listed as Graciela \"Chela\" Garcia Irlando by the state party. Did not answer the Denver Gazette or Denver Post questionnaires; no campaign site found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -790,7 +778,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Financial professional; won the June Republican primary.",
+        "background": "Legal assistant and musician, per his Denver Post questionnaire; won the June Republican primary.",
         "own_words": [
           {
             "text": "Remove the 10 year requirement for senior citizens to receive the tax credit.",
@@ -1000,14 +988,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Won the June Republican primary (Critical Report spells it Erwin; the SOS list says Ervin).",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
-          }
-        ],
+        "background": "Won the June Republican primary (Critical Report spells it Erwin; the SOS list says Ervin). Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -1034,14 +1016,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Forward Party nominee.",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html"
-          }
-        ],
+        "background": "Forward Party nominee. Business executive; most recently president of FBC Remodel and earlier ran the packaging company Clysar (BallotReady). Did not return the Denver Post questionnaire; no campaign site found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -1108,9 +1084,14 @@
         "background": "Republican nominee in 2022 and 2024 as well.",
         "own_words": [
           {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
+            "text": "From his 2024 iVoterGuide answers: \"the government should stay out of setting wages and let employers, employees, and the market determine pay\"",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/69759/race/9783/election/1232"
+          },
+          {
+            "text": "From his 2024 iVoterGuide answers: \"When we vote we should always know who you are and that you can legally vote in our country!\"",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/69759/race/9783/election/1232"
           }
         ],
         "lwv_status": "unknown",
@@ -1176,14 +1157,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Campus coordinator; won the June Republican primary.",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
-          }
-        ],
+        "background": "Campus coordinator; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -1301,14 +1276,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Implementation consultant; won the June Republican primary.",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
-          }
-        ],
+        "background": "Implementation consultant; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -1324,6 +1293,16 @@
             "text": "\"Government should be a place where we come together to solve real problems.\"",
             "is_quote": true,
             "source": "https://www.gilchristforcolorado.com"
+          },
+          {
+            "text": "Lists her priorities as expanding access to quality health care, opportunities for children and youth, and criminal justice reform; says she will focus on rising health care and housing costs.",
+            "is_quote": false,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-8-candidate-qa/"
+          },
+          {
+            "text": "improving Colorado’s child welfare system will remain a central priority for me",
+            "is_quote": true,
+            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-8-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -1394,14 +1373,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Republican nominee in 2022 and 2024 as well.",
-        "own_words": [
-          {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-state-house-primaries"
-          }
-        ],
+        "background": "Republican nominee in 2022 and 2024 as well. Did not return the Denver Post questionnaire; only a campaign Facebook page was found (Ballotpedia).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -2976,9 +2949,19 @@
         "background": "Republican nominee; also the 2022 nominee.",
         "own_words": [
           {
-            "text": "No platform collected yet.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "Everyone, citizens and officials alike should be held responsible for their actions. No one is above the law.",
+            "is_quote": true,
+            "source": "https://www.josephdomenicoacc.com/platform"
+          },
+          {
+            "text": "I stand 100% behind our law enforcement.",
+            "is_quote": true,
+            "source": "https://www.josephdomenicoacc.com/platform"
+          },
+          {
+            "text": "I propose an annual month-long celebration to honor our veterans using the beautiful Riverdale Park display.",
+            "is_quote": true,
+            "source": "https://www.josephdomenicoacc.com/platform"
           }
         ],
         "lwv_status": "unknown",

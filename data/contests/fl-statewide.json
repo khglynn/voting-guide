@@ -64,17 +64,22 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "No-party candidate. Did not respond to the News4JAX questionnaire; no campaign website found.",
+        "background": "No-party candidate. Did not respond to the News4JAX or News 6 questionnaires; his campaign blog (neilgillespie4senate.blogspot.com) posts his answers to other surveys.",
         "own_words": [
           {
-            "text": "Did not respond to the News4JAX candidate questionnaire.",
-            "is_quote": false,
-            "source": "https://www.news4jax.com/voters-guide/2026/07/31/floridas-2026-us-senate-race/"
+            "text": "I am motivated to run for office because of lawfare and lack of due process in our state and federal courts.",
+            "is_quote": true,
+            "source": "https://neilgillespie4senate.blogspot.com/"
           },
           {
-            "text": "No campaign website or platform statement found.",
+            "text": "Proposes national health coverage with the ability to opt out.",
             "is_quote": false,
-            "source": "https://ballotpedia.org/Neil_Gillespie"
+            "source": "https://neilgillespie4senate.blogspot.com/"
+          },
+          {
+            "text": "Immigrants are essential for the U.S. economy.",
+            "is_quote": true,
+            "source": "https://neilgillespie4senate.blogspot.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -187,14 +192,19 @@
         "background": "Libertarian Party of Florida nominee; unopposed in the Aug 18 Libertarian primary. Running mate Nicole Skelly per the state candidate file.",
         "own_words": [
           {
-            "text": "No platform statement collected yet; see the campaign's 'Our Mission' page.",
-            "is_quote": false,
-            "source": "https://www.scottjewett.com/our-mission/"
+            "text": "cut rules and fees that raise the price of food, housing, energy, insurance and hiring",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           },
           {
-            "text": "No questionnaire response found.",
+            "text": "Favors eliminating all property taxes on homesteaded homes and says governments will have to spend less (campaign site, as quoted by News 6).",
             "is_quote": false,
-            "source": "https://ballotpedia.org/Scott_Jewett"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
+          },
+          {
+            "text": "No identity politics in the classroom. Teach kids. Don't recruit them.",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           }
         ],
         "lwv_status": "unknown",
@@ -206,17 +216,22 @@
         "incumbent": false,
         "website": "https://www.deanabrams.com/",
         "website_confidence": "sourced",
-        "background": "No-party candidate. Running mate: Joe Van Vactor. We have not found more background.",
+        "background": "No-party candidate. Running mate: Joe Van Vactor. Lives in Sarasota; has worked in enterprise technology and management consulting, per his website (News 6 voter guide).",
         "own_words": [
           {
-            "text": "No platform statement collected yet; see his campaign site.",
+            "text": "Top issues on his campaign site: affordability, health care, and ending the use of Flock license plate reader cameras.",
             "is_quote": false,
-            "source": "https://www.deanabrams.com/"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           },
           {
-            "text": "No questionnaire response found.",
+            "text": "Would end property taxes on homesteaded homes valued up to twice the county median, with smaller cuts above that.",
             "is_quote": false,
-            "source": "https://ballotpedia.org/Dean_Abrams"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
+          },
+          {
+            "text": "Paper ballots. Auditable systems.",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           }
         ],
         "lwv_status": "unknown",
@@ -231,14 +246,19 @@
         "background": "Former mayor of Surfside (Miami-Dade). Ran briefly as a Republican before switching to no-party. Running mate: Ruben A. Coto.",
         "own_words": [
           {
-            "text": "No platform statement collected yet; see his campaign site.",
-            "is_quote": false,
-            "source": "https://burkettforgov.com/"
+            "text": "Florida is full and must stop adding people to our state",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           },
           {
-            "text": "No questionnaire response found.",
+            "text": "Would phase out property taxes on homesteaded homes of 10-year residents by a tenth a year, and end road tolls for residents.",
             "is_quote": false,
-            "source": "https://ballotpedia.org/Charles_Burkett_(Florida)"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
+          },
+          {
+            "text": "Data centers must provide for their own power and water supplies",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           }
         ],
         "lwv_status": "unknown",
@@ -250,19 +270,8 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "No-party candidate. Running mate: Juan Santana. No campaign website found; the state candidate page is the only listing.",
-        "own_words": [
-          {
-            "text": "No platform statement found.",
-            "is_quote": false,
-            "source": "https://ballotpedia.org/Jeffrey_Datto"
-          },
-          {
-            "text": "No questionnaire response found.",
-            "is_quote": false,
-            "source": "https://ballotpedia.org/Jeffrey_Datto"
-          }
-        ],
+        "background": "No-party candidate. Running mate: Juan Santana. Lives in Hialeah. Did not respond to the News 6 / Winter Park Voice questionnaire; his only campaign presence found is a Facebook page (News 6 voter guide).",
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
       },
@@ -272,17 +281,22 @@
         "incumbent": false,
         "website": "https://nomoecorruption.com/",
         "website_confidence": "sourced",
-        "background": "No-party candidate. Running mate: Benjiman Rojas. We have not found more background.",
+        "background": "No-party candidate. Running mate: Benjiman Rojas. FedEx delivery driver from Orlando (News 6 voter guide).",
         "own_words": [
           {
-            "text": "No platform statement collected yet; see his campaign site.",
+            "text": "Proposes a program in which the state acquires abandoned homes and grants them to college graduates, young couples, veterans and seniors.",
             "is_quote": false,
-            "source": "https://nomoecorruption.com/"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           },
           {
-            "text": "No questionnaire response found.",
-            "is_quote": false,
-            "source": "https://ballotpedia.org/Moliere_Dimanche"
+            "text": "They won't have to respond if I am Governor because data centers will be banned.",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
+          },
+          {
+            "text": "Voting rights need to be expanded, not inhibited.",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           }
         ],
         "lwv_status": "unknown",
@@ -294,17 +308,22 @@
         "incumbent": false,
         "website": "https://www.russo2026.com/",
         "website_confidence": "sourced",
-        "background": "No-party candidate. Running mate: Rachel Rodriguez. We have not found more background.",
+        "background": "No-party candidate. Running mate: Rachel Rodriguez. Boca Raton entrepreneur who says he has spent more than 30 years in the insurance industry (News 6 voter guide).",
         "own_words": [
           {
-            "text": "No platform statement collected yet; see his campaign site.",
-            "is_quote": false,
-            "source": "https://www.russo2026.com/"
+            "text": "Affordability is Florida's biggest challenge.",
+            "is_quote": true,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           },
           {
-            "text": "No questionnaire response found.",
+            "text": "Proposes a state catastrophic hurricane and wind program, a homeowner bill of rights and an elected insurance commissioner.",
             "is_quote": false,
-            "source": "https://ballotpedia.org/Frank_Russo"
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
+          },
+          {
+            "text": "Supports the property tax amendment and wants teacher pay raised to nationally competitive levels.",
+            "is_quote": false,
+            "source": "https://www.clickorlando.com/voters-guide/2026/10/16/2026-voters-guide-florida-governors-race/"
           }
         ],
         "lwv_status": "unknown",

@@ -284,10 +284,26 @@
         "name": "Everett Jackson",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://jacksonfortexas.com/",
+        "website_confidence": "sourced",
         "background": "Small business owner and community organizer (Dallas County GOP). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Creating good-paying jobs and supporting small businesses in TX-30.",
+            "is_quote": true,
+            "source": "https://jacksonfortexas.com/"
+          },
+          {
+            "text": "Investing in our schools and making education accessible for all.",
+            "is_quote": true,
+            "source": "https://jacksonfortexas.com/"
+          },
+          {
+            "text": "Securing our borders and confronting China's aggression to protect American interests.",
+            "is_quote": true,
+            "source": "https://jacksonfortexas.com/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -298,7 +314,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Dallas pastor (The Ellis Insight). Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "we have to rethink what a living wage is, as opposed to talking about minimum wage.",
+            "is_quote": true,
+            "source": "https://www.texastribune.org/2026/01/15/frederick-haynes-congress-dallas-pastor-jasmine-crockett-2026/"
+          },
+          {
+            "text": "Supports quality, affordable health care for all and dismantling ICE, the federal immigration enforcement agency.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/01/15/frederick-haynes-congress-dallas-pastor-jasmine-crockett-2026/"
+          },
+          {
+            "text": "Says Congress has not held the executive branch accountable, and that this is part of why he is running.",
+            "is_quote": false,
+            "source": "https://www.texastribune.org/2026/01/15/frederick-haynes-congress-dallas-pastor-jasmine-crockett-2026/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       }
@@ -2092,8 +2124,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "background": "Presiding judge of the 301st District Court; earlier a judge on the 162nd, 44th and 254th District Courts, per her Dallas Morning News questionnaire. Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "The Court hears both civil and criminal appeals making diverse legal and judicial experience a necessity.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          },
+          {
+            "text": "Points to hundreds of trials as a family and civil district judge, 12 years in private practice, and both a law degree and an MBA.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          },
+          {
+            "text": "Says she drew the most votes of confidence of any candidate in this race in the latest State Bar judicial poll.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -2103,8 +2151,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Did not answer the LWV questionnaire.",
-        "own_words": [],
+        "background": "Judge of the 330th District Court since 2010 (four terms) and Dallas County's local administrative district judge, per her Dallas Morning News questionnaire. Did not answer the LWV questionnaire.",
+        "own_words": [
+          {
+            "text": "Attorneys need to be compensated for their work and they also need to have resources to conduct investigations",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          },
+          {
+            "text": "Says judges can help parties settle by ruling consistently and helping them realistically assess their case.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          },
+          {
+            "text": "Points to 17 years of civil rights litigation before taking the bench and says lawyers rate her court among the most efficient.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/5th-court-of-appeals-place-8/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       }
@@ -2280,10 +2344,26 @@
         "name": "Amber Givens",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Former state district judge who beat incumbent DA John Creuzot in the March Democratic primary (Dallas Morning News). Unopposed on the printed ballot, so the LWV sent no questionnaire.",
-        "own_words": [],
+        "website": "https://ambergivens.com",
+        "website_confidence": "sourced",
+        "background": "Former state district judge who beat incumbent DA John Creuzot in the March Democratic primary (Dallas Morning News). Unopposed on the printed ballot, so the LWV sent no questionnaire. Left the Dallas Morning News questionnaire blank.",
+        "own_words": [
+          {
+            "text": "Promises an evidence-ready standard: all evidence identified at the start of each case, with reviews at 30, 60 and 90 days.",
+            "is_quote": false,
+            "source": "https://ambergivens.com/evidence-ready"
+          },
+          {
+            "text": "Diversion is not softness. It is strategy. Discipline. Prevention.",
+            "is_quote": true,
+            "source": "https://ambergivens.com/diversion"
+          },
+          {
+            "text": "Would set up monthly community justice councils to review case trends, and publish the office's policies on pleas, evidence and diversion.",
+            "is_quote": false,
+            "source": "https://ambergivens.com/community-justice-councils"
+          }
+        ],
         "lwv_status": "not_asked",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },
@@ -2294,7 +2374,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Declared write-in candidate: his name is not printed; you would write it in. Solo attorney and former Dallas County prosecutor (Dallas Morning News).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Resources should be focused where they have the greatest impact on public safety",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-district-attorney/"
+          },
+          {
+            "text": "Supports the 2025 constitutional amendment requiring judges to deny bail for certain violent offenses.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-district-attorney/"
+          },
+          {
+            "text": "I believe Dallas County deserves a District Attorney who will apply one standard of justice",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-district-attorney/"
+          }
+        ],
         "lwv_status": "not_asked",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       }
@@ -2926,8 +3022,24 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Unopposed on the printed ballot, so the LWV sent no questionnaire.",
-        "own_words": [],
+        "background": "Justice of the peace in this seat since 2007 and an attorney for more than 20 years, per her Dallas Morning News questionnaire. Unopposed on the printed ballot, so the LWV sent no questionnaire.",
+        "own_words": [
+          {
+            "text": "Landlord and tenants rights are equally important.",
+            "is_quote": true,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-2/"
+          },
+          {
+            "text": "Points to tenant rights handbooks, free legal aid and rental assistance resources offered to both sides in her court.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-2/"
+          },
+          {
+            "text": "Says small claims cases call for patience in hearing each side, and that her court is the people's court.",
+            "is_quote": false,
+            "source": "https://www.dallasnews.com/projects/2026/dallas-texas-november-election-voter-guide/dallas-county-justice-of-the-peace-precinct-1-place-2/"
+          }
+        ],
         "lwv_status": "not_asked",
         "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
       },

@@ -197,12 +197,17 @@
         "background": "Portland-born engineering consultant with past work in natural gas measurement and oil refining. Ran for U.S. Senate as a Libertarian in 2020, for Metro Council President in 2022, and in the 2024 Republican primary for the 3rd Congressional District. Chose not to submit a Voters' Pamphlet statement.",
         "own_words": [
           {
-            "text": "No 2026 statement. The state pamphlet marks him as a candidate who 'chose not to submit a voters' pamphlet statement.'",
-            "is_quote": false,
-            "source": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+            "text": "From his 2024 Ballotpedia survey: \"Keep us out of World War III. Stop the warmongering.\"",
+            "is_quote": true,
+            "source": "https://ballotpedia.org/Gary_Dye"
           },
           {
-            "text": "From an earlier run: \"We need to rid ourselves of career politicians.\"",
+            "text": "In the same 2024 survey, called for 12-year federal term limits and cutting government 10% a year until the deficit is gone.",
+            "is_quote": false,
+            "source": "https://ballotpedia.org/Gary_Dye"
+          },
+          {
+            "text": "Also in his 2024 survey: \"We need to rid ourselves of career politicians.\"",
             "is_quote": true,
             "source": "https://ballotpedia.org/Gary_Dye"
           }

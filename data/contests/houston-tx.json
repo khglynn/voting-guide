@@ -18,10 +18,26 @@
         "name": "Steve Toth",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.stevetothforcongress.com",
+        "website_confidence": "sourced",
+        "background": "State representative, small business owner and pastor (Community Impact).",
+        "own_words": [
+          {
+            "text": "We must secure the border permanently, not just for four years",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          },
+          {
+            "text": "Texas needs to cut the red tape that drives up housing costs and strangles entrepreneurs",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          },
+          {
+            "text": "Wants Congress to put American graduates and workers ahead of foreign workers on H-1B visas.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -29,10 +45,26 @@
         "name": "Shaun Finnie",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.shaunfinnieforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Oil and gas investment banker in The Woodlands (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are: never spend more than we can afford, and ensure everyone has an opportunity to support their families.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          },
+          {
+            "text": "Calls the growing national debt the greatest challenge for Texas over the next five years.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          },
+          {
+            "text": "We need to keep taxes low for middle class families, raise the minimum wage, close tax loopholes for the ultra-wealthy",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-congressional-district-2-143268/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -68,10 +100,26 @@
         "name": "Alexander Hale",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.halefortexas.com",
+        "website_confidence": "sourced",
+        "background": "Energy and chemicals consultant and fourth-generation Houstonian (Community Impact).",
+        "own_words": [
+          {
+            "text": "Top priorities: affordability and cutting deficit spending, lower health care costs through price transparency, and funding police.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "Washington's job is to stop making things more expensive",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "Wants Congress to fund the Coastal Texas storm surge program and speed up federal permits for energy projects.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -79,10 +127,26 @@
         "name": "Lizzie Pannill Fletcher",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.lizziefletcher.com",
+        "website_confidence": "sourced",
+        "background": "Has represented the 7th District in Congress for eight years (Community Impact).",
+        "own_words": [
+          {
+            "text": "Top priorities: making health care and energy more affordable and holding the Trump administration accountable for actions she calls unlawful.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "ending partisan gerrymandering so those votes make a meaningful impact on government decisions",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "Points to a law she passed to cut red tape in disaster recovery after Harvey, and to flood control funding she secured.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -90,10 +154,26 @@
         "name": "Espoir Ngabo",
         "party": "Green",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.espoirfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Houston community advocate who arrived in Houston as a 5-year-old refugee from Congo (Community Impact).",
+        "own_words": [
+          {
+            "text": "Making life affordable again: a living wage, universal healthcare, and real housing solutions.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "Wants federal flood and transit money to reach Alief, Sharpstown and Gulfton, and corporate money out of politics.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          },
+          {
+            "text": "Growth shouldn't mean displacement.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-running-for-us-house-district-7/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -129,10 +209,26 @@
         "name": "Jessica Hart Steinmann",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://jessicasteinmann.com",
+        "website_confidence": "sourced",
+        "background": "Executive general counsel at the America First Policy Institute, former senior Justice Department official and former senior staffer for Sen. Ted Cruz (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priority will be making life more affordable for Texas families by lowering energy costs, cutting taxes and regulations",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          },
+          {
+            "text": "Wants Congress to invest in energy and water infrastructure and cut regulations.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          },
+          {
+            "text": "Would work before disasters strike to strengthen flood control, and push federal agencies to deliver aid quickly.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -140,10 +236,26 @@
         "name": "Laura Jones",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.laura4tx.com",
+        "website_confidence": "sourced",
+        "background": "Community activist and former San Jacinto County Democratic Party chair (Community Impact).",
+        "own_words": [
+          {
+            "text": "Lower costs for groceries, childcare, and housing. Fight for a living wage. Support Medicare for All.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          },
+          {
+            "text": "Wants to protect voting access and Social Security and end abusive immigration detention practices.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          },
+          {
+            "text": "We can't let growth outrun affordability.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-us-house-district-8/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -179,10 +291,26 @@
         "name": "Alex Mealer",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://alexandramealer.com/",
+        "website_confidence": "sourced",
+        "background": "Combat veteran, West Point graduate and oil and gas small business owner (campaign site). Did not answer the Community Impact questionnaire.",
+        "own_words": [
+          {
+            "text": "Wants to ban members of Congress from trading individual stocks and set term limits for Congress.",
+            "is_quote": false,
+            "source": "https://alexandramealer.com/"
+          },
+          {
+            "text": "I will fight to cut taxes and unnecessary regulations, create good-paying jobs, and lower the cost of living",
+            "is_quote": true,
+            "source": "https://alexandramealer.com/"
+          },
+          {
+            "text": "Would push for infrastructure projects to protect and grow the Houston Ship Channel and Port Houston.",
+            "is_quote": false,
+            "source": "https://alexandramealer.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -190,10 +318,26 @@
         "name": "Leticia Gutierrez",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.leticiaforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Government relations and community outreach director at Air Alliance Houston and a community organizer (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are lowering housing and utility costs, protecting Social Security and Medicare, fully funding public schools",
+            "is_quote": true,
+            "source": "https://communityimpact.com/pearland-friendswood-manvel/election/q-a-meet-the-candidates-for-us-house-district-9/"
+          },
+          {
+            "text": "Would hold regular town halls and create resident advisory councils across the district.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/pearland-friendswood-manvel/election/q-a-meet-the-candidates-for-us-house-district-9/"
+          },
+          {
+            "text": "Wants major industrial water users, including data centers, to conserve water and pay their fair share.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/pearland-friendswood-manvel/election/q-a-meet-the-candidates-for-us-house-district-9/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -231,7 +375,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "First run for public office (Branch). Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -240,10 +384,26 @@
         "name": "Christian Dashaun Menefee",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.christianmenefee.com",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Lower costs for families, defending voting rights, fighting for environmental justice in communities that have been overlooked for too long",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-18th-congressional-district/"
+          },
+          {
+            "text": "Growth can't come at working families' expense.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-18th-congressional-district/"
+          },
+          {
+            "text": "Calls climate-driven disasters outpacing infrastructure the state's greatest challenge, and wants investment in water systems and the power grid.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-18th-congressional-district/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -279,10 +439,26 @@
         "name": "Trever Nehls",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.trevernehlsforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Retired Army Reserve colonel and former Fort Bend County Precinct 4 constable (Community Impact).",
+        "own_words": [
+          {
+            "text": "Names affordability and infrastructure as the district's biggest issues, and supports lower taxes and a pro-growth agenda.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          },
+          {
+            "text": "I will work to cut red tape to reduce barriers and streamline the recovery process.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          },
+          {
+            "text": "Wants Texas to have the resources for reliable power generation and delivery as it grows.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -290,10 +466,26 @@
         "name": "Marquette Greene-Scott",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://marquettegreenescott.com",
+        "website_confidence": "sourced",
+        "background": "City council member and mayor pro tem, attorney and former educator (Community Impact).",
+        "own_words": [
+          {
+            "text": "fight for affordable healthcare, defend our voting rights, bring down the rising cost of living and stand up to extremism",
+            "is_quote": true,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          },
+          {
+            "text": "Infrastructure is an investment in safety, growth and the long-term success of every community in this district.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          },
+          {
+            "text": "Would hold town halls and community meetings and offer materials in several languages.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/sugar-land-missouri-city/election/qa-get-to-know-the-candidates-for-congressional-district-22/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -329,10 +521,26 @@
         "name": "Martha Fierro",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.fierrofortx.com/",
+        "website_confidence": "sourced",
+        "background": "Did not answer the Community Impact questionnaire.",
+        "own_words": [
+          {
+            "text": "Make Houston Affordable Again by cutting reckless federal spending and fighting inflation",
+            "is_quote": true,
+            "source": "https://www.fierrofortx.com/"
+          },
+          {
+            "text": "Wants to make health care more affordable through competition and patient choice rather than government mandates.",
+            "is_quote": false,
+            "source": "https://www.fierrofortx.com/"
+          },
+          {
+            "text": "Empower parents with school choice, defend parental rights",
+            "is_quote": true,
+            "source": "https://www.fierrofortx.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -340,10 +548,26 @@
         "name": "Sylvia Garcia",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.sylviaforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Member of Congress; earlier Houston city controller, state senator and Harris County commissioner (Community Impact).",
+        "own_words": [
+          {
+            "text": "I’ll keep fighting Trump’s harmful policies, standing up to ICE abuses, protecting Social Security and Medicare",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-congressional-district-29/"
+          },
+          {
+            "text": "Growth is good, but people who have lived here for years shouldn’t be priced out.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-congressional-district-29/"
+          },
+          {
+            "text": "Says she will press FEMA to deliver disaster aid fairly and on time.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-congressional-district-29/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -383,10 +607,26 @@
         "name": "Brian Babin",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.babinforcongress.com/",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Securing our nation’s borders remains my top priority when it comes to immigration.",
+            "is_quote": true,
+            "source": "https://www.babinforcongress.com/"
+          },
+          {
+            "text": "I am a rock-solid defender of the Second Amendment.",
+            "is_quote": true,
+            "source": "https://www.babinforcongress.com/"
+          },
+          {
+            "text": "Supports shoring up Social Security and Medicare while keeping the promise made to current retirees.",
+            "is_quote": false,
+            "source": "https://www.babinforcongress.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -394,10 +634,21 @@
         "name": "Rhonda Hart",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.hart4congress.com",
+        "website_confidence": "sourced",
+        "background": "Army veteran and a surviving parent of the 2018 Santa Fe High School shooting, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Americans are most worried about the cost of living and healthcare right now.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Points to helping pass the 2022 federal Bipartisan Safer Communities Act and a 2023 Texas bill.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -433,10 +684,26 @@
         "name": "Jon Bonck",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.jonbonck.com",
+        "website_confidence": "sourced",
+        "background": "Built a real estate and mortgage brokerage with his wife after working in oil and gas, per his LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "My first priority is affordability.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants to cut the barriers that make it harder to start businesses and buy homes.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "We must secure the border, enforce the law, and continue large scale removal of those here illegally",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -444,10 +711,26 @@
         "name": "Melissa McDonough",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://melissaforcongress.com",
+        "website_confidence": "sourced",
+        "background": "Real estate professional and brokerage owner for nearly 30 years and a longtime volunteer lobbyist, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "First: restore constitutional checks and balances among the three branches of government.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Would seek a federal tax credit for health insurance as premiums rise.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Democracy is not a red or blue issue; it’s a purple solution",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -455,10 +738,26 @@
         "name": "Alex McMenemy",
         "party": "Green",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://alexforthepeople.org",
+        "website_confidence": "sourced",
+        "background": "Community organizer from Tomball who describes himself as a democratic socialist (campaign site).",
+        "own_words": [
+          {
+            "text": "Demand Free, Universal Healthcare and Education",
+            "is_quote": true,
+            "source": "https://alexforthepeople.org"
+          },
+          {
+            "text": "Demand More Democracy, the Removal of Money from Politics, and the Protection of Human Rights",
+            "is_quote": true,
+            "source": "https://alexforthepeople.org"
+          },
+          {
+            "text": "Says he will reject contributions from big corporations and groups like AIPAC.",
+            "is_quote": false,
+            "source": "https://alexforthepeople.org"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": null
       }
@@ -509,10 +808,26 @@
         "name": "Coretta Mallet-Fontenot",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://corettaforsboe4.com",
+        "website_confidence": "sourced",
+        "background": "Houston ISD educator for 27 years and a Houston Federation of Teachers officer (campaign site).",
+        "own_words": [
+          {
+            "text": "Wants students taught the truth about history and fact-based science, with multiple paths to a high school diploma.",
+            "is_quote": false,
+            "source": "https://corettaforsboe4.com"
+          },
+          {
+            "text": "Supports fully funded pre-K and pay raises for school employees.",
+            "is_quote": false,
+            "source": "https://corettaforsboe4.com"
+          },
+          {
+            "text": "Says standardized tests like the STAAR do not accurately measure intelligence.",
+            "is_quote": false,
+            "source": "https://corettaforsboe4.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -551,7 +866,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Speaker, coach and freelance nonprofit consultant from The Woodlands; served one term on the Conroe ISD board, 2022 to 2025 (Branch).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I will work to move beyond a one-size-fits-all test and instead focus on real results that measure growth",
+            "is_quote": true,
+            "source": "https://www.tiffanynelsonfortexas.com/priorities"
+          },
+          {
+            "text": "Wants parents told exactly what is taught in classrooms and how tax dollars are spent.",
+            "is_quote": false,
+            "source": "https://www.tiffanynelsonfortexas.com/priorities"
+          },
+          {
+            "text": "Critical Race Theory, gender ideology, and anti-American narratives have no place in Texas schools.",
+            "is_quote": true,
+            "source": "https://www.tiffanynelsonfortexas.com/priorities"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -562,7 +893,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "History and government teacher in Aldine ISD and a former retail manager; ran for this seat in 2022 (Branch).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Wants the standards the board approves to be based on facts, including in science, history and health.",
+            "is_quote": false,
+            "source": "https://teachthevote.atpe.org/Candidates/michelle-palmer"
+          },
+          {
+            "text": "I would like to see more P-TECH and CTE schools opened in the state.",
+            "is_quote": true,
+            "source": "https://teachthevote.atpe.org/Candidates/michelle-palmer"
+          },
+          {
+            "text": "Would pause new charter school approvals until current charter systems can be audited.",
+            "is_quote": false,
+            "source": "https://teachthevote.atpe.org/Candidates/michelle-palmer"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -613,10 +960,26 @@
         "name": "Julie Pickren",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://juliepickren.com/",
+        "website_confidence": "sourced",
+        "background": "First elected to the State Board of Education in 2022 (ATPE Teach the Vote).",
+        "own_words": [
+          {
+            "text": "holding curriculum to a standard of academic rigor rather than ideological fashion",
+            "is_quote": true,
+            "source": "https://juliepickren.com/issues/investment-in-education"
+          },
+          {
+            "text": "Wants schools measured on what students actually learn, with parents choosing among public, charter, private and home school options.",
+            "is_quote": false,
+            "source": "https://juliepickren.com/issues/investment-in-education"
+          },
+          {
+            "text": "Said in a 2022 educator survey that the state should do away with STAAR testing because schools teach to the test.",
+            "is_quote": false,
+            "source": "https://teachthevote.atpe.org/Candidates/julie-pickren"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -626,8 +989,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Texas educator with a master's in education who owns a tutoring business, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Public schools should not promote or endorse any religion.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Says overuse of AI is weakening students' critical thinking, and wants students reading whole novels.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants to protect academic freedom and keep politics out of curriculum decisions.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -663,10 +1042,26 @@
         "name": "Audrey G. Young",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://sboe8.com",
+        "website_confidence": "sourced",
+        "background": "More than three decades in Texas public education, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Favors reading physical texts, writing by hand and hands-on learning, with technology enhancing rather than replacing teaching.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Supports teaching about religion in an academic and historical context.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants stronger training for local school board members and high-quality instructional materials.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -676,8 +1071,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Educator for nearly 20 years, now a community college professor and administrator, per the LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Religion has no place in our public schools.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants to end school vouchers, raise math and literacy standards and make college more affordable.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants to reassess teacher pay and benefits and fix alternative certification routes.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -713,10 +1124,26 @@
         "name": "Brett W. Ligon",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.ligonfortexas.com",
+        "website_confidence": "sourced",
+        "background": "State senator since 2026; Montgomery County district attorney from 2008 to 2025 (Community Impact).",
+        "own_words": [
+          {
+            "text": "fight for taxpayers, strengthen border security, improve flood mitigation, and defend the values that make Texas strong",
+            "is_quote": true,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          },
+          {
+            "text": "Wants lower property taxes and homeowners insurance rates and a more competitive insurance market.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          },
+          {
+            "text": "Says rapid growth is straining infrastructure, flood control and public safety in the district.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -724,10 +1151,26 @@
         "name": "Ron C. Angeletti",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://angelettifortexas.org",
+        "website_confidence": "sourced",
+        "background": "Educator, counselor and education advocate (Community Impact).",
+        "own_words": [
+          {
+            "text": "I’m running because public service should be about people, not politics.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          },
+          {
+            "text": "Wants more affordable housing and property-tax relief that does not undermine public schools.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          },
+          {
+            "text": "Would push for faster, more transparent disaster aid and for investment in resilient infrastructure.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-learn-more-about-the-candidates-for-texas-senate-district-4/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -763,10 +1206,26 @@
         "name": "Dennis Paul",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.dennispaul.com/",
+        "website_confidence": "sourced",
+        "background": "Structural engineer and state representative (Community Impact).",
+        "own_words": [
+          {
+            "text": "I'll fight to lower costs, rein in insurance rates, cut regulations, eliminate property taxes, strengthen public schools",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          },
+          {
+            "text": "Wants public education fully funded, with safe schools and better pay for teachers.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          },
+          {
+            "text": "Big projects must pay for the pressure they put on our power grid, water, roads, and communities.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -774,10 +1233,26 @@
         "name": "Shannon Dicely",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.shannondicely.com/",
+        "website_confidence": "sourced",
+        "background": "Civic engagement and public education advocate with a master's in political science; has served on Friendswood city and school district committees (Community Impact).",
+        "own_words": [
+          {
+            "text": "I will work to repeal private school vouchers, reduce high-stakes testing, protect local control",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          },
+          {
+            "text": "Would put fixing aging water infrastructure, leak detection and conservation ahead of costly new supply projects.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          },
+          {
+            "text": "Wants data centers to pay for their own infrastructure and protect water supplies.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-state-senate-district-11/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -852,10 +1327,21 @@
         "name": "Lois W. Kolkhorst",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://loisfortexas.com",
+        "website_confidence": "sourced",
+        "background": "State senator since 2014; small business owner and former state House member (campaign site).",
+        "own_words": [
+          {
+            "text": "My record speaks for itself, and I’ll keep delivering conservative victories for Texas families",
+            "is_quote": true,
+            "source": "https://loisfortexas.com"
+          },
+          {
+            "text": "Wants to keep working to secure the border, lower property taxes, support law enforcement and protect families.",
+            "is_quote": false,
+            "source": "https://loisfortexas.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -863,10 +1349,26 @@
         "name": "Erica Gillum",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://gillumfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Realtor and businesswoman; former mayor of Hempstead (campaign site).",
+        "own_words": [
+          {
+            "text": "I will fight to fully fund neighborhood schools, ensure teachers are paid what they deserve",
+            "is_quote": true,
+            "source": "https://gillumfortexas.com"
+          },
+          {
+            "text": "I will ensure adequate water supplies, reliable roads, and strong rural services",
+            "is_quote": true,
+            "source": "https://gillumfortexas.com"
+          },
+          {
+            "text": "Wants to bring down housing, child care and prescription drug costs.",
+            "is_quote": false,
+            "source": "https://gillumfortexas.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -902,10 +1404,26 @@
         "name": "Stan Stanart",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.stanstanart.com",
+        "website_confidence": "sourced",
+        "background": "Former Harris County clerk and chief election official; has lived in the district for 30 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "eliminate or sharply cut high property taxes and insurance premiums",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          },
+          {
+            "text": "Wants stronger infrastructure to stop flooding and more election integrity measures.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          },
+          {
+            "text": "Wants data centers to generate their own power and use closed-loop water systems so they never raise electric bills.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -913,10 +1431,26 @@
         "name": "Stefanie Bord",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.stefaniebordfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Former Klein ISD teacher and environmental consultant who now homeschools (Community Impact).",
+        "own_words": [
+          {
+            "text": "Wants per-student school funding raised to at least the national average, with higher teacher pay.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          },
+          {
+            "text": "Supports Medicaid expansion, a higher minimum wage and infrastructure built for climate change.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          },
+          {
+            "text": "excellent free public schools that don’t require a voucher or application to attend",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-district-126/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -952,10 +1486,26 @@
         "name": "Charles Cunningham",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://charlescunninghamtx.com",
+        "website_confidence": "sourced",
+        "background": "State representative, first elected in 2022 (Community Impact).",
+        "own_words": [
+          {
+            "text": "no Texan should face being taxed out of their home.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          },
+          {
+            "text": "Leans toward more state oversight of data centers, including their power use and grid connection costs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          },
+          {
+            "text": "Flooding mitigation, eliminate property taxes, secure elections, border enforcement, protect life and Texas kids",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -963,10 +1513,26 @@
         "name": "Michelle Williams",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.michelleforstaterep.com",
+        "website_confidence": "sourced",
+        "background": "Classroom teacher and president of the Houston Education Association (Community Impact).",
+        "own_words": [
+          {
+            "text": "I want practical fixes, not slogans.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          },
+          {
+            "text": "Would keep recent property tax relief without cutting school funding, and stop upstream sand mining that she says raises flood risk.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          },
+          {
+            "text": "Large projects should pay their fair share toward water, power, and flood infrastructure instead of shifting costs to homeowners.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/qa-get-to-know-the-candidates-running-for-texas-house-district-127-143266/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1002,10 +1568,26 @@
         "name": "Tom Butler",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://tombutler.org",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I will work to cut property taxes (not just slow their growth), rein in runaway appraisals",
+            "is_quote": true,
+            "source": "https://tombutler.org"
+          },
+          {
+            "text": "Calls securing elections his top priority and wants ID required even to register to vote.",
+            "is_quote": false,
+            "source": "https://tombutler.org"
+          },
+          {
+            "text": "Wants to expand the state's new school choice program so education dollars follow the student.",
+            "is_quote": false,
+            "source": "https://tombutler.org"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1013,10 +1595,26 @@
         "name": "Desiree Klaus",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://desireeklaustx.com",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Would fight to fund public schools rather than vouchers.",
+            "is_quote": false,
+            "source": "https://desireeklaustx.com/issues"
+          },
+          {
+            "text": "Wants workforce training that places local workers in high-demand careers, and capital and coaching for small businesses.",
+            "is_quote": false,
+            "source": "https://desireeklaustx.com/issues"
+          },
+          {
+            "text": "Cap prescription prices, end surprise billing, fund neighborhood clinics and mobile care",
+            "is_quote": true,
+            "source": "https://desireeklaustx.com/issues"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1052,10 +1650,26 @@
         "name": "Scott Bowen",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://bowenfortx.com/",
+        "website_confidence": "sourced",
+        "background": "Chemical engineer and former Clear Creek ISD trustee (Community Impact).",
+        "own_words": [
+          {
+            "text": "Parents have the right to decide how their children are educated, whether public, private or homeschooled.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          },
+          {
+            "text": "Wants to lower property taxes, fight rising insurance rates and get criminals off the streets.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          },
+          {
+            "text": "Supports the governor's temporary pause on new data centers until laws require them to pay local taxes and generate their own power.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1063,10 +1677,26 @@
         "name": "Albert Wittliff",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.votewittliff.com/",
+        "website_confidence": "sourced",
+        "background": "Director of security and retired special agent and criminal investigator (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are to fully fund public schools and repeal the school voucher program.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          },
+          {
+            "text": "Wants more affordable homeowners insurance and better flood and power infrastructure before disasters hit.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          },
+          {
+            "text": "Wants data centers to pay their fair share for the infrastructure and resources they use.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/qa-meet-the-candidates-running-to-represent-texas-house-district-129/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1102,10 +1732,26 @@
         "name": "Tom Oliverson",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://tomoliverson.com",
+        "website_confidence": "sourced",
+        "background": "Chaired the House Insurance Committee in the 2023 session, per his campaign site. Did not answer the Community Impact questionnaire.",
+        "own_words": [
+          {
+            "text": "Reducing homeowners insurance costs is one of my top priorities for the 90th Legislative Session.",
+            "is_quote": true,
+            "source": "https://tomoliverson.com"
+          },
+          {
+            "text": "Says uncompensated care and federal mandates drive up health care prices, and calls that a top priority for next session.",
+            "is_quote": false,
+            "source": "https://tomoliverson.com"
+          },
+          {
+            "text": "Backs storm-proofing homes as a way to cut damage claims and bring insurance premiums down.",
+            "is_quote": false,
+            "source": "https://tomoliverson.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1113,10 +1759,26 @@
         "name": "Brett Robinson",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.brett4texas.com",
+        "website_confidence": "sourced",
+        "background": "Has a master's in public administration and works with children with autism as a behavior technician (Community Impact).",
+        "own_words": [
+          {
+            "text": "Wants a right for workers to unionize and bargain collectively, and passage of the Texas Cares health coverage bill.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-district-130/"
+          },
+          {
+            "text": "I support banning corporate ownership of housing, increasing affordable housing construction, and increasing the Homestead exemption.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-district-130/"
+          },
+          {
+            "text": "I support repealing the voucher law",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-district-130/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1163,10 +1825,21 @@
         "name": "Staci Childs",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.childsfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Attorney, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Wants to strengthen public education with rigorous instructional materials and targeted academic support.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Supports a criminal justice system that emphasizes prevention, rehabilitation and second chances.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1202,10 +1875,26 @@
         "name": "Mike Schofield",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.mikeschofield.com",
+        "website_confidence": "sourced",
+        "background": "State representative 2015 to 2019 and since 2021; earlier an adviser to Gov. Rick Perry for 11 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "Top priorities: lower insurance rates, permanent property tax cuts, and requiring district attorneys to prosecute violent criminals.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          },
+          {
+            "text": "we must fix our broken homeowners and auto insurance markets so you can afford to live here.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          },
+          {
+            "text": "Wants to cut the regulations, taxes and frivolous lawsuits that burden small businesses.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1213,10 +1902,26 @@
         "name": "Sara McGee",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.mcgeefortx.com",
+        "website_confidence": "sourced",
+        "background": "Healthcare executive and community advocate (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are fully funding public schools, raising teacher pay, reducing classroom sizes",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          },
+          {
+            "text": "Wants growth managed responsibly, with corporations paying fairly for their impact on communities.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          },
+          {
+            "text": "Would expand small businesses' access to capital and workforce training rather than special incentives for large corporations.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/q-a-meet-the-candidates-for-texas-house-of-representatives-district-132/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1252,10 +1957,26 @@
         "name": "Mano DeAyala",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://manoforstaterep.com/",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I'll keep fighting to lower property taxes. We should never be taxed out of our homes.",
+            "is_quote": true,
+            "source": "https://manoforstaterep.com/"
+          },
+          {
+            "text": "I’m laser-focused on keeping Texas affordable",
+            "is_quote": true,
+            "source": "https://manoforstaterep.com/"
+          },
+          {
+            "text": "Wants to keep neighborhoods safe and expand educational opportunity.",
+            "is_quote": false,
+            "source": "https://manoforstaterep.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1263,10 +1984,26 @@
         "name": "Josh Wallenstein",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://josh4texas.com",
+        "website_confidence": "sourced",
+        "background": "Anti-corruption attorney for more than two decades and a small business owner (campaign site).",
+        "own_words": [
+          {
+            "text": "Wants stronger ethics rules, more transparency and tougher safeguards against conflicts of interest.",
+            "is_quote": false,
+            "source": "https://josh4texas.com/issues/"
+          },
+          {
+            "text": "Supports banning candidates and officeholders from using campaign funds to trade individual stocks.",
+            "is_quote": false,
+            "source": "https://josh4texas.com/issues/"
+          },
+          {
+            "text": "Wants local residents to have a real say in where data centers go and what tax breaks they get.",
+            "is_quote": false,
+            "source": "https://josh4texas.com/issues/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1302,10 +2039,26 @@
         "name": "Mike Michna",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.votemichna.com",
+        "website_confidence": "sourced",
+        "background": "Marine veteran, Houston firefighter and small business owner (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities would be affordability and public safety.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          },
+          {
+            "text": "Supports freezing a home's taxable value for the first five years after purchase.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          },
+          {
+            "text": "Wants to work with police officers and firefighters on bail reform and public safety laws.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1313,10 +2066,26 @@
         "name": "Ann Johnson",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.annjohnson.com",
+        "website_confidence": "sourced",
+        "background": "Three-term state representative, former chief human trafficking prosecutor, teacher and small business owner (Community Impact).",
+        "own_words": [
+          {
+            "text": "I am running to fight against the extremism that is too prevalent in Texas politics and government.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          },
+          {
+            "text": "Wants to expand Medicaid, fully fund public schools, fix the power grid and rein in data centers' power and water use.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          },
+          {
+            "text": "Would keep working to unwind the state takeover of Houston ISD.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-for-texas-house-district-134/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1352,10 +2121,26 @@
         "name": "Liz Ramos",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.lizramosfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Thirty years in public service, managing multimillion-dollar budgets (Community Impact).",
+        "own_words": [
+          {
+            "text": "Says property tax relief is urgently needed as families are squeezed by rising costs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          },
+          {
+            "text": "Wants to cut school administrative costs to raise teacher pay, and to return to paper and pencil to reduce digital distractions.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          },
+          {
+            "text": "I will launch text-based pulse polls, host bi-monthly neighborhood town halls, and set up informal coffee hours at local diners.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1363,10 +2148,26 @@
         "name": "Odus E. Evbagharu",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.odusfortexas.com",
+        "website_confidence": "sourced",
+        "background": "Former chief of staff for House District 135 and small business owner (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities are fully funding Cy-Fair and Katy public schools, lowering everyday costs and property taxes",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          },
+          {
+            "text": "I support economic development, but growth must pay its way.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          },
+          {
+            "text": "Would hold regular town halls, office hours and neighborhood meetings across Cy-Fair and Katy.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/cypress/election/qa-meet-the-candidates-for-texas-house-district-135/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1402,10 +2203,26 @@
         "name": "Helen Zhou",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://helenforstaterep.com/",
+        "website_confidence": "sourced",
+        "background": "Accountant (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities are crime, job training and infrastructure.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          },
+          {
+            "text": "Wants a vocational high school in Southwest Houston and more skilled-trades training for students and adults.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          },
+          {
+            "text": "Preventing property destruction is better than repeatedly paying for recovery.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1413,10 +2230,26 @@
         "name": "Gene Wu",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "http://genefortexas.com/",
+        "website_confidence": "sourced",
+        "background": "Former Harris County prosecutor; has represented District 137 since 2012 (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities include affordability and creating an economy that works for all working families, fighting for public education, opposing gerrymandering",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          },
+          {
+            "text": "Wants to focus on fair wages, fair rent, property taxes and medical and homeowners insurance costs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          },
+          {
+            "text": "Names immigration enforcement, environmental impacts and access to education and transit as the district's biggest challenges.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/q-a-meet-the-candidates-for-texas-house-district-137/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1452,10 +2285,26 @@
         "name": "Lacey Hull",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.laceyhull.com",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Wants to lower property taxes by reining in the home appraisal process.",
+            "is_quote": false,
+            "source": "https://www.laceyhull.com/issues"
+          },
+          {
+            "text": "Points to her votes to stop no-cash bail for violent criminals and to end parole for rapists and murderers.",
+            "is_quote": false,
+            "source": "https://www.laceyhull.com/issues"
+          },
+          {
+            "text": "Points to AI rules she passed, including bans on behavioral manipulation, social scoring and deepfakes.",
+            "is_quote": false,
+            "source": "https://www.laceyhull.com/issues"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1463,10 +2312,26 @@
         "name": "Tyler Smith",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://tylerfortx.com",
+        "website_confidence": "sourced",
+        "background": "Texas Southern University political science graduate who has worked on gun violence prevention (campaign site).",
+        "own_words": [
+          {
+            "text": "I’ll work with anyone, Democrats, Independents, or Republicans, to lower costs and keep our neighborhoods safe for families.",
+            "is_quote": true,
+            "source": "https://tylerfortx.com"
+          },
+          {
+            "text": "Wants to fix the power grid, protect families from extreme weather and stand up to corporate polluters.",
+            "is_quote": false,
+            "source": "https://tylerfortx.com"
+          },
+          {
+            "text": "Supports bipartisan bail reform to keep repeat violent offenders off the streets.",
+            "is_quote": false,
+            "source": "https://tylerfortx.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1504,7 +2369,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -1513,10 +2378,26 @@
         "name": "Charlene Ward Johnson",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.electcharlene.com",
+        "website_confidence": "sourced",
+        "background": "Incumbent; former Houston Community College trustee with 30 years in corporate America (Community Impact).",
+        "own_words": [
+          {
+            "text": "My top priorities are affordable housing, stronger infrastructure and flood mitigation, better schools and workforce training, quality healthcare, and environmental protection.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-of-representatives-district-139/"
+          },
+          {
+            "text": "Wants major projects to require transparency, community input and environmental and infrastructure reviews.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-of-representatives-district-139/"
+          },
+          {
+            "text": "Would keep holding neighborhood meetings and listening sessions and use online surveys to hear from residents.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-texas-house-of-representatives-district-139/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1563,10 +2444,26 @@
         "name": "Armando Lucio Walle",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://wallefortexas.com",
+        "website_confidence": "sourced",
+        "background": "Member of the House Appropriations Committee (campaign site).",
+        "own_words": [
+          {
+            "text": "Wants more air pollution monitoring and protections for residents near concrete batch plants.",
+            "is_quote": false,
+            "source": "https://wallefortexas.com/issues"
+          },
+          {
+            "text": "Supports fully funding neighborhood schools, and has repeatedly filed bills to raise the minimum wage.",
+            "is_quote": false,
+            "source": "https://wallefortexas.com/issues"
+          },
+          {
+            "text": "Supports limits on local police coordination with ICE.",
+            "is_quote": false,
+            "source": "https://wallefortexas.com/issues"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1604,7 +2501,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -1613,10 +2510,26 @@
         "name": "Senfronia Thompson",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://senfroniathompson.com/",
+        "website_confidence": "sourced",
+        "background": "State representative for District 141 and an attorney (Community Impact).",
+        "own_words": [
+          {
+            "text": "Says she serves to advocate for those less fortunate and to keep fighting for equality, justice and opportunity for all.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-state-house-district-141/"
+          },
+          {
+            "text": "I will continue supporting HUB programs so minority-owned small businesses can have access to capital and opportunities.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-state-house-district-141/"
+          },
+          {
+            "text": "Wants the Legislature to prioritize water infrastructure, public education, skilled trades and affordable health care.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-running-for-state-house-district-141/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1652,10 +2565,26 @@
         "name": "Heidi Hall",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.heididhall.com",
+        "website_confidence": "sourced",
+        "background": "HOA and condominium board officer and past chair of a corporate community relations team (Community Impact).",
+        "own_words": [
+          {
+            "text": "Top priorities: quality education for every student, working with police to reduce crime, and health care, housing and job training for veterans.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-get-to-know-the-candidates-running-for-texas-house-district-142/"
+          },
+          {
+            "text": "Wants affordable housing that is available now offered to American citizens first.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-get-to-know-the-candidates-running-for-texas-house-district-142/"
+          },
+          {
+            "text": "I plan to invite the residents to quarterly town halls in different areas of the district",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-get-to-know-the-candidates-running-for-texas-house-district-142/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1665,8 +2594,19 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Has represented District 142 since 1985, per his LWV Houston primary guide answers. Did not answer the Community Impact questionnaire.",
+        "own_words": [
+          {
+            "text": "Wants to keep District 142 from being eliminated in any redrawing of district lines.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Wants the school accountability system to reflect how well boys are succeeding in public schools.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1713,10 +2653,21 @@
         "name": "Ana Hernandez",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://anafortexas.com",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Wants stronger schools, better health care and more jobs for the district.",
+            "is_quote": false,
+            "source": "https://anafortexas.com"
+          },
+          {
+            "text": "Points to laws she wrote on women veterans' benefits, shutting down sex trafficking fronts and expanding the state DNA database.",
+            "is_quote": false,
+            "source": "https://anafortexas.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1763,10 +2714,26 @@
         "name": "Mary Ann Perez",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.votemaryannperez.com",
+        "website_confidence": "sourced",
+        "background": "State representative first elected in 2012 and vice chair of the House Transportation Committee; former Houston Community College board chair, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Consumer protection is a priority.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Points to her laws against gas pump card skimming and financial fraud, including creating the Financial Crimes Intelligence Center.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Focuses on transportation safety and infrastructure around the Port of Houston.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1802,10 +2769,26 @@
         "name": "Inocensia Moreno",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "http://www.morenofortxhd145.com",
+        "website_confidence": "sourced",
+        "background": "Native Houstonian and community advocate for over 25 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "Names affordability, crime, education, infrastructure and immigration as the district's main challenges.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-145/"
+          },
+          {
+            "text": "Wants to keep health and home insurance costs down and limit tax increases.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-145/"
+          },
+          {
+            "text": "streamline the permitting process with the city and the county",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-145/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1813,9 +2796,9 @@
         "name": "Christina Morales",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
+        "website": "https://www.moralesfordistrict145.com",
+        "website_confidence": "sourced",
+        "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -1854,7 +2837,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -1863,10 +2846,26 @@
         "name": "Lauren Ashley Simmons",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "http://www.laurenashleysimmons.com",
+        "website_confidence": "sourced",
+        "background": "State representative for District 146; chairs the Labor and Workforce Caucus; former statewide union organizing director (Community Impact).",
+        "own_words": [
+          {
+            "text": "keep fighting for living wages and health care for people who have to choose between paying for medicine or rent",
+            "is_quote": true,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-146/"
+          },
+          {
+            "text": "Would expand Medicaid, help first-time homebuyers with down payments, and make power companies rather than customers pay for losses in extreme weather.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-146/"
+          },
+          {
+            "text": "Top priorities include supporting public schools, health care for people in medical debt, higher wages, and protecting Black history and LGBTIA people.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/heights-river-oaks-montrose/election/qa-meet-the-candidates-for-texas-house-district-146/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1904,8 +2903,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Wildlife consultant, U.S. veteran and entrepreneur (Community Impact).",
+        "own_words": [
+          {
+            "text": "Top priorities: public safety, economic growth, keeping violent criminals off the street, and reducing or removing property taxes.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          },
+          {
+            "text": "Would hold workshops to encourage entrepreneurship and draw new businesses to the district.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          },
+          {
+            "text": "Says disaster preparation cannot wait until the last minute, and notes he lost his own home in Hurricane Harvey.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1913,10 +2928,26 @@
         "name": "Jolanda Jones",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.jolandajones.com",
+        "website_confidence": "sourced",
+        "background": "State representative and attorney; former at-large Houston City Council member and HISD trustee (Community Impact).",
+        "own_words": [
+          {
+            "text": "Protecting voting rights and making life affordable.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          },
+          {
+            "text": "Public dollars belong in public schools, not subsidizing private education.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          },
+          {
+            "text": "Wants more money for the Texas Housing Trust Fund and power companies held accountable for fixing the grid and lowering rates.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bellaire-meyerland-west-university/election/qa-meet-the-candidates-running-for-district-147-in-texas-house-of-representatives/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -1952,10 +2983,26 @@
         "name": "Amanda LaBrie",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://amandalabrie.com",
+        "website_confidence": "sourced",
+        "background": "Oil and gas landman, events entrepreneur and Republican precinct chair, born and raised in the district (campaign site).",
+        "own_words": [
+          {
+            "text": "A safe Harris County is a prosperous Harris County.",
+            "is_quote": true,
+            "source": "https://amandalabrie.com"
+          },
+          {
+            "text": "Wants to reform the bail system, attract good-paying jobs and secure state money for drainage, flooding and transportation.",
+            "is_quote": false,
+            "source": "https://amandalabrie.com"
+          },
+          {
+            "text": "Supports giving parents more choices in their children's education.",
+            "is_quote": false,
+            "source": "https://amandalabrie.com"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -2004,8 +3051,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Critical infrastructure and electrical engineer, small business owner, and school board and HOA board member (Community Impact).",
+        "own_words": [
+          {
+            "text": "Crime is the biggest issue in HD149.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          },
+          {
+            "text": "Wants lower taxes and electric bills for residents and small businesses, and funding for public school improvements.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          },
+          {
+            "text": "Says small businesses and residents pay far more for electricity than the biggest businesses, and wants that gap closed.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -2013,10 +3076,26 @@
         "name": "Darlene Breaux",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://darlenebreaux.com",
+        "website_confidence": "sourced",
+        "background": "School board trustee, Texas Association of School Boards leader and educator; has lived in District 149 for more than 30 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "our neighbors deserve a legislator who turns policy into action, not just promises.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          },
+          {
+            "text": "Would push for infrastructure investment along Main Street corridors, less red tape for local entrepreneurs and workforce training.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          },
+          {
+            "text": "Plans to prioritize the Public Schools First Act, the Safe Apartments and Homestead Relief Act, and fair power bills.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-learn-more-about-the-candidates-running-for-texas-house-district-149/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -2052,10 +3131,16 @@
         "name": "Valoree Swanson",
         "party": "Republican",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.valoreeswanson.com",
+        "website_confidence": "sourced",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Points to her vote for a 2021 law banning COVID-19 vaccine passports, and says she has long supported medical freedom.",
+            "is_quote": false,
+            "source": "https://www.valoreeswanson.com/issues/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6024,10 +7109,26 @@
         "name": "Jacqueline Lucci Smith",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Attorney.",
-        "own_words": [],
+        "website": "https://smith4harriscounty.com/",
+        "website_confidence": "sourced",
+        "background": "Former judge and assistant county attorney; attorney for 30 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "I want to restore integrity, transparency, and accountability to this office.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          },
+          {
+            "text": "As County Attorney, I will be an independent voice, not a rubber stamp.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          },
+          {
+            "text": "Would publish non-privileged information on county lawsuits and what they cost.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6035,10 +7136,26 @@
         "name": "Abbie Kamin",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Attorney; former Houston City Council member for District C, who stepped down to run.",
-        "own_words": [],
+        "website": "https://abbiekamin.com",
+        "website_confidence": "sourced",
+        "background": "Attorney; former Houston City Council member for District C. Community Impact lists her as the incumbent Harris County attorney.",
+        "own_words": [
+          {
+            "text": "Says her office is taking on scammers and slumlords, cracking down on domestic abusers and suing polluters.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          },
+          {
+            "text": "Calls protecting voters' rights and free and fair elections her overriding priority.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          },
+          {
+            "text": "You have a right to know what your government is doing.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/meet-the-candidates-for-harris-county-attorney/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6082,10 +7199,26 @@
         "name": "Chris Daniel",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.chrisdaniel.org",
+        "website_confidence": "sourced",
         "background": "Attorney and engineer; previously served as Harris County district clerk, per the Chronicle.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I am running because this office is the backbone of the courthouse.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          },
+          {
+            "text": "Would set clear processing standards, publish turnaround times and simplify the public records portals.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          },
+          {
+            "text": "Wants more practical help for people without lawyers, including kiosks and bilingual service.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6093,10 +7226,26 @@
         "name": "Darrell Jordan, Jr",
         "party": "Democratic",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Attorney; won the May 2026 Democratic runoff.",
-        "own_words": [],
+        "website": "https://www.darrelljordanjr.com",
+        "website_confidence": "sourced",
+        "background": "Attorney; won the May 2026 Democratic runoff. Former judge and military officer (Community Impact).",
+        "own_words": [
+          {
+            "text": "I’m running to modernize the District Clerk’s Office and deliver efficient, accessible, customer-focused service.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          },
+          {
+            "text": "Names outdated technology, inefficient processes, staffing and delays as the office's main challenges.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          },
+          {
+            "text": "Use technology, accountability, and smarter staffing to reduce backlogs and provide faster access to court services.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/qa-meet-the-candidates-for-harris-county-district-clerk/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6136,10 +7285,26 @@
         "name": "Mike Wolfe",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Consultant; won the March Republican primary.",
-        "own_words": [],
+        "website": "https://mikewolfe.com",
+        "website_confidence": "sourced",
+        "background": "Consultant; won the March Republican primary. Former Harris County school trustee (Community Impact).",
+        "own_words": [
+          {
+            "text": "Restoring public trust and operational efficiency.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          },
+          {
+            "text": "Would modernize property search tools, expand online filings and publish processing times.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          },
+          {
+            "text": "Wants better-trained election workers and accurate returns reported promptly on election night.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6147,10 +7312,26 @@
         "name": "Teneshia Hudspeth",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.teneshiahudspeth.com",
+        "website_confidence": "sourced",
         "background": "Harris County Clerk; her office runs the county's elections.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Calls unfunded election mandates from the Legislature the office's biggest issue.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          },
+          {
+            "text": "Points to digitized records, online birth certificate orders and a new deed fraud alert system.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          },
+          {
+            "text": "I remain committed to transparent, efficient, and reliable public service.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/q-a-meet-the-candidates-running-for-harris-county-clerk/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6194,10 +7375,26 @@
         "name": "Marc Cowart",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.marccowart.com",
+        "website_confidence": "sourced",
         "background": "Listed by the Chronicle as a business leader and longtime Republican staffer.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I am running to restore trust, accountability and transparency to the office.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-running-for-harris-county-treasurer/"
+          },
+          {
+            "text": "Would bring back an online, searchable database of county spending.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-running-for-harris-county-treasurer/"
+          },
+          {
+            "text": "Calls uncontrolled county spending the biggest financial challenge and plans to educate the public about it.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-running-for-harris-county-treasurer/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6207,7 +7404,7 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Harris County Treasurer.",
+        "background": "Harris County Treasurer. Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -6304,7 +7501,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Business consultant.",
+        "background": "Business consultant. Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -6316,7 +7513,23 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Board member, appointed to the seat; former educator.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Wants to protect and expand early childhood education through Head Start and Early Head Start.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-get-to-know-the-candidates-running-for-harris-county-dept-of-education-place-7/"
+          },
+          {
+            "text": "Would focus on widening access to the department's existing services, including therapy for students with disabilities and after-school programs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/bay-area/election/q-a-get-to-know-the-candidates-running-for-harris-county-dept-of-education-place-7/"
+          },
+          {
+            "text": "I do not believe the needs of educators and students are competing interests.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/bay-area/election/q-a-get-to-know-the-candidates-running-for-harris-county-dept-of-education-place-7/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6356,10 +7569,26 @@
         "name": "Richard Vega",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Pastor; ran in 2022.",
-        "own_words": [],
+        "website": "https://www.richardvega.us",
+        "website_confidence": "sourced",
+        "background": "Pastor; ran in 2022. U.S. Army veteran, businessman and nonprofit leader (Community Impact).",
+        "own_words": [
+          {
+            "text": "My priorities are public safety, fiscal responsibility, infrastructure and flood protection, and affordability.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          },
+          {
+            "text": "Wants to speed up flood-control projects and improve roads and drainage.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          },
+          {
+            "text": "Says taxpayers deserve to know where their money goes and what results it produces.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6367,10 +7596,26 @@
         "name": "Adrian Garcia",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Precinct 2 commissioner; re-elected in 2022 with 52.7% of the vote.",
-        "own_words": [],
+        "website": "https://www.adriangarcia.com",
+        "website_confidence": "sourced",
+        "background": "Precinct 2 commissioner; re-elected in 2022 with 52.7% of the vote. Former Harris County sheriff and Houston police officer (Community Impact).",
+        "own_words": [
+          {
+            "text": "Flooding, cost of goods and housing, and access to public health.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          },
+          {
+            "text": "Points to property tax cuts for seniors, mobile health units, affordable housing and $500 million for flood prevention.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          },
+          {
+            "text": "Is funding a nonprofit grocery store to bring down food costs.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/lake-houston-humble-kingwood/election/q-a-meet-the-candidates-for-harris-county-precinct-2-comissioner/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6418,10 +7663,26 @@
         "name": "Steve Radack",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://www.steveradack.com/",
+        "website_confidence": "sourced",
         "background": "Former Harris County commissioner for Precinct 3, 1988 to 2020.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Balance the County budget and reduce the property tax rate by eliminating programs and departments that are not needed.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          },
+          {
+            "text": "Wants to focus on infrastructure, parks and community centers, and to support more law enforcement patrols.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          },
+          {
+            "text": "Would work with Flood Control to schedule and build projects that directly reduce flooding.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6429,10 +7690,26 @@
         "name": "Lesley Briones",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": "Precinct 4 commissioner; elected in 2022 with 51.7% of the vote.",
-        "own_words": [],
+        "website": "https://lesleybriones.com/",
+        "website_confidence": "sourced",
+        "background": "Precinct 4 commissioner; elected in 2022 with 51.7% of the vote. Former judge, lawyer and teacher (Community Impact).",
+        "own_words": [
+          {
+            "text": "Affordability, public safety, and flood prevention.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          },
+          {
+            "text": "Points to tax relief for seniors, more than 80 miles of new sidewalks, competitive pay for law enforcement and billions for flood mitigation.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          },
+          {
+            "text": "I’m running to make sure every person in Harris County has a fair shot.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/katy-fulshear/election/q-a-meet-the-candidates-for-harris-county-precinct-4-commissioner/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6545,10 +7822,21 @@
         "name": "Dolores Lozano",
         "party": "Democratic",
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.doloreslozano.com",
+        "website_confidence": "sourced",
+        "background": "Justice of the peace for Precinct 2, Place 2, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Brought free onsite legal aid, interpreters and plain-language materials into her court for people without lawyers.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Points to an eviction diversion program that connects tenants and landlords to mediation, rental assistance and legal help.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -6685,10 +7973,26 @@
         "name": "Mark Fury",
         "party": "Republican",
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.bringbackagoodjp.com",
+        "website_confidence": "sourced",
+        "background": "Served two terms as justice of the peace at the Precinct 5 Chimney Rock courthouse, per his LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Calls the court's case backlog, which he puts at 68,000 undisposed cases, its most pressing issue.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Points to cutting a backlog of more than 70,000 cases during his earlier terms.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Justice of the Peace will be my only job.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -6698,8 +8002,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Has worked 13 years in Harris County justice of the peace courts and more than 15 years in human resources, per her LWV Houston primary guide answers.",
+        "own_words": [
+          {
+            "text": "Wants more community outreach so residents understand the court's role and resources.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "Stresses professionalism, efficiency and consistency in every courtroom interaction.",
+            "is_quote": false,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          },
+          {
+            "text": "I am committed to delivering justice that is fair and efficient to all we serve.",
+            "is_quote": true,
+            "source": "https://irp.cdn-website.com/af2f04f7/files/uploaded/2026_LWVHouston_Primary_DIGITAL-GUIDE.pdf"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7063,10 +8383,26 @@
         "name": "Linda Ford",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.lindaford4kleinisd.org",
+        "website_confidence": "sourced",
+        "background": "Educator, counselor and special education professional for 32 years; now teaches neurodiverse students at Lone Star College (Community Impact).",
+        "own_words": [
+          {
+            "text": "I will prioritize students by leading with tomorrow in mind.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          },
+          {
+            "text": "Wants career preparation to start early, including career and technical programs built to hold up as AI spreads.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          },
+          {
+            "text": "Have we explored every funding source, or are we leaving money on the table?",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7074,10 +8410,26 @@
         "name": "Dustin Qualls",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "http://www.qualls4klein.com",
+        "website_confidence": "sourced",
+        "background": "Klein ISD trustee and 25-year Klein resident (Community Impact).",
+        "own_words": [
+          {
+            "text": "I prioritize students by being present.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          },
+          {
+            "text": "Wants budgets to put money into classrooms, student pathways and teacher raises, with zero-based budgeting to cut waste.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          },
+          {
+            "text": "Wants early support for students and families to catch warning signs before a student brings a weapon to school.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/spring-klein/election/q-a-meet-the-candidates-for-klein-isd-board-of-trustees/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7470,8 +8822,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Tomball ISD parent, safety specialist, early childhood educator and youth and family minister (Community Impact).",
+        "own_words": [
+          {
+            "text": "I'm running to bring transparency, fiscal responsibility, great teachers, and safe campuses to every child in this District.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          },
+          {
+            "text": "Wants budget, curriculum and safety information posted before parents have to ask.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          },
+          {
+            "text": "Would cut non-instructional paperwork and pay for teacher raises by trimming bureaucracy rather than raising taxes.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7481,8 +8849,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Tomball ISD trustee with over 20 years on church, community and professional boards (Community Impact).",
+        "own_words": [
+          {
+            "text": "Names complacency, school funding that lags state mandates and inflation, and keeping career programs current as top challenges.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          },
+          {
+            "text": "Says trustees should keep asking how each decision helps teachers spend more time teaching.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          },
+          {
+            "text": "Tomball ISD is morally and legally obligated to support our special education population.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-1/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7557,10 +8941,21 @@
         "name": "Joseph Ferguson",
         "party": null,
         "incumbent": false,
-        "website": null,
-        "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "website": "https://www.votejosephferguson.com",
+        "website_confidence": "sourced",
+        "background": "Educator for over 20 years as a teacher and campus administrator; Tomball ISD graduate (Community Impact).",
+        "own_words": [
+          {
+            "text": "I owe a tremendous debt to Tomball ISD.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-3/"
+          },
+          {
+            "text": "Wants proactive planning, maximum transparency and two-way communication to handle rapid growth.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-3/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7570,8 +8965,19 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Tomball ISD trustee for 26 years (Community Impact).",
+        "own_words": [
+          {
+            "text": "Calls managing growth amid an uncertain state funding system the district's greatest challenge.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-3/"
+          },
+          {
+            "text": "Our teachers deserve to feel supported, respected, and valued.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/tomball-magnolia/election/meet-the-candidates-for-tomball-isd-position-3/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7815,8 +9221,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "New Caney ISD parent and PTO treasurer with a Big 4 accounting background (Community Impact).",
+        "own_words": [
+          {
+            "text": "I am running to restore fiscal responsibility, empower parents, and refocus New Caney ISD on strong academic excellence.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "Would audit spending to cut administrative bloat and send tax dollars to classrooms.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "Wants healthy limits on student technology use and protected planning time for teachers.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7826,8 +9248,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "Senior vessel operator, licensed insurance agent and father (Community Impact).",
+        "own_words": [
+          {
+            "text": "public schools are the foundation of our republic, yet trust in the system is broken",
+            "is_quote": true,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "Wants parents' voices to guide district decisions, with a renewed focus on literacy and critical thinking.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "Wants strict audits of construction spending so projects stay on schedule and within budget.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7837,7 +9275,7 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
+        "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
@@ -7848,8 +9286,24 @@
         "incumbent": false,
         "website": null,
         "website_confidence": "unverified",
-        "background": null,
-        "own_words": [],
+        "background": "New Caney ISD graduate and parent of four with budgeting experience (Community Impact).",
+        "own_words": [
+          {
+            "text": "Wants to work alongside the current board and support what is already working.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "I believe we can keep growing while staying focused on providing a strong education for every student.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          },
+          {
+            "text": "Wants teachers supported and facilities planned as the district grows.",
+            "is_quote": false,
+            "source": "https://communityimpact.com/new-caney-porter/election/q-a-meet-the-candidates-running-for-new-caney-isd-trustee-position-2/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }

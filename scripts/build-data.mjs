@@ -37,9 +37,11 @@ const str = (v) => (isStr(v) ? v.trim() : null);
 const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
 const conf = (v) => (CONF.includes(v) ? v : 'unverified');
 const safeUrl = (u) => (isStr(u) && /^https?:\/\//i.test(u.trim()) ? u.trim() : null);
-const NOT_WORDS = /^(no (\d{4} )?(statements?|platform|own words|positions?|campaign (site|website|statements?|resources)|public statement|issue (statement|page)|questionnaire (response|answers)|published positions|stated platform|voters'? pamphlet statement)\b|we found no|none found|not collected)/i;
-// A research note, not the candidate's words: every sentence is a "nothing found" note (a trailing "See ..." is fine).
-const notWords = (t) => NOT_WORDS.test(t) && t.split(/(?<=[.;])\s+/).slice(1).filter((x) => !/^(see|\(|per |as of)/i.test(x)).every((x) => NOT_WORDS.test(x));
+// Research notes are not the candidate's words ("No statement collected", "Campaign site ... not opened
+// for this guide", "Unopposed on the ballot. No positions collected."). Drop those sentences; drop the
+// item if nothing else is left, so the card shows its empty state instead of a fake bullet.
+const META = /(for this guide|this (guide|run|pass)\b|not (yet )?(collected|opened|read|reviewed)|\b(was|were) not (read|opened|reviewed)|positions? (were |was )?not collected|no positions collected|^unopposed on the ballot|^no (\d{4} )?(statements?|platform|own words|positions?|campaign|issue|questionnaire|published|stated|voters'? pamphlet|lacc?d platform)\b.*\b(found|located|reviewed|collected|exists?|submitted)?|^we found no|^none found|^not collected|^did not respond\b|(campaign site|website) (had|listed|has) no\b|has no campaign website|^no bio\b|answers were not captured|ballotpedia lists|no questionnaire response)/i;
+const stripNotes = (t) => t.split(/(?<=[.;!?])\s+/).filter((x) => !META.test(x.trim()) && !/^see (his|her|their|the) /i.test(x.trim())).join(' ').trim();
 
 /* ---------- file loading ---------- */
 function listJson(dir) {
@@ -91,8 +93,9 @@ function normContest(c, file) {
       background: str(k.background),
       // Research notes like "No statement collected yet" are not the candidate's words: drop them so
       // the card shows its empty state instead of a fake bullet under "In their own words".
-      own_words: (Array.isArray(k.own_words) ? k.own_words : []).filter((o) => o && isStr(o.text) && !(o.is_quote !== true && notWords(o.text.trim())))
-        .map((o) => ({ text: o.text.trim(), is_quote: !!o.is_quote, source: safeUrl(o.source) })),
+      own_words: (Array.isArray(k.own_words) ? k.own_words : []).filter((o) => o && isStr(o.text))
+        .map((o) => ({ text: o.is_quote === true ? o.text.trim() : stripNotes(o.text.trim()), is_quote: !!o.is_quote, source: safeUrl(o.source) }))
+        .filter((o) => o.text.length > 0),
       lwv_status: str(k.lwv_status),
       lwv_url: safeUrl(k.lwv_url),
     });

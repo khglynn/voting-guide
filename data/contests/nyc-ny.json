@@ -6717,9 +6717,19 @@
         "background": "Former State Assembly member. Won the June Republican primary with 82.7%.",
         "own_words": [
           {
-            "text": "No campaign website was found in the sources checked; positions not collected yet.",
+            "text": "Affordability starts with letting Americans keep more of what they earn.",
+            "is_quote": true,
+            "source": "https://www.mikelipetriforcongress.com/"
+          },
+          {
+            "text": "Wants to lift the SALT tax cap and end taxes on tips, overtime and Social Security.",
             "is_quote": false,
-            "source": "https://api.delilahusa.com/v1/midterms?state=NY&level=federal"
+            "source": "https://www.mikelipetriforcongress.com/"
+          },
+          {
+            "text": "These officers and their families deserve and have earned our full and unapologetic support.",
+            "is_quote": true,
+            "source": "https://www.mikelipetriforcongress.com/"
           }
         ],
         "lwv_status": "unknown",

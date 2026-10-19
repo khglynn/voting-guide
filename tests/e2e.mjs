@@ -371,6 +371,9 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Portland link: the note comes back', /Check the OPB explainer/.test(await text(fresh.page, '#cheat')));
   noErrors(fresh.page, 'Portland link');
   await fresh.ctx.close();
+  // "Change" on a cheat-sheet line goes back to that row, opened, even inside a folded section.
+  await tap(page, '#cheat tr[data-cs="portland-council-3"] [data-act="goto"]');
+  check('Portland: Change on the cheat sheet reopens that row on the ballot', !!(await page.$('#i-portland-council-3.is-open')) && !(await page.$('#cheat')));
   await ctx.close();
 }
 

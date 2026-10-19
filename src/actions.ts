@@ -9,6 +9,7 @@ import { render, renderRow, renderSection, renderSummaries, renderLens, renderBa
 import { openBallot, go, openReader, runAddress } from './app';
 import { planAgree, planParty, planJudges, applyFills, undoFills, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
+import { courtGroup } from './model/labels';
 import { cheatText, shareURL } from './views/cheat';
 import { messages } from './views/pass';
 
@@ -53,7 +54,7 @@ A.goto = (d) => {
   const sec = sectionOf(it);
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
-  document.querySelectorAll<HTMLElement>(`#sec-${sec} [data-act="grp"]`).forEach((g) => S.ui.unfolded.add(g.dataset.g!));
+  if (it.kind === 'contest') S.ui.unfolded.add(`${sec}|${courtGroup(it)}`); // its court group, if the section folds into groups
   S.ui.row = id;
   renderSection(sec);
   scrollRowIntoView(id, true);
@@ -63,9 +64,8 @@ A.next = () => {
   const items = decisionItems().filter((i) => !i.done);
   if (!items.length) return;
   const b = B();
-  const keyOf = (i: { id: string; question?: boolean }) => (i.question ? i.id.replace(/^q:/, 'q:') : i.id);
   // The first undecided below the current scroll position, else the first one.
-  const pick = items.find((i) => { const el = rowEl(keyOf(i)); return el && el.getBoundingClientRect().top > 80; }) || items[0];
+  const pick = items.find((i) => { const el = rowEl(i.id); return el && el.getBoundingClientRect().top > 80; }) || items[0];
   const id = pick.question ? b.groups.find((g) => `q:${g.key}` === pick.id)!.members[0] : pick.id;
   const sec = sectionOf(b.byId.get(id)!);
   S.ui.folded.delete(sec);

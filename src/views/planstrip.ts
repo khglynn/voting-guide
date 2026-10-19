@@ -38,7 +38,7 @@ function dateRows(h: HowTo): Row[] {
   if (rq && rq.date) out.push({ date: rq.date, label: 'Last day to ask for a mail ballot', detail: rq.rule, source: rq.source, key: 'req' });
   const ep = h.early_in_person;
   if (ep.available && ep.start) out.push({ date: ep.start, label: 'Early voting starts', detail: ep.hours_note, source: ep.lookup_url, key: 'eps' });
-  if (ep.available && ep.end) out.push({ date: ep.end, label: 'Early voting ends', detail: ep.hours_note, source: ep.lookup_url, key: 'epe' });
+  if (ep.available && ep.end) out.push({ date: ep.end, label: 'Early voting ends', detail: ep.available && ep.start ? null : ep.hours_note, source: ep.lookup_url, key: 'epe' });
   const r = h.mail_ballot.return_deadline;
   out.push({ date: r.date, label: `Mail ballots must be ${r.rule === 'received_by' ? 'received' : r.rule === 'postmarked_by' ? 'postmarked' : 'returned'}`, detail: r.time, source: r.source, key: 'ret' });
   out.push({ date: h.election_date, label: `Election Day. Polls close ${h.election_day.polls_close}`, detail: h.election_day.in_line_rule, source: h.election_day.lookup_url, key: 'ed' });
@@ -56,7 +56,13 @@ function whatIfHTML(h: HowTo): string {
   const sits = (h.situations || []).filter((x) => x && x.question && x.answer);
   const disc = (k: string, q: string, body: string) => `<li><button class="wi-q" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}"><span>${esc(q)}</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>${isOpen(k) ? `<div class="wi-a">${body}</div>` : ''}</li>`;
   const sitList = sits.map((x) => disc(`wi-${x.id}`, x.question, `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`)).join('');
-  const dates = dateRows(h).map((r) => `<li class="${r.date < t ? 'past' : ''}"><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.label)}${r.date < t ? ' <span class="passed">passed</span>' : ''}${r.source ? ` ${ext(r.source, host(r.source))}` : ''}</span></li>`).join('');
+  // Each date keeps its fine print (the rule, the hours, the noon cutoff) one tap away.
+  const dates = dateRows(h).map((r) => {
+    const k = `kd-${r.key}`;
+    const open = !!r.detail && isOpen(k);
+    const more = r.detail ? ` <button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${open}" aria-label="${esc(open ? `Hide details: ${r.label}` : `Details: ${r.label}`)}">${open ? 'Hide details' : 'Details'}</button>` : '';
+    return `<li class="${r.date < t ? 'past' : ''}"><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.label)}${r.date < t ? ' <span class="passed">passed</span>' : ''}${r.source ? ` ${ext(r.source, host(r.source))}` : ''}${more}${open ? `<span class="pd-x">${escP(r.detail)}</span>` : ''}</span></li>`;
+  }).join('');
   const idr = h.id_rules;
   const booth = h.in_the_booth;
   const office = b.places.map((p) => p.county_election_office).find(Boolean);

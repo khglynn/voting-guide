@@ -218,6 +218,8 @@ export interface StateBundle {
   endorsements: Record<string, Record<string, Endorsement>>;
 }
 
+export interface PlaceEarly { start: string; end: string; hours_note: string | null; lookup_url: string | null; source: string | null; confidence: string }
+
 export interface PlaceBundle {
   id: string;
   label: string;
@@ -231,6 +233,8 @@ export interface PlaceBundle {
   county_label?: string | null;
   district_finders?: { office_match: string; label: string; url: string }[];
   heads_up?: HeadsUp[];
+  /* the county's own early-voting window, when it differs from the state's; plan.ts prefers it */
+  early_in_person?: PlaceEarly;
   order: string[];
   local: string[];
   items: Item[];

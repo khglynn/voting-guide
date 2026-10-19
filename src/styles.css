@@ -155,6 +155,8 @@ b, strong { font-weight: 600; }
 .pdates li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
 .pdates li.past { color: var(--muted); }
 .pd-d { font-weight: 600; font-variant-numeric: tabular-nums; }
+.pd-more { background: none; border: 0; padding: 4px 2px; margin: -4px 0; font: inherit; font-size: .9em; color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; min-height: 32px; }
+.pd-x { display: block; margin-top: 4px; color: var(--ink-2); font-size: .95em; line-height: 1.45; }
 .passed { font-size: 12.5px; font-style: italic; }
 .bul { list-style: disc; padding-left: 20px; display: grid; gap: 4px; margin-top: 6px; }
 .bul-lead .bul-rest { color: var(--muted); }

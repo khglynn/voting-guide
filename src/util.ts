@@ -25,6 +25,16 @@ export function todayISO(): string {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
+/* Minutes after midnight on this device; `?now=HH:MM` overrides it for testing. */
+export function nowMinutes(): number {
+  try {
+    const q = new URLSearchParams(location.search).get('now');
+    const m = q && q.match(/^(\d{1,2}):(\d{2})$/);
+    if (m) return +m[1] * 60 + +m[2];
+  } catch { /* ignore */ }
+  const d = new Date();
+  return d.getHours() * 60 + d.getMinutes();
+}
 export const daysBetween = (a: string, b: string): number => Math.round((parse(b).getTime() - parse(a).getTime()) / 864e5);
 
 /* Short stable hashes for the save link. FNV-1a 32-bit, base36. */

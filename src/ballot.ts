@@ -2,6 +2,7 @@
    rules for filters, statuses and endorsements. Pure functions over S. */
 import type { Contest, Endorsement, Endorser, HowTo, Item, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
+import { localHowto } from './model/plan';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
 export const SECTIONS: [SectionKey, string][] = [
@@ -145,7 +146,7 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 
   return {
     key: `${sb.state}|${places.map((p) => p.id).join('+') || '-'}`,
-    st: sb.state, stateName: sb.name, howto: sb.howto, places,
+    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), places,
     items, byId, order: ids, endorsers, eById, ends, statewide, onlyIn, groups, groupOf, mayApply,
     hasLocal: places.some((p) => p.local.length > 0),
   };

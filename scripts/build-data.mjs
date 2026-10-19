@@ -94,6 +94,14 @@ function districtFinders(list, where) {
     return ok;
   }).map((d) => ({ office_match: d.office_match.trim(), label: d.label.trim(), url: safeUrl(d.url) }));
 }
+/* A place's own early-voting window, when its county runs a different one from the state's
+   (Florida counties choose their own days inside the state's range). plan.ts prefers it. */
+function placeEarly(x, where) {
+  if (x == null) return null;
+  const ok = x && typeof x === 'object' && isDate(x.start) && isDate(x.end) && x.start <= x.end && safeUrl(x.source);
+  if (!ok) { warn(`${where}: early_in_person needs start and end dates (start first) and an https source; dropped it`); return null; }
+  return { start: x.start, end: x.end, hours_note: str(x.hours_note), lookup_url: safeUrl(x.lookup_url), source: safeUrl(x.source), confidence: conf(x.confidence) };
+}
 const optional = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
 function ownWordsChecked(x, where) {
   if (x == null) return null;
@@ -348,6 +356,7 @@ for (const f of listJson('places')) {
     county_label: str(p.county_label),
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
+    ...optional({ early_in_person: placeEarly(p.early_in_person, f) }),
     order: known,
     file: f,
   });

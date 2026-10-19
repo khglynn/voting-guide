@@ -184,9 +184,37 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     const ca = read('state-CA.json').howto;
     const alert = plan.registrationAlert(ca, '2026-10-19');
     check('plan: California on Oct 19 warns registration closes today, then same-day', !!alert && /today/.test(alert) && /through Election Day/.test(alert), alert || '');
-    check('plan: Election Day says polls close', /Polls close at/.test(plan.nextStep(tx, '2026-11-03').head.map((p) => p[0]).join('')));
+    const words = (st) => st.head.map((p) => p[0]).join('');
+    check('plan: Election Day says polls close', /Polls close at/.test(words(plan.nextStep(tx, '2026-11-03', false, 10 * 60))));
+    // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
+    const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
+    check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));
+    check('plan: after close the in-line rule stays', shut.sub.some((x) => /in line/i.test(x)) && !/Find where to vote/.test(JSON.stringify(shut.primary)), shut.sub.join(' | '));
+    check('plan: one minute before close it is still Election Day', plan.nextStep(tx, '2026-11-03', false, 18 * 60 + 59).phase === 'election_day');
+    check('plan: a mail state says voting closed, not polls', /^Voting closed at 7 PM/.test(words(plan.nextStep(co, '2026-11-03', false, 21 * 60))));
+    check('plan: text read later (absolute) never says closed', plan.nextStep(tx, '2026-11-03', true, 23 * 60).phase === 'election_day');
+    // Codex #4: a postmark deadline is not a drop-off time.
+    for (const s of ['CA', 'DC', 'OR', 'WA']) {
+      const hs = read(`state-${s}.json`).howto;
+      const ms = plan.nextStep(hs, '2026-10-19');
+      check(`plan: ${s} puts the 8 PM time on drop-off and states the postmark rule apart`, /^Drop off your ballot by 8 PM Tue, Nov 3\.$/.test(words(ms)) && /postmark dated Nov 3 or earlier/.test(ms.sub[0] || ''), `${words(ms)} | ${ms.sub.join(' | ')}`);
+    }
+    check('plan: Colorado (received by) keeps "Return your ballot by"', !/postmark/.test(cs.sub.join(' ')));
+    // Codex #5: a county's own early-voting window wins over the state's.
+    const fl = read('state-FL.json').howto;
+    const orl = open('FL', ['orlando-fl']).howto.early_in_person;
+    const pen = open('FL', ['pensacola-fl']).howto.early_in_person;
+    check('plan: Orlando uses Orange County early voting, Oct 19 to Nov 1', orl.start === '2026-10-19' && orl.end === '2026-11-01' && /voteorangefl\.gov/.test(orl.lookup_url || '') && /Orange County/.test(orl.hours_note || ''), JSON.stringify(orl));
+    check('plan: Pensacola ends Oct 31 with no Sunday', pen.end === '2026-10-31' && /escambiavotes\.gov/.test(pen.lookup_url || ''), JSON.stringify(pen));
+    check('plan: on Nov 1 Orlando can still vote early, Pensacola cannot', plan.nextStep(open('FL', ['orlando-fl']).howto, '2026-11-01').phase === 'early_open' && plan.nextStep(open('FL', ['pensacola-fl']).howto, '2026-11-01').phase === 'election_day_next');
+    check('plan: a ballot with no county window keeps the state window', open('FL', []).howto.early_in_person.end === fl.early_in_person.end);
+    const a1 = { early_in_person: { start: '2026-10-19', end: '2026-11-01', hours_note: 'A', lookup_url: 'https://a.example', source: 'https://a.example', confidence: 'verified' } };
+    const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
+    check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]) === fl && plan.localHowto(fl, [a1, {}]) === fl);
+    check('plan: places that agree on dates but not pages keep the state page', plan.localHowto(fl, [a1, { early_in_person: { ...a1.early_in_person, lookup_url: 'https://c.example' } }]).early_in_person.lookup_url === fl.early_in_person.lookup_url);
     check('plan: after Election Day says voting has closed', plan.nextStep(co, '2026-11-04').phase === 'closed');
     check('plan: never a countdown', !/days? (left|until|to Election)/i.test(JSON.stringify([step, cs])));
+    check('plan: clockMinutes reads 7:00 PM, 8 p.m. and noon', plan.clockMinutes('7:00 PM') === 1140 && plan.clockMinutes('8 p.m. sharp') === 1200 && plan.clockMinutes('by noon') === 720 && plan.clockMinutes('12:30 AM') === 30);
   }
 
   /* ---------- titles: unique on every ballot the guide can show ---------- */

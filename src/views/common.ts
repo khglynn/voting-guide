@@ -51,13 +51,17 @@ export const isOpen = (k: string): boolean => S.ui.open.has(k);
 const SHOUT = new Set(('NOT ONE TWO THREE ANY YOUR ONLY MORE LESS AFTER BEFORE NOON RECEIVED ARRIVE ARRIVES POSTMARKED ' +
   'WITH NEW EVERY SIGN AND DATE MONDAY TUESDAY OCTOBER NOVEMBER PROVISIONAL APPLICATION BALLOT VOTE CENTER COUNTIES ' +
   'POLLING PLACE EVERYTHING ELSE REPEALS NOTE HAVE IMPORTANT EARLY MAIL ABSENTEE MEETS PERFORMANCE STANDARDS NEVER ' +
-  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS YES NO FOR AGAINST').split(' '));
+  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS YES NO FOR AGAINST ' +
+  'REACH WITHOUT FIRST EXPIRED REQUEST NOTARIZED AFFIDAVIT MINIMUM CONFIRMED DATES').split(' '));
+/* Place names written in capitals for emphasis take title case, never lower case. */
+const PROPER = new Set('ORANGE LEON ESCAMBIA CHICAGO SUBURBAN COOK COLLAR'.split(' '));
 const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])('[^']*')(?=[\s.,;:)!?]|$)/g;
 export function deshout(text: string): string {
   if (!text || !/[A-Z]{3}/.test(text)) return text;
   const fix = (seg: string, atStart: boolean) => seg.replace(/\b[A-Z]{2,}\b/g, (w, i: number) => {
-    if (!SHOUT.has(w) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
+    if ((!SHOUT.has(w) && !PROPER.has(w)) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
     const lower = w.toLowerCase();
+    if (PROPER.has(w)) return lower.charAt(0).toUpperCase() + lower.slice(1);
     const before = seg.slice(0, i);
     const start = (atStart && /^\s*$/.test(before)) || /[.!?:]\s+$/.test(before);
     return start ? lower.charAt(0).toUpperCase() + lower.slice(1) : lower;

@@ -282,9 +282,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-council-3",
-    "status": "endorsed",
-    "choice": "Kellie Torres, Steve Novick, Angelita Morillo",
-    "why": "Ranks Torres first, Novick second and Morillo third. Confirmed in an index carrying the editorial’s caption; the full editorial is blocked.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-change-the-mix-on-city-council-by-electing-these-endorsed-candidates.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -292,9 +292,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-council-4",
-    "status": "endorsed",
-    "choice": "Eric Zimmerman, Olivia Clark, Eli Arnold",
-    "why": "Ranks Zimmerman first, Clark second and Arnold third. Confirmed in an index carrying the editorial’s caption; the full editorial is blocked.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-change-the-mix-on-city-council-by-electing-these-endorsed-candidates.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -302,9 +302,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "multnomah-chair",
-    "status": "endorsed",
-    "choice": "Julia Brim-Edwards",
-    "why": "The general-election endorsement index names this candidate and links the editorial; OregonLive blocks direct access.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-elect-julia-brim-edwards-as-multnomah-county-chair-to-end-the-dysfunction.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -312,9 +312,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "multnomah-commissioner-2",
-    "status": "endorsed",
-    "choice": "Serena Cruz",
-    "why": "The general-election endorsement index names this candidate and links the editorial; OregonLive blocks direct access.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-send-serena-cruz-back-to-multnomah-county-for-district-2.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -322,9 +322,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "portland-26-267",
-    "status": "endorsed",
-    "choice": "NO",
-    "why": "The public index quotes the editorial’s no recommendation; the full editorial remains blocked.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/09/editorial-endorsement-november-2026-vote-no-on-portlands-participatory-budgeting-measure.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -1782,20 +1782,20 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "multnomah-circuit-judge-2",
-    "status": "endorsed",
-    "choice": "Diane S Sykes",
+    "status": "not_found",
+    "choice": null,
     "url": "https://www.oregonlive.com/opinion/2026/09/editorial-endorsement-november-2026-choose-diane-sykes-for-multnomah-county-judge-position-2.html",
-    "why": "The general-election endorsement index names this candidate and links the editorial; OregonLive blocks direct access.",
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
     "endorser_id": "oregonian-eb",
     "target_id": "multnomah-circuit-judge-14",
-    "status": "endorsed",
-    "choice": "Joseph Hagedorn",
+    "status": "not_found",
+    "choice": null,
     "url": "https://www.oregonlive.com/opinion/2026/09/editorial-endorsement-november-2026-elect-joe-hagedorn-as-multnomah-countys-next-family-law-judge.html",
-    "why": "The general-election endorsement index names this candidate and links the editorial; OregonLive blocks direct access.",
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "date": "2026-10-19",
     "confidence": "sourced"
   },

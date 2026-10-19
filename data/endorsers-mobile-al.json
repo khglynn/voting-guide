@@ -44,7 +44,9 @@
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": false,
-    "lean_basis_kind": "mission"
+    "lean_basis_kind": "mission",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "mobile-chamber",

@@ -9202,11 +9202,11 @@
   {
     "endorser_id": "newsday-eb",
     "target_id": "ny-us-house-3",
-    "status": "endorsed",
-    "choice": "Thomas R. Suozzi",
-    "why": "Newsday (Oct 10): \"Suozzi is a valuable voice for the concerns of his 'purple' district\" and is \"primed\" to move quickly in the next Congress. Seen via the Suozzi campaign's repost; Newsday's own page was not opened.",
+    "status": "not_found",
+    "choice": null,
+    "why": "Newsday's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://suozziforcongress.com/article/thomas-r-suozzi-for-new-yorks-3rd-congressional-district/",
-    "date": "2026-10-10",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {

@@ -12,7 +12,9 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "sun-sentinel-eb",
@@ -27,7 +29,9 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "miami-herald-eb",
@@ -42,7 +46,9 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "tampa-bay-times-eb",
@@ -57,7 +63,9 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "tcpalm-eb",
@@ -87,7 +95,9 @@
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": false,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "pensacola-news-journal-eb",
@@ -102,7 +112,9 @@
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": false,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "lwv-florida",

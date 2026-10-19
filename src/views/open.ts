@@ -8,18 +8,11 @@ import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally'
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML } from './ledger';
 
-/* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
-   The two entry ids prefill "Which race or measure?" and "Where are you voting?". */
-const REPORT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ/viewform';
-export function reportLink(it: Item): string {
-  const b = S.ballot!;
-  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
-  const q = new URLSearchParams({ usp: 'pp_url', 'entry.90887649': `${cheatTitle(it)} [${it.id}]`, 'entry.628621310': where });
-  return `${REPORT_URL}?${q.toString()}`;
-}
+/* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
+export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
 
 const CHECK = '<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2.5 7.4l3 3 6-6.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>';
 const ARROW = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M6 3l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
@@ -67,7 +60,10 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
     const what = it.kind === 'measure' ? 'take positions on measures' : 'pick candidates';
     out.push(`${guides.map((e) => (e.guide_url ? ext(e.guide_url, e.short) : esc(e.short))).join(', ')} ${guides.length === 1 ? 'doesn’t' : 'don’t'} ${what}; ${guides.length === 1 ? 'its guide explains' : 'their guides explain'}.`);
   }
-  return out.length ? `<p class="gridnote">${out.join(' ')}</p>` : '';
+  // Called once per open row, so a chosen paywalled source with no readable pick here gets its
+  // note once (Kevin, Oct 19).
+  const pw = paywallRowHTML([...l.notFound, ...l.notChecked], cheatTitle(it));
+  return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
 function srcCell(e: Endorser): string {
   // The dots and the lean word stay in the cell; how the lean was placed is one tap away.

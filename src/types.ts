@@ -126,6 +126,13 @@ export interface Endorser {
   /* For party organizations: the party they speak for ("Democratic", "Working Families"). */
   party?: string;
   lean_basis_kind?: 'outside_rating' | 'party' | 'mission';
+  /* A paper whose endorsements sit behind a paywall we couldn't read. Picks seen only secondhand
+     are out of the data; the app shows a note asking subscribers to send them. Absent = false. */
+  paywall?: true;
+  /* false hides the paywall note for this source (absent = show it). */
+  paywall_note_ok?: false;
+  /* This source's own wording for the note, when the data gives one; otherwise the app's. */
+  paywall_note?: string;
 }
 
 export interface Endorsement {

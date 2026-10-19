@@ -477,5 +477,9 @@
       "label": "Check your district on your Harris County ballot",
       "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.harrisvotes.com/Vote-Centers",
+    "election_day": "https://www.harrisvotes.com/Vote-Centers"
+  }
 }

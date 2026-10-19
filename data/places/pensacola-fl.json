@@ -106,5 +106,10 @@
     "lookup_url": "https://escambiavotes.gov/early-voting-locations",
     "source": "https://escambiavotes.gov/early-voting-locations",
     "confidence": "verified"
+  },
+  "lookups": {
+    "early_in_person": "https://escambiavotes.gov/early-voting-locations",
+    "election_day": "https://escambiavotes.gov/precinct-finder",
+    "drop_box": "https://escambiavotes.gov/secure-ballot-intake-stations"
   }
 }

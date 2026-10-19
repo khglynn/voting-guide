@@ -91,5 +91,9 @@
       "label": "Find your district on your official voter record",
       "url": "https://voterservices.elections.maryland.gov/VoterSearch"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.baltimorecity.gov/media/document/flag-earlyvotingcenters-handout-20260pdf",
+    "election_day": "https://www.baltimorecity.gov/boe/our-work/election-information/polling-locations"
+  }
 }

@@ -244,5 +244,10 @@
    "label": "Check your district on your official sample ballot",
    "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
   }
- ]
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/vbm-ballot-drop-off"
+ }
 }

@@ -67,7 +67,7 @@
     "end": "2026-11-03",
     "hours_note": "Oregon has no polling places or 'early voting' in the usual sense. Once ballots go out (Oct. 14), you can vote any time. County elections offices can give you a replacement ballot, an accessible ballot, or help in another language, and you can fill out your ballot there. Multnomah County: Voting Center, 1040 SE Morrison St., Portland, and Voting Center Express, 600 NE 8th St., Gresham (weekdays 8 AM to 5 PM; opened Oct. 8). Extended hours at both: Oct. 28 to 30, 8 AM to 7 PM; Sat. Oct. 31, 10 AM to 2 PM; Mon. Nov. 2, 8 AM to 7 PM; Election Day 7 AM to 8 PM.",
     "vote_centers": true,
-    "lookup_url": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections",
+    "lookup_url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx",
     "confidence": "verified"
   },
   "election_day": {

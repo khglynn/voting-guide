@@ -123,5 +123,10 @@
       "label": "Find your district",
       "url": "https://www.palegis.us/find-my-legislator"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://vote.phila.gov/about-us/satellite-election-offices/",
+    "election_day": "https://vote.phila.gov/voting/election-day/where-is-my-polling-place/",
+    "drop_box": "https://vote.phila.gov/ballot-drop-off/"
+  }
 }

@@ -234,5 +234,9 @@
       "label": "Check your district on your Dallas County ballot",
       "url": "https://www.dallascountyvotes.org/voters/ballot/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.dallascounty.org/elections/VoteCenters/Early%20Voting%20Vote%20Centers.pdf",
+    "election_day": "https://www.dallascounty.org/elections/VoteCenters/Election%20Day%20Vote%20Centers.pdf"
+  }
 }

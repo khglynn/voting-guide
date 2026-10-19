@@ -68,7 +68,7 @@
     "end": "2026-11-02",
     "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS county has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Hours per the St. Louis County Democrats' logistics page: weekdays Oct 20 to 30, 8 AM to 4:30 PM; Saturdays Oct 24 and Oct 31, 9 AM to 1 PM; closed Sundays; Monday Nov 2, 8 AM to 5 PM. The county library lists its branches as 8 AM to 5 PM weekdays and Sat Oct 31, 9 AM to 1 PM. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
     "vote_centers": true,
-    "lookup_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=c094cf17f6214c2b9d6f7d77f225cf78",
+    "lookup_url": "https://www.sos.mo.gov/elections/goVoteMissouri/localelectionauthority",
     "confidence": "verified"
   },
   "election_day": {
@@ -76,7 +76,7 @@
     "polls_close": "7:00 PM",
     "in_line_rule": "SOS: 'polling places are open from 6:00 AM to 7:00 PM on Election Day.' If you are in line at 7:00 PM, you still have the right to vote.",
     "vote_centers": true,
-    "lookup_url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
+    "lookup_url": "https://voteroutreach.sos.mo.gov/portal/",
     "confidence": "verified"
   },
   "id_rules": {

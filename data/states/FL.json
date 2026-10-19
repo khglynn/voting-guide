@@ -59,7 +59,7 @@
     "tracking_url": "https://registration.elections.myflorida.com/CheckVoterStatus",
     "cure_process": "If your signature is missing or does not match, the supervisor must notify you. You fix it by submitting the Vote-by-Mail Ballot Cure Affidavit (Form DS-DE 139) plus a copy of an ID. Official deadline: 'no later than 5 p.m. (local time) on the 2nd day after an election,' which is Thursday, November 5, 2026. Return the form and ID by mail, email, fax, or in person. Acceptable ID copies include a Florida driver license, Florida ID, U.S. passport, debit/credit card, military/student/retirement center/neighborhood association/public assistance/veteran health ID, concealed weapon license, government employee ID; or, if none of those, a current utility bill, bank statement, government check, paycheck, or other government document showing your name and address.",
     "mail_cutoff_advice": "Postmarks do not count. The state's own page: the ballot 'must be received, regardless of postmark, by the Supervisor of Elections' office no later than 7:00 pm (local time) on Election Day.' USPS recommends mailing at least 7 days out, so mail by about Tuesday, October 27. From then on, hand it to an intake station at an early voting site or the supervisor's office. Overseas voters are the only exception: a 10-day extension if postmarked by Election Day.",
-    "drop_box_lookup_url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/",
+    "drop_box_lookup_url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
     "confidence": "verified"
   },
   "early_in_person": {

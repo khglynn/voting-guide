@@ -197,5 +197,10 @@
       "label": "Find your election district on the county maps",
       "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections",
+    "election_day": "https://multco.us/info/official-ballot-drop-sites",
+    "drop_box": "https://multco.us/info/official-ballot-drop-sites"
+  }
 }

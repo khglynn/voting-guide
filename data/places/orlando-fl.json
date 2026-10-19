@@ -138,5 +138,10 @@
     "lookup_url": "https://voteorangefl.gov/event/early-voting-general-election/",
     "source": "https://voteorangefl.gov/event/early-voting-general-election/",
     "confidence": "verified"
+  },
+  "lookups": {
+    "early_in_person": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "election_day": "https://voteorangefl.gov/find-your-polling-place/",
+    "drop_box": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/"
   }
 }

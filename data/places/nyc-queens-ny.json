@@ -154,5 +154,9 @@
       "label": "Find your election and court districts",
       "url": "https://findmypollsite.vote.nyc/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://findmypollsite.vote.nyc/",
+    "election_day": "https://findmypollsite.vote.nyc/"
+  }
 }

@@ -146,5 +146,10 @@
       "label": "Check your district in the official voter portal",
       "url": "https://sfelections.org/tools/portal/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.sf.gov/november-3-2026-consolidated-general-election",
+    "election_day": "https://www.sf.gov/november-3-2026-consolidated-general-election",
+    "drop_box": "https://www.sf.gov/november-3-2026-consolidated-general-election"
+  }
 }

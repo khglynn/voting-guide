@@ -120,5 +120,10 @@
    "label": "Find your district on the registrar’s map",
    "url": "https://ocvote.gov/findmydistrict"
   }
- ]
+ ],
+ "lookups": {
+  "early_in_person": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election",
+  "election_day": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election",
+  "drop_box": "https://ocvote.gov/voting/voting-and-dropoff-locations-by-election"
+ }
 }

@@ -43,5 +43,8 @@
       "label": "Find your Assembly district",
       "url": "https://nyassembly.gov/mem/search/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting"
+  }
 }

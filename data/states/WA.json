@@ -68,7 +68,7 @@
     "end": "2026-11-03",
     "hours_note": "King County vote centers: Renton, Elections headquarters, 919 SW Grady Way; Bellevue College, Building U, Gary Locke Ballroom, 3000 Landerholm Cir SE; Federal Way, Weyerhaeuser Aquatic Center Banquet Hall, 650 SW Campus Dr; Kenmore City Hall, 18120 68th Ave NE; Kent, Green River College-Kent Campus, Rooms 282 and 283, 417 Ramsay Way; Seattle City Hall, Bertha Knight Landes Room, Floor 1, 600 4th Ave. All six open October 31, 10 AM to 4 PM; November 2, 8:30 AM to 6 PM; November 3, 8:30 AM to 8 PM. Renton also opens weekdays October 14 to 23, 8:30 AM to 4:30 PM, and October 26 to 30, 8:30 AM to 6 PM. Centers offer registration, replacement ballots and accessible voting. Check the live county page before leaving.",
     "vote_centers": true,
-    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"
   },
   "election_day": {
@@ -76,7 +76,7 @@
     "polls_close": "8:00 PM",
     "in_line_rule": "Drop boxes close at '8 p.m. sharp' on Election Day (King County). If you are inside a voting center or in its line at 8:00 PM you can still register and vote. Don't plan on 7:58.",
     "vote_centers": true,
-    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"
   },
   "id_rules": {

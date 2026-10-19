@@ -150,5 +150,10 @@
   "lookup_url": "https://www.leonvotes.gov/Voting/Early-Voting",
   "source": "https://www.leonvotes.gov/Voting/Early-Voting",
   "confidence": "verified"
+ },
+ "lookups": {
+  "early_in_person": "https://www.leonvotes.gov/Voting/Early-Voting",
+  "election_day": "https://www.leonvotes.gov/Voting/Election-Day",
+  "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
  }
 }

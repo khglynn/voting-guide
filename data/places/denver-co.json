@@ -175,5 +175,10 @@
       "label": "Check your district on your official ballot",
       "url": "https://myballot.coloradosos.gov/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
+    "election_day": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
+    "drop_box": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver"
+  }
 }

@@ -121,5 +121,10 @@
       "label": "Find your district on the official county maps",
       "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://bouldercounty.gov/elections/information/voting-locations/",
+    "election_day": "https://bouldercounty.gov/elections/information/voting-locations/",
+    "drop_box": "https://bouldercounty.gov/elections/information/voting-locations/"
+  }
 }

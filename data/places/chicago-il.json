@@ -464,5 +464,9 @@
       "label": "Find your districts and sample ballot",
       "url": "https://chicagoelections.gov/voting/your-voter-information"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://chicagoelections.gov/voting/early-votingvote-centers",
+    "drop_box": "https://chicagoelections.gov/voting/drop-boxes"
+  }
 }

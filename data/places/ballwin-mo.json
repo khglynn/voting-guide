@@ -73,5 +73,9 @@
       "label": "Find your district and November sample ballot",
       "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
     }
-  ]
+  ],
+  "lookups": {
+    "early_in_person": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=9301b4594bef4d9c9271778e4648179d",
+    "election_day": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=13fb36e785c84dbdbcc5219f999652ba"
+  }
 }

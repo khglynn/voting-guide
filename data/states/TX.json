@@ -68,7 +68,7 @@
     "end": "2026-10-30",
     "hours_note": "Monday, Oct. 19 through Friday, Oct. 30, including the weekend of Oct. 24 and 25. Hours are set by each county. Travis: every day 7 AM to 7 PM, with some sites open until 10 PM on Oct. 29 and 30. Harris: Mon through Sat 7 AM to 7 PM, Sunday Oct. 25 noon to 7 PM. Dallas: Mon through Sat 7 AM to 7 PM, Sunday Oct. 25 noon to 6 PM. Bexar regular sites: October 19 to 23, 8 AM to 6 PM; October 24, 7 AM to 7 PM; October 25, noon to 6 PM; October 26 to 30, 7 AM to 7 PM. Two branch sites, Bexar County Justice Center and Valley Ranch Community Center, open weekdays only, 8 AM to 6 PM, throughout October 19 to 30. Check your county's site for exact hours at your location.",
     "vote_centers": true,
-    "lookup_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
+    "lookup_url": "https://www.votetexas.gov/voting/where.html",
     "confidence": "verified"
   },
   "election_day": {
@@ -76,7 +76,7 @@
     "polls_close": "7:00 PM",
     "in_line_rule": "If you are inside or in line at the polling place at 7:00 PM, you get to vote. Stay in line. (Election Code 41.032)",
     "vote_centers": true,
-    "lookup_url": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
+    "lookup_url": "https://www.votetexas.gov/voting/where.html",
     "confidence": "verified"
   },
   "id_rules": {

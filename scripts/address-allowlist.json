@@ -1,0 +1,234 @@
+{
+  "allowed": [
+    {
+      "address": "4946 S. Drexel Blvd.",
+      "reason": "Not a residence: a street-median site named in the text of a Chicago advisory ballot question.",
+      "source": "https://chicagoelections.gov/"
+    },
+    {
+      "address": "2019 Harding Street",
+      "reason": "False alarm: \"2019 Harding Street raid\" is the name of a 2019 police raid in a Houston measure summary, not an address.",
+      "source": ""
+    },
+    {
+      "address": "4380 Memorial Dr",
+      "reason": "DeKalb County elections office, named in the Georgia absentee instructions.",
+      "source": "https://dekalbcountyga.gov/voter-registration-and-elections"
+    },
+    {
+      "address": "136 Peachtree St",
+      "reason": "Fulton County Government Center, county elections office.",
+      "source": "https://www.fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections"
+    },
+    {
+      "address": "5501 Airport Blvd.",
+      "reason": "Travis County Clerk, Elections Division (VoteTravis).",
+      "source": "https://votetravis.gov/"
+    },
+    {
+      "address": "725 Northwest Plaza Dr.",
+      "reason": "St. Louis County Board of Elections.",
+      "source": "https://www.stlouiscountymo.gov/st-louis-county-government/board-of-elections/"
+    },
+    {
+      "address": "417 E. Fayette St.",
+      "reason": "Baltimore City Board of Elections.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "15 S. Eutaw St.",
+      "reason": "Steadman Fire Station, a public polling place named by Baltimore City.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "1037 Cathedral St.",
+      "reason": "Chase House, a public polling place named by Baltimore City.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "507 W. Preston St.",
+      "reason": "Samuel Coleridge-Taylor Elementary, a public school polling place.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "400 Cathedral St.",
+      "reason": "Enoch Pratt Central Library, a public polling place.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "1000 Cathedral St.",
+      "reason": "Waxter Center, a public polling place.",
+      "source": "https://boe.baltimorecity.gov/"
+    },
+    {
+      "address": "16 S. Poppleton St.",
+      "reason": "University of Maryland Engagement Center, a public early voting center.",
+      "source": "https://elections.maryland.gov/"
+    },
+    {
+      "address": "1750 33rd Street",
+      "reason": "Boulder County Clerk and Recorder, Elections Division.",
+      "source": "https://bouldercounty.gov/elections/"
+    },
+    {
+      "address": "69 W. Washington St.",
+      "reason": "Chicago Board of Election Commissioners.",
+      "source": "https://chicagoelections.gov/"
+    },
+    {
+      "address": "1520 Round Table Drive",
+      "reason": "Dallas County Elections Department.",
+      "source": "https://www.dallascountyvotes.org/"
+    },
+    {
+      "address": "1015 Half Street SE",
+      "reason": "DC Board of Elections headquarters.",
+      "source": "https://dcboe.org/"
+    },
+    {
+      "address": "200 W. 14th Ave.",
+      "reason": "Denver Elections Division.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments/Clerk-and-Recorder/Elections-Division"
+    },
+    {
+      "address": "5334 S. Prince St.",
+      "reason": "Arapahoe County Elections.",
+      "source": "https://www.arapahoevotes.gov/"
+    },
+    {
+      "address": "1300 S. Grand Ave",
+      "reason": "Orange County Registrar of Voters.",
+      "source": "https://ocvote.gov"
+    },
+    {
+      "address": "15600 Morales Road",
+      "reason": "Harris County Clerk, Elections Department.",
+      "source": "https://www.harrisvotes.com/"
+    },
+    {
+      "address": "3500 Illinois St.",
+      "reason": "Jefferson County Elections.",
+      "source": "https://www.jeffco.us/4947/Elections"
+    },
+    {
+      "address": "12400 Imperial Hwy",
+      "reason": "Los Angeles County Registrar-Recorder/County Clerk.",
+      "source": "https://lavote.gov"
+    },
+    {
+      "address": "345 Adams Street",
+      "reason": "NYC Board of Elections, Brooklyn borough office.",
+      "source": "https://vote.nyc/"
+    },
+    {
+      "address": "200 Varick Street",
+      "reason": "NYC Board of Elections, Manhattan borough office.",
+      "source": "https://vote.nyc/"
+    },
+    {
+      "address": "118-35 Queens Boulevard",
+      "reason": "NYC Board of Elections, Queens borough office.",
+      "source": "https://vote.nyc/"
+    },
+    {
+      "address": "1 Edgewater Plaza",
+      "reason": "NYC Board of Elections, Staten Island borough office.",
+      "source": "https://vote.nyc/"
+    },
+    {
+      "address": "119 W. Kaley St.",
+      "reason": "Orange County Supervisor of Elections.",
+      "source": "https://voteorangefl.gov/"
+    },
+    {
+      "address": "213 Palafox Place",
+      "reason": "Escambia County Supervisor of Elections.",
+      "source": "https://escambiavotes.gov/"
+    },
+    {
+      "address": "1400 John F. Kennedy Blvd.",
+      "reason": "Philadelphia City Hall, City Commissioners (Board of Elections).",
+      "source": "https://vote.phila.gov/"
+    },
+    {
+      "address": "542 Forbes Ave.",
+      "reason": "Allegheny County Elections Division, County Office Building.",
+      "source": "https://www.alleghenycounty.us/Government/Elections"
+    },
+    {
+      "address": "1040 SE Morrison St.",
+      "reason": "Multnomah County Elections Division, Voting Center.",
+      "source": "https://multco.us/elections"
+    },
+    {
+      "address": "600 NE 8th St.",
+      "reason": "Multnomah County Voting Center Express, Gresham.",
+      "source": "https://multco.us/elections"
+    },
+    {
+      "address": "1103 S. Frio St.",
+      "reason": "Bexar County Elections Department.",
+      "source": "https://elections.bexar.gov/"
+    },
+    {
+      "address": "5600 Overland Ave",
+      "reason": "San Diego County Registrar of Voters.",
+      "source": "https://www.sdvote.com"
+    },
+    {
+      "address": "120 Stagecoach Trail",
+      "reason": "Hays County Elections Office.",
+      "source": "https://www.hayscountytx.gov/"
+    },
+    {
+      "address": "919 SW Grady Way",
+      "reason": "King County Elections headquarters.",
+      "source": "https://kingcounty.gov/elections"
+    },
+    {
+      "address": "600 4th Ave",
+      "reason": "Seattle City Hall, King County Seattle Vote Center.",
+      "source": "https://kingcounty.gov/elections"
+    },
+    {
+      "address": "151 Government St",
+      "reason": "Mobile County Board of Registrars.",
+      "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf"
+    },
+    {
+      "address": "137 S. State St.",
+      "reason": "Chicago Downtown Voting Supersite.",
+      "source": "https://chicagoelections.gov/"
+    },
+    {
+      "address": "300 N. Tucker Blvd.",
+      "reason": "City of St. Louis Board of Election Commissioners.",
+      "source": "https://s1.sos.mo.gov/elections/goVoteMissouri/votingquestions"
+    },
+    {
+      "address": "100 North Street",
+      "reason": "Sullivan County Government Center, Monticello (early voting site).",
+      "source": "https://elections.ny.gov/"
+    },
+    {
+      "address": "50 Community Lane",
+      "reason": "Sullivan County Public Health, Liberty (early voting site).",
+      "source": "https://elections.ny.gov/"
+    },
+    {
+      "address": "520 N. Columbus Blvd.",
+      "reason": "Philadelphia Voter Registration Office.",
+      "source": "https://vote.phila.gov/"
+    },
+    {
+      "address": "701 N. Homewood Ave.",
+      "reason": "CCAC Homewood, Allegheny County satellite election office.",
+      "source": "https://www.alleghenycounty.us/Government/Elections"
+    },
+    {
+      "address": "1200 Pearce Mill Rd.",
+      "reason": "North Park Ice Rink, Allegheny County satellite election office.",
+      "source": "https://www.alleghenycounty.us/Government/Elections"
+    }
+  ]
+}

@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 /*
- * check-data: the rules from FOUNDATION.md, as code, run against data/ BEFORE the build.
+ * check-data: the rules from FOUNDATION.md, as code. Run it right after `npm run data`.
  *
  * build-data.mjs is forgiving on purpose (a bad record is skipped, never fatal). That is right
  * for the live site and wrong for a gate: a skipped record is a hole in someone's ballot, and a
- * date after Nov 3 is a wrong fact. This script reads the raw JSON itself, plus
- * public/data/build-report.json when it exists, and decides what blocks a deploy.
+ * date after Nov 3 is a wrong fact. This script reads the raw JSON itself, the build's own report
+ * (public/data/build-report.json, which must exist and be newer than every data file), and the
+ * built bundles, and decides what blocks a deploy. Anything the build dropped blocks: a skipped
+ * file or record, a candidate with no name, a place pointing at nothing, a duplicate that lost,
+ * and any build warning this script does not recognize (classify new ones below, on purpose).
+ * Every contest's candidate names must also arrive in the bundles exactly as the raw data has them.
  *
  *   node scripts/check-data.mjs                  # exit 1 on any ERROR above the baseline
  *   node scripts/check-data.mjs --update-baseline  # record today's counts (a person does this on purpose)
@@ -70,19 +74,39 @@ for (const f of files(DATA)) {
 }
 
 /* ---------- 1. the build's own complaints ---------- */
+// Every warning build-data.mjs can emit, and what it means. Each one loses or bends data, so each
+// blocks; a person who decides a specific one is fine records it with --update-baseline. A warning
+// that matches none of these is new: it blocks until someone reads build-data.mjs and adds it here.
+const BUILD_WARNINGS = [
+  [/has a candidate with no name; dropped it/, 'build-dropped-candidate'],
+  [/which no contests or measures file defines; dropped it/, 'build-dropped-place-item'],
+  [/appears in .* and .*; kept /, 'build-duplicate-dropped'],
+  [/two files disagree .*; kept /, 'build-endorsement-conflict-dropped'],
+  [/couldn't match .* to a candidate; shown as text/, 'build-endorsement-unlinked'],
+  [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
+  [/is missing yes_means or no_means/, 'measure-means'],
+];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
-if (fs.existsSync(reportFile)) {
-  const r = JSON.parse(fs.readFileSync(reportFile, 'utf8'));
-  r.skippedFiles.forEach((s) => err('build-skipped-file', `${s.file}: ${s.why}`));
-  r.skippedRecords.forEach((s) => err('build-skipped-record', `${s.file} ${s.id}: ${s.why}`));
-  for (const w of r.warnings) {
-    if (/couldn't match/.test(w)) warn('endorsement-choice-unmatched', w);
-    else if (/appears in .* and /.test(w)) warn('duplicate-id-across-files', w);
-    else if (/two files disagree/.test(w)) warn('endorsement-files-disagree', w);
-    else if (/missing yes_means or no_means/.test(w)) err('measure-means', w);
-    else warn('build-other', w);
+const BUNDLES = path.join(ROOT, 'public', 'data');
+let report = null;
+if (!fs.existsSync(reportFile)) err('build-report-missing', 'public/data/build-report.json does not exist: run `npm run data` first, then this check');
+else {
+  try { report = JSON.parse(fs.readFileSync(reportFile, 'utf8')); } catch (e) { err('build-report-missing', `build-report.json is not readable JSON: ${e.message.slice(0, 80)}`); }
+}
+if (report) {
+  // A report older than the data describes some other data. Compare with every input the build reads.
+  const inputs = [...files(DATA), path.join(ROOT, 'scripts', 'build-data.mjs'), path.join(ROOT, 'scripts', 'config.json')].filter((f) => fs.existsSync(f));
+  const newest = inputs.reduce((a, f) => { const t = fs.statSync(f).mtimeMs; return t > a.t ? { t, f } : a; }, { t: 0, f: '' });
+  const built = Date.parse(report.generated);
+  if (!Number.isFinite(built) || newest.t > built + 1000) err('build-report-stale', `build-report.json (${report.generated}) is older than ${path.relative(ROOT, newest.f)}: run \`npm run data\` again`);
+  for (const k of ['skippedFiles', 'skippedRecords', 'warnings']) if (!Array.isArray(report[k])) err('build-report-missing', `build-report.json has no ${k} list`);
+  (report.skippedFiles || []).forEach((s) => err('build-skipped-file', `${s.file}: ${s.why}`));
+  (report.skippedRecords || []).forEach((s) => err('build-skipped-record', `${s.file} ${s.id}: ${s.why}`));
+  for (const w of report.warnings || []) {
+    const hit = BUILD_WARNINGS.find(([re]) => re.test(w));
+    err(hit ? hit[1] : 'build-warning-unclassified', w);
   }
-} else warn('no-build-report', 'run `npm run data` first to include the build\'s own skip and warning lists');
+}
 
 /* ---------- 2. dates ---------- */
 for (const s of all.states) {
@@ -138,13 +162,16 @@ for (const c of all.contests) {
   const id = `${c._f} ${c.id}`;
   if (seen.has(c.id)) warn('duplicate-id-across-files', `${c.id} in ${seen.get(c.id)} and ${c._f}`); else seen.set(c.id, c._f);
   if (!['verified', 'sourced', 'unverified'].includes(c.confidence)) err('confidence', `${id}: confidence "${c.confidence}"`);
-  if (Array.isArray(c.candidates) && c.candidates.length === 0) warn('contest-no-candidates', id);
+  if (!Array.isArray(c.candidates)) err('contest-candidates-not-list', `${id}: candidates is not a list, so the build drops the whole race`);
+  else if (c.candidates.length === 0) warn('contest-no-candidates', id);
+  // The build drops a nameless candidate with only a warning; here it is a hole in someone's ballot.
+  (Array.isArray(c.candidates) ? c.candidates : []).forEach((k, i) => { if (!k || typeof k !== 'object' || !isStr(k.name)) err('candidate-no-name', `${id}: candidate ${i + 1} has no name, so the build drops them`); });
   if (c.ranked_choice === true) {
     if (!Number.isInteger(c.rank_up_to) || c.rank_up_to < 2) err('rcv', `${id}: ranked choice with no usable rank_up_to`);
     if (!Number.isInteger(c.winners) || c.winners < 1) warn('rcv', `${id}: ranked choice with no winners count`);
     if (!isUrl(c.rcv_url)) warn('rcv', `${id}: ranked choice with no rcv_url`);
   }
-  const names = (c.candidates || []).map((k) => k.name);
+  const names = (Array.isArray(c.candidates) ? c.candidates : []).filter((k) => k && isStr(k.name)).map((k) => k.name.trim());
   if (new Set(names).size !== names.length) err('candidate-duplicate', `${id}: two candidates share a name`);
   const withWords = (c.candidates || []).filter((k) => (k.own_words || []).length);
   if (withWords.length && withWords.length < (c.candidates || []).length && (c.candidates || []).length > 1) warn('own-words-parallel', `${id}: own_words for ${withWords.length} of ${c.candidates.length} candidates`);
@@ -204,6 +231,34 @@ for (const p of all.places) {
   for (const id of [...(p.contest_ids || []), ...(p.measure_ids || [])]) if (!targets.has(id)) err('place-dangling', `${p._f}: lists ${id}, which no file defines`);
   const ids = [...(p.contest_ids || []), ...(p.measure_ids || [])];
   if (new Set(ids).size !== ids.length) warn('place-duplicate-ids', `${p._f}: lists an id twice`);
+}
+
+/* ---------- 7b. what the build wrote: every race a ballot should show is in a bundle, with every candidate ---------- */
+// Independent of the build's own warnings, so a new way of dropping data is caught even if nobody
+// taught the build to mention it.
+if (report && fs.existsSync(BUNDLES)) {
+  const bundled = new Map();
+  for (const f of fs.readdirSync(BUNDLES).filter((x) => /^(state|place)-.*\.json$/.test(x))) {
+    let b;
+    try { b = JSON.parse(fs.readFileSync(path.join(BUNDLES, f), 'utf8')); } catch (e) { err('bundle-unreadable', `${f}: ${e.message.slice(0, 80)}`); continue; }
+    for (const it of b.items || []) if (!bundled.has(it.id)) bundled.set(it.id, it);
+  }
+  const onABallot = new Set(all.places.flatMap((p) => [...(p.contest_ids || []), ...(p.measure_ids || [])]));
+  for (const x of [...all.contests, ...all.measures]) {
+    if (!isStr(x.id)) continue;
+    const id = x.id.trim();
+    const statewide = /(^|\/)[a-z]{2}-statewide/i.test(x._f);
+    const b = bundled.get(id);
+    if (!b) {
+      if (statewide || onABallot.has(id)) err('bundle-missing-item', `${x._f} ${id}: a ballot should show it, but no bundle has it`);
+      else warn('item-on-no-ballot', `${x._f} ${id}: defined, but no place lists it and it is not statewide`);
+      continue;
+    }
+    if (x.candidates === undefined) continue; // a measure
+    const want = (Array.isArray(x.candidates) ? x.candidates : []).filter((k) => k && isStr(k.name)).map((k) => k.name.trim()).sort();
+    const got = (b.candidates || []).map((k) => k.name).sort();
+    if (want.join('\n') !== got.join('\n')) err('bundle-candidates-differ', `${x._f} ${id}: data has ${want.length} named candidates, the bundle has ${got.length}${want.filter((n) => !got.includes(n)).length ? ` (missing: ${want.filter((n) => !got.includes(n)).slice(0, 3).join(', ')})` : ''}`);
+  }
 }
 
 /* ---------- 8. our own words: no em dashes, no shouting ---------- */

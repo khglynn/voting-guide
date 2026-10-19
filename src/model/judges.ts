@@ -125,7 +125,11 @@ export function candidateReview(c: Candidate): Review | null {
 
 /* One contest: a single judge's review, or a summary across a batch of judges. */
 export function judgeReview(it: Contest): Review | null {
-  if (!isMultiJudge(it)) return it.candidates[0] ? candidateReview(it.candidates[0]) : null;
+  if (!isMultiJudge(it)) {
+    const r = it.candidates[0] ? candidateReview(it.candidates[0]) : null;
+    // On a keep-or-remove question, a bar group's yes is a "keep".
+    return r && /^bar groups/.test(r.sub) ? { ...r, main: r.main.replace(/ recommend$/, ' say keep').replace(/ say no$/, ' say don’t keep') } : r;
+  }
   const rs = it.candidates.map(candidateReview);
   const have = rs.filter((r): r is Review => !!r);
   if (!have.length) return null;
@@ -146,6 +150,44 @@ export function judgeReview(it: Contest): Review | null {
     tone, line: `${fav} of ${n} judges got a favorable review.${splits ? ` ${splits === 1 ? 'One was' : `${splits} were`} by a split vote.` : ''}`, split: splits > 0,
     concerns: have.flatMap((r) => r.concerns), strengths: [], links: [],
   };
+}
+
+/* ---------- the plain answer, first ----------
+   One or two plain sentences that answer "what does this rating mean?" before any process: a
+   "meets standards" review is a passing grade, not an endorsement (with how many passed, from
+   the state's own history line); bar groups' ratings say fit or not and a "no" can mean a
+   skipped interview; a lawyer poll is a poll; no review at all says so. The process stays one
+   tap away. Built from the ballot's evaluations and the state's judicial_review fields. */
+export function judgesLead(): string {
+  const b = S.ballot!;
+  const jr = judicialReview();
+  const evs = b.items.flatMap((it) => (it.kind === 'contest' && it.level === 'judicial' ? it.candidates.flatMap((c) => c.evaluations || []) : []));
+  const official = evs.filter(isOfficial);
+  const meets = official.filter((e) => /meets/i.test(e.rating)).length;
+  const first = (t: string | null | undefined) => ((t || '').match(/^(.+?[.!?])(\s|$)/) || [])[1] || '';
+  if (official.length && meets * 2 > official.length) {
+    const h = (jr?.history || '').match(/(\d+) of (\d+) judges[^.]*met performance standards/i);
+    return `“Meets standards” is a passing grade on a job review, not an endorsement.${h ? ` ${h[1]} of ${h[2]} judges on the ballot in ${b.stateName} passed this year.` : ''}`;
+  }
+  if (official.length) return first(jr?.what_it_doesnt_mean) || first(jr?.what_the_rating_means);
+  if (evs.some((e) => e.kind === 'bar_group')) {
+    const skipped = evs.some((e) => evalState(e) === 'declined');
+    return `Bar groups rate whether a judge is fit for the job.${skipped ? ' A “no” sometimes just means the judge skipped the interview, so check the reason.' : ' A rating isn’t an endorsement.'}`;
+  }
+  if (evs.some(isPoll)) return 'Some bar groups poll lawyers on who they prefer. It’s a poll of lawyers, not a job review.';
+  if (jr && /\bno\b[^.]*\b(official|published)\b/i.test(`${jr.who_reviews || ''} ${jr.what_the_rating_means || ''}`)) return `${b.stateName} has no official review of these judges. Read each candidate’s own statement below.`;
+  return first(jr?.what_it_doesnt_mean) || first(jr?.what_the_rating_means);
+}
+/* The band's one line: how a judge keeps the seat or wins it, in a few words. */
+export function judgesRule(): string {
+  const jr = judicialReview();
+  const t = (jr?.to_keep_a_judge || '').trim();
+  if (!t) return '';
+  if (/^vote for the candidate/i.test(t)) return 'How judges win here: most votes wins. These aren’t keep-or-remove questions.';
+  const pct = t.match(/at least (\d+) percent yes/i);
+  if (pct) return `Judges need ${pct[1]}% yes to stay.`;
+  const s = (t.match(/^(.+?[.!?])(\s|$)/) || [])[1] || t;
+  return `To keep a judge: ${s.charAt(0).toLowerCase()}${s.slice(1)}`.replace(/\.?$/, '.');
 }
 
 /* ---------- lawyer preference polls (Texas): counts side by side, no tone ---------- */
@@ -206,7 +248,10 @@ export function judgeBatch(): JudgeBatch | null {
     targets = withOfficial.filter((x) => evalState(evs(x.c).find(isOfficial)!) === 'yes');
     const ratings = targets.map((x) => evs(x.c).find(isOfficial)!.rating);
     const common = [...ratings].sort((a, c) => ratings.filter((r) => r === c).length - ratings.filter((r) => r === a).length)[0] || '';
-    label = `Keep every judge the review rated “${common.toLowerCase()}”`;
+    const n = targets.length;
+    const verb = /^substantially meets/i.test(common) ? 'substantially meet standards' : /^meets/i.test(common) ? 'meet standards' : '';
+    label = !verb ? `Keep the ${n} ${n === 1 ? 'judge' : 'judges'} the review rated “${common.toLowerCase()}”`
+      : n === 1 ? `Keep the 1 judge the review says ${verb.replace('meet', 'meets')}` : `Keep all ${n} judges the review says ${verb}`;
     for (const x of withOfficial) {
       const off = evs(x.c).find(isOfficial)!;
       const why = [voteAgainst(off.vote) ? `a ${off.vote} vote` : '', evs(x.c).some((e) => e.noted_concern) ? 'a noted concern' : '', evalState(off) !== 'yes' ? off.rating.toLowerCase() : ''].filter(Boolean).join(' and ');
@@ -215,11 +260,11 @@ export function judgeBatch(): JudgeBatch | null {
   } else if (withBars.length) {
     const st = (x: (typeof open)[number]) => evs(x.c).filter((e) => e.kind === 'bar_group').map(evalState);
     targets = withBars.filter((x) => { const s = st(x); return s.includes('yes') && s.every((v) => v === 'yes' || v === 'unrated'); });
-    label = 'Keep every judge all the rating bar groups recommend';
+    label = `Keep the ${targets.length} ${targets.length === 1 ? 'judge' : 'judges'} the bar groups recommend`;
     for (const x of withBars) {
       const s = st(x);
       const no = s.filter((v) => v === 'no').length, dec = s.filter((v) => v === 'declined').length;
-      const why = [no ? `${no} of ${s.length} groups say no` : '', dec ? `${dec} list the judge as not recommended for not taking part in screening` : ''].filter(Boolean).join(' and ');
+      const why = [no ? `${no} of ${s.length} groups say no` : '', dec ? `skipped ${dec} ${dec === 1 ? 'screening' : 'screenings'}` : ''].filter(Boolean).join(' and ');
       if (why) readFirst.push({ id: x.it.id, name: x.c.name, why });
     }
   } else return null;

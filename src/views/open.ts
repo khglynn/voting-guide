@@ -5,7 +5,7 @@ import { S } from '../state';
 import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
-import { candidateReview, judicialReview, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
+import { candidateReview, judicialReview, judgesLead, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
 import { sourceLean, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
@@ -296,6 +296,9 @@ export function raceRatingsHTML(c: Contest): string {
   </div>`;
 }
 function meansLineHTML(): string {
+  // The same plain answer the judges section leads with, not the review's process.
+  const lead = judgesLead();
+  if (lead) return `<p class="ob-meta"><b>What it means:</b> ${escP(lead)}</p>`;
   const jr = judicialReview();
   if (!jr || !jr.what_the_rating_means) return '';
   return `<p class="ob-meta"><b>What the rating means:</b> ${escP(leadRest(jr.what_the_rating_means, 24)[0])}</p>`;

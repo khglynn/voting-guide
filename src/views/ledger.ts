@@ -13,7 +13,7 @@ import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
 import { planAgree, planParty } from '../model/bulk';
-import { judgeBatch, judicialReview } from '../model/judges';
+import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest } from './common';
 import { lensHTML } from './lens';
 import { addrHTML } from './mast';
@@ -48,8 +48,7 @@ function sectionSub(sec: SectionKey): string {
   const b = S.ballot!;
   if (sec === 'measures') return 'Each one says what a yes and a no vote mean.';
   if (sec === 'judicial') {
-    const jr = judicialReview();
-    return jr && jr.to_keep_a_judge ? `To keep a judge: ${jr.to_keep_a_judge}.`.replace(/\.\.$/, '.') : '';
+    return judgesRule();
   }
   if ((sec === 'city' || sec === 'county' || sec === 'school' || sec === 'special_district') && b.places.length > 1) return `Some only in ${b.places.map((p) => p.label).join(' or ')}`;
   return '';
@@ -286,9 +285,13 @@ function judgeToolsHTML(): string {
   const batch = judgeBatch();
   const k = 'jr-more';
   const parts: string[] = [];
-  parts.push(headsHTML(headsUp('section:judicial')));
-  if (jr && (jr.what_the_rating_means || jr.who_reviews)) {
+  // The plain answer first, the process and any section notes one tap away (the notes repeated
+  // the rule on the band and the paragraph under it).
+  const lead = judgesLead();
+  if (jr && (lead || jr.what_the_rating_means || jr.who_reviews)) {
     const more = [
+      headsHTML(headsUp('section:judicial')),
+      jr.what_the_rating_means && lead ? `<p><b>What the rating means.</b> ${escP(jr.what_the_rating_means)}</p>` : '',
       jr.how_judges_get_here ? `<p><b>How judges get on your ballot.</b> ${escP(jr.how_judges_get_here)}</p>` : '',
       jr.who_reviews && jr.what_the_rating_means ? `<p><b>Who reviews them.</b> ${escP(jr.who_reviews)}</p>` : '',
       jr.what_it_doesnt_mean ? `<p><b>What it doesn’t mean.</b> ${escP(jr.what_it_doesnt_mean)}</p>` : '',
@@ -297,14 +300,25 @@ function judgeToolsHTML(): string {
       jr.read_one ? `<p>${ext(jr.read_one.url, jr.read_one.label)}</p>` : '',
       jr.sources.length ? `<p class="fine-src">Sources: ${jr.sources.map((x) => ext(x.url, x.name)).join(', ')}</p>` : '',
     ].join('');
-    parts.push(`<div class="jr"><p>${escP(jr.what_the_rating_means || jr.who_reviews)} <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Less' : 'More'}</button></p>${isOpen(k) ? `<div class="jr-more">${more}</div>` : ''}</div>`);
+    parts.push(`<div class="jr"><p>${escP(lead || jr.what_the_rating_means || jr.who_reviews)} <button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Less' : 'More'}</button></p>${isOpen(k) ? `<div class="jr-more">${more}</div>` : ''}</div>`);
+  } else if (headsUp('section:judicial').length) {
+    parts.push(headsHTML(headsUp('section:judicial')));
   }
   if (batch) {
     const n = batch.targets.length;
-    parts.push(`<button class="retain-all" data-act="bulk" data-k="judges" data-fk="bulk-judges"><span>${esc(batch.label)} (${n})</span><small>Worded as the review’s rating, not ours. Undo is one tap.</small></button>`);
+    parts.push(`<button class="retain-all" data-act="bulk" data-k="judges" data-fk="bulk-judges" data-n="${n}"><span>${esc(batch.label)}</span><small>That’s the review’s call, not ours. You can undo it.</small></button>`);
     if (batch.readFirst.length) {
-      const list = batch.readFirst.slice(0, 6).map((x) => `<button class="linkbtn" data-act="goto" data-id="${esc(x.id)}">${esc(x.name)}</button> (${esc(x.why)})`).join(', ');
-      parts.push(`<p class="readfirst">Read these first: ${list}${batch.readFirst.length > 6 ? `, and ${batch.readFirst.length - 6} more` : ''}.</p>`);
+      // Grouped by reason, last names only: "The review noted a concern for Harris, Contiguglia
+      // and 2 more." Each name jumps to the judge.
+      const last = (name: string) => name.replace(/,?\s+(Jr\.|Sr\.|II|III|IV)$/, '').split(/\s+/).pop() || name;
+      const by = new Map<string, { id: string; name: string }[]>();
+      batch.readFirst.forEach((x) => { by.set(x.why, [...(by.get(x.why) || []), x]); });
+      const lines = [...by].map(([why, list]) => {
+        const shown = list.slice(0, 6).map((x) => `<button class="linkbtn" data-act="goto" data-id="${esc(x.id)}">${esc(last(x.name))}</button>`);
+        const names = shown.length > 1 ? `${shown.slice(0, -1).join(', ')}${list.length > 6 ? ', ' : ' and '}${shown[shown.length - 1]}` : shown[0];
+        return `${esc(why.charAt(0).toUpperCase() + why.slice(1))}: ${names}${list.length > 6 ? ` and ${list.length - 6} more` : ''}.`;
+      });
+      parts.push(`<p class="readfirst"><b>Read these first.</b> ${lines.join(' ')}</p>`);
     }
   }
   const html = parts.join('');

@@ -337,6 +337,27 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
+  /* ---------- UX review #1: the judges section leads with the plain answer ---------- */
+  {
+    open('CO', ['lakewood-co']);
+    const lead = judges.judgesLead();
+    check('judges lead: Colorado says "meets standards" is a passing grade, not an endorsement, with how many passed', /passing grade on a job review, not an endorsement/.test(lead) && /121 of 123 judges/.test(lead), lead);
+    check('judges rule: Colorado band says more yes than no keeps the judge', /^To keep a judge: more yes than no votes keeps the judge\.$/.test(judges.judgesRule()), judges.judgesRule());
+    open('IL', ['chicago-il']);
+    check('judges rule: Chicago band is one line, "Judges need 60% yes to stay."', judges.judgesRule() === 'Judges need 60% yes to stay.', judges.judgesRule());
+    check('judges lead: Chicago explains a bar "no" can mean a skipped interview', /skipped the interview/.test(judges.judgesLead()), judges.judgesLead());
+    const jb = judges.judgeBatch();
+    check('judges batch: Chicago reads "Keep the N judges the bar groups recommend"', !!jb && /^Keep the \d+ judges the bar groups recommend$/.test(jb.label), jb && jb.label);
+    open('TX', ['houston-tx']);
+    check('judges rule: Texas says how judges win, not "to keep a judge"', /^How judges win here: most votes wins\./.test(judges.judgesRule()));
+    check('judges lead: Texas calls a lawyer poll a poll', /poll of lawyers, not a job review/.test(judges.judgesLead()), judges.judgesLead());
+    open('OR', ['portland-or']);
+    check('judges lead: Oregon says there is no official review', /^Oregon has no official review of these judges\./.test(judges.judgesLead()), judges.judgesLead());
+    const lk = open('CO', ['lakewood-co']);
+    const cb = judges.judgeBatch();
+    check('judges batch: Colorado reads "Keep all N judges the review says meet standards"', !!cb && /^Keep all \d+ judges the review says meet standards$/.test(cb.label), cb && cb.label);
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

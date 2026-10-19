@@ -175,7 +175,11 @@ b, strong { font-weight: 600; }
 .pbtn.line { border: 1.25px solid var(--on-dusk-2); color: var(--on-dusk); }
 .plan-acts .pbtn:only-child { grid-column: 1 / -1; }
 .plan-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-top: 8px; border-top: 1px solid var(--dusk-rule); }
-.whatif-tog { min-height: 46px; display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--on-dusk); }
+.whatif-tog { min-height: 46px; display: flex; align-items: center; font-size: 15px; color: var(--on-dusk); text-align: left; }
+/* The arrow follows the last word, so it never floats in the middle of a wrapped line. */
+.whatif-tog .nw { white-space: nowrap; }
+.whatif-tog .chev { display: inline-block; vertical-align: -1px; margin-left: 6px; }
+.whatif-tog[aria-expanded="true"] .chev { transform: rotate(180deg); }
 .chev { width: 14px; height: 14px; flex: none; transition: transform .2s ease; }
 [aria-expanded="true"] > .chev { transform: rotate(180deg); }
 .voted { color: var(--on-dusk); font-size: 15px; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; min-height: 46px; display: inline-flex; align-items: center; white-space: nowrap; }

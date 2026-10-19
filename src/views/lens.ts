@@ -1,4 +1,4 @@
-/* "Show endorsements from": the lens head, the sticky chip bar, the "See all sources" sheet and the
+/* "Show endorsements from": the lens head, the chip bar (it wraps; it sticks on wide screens), the "See all sources" sheet and the
    party chooser. Lean labels show with their basis; parties are text; no red or blue. */
 import type { Contest, Endorser } from '../types';
 import { S } from '../state';

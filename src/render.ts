@@ -51,7 +51,7 @@ export function withFocusKept(fn: () => void): void {
 /* Keep what you're looking at still while content above it changes height. */
 function anchorRow(): { el: string; top: number } | null {
   const lens = $('#lensbar');
-  const floor = lens ? lens.getBoundingClientRect().bottom : 0;
+  const floor = lens ? Math.max(0, lens.getBoundingClientRect().bottom) : 0;
   const rows = document.querySelectorAll<HTMLElement>('.ledger .row, .ledger .sec-hd');
   for (const r of rows) {
     const rect = r.getBoundingClientRect();
@@ -182,12 +182,12 @@ export function renderLens(): void {
   }, 'lensbar');
 }
 
-/* Bring a row into view under the sticky lens bar. */
+/* Bring a row into view, under the lens bar where it sticks (wide screens). */
 export function scrollRowIntoView(key: string, force = false): void {
   const el = rowEl(key);
   if (!el) return;
   const lens = $('#lensbar');
-  const top = lens ? lens.getBoundingClientRect().height : 0;
+  const top = lens && getComputedStyle(lens).position === 'sticky' ? lens.getBoundingClientRect().height : 0;
   const r = el.getBoundingClientRect();
   if (force || r.top < top || r.top > window.innerHeight * 0.4) window.scrollBy(0, r.top - top - 4);
 }

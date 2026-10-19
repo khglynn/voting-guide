@@ -25,7 +25,6 @@
   --r-plan: url(/paper/plan.webp); --r-sheet: url(/paper/sheet.webp); --r-crowd: url(/paper/crowd.webp);
   --r-strip-a: url(/paper/strip-a.webp); --r-strip-b: url(/paper/strip-b.webp); --r-strip-c: url(/paper/strip-c.webp); --r-strip-d: url(/paper/strip-d.webp);
   --scrim: rgba(31, 38, 35, .45);
-  --fade: rgba(239, 233, 218, 0);
   --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", sans-serif;
   --f-body: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --g: max(16px, env(safe-area-inset-left, 0px));
@@ -44,7 +43,7 @@
     --tile: url(/paper/stock-dark.webp); --tile-blend: overlay;
     --r-plan: url(/paper/dark/plan.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-crowd: url(/paper/dark/crowd.webp);
     --r-strip-a: url(/paper/dark/strip-a.webp); --r-strip-b: url(/paper/dark/strip-b.webp); --r-strip-c: url(/paper/dark/strip-c.webp); --r-strip-d: url(/paper/dark/strip-d.webp);
-    --scrim: rgba(0, 0, 0, .6); --fade: rgba(22, 29, 26, 0); color-scheme: dark;
+    --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
@@ -58,7 +57,7 @@
   --tile: url(/paper/stock-dark.webp); --tile-blend: overlay;
   --r-plan: url(/paper/dark/plan.webp); --r-sheet: url(/paper/dark/sheet.webp); --r-crowd: url(/paper/dark/crowd.webp);
   --r-strip-a: url(/paper/dark/strip-a.webp); --r-strip-b: url(/paper/dark/strip-b.webp); --r-strip-c: url(/paper/dark/strip-c.webp); --r-strip-d: url(/paper/dark/strip-d.webp);
-  --scrim: rgba(0, 0, 0, .6); --fade: rgba(22, 29, 26, 0); color-scheme: dark;
+  --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
 }
 /* paper:start (written by scripts/paper/bake.py) */
 :root { --sheet-fill: linear-gradient(90deg, #FEFDF7 20px, #FFFEF9 40px, #FFFDF8 60px, #FEFCF7 80px, #FDFCF6 100px, #FCFBF6 120px, #FCFAF4 140px, #FBF9F4 160px, #FAF9F3 180px, #F9F8F2 200px, #F9F7F2 220px, #F8F6F1 240px, #F7F5F0 260px, #F6F4EF 280px, #F5F4EF 300px, #F4F3ED 320px, #F3F2ED 340px, #F3F1EC 360px, #F2F0EB 380px, #F1F0EB 400px, #F1EFEA 420px, #F0EEE9 440px, #EFEDE8 460px, #EEEDE8 480px, #EDECE7 500px, #EDECE6 520px, #ECEBE5 540px, #ECEAE5 560px, #EBE9E4 580px, #EAE9E3 600px, #ECEAE5 620px); --sheet-paper: #F4F3ED; }
@@ -67,7 +66,7 @@
 /* paper:end */
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; }
 html, body { margin: 0; }
 body {
   background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); color: var(--ink);
@@ -207,12 +206,15 @@ b, strong { font-weight: 600; }
 .lens-head h2 { font-family: var(--f-display); font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: -.004em; font-variation-settings: "wdth" 78; color: var(--print); }
 .lens-head p { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
 .lens-head .cov { color: var(--ink-2); }
-.lensbar { position: sticky; top: 0; z-index: 30; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
-.chipwrap { position: relative; max-width: 640px; margin: 0 auto; }
-.chipwrap::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(to right, var(--fade), var(--bone)); pointer-events: none; }
-.chips { display: flex; gap: 6px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; padding: 8px var(--g); }
-.chips::-webkit-scrollbar { display: none; }
-.chips::after { content: ""; flex: none; width: 12px; }
+/* The chips wrap, so every choice is in view. On a phone two rows would cover too much of the ballot to stay
+   pinned, so the bar sticks only on wide screens. */
+.chipwrap { max-width: 640px; margin: 0 auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 16px 6px var(--g); }
+@media (min-width: 600px) {
+  html { scroll-padding-top: 128px; }
+  .lensbar { position: sticky; top: 0; z-index: 30; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
+  .chips { padding-bottom: 10px; }
+}
 .chip { flex: none; min-height: 44px; padding: 0 13px; border: 1.25px solid var(--ink); border-radius: 2px; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); white-space: nowrap; }
 .chip[aria-pressed="true"] { background: var(--paper-green); border-color: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); }
 .chip.some[aria-pressed="true"] { background: var(--dusk-tint); color: var(--dusk-ink); border-color: var(--dusk-2); }

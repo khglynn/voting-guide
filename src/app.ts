@@ -6,7 +6,7 @@ import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare,
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
 import { zipState, censusLookup, type GeoResult } from './geo';
 import { toast } from './util';
-import { render, renderBallot, $ } from './render';
+import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
 import { partiesOnBallot, toggleChip } from './model/lens';
@@ -53,6 +53,7 @@ export function go(view: View, push = true): void {
   S.ui.reader = null; S.ui.sheet = null;
   if (push) { try { history.pushState({ vg: view }, '', location.pathname + location.search); } catch { /* ignore */ } }
   render();
+  if (view === 'cheat') render(['print']);
   window.scrollTo(0, 0);
   if (view === 'pass') void loadInvolved().then(() => { if (S.ui.view === 'pass') render(['pass']); });
 }
@@ -155,23 +156,23 @@ export async function runAddress(addr: string): Promise<void> {
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.ballot;
   if (!b && !choosing) return;
-  if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; render(['mast']); return; }
-  S.ui.addrBusy = true; S.ui.addrMsg = null; render(['mast']);
+  if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; renderAddr(); return; }
+  S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
   let r: GeoResult | null;
   try { r = await censusLookup(addr.trim()); }
-  catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or answer the questions yourself.'; render(['mast']); return; }
+  catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or answer the questions yourself.'; renderAddr(); return; }
   S.ui.addrBusy = false;
-  if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; render(['mast']); return; }
+  if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }
   if (choosing && S.zipChoice) {
     const hit = placeFromGeo(S.zipChoice.placeIds, r);
-    if (!hit) { S.ui.addrMsg = 'That address didn’t match one of these places. Pick one, or “I’m not sure”.'; render(['mast']); return; }
+    if (!hit) { S.ui.addrMsg = 'That address didn’t match one of these places. Pick one, or “I’m not sure”.'; renderAddr(); return; }
     const zip = S.zipChoice.zip;
     S.ui.addrOpen = false;
     await openBallot(S.index!.places[hit].state, [hit], zip);
     return applyGeo(r);
   }
   if (!b) return;
-  if (r.state && r.state !== b.st) { S.ui.addrMsg = `That address is outside ${b.stateName}. Change your ZIP first.`; render(['mast']); return; }
+  if (r.state && r.state !== b.st) { S.ui.addrMsg = `That address is outside ${b.stateName}. Change your ZIP first.`; renderAddr(); return; }
   if (b.places.length > 1) {
     const hit = placeFromGeo(b.places.map((p) => p.id), r);
     if (hit) { await openBallot(b.st, [hit], S.b.zip); return applyGeo(r); }

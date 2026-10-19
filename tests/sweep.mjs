@@ -85,7 +85,11 @@ async function oracle(st, placeIds) {
   const items = ids.map((id) => byId.get(id));
   const by = new Map();
   for (const it of items) if (it.kind === 'contest' && !it.every && !onlyIn.has(it.id)) by.set(`${it.level}|${it.office}`, [...(by.get(`${it.level}|${it.office}`) || []), it.id]);
-  const groups = [...by].filter(([, m]) => m.length >= 2).map(([key, members]) => ({ key, members, sec: sectionOf(byId.get(members[0])) }));
+  // Numbered seats (Place/Position/Seat N) sharing one scope are separate races every voter there
+  // sees, not a district question (fixed 2026-10-19; Houston ISDs, Edgewood ISD, Tallahassee).
+  const SEAT = /^(?:place|position|seat|post|no\.)\s*\d+\b/i;
+  const seats = (m) => m.every((id) => SEAT.test((byId.get(id).district || '').trim())) && m.every((id) => (byId.get(id).scope_plain || '').trim().toLowerCase() === (byId.get(m[0]).scope_plain || '').trim().toLowerCase());
+  const groups = [...by].filter(([, m]) => m.length >= 2 && !seats(m)).map(([key, members]) => ({ key, members, sec: sectionOf(byId.get(members[0])) }));
   return { items, byId, groups, kinds: Object.fromEntries(items.map((i) => [i.id, kindOf(i)])) };
 }
 /* What should be on screen for a set of district answers (group key -> member id or '*'). */
@@ -128,43 +132,49 @@ const SNAPSHOT = (w) => {
   });
   return {
     ids, dupIds: [...dupIds], over, sec, scrollWidth: document.documentElement.scrollWidth,
-    qs: [...document.querySelectorAll('.q[data-q]')].map((q) => q.dataset.q),
-    bar: (document.querySelector('.bar-txt') || {}).textContent?.trim() || '',
+    qs: [...document.querySelectorAll('.row[data-q]')].map((q) => q.dataset.q),
+    bar: (document.querySelector('.bar-txt') || {}).textContent?.replace(/\s+/g, ' ').trim() || '',
     barBtnDisabled: !!document.querySelector('[data-act="next"][disabled]'),
   };
 };
 /* The app ignores a click within 650ms of the last action (a touch guard), so programmatic taps
    dispatch the mouse pointerdown that fires an action immediately. Real touch taps are covered by e2e. */
 const PRESS = `window.__press = (el) => el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));`;
-const OPEN_UNOPP = () => { document.querySelectorAll('.unopp .disc[aria-expanded="false"]').forEach((b) => window.__press(b)); };
-/* Pick one thing on every open card, by the kind of card it is. */
+/* Unopposed lists and long court groups start folded; open every one (each tap re-renders its section). */
+const OPEN_UNOPP = () => {
+  for (let i = 0; i < 400; i++) {
+    const b = document.querySelector('.unopp .disc[aria-expanded="false"], [data-act="grp"][aria-expanded="false"]');
+    if (!b) break;
+    window.__press(b);
+  }
+};
+/* Pick one thing on every undecided row, by the kind of row it is: open it, then decide. */
 const PICK_ALL = () => {
   const log = [];
-  for (let guard = 0; guard < 2000; guard++) {
-    const card = document.querySelector('article.card-r[data-undecided]');
-    if (!card) break;
-    const id = card.dataset.item;
-    const click = (sel) => { const b = card.querySelector(sel); if (b) window.__press(b); return !!b; };
-    const before = card.outerHTML.length;
+  const q = (id, sel) => document.querySelector(`#i-${CSS.escape(id)} ${sel}`);
+  for (let guard = 0; guard < 3000; guard++) {
+    const row = document.querySelector('.row[data-item][data-undecided]:not([data-stuck])');
+    if (!row) break;
+    const id = row.dataset.item;
+    if (!row.classList.contains('is-open')) window.__press(row.querySelector('[data-act="row"]'));
     let did = false;
-    if (card.querySelector('[data-act="jpick"]')) { // each answer re-renders the card, so look it up again every time
-      for (let i = 0; i < 100; i++) { const b = document.querySelector(`#i-${CSS.escape(id)} [data-act="jpick"][data-v="YES"][aria-pressed="false"]`); if (!b) break; window.__press(b); }
+    if (q(id, '[data-act="jpick"]')) {
+      for (let i = 0; i < 100; i++) { const b = q(id, '[data-act="jpick"][data-v="YES"][aria-pressed="false"]'); if (!b) break; window.__press(b); }
       did = true;
+    } else if (q(id, '[data-act="rank"]')) {
+      for (let i = 0; i < 30; i++) { const b = q(id, '[data-act="rank"][aria-pressed="false"]'); const left = q(id, '.rank-panel'); if (!b || (left && /All \d+ ranked/.test(left.textContent))) break; window.__press(b); }
+      const d = q(id, '[data-act="rdone"]'); if (d) window.__press(d);
+      did = true;
+    } else if (q(id, '[data-act="mpick"]')) {
+      for (let i = 0; i < 12; i++) { const b = q(id, '[data-act="mpick"][aria-pressed="false"]'); if (!b || !document.querySelector(`#i-${CSS.escape(id)}[data-undecided]`)) break; window.__press(b); }
+      const d = q(id, '[data-act="mdone"]'); if (d) window.__press(d);
+      did = true;
+    } else {
+      const b = q(id, '[data-act="pick"]') || q(id, '[data-act="skip"]');
+      if (b) { window.__press(b); did = true; }
     }
-    else if (card.querySelector('[data-act="rank"]')) {
-      const max = Number((card.querySelector('.rank-panel .small:last-child')?.textContent.match(/of (\d+) ranked/) || [])[1] || 0);
-      const n = card.querySelectorAll('[data-act="rank"]').length;
-      for (let i = 0; i < Math.max(1, Math.min(max || n, n)); i++) { const c = document.querySelector(`#i-${CSS.escape(id)}`); const b = c && c.querySelector('[data-act="rank"][aria-pressed="false"]'); if (b) window.__press(b); }
-      const d = document.querySelector(`#i-${CSS.escape(id)} [data-act="rdone"]`); if (d) window.__press(d);
-      did = true;
-    } else if (card.querySelector('[data-act="mpick"]')) {
-      const seats = Number((card.textContent.match(/fills (\d+) seats/) || [])[1] || 1);
-      for (let i = 0; i < seats; i++) { const c = document.querySelector(`#i-${CSS.escape(id)}`); const b = c && c.querySelector('[data-act="mpick"][aria-pressed="false"]'); if (b) window.__press(b); }
-      const d = document.querySelector(`#i-${CSS.escape(id)} [data-act="mdone"]`); if (d) window.__press(d);
-      did = true;
-    } else did = click('[data-act="pick"]') || click('[data-act="skip"]');
     const after = document.querySelector(`#i-${CSS.escape(id)}`);
-    if (!did || (after && after.hasAttribute('data-undecided') && after.outerHTML.length === before)) { log.push(`stuck:${id}`); card.removeAttribute('data-undecided'); card.setAttribute('data-stuck', ''); }
+    if (!did || (after && after.hasAttribute('data-undecided'))) { log.push(`stuck:${id}`); if (after) after.setAttribute('data-stuck', ''); }
   }
   return log;
 };
@@ -199,7 +209,7 @@ async function open(browser, ballot, R) {
     await page.locator('button[type=submit]').click();
     await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
   } else {
-    await page.locator('.browse .btn-text').first().click(); // "Or pick a place from the list"
+    await page.locator('[data-fk="browse"]').click(); // "Or pick a place from the list"
     const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
     await page.locator(sel).first().click();
   }
@@ -247,7 +257,12 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   }
   return { ex, snap };
 }
-const pressDistrict = (page, key, v) => page.locator(`.q[data-q="${key.replace(/"/g, '\\"')}"] [data-act="district"][data-v="${v}"]`).first().evaluate((e) => window.__press(e));
+/* A district question is a row: open it, then answer. */
+const pressDistrict = async (page, key, v) => {
+  const sel = `.row[data-q="${key.replace(/"/g, '\\"')}"]`;
+  await page.locator(sel).first().evaluate((r) => { if (!r.classList.contains('is-open')) window.__press(r.querySelector('[data-act="row"]')); });
+  await page.locator(`${sel} [data-act="district"][data-v="${v}"]`).first().evaluate((e) => window.__press(e));
+};
 const pressChange = (page, key) => page.locator(`[data-act="district-change"][data-g="${key.replace(/"/g, '\\"')}"]`).first().evaluate((e) => window.__press(e));
 
 async function sweepBallot(browser, ballot) {
@@ -283,6 +298,10 @@ async function sweepBallot(browser, ballot) {
   const stuck = await page.evaluate(PICK_ALL);
   if (stuck.length) R.fail(ballot.name, 'could not pick on some cards', stuck.slice(0, 4).join(', '));
   await page.waitForTimeout(250);
+  const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.replace(/\s+/g, ' ').trim());
+  if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
+  await page.locator('[data-act="cheat"]').first().evaluate((e) => window.__press(e));
+  await page.waitForSelector('#cheat', { timeout: 5000 });
   const cheat = await page.evaluate(CHEAT);
   if (cheat.screen.length !== ex.decisions.length) R.fail(ballot.name, 'cheat sheet row count', `want ${ex.decisions.length} got ${cheat.screen.length}`);
   const blank = cheat.screen.filter((r) => !r.v || /not decided/i.test(r.v) || /^_+$/.test(r.v));
@@ -291,9 +310,8 @@ async function sweepBallot(browser, ballot) {
   if (cheat.print.length !== wantPrint) R.fail(ballot.name, 'print sheet row count', `want ${wantPrint} got ${cheat.print.length}`);
   const titles = cheat.screen.map((r) => r.t);
   // 2026-10-19: found by the first sweep. Two races with the same title leave the voter unable to tell the rows apart.
-  if (new Set(titles).size !== titles.length) (process.env.STRICT ? R.fail : warn)(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
-  const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.trim());
-  if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
+  // Seat labels made every title unique on 2026-10-19, so a repeat is now a failure.
+  if (new Set(titles).size !== titles.length) R.fail(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
 
   if (page.errs.length) R.fail(ballot.name, 'console or network errors', page.errs.slice(0, 3).join(' | '));
   if (R.n) await page.screenshot({ path: path.join(SHOTS, `FAIL-${ballot.name}.png`) }).catch(() => {});

@@ -91,11 +91,46 @@ export function lineup(it: Item, sources: Endorser[] = chosen()): Lineup {
 }
 export const weighedIn = (l: Lineup): Endorser[] => l.groups.flatMap((g) => g.sources);
 
-/* A source's name, short enough for a lineup in the narrow column. */
-export function tagOf(e: Endorser): string {
-  return e.short.replace(/^The\s+/, '').replace(/\s+(Editorial Board|Editorial Page|Endorsements?)$/i, '').trim();
+/* A source's name, short enough for a lineup in the narrow column: "Denver Post" -> "Post",
+   "LWV Colorado" -> "LWV", "Colorado Sun" -> "Sun". A leading word is dropped only when it is a
+   place this guide covers (a state or a place label from the index), and a tag that would be
+   shared by two sources on one ballot ("Houston Chronicle", "Austin Chronicle") keeps its full
+   short name. */
+const tagCache = new WeakMap<Ballot, Map<string, string>>();
+function placeWords(): string[] {
+  const idx = S.index;
+  const words = new Set<string>();
+  if (idx) {
+    Object.values(idx.states).forEach((s) => words.add(s.name));
+    Object.values(idx.places).forEach((p) => { words.add(p.label.replace(/\s*\(.*\)$/, '')); p.counties.forEach((c) => words.add(c.replace(/\s*\(.*\)$/, ''))); });
+  }
+  if (S.ballot) { words.add(S.ballot.stateName); S.ballot.places.forEach((p) => words.add(p.label)); }
+  return [...words].filter((w) => w.length > 2).sort((a, b) => b.length - a.length);
 }
-const TAG_MAX = 20;
+function rawTag(e: Endorser, places: string[]): string {
+  let t = e.short.replace(/^The\s+/, '').replace(/\s+(Editorial Board|Editorial Page|Endorsements?)$/i, '').trim();
+  if (/^(LWV|League of Women Voters)\b/i.test(t)) return 'LWV';
+  for (const w of places) {
+    if (t.startsWith(`${w} `) && t.length > w.length + 3) { t = t.slice(w.length + 1); break; }
+  }
+  return t;
+}
+export function tagOf(e: Endorser): string {
+  const b = S.ballot;
+  if (!b) return e.short;
+  let m = tagCache.get(b);
+  if (!m) {
+    m = new Map();
+    const places = placeWords();
+    const raw = new Map(b.endorsers.map((x) => [x.id, rawTag(x, places)]));
+    const count = new Map<string, number>();
+    raw.forEach((t) => count.set(t, (count.get(t) || 0) + 1));
+    for (const x of b.endorsers) { const t = raw.get(x.id)!; m.set(x.id, (count.get(t) || 0) > 1 ? x.short : t); }
+    tagCache.set(b, m);
+  }
+  return m.get(e.id) || e.short;
+}
+const TAG_MAX = 14;
 /* "Post no, Gazette yes" when three or fewer sources weighed in and their names are short;
    null when the row should show a tally instead. */
 export function namedLineup(l: Lineup, it: Item): string | null {

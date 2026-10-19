@@ -38,15 +38,12 @@ export function mastHTML(): string {
     const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip ? `ZIP ${S.b.zip}` : ''].filter(Boolean).join('. ');
     const office = b.places.map((p) => p.county_election_office).find(Boolean);
     const officeName = office ? office.name.split(/[,:]\s*\d/)[0].trim() : '';
-    const hasQs = b.groups.length > 0 || b.mayApply.size > 0;
     return `<header class="mast wrap">${tryBanner()}
       <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
       <h1 class="place">${esc(name)}</h1>
       <p class="where"><span>${esc(where)}.</span> <button class="linkbtn" data-act="change-place" data-fk="change-place">Not your ballot? Change</button></p>
       ${office ? `<p class="office">Election office: ${office.url ? ext(office.url, officeName) : esc(officeName)}${office.phone ? `, ${telHTML(office.phone)}` : ''}</p>` : ''}
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
-      ${hasQs && !S.ui.addrOpen ? '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address to answer the district questions</button></p>' : ''}
-      ${addrHTML()}
     </header>`;
   }
   const err = S.zipErr ? `<p class="zip-err" role="alert" id="zip-err">${esc(S.zipErr)}</p>` : '';

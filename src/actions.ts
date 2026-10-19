@@ -5,7 +5,7 @@ import type { Contest } from './types';
 import { S, persist, forgetLast, type View } from './state';
 import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, rowEl, scrollRowIntoView, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, go, openReader, runAddress } from './app';
 import { planAgree, planParty, planJudges, applyFills, undoFills, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
@@ -352,8 +352,8 @@ A['change-place'] = () => {
   window.scrollTo(0, 0);
   $('#zip')?.focus();
 };
-A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; render(['mast']); window.scrollTo(0, 0); $('#addr-in')?.focus(); };
-A['addr-close'] = () => { S.ui.addrOpen = false; render(['mast']); };
+A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
+A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 

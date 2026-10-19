@@ -51,6 +51,10 @@ export function seatLabel(c: Contest): string | null {
   if (d.length > 40) d = d.split(',')[0].trim();
   if (!d) return null;
   if (c.office.toLowerCase().includes(d.toLowerCase())) return extra || null;
+  // "Jefferson County" under a county race in the Jefferson County section says nothing new.
+  const b = S.ballot;
+  const here = (b ? b.places.flatMap((p) => [p.label, ...p.counties]) : []).map((x) => x.replace(/\s*\(.*\)$/, '').replace(/\s+County$/i, '').toLowerCase());
+  if (!extra && here.includes(d.replace(/\s+County( Court)?$/i, '').toLowerCase()) && !/court/i.test(d)) return null;
   return extra ? `${d}, ${extra}` : d;
 }
 

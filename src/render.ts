@@ -130,6 +130,13 @@ export const rowEl = (key: string): HTMLElement | null => {
   return $(`#i-${CSS.escape(key)}`);
 };
 
+/* The address form lives in the ballot head on a ballot, in the masthead on the place question. */
+export function renderAddr(): void {
+  const wrap = $('.wrap-led');
+  if (S.ballot && S.view === 'ballot' && S.ui.view === 'ballot' && wrap) withFocusKept(() => { wrap.innerHTML = ballotHeadHTML(); });
+  else render(['mast']);
+}
+
 /* The parts that summarize the whole ballot: the lens coverage line, the bulk counts, the bar. */
 let lazyTimer: number | undefined;
 export function renderSummaries(): void {

@@ -4,7 +4,7 @@ import type { Candidate, Contest, Endorser, Item, Measure } from '../types';
 import { S } from '../state';
 import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
 import { esc, hash, plural, host } from '../util';
-import { lineup, weighedIn, orderCandidates, tagOf, type Lineup } from '../model/tally';
+import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, type Review } from '../model/judges';
 import { seatLabel, cheatTitle } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
@@ -51,17 +51,17 @@ function lookedSources(l: Lineup): Endorser[] {
 }
 function quietLines(l: Lineup, it: Item): string {
   const out: string[] = [];
-  if (l.notChecked.length) out.push(`Not checked yet: ${l.notChecked.map(tagOf).join(', ')}.`);
-  if (l.both.length) out.push(`${l.both.map(tagOf).join(', ')} ${l.both.length === 1 ? 'lists' : 'list'} campaigns on both sides.`);
+  if (l.notChecked.length) out.push(`Not checked yet: ${l.notChecked.map((e) => e.short).join(', ')}.`);
+  if (l.both.length) out.push(`${l.both.map((e) => e.short).join(', ')} ${l.both.length === 1 ? 'lists' : 'list'} campaigns on both sides.`);
   const guides = l.guides.filter((e) => e.guide_url || picksOnBallot(S.ballot!, e.id) === 0);
   if (guides.length) {
     const what = it.kind === 'measure' ? 'take positions on measures' : 'pick candidates';
-    out.push(`${guides.map((e) => (e.guide_url ? ext(e.guide_url, tagOf(e)) : esc(tagOf(e)))).join(', ')} ${guides.length === 1 ? 'doesn’t' : 'don’t'} ${what}; ${guides.length === 1 ? 'its guide explains' : 'their guides explain'}.`);
+    out.push(`${guides.map((e) => (e.guide_url ? ext(e.guide_url, e.short) : esc(e.short))).join(', ')} ${guides.length === 1 ? 'doesn’t' : 'don’t'} ${what}; ${guides.length === 1 ? 'its guide explains' : 'their guides explain'}.`);
   }
   return out.length ? `<p class="gridnote">${out.join(' ')}</p>` : '';
 }
 function srcCell(e: Endorser): string {
-  return `<th scope="row"><span class="sn">${esc(tagOf(e))}</span>${leanHTML(e.lean)}</th>`;
+  return `<th scope="row"><span class="sn">${esc(e.short)}</span>${leanHTML(e.lean)}</th>`;
 }
 function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | null {
   const r = (S.ballot!.ends[it.id] || {})[e.id];
@@ -82,7 +82,7 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
     const span = spanCell(it, e, keys, cols.length);
     if (span) return `<tr>${srcCell(e)}${span}</tr>`;
     const r = (S.ballot!.ends[it.id] || {})[e.id]!;
-    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(tagOf(e))} backs ${esc(c.head)}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
+    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} backs ${esc(c.head)}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
   }).join('');
   return `<div class="gridwrap"><table class="grid c${cols.length}">
     <colgroup><col class="src">${cols.map(() => '<col>').join('')}</colgroup>
@@ -98,9 +98,9 @@ function noneLineHTML(it: Item, l: Lineup): string {
   else if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
     const bits: string[] = [];
-    if (l.noStand.length) bits.push(`${l.noStand.map(tagOf).join(', ')} took no stand`);
-    if (l.notFound.length) bits.push(`we found no pick from ${l.notFound.map(tagOf).join(', ')}`);
-    if (l.notChecked.length) bits.push(`${l.notChecked.map(tagOf).join(', ')} not checked yet`);
+    if (l.noStand.length) bits.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand`);
+    if (l.notFound.length) bits.push(`we found no pick from ${l.notFound.map((e) => e.short).join(', ')}`);
+    if (l.notChecked.length) bits.push(`${l.notChecked.map((e) => e.short).join(', ')} not checked yet`);
     parts.push(`Your sources haven’t picked here: ${bits.join('; ')}.`);
   }
   return `<p class="none-line">${esc(parts.join(' '))}</p>`;
@@ -171,12 +171,19 @@ function rankPanelHTML(it: Contest): string {
 }
 function backedBy(c: Contest, k: Candidate, l: Lineup): string {
   const by = l.groups.filter((g) => g.choices.includes(k.name)).flatMap((g) => g.sources);
-  return by.length ? `<span class="by">${CHECK}<span>Backed by ${esc(by.map(tagOf).join(', '))}</span></span>` : '';
+  return by.length ? `<span class="by">${CHECK}<span>Backed by ${esc(by.map((e) => e.short).join(', '))}</span></span>` : '';
+}
+/* Every candidate gets the same line: their own words (quote marked) or the honest gap. */
+function wordsLine(k: Candidate): string {
+  const o = k.own_words[0];
+  if (o) return `<span class="cl-w${o.is_quote ? ' q' : ''}">${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</span>`;
+  if (k.own_words_status === 'none_found') return `<span class="cl-w none">No campaign statement found${k.own_words_checked ? ` (checked ${esc(fmtShort(k.own_words_checked.on))})` : ''}.</span>`;
+  return '';
 }
 function listHTML(c: Contest, l: Lineup): string {
   const cands = orderCandidates(c, l);
   return `<ol class="clist">${cands.map((k) => `<li class="cl${(isRCV(c) ? ranksOf(c.id).includes(k.name) : isMultiSeat(c) ? S.b.picks[`${c.id}|${k.name}`] === 'PICK' : S.b.picks[c.id] === k.name) ? ' on' : ''}">
-      <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}</span>
+      <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}${wordsLine(k)}</span>
       ${pickBtn(c, k, 'pick cl-b')}</li>`).join('')}</ol>`;
 }
 function voicesHTML(c: Contest, cands: Candidate[]): string {
@@ -235,7 +242,7 @@ function raceHTML(c: Contest): string {
     ${rcv ? rcvHeadHTML(c) : ''}${nonpartisan}
     ${body}
     ${othersHTML(c)}
-    ${voicesHTML(c, (useGrid ? shown : c.candidates.slice(0, 4)))}`;
+    ${useGrid ? voicesHTML(c, shown) : ''}`;
 }
 const listNames = (ks: Candidate[]): string => ks.length <= 1 ? (ks[0]?.short || '') : `${ks.slice(0, -1).map((k) => k.short).join(', ')} and ${ks[ks.length - 1].short}`;
 const ARROW_LEFT_OR_RIGHT = (fwd: boolean): string => (fwd ? ARROW : '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M12 3L6 9l6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>');

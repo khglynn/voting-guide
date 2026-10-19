@@ -16,6 +16,7 @@ import { planAgree, planParty } from '../model/bulk';
 import { judgeBatch, judicialReview } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest } from './common';
 import { lensHTML } from './lens';
+import { addrHTML } from './mast';
 import { openHTML } from './open';
 
 /* ---------- names ---------- */
@@ -331,11 +332,12 @@ export function ballotHeadHTML(): string {
   const may = [...b.mayApply].filter((id) => !S.b.notMine.includes(id)).length;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  const parts = [`${plural(items.length - qs, 'thing')} to decide, in ballot order.`];
+  const parts = [`${plural(items.length - qs, 'decision')}, in ballot order.`];
   if (qs) parts.push(`${plural(qs, 'question')} about where you live.`);
   if (may) parts.push(`${may} marked “may apply”.`);
   return `<div class="bhead"><h2 id="ballot-h">Your ballot</h2>
       <p>${esc(parts.join(' '))}</p>
+      ${(b.groups.length || b.mayApply.size) ? (S.ui.addrOpen ? addrHTML() : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Answer the “where do you live” questions from your address</button></p>') : ''}
       ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. ${sb ? ext(sb.url, sb.label) : ''}</p>` : sb ? `<p class="sb">Double-check with ${ext(sb.url, 'your official sample ballot')}.</p>` : ''}
     </div>
     ${headsHTML(headsUp('ballot'))}
@@ -366,7 +368,7 @@ export function barHTML(): string {
   return `<div class="foot screen-only" role="region" aria-label="Your progress">
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
     <div class="foot-in">
-      <button class="prog" data-act="next" ${allDone ? 'disabled' : ''} data-fk="bar-next" aria-label="${allDone ? 'All decided' : `${done} of ${items.length} decided. Go to the next undecided`}"><span class="bar-txt"><b>${done}</b> of ${items.length} decided</span><span class="prog-n">${allDone ? 'All done' : 'Next undecided'}</span></button>
+      <button class="prog" data-act="next" ${allDone ? 'disabled' : ''} data-fk="bar-next" aria-label="${allDone ? `All ${items.length} decided` : `${done} of ${items.length} decided. Go to the next undecided`}"><span class="bar-txt"><b>${done}</b> of ${items.length} <span class="dl">decided</span></span></button>
       <button class="ftog" data-act="only" aria-pressed="${S.ui.onlyUndecided}" data-fk="bar-only"><span class="box" aria-hidden="true"></span>Only undecided</button>
       <button class="fcta" data-act="cheat" data-fk="bar-cheat">Cheat sheet</button>
     </div></div>`;

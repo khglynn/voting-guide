@@ -58,16 +58,30 @@ if (!Number.isInteger(WORKERS) || WORKERS < 1 || WORKERS > 16) stop(`WORKERS mus
 
 // Output: a new folder per run, inside .tmp/. Never delete a folder someone named.
 const TMP = path.join(ROOT, '.tmp');
-const OUT_ROOT = path.resolve(process.env.SHOTS_DIR || path.join(TMP, 'sweep-shots'));
-if (!OUT_ROOT.startsWith(TMP + path.sep)) stop(`SHOTS_DIR must be a folder inside ${TMP}/ (got ${OUT_ROOT}). Each run makes its own subfolder there.`);
+const OUT_ROOT_ASKED = path.resolve(process.env.SHOTS_DIR || path.join(TMP, 'sweep-shots'));
+if (!OUT_ROOT_ASKED.startsWith(TMP + path.sep)) stop(`SHOTS_DIR must be a folder inside ${TMP}/ (got ${OUT_ROOT_ASKED}). Each run makes its own subfolder there.`);
+fs.mkdirSync(OUT_ROOT_ASKED, { recursive: true });
+// Judge by real paths, so a symlink inside .tmp cannot lead the run, or the pruning below, outside it.
+const REAL_TMP = fs.realpathSync(TMP);
+const OUT_ROOT = fs.realpathSync(OUT_ROOT_ASKED);
+if (!OUT_ROOT.startsWith(REAL_TMP + path.sep)) stop(`SHOTS_DIR ${OUT_ROOT_ASKED} leads to ${OUT_ROOT}, outside ${REAL_TMP}/ (a symlink?). Use a plain folder inside .tmp/.`);
 const RUN_MARK = '.sweep-run';
 const RUN_NAME = /^\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z-(fast|full)-\d+$/;
-fs.mkdirSync(OUT_ROOT, { recursive: true });
 const SHOTS = path.join(OUT_ROOT, `${new Date().toISOString().replace(/[:.]/g, '-')}-${MODE}-${process.pid}`);
 fs.mkdirSync(SHOTS); // throws if it somehow exists: this run never writes into another run's folder
 fs.writeFileSync(path.join(SHOTS, RUN_MARK), `sweep run ${new Date().toISOString()} ${MODE}\n`);
-// Keep the newest 10 runs. Remove only files this script writes, then the folder only if it is empty.
-for (const old of fs.readdirSync(OUT_ROOT).filter((n) => RUN_NAME.test(n) && fs.existsSync(path.join(OUT_ROOT, n, RUN_MARK))).sort().slice(0, -10)) {
+// Keep the newest 10 runs. A run folder counts only if it is a real folder (not a symlink), really
+// sits right here, and holds this script's marker file. Remove only files this script writes, then the
+// folder only if it is empty.
+const isOwnRun = (n) => {
+  if (!RUN_NAME.test(n)) return false;
+  const dir = path.join(OUT_ROOT, n);
+  try {
+    const st = fs.lstatSync(dir);
+    return st.isDirectory() && !st.isSymbolicLink() && fs.realpathSync(dir) === dir && fs.lstatSync(path.join(dir, RUN_MARK)).isFile();
+  } catch { return false; }
+};
+for (const old of fs.readdirSync(OUT_ROOT).filter(isOwnRun).sort().slice(0, -10)) {
   const dir = path.join(OUT_ROOT, old);
   for (const f of fs.readdirSync(dir)) if ((f === RUN_MARK || f === 'sweep-report.json' || f.endsWith('.png')) && fs.lstatSync(path.join(dir, f)).isFile()) fs.rmSync(path.join(dir, f));
   try { fs.rmdirSync(dir); } catch { /* something else is in there: leave it */ }

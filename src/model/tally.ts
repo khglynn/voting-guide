@@ -224,7 +224,7 @@ export function verdict(it: Item): Verdict {
   if (s === 'decided' || s === 'auto' || s === 'skipped') {
     // A filled pick says where it came from, in a few words; what the sources said is in the open row.
     const auto = S.b.auto[it.id];
-    const from = auto ? (/party|candidate on the ballot/i.test(auto) ? 'Filled from your party' : /review/i.test(auto) ? 'Filled from the review' : 'Filled from your sources') : '';
+    const from = auto ? (/party|candidate on the ballot|^Filled in with the .+ candidate/i.test(auto) ? 'Filled from your party' : /review/i.test(auto) ? 'Filled from the review' : 'Filled from your sources') : '';
     return { kind: 'mine', main: pickShort(it) || 'Decided', sub: s === 'skipped' ? '' : from || lineupUnderPick(l, it), filled: !!auto };
   }
   // Judges: the official review, in its own neutral style. It is not one of your sources.

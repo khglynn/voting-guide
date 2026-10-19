@@ -217,7 +217,7 @@ export function applyGeo(r: { cd: number | null; upper: number | null; lower: nu
   S.ui.addrMsg = null;
   render();
   persist();
-  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.` : 'Found your address. Nothing on this ballot depends on it.');
+  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.` : (b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.' : 'Found your address. Nothing on this ballot depends on it.'));
 }
 
 /* ---------- "try as": scenarios for feeling the guide, never saved ---------- */

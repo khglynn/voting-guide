@@ -257,6 +257,13 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     const party = bulk.planParty('Democratic');
     check('party fill: finds Democratic races in Portland (display text says "Democrat")', party.fills.length > 0, String(party.fills.length));
     check('party fill: never fills a ranked race, counts them instead', !party.fills.some((f) => p.byId.get(f.id).ranked_choice));
+    // A party fill says it came from the party, not from your sources (Codex, copy pass review).
+    const pf1 = party.fills.find((f) => p.byId.get(f.id).vote_for === 1);
+    if (pf1) {
+      bulk.applyFills([pf1]);
+      const pv = tally.verdict(p.byId.get(pf1.id));
+      check('party fill: the row says "Filled from your party", not "from your sources"', pv.sub === 'Filled from your party', JSON.stringify(pv));
+    } else check('party fill: a single-seat party fill exists to test', false);
     // Top-two: LA has races with two candidates of one party.
     const la = open('CA', ['los-angeles-ca']);
     la.groups.forEach((x) => { S.b.districts[x.key] = '*'; });

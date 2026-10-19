@@ -340,7 +340,7 @@ function judgeHTML(c: Contest): string {
   return `${c.office_explainer ? clampP(`ex-${c.id}`, c.office_explainer, 22, 'ob-lede') : ''}
     ${headsHTML(headsUp(`item:${c.id}`))}
     ${r ? reviewHTML(r, j) + meansLineHTML() : noReviewHTML(c)}
-    ${weighedIn(lineup(c)).length ? sourcesYesNo(c) : ''}
+    ${weighedIn(lineup(c)).length ? sourcesYesNo(c) : pwOnly(c)}
     <div class="duo" role="group" aria-label="Keep ${esc(j.name)}?">
       <button class="pick tall${v === 'YES' ? ' on' : ''}" data-act="pick" data-id="${esc(c.id)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="pb-${esc(c.id)}-y"><span>Keep</span><small>Mark yes on the ballot</small></button>
       <button class="pick tall${v === 'NO' ? ' on' : ''}" data-act="pick" data-id="${esc(c.id)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="pb-${esc(c.id)}-n"><span>Remove</span><small>Mark no on the ballot</small></button>
@@ -363,8 +363,10 @@ function multiJudgeHTML(c: Contest): string {
           <button class="mini${v === 'NO' ? ' on' : ''}" data-act="jpick" data-k="${esc(key)}" data-v="NO" aria-pressed="${v === 'NO'}" data-fk="jp-${hash(key)}-n">Remove</button></span></div>
         ${r || k.background || k.own_words.length ? `<button class="linkbtn" data-act="open" data-k="${esc(bk)}" aria-expanded="${isOpen(bk)}">${isOpen(bk) ? 'Less' : 'About this judge'}</button>` : ''}
         ${isOpen(bk) ? `<div class="j-more">${reviewHTML(r, k)}${k.background ? `<p class="small">${escP(k.background)}</p>` : ''}${!r && k.own_words[0] ? `<p class="small">${escP(k.own_words[0].text)} ${srcLink(k.own_words[0].source)}</p>` : ''}</div>` : ''}</li>`;
-    }).join('')}</ul>`;
+    }).join('')}</ul>${pwOnly(c)}`;
 }
+/* A row whose sources made no readable pick still names its paywalled ones, once (Kevin, Oct 19). */
+const pwOnly = (it: Item): string => { const l = lineup(it); return paywallRowHTML([...l.notFound, ...l.notChecked], cheatTitle(it)); };
 /* Sources' yes/no on a measure or a judge, as a two-column grid. */
 function sourcesYesNo(it: Item): string {
   const l = lineup(it);

@@ -495,6 +495,15 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Help friends vote: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
   // Florida counties set their own early-voting days: a county ballot gives its county's window,
   // and a statewide-only ballot calls the state's dates a minimum (Codex round 4).
+  {
+    // A judge whose chosen paywalled papers have no readable pick still gets the paywall note
+    // once (Codex, copy pass review): Ballwin's Missouri Supreme Court retention.
+    const bw = await newPage();
+    await openBallot(bw.page, '63011');
+    await openRow(bw.page, 'mo-retention-wilson');
+    check('Ballwin: a retention row names its paywalled papers with the note', /behind a paywall/.test(await text(bw.page, '#i-mo-retention-wilson')));
+    await bw.ctx.close();
+  }
   for (const [zip, re, label] of [
     ['32801', /Early voting in Orange County runs Mon, Oct 19 through Sun, Nov 1\./, "Help friends vote: Orlando gives Orange County's early-voting window"],
     ['32052', /Every Florida county offers early voting Sat, Oct 24 through Sat, Oct 31\. Some counties start earlier or finish later/, "Help friends vote: a statewide Florida ballot calls Oct 24 to 31 the counties' minimum"],

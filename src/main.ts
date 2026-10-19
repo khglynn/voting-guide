@@ -17,6 +17,9 @@ function fire(el: HTMLElement): void {
   el.classList.add('is-pressed');
   window.setTimeout(() => el.classList.remove('is-pressed'), 120);
   try { void fn(el.dataset, el); } catch (e) { console.error(e); }
+  // Count the click-dedupe window from when the action finished painting, not when it started:
+  // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
+  lastTap = Date.now();
 }
 document.addEventListener('pointerdown', (e) => {
   if (e.button !== 0) return;

@@ -26,7 +26,8 @@ scripts/ship.sh --gates-only       # all local gates in one go
 
 - `data/` is the only copy of the research data. `scripts/build-data.mjs` validates it into `public/data/` bundles (bad records are skipped and reported, never fatal); `scripts/check-data.mjs` and `scripts/check-addresses.mjs` are the data gates. New optional fields must be passed through and shape-checked in build-data and typed in `src/types.ts`.
 - `src/ballot.ts`, `src/state.ts`, `src/geo.ts`, `src/util.ts`: the model. `buildBallot` decides what is on a ballot (statewide items, place items, district questions, "may apply"). Don't replace it with a shortcut over `place.order`.
-- `src/model/`: rules the views use. `labels` (titles, seat labels, courts, pick words), `lens` ("Who do you trust?" presets), `tally` (the verdict column), `bulk` (fills with undo), `judges` (official reviews), `plan` (the next step from the state file).
+- `src/model/`: rules the views use. `labels` (titles, seat labels, courts, pick words, pass thresholds), `lens` ("Who do you trust?" presets), `tally` (the verdict column), `bulk` (fills with undo), `judges` (official reviews and the section's plain answer), `plan` (the next step from the state file; a place's own `early_in_person` window wins over the state's when every place on the ballot agrees).
+- Poll times are local: `plan.ts` keeps each state's time zones, the main one first. A new place in a state's other zone (Pensacola is Central in Eastern Florida) needs a line in `PLACE_ZONE`, or its "polls closed" moment is an hour off.
 - `src/views/`: string templates. `render.ts` paints regions and single rows; `actions.ts` holds every `data-act`; `app.ts` the flows; `main.ts` boot and the tap handler (tuned on phones; keep it).
 - `tests/`: `model.mjs` + `model-ledger.mjs`, `e2e.mjs`, `sweep.mjs`, `perf.mjs`, `shots.mjs`.
 
@@ -58,4 +59,4 @@ Changing any of this silently loses people's picks. `tests/model.mjs` pins it (a
 
 ## Test hooks (keep them, or update the tests in the same change)
 
-`id="i-<item id>"` and `data-item` on every item, `data-undecided` on undecided rows, `data-q` on district questions, `data-act` on every control, `.sec[data-sec]` with `.sec-count`, `.unopp .disc`, `.bar-txt` ("N of M decided"), `#plan`, `#cheat`, `#r-print`, `.toast`.
+`id="i-<item id>"` and `data-item` on every item, `data-undecided` on undecided rows, `data-q` on district questions, `data-act` on every control, `.sec[data-sec]` with `.sec-count`, `.unopp .disc`, `.wi-fold` (folded write-ins), `.bar-txt` ("N of M decided", choices only), `#plan`, `#cheat`, `#r-print`, `.toast`. Test-only query strings: `?today=YYYY-MM-DD`, `?now=HH:MM` (local time where the polls are), `?try=fresh|aunt|straight|sources`.

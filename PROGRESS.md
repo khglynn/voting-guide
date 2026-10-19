@@ -20,6 +20,23 @@ Resume file. Keep current. Agent notes: `AGENTS.md`.
 - Gates: `tests/model.mjs` (81), `tests/e2e.mjs` (128), the sweep 68/68 fast and full,
   `tests/perf.mjs` (taps under 250ms at 4x throttle on Chicago and Houston).
 
+## Ledger round 2 (Mon Oct 19, afternoon)
+- Data: batch 2 (judge reviews, judicial_review, heads-up notes, seat labels, district
+  finders, endorser party and lean basis, get-involved.json), own words for the rest of the
+  ballots, short titles for all 221 measures, the Florida counties' own early-voting windows
+  (`early_in_person` on a place file) and Florida's statewide window back to Oct 24 to 31.
+- Codex's two review rounds, every item fixed with a test that fails on the old code: fills
+  never overvote and Undo only takes back what the batch did; addresses match the state first;
+  postmark and drop-off are separate rules; poll closing is judged in the state's own time
+  zone(s) and an open page turns over at close; dialogs hold the keyboard; and the judge,
+  verdict and lean-basis wording fixes.
+- The phone UX review's top ten and most of its copy table: the judges section leads with
+  the plain answer; measures have short names; ranked-choice verdicts count first choices;
+  other districts' measures read "May apply"; one number for the ballot's size; quieter
+  verdict colors and no-pick lines; this week's action in the plan strip; a banner when a
+  link brings someone else's picks; write-ins fold.
+- Gates: `tests/model.mjs` (171), `tests/e2e.mjs` (174), sweep 68/68 fast and full.
+
 ## v2 history
 
 ## Done

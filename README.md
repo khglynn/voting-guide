@@ -38,8 +38,8 @@ runs every gate on a copy of exactly the commit it will make (so a file left out
 something else staged, cannot slip through), opens a pull request, waits for the `data`
 and `browser` checks to pass on that exact commit, then tests the Vercel preview once
 it serves that commit. It never merges. After the review and the merge,
-`scripts/ship.sh --after-merge <pr>` waits until production serves the merge commit,
-then sweeps it. `scripts/ship.sh --self-test` and `node scripts/check-addresses.mjs
+`scripts/ship.sh --after-merge <pr>` waits until production serves the merge commit
+(or a later `main` commit that includes it), then sweeps it. `scripts/ship.sh --self-test` and `node scripts/check-addresses.mjs
 --self-test` check the scripts' own decisions; CI runs both.
 
 `?today=2026-10-30` on the URL pretends it's that date, for checking the plan strip.
@@ -71,7 +71,9 @@ Two guards you may trip, both on purpose:
   address, in any capitalization. A public office or polling place is allowed by adding
   its whole address as the checker prints it, with a reason and a source URL, to
   `scripts/address-allowlist.json`. A person's address is never allowed: delete it from
-  the data.
+  the data. The check is a best-effort tripwire behind the real rule (nobody writes a
+  person's address anywhere, and a reviewer reads what ships), not a complete detector;
+  its known limits are listed at the top of the script.
 - **Data rules.** `scripts/check-data.mjs` blocks dates after the election, broken
   measure links, bad endorsement states and similar, and anything the build dropped (a
   nameless candidate, a race a place lists but no file defines, a build warning it has

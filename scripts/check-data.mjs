@@ -89,9 +89,16 @@ const BUILD_WARNINGS = [
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
 let report = null;
+// A report must be a real build report. Anything else (missing, unreadable, `null`, an array, missing
+// lists) blocks, and everything below that depends on the report is then not trusted.
+const isReport = (r) => !!r && typeof r === 'object' && !Array.isArray(r) && typeof r.generated === 'string'
+  && ['skippedFiles', 'skippedRecords', 'warnings'].every((k) => Array.isArray(r[k])) && !!r.counts && typeof r.counts === 'object';
 if (!fs.existsSync(reportFile)) err('build-report-missing', 'public/data/build-report.json does not exist: run `npm run data` first, then this check');
 else {
-  try { report = JSON.parse(fs.readFileSync(reportFile, 'utf8')); } catch (e) { err('build-report-missing', `build-report.json is not readable JSON: ${e.message.slice(0, 80)}`); }
+  let parsed;
+  try { parsed = JSON.parse(fs.readFileSync(reportFile, 'utf8')); } catch (e) { err('build-report-invalid', `build-report.json is not readable JSON: ${e.message.slice(0, 80)}`); }
+  if (parsed !== undefined && !isReport(parsed)) err('build-report-invalid', 'build-report.json is not a build report (it needs generated, skippedFiles, skippedRecords, warnings and counts): run `npm run data` again');
+  else if (parsed !== undefined) report = parsed;
 }
 if (report) {
   // A report older than the data describes some other data. Compare with every input the build reads.
@@ -99,10 +106,9 @@ if (report) {
   const newest = inputs.reduce((a, f) => { const t = fs.statSync(f).mtimeMs; return t > a.t ? { t, f } : a; }, { t: 0, f: '' });
   const built = Date.parse(report.generated);
   if (!Number.isFinite(built) || newest.t > built + 1000) err('build-report-stale', `build-report.json (${report.generated}) is older than ${path.relative(ROOT, newest.f)}: run \`npm run data\` again`);
-  for (const k of ['skippedFiles', 'skippedRecords', 'warnings']) if (!Array.isArray(report[k])) err('build-report-missing', `build-report.json has no ${k} list`);
-  (report.skippedFiles || []).forEach((s) => err('build-skipped-file', `${s.file}: ${s.why}`));
-  (report.skippedRecords || []).forEach((s) => err('build-skipped-record', `${s.file} ${s.id}: ${s.why}`));
-  for (const w of report.warnings || []) {
+  report.skippedFiles.forEach((s) => err('build-skipped-file', `${s.file}: ${s.why}`));
+  report.skippedRecords.forEach((s) => err('build-skipped-record', `${s.file} ${s.id}: ${s.why}`));
+  for (const w of report.warnings) {
     const hit = BUILD_WARNINGS.find(([re]) => re.test(w));
     err(hit ? hit[1] : 'build-warning-unclassified', w);
   }
@@ -233,32 +239,73 @@ for (const p of all.places) {
   if (new Set(ids).size !== ids.length) warn('place-duplicate-ids', `${p._f}: lists an id twice`);
 }
 
-/* ---------- 7b. what the build wrote: every race a ballot should show is in a bundle, with every candidate ---------- */
-// Independent of the build's own warnings, so a new way of dropping data is caught even if nobody
-// taught the build to mention it.
-if (report && fs.existsSync(BUNDLES)) {
-  const bundled = new Map();
-  for (const f of fs.readdirSync(BUNDLES).filter((x) => /^(state|place)-.*\.json$/.test(x))) {
-    let b;
-    try { b = JSON.parse(fs.readFileSync(path.join(BUNDLES, f), 'utf8')); } catch (e) { err('bundle-unreadable', `${f}: ${e.message.slice(0, 80)}`); continue; }
-    for (const it of b.items || []) if (!bundled.has(it.id)) bundled.set(it.id, it);
-  }
-  const onABallot = new Set(all.places.flatMap((p) => [...(p.contest_ids || []), ...(p.measure_ids || [])]));
-  for (const x of [...all.contests, ...all.measures]) {
-    if (!isStr(x.id)) continue;
-    const id = x.id.trim();
-    const statewide = /(^|\/)[a-z]{2}-statewide/i.test(x._f);
-    const b = bundled.get(id);
-    if (!b) {
-      if (statewide || onABallot.has(id)) err('bundle-missing-item', `${x._f} ${id}: a ballot should show it, but no bundle has it`);
-      else warn('item-on-no-ballot', `${x._f} ${id}: defined, but no place lists it and it is not statewide`);
-      continue;
+/* ---------- 7b. what the build wrote, bundle by bundle ----------
+   Independent of the build's own warnings, so a new way of dropping data is caught even if nobody
+   taught the build to mention it. Each state and place bundle is checked on its own against what the
+   raw data says it must hold: its races and measures, in order, each with exactly the raw data's
+   named candidates in order. A correct copy of a race in one bundle never vouches for a broken copy
+   in another (Codex round 2: Englewood missing a candidate passed because Aurora's copy was fine). */
+if (!fs.existsSync(BUNDLES)) err('bundle-missing', 'public/data does not exist: run `npm run data` first');
+else if (report) {
+  const readBundle = (name) => {
+    const f = path.join(BUNDLES, name);
+    if (!fs.existsSync(f)) { err('bundle-missing', `${name} was not written`); return null; }
+    try { const b = JSON.parse(fs.readFileSync(f, 'utf8')); if (b && typeof b === 'object') return b; } catch (e) { err('bundle-unreadable', `${name}: ${e.message.slice(0, 80)}`); return null; }
+    err('bundle-unreadable', `${name}: not a bundle`); return null;
+  };
+  const rawById = new Map();
+  for (const x of [...all.contests, ...all.measures]) if (isStr(x.id) && !rawById.has(x.id.trim())) rawById.set(x.id.trim(), x);
+  const named = (x) => (Array.isArray(x.candidates) ? x.candidates : []).filter((k) => k && isStr(k.name)).map((k) => k.name.trim());
+  const list = (v) => (Array.isArray(v) ? v : []);
+  const same = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);
+  const firstDiff = (want, got) => {
+    const i = want.findIndex((x, j) => x !== got[j]);
+    return i < 0 ? `has ${got.length - want.length} more than the data (${got.slice(want.length, want.length + 3).join(', ')})` : `differs at position ${i + 1}: the data has ${want[i]}, the bundle has ${got[i] ?? 'nothing'}`;
+  };
+  const checkItems = (where, b, wantIds) => {
+    const items = list(b.items);
+    const gotIds = items.map((it) => (it && it.id) || '?');
+    if (!same(wantIds, gotIds)) err('bundle-items-differ', `${where}: items ${firstDiff(wantIds, gotIds)}`);
+    for (const it of items) {
+      const raw = it && rawById.get(it.id);
+      if (!raw || raw.candidates === undefined) continue; // an unknown id is reported just above; measures have no candidates
+      const want = named(raw);
+      const got = list(it.candidates).map((k) => (k && k.name) || '');
+      if (!same(want, got)) {
+        const gone = want.filter((n) => !got.includes(n));
+        err('bundle-candidates-differ', `${where} ${it.id}: the data has ${want.length} named candidates, the bundle has ${got.length}${gone.length ? ` (missing: ${gone.slice(0, 3).join(', ')})` : ' (order or names differ)'}`);
+      }
     }
-    if (x.candidates === undefined) continue; // a measure
-    const want = (Array.isArray(x.candidates) ? x.candidates : []).filter((k) => k && isStr(k.name)).map((k) => k.name.trim()).sort();
-    const got = (b.candidates || []).map((k) => k.name).sort();
-    if (want.join('\n') !== got.join('\n')) err('bundle-candidates-differ', `${x._f} ${id}: data has ${want.length} named candidates, the bundle has ${got.length}${want.filter((n) => !got.includes(n)).length ? ` (missing: ${want.filter((n) => !got.includes(n)).slice(0, 3).join(', ')})` : ''}`);
+  };
+  // State bundles: every race and measure from that state's {st}-statewide files, contests first, in file order.
+  const statewide = new Map();
+  for (const s of all.states) {
+    const st = String(s.state || '').trim().toUpperCase();
+    if (!st) continue;
+    const fromFile = (x) => isStr(x.id) && path.basename(x._f).toLowerCase().startsWith(`${st.toLowerCase()}-statewide`);
+    const want = [...all.contests.filter(fromFile), ...all.measures.filter(fromFile)].map((x) => x.id.trim());
+    statewide.set(st, new Set(want));
+    const b = readBundle(`state-${st}.json`);
+    if (!b) continue;
+    if (!same(want, list(b.order))) err('bundle-order-differ', `state-${st}.json: order ${firstDiff(want, list(b.order))}`);
+    checkItems(`state-${st}.json`, b, want);
   }
+  // Place bundles: the place's listed races and measures that exist, in its order; items are the non-statewide ones.
+  for (const p of all.places) {
+    if (!isStr(p.id)) continue;
+    const order = [];
+    for (const id of [...list(p.contest_ids), ...list(p.measure_ids)]) if (rawById.has(id) && !order.includes(id)) order.push(id);
+    const sw = statewide.get(String(p.state || '').trim().toUpperCase()) || new Set();
+    const local = order.filter((id) => !sw.has(id));
+    const name = `place-${p.id}.json`;
+    const b = readBundle(name);
+    if (!b) continue;
+    if (!same(order, list(b.order))) err('bundle-order-differ', `${name}: order ${firstDiff(order, list(b.order))}`);
+    if (!same(local, list(b.local))) err('bundle-order-differ', `${name}: local ${firstDiff(local, list(b.local))}`);
+    checkItems(name, b, local);
+  }
+  const onABallot = new Set([...[...statewide.values()].flatMap((s) => [...s]), ...all.places.flatMap((p) => [...list(p.contest_ids), ...list(p.measure_ids)])]);
+  for (const [id, x] of rawById) if (!onABallot.has(id)) warn('item-on-no-ballot', `${x._f} ${id}: defined, but no place lists it and it is not statewide`);
 }
 
 /* ---------- 8. our own words: no em dashes, no shouting ---------- */

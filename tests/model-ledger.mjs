@@ -244,6 +244,23 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     rets.forEach((r, i) => { r.candidates[0].evaluations = saved[i]; });
   }
 
+  /* ---------- Codex #8 and the bar-group states ---------- */
+  {
+    const ev = (verdict, rating, by, concern = null) => ({ kind: 'bar_group', by, by_short: by, rating, verdict, vote: null, vote_note: null, noted_concern: concern, noted_strength: null, url: 'https://example.org', survey: null, survey_note: null });
+    const cand = (evs) => ({ name: 'Pat Example', short: 'Example', parties: [], own_words: [], evaluations: evs });
+    let r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('mixed', 'Mixed', 'B'), ev('none', 'Not listed', 'C')]));
+    check('judges: favorable, mixed and not listed never reads as all recommend', r.main === '1 of 3 recommend' && r.tone === 'mixed' && !/\ball\b/i.test(r.line), JSON.stringify([r.main, r.tone, r.line]));
+    r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('none', 'Not listed', 'B')]));
+    check('judges: one recommends and one did not rate says 1 of 2 and names the one that did not', r.main === '1 of 2 recommend' && /1 did not rate Example \(B\)/.test(r.line) && !/\ball\b/i.test(r.line), JSON.stringify([r.main, r.line]));
+    r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('favorable', 'Highly qualified', 'B'), ev('favorable', 'Qualified', 'C')]));
+    check('judges: every group recommends is all, favorable', r.main === '3 of 3 recommend' && r.tone === 'fav' && /all 3 recommend/.test(r.line), JSON.stringify([r.main, r.line]));
+    const ch = open('IL', ['chicago-il']);
+    const nm = ch.byId.get('il-cook-subcircuit-17-brooks-vacancy').candidates.find((c) => /Natalia Moore/.test(c.name));
+    r = nm && judges.candidateReview(nm);
+    check('judges: Natalia Moore (did not take part in 14 screenings) reads as declined, not 14 groups finding her unfit', !!r && r.main === 'Declined screening' && r.tone === 'none' && /did not take part/.test(r.line) && !/do not \(/.test(r.line), r ? JSON.stringify([r.main, r.line.slice(0, 160)]) : 'not found');
+    check('judges: her reason is shown as a reason, not a finding', !!r && r.concerns.length > 0 && r.concerns.every((x) => x.reason));
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

@@ -95,9 +95,13 @@ export function candidateReview(c: Candidate): Review | null {
     const rated = yes.length + no.length + mixed.length;
     const who = nameOf(c);
     let main: string; let tone: Review['tone'];
-    if (!rated) { main = declined.length ? 'Declined screening' : 'Not rated'; tone = 'none'; }
-    else if (no.length) { main = `${no.length} of ${rated} say no`; tone = no.length * 2 > rated ? 'unfav' : 'mixed'; }
-    else { main = `${yes.length} of ${rated} recommend`; tone = mixed.length ? 'mixed' : 'fav'; }
+    // Counted out of every group, so a group that did not rate or was not screened is never
+    // read as agreeing. The tone is favorable only when no group said no, gave a mixed rating
+    // or went unscreened: the same rule the "keep every judge the review favors" batch uses.
+    const n = groups.length;
+    if (!rated) { main = declined.length === n ? 'Declined screening' : declined.length ? `Not rated; ${declined.length} not screened` : 'Not rated'; tone = 'none'; }
+    else if (no.length) { main = `${no.length} of ${n} say no`; tone = no.length * 2 > rated ? 'unfav' : 'mixed'; }
+    else { main = `${yes.length} of ${n} recommend`; tone = mixed.length || declined.length ? 'mixed' : 'fav'; }
     const parts = [
       yes.length ? `${yes.length === groups.length ? `all ${yes.length}` : yes.length} recommend ${who}${yes.length <= 3 ? ` (${listNames(yes)})` : ''}` : '',
       no.length ? `${no.length} do not (${listNames(no)})` : '',

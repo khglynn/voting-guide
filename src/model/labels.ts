@@ -11,7 +11,7 @@ import { isMultiJudge, isMultiSeat, isRCV, ranksOf } from '../ballot';
 const QUIET_PAREN = /\s*\((?:non-?partisan|partisan|countywide|municipal court district|retention|unexpired term|[A-Z]{2,6})\)/gi;
 
 export function cleanOffice(office: string): string {
-  return office.replace(QUIET_PAREN, '').replace(/\s{2,}/g, ' ').trim();
+  return office.replace(QUIET_PAREN, '').replace(/\s+judges? retention$/i, ' judges').replace(/\s{2,}/g, ' ').trim();
 }
 
 /* "Circuit Court of Cook County: retain Judge Lewis Nixon?" -> "Circuit Court of Cook County".

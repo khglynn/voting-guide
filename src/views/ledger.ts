@@ -200,7 +200,7 @@ function foldSummary(entries: Entry[]): string {
 }
 
 /* Long judge sections fold by court: one heading per court, opened on demand. */
-const GROUP_AT = 12;
+const GROUP_AT = 24;
 interface Block { key: string; label: string; entries: Entry[] }
 function blocks(sec: SectionKey, entries: Entry[]): Block[] | null {
   if (sec !== 'judicial') return null;

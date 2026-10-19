@@ -92,6 +92,7 @@ b, strong { font-weight: 600; }
 .place { font-family: var(--f-display); font-weight: 600; font-size: 44px; line-height: 1; letter-spacing: -.02em; font-variation-settings: "SOFT" 60, "opsz" 144; margin-top: 2px; overflow-wrap: anywhere; }
 .front .place { font-size: 40px; }
 .where { margin-top: 8px; font-size: 15.5px; color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
+.where-note { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
 .office { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
 .office a { color: var(--ink-2); }
 .addr-cta { margin-top: 6px; font-size: 14.5px; }

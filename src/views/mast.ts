@@ -33,14 +33,18 @@ export function mastHTML(): string {
   const idx = S.index;
   if (S.view === 'ballot' && S.ballot) {
     const b = S.ballot;
-    const name = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
-    const county = b.places.length === 1 ? countyName(b.places[0]) : '';
+    // "Brooklyn (Kings County)": the name up top, the note in parentheses on the line below.
+    const bare = (l: string) => l.replace(/\s*\(.*\)$/, '');
+    const name = b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
+    const note = b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
+    const county = b.places.length === 1 && b.st !== 'DC' ? countyName(b.places[0]) : '';
     const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip ? `ZIP ${S.b.zip}` : ''].filter(Boolean).join('. ');
     const office = b.places.map((p) => p.county_election_office).find(Boolean);
     const officeName = office ? office.name.split(/[,:]\s*\d/)[0].trim() : '';
     return `<header class="mast wrap">${tryBanner()}
       <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
       <h1 class="place">${esc(name)}</h1>
+      ${note && !/county\)?$/i.test(note) ? `<p class="where-note">${esc(note.charAt(0).toUpperCase() + note.slice(1))}</p>` : ''}
       <p class="where"><span>${esc(where)}.</span> <button class="linkbtn" data-act="change-place" data-fk="change-place">Not your ballot? Change</button></p>
       ${office ? `<p class="office">Election office: ${office.url ? ext(office.url, officeName) : esc(officeName)}${office.phone ? `, ${telHTML(office.phone)}` : ''}</p>` : ''}
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}

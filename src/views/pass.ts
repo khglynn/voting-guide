@@ -29,7 +29,7 @@ export function messages(): { fam: string; pub: string } {
   const stepLine = step.head.map((p) => p[0]).join('');
   const site = `${location.origin}${location.pathname}`;
   const ed = fmtDate(h.election_date);
-  const fam = `I just made my plan to vote. Election Day is ${ed}. This guide shows what’s on your ballot in plain words and who endorsed whom: ${site}\n\nDo you have a plan? Text three people and ask them too.`;
+  const fam = `I just made my plan to vote. Election Day is ${ed}. This guide shows what’s on your ballot in plain words and who endorsed whom: ${site}\n\nDo you have a plan? Text three people and ask them too. Message me if you have questions.`;
   const reg = registrationAlert(h, undefined, true);
   const look = h.early_in_person.lookup_url || h.election_day.lookup_url || h.mail_ballot.drop_box_lookup_url;
   const pub = [

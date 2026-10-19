@@ -208,12 +208,18 @@ export function verdict(it: Item): Verdict {
   const w = weighedIn(l);
   if (!w.length) {
     const why = noneWhy(l, chosen().length > 0);
+    // A judge with no review in our data yet and no source picks: point to what the row holds.
+    // (A wording choice only: no fact is read out of the prose.)
+    if (it.kind === 'contest' && it.is_retention && (why === 'no_cover' || why === 'not_checked')) {
+      const reviewed = /commission|evaluat|review|rated|recommend|bar association|poll/i.test(`${it.why_it_matters || ''} ${it.candidates.map((c) => c.own_words.map((o) => o.text).join(' ')).join(' ')}`);
+      return { kind: 'none', main: reviewed ? 'See the review' : 'Keep or remove?', sub: '', why };
+    }
     return { kind: 'none', main: NONE_WORDS[why], sub: '', why };
   }
   if (l.groups.length === 1) {
     const g = l.groups[0];
     const named = namedLineup(l, it);
-    return { kind: 'agree', main: g.label, sub: named || `all ${w.length} agree` };
+    return { kind: 'agree', main: g.label, sub: named || (w.length === 1 ? w[0].short : `all ${w.length} agree`) };
   }
   const named = namedLineup(l, it);
   return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split' };

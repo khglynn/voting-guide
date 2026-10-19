@@ -130,5 +130,13 @@
       "label": "Find your districts and sample ballot",
       "url": "https://voteorangefl.gov/whats-on-my-ballot/"
     }
-  ]
+  ],
+  "early_in_person": {
+    "start": "2026-10-19",
+    "end": "2026-11-01",
+    "hours_note": "Orange County: Monday, October 19 through Sunday, November 1, 8:00 AM to 8:00 PM, at any of 27 early voting sites in the county.",
+    "lookup_url": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "source": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "confidence": "verified"
+  }
 }

@@ -64,6 +64,12 @@ function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   }));
 }
 
+const SEAT = /^(?:place|position|seat|post|no\.)\s*\d+\b/i;
+export function sameScopeSeats(cs: Contest[]): boolean {
+  const scope = (c: Contest) => (c.scope_plain || '').trim().toLowerCase();
+  return cs.every((c) => SEAT.test((c.district || '').trim())) && cs.every((c) => scope(c) && scope(c) === scope(cs[0]));
+}
+
 export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
   const byId = new Map<string, Item>();
   sb.items.forEach((i) => byId.set(i.id, i));
@@ -111,6 +117,13 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
   const groupOf: Record<string, string> = {};
   const mayApply = new Set<string>();
   for (const [k, members] of byOffice) {
+    // Numbered seats (Place 1, Position 4, Seat 3) that share one scope are separate races on the
+    // same ballot (every Klein ISD voter picks both trustee positions), not districts to choose
+    // between, so they never become a question. Each one may still apply, by its scope.
+    if (members.length >= 2 && sameScopeSeats(members.map((m) => byId.get(m) as Contest))) {
+      members.forEach((m) => { if (!coversPlace(byId.get(m) as Contest, places)) mayApply.add(m); });
+      continue;
+    }
     if (members.length >= 2) {
       const first = byId.get(members[0]) as Contest;
       groups.push({ key: k, level: first.level, office: first.office, members, kind: districtNum(first).kind });

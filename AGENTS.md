@@ -6,7 +6,7 @@ A public, one-page guide to the Nov 3, 2026 general election for Kevin's friends
 
 ## Run and test
 
-Node 20+. On Kevin's Macs a v4 node at `/usr/local/bin` shadows the real one: prefix commands with `export PATH=/usr/local/opt/node@22/bin:$PATH;`.
+Node 20+. If `node --version` shows an old version, prefix commands with `export PATH=/usr/local/opt/node@22/bin:$PATH;` (a stray 2016 node at `/usr/local/bin` shadowed the real one on Kevin's personal Mac until Oct 19, 2026). Pick preview ports Node's `fetch` accepts: 4173 to 4189 and 4191 up work, but 4190 is on its blocked list, so the sweep fails there with "bad port".
 
 ```sh
 npm ci && npm run playwright:install

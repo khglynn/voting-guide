@@ -559,7 +559,7 @@ sizes['index.json'] = write('index.json', index);
 // Optional: "Pass it on" ways to get involved and the texting study, from the data track.
 if (fs.existsSync(path.join(DATA, 'get-involved.json'))) {
   const gi = readJson('get-involved.json');
-  if (gi && typeof gi === 'object' && !Array.isArray(gi)) sizes['get-involved.json'] = write('get-involved.json', gi);
+  if (gi && typeof gi === 'object' && !Array.isArray(gi)) { sizes['get-involved.json'] = write('get-involved.json', gi); index.involved = true; write('index.json', index); }
   else warn('get-involved.json is not an object; skipped it');
 }
 

@@ -233,4 +233,6 @@ export interface Index {
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] }>;
   places: Record<string, { label: string; state: string; counties: string[]; local_count: number }>;
   zips: Record<string, string[]>;
+  /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
+  involved?: boolean;
 }

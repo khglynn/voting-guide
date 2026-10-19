@@ -32,7 +32,7 @@ export async function ensureIndex(): Promise<Index> {
 /* Optional: ways to get involved, from the data track. A missing file is normal. */
 let involvedTried = false;
 export async function loadInvolved(): Promise<void> {
-  if (involvedTried) return;
+  if (involvedTried || !S.index || !S.index.involved) return;
   involvedTried = true;
   try {
     const r = await fetch(`${BASE}data/get-involved.json`, { cache: 'no-cache' });

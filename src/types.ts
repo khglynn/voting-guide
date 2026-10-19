@@ -16,7 +16,30 @@ export interface Candidate {
   own_words: { text: string; is_quote: boolean; source: string | null }[];
   lwv_status: string | null;
   lwv_url: string | null;
+  /* "none_found" when a real search found no statement; own_words_checked says where and when. */
+  own_words_status?: 'none_found';
+  own_words_checked?: { on: string; where: string[] };
+  /* Official job reviews and bar ratings, for judges (retention and judicial races). */
+  evaluations?: Evaluation[];
 }
+
+export interface Evaluation {
+  by: string;
+  by_short: string;
+  kind: 'official_commission' | 'bar_group' | 'bar_poll' | 'bar_committee';
+  rating: string;
+  verdict: 'favorable' | 'unfavorable' | 'mixed' | 'none';
+  vote: string | null;
+  survey: { question: string | null; attorneys: { yes_pct: number; n: number | null } | null; non_attorneys: { yes_pct: number; n: number | null } | null } | null;
+  noted_strength: string | null;
+  noted_concern: string | null;
+  url: string;
+  verified_on: string | null;
+  confidence: Confidence;
+}
+
+/* A short note on a known confusion point, shown once where it applies. */
+export interface HeadsUp { text: string; applies_to: string; source?: string | null }
 
 export interface Contest {
   kind: 'contest';
@@ -42,6 +65,8 @@ export interface Contest {
   open_seat: boolean | null;
   term_years: number | null;
   is_retention: boolean;
+  /* Short distinguishing label ("Seat 3", "Subdistrict 4") when one office repeats on a ballot. */
+  seat_label?: string;
   candidates: Candidate[];
   sources: Src[];
   confidence: Confidence;
@@ -86,6 +111,9 @@ export interface Endorser {
   default_on: boolean;
   endorses_candidates: boolean;
   endorses_measures: boolean;
+  /* For party organizations: the party they speak for ("Democratic", "Working Families"). */
+  party?: string;
+  lean_basis_kind?: 'outside_rating' | 'party' | 'mission';
 }
 
 export interface Endorsement {
@@ -154,6 +182,20 @@ export interface HowTo {
   gotchas: string[];
   situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence }[];
   sources: Src[];
+  heads_up?: HeadsUp[];
+  judicial_review?: JudicialReview | null;
+}
+
+/* How judges get on this state's ballot and what their reviews mean, in plain words. */
+export interface JudicialReview {
+  how_judges_get_here: string | null;
+  who_reviews: string | null;
+  what_the_rating_means: string | null;
+  what_it_doesnt_mean: string | null;
+  to_keep_a_judge: string | null;
+  history: string | null;
+  read_one: { label: string; url: string } | null;
+  sources: Src[];
 }
 
 export interface StateBundle {
@@ -176,6 +218,9 @@ export interface PlaceBundle {
   zips: string[];
   zip_caveats: string | null;
   notes: string | null;
+  county_label?: string | null;
+  district_finders?: { office_match: string; label: string; url: string }[];
+  heads_up?: HeadsUp[];
   order: string[];
   local: string[];
   items: Item[];

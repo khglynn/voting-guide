@@ -100,7 +100,7 @@ export function renderSection(sec: SectionKey): void {
 export function renderBallot(): void { anchored(() => render(['ballot'])); }
 
 /* One row (an item or a district question), in place; its section's count follows. */
-export function renderRow(key: string | null): void {
+export function renderRow(key: string | null, counts = true): void {
   if (!key || S.ui.view !== 'ballot') return;
   const b = S.ballot!;
   if (key.startsWith('q:')) {
@@ -113,6 +113,7 @@ export function renderRow(key: string | null): void {
   const el = $(`#i-${CSS.escape(key)}`);
   if (!el || !el.classList.contains('row') || el.classList.contains('is-off')) { renderSection(sectionOf(it)); return; }
   withFocusKept(() => { el.outerHTML = rowHTML(it); });
+  if (!counts) return;
   const sec = sectionOf(it);
   const entries = entriesBySection().get(sec) || [];
   // Fold state changed (the section is now complete, say): repaint the section, held in place.

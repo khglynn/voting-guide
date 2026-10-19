@@ -250,8 +250,17 @@ export type Entry =
   | { t: 'groupline'; group: Group }
   | { t: 'notmine'; id: string };
 
+/* Cached per ballot and per district answers: a render asks for this many times. */
+let entriesCache: { b: Ballot; sig: string; v: Map<SectionKey, Entry[]> } | null = null;
 export function entriesBySection(): Map<SectionKey, Entry[]> {
   const b = S.ballot!;
+  const sig = `${JSON.stringify(S.b.districts)}|${S.b.notMine.join(',')}`;
+  if (entriesCache && entriesCache.b === b && entriesCache.sig === sig) return entriesCache.v;
+  const v = computeEntries(b);
+  entriesCache = { b, sig, v };
+  return v;
+}
+function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
   const out = new Map<SectionKey, Entry[]>();
   const push = (s: SectionKey, e: Entry) => { out.set(s, [...(out.get(s) || []), e]); };
   const seenGroup = new Set<string>();

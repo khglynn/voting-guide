@@ -38,11 +38,11 @@ A.row = (d) => {
   const prev = S.ui.row;
   const prevKeep = S.ui.keep;
   S.ui.keep = null;
-  if (prev === key) { S.ui.row = null; renderRow(key); return; }
+  if (prev === key) { S.ui.row = null; renderRow(key, false); return; }
   S.ui.row = key;
-  if (prev) renderRow(prev);
+  if (prev) renderRow(prev, false);
   if (prevKeep && prevKeep !== key && S.ui.onlyUndecided) renderRow(prevKeep);
-  renderRow(key);
+  renderRow(key, false);
   scrollRowIntoView(key);
 };
 A.goto = (d) => {

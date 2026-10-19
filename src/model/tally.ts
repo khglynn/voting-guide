@@ -59,7 +59,23 @@ function choiceRank(it: Item, key: string): number {
   return key === 'YES' || key === 'FOR' ? 0 : key === 'NO' || key === 'AGAINST' ? 1 : 2;
 }
 
-export function lineup(it: Item, sources: Endorser[] = chosen()): Lineup {
+/* Lineups for the chosen sources are cached per ballot and per source list; they depend on
+   nothing else. Picks never change a lineup. */
+let lineCache: { b: Ballot; sig: string; m: Map<string, Lineup> } | null = null;
+export function lineup(it: Item, sources?: Endorser[]): Lineup {
+  const b = S.ballot!;
+  if (!sources) {
+    const sig = S.b.sources ? S.b.sources.join(',') : '*';
+    if (!lineCache || lineCache.b !== b || lineCache.sig !== sig) lineCache = { b, sig, m: new Map() };
+    let l = lineCache.m.get(it.id);
+    if (!l) { l = computeLineup(it, chosen()); lineCache.m.set(it.id, l); }
+    return l;
+  }
+  return computeLineup(it, sources);
+}
+/* For tests that rewrite endorsement rows in place. */
+export const clearLineups = (): void => { lineCache = null; };
+function computeLineup(it: Item, sources: Endorser[]): Lineup {
   const b = S.ballot!;
   const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], guides: [], relevant: [] };
   const groups = new Map<string, LGroup>();

@@ -76,7 +76,7 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     const it = b.byId.get('co-amendment-81');
     const [e1, e2, e3] = b.endorsers.filter((e) => e.default_on && e.endorses_measures).slice(0, 3);
     S.b.sources = [e1.id, e2.id, e3.id];
-    const set = (rows) => { b.ends[it.id] = rows; };
+    const set = (rows) => { b.ends[it.id] = rows; tally.clearLineups(); };
     const row = (s, c = null) => ({ s, c, note: null, why: null, url: 'https://example.org', date: null, conf: 'verified' });
     set({ [e1.id]: row('endorsed', ['NO']), [e2.id]: row('endorsed', ['NO']) });
     let v = tally.verdict(it);
@@ -94,6 +94,7 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     v = tally.verdict(it);
     check('verdict: sources that cover this area but have no row: not checked yet', v.kind === 'none' && v.why === 'not_checked', JSON.stringify(v));
     S.b.sources = [];
+    tally.clearLineups();
     v = tally.verdict(it);
     check('verdict: no sources chosen says so', v.kind === 'none' && v.why === 'no_sources', JSON.stringify(v));
     S.b.sources = [e1.id];

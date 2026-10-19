@@ -447,13 +447,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent U.S. representative for District 10 since 2023. Unopposed in the general election.",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/florida"
    }
@@ -2001,7 +1995,15 @@
     "background": "Did not respond to the News Collaborative of Central Florida questionnaire (News 6 voter guide).",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/florida"
+    "lwv_url": "https://www.vote411.org/florida",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site and questionnaire web search",
+      "News 6 and News Collaborative of Central Florida Seat 3 questionnaire"
+     ]
+    }
    }
   ],
   "sources": [
@@ -2040,7 +2042,15 @@
     "background": "Did not respond to the News Collaborative of Central Florida questionnaire (News 6 voter guide).",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/florida"
+    "lwv_url": "https://www.vote411.org/florida",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site and questionnaire web search",
+      "News 6 and News Collaborative of Central Florida Seat 5 questionnaire"
+     ]
+    }
    },
    {
     "name": "Jimm Middleton",

@@ -31,7 +31,8 @@
         "url": "https://www.axios.com/local/portland/2026/10/14/2026-election-voter-guide-races-ballot-measure"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Resident votes on city spending"
   },
   {
     "id": "reynolds-sd-26-268",
@@ -58,6 +59,7 @@
     },
     "official_text_url": "https://multco.us/info/ballot-measure-filings-november-2026-general-election",
     "official_guide_url": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Reynolds school building bonds"
   }
 ]

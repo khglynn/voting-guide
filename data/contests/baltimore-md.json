@@ -3,7 +3,7 @@
     "id": "md-us-house-2",
     "state": "MD",
     "level": "federal",
-    "office": "U.S. Representative, District 2",
+    "office": "U.S. Representative",
     "district": "CD-2",
     "scope_plain": "Only a small slice of Baltimore City: about 5% of city voters, in north Baltimore near the county line (precincts voting at places in Hampden, Medfield, Roland Park, Mount Washington and along York Road and North Charles Street). Most of District 2 is in Baltimore County. Downtown and ZIP 21201 are in District 7, not here.",
     "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
@@ -87,13 +87,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 2"
   },
   {
     "id": "md-us-house-7",
     "state": "MD",
     "level": "federal",
-    "office": "U.S. Representative, District 7",
+    "office": "U.S. Representative",
     "district": "CD-7",
     "scope_plain": "About 95% of Baltimore City voters, including all of downtown, Mount Vernon, the UMB campus and ZIP 21201. A slice of north Baltimore votes in District 2 instead.",
     "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
@@ -140,9 +141,9 @@
         "background": "Dundalk High School graduate whose work history includes structural steel painting, home improvement and the media outlet DundalkTV (Ballotpedia).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires. No campaign website listed.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "continue working with members of the Law Enforcement Community & groups that support our officers",
+            "is_quote": true,
+            "source": "https://www.ballotready.org/people/scott-m-collier"
           }
         ],
         "lwv_status": "declined",
@@ -167,13 +168,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 7"
   },
   {
     "id": "md-sd-40",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 40",
+    "office": "State Senator",
     "district": "SD-40",
     "scope_plain": "Voters in Legislative District 40: west and central Baltimore, including the UMB campus area and downtown west, part of Mount Vernon, Bolton Hill, Reservoir Hill, Upton, Sandtown, Hollins Market, Pigtown and parts of Hampden. Neighborhood list is approximate (based on where precincts vote).",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -193,9 +195,9 @@
         "background": "48. State senator for District 40 since 2019; vice chair of the Senate Finance Committee. Delegate for District 40, 2015 to 2019 (Banner).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured in our saved copy.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Antonio believes strong neighborhoods require investment and access to opportunity.",
+            "is_quote": true,
+            "source": "https://www.antoniohayes.com/delivering-for-baltimore"
           }
         ],
         "lwv_status": "declined",
@@ -208,15 +210,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. No bio on The Banner's guide.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Working Class Party of Maryland campaign page (statement belongs to Cathy White, not Rebar)",
+            "VOTE411 Senate District 40 questionnaire (candidate has not yet responded)",
+            "Web search: Alan Rebar campaign priorities Maryland"
+          ]
+        }
       }
     ],
     "sources": [
@@ -237,13 +242,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 40"
   },
   {
     "id": "md-sd-41",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 41",
+    "office": "State Senator",
     "district": "SD-41",
     "scope_plain": "Voters in Legislative District 41: northwest and west Baltimore, including Roland Park, Mount Washington, Forest Park and Edmondson Village areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -263,9 +269,9 @@
         "background": "Sitting delegate for District 41, running for the Senate seat.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "In the Senate, he'll keep building justice that protects every neighborhood.",
+            "is_quote": true,
+            "source": "https://www.malcolmpruff.com/"
           }
         ],
         "lwv_status": "declined",
@@ -290,13 +296,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 41"
   },
   {
     "id": "md-sd-43",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 43",
+    "office": "State Senator",
     "district": "SD-43",
     "scope_plain": "Voters in Legislative District 43: north-central Baltimore (the city part of District 43, called 43A for delegates), including Charles Village, Waverly, Govans and Hamilton areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -316,9 +323,9 @@
         "background": "Sitting state senator for District 43.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Marylanders deserve a government that is clear, efficient, and accountable to the people it serves.",
+            "is_quote": true,
+            "source": "https://www.senatormarywashington.com/2026-session"
           }
         ],
         "lwv_status": "declined",
@@ -343,13 +350,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 43"
   },
   {
     "id": "md-sd-45",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 45",
+    "office": "State Senator",
     "district": "SD-45",
     "scope_plain": "Voters in Legislative District 45: east and northeast Baltimore, including parts of 21202, 21205, 21206, 21213 and 21218. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -369,9 +377,9 @@
         "background": "Sitting state senator for District 45.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Delivering exceptional service, disciplined budgeting, and focused resources for a better Baltimore.",
+            "is_quote": true,
+            "source": "https://corymccrayformaryland.com/"
           }
         ],
         "lwv_status": "declined",
@@ -396,13 +404,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 45"
   },
   {
     "id": "md-sd-46",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 46",
+    "office": "State Senator",
     "district": "SD-46",
     "scope_plain": "Voters in Legislative District 46: southeast Baltimore and the harbor, including part of Mount Vernon and downtown, the Inner Harbor, Federal Hill, Fells Point, Canton, Highlandtown, Locust Point, Brooklyn and Curtis Bay. Neighborhood list is approximate (based on where precincts vote).",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -449,9 +458,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Push back on new taxes and fees that squeeze working families and small businesses already stretched thin.",
+            "is_quote": true,
+            "source": "https://www.digmanforbaltimore.com/"
           }
         ],
         "lwv_status": "declined",
@@ -476,13 +485,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 46"
   },
   {
     "id": "md-hd-40",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 40",
+    "office": "House of Delegates",
     "district": "HD-40",
     "scope_plain": "Voters in Legislative District 40 (west and central Baltimore, including the UMB campus area). Same area as State Senate District 40.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -583,13 +593,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 40"
   },
   {
     "id": "md-hd-41",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 41",
+    "office": "House of Delegates",
     "district": "HD-41",
     "scope_plain": "Voters in Legislative District 41 (northwest and west Baltimore). Same area as State Senate District 41. Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -607,15 +618,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Sitting delegate for District 41.",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+        "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and 2026 education-priority web search",
+            "delsandy.com (blocked)",
+            "LWV Baltimore City 2026 guide (no response)"
+          ]
+        }
       },
       {
         "name": "Sean A. Stinnett",
@@ -626,9 +640,9 @@
         "background": "Sitting delegate for District 41.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Passionate about public safety, youth empowerment, and supporting small and minority-owned businesses",
+            "is_quote": true,
+            "source": "https://www.seanstinnett.com/"
           }
         ],
         "lwv_status": "declined",
@@ -680,13 +694,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 41"
   },
   {
     "id": "md-hd-43a",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 43A",
+    "office": "House of Delegates",
     "district": "HD-43A",
     "scope_plain": "Voters in subdistrict 43A, the Baltimore City part of District 43 (north-central Baltimore). Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -766,13 +781,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 43A"
   },
   {
     "id": "md-hd-45",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 45",
+    "office": "House of Delegates",
     "district": "HD-45",
     "scope_plain": "Voters in Legislative District 45 (east and northeast Baltimore). Same area as State Senate District 45. Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -819,9 +835,9 @@
         "background": "Delegate for District 45 from 2020 to 2023; has worked as director of support operations at the Maryland Department of Human Services (Ballotpedia).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Dedicated fighter for public safety, introducing legislation for specialized gun courts",
+            "is_quote": true,
+            "source": "https://chanelbranch.com/"
           }
         ],
         "lwv_status": "declined",
@@ -834,13 +850,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "39. Sitting delegate for District 45; member of the House Ways and Means Committee and chair of its Early Childhood and Special Education Subcommittee. Lawyer (University of Baltimore School of Law) (Banner).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -894,13 +904,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 45"
   },
   {
     "id": "md-hd-46",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 46",
+    "office": "House of Delegates",
     "district": "HD-46",
     "scope_plain": "Voters in Legislative District 46 (southeast Baltimore and the harbor, including part of Mount Vernon and downtown in ZIP 21201). Same area as State Senate District 46.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -920,9 +931,9 @@
         "background": "Sitting delegate for District 46.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters or Baltimore Banner questionnaires.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Committed to fighting for victims of crime and increasing public safety measures.",
+            "is_quote": true,
+            "source": "https://www.lukeclippinger.com/"
           }
         ],
         "lwv_status": "declined",
@@ -964,9 +975,9 @@
         "background": "63. Delegate for District 46 (Banner lists 2022 to present); chairs the Baltimore City House Delegation and a transportation subcommittee. Founder of Patterson Park Public Charter School (Banner).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire. The Banner's questionnaire answers were not captured.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "Robbyn Lewis is a leader in health care, transit, and safe & livable communities.",
+            "is_quote": true,
+            "source": "https://www.robbynlewis.com/"
           }
         ],
         "lwv_status": "declined",
@@ -1022,7 +1033,8 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 46"
   },
   {
     "id": "baltimore-circuit-court-8",
@@ -1046,13 +1058,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Appointed to the Baltimore City Circuit Court in June 2025 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -1063,13 +1069,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Baltimore City Circuit Court judge since March 6, 2009 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -1080,13 +1080,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Appointed to the Baltimore City Circuit Court in September 2024 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -1097,13 +1091,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Appointed to the Baltimore City Circuit Court in September 2024 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -1114,13 +1102,7 @@
         "website": "https://baltimorecitysittingjudges.com/tipton-full-bio",
         "website_confidence": "sourced",
         "background": "Appointed to the Baltimore City Circuit Court on February 16, 2024 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       },
@@ -1131,13 +1113,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Appointed to the Baltimore City Circuit Court in February 2024 (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire. Runs as one of six candidates Ballotpedia lists as incumbents.",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
         "lwv_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
       }
@@ -1249,9 +1225,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "From a 2022 Baltimore Brew interview: \"If you don’t address these staffing shortages, everything else falls apart\"",
+            "is_quote": true,
+            "source": "https://www.baltimorebrew.com/2022/07/13/clerk/"
           }
         ],
         "lwv_status": "declined",
@@ -1388,9 +1364,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "From 2022 joint testimony by three Orphans’ Court judges: \"we are able to devote the time and attention to mastering the subject matter of estates\"",
+            "is_quote": true,
+            "source": "https://mgaleg.maryland.gov/cmte_testimony/2022/jpr/1H3MtdlwsS-w0SuXLc1Chrj79b0M7MiQ_.pdf"
           }
         ],
         "lwv_status": "declined",
@@ -1405,9 +1381,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "From 2022 joint testimony by three Orphans’ Court judges: \"we are able to devote the time and attention to mastering the subject matter of estates\"",
+            "is_quote": true,
+            "source": "https://mgaleg.maryland.gov/cmte_testimony/2022/jpr/1H3MtdlwsS-w0SuXLc1Chrj79b0M7MiQ_.pdf"
           }
         ],
         "lwv_status": "declined",
@@ -1422,9 +1398,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire (\"No response received by deadline\").",
-            "is_quote": false,
-            "source": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920"
+            "text": "From 2022 joint testimony by three Orphans’ Court judges: \"we are able to devote the time and attention to mastering the subject matter of estates\"",
+            "is_quote": true,
+            "source": "https://mgaleg.maryland.gov/cmte_testimony/2022/jpr/1H3MtdlwsS-w0SuXLc1Chrj79b0M7MiQ_.pdf"
           }
         ],
         "lwv_status": "declined",

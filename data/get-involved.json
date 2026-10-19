@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-19",
+  "study": {
+    "title": "Why text a friend?",
+    "summary": "A personal reminder can help a friend follow through on voting.",
+    "is_quote": false,
+    "citation": {
+      "authors": [
+        "Aaron Schein",
+        "Keyon Vafa",
+        "Dhanya Sridhar",
+        "Victor Veitch",
+        "Jeffrey Quinn",
+        "James Moffet",
+        "David M. Blei",
+        "Donald P. Green"
+      ],
+      "title": "Assessing the Effects of Friend-to-Friend Texting on Turnout in the 2018 US Midterm Elections",
+      "venue": "Proceedings of the Web Conference 2021",
+      "year": 2021,
+      "pages": "2025-2036",
+      "doi": "10.1145/3442381.3449800",
+      "url": "https://doi.org/10.1145/3442381.3449800",
+      "paper_url": "https://www.cs.columbia.edu/~blei/papers/ScheinVafaSridharVeitchQuinnMoffetBleiGreen2021.pdf",
+      "study_year": 2018,
+      "app": "Outvote"
+    },
+    "effect": {
+      "label": "Friend-to-friend texts in the 2018 study",
+      "estimate_pp": 8.26,
+      "display_pp": 8.3,
+      "standard_error_pp": 3.61,
+      "ci_95_pp": [
+        1.18,
+        15.34
+      ],
+      "estimand": "covariate-adjusted complier average causal effect",
+      "plain": "About 8 percentage points among people whose receipt of a text changed because of the experiment’s assignment.",
+      "assignment_effect_pp": 2.09,
+      "assignment_standard_error_pp": 0.91,
+      "refined_sample_n": 27464,
+      "source": "https://www.cs.columbia.edu/~blei/papers/ScheinVafaSridharVeitchQuinnMoffetBleiGreen2021.pdf",
+      "locator": "Section 4 and Figure 3, printed page 2031",
+      "is_quote": false,
+      "confidence": "verified"
+    },
+    "comparison": {
+      "label": "Large-scale organizational texts in other studies",
+      "estimate_pp": 0.44,
+      "source": "https://www.cs.columbia.edu/~blei/papers/ScheinVafaSridharVeitchQuinnMoffetBleiGreen2021.pdf",
+      "locator": "Section 5, printed page 2031",
+      "basis": "The published paper describes this as a meta-analysis average and cites Haenschen and Mann’s 2021 technical report, reference 15.",
+      "same_experiment": false,
+      "caveat": "These numbers come from different studies. They are not a head-to-head test of friends and strangers.",
+      "is_quote": false,
+      "confidence": "verified"
+    },
+    "caveats": [
+      "The 8.3-point estimate applies to a selected group in one 2018 app experiment. It is not the average effect for everyone offered a text.",
+      "The 95 percent confidence interval was about 1.2 to 15.3 percentage points. Matching people to voter records and incomplete messaging complicated the analysis.",
+      "A follow-up experiment in the 2020 presidential election found a smaller estimate, with a confidence interval that included no effect.",
+      "This study does not establish that texting is always the most effective way to help after voting, or test an ask to text three people."
+    ],
+    "follow_up": {
+      "title": "Assessing the Effects of Friend-to-Friend Texting on Turnout in the 2020 U.S. Presidential Election",
+      "authors": [
+        "Aaron Schein",
+        "David M. Blei",
+        "Donald P. Green"
+      ],
+      "estimate_pp": 2.21,
+      "ci_95_pp": [
+        -2.3,
+        6.72
+      ],
+      "url": "https://aschein.github.io/pdfs/schein_blei_green_2021.pdf",
+      "locator": "Introduction and Figure 1",
+      "confidence": "verified"
+    },
+    "impactive_claim": {
+      "url": "https://www.impactive.io/blog/largest-ever-study-on-relational-organizing-shows-8-3-percent-increase-in-turnout",
+      "published_on": "2020-10-09",
+      "usable_with_caveats": true,
+      "assessment": "Its 8.3-point result traces to the 2018 Outvote study. Cite the published paper instead of treating this vendor post as separate evidence.",
+      "unit_correction": "Use percentage points. The headline and some body text use a percent sign ambiguously.",
+      "comparison_correction": "The post and older working paper use 0.29 points for mass texts. The published 2021 paper uses 0.44 points.",
+      "do_not_reuse": [
+        "largest-ever",
+        "single most effective",
+        "a guaranteed increase for each text"
+      ],
+      "confidence": "verified"
+    },
+    "sources": [
+      "https://www.cs.columbia.edu/~blei/papers/ScheinVafaSridharVeitchQuinnMoffetBleiGreen2021.pdf",
+      "https://aschein.github.io/pdfs/schein_blei_green_2021.pdf",
+      "https://www.impactive.io/blog/largest-ever-study-on-relational-organizing-shows-8-3-percent-increase-in-turnout"
+    ],
+    "verified_on": "2026-10-19",
+    "confidence": "verified",
+    "display_note": "Show the study caveats with the numbers. Do not present the two estimates as a head-to-head test or a guaranteed effect.",
+    "text": "In a 2018 study of the Outvote app, people who got a text from a friend because of the experiment were about 8 percentage points more likely to vote. Mass texts from organizations averaged about half a point in other studies, so this is not a head-to-head test. A 2020 follow-up found a smaller effect that could have been zero.",
+    "cite": "Schein and others, Proceedings of the Web Conference 2021",
+    "url": "https://www.cs.columbia.edu/~blei/papers/ScheinVafaSridharVeitchQuinnMoffetBleiGreen2021.pdf"
+  },
+  "get_involved": {
+    "title": "Beyond texting",
+    "intro": "Start with a practical way to help. If you want to organize for a cause, these groups describe their goals in their own words.",
+    "groups": [
+      {
+        "id": "nonpartisan",
+        "label": "Nonpartisan",
+        "items": [
+          {
+            "id": "poll-worker",
+            "label": "Become a poll worker",
+            "kind": "election_service",
+            "lean": "neutral",
+            "action": "Use the official lookup to find your local election office. Check its requirements, training and sign-up dates.",
+            "url": "https://www.helpamericavote.gov/",
+            "lean_basis_kind": null,
+            "mission_quote": null,
+            "sources": [
+              "https://www.helpamericavote.gov/"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "id": "help-a-friend-vote",
+            "label": "Help someone get to the polls",
+            "kind": "personal_help",
+            "lean": "neutral",
+            "action": "Offer a ride or company. Check when and where to go with their election office.",
+            "url": "https://www.usa.gov/election-office",
+            "lean_basis_kind": null,
+            "mission_quote": null,
+            "sources": [
+              "https://www.usa.gov/election-office"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "id": "friend-registration",
+            "label": "Help a friend check their registration",
+            "kind": "personal_help",
+            "lean": "neutral",
+            "action": "Send your state’s official registration lookup. Let your friend enter their own details and check their status.",
+            "url": "https://www.usa.gov/election-office",
+            "lean_basis_kind": null,
+            "mission_quote": null,
+            "sources": [
+              "https://www.usa.gov/election-office"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "left",
+        "label": "On the left",
+        "items": [
+          {
+            "id": "swing-left",
+            "label": "Swing Left",
+            "kind": "voter_outreach",
+            "lean": "left",
+            "action": "Join a volunteer orientation, call voters or knock on doors in competitive districts.",
+            "url": "https://go.swingleft.org/p/2026-take-action",
+            "lean_basis_kind": "mission",
+            "mission_quote": {
+              "text": "help Democrats win majorities at the state and federal level",
+              "is_quote": true,
+              "source": "https://swingleft.org/campus-leaders-toolkit"
+            },
+            "sources": [
+              "https://swingleft.org/campus-leaders-toolkit",
+              "https://go.swingleft.org/p/2026-take-action"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "id": "indivisible",
+            "label": "Indivisible",
+            "kind": "policy_organizing",
+            "lean": "left",
+            "action": "Join a local group and use its action center to call or email your elected officials.",
+            "url": "https://indivisible.org/get-involved/",
+            "lean_basis_kind": "mission",
+            "mission_quote": {
+              "text": "win an inclusive democracy and bold progressive policies",
+              "is_quote": true,
+              "source": "https://indivisible.org/about/"
+            },
+            "sources": [
+              "https://indivisible.org/about/",
+              "https://indivisible.org/get-involved/"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "right",
+        "label": "On the right",
+        "items": [
+          {
+            "id": "turning-point-action",
+            "label": "Turning Point Action",
+            "kind": "voter_outreach",
+            "lean": "right",
+            "action": "Join its local voter outreach events or use its app to help supporters follow through on voting.",
+            "url": "https://www.tpaction.com/chasethevote",
+            "lean_basis_kind": "mission",
+            "mission_quote": {
+              "text": "embolden the conservative base through grassroots activism and provide voters with the necessary resources to elect true conservative leaders",
+              "is_quote": true,
+              "source": "https://www.tpaction.com/about"
+            },
+            "sources": [
+              "https://www.tpaction.com/about",
+              "https://www.tpaction.com/chasethevote"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "id": "heritage-action",
+            "label": "Heritage Action",
+            "kind": "policy_organizing",
+            "lean": "right",
+            "action": "Join its Sentinel program for training, legislative updates and tools to contact your elected officials.",
+            "url": "https://heritageaction.com/about-sentinel",
+            "lean_basis_kind": "mission",
+            "mission_quote": {
+              "text": "fight for conservative policies in Washington, D.C. and in state capitals across the country",
+              "is_quote": true,
+              "source": "https://heritageaction.com/about"
+            },
+            "sources": [
+              "https://heritageaction.com/about",
+              "https://heritageaction.com/about-sentinel"
+            ],
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "link_bindings": {
+      "friend-registration": {
+        "preferred_field": "state.registration.check_url",
+        "fallback_url": "https://www.usa.gov/election-office"
+      },
+      "help-a-friend-vote": {
+        "preferred_field": "confirmed_place.county_election_office.url",
+        "fallback_field": "state.official_site.url",
+        "fallback_url": "https://www.usa.gov/election-office"
+      },
+      "poll-worker": {
+        "url": "https://www.helpamericavote.gov/",
+        "note": "The EAC lookup links directly to state or local election offices. This covers every state and DC without inventing state poll-worker fields."
+      }
+    },
+    "selection_note": "Examples of ways to take part, not recommendations. Each side has one voter outreach group and one policy organizing group."
+  },
+  "messages": {
+    "friends_family": {
+      "label": "Friends and family",
+      "template": "Got a plan to vote? Here’s a guide to help you sort through your ballot: {guide_url}\n\nIf you’ve already voted, text three people and ask if they have a plan too. Message me if you have questions.",
+      "slots": {
+        "guide_url": {
+          "source": "app base URL only",
+          "default": "https://voting-guide-silk.vercel.app/",
+          "required": true,
+          "note": "Use the guide homepage, without saved picks, personal lookup details or a tracking query."
+        }
+      },
+      "audience": "Private messages to friends and family",
+      "official_links_only": false
+    },
+    "public": {
+      "label": "Work, school or public channels",
+      "template": "Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.",
+      "slots": {
+        "state_name": {
+          "source_file": "data/states/{state}.json",
+          "field": "state",
+          "transform": "Resolve the state code through scripts/config.json stateNames. The generated state bundle already exposes name; Ballot exposes stateName.",
+          "required": true
+        },
+        "registration_check_url": {
+          "source_file": "data/states/{state}.json",
+          "field": "registration.check_url",
+          "required": false,
+          "missing": "Omit the entire registration line if absent. Do not claim registration is still open."
+        },
+        "official_voting_url": {
+          "source_file": "data/states/{state}.json",
+          "field": "official_site.url",
+          "required": true,
+          "missing": "Do not offer the public copy button until this official state URL exists."
+        },
+        "local_election_office_line": {
+          "source_file": "data/places/{confirmed-place}.json",
+          "field": "county_election_office.url",
+          "format": "Local election office: {local_election_office_url}",
+          "required": false,
+          "missing": "Use an empty string and remove the blank line if the place or county is unresolved. Do not guess from a shared ZIP or choose the first county."
+        }
+      },
+      "audience": "Work, school, neighborhood and other public channels",
+      "official_links_only": true,
+      "allowed_url_fields": [
+        "state.registration.check_url",
+        "state.official_site.url",
+        "confirmed_place.county_election_office.url"
+      ],
+      "render_rules": [
+        "Build this message separately from the friends and family message. Never append the guide, a saved ballot or any partisan group link.",
+        "Substitute only the named fields above from the selected state and confirmed place. Do not reuse election_day.lookup_url as a statewide fallback.",
+        "Only use verified official state or local election links. Block copying if a required slot or template token remains unresolved.",
+        "Omit optional missing lines and trim extra blank lines. Preserve the closing offer to help.",
+        "Do not add a registration deadline, same-day registration, early voting dates or a polling-place promise from another state.",
+        "If two lines would carry the same URL (registration and official links in CO, GA and WA; official and local links in DC), keep only the first of them."
+      ]
+    },
+    "copy_note": "These are suggested messages, not quotations or claims that the sender has already voted. The ask to text three people is a practical prompt, not a tested finding of the study."
+  },
+  "who_to_text": [
+    "Family chat",
+    "Friends chat",
+    "School or parent groups",
+    "Work channels",
+    "Neighborhood groups",
+    "A public post"
+  ],
+  "ways": [
+    {
+      "title": "Nonpartisan",
+      "items": [
+        {
+          "label": "Become a poll worker",
+          "url": "https://www.helpamericavote.gov/",
+          "note": "Use the official lookup to find your local election office. Check its requirements, training and sign-up dates."
+        },
+        {
+          "label": "Help someone get to the polls",
+          "url": "https://www.usa.gov/election-office",
+          "note": "Offer a ride or company. Check when and where to go with their election office."
+        },
+        {
+          "label": "Help a friend check their registration",
+          "url": "https://www.usa.gov/election-office",
+          "note": "Send your state’s official registration lookup. Let your friend enter their own details and check their status."
+        }
+      ]
+    },
+    {
+      "title": "On the left",
+      "items": [
+        {
+          "label": "Swing Left",
+          "url": "https://go.swingleft.org/p/2026-take-action",
+          "note": "Join a volunteer orientation, call voters or knock on doors in competitive districts. Its stated mission: “help Democrats win majorities at the state and federal level.”"
+        },
+        {
+          "label": "Indivisible",
+          "url": "https://indivisible.org/get-involved/",
+          "note": "Join a local group and use its action center to call or email your elected officials. Its stated mission: “win an inclusive democracy and bold progressive policies.”"
+        }
+      ]
+    },
+    {
+      "title": "On the right",
+      "items": [
+        {
+          "label": "Turning Point Action",
+          "url": "https://www.tpaction.com/chasethevote",
+          "note": "Join its local voter outreach events or use its app to help supporters follow through on voting. Its stated mission: “embolden the conservative base through grassroots activism and provide voters with the necessary resources to elect true conservative leaders.”"
+        },
+        {
+          "label": "Heritage Action",
+          "url": "https://heritageaction.com/about-sentinel",
+          "note": "Join its Sentinel program for training, legislative updates and tools to contact your elected officials. Its stated mission: “fight for conservative policies in Washington, D.C. and in state capitals across the country.”"
+        }
+      ]
+    }
+  ]
+}

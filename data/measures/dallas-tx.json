@@ -36,7 +36,8 @@
         "url": "https://communityimpact.com/richardson/election/dallas-county-voters-to-decide-on-proposition-to-address-homelessness/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "County tax for homelessness programs"
   },
   {
     "id": "tx-dallas-prop-a",
@@ -70,7 +71,8 @@
         "url": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Police and fire building bonds"
   },
   {
     "id": "tx-mesquite-isd-prop-a",
@@ -98,7 +100,8 @@
     "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Mesquite school operating tax"
   },
   {
     "id": "tx-irving-isd-prop-a",
@@ -126,7 +129,8 @@
     "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Irving school replacement and upgrade bonds"
   },
   {
     "id": "tx-irving-isd-prop-b",
@@ -154,7 +158,8 @@
     "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Irving High School replacement bonds"
   },
   {
     "id": "tx-irving-isd-prop-c",
@@ -182,7 +187,8 @@
     "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Irving school technology bonds"
   },
   {
     "id": "tx-irving-isd-prop-d",
@@ -210,6 +216,7 @@
     "official_text_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Irving indoor practice building bonds"
   }
 ]

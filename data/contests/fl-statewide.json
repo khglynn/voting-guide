@@ -273,7 +273,15 @@
         "background": "No-party candidate. Running mate: Juan Santana. Lives in Hialeah. Did not respond to the News 6 / Winter Park Voice questionnaire; his only campaign presence found is a Facebook page (News 6 voter guide).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/florida"
+        "lwv_url": "https://www.vote411.org/florida",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "Facebook campaign page and linked policy post (blocked)"
+          ]
+        }
       },
       {
         "name": "Moliere \"Moe\" Dimanche (Lt. Gov.: Benjiman Rojas)",
@@ -619,7 +627,7 @@
         "incumbent": true,
         "website": null,
         "website_confidence": "unverified",
-        "background": "Chief justice for two terms starting in 2022, chosen by his fellow justices; on the court since January 2019, appointed by Gov. DeSantis. Before that: general counsel of the U.S. Department of Education, deputy attorney general under Pam Bondi, deputy general counsel to Gov. Jeb Bush. Yale Law 1997, UVA 1991.",
+        "background": "Supreme Court justice since January 2019, appointed by Gov. Ron DeSantis. Served as chief justice from July 1, 2022, through June 30, 2026. Previously general counsel of the U.S. Department of Education and Florida deputy attorney general. Yale Law, 1997; University of Virginia, 1991.",
         "own_words": [
           {
             "text": "Notable opinions: joined the 6-1 majority in Planned Parenthood v. State (April 2024) holding the state privacy clause does not protect abortion; wrote the July 2025 opinion upholding the DeSantis congressional map; in Conage directed courts to consider \"all textual and structural clues\" when reading statutes.",
@@ -656,6 +664,14 @@
       {
         "name": "Florida Supreme Court: Justice Carlos G. Muñiz",
         "url": "https://supremecourt.flcourts.gov/the-court/about-the-court/justices/justice-carlos-g.-muniz"
+      },
+      {
+        "name": "Florida courts: Couriel elected chief justice, succeeding Muñiz July 1, 2026",
+        "url": "https://www.flcourts.gov/Services/Communications/court-news/court-news-archive/recent-news/couriel-elected-chief-justice"
+      },
+      {
+        "name": "Florida Supreme Court: July 1, 2026 opinion lists Couriel as chief justice and Muñiz as justice",
+        "url": "https://flcourts-media.flcourts.gov/content/download/2490795/opinion/Opinion_SC2026-0959.pdf"
       }
     ],
     "confidence": "verified"

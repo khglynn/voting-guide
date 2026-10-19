@@ -31,7 +31,8 @@
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "County auditor term"
   },
   {
     "id": "stlco-prop-s",
@@ -70,7 +71,8 @@
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Senior services property tax"
   },
   {
     "id": "webster-groves-sd-prop-w",
@@ -104,7 +106,8 @@
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Webster Groves school operating tax"
   },
   {
     "id": "parkway-sd-prop-p",
@@ -138,7 +141,8 @@
         "url": "https://www.stlpr.org/government-politics-issues/2026-09-22/st-louis-voter-guide-2026-november-election-missouri-illinois"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Parkway school operating tax"
   },
   {
     "id": "webster-groves-city-amendment-1",
@@ -159,6 +163,7 @@
     "opponents_case": null,
     "official_text_url": "https://extcontent.stlouisco.com/BOE/FIO/NovemberFIO.pdf",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City manager residency requirement"
   }
 ]

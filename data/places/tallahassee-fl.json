@@ -70,5 +70,90 @@
   "fl-leon-school-surtax",
   "fl-leon-school-millage",
   "fl-leon-consolidation-straw-ballot"
- ]
+ ],
+ "district_finders": [
+  {
+   "office_match": "State Representative",
+   "label": "Find your district on the election maps",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "Board of County Commissioners",
+   "label": "Find your county commission district",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "School Board",
+   "label": "Find your school board district",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "City Commissioner",
+   "label": "Check both city commission seats on your sample ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Board of County Commissioners",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Canopy Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Capital Region Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Circuit Judge, 2nd Judicial Circuit",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "County Judge",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Leon Soil and Water Conservation District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Piney Z Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "School Board",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "State Representative",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  }
+ ],
+ "early_in_person": {
+  "start": "2026-10-19",
+  "end": "2026-11-01",
+  "hours_note": "Leon County: Monday, October 19 through Sunday, November 1, at 10 sites. Hours vary by site: Courthouse 8 AM to 4 PM, Elections Center 8:30 AM to 6 PM, the other 8 sites 10 AM to 6 PM.",
+  "lookup_url": "https://www.leonvotes.gov/Voting/Early-Voting",
+  "source": "https://www.leonvotes.gov/Voting/Early-Voting",
+  "confidence": "verified"
+ },
+ "lookups": {
+  "early_in_person": "https://www.leonvotes.gov/Voting/Early-Voting",
+  "election_day": "https://www.leonvotes.gov/Voting/Election-Day",
+  "drop_box": "https://www.leonvotes.gov/Voting/Vote-by-Mail/Secure-Ballot-Intake-Stations"
+ }
 }

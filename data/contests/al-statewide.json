@@ -329,6 +329,11 @@
             "text": "Pledges a tough-on-crime agenda and says she would fight 'the Left' while enforcing state laws. Did not respond to the Reflector's question on intervening in Alabama Power rate cases.",
             "is_quote": true,
             "source": "https://alabamareflector.com/2026/09/24/alabamas-attorney-general-can-intervene-in-rate-hearings-will-ag-candidates-do-so/"
+          },
+          {
+            "text": "As your Attorney General, I’ll make sure Alabama remains a fortress for conservative values.",
+            "is_quote": true,
+            "source": "https://www.katherineforag.com/about"
           }
         ],
         "lwv_status": "unknown",
@@ -815,9 +820,9 @@
         "background": "Associate justice since 2018 (appointed, then elected in 2020). Former Houston County circuit judge. No Democratic opponent qualified.",
         "own_words": [
           {
-            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf"
+            "text": "Alabama’s Constitution gives our Supreme Court oversight over the entire judicial branch, and that is not a responsibility we take lightly.",
+            "is_quote": true,
+            "source": "https://yellowhammernews.com/justice-brad-mendheim-protecting-families-and-promoting-confidence-in-alabamas-court-system/"
           }
         ],
         "lwv_status": "unknown",
@@ -880,20 +885,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Associate justice since 2009; previously on the Court of Criminal Appeals. As of Oct. 1 had released no ads and had no campaign website, per the Reflector.",
-        "own_words": [
-          {
-            "text": "No 2026 campaign statement found. A 2020 campaign ad described him as 'one of Alabama's most conservative justices.'",
-            "is_quote": true,
-            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
-          },
-          {
-            "text": "No 2026 campaign statement found.",
-            "is_quote": false,
-            "source": "https://alabamareflector.com/voter-guides/contests/alsc08/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/alabama"
+        "lwv_url": "https://www.vote411.org/alabama",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web searches: Greg Shaw campaign judicial philosophy, including 2026",
+            "Alabama campaign/election guide and published interview leads; no campaign statement verified"
+          ]
+        }
       }
     ],
     "sources": [
@@ -930,15 +932,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Judge on the Court of Civil Appeals; unopposed.",
-        "own_words": [
-          {
-            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/alabama"
+        "lwv_url": "https://www.vote411.org/alabama",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web searches: Benjamin M. Bowden campaign judicial philosophy, including 2026",
+            "Alabama campaign/election guide and published interview leads; no campaign statement verified"
+          ]
+        }
       }
     ],
     "sources": [
@@ -971,13 +975,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Judge on the Court of Civil Appeals; former state representative. Unopposed.",
-        "own_words": [
-          {
-            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/alabama"
       }
@@ -1014,9 +1012,9 @@
         "background": "Presiding judge of the Court of Criminal Appeals; on the court since 2009. Unopposed.",
         "own_words": [
           {
-            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+            "text": "From her 2020 campaign announcement: \"I will apply the law as it is written and not make law from the bench.\"",
+            "is_quote": true,
+            "source": "https://birminghamwatch.org/2020/02/24/mary-becker-windom/"
           }
         ],
         "lwv_status": "unknown",
@@ -1055,9 +1053,9 @@
         "background": "Former Jefferson County deputy district attorney. Unopposed.",
         "own_words": [
           {
-            "text": "Unopposed. We did not collect campaign statements for unopposed judges.",
-            "is_quote": false,
-            "source": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+            "text": "we need judges who are experienced, principled and committed to the rule of law,",
+            "is_quote": true,
+            "source": "https://www.thecoosacountynews.com/2026/03/05/riggs-walker-announces-candidacy-for-alabama-court-of-criminal-appeals-place-5/"
           }
         ],
         "lwv_status": "unknown",

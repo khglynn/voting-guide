@@ -74,5 +74,41 @@
     "nyc-proposal-3",
     "nyc-proposal-4",
     "nyc-proposal-5"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Find your district",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "office_match": "State Assembly",
+      "label": "Find your district",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "office_match": "Judge of the Civil Court (municipal court district)",
+      "label": "Find your district",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "office_match": "Justice of the Supreme Court",
+      "label": "Find your election and court districts",
+      "url": "https://findmypollsite.vote.nyc/"
+    },
+    {
+      "office_match": "Surrogate's Court Judge",
+      "label": "Find your election and court districts",
+      "url": "https://findmypollsite.vote.nyc/"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://findmypollsite.vote.nyc/",
+    "election_day": "https://findmypollsite.vote.nyc/"
+  }
 }

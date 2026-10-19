@@ -1,19 +1,45 @@
 /* Small render helpers shared by every view. */
-import type { Lean } from '../types';
+import type { Endorser, Lean } from '../types';
 import { S } from '../state';
 import { esc, host } from '../util';
 
 export const LEANS: Record<Lean, [number, string]> = {
-  left: [0, 'Left'], lean_left: [1, 'Lean left'], neutral: [2, 'Neutral'], lean_right: [3, 'Lean right'], right: [4, 'Right'],
+  left: [0, 'left'], lean_left: [1, 'leans left'], neutral: [2, 'center'], lean_right: [3, 'leans right'], right: [4, 'right'],
 };
 
-/* Neutral 5-step scale plus words. Never color. */
-export function leanHTML(lean: Lean | null, words = true): string {
-  if (!lean) return `<span class="lean"><span class="lean-scale none" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>${words ? '<span>Not rated</span>' : '<span class="vh">Not rated</span>'}</span>`;
-  const [idx, word] = LEANS[lean];
-  const cells = [0, 1, 2, 3, 4].map((i) => `<i class="${i === idx ? 'on' : ''}"></i>`).join('');
-  return `<span class="lean" title="${word}"><span class="lean-scale" role="img" aria-label="Lean: ${word}">${cells}</span>${words ? `<span>${word}</span>` : `<span class="vh">${word}</span>`}</span>`;
+/* The neutral five-step lean scale plus a word. Ink only, never red or blue; the middle step
+   is round. "Not rated" is its own visible state, never a blank scale. */
+export function leanHTML(lean: Lean | null, words = true, basis = ''): string {
+  const word = lean ? LEANS[lean][1] : 'not rated';
+  const idx = lean ? LEANS[lean][0] : -1;
+  const cells = [0, 1, 2, 3, 4].map((i) => `<i class="${i === 2 ? 'mid' : ''}${i === idx ? ' on' : ''}"></i>`).join('');
+  const lean_ = `<span class="lean${lean ? '' : ' unrated'}"><span class="ls" aria-hidden="true">${cells}</span>${words ? `<span class="lw">${word}</span>` : `<span class="vh">Lean: ${word}</span>`}</span>`;
+  return basis ? `<span class="lean-b">${lean_}<span class="lk">${esc(basis)}</span></span>` : lean_;
 }
+
+/* How a lean was placed, in plain words: an outside rating names the rater, a party is a
+   party, anything else is read from the group's own mission statement. Never from whom a
+   source endorsed. Empty when there is no lean. */
+export function basisWords(e: Endorser): string {
+  if (!e.lean || !e.lean_basis_kind) return '';
+  if (e.lean_basis_kind === 'party') return 'party';
+  if (e.lean_basis_kind === 'mission') return 'from its mission statement';
+  // Name the rater only when the basis names exactly one and doesn't say that rater has none
+  // ("no AllSides rating found; Ad Fontes rates it..."). Otherwise stay general; the full basis
+  // is one tap away in More sources.
+  const b = e.lean_basis || '';
+  const named = (re: RegExp, no: RegExp) => re.test(b) && !no.test(b);
+  const raters = [
+    named(/AllSides/i, /\bno\s+AllSides|AllSides\s+(has|had|gives)\s+no|not\s+(rated|listed)\s+(by|on)\s+AllSides|without\s+an?\s+AllSides/i) ? 'AllSides' : '',
+    named(/Ad Fontes/i, /\bno\s+Ad Fontes|Ad Fontes\s+(has|had|gives)\s+no|not\s+(rated|listed)\s+(by|on)\s+Ad Fontes|without\s+an?\s+Ad Fontes/i) ? 'Ad Fontes Media' : '',
+  ].filter(Boolean);
+  return raters.length === 1 ? `rated by ${raters[0]}` : 'an outside media-bias rating';
+}
+/* The lean scale for a source, with how it was placed beneath. */
+export const sourceLean = (e: Endorser, words = true): string => {
+  const k = basisWords(e);
+  return leanHTML(e.lean, words, k);
+};
 
 export const confLabel = (c: string | null | undefined): string =>
   c === 'unverified' ? 'Not yet confirmed' : c === 'sourced' ? 'Secondhand source' : '';
@@ -39,17 +65,8 @@ export function sampleBallot(): { url: string; label: string } | null {
   return { url: b.howto.official_site.url, label: b.howto.official_site.name };
 }
 
-/* A "disclosure" button. The key lives in S.ui.open. */
+/* Disclosures: the key lives in S.ui.open. */
 export const isOpen = (k: string): boolean => S.ui.open.has(k);
-export function discBtn(k: string, label: string, cls = 'disc'): string {
-  return `<button class="${cls}" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${esc(label)}</button>`;
-}
-
-export const firstSentence = (s: string): [string, string] => {
-  const m = s.match(/^(.+?[.!?])(\s+|$)([\s\S]*)$/);
-  if (!m) return [s.trim(), ''];
-  return [m[1].replace(/\.$/, '').trim(), m[3].trim()];
-};
 
 /* ---------- no shouting ----------
    Research notes sometimes stress a word in capitals ("must be RECEIVED", "NOT in the
@@ -59,13 +76,17 @@ export const firstSentence = (s: string): [string, string] => {
 const SHOUT = new Set(('NOT ONE TWO THREE ANY YOUR ONLY MORE LESS AFTER BEFORE NOON RECEIVED ARRIVE ARRIVES POSTMARKED ' +
   'WITH NEW EVERY SIGN AND DATE MONDAY TUESDAY OCTOBER NOVEMBER PROVISIONAL APPLICATION BALLOT VOTE CENTER COUNTIES ' +
   'POLLING PLACE EVERYTHING ELSE REPEALS NOTE HAVE IMPORTANT EARLY MAIL ABSENTEE MEETS PERFORMANCE STANDARDS NEVER ' +
-  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS YES NO FOR AGAINST').split(' '));
+  'MUST CANNOT DOES WILL SUNDAY BOTH EITHER NEITHER ALSO LEGALIZED WEAR CAMPAIGN BUTTONS YES NO FOR AGAINST ' +
+  'REACH WITHOUT FIRST EXPIRED REQUEST NOTARIZED AFFIDAVIT MINIMUM CONFIRMED DATES').split(' '));
+/* Place names written in capitals for emphasis take title case, never lower case. */
+const PROPER = new Set('ORANGE LEON ESCAMBIA CHICAGO SUBURBAN COOK COLLAR'.split(' '));
 const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])('[^']*')(?=[\s.,;:)!?]|$)/g;
 export function deshout(text: string): string {
   if (!text || !/[A-Z]{3}/.test(text)) return text;
   const fix = (seg: string, atStart: boolean) => seg.replace(/\b[A-Z]{2,}\b/g, (w, i: number) => {
-    if (!SHOUT.has(w) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
+    if ((!SHOUT.has(w) && !PROPER.has(w)) || seg[i - 1] === '-' || seg[i + w.length] === '-') return w;
     const lower = w.toLowerCase();
+    if (PROPER.has(w)) return lower.charAt(0).toUpperCase() + lower.slice(1);
     const before = seg.slice(0, i);
     const start = (atStart && /^\s*$/.test(before)) || /[.!?:]\s+$/.test(before);
     return start ? lower.charAt(0).toUpperCase() + lower.slice(1) : lower;
@@ -80,9 +101,6 @@ export function deshout(text: string): string {
   }
   return out + fix(text.slice(last), last === 0);
 }
-/* Ballot choice values are stored as YES, NO, FOR, AGAINST. Show them in sentence case. */
-const CHOICE: Record<string, string> = { YES: 'Yes', NO: 'No', FOR: 'For', AGAINST: 'Against' };
-export const choiceWord = (x: string): string => CHOICE[x] || x;
 export const escP = (s: string | null | undefined): string => esc(deshout(s || ''));
 
 /* ---------- skimmable prose ----------

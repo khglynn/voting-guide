@@ -11,7 +11,8 @@
   "guide_url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
   "default_on": true,
   "endorses_candidates": false,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "sd-county-democratic-party",
@@ -25,7 +26,9 @@
   "guide_url": "https://www.sddemocrats.org/candidates.html",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
  },
  {
   "id": "sd-county-gop",
@@ -39,7 +42,9 @@
   "guide_url": "https://www.sandiegorepublicans.org/voter-guides/san-diego",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party"
  },
  {
   "id": "sd-imperial-labor-council",
@@ -53,35 +58,40 @@
   "guide_url": "https://www.unionyes.org/2026-endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "sd-democrats-for-equality",
   "name": "San Diego Democrats for Equality (LGBTQ+ Democratic club)",
   "type": "advocacy",
   "lean": "left",
-  "lean_basis": "Its name identifies it as a Democratic club. Self-description on its Blue Voter Guide listing: \"Serving as one of the oldest active LGBTQ organizations in the United States.\" Its own site (democratsforequality.org) blocked our reader, so its About page is not quoted. No outside rating.",
+  "lean_basis": "Its stated mission or political identity includes: \"Join the progressive movement: Sign up\". Source: https://democratsforequality.org.",
   "geography": [
    "san-diego-ca"
   ],
   "guide_url": "https://www.democratsforequality.org/endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission",
+  "short": "San Diego Democrats for Equality"
  },
  {
   "id": "sd-regional-chamber",
   "name": "San Diego Regional Chamber of Commerce",
   "type": "business",
-  "lean": "lean_right",
-  "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating, so it is labeled lean_right under this guide's rule for chambers. Its About page (sdchamber.org) blocked our reader, so its mission is not quoted here.",
+  "lean": null,
+  "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating. Its About page (sdchamber.org) blocked our reader, so its mission is not quoted here. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
   "geography": [
    "san-diego-ca"
   ],
   "guide_url": "https://sdchamber.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission",
+  "short": "San Diego Regional Chamber"
  },
  {
   "id": "reform-california",
@@ -95,6 +105,7 @@
   "guide_url": "https://www.reformcalifornia.org/voter-guides/san-diego",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  }
 ]

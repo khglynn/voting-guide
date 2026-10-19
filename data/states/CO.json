@@ -397,5 +397,57 @@
       "name": "2026 State Ballot Information Booklet (Blue Book), Legislative Council Staff",
       "url": "https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "The governor appoints judges from a screening commission’s shortlist. Denver’s mayor appoints Denver County Court judges. After an initial two-year term, you vote yes or no on keeping each judge.",
+    "who_reviews": "Volunteer citizen commissions decide: six non-lawyers and four lawyers for trial courts; six non-lawyers and five lawyers for appeals courts. The state Office of Judicial Performance Evaluation runs the process.",
+    "what_the_rating_means": "The commission reviews anonymous surveys, courtroom visits, written decisions, caseload figures and the judge’s interview. It votes whether the judge meets job standards for integrity, legal knowledge, communication, temperament, administration and public service.",
+    "what_it_doesnt_mean": "This is a job review, not an endorsement or a ranking. It does not tell you whether you will agree with the judge’s rulings. Small survey samples deserve caution.",
+    "to_keep_a_judge": "More yes than no votes keeps the judge. Vote no to remove the judge.",
+    "history": "A negative finding is rare: 121 of 123 judges on the ballot statewide in 2026 met performance standards. Two did not; neither is on a ballot covered by this guide.",
+    "read_one": {
+      "label": "Choose a judge, then read the narrative, commission vote and survey report",
+      "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+    },
+    "sources": [
+      {
+        "name": "Colorado judicial performance: process and standards",
+        "url": "https://judicialperformance.colorado.gov/judicial-evaluations"
+      },
+      {
+        "name": "Colorado judicial performance: frequently asked questions",
+        "url": "https://judicialperformance.colorado.gov/frequently-asked-questions"
+      },
+      {
+        "name": "Colorado judicial performance: 2026 statewide report",
+        "url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judicial%20Performance%20Evaluation%20Report%20%28Post-Evaluation%29.pdf"
+      },
+      {
+        "name": "Colorado judicial performance: full 2026 list",
+        "url": "https://judicialperformance.colorado.gov/2026-judicial-performance-evaluations-full-list"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "Amendments 81 through 86 need 55 percent to pass. Amendment 87 and the propositions need more yes votes than no votes.",
+      "applies_to": "section:measures"
+    },
+    {
+      "text": "Amendment 87 and Prop 136 conflict. If both pass, the Blue Book says the outcome is unclear; lawmakers or a court would resolve it.",
+      "applies_to": "item:co-amendment-87"
+    },
+    {
+      "text": "Amendment 87 and Prop 136 conflict. If both pass, the Blue Book says the outcome is unclear; lawmakers or a court would resolve it.",
+      "applies_to": "item:co-proposition-136"
+    },
+    {
+      "text": "A commission’s judicial performance finding reviews the judge’s work. Open the review to see the evidence and any concerns.",
+      "applies_to": "section:judicial"
+    },
+    {
+      "text": "Some ballots outside the rail district show Issue 7A by mistake. Your ballot is still valid; only eligible district votes on 7A count.",
+      "applies_to": "item:co-frpr-7a"
+    }
   ]
 }

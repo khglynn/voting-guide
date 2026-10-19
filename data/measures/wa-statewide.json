@@ -11,7 +11,7 @@
     "no_means": "The 2026 law stays, and the 9.9% tax on income over $1 million starts in 2028 as scheduled.",
     "current_law": "Washington has no broad personal income tax. The state taxes capital gains above a threshold (upheld by the state Supreme Court in 2023). ESSB 6346 (2026) adds a 9.9% tax on an individual's receipt of income over $1,000,000 starting in calendar year 2028, with the $1 million standard deduction inflation-adjusted from 2029 and an extra charitable deduction of up to $100,000 per household. Credits are allowed for income tax paid to another state, Washington capital gains tax, and B&O or public utility tax paid on the same income. 95% of revenue goes to the general fund and 5% to the Fair Start for Kids account for child care and early learning. Nonresidents are taxed only on Washington-source income. The Department of Revenue projects about 25,000 households would owe it.",
     "fiscal_impact": "Office of Financial Management: 'If approved by voters, Initiative 645 will result in an estimated loss to state revenue of $11.4 billion over state fiscal years 2027-2031' (exact figure $11,432,414,000, from the state general fund, federal general fund and Fair Start for Kids account). No impact on local revenue. OFM notes the Legislature said it intended to use the tax for free school meals, child care and early learning, and payments to local governments to offset sales tax losses, but impacts that depend on a future Legislature are not counted. Effective date December 3, 2026; the Department of Revenue would stop implementation that day.",
-    "pass_threshold": "simple majority of votes cast on the measure",
+    "pass_threshold": "Simple majority of votes cast on the measure; at least one-third of voters taking part in the election must vote on the measure.",
     "referred_by": "citizen_initiative",
     "confusing_wording_note": "This is a repeal written as a yes question, so it can read backwards. Yes gets rid of the tax on income over $1 million and bans future income taxes. No keeps the tax. 'Enacted into law' means enacting the repeal, not the tax. The measure also does more than repeal: it blocks any future state or local tax on individual income, and defines 'income' broadly.",
     "supporters_case": {
@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-07/Finaltext_IP26-645_fulltext.pdf",
     "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Income tax repeal and ban"
   },
   {
     "id": "wa-initiative-001",
@@ -38,7 +39,7 @@
     "no_means": "The Parents' Bill of Rights stays as lawmakers changed it in 2025: for example, schools keep 45 days to hand over records, and the 2025 additions (like immediate notice if a school employee allegedly abuses a child) stay.",
     "current_law": "The 2024 Parents' Bill of Rights remains in law as amended in 2025 (HB 1296 and SB 5181). Under current law parents can review curriculum and records 'according to the provisions of other law and in conformity with school policies,' schools have 45 days to produce records, health care records are governed by separate disclosure laws, parents are entitled to notice of crimes or law-enforcement contact that occur on school property during school hours, and parents have a right to immediate notice if a child is allegedly the victim of abuse or assault by a school employee or contractor. The Attorney General notes many rights in both versions already exist elsewhere in state or federal law.",
     "fiscal_impact": "Office of Financial Management: 'The initiative would have no fiscal impact on the state. Local school districts may incur minor costs to update policies and procedures, but this fiscal impact is indeterminate.' No impact on state or local revenue. Assumed effective date December 3, 2026.",
-    "pass_threshold": "simple majority of votes cast on the measure",
+    "pass_threshold": "Simple majority of votes cast on the measure; at least one-third of voters taking part in the election must vote on the measure.",
     "referred_by": "citizen_initiative",
     "confusing_wording_note": "'Repeal amendments' and 're-enact' together mean a yes vote takes the law back to its 2024 version. The two versions overlap a lot. The real differences are specific: how fast schools must hand over records, whether health records follow separate privacy laws, and which incidents trigger a notice to parents. Each side says the other version removes a parental right, and each is pointing at different clauses.",
     "supporters_case": {
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-03/INITIATIVE%20IL26-001%20fulltext.pdf",
     "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "School parental rights law"
   },
   {
     "id": "wa-initiative-638",
@@ -65,7 +67,7 @@
     "no_means": "Current rules stay, so students can play on the team that matches their gender identity and no sex-verification form is required.",
     "current_law": "Washington's Law Against Discrimination covers gender identity, OSPI rules prohibit discrimination in school sports based on sex and gender identity, and WIAA policy allows students to participate consistent with their gender identity. No sex-verification form is required to play.",
     "fiscal_impact": "Office of Financial Management: the Office of Superintendent of Public Instruction 'would incur a one-time cost of approximately $21,000' to update guidance. 'Local school districts would likely also incur costs to revise existing policies, procedures, rules, and other requirements, but this fiscal impact is indeterminate.' No impact on state or local revenue. Assumed effective date December 3, 2026.",
-    "pass_threshold": "simple majority of votes cast on the measure",
+    "pass_threshold": "Simple majority of votes cast on the measure; at least one-third of voters taking part in the election must vote on the measure.",
     "referred_by": "citizen_initiative",
     "confusing_wording_note": "The title never says 'transgender'; it says 'biologically male' and 'female students only.' The second sentence matters too: every student who wants to play girls' sports, not only transgender students, would need a provider-signed form. The two sides disagree about what that exam involves; the Attorney General says students 'would thus have to undergo some type of medical evaluation of their sex.' Yes restricts; no keeps current rules.",
     "supporters_case": {
@@ -78,6 +80,7 @@
     },
     "official_text_url": "https://www.sos.wa.gov/sites/default/files/2026-03/INITIATIVE%20IL26-638%20fulltext.pdf",
     "official_guide_url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Eligibility for girls’ school sports"
   }
 ]

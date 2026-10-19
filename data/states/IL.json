@@ -56,10 +56,10 @@
     ],
     "postage": "Chicago and suburban Cook County return envelopes are postage-paid. Elsewhere in Illinois most election authorities also prepay return postage; if your envelope doesn't say 'no postage necessary,' add a stamp. (Sourced from past-cycle practice and news guides; read your envelope.)",
     "signature_witness_rules": "Sign the certification envelope. No witness or notary. A panel of three election judges compares your signature to the one on file. Date the certification: under 10 ILCS 5/19-8, if the postmark is missing or unreadable, the date you wrote on the certification can establish that you voted by Election Day.",
-    "tracking_url": "https://chicagoelections.gov/voting/vote-mail",
+    "tracking_url": "https://www.elections.il.gov/ElectionOperations/ElectionAuthorities.aspx",
     "cure_process": "If judges reject your ballot for a missing or mismatched signature, the election authority must notify you (by mail, and by email or phone if they have it) within 2 days, and you have until 14 days after the election, Tuesday, November 17, 2026, to fix it with a signed statement or new signature. Watch your mail and email after you return your ballot. Illinois Election Code 10 ILCS 5/19-8.",
     "mail_cutoff_advice": "Mail by about October 27, or use an official drop box. USPS says to ask a retail counter clerk for a manual postmark when handing over a ballot; it is free. A mailed ballot counts if it is postmarked by November 3 and arrives by November 17. In Chicago, use an early voting site drop box through November 2, or a designated Election Day vote center drop box by 7 PM on November 3. Ordinary precinct polling places cannot accept completed mail ballots. Follow your own election authority's return instructions outside Chicago.",
-    "drop_box_lookup_url": "https://chicagoelections.gov/voting/drop-boxes",
+    "drop_box_lookup_url": "https://www.elections.il.gov/VotingAndRegistrationSystems/VoteByMailBallotDropBoxLocations.aspx",
     "confidence": "verified"
   },
   "early_in_person": {
@@ -68,15 +68,16 @@
     "end": "2026-11-02",
     "hours_note": "CHICAGO (official, chicagoelections.gov): Downtown Voting Supersite, 137 S. State St., and the Chicago Board of Elections office, 69 W. Washington St., 6th floor, opened Thursday, Oct. 1. Hours Oct. 1 to 25: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Hours Oct. 26 to Nov. 2: Mon to Fri 9 AM to 7 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. All 50 ward sites open Monday, Oct. 19 through Monday, Nov. 2: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Any Chicago voter can use any site. Three campus sites (Chicago State, NEIU, UChicago Reynolds Club) run Oct. 28 to 30, 10 AM to 5 PM. On Election Day the Supersite and all 50 ward sites are open 6 AM to 7 PM as vote centers for any Chicago voter; the 69 W. Washington office is NOT open for voting on Election Day. SUBURBAN COOK: early voting began Oct. 7 at some sites and most sites open Oct. 19; hours vary by site and week; see cookcountyclerkil.gov. COLLAR counties: most opened Sept. 24 at the clerk's office, with more sites Oct. 19; DuPage's 24 permanent sites run weekdays 8 AM to 7 PM and weekends 9 AM to 5 PM.",
     "vote_centers": true,
-    "lookup_url": "https://chicagoelections.gov/voting/early-votingvote-centers",
-    "confidence": "verified"
+    "lookup_url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx",
+    "confidence": "verified",
+    "counties_vary": "varies"
   },
   "election_day": {
     "polls_open": "6:00 AM",
     "polls_close": "7:00 PM",
     "in_line_rule": "If you are in line at 7:00 PM, stay in line. You get to vote. Chicago voters can vote at their home precinct OR at any of 51 vote centers (the Downtown Supersite at 137 S. State and all 50 ward sites), per the Chicago Board: 'Voters can choose whatever voting site is most convenient for them, including on Election Day.' Outside Chicago, go to your assigned precinct unless your county says otherwise.",
     "vote_centers": true,
-    "lookup_url": "https://ova.elections.il.gov/RegistrationLookup.aspx",
+    "lookup_url": "https://ova.elections.il.gov/PollingPlaceLookup.aspx",
     "confidence": "verified"
   },
   "id_rules": {
@@ -404,6 +405,42 @@
     {
       "name": "Cook County Clerk: Mail Voting Frequently Asked Questions (provisional ballot if you can't surrender your mail ballot)",
       "url": "https://cookcountyclerkil.gov/publications/mail-ballot-frequently-asked-questions"
+    }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "New judges run in partisan elections. After a term, a sitting judge usually seeks retention: a yes-or-no vote without an opponent.",
+    "who_reviews": "The Alliance’s 13 bar groups share an investigation and interview, then rate independently. The Chicago Bar Association conducts its own review. These are lawyer associations, not a state job-review commission.",
+    "what_the_rating_means": "Recommended or qualified means that bar group found the candidate fit for the office. Groups can disagree. Some give a negative rating when a candidate does not participate, so read the explanation.",
+    "what_it_doesnt_mean": "A rating does not tell you how a judge will rule in your case. A negative rating can reflect nonparticipation; it does not automatically establish misconduct.",
+    "to_keep_a_judge": "A judge needs at least 60 percent yes votes on the retention question to stay. Blank votes count neither yes nor no. New candidates instead compete for the most votes.",
+    "history": "Illinois’s constitution sets the retention threshold at three-fifths, which is 60 percent. It is higher than a simple majority.",
+    "read_one": {
+      "label": "Read Cook County bar ratings and explanations",
+      "url": "https://www.isba.org/judicial-elections/counties/cook"
+    },
+    "sources": [
+      {
+        "name": "Illinois Constitution, article VI, section 12",
+        "url": "https://www.ilga.gov/commission/lrb/con6.htm"
+      },
+      {
+        "name": "Illinois State Bar: Cook County ratings",
+        "url": "https://www.isba.org/judicial-elections/counties/cook"
+      },
+      {
+        "name": "Chicago Bar: evaluation process",
+        "url": "https://www.chicagobar.org/judicial-evaluations"
+      },
+      {
+        "name": "Alliance: 2026 ratings",
+        "url": "https://www.voteforjudges.org/wp-content/uploads/2026/10/2026-Alliance-General-Ballot-Ratings-Oct-6-2026.pdf"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "In a yes-or-no retention vote, a judge needs at least 60 percent yes to stay. Only votes on that judge’s question count.",
+      "applies_to": "section:judicial"
     }
   ]
 }

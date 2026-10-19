@@ -67,7 +67,7 @@
     "end": "2026-11-03",
     "hours_note": "Oregon has no polling places or 'early voting' in the usual sense. Once ballots go out (Oct. 14), you can vote any time. County elections offices can give you a replacement ballot, an accessible ballot, or help in another language, and you can fill out your ballot there. Multnomah County: Voting Center, 1040 SE Morrison St., Portland, and Voting Center Express, 600 NE 8th St., Gresham (weekdays 8 AM to 5 PM; opened Oct. 8). Extended hours at both: Oct. 28 to 30, 8 AM to 7 PM; Sat. Oct. 31, 10 AM to 2 PM; Mon. Nov. 2, 8 AM to 7 PM; Election Day 7 AM to 8 PM.",
     "vote_centers": true,
-    "lookup_url": "https://multco.us/info/current-and-upcoming-elections-multnomah-county-elections",
+    "lookup_url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx",
     "confidence": "verified"
   },
   "election_day": {
@@ -362,5 +362,27 @@
       "name": "Multnomah County: Official Ballot Drop Sites (any Oregon drop site until 8:00 PM; voters in line at 8:00 PM may drop off their ballot)",
       "url": "https://multco.us/info/official-ballot-drop-sites"
     }
-  ]
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "Oregon judges run without party labels for six-year terms. You choose a candidate. The governor can fill a vacancy by appointment until an election.",
+    "who_reviews": "We found no published 2026 bar rating or official election job review for the Portland judges as of October 19. The state voters’ pamphlet provides candidate statements.",
+    "what_the_rating_means": "No current evaluation is shown. Candidate statements explain candidates’ backgrounds and views in their own words.",
+    "what_it_doesnt_mean": "A candidate statement is not an independent performance review or a recommendation from the state. A missing rating does not mean a candidate is unqualified.",
+    "to_keep_a_judge": "Vote for the candidate you want. The candidate with the most votes wins the November race; these are not yes-or-no retention questions.",
+    "history": "Oregon elects judges to six-year terms without party labels. Its voters’ pamphlet includes candidate statements, which you can compare alongside other sources.",
+    "read_one": {
+      "label": "Read candidate statements in the Multnomah voters’ pamphlet",
+      "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+    },
+    "sources": [
+      {
+        "name": "Oregon Judicial Department: how state courts work",
+        "url": "https://www.courts.oregon.gov/about/Pages/default.aspx"
+      },
+      {
+        "name": "Oregon Secretary of State: Multnomah voters’ pamphlet",
+        "url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf"
+      }
+    ]
+  }
 }

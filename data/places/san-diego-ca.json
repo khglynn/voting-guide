@@ -112,5 +112,77 @@
   "ca-assembly-78",
   "ca-assembly-79",
   "ca-assembly-80"
- ]
+ ],
+ "district_finders": [
+  {
+   "office_match": "San Diego City Council",
+   "label": "Find your council district",
+   "url": "https://www.sandiego.gov/citycouncil"
+  },
+  {
+   "office_match": "San Diego County Board of Education",
+   "label": "View your county board trustee area map",
+   "url": "https://www.sdcoe.net/board-of-education"
+  },
+  {
+   "office_match": "San Diego Community College District Board of Trustees",
+   "label": "View your community college trustee district map",
+   "url": "https://www.sdccd.edu/about/leadership/board-of-trustees/district-boundaries.aspx"
+  },
+  {
+   "office_match": "San Diego Unified School District Board of Education",
+   "label": "View your school board subdistrict map",
+   "url": "https://www.sandiegounified.org/about/board_of_education"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "Board of Equalization Member",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "San Diego City Council",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "San Diego Community College District Board of Trustees",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "San Diego County Board of Education",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "San Diego County Board of Supervisors",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  },
+  {
+   "office_match": "San Diego Unified School District Board of Education",
+   "label": "Find your districts and voter pamphlet",
+   "url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://www.sdvote.com/content/rov/en/voting-options.html#votecenter",
+  "election_day": "https://www.sdvote.com/content/rov/en/voting-options.html#votecenter",
+  "drop_box": "https://www.sdvote.com/content/rov/en/voting-options.html#ballotdropbox"
+ }
 }

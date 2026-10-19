@@ -15,7 +15,8 @@
     "guide_url": "https://citizensunion.org/document/2026-10-01/citizens-union-recommends-a-yes-vote-on-all-five-2026-charter-proposals/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "common-cause-ny",
@@ -34,7 +35,8 @@
     "guide_url": "https://www.commoncause.org/new-york/2026-nyc-ballot-proposals/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "mas-nyc",
@@ -52,14 +54,16 @@
     "guide_url": "https://www.mas.org/news/no-on-ballot-3/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Municipal Art Society of NYC"
   },
   {
     "id": "amny-eb",
     "name": "amNewYork editorial board",
     "type": "publication",
     "lean": null,
-    "lean_basis": "No AllSides or Ad Fontes rating found. Free NYC daily owned by Schneps Media; its site (https://www.amny.com/) states no ideological mission, so it is shown as not rated.",
+    "lean_basis": "Not rated. The existing record contains no quoted ideological mission or usable outside rating. Its source: https://www.amny.com/.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -70,14 +74,15 @@
     "guide_url": "https://www.amny.com/opinion/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "vital-city",
     "name": "Vital City (editors)",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Nonprofit publication that calls itself 'a platform for ideas about how to improve civic life' (https://www.vitalcitynyc.org/about). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"a platform for ideas about how to improve civic life\". This does not establish a position on the political scale. Source: https://www.vitalcitynyc.org/about.",
     "geography": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -88,7 +93,8 @@
     "guide_url": "https://www.vitalcitynyc.org/nyc-mamdani-coge-government-efficiency-ballot-reform-recommendations/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "cbc-rein",
@@ -106,6 +112,8 @@
     "guide_url": "https://www.brownstoner.com/brooklyn-life/election-ballot-questions-proposals-voting-2026/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Andrew Rein"
   }
 ]

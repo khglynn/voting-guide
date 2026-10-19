@@ -5,11 +5,14 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Nonpartisan civic organization: 'We're nonpartisan, which means we do not support or oppose any political parties or candidates' (lwvsf.org/ballot-recommendations). Takes support, oppose or neutral positions on SF propositions based on member-adopted positions. Never endorses candidates. No AllSides or Ad Fontes rating.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://lwvsf.org/ballot-recommendations",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-bay-area",
@@ -17,11 +20,14 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Regional League of Women Voters body; nonpartisan and never endorses candidates. Takes positions on regional measures ('Vote With the League'). No AllSides or Ad Fontes rating. Covers only the regional transit measure here.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sf-democratic-party",
@@ -29,11 +35,15 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official county Democratic Party organization (sfdems.org).",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://www.sfdems.org/endorsements/nov-3-2026-general-election",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "sf-republican-party",
@@ -41,11 +51,15 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official county Republican Party organization (sfgop.org). It marks some picks as 'Recommended' rather than 'Endorsed', and sends statewide picks to the California Republican Party.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://sfgop.org/nov-2026-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "spur",
@@ -53,11 +67,14 @@
     "type": "advocacy",
     "lean": "lean_left",
     "lean_basis": "No AllSides or Ad Fontes rating. Stated mission (spur.org/about): a 'nonprofit public policy organization' that brings 'people together from across the political spectrum,' whose stated beliefs include 'Housing is a human right' and that the region 'should be environmentally just, carbon-neutral.' Labeled lean left on those stated values. Takes positions on measures only.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://www.spur.org/voter-guide/2026-11",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "growsf",
@@ -65,11 +82,14 @@
     "type": "advocacy",
     "lean": "neutral",
     "lean_basis": "No AllSides or Ad Fontes rating. A 501(c)(4) whose stated goal is to 'make San Francisco work for everyone' through 'winning local elections, holding leaders accountable, and giving voters clear, honest information' (growsf.org/about); the mission names no party or ideology, so it is labeled neutral by this guide's rule. It endorses candidates and measures.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://growsf.org/voter-guide/san-francisco-voter-guide-november-2026-election/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sflcv",
@@ -77,23 +97,30 @@
     "type": "advocacy",
     "lean": "lean_left",
     "lean_basis": "No AllSides or Ad Fontes rating. Stated mission (sflcv.org/about): 'to promote environmental protection through active participation in the San Francisco political system,' including 'environmental justice, and sustainability, as well as good government issues.' Environmental advocacy group, labeled lean left on its mission, as with the LA League of Conservation Voters in this guide.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://www.sflcv.org/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "SF League of Conservation Voters"
   },
   {
     "id": "alice-b-toklas",
     "name": "Alice B. Toklas LGBTQ Democratic Club",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Chartered Democratic club: it is 'proud to endorse Democratic office-seekers and requires that all candidates seeking endorsement are registered Democrats' (alicebtoklas.org/2026endorsements).",
-    "geography": ["san-francisco-ca"],
+    "lean_basis": "Its stated mission or political identity includes: \"Advocating within the Democratic Party for human rights, social and economic justice, and equality for all persons\". Source: https://alicebtoklas.org/2026endorsements.",
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://alicebtoklas.org/2026endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sf-labor-council",
@@ -101,11 +128,14 @@
     "type": "labor",
     "lean": "lean_left",
     "lean_basis": "No AllSides or Ad Fontes rating; unions are labeled lean left in this guide. Its About text: 'the local body of the AFL-CIO' that 'represents more than 100,000 union members and their families in the City' through more than 150 unions (sflaborcouncil.org About Us).",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://admin.linkedunion.com/rest_api/news_webview?category=9251&app_id=69",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sf-chamber",
@@ -113,10 +143,14 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "No AllSides or Ad Fontes rating; chambers of commerce are labeled lean right in this guide. Its stated mission: 'We attract, support, and grow business through advocacy, economic development, and business development' (sfchamber.com/about). Its November 2026 guide covers local measures only.",
-    "geography": ["san-francisco-ca"],
+    "geography": [
+      "san-francisco-ca"
+    ],
     "guide_url": "https://sfchamber.com/november-2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "San Francisco Chamber"
   }
 ]

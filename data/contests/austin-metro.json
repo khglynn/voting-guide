@@ -1008,7 +1008,22 @@
           }
         ],
         "lwv_status": "declined",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_url": "https://austinvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 146 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "146",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Darlene Byrne",
@@ -1035,7 +1050,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_url": "https://austinvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 536 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "536",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2194,7 +2224,22 @@
           }
         ],
         "lwv_status": "not_asked",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_url": "https://austinvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Austin Bar Association",
+            "by_short": "Austin Bar",
+            "kind": "bar_poll",
+            "rating": "Austin Bar member poll published Feb 13, 2026, before the March primary: 176 votes. Andrew Reginald Hairston, who is not on the November ballot, got 47, and 62 gave no answer. 285 of 2,864 eligible members took part. Not an Austin Bar endorsement.",
+            "verdict": "none",
+            "vote": "176",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.austinlawyeronline.com/?p=5840",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2243,7 +2288,22 @@
           }
         ],
         "lwv_status": "not_asked",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_url": "https://austinvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Austin Bar Association",
+            "by_short": "Austin Bar",
+            "kind": "bar_poll",
+            "rating": "Austin Bar member poll published Feb 13, 2026, before the March primary: 77 votes. Randall Slagle, who is not on the November ballot, got 158, and 50 gave no answer. 285 of 2,864 eligible members took part. Not an Austin Bar endorsement.",
+            "verdict": "none",
+            "vote": "77",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.austinlawyeronline.com/?p=5840",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6121,7 +6181,7 @@
     "id": "tx-dvisd-trustee-3",
     "state": "TX",
     "level": "school",
-    "office": "Del Valle ISD Trustee, Single Member District 3",
+    "office": "Del Valle ISD Trustee",
     "district": "Single Member District 3",
     "scope_plain": "Del Valle ISD voters in trustee Single Member District 3 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
     "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
@@ -6193,13 +6253,14 @@
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Single Member District 3"
   },
   {
     "id": "tx-dvisd-trustee-5",
     "state": "TX",
     "level": "school",
-    "office": "Del Valle ISD Trustee, Single Member District 5",
+    "office": "Del Valle ISD Trustee",
     "district": "Single Member District 5",
     "scope_plain": "Del Valle ISD voters in trustee Single Member District 5 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
     "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
@@ -6228,13 +6289,14 @@
         "url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Single Member District 5"
   },
   {
     "id": "tx-dvisd-trustee-7",
     "state": "TX",
     "level": "school",
-    "office": "Del Valle ISD Trustee, Single Member District 7",
+    "office": "Del Valle ISD Trustee",
     "district": "Single Member District 7",
     "scope_plain": "Del Valle ISD voters in trustee Single Member District 7 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
     "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
@@ -6300,13 +6362,14 @@
         "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "seat_label": "Single Member District 7"
   },
   {
     "id": "tx-dvisd-trustee-8",
     "state": "TX",
     "level": "school",
-    "office": "Del Valle ISD Trustee, Single Member District 8",
+    "office": "Del Valle ISD Trustee",
     "district": "Single Member District 8",
     "scope_plain": "Del Valle ISD voters in trustee Single Member District 8 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
     "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
@@ -6386,13 +6449,14 @@
         "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "seat_label": "Single Member District 8"
   },
   {
     "id": "tx-dvisd-trustee-9",
     "state": "TX",
     "level": "school",
-    "office": "Del Valle ISD Trustee, Single Member District 9",
+    "office": "Del Valle ISD Trustee",
     "district": "Single Member District 9",
     "scope_plain": "Del Valle ISD voters in trustee Single Member District 9 (southeast Travis County, including some southeast Austin addresses). Most Austin voters are in Austin ISD instead.",
     "office_explainer": "A school board member who helps hire the superintendent, pass the school budget and set district policy.",
@@ -6485,7 +6549,8 @@
         "url": "https://goodparty.org/elections/tx/travis-county/del-valle-independent-school-district/position/local-school-board"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "seat_label": "Single Member District 9"
   },
   {
     "id": "tx-lisd-trustee-1",

@@ -3281,7 +3281,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 232 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "232",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 210 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "210",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Veronica Rivas-Molloy",
@@ -3292,7 +3320,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 299 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "299",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 415 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "415",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3335,7 +3391,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 331 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "331",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 446 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "446",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Julie Countiss",
@@ -3346,7 +3430,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 234 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "234",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 529 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "529",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3389,7 +3501,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 157 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "157",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 287 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "287",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Amy Guerra",
@@ -3400,7 +3540,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 277 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "277",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 575 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "575",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3443,7 +3611,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 284 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "284",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 422 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "422",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Sarah Beth Landau",
@@ -3454,7 +3650,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 250 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "250",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 522 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "522",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3497,7 +3721,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 401 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "401",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 559 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "559",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "William Demond",
@@ -3508,7 +3760,35 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 177 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "177",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 206 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "206",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3551,7 +3831,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 276 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "276",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Latosha Lewis Payne",
@@ -3562,7 +3857,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 267 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "267",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3605,7 +3915,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 222 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "222",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Rabeea Collier",
@@ -3616,7 +3941,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 335 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "335",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3659,7 +3999,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 178 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "178",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Tanya Garrison",
@@ -3670,7 +4025,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 412 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "412",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3713,7 +4083,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 379 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "379",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Tamika \"Tami\" Craft",
@@ -3724,7 +4109,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 148 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "148",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3767,7 +4167,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 142 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "142",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Beau Miller",
@@ -3778,7 +4193,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 429 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "429",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3821,7 +4251,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 134 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "134",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Lauren Reeder",
@@ -3832,7 +4277,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 453 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "453",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3875,7 +4335,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 127 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "127",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Cory Don Sepolio",
@@ -3886,7 +4361,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 389 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "389",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3929,7 +4419,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 409 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "409",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Dedra Davis",
@@ -3940,7 +4445,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 125 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "125",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3983,7 +4503,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 148 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "148",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Christine Weems",
@@ -3994,7 +4529,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 432 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "432",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4037,7 +4587,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 211 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "211",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Donna Roth",
@@ -4048,7 +4613,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 337 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "337",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4091,7 +4671,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 109 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "109",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Samantha Y. Davis",
@@ -4102,7 +4697,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 126 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "126",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4184,7 +4794,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 103 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "103",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Leah Shapiro",
@@ -4195,7 +4820,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 198 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "198",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4238,7 +4878,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 158 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "158",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Stephanie Morales",
@@ -4249,7 +4904,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 135 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "135",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4292,7 +4962,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 120 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "120",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Danilo \"Danny\" Lacayo",
@@ -4303,7 +4988,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 180 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "180",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4346,7 +5046,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 226 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "226",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Julia Maldonado",
@@ -4357,7 +5072,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 140 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "140",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4400,7 +5130,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 132 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "132",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Katherine \"Kat\" Thomas",
@@ -4411,7 +5156,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 150 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "150",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4454,7 +5214,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 140 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "140",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Andrea Beall",
@@ -4465,7 +5240,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 182 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "182",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4508,7 +5298,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 129 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "129",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Beverly D. Armstrong",
@@ -4519,7 +5324,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 151 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "151",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4562,7 +5382,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 84 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "84",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Brian Edward Warren",
@@ -4573,7 +5408,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 200 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "200",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4620,7 +5470,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 168 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "168",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Alyson Almaguer",
@@ -4631,7 +5496,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 93 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "93",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4674,7 +5554,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 114 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "114",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Chris Morton",
@@ -4685,7 +5580,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 162 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "162",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4728,7 +5638,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 131 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "131",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Josh Hill",
@@ -4739,7 +5664,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 181 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "181",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4782,7 +5722,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 130 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "130",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Hilary Unger",
@@ -4793,7 +5748,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 170 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "170",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4836,7 +5806,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 129 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "129",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Lori Chambers Gray",
@@ -4847,7 +5832,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 142 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "142",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4890,7 +5890,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 124 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "124",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Melissa Marie Morris",
@@ -4901,7 +5916,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 145 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "145",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4944,7 +5974,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 133 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "133",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Veronica M. Nelson",
@@ -4955,7 +6000,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 145 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "145",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4998,7 +6058,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 225 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "225",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Ramona Franklin",
@@ -5009,7 +6084,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 89 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "89",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5052,7 +6142,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 178 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "178",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Breanna Schwartz",
@@ -5063,7 +6168,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 94 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "94",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5106,7 +6226,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 158 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "158",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Tiffany M. Hill",
@@ -5117,7 +6252,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 114 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "114",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5214,7 +6364,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 155 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "155",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Angela M Lancelin",
@@ -5225,7 +6390,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 154 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "154",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5397,7 +6577,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 160 votes. This is not an HBA endorsement. Listed as Rosa Cardenas in the poll.",
+            "verdict": "none",
+            "vote": "160",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Damiane Dianne Curvey",
@@ -5408,7 +6603,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 140 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "140",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5494,7 +6704,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 133 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "133",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Linda Marie Dunson",
@@ -5505,7 +6730,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 166 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "166",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5591,7 +6831,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 120 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "120",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Germaine Janet Tanner",
@@ -5602,7 +6857,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 187 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "187",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5645,7 +6915,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 98 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "98",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Teresa Waldrop",
@@ -5656,7 +6941,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 229 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "229",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5699,7 +6999,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 124 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "124",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Sonia Lopez",
@@ -5710,7 +7025,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 152 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "152",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5757,7 +7087,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 182 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "182",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Ebony N. Williams",
@@ -5768,7 +7113,22 @@
         "background": "Lawyer; defeated incumbent Judge Jim Kovach in the March Democratic primary.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 109 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "109",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5815,7 +7175,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 150 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "150",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "LaShawn A. Williams",
@@ -5826,7 +7201,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 189 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "189",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5873,7 +7263,22 @@
         "background": "Attorney and mediator.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 188 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "188",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "M. Monica Singh",
@@ -5884,7 +7289,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 236 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "236",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5931,7 +7351,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 143 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "143",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jermaine Thomas",
@@ -5942,7 +7377,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 136 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "136",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -5989,7 +7439,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 113 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "113",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Alex Salgado",
@@ -6000,7 +7465,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 145 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "145",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6047,7 +7527,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 138 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "138",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Matthew Ruben Perez",
@@ -6058,7 +7553,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 110 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "110",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6105,7 +7615,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 129 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "129",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Carlos Alberto Aguayo",
@@ -6116,7 +7641,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 105 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "105",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6163,7 +7703,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 96 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "96",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Shannon B. Baldwin",
@@ -6174,7 +7729,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 152 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "152",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6221,7 +7791,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 97 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "97",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "David M. Fleischer",
@@ -6232,7 +7817,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 150 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "150",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6279,7 +7879,22 @@
         "background": "Attorney and prosecutor.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 94 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "94",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Kelley Andrews",
@@ -6290,7 +7905,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 152 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "152",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6337,7 +7967,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 114 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "114",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Andrew A. Wright",
@@ -6348,7 +7993,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 131 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "131",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6395,7 +8055,22 @@
         "background": "Prosecutor.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 97 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "97",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Erika Ramirez",
@@ -6406,7 +8081,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 150 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "150",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6453,7 +8143,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 123 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "123",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Toria J. Finch",
@@ -6464,7 +8169,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 139 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "139",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6511,7 +8231,22 @@
         "background": "Lawyer.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 100 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "100",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Juanita A. Jackson",
@@ -6522,7 +8257,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 148 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "148",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6569,7 +8319,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 119 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "119",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Sedrick T. Walker II",
@@ -6580,7 +8345,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 134 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "134",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6627,7 +8407,22 @@
         "background": "Prosecutor.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 106 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "106",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Ashley Mayes Guice",
@@ -6638,7 +8433,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 137 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "137",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6685,7 +8495,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 102 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "102",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Raul Rodriguez",
@@ -6696,7 +8521,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 164 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "164",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6743,7 +8583,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 148 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "148",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Yahaira Quezada",
@@ -6754,7 +8609,22 @@
         "background": "Associate judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 112 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "112",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6801,7 +8671,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 116 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "116",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Tonya Jones",
@@ -6812,7 +8697,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 132 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "132",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6859,7 +8759,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 125 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "125",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jerry Simoneaux",
@@ -6870,7 +8785,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 305 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "305",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6917,7 +8847,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 136 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "136",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Pamela Medina",
@@ -6928,7 +8873,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 208 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "208",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6975,7 +8935,22 @@
         "background": "Retired attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 87 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "87",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jason Cox",
@@ -6986,7 +8961,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 255 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "255",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -7033,7 +9023,22 @@
         "background": "Attorney.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 139 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "139",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "James S. Horwitz",
@@ -7044,7 +9049,22 @@
         "background": "Incumbent judge.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 226 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "226",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -7573,7 +9593,8 @@
         "url": "https://en.wikipedia.org/wiki/2026_Harris_County_elections"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Position 5, at large"
   },
   {
     "id": "tx-harris-hcde-7",
@@ -7649,7 +9670,8 @@
         "url": "https://en.wikipedia.org/wiki/2026_Harris_County_elections"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Position 7, at large"
   },
   {
     "id": "tx-harris-commissioner-2",
@@ -7923,7 +9945,22 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 115 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "115",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Dolores Lozano",
@@ -7945,7 +9982,22 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 113 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "113",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -8031,7 +10083,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 106 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "106",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Sean Simon",
@@ -8042,7 +10109,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 106 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "106",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -8101,7 +10183,22 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 146 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "146",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Lisa Jefferson",
@@ -8128,7 +10225,22 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 107 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "107",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -8253,7 +10365,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 162 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "162",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Nicolas Juan",
@@ -8264,7 +10391,22 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 72 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "72",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

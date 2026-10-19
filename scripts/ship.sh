@@ -258,6 +258,8 @@ run_gates() { # $1 folder holding the files to check, $2 label, $3 changed files
     say "Data build and rules"
     npm run data --silent
     node scripts/check-data.mjs
+    say "Model tests (save-link contract, districts, lenses, verdicts, fills)"
+    node tests/model.mjs
     say "Typecheck and production build"
     npm run build --silent
     say "Browser checks against a local preview"

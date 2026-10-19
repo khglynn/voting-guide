@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
     "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "State rainy day fund"
   },
   {
     "id": "fl-amendment-2",
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
     "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Farm equipment property tax exemption"
   },
   {
     "id": "fl-amendment-3",
@@ -78,6 +80,7 @@
     },
     "official_text_url": "https://files.floridados.gov/media/711355/eng-2026-booklet-constitutional-amendpub-updated-20260821.pdf",
     "official_guide_url": "https://dos.fl.gov/elections/laws-rules/constitutional-amendmentsinitiatives/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Property tax exemptions and assessment limits"
   }
 ]

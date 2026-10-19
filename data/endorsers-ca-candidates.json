@@ -4,72 +4,98 @@
     "name": "Los Angeles Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found.",
-    "geography": ["CA", "los-angeles-ca"],
+    "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/los-angeles-times-media-bias.",
+    "geography": [
+      "CA",
+      "los-angeles-ca"
+    ],
     "guide_url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sf-chronicle-eb",
     "name": "San Francisco Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "AllSides rates the San Francisco Chronicle Left (-4.00; last review May 2022, low or initial confidence as of Oct. 2026). No separate editorial-board rating was found.",
-    "geography": ["CA", "san-francisco-ca"],
+    "lean_basis": "AllSides rates the San Francisco Chronicle Left (-4.00; last review May 2022, low or initial confidence as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/san-francisco-chronicle-media-bias.",
+    "geography": [
+      "CA",
+      "san-francisco-ca"
+    ],
     "guide_url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sac-bee-eb",
     "name": "Sacramento Bee / McClatchy California editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Sacramento Bee Lean Left (independent review, low or initial confidence, as of Oct. 2026). One McClatchy board writes for the Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune.",
-    "geography": ["CA"],
+    "lean_basis": "AllSides rates The Sacramento Bee Lean Left (independent review, low or initial confidence, as of Oct. 2026). One McClatchy board writes for the Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune. Rating source: https://www.allsides.com/news-source/sacramento-bee-media-bias.",
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.sacbee.com/opinion/election-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sd-union-tribune-eb",
     "name": "San Diego Union-Tribune editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the San Diego Union-Tribune Lean Left (independent review, August 2020; low or initial confidence as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found. Since 2023 it has been owned by MediaNews Group and shares an opinion editor with the Southern California News Group, while keeping its own board.",
-    "geography": ["CA", "san-diego-ca"],
+    "lean_basis": "AllSides rates the San Diego Union-Tribune Lean Left (independent review, August 2020; low or initial confidence as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found. Since 2023 it has been owned by MediaNews Group and shares an opinion editor with the Southern California News Group, while keeping its own board. Rating source: https://www.allsides.com/news-source/san-diego-union-tribune-media-bias.",
+    "geography": [
+      "CA",
+      "san-diego-ca"
+    ],
     "guide_url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "oc-register-eb",
     "name": "Orange County Register / Southern California News Group editorial board",
     "type": "publication",
     "lean": "lean_right",
-    "lean_basis": "AllSides rates the Orange County Register Lean Right (2.00; independent review, low or initial confidence, as of Oct. 2026). One Southern California News Group board writes the editorials for the Register, the LA Daily News and nine sister papers.",
-    "geography": ["CA", "los-angeles-ca", "fullerton-ca", "orange-county-ca"],
+    "lean_basis": "AllSides rates the Orange County Register Lean Right (2.00; independent review, low or initial confidence, as of Oct. 2026). One Southern California News Group board writes the editorials for the Register, the LA Daily News and nine sister papers. Rating source: https://www.allsides.com/news-source/orange-county-register-media-bias.",
+    "geography": [
+      "CA",
+      "los-angeles-ca",
+      "fullerton-ca",
+      "orange-county-ca"
+    ],
     "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "mercury-news-eb",
     "name": "Mercury News and East Bay Times editorial boards (Bay Area News Group)",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the San Jose Mercury News Lean Left (independent review, low or initial confidence, as of Oct. 2026). It publishes joint endorsements with the East Bay Times board.",
-    "geography": ["CA", "san-francisco-ca"],
+    "lean_basis": "AllSides rates the San Jose Mercury News Lean Left (independent review, low or initial confidence, as of Oct. 2026). It publishes joint endorsements with the East Bay Times board. Rating source: https://www.allsides.com/news-source/san-jose-mercury-news-media-bias.",
+    "geography": [
+      "CA",
+      "san-francisco-ca"
+    ],
     "guide_url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating",
+    "short": "Mercury News / East Bay Times"
   },
   {
     "id": "ca-democratic-party",
@@ -77,11 +103,15 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official state party organization. Endorsements require a supermajority of delegates or Executive Board.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://cadem.org/wp-content/uploads/2026/08/FINAL-2026-General-Election-Endorsements.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "ca-republican-party",
@@ -89,11 +119,15 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official state party organization. Endorsements require 60% of delegates at convention.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://cagop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "ca-labor-fed",
@@ -101,11 +135,15 @@
     "type": "labor",
     "lean": "lean_left",
     "lean_basis": "Federation of about 1,300 unions; its About page says 'Unions are working people standing together' (https://calaborfed.org/about/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "California Labor Federation"
   },
   {
     "id": "calchamber",
@@ -113,11 +151,14 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Statewide business lobby that calls itself 'California’s largest broad-based business advocate' and says it 'fights for policies that lower costs and cut through regulatory red tape' (https://www.calchamber.com/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://advocacy.calchamber.com/elections/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "cta",
@@ -125,11 +166,14 @@
     "type": "labor",
     "lean": "lean_left",
     "lean_basis": "The state's largest teachers' union; its site says 'We believe our public schools are worth fighting for' (https://www.cta.org/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.cta.org/our-advocacy/election-2026",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ppac-votes",
@@ -137,11 +181,14 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "Abortion-rights political arm of Planned Parenthood affiliates in Los Angeles County. Planned Parenthood Action Fund says the federation works to 'defend reproductive rights' (https://www.plannedparenthoodaction.org/about-us). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-advocacy-project-los-angeles-county/voter-guide-ppapx",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "hjta-pac",
@@ -149,11 +196,14 @@
     "type": "advocacy",
     "lean": "right",
     "lean_basis": "Anti-tax group that calls itself 'the legal and political watchdog for Proposition 13 and a staunch defender of California taxpayers' (https://www.hjta.org/about-hjta/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "equality-california",
@@ -161,11 +211,14 @@
     "type": "advocacy",
     "lean": "left",
     "lean_basis": "LGBTQ+ rights group that calls itself 'the nation’s largest statewide LGBTQ+ civil rights organization' (https://www.eqca.org/about/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.eqca.org/elections/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "porac",
@@ -173,23 +226,29 @@
     "type": "advocacy",
     "lean": "neutral",
     "lean_basis": "Police officers' association whose stated mission, 'to maintain a leadership role in organizing, empowering and representing the interests of rank-and-file peace officers' (https://porac.org/about/), uses no ideological language. No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://porac.org/advocacy/2026-voting-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-ca",
     "name": "Sierra Club California",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its California chapter.",
-    "geography": ["CA"],
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its California chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "ca-envirovoters",
@@ -197,11 +256,14 @@
     "type": "advocacy",
     "lean": "lean_left",
     "lean_basis": "Environmental political group; its giving platform backs candidates who will 'champion bold policies to protect our environment and democracy, and fight for climate justice' (https://www.ecovote.org/about). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://action.ecovote.org/2026-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ca-business-roundtable",
@@ -209,11 +271,14 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Association of large employers that says it is 'dedicated to promoting a business environment where companies can thrive' (https://www.cbrt.org/about). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://www.cbrt.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-california",
@@ -221,10 +286,13 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "League of Women Voters state chapter that says 'We are a nonpartisan organization, which means that we do not support or oppose candidates or political parties' (https://lwvc.org/about-us/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["CA"],
+    "geography": [
+      "CA"
+    ],
     "guide_url": "https://cavotes.org/wp-content/uploads/sites/3/2026/08/EVG-Nov26-Eng.pdf",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

@@ -36,7 +36,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Park bonds"
   },
   {
     "id": "tx-austin-prop-b",
@@ -75,7 +76,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Library bonds"
   },
   {
     "id": "tx-austin-prop-c",
@@ -109,7 +111,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Council district drawing rules"
   },
   {
     "id": "tx-austin-prop-d",
@@ -143,7 +146,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Council meeting schedule"
   },
   {
     "id": "tx-austin-prop-e",
@@ -177,7 +181,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Council meeting rules"
   },
   {
     "id": "tx-austin-prop-f",
@@ -211,7 +216,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Campaign contribution limits"
   },
   {
     "id": "tx-austin-prop-g",
@@ -245,7 +251,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Citizen petition election dates"
   },
   {
     "id": "tx-austin-prop-h",
@@ -279,7 +286,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Hiring the city attorney"
   },
   {
     "id": "tx-austin-prop-i",
@@ -318,7 +326,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Outside reviews of city spending"
   },
   {
     "id": "tx-austin-prop-j",
@@ -352,7 +361,8 @@
         "url": "https://www.kvue.com/article/news/politics/vote-texas/austin-ballot-measures-propositions-midterm-election-2026/269-7d20ea31-17af-4602-8f92-8d4cb59cfa85"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Charter wording cleanup"
   },
   {
     "id": "tx-acc-prop-a-pflugerville",
@@ -379,7 +389,8 @@
     },
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Community college taxing district expansion"
   },
   {
     "id": "tx-pflugerville-prop-a",
@@ -400,7 +411,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mayor and council pay"
   },
   {
     "id": "tx-pflugerville-prop-b",
@@ -421,7 +433,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City data and surveillance rules"
   },
   {
     "id": "tx-pflugerville-prop-c",
@@ -442,7 +455,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Passing ordinances in one meeting"
   },
   {
     "id": "tx-pflugerville-prop-d",
@@ -463,7 +477,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Petition signature requirements"
   },
   {
     "id": "tx-pflugerville-prop-e",
@@ -484,7 +499,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Council meeting agenda requests"
   },
   {
     "id": "tx-pflugerville-prop-f",
@@ -505,7 +521,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Time to fix petitions"
   },
   {
     "id": "tx-pflugerville-prop-g",
@@ -526,7 +543,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Budget forecasts and project reports"
   },
   {
     "id": "tx-pflugerville-prop-h",
@@ -547,7 +565,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City manager meeting attendance"
   },
   {
     "id": "tx-pflugerville-prop-i",
@@ -568,7 +587,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City boards and nearby residents"
   },
   {
     "id": "tx-pflugerville-prop-j",
@@ -589,7 +609,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mayor and council policy roles"
   },
   {
     "id": "tx-pflugerville-prop-k",
@@ -610,7 +631,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Public comment at removal hearings"
   },
   {
     "id": "tx-pflugerville-prop-l",
@@ -631,7 +653,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Municipal judge residency requirement"
   },
   {
     "id": "tx-pflugerville-prop-m",
@@ -652,7 +675,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Public participation rules"
   },
   {
     "id": "tx-pflugerville-prop-n",
@@ -673,7 +697,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://austinvotersguide.org/LWVAA-VG-EN.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Charter text cleanup"
   },
   {
     "id": "tx-rrisd-prop-a",
@@ -694,7 +719,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://roundrockisd.org",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Round Rock school operating tax"
   },
   {
     "id": "tx-lisd-prop-a",
@@ -715,7 +741,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://www.leanderisd.org",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Leander school operating tax"
   },
   {
     "id": "tx-dvisd-prop-a",
@@ -736,7 +763,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://www.dvisd.net",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Del Valle school operating tax"
   },
   {
     "id": "tx-manor-isd-prop-a",
@@ -757,7 +785,8 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://www.manorisd.net",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Manor school building bonds"
   },
   {
     "id": "tx-manor-isd-prop-b",
@@ -778,6 +807,7 @@
     "opponents_case": null,
     "official_text_url": "https://votetravis.gov/wp-content/uploads/G26-Bedsheet-Ballot-Corrected-Final2.pdf",
     "official_guide_url": "https://www.manorisd.net",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Manor school technology bonds"
   }
 ]

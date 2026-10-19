@@ -4,7 +4,7 @@
   "name": "Houston Chronicle editorial board",
   "type": "publication",
   "lean": "neutral",
-  "lean_basis": "AllSides rates the Houston Chronicle Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+  "lean_basis": "AllSides rates the Houston Chronicle Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/houston-chronicle-media-bias.",
   "geography": [
    "houston-tx",
    "TX"
@@ -12,7 +12,8 @@
   "guide_url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "default_on": true,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
  },
  {
   "id": "lwv-houston",
@@ -26,7 +27,8 @@
   "guide_url": "https://www.houstonvotersguide.org/",
   "default_on": true,
   "endorses_candidates": false,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "the-caucus-houston",
@@ -40,7 +42,8 @@
   "guide_url": "https://pac.thecaucus.org/endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "harris-county-gop",
@@ -54,7 +57,9 @@
   "guide_url": "https://hcgop.v-web.com/elections/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party"
  },
  {
   "id": "tx-gulf-coast-labor-federation",
@@ -68,20 +73,22 @@
   "guide_url": "https://www.gcaflcio.org/endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "ground-game-texas",
   "name": "Ground Game Texas",
   "type": "advocacy",
   "lean": "left",
-  "lean_basis": "Self-described progressive group: 'Building a progressive Texas, from the ground up' (https://groundgametexas.org/). No outside rating found; lean reflects its stated mission.",
+  "lean_basis": "Its stated mission or political identity includes: \"Building a progressive Texas, from the ground up\". Source: https://groundgametexas.org/.",
   "geography": [
    "houston-tx"
   ],
   "guide_url": "https://www.fox26houston.com/news/houston-proposition-a-what-marijuana-enforcement-no-knock-warrant-measure-would-do",
   "default_on": false,
   "endorses_candidates": false,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  }
 ]

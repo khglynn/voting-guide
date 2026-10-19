@@ -1971,7 +1971,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 233 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "233",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Amanda Reichek",
@@ -1998,7 +2013,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 433 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "433",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2057,7 +2087,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 255 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "255",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Monica Purdy",
@@ -2084,7 +2129,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 448 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "448",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2143,7 +2203,22 @@
           }
         ],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 274 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "274",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Andrea D. Plumlee",
@@ -2170,7 +2245,22 @@
           }
         ],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 265 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "265",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

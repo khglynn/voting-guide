@@ -202,5 +202,52 @@
   "ca-assembly-61",
   "ca-assembly-65",
   "ca-assembly-66"
- ]
+ ],
+ "district_finders": [
+  {
+   "office_match": "Los Angeles City Council",
+   "label": "Find your council district",
+   "url": "https://lacity.gov/neighborhoodinfo"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district on your official ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "Board of Equalization Member",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "Judge of the Superior Court, Los Angeles County",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "Los Angeles City Council",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  },
+  {
+   "office_match": "Los Angeles Community College District Board of Trustees",
+   "label": "Check your district on your official sample ballot",
+   "url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot"
+  }
+ ],
+ "lookups": {
+  "early_in_person": "https://locator.lavote.net/locations/vc",
+  "election_day": "https://locator.lavote.net/locations/vc",
+  "drop_box": "https://www.lavote.gov/home/voting-elections/voting-options/vote-by-mail/vbm-ballot-drop-off"
+ }
 }

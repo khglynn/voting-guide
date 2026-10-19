@@ -63,5 +63,92 @@
     "tx-us-house-21"
   ],
   "measure_ids": [],
-  "notes": "Hays early voting: Oct 19 to 23 9 AM to 7 PM, Sat Oct 24 7 AM to 7 PM, Sun Oct 25 noon to 6 PM, Oct 26 to 30 7 AM to 7 PM. Main early voting site: Hays County Elections Office, 120 Stagecoach Trail, San Marcos. Any Hays voter can use any Hays vote center. No Hays County, San Marcos CISD or Hays CISD bond or tax measure was confirmed for Nov 2026; the county site blocked automated checks, so verify at the Hays sample ballot."
+  "notes": "Hays early voting: Oct 19 to 23 9 AM to 7 PM, Sat Oct 24 7 AM to 7 PM, Sun Oct 25 noon to 6 PM, Oct 26 to 30 7 AM to 7 PM. Main early voting site: Hays County Elections Office, 120 Stagecoach Trail, San Marcos. Any Hays voter can use any Hays vote center. No Hays County, San Marcos CISD or Hays CISD bond or tax measure was confirmed for Nov 2026; the county site blocked automated checks, so verify at the Hays sample ballot.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on the Hays County election page",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Hays commissioner precinct",
+      "url": "https://www.hayscountytx.gov/771/Precinct-Maps"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "San Marcos City Council Member",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your precinct and Hays County ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    }
+  ]
 }

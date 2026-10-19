@@ -1351,7 +1351,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Served 10 years on the East Point City Council; attorney and nonprofit health care executive (Branch profile). The qualifying list spells her name Karen Rene'. Fulton's sample ballot prints no party next to her name; the qualifying list says Democratic. No campaign website found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "we want to make sure that we’re not raising property taxes, especially during these inflationary times",
+            "is_quote": true,
+            "source": "https://www.ajc.com/news/2026/10/county-commission-races-heat-up-during-early-voting-across-metro-atlanta/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/georgia"
       },
@@ -1449,7 +1455,16 @@
         "background": "Former mayor of Dolton, Illinois (2021 to 2025). Moved to Georgia after leaving office; Fulton's elections board accepted her May 2025 South Fulton lease as proof of residency and let her run. Lists her occupation as business owner. Won the Republican primary unopposed. No campaign website found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/georgia"
+        "lwv_url": "https://www.vote411.org/georgia",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Fulton campaign-site and platform web search",
+            "tiffanyhenyard.org (unavailable)",
+            "Branch candidate platform profile"
+          ]
+        }
       }
     ],
     "sources": [

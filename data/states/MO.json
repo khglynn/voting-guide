@@ -68,7 +68,7 @@
     "end": "2026-11-02",
     "hours_note": "Missouri calls this 'no-excuse absentee voting in person.' The SOS: 'From the second Tuesday before an election to the day before the election, you may vote a no-excuse absentee ballot in person' at a site your election authority designates, until 5:00 PM the day before the election. For Nov 3 that is Tuesday, October 20 through Monday, November 2, 2026 (STLPR: 'In-person no excuses needed absentee voting begins: Oct. 20'; KCUR: 'Oct. 20-Nov. 2, 2026'). Bring a photo ID. No notary is needed in person. ST. LOUIS county has 21 sites: the Board of Elections HQ (725 Northwest Plaza Dr., St. Ann) plus 20 satellites, including eight county library branches (Cliff Cave, Clark Family, Daniel Boone, Grand Glaize, Grant's View, Lewis & Clark, Mid-County, Thornhill), the St. Louis Galleria, STLCC Meramec, UMSL, Olivette City Center, Wildwood City Hall, North County Rec Complex, Dellwood Rec Center, JFK Community Center, and several churches. Hours per the St. Louis County Democrats' logistics page: weekdays Oct 20 to 30, 8 AM to 4:30 PM; Saturdays Oct 24 and Oct 31, 9 AM to 1 PM; closed Sundays; Monday Nov 2, 8 AM to 5 PM. The county library lists its branches as 8 AM to 5 PM weekdays and Sat Oct 31, 9 AM to 1 PM. Confirm your site's hours with the Board (314-615-1800) or its satellite lookup map. Before October 20 (from September 22), only voters with one of the six excuses could vote absentee in person, at the St. Ann office.",
     "vote_centers": true,
-    "lookup_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/nearby/index.html?appid=c094cf17f6214c2b9d6f7d77f225cf78",
+    "lookup_url": "https://www.sos.mo.gov/elections/goVoteMissouri/localelectionauthority",
     "confidence": "verified"
   },
   "election_day": {
@@ -76,7 +76,7 @@
     "polls_close": "7:00 PM",
     "in_line_rule": "SOS: 'polling places are open from 6:00 AM to 7:00 PM on Election Day.' If you are in line at 7:00 PM, you still have the right to vote.",
     "vote_centers": true,
-    "lookup_url": "https://lookup-stlouiscovotes.hub.arcgis.com/",
+    "lookup_url": "https://voteroutreach.sos.mo.gov/portal/",
     "confidence": "verified"
   },
   "id_rules": {
@@ -406,6 +406,38 @@
     {
       "name": "Missouri Secretary of State: FAQs, Other Voting Questions ('In person absentee voters are not eligible for a provisional ballot'; moving; name change)",
       "url": "https://www.sos.mo.gov/elections/goVoteMissouri/votingquestions"
+    }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "For the Supreme Court, appeals courts and St. Louis County trial courts in this guide, the governor appoints from three nominees. Judges later face a yes-or-no retention vote. Other Missouri trial courts can use partisan elections.",
+    "who_reviews": "The Judicial Performance Review Committee includes lawyers, non-lawyers and retired judges. It reads lawyer and juror surveys and sample decisions, then votes on whether each judge meets performance standards.",
+    "what_the_rating_means": "A majority of the committee found that the judge substantially meets overall judicial performance standards and recommends keeping the judge.",
+    "what_it_doesnt_mean": "The finding does not endorse the judge’s rulings or predict how you would fare in court. The published recommendation does not include the committee’s vote count.",
+    "to_keep_a_judge": "More yes than no votes keeps the judge. Vote no to remove the judge.",
+    "history": "The committee recommended keeping every judge listed in its statewide 2026 review guide.",
+    "read_one": {
+      "label": "Choose a judge to read the review, surveys and sample decisions",
+      "url": "https://yourmissourijudges.org/judges/"
+    },
+    "sources": [
+      {
+        "name": "Missouri judicial reviews",
+        "url": "https://yourmissourijudges.org/reviews/"
+      },
+      {
+        "name": "Missouri review frequently asked questions",
+        "url": "https://yourmissourijudges.org/reviews/frequently-asked-questions/"
+      },
+      {
+        "name": "Missouri 2026 review guide",
+        "url": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "St. Louis County and the City of St. Louis have separate election offices and different ballots.",
+      "applies_to": "ballot"
     }
   ]
 }

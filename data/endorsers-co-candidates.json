@@ -4,56 +4,60 @@
     "name": "The Denver Post editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low or initial confidence, Oct. 2026) and Ad Fontes rates it Middle (-2.86). Neither rates the editorial board separately.",
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low or initial confidence, Oct. 2026) and Ad Fontes rates it Middle (-2.86). Neither rates the editorial board separately. Rating source: https://www.allsides.com/news-source/denver-post-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "co-springs-gazette-eb",
     "name": "The Gazette (Colorado Springs) editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes.",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes. Rating source: https://www.allsides.com/news-source/denver-gazette-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "denver-gazette-eb",
     "name": "The Denver Gazette editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes.",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes. Rating source: https://www.allsides.com/news-source/denver-gazette-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "colorado-sun",
     "name": "The Colorado Sun",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Colorado Sun Lean Left (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom has no editorial board and does not endorse.",
+    "lean_basis": "AllSides rates The Colorado Sun Lean Left (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom has no editorial board and does not endorse. Rating source: https://www.allsides.com/news-source/colorado-sun-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-colorado",
@@ -67,7 +71,8 @@
     "guide_url": "https://lwvcolorado.org/wtls",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "co-democratic-party",
@@ -81,7 +86,9 @@
     "guide_url": "https://www.coloradodems.org/candidates",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "co-republican-party",
@@ -95,7 +102,9 @@
     "guide_url": "https://colorado.gop/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "co-afl-cio",
@@ -109,7 +118,8 @@
     "guide_url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-education-association",
@@ -123,7 +133,8 @@
     "guide_url": "https://denverteachers.org/denver-classroom-teachers-association-dcta-announces-recommendations-for-2026-general-election/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "conservation-colorado",
@@ -137,7 +148,8 @@
     "guide_url": "https://conservationco.org/resources/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "planned-parenthood-votes-co",
@@ -151,7 +163,8 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-votes-colorado/blog-copy-2/planned-parenthood-votes-colorado-announces-full-2026-endorsement-slate",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -165,7 +178,8 @@
     "guide_url": "https://www.nrapvf.org/grades/colorado",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "rocky-mountain-gun-owners",
@@ -179,7 +193,8 @@
     "guide_url": "https://rmgo.org/endorsement/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-chamber-pac",
@@ -193,7 +208,8 @@
     "guide_url": "https://cochamber.com/2026/07/10/colorado-chamber-announces-general-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-fop",
@@ -207,6 +223,8 @@
     "guide_url": "https://philforcolorado.com/endorsement-colorado-fraternal-order-of-police-endorses-phil-weiser-for-governor/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "Colorado FOP"
   }
 ]

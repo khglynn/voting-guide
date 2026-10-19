@@ -25,7 +25,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Affordable housing bonds"
   },
   {
     "id": "baltimore-question-b",
@@ -53,7 +54,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "School building bonds"
   },
   {
     "id": "baltimore-question-c",
@@ -81,7 +83,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Economic development bonds"
   },
   {
     "id": "baltimore-question-d",
@@ -109,7 +112,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City building and infrastructure bonds"
   },
   {
     "id": "baltimore-question-e",
@@ -143,7 +147,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City contract bidding rules"
   },
   {
     "id": "baltimore-question-f",
@@ -177,7 +182,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Budget process and Board of Estimates"
   },
   {
     "id": "baltimore-question-g",
@@ -211,7 +217,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Use of city property"
   },
   {
     "id": "baltimore-question-h",
@@ -245,7 +252,8 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Water and wastewater department"
   },
   {
     "id": "baltimore-question-i",
@@ -279,6 +287,7 @@
         "url": "https://www.thebanner.com/voter-guide/2026/baltimore-city/baltimore-city-ballot-questions-L4NDEPL6YVF2JOQAXAK3JF5TOQ/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Fund for families with newborns"
   }
 ]

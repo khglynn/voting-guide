@@ -4,7 +4,7 @@
     "name": "The Baltimore Sun editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Baltimore Sun Center (low confidence, Oct. 2026) and Ad Fontes rates it Middle. Largest Maryland daily, bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams; Williams said that month the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan. 20, 2024). Its opinion pages have run guest pieces against Question 3, but no board position was found, and no Sun editorial on Baltimore City Questions A to I was found (the site blocks automated reads).",
+    "lean_basis": "AllSides rates The Baltimore Sun Center (low confidence, Oct. 2026) and Ad Fontes rates it Middle. Largest Maryland daily, bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams; Williams said that month the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan. 20, 2024). Its opinion pages have run guest pieces against Question 3, but no board position was found, and no Sun editorial on Baltimore City Questions A to I was found (the site blocks automated reads). Rating source: https://www.allsides.com/news-source/baltimore-sun-media-bias.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -12,14 +12,15 @@
     "guide_url": "https://www.baltimoresun.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "baltimore-banner",
     "name": "The Baltimore Banner",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions.",
+    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions. Rating source: https://www.allsides.com/news-source/baltimore-banner-media-bias.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -27,7 +28,8 @@
     "guide_url": "https://www.thebanner.com/voter-guide/maryland-voter-guide-2026-24CQJDVUAVCIVIFJECKCDXMFPU/filter/baltimorecity/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-baltimore-city",
@@ -41,7 +43,8 @@
     "guide_url": "https://assets.nationbuilder.com/lwvmaryland/pages/15592/attachments/original/1790347920/Baltimore_City_2026_General_VG.pdf?1790347920",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-democratic-party",
@@ -56,7 +59,9 @@
     "guide_url": "https://www.mddems.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "md-republican-party",
@@ -71,14 +76,16 @@
     "guide_url": "https://mdgop.org/save-our-voice/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "sierra-club-md",
     "name": "Sierra Club Maryland Chapter PAC",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Maryland chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Maryland chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -86,7 +93,8 @@
     "guide_url": "https://www.sierraclub.org/sites/default/files/2026-09/mdsc-2026-endorsements-v7.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "mayor-brandon-scott",
@@ -100,7 +108,8 @@
     "guide_url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "council-president-zeke-cohen",
@@ -114,7 +123,8 @@
     "guide_url": "https://baltimorebrew.com/2026/06/08/council-advances-three-charter-bills-eliminating-the-competitive-bid-requirement-and-more/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "comptroller-bill-henry",
@@ -128,7 +138,8 @@
     "guide_url": "https://www.thebanner.com/community/climate-environment/baltimore-wastewater-public-works-department-split-RNY7RAUKKVDDVNEWBMU77IAXKE/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "gov-wes-moore",
@@ -143,7 +154,8 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "sen-antonio-hayes",
@@ -157,35 +169,38 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "party"
   },
   {
     "id": "baltimore-teachers-union",
     "name": "Baltimore Teachers Union",
     "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "Teachers' union for Baltimore City schools, an AFT affiliate (https://www.baltimoreteachers.org/about). Its page gives no mission text, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
+    "lean": null,
+    "lean_basis": "Teachers' union for Baltimore City schools, an AFT affiliate (https://www.baltimoreteachers.org/about). Its page gives no mission text. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
     "geography": [
       "baltimore-md"
     ],
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "metro-baltimore-afl-cio",
     "name": "Metropolitan Baltimore Council of AFL-CIO Unions",
     "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "AFL-CIO central labor council for the Baltimore area. Its site (https://www.metrobaltimoreaflcio.org/) could not be read on Oct. 17, 2026, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
+    "lean": null,
+    "lean_basis": "AFL-CIO central labor council for the Baltimore area. Its site (https://www.metrobaltimoreaflcio.org/) could not be read on Oct. 17, 2026. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
     "geography": [
       "baltimore-md"
     ],
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "seiu-1199",
@@ -199,14 +214,15 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "progressive-maryland",
     "name": "Progressive Maryland",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive group that says it is 'leading the fight for progressive change in Maryland' (https://www.progressivemaryland.org/about). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"leading the fight for progressive change in Maryland\". Source: https://www.progressivemaryland.org/about.",
     "geography": [
       "MD",
       "baltimore-md"
@@ -214,21 +230,23 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "greater-baltimore-dsa",
     "name": "Greater Baltimore Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Local chapter of the Democratic Socialists of America; it works 'for a socialist future in Greater Baltimore' (https://baltimoredsa.org/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"for a socialist future in Greater Baltimore\". Source: https://baltimoredsa.org/.",
     "geography": [
       "baltimore-md"
     ],
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "charm-city-indivisible",
@@ -242,7 +260,8 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "moms-demand-action-gun-sense",
@@ -257,7 +276,8 @@
     "guide_url": "https://www.thebanner.com/education/k-12-schools/city-board-of-school-commissioners-candidates-2JJ4A3LXOREHXG6X6NU6X6ZJ4M/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "baltimore-baby-fund-campaign",
@@ -271,6 +291,7 @@
     "guide_url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

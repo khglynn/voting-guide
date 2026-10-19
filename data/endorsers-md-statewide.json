@@ -4,42 +4,45 @@
     "name": "The Baltimore Sun editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Baltimore Sun Center (low confidence, Oct. 2026) and Ad Fontes rates it Middle. Largest Maryland daily, bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams; Williams said that month the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan. 20, 2024). Its opinion pages have run guest pieces against Question 3, but no board position was found, and no Sun editorial on Baltimore City Questions A to I was found (the site blocks automated reads).",
+    "lean_basis": "AllSides rates The Baltimore Sun Center (low confidence, Oct. 2026) and Ad Fontes rates it Middle. Largest Maryland daily, bought in January 2024 by Sinclair executive chairman David Smith with Armstrong Williams; Williams said that month the Sun 'will stop endorsing political candidates' (Baltimore Banner, Jan. 20, 2024). Its opinion pages have run guest pieces against Question 3, but no board position was found, and no Sun editorial on Baltimore City Questions A to I was found (the site blocks automated reads). Rating source: https://www.allsides.com/news-source/baltimore-sun-media-bias.",
     "geography": [
       "MD"
     ],
     "guide_url": "https://www.baltimoresun.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "baltimore-banner",
     "name": "The Baltimore Banner",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions.",
+    "lean_basis": "AllSides rates The Baltimore Banner Center (independent review, low or initial confidence, as of Oct. 2026). As a 501(c)(3) newsroom it does not endorse candidates or ballot questions. Rating source: https://www.allsides.com/news-source/baltimore-banner-media-bias.",
     "geography": [
       "MD"
     ],
     "guide_url": "https://www.thebanner.com/voter-guide/2026/maryland/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "washington-post-eb",
     "name": "The Washington Post editorial board",
     "type": "publication",
     "lean": "lean_right",
-    "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found.",
+    "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found. Rating source: https://www.allsides.com/news-source/washington-post-editorial-board-media-bias.",
     "geography": [
       "MD"
     ],
     "guide_url": "https://www.washingtonpost.com/opinions/the-posts-view/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-maryland",
@@ -53,7 +56,8 @@
     "guide_url": "https://www.lwvmd.org/voterguides2026",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-democratic-party",
@@ -67,7 +71,9 @@
     "guide_url": "https://www.mddems.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "md-republican-party",
@@ -81,7 +87,9 @@
     "guide_url": "https://mdgop.org/save-our-voice/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "mddc-afl-cio",
@@ -95,7 +103,8 @@
     "guide_url": "https://mddclabor.org/endorsements-2026",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-state-education-association",
@@ -109,7 +118,8 @@
     "guide_url": "https://marylandeducators.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-chamber-of-commerce",
@@ -123,7 +133,8 @@
     "guide_url": "https://www.mdchamber.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-lcv",
@@ -137,7 +148,9 @@
     "guide_url": "https://www.mdlcv.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Maryland LCV"
   },
   {
     "id": "planned-parenthood-md-action",
@@ -151,7 +164,8 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-maryland-action-fund",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-right-to-life",
@@ -165,7 +179,8 @@
     "guide_url": "https://www.mdrtl.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -179,7 +194,8 @@
     "guide_url": "https://www.nrapvf.org/grades/maryland",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "md-fop",
@@ -193,6 +209,7 @@
     "guide_url": "https://www.mdfop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

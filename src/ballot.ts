@@ -2,6 +2,7 @@
    rules for filters, statuses and endorsements. Pure functions over S. */
 import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
+import { localHowto } from './model/plan';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
 export const SECTIONS: [SectionKey, string][] = [
@@ -22,6 +23,8 @@ export interface Ballot {
   st: string;
   stateName: string;
   howto: HowTo;
+  /* the state file's own plan facts, before any place override: for text about the whole state */
+  stateHowto: HowTo;
   places: PlaceBundle[];
   items: Item[];
   byId: Map<string, Item>;
@@ -53,6 +56,28 @@ export const contestDistrict = districtNum;
    county and no district inside it (an appeals court for "LA and three nearby counties"),
    applies to everyone there. Anything scoped to a precinct, ward or numbered district
    still says "May apply". */
+/* Read from the measure's own jurisdiction note, the way coversPlace reads a race's scope: a
+   district named as covering only part of the place ("including part of northwest Houston",
+   "central San Antonio", "only voters inside this territory"), one county of a place that spans
+   several, or a school district that names neither the place nor its county, may apply. */
+const PARTIAL = /\b(part of|parts of|small part|much of|touching|only|not already|except|excluding|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
+function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
+  if (!places.length) return true;
+  const j = m.jurisdiction || '';
+  if (/\bevery\b[^)]*\bvoter/i.test(j)) return true;
+  if (!['school', 'special_district', 'county'].includes(m.level)) return true;
+  if (PARTIAL.test(j)) return false;
+  const counties = (p: PlaceBundle) => p.counties.map((c) => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
+  // A place in several counties: a measure that names some of them but not all (Aurora: "17th
+  // Judicial District (Adams County and ...)") reaches only part of it.
+  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
+  if (places.some((p) => counties(p).length > 1 && counties(p).some(named) && !counties(p).every(named))) return false;
+  if (m.level === 'school') {
+    const names = places.flatMap((p) => [p.label.replace(/\s*\(.*\)$/, ''), ...counties(p)]).map((x) => x.toLowerCase());
+    return names.some((x) => x && j.toLowerCase().includes(x));
+  }
+  return true;
+}
 const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d/i;
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
@@ -62,6 +87,12 @@ function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
     const name = county.replace(/\s*\(.*\)\s*/, '').replace(/\s+County$/i, '').trim();
     return name.length > 2 && scope.toLowerCase().includes(name.toLowerCase());
   }));
+}
+
+const SEAT = /^(?:place|position|seat|post|no\.)\s*\d+\b/i;
+export function sameScopeSeats(cs: Contest[]): boolean {
+  const scope = (c: Contest) => (c.scope_plain || '').trim().toLowerCase();
+  return cs.every((c) => SEAT.test((c.district || '').trim())) && cs.every((c) => scope(c) && scope(c) === scope(cs[0]));
 }
 
 export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
@@ -111,6 +142,13 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
   const groupOf: Record<string, string> = {};
   const mayApply = new Set<string>();
   for (const [k, members] of byOffice) {
+    // Numbered seats (Place 1, Position 4, Seat 3) that share one scope are separate races on the
+    // same ballot (every Klein ISD voter picks both trustee positions), not districts to choose
+    // between, so they never become a question. Each one may still apply, by its scope.
+    if (members.length >= 2 && sameScopeSeats(members.map((m) => byId.get(m) as Contest))) {
+      members.forEach((m) => { if (!coversPlace(byId.get(m) as Contest, places)) mayApply.add(m); });
+      continue;
+    }
     if (members.length >= 2) {
       const first = byId.get(members[0]) as Contest;
       groups.push({ key: k, level: first.level, office: first.office, members, kind: districtNum(first).kind });
@@ -118,6 +156,9 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
     } else if (!coversPlace(byId.get(members[0]) as Contest, places)) mayApply.add(members[0]);
   }
   Object.keys(onlyIn).forEach((id) => mayApply.add(id));
+  // A local measure for a school or special district that covers only part of the place
+  // (Cy-Fair ISD on a downtown Houston ballot) may apply too, by its own scope.
+  for (const it of items) if (it.kind === 'measure' && !statewide.has(it.id) && !measureCovers(it, places)) mayApply.add(it.id);
 
   const ends: Record<string, Record<string, Endorsement>> = {};
   const eById = new Map<string, Endorser>();
@@ -132,7 +173,7 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 
   return {
     key: `${sb.state}|${places.map((p) => p.id).join('+') || '-'}`,
-    st: sb.state, stateName: sb.name, howto: sb.howto, places,
+    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), stateHowto: sb.howto, places,
     items, byId, order: ids, endorsers, eById, ends, statewide, onlyIn, groups, groupOf, mayApply,
     hasLocal: places.some((p) => p.local.length > 0),
   };
@@ -140,17 +181,6 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 
 /* ---------- sections ---------- */
 export const sectionOf = (it: Item): SectionKey => (it.kind === 'measure' ? 'measures' : it.level);
-
-export const itemTitle = (it: Item): string => {
-  if (it.kind === 'measure') return it.number;
-  const d = (it.district || '').replace(/\s*\(.*\)\s*$/, '').trim();
-  if (!d || /^your\b/i.test(d) || it.office.endsWith('?') || it.office.includes('(') || it.office.includes(d)) return it.office;
-  return `${it.office}, ${d}`;
-};
-export const shortTitle = (it: Item): string => {
-  const t = itemTitle(it);
-  return t.length > 64 ? `${t.slice(0, 61)}...` : t;
-};
 
 /* ---------- sources ---------- */
 export function chosenIds(): string[] {
@@ -163,34 +193,8 @@ export function chosen(): Endorser[] {
   const ids = new Set(chosenIds());
   return b.endorsers.filter((e) => ids.has(e.id));
 }
-export const endorsement = (tid: string, eid: string): Endorsement | null => (S.ballot!.ends[tid] || {})[eid] || null;
-
-/* Sources that could weigh in here: they endorse this kind of item, or we have a row for it. */
-export function relevantChosen(it: Item): Endorser[] {
-  return chosen().filter((e) => endorsement(it.id, e.id) || (it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates));
-}
-export function weighedIn(it: Item): Endorser[] {
-  return relevantChosen(it).filter((e) => endorsement(it.id, e.id)?.s === 'endorsed');
-}
-export function backers(it: Item, choice: string): Endorser[] {
-  return chosen().filter((e) => { const en = endorsement(it.id, e.id); return en?.s === 'endorsed' && !!en.c && en.c.includes(choice); });
-}
-
 /* ---------- parties ---------- */
 const NO_PARTY = /^(nonpartisan|unaffiliated|independent|no party affiliation|no party|write-in|none)$/i;
-export type PartyCat = 'D' | 'R' | 'O' | 'I';
-export const PARTY_LABEL: Record<PartyCat, string> = { D: 'Democratic', R: 'Republican', O: 'Other parties', I: 'Independent or none' };
-export function partyCats(c: { parties: string[] }): PartyCat[] {
-  const cats = new Set<PartyCat>();
-  for (const p of c.parties) {
-    if (p === 'Democratic') cats.add('D');
-    else if (p === 'Republican') cats.add('R');
-    else if (NO_PARTY.test(p)) cats.add('I');
-    else cats.add('O');
-  }
-  if (!cats.size) cats.add('I');
-  return [...cats];
-}
 export const isPartisan = (c: Contest): boolean => c.candidates.some((k) => k.parties.some((p) => !NO_PARTY.test(p)));
 
 /* ---------- statuses ---------- */
@@ -208,19 +212,6 @@ export const ordinal = (n: number): string => {
   const t = n % 100 >= 11 && n % 100 <= 13 ? 'th' : (['th', 'st', 'nd', 'rd'][n % 10] || 'th');
   return `${n}${t}`;
 };
-
-/* The candidates (or YES/NO) this voter chose on an item, in order: one pick, the marked
-   seats, or the ranking, 1st choice first. */
-export function myChoices(it: Item): string[] {
-  const p = S.b.picks;
-  const v = p[it.id];
-  if (v === 'SKIP') return [];
-  if (it.kind === 'measure') return v ? [v] : [];
-  if (isRCV(it)) return ranksOf(it.id);
-  if (isMultiSeat(it)) return it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'PICK').map((c) => c.name);
-  if (isMultiJudge(it)) return [];
-  return v && v !== 'DONE' ? [v] : [];
-}
 
 export function status(it: Item): Status {
   const p = S.b.picks;
@@ -243,46 +234,6 @@ export function status(it: Item): Status {
 }
 export const isDecision = (s: Status): boolean => s !== 'info' && s !== 'unopposed';
 
-/* ---------- filters ---------- */
-export interface Filtered { shown: Contest['candidates']; hidden: number; party: boolean; endorsed: boolean }
-export function filterCands(c: Contest): Filtered {
-  const all = c.candidates;
-  if (c.is_retention || all.length < 2 || S.ui.showAll.has(c.id)) return { shown: all, hidden: 0, party: false, endorsed: false };
-  let shown = all;
-  let party = false, endorsedF = false;
-  const parties = S.prefs.parties;
-  if (parties && isPartisan(c)) {
-    const next = shown.filter((k) => partyCats(k).some((p) => parties.includes(p)));
-    if (next.length < shown.length) party = true;
-    shown = next;
-  }
-  if (S.prefs.endorsedOnly) {
-    const names = new Set<string>();
-    chosen().forEach((e) => { const en = endorsement(c.id, e.id); if (en?.s === 'endorsed' && en.c) en.c.forEach((n) => names.add(n)); });
-    if (names.size) {
-      const next = shown.filter((k) => names.has(k.name));
-      if (next.length < shown.length) endorsedF = true;
-      shown = next;
-    }
-  }
-  return { shown, hidden: all.length - shown.length, party, endorsed: endorsedF };
-}
-export const filterSig = (): string => `${(S.prefs.parties || []).join('')}|${S.prefs.endorsedOnly ? 1 : 0}|${chosenIds().join(',')}`;
-
-export function autoReason(c: Contest, f: Filtered): string {
-  const k = f.shown[0];
-  if (f.party && !f.endorsed) {
-    const cat = partyCats(k).map((x) => PARTY_LABEL[x]).filter((x) => x !== 'Other parties' && x !== 'Independent or none');
-    const label = k.party || 'their party';
-    return `Only ${cat.length ? cat[0] : label} candidate left after your party filter.`;
-  }
-  if (f.endorsed && !f.party) {
-    const by = backers(c, k.name).map((e) => e.short);
-    return `Only candidate your sources endorsed${by.length ? ` (${by.join(', ')})` : ''}.`;
-  }
-  return 'Only candidate left after your filters.';
-}
-
 /* ---------- what's visible ---------- */
 export type Entry =
   | { t: 'item'; id: string }
@@ -290,8 +241,17 @@ export type Entry =
   | { t: 'groupline'; group: Group }
   | { t: 'notmine'; id: string };
 
+/* Cached per ballot and per district answers: a render asks for this many times. */
+let entriesCache: { b: Ballot; sig: string; v: Map<SectionKey, Entry[]> } | null = null;
 export function entriesBySection(): Map<SectionKey, Entry[]> {
   const b = S.ballot!;
+  const sig = `${JSON.stringify(S.b.districts)}|${S.b.notMine.join(',')}`;
+  if (entriesCache && entriesCache.b === b && entriesCache.sig === sig) return entriesCache.v;
+  const v = computeEntries(b);
+  entriesCache = { b, sig, v };
+  return v;
+}
+function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
   const out = new Map<SectionKey, Entry[]>();
   const push = (s: SectionKey, e: Entry) => { out.set(s, [...(out.get(s) || []), e]); };
   const seenGroup = new Set<string>();
@@ -329,23 +289,3 @@ export function decisionItems(): { id: string; done: boolean; question?: boolean
   }
   return out;
 }
-
-/* Races where the filters leave exactly one candidate and nothing is picked yet. */
-export function autoCandidates(): { c: Contest; name: string; why: string }[] {
-  const out: { c: Contest; name: string; why: string }[] = [];
-  if (!S.prefs.parties && !S.prefs.endorsedOnly) return out;
-  for (const [, entries] of entriesBySection()) {
-    for (const e of entries) {
-      if (e.t !== 'item') continue;
-      const it = S.ballot!.byId.get(e.id)!;
-      // Never for ranked races: one candidate left after filters is not a ranking.
-      if (it.kind !== 'contest' || it.is_retention || isMultiSeat(it) || isRCV(it) || it.candidates.length < 2) continue;
-      if (status(it) !== 'open' || S.b.noAuto.includes(it.id)) continue;
-      const f = filterCands(it);
-      if (f.shown.length === 1 && f.hidden > 0) out.push({ c: it, name: f.shown[0].name, why: autoReason(it, f) });
-    }
-  }
-  return out;
-}
-
-export const measureById = (id: string): Measure | null => { const it = S.ballot!.byId.get(id); return it && it.kind === 'measure' ? it : null; };

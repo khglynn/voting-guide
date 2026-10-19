@@ -11,6 +11,8 @@
   "guide_url": "https://www.denvergazette.com/2026/10/09/what-jefferson-county-voters-can-expect-to-see-on-their-ballots/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party"
  }
 ]

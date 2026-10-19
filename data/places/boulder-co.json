@@ -79,5 +79,52 @@
     "boulder-2l",
     "boulder-2m",
     "co-frpr-7a"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "Boulder County Commissioner",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    },
+    {
+      "office_match": "RTD Board of Directors",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    },
+    {
+      "office_match": "Regent of the University of Colorado",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district on the official county maps",
+      "url": "https://bouldercounty.gov/elections/maps-and-data/maps/"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://bouldercounty.gov/elections/information/voting-locations/",
+    "election_day": "https://bouldercounty.gov/elections/information/voting-locations/",
+    "drop_box": "https://bouldercounty.gov/elections/information/voting-locations/"
+  }
 }

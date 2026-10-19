@@ -41,7 +41,8 @@
         "url": "https://www.tpr.org/education/2026-09-03/pre-k-4-sa-says-it-will-increase-toddler-access-affordability-if-city-funding-reauthorized-by-voters"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Preschool sales tax renewal"
   },
   {
     "id": "tx-saisd-prop-a",
@@ -75,7 +76,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "San Antonio school operating tax"
   },
   {
     "id": "tx-saisd-prop-b",
@@ -109,7 +111,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "San Antonio school renovation bonds"
   },
   {
     "id": "tx-saisd-prop-c",
@@ -143,7 +146,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "San Antonio school technology bonds"
   },
   {
     "id": "tx-saisd-prop-d",
@@ -177,7 +181,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-saisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Stadium and arena renovation bonds"
   },
   {
     "id": "tx-nisd-prop-a",
@@ -211,7 +216,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Northside school operating tax"
   },
   {
     "id": "tx-nisd-prop-b",
@@ -245,7 +251,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Northside school renovation bonds"
   },
   {
     "id": "tx-nisd-prop-c",
@@ -279,7 +286,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Northside school technology bonds"
   },
   {
     "id": "tx-nisd-prop-d",
@@ -313,7 +321,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-northsideisd-bond-vatre-elections/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Northside school swimming pool bonds"
   },
   {
     "id": "tx-southsan-isd-prop-a",
@@ -347,7 +356,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-south-san-vatre-election/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "South San school operating tax"
   },
   {
     "id": "tx-ecisd-prop-a",
@@ -381,7 +391,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-ecisd-vatre-election/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "East Central school operating tax"
   },
   {
     "id": "tx-scucisd-prop-a",
@@ -415,7 +426,8 @@
         "url": "https://sanantonioreport.org/voter-guide-2026-scucisd-vatre-election/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Schertz-Cibolo-Universal City school operating tax"
   },
   {
     "id": "tx-comal-isd-prop-a",
@@ -436,7 +448,8 @@
     "opponents_case": null,
     "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Comal school building bonds"
   },
   {
     "id": "tx-comal-isd-prop-b",
@@ -457,6 +470,7 @@
     "opponents_case": null,
     "official_text_url": "https://elections.bexar.gov/DocumentCenter/View/1708/Generic-Sample-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Comal school technology bonds"
   }
 ]

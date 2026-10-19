@@ -59,7 +59,7 @@
     "tracking_url": "https://georgia.ballottrax.net/voter/",
     "cure_process": "If your ID number or date of birth is missing or doesn't match, or the oath is unsigned, the county must notify you (by mail, and by phone or email if they have it) and your ballot is held as provisional. You fix it by returning a signed affidavit with a copy of an accepted ID. Georgia's cure window runs until the end of the third day after the election, Friday, November 6, 2026. SB 202 (O.C.G.A. 21-2-386) gives you 'until the end of the period for verifying provisional ballots,' and georgia.gov says provisional issues must be resolved 'within three days.' You can also check status on BallotTrax or My Voter Page.",
     "mail_cutoff_advice": "Election officials and USPS say to mail at least 7 days before Election Day. In practice: if you still have your ballot after Monday, October 26, don't mail it. Put it in a drop box at an early voting site by close on Friday, October 30, or hand it to your county elections office by 7:00 PM on Tuesday, November 3. If you decide to vote in person instead, bring the mail ballot with you so the poll manager can cancel it. If you never received it, you can still vote in person: georgia.gov says you'll 'sign a document attesting that you are only voting once.' Once you've returned your absentee ballot, you've voted and can't vote in person.",
-    "drop_box_lookup_url": "https://mvp.sos.ga.gov/",
+    "drop_box_lookup_url": "https://georgia.gov/locate-county-registrars-office",
     "confidence": "verified"
   },
   "early_in_person": {
@@ -429,6 +429,12 @@
     {
       "name": "Fulton County: Request/Return an Absentee Ballot (absentee office contacts; what to do if your ballot hasn't come)",
       "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Absentee-Voting"
+    }
+  ],
+  "heads_up": [
+    {
+      "text": "If no candidate gets more than half the votes, the top two go to a Dec. 1 runoff.",
+      "applies_to": "ballot"
     }
   ]
 }

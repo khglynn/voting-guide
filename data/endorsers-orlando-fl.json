@@ -4,14 +4,15 @@
   "name": "Orlando Sentinel editorial board",
   "type": "publication",
   "lean": "neutral",
-  "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate.",
+  "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate. Rating source: https://www.allsides.com/news-source/orlando-sentinel-media-bias.",
   "geography": [
    "FL"
   ],
   "guide_url": "https://www.orlandosentinel.com/opinion/endorsements/",
   "default_on": true,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
  },
  {
   "id": "lwv-florida",
@@ -25,7 +26,8 @@
   "guide_url": "https://lwvfl.org/",
   "default_on": true,
   "endorses_candidates": false,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "fl-afl-cio",
@@ -39,7 +41,8 @@
   "guide_url": "https://flaflcio.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "fl-democratic-party",
@@ -53,7 +56,9 @@
   "guide_url": "https://www.floridadems.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
  },
  {
   "id": "fl-republican-party",
@@ -67,7 +72,9 @@
   "guide_url": "https://florida.gop/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party"
  },
  {
   "id": "eqfl-action-pac",
@@ -82,7 +89,8 @@
   "guide_url": "https://eqflpac.org/endorsed-candidates/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "orange-cta",
@@ -96,7 +104,8 @@
   "guide_url": "https://www.clickorlando.com/voters-guide/2026/07/31/2026-voters-guide-orange-county-school-board-district-3/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "maxwell-frost",
@@ -110,7 +119,8 @@
   "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "party"
  },
  {
   "id": "anna-eskamani",
@@ -124,7 +134,8 @@
   "guide_url": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "party"
  },
  {
   "id": "jerry-demings",
@@ -138,7 +149,8 @@
   "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "party"
  },
  {
   "id": "buddy-dyer",
@@ -152,7 +164,8 @@
   "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "party"
  },
  {
   "id": "glenda-hood",
@@ -166,7 +179,8 @@
   "guide_url": "https://floridapolitics.com/archives/821818-maxwell-frost-jerry-demings-buddy-dyer-come-out-strong-for-tiffany-moore-russells-orange-county-mayor-bid/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "party"
  },
  {
   "id": "orange-county-democrats",

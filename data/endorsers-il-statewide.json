@@ -4,42 +4,45 @@
     "name": "Chicago Tribune editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Chicago Tribune Center (online news; low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Chicago Tribune Center (online news; low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/chicago-tribune-media-bias.",
     "geography": [
       "IL"
     ],
     "guide_url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "chicago-sun-times-eb",
     "name": "Chicago Sun-Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026).",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026). Rating source: https://www.allsides.com/news-source/chicago-sun-times.",
     "geography": [
       "IL"
     ],
     "guide_url": "https://chicago.suntimes.com/elections/2026",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "crains-chicago-eb",
     "name": "Crain's Chicago Business editorial board",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Business weekly that calls itself 'the top source of news and information on all things business in the Chicago area' (https://www.chicagobusiness.com/corporate/ccb-about-us/). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"the top source of news and information on all things business in the Chicago area\". This does not establish a position on the political scale. Source: https://www.chicagobusiness.com/corporate/ccb-about-us/.",
     "geography": [
       "IL"
     ],
     "guide_url": "https://www.chicagobusiness.com/opinion",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-illinois",
@@ -53,21 +56,24 @@
     "guide_url": "https://www.vote411.org/illinois",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "injustice-watch",
     "name": "Injustice Watch: Check Your Judges",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Nonprofit newsroom that calls itself 'the only newsroom in Cook County dedicated to reporting on the court system' (https://www.injusticewatch.org/) and makes no endorsements. No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"the only newsroom in Cook County dedicated to reporting on the court system\". This does not establish a position on the political scale. Source: https://www.injusticewatch.org/.",
     "geography": [
       "cook-county-il"
     ],
     "guide_url": "https://2026retention.injusticewatch.org/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "Injustice Watch"
   },
   {
     "id": "il-democratic-party",
@@ -81,7 +87,9 @@
     "guide_url": "https://ildems.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "il-republican-party",
@@ -95,21 +103,24 @@
     "guide_url": "https://ilgop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "il-afl-cio",
     "name": "Illinois AFL-CIO",
     "type": "labor",
     "lean": "lean_left",
-    "lean_basis": "State labor federation of 'more than 1,500 affiliated unions' (https://ilafl-cio.org/); unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Our reading of its stated mission: \"more than 1,500 affiliated unions\". Source: https://ilafl-cio.org/.",
     "geography": [
       "IL"
     ],
     "guide_url": "https://labortribune.com/illinois-afl-cio-2026-general-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "chicago-federation-of-labor",
@@ -123,7 +134,8 @@
     "guide_url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ift-ctu",
@@ -137,7 +149,9 @@
     "guide_url": "https://www.ift-aft.org/political-action",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Illinois Federation of Teachers"
   },
   {
     "id": "personal-pac",
@@ -151,7 +165,8 @@
     "guide_url": "https://personalpac.org/elections/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "il-right-to-life-pac",
@@ -165,7 +180,8 @@
     "guide_url": "https://www.illinoisrighttolife.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "il-manufacturers-assn",
@@ -179,7 +195,8 @@
     "guide_url": "https://ima-net.org/advocacy/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf-il",
@@ -193,7 +210,8 @@
     "guide_url": "https://www.nrapvf.org/grades/illinois",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "il-fop",
@@ -207,20 +225,23 @@
     "guide_url": "https://www.ilfop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "Illinois FOP"
   },
   {
     "id": "sierra-club-il",
     "name": "Sierra Club Illinois Chapter",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Illinois chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Illinois chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "IL"
     ],
     "guide_url": "https://www.sierraclub.org/illinois/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   }
 ]

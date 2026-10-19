@@ -4,21 +4,22 @@
     "name": "The Oregonian / OregonLive editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Oregonian Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates The Oregonian Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/oregonian-media-bias.",
     "geography": [
       "OR"
     ],
     "guide_url": "https://www.oregonlive.com/opinion/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "willamette-week-eb",
     "name": "Willamette Week endorsements",
     "type": "publication",
     "lean": null,
-    "lean_basis": "No AllSides or Ad Fontes rating found. The Portland alt-weekly's About page (https://www.wweek.com/about/) states no ideological mission, so it is shown as not rated.",
+    "lean_basis": "Not rated. The existing record contains no quoted ideological mission or usable outside rating. Its source: https://www.wweek.com/about/.",
     "geography": [
       "OR",
       "portland-or"
@@ -26,14 +27,15 @@
     "guide_url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "portland-mercury-eb",
     "name": "Portland Mercury endorsements",
     "type": "publication",
     "lean": null,
-    "lean_basis": "No AllSides or Ad Fontes rating found, and no About page could be read (https://www.portlandmercury.com/about returned 404 on Oct. 17, 2026). With no stated mission, the alt-weekly is shown as not rated.",
+    "lean_basis": "Not rated. The existing record contains no quoted ideological mission or usable outside rating. Its source: https://www.portlandmercury.com/about.",
     "geography": [
       "OR",
       "portland-or"
@@ -41,7 +43,8 @@
     "guide_url": "https://www.portlandmercury.com/elections",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-oregon",
@@ -55,7 +58,8 @@
     "guide_url": "https://www.vote411.org/lwvor",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "democratic-party-of-oregon",
@@ -69,7 +73,9 @@
     "guide_url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "oregon-republican-party",
@@ -83,7 +89,9 @@
     "guide_url": "https://sos.oregon.gov/elections/Voters-Pamphlet/Documents/VP_G26-Book13_web.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "oregon-afl-cio",
@@ -97,7 +105,8 @@
     "guide_url": "https://oraflcio.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "planned-parenthood-action-oregon",
@@ -111,21 +120,23 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-pac-oregon",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-oregon",
     "name": "Sierra Club Oregon Chapter",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Oregon chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Oregon chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "OR"
     ],
     "guide_url": "https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "oregon-coalition-police-sheriffs",
@@ -139,7 +150,8 @@
     "guide_url": "https://www.orcops.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "oregon-farm-bureau",
@@ -153,7 +165,8 @@
     "guide_url": "https://oregonfb.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "oregon-right-to-life",
@@ -167,7 +180,8 @@
     "guide_url": "https://www.ortl.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "oregon-firearms-federation",
@@ -181,6 +195,7 @@
     "guide_url": "https://www.oregonfirearms.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

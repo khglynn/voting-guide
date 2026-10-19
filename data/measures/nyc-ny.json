@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://www.nyc.gov/assets/charter/downloads/pdf/2026/appendix_c_proposed_charter_amendments_20260723.pdf",
     "official_guide_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-1/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Permits to use public space"
   },
   {
     "id": "nyc-proposal-2",
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://www.nyc.gov/assets/charter/downloads/pdf/2026/appendix_c_proposed_charter_amendments_20260723.pdf",
     "official_guide_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-2/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City contractor paperwork"
   },
   {
     "id": "nyc-proposal-3",
@@ -78,7 +80,8 @@
     },
     "official_text_url": "https://www.nyc.gov/assets/charter/downloads/pdf/2026/appendix_c_proposed_charter_amendments_20260723.pdf",
     "official_guide_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-3/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Street projects and city property review"
   },
   {
     "id": "nyc-proposal-4",
@@ -105,7 +108,8 @@
     },
     "official_text_url": "https://www.nyc.gov/assets/charter/downloads/pdf/2026/appendix_c_proposed_charter_amendments_20260723.pdf",
     "official_guide_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-4/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Building and waterfront permits"
   },
   {
     "id": "nyc-proposal-5",
@@ -132,6 +136,7 @@
     },
     "official_text_url": "https://www.nyc.gov/assets/charter/downloads/pdf/2026/appendix_c_proposed_charter_amendments_20260723.pdf",
     "official_guide_url": "https://www.nycvotes.org/whats-on-the-ballot/2026-general-election-voter-guide/ballot-proposals-2026/ballot-proposal-5/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Rainy day fund contribution targets"
   }
 ]

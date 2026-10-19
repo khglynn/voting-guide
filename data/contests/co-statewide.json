@@ -648,11 +648,6 @@
             "text": "Says the secretary of state should be more than \"a glorified, overpaid file clerk\" and should actively uphold the constitution.",
             "is_quote": true,
             "source": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
-          },
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -799,11 +794,6 @@
             "text": "Priorities, per KSJD: protecting taxpayer funds, more transparency in state investments, reforming PERA and returning unclaimed property.",
             "is_quote": false,
             "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
-          },
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -818,7 +808,16 @@
         "background": "Boulder photographer and owner of Marilee Photography. Only a Facebook page was found. She did not return the Denver Post questionnaire, and KSJD's statewide guide found no stated platform.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "BallotReady candidate links",
+            "Colorado Public Radio third-party treasurer guide"
+          ]
+        }
       }
     ],
     "sources": [
@@ -864,18 +863,44 @@
         "name": "William W. Hood, III",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Justice since January 2014. Before that, seven years as a Denver District Court judge, a litigation partner at a Denver firm, and ten years as a prosecutor in the 18th Judicial District. UVA Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It said he \"demonstrates an admirable work ethic and issues decisions in a timely manner\" and his opinions have \"a clear writing style.\" Survey: 7 attorneys and 24 judges responded.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 86,
+                "no_pct": 14,
+                "n": 7
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 24
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Justice%20William%20W.%20Hood%2C%20III%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "He demonstrates an admirable work ethic and issues decisions in a timely manner.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/hood-iii-william-w-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -917,18 +942,44 @@
         "name": "Rebecca Rankin Freyre",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed 2015; retained by voters in 2018. Deputy Chief Judge from January 2022 to January 2026. Spent 25 years as a Deputy State Public Defender before the bench. Smith College, DU Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her \"an exemplary jurist\" with \"thoughtful, well-reasoned\" opinions. Every survey respondent agreed she meets standards.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 3
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 24
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Rebecca%20R.%20Freyre%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "The Commission finds her written opinions to be thoughtful, well-reasoned, and drafted with clarity that makes the information accessible to litigants, practitioners, and the public.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/freyre-rebecca-r-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -970,18 +1021,44 @@
         "name": "Elizabeth L. Harris",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed 2015. Clerked on the 10th Circuit, spent five years at the Federal Public Defender's Office, then ran her own appellate law firm. Georgetown, NYU Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her opinions \"clear, well-written, and reasonably timely,\" though lawyers surveyed \"noted the length of time required for Judge Harris to issue an opinion as a weakness.\" 93% of survey respondents agreed she meets standards; only 5 attorneys and 22 judges responded.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 5
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 91,
+                "no_pct": 9,
+                "n": 22
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Elizabeth%20L.%20Harris%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "At oral arguments, she is well-prepared, succinct in her questions, respectful, and seeks to draw out the issues most important to the Court’s decision-making process.",
+            "noted_concern": "Lawyers noted the length of time required for Judge Harris to issue an opinion as a weakness. Judge Harris received positive comments from fellow judges for her writing ability, her thoughtfulness and her engagement in committee work for Colorado Courts. Judges also noted Judge Harris’ timeliness in issuing decisions as a weakness.",
+            "url": "https://judicialperformance.colorado.gov/harris-elizabeth-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1023,18 +1100,44 @@
         "name": "Katharine E. Lum",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed 2022; first time on the ballot. Practiced family law at the trial and appellate level and clerked for Justice Gregory Hobbs Jr. Berkeley Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It called her \"an exceptional judicial writer\" with \"a clear and accessible style.\" Every survey respondent agreed she meets standards.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 6
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 19
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Katharine%20E%20Lum%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "She is an exceptional judicial writer who conveys her opinions in a clear and accessible style understood by litigants, practitioners, and members of the public alike.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/lum-katherine-e-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1076,18 +1179,44 @@
         "name": "Pax Moultrie",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed January 2024; first time on the ballot. Former Denver Juvenile Court judge and 1st Judicial District magistrate. Washington University, DU Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found she meets performance standards, 9-0. It said her opinions are \"thoughtful, accessible, and well written\" and praised her plain-language writing. Every survey respondent agreed she meets standards.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commission absence and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 9
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 27
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Pax%20L.%20Moultrie%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "The Commission finds that her opinions are thoughtful, accessible, and well written.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/moultrie-pax-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1129,18 +1258,44 @@
         "name": "Karl L. Schock",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed 2022; first time on the ballot. Clerked on the 10th Circuit, practiced at Brownstein Hyatt, then served as an Assistant U.S. Attorney in the appellate division from 2015 to 2022. CU Law.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It said his opinions are \"clear and easy to understand\" and he is \"respectful, curious, and well-prepared\" at argument. Every survey respondent agreed he meets standards.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 20
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Karl%20L%20Schock%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "His written opinions are clear and easy to understand.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/schock-karl-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1182,18 +1337,44 @@
         "name": "Grant Sullivan",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation",
+        "website_confidence": "verified",
         "background": "Appointed January 2024; first time on the ballot. Was a trial and appellate litigator in the Colorado Attorney General's Office handling constitutional, voting rights, election and tax cases. CU Law, UT Austin.",
-        "own_words": [
-          {
-            "text": "The State Commission on Judicial Performance found he meets performance standards, 9-0. It found his opinions \"consistently well-reasoned, fair, and thoughtfully articulated\" and noted \"a strong and confident transition\" to the appellate bench.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "State Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one commissioner absent and one commission vacancy",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 4
+              },
+              "non_attorneys": null,
+              "judges": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 15
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Grant%20Sullivan%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'. Appellate judges are surveyed by attorneys and other judges; no non-attorney survey group is reported."
+            },
+            "noted_strength": "The Commission found the judge’s written opinions to be consistently well-reasoned, fair, and thoughtfully articulated, demonstrating a strong command of the law and clear judicial reasoning.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/sullivan-grant-t-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

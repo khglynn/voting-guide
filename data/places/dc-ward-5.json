@@ -47,5 +47,17 @@
     "dc-sboe-ward-seats-2026",
     "dc-anc"
   ],
-  "last_verified": "2026-10-16"
+  "last_verified": "2026-10-16",
+  "district_finders": [
+    {
+      "office_match": "Ward",
+      "label": "Find your DC ward",
+      "url": "https://planning.dc.gov/whatsmyward"
+    },
+    {
+      "office_match": "Advisory Neighborhood Commissioner",
+      "label": "Find your single-member district (SMD)",
+      "url": "https://dcgis.maps.arcgis.com/apps/instant/lookup/index.html?appid=12bb36e8b77a4a8780125e77e990b146"
+    }
+  ]
 }

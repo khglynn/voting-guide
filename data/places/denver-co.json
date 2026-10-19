@@ -112,5 +112,73 @@
     "denver-311",
     "denver-dps-4a",
     "co-frpr-7a"
-  ]
+  ],
+  "heads_up": [
+    {
+      "text": "Your ballot has two cards. Check all four sides: Denver’s local measures are on the back of card B.",
+      "applies_to": "ballot"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your congressional district",
+      "url": "https://content.leg.colorado.gov/find-your-legislator-0"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "RTD Board of Directors",
+      "label": "Find your RTD district",
+      "url": "https://www.rtd-denver.com/about-rtd/board-of-directors"
+    },
+    {
+      "office_match": "Denver City Council, At-Large Seat B (vacancy election)",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "RTD Board of Directors",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "Regent of the University of Colorado",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "State Board of Education",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
+    "election_day": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver",
+    "drop_box": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Where-to-Vote-in-Denver"
+  }
 }

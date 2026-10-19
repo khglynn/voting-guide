@@ -77,9 +77,9 @@
         "background": "Unity Party nominee. No campaign site or questionnaire answers found.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+            "text": "I think my history as a problem solver really fits well with being able to bring people in.",
+            "is_quote": true,
+            "source": "https://denverite.com/2026/09/25/vg-2026-critter-milton-1st-congressional-district-voter-guide/"
           }
         ],
         "lwv_status": "unknown",
@@ -254,9 +254,9 @@
         "background": "Unity Party nominee.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+            "text": "It is time to end tax breaks for corporations and the rich and fund universal healthcare.",
+            "is_quote": true,
+            "source": "https://votemeredithryan.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -357,9 +357,9 @@
         "background": "Republican nominee.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+            "text": "reading, writing, math, and the ability to think clearly.",
+            "is_quote": true,
+            "source": "https://www.unbrokenschoolsco.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -372,15 +372,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Libertarian nominee.",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Clayton Casciato Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       }
     ],
     "sources": [
@@ -450,9 +452,9 @@
         "background": "Republican nominee; unopposed in the June primary.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+            "text": "Freedom of speech should be on the campus of CU for all students, not just some, all students.",
+            "is_quote": true,
+            "source": "https://www.cpr.org/2026/09/24/vg-2026-cu-board-of-regents-voter-guide/"
           }
         ],
         "lwv_status": "unknown",
@@ -608,7 +610,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Republican nominee. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Let's make Colorado safe and affordable for families again.",
+            "is_quote": true,
+            "source": "https://wulff4colorado.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -651,7 +659,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Nonprofit director. Won the June Democratic primary with 69% over Andrés Carrera. Listed as Graciela \"Chela\" Garcia Irlando by the state party. Did not answer the Denver Gazette or Denver Post questionnaires; no campaign site found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I believe all people deserve to live a life with dignity.",
+            "is_quote": true,
+            "source": "https://www.chelaforcolorado.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -991,7 +1005,15 @@
         "background": "Won the June Republican primary (Critical Report spells it Erwin; the SOS list says Ervin). Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Cecelia Espenoza",
@@ -1017,7 +1039,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Forward Party nominee. Business executive; most recently president of FBC Remodel and earlier ran the packaging company Clysar (BallotReady). Did not return the Denver Post questionnaire; no campaign site found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Corporate PAC money is not welcome in this campaign.",
+            "is_quote": true,
+            "source": "https://www.coloradoforwardparty.com/2026_fwdcandidate_hare"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -1160,7 +1188,15 @@
         "background": "Campus coordinator; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1279,7 +1315,15 @@
         "background": "Implementation consultant; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Lindsay Gilchrist",
@@ -1376,7 +1420,15 @@
         "background": "Republican nominee in 2022 and 2024 as well. Did not return the Denver Post questionnaire; only a campaign Facebook page was found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Monica VanBuskirk",
@@ -1672,13 +1724,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Founder of Julissa Soto Latino Health Equity Consulting and Casa Inmigrante. Did not respond to the Denver Gazette or Denver Post questionnaires.",
-        "own_words": [
-          {
-            "text": "Did not respond to the Denver Gazette questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -1903,15 +1949,39 @@
         "website": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal docket. Appointed July 2024; previously an Adams County magistrate, deputy DA and federal criminal defense lawyer.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): Commission found him 'diligent, professional, and committed to growing as a judge'; no notable weakness; exceeded productivity benchmarks. 12 attorneys and 13 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 73,
+                "no_pct": 18,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 67,
+                "no_pct": 25,
+                "n": 12
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Michael%20W.%20V.%20Angel%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission found Judge Angel to be diligent, professional, and committed to growing as a judge.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/angel-michael-wv-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1948,15 +2018,39 @@
         "website": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation",
         "website_confidence": "verified",
         "background": "Chief Judge of Denver District Court since 2022; civil docket plus statewide grand jury and warrants.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): Commended for 'alacrity' in administrative duties; strengths in balancing civil docket with Chief Judge role, courtroom demeanor and fairness; no notable weakness; exceeded productivity benchmark. 15 attorneys and 17 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 93,
+                "no_pct": 7,
+                "n": 14
+              },
+              "non_attorneys": {
+                "yes_pct": 76,
+                "no_pct": 24,
+                "n": 17
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Christopher%20J.%20Baumann%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission commends Judge Baumann for his alacrity in carrying out his administrative duties and his preparation as a jurist.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/baumann-christopher-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1993,15 +2087,39 @@
         "website": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation",
         "website_confidence": "verified",
         "background": "Domestic relations docket. Commended for mentoring newer judges.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): Strengths: professional temperament, clear and prompt decisions, respect for self-represented litigants; no notable weakness; exceeded productivity benchmark. 8 attorneys and 10 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 80,
+                "no_pct": 20,
+                "n": 10
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20John%20Eric%20Elliff%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission commends Judge Elliff for mentoring newer judges, his preparation and knowledge of the law.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/elliff-j-eric-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2038,15 +2156,40 @@
         "website": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal docket.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: respectful demeanor, preparation, giving each side a fair hearing; no notable weakness. Did not meet the criminal productivity benchmark, which the commission attributes to inherited unresolved cases rather than his delay. 25 attorneys and 15 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one Commissioner recusing",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 21
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 15
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Andrew%20Luxen%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission commends Judge Luxen for his knowledge of the law, his patience with courtroom participants and his commitment to maintaining courtroom dignity.",
+            "noted_concern": "Although Judge Luxen did not meet the productivity benchmark for criminal courtrooms, the results were largely influenced by unresolved cases inherited by Judge Luxen, not due to his delay.",
+            "url": "https://judicialperformance.colorado.gov/luxen-andrew-j-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2083,15 +2226,40 @@
         "website": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil docket.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: civility, clear communication, commitment to reducing courtroom bias; no notable weakness; exceeded productivity benchmark. 41 attorneys and 4 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one Commissioner recusing",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 85,
+                "no_pct": 13,
+                "n": 40
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 4
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Jon%20J.%20Olafson%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission recognizes Judge Olafson for his strong case management skills and his commitment to the fair and efficient administration of justice.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/olafson-jon-j-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2128,15 +2296,40 @@
         "website": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil docket; has handled complex and high-profile matters.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: case management, professionalism, composure in complex cases; no notable weakness; exceeded productivity benchmark. 39 attorneys and 12 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one Commissioner recusing",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 63,
+                "no_pct": 34,
+                "n": 35
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 12
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Sarah%20Block%20Wallace%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission found Judge Wallace to be a thoughtful, hardworking, and highly engaged jurist who demonstrates a strong commitment to the fair and efficient administration of justice.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/wallace-sarah-b-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2173,15 +2366,40 @@
         "website": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation",
         "website_confidence": "verified",
         "background": "Denver Juvenile Court.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0 (one commissioner recused)): Strengths: knowledge of the law, respect for participants, balancing decisiveness with empathy; no notable weakness; exceeded 4 of 5 juvenile productivity benchmarks. 11 attorneys and 3 non-attorneys surveyed; too few responses to publish a 2025 interim survey.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "with one Commissioner recusing",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 2
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Lisa%20Gomez%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission acknowledges Judge Gomez’s excellent knowledge of the law and her efforts to ensure public confidence and consistency in Juvenile Court.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/gomez-lisa-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2218,15 +2436,39 @@
         "website": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation",
         "website_confidence": "verified",
         "background": "Presiding Judge of Denver Juvenile Court.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): Strengths: exceptional communication and listening, dignity for all participants, knowledge of juvenile law; no notable weakness; exceeded 5 of 6 productivity benchmarks. 10 attorneys and 4 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 10
+              },
+              "non_attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 4
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Elizabeth%20J.%20McCarthy%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission commends Judge McCarthy for her commitment to improve the experience of all those who appear before her in Denver Juvenile Court.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/mccarthy-elizabeth-j-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2263,15 +2505,39 @@
         "website": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation",
         "website_confidence": "verified",
         "background": "Denver Probate Court (probate and mental health cases).",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): Strengths: deep knowledge of probate and mental health law, fair treatment, managing emotionally difficult cases; no notable weakness. No productivity benchmarks exist for probate. 35 attorneys and 8 non-attorneys surveyed.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Second Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 88,
+                "no_pct": 3,
+                "n": 32
+              },
+              "non_attorneys": {
+                "yes_pct": 88,
+                "no_pct": 13,
+                "n": 8
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Elizabeth%20Leith%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission found Judge Leith to be an experienced and hardworking jurist who demonstrates judicial efficiency and exceptional judicial demeanor.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/leith-elizabeth-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2308,15 +2574,26 @@
         "website": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed July 2016.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): 'Energetic, positive and low-stress courtroom'; fair, clear, efficient; volunteers to cover other courtrooms including weekends during a budget crisis.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Eddy runs an energetic, positive and low-stress courtroom.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/eddy-andrea-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2353,15 +2630,26 @@
         "website": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation",
         "website_confidence": "verified",
         "background": "Senior member of the county bench.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): 'A model of efficiency'; clears heavy dockets; champion of equal access for self-represented litigants.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Fay is a model of efficiency and has demonstrated the ability to clear inundated dockets and deliver justice in a timely manner.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/fay-olympia-z-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2398,15 +2686,26 @@
         "website": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation",
         "website_confidence": "verified",
         "background": "Presiding judge of Denver County Court since 2024; oversees administration, budget and staff.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): Commended for transparency and clear communication during recent budget problems, including open forums; 'efficient, approachable, knowledgeable' in the courtroom.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "In the courtroom, she is efficient, approachable, knowledgeable and commands respect.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/lombardi-kerri-d-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2443,15 +2742,26 @@
         "website": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed 2016; former criminal defense solo practitioner.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): 'Outstanding understanding of the law'; disciplined, well-prepared courtroom; revised the evidence chapter of a judges' benchbook.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Malone is known for her outstanding understanding of the law, is knowledgeable about procedure and runs a disciplined courtroom.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/malone-chelsea-soo-mee-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2488,15 +2798,26 @@
         "website": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation",
         "website_confidence": "verified",
         "background": "Runs a 'supportive, rehabilitative courtroom.'",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): Creative in sentencing, values transparency, developed a plain-language brochure on county court procedures; educated juries on implicit bias before it was required.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Martinez-Thomas is personable, professional and has a true passion for her work.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/martinez-thomas-michelle-r-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2533,15 +2854,26 @@
         "website": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed June 2023; newest member evaluated.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): 'Direct and efficient'; hardworking; willing to seek guidance as a newer judge; commission expects him to 'add even more value' with experience.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Shamsid-Deen is direct and efficient in his courtroom.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/shamsid-deen-isaam-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2578,15 +2910,26 @@
         "website": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Led the court's move to a web-based case system.",
-        "own_words": [
-          {
-            "text": "Commission finding (5-0): 'Upbeat and approachable'; uses plain language; 'a legal scholar' sought out by colleagues.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Denver County Court Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "5-0",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Smith has a reputation for her intelligence, work ethic and positivity.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/smith-judith-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2652,9 +2995,9 @@
         "background": "Retired operations executive. Did not respond to the Denver Gazette questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the Denver Gazette questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+            "text": "a commissioner who will manage county tax dollars carefully.",
+            "is_quote": true,
+            "source": "https://carlschuldiesforcommissioner.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2877,9 +3220,9 @@
         "background": "Incumbent commissioner. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf"
+            "text": "We need to build an Adams County economy that leaves no one out and no one behind.",
+            "is_quote": true,
+            "source": "https://www.ballotready.org/people/emma-pinter"
           }
         ],
         "lwv_status": "unknown",

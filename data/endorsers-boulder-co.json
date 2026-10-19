@@ -4,14 +4,15 @@
     "name": "Boulder Daily Camera editorial board",
     "type": "publication",
     "lean": null,
-    "lean_basis": "AllSides lists the Daily Camera as Not Rated, and no Ad Fontes rating was found. Its stated mission is 'To deliver essential, informed and relevant news to our readers' (https://www.dailycamera.com/about-us/). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"To deliver essential, informed and relevant news to our readers\". This does not establish a position on the political scale. Source: https://www.dailycamera.com/about-us/.",
     "geography": [
       "boulder-co"
     ],
     "guide_url": "https://www.dailycamera.com/2026/10/11/boulder-city-county-ballot-measures-2k-vacancy-tax-endorsement/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-boulder-county",
@@ -25,21 +26,23 @@
     "guide_url": "https://www.lwvbc.org/docs.ashx?id=1829355",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "boulder-reporting-lab",
     "name": "Boulder Reporting Lab",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Nonprofit newsroom (no endorsements) that promises 'Quality, non-partisan reporting that digs beneath the surface on issues of public importance' (https://boulderreportinglab.org/about-us/). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"Quality, non-partisan reporting that digs beneath the surface on issues of public importance\". This does not establish a position on the political scale. Source: https://boulderreportinglab.org/about-us/.",
     "geography": [
       "boulder-co"
     ],
     "guide_url": "https://boulderreportinglab.org/2026/10/06/where-boulder-candidates-stand-on-the-400-million-bond-and-every-other-local-ballot-measure/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "plan-boulder",
@@ -53,21 +56,23 @@
     "guide_url": "https://www.planboulder.org/2026-city-council-candidate-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "better-boulder",
     "name": "Better Boulder",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "Urbanist group that says it advocates for 'Environmental stewardship' and 'Progressive and innovative elected officials' (https://betterboulder.com/about/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"Progressive and innovative elected officials\". Source: https://betterboulder.com/about/.",
     "geography": [
       "boulder-co"
     ],
     "guide_url": "https://betterboulder.com/better-boulder-2026-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "boulder-progressives",
@@ -81,7 +86,8 @@
     "guide_url": "https://blog.boulderprogressives.org/announcing-bps-strongest-slate-ever-for-2026-election",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "open-boulder",
@@ -95,21 +101,23 @@
     "guide_url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "boulder-dsa",
     "name": "Boulder Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described socialist group: 'a chapter of the Democratic Socialists of America, the largest socialist organization in United States history' (https://www.boulderdsa.org/about). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"a chapter of the Democratic Socialists of America, the largest socialist organization in United States history\". Source: https://www.boulderdsa.org/about.",
     "geography": [
       "boulder-co"
     ],
     "guide_url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "co-wfp",
@@ -124,7 +132,9 @@
     "guide_url": "https://workingfamilies.org/state/colorado/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Working Families",
+    "lean_basis_kind": "party"
   },
   {
     "id": "boulder-area-labor-council",
@@ -138,7 +148,8 @@
     "guide_url": "https://boulderreportinglab.org/2026/08/30/meet-the-19-candidates-running-for-boulder-mayor-and-city-council-in-2026/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "boulder-county-democrats",
@@ -152,7 +163,9 @@
     "guide_url": "https://www.bocodems.org/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "boulder-county-gop",
@@ -166,7 +179,9 @@
     "guide_url": "https://bocogop.org/wp-content/uploads/2026/09/BoulderCountyRepublicansVoterGuide2026.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "boulder-county-commissioners",
@@ -180,6 +195,8 @@
     "guide_url": "https://bouldercounty.gov/news/support-for-and-opposition-to-state-and-local-ballot-measures-2/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Boulder County commissioners"
   }
 ]

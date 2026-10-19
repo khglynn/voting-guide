@@ -16,7 +16,40 @@ export interface Candidate {
   own_words: { text: string; is_quote: boolean; source: string | null }[];
   lwv_status: string | null;
   lwv_url: string | null;
+  /* "none_found" when a real search found no statement; own_words_checked says where and when. */
+  own_words_status?: 'none_found';
+  own_words_checked?: { on: string; where: string[] };
+  /* Official job reviews and bar ratings, for judges (retention and judicial races). */
+  evaluations?: Evaluation[];
 }
+
+export interface Evaluation {
+  by: string;
+  by_short: string;
+  kind: 'official_commission' | 'bar_group' | 'bar_poll' | 'bar_committee';
+  rating: string;
+  verdict: 'favorable' | 'unfavorable' | 'mixed' | 'none';
+  vote: string | null;
+  survey: {
+    question: string | null;
+    attorneys: SurveyRow | null; non_attorneys: SurveyRow | null; judges: SurveyRow | null;
+    report_url: string | null; caution: string | null;
+  } | null;
+  vote_note: string | null;
+  survey_note: string | null;
+  noted_strength: string | null;
+  noted_concern: string | null;
+  url: string;
+  verified_on: string | null;
+  confidence: Confidence;
+}
+
+/* One group's answers to the review's yes-or-no question. n counts everyone who answered it,
+   including "no opinion", so yes and no need not add to 100. */
+export interface SurveyRow { yes_pct: number; no_pct: number | null; n: number | null }
+
+/* A short note on a known confusion point, shown once where it applies. */
+export interface HeadsUp { text: string; applies_to: string; source?: string | null }
 
 export interface Contest {
   kind: 'contest';
@@ -42,6 +75,8 @@ export interface Contest {
   open_seat: boolean | null;
   term_years: number | null;
   is_retention: boolean;
+  /* Short distinguishing label ("Seat 3", "Subdistrict 4") when one office repeats on a ballot. */
+  seat_label?: string;
   candidates: Candidate[];
   sources: Src[];
   confidence: Confidence;
@@ -55,6 +90,8 @@ export interface Measure {
   jurisdiction: string;
   number: string;
   official_title: string | null;
+  /* 2 to 5 plain words naming what it does ("Parks bond, $260M"), for rows and the cheat sheet */
+  short_title?: string | null;
   plain_summary: string | null;
   yes_means: string | null;
   no_means: string | null;
@@ -86,6 +123,9 @@ export interface Endorser {
   default_on: boolean;
   endorses_candidates: boolean;
   endorses_measures: boolean;
+  /* For party organizations: the party they speak for ("Democratic", "Working Families"). */
+  party?: string;
+  lean_basis_kind?: 'outside_rating' | 'party' | 'mission';
 }
 
 export interface Endorsement {
@@ -103,6 +143,9 @@ export interface Deadline { method?: string; date: string | null; rule: string; 
 
 export interface HowTo {
   state: string;
+  /* where the polls are, set by plan.localHowto: one zone for a known place, every zone the
+     state spans for a statewide-only ballot */
+  zones?: string[];
   election_date: string;
   last_verified: string | null;
   official_site: Src;
@@ -154,6 +197,20 @@ export interface HowTo {
   gotchas: string[];
   situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence }[];
   sources: Src[];
+  heads_up?: HeadsUp[];
+  judicial_review?: JudicialReview | null;
+}
+
+/* How judges get on this state's ballot and what their reviews mean, in plain words. */
+export interface JudicialReview {
+  how_judges_get_here: string | null;
+  who_reviews: string | null;
+  what_the_rating_means: string | null;
+  what_it_doesnt_mean: string | null;
+  to_keep_a_judge: string | null;
+  history: string | null;
+  read_one: { label: string; url: string } | null;
+  sources: Src[];
 }
 
 export interface StateBundle {
@@ -166,6 +223,8 @@ export interface StateBundle {
   endorsements: Record<string, Record<string, Endorsement>>;
 }
 
+export interface PlaceEarly { start: string; end: string; hours_note: string | null; lookup_url: string | null; source: string | null; confidence: string }
+
 export interface PlaceBundle {
   id: string;
   label: string;
@@ -176,6 +235,13 @@ export interface PlaceBundle {
   zips: string[];
   zip_caveats: string | null;
   notes: string | null;
+  county_label?: string | null;
+  district_finders?: { office_match: string; label: string; url: string }[];
+  heads_up?: HeadsUp[];
+  /* the county's own early-voting window, when it differs from the state's; plan.ts prefers it */
+  early_in_person?: PlaceEarly;
+  /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
+  lookups?: { early_in_person?: string; election_day?: string; drop_box?: string };
   order: string[];
   local: string[];
   items: Item[];
@@ -188,4 +254,6 @@ export interface Index {
   states: Record<string, { name: string; as_of: string | null; election_date: string; official_site: Src; places: string[] }>;
   places: Record<string, { label: string; state: string; counties: string[]; local_count: number }>;
   zips: Record<string, string[]>;
+  /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
+  involved?: boolean;
 }

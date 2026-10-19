@@ -22,6 +22,19 @@ export function zipState(zip: string): string | null {
   return r ? r[2] : null;
 }
 
+/* Full names for every postal code the ZIP lookup can return, so "We don't cover Montana yet"
+   never prints "MT". */
+const NAMES: Record<string, string> = {
+  AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware',
+  DC: 'Washington, DC', FL: 'Florida', GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas',
+  KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi',
+  MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York',
+  NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island',
+  SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington',
+  WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', PR: 'Puerto Rico', GU: 'Guam',
+};
+export const stateName = (code: string): string => NAMES[code] || code;
+
 export interface GeoResult {
   matched: string;           // the address as Census matched it (shown back, never stored)
   state: string | null;      // two-letter
@@ -40,6 +53,17 @@ const STATE_FIPS: Record<string, string> = {
   '45': 'SC', '46': 'SD', '47': 'TN', '48': 'TX', '49': 'UT', '50': 'VT', '51': 'VA', '53': 'WA', '54': 'WV', '55': 'WI',
   '56': 'WY', '72': 'PR',
 };
+
+/* Which of these places a Census result points to. The state has to match first: Aurora,
+   Illinois is not Aurora, Colorado, and applying one state's district numbers to the other's
+   races would hide the right ones. In DC the Census "upper" layer is the ward. */
+export function placeFromGeo(places: Record<string, { label: string; state: string }>, ids: string[], r: GeoResult): string | null {
+  if (!r.state) return null;
+  const inState = ids.filter((id) => places[id] && places[id].state === r.state);
+  if (r.state === 'DC' && r.upper != null) return inState.find((id) => places[id].label === `DC Ward ${r.upper}`) || null;
+  if (!r.place) return null;
+  return inState.find((id) => places[id].label.toLowerCase() === r.place!.toLowerCase()) || null;
+}
 
 /* US Census Geocoder, JSONP (no key, no CORS). The address goes only to the Census
    Bureau. We keep it in memory for this one request and never store it. */

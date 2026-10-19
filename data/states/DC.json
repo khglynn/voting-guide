@@ -372,5 +372,15 @@
       "name": "DCBOE: Voting by Live Ballot (special ballot proof of residence due 5:00 pm on the Thursday following Election Day)",
       "url": "https://dcboe.org/voters/casting-your-vote/voting-by-live-ballot"
     }
+  ],
+  "heads_up": [
+    {
+      "text": "Rank up to five candidates in ranked-choice races. Use one candidate per column and rank each candidate only once.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "Two at-large council members win, but your ballot counts for one candidate at a time. Rank candidates rather than choosing two equal first choices.",
+      "applies_to": "item:dc-council-at-large"
+    }
   ]
 }

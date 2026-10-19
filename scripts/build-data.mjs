@@ -45,6 +45,83 @@ const safeUrl = (u) => (isStr(u) && /^https?:\/\//i.test(u.trim()) ? u.trim() : 
 const META = /(for this guide|this (guide|run|pass)\b|not (yet )?(collected|opened|read|reviewed)|\b(was|were) not (read|opened|reviewed)|positions? (were |was )?not collected|no positions collected|^unopposed on the ballot|^no (\d{4} )?(statements?|platform|own words|positions?|campaign|issue|questionnaire|published|stated|voters'? pamphlet|lacc?d platform)\b.*\b(found|located|reviewed|collected|exists?|submitted)?|^we found no|^none found|^not collected|^did not respond\b|(campaign site|website) (had|listed|has) no\b|has no campaign website|^no bio\b|answers were not captured|ballotpedia lists|no questionnaire response)/i;
 const stripNotes = (t) => t.split(/(?<=[.;!?])\s+/).filter((x) => !META.test(x.trim()) && !/^see (his|her|their|the) /i.test(x.trim())).join(' ').trim();
 
+/* ---------- optional ledger fields (Oct 19 data contract) ----------
+   Every one is optional. A bad shape warns and drops that field; it never drops the record. */
+const EVAL_KINDS = ['official_commission', 'bar_group', 'bar_poll', 'bar_committee'];
+const VERDICTS = ['favorable', 'unfavorable', 'mixed', 'none'];
+const pctOk = (v) => Number.isFinite(v) && v >= 0 && v <= 100;
+const pct = (x) => (x && pctOk(x.yes_pct) ? { yes_pct: x.yes_pct, no_pct: pctOk(x.no_pct) ? x.no_pct : null, n: Number.isInteger(x.n) ? x.n : null } : null);
+function evaluations(list, where) {
+  if (list == null) return [];
+  if (!Array.isArray(list)) { warn(`${where}: evaluations is not a list; dropped it`); return []; }
+  const out = [];
+  for (const e of list) {
+    if (!e || !isStr(e.by) || !isStr(e.rating) || !VERDICTS.includes(e.verdict)) { warn(`${where}: an evaluation is missing by, rating or a valid verdict; dropped it`); continue; }
+    const url = safeUrl(e.url);
+    if (!url) { warn(`${where}: an evaluation by ${e.by} has no source URL; dropped it`); continue; }
+    const sv = e.survey && typeof e.survey === 'object' ? {
+      question: str(e.survey.question), attorneys: pct(e.survey.attorneys), non_attorneys: pct(e.survey.non_attorneys), judges: pct(e.survey.judges),
+      report_url: safeUrl(e.survey.report_url), caution: str(e.survey.caution),
+    } : null;
+    out.push({
+      by: e.by.trim(), by_short: str(e.by_short) || e.by.trim(),
+      kind: EVAL_KINDS.includes(e.kind) ? e.kind : 'bar_group',
+      rating: e.rating.trim(), verdict: e.verdict, vote: str(e.vote),
+      survey: sv && (sv.attorneys || sv.non_attorneys || sv.judges) ? sv : null,
+      vote_note: str(e.vote_note), survey_note: str(e.survey_note),
+      noted_strength: str(e.noted_strength), noted_concern: str(e.noted_concern),
+      url, verified_on: isDate(e.verified_on) ? e.verified_on : null, confidence: conf(e.confidence),
+    });
+  }
+  return out;
+}
+const APPLIES = /^(ballot|section:(federal|state|judicial|county|city|school|special_district|measures)|item:\S+)$/;
+function headsUp(list, where) {
+  if (list == null) return [];
+  if (!Array.isArray(list)) { warn(`${where}: heads_up is not a list; dropped it`); return []; }
+  return list.filter((h) => {
+    const ok = h && isStr(h.text) && isStr(h.applies_to) && APPLIES.test(h.applies_to.trim());
+    if (!ok) warn(`${where}: a heads_up note has no text or a bad applies_to; dropped it`);
+    return ok;
+  }).map((h) => ({ text: h.text.trim(), applies_to: h.applies_to.trim(), source: safeUrl(h.source) }));
+}
+function districtFinders(list, where) {
+  if (list == null) return [];
+  if (!Array.isArray(list)) { warn(`${where}: district_finders is not a list; dropped it`); return []; }
+  return list.filter((d) => {
+    const ok = d && isStr(d.office_match) && isStr(d.label) && safeUrl(d.url);
+    if (!ok) warn(`${where}: a district finder needs office_match, label and an https URL; dropped it`);
+    return ok;
+  }).map((d) => ({ office_match: d.office_match.trim(), label: d.label.trim(), url: safeUrl(d.url) }));
+}
+/* A place's own early-voting window, when its county runs a different one from the state's
+   (Florida counties choose their own days inside the state's range). plan.ts prefers it. */
+function placeEarly(x, where) {
+  if (x == null) return null;
+  const ok = x && typeof x === 'object' && isDate(x.start) && isDate(x.end) && x.start <= x.end && safeUrl(x.source);
+  if (!ok) { warn(`${where}: early_in_person needs start and end dates (start first) and an https source; dropped it`); return null; }
+  return { start: x.start, end: x.end, hours_note: str(x.hours_note), lookup_url: safeUrl(x.lookup_url), source: safeUrl(x.source), confidence: conf(x.confidence) };
+}
+/* A place's own where-to-vote tools, when its county runs them; plan.ts prefers them over the
+   state's statewide lookups. */
+function placeLookups(x, where) {
+  if (x == null) return null;
+  if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
+  const out = {};
+  for (const k of ['early_in_person', 'election_day', 'drop_box']) {
+    if (x[k] == null) continue;
+    const u = safeUrl(x[k]);
+    if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);
+  }
+  return Object.keys(out).length ? out : null;
+}
+const optional = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
+function ownWordsChecked(x, where) {
+  if (x == null) return null;
+  if (typeof x !== 'object' || !isDate(x.on)) { warn(`${where}: own_words_checked needs an "on" date; dropped it`); return null; }
+  return { on: x.on, where: Array.isArray(x.where) ? x.where.filter(isStr).map((w) => w.trim()) : [] };
+}
+
 /* ---------- file loading ---------- */
 function listJson(dir) {
   const p = path.join(DATA, dir);
@@ -100,6 +177,12 @@ function normContest(c, file) {
         .filter((o) => o.text.length > 0),
       lwv_status: str(k.lwv_status),
       lwv_url: safeUrl(k.lwv_url),
+      // Optional fields are written only when present, so 3,000 candidates don't each carry empty keys.
+      ...optional({
+        own_words_status: k.own_words_status === 'none_found' ? 'none_found' : null,
+        own_words_checked: ownWordsChecked(k.own_words_checked, `${file}: ${c.id}`),
+        evaluations: evaluations(k.evaluations, `${file}: ${c.id} / ${k.name}`),
+      }),
     });
   }
   const scope = str(c.scope_plain) || '';
@@ -132,6 +215,7 @@ function normContest(c, file) {
     open_seat: typeof c.open_seat === 'boolean' ? c.open_seat : null,
     term_years: typeof c.term_years === 'number' ? c.term_years : null,
     is_retention: !!c.is_retention,
+    ...optional({ seat_label: str(c.seat_label) }),
     candidates: cands,
     sources: (Array.isArray(c.sources) ? c.sources : []).filter((s) => s && safeUrl(s.url)).map((s) => ({ name: str(s.name) || 'Source', url: safeUrl(s.url) })),
     confidence: conf(c.confidence),
@@ -151,6 +235,7 @@ function normMeasure(m, file) {
     jurisdiction: str(m.jurisdiction) || m.state,
     number: m.number.trim(),
     official_title: str(m.official_title),
+    short_title: str(m.short_title),
     plain_summary: str(m.plain_summary),
     yes_means: str(m.yes_means),
     no_means: str(m.no_means),
@@ -199,7 +284,8 @@ function shortEndorser(name) {
   let s = name.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim().replace(/^The\s+/, '').replace(/\s+editorial boards?$/i, '')
     .replace(/\s+endorsements?$/i, '').replace(/League of Women Voters( of)?( the)?/i, 'LWV').trim();
   if (s.includes(' / ')) s = s.split(' / ')[0].trim();
-  if (s.length > 30) { const cut = s.slice(0, 30); s = cut.slice(0, cut.lastIndexOf(' ')) || cut; }
+  // No length cut: a cut chopped 98 names mid-phrase (four Planned Parenthood groups all read
+  // "Planned Parenthood..."). The views wrap long names; the verdict column uses a shorter tag.
   return s.replace(/[,;:]$/, '');
 }
 
@@ -243,6 +329,19 @@ for (const f of listJson('states')) {
   const s = readJson(f);
   if (!s || !validState(s, f)) continue;
   s.state = s.state.toUpperCase();
+  s.heads_up = headsUp(s.heads_up, f);
+  if (s.judicial_review != null) {
+    const jr = s.judicial_review;
+    const ok = jr && typeof jr === 'object' && ['what_the_rating_means', 'who_reviews', 'how_judges_get_here'].some((k) => isStr(jr[k]));
+    if (!ok) { warn(`${f}: judicial_review has none of what_the_rating_means, who_reviews, how_judges_get_here; dropped it`); s.judicial_review = null; }
+    else {
+      const keep = {};
+      for (const k of ['how_judges_get_here', 'who_reviews', 'what_the_rating_means', 'what_it_doesnt_mean', 'to_keep_a_judge', 'history']) keep[k] = str(jr[k]);
+      keep.read_one = jr.read_one && isStr(jr.read_one.label) && safeUrl(jr.read_one.url) ? { label: jr.read_one.label.trim(), url: safeUrl(jr.read_one.url) } : null;
+      keep.sources = (Array.isArray(jr.sources) ? jr.sources : []).filter((x) => x && isStr(x.name) && safeUrl(x.url)).map((x) => ({ name: x.name.trim(), url: safeUrl(x.url) }));
+      s.judicial_review = keep;
+    }
+  }
   states.set(s.state, s);
 }
 
@@ -268,6 +367,10 @@ for (const f of listJson('places')) {
     zips: p.zips.map(String).filter((z) => /^\d{5}$/.test(z)),
     zip_caveats: str(p.zip_caveats),
     notes: str(p.notes),
+    county_label: str(p.county_label),
+    district_finders: districtFinders(p.district_finders, f),
+    heads_up: headsUp(p.heads_up, f),
+    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f) }),
     order: known,
     file: f,
   });
@@ -301,8 +404,9 @@ for (const [id, vers] of endorserVersions) {
   const newest = [...vers].sort((a, b) => b.t - a.t)[0].rec;
   const name = CONFIG.endorserNames[id] || (vers.find((v) => v.rec.id === id) || vers[0]).rec.name.trim();
   const type = str(newest.type) || 'other';
+  const dataShort = vers.map((v) => v.rec.short).find(isStr);
   endorsers.set(id, {
-    id, name, short: shortEndorser(name), type,
+    id, name, short: dataShort ? dataShort.trim() : shortEndorser(name), type,
     lean,
     lean_basis: str(newest.lean_basis),
     lean_note: leanKeys.length > 1 ? `Our research passes rated this source differently: ${leanKeys.map((k) => LEAN_WORD[k]).join(' and ')}. We show ${LEAN_WORD[lean]}.` : null,
@@ -311,6 +415,12 @@ for (const [id, vers] of endorserVersions) {
     default_on: type === 'publication' || type === 'civic_nonpartisan',
     endorses_candidates: vers.some((v) => v.rec.endorses_candidates === true),
     endorses_measures: vers.some((v) => v.rec.endorses_measures === true),
+    // Which party a party organization speaks for ("Democratic", "Working Families"), and how its
+    // lean is known. Both optional; the app falls back to reading the party out of the name.
+    ...optional({
+      party: type === 'party' || type === 'elected_official' ? str(newest.party) : null,
+      lean_basis_kind: ['outside_rating', 'party', 'mission'].includes(newest.lean_basis_kind) ? newest.lean_basis_kind : null,
+    }),
   });
 }
 
@@ -427,14 +537,31 @@ function linkGroups() {
 report.linkedMeasures = linkGroups();
 
 /* ---------- bundles ---------- */
-function bundleFor(ids) {
+/* Where a source speaks, from its own `geography` (state codes and/or place ids, across every
+   file that defines it). A state code means statewide. A source with only place ids is local to
+   those places: an Orlando county party's picks on Florida's statewide races belong on Orlando
+   ballots, not on Tallahassee's or Pensacola's. A source with no geography counts as statewide. */
+const endorserHome = new Map(); // eid -> null (statewide) | Set(placeIds)
+for (const [id, vers] of endorserVersions) {
+  const geo = vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim());
+  if (!geo.length || geo.some((g) => /^[A-Z]{2}$/.test(g))) { endorserHome.set(id, null); continue; }
+  endorserHome.set(id, new Set(geo.filter((g) => places.has(g))));
+}
+const allStatewide = new Set([...statewideFileIds.values()].flatMap((s) => [...s]));
+report.localSources = [...endorserHome].filter(([, h]) => h).length;
+/* A bundle's rows: every row on its items, except that a local source's rows on statewide items go
+   only to its home places' bundles (placeId), never to the state bundle. */
+function bundleFor(ids, placeId = null) {
   const items = ids.map(item).filter(Boolean);
   const idSet = new Set(items.map((i) => i.id));
+  const extra = placeId ? new Set((places.get(placeId)?.order || []).filter((id) => allStatewide.has(id))) : new Set();
   const ends = {};
   const used = new Set();
   for (const [key, rec] of endorsementByKey) {
     const [eid, tid] = key.split('|');
-    if (!idSet.has(tid)) continue;
+    const home = endorserHome.get(eid);
+    if (idSet.has(tid)) { if (!placeId && home) continue; }
+    else if (!(extra.has(tid) && home && home.has(placeId))) continue;
     const { f: _file, ...clean } = rec;
     (ends[tid] = ends[tid] || {})[eid] = clean;
     used.add(eid);
@@ -465,7 +592,7 @@ for (const [st, s] of states) {
 for (const [id, p] of places) {
   const sw = statewideFileIds.get(p.state) || new Set();
   const local = p.order.filter((x) => !sw.has(x));
-  const b = bundleFor(local);
+  const b = bundleFor(local, id);
   const bundle = { ...p, file: undefined, local, ...b };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length };
@@ -476,6 +603,12 @@ for (const [id, p] of places) {
   }
 }
 sizes['index.json'] = write('index.json', index);
+// Optional: "Pass it on" ways to get involved and the texting study, from the data track.
+if (fs.existsSync(path.join(DATA, 'get-involved.json'))) {
+  const gi = readJson('get-involved.json');
+  if (gi && typeof gi === 'object' && !Array.isArray(gi)) { sizes['get-involved.json'] = write('get-involved.json', gi); index.involved = true; write('index.json', index); }
+  else warn('get-involved.json is not an object; skipped it');
+}
 
 report.counts = {
   states: states.size, places: places.size, contests: contests.size, measures: measures.size,

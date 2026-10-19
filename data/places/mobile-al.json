@@ -71,5 +71,32 @@
     "al-amendment-4",
     "mobile-county-local-amendment-1",
     "mobile-county-payg-bonds"
+  ],
+  "district_finders": [
+    {
+      "office_match": "Alabama State Senate",
+      "label": "Find your district",
+      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+    },
+    {
+      "office_match": "Alabama House of Representatives",
+      "label": "Find your district",
+      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+    },
+    {
+      "office_match": "Member, Mobile County Board of Education (Board of School Commissioners)",
+      "label": "Find your district",
+      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+    },
+    {
+      "office_match": "District Court Judge, Mobile County, Place 3",
+      "label": "Find your district on the official county maps",
+      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district on the official county maps",
+      "url": "https://probate.mobilecountyal.gov/elections/district-maps"
+    }
   ]
 }

@@ -68,7 +68,7 @@
     "end": "2026-11-03",
     "hours_note": "King County vote centers: Renton, Elections headquarters, 919 SW Grady Way; Bellevue College, Building U, Gary Locke Ballroom, 3000 Landerholm Cir SE; Federal Way, Weyerhaeuser Aquatic Center Banquet Hall, 650 SW Campus Dr; Kenmore City Hall, 18120 68th Ave NE; Kent, Green River College-Kent Campus, Rooms 282 and 283, 417 Ramsay Way; Seattle City Hall, Bertha Knight Landes Room, Floor 1, 600 4th Ave. All six open October 31, 10 AM to 4 PM; November 2, 8:30 AM to 6 PM; November 3, 8:30 AM to 8 PM. Renton also opens weekdays October 14 to 23, 8:30 AM to 4:30 PM, and October 26 to 30, 8:30 AM to 6 PM. Centers offer registration, replacement ballots and accessible voting. Check the live county page before leaving.",
     "vote_centers": true,
-    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"
   },
   "election_day": {
@@ -76,7 +76,7 @@
     "polls_close": "8:00 PM",
     "in_line_rule": "Drop boxes close at '8 p.m. sharp' on Election Day (King County). If you are inside a voting center or in its line at 8:00 PM you can still register and vote. Don't plan on 7:58.",
     "vote_centers": true,
-    "lookup_url": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "lookup_url": "https://www.sos.wa.gov/elections/voters/voter-registration/drop-box-and-voting-center-locations",
     "confidence": "verified"
   },
   "id_rules": {
@@ -374,6 +374,46 @@
     {
       "name": "Washington State Standard: Voter Guide, 2026 Washington state general election",
       "url": "https://washingtonstatestandard.com/voter-guides/2026-washington-state-general-election/"
+    }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "Washington judges run without party labels. You choose a candidate for each position. Appointed judges also face elections to keep their seats.",
+    "who_reviews": "The King County Bar’s committee includes lawyers and public members. It reviews questionnaires, writing samples, references and interviews for candidates in contested elections. Unopposed incumbents generally do not seek ratings.",
+    "what_the_rating_means": "The scale is Exceptionally Well Qualified, Well Qualified, Qualified and Not Qualified. It assesses fitness for judicial office. The 2026 page also includes ratings issued within the past three years.",
+    "what_it_doesnt_mean": "A qualification rating is not an endorsement. “Not rated” means the bar has no recent rating to report; it does not mean the candidate is unqualified.",
+    "to_keep_a_judge": "Vote for the candidate you want. The candidate with the most votes wins; these are candidate elections, not yes-or-no retention questions.",
+    "history": "The bar’s 2026 page, last updated August 4, lists a 2026 rating for Sean O’Donnell and Gabe Rothstein. The other statewide candidates listed there have no recent rating.",
+    "read_one": {
+      "label": "Read the King County Bar’s 2026 candidate ratings",
+      "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election"
+    },
+    "sources": [
+      {
+        "name": "Washington county elections office: nonpartisan judicial elections",
+        "url": "https://douglascountywa.gov/208/Non-Partisan-Elections"
+      },
+      {
+        "name": "King County Bar: evaluation process",
+        "url": "https://www.kcba.org/?pg=Judicial-Candidate-Evaluation-Ratings"
+      },
+      {
+        "name": "King County Bar: 2026 ratings",
+        "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election"
+      },
+      {
+        "name": "King County Bar: rating rules and categories",
+        "url": "https://www.kcba.org/docDownload/2124203"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "The top two primary finishers advance, even if both prefer the same party. Party preference is not a party endorsement.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "On IP26-645, yes repeals the 9.9 percent tax on income over $1 million and bans state and local income taxes. No keeps the tax law as passed.",
+      "applies_to": "item:wa-initiative-645"
     }
   ]
 }

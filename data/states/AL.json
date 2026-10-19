@@ -357,5 +357,33 @@
       "name": "VOTE411 (League of Women Voters): Alabama voting information",
       "url": "https://www.vote411.org/alabama"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "Alabama judges run with party labels. You choose a candidate for each seat. A straight-party vote includes judicial candidates of that party.",
+    "who_reviews": "We found no official election job review or Alabama State Bar rating for the judges in this guide as of October 19, 2026.",
+    "what_the_rating_means": "There is no verified current performance rating to show. Party labels identify the candidate’s party, not judicial qualifications.",
+    "what_it_doesnt_mean": "No published rating does not mean a candidate is unqualified. A party label or endorsement is not a performance review.",
+    "to_keep_a_judge": "Vote for the candidate you want. The candidate with the most votes wins; these are not yes-or-no retention questions.",
+    "history": "Most judicial races on the Mobile ballot have one listed candidate. You can still read the ballot and candidate background before choosing.",
+    "read_one": {
+      "label": "Read the official Mobile County sample ballot",
+      "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+    },
+    "sources": [
+      {
+        "name": "Alabama Secretary of State: Mobile County sample ballot",
+        "url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/Mobile-Sample.pdf"
+      },
+      {
+        "name": "Alabama State Bar: search for judicial ratings",
+        "url": "https://www.alabar.org/?s=judicial+ratings"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "Judges have party labels. A straight-party mark covers partisan races; ballot measures still need separate votes.",
+      "applies_to": "ballot"
+    }
   ]
 }

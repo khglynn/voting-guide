@@ -54,6 +54,8 @@ jobs:
         run: npm run data
       - name: Data rules (dates, measures, endorsements, lean basis, copy, anything the build dropped)
         run: node scripts/check-data.mjs
+      - name: Model tests (save-link contract, districts, lenses, verdicts, bulk fills; no browser)
+        run: node tests/model.mjs
       - name: Typecheck and production build
         run: npm run build
 

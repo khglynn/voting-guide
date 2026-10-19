@@ -406,5 +406,41 @@
       "name": "NY State Senate: Bill S1099 of 2019 (signed Jan 24, 2019 as Chapter 3). Voters who move anywhere in the state can vote an affidavit ballot at the new poll site; the board transfers the registration",
       "url": "https://www.nysenate.gov/legislation/bills/2019/S1099"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "New York judges run with party labels. Supreme Court is the main trial court, not the state’s highest court. Parties nominate its candidates at judicial conventions.",
+    "who_reviews": "Independent judicial screening panels and bar groups assess candidates’ qualifications. Look for a rating tied to the specific candidate and election.",
+    "what_the_rating_means": "A qualification rating reflects that group’s screening for judicial office. Different bar groups can use different standards and reach different findings.",
+    "what_it_doesnt_mean": "A qualification rating does not predict rulings. A party nomination is not a performance evaluation, and absence of a current rating does not establish lack of qualifications.",
+    "to_keep_a_judge": "Vote for the candidate or candidates you want, up to the number shown on your ballot. These races do not use yes-or-no retention questions.",
+    "history": "Some official screening-panel pages still show old ratings. Older ratings should not be described as a new 2026 review.",
+    "read_one": {
+      "label": "Read the court system’s explanation of independent screening",
+      "url": "https://www.nycourts.gov/courts/ad1/Committees&Programs/IndJudElectionQual/"
+    },
+    "sources": [
+      {
+        "name": "New York courts: court structure",
+        "url": "https://www.nycourts.gov/courts/10th-jd-suffolk/structure-courts"
+      },
+      {
+        "name": "New York courts: independent judicial election qualifications",
+        "url": "https://www.nycourts.gov/courts/ad1/Committees&Programs/IndJudElectionQual/"
+      },
+      {
+        "name": "New York election law: judicial conventions",
+        "url": "https://www.nysenate.gov/legislation/laws/ELN/6-106"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "The same candidate can appear on several party lines. Choose that person on one line; votes from those lines add together.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "Check how many judges each race lets you choose. Some races elect several judges, and each person counts as one choice.",
+      "applies_to": "section:judicial"
+    }
   ]
 }

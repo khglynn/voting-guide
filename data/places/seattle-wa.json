@@ -93,5 +93,132 @@
     "wa-initiative-001",
     "wa-initiative-638",
     "seattle-prop-1"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your district",
+      "url": "https://kingcounty.gov/en/dept/elections/maps/find-my-district"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district",
+      "url": "https://kingcounty.gov/en/dept/elections/maps/find-my-district"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://kingcounty.gov/en/dept/elections/maps/find-my-district"
+    },
+    {
+      "office_match": "Metropolitan King County Council",
+      "label": "Find your district",
+      "url": "https://kingcounty.gov/en/dept/elections/maps/find-my-district"
+    },
+    {
+      "office_match": "Court of Appeals, Division 1, District 1, Judge Position 5",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Court of Appeals, Division 1, District 1, Judge Position 6",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "King County District Court, West Electoral District, Judge Position 1 (short and full term)",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "King County District Court, West Electoral District, Judge Position 2",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "King County District Court, West Electoral District, Judge Position 3",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "King County District Court, West Electoral District, Judge Position 4 (short and full term)",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "King County District Court, West Electoral District, Judge Position 5",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Metropolitan King County Council",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Metropolitan King County Council (short and full term)",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle City Council (unexpired 1-year term)",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 1",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 2",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 3",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 4",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 5",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 6",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "Seattle Municipal Court Judge, Position 7",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Check your district on your King County ballot",
+      "url": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo.aspx"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "election_day": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
+    "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes"
+  }
 }

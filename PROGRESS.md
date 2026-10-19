@@ -1,6 +1,43 @@
-# Voting Guide v2: progress
+# Voting Guide: progress
 
-Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (ranked choice pass).
+Resume file. Keep current. Agent notes: `AGENTS.md`.
+
+## v3, the ledger (Mon Oct 19, 2026)
+- Kevin picked prototype A ("the ledger") from the Oct 18 design round. Spec and research:
+  the workbench's `claude-plans/2026-10-19-ledger-v1/` (BUILD-SPEC.md, research/).
+- The model layer stayed (`ballot.ts`, `state.ts`, save links byte for byte); the views were
+  replaced: masthead, dusk plan strip (next step plus its date, every voting model), "Who do
+  you trust?" chips over the saved source list, one row per item with a verdict column,
+  open rows (grid of your sources, ranked choice, mark up to N, judges, measures, district
+  questions), a Full read sheet, a cheat sheet that ends with Pass it on as its own step.
+- New: "Use their picks where they agree", "Fill in the {party} candidates" and the judges'
+  review batch, each undone as one batch; judge reviews from structured `evaluations`;
+  `heads_up`, `judicial_review`, `seat_label`, `district_finders` from data; "not on my
+  ballot" in the save link; DC wards from an address; numbered seats that share a scope are
+  no longer a district question; unique cheat-sheet titles on every ballot.
+- Removed with v2's views: the Filter shelf, party filter, "only endorsed" and auto-pick
+  (replaced by the lens and the fills).
+- Gates: `tests/model.mjs` (81), `tests/e2e.mjs` (128), the sweep 68/68 fast and full,
+  `tests/perf.mjs` (taps under 250ms at 4x throttle on Chicago and Houston).
+
+## Ledger round 2 (Mon Oct 19, afternoon)
+- Data: batch 2 (judge reviews, judicial_review, heads-up notes, seat labels, district
+  finders, endorser party and lean basis, get-involved.json), own words for the rest of the
+  ballots, short titles for all 221 measures, the Florida counties' own early-voting windows
+  (`early_in_person` on a place file) and Florida's statewide window back to Oct 24 to 31.
+- Codex's two review rounds, every item fixed with a test that fails on the old code: fills
+  never overvote and Undo only takes back what the batch did; addresses match the state first;
+  postmark and drop-off are separate rules; poll closing is judged in the state's own time
+  zone(s) and an open page turns over at close; dialogs hold the keyboard; and the judge,
+  verdict and lean-basis wording fixes.
+- The phone UX review's top ten and most of its copy table: the judges section leads with
+  the plain answer; measures have short names; ranked-choice verdicts count first choices;
+  other districts' measures read "May apply"; one number for the ballot's size; quieter
+  verdict colors and no-pick lines; this week's action in the plan strip; a banner when a
+  link brings someone else's picks; write-ins fold.
+- Gates: `tests/model.mjs` (171), `tests/e2e.mjs` (174), sweep 68/68 fast and full.
+
+## v2 history
 
 ## Done
 - Vite + vanilla TS app in this folder, local git history (branch `main`).

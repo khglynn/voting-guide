@@ -1,16 +1,16 @@
-/* Cheat sheet: picks and notes in ballot order, plus the plan essentials. Print, copy, save link. */
-import type { Item } from '../types';
+/* Cheat sheet: picks and notes in ballot order with seat labels, ranked choices in order, the
+   plan essentials; Print (a real print sheet), Copy as text, Save a link. It ends there; Pass it
+   on is its own step after it. Test hooks: #cheat and #r-print tables, tr[data-cs] rows. */
+import type { Contest, Item } from '../types';
 import { S, encodeShare } from '../state';
-import type { Contest } from '../types';
-import { SECTIONS, entriesBySection, status, isDecision, itemTitle, isMultiJudge, isRCV, ranksOf, ordinal } from '../ballot';
+import { SECTIONS, entriesBySection, status, isDecision, isMultiJudge, isRCV, ranksOf, ordinal } from '../ballot';
 import { esc, fmtDate } from '../util';
-import { pickLabel } from './items';
-import { nextStep } from './plan';
+import { cheatTitle, pickLabel } from '../model/labels';
+import { nextStep } from '../model/plan';
+import { sectionTitle } from './ledger';
 
 interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean }
 
-const cheatTitle = (it: Item): string => (it.kind === 'measure' && it.level !== 'state' ? `${it.number} (${it.jurisdiction})` : itemTitle(it));
-/* A ranked race with a ranking (and not skipped): the ranks, in order, to copy onto the ballot. */
 const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' && isRCV(it) && S.b.picks[it.id] !== 'SKIP' ? ranksOf(it.id) : []);
 const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
 
@@ -18,7 +18,8 @@ function lines(): Line[] {
   const b = S.ballot!;
   const by = entriesBySection();
   const out: Line[] = [];
-  for (const [k, label] of SECTIONS) {
+  for (const [k] of SECTIONS) {
+    const label = sectionTitle(k);
     for (const e of by.get(k) || []) {
       if (e.t === 'question') { out.push({ sec: label, it: null, title: e.group.office, label: null, note: 'Depends on your district. Pick it in the guide or check your sample ballot.', unopposed: false, question: true }); continue; }
       if (e.t !== 'item') continue;
@@ -32,12 +33,13 @@ function lines(): Line[] {
   return out;
 }
 
-function essentials(): string[] {
+export function essentials(): string[] {
   const h = S.ballot!.howto;
   const step = nextStep(h);
-  const out = [step.title + '.', ...step.lines.slice(0, 1)];
+  const out = [step.head.map((p) => p[0]).join(''), ...step.sub.slice(0, 1)];
   const booth = h.in_the_booth;
-  out.push(`In the booth: notes ${booth.notes_allowed === 'allowed' ? 'are allowed' : booth.notes_allowed === 'prohibited' ? 'are not allowed' : 'rules are unclear'}; phones ${booth.phones === 'allowed' ? 'are allowed' : booth.phones === 'prohibited' ? 'are not allowed' : booth.phones === 'restricted' ? 'are restricted' : 'rules are unclear'}.`);
+  const rule = (v: string, yes: string, no: string) => (v === 'allowed' ? yes : v === 'prohibited' ? no : v === 'restricted' ? 'are restricted' : 'rules are unclear');
+  out.push(`In the booth: notes ${rule(booth.notes_allowed, 'are allowed', 'are not allowed')}; phones ${rule(booth.phones, 'are allowed', 'are not allowed')}.`);
   return out;
 }
 
@@ -61,7 +63,8 @@ export function cheatText(): string {
       if (l.note) out.push(`  Note: ${l.note}`);
       continue;
     }
-    out.push(`${l.title}: ${l.label || '____'}`);
+    const short = it && it.kind === 'measure' && it.short_title ? ` (${it.short_title})` : '';
+    out.push(`${l.title}${short}: ${l.label || '____'}`);
     if (it && it.kind === 'contest' && isMultiJudge(it)) {
       it.candidates.forEach((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; out.push(`  ${c.name}: ${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '____'}`); });
     }
@@ -74,25 +77,27 @@ export function cheatText(): string {
 function tableHTML(forPrint: boolean): string {
   let sec = '';
   const rows: string[] = [];
+  const blank = '<span class="screen-only">Not decided</span><span class="print-only">________________</span>';
   for (const l of lines()) {
     if (l.unopposed && !forPrint) continue;
     if (l.sec !== sec) { sec = l.sec; rows.push(`<tr class="cs-sec"><th colspan="2" scope="colgroup">${esc(sec)}</th></tr>`); }
     const it = l.it;
+    const go = it && !forPrint ? ` data-act="goto" data-id="${esc(it.id)}"` : '';
     const ranks = rankedList(it);
+    // The title stays a plain text node (tests read it that way). The whole line is the tap
+    // target; the "Change" button stays for keyboards and screen readers, shown only on focus.
+    const short = it && it.kind === 'measure' && it.short_title ? `<span class="cs-sub">${esc(it.short_title)}</span>` : '';
+    const title = (extra = '') => `<th scope="row">${esc(l.title)}${short}${extra}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}${go ? `<button class="cs-go"${go}>Change<span class="vh"> ${esc(l.title)}</span></button>` : ''}</th>`;
     if (it && it.kind === 'contest' && isRCV(it) && (ranks.length || !l.label)) {
-      const body = ranks.length
-        ? `<ol class="cs-ranks">${ranks.map((n, i) => `<li><span class="cs-rk">${ordinal(i + 1)}</span> ${esc(n)}</li>`).join('')}</ol>`
-        : '<span class="screen-only">Not decided</span><span class="print-only">________________</span>';
-      rows.push(`<tr data-cs="${esc(it.id)}"><th scope="row">${esc(l.title)}<span class="cs-sub">${esc(rankNote(it))}</span>${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}</th>
-        <td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
+      const body = ranks.length ? `<ol class="cs-ranks">${ranks.map((n, i) => `<li><span class="cs-rk">${ordinal(i + 1)}</span> ${esc(n)}</li>`).join('')}</ol>` : blank;
+      rows.push(`<tr data-cs="${esc(it.id)}"${go}>${title(`<span class="cs-sub">${esc(rankNote(it))}</span>`)}<td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
       continue;
     }
     const multi = !!it && it.kind === 'contest' && isMultiJudge(it);
     const sub = it && it.kind === 'contest' && multi ? `<ul class="cs-judges">${it.candidates.map((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; return `<li>${esc(c.name)}: <strong>${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '<span class="print-only">____</span><span class="screen-only">not decided</span>'}</strong></li>`; }).join('')}</ul>` : '';
-    rows.push(`<tr><th scope="row">${esc(l.title)}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}</th>
-      <td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : '<span class="screen-only">Not decided</span><span class="print-only">________________</span>'}${sub}</td></tr>`);
+    rows.push(`<tr${it ? ` data-cs="${esc(it.id)}"` : ''}${go}>${title()}<td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : blank}${sub}</td></tr>`);
   }
-  return `<table><tbody>${rows.join('')}</tbody></table>`;
+  return `<table class="cs-table"><tbody>${rows.join('')}</tbody></table>`;
 }
 
 export function cheatHTML(forPrint = false): string {
@@ -101,33 +106,36 @@ export function cheatHTML(forPrint = false): string {
   const done = all.filter((l) => l.label).length;
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
   return `<div class="cheat">
-    <div class="cheat-hd"><span class="kicker">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. Election Day ${esc(fmtDate(b.howto.election_date))}</span>
-      <h2 class="h2" id="${forPrint ? 'cs-p' : 'cs-h'}">Your cheat sheet</h2>
-      <p class="small muted">${done} of ${all.length} decided. Blank lines are yours to fill in.</p></div>
-    <div class="cheat-plan">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div>
+    <div class="cheat-head"><p class="kick">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. Election Day ${esc(fmtDate(b.howto.election_date))}</p>
+      <h2 id="${forPrint ? 'cs-p' : 'cs-h'}">Your cheat sheet</h2>
+      <p class="sub">${done} of ${all.length} decided.${forPrint ? ' Blank lines are yours to fill in.' : ' Tap any line to change it.'}</p>
+      <div class="remind">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div></div>
     ${tableHTML(forPrint)}
-    <div class="cheat-ft"><p class="lim">From the 2026 voting guide. Checked ${esc(b.howto.last_verified || '')}. Official info: <span class="p-url" data-url="${esc(b.howto.official_site.url)}">${esc(b.howto.official_site.name)}</span>.</p></div>
+    <p class="fine cs-foot">From Kevin’s 2026 voting guide.${b.howto.last_verified ? ` Checked ${esc(fmtDate(b.howto.last_verified, { weekday: false }))}.` : ''} Official info: <span class="p-url" data-url="${esc(b.howto.official_site.url)}">${esc(b.howto.official_site.name)}</span>.</p>
   </div>`;
 }
 
 export function cheatSectionHTML(): string {
   const url = S.ui.saveOpen ? shareURL() : '';
   const body = `My voting picks: ${url}`;
-  return `<section class="cheat-wrap" id="cheat" aria-labelledby="cs-h">
+  return `<section class="cheat-wrap wrap" id="cheat" aria-labelledby="cs-h">
+    <button class="back" data-act="view" data-v="ballot" data-fk="cs-back">Back to the ballot</button>
     ${cheatHTML(false)}
-    <div class="row cheat-actions screen-only">
-      <button class="btn btn-primary" data-act="print">Print</button>
-      <button class="btn" data-act="copy">Copy as text</button>
-      <button class="btn" data-act="save-open" aria-expanded="${S.ui.saveOpen}">Save my picks</button>
+    <div class="cheat-acts screen-only">
+      <button class="cbtn dark" data-act="print" data-fk="cs-print">Print</button>
+      <button class="cbtn" data-act="copy" data-fk="cs-copy">Copy as text</button>
+      <button class="cbtn wide" data-act="save-open" aria-expanded="${S.ui.saveOpen}" data-fk="cs-save">Save a link to my picks</button>
     </div>
     ${S.ui.copyFallback ? `<label class="small screen-only" for="cf">Copy didn’t work here. Select this text and copy it.</label><textarea class="copy-fallback screen-only" id="cf" readonly>${esc(S.ui.copyFallback)}</textarea>` : ''}
     ${S.ui.saveOpen ? `<div class="save screen-only">
-      <p class="small"><strong>No account needed.</strong> This link holds your picks and notes. Open it on any device to get them back. Anyone with the link can see your picks.</p>
+      <p class="small"><b>No account needed.</b> This link holds your picks and notes. Open it on any device to get them back. Anyone with the link can see your picks.</p>
       <input class="save-url" readonly value="${esc(url)}" aria-label="Your save link" data-fk="save-url">
-      <div class="row"><button class="btn btn-sm btn-primary" data-act="copy-link">Copy link</button>
-        <a class="btn btn-sm" href="sms:?&body=${encodeURIComponent(body)}">Text it to me</a>
-        <a class="btn btn-sm" href="mailto:?subject=${encodeURIComponent('My voting picks')}&body=${encodeURIComponent(body)}">Email it to me</a></div>
-      <p class="lim">Text and email open your phone’s apps, if it has them. Copy always works. Your picks also save on this device.</p>
+      <div class="row-btns"><button class="mini dark" data-act="copy-link">Copy link</button>
+        <a class="mini" href="sms:?&body=${encodeURIComponent(body)}">Text it to me</a>
+        <a class="mini" href="mailto:?subject=${encodeURIComponent('My voting picks')}&body=${encodeURIComponent(body)}">Email it to me</a></div>
+      <p class="fine">Text and email open your phone’s apps, if it has them. Copy always works. Your picks also save on this device.</p>
     </div>` : ''}
+    <div class="next-step screen-only"><p><b>One more thing.</b> Help your people make a plan too.</p>
+      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Pass it on</button></div>
   </section>`;
 }

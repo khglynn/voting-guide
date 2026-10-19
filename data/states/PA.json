@@ -60,7 +60,7 @@
     "tracking_url": "https://www.pavoterservices.pa.gov/Pages/BallotTracking.aspx",
     "cure_process": "Pennsylvania has no statewide cure law, so it depends on your county. Philadelphia and Allegheny County both notify voters whose returned ballot has a problem (missing signature, naked ballot) and let them fix or replace it before Election Day; the state tracker will show the status. Your universal fallback: under Genser v. Butler County (Pa. Supreme Court, Oct. 2024), if your mail ballot is rejected for a packaging mistake you may go to your polling place on Election Day, vote a provisional ballot, and it must be counted. Give an email and phone on your application so the county can reach you; DOS says you may get notifications 'depending on county practices.'",
     "mail_cutoff_advice": "The Department of State says paper applications must be received 'at least one week before the election,' and USPS recommends mailing a voted ballot at least seven days out, so mail by about Tuesday, October 27. After that, hand-deliver it to your county election office, a satellite office, a Philadelphia drop box or an Allegheny return site. DOS: 'A postmark by 8 p.m. Nov. 3 is not sufficient.'",
-    "drop_box_lookup_url": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot",
+    "drop_box_lookup_url": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot/return-ballot",
     "confidence": "verified"
   },
   "early_in_person": {
@@ -69,7 +69,7 @@
     "end": "2026-10-27",
     "hours_note": "You can apply for, receive, fill out and return a mail ballot in one visit at your county election office or a designated satellite office through 5 PM on October 27. Bring your PennDOT ID number or last four digits of your Social Security number. Philadelphia: City Hall Room 140 and 10 district satellite offices, Monday to Friday 9 AM to 5 PM, Saturday and Sunday 10 AM to 4 PM, confirmed in the city's 2026 post updated October 17. Hours can change; check the city page before leaving and arrive well before closing. Allegheny: County Office Building, weekdays 8:30 AM to 4:30 PM, extended to 5 PM on October 19 and 27. Weekend service October 17, 18, 24 and 25, 9 AM to 4 PM, at CCAC Homewood, North Park Ice Rink, South Park Ice Rink and the County Office Building. After October 27, you may still return a ballot you already requested, or ask the county about emergency absentee voting if you qualify.",
     "vote_centers": null,
-    "lookup_url": "https://vote.phila.gov/about-us/satellite-election-offices/",
+    "lookup_url": "https://www.pa.gov/agencies/vote/voter-support/mail-in-and-absentee-ballot/mail-ballot-before-election-day",
     "confidence": "verified"
   },
   "election_day": {
@@ -77,7 +77,7 @@
     "polls_close": "8:00 PM",
     "in_line_rule": "If you are in line at 8:00 PM, stay in line. You get to vote.",
     "vote_centers": false,
-    "lookup_url": "https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx",
+    "lookup_url": "https://www.pa.gov/services/vote/find-your-local-polling-place",
     "confidence": "verified"
   },
   "id_rules": {

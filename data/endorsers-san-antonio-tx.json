@@ -4,12 +4,16 @@
     "name": "San Antonio Express-News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the San Antonio Express-News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
-    "geography": ["TX", "san-antonio-tx"],
+    "lean_basis": "AllSides rates the San Antonio Express-News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/san-antonio-express-news-media-bias.",
+    "geography": [
+      "TX",
+      "san-antonio-tx"
+    ],
     "guide_url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-san-antonio",
@@ -17,11 +21,14 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "League of Women Voters chapter that calls itself 'A nonpartisan trusted voting and election information resource' (https://lwvsa.clubexpress.com/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["san-antonio-tx"],
+    "geography": [
+      "san-antonio-tx"
+    ],
     "guide_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "bexar-county-gop",
@@ -29,11 +36,15 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official county party organization. Its Conservative Voter Guide takes no stand on local propositions.",
-    "geography": ["san-antonio-tx"],
+    "geography": [
+      "san-antonio-tx"
+    ],
     "guide_url": "https://bexargop.org/wp-content/uploads/2026/10/Conservative_Voter_Guide_LETTER_8.5x11_EDITABLE.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "bexar-county-democratic-party",
@@ -41,23 +52,30 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official county party organization. Its Lift the Slate site takes no stand on local propositions.",
-    "geography": ["san-antonio-tx"],
+    "geography": [
+      "san-antonio-tx"
+    ],
     "guide_url": "https://lift-the-slate.com",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "san-antonio-afl-cio",
     "name": "San Antonio AFL-CIO (Central Labor Council)",
     "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "AFL-CIO labor council for San Antonio (https://texasaflcio.org/sanantonio); its page gives no mission text, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
-    "geography": ["san-antonio-tx"],
+    "lean": null,
+    "lean_basis": "AFL-CIO labor council for San Antonio (https://texasaflcio.org/sanantonio); its page gives no mission text. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
+    "geography": [
+      "san-antonio-tx"
+    ],
     "guide_url": "https://texasaflcio.org/sanantonio/news/san-antonio-afl-cio-2026-general-election-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sapoa-pac",
@@ -65,10 +83,13 @@
     "type": "labor",
     "lean": "neutral",
     "lean_basis": "Police union PAC that says it 'represents the concerns of police officers and their families to elected officials at all levels of government' (https://sapoa.org/about/political-action), with no ideological language. No outside rating found; lean reflects its stated mission.",
-    "geography": ["san-antonio-tx"],
+    "geography": [
+      "san-antonio-tx"
+    ],
     "guide_url": "https://sapoa.org/about/political-action",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

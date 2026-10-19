@@ -526,7 +526,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "ECUA District 2 board member (ECUA). Wikipedia says she was appointed to the board by Gov. Jeb Bush in 2004 and earlier served on the Pensacola City Council (1988-90) and in the Florida House (1992-94). She did not answer the WUWF guide questions or post an SOE statement, and we found no campaign website.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I'm going to make sure that we have a clear way of alerting the public and the press",
+            "is_quote": true,
+            "source": "https://pensacolacitizen.org/article/public-notice-canceled-ecua-meeting-causes-pledge-for-clearer-communication"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/florida"
       },
@@ -592,7 +598,8 @@
         "url": "https://en.wikipedia.org/wiki/Lois_Benson"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 2"
   },
   {
     "id": "fl-escambia-ecua-4",
@@ -645,7 +652,15 @@
         "background": "Qualified as the Democratic candidate. SOE records show no campaign money raised or spent and no candidate statement, and we found no website or questionnaire answers.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/florida"
+        "lwv_url": "https://www.vote411.org/florida",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and candidate-questionnaire web search",
+            "Escambia elections candidate listing"
+          ]
+        }
       },
       {
         "name": "Ralph Schofield, Jr.",
@@ -701,7 +716,8 @@
         "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=852&rellevel=4&committee=N"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 4"
   },
   {
     "id": "fl-pensacola-council-2",

@@ -20,7 +20,7 @@
  *   4  no duplicate DOM ids anywhere
  *   5  district questions match the oracle's groups
  *   6  section counts, unopposed counts and the progress bar match the data
- *   7  make a choice on every decision, chosen here from the data (varied by race: different
+ *   7  make a choice on every decision row (opened, paged if needed), chosen here from the data (varied by race: different
  *      candidates, yes and no, skips, rankings with a reorder, mixed judge answers), then the
  *      cheat sheet and the print sheet must show every race, in order, each with exactly that
  *      choice: the pick and party, the marked seats, each rank, each judge's answer
@@ -127,8 +127,14 @@ async function oracle(st, placeIds) {
   const items = ids.map((id) => byId.get(id));
   const by = new Map();
   for (const it of items) if (it.kind === 'contest' && !it.every && !onlyIn.has(it.id)) by.set(`${it.level}|${it.office}`, [...(by.get(`${it.level}|${it.office}`) || []), it.id]);
-  const groups = [...by].filter(([, m]) => m.length >= 2).map(([key, members]) => ({ key, members, sec: sectionOf(byId.get(members[0])) }));
-  return { items, byId, groups, kinds: Object.fromEntries(items.map((i) => [i.id, kindOf(i)])) };
+  // Numbered seats (Place/Position/Seat N) sharing one scope are separate races every voter there
+  // sees, not a district question (fixed 2026-10-19; Houston ISDs, Edgewood ISD, Tallahassee).
+  const SEAT = /^(?:place|position|seat|post|no\.)\s*\d+\b/i;
+  const scopeOf = (id) => (byId.get(id).scope_plain || '').trim().toLowerCase();
+  const seats = (m) => m.every((id) => SEAT.test((byId.get(id).district || '').trim())) && m.every((id) => scopeOf(id) && scopeOf(id) === scopeOf(m[0]));
+  const groups = [...by].filter(([, m]) => m.length >= 2 && !seats(m)).map(([key, members]) => ({ key, members, sec: sectionOf(byId.get(members[0])) }));
+  const here = pbs.flatMap((p) => [p.label, ...p.counties]).map((x) => x.replace(/\s*\(.*\)$/, '').replace(/\s+County$/i, '').toLowerCase());
+  return { items, byId, groups, kinds: Object.fromEntries(items.map((i) => [i.id, kindOf(i)])), titles: sheetTitles(items, here) };
 }
 /* What should be on screen for a set of district answers (group key -> member id or '*'). */
 function expected(o, answers) {
@@ -148,7 +154,8 @@ function expected(o, answers) {
   }
   for (const g of unanswered) (perSec[g.sec] ||= { decisions: 0, unopposed: 0, questions: 0 }).questions++;
   const decisions = visible.filter((i) => o.kinds[i.id] === 'decision');
-  return { visible, perSec, decisions, unanswered, barTotal: decisions.length + unanswered.length };
+  // The bar and the section counts count choices; a district question is setup, not a choice.
+  return { visible, perSec, decisions, unanswered, barTotal: decisions.length };
 }
 
 /* ---------- the choices this sweep makes, and what the cheat sheet must then say ----------
@@ -178,16 +185,68 @@ function planFor(ex) {
   }
   return plan;
 }
-/* The row title: the documented rule in src/ballot.ts itemTitle and src/views/cheat.ts cheatTitle.
-   If that rule changes on purpose, change it here too. */
-function sheetTitle(it) {
-  if (it.kind === 'measure') return it.level !== 'state' ? `${it.number} (${it.jurisdiction})` : it.number;
-  const d = (it.district || '').replace(/\s*\(.*\)\s*$/, '').trim();
-  if (!d || /^your\b/i.test(d) || it.office.endsWith('?') || it.office.includes('(') || it.office.includes(d)) return it.office;
-  return `${it.office}, ${d}`;
+/* Cheat-sheet titles: the documented rule in src/model/labels.ts (cheatTitle), written again here
+   so a bug there is a disagreement, not a shared blind spot. If the rule changes on purpose,
+   change it here too. Measures: the number, plus the place for a short local number. Judges: the
+   court and the judge. Races: the office (quiet parentheses dropped) and a seat label from the
+   district, unless that only names this ballot's own county or place. Titles that still repeat on
+   one ballot get the county from their scope, else "(1 of 2)". */
+const QUIET_PAREN = /\s*\((?:non-?partisan|partisan|countywide|municipal court district|retention|unexpired term|[A-Z]{2,6})\)/gi;
+const cleanOffice = (o) => o.replace(QUIET_PAREN, '').replace(/\s+judges? retention$/i, ' judges').replace(/\s{2,}/g, ' ').trim();
+function courtOf(c) {
+  const o = c.office.trim();
+  const colon = o.match(/^(.*?):\s*(?:retain\b|.*continuance in office)/i);
+  if (colon) return colon[1].trim();
+  if (/\bjudge retention$/i.test(o)) {
+    const base = o.replace(/\s*judges? retention$/i, '').trim();
+    const d = (c.district || '').trim();
+    return d && !/county court$/i.test(d) ? `${base}, ${d}` : d || base;
+  }
+  return cleanOffice(o.replace(/\s*\(retention\)\s*$/i, ''));
 }
-function wantRow(it, kind, p) {
-  const row = { t: squash(sheetTitle(it)), v: '', ranks: [], judges: [] };
+function seatLabel(c, here) {
+  if (c.seat_label) return c.seat_label;
+  let d = (c.district || '').trim();
+  if (!d || /^your\b/i.test(d)) return null;
+  let extra = '';
+  const paren = d.match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+  if (paren) { d = paren[1].trim(); if (/county|term\b/i.test(paren[2]) && paren[2].length <= 28) extra = paren[2].trim(); }
+  d = d.split(':')[0].trim();
+  d = d.replace(/^(?:CD|SD|HD|AD|LD|[A-Z]{2})-\s*(\d+[A-Z]?)\b\s*/, (_m, n) => `District ${n} `).trim();
+  d = d.replace(/^(District \d+[A-Z]?) (Position \d+)/, '$1, $2');
+  if (d.length > 40) d = d.split(',')[0].trim();
+  if (!d) return null;
+  if (c.office.toLowerCase().includes(d.toLowerCase())) return extra || null;
+  if (!extra && here.includes(d.replace(/\s+County( Court)?$/i, '').toLowerCase()) && !/court/i.test(d)) return null;
+  return extra ? `${d}, ${extra}` : d;
+}
+const jurisdictionShort = (m) => m.jurisdiction.replace(/\s*\([^)]*\)/g, '').replace(/\.\s.*$/, '').split(':')[0].trim();
+function baseTitle(it, here) {
+  if (it.kind === 'measure') {
+    const n = it.number.trim();
+    const jur = jurisdictionShort(it);
+    return it.level !== 'state' && jur && !n.toLowerCase().includes(jur.split(' ')[0].toLowerCase()) && n.length <= 24 ? `${n} (${jur})` : n;
+  }
+  if (it.is_retention && it.candidates.length === 1) return `${courtOf(it)}: ${it.candidates[0].name}`;
+  if (it.is_retention) return `${courtOf(it)}, ${it.candidates.length} judges`;
+  const seat = seatLabel(it, here);
+  return seat ? `${cleanOffice(it.office)}, ${seat}` : cleanOffice(it.office);
+}
+function sheetTitles(items, here) {
+  const out = new Map();
+  const by = new Map();
+  for (const it of items) { const t = baseTitle(it, here); out.set(it.id, t); by.set(t, [...(by.get(t) || []), it]); }
+  for (const [t, list] of by) {
+    if (list.length < 2) continue;
+    const county = (it) => { const m = ((it.kind === 'measure' ? it.jurisdiction : it.scope_plain) || '').match(/\b([A-Z][a-zA-Z.]+(?: [A-Z][a-zA-Z.]+)?) County\b/); return m ? `${m[1]} County` : null; };
+    const extra = list.map((it) => county(it) || (it.kind === 'measure' ? jurisdictionShort(it) : null));
+    const distinct = new Set(extra).size === list.length && extra.every(Boolean);
+    list.forEach((it, i) => out.set(it.id, distinct ? `${t} (${extra[i]})` : `${t} (${i + 1} of ${list.length})`));
+  }
+  return out;
+}
+function wantRow(it, kind, p, titles) {
+  const row = { t: squash(titles.get(it.id)), v: '', ranks: [], judges: [] };
   if (kind === 'unopposed') row.v = squash(`${it.candidates[0].name} (unopposed)`);
   else if (!p) row.v = '(the sweep made no choice here)';
   else if (p.t === 'skip') row.v = 'Skipped';
@@ -210,7 +269,7 @@ function wantSheet(o, ex, plan, secOrder, forPrint) {
     const k = o.kinds[it.id];
     if (k === 'info' || (k === 'unopposed' && !forPrint)) continue;
     if (!bySec.has(sectionOf(it))) bySec.set(sectionOf(it), []);
-    bySec.get(sectionOf(it)).push(wantRow(it, k, plan[it.id]));
+    bySec.get(sectionOf(it)).push(wantRow(it, k, plan[it.id], o.titles));
   }
   return [...secOrder, ...[...bySec.keys()].filter((s) => !secOrder.includes(s))].flatMap((s) => bySec.get(s) || []);
 }
@@ -240,29 +299,55 @@ const SNAPSHOT = (w) => {
     sec[s.dataset.sec] = {
       count: (s.querySelector('.sec-count') || {}).textContent?.trim() || '',
       unopp: u ? Number((u.textContent.match(/^(\d+) unopposed/) || [])[1] || -1) : 0,
-      order: [...s.querySelectorAll('[id^="i-"]')].map((e) => e.id.slice(2)),
+      // Rows inside the "other school districts" fold list where the fold sits, so they are
+      // checked for presence, not for place in the section's order.
+      order: [...s.querySelectorAll('[id^="i-"]:not([data-fold])')].map((e) => e.id.slice(2)),
     };
   });
   return {
     ids, dupIds: [...dupIds], over, sec, scrollWidth: document.documentElement.scrollWidth,
-    qs: [...document.querySelectorAll('.q[data-q]')].map((q) => q.dataset.q),
-    bar: (document.querySelector('.bar-txt') || {}).textContent?.trim() || '',
+    qs: [...document.querySelectorAll('.row[data-q]')].map((q) => q.dataset.q),
+    bar: (document.querySelector('.bar-txt') || {}).textContent?.replace(/\s+/g, ' ').trim() || '',
     barBtnDisabled: !!document.querySelector('[data-act="next"][disabled]'),
   };
 };
 /* The app ignores a click within 650ms of the last action (a touch guard), so programmatic taps
    dispatch the mouse pointerdown that fires an action immediately. Real touch taps are covered by e2e. */
 const PRESS = `window.__press = (el) => el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));`;
-const OPEN_UNOPP = () => { document.querySelectorAll('.unopp .disc[aria-expanded="false"]').forEach((b) => window.__press(b)); };
-/* Carry out the sweep's plan on every decision card, pressing the button that names each choice.
-   Each press re-renders the card, so every button is looked up again. Returns what went wrong. */
+/* Unopposed lists and long court groups start folded; open every one (each tap re-renders its section). */
+const OPEN_UNOPP = () => {
+  for (let i = 0; i < 400; i++) {
+    const b = document.querySelector('.unopp .disc[aria-expanded="false"], [data-act="grp"][aria-expanded="false"]');
+    if (!b) break;
+    window.__press(b);
+  }
+};
+/* Carry out the sweep's plan on every decision row: open the row, then press the button that names
+   each choice, paging the candidate grid when the choice is on another page (the ledger shows three
+   at a time). Each press re-renders the row, so every button is looked up again. Returns what went wrong. */
 const PICK_PLAN = (plan) => {
   const log = [];
   const card = (id) => document.getElementById(`i-${id}`);
-  const find = (id, act, pred) => { const c = card(id); return (c && [...c.querySelectorAll(`[data-act="${act}"]`)].find(pred)) || null; };
+  const open = (id) => { const c = card(id); if (c && !c.classList.contains('is-open')) window.__press(c.querySelector('[data-act="row"]')); };
+  const find = (id, act, pred) => {
+    for (let page = 0; page < 4; page++) {
+      open(id);
+      const c = card(id);
+      const hit = c && [...c.querySelectorAll(`[data-act="${act}"]`)].find(pred);
+      if (hit) return hit;
+      // Write-in candidates fold into one line; open it and look again.
+      const wi = c && c.querySelector('.wi-fold [data-act="open"][aria-expanded="false"]');
+      if (wi) { window.__press(wi); page--; continue; }
+      const pager = c && c.querySelector('[data-act="page"]');
+      if (!pager) return null;
+      window.__press(pager);
+    }
+    return null;
+  };
   for (const [id, p] of Object.entries(plan)) {
     if (!card(id)) { log.push(`no card for ${id}`); continue; }
     if (!card(id).hasAttribute('data-undecided')) log.push(`${id} was already decided before the sweep chose anything`);
+    open(id);
     const press = (b, what) => { if (b) window.__press(b); else log.push(`${id}: no button to ${what}`); };
     if (p.t === 'skip') press(find(id, 'skip', () => true), 'skip');
     else if (p.t === 'pick') press(find(id, 'pick', (b) => b.dataset.v === p.v), `pick "${p.v}"`);
@@ -277,7 +362,7 @@ const PICK_PLAN = (plan) => {
     }
     if (card(id) && card(id).hasAttribute('data-undecided')) log.push(`${id} is still undecided after the sweep's choices`);
   }
-  const left = [...document.querySelectorAll('article.card-r[data-undecided]')].map((c) => c.dataset.item).filter((x) => !(x in plan));
+  const left = [...document.querySelectorAll('.row[data-item][data-undecided]')].map((c) => c.dataset.item).filter((x) => !(x in plan));
   if (left.length) log.push(`open cards the data does not count as decisions: ${left.slice(0, 4).join(', ')}`);
   return log;
 };
@@ -325,7 +410,7 @@ async function open(browser, ballot, R) {
       await page.locator('button[type=submit]').click();
       await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
     } else {
-      await page.locator('.browse .btn-text').first().click(); // "Or pick a place from the list"
+      await page.locator('[data-fk="browse"]').click(); // "Or pick a place from the list"
       const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
       await page.locator(sel).first().click();
     }
@@ -353,7 +438,7 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   const wantQ = ex.unanswered.map((g) => g.key).sort().join('|'), gotQ = [...snap.qs].sort().join('|');
   if (wantQ !== gotQ) R.fail(where, 'district questions differ from the oracle', `want ${wantQ || 'none'} got ${gotQ || 'none'}`);
   for (const [sec, s] of Object.entries(ex.perSec)) {
-    const total = s.decisions + s.questions;
+    const total = s.decisions;
     const wantCount = total ? `0 of ${total} decided` : s.unopposed ? 'Nothing to decide' : '';
     const d = snap.sec[sec];
     if (!d) { if (s.decisions || s.unopposed || s.questions) R.fail(where, `section ${sec} is missing`); continue; }
@@ -374,7 +459,12 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   }
   return { ex, snap };
 }
-const pressDistrict = (page, key, v) => page.locator(`.q[data-q="${key.replace(/"/g, '\\"')}"] [data-act="district"][data-v="${v}"]`).first().evaluate((e) => window.__press(e));
+/* A district question is a row: open it, then answer. */
+const pressDistrict = async (page, key, v) => {
+  const sel = `.row[data-q="${key.replace(/"/g, '\\"')}"]`;
+  await page.locator(sel).first().evaluate((r) => { if (!r.classList.contains('is-open')) window.__press(r.querySelector('[data-act="row"]')); });
+  await page.locator(`${sel} [data-act="district"][data-v="${v}"]`).first().evaluate((e) => window.__press(e));
+};
 const pressChange = (page, key) => page.locator(`[data-act="district-change"][data-g="${key.replace(/"/g, '\\"')}"]`).first().evaluate((e) => window.__press(e));
 
 async function sweepBallot(browser, ballot) {
@@ -412,6 +502,12 @@ async function sweepBallot(browser, ballot) {
     const plan = planFor(ex);
     const problems = await page.evaluate(PICK_PLAN, plan);
     if (problems.length) R.fail(ballot.name, `${problems.length} problems making the planned choices`, problems.slice(0, 4).join(' | '));
+    await page.waitForTimeout(150);
+    const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.replace(/\s+/g, ' ').trim());
+    if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
+    // The cheat sheet is its own view in the ledger (with the print sheet rendered beside it).
+    await page.locator('[data-act="cheat"]').first().evaluate((e) => window.__press(e));
+    await page.waitForSelector('#cheat', { timeout: 5000 });
     // The sheets render just after the last tap paints. Wait (up to 5 s, for a busy machine) until neither
   // shows anything undecided; a row that stays blank is then reported by the comparison below.
   await page.waitForFunction(() => !document.querySelector('#cheat td.undecided, #r-print td.undecided, #cheat td .screen-only, #r-print td .screen-only'), null, { timeout: 5000 }).catch(() => {});
@@ -422,9 +518,8 @@ async function sweepBallot(browser, ballot) {
     compareSheet(R, ballot.name, 'print sheet', cheat.print, wantSheet(o, ex, plan, secOrder, true));
     const titles = cheat.screen.map((r) => r.t);
     // 2026-10-19: found by the first sweep. Two races with the same title leave the voter unable to tell the rows apart.
-    if (new Set(titles).size !== titles.length) (process.env.STRICT ? R.fail : warn)(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
-    const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.trim());
-    if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
+    // Seat labels made every title unique on 2026-10-19, so a repeat is now a failure.
+    if (new Set(titles).size !== titles.length) R.fail(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
 
     if (page.errs.length) R.fail(ballot.name, 'console or network errors', page.errs.slice(0, 3).join(' | '));
     if (R.n) await page.screenshot({ path: path.join(SHOTS, `FAIL-${ballot.name}.png`) }).catch(() => {});

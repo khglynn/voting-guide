@@ -16,10 +16,6 @@ export function fmtDate(iso: string | null | undefined, opts: { weekday?: boolea
   if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return '';
   return parse(iso).toLocaleDateString('en-US', { weekday: opts.weekday === false ? undefined : 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
-export function fmtLong(iso: string | null | undefined): string {
-  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return '';
-  return parse(iso).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-}
 /* Today's date on this device, as YYYY-MM-DD. A ?today=2026-10-30 query overrides it for testing. */
 export function todayISO(): string {
   try {
@@ -28,6 +24,27 @@ export function todayISO(): string {
   } catch { /* ignore */ }
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+/* `?now=HH:MM` (local time where the polls are) for testing; null when absent. */
+export function nowOverride(): number | null {
+  try {
+    const q = new URLSearchParams(location.search).get('now');
+    const m = q && q.match(/^(\d{1,2}):(\d{2})$/);
+    if (m) return +m[1] * 60 + +m[2];
+  } catch { /* ignore */ }
+  return null;
+}
+/* The date and the minutes after midnight at this instant in a time zone (the device's own when
+   the zone is unknown). Comparing both, never the minutes alone, keeps "after midnight" from
+   reading as "before 7 PM". */
+export function zonedNow(zone: string | null, at: Date): { date: string; min: number } {
+  const local = () => ({ date: `${at.getFullYear()}-${String(at.getMonth() + 1).padStart(2, '0')}-${String(at.getDate()).padStart(2, '0')}`, min: at.getHours() * 60 + at.getMinutes() });
+  if (!zone) return local();
+  try {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: zone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(at);
+    const v = (t: string) => parts.find((p) => p.type === t)?.value || '0';
+    return { date: `${v('year')}-${v('month')}-${v('day')}`, min: (+v('hour') % 24) * 60 + +v('minute') };
+  } catch { return local(); }
 }
 export const daysBetween = (a: string, b: string): number => Math.round((parse(b).getTime() - parse(a).getTime()) / 864e5);
 
@@ -63,7 +80,8 @@ export function save(key: string, value: unknown): boolean {
 }
 
 let toastTimer: number | undefined;
-export function toast(msg: string): void {
+/* A status message at the bottom; with an action (Undo), it stays long enough to use it. */
+export function toast(msg: string, action?: { label: string; act: string }): void {
   let t = document.querySelector<HTMLDivElement>('.toast');
   if (!t) {
     t = document.createElement('div');
@@ -71,10 +89,16 @@ export function toast(msg: string): void {
     t.setAttribute('role', 'status');
     document.body.appendChild(t);
   }
-  t.textContent = msg;
+  t.innerHTML = `<span class="toast-t">${esc(msg)}</span>${action ? `<button data-act="${esc(action.act)}" data-fk="toast-act">${esc(action.label)}</button>` : ''}`;
   t.hidden = false;
+  t.classList.add('show');
   window.clearTimeout(toastTimer);
-  toastTimer = window.setTimeout(() => { if (t) t.hidden = true; }, 2600);
+  toastTimer = window.setTimeout(() => { if (t) { t.classList.remove('show'); t.hidden = true; } }, action ? 8000 : 2800);
+}
+export function hideToast(): void {
+  const t = document.querySelector<HTMLDivElement>('.toast');
+  if (t) { t.classList.remove('show'); t.hidden = true; }
+  window.clearTimeout(toastTimer);
 }
 
 export async function copyText(text: string): Promise<boolean> {
@@ -93,16 +117,6 @@ export async function copyText(text: string): Promise<boolean> {
     ta.remove();
     return ok;
   } catch { return false; }
-}
-
-export function reducedMotion(): boolean {
-  try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { return true; }
-}
-
-/* FOUNDATION: smooth scrolling failed on phones last cycle. Jump instead. */
-export function scrollToEl(el: Element | null): void {
-  if (!el) return;
-  el.scrollIntoView({ block: 'start', behavior: 'auto' });
 }
 
 /* A quiet screen-reader announcement (a persistent, visually hidden live region), for

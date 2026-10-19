@@ -78,5 +78,70 @@
     "fl-orange-soil-water-5",
     "fl-vista-lakes-cdd-3",
     "fl-orange-ocps-millage"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Orange sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district on the election maps",
+      "url": "https://voteorangefl.gov/maps/"
+    },
+    {
+      "office_match": "Orange County Commissioner",
+      "label": "Find your county commission district",
+      "url": "https://voteorangefl.gov/maps/"
+    },
+    {
+      "office_match": "Soil and Water Conservation District Supervisor",
+      "label": "Check your soil and water races on your sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "Circuit Judge, 9th Judicial Circuit, Group 1",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "Orange County Commissioner",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "Orange County School Board Member",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    },
+    {
+      "office_match": "Vista Lakes Community Development District, Seat 3",
+      "label": "Find your districts and sample ballot",
+      "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+    }
+  ],
+  "early_in_person": {
+    "start": "2026-10-19",
+    "end": "2026-11-01",
+    "hours_note": "Orange County: Monday, October 19 through Sunday, November 1, 8:00 AM to 8:00 PM, at any of 27 early voting sites in the county.",
+    "lookup_url": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "source": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "confidence": "verified"
+  },
+  "lookups": {
+    "early_in_person": "https://voteorangefl.gov/event/early-voting-general-election/",
+    "election_day": "https://voteorangefl.gov/find-your-polling-place/",
+    "drop_box": "https://voteorangefl.gov/secure-ballot-intake-stations-drop-boxes/"
+  }
 }

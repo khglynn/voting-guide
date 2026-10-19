@@ -55,5 +55,17 @@
     "co-proposition-137",
     "littleton-schools-4a",
     "co-frpr-7a"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
+    "election_day": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php",
+    "drop_box": "https://www.arapahoeco.gov/your_county/arapahoevotes/voting_locations/index.php"
+  }
 }

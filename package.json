@@ -1,7 +1,7 @@
 {
   "name": "voting-guide",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
     "data": "node scripts/build-data.mjs",
@@ -10,8 +10,10 @@
     "build": "node scripts/build-data.mjs && tsc --noEmit && vite build",
     "preview": "vite preview",
     "test:e2e": "node tests/e2e.mjs",
+    "test:model": "node scripts/build-data.mjs && node tests/model.mjs",
     "check": "node scripts/check-addresses.mjs && node scripts/build-data.mjs && node scripts/check-data.mjs",
     "sweep": "node tests/sweep.mjs",
+    "shots": "node tests/shots.mjs",
     "playwright:install": "playwright install chromium"
   },
   "devDependencies": {

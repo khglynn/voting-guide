@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://gov.georgia.gov/document/2025-signed-legislation/hr-32/download",
     "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Farmland tax acreage limit"
   },
   {
     "id": "ga-amendment-2",
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://gov.georgia.gov/document/2026-signed-legislation/hr-251/download",
     "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Nonpartisan probate judge elections"
   },
   {
     "id": "ga-amendment-3",
@@ -78,6 +80,7 @@
     },
     "official_text_url": "https://gov.georgia.gov/document/2026-signed-legislation/hr-1243/download",
     "official_guide_url": "https://sos.ga.gov/sites/default/files/2026-09/2026%20Constitutional%20Summaries%20booklet%20FINAL.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Dedicated emergency call system funding"
   }
 ]

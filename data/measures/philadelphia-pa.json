@@ -36,7 +36,8 @@
         "url": "https://thephiladelphiacitizen.org/ballot-questions/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City contracting preferences and rules"
   },
   {
     "id": "philadelphia-question-2",
@@ -75,6 +76,7 @@
         "url": "https://thephiladelphiacitizen.org/ballot-questions/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City arts and culture office"
   }
 ]

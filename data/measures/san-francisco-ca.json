@@ -31,7 +31,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition A",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-a"
       }
-    ]
+    ],
+    "short_title": "City departments and commissions"
   },
   {
     "id": "sf-prop-b",
@@ -65,7 +66,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition B",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-b"
       }
-    ]
+    ],
+    "short_title": "City lender and public bank"
   },
   {
     "id": "sf-prop-c",
@@ -99,7 +101,8 @@
         "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
         "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
       }
-    ]
+    ],
+    "short_title": "Housing trust fund contributions"
   },
   {
     "id": "sf-prop-d",
@@ -133,7 +136,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition D",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-d"
       }
-    ]
+    ],
+    "short_title": "Ballot measure petition rules"
   },
   {
     "id": "sf-prop-e",
@@ -167,7 +171,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition E",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-e"
       }
-    ]
+    ],
+    "short_title": "City administrator and contracting powers"
   },
   {
     "id": "sf-prop-f",
@@ -201,7 +206,8 @@
         "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
         "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
       }
-    ]
+    ],
+    "short_title": "Mayor and department management powers"
   },
   {
     "id": "sf-prop-g",
@@ -240,7 +246,8 @@
         "title": "SF's Proposition G to allow cars back on the Great Highway heads to voters",
         "url": "https://localnewsmatters.org/2026/09/30/prop-g-great-highway-san-francisco/"
       }
-    ]
+    ],
+    "short_title": "Weekday cars on Great Highway"
   },
   {
     "id": "sf-prop-h",
@@ -274,7 +281,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition H",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-h"
       }
-    ]
+    ],
+    "short_title": "Property tax for Muni"
   },
   {
     "id": "sf-prop-i",
@@ -308,7 +316,8 @@
         "title": "Let's vote, San Francisco: Introducing The Standard's 2026 Voter Guide",
         "url": "https://sfstandard.com/2026/10/06/san-francisco-2026-voter-guide-interactive/"
       }
-    ]
+    ],
+    "short_title": "Property sale tax for housing"
   },
   {
     "id": "sf-prop-j",
@@ -342,7 +351,8 @@
         "title": "2026 San Francisco Voter Guide: Proposition J",
         "url": "https://www.kqed.org/voterguide/sanfrancisco/proposition-j"
       }
-    ]
+    ],
+    "short_title": "Foreclosure property sale taxes"
   },
   {
     "id": "bay-area-rtm",
@@ -376,6 +386,7 @@
         "title": "2026 Bay Area Voter Guide: Regional Measure RTM",
         "url": "https://www.kqed.org/voterguide/california/regional-measure-rtm"
       }
-    ]
+    ],
+    "short_title": "Bay Area transit sales tax"
   }
 ]

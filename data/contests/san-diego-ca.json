@@ -827,7 +827,13 @@
     "website": "https://armenkurdian.com",
     "website_confidence": "unverified",
     "background": "Retired Navy captain and political newcomer (Times of San Diego). Ballot designation: Retired Navy Captain.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Armen will lower costs and stop the wasteful spending driving them up.",
+      "is_quote": true,
+      "source": "https://kurdianforcongress.com/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -892,7 +898,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "76-year-old former KUSI news director (Times of San Diego). Ballot designation: Television News Consultant.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Cutting federal red tape that blocks new home construction",
+      "is_quote": true,
+      "source": "https://cohenforcongressca50.com/veteran-san-diego-journalist-steve-cohen-announces-campaign-for-congress-in-ca-50/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -1043,7 +1055,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "State senator seeking a second four-year term; former Chula Vista mayor (Times of San Diego). Ballot designation: California State Senator.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "If you work hard, you should be able to make it in the Golden State.",
+      "is_quote": true,
+      "source": "https://www.votestevepadilla.com/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -1125,7 +1143,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Oceanside business owner and community volunteer (Times of San Diego). Ballot designation: Small Business Owner.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Every person deserves to feel safe in their home and neighborhood.",
+      "is_quote": true,
+      "source": "https://www.bassettforca.com/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -1256,7 +1280,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Navy and Air Force veteran who volunteers with veteran support groups (Times of San Diego). Ballot designation: IT Contractor/Father.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Gerald is working to expand housing access, tackle the cost-of-living crisis, and bring us more opportunities, right here at home.",
+      "is_quote": true,
+      "source": "https://geraldforassembly.com/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    }
@@ -1372,7 +1402,16 @@
     "background": "Executive director of Carl DeMaio's Reform California (Times of San Diego). Ballot designation: Taxpayer Advocate.",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site and questionnaire web search",
+      "Indexed Ballotpedia and VOTE411 search",
+      "San Diego primary voter pamphlet (no statement submitted)"
+     ]
+    }
    }
   ],
   "sources": [

@@ -55,5 +55,22 @@
     "pa-hd-36",
     "pa-hd-38",
     "allegheny-charter-7c"
-  ]
+  ],
+  "district_finders": [
+    {
+      "office_match": "Pennsylvania State Senate",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    },
+    {
+      "office_match": "Pennsylvania House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    }
+  ],
+  "lookups": {
+    "early_in_person": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar",
+    "election_day": "https://apps.alleghenycounty.us/website/ElectPollPlace.aspx",
+    "drop_box": "https://www.alleghenycounty.us/Government/Elections/Pre-Election-Day-Voting-Options/Voting-Events-Calendar"
+  }
 }

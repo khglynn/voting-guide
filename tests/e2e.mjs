@@ -107,7 +107,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await noSideScroll(page, 'Denver');
   check('Denver: masthead names the place and offers a way out', /Denver/.test(await text(page, '.place')) && /Not your ballot\? Change/.test(await text(page, '.where')));
   const head = await text(page, '.plan-h');
-  check('Denver: plan strip leads with the next step and its date, never a countdown', /^Return your ballot by 7 PM Tue, Nov 3\.$/.test(head) && !/days? (left|until)/i.test(await text(page, '#plan')), head);
+  check('Denver: plan strip leads with the next step and its date, never a countdown', /^Mail your ballot by Mon, Oct 26\.$/.test(head) && !/days? (left|until)/i.test(await text(page, '#plan')), head);
   check('Denver: plan paragraphs stay under 40 words', (await planWalls(page)).length === 0, (await planWalls(page)).join(' | '));
   check('Denver: "Am I registered?" goes to the official lookup', /^https?:/.test((await page.getAttribute('.plan .pbtn.line', 'href')) || ''));
   check('Denver: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));

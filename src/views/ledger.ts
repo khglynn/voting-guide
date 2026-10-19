@@ -22,7 +22,10 @@ import { openHTML } from './open';
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
   if (p.county_label) return p.county_label;
-  if (p.counties.length !== 1) return 'County';
+  const names = p.counties.map((x) => x.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
+  if (!names.length) return 'County';
+  // A city in more than one county names them all: "Travis, Williamson and Hays counties".
+  if (names.length > 1) return `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]} counties`;
   const c = p.counties[0].replace(/\s*\([^)]*\)/g, '').trim();
   if (/district of columbia/i.test(c)) return 'District of Columbia';
   return /\b(county|city|parish|borough)$/i.test(c) ? c : `${c} County`;

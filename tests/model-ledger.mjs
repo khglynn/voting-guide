@@ -312,11 +312,14 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     check('plan: Texas on Oct 19 says early voting starts today', text === 'Early voting starts today, Oct 19.', text);
     const co = read('state-CO.json').howto;
     const cs = plan.nextStep(co, '2026-10-19');
-    check('plan: Colorado says return your ballot, with the time and date', /^Return your ballot by 7 PM Tue, Nov 3\.$/.test(cs.head.map((p) => p[0]).join('')), cs.head.map((p) => p[0]).join(''));
+    // UX review #10: the headline is this week's action, mail it by the state's suggested day.
+    check('plan: Colorado on Oct 19 says mail it by Mon, Oct 26, then a drop box by 7 PM Nov 3', /^Mail your ballot by Mon, Oct 26\.$/.test(cs.head.map((p) => p[0]).join('')) && /drop box by 7 PM Tue, Nov 3/.test(cs.sub.join(' ')), `${cs.head.map((p) => p[0]).join('')} | ${cs.sub.join(' | ')}`);
+    const co27 = plan.nextStep(co, '2026-10-27');
+    check('plan: Colorado from Oct 27 says drop it off by 7 PM Tue, Nov 3, and not to mail it', /^Drop off your ballot by 7 PM Tue, Nov 3\.$/.test(co27.head.map((p) => p[0]).join('')) && /drop box or a vote center/.test(co27.sub.join(' ')), co27.sub.join(' | '));
     check('plan: Colorado mentions in-person voting opening today', cs.sub.some((x) => /opens today/.test(x)), cs.sub.join(' | '));
-    const ca = read('state-CA.json').howto;
-    const alert = plan.registrationAlert(ca, '2026-10-19');
-    check('plan: California on Oct 19 warns registration closes today, then same-day', !!alert && /today/.test(alert) && /through Election Day/.test(alert), alert || '');
+    const caH = read('state-CA.json').howto;
+    const alert = plan.registrationAlert(caH, '2026-10-19');
+    check('plan: California on Oct 19 warns registration closes today, then same-day', !!alert && /today/i.test(alert) && /register and vote in person/.test(alert), alert || '');
     const words = (st) => st.head.map((p) => p[0]).join('');
     check('plan: Election Day says polls close', /Polls close at/.test(words(plan.nextStep(tx, '2026-11-03', false, 10 * 60))));
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
@@ -329,10 +332,17 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     // Codex #4: a postmark deadline is not a drop-off time.
     for (const s of ['CA', 'DC', 'OR', 'WA']) {
       const hs = read(`state-${s}.json`).howto;
-      const ms = plan.nextStep(hs, '2026-10-19');
-      check(`plan: ${s} puts the 8 PM time on drop-off and states the postmark rule apart`, /^Drop off your ballot by 8 PM Tue, Nov 3\.$/.test(words(ms)) && /postmark dated Nov 3 or earlier/.test(ms.sub[0] || ''), `${words(ms)} | ${ms.sub.join(' | ')}`);
+      const early = plan.nextStep(hs, '2026-10-19');
+      check(`plan: ${s} on Oct 19 says mail by the suggested day, with 8 PM only on the drop box`, /^Mail your ballot by (about )?Tue, Oct 27\.$/.test(words(early)) && !/8 PM/.test(words(early)) && /drop box by 8 PM Tue, Nov 3/.test(early.sub[0] || ''), `${words(early)} | ${early.sub.join(' | ')}`);
+      const ms = plan.nextStep(hs, '2026-10-29');
+      check(`plan: ${s} after that puts 8 PM on drop-off and states the postmark rule apart`, /^Drop off your ballot by 8 PM Tue, Nov 3\.$/.test(words(ms)) && /postmark dated Nov 3 or earlier/.test(ms.sub[0] || ''), `${words(ms)} | ${ms.sub.join(' | ')}`);
     }
-    check('plan: Colorado (received by) keeps "Return your ballot by"', !/postmark/.test(cs.sub.join(' ')));
+    check('plan: Colorado (received by) never mentions a postmark', !/postmark/.test(cs.sub.join(' ') + co27.sub.join(' ')));
+    const ca = read('state-CA.json').howto;
+    const caIn = plan.nextStep(ca, '2026-10-29');
+    check('plan: in-person voting through Nov 2 never reads as if Election Day is closed', caIn.sub.some((x) => /^Or vote early in person through Mon, Nov 2, or on Election Day\.$/.test(x)), caIn.sub.join(' | '));
+    check('plan: on the registration deadline it says "Today is the last day to register online"', /^Not registered\? Today is the last day to register online\. After that, you can still register and vote in person\.$/.test(plan.registrationAlert(ca, '2026-10-19') || ''), plan.registrationAlert(ca, '2026-10-19') || '');
+    check('plan: mailBy rejects a weekday that does not match the date', plan.mailBy({ ...co, mail_ballot: { ...co.mail_ballot, mail_cutoff_advice: 'Mail it by Tuesday, October 26.' } }) === null);
     // Codex #5: a county's own early-voting window wins over the state's.
     const fl = read('state-FL.json').howto;
     const orl = open('FL', ['orlando-fl']).howto.early_in_person;

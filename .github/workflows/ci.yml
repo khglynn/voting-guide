@@ -44,11 +44,15 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
       - run: npm ci
+      - name: The gates' own decisions (address matcher, ship.sh CI and deploy logic)
+        run: |
+          node scripts/check-addresses.mjs --self-test
+          bash scripts/ship.sh --self-test
       - name: No street addresses that are not allowlisted public offices
         run: node scripts/check-addresses.mjs
       - name: Build data bundles (also writes public/data/build-report.json)
         run: npm run data
-      - name: Data rules (dates, measures, endorsements, lean basis, copy)
+      - name: Data rules (dates, measures, endorsements, lean basis, copy, anything the build dropped)
         run: node scripts/check-data.mjs
       - name: Model tests (save-link contract, districts, lenses, verdicts, bulk fills; no browser)
         run: node tests/model.mjs

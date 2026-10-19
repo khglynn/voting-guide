@@ -28,12 +28,19 @@ scripts/ship.sh --gates-only   # everything above in one go, on a throwaway prev
 `test:e2e` and `sweep` read `BASE` (default `http://localhost:4173`, so run `npm run build`
 and `npm run preview` first, or point `BASE` at a Vercel preview). `sweep` takes
 `MODE=full` to also visit every district variant, and `ONLY=austin-tx,dc-ward-1` to
-debug a few ballots. Screenshots land in `.tmp/` (ignored by git); `shots/` is the
+debug a few ballots. Each sweep run writes its screenshots and report to its own folder
+under `.tmp/sweep-shots/` (ignored by git; the newest 10 are kept); `shots/` is the
 committed reference set. CI (`.github/workflows/ci.yml`) runs the same gates on every
 pull request and every push to `main`, plus a daily sweep of the live site.
 
-To ship: `scripts/ship.sh "what changed" path/to/file ...` runs the gates, opens a
-pull request, waits for CI and tests the Vercel preview. It never merges.
+To ship: from an up-to-date `main`, `scripts/ship.sh "what changed" path/to/file ...`
+runs every gate on a copy of exactly the commit it will make (so a file left out, or
+something else staged, cannot slip through), opens a pull request, waits for the `data`
+and `browser` checks to pass on that exact commit, then tests the Vercel preview once
+it serves that commit. It never merges. After the review and the merge,
+`scripts/ship.sh --after-merge <pr>` waits until production serves the merge commit,
+then sweeps it. `scripts/ship.sh --self-test` and `node scripts/check-addresses.mjs
+--self-test` check the scripts' own decisions; CI runs both.
 
 `?today=2026-10-30` on the URL pretends it's that date, for checking the plan strip.
 `?try=fresh`, `aunt`, `straight` or `sources` shows that scenario on whatever ballot you
@@ -61,11 +68,14 @@ The state must already have `data/states/{ST}.json`. Statewide items come from
 Two guards you may trip, both on purpose:
 
 - **Addresses.** `scripts/check-addresses.mjs` fails on anything shaped like a street
-  address. A public office or polling place is allowed by adding it, with a reason and
-  a source URL, to `scripts/address-allowlist.json`. A person's address is never
-  allowed: delete it from the data.
+  address, in any capitalization. A public office or polling place is allowed by adding
+  its whole address as the checker prints it, with a reason and a source URL, to
+  `scripts/address-allowlist.json`. A person's address is never allowed: delete it from
+  the data.
 - **Data rules.** `scripts/check-data.mjs` blocks dates after the election, broken
-  measure links, bad endorsement states and similar. Known older findings are counted
+  measure links, bad endorsement states and similar, and anything the build dropped (a
+  nameless candidate, a race a place lists but no file defines, a build warning it has
+  not seen before). Run it right after `npm run data`. Known older findings are counted
   in `scripts/data-baseline.json`; the count may fall but not rise. After fixing some,
   run `node scripts/check-data.mjs --update-baseline` to lock the gain in.
 

@@ -81,8 +81,8 @@
       "source": "https://www.dallascountyvotes.org/"
     },
     {
-      "address": "1015 Half Street S",
-      "reason": "DC Board of Elections headquarters (the 1015 Half Street SE address).",
+      "address": "1015 Half Street SE",
+      "reason": "DC Board of Elections headquarters.",
       "source": "https://dcboe.org/"
     },
     {
@@ -126,8 +126,8 @@
       "source": "https://vote.nyc/"
     },
     {
-      "address": "35 Queens Boulevard",
-      "reason": "NYC Board of Elections, Queens borough office (118-35 Queens Boulevard; the checker only sees the tail).",
+      "address": "118-35 Queens Boulevard",
+      "reason": "NYC Board of Elections, Queens borough office.",
       "source": "https://vote.nyc/"
     },
     {

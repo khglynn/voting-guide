@@ -22,7 +22,9 @@ const DATA = path.join(ROOT, 'data');
 const OUT = path.join(ROOT, 'public', 'data');
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'config.json'), 'utf8'));
 
-const report = { generated: new Date().toISOString(), skippedFiles: [], skippedRecords: [], warnings: [], counts: {} };
+// `commit` is the git commit Vercel built (it sets VERCEL_GIT_COMMIT_SHA during builds), so scripts/ship.sh
+// can prove a preview or production is serving exactly the commit it expects. Local builds leave it null.
+const report = { generated: new Date().toISOString(), commit: process.env.VERCEL_GIT_COMMIT_SHA || null, skippedFiles: [], skippedRecords: [], warnings: [], counts: {} };
 const warn = (msg) => { report.warnings.push(msg); };
 const skipRec = (file, id, why) => { report.skippedRecords.push({ file, id, why }); };
 

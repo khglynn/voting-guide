@@ -105,7 +105,8 @@ export function cheatHTML(forPrint = false): string {
   const all = lines().filter((l) => !l.it || isDecision(status(l.it)));
   const done = all.filter((l) => l.label).length;
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
-  return `<div class="cheat">
+  // On screen the sheet is paper torn off a pad: a rendered top and a fill that continues its light.
+  return `<div class="cheat">${forPrint ? '' : '<span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>'}
     <div class="cheat-head"><p class="kick">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. Election Day ${esc(fmtDate(b.howto.election_date))}</p>
       <h2 id="${forPrint ? 'cs-p' : 'cs-h'}">Your cheat sheet</h2>
       <p class="sub">${done} of ${all.length} decided.${forPrint ? ' Blank lines are yours to fill in.' : ' Tap any line to change it.'}</p>

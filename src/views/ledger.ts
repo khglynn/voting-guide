@@ -88,6 +88,8 @@ function titleHTML(it: Item): string {
   }
   return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>`;
 }
+/* The chevron column: a row opens and closes in place. */
+const CHEV = '<span class="cv" aria-hidden="true"><svg class="chev" viewBox="0 0 14 14"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>';
 export function rowHTML(it: Item): string {
   const s = status(it);
   const b = S.ballot!;
@@ -102,7 +104,7 @@ export function rowHTML(it: Item): string {
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
-      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it)}${vd}</button>
+      <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it)}${vd}${CHEV}</button>
     ${tags.length ? `<span class="tag-line">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : ''}
     ${open ? openHTML(it) : ''}
   </li>`;
@@ -113,7 +115,7 @@ function questionHTML(g: Group): string {
   return `<li class="row is-q${open ? ' is-open' : ''}" id="${qId(g)}" data-q="${esc(g.key)}" data-undecided>
     <button class="row-hd" data-act="row" data-id="${esc(`q:${g.key}`)}" aria-expanded="${open}" data-fk="row-${qId(g)}">
       <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(cleanOffice(g.office))}</b><small>Depends on your address</small></span></span>
-      ${qVerdict('Pick your district')}</button>
+      ${qVerdict('Pick your district')}${CHEV}</button>
     ${open ? questionBodyHTML(g) : ''}
   </li>`;
 }

@@ -181,5 +181,5 @@ export function passHTML(): string {
     <ul class="checks">${who.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${studyHTML()}
     ${waysHTML()}
-  </div></section>`;
+  </div><div class="crowd" aria-hidden="true"></div></section>`;
 }

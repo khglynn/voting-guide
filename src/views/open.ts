@@ -14,7 +14,8 @@ import { headsUp, headsHTML } from './ledger';
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
 export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
 
-const CHECK = '<svg viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2.5 7.4l3 3 6-6.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>';
+// A pen tick, drawn rather than typeset (the same stroke as --pen-tick in styles.css).
+const CHECK = '<svg viewBox="0 0 26 24" aria-hidden="true" focusable="false"><path d="M4 13.6c1.6 1.1 3 2.8 4.1 5C11 12 15.4 6.6 22.4 2.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const ARROW = '<svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M6 3l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
 const PAGE = 3;
 

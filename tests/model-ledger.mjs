@@ -422,6 +422,16 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('plan: in-person voting through Nov 2 never reads as if Election Day is closed', caIn.sub.some((x) => /^Or vote early in person through Mon, Nov 2, or on Election Day\.$/.test(x)), caIn.sub.join(' | '));
     check('plan: on the registration deadline it says "Today is the last day to register online"', /^Not registered\? Today is the last day to register online\. After that, you can still register and vote in person\.$/.test(plan.registrationAlert(ca, '2026-10-19') || ''), plan.registrationAlert(ca, '2026-10-19') || '');
     check('plan: mailBy rejects a weekday that does not match the date', plan.mailBy({ ...co, mail_ballot: { ...co.mail_ballot, mail_cutoff_advice: 'Mail it by Tuesday, October 26.' } }) === null);
+    // Final round A: the place's own where-to-vote tool wins over the state's; a statewide ballot
+    // never gets one county's page.
+    const den = plan.nextStep(open('CO', ['denver-co']).howto, '2026-10-19');
+    check('lookups: Denver\'s drop box button goes to Denver\'s own page', /denvergov\.org/.test((den.primary || {}).url || ''), JSON.stringify(den.primary));
+    const spo = plan.nextStep(open('WA', []).howto, '2026-10-19');
+    check('lookups: a statewide Washington ballot never gets King County\'s page', !!spo.primary && !/kingcounty\.gov/.test(spo.primary.url), JSON.stringify(spo.primary));
+    const sea = plan.nextStep(open('WA', ['seattle-wa']).howto, '2026-10-19');
+    check('lookups: Seattle gets King County\'s drop boxes', /kingcounty\.gov/.test((sea.primary || {}).url || ''), JSON.stringify(sea.primary));
+    const pgh = plan.nextStep(open('PA', ['pittsburgh-pa']).howto, '2026-11-03', false, 10 * 60);
+    check('lookups: Pittsburgh on Election Day finds polls through Allegheny County', /alleghenycounty\.us/.test((pgh.primary || {}).url || ''), JSON.stringify(pgh.primary));
     // Codex #5: a county's own early-voting window wins over the state's.
     const fl = read('state-FL.json').howto;
     const orl = open('FL', ['orlando-fl']).howto.early_in_person;

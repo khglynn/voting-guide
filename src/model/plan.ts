@@ -50,7 +50,22 @@ export function clockMinutes(s: string | null | undefined): number | null {
    state's range) carries them in its place file. When every place on this ballot agrees,
    the plan uses the county's window, hours and lookup page; otherwise the state's stands. */
 export function localHowto(h0: HowTo, places: PlaceBundle[]): HowTo {
-  const h = places.length ? { ...h0, zones: zonesFor(h0.state, places) } : h0;
+  let h = places.length ? { ...h0, zones: zonesFor(h0.state, places) } : h0;
+  // The county's own where-to-vote tools win over the state's statewide lookups, when every
+  // place on the ballot points to the same one.
+  const one = (k: 'early_in_person' | 'election_day' | 'drop_box'): string | null => {
+    const urls = [...new Set(places.map((p) => p.lookups?.[k] || null))];
+    return places.length && urls.length === 1 && urls[0] ? urls[0] : null;
+  };
+  const le = one('early_in_person'), ld = one('election_day'), lb = one('drop_box');
+  if (le || ld || lb) {
+    h = {
+      ...h,
+      early_in_person: le ? { ...h.early_in_person, lookup_url: le } : h.early_in_person,
+      election_day: ld ? { ...h.election_day, lookup_url: ld } : h.election_day,
+      mail_ballot: lb ? { ...h.mail_ballot, drop_box_lookup_url: lb } : h.mail_ballot,
+    };
+  }
   const eps = places.map((p) => p.early_in_person);
   if (!eps.length || eps.some((e) => !e)) return h;
   const first = eps[0]!;
@@ -62,7 +77,7 @@ export function localHowto(h0: HowTo, places: PlaceBundle[]): HowTo {
     early_in_person: {
       ...h.early_in_person, available: true, start: first.start, end: first.end,
       hours_note: notes.length ? notes.join(' ') : h.early_in_person.hours_note,
-      lookup_url: looks.length === 1 && looks[0] ? looks[0] : h.early_in_person.lookup_url,
+      lookup_url: le || (looks.length === 1 && looks[0] ? looks[0] : h.early_in_person.lookup_url),
     },
   };
 }

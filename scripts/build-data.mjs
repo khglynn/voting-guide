@@ -102,6 +102,19 @@ function placeEarly(x, where) {
   if (!ok) { warn(`${where}: early_in_person needs start and end dates (start first) and an https source; dropped it`); return null; }
   return { start: x.start, end: x.end, hours_note: str(x.hours_note), lookup_url: safeUrl(x.lookup_url), source: safeUrl(x.source), confidence: conf(x.confidence) };
 }
+/* A place's own where-to-vote tools, when its county runs them; plan.ts prefers them over the
+   state's statewide lookups. */
+function placeLookups(x, where) {
+  if (x == null) return null;
+  if (typeof x !== 'object') { warn(`${where}: lookups is not an object; dropped it`); return null; }
+  const out = {};
+  for (const k of ['early_in_person', 'election_day', 'drop_box']) {
+    if (x[k] == null) continue;
+    const u = safeUrl(x[k]);
+    if (u) out[k] = u; else warn(`${where}: lookups.${k} is not an http(s) URL; dropped it`);
+  }
+  return Object.keys(out).length ? out : null;
+}
 const optional = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
 function ownWordsChecked(x, where) {
   if (x == null) return null;
@@ -357,7 +370,7 @@ for (const f of listJson('places')) {
     county_label: str(p.county_label),
     district_finders: districtFinders(p.district_finders, f),
     heads_up: headsUp(p.heads_up, f),
-    ...optional({ early_in_person: placeEarly(p.early_in_person, f) }),
+    ...optional({ early_in_person: placeEarly(p.early_in_person, f), lookups: placeLookups(p.lookups, f) }),
     order: known,
     file: f,
   });

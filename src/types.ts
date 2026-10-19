@@ -240,6 +240,8 @@ export interface PlaceBundle {
   heads_up?: HeadsUp[];
   /* the county's own early-voting window, when it differs from the state's; plan.ts prefers it */
   early_in_person?: PlaceEarly;
+  /* the county's own where-to-vote tools; plan.ts prefers them over the state's */
+  lookups?: { early_in_person?: string; election_day?: string; drop_box?: string };
   order: string[];
   local: string[];
   items: Item[];

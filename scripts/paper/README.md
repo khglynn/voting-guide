@@ -1,0 +1,19 @@
+# Paper
+
+The guide's paper (the torn green notice for your next step, the cut green section strips, the cheat sheet torn off a pad, the crowd on the share step) is rendered once, offline, with Blender's Cycles path tracer, and shipped as WebP images. The browser only draws flat images; the light, the paper thickness, the white fiber where green paper tears and the soft shadows come from the render.
+
+```sh
+python3 -m venv .tmp/bl && .tmp/bl/bin/pip install bpy scikit-image      # Blender 5.2 as a Python module, about 1 GB
+.tmp/bl/bin/python scripts/paper/render.py .tmp/paper plan,sheet,crowd,strip-a,strip-b,strip-c,strip-d 48
+python3 -I scripts/paper/bake.py .tmp/paper
+```
+
+`render.py` builds each piece as real geometry (a torn or scissor-cut outline, a mesh, a lift-only crumple near the edges, Solidify thickness, a feathered white fiber ring on torn edges), lights every piece with the same soft sun and a long far lamp (a gentle light falloff from left to right), and renders on a transparent background with a shadow catcher. `bake.py` softens the shadows, derives the dark set, checks the middles are flat enough to stretch, and writes `public/paper/` plus the paper variables in `src/styles.css`.
+
+How it is used in CSS:
+- The plan notice and the section strips use `border-image`: the edges come from the render, the flat middle rows stretch to any height.
+- The cheat sheet's torn top is a band; its fill continues the render's light with a sampled gradient.
+- Dark mode swaps to `public/paper/dark/` through CSS variables.
+- Print hides all of it.
+
+The method, what failed on the way, and the design rules behind it (paper, one printed ink, pen) are written up in the workbench repo: `claude-plans/2026-10-19-paper-skin/METHOD.md` and the `real-materials` skill.

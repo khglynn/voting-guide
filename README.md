@@ -65,7 +65,9 @@ Two guards you may trip, both on purpose:
   address, in any capitalization. A public office or polling place is allowed by adding
   its whole address as the checker prints it, with a reason and a source URL, to
   `scripts/address-allowlist.json`. A person's address is never allowed: delete it from
-  the data.
+  the data. The check is a best-effort tripwire behind the real rule (nobody writes a
+  person's address anywhere, and a reviewer reads what ships), not a complete detector;
+  its known limits are listed at the top of the script.
 - **Data rules.** `scripts/check-data.mjs` blocks dates after the election, broken
   measure links, bad endorsement states and similar, and anything the build dropped (a
   nameless candidate, a race a place lists but no file defines, a build warning it has

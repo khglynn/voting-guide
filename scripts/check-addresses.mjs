@@ -3,6 +3,19 @@
  * check-addresses: fail when anything that looks like a street address appears in the
  * files we ship or keep. Rule from FOUNDATION: no real person's address anywhere.
  *
+ * What this is, and is not (2026-10-19, after two review rounds found holes of the same kind):
+ * a best-effort tripwire behind the real rule, not a complete detector. The rule is held by
+ * people and agents: nobody writes a person's address into the data or the notes, and a
+ * reviewer reads what ships. This script catches the common slips. Known limits, on purpose:
+ *   - it reads shapes, not meaning: an address with no street word ("12 Oak, Austin"), one
+ *     spelled out ("twelve Main Street"), or split across lines or fields is not seen;
+ *   - an all-lowercase street name built from everyday words ("12 the meadows pkwy",
+ *     "39 listed road") counts only when a residential word ("lives at", "home") is in the
+ *     same sentence, because the same shape is ordinary prose far more often than an address;
+ *   - its false alarms are handled by the allowlist below, with a reason.
+ * When a review finds another miss, add it as a self-test case and fix it if the fix is narrow;
+ * do not try to make the regex complete. A regex cannot be.
+ *
  * Official public buildings (an election office, a city hall, a vote center the state
  * itself lists) are legitimate and the guide shows several. They are allowed only by an
  * explicit entry in scripts/address-allowlist.json, each with a source URL and a reason,
@@ -40,8 +53,8 @@ const allowed = new Set(allow.map((a) => norm(a.address)));
    Any capitalization: "123 main street" and "123 MAIN STREET" are addresses too. What keeps
    prose from matching is the shape, not the capitals: a whole house number, one to four
    street-name words that are not everyday words, then a street word. The regexes have no `i`
-   flag because one rule is about case: a LOWERCASE word ending in -ed or -ing ("39 listed road",
-   "21201 polling place") is prose, while "Twisted Oak Dr" and "Rolling Hills Dr" are streets. */
+   flag because some word rules are about case ("The Meadows Pkwy" is a street, "the" in
+   lowercase is usually prose). Next to a residential word, those prose rules are dropped. */
 const anyCase = (words) => words.slice().sort((a, b) => b.length - a.length)
   .map((w) => w.replace(/[A-Za-z]/g, (c) => `[${c.toUpperCase()}${c.toLowerCase()}]`).replace(/\./g, '\\.')).join('|');
 const DESIG = `(?:${anyCase(['Street', 'St', 'Avenue', 'Ave', 'Boulevard', 'Blvd', 'Road', 'Rd', 'Drive', 'Dr', 'Lane', 'Ln', 'Court', 'Ct', 'Place', 'Pl', 'Parkway', 'Pkwy', 'Way', 'Highway', 'Hwy', 'Circle', 'Cir', 'Terrace', 'Ter', 'Trail', 'Trl', 'Square', 'Sq', 'Plaza', 'Pike'])})`;
@@ -57,40 +70,60 @@ const STOP = `(?:${anyCase(['a', 'an', 'and', 'or', 'nor', 'but', 'of', 'to', 'i
   'before', 'between', 'through', 'against', 'until', 'where', 'when', 'which', 'who', 'near', 'either', 'neither', 'any', 'other', 'no', 'not', 'each', 'every', 'more', 'less',
   'most', 'percent', 'ago', 'am', 'pm', 'a.m.', 'p.m.'])})(?![A-Za-z])`;
 // Words that are prose in lowercase but real street names when capitalized ("1016 The Meadows Pkwy",
-// "3955 W. D. Judge Dr.", "12500 Will Clayton Pkwy", "Thousand Oaks Blvd"), plus lowercase -ed and -ing words ("39 listed road",
-// "21201 polling place", while "Twisted Oak Dr" and "Rolling Hills Dr" still count).
-const PROSE_LOWER = `(?:the|will|over|under|million|billion|thousand|hundred|years?|months?|weeks?|days?|hours?|minutes?|times|seats?|votes?|members?|judges?|people|voters|cents|dollars|elections?|candidates?|office|[a-z]{3,}ed|[a-z]{4,}ing)(?![A-Za-z])`;
-// A street-name word: an initial ("F."), a short capitalized abbreviation ("So.", "Ft.", "Jr."), an ordinal,
+// "3955 W. D. Judge Dr.", "12500 Will Clayton Pkwy", "Thousand Oaks Blvd").
+const PROSE_LOWER = '(?:the|will|over|under|million|billion|thousand|hundred|years?|months?|weeks?|days?|hours?|minutes?|times|seats?|votes?|members?|judges?|people|voters|cents|dollars|elections?|candidates?|office)(?![A-Za-z])';
+// A street-name word: an initial ("F."), a street abbreviation in any case ("jr.", "MT."), a short capitalized
+// abbreviation ("So."), an ordinal,
 // or a word (inner hyphens and periods allowed, "BRd.way"; a period at the end is a sentence ending, not a word).
-const WORD = `(?!${STOP})(?!${PROSE_LOWER})(?:[A-Za-z]\\.|[A-Z][a-z]{1,2}\\.|\\d{1,3}(?:st|nd|rd|th)|[A-Za-z][A-Za-z'’]*(?:[-.][A-Za-z]+)*)`;
-// number + (direction) + 1-4 street-name words + street word + (direction)
-const STREET = new RegExp(`${HOUSE}\\s+(?:${DIR}\\s+)?${WORD}(?:\\s+${WORD}){0,3}\\s+${DESIG}(?![A-Za-z])\\.?(?:\\s+${DIR})?`, 'g');
+const WORD_SHAPE = `(?:${anyCase(['Jr.', 'Sr.', 'St.', 'Mt.', 'Ft.', 'Dr.'])}|` + "[A-Za-z]\\.|[A-Z][a-z]{1,2}\\.|\\d{1,3}(?:st|nd|rd|th)|[A-Za-z][A-Za-z'’]*(?:[-.][A-Za-z]+)*)";
+const street = (word) => new RegExp(`${HOUSE}\\s+(?:${DIR}\\s+)?(${word}(?:\\s+${word}){0,3})\\s+${DESIG}(?![A-Za-z])\\.?(?:\\s+${DIR})?`, 'g');
+// number + (direction) + 1-4 street-name words + street word + (direction). Group 1 is the street name.
+const STREET = street(`(?!${STOP})(?!${PROSE_LOWER})${WORD_SHAPE}`);
+// The same shape without the lowercase-prose rule. It counts only next to a residential word.
+const STREET_NEAR_HOME = street(`(?!${STOP})${WORD_SHAPE}`);
+// A street name made only of lowercase -ed / -ing words is prose ("39 listed road", "21201 polling place",
+// "2024 backed expanded street"), unless a residential word is in the sentence. "88 rolling hills drive" counts.
+const VERB_ONLY = /^(?:(?:[a-z]{3,}ed|[a-z]{4,}ing)\s*)+$/;
 // PO boxes, and apartment or unit numbers with a number (a bare "Suite" in prose is not a hit)
 const BOX = /\b(?:P\.?\s?O\.?\s+Box\s+\d+|(?:Apt|Apartment|Unit)\.?\s+#?\d[\w-]{0,5}\b)/gi;
 // "City, ST 12345" tails, with a house number in front
 const TAIL = new RegExp(`${HOUSE}\\s+[A-Za-z0-9. ']{3,40},\\s*[A-Z]{2}\\s+\\d{5}(?:-\\d{4})?\\b`, 'g');
 // A judicial body is a false alarm only when the match itself ends in it ("2024 Texas Supreme Court",
-// or "Court" followed straight away by "of"). Nothing around the match can excuse it.
+// or "Court" followed straight away by "of"). Nothing around the match can excuse it, except that a
+// year in front ("the 2026 Texas Supreme Court race") is always an election or a ruling, never a home.
 const JUDICIAL_TAIL = /\b(?:Supreme|Circuit|District|State|Commissioners|Superior|Appeals?|Appellate|Municipal|Criminal|Civil|Family|Probate|Juvenile|County|Traffic|Housing|Justice|Federal|Claims|Tax|Drug|Business)\s+(?:Court|Ct)\.?$/i;
-// A hit near these words is about a person's home. Never allowlistable, never excused.
-const PERSONAL = /\b(?:home|residence|resides?|lives?\s+(?:at|on|in)|domicile|mailing address of|her address|his address|their address)\b/i;
+const YEAR_FIRST = /^(?:19|20)\d\d\s/;
+// Residential words, read only within the sentence or data field around a match. "Home rule" is a kind of
+// local government, not a home. A match with one of these is never allowlistable and never excused.
+const PERSONAL = /\b(?:home(?![\s-]+rule)|residence|resides?|lives?\s+(?:at|on|in)|domicile|mailing address of|her address|his address|their address)\b/i;
+function sentenceAround(text, start, end) {
+  const before = text.slice(Math.max(0, start - 120), start);
+  const after = text.slice(end, end + 120);
+  // A sentence ends at ! ? ; a line break, the end of a JSON string, or a period after a word of 3+ letters
+  // ("disputes."), but not at "St." or "W." inside an address.
+  let cut = 0;
+  for (const m of before.matchAll(/[!?;\n]|"\s*[,}\]]|(?<=[a-z]{3})\.\s/g)) cut = m.index + m[0].length;
+  const stop = after.search(/[!?;\n]|"\s*[,}\]]|(?<=[a-z]{3})\.(?:\s|$)/);
+  return before.slice(cut) + text.slice(start, end) + (stop < 0 ? after : after.slice(0, stop));
+}
 
 function scan(text) {
   const out = [];
   const seen = new Set();
-  for (const re of [STREET, BOX, TAIL]) {
+  for (const re of [STREET, STREET_NEAR_HOME, BOX, TAIL]) {
     re.lastIndex = 0;
     for (const m of text.matchAll(re)) {
       const s = m[0].replace(/\s+/g, ' ').trim();
       const end = m.index + m[0].length;
-      const ctx = text.slice(Math.max(0, m.index - 80), end + 80);
-      const personal = PERSONAL.test(ctx);
-      const excused = re === STREET && (JUDICIAL_TAIL.test(s) || (/\b(?:Court|Ct)\.?$/i.test(s) && /^\s+of\b/i.test(text.slice(end, end + 5))));
-      if (excused && !personal) continue;
+      const personal = PERSONAL.test(sentenceAround(text, m.index, end));
+      if (re === STREET_NEAR_HOME && !personal) continue;
+      if (re === STREET && !personal && VERB_ONLY.test(m[1].trim())) continue;
+      const judicial = (re === STREET || re === STREET_NEAR_HOME) && (JUDICIAL_TAIL.test(s) || (/\b(?:Court|Ct)\.?$/i.test(s) && /^\s+of\b/i.test(text.slice(end, end + 5))));
+      if (judicial && (!personal || YEAR_FIRST.test(s))) continue;
       const key = norm(s);
       if (seen.has(key)) continue;
       seen.add(key);
-      out.push({ address: s, personal, ctx: ctx.replace(/\s+/g, ' ') });
+      out.push({ address: s, personal, ctx: text.slice(Math.max(0, m.index - 80), end + 80).replace(/\s+/g, ' ') });
     }
   }
   return out;
@@ -144,6 +177,22 @@ if (flag('--self-test')) {
     ['1300 Yards Pl. SE', 'blocked'],
     ['Library, 6115 Will Clayton Pkwy. Humble', 'blocked'],
     ['Precinct 2950 BRd.way Blvd. Garland', 'blocked'],
+    // Codex round 2 (2026-10-19): lowercase streets with -ed/-ing words, and capitalization variants
+    ['88 rolling hills drive', 'blocked'],
+    ['Lives at 88 rolling hills drive', 'personal'],
+    ['88 ROLLING HILLS DRIVE', 'blocked'],
+    ['1500 twisted oak dr', 'blocked'],
+    ['1500 TWISTED OAK DR', 'blocked'],
+    ['2100 martin luther king jr. blvd', 'blocked'],
+    ['6115 WILL CLAYTON PKWY', 'blocked'],
+    ['she lives at 12 the meadows pkwy now', 'personal'],
+    ['Lives at 39 listed road', 'personal'],
+    // ...and judicial copy that must not read as a home
+    ['The 2026 Texas Supreme Court race decides home rule disputes.', 'clean'],
+    ['Candidates for the 2026 Texas Supreme Court must reside in Texas.', 'clean'],
+    ['The city adopted home rule in 1985 at 200 W. 14th Ave.', 'allowed'],
+    // the residential word must be in the same sentence as the address
+    ['He grew up at home. The office is at 200 W. 14th Ave.', 'allowed'],
     // ...and number tails and prose that are not
     ['killed in a crash on I-55 Second St. Charles official', 'clean'],
     ['Position M-40 Tiffany Koyama Lane M-54', 'clean'],
@@ -165,7 +214,10 @@ if (flag('--self-test')) {
 }
 
 /* ---------- scan the files ---------- */
-const TEXT_EXT = new Set(['.json', '.md', '.txt', '.csv', '.html', '.ts', '.mjs', '.css', '.yml', '.yaml', '.sh']);
+// Folder scans read these. A file named on the command line is read whatever its extension
+// (ship.sh passes every file a change touches), unless it is binary.
+const TEXT_EXT = new Set(['.json', '.md', '.txt', '.csv', '.tsv', '.html', '.htm', '.xml', '.svg', '.css', '.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.yml', '.yaml', '.toml', '.sh', '.py']);
+const isBinary = (buf) => buf.subarray(0, 8000).includes(0);
 function* walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     if (e.name === 'node_modules' || e.name === '.git' || e.name === 'dist') continue;
@@ -179,10 +231,12 @@ const hits = [];
 for (const root of roots) {
   if (!fs.existsSync(root)) { console.error(`check-addresses: ${root} does not exist`); process.exit(2); }
   const isDir = fs.statSync(root).isDirectory();
-  const files = isDir ? [...walk(root)] : TEXT_EXT.has(path.extname(root)) ? [root] : [];
+  const files = isDir ? [...walk(root)] : [root];
   for (const f of files) {
     if (path.resolve(f) === SELF) continue; // this file's own test cases are fake addresses on purpose
-    for (const h of scan(fs.readFileSync(f, 'utf8'))) hits.push({ ...h, file: isDir ? path.relative(root, f) : f });
+    const buf = fs.readFileSync(f);
+    if (isBinary(buf)) continue; // images, PDFs: nothing a regex can read
+    for (const h of scan(buf.toString('utf8'))) hits.push({ ...h, file: isDir ? path.relative(root, f) : f });
   }
 }
 

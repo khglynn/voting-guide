@@ -20,12 +20,21 @@
  *   4  no duplicate DOM ids anywhere
  *   5  district questions match the oracle's groups
  *   6  section counts, unopposed counts and the progress bar match the data
- *   7  pick everything: cheat sheet and print sheet list every decision once, none blank
+ *   7  make a choice on every decision, chosen here from the data (varied by race: different
+ *      candidates, yes and no, skips, rankings with a reorder, mixed judge answers), then the
+ *      cheat sheet and the print sheet must show every race, in order, each with exactly that
+ *      choice: the pick and party, the marked seats, each rank, each judge's answer
  * MODE=full repeats 3 and 6 for each district choice (every member of every group at least once).
  *
- * Screenshots go to SHOTS_DIR (default .tmp/sweep-shots, gitignored): the top of every ballot,
- * and the failing card for every failure. A CI run uploads that folder as an artifact.
- * Exit code 1 if anything fails. No dependencies beyond the repo's playwright.
+ * The run fails, rather than passing quietly, when it would check nothing: WORKERS that is not
+ * 1 to 16, an ONLY that names a ballot that does not exist, an index with no states, places or
+ * ZIPs, or any planned ballot that did not finish.
+ *
+ * Each run writes to its own new folder, SHOTS_DIR/<time>-<mode>-<pid>/ (SHOTS_DIR defaults to
+ * .tmp/sweep-shots and must be inside the repo's .tmp/): the top of every ballot, the failing
+ * card for every failure, and sweep-report.json. Nothing is ever deleted except this script's
+ * own files in its own older run folders (it keeps the newest 10). CI uploads SHOTS_DIR.
+ * Exit code 1 if anything fails, 2 for bad settings. No dependencies beyond the repo's playwright.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -36,14 +45,32 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
 const ORIGIN = new URL(BASE).origin;
 const MODE = process.env.MODE === 'full' ? 'full' : 'fast';
-const WORKERS = Number(process.env.WORKERS || 4);
 const TODAY = process.env.TODAY || '2026-10-16';
 const W = 380;
-const SHOTS = path.resolve(process.env.SHOTS_DIR || path.join(ROOT, '.tmp', 'sweep-shots'));
-const ONLY = (process.env.ONLY || '').split(',').filter(Boolean);
+const ONLY = (process.env.ONLY || '').split(',').map((s) => s.trim()).filter(Boolean);
 const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || ''; // protected Vercel previews
-fs.rmSync(SHOTS, { recursive: true, force: true });
-fs.mkdirSync(SHOTS, { recursive: true });
+const stop = (msg) => { console.error(`sweep: ${msg}`); process.exit(2); };
+
+// A run that checks nothing must not pass: no workers means no ballots opened.
+const WORKERS = process.env.WORKERS === undefined || process.env.WORKERS === '' ? 4 : Number(process.env.WORKERS);
+if (!Number.isInteger(WORKERS) || WORKERS < 1 || WORKERS > 16) stop(`WORKERS must be a whole number from 1 to 16, got "${process.env.WORKERS}".`);
+
+// Output: a new folder per run, inside .tmp/. Never delete a folder someone named.
+const TMP = path.join(ROOT, '.tmp');
+const OUT_ROOT = path.resolve(process.env.SHOTS_DIR || path.join(TMP, 'sweep-shots'));
+if (!OUT_ROOT.startsWith(TMP + path.sep)) stop(`SHOTS_DIR must be a folder inside ${TMP}/ (got ${OUT_ROOT}). Each run makes its own subfolder there.`);
+const RUN_MARK = '.sweep-run';
+const RUN_NAME = /^\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z-(fast|full)-\d+$/;
+fs.mkdirSync(OUT_ROOT, { recursive: true });
+const SHOTS = path.join(OUT_ROOT, `${new Date().toISOString().replace(/[:.]/g, '-')}-${MODE}-${process.pid}`);
+fs.mkdirSync(SHOTS); // throws if it somehow exists: this run never writes into another run's folder
+fs.writeFileSync(path.join(SHOTS, RUN_MARK), `sweep run ${new Date().toISOString()} ${MODE}\n`);
+// Keep the newest 10 runs. Remove only files this script writes, then the folder only if it is empty.
+for (const old of fs.readdirSync(OUT_ROOT).filter((n) => RUN_NAME.test(n) && fs.existsSync(path.join(OUT_ROOT, n, RUN_MARK))).sort().slice(0, -10)) {
+  const dir = path.join(OUT_ROOT, old);
+  for (const f of fs.readdirSync(dir)) if ((f === RUN_MARK || f === 'sweep-report.json' || f.endsWith('.png')) && fs.lstatSync(path.join(dir, f)).isFile()) fs.rmSync(path.join(dir, f));
+  try { fs.rmdirSync(dir); } catch { /* something else is in there: leave it */ }
+}
 
 /* ---------- data + oracle ---------- */
 const hdrs = BYPASS ? { 'x-vercel-protection-bypass': BYPASS } : {};
@@ -109,6 +136,81 @@ function expected(o, answers) {
   return { visible, perSec, decisions, unanswered, barTotal: decisions.length + unanswered.length };
 }
 
+/* ---------- the choices this sweep makes, and what the cheat sheet must then say ----------
+   The choice for each race comes from the data and a hash of its id, so it is the same every run
+   but not always "the first candidate" or "yes": a cheat sheet that shows the wrong candidate, a
+   stale answer, one judge's answer on another judge, or a ranking out of order cannot pass. */
+const hashStr = (s) => { let h = 2166136261; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const ordinal = (n) => `${n}${n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th'}`;
+const squash = (s) => String(s).replace(/\s+/g, ' ').trim();
+function planFor(ex) {
+  const plan = {};
+  for (const it of ex.decisions) {
+    const h = hashStr(it.id);
+    if (it.kind === 'measure' || (it.is_retention && it.candidates.length === 1)) { plan[it.id] = h % 11 === 0 ? { t: 'skip' } : { t: 'pick', v: h % 2 ? 'NO' : 'YES' }; continue; }
+    const names = it.candidates.map((c) => c.name);
+    const rot = [...names.slice(h % names.length), ...names.slice(0, h % names.length)];
+    if (it.is_retention) plan[it.id] = { t: 'judges', answers: names.map((n, j) => [n, (h + j) % 2 ? 'NO' : 'YES']) };
+    else if (it.ranked_choice) {
+      // Rank all the ballot allows, or one short of it (then "Done ranking"), then move the last one up.
+      const max = Math.min(it.rank_up_to || names.length, names.length);
+      const order = rot.slice(0, max > 2 ? max - 1 : max);
+      const up = order.length >= 2 ? order[order.length - 1] : null;
+      const final = up ? [...order.slice(0, -2), up, order[order.length - 2]] : order;
+      plan[it.id] = { t: 'rank', order, up, final };
+    } else if (it.vote_for > 1) plan[it.id] = { t: 'seats', names: rot.slice(0, Math.min(it.vote_for, names.length)) };
+    else plan[it.id] = { t: 'pick', v: rot[0] };
+  }
+  return plan;
+}
+/* The row title: the documented rule in src/ballot.ts itemTitle and src/views/cheat.ts cheatTitle.
+   If that rule changes on purpose, change it here too. */
+function sheetTitle(it) {
+  if (it.kind === 'measure') return it.level !== 'state' ? `${it.number} (${it.jurisdiction})` : it.number;
+  const d = (it.district || '').replace(/\s*\(.*\)\s*$/, '').trim();
+  if (!d || /^your\b/i.test(d) || it.office.endsWith('?') || it.office.includes('(') || it.office.includes(d)) return it.office;
+  return `${it.office}, ${d}`;
+}
+function wantRow(it, kind, p) {
+  const row = { t: squash(sheetTitle(it)), v: '', ranks: [], judges: [] };
+  if (kind === 'unopposed') row.v = squash(`${it.candidates[0].name} (unopposed)`);
+  else if (!p) row.v = '(the sweep made no choice here)';
+  else if (p.t === 'skip') row.v = 'Skipped';
+  else if (it.kind === 'measure') row.v = p.v === 'YES' ? 'Yes' : 'No';
+  else if (p.t === 'pick' && it.is_retention) row.v = p.v === 'YES' ? 'Yes, keep' : 'No, remove';
+  else if (p.t === 'pick') { const c = it.candidates.find((k) => k.name === p.v); row.v = squash(`${c.name}${c.party ? ` (${c.party})` : ''}`); }
+  else if (p.t === 'seats') row.v = squash(it.candidates.filter((c) => p.names.includes(c.name)).map((c) => c.name).join(', '));
+  else if (p.t === 'judges') {
+    const yes = p.answers.filter(([, v]) => v === 'YES').length;
+    row.v = `Yes on ${yes}, No on ${p.answers.length - yes}`;
+    row.judges = p.answers.map(([n, v]) => squash(`${n}: ${v === 'YES' ? 'Yes' : 'No'}`));
+  } else if (p.t === 'rank') row.ranks = p.final.map((n, i) => squash(`${ordinal(i + 1)} ${n}`));
+  return row;
+}
+/* Every row the sheet should have, in ballot order: sections in the order the page shows them,
+   items in ballot order within each. The screen sheet lists decisions; print adds unopposed races. */
+function wantSheet(o, ex, plan, secOrder, forPrint) {
+  const bySec = new Map();
+  for (const it of ex.visible) {
+    const k = o.kinds[it.id];
+    if (k === 'info' || (k === 'unopposed' && !forPrint)) continue;
+    if (!bySec.has(sectionOf(it))) bySec.set(sectionOf(it), []);
+    bySec.get(sectionOf(it)).push(wantRow(it, k, plan[it.id]));
+  }
+  return [...secOrder, ...[...bySec.keys()].filter((s) => !secOrder.includes(s))].flatMap((s) => bySec.get(s) || []);
+}
+function compareSheet(R, where, label, got, want) {
+  const show = (r) => `${r.t}: ${r.ranks.length ? r.ranks.join(', ') : r.v}${r.judges.length ? ` [${r.judges.join('; ')}]` : ''}`;
+  const diffs = [];
+  for (let i = 0; i < Math.max(got.length, want.length); i++) {
+    const g = got[i], w = want[i];
+    const same = g && w && !g.blank && g.t === w.t && g.v === w.v && g.ranks.join('\n') === w.ranks.join('\n') && g.judges.join('\n') === w.judges.join('\n');
+    if (!same) diffs.push(`row ${i + 1}: want "${w ? show(w) : '(no row)'}" got "${g ? show(g) + (g.blank ? ' (blank)' : '') : '(no row)'}"`);
+  }
+  if (got.length !== want.length) R.fail(where, `${label} has ${got.length} rows, the picks need ${want.length}`);
+  if (diffs.length) R.fail(where, `${label}: ${diffs.length} rows do not show the race and choice made`, diffs.slice(0, 3).join(' | '));
+}
+
 /* ---------- in-page snapshots and actions ---------- */
 const SNAPSHOT = (w) => {
   const ids = [...document.querySelectorAll('[id^="i-"]')].map((e) => e.id.slice(2));
@@ -137,39 +239,47 @@ const SNAPSHOT = (w) => {
    dispatch the mouse pointerdown that fires an action immediately. Real touch taps are covered by e2e. */
 const PRESS = `window.__press = (el) => el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));`;
 const OPEN_UNOPP = () => { document.querySelectorAll('.unopp .disc[aria-expanded="false"]').forEach((b) => window.__press(b)); };
-/* Pick one thing on every open card, by the kind of card it is. */
-const PICK_ALL = () => {
+/* Carry out the sweep's plan on every decision card, pressing the button that names each choice.
+   Each press re-renders the card, so every button is looked up again. Returns what went wrong. */
+const PICK_PLAN = (plan) => {
   const log = [];
-  for (let guard = 0; guard < 2000; guard++) {
-    const card = document.querySelector('article.card-r[data-undecided]');
-    if (!card) break;
-    const id = card.dataset.item;
-    const click = (sel) => { const b = card.querySelector(sel); if (b) window.__press(b); return !!b; };
-    const before = card.outerHTML.length;
-    let did = false;
-    if (card.querySelector('[data-act="jpick"]')) { // each answer re-renders the card, so look it up again every time
-      for (let i = 0; i < 100; i++) { const b = document.querySelector(`#i-${CSS.escape(id)} [data-act="jpick"][data-v="YES"][aria-pressed="false"]`); if (!b) break; window.__press(b); }
-      did = true;
+  const card = (id) => document.getElementById(`i-${id}`);
+  const find = (id, act, pred) => { const c = card(id); return (c && [...c.querySelectorAll(`[data-act="${act}"]`)].find(pred)) || null; };
+  for (const [id, p] of Object.entries(plan)) {
+    if (!card(id)) { log.push(`no card for ${id}`); continue; }
+    if (!card(id).hasAttribute('data-undecided')) log.push(`${id} was already decided before the sweep chose anything`);
+    const press = (b, what) => { if (b) window.__press(b); else log.push(`${id}: no button to ${what}`); };
+    if (p.t === 'skip') press(find(id, 'skip', () => true), 'skip');
+    else if (p.t === 'pick') press(find(id, 'pick', (b) => b.dataset.v === p.v), `pick "${p.v}"`);
+    else if (p.t === 'judges') for (const [n, v] of p.answers) press(find(id, 'jpick', (b) => b.dataset.k === `${id}|${n}` && b.dataset.v === v), `answer ${v} on ${n}`);
+    else if (p.t === 'seats') {
+      for (const n of p.names) press(find(id, 'mpick', (b) => b.dataset.v === n), `mark "${n}"`);
+      const d = find(id, 'mdone', () => true); if (d) window.__press(d);
+    } else if (p.t === 'rank') {
+      for (const n of p.order) press(find(id, 'rank', (b) => b.dataset.v === n && b.getAttribute('aria-pressed') === 'false'), `rank "${n}"`);
+      if (p.up) press(find(id, 'rup', (b) => b.dataset.v === p.up), `move "${p.up}" up`);
+      const d = find(id, 'rdone', () => true); if (d) window.__press(d);
     }
-    else if (card.querySelector('[data-act="rank"]')) {
-      const max = Number((card.querySelector('.rank-panel .small:last-child')?.textContent.match(/of (\d+) ranked/) || [])[1] || 0);
-      const n = card.querySelectorAll('[data-act="rank"]').length;
-      for (let i = 0; i < Math.max(1, Math.min(max || n, n)); i++) { const c = document.querySelector(`#i-${CSS.escape(id)}`); const b = c && c.querySelector('[data-act="rank"][aria-pressed="false"]'); if (b) window.__press(b); }
-      const d = document.querySelector(`#i-${CSS.escape(id)} [data-act="rdone"]`); if (d) window.__press(d);
-      did = true;
-    } else if (card.querySelector('[data-act="mpick"]')) {
-      const seats = Number((card.textContent.match(/fills (\d+) seats/) || [])[1] || 1);
-      for (let i = 0; i < seats; i++) { const c = document.querySelector(`#i-${CSS.escape(id)}`); const b = c && c.querySelector('[data-act="mpick"][aria-pressed="false"]'); if (b) window.__press(b); }
-      const d = document.querySelector(`#i-${CSS.escape(id)} [data-act="mdone"]`); if (d) window.__press(d);
-      did = true;
-    } else did = click('[data-act="pick"]') || click('[data-act="skip"]');
-    const after = document.querySelector(`#i-${CSS.escape(id)}`);
-    if (!did || (after && after.hasAttribute('data-undecided') && after.outerHTML.length === before)) { log.push(`stuck:${id}`); card.removeAttribute('data-undecided'); card.setAttribute('data-stuck', ''); }
+    if (card(id) && card(id).hasAttribute('data-undecided')) log.push(`${id} is still undecided after the sweep's choices`);
   }
+  const left = [...document.querySelectorAll('article.card-r[data-undecided]')].map((c) => c.dataset.item).filter((x) => !(x in plan));
+  if (left.length) log.push(`open cards the data does not count as decisions: ${left.slice(0, 4).join(', ')}`);
   return log;
 };
+/* Both sheets, row by row: the race title, the chosen value, and any ranks or per-judge answers.
+   Read from text nodes, not innerText, so the hidden print sheet reads the same as the screen one. */
 const CHEAT = () => {
-  const rows = (root) => [...document.querySelectorAll(`${root} tbody tr:not(.cs-sec)`)].map((r) => ({ t: r.querySelector('th')?.textContent.trim(), v: (r.querySelector('td')?.innerText || '').replace(/\s+/g, ' ').trim() }));
+  const own = (el) => (el ? [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join('') : '').replace(/\s+/g, ' ').trim();
+  const rows = (root) => [...document.querySelectorAll(`${root} tbody tr:not(.cs-sec)`)].map((r) => {
+    const td = r.querySelector('td');
+    return {
+      t: own(r.querySelector('th')),
+      v: own(td),
+      blank: !td || td.classList.contains('undecided') || !!td.querySelector('.screen-only, .print-only'),
+      ranks: [...(td ? td.querySelectorAll('ol.cs-ranks > li') : [])].map((li) => `${((li.querySelector('.cs-rk') || {}).textContent || '?').trim()} ${own(li)}`.replace(/\s+/g, ' ').trim()),
+      judges: [...(td ? td.querySelectorAll('ul.cs-judges > li') : [])].map((li) => `${own(li)} ${((li.querySelector('strong') || {}).textContent || '').trim()}`.replace(/\s+/g, ' ').trim()),
+    };
+  });
   return { screen: rows('#cheat'), print: rows('#r-print') };
 };
 
@@ -276,19 +386,19 @@ async function sweepBallot(browser, ballot) {
   const notSure = Object.fromEntries(o.groups.map((g) => [g.key, '*']));
   for (const g of o.groups) await pressDistrict(page, g.key, '*');
   await page.waitForTimeout(200);
-  const { ex } = await checkStructure(page, ballot, o, notSure, 'all districts', R);
+  const { ex, snap } = await checkStructure(page, ballot, o, notSure, 'all districts', R);
   await page.screenshot({ path: path.join(SHOTS, `${ballot.name}.png`) });
 
-  // Pick everything, then the cheat sheet and print sheet must list every decision once, none blank.
-  const stuck = await page.evaluate(PICK_ALL);
-  if (stuck.length) R.fail(ballot.name, 'could not pick on some cards', stuck.slice(0, 4).join(', '));
-  await page.waitForTimeout(250);
+  // Make the planned choice on every decision. Then both sheets must show each race, in order,
+  // with exactly that choice.
+  const plan = planFor(ex);
+  const problems = await page.evaluate(PICK_PLAN, plan);
+  if (problems.length) R.fail(ballot.name, `${problems.length} problems making the planned choices`, problems.slice(0, 4).join(' | '));
+  await page.waitForTimeout(250); // the sheets render just after the tap paints
   const cheat = await page.evaluate(CHEAT);
-  if (cheat.screen.length !== ex.decisions.length) R.fail(ballot.name, 'cheat sheet row count', `want ${ex.decisions.length} got ${cheat.screen.length}`);
-  const blank = cheat.screen.filter((r) => !r.v || /not decided/i.test(r.v) || /^_+$/.test(r.v));
-  if (blank.length) R.fail(ballot.name, `${blank.length} cheat sheet rows are blank after picking everything`, blank.slice(0, 3).map((r) => r.t).join(' | '));
-  const wantPrint = ex.decisions.length + ex.visible.filter((i) => o.kinds[i.id] === 'unopposed').length;
-  if (cheat.print.length !== wantPrint) R.fail(ballot.name, 'print sheet row count', `want ${wantPrint} got ${cheat.print.length}`);
+  const secOrder = Object.keys(snap.sec);
+  compareSheet(R, ballot.name, 'cheat sheet (screen)', cheat.screen, wantSheet(o, ex, plan, secOrder, false));
+  compareSheet(R, ballot.name, 'print sheet', cheat.print, wantSheet(o, ex, plan, secOrder, true));
   const titles = cheat.screen.map((r) => r.t);
   // 2026-10-19: found by the first sweep. Two races with the same title leave the voter unable to tell the rows apart.
   if (new Set(titles).size !== titles.length) (process.env.STRICT ? R.fail : warn)(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
@@ -304,21 +414,31 @@ async function sweepBallot(browser, ballot) {
 
 /* ---------- plan the ballots ---------- */
 const index = await getJSON('index.json');
+const states = index && typeof index.states === 'object' && index.states ? index.states : {};
+const places = index && typeof index.places === 'object' && index.places ? index.places : {};
+const zips = index && typeof index.zips === 'object' && index.zips ? index.zips : {};
 const ballots = [];
-for (const [st, s] of Object.entries(index.states)) ballots.push({ name: `state-${st}`, st, placeIds: [] });
-for (const [id, p] of Object.entries(index.places)) ballots.push({ name: id, st: p.state, placeIds: [id] });
+for (const st of Object.keys(states)) ballots.push({ name: `state-${st}`, st, placeIds: [] });
+for (const [id, p] of Object.entries(places)) ballots.push({ name: id, st: p.state, placeIds: [id] });
 const combos = new Map();
-for (const [zip, list] of Object.entries(index.zips)) if (list.length > 1 && !combos.has(list.join('+'))) combos.set(list.join('+'), zip);
-for (const [key, zip] of combos) ballots.push({ name: `zip-${key}`, st: index.places[key.split('+')[0]].state, placeIds: key.split('+'), combo: true, zip });
+for (const [zip, list] of Object.entries(zips)) if (Array.isArray(list) && list.length > 1 && !combos.has(list.join('+'))) combos.set(list.join('+'), zip);
+for (const [key, zip] of combos) ballots.push({ name: `zip-${key}`, st: (places[key.split('+')[0]] || {}).state, placeIds: key.split('+'), combo: true, zip });
+const unknown = ONLY.filter((n) => !ballots.some((b) => b.name === n));
+if (unknown.length) stop(`ONLY names ballots that do not exist: ${unknown.join(', ')}. Names look like state-TX, austin-tx, ${[...combos.keys()][0] ? `zip-${[...combos.keys()][0]}` : 'zip-a+b'}.`);
 const todo = ballots.filter((b) => !ONLY.length || ONLY.includes(b.name));
-console.log(`sweep ${MODE}: ${todo.length} ballots (${Object.keys(index.states).length} state-only, ${Object.keys(index.places).length} places, ${combos.size} multi-place ZIPs) at ${W}px against ${BASE}`);
+console.log(`sweep ${MODE}: ${todo.length} ballots (${Object.keys(states).length} state-only, ${Object.keys(places).length} places, ${combos.size} multi-place ZIPs) at ${W}px against ${BASE}, ${WORKERS} workers`);
 
-/* ---------- index sanity: every ZIP resolves to real places, every place has a ZIP ---------- */
-for (const [zip, list] of Object.entries(index.zips)) {
+/* ---------- index sanity: there is something to check, every ZIP resolves to real places, every place has a ZIP ---------- */
+if (!Object.keys(states).length) fail('index', 'index.json lists no states');
+if (!Object.keys(places).length) fail('index', 'index.json lists no places');
+if (!Object.keys(zips).length) fail('index', 'index.json lists no ZIPs');
+if (!todo.length) fail('sweep', 'no ballots to sweep');
+for (const [zip, list] of Object.entries(zips)) {
   if (!/^\d{5}$/.test(zip)) fail('index', 'bad ZIP key', zip);
-  for (const id of list) if (!index.places[id]) fail('index', `ZIP ${zip} points at unknown place`, id);
+  if (!Array.isArray(list) || !list.length) { fail('index', `ZIP ${zip} lists no places`); continue; }
+  for (const id of list) if (!places[id]) fail('index', `ZIP ${zip} points at unknown place`, id);
 }
-for (const id of Object.keys(index.places)) if (!Object.values(index.zips).some((l) => l.includes(id))) fail('index', `place has no ZIP`, id);
+for (const id of Object.keys(places)) if (!Object.values(zips).some((l) => Array.isArray(l) && l.includes(id))) fail('index', `place has no ZIP`, id);
 
 const browser = await chromium.launch();
 const queue = [...todo];
@@ -330,6 +450,11 @@ await Promise.all(Array.from({ length: Math.min(WORKERS, queue.length) }, async 
 }));
 await browser.close();
 
-fs.writeFileSync(path.join(SHOTS, 'sweep-report.json'), JSON.stringify({ mode: MODE, base: BASE, results, fails, warns }, null, 2));
-console.log(`\nsweep: ${results.length} ballots swept, ${fails.length} failures, ${warns.length} warnings. Report and screenshots in ${path.relative(ROOT, SHOTS)}/`);
-process.exit(fails.length ? 1 : 0);
+// Every planned ballot must have finished its checks. A crash, a lost worker or a skipped ballot is a failure.
+const finished = new Set(results.map((r) => r.name));
+const unfinished = todo.filter((b) => !finished.has(b.name)).map((b) => b.name);
+if (unfinished.length) fail('sweep', `${unfinished.length} of ${todo.length} planned ballots did not finish`, unfinished.slice(0, 6).join(', '));
+
+fs.writeFileSync(path.join(SHOTS, 'sweep-report.json'), JSON.stringify({ mode: MODE, base: BASE, planned: todo.map((b) => b.name), results, fails, warns }, null, 2));
+console.log(`\nsweep: ${results.length} of ${todo.length} planned ballots swept, ${fails.length} failures, ${warns.length} warnings. Report and screenshots in ${path.relative(ROOT, SHOTS)}/`);
+process.exit(fails.length || results.length !== todo.length || !todo.length ? 1 : 0);

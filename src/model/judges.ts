@@ -217,10 +217,10 @@ export function judgesRule(): string {
   const jr = judicialReview();
   const t = (jr?.to_keep_a_judge || '').trim();
   if (!t) return '';
-  if (/^vote for the candidate/i.test(t)) return 'How judges win here: most votes wins. These aren’t keep-or-remove questions.';
+  if (/^vote for the candidate/i.test(t)) return 'The most votes wins. These aren’t keep-or-remove votes.';
   const pct = t.match(/at least (\d+) percent yes/i);
   if (pct) return `A judge needs ${pct[1]}% yes to stay.`;
-  if (/^more yes than no votes keeps/i.test(t)) return 'A judge stays with more yes than no votes.';
+  if (/^more yes than no votes keeps/i.test(t)) return 'A judge stays with more yes votes than no votes.';
   const s = (t.match(/^(.+?[.!?])(\s|$)/) || [])[1] || t;
   return s.replace(/\.?$/, '.');
 }

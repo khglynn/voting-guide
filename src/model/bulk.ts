@@ -47,7 +47,7 @@ export function planAgree(): Plan {
     if (!w.length || l.groups.length !== 1 || l.both.length) continue;
     const g = l.groups[0];
     if (!g.choices.length) continue;
-    const why = `Filled from your sources: ${w.map((e) => e.short).join(', ')}`;
+    const why = `Filled in from your sources: ${w.map((e) => e.short).join(', ')}`;
     if (it.kind === 'measure' || it.is_retention) {
       if (g.choices.length !== 1 || !['YES', 'NO'].includes(g.choices[0])) continue;
       fills.push({ id: it.id, set: { [it.id]: g.choices[0] }, single: w.length === 1, why });
@@ -75,7 +75,7 @@ export function planParty(party: string): Plan {
     const mine = it.candidates.filter((c) => c.parties.includes(party));
     if (!mine.length) continue;
     if (isRCV(it)) { skippedRanked++; continue; }
-    const why = `Filled: the ${party} candidate on the ballot`;
+    const why = `Filled in with the ${party} candidate`;
     if (isMultiSeat(it)) {
       if (mine.length > it.vote_for) { skippedTwo++; continue; }
       if (pickedIn(it)) { skippedPartial++; continue; }
@@ -95,7 +95,7 @@ export function planJudges(): Plan {
   if (!jb) return emptyPlan();
   const by = new Map<string, Fill>();
   for (const t of jb.targets) {
-    const f = by.get(t.id) || { id: t.id, set: {}, single: false, why: 'Filled: the judges’ review' };
+    const f = by.get(t.id) || { id: t.id, set: {}, single: false, why: 'Filled in from the judges’ review' };
     f.set[t.key] = 'YES';
     by.set(t.id, f);
   }

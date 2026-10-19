@@ -140,7 +140,7 @@ function studyHTML(): string {
   if (!st || !st.text) return '';
   const k = 'study-more';
   const cav = (st.caveats || []).filter(Boolean);
-  return `<h3>Why text a friend?</h3><p class="study">${esc(st.text)}${st.url ? ` ${ext(st.url, st.cite || 'The study')}` : st.cite ? ` (${esc(st.cite)})` : ''}</p>
+  return `<h3>The research on texting friends</h3><p class="study">${esc(st.text)}${st.url ? ` ${ext(st.url, st.cite || 'The study')}` : st.cite ? ` (${esc(st.cite)})` : ''}</p>
     ${cav.length ? `<button class="linkbtn study-tog" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="${k}">What this study does and doesn’t show</button>${isOpen(k) ? `<ul class="bul study-cav">${cav.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>` : ''}` : ''}`;
 }
 
@@ -159,7 +159,7 @@ function waysHTML(): string {
     const note = partisan && !notePlaced && gi?.selection_note ? (notePlaced = true, `<p class="w-note">${esc(gi.selection_note)}</p>`) : '';
     return `${note}<div class="grp">${g.label ? `<h4>${esc(g.label)}</h4>` : ''}<ul>${g.items!.filter((x) => x.label).map(item).join('')}</ul></div>`;
   }).join('');
-  return `<h3>${esc(gi?.title || 'Beyond texting')}</h3>${gi?.intro ? `<p class="sub">${esc(gi.intro)}</p>` : ''}<div class="ways">${body}</div>`;
+  return `<h3>${esc(gi?.title || 'Other ways to help')}</h3>${gi?.intro ? `<p class="sub">${esc(gi.intro)}</p>` : ''}<div class="ways">${body}</div>`;
 }
 
 export function passHTML(): string {
@@ -168,16 +168,16 @@ export function passHTML(): string {
   const data = involved?.who_to_text;
   const who = WHO.map(([k, l], i) => [k, data && data.length === WHO.length && data[i] ? data[i] : l]);
   const msg = (k: 'fam' | 'pub', text: string | null) => (text
-    ? `<div class="msg"><p id="msg-${k}">${esc(text)}</p><button class="copy" data-act="copy-msg" data-k="${k}" data-fk="copy-${k}">${COPY}Copy this</button></div>`
+    ? `<div class="msg"><p id="msg-${k}">${esc(text)}</p><button class="copy" data-act="copy-msg" data-k="${k}" data-fk="copy-${k}">${COPY}Copy message</button></div>`
     : '<p class="small">This message isn’t ready for your state yet.</p>');
   return `<section class="pass" id="pass" aria-labelledby="pass-h"><div class="wrap">
     <button class="back" data-act="view" data-v="ballot" data-fk="pass-back">Back to the ballot</button>
     ${voted ? '<div class="voted-head"><p class="kick">You voted. Thank you.</p></div>' : ''}
-    <h2 id="pass-h">Pass it on</h2>
-    <p class="lede">Make sure your people have a plan. Copy a message, send it, and ask them to text three people too.</p>
-    <div class="msgs fam"><h4>For friends and family</h4><p class="rule">Your people. It’s fine to share this guide.</p>${msg('fam', m.fam)}</div>
-    <div class="msgs pub"><h4>For work, school and public groups</h4><p class="rule">Nonpartisan: official links only, never this guide.</p>${msg('pub', m.pub)}</div>
-    <h3>Who to send it to</h3><p class="sub">Tick them off as you go. This stays on your phone.</p>
+    <h2 id="pass-h">Help your friends vote</h2>
+    <p class="lede">Copy a message below and send it. Ask each person to text three more.</p>
+    <div class="msgs fam"><h4>For friends and family</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
+    <div class="msgs pub"><h4>For work, school and public groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
+    <h3>Who to send it to</h3><p class="sub">Check them off as you go. Saved on this device only.</p>
     <ul class="checks">${who.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${studyHTML()}
     ${waysHTML()}

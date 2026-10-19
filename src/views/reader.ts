@@ -40,8 +40,8 @@ function candBlock(c: Contest, k: Candidate): string {
   return `<div class="cand-blk"><h4>${esc(k.name)}</h4>${who ? `<p class="who">${esc(who)}</p>` : ''}
     ${ownWords(k)}
     ${k.background ? `<p class="bg">${escP(k.background)}</p>` : ''}
-    ${by.mine.length ? `<p class="backs"><b>Backed by sources you chose:</b> ${esc(by.mine.map((e) => e.short).join(', '))}.</p>` : ''}
-    ${by.others.length ? `<p class="backs"><b>Also backed by:</b> ${esc(by.others.map((e) => e.short).join(', '))}.</p>` : ''}
+    ${by.mine.length ? `<p class="backs"><b>Endorsed by your sources:</b> ${esc(by.mine.map((e) => e.short).join(', '))}.</p>` : ''}
+    ${by.others.length ? `<p class="backs"><b>Also endorsed by:</b> ${esc(by.others.map((e) => e.short).join(', '))}.</p>` : ''}
     ${k.website || k.lwv_url ? `<p class="site">${k.website ? `${ext(k.website, 'Campaign site')}${k.website_confidence === 'unverified' ? ' <span class="flag">We’re not sure this is their site</span>' : ''}` : ''}${k.website && k.lwv_url ? ' · ' : ''}${k.lwv_url ? ext(k.lwv_url, k.lwv_status === 'responded' ? 'Their answers to the League of Women Voters' : 'League of Women Voters guide') : ''}</p>` : ''}
   </div>`;
 }
@@ -53,7 +53,7 @@ function sourcesSaid(it: Item): string {
   list.sort((a, c) => (ids.has(c.e.id) ? 1 : 0) - (ids.has(a.e.id) ? 1 : 0) || (a.en.s === 'endorsed' ? -1 : 1) - (c.en.s === 'endorsed' ? -1 : 1) || a.e.name.localeCompare(c.e.name));
   if (!list.length) return '';
   return list.map(({ e, en }) => {
-    const st = en.s === 'no_position' ? '<p class="st np">Took no stand</p>' : en.s === 'not_found' ? '<p class="st nf">No pick found</p>'
+    const st = en.s === 'no_position' ? '<p class="st np">Took no stand</p>' : en.s === 'not_found' ? '<p class="st nf">No endorsement found</p>'
       : `<p class="st end">${en.both ? 'Lists campaigns on both sides' : esc((en.c || []).map((x) => choiceShort(it, x)).join(', ') || en.note || 'Endorsed')}${en.note && en.c ? ` (${esc(en.note)})` : ''}</p>`;
     return `<div class="ent"><div class="ent-h"><b>${esc(e.name)}</b>${ids.has(e.id) ? '<span class="mine-tag">you chose</span>' : ''}</div>${sourceLean(e)}${st}
       ${en.why ? `<p>${escP(en.why)}</p>` : ''}
@@ -111,9 +111,9 @@ function raceRead(c: Contest): string {
     ${c.why_it_matters ? sec('Why it matters', para(c.why_it_matters)) : ''}
     ${sec('The candidates, in their own words', c.candidates.map((k) => candBlock(c, k)).join(''), 'Quote marks mean their exact words. Anything else is our summary, labeled.')}
     ${hasRatings(c) ? sec('Lawyer polls and bar ratings', raceRatingsHTML(c)) : ''}
-    ${sec('Each rating as published', ratingsAsPublished(c), 'Word for word, with what it covered and when, and a link to the group’s own page.')}
+    ${sec('Ratings, word for word', ratingsAsPublished(c), 'With what each one covered, when, and a link to the group’s own page.')}
     ${sec('Guides that explain without picking', guides(c))}
-    ${sec('What each source said', sourcesSaid(c), 'Sources you chose come first.')}
+    ${sec('What each source said', sourcesSaid(c), 'Your sources come first.')}
     ${sec('Official and source links', links(c.sources))}`;
 }
 function measureRead(m: Measure): string {
@@ -143,14 +143,14 @@ function judgeRead(c: Contest): string {
     ${sec(isMultiJudge(c) ? 'The judges and their reviews' : 'The review', blocks)}
     ${jr ? sec('What judges’ reviews mean here', [jr.what_the_rating_means, jr.who_reviews, jr.what_it_doesnt_mean, jr.how_judges_get_here, jr.to_keep_a_judge, jr.history].filter(Boolean).map((t) => para(t)).join('') + (jr.read_one ? `<p>${ext(jr.read_one.url, jr.read_one.label)}</p>` : '') + links(jr.sources)) : ''}
     ${sec('What each source said', sourcesSaid(c))}
-    ${sec('Links', links(c.sources))}`;
+    ${sec('Official and source links', links(c.sources))}`;
 }
 
 export function readerHTML(id: string): string {
   const it = S.ballot!.byId.get(id);
   if (!it) return '';
   const body = it.kind === 'measure' ? measureRead(it) : it.is_retention ? judgeRead(it) : raceRead(it);
-  return `<div class="reader screen-only" role="dialog" aria-modal="true" aria-label="Full read" data-keep="reader">
-    <div class="reader-bar"><span class="crumb">Full read</span><button class="closebtn" data-act="reader-close" data-fk="reader-x">Back to my ballot</button></div>
+  return `<div class="reader screen-only" role="dialog" aria-modal="true" aria-label="Full details" data-keep="reader">
+    <div class="reader-bar"><span class="crumb">Full details</span><button class="closebtn" data-act="reader-close" data-fk="reader-x">Back to my ballot</button></div>
     <article class="rd wrap">${body}<p class="fine report">${ext(reportLink(it), 'Report a problem with this page')}. It’s a short form, no sign-in needed.</p></article></div>`;
 }

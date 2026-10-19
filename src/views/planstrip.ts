@@ -27,8 +27,8 @@ export function planHTML(): string {
       ${step.sub.length ? `<p class="plan-sub">${esc(step.sub.join(' '))}</p>` : ''}
       ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
-        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Am I registered?</a>` : ''}</div>
-      <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Moved? Lost your ballot? Dates and ID</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
+      <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost your ballot</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
     </div></section>
     ${open ? whatIfHTML(h) : ''}`;
@@ -73,18 +73,18 @@ function whatIfHTML(h: HowTo): string {
   const office = b.places.map((p) => p.county_election_office).find(Boolean);
   const mail = h.mail_ballot;
   const basics = [
-    disc('bx-dates', 'Every key date', `<ol class="pdates">${dates}</ol>`),
+    disc('bx-dates', 'Key dates', `<ol class="pdates">${dates}</ol>`),
     disc('bx-id', `What to bring: ${IDS[idr.required] || idr.required}`, `${idr.accepted.length ? `<ul>${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`),
     disc('bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and this cheat sheet.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`),
-    disc('bx-mail', isMailState(h) ? 'Voting by mail: how it works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`),
+    disc('bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`),
     office ? disc('bx-office', 'Your election office', (() => { const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/); const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')]; return `<p>${office.url ? ext(office.url, n) : esc(n)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${a ? `<br>${esc(a)}` : ''}</p>`; })()) : '',
     h.model_plain ? disc('bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain)) : '',
     ...b.places.filter((p) => p.notes).map((p) => disc(`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes))),
   ].join('');
-  return `<section class="whatifs" aria-label="What if, key dates and rules"><div class="wrap">
-    ${sits.length ? `<h3 class="wi-h">What if…</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
-    ${h.gotchas.length ? `<h3 class="wi-h">Things people get wrong in ${esc(b.stateName)}</h3>${leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas')}` : ''}
-    <h3 class="wi-h">The basics</h3><ul class="wi-list">${basics}</ul>
+  return `<section class="whatifs" aria-label="Dates, ID, rules and common problems"><div class="wrap">
+    ${sits.length ? `<h3 class="wi-h">Common problems and what to do</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
+    ${h.gotchas.length ? `<h3 class="wi-h">Common mistakes in ${esc(b.stateName)}</h3>${leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas')}` : ''}
+    <h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div></section>`;
 }

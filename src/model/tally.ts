@@ -179,10 +179,10 @@ export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'n
 export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none'; shade?: 'one' | 'lean' | 'even' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
-  no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',
+  no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
-  no_cover: 'Open to compare', no_sources: 'No sources chosen', both: 'Listed both sides',
-  mixed: 'No picks',
+  no_cover: 'No endorsements. Open to compare', no_sources: 'No sources on', both: 'Listed both sides',
+  mixed: 'No endorsements',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (!anyChosen) return 'no_sources';

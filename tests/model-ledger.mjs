@@ -110,7 +110,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     // Codex #7: "Took no stand" only when every source that covers this took no stand.
     set({ [e1.id]: row('no_position'), [e2.id]: row('no_position') });
     v = tally.verdict(it);
-    check('verdict: two took no stand and one is not checked yet is mixed, with the counts', v.kind === 'none' && v.why === 'mixed' && v.main === 'No picks' && v.sub === '2 took no stand', JSON.stringify(v));
+    check('verdict: two took no stand and one is not checked yet is mixed, with the counts', v.kind === 'none' && v.why === 'mixed' && v.main === 'No endorsements' && v.sub === '2 took no stand', JSON.stringify(v));
     S.b.sources = [e1.id, e2.id];
     tally.clearLineups();
     v = tally.verdict(it);
@@ -120,7 +120,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('verdict: nothing found', v.kind === 'none' && v.why === 'not_found', JSON.stringify(v));
     set({ [e1.id]: row('not_found'), [e2.id]: row('no_position') });
     v = tally.verdict(it);
-    check('verdict: one found nothing and one took no stand is mixed, one short line', v.why === 'mixed' && v.main === 'No picks' && v.sub === '1 took no stand', JSON.stringify(v));
+    check('verdict: one found nothing and one took no stand is mixed, one short line', v.why === 'mixed' && v.main === 'No endorsements' && v.sub === '1 took no stand', JSON.stringify(v));
     S.b.sources = [e1.id, e2.id, e3.id];
     set({});
     v = tally.verdict(it);
@@ -327,7 +327,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     for (const f of [...Object.keys(INDEX.states).map((x) => `state-${x}.json`), ...Object.keys(INDEX.places).map((x) => `place-${x}.json`)]) for (const e of read(f).endorsers) all.set(e.id, e);
     const wrong = [...all.values()].filter((e) => /rated by AllSides/.test(common.basisWords(e)) && /\bno\s+AllSides/i.test(e.lean_basis || ''));
     check('lean: no source whose basis says "no AllSides rating" is credited to AllSides', wrong.length === 0, wrong.map((e) => e.id).join(', '));
-    check('lean: a party reads "party", a mission "from its mission statement"', [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'party').every((e) => common.basisWords(e) === 'party') && [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'mission').every((e) => common.basisWords(e) === 'from its mission statement'));
+    check('lean: a party reads "from party status", a mission "from its mission statement"', [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'party').every((e) => common.basisWords(e) === 'from party status') && [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'mission').every((e) => common.basisWords(e) === 'from its mission statement'));
   }
 
   /* ---------- what it takes to pass, read as a rule ---------- */
@@ -377,7 +377,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     open('CO', ['lakewood-co']);
     const lead = judges.judgesLead();
     check('judges lead: Colorado says "meets standards" is a passing grade, not an endorsement, with how many passed', /passing grade on a job review, not an endorsement/.test(lead) && /121 of 123 judges/.test(lead), lead);
-    check('judges rule: Colorado band says "A judge stays with more yes than no votes."', judges.judgesRule() === 'A judge stays with more yes than no votes.', judges.judgesRule());
+    check('judges rule: Colorado band says "A judge stays with more yes votes than no votes."', judges.judgesRule() === 'A judge stays with more yes votes than no votes.', judges.judgesRule());
     open('IL', ['chicago-il']);
     check('judges rule: Chicago band is one line, "A judge needs 60% yes to stay."', judges.judgesRule() === 'A judge needs 60% yes to stay.', judges.judgesRule());
     // UX re-walk: one wording on a retention row and its open row ("say don't keep"), groups by full name.
@@ -389,7 +389,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     const jb = judges.judgeBatch();
     check('judges batch: Chicago reads "Keep the N judges the bar groups recommend"', !!jb && /^Keep the \d+ judges the bar groups recommend$/.test(jb.label), jb && jb.label);
     open('TX', ['houston-tx']);
-    check('judges rule: Texas says how judges win, not "to keep a judge"', /^How judges win here: most votes wins\./.test(judges.judgesRule()));
+    check('judges rule: Texas says how judges win, not "to keep a judge"', /^The most votes wins\. These aren’t keep-or-remove votes\./.test(judges.judgesRule()));
     check('judges lead: Texas calls a lawyer poll a poll', /poll of lawyers, not a job review/.test(judges.judgesLead()), judges.judgesLead());
     open('OR', ['portland-or']);
     check('judges lead: Oregon says there is no official review', /^Oregon has no official review of these judges\./.test(judges.judgesLead()), judges.judgesLead());
@@ -410,7 +410,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('plan: Colorado on Oct 19 says mail it by Mon, Oct 26, then a drop box by 7 PM Nov 3', /^Mail your ballot by Mon, Oct 26\.$/.test(cs.head.map((p) => p[0]).join('')) && /drop box by 7 PM Tue, Nov 3/.test(cs.sub.join(' ')), `${cs.head.map((p) => p[0]).join('')} | ${cs.sub.join(' | ')}`);
     const co27 = plan.nextStep(co, '2026-10-27');
     check('plan: Colorado from Oct 27 says drop it off by 7 PM Tue, Nov 3, and not to mail it', /^Drop off your ballot by 7 PM Tue, Nov 3\.$/.test(co27.head.map((p) => p[0]).join('')) && /drop box or a vote center/.test(co27.sub.join(' ')), co27.sub.join(' | '));
-    check('plan: Colorado mentions in-person voting opening today', cs.sub.some((x) => /opens today/.test(x)), cs.sub.join(' | '));
+    check('plan: Colorado mentions in-person voting opening today', cs.sub.some((x) => /in person, starting today/.test(x)), cs.sub.join(' | '));
     const caH = read('state-CA.json').howto;
     const alert = plan.registrationAlert(caH, '2026-10-19');
     check('plan: California on Oct 19 warns registration closes today, then same-day', !!alert && /today/i.test(alert) && /register and vote in person/.test(alert), alert || '');

@@ -21,6 +21,9 @@ const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
 const TODAY = process.env.TODAY || '2026-10-19';
 const W = 380;
 const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || '';
+/* The copy pass (Oct 19): the sources header's words and the paywall note's, from the copy table. */
+const LENS_HEAD = 'Show endorsements from';
+const PW_NOTE_RE = /behind a paywall, so we couldn’t read/i;
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? `  (${extra})` : ''}`); };
@@ -116,6 +119,8 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await tap(page, '[data-act="open"][data-k="whatif"]');
 
   // The lens: Papers and guides on by default; a chip adds groups; the sheet lists everyone.
+  // The copy pass (Kevin, Oct 19): the section header says what it does, not "Who do you trust?".
+  check(`Denver: the sources header reads "${LENS_HEAD}"`, (await text(page, '#lens-h')) === LENS_HEAD, await text(page, '#lens-h'));
   check('Denver: Papers and guides is on by default', (await page.getAttribute('[data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true');
   const cov1 = await text(page, '#lens .cov');
   await tap(page, '[data-act="chip"][data-k="progressive"]');
@@ -323,6 +328,16 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   const { ctx, page } = await newPage();
   await openBallot(page, '97214');
   await noSideScroll(page, 'Portland');
+  await tap(page, '[data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel');
+  const pw = await page.evaluate(() => {
+    const row = [...document.querySelectorAll('.sheet-panel .srow')].find((r) => r.querySelector('.pw-note'));
+    if (!row) return null;
+    const a = row.querySelector('.pw-note a');
+    return { name: row.querySelector('.s-n').textContent.trim(), note: row.querySelector('.pw-note').textContent.replace(/\s+/g, ' ').trim(), href: a ? a.href : '' };
+  });
+  check('Portland: a paywalled paper in More sources carries the note, linking the report form with its name', !!pw && PW_NOTE_RE.test(pw.note) && pw.href.includes('docs.google.com/forms') && new URL(pw.href).searchParams.get('entry.90887649').includes(pw.name), pw ? `${pw.name}: ${pw.note}` : 'no paywalled source on this ballot');
+  await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   const key = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /Portland City Council/.test(k)));
   check('Portland: asks which council district', !!key);
   await openRow(page, `q:${key}`);
@@ -335,6 +350,10 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Portland: header links the official count rules', ((await page.getAttribute(`${card} .rcv a`, 'href')) || '').includes('multco.us'));
   check('Portland: no "mark up to" wording on a ranked race', !/mark up to/i.test(await text(page, card)));
   check('Portland: no em dashes in the ranked race', !/—/.test(await text(page, card)));
+  // Paywalled papers (Kevin, Oct 19): the Oregonian's picks we only saw secondhand are out, so
+  // this race says once why, with a link that opens the report form naming the paper.
+  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), href: (n.querySelector('a') || {}).href || '' } : null; }, card);
+  check('Portland: the race notes the paywalled Oregonian once, linking the report form with its name', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && new URL(pwRow.href).searchParams.get('entry.90887649').includes('Oregonian'), pwRow ? pwRow.note : 'no note');
   await tap(page, `${card} [data-act="rank"][data-v="Steve Novick"]`);
   await tap(page, `${card} [data-act="rank"][data-v="Tiffany Koyama Lane"]`);
   const nextLabel = await text(page, `${card} [data-act="rank"][data-v="Kellie Torres"]`);

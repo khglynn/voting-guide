@@ -26,7 +26,7 @@ function whereHTML(it: Item): string {
     if (!b.mayApply.has(it.id)) return '';
     // Another district's measure: who votes on it, and a way to clear every one like it at once.
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Measure | undefined)?.jurisdiction === it.jurisdiction);
-    return `<div class="may"><p><b>Only some voters see this.</b> ${escP(it.jurisdiction)}</p>
+    return `<div class="may"><p><b>Only on some ballots.</b> ${escP(it.jurisdiction)}</p>
       <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} like this</button>` : ''}</p></div>`;
   }
   const g = b.groupOf[it.id];
@@ -34,12 +34,12 @@ function whereHTML(it: Item): string {
     const ans = S.b.districts[g];
     const grp = b.groups.find((x) => x.key === g)!;
     if (ans === it.id) return `<p class="ob-meta">You said you’re in ${esc(seatLabel(it) || 'this district')}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
-    return `<p class="ob-meta"><b>May apply.</b> You weren’t sure which ${esc(grp.office)} district is yours, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
+    return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
   }
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;
   if (b.mayApply.has(it.id)) {
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Contest | undefined)?.scope_plain === it.scope_plain);
-    return `<div class="may"><p><b>Only some voters see this.</b> ${escP(it.scope_plain)}</p>
+    return `<div class="may"><p><b>Only on some ballots.</b> ${escP(it.scope_plain)}</p>
       <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} like this</button>` : ''}</p></div>`;
   }
   return '';
@@ -52,12 +52,12 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   const out: string[] = [];
   const names = (list: Endorser[]) => esc(list.map((e) => e.short).join(', '));
   if (picked && l.noStand.length) out.push(`Took no stand: ${names(l.noStand)}.`);
-  if (picked && l.notFound.length) out.push(`No picks found: ${names(l.notFound)}.`);
+  if (picked && l.notFound.length) out.push(`No endorsements found: ${names(l.notFound)}.`);
   if (picked && l.notChecked.length) out.push(`Not checked yet: ${names(l.notChecked)}.`);
   if (l.both.length) out.push(`${names(l.both)} ${l.both.length === 1 ? 'lists' : 'list'} campaigns on both sides.`);
   const guides = l.guides.filter((e) => e.guide_url || picksOnBallot(S.ballot!, e.id) === 0);
   if (guides.length) {
-    const what = it.kind === 'measure' ? 'take positions on measures' : 'pick candidates';
+    const what = it.kind === 'measure' ? 'take positions on measures' : 'endorse candidates';
     out.push(`${guides.map((e) => (e.guide_url ? ext(e.guide_url, e.short) : esc(e.short))).join(', ')} ${guides.length === 1 ? 'doesn’t' : 'don’t'} ${what}; ${guides.length === 1 ? 'its guide explains' : 'their guides explain'}.`);
   }
   // Called once per open row, so a chosen paywalled source with no readable pick here gets its
@@ -73,11 +73,11 @@ function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | nu
   const r = (S.ballot!.ends[it.id] || {})[e.id];
   if (!r) return null;
   if (r.s === 'no_position') return `<td class="span np" colspan="${n}">Took no stand</td>`;
-  if (r.s === 'not_found') return `<td class="span nf" colspan="${n}">No picks found</td>`;
+  if (r.s === 'not_found') return `<td class="span nf" colspan="${n}">No endorsement found</td>`;
   const c = r.c || [];
   if (!c.some((x) => cols.includes(x))) {
     const names = c.length ? c.map((x) => (it.kind === 'contest' ? (it.candidates.find((k) => k.name === x)?.short || x) : x)).join(', ') : (r.note || 'Endorsed');
-    return `<td class="span" colspan="${n}">Backs ${esc(names)}</td>`;
+    return `<td class="span" colspan="${n}">Endorses ${esc(names)}</td>`;
   }
   return null;
 }
@@ -88,7 +88,7 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
     const span = spanCell(it, e, keys, cols.length);
     if (span) return `<tr>${srcCell(e)}${span}</tr>`;
     const r = (S.ballot!.ends[it.id] || {})[e.id]!;
-    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} backs ${esc(c.head)}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
+    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} endorses ${esc(c.head)}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
   }).join('');
   return `<div class="gridwrap"><table class="grid c${cols.length}">
     <colgroup><col class="src">${cols.map(() => '<col>').join('')}</colgroup>
@@ -100,11 +100,11 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
 /* When none of your sources weighed in: one calm line instead of an empty table. */
 function noneLineHTML(it: Item, l: Lineup): string {
   const parts: string[] = [];
-  if (!chosen().length) parts.push('You haven’t chosen any sources.');
+  if (!chosen().length) parts.push('No sources on. Turn some on at the top.');
   else if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
     if (l.noStand.length) parts.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand.`);
-    if (l.notFound.length) parts.push(`No pick found from ${l.notFound.map((e) => e.short).join(', ')}.`);
+    if (l.notFound.length) parts.push(`No endorsement found from ${l.notFound.map((e) => e.short).join(', ')}.`);
     if (l.notChecked.length) parts.push(`Not checked yet: ${l.notChecked.map((e) => e.short).join(', ')}.`);
   }
   return `<p class="none-line">${esc(parts.join(' '))}</p>`;
@@ -120,7 +120,7 @@ function othersHTML(it: Item): string {
   const open = S.ui.others.has(k);
   const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => `<li><span class="o-n">${esc(e.short)}</span>${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
       <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`)).join('')}</ul>` : '';
-  return `<div class="others-wrap"><button class="linkbtn" data-act="others" data-id="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'See'} ${plural(w.length, 'other source')} that picked here</button>${list}</div>`;
+  return `<div class="others-wrap"><button class="linkbtn" data-act="others" data-id="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'See'} ${plural(w.length, 'other source')} that endorsed here</button>${list}</div>`;
 }
 
 /* ---------- buttons ---------- */
@@ -181,7 +181,7 @@ function backedBy(c: Contest, k: Candidate, l: Lineup): string {
     return by.length ? `<span class="by">${CHECK}<span>Ranked by ${esc(by.join(', '))}</span></span>` : '';
   }
   const by = l.groups.filter((g) => g.choices.includes(k.name)).flatMap((g) => g.sources);
-  return by.length ? `<span class="by">${CHECK}<span>Backed by ${esc(by.map((e) => e.short).join(', '))}</span></span>` : '';
+  return by.length ? `<span class="by">${CHECK}<span>Endorsed by ${esc(by.map((e) => e.short).join(', '))}</span></span>` : '';
 }
 /* Every candidate gets the same kind of line: their own words (quote marked), "no statement
    found" when a real search found none, or, when nobody has looked yet, a neutral line that
@@ -264,7 +264,7 @@ function raceHTML(c: Contest): string {
   body += quietLines(l, c, w.length > 0);
   if (multi) {
     const n = c.candidates.filter((k) => S.b.picks[`${c.id}|${k.name}`] === 'PICK').length;
-    body = `<p class="seats"><b>This race fills ${c.vote_for} seats.</b> Mark up to ${c.vote_for} for your cheat sheet. ${n ? `${n} marked.` : ''}</p>${body}${n && n < c.vote_for && status(c) === 'open' ? `<button class="mini" data-act="mdone" data-id="${esc(c.id)}">I’m done with this race</button>` : ''}`;
+    body = `<p class="seats"><b>Fills ${c.vote_for} seats:</b> mark up to ${c.vote_for}. ${n ? `${n} marked.` : ''}</p>${body}${n && n < c.vote_for && status(c) === 'open' ? `<button class="mini" data-act="mdone" data-id="${esc(c.id)}">I’m done with this race</button>` : ''}`;
   }
   const nonpartisan = !isPartisan(c) ? '<p class="ob-meta">Nonpartisan race: no party labels on the ballot.</p>' : '';
   return `${c.office_explainer ? clampP(`ex-${c.id}`, c.office_explainer, 22, 'ob-lede') : ''}
@@ -314,7 +314,7 @@ export function raceRatingsHTML(c: Contest): string {
   const jr = judicialReview();
   return `<div class="ratings">
     ${polls.length ? `<h4>Lawyer preference polls</h4><p class="fine">A count of which candidate responding lawyers prefer. Not an endorsement or a job review.</p><ul>${pollHTML}</ul>` : ''}
-    ${groups.length ? `<h4>Bar ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
+    ${groups.length ? `<h4>Bar group ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
     ${jr && jr.what_the_rating_means ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
   </div>`;
 }
@@ -472,7 +472,7 @@ function footHTML(it: Item): string {
   const auto = S.b.auto[it.id] && decided ? `<p class="filled">${esc(S.b.auto[it.id])}. <button class="linkbtn" data-act="clear" data-id="${esc(it.id)}">Clear it</button></p>` : '';
   return `${auto}<div class="ob-acts">${acts}</div>
     ${noteOpen ? `<label class="note-ed"><span class="kick">Your note</span><textarea data-note="${esc(it.id)}" data-fk="note-${esc(it.id)}" rows="2" maxlength="500" placeholder="Only you see this. It saves as you type.">${esc(S.b.notes[it.id] || '')}</textarea></label>` : ''}
-    ${s === 'info' ? '' : `<button class="deeper" data-act="reader" data-id="${esc(it.id)}" data-fk="rd-${esc(it.id)}"><span><b>Full read</b><small>${it.kind === 'measure' ? 'The ballot wording, both sides, the cost, every source’s reason' : it.kind === 'contest' && it.is_retention ? 'The full review, the judge’s background, the links' : 'The candidates in their own words, every source’s reason, official links'}</small></span>${ARROW}</button>`}`;
+    ${s === 'info' ? '' : `<button class="deeper" data-act="reader" data-id="${esc(it.id)}" data-fk="rd-${esc(it.id)}"><span><b>Full details</b><small>${it.kind === 'measure' ? 'The ballot wording, both sides, the cost, every source’s reason' : it.kind === 'contest' && it.is_retention ? 'The full review, the judge’s background, the links' : 'The candidates in their own words, every source’s reason, official links'}</small></span>${ARROW}</button>`}`;
 }
 
 export function openHTML(it: Item): string {

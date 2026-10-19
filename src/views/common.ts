@@ -21,8 +21,10 @@ export function reportURL(what: string): string {
 export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
 /* The form's "Which race or measure?" line for a source's picks, so the report names the paper. */
 export const reportSourceLink = (e: Endorser, where = ''): string => reportURL(`${e.name}: picks${where ? ` on ${where}` : ''} [${e.id}]`);
-const PW_NOTE = 'PLACEHOLDER: We couldn’t read this paper’s picks behind its paywall.';
-const PW_LINK = 'PLACEHOLDER: Send us a PDF or the picks';
+const PW_NOTE = 'Behind a paywall, so we couldn’t read its endorsements. Have a login? We’d love a PDF or the list.';
+const PW_LINK = 'Send it to us';
+/* The row's form: lower case after the source names, its or their by count. */
+const PW_ROW = (n: number): string => `behind a paywall, so we couldn’t read ${n === 1 ? 'its' : 'their'} endorsements here. Have a login? We’d love a PDF or the list.`;
 /* In the sources sheet, under one paywalled source. */
 export function paywallSourceHTML(e: Endorser): string {
   if (!hasPaywallNote(e)) return '';
@@ -33,8 +35,8 @@ export function paywallSourceHTML(e: Endorser): string {
 export function paywallRowHTML(list: Endorser[], what: string): string {
   const pw = list.filter(hasPaywallNote);
   if (!pw.length) return '';
-  const links = pw.map((e) => ext(reportSourceLink(e, what), `${PW_LINK} (${e.short})`)).join(' ');
-  return `<p class="pw-note">${esc(pw.map((e) => e.short).join(', '))}: ${esc(PW_NOTE)} ${links}.</p>`;
+  const links = pw.map((e) => ext(reportSourceLink(e, what), `${PW_LINK} (${e.short})`)).join(', ');
+  return `<p class="pw-note">${esc(pw.map((e) => e.short).join(', '))}: ${esc(PW_ROW(pw.length))} ${links}.</p>`;
 }
 
 export const LEANS: Record<Lean, [number, string]> = {
@@ -56,7 +58,7 @@ export function leanHTML(lean: Lean | null, words = true, basis = ''): string {
    source endorsed. Empty when there is no lean. */
 export function basisWords(e: Endorser): string {
   if (!e.lean || !e.lean_basis_kind) return '';
-  if (e.lean_basis_kind === 'party') return 'party';
+  if (e.lean_basis_kind === 'party') return 'from party status';
   if (e.lean_basis_kind === 'mission') return 'from its mission statement';
   // Name the rater only when the basis names exactly one and doesn't say that rater has none
   // ("no AllSides rating found; Ad Fontes rates it..."). Otherwise stay general; the full basis

@@ -15,7 +15,7 @@ function electionDate(): string {
 const dateline = (): string => { const d = electionDate(); return d ? `General election, ${fmtDate(d)}` : 'General election'; };
 
 function tryBanner(): string {
-  return S.tryMode ? `<p class="trybar" role="status">Trying it as “${esc(S.tryMode)}”. Nothing here is saved. <a href="${esc(location.pathname)}">Exit</a></p>` : '';
+  return S.tryMode ? `<p class="trybar" role="status">Demo: “${esc(S.tryMode)}”. Nothing here is saved. <a href="${esc(location.pathname)}">Exit demo</a></p>` : '';
 }
 
 export function addrHTML(forPlaces = false): string {
@@ -23,9 +23,9 @@ export function addrHTML(forPlaces = false): string {
   return `<form class="addr" data-form="addr" novalidate>
     <label for="addr-in"><b>Street address</b></label>
     <input id="addr-in" name="addr" data-fk="addr" autocomplete="street-address" placeholder="Street, city and ZIP" ${S.ui.addrBusy ? 'disabled' : ''}>
-    <div class="row-btns"><button class="mini dark" type="submit" ${S.ui.addrBusy ? 'disabled' : ''}>${S.ui.addrBusy ? 'Looking up...' : forPlaces ? 'Find my ballot' : 'Match my districts'}</button>
+    <div class="row-btns"><button class="mini dark" type="submit" ${S.ui.addrBusy ? 'disabled' : ''}>${S.ui.addrBusy ? 'Looking up...' : forPlaces ? 'Find my ballot' : 'Find my districts'}</button>
       <button class="mini quiet" type="button" data-act="addr-close">Cancel</button></div>
-    <p class="fine">Your address goes only to the U.S. Census Bureau’s free lookup to find your districts. We never store it or send it anywhere else. Double-check with your official sample ballot.</p>
+    <p class="fine">We send your address only to the U.S. Census Bureau’s free lookup to find your districts, and we never store it. Double-check with your official sample ballot.</p>
     ${S.ui.addrMsg ? `<p class="small" role="status">${esc(S.ui.addrMsg)}</p>` : ''}
   </form>`;
 }
@@ -58,19 +58,19 @@ export function mastHTML(): string {
   if (S.zipChoice && idx) {
     after = `<div class="choose" role="group" aria-labelledby="which-h">
       ${(() => { const dc = S.zipChoice.placeIds.every((id) => idx.places[id].state === 'DC'); const n = S.zipChoice.placeIds.length;
-        return dc ? `<h2 id="which-h">${esc(S.zipChoice.zip)} is split across ${n} wards. Which one is yours?</h2><p class="small">Your voter registration card says, or use your address.</p>`
-          : `<h2 id="which-h">${esc(S.zipChoice.zip)} crosses city lines. Which of these is you?</h2><p class="small">Check the city on your voter registration or your ballot envelope.</p>`; })()}
+        return dc ? `<h2 id="which-h">${esc(S.zipChoice.zip)} covers ${n} wards. Pick yours.</h2><p class="small">It’s on your voter registration card.</p>`
+          : `<h2 id="which-h">${esc(S.zipChoice.zip)} covers more than one city. Pick yours.</h2><p class="small">It’s on your voter registration or your ballot envelope.</p>`; })()}
       <div class="opts">${S.zipChoice.placeIds.map((id) => { const p = idx.places[id]; return `<button class="opt" data-act="choose-place" data-ids="${esc(id)}" data-fk="cp-${esc(id)}"><b>${esc(p.label)}</b><small>${esc(p.counties.join(', '))}</small></button>`; }).join('')}
         <button class="opt opt-unsure" data-act="choose-place" data-ids="${esc(S.zipChoice.placeIds.join('+'))}" data-fk="cp-unsure"><b>I’m not sure</b><small>Show everything that might be on my ballot</small></button></div>
-      ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Or use my address to pick</button></p>'}</div>`;
+      ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address instead</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
     const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
-    after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> This guide covers the places Kevin’s friends and family vote. ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p></div>`;
+    after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> This guide covers where Kevin’s friends and family vote. ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p></div>`;
   }
   return `<header class="mast front wrap">${tryBanner()}
     <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
     <h1 class="place">Your ballot, explained</h1>
-    <p class="lede">Enter your ZIP. You’ll see what to do next and by when, everything on your ballot in plain words, and who endorsed whom.</p>
+    <p class="lede">Enter your ZIP to see how and by when to vote, every race and measure in plain words, and who endorsed whom.</p>
     <form class="zipform" data-form="zip" novalidate>
       <label for="zip">Your ZIP code</label>
       <div class="zip-row"><input class="zip-input" id="zip" name="zip" data-fk="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="80205" value="${esc(S.zip)}" ${S.zipErr ? 'aria-describedby="zip-err" aria-invalid="true"' : ''}>
@@ -89,10 +89,10 @@ function browseHTML(): string {
   if (!idx) return '';
   const k = 'browse';
   const states = Object.entries(idx.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
-  return `<div class="browse"><button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">Or pick a place from the list</button>
+  return `<div class="browse"><button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}" data-fk="browse">Or browse the places we cover</button>
     ${isOpen(k) ? `<ul class="browse-list">${states.map(([st, s]) => `<li><b>${esc(s.name)}</b>
       ${s.places.map((id) => `<button class="linkbtn" data-act="choose-place" data-ids="${esc(id)}">${esc(idx.places[id].label)}</button>`).join('')}
-      <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state' : 'Statewide races'}</button></li>`).join('')}</ul>` : ''}</div>`;
+      <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>` : ''}</div>`;
 }
 
 export function restoreHTML(): string {
@@ -101,7 +101,7 @@ export function restoreHTML(): string {
     const where = S.ballot ? (S.ballot.places.length ? S.ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : S.ballot.stateName) : '';
     return `<div class="notice strong wrap" role="region" aria-labelledby="rs-h">
     <p id="rs-h"><b>${esc(S.pending.summary)}</b></p>
-    <div class="row-btns"><button class="mini dark" data-act="shared-keep" data-fk="restore-yes">Keep them</button>
+    <div class="row-btns"><button class="mini dark" data-act="shared-keep" data-fk="restore-yes">Keep these picks</button>
       <button class="mini" data-act="shared-fresh">Start fresh</button></div>
     <p class="small">Not in ${esc(where)}? <button class="linkbtn" data-act="change-place">Find your ballot</button></p></div>`;
   }

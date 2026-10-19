@@ -143,6 +143,9 @@ export interface Deadline { method?: string; date: string | null; rule: string; 
 
 export interface HowTo {
   state: string;
+  /* where the polls are, set by plan.localHowto: one zone for a known place, every zone the
+     state spans for a statewide-only ballot */
+  zones?: string[];
   election_date: string;
   last_verified: string | null;
   official_site: Src;

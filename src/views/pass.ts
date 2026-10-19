@@ -2,8 +2,8 @@
    friends and family that can include the guide; one for work, school and public channels with
    official links only, never the guide), a who-to-send-it-to checklist, and, from
    data/get-involved.json, the message templates, the texting study with its caveats and ways
-   to get involved. Every link in the public message comes from the state file or the
-   confirmed place, so it is right for every state. */
+   to get involved. Every link in the public message is a statewide one from the state file, so
+   it is right for anyone in the state. */
 import { S } from '../state';
 import { esc } from '../util';
 import { ext, isOpen } from './common';
@@ -31,11 +31,11 @@ const WHO = [
 const COPY = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="5" y="5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 11V3h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 
 /* The default templates match data/get-involved.json, so the page reads the same with or
-   without it. The public one carries only statewide official links and the confirmed
-   place's election office: never this guide, a saved ballot or a partisan group, and never
+   without it. The public one carries only statewide official links: never this guide, a
+   local office's page, a saved ballot or a partisan group, and never
    election_day.lookup_url (in IL, MO, OR, PA and WA that one is a local office's page). */
 const FAM = 'Got a plan to vote? Here’s a guide to help you sort through your ballot: {guide_url}\n\nIf you’ve already voted, text three people and ask if they have a plan too. Message me if you have questions.';
-const PUB = 'Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n{local_election_office_line}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.';
+const PUB = 'Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.';
 
 /* Fill a template line by line: a line whose slot is empty is left out, a line that repeats a
    URL already given is left out, extra blank lines are trimmed. Null when a required slot is
@@ -64,14 +64,13 @@ export function messages(): { fam: string | null; pub: string | null } {
   const voted = S.ui.open.has('voted');
   const famBody = fillTemplate(involved?.messages?.friends_family?.template || FAM, { guide_url: site }, ['guide_url']);
   const fam = famBody && voted ? `I just voted! ${famBody}` : famBody;
-  // The local office only for one confirmed place in one county: never guessed from a shared ZIP.
-  const place = b.places.length === 1 ? b.places[0] : null;
-  const office = place && place.counties.length <= 1 ? place.county_election_office?.url || '' : '';
+  // Statewide official links only: a public group reaches people in other counties, so a local
+  // office's page never goes in (a template that still asks for one gets an empty line).
   const pub = fillTemplate(involved?.messages?.public?.template || PUB, {
     state_name: b.stateName,
     registration_check_url: h.registration.check_url || '',
     official_voting_url: h.official_site.url || '',
-    local_election_office_line: office ? `Local election office: ${office}` : '',
+    local_election_office_line: '',
   }, ['state_name', 'official_voting_url']);
   return { fam, pub };
 }

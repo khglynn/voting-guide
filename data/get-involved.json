@@ -286,7 +286,7 @@
     },
     "public": {
       "label": "Work, school or public channels",
-      "template": "Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n{local_election_office_line}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.",
+      "template": "Here are the official voting links for {state_name}:\nCheck your registration: {registration_check_url}\nOfficial election info: {official_voting_url}\n\nAlready voted? Text three people and ask if they have a plan too. Message me if you have questions.",
       "slots": {
         "state_name": {
           "source_file": "data/states/{state}.json",

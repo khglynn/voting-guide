@@ -8,10 +8,15 @@ import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, isMailState } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML } from './common';
 
+/* What the strip last showed, so main.ts can repaint it when the step changes while the page
+   sits open (the polls close, midnight passes). */
+export let planKey = '';
+export const stepKey = (h: HowTo): string => { const s = nextStep(h); return `${s.phase}|${s.head.map((p) => p[0]).join('')}`; };
 export function planHTML(): string {
   const b = S.ballot!;
   const h = b.howto;
   const step = nextStep(h);
+  planKey = `${step.phase}|${step.head.map((p) => p[0]).join('')}`;
   const head = step.head.map(([t, em]) => (em ? `<span class="d">${esc(t)}</span>` : esc(t))).join('');
   const reg = registrationAlert(h);
   const open = isOpen('whatif');

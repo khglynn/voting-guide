@@ -444,7 +444,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Pass it on: "I already voted" says thank you', /You voted\. Thank you\./.test(await text(page, '#pass')));
   check('Pass it on: the public message uses official links, never this guide', /(Official election info|Check your registration): https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
   check('Pass it on: Colorado’s registration and official links are the same URL, given once', (pub.match(/govotecolorado\.gov/g) || []).length === 1, pub);
-  check('Pass it on: the confirmed place adds its election office', /Local election office: https?:\/\//.test(pub), pub);
+  check('Pass it on: the public message carries statewide links only, never the county office', !/Local election office|jeffco\.us/.test(pub), pub);
   check('Pass it on: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
   check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
   check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
@@ -458,7 +458,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
 }
 for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close at 7 PM\.$/], ['2026-11-04', /^Voting has closed/]]) {
   const { ctx, page } = await newPage();
-  await page.goto(`${BASE}/?today=${day}`);
+  await page.goto(`${BASE}/?today=${day}&now=10:00`);
   await page.fill('#zip', '80226');
   await page.locator('button[type=submit]').tap();
   await page.waitForSelector('#plan');
@@ -524,6 +524,23 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Orlando');
   await ctx.close();
 }
+// Codex r2 (r1 #3): confirming a filled pick by hand, even with the same value, survives Undo.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80226');
+  await tap(page, '[data-act="bulk"][data-k="agree"]');
+  const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /filled for you/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
+  check('Undo after a hand edit: a measure was filled', !!filled);
+  if (filled) {
+    await openRow(page, filled.id);
+    await tap(page, `#i-${filled.id} [data-act="pick"][data-v="${filled.v}"]`);
+    await tap(page, '.toast [data-act="undo-bulk"]').catch(() => {});
+    const still = await text(page, `#i-${filled.id} .vd .m`);
+    check('Undo after a hand edit: the pick you confirmed by hand stays', new RegExp(filled.v === 'YES' ? 'Yes$' : 'No$').test(still) && !/filled for you/.test(await text(page, `#i-${filled.id}`)), still);
+  }
+  noErrors(page, 'Undo after a hand edit');
+  await ctx.close();
+}
 // #12: after the polls close on Election Day.
 {
   const { ctx, page } = await newPage();
@@ -534,6 +551,23 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const head = await text(page, '.plan-h');
   check('Houston 7:05 PM on Election Day: polls closed, stay in line', /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(head), head);
   noErrors(page, 'Polls closed');
+  await ctx.close();
+}
+// Codex r2 (r1 #12): an open page turns over at 7 PM Central on its own, whatever the device's zone.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Los_Angeles' });
+  await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.fill('#zip', '78702');
+  await page.locator('button[type=submit]').tap();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  const before = await text(page, '.plan-h');
+  await page.clock.runFor(3 * 60_000);
+  await page.waitForTimeout(200);
+  const after = await text(page, '.plan-h');
+  check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
+  check('Austin on a Pacific-time phone: the open page turns to "Polls closed" after 7 PM Central', /^Polls closed at 7 PM/.test(after), after);
+  noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }
 // #9: a sheet and the Full read hold the keyboard; the ballot behind them is inert.

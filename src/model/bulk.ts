@@ -140,3 +140,10 @@ export function undoFills(): boolean {
   return true;
 }
 export const forgetUndo = (): void => { last = null; };
+/* A hand edit to a row takes that row out of the pending Undo, even when you set the same value
+   the batch did: Undo only ever takes back what the batch did on its own. */
+export function touchUndo(id: string): void {
+  if (!last) return;
+  for (const k of [...last.picks.keys()]) if (k === id || k.startsWith(`${id}|`)) last.picks.delete(k);
+  last.auto.delete(id);
+}

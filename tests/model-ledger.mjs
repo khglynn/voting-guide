@@ -191,6 +191,16 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
       if (other) delete S.b.picks[other.id];
       if (changed) delete S.b.picks[changed.id];
     }
+    // Codex r2 (r1 #3 still open): confirming the same value by hand still takes the row out of Undo.
+    {
+      const plan3 = bulk.planAgree();
+      const same = plan3.fills.find((f) => b.byId.get(f.id).kind === 'measure');
+      bulk.applyFills(plan3.fills);
+      if (same) { S.b.picks[same.id] = same.set[same.id]; delete S.b.auto[same.id]; bulk.touchUndo(same.id); }
+      bulk.undoFills();
+      check('undo: a hand pick of the same value the batch set survives Undo', !!same && S.b.picks[same.id] === same.set[same.id], same && same.id);
+      if (same) delete S.b.picks[same.id];
+    }
     // Codex #1: a multi-seat race you started picking is never filled past its seats.
     {
       const bo = open('CO', ['boulder-co']);
@@ -321,7 +331,16 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     const alert = plan.registrationAlert(caH, '2026-10-19');
     check('plan: California on Oct 19 warns registration closes today, then same-day', !!alert && /today/i.test(alert) && /register and vote in person/.test(alert), alert || '');
     const words = (st) => st.head.map((p) => p[0]).join('');
-    check('plan: Election Day says polls close', /Polls close at/.test(words(plan.nextStep(tx, '2026-11-03', false, 10 * 60))));
+    check('plan: Election Day says polls close', /Polls close at 7 PM/.test(words(plan.nextStep(open('TX', ['austin-tx']).howto, '2026-11-03', false, 10 * 60))));
+    // Codex r2 (r1 #12): poll times are compared where the polls are, never on the device's clock.
+    const austin = open('TX', ['austin-tx']).howto;
+    check('plan: Austin is on Central time', JSON.stringify(austin.zones) === '["America/Chicago"]');
+    check('plan: at 7:30 PM Central (01:30 UTC) Austin says the polls closed, on any device', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T01:30:00Z')).phase === 'polls_closed');
+    check('plan: at 6:59 PM Central Austin is still voting', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T00:59:00Z')).phase === 'election_day');
+    const txAll = plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T01:30:00Z'));
+    check('plan: a statewide Texas ballot waits for El Paso (Mountain time) before saying closed', txAll.phase === 'election_day' && /Your local polls close at 7 PM/.test(words(txAll)), words(txAll));
+    check('plan: and says closed once every Texas zone has closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T02:01:00Z')).phase === 'polls_closed');
+    check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);
     check('plan: at 7 PM on Election Day Texas says the polls closed', shut.phase === 'polls_closed' && /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(words(shut)), words(shut));
@@ -351,9 +370,13 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     check('plan: Pensacola ends Oct 31 with no Sunday', pen.end === '2026-10-31' && /escambiavotes\.gov/.test(pen.lookup_url || ''), JSON.stringify(pen));
     check('plan: on Nov 1 Orlando can still vote early, Pensacola cannot', plan.nextStep(open('FL', ['orlando-fl']).howto, '2026-11-01').phase === 'early_open' && plan.nextStep(open('FL', ['pensacola-fl']).howto, '2026-11-01').phase === 'election_day_next');
     check('plan: a ballot with no county window keeps the state window', open('FL', []).howto.early_in_person.end === fl.early_in_person.end);
+    // Codex r2 P1: a statewide Florida ballot (Hamilton County, 32052) must not say early voting started Oct 19.
+    const flAll = plan.nextStep(open('FL', []).howto, '2026-10-19');
+    check('plan: statewide Florida on Oct 19 says early voting starts Sat, Oct 24, and that some counties open sooner', /^Early voting starts Sat, Oct 24\.$/.test(words(flAll)) && flAll.sub.some((x) => /Some counties open sooner/.test(x)), `${words(flAll)} | ${flAll.sub.join(' | ')}`);
+    check('plan: Orlando on Oct 19 still says early voting starts today', /^Early voting starts today, Oct 19\.$/.test(words(plan.nextStep(open('FL', ['orlando-fl']).howto, '2026-10-19'))));
     const a1 = { early_in_person: { start: '2026-10-19', end: '2026-11-01', hours_note: 'A', lookup_url: 'https://a.example', source: 'https://a.example', confidence: 'verified' } };
     const a2 = { early_in_person: { start: '2026-10-24', end: '2026-10-31', hours_note: 'B', lookup_url: 'https://b.example', source: 'https://b.example', confidence: 'verified' } };
-    check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]) === fl && plan.localHowto(fl, [a1, {}]) === fl);
+    check('plan: places that disagree keep the state window', plan.localHowto(fl, [a1, a2]).early_in_person === fl.early_in_person && plan.localHowto(fl, [a1, {}]).early_in_person === fl.early_in_person);
     check('plan: places that agree on dates but not pages keep the state page', plan.localHowto(fl, [a1, { early_in_person: { ...a1.early_in_person, lookup_url: 'https://c.example' } }]).early_in_person.lookup_url === fl.early_in_person.lookup_url);
     check('plan: after Election Day says voting has closed', plan.nextStep(co, '2026-11-04').phase === 'closed');
     check('plan: never a countdown', !/days? (left|until|to Election)/i.test(JSON.stringify([step, cs])));

@@ -2,7 +2,7 @@
    Never a countdown. Dates come only from data/states/{ST}.json; `?today=` overrides the
    clock for testing (util.todayISO). */
 import type { HowTo, PlaceBundle } from '../types';
-import { fmtDate, todayISO, daysBetween, nowMinutes } from '../util';
+import { fmtDate, todayISO, daysBetween, nowOverride, minutesIn } from '../util';
 
 export type Part = [string, boolean]; // text, emphasized (a date or time)
 export interface Step {
@@ -21,6 +21,23 @@ export function clock(s: string | null | undefined): string | null {
   if (/\bnoon\b/i.test(s || '')) return 'noon';
   return null;
 }
+/* Poll times are local. Each state's zones, the zone most of it uses first; a place in a
+   state's other zone is pinned here. A statewide-only ballot in a two-zone state says "your
+   local polls close at" and says they have closed only once they have closed in every zone,
+   so nobody is told the polls are closed while theirs are still open. */
+const STATE_ZONES: Record<string, string[]> = {
+  AL: ['America/Chicago'], CA: ['America/Los_Angeles'], CO: ['America/Denver'], DC: ['America/New_York'],
+  FL: ['America/New_York', 'America/Chicago'], GA: ['America/New_York'], IL: ['America/Chicago'],
+  MD: ['America/New_York'], MO: ['America/Chicago'], NY: ['America/New_York'], OR: ['America/Los_Angeles', 'America/Boise'],
+  PA: ['America/New_York'], TX: ['America/Chicago', 'America/Denver'], WA: ['America/Los_Angeles'],
+};
+const PLACE_ZONE: Record<string, string> = { 'pensacola-fl': 'America/Chicago' };
+export function zonesFor(st: string, places: { id: string }[]): string[] {
+  const all = STATE_ZONES[st] || [];
+  if (!places.length) return all;
+  return [...new Set(places.map((p) => PLACE_ZONE[p.id] || all[0]).filter(Boolean))];
+}
+
 /* "7:00 PM" -> 1140 (minutes after midnight); null when there is no time. */
 export function clockMinutes(s: string | null | undefined): number | null {
   const m = (s || '').match(/\b(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?\b/i);
@@ -32,7 +49,8 @@ export function clockMinutes(s: string | null | undefined): number | null {
 /* A county that runs its own early-voting days (Florida counties choose theirs inside the
    state's range) carries them in its place file. When every place on this ballot agrees,
    the plan uses the county's window, hours and lookup page; otherwise the state's stands. */
-export function localHowto(h: HowTo, places: PlaceBundle[]): HowTo {
+export function localHowto(h0: HowTo, places: PlaceBundle[]): HowTo {
+  const h = places.length ? { ...h0, zones: zonesFor(h0.state, places) } : h0;
   const eps = places.map((p) => p.early_in_person);
   if (!eps.length || eps.some((e) => !e)) return h;
   const first = eps[0]!;
@@ -52,11 +70,10 @@ export function localHowto(h: HowTo, places: PlaceBundle[]): HowTo {
 const day = (iso: string, t: string, absolute = false): string => (absolute ? fmtDate(iso) : iso === t ? 'today' : daysBetween(t, iso) === 1 ? 'tomorrow' : fmtDate(iso));
 const dayNoWeek = (iso: string): string => fmtDate(iso, { weekday: false });
 
-/* `absolute` writes dates, never "today", for text someone may read days later. `now` is the
-   time of day in minutes on this device (`?now=HH:MM` overrides it for testing); it only
-   matters on Election Day, to say the polls have closed. Poll times are local, and people
-   read this where they vote, so the device clock is the right one. */
-export function nextStep(h: HowTo, t = todayISO(), absolute = false, now = nowMinutes()): Step {
+/* `absolute` writes dates, never "today", for text someone may read days later. `now` only
+   matters on Election Day, to say the polls have closed: minutes after midnight where the polls
+   are (a test, or `?now=HH:MM`), or an instant compared in each of the ballot's zones. */
+export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number | Date | null = nowOverride()): Step {
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
@@ -66,7 +83,11 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now = nowMi
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
-    if (!absolute && closesAt != null && now >= closesAt) {
+    const zones = h.zones || STATE_ZONES[h.state] || [];
+    const at = now instanceof Date ? now : new Date();
+    const local = (z: string | null) => (typeof now === 'number' ? now : minutesIn(z, at));
+    const shut = closesAt != null && (zones.length ? zones.every((z) => local(z) >= closesAt) : local(null) >= closesAt);
+    if (!absolute && shut) {
       return {
         phase: 'polls_closed',
         head: [[isMailState(h) ? 'Voting closed at ' : 'Polls closed at ', false], [close, true], ['. Already in line? Stay in line.', false]],
@@ -79,7 +100,8 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now = nowMi
     const url = isMailState(h) ? mb.drop_box_lookup_url || ed.lookup_url : ed.lookup_url;
     return {
       phase: 'election_day',
-      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. Polls close at `, false], [close, true], ['.', false]] : [['Today is Election Day. Polls close at ', false], [close, true], ['.', false]],
+      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]]
+        : [[`Today is Election Day. ${zones.length > 1 ? 'Your local polls' : 'Polls'} close at `, false], [close, true], ['.', false]],
       sub, primary: url ? { label: isMailState(h) && mb.drop_box_lookup_url ? 'Find a drop box or vote center' : 'Find where to vote', url } : null,
     };
   }
@@ -120,7 +142,9 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now = nowMi
     return {
       phase: 'early_before',
       head: d === 1 && !absolute ? [['Early voting starts tomorrow, ', false], [dayNoWeek(ep.start), true], ['.', false]] : [['Early voting starts ', false], [fmtDate(ep.start), true], ['.', false]],
-      sub: [ep.end ? `It runs through ${fmtDate(ep.end)}.` : '', ...sub].filter(Boolean), primary: look ? { label: 'Find early voting places', url: look } : null,
+      // A statewide window whose own note says counties may add days (Florida) says so, since
+      // some voters can start sooner.
+      sub: [ep.end ? `It runs through ${fmtDate(ep.end)}.` : '', /counties may add days|some counties open earlier/i.test(ep.hours_note || '') ? 'Some counties open sooner. Check yours.' : '', ...sub].filter(Boolean), primary: look ? { label: 'Find early voting places', url: look } : null,
     };
   }
   if (ep.available && ep.start && ep.end && t <= ep.end) {

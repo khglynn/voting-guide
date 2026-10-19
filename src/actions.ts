@@ -7,7 +7,7 @@ import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type Sec
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, go, openReader, runAddress } from './app';
-import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, type Plan } from './model/bulk';
+import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { cheatText, shareURL } from './views/cheat';
@@ -19,6 +19,7 @@ const B = () => S.ballot!;
 
 /* ---------- after a decision ---------- */
 function afterPick(id: string, close = true): void {
+  touchUndo(id);
   const was = S.ui.row;
   if (close && S.ui.row === id) { S.ui.row = null; S.ui.keep = id; }
   renderRow(id);
@@ -221,7 +222,7 @@ A['district-change'] = (d) => {
   const g = B().groups.find((x) => x.key === d.g)!;
   const ans = S.b.districts[g.key];
   delete S.b.districts[g.key];
-  if (ans && ans !== '*' && ans !== 'none') { delete S.b.picks[ans]; delete S.b.ranks[ans]; delete S.b.auto[ans]; }
+  if (ans && ans !== '*' && ans !== 'none') { delete S.b.picks[ans]; delete S.b.ranks[ans]; delete S.b.auto[ans]; touchUndo(ans); }
   S.ui.row = `q:${g.key}`;
   renderSection(sectionOf(B().byId.get(g.members[0])!));
   renderSummaries();

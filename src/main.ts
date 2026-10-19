@@ -1,6 +1,7 @@
 /* Boot and input wiring. Flows live in app.ts, controls in actions.ts, drawing in render.ts. */
 import './styles.css';
 import { S, readSaved, persist, parseShareHead } from './state';
+import { stepKey, planKey } from './views/planstrip';
 import { render } from './render';
 import { ensureIndex, openBallot, submitZip } from './app';
 import { A, runAddress } from './actions';
@@ -76,6 +77,15 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
+/* The next step can change while the page sits open: the polls close at 7, or midnight passes.
+   Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
+function refreshPlan(): void {
+  if (!S.ballot || S.view !== 'ballot') return;
+  if (stepKey(S.ballot.howto) !== planKey) render(['plan']);
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshPlan(); });
+window.addEventListener('focus', refreshPlan);
+window.setInterval(refreshPlan, 60_000);
 /* A save link pasted into a tab that already has the guide open changes only the hash. */
 window.addEventListener('hashchange', () => {
   const head = parseShareHead(location.hash);

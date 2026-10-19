@@ -25,15 +25,24 @@ export function todayISO(): string {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
-/* Minutes after midnight on this device; `?now=HH:MM` overrides it for testing. */
-export function nowMinutes(): number {
+/* `?now=HH:MM` (local time where the polls are) for testing; null when absent. */
+export function nowOverride(): number | null {
   try {
     const q = new URLSearchParams(location.search).get('now');
     const m = q && q.match(/^(\d{1,2}):(\d{2})$/);
     if (m) return +m[1] * 60 + +m[2];
   } catch { /* ignore */ }
-  const d = new Date();
-  return d.getHours() * 60 + d.getMinutes();
+  return null;
+}
+/* Minutes after midnight at this instant in a time zone ("America/Chicago"); the device's own
+   clock when the zone is unknown. */
+export function minutesIn(zone: string | null, at: Date): number {
+  if (!zone) return at.getHours() * 60 + at.getMinutes();
+  try {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: zone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(at);
+    const n = (t: string) => +(parts.find((p) => p.type === t)?.value || 0);
+    return (n('hour') % 24) * 60 + n('minute');
+  } catch { return at.getHours() * 60 + at.getMinutes(); }
 }
 export const daysBetween = (a: string, b: string): number => Math.round((parse(b).getTime() - parse(a).getTime()) / 864e5);
 

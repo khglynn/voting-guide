@@ -63,7 +63,8 @@ export function save(key: string, value: unknown): boolean {
 }
 
 let toastTimer: number | undefined;
-export function toast(msg: string): void {
+/* A status message at the bottom; with an action (Undo), it stays long enough to use it. */
+export function toast(msg: string, action?: { label: string; act: string }): void {
   let t = document.querySelector<HTMLDivElement>('.toast');
   if (!t) {
     t = document.createElement('div');
@@ -71,10 +72,16 @@ export function toast(msg: string): void {
     t.setAttribute('role', 'status');
     document.body.appendChild(t);
   }
-  t.textContent = msg;
+  t.innerHTML = `<span class="toast-t">${esc(msg)}</span>${action ? `<button data-act="${esc(action.act)}" data-fk="toast-act">${esc(action.label)}</button>` : ''}`;
   t.hidden = false;
+  t.classList.add('show');
   window.clearTimeout(toastTimer);
-  toastTimer = window.setTimeout(() => { if (t) t.hidden = true; }, 2600);
+  toastTimer = window.setTimeout(() => { if (t) { t.classList.remove('show'); t.hidden = true; } }, action ? 8000 : 2800);
+}
+export function hideToast(): void {
+  const t = document.querySelector<HTMLDivElement>('.toast');
+  if (t) { t.classList.remove('show'); t.hidden = true; }
+  window.clearTimeout(toastTimer);
 }
 
 export async function copyText(text: string): Promise<boolean> {

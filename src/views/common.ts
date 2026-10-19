@@ -4,15 +4,16 @@ import { S } from '../state';
 import { esc, host } from '../util';
 
 export const LEANS: Record<Lean, [number, string]> = {
-  left: [0, 'Left'], lean_left: [1, 'Lean left'], neutral: [2, 'Neutral'], lean_right: [3, 'Lean right'], right: [4, 'Right'],
+  left: [0, 'left'], lean_left: [1, 'leans left'], neutral: [2, 'center'], lean_right: [3, 'leans right'], right: [4, 'right'],
 };
 
-/* Neutral 5-step scale plus words. Never color. */
+/* The neutral five-step lean scale plus a word. Ink only, never red or blue; the middle step
+   is round. "Not rated" is its own visible state, never a blank scale. */
 export function leanHTML(lean: Lean | null, words = true): string {
-  if (!lean) return `<span class="lean"><span class="lean-scale none" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>${words ? '<span>Not rated</span>' : '<span class="vh">Not rated</span>'}</span>`;
-  const [idx, word] = LEANS[lean];
-  const cells = [0, 1, 2, 3, 4].map((i) => `<i class="${i === idx ? 'on' : ''}"></i>`).join('');
-  return `<span class="lean" title="${word}"><span class="lean-scale" role="img" aria-label="Lean: ${word}">${cells}</span>${words ? `<span>${word}</span>` : `<span class="vh">${word}</span>`}</span>`;
+  const word = lean ? LEANS[lean][1] : 'not rated';
+  const idx = lean ? LEANS[lean][0] : -1;
+  const cells = [0, 1, 2, 3, 4].map((i) => `<i class="${i === 2 ? 'mid' : ''}${i === idx ? ' on' : ''}"></i>`).join('');
+  return `<span class="lean${lean ? '' : ' unrated'}"><span class="ls" aria-hidden="true">${cells}</span>${words ? `<span class="lw">${word}</span>` : `<span class="vh">Lean: ${word}</span>`}</span>`;
 }
 
 export const confLabel = (c: string | null | undefined): string =>

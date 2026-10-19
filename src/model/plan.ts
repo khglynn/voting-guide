@@ -21,10 +21,11 @@ export function clock(s: string | null | undefined): string | null {
   if (/\bnoon\b/i.test(s || '')) return 'noon';
   return null;
 }
-const day = (iso: string, t: string): string => (iso === t ? 'today' : daysBetween(t, iso) === 1 ? 'tomorrow' : fmtDate(iso));
+const day = (iso: string, t: string, absolute = false): string => (absolute ? fmtDate(iso) : iso === t ? 'today' : daysBetween(t, iso) === 1 ? 'tomorrow' : fmtDate(iso));
 const dayNoWeek = (iso: string): string => fmtDate(iso, { weekday: false });
 
-export function nextStep(h: HowTo, t = todayISO()): Step {
+/* `absolute` writes dates, never "today", for text someone may read days later. */
+export function nextStep(h: HowTo, t = todayISO(), absolute = false): Step {
   const ed = h.election_day;
   const mb = h.mail_ballot;
   const ep = h.early_in_person;
@@ -38,7 +39,7 @@ export function nextStep(h: HowTo, t = todayISO()): Step {
     const url = isMailState(h) ? mb.drop_box_lookup_url || ed.lookup_url : ed.lookup_url;
     return {
       phase: 'election_day',
-      head: [['Today is Election Day. Polls close at ', false], [close, true], ['.', false]],
+      head: absolute ? [[`Election Day is ${fmtDate(h.election_date)}. Polls close at `, false], [close, true], ['.', false]] : [['Today is Election Day. Polls close at ', false], [close, true], ['.', false]],
       sub, primary: url ? { label: isMailState(h) && mb.drop_box_lookup_url ? 'Find a drop box or vote center' : 'Find where to vote', url } : null,
     };
   }
@@ -52,7 +53,7 @@ export function nextStep(h: HowTo, t = todayISO()): Step {
     const sub: string[] = [];
     if (mb.mail_cutoff_advice) sub.push(firstSentence(mb.mail_cutoff_advice));
     if (ep.available && ep.start) {
-      if (t < ep.start) sub.push(`In-person voting opens ${day(ep.start, t)}.`);
+      if (t < ep.start || (absolute && t === ep.start)) sub.push(`In-person voting opens ${day(ep.start, t, absolute)}.`);
       else if (t === ep.start) sub.push('In-person voting opens today, if you’d rather vote in person.');
       else if (!ep.end || t <= ep.end) sub.push(`You can also vote in person${ep.end ? ` through ${fmtDate(ep.end)}` : ''}.`);
     }
@@ -65,15 +66,15 @@ export function nextStep(h: HowTo, t = todayISO()): Step {
     const d = daysBetween(t, ep.start);
     return {
       phase: 'early_before',
-      head: d === 1 ? [['Early voting starts tomorrow, ', false], [dayNoWeek(ep.start), true], ['.', false]] : [['Early voting starts ', false], [fmtDate(ep.start), true], ['.', false]],
+      head: d === 1 && !absolute ? [['Early voting starts tomorrow, ', false], [dayNoWeek(ep.start), true], ['.', false]] : [['Early voting starts ', false], [fmtDate(ep.start), true], ['.', false]],
       sub: [ep.end ? `It runs through ${fmtDate(ep.end)}.` : '', ...sub].filter(Boolean), primary: look ? { label: 'Find early voting places', url: look } : null,
     };
   }
   if (ep.available && ep.start && ep.end && t <= ep.end) {
-    const head: Part[] = t === ep.start
-      ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
-      : t === ep.end ? [['Today is the last day of early voting.', false]]
-        : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
+    const head: Part[] = absolute ? [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]]
+      : t === ep.start ? [['Early voting starts today, ', false], [dayNoWeek(ep.start), true], ['.', false]]
+        : t === ep.end ? [['Today is the last day of early voting.', false]]
+          : [['Early voting is open through ', false], [fmtDate(ep.end), true], ['.', false]];
     return { phase: 'early_open', head, sub: [...sub, `Or vote on Election Day, ${fmtDate(h.election_date)}, until ${close}.`], primary: look ? { label: 'Find early voting places', url: look } : null };
   }
   return {
@@ -85,7 +86,7 @@ export function nextStep(h: HowTo, t = todayISO()): Step {
 const firstSentence = (s: string): string => { const m = s.match(/^(.+?[.!?])(\s|$)/); return (m ? m[1] : s).trim(); };
 
 /* "Not registered?" when a registration deadline is within a week, from the state file. */
-export function registrationAlert(h: HowTo, t = todayISO()): string | null {
+export function registrationAlert(h: HowTo, t = todayISO(), absolute = false): string | null {
   const open = h.registration.deadlines.filter((d) => d.date && d.date >= t).sort((a, b) => (a.date! < b.date! ? -1 : 1));
   if (!open.length) return null;
   const first = open[0];
@@ -93,8 +94,8 @@ export function registrationAlert(h: HowTo, t = todayISO()): string | null {
   const how = (m: string) => (m === 'online' ? 'online' : m === 'mail' ? 'by mail' : 'in person');
   const allSame = open.every((d) => d.date === first.date);
   const firstLine = allSame
-    ? `${first.date === t ? 'Today is the last day to register' : `The last day to register is ${fmtDate(first.date)}`}.`
-    : `Register ${how(first.method)} by ${day(first.date!, t)}.`;
+    ? `${first.date === t && !absolute ? 'Today is the last day to register' : `The last day to register is ${fmtDate(first.date)}`}.`
+    : `Register ${how(first.method)} by ${day(first.date!, t, absolute)}.`;
   const later = open.filter((d) => d.date !== first.date).pop();
   const laterLine = later && later.method === 'in_person' && later.date === h.election_date && h.registration.same_day_registration
     ? ` After that you can still register and vote in person, through Election Day.`

@@ -58,10 +58,11 @@ const MEASURE_WORDS = /^(?:ballot (?:issue|question)|question|proposition|prop\.
 /* The bit of a measure number that fits a narrow column: "81", "2G", "NN". Null when the
    number is a phrase ("Cook County advisory question: ...") and should be the title instead. */
 export function measureTag(m: Measure): string | null {
-  const n = m.number.trim();
+  const n = m.number.trim().replace(/\s*\([^)]*\)\s*$/, '');
   const tail = n.replace(MEASURE_WORDS, '');
   if (tail !== n && /^[#]?[A-Z0-9-]{1,9}$/i.test(tail)) return tail.replace(/^#/, '');
-  return null;
+  const end = n.match(/\b(?:proposition|prop\.?|amendment|measure|question|issue|proposal)\s+#?([A-Z0-9-]{1,4})$/i);
+  return end ? end[1] : null;
 }
 /* "Ballot Issue 2G" stays; "Cypress-Fairbanks ISD Proposition A" stays; a long advisory
    question title is the number itself. */

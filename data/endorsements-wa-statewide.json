@@ -116,8 +116,8 @@
     "choice": "Colleen Melody",
     "why": "Praises her civil rights work against Trump administration policies; says challenger Scott Edwards is backed by a conservative court-focused group.",
     "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-    "date": "2026-10-09",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "the-stranger-eb",
@@ -126,8 +126,8 @@
     "choice": "Jaime Michelle Hawk",
     "why": "Cites her public defender and ACLU career; criticizes David Stevens for opposing efforts to make juries more representative and for opposing the millionaires tax.",
     "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-    "date": "2026-10-09",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "the-stranger-eb",
@@ -136,8 +136,8 @@
     "choice": "Ian Birk",
     "why": "Praises his analytical approach; notes Sean O'Donnell took donations from police and from a campaign backed by former AG Rob McKenna.",
     "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-    "date": "2026-10-09",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "the-stranger-eb",
@@ -146,8 +146,8 @@
     "choice": "Theo Angelis",
     "why": "Commends his knowledge of the state constitution and immigrant-rights advocacy; notes Dave Larson called the Blake drug-possession decision a setback.",
     "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-    "date": "2026-10-09",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "the-stranger-eb",
@@ -156,8 +156,8 @@
     "choice": "Debra L. Stephens",
     "why": "Wants her retained, citing her authorship of the McCleary school-funding decision.",
     "url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
-    "date": "2026-10-09",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-wa",
@@ -374,9 +374,9 @@
     "target_id": "wa-supreme-court-pos-4",
     "status": "not_found",
     "choice": null,
-    "why": "The July release said the party would decide Position 4 after the primary; a Sept 4 post says it recommends five justices but doesn't name the fifth. Ballotpedia lists only Edwards, Stevens, Larson and Bloom as GOP-endorsed. Check wagop.org.",
-    "url": "https://wagop.org/wagop-endorses-a-slate-of-ten-congressional-candidates-as-election-day-nears/",
-    "date": "2026-10-16",
+    "why": "The party’s July list deferred Position 4 until after the primary. No later Position 4 recommendation was found in the public party pages and searches checked Oct 19.",
+    "url": "https://wagop.org/wagop-completes-official-recommendations-of-candidates-for-the-state-supreme-by-recommending-scott-edwards/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -1038,5 +1038,85 @@
     "url": "https://houserepublicans.wa.gov/",
     "date": "2026-10-16",
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-supreme-court-pos-1",
+    "status": "endorsed",
+    "choice": "Colleen Melody",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "why": "Listed on Fuse’s formal general-election endorsement slate, checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-supreme-court-pos-3",
+    "status": "endorsed",
+    "choice": "Jaime Michelle Hawk",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "why": "Listed on Fuse’s formal general-election endorsement slate, checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-supreme-court-pos-4",
+    "status": "endorsed",
+    "choice": "Ian Birk",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "why": "Listed on Fuse’s formal general-election endorsement slate, checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-supreme-court-pos-5",
+    "status": "endorsed",
+    "choice": "Theo Angelis",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "why": "Listed on Fuse’s formal general-election endorsement slate, checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-supreme-court-pos-7",
+    "status": "endorsed",
+    "choice": "Debra L. Stephens",
+    "url": "https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements",
+    "why": "Listed on Fuse’s formal general-election endorsement slate, checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-initiative-645",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general",
+    "why": "Fuse’s general-election Progressive Voters Guide recommends no.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-initiative-001",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general",
+    "why": "Fuse’s general-election Progressive Voters Guide recommends no.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "fuse-washington",
+    "target_id": "wa-initiative-638",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.progressivevotersguide.com/washington/2026/general",
+    "why": "Fuse’s general-election Progressive Voters Guide recommends no.",
+    "date": "2026-10-19",
+    "confidence": "verified"
   }
 ]

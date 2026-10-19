@@ -194,5 +194,52 @@
     "default_on": false,
     "endorses_candidates": false,
     "endorses_measures": false
+  },
+  {
+    "id": "nra-pvf",
+    "name": "NRA Political Victory Fund",
+    "type": "advocacy",
+    "lean": "right",
+    "lean_basis": "Gun-rights PAC of the National Rifle Association, which calls itself 'a single issue organization' that grades candidates on 'Second Amendment issues' (https://www.nrapvf.org/). No outside rating found; lean reflects its stated mission.",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://www.nrapvf.org/grades/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
+  },
+  {
+    "id": "ga-afl-cio",
+    "name": "Georgia AFL-CIO",
+    "short": "Georgia AFL-CIO",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "The state labor federation says it strengthens the voice of working families by advocating for workers' rights and protections (https://georgiaaflcio.org/). No outside rating found; lean follows its stated mission.",
+    "lean_basis_kind": "mission",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://georgiaaflcio.org/",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
+  },
+  {
+    "id": "gae-fpe",
+    "name": "Georgia Association of Educators Fund for Public Education",
+    "short": "GAE-FPE",
+    "type": "labor",
+    "lean": "lean_left",
+    "lean_basis": "The educators' PAC says it recommends and supports public education champions; GAE describes a mission of public education, opportunity and inclusion (https://gae.org/votes). No outside rating found; lean follows that stated mission.",
+    "lean_basis_kind": "mission",
+    "geography": [
+      "GA"
+    ],
+    "guide_url": "https://gae.org/get-informed/members/2026-gae-fpe-recommended-candidates",
+    "default_on": false,
+    "endorses_candidates": true,
+    "endorses_measures": false
   }
 ]

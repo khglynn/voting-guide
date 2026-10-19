@@ -311,7 +311,7 @@
   "level": "county",
   "jurisdiction": "Los Angeles County",
   "number": "Measure E",
-  "official_title": "Proposed County Charter Amendment. County of Los Angeles Ethics Commission and Community Investment Charter Amendment. Shall the measure amending the Los Angeles County Charter to provide greater independence and structure for the County of Los Angeles Ethics Commission, Office of Ethics Compliance, and Ethics Compliance Officer, including appointment processes, qualifications, term, duties and responsibilities, and to continue uninterrupted the County's commitment to community investment and alternatives to incarceration, as specified in the charter amendment ordinance, be adopted?",
+  "official_title": "County of Los Angeles Ethics Commission and Community Investment Budget Allocation Charter Amendment. Shall the measure amending the Los Angeles County Charter to provide greater independence and structure for the County of Los Angeles Ethics Commission, Office of Ethics Compliance, and Ethics Compliance Officer, including appointment processes, qualifications, term, duties and responsibilities, and to continue uninterrupted the County's commitment to community investment and alternatives to incarceration, as specified in the charter amendment ordinance, be adopted?",
   "plain_summary": "Two things in one vote. It writes the independence, powers and minimum budget ($14.3 million a year) of the new County Ethics Commission into the charter. And it restores 2020's Measure J, which sets aside 10% of the county's flexible general fund for community investment and alternatives to jail.",
   "yes_means": "The Ethics Commission gets charter-protected independence, powers and funding, and the Measure J 10% set-aside is permanently restored.",
   "no_means": "The Ethics Commission still exists under Measure G, but a future Board could weaken it, and the Measure J set-aside expires from the charter in December 2028.",
@@ -328,7 +328,7 @@
    "text": "No opponent is listed on the official ballot. The LA Daily News editorial board urged a no vote, writing that Measure E 'bundles plausibly fine ethics policy changes with the restoration of really bad policy' and that 'ballot box budgeting is simply irresponsible.' Supervisor Kathryn Barger abstained, saying the county 'should not tie the hands of future Boards.'",
    "source": "https://cityhallpass.com/election-2026/measures/county-measure-e"
   },
-  "official_text_url": "https://www.lavote.gov/home/voting-elections/voting-options/interactive-sample-ballot",
+  "official_text_url": "https://content.lavote.gov/docs/rrcc/documents/measures-appearing-on-the-ballot---november-3-2026-rev-8-14-2026-v-4.pdf",
   "official_guide_url": "https://www.californiachoices.org/los-angeles-measure-e-2026",
   "explainers": [
    {
@@ -337,6 +337,6 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-county-measure-e-ethics-comission-measure-j"
    }
   ],
-  "confidence": "sourced"
+  "confidence": "verified"
  }
 ]

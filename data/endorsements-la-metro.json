@@ -534,9 +534,9 @@
   "target_id": "la-city-mayor",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026), so no runoff pick yet. The board endorsed Adam Miller in the June primary (City Hall Pass).",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -544,9 +544,9 @@
   "target_id": "la-city-council-9",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -554,9 +554,9 @@
   "target_id": "la-laccd-seat-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -564,9 +564,9 @@
   "target_id": "la-laccd-seat-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -574,9 +574,9 @@
   "target_id": "la-laccd-seat-6",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -584,39 +584,39 @@
   "target_id": "la-city-prop-te",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the SCNG endorsement list as of Oct 15, 2026. The board endorsed Adam Miller for mayor in the primary and has not endorsed in the runoff. Columnist Susan Shelley's individual recommendations (yes on TE, no on FD and SC) are not board positions.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "date": "2026-10-19",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-daily-news-eb",
   "target_id": "la-city-ordinance-fd",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the SCNG endorsement list as of Oct 15, 2026. The board endorsed Adam Miller for mayor in the primary and has not endorsed in the runoff. Columnist Susan Shelley's individual recommendations (yes on TE, no on FD and SC) are not board positions.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "date": "2026-10-19",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-daily-news-eb",
   "target_id": "la-city-charter-sc",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the SCNG endorsement list as of Oct 15, 2026. The board endorsed Adam Miller for mayor in the primary and has not endorsed in the runoff. Columnist Susan Shelley's individual recommendations (yes on TE, no on FD and SC) are not board positions.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-16",
-  "confidence": "sourced"
+  "date": "2026-10-19",
+  "confidence": "verified"
  },
  {
   "endorser_id": "la-daily-news-eb",
   "target_id": "ca-us-house-34",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -624,9 +624,9 @@
   "target_id": "ca-us-house-36",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -634,9 +634,9 @@
   "target_id": "ca-us-house-37",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -644,9 +644,9 @@
   "target_id": "ca-us-house-30",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -654,9 +654,9 @@
   "target_id": "ca-state-senate-26",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -664,9 +664,9 @@
   "target_id": "ca-state-senate-28",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -674,9 +674,9 @@
   "target_id": "ca-assembly-51",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -684,9 +684,9 @@
   "target_id": "ca-assembly-54",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -694,9 +694,9 @@
   "target_id": "ca-assembly-55",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -704,9 +704,9 @@
   "target_id": "ca-assembly-61",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -714,9 +714,9 @@
   "target_id": "ca-assembly-57",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -724,9 +724,9 @@
   "target_id": "fullerton-council-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -734,9 +734,9 @@
   "target_id": "fullerton-council-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -744,9 +744,9 @@
   "target_id": "fullerton-fsd-area-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -754,9 +754,9 @@
   "target_id": "fullerton-fjuhsd-area-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -764,9 +764,9 @@
   "target_id": "fullerton-fjuhsd-area-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -774,9 +774,9 @@
   "target_id": "nocccd-area-6",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1784,9 +1784,9 @@
   "target_id": "la-city-mayor",
   "status": "endorsed",
   "choice": "Karen Ruth Bass",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1794,9 +1794,9 @@
   "target_id": "la-city-attorney",
   "status": "endorsed",
   "choice": "Marissa Roy",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1804,9 +1804,9 @@
   "target_id": "la-city-council-3",
   "status": "endorsed",
   "choice": "Barri Worth Girvan",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1814,9 +1814,9 @@
   "target_id": "la-city-council-9",
   "status": "endorsed",
   "choice": "Jose Ugarte",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1824,9 +1824,9 @@
   "target_id": "la-county-sheriff",
   "status": "endorsed",
   "choice": "Robert G. Luna",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1834,9 +1834,9 @@
   "target_id": "la-county-judge-64",
   "status": "endorsed",
   "choice": "Maria Ghobadi",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1844,9 +1844,9 @@
   "target_id": "la-county-judge-65",
   "status": "endorsed",
   "choice": "Justin Allen Clayton",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1854,9 +1854,9 @@
   "target_id": "la-county-judge-87",
   "status": "endorsed",
   "choice": "David DeJute",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1864,9 +1864,9 @@
   "target_id": "la-laccd-seat-2",
   "status": "endorsed",
   "choice": "Steven F. Veres",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1874,9 +1874,9 @@
   "target_id": "la-laccd-seat-4",
   "status": "endorsed",
   "choice": "Darryn Harris",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1884,9 +1884,9 @@
   "target_id": "la-laccd-seat-6",
   "status": "endorsed",
   "choice": "Randall Winston",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1894,9 +1894,9 @@
   "target_id": "la-county-judge-131",
   "status": "not_found",
   "choice": null,
-  "why": "The party's Nov 3 endorsement page lists picks for Superior Court Offices 64, 65 and 87, but none for Office 131 (checked Oct 17, 2026).",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1914,9 +1914,9 @@
   "target_id": "la-city-charter-la",
   "status": "endorsed",
   "choice": "NO",
-  "why": "The party's 2026 ballot measure table lists Measure LA: NO.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1924,9 +1924,9 @@
   "target_id": "la-city-charter-pl",
   "status": "no_position",
   "choice": null,
-  "why": "The party's 2026 ballot measure table lists Measure PL as 'No Endorsement.'",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "The November measure table says no endorsement.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1934,9 +1934,9 @@
   "target_id": "la-city-charter-ee",
   "status": "endorsed",
   "choice": "NO",
-  "why": "The party's 2026 ballot measure table lists Measure EE: NO.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1944,9 +1944,9 @@
   "target_id": "la-city-charter-prk",
   "status": "endorsed",
   "choice": "YES",
-  "why": "The party's 2026 ballot measure table lists Measure PRK: YES.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1954,9 +1954,9 @@
   "target_id": "la-city-charter-prt",
   "status": "endorsed",
   "choice": "YES",
-  "why": "The party's 2026 ballot measure table lists Measure PRT: YES.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1984,9 +1984,9 @@
   "target_id": "la-county-measure-a",
   "status": "endorsed",
   "choice": "YES",
-  "why": "The party's 2026 ballot measure table lists Measure A: YES.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1994,9 +1994,9 @@
   "target_id": "la-county-measure-e",
   "status": "endorsed",
   "choice": "YES",
-  "why": "The party's 2026 ballot measure table lists Measure E: YES.",
-  "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+  "url": "https://www.lacdp.org/ballotmeasures",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2044,9 +2044,9 @@
   "target_id": "ca-state-senate-24",
   "status": "not_found",
   "choice": null,
-  "why": "Not listed on the party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2054,9 +2054,9 @@
   "target_id": "ca-state-senate-26",
   "status": "not_found",
   "choice": null,
-  "why": "Not listed on the party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2114,9 +2114,9 @@
   "target_id": "ca-assembly-57",
   "status": "not_found",
   "choice": null,
-  "why": "Not listed on the party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2134,9 +2134,9 @@
   "target_id": "la-county-judge-64",
   "status": "endorsed",
   "choice": "Maria Ghobadi",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2144,9 +2144,9 @@
   "target_id": "la-city-attorney",
   "status": "endorsed",
   "choice": "John McKinney",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2164,9 +2164,9 @@
   "target_id": "la-city-council-3",
   "status": "endorsed",
   "choice": "Timothy K. Gaspar",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2194,9 +2194,9 @@
   "target_id": "la-city-charter-la",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure LA: NO.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2204,9 +2204,9 @@
   "target_id": "la-city-charter-pl",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PL: NO.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2214,9 +2214,9 @@
   "target_id": "la-city-charter-ee",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure EE: NO.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2224,9 +2224,9 @@
   "target_id": "la-city-charter-prk",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PRK: NO.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2234,9 +2234,9 @@
   "target_id": "la-city-charter-prt",
   "status": "endorsed",
   "choice": "NO",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure PRT: NO.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2264,9 +2264,9 @@
   "target_id": "la-county-measure-a",
   "status": "endorsed",
   "choice": "YES",
-  "why": "Its Nov 2026 endorsement lookup tool, linked from lagop.org, lists Measure A: YES.",
+  "why": "The party’s public lookup lists this choice. Its source label is: Local measure recommendation.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2276,7 +2276,7 @@
   "choice": "NO",
   "why": "Its lookup tool says no, describing E as an 'ethics commission measure that reaffirms wasteful programs.'",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2484,9 +2484,9 @@
   "target_id": "la-city-mayor",
   "status": "endorsed",
   "choice": "Karen Ruth Bass",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026). The Fed's own release: 'Los Angeles Labor Movement Endorses Mayor Karen Bass for Re-Election.'",
-  "url": "https://thelafed.org/news/los-angeles-labor-movement-endorses-mayor-karen-bass-for-re-election/",
-  "date": "2026-10-17",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2494,9 +2494,9 @@
   "target_id": "la-city-attorney",
   "status": "endorsed",
   "choice": "Marissa Roy",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2504,9 +2504,9 @@
   "target_id": "la-city-council-3",
   "status": "endorsed",
   "choice": "Barri Worth Girvan",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026). The Fed's own page: 'The Democratic Party and Trusted Labor Organizations Support Barri Worth Girvan.'",
-  "url": "https://thelafed.org/take-action/barri4la/",
-  "date": "2026-10-17",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2514,9 +2514,9 @@
   "target_id": "la-county-sheriff",
   "status": "endorsed",
   "choice": "Robert G. Luna",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2524,9 +2524,9 @@
   "target_id": "la-laccd-seat-2",
   "status": "endorsed",
   "choice": "Steven F. Veres",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2534,9 +2534,9 @@
   "target_id": "la-laccd-seat-6",
   "status": "endorsed",
   "choice": "Randall Winston",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2544,9 +2544,9 @@
   "target_id": "ca-state-senate-24",
   "status": "endorsed",
   "choice": "John M. Erickson",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2554,49 +2554,49 @@
   "target_id": "la-city-council-9",
   "status": "not_found",
   "choice": null,
-  "why": "The Fed's November 2026 guide lists an LA City Council pick only for District 3, none for District 9 (checked Oct 17, 2026).",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-prop-te",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-la",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-pl",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-ee",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2604,39 +2604,39 @@
   "target_id": "la-city-charter-prk",
   "status": "endorsed",
   "choice": "YES",
-  "why": "Listed as 'Measure PRK - Yes' in the LA Fed's November 2026 voter guide.",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-prt",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-ordinance-fd",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-city-charter-sc",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -2644,19 +2644,19 @@
   "target_id": "la-county-measure-a",
   "status": "endorsed",
   "choice": "YES",
-  "why": "Listed as 'Measure A - Yes' in the LA Fed's November 2026 voter guide.",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "la-fed",
   "target_id": "la-county-measure-e",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not in the LA Fed's November 2026 voter guide, whose local-measure list (County A and LA City PRK for this area) is complete; it took no position.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3564,9 +3564,9 @@
   "target_id": "ca-us-house-26",
   "status": "endorsed",
   "choice": "Sam Gallucci",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3594,9 +3594,9 @@
   "target_id": "ca-us-house-27",
   "status": "endorsed",
   "choice": "Jason Gibbs",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3624,9 +3624,9 @@
   "target_id": "ca-us-house-28",
   "status": "endorsed",
   "choice": "April A. Verlato",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3654,9 +3654,9 @@
   "target_id": "ca-us-house-29",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3684,9 +3684,9 @@
   "target_id": "ca-us-house-30",
   "status": "endorsed",
   "choice": "Scott Alan Meyers",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3714,9 +3714,9 @@
   "target_id": "ca-us-house-32",
   "status": "endorsed",
   "choice": "Larry Thompson",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3744,9 +3744,9 @@
   "target_id": "ca-us-house-34",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3774,9 +3774,9 @@
   "target_id": "ca-us-house-36",
   "status": "endorsed",
   "choice": "Houston Brignano",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3804,9 +3804,9 @@
   "target_id": "ca-us-house-37",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3834,9 +3834,9 @@
   "target_id": "ca-us-house-43",
   "status": "endorsed",
   "choice": "Cristian Morales",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3864,9 +3864,9 @@
   "target_id": "ca-us-house-44",
   "status": "endorsed",
   "choice": "Genevieve Angel",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3894,9 +3894,9 @@
   "target_id": "ca-us-house-41",
   "status": "endorsed",
   "choice": "Mitch Clemmons",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3924,9 +3924,9 @@
   "target_id": "ca-us-house-45",
   "status": "endorsed",
   "choice": "Chuong V. Vo",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3954,9 +3954,9 @@
   "target_id": "ca-us-house-46",
   "status": "endorsed",
   "choice": "David Pan",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3984,9 +3984,9 @@
   "target_id": "ca-state-senate-20",
   "status": "endorsed",
   "choice": "Tony Rodriguez",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4014,9 +4014,9 @@
   "target_id": "ca-state-senate-24",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4044,9 +4044,9 @@
   "target_id": "ca-state-senate-26",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4074,9 +4074,9 @@
   "target_id": "ca-state-senate-28",
   "status": "endorsed",
   "choice": "Joe Lisuzzo",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4104,9 +4104,9 @@
   "target_id": "ca-state-senate-34",
   "status": "endorsed",
   "choice": "Rhonda Shader",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4134,9 +4134,9 @@
   "target_id": "ca-assembly-40",
   "status": "not_found",
   "choice": null,
-  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4164,9 +4164,9 @@
   "target_id": "ca-assembly-42",
   "status": "endorsed",
   "choice": "Ted Nordblum",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4194,9 +4194,9 @@
   "target_id": "ca-assembly-43",
   "status": "endorsed",
   "choice": "Ricardo Benitez",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4224,9 +4224,9 @@
   "target_id": "ca-assembly-44",
   "status": "endorsed",
   "choice": "Carolyn Daniels",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4254,9 +4254,9 @@
   "target_id": "ca-assembly-46",
   "status": "endorsed",
   "choice": "Tracey Schroeder",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4284,9 +4284,9 @@
   "target_id": "ca-assembly-51",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4314,9 +4314,9 @@
   "target_id": "ca-assembly-52",
   "status": "endorsed",
   "choice": "Andrea Lee Anderson",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4344,9 +4344,9 @@
   "target_id": "ca-assembly-54",
   "status": "not_found",
   "choice": null,
-  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4374,9 +4374,9 @@
   "target_id": "ca-assembly-55",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4404,9 +4404,9 @@
   "target_id": "ca-assembly-57",
   "status": "endorsed",
   "choice": "Constance Jewel Menzies",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4434,9 +4434,9 @@
   "target_id": "ca-assembly-59",
   "status": "endorsed",
   "choice": "Phillip Chen",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4464,9 +4464,9 @@
   "target_id": "ca-assembly-61",
   "status": "not_found",
   "choice": null,
-  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4494,9 +4494,9 @@
   "target_id": "ca-assembly-65",
   "status": "endorsed",
   "choice": "Lydia A. Gutiérrez",
-  "why": "On the California Republican Party endorsements page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4524,9 +4524,9 @@
   "target_id": "ca-assembly-66",
   "status": "not_found",
   "choice": null,
-  "why": "No Republican is on the ballot here, and the party endorsements page names no one in this district.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4554,9 +4554,9 @@
   "target_id": "ca-assembly-67",
   "status": "not_found",
   "choice": null,
-  "why": "The party endorsements page skips this district, though a Republican is on the ballot.",
+  "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
   "url": "https://cagop.org/endorsements/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4584,9 +4584,9 @@
   "target_id": "ca-us-house-26",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4604,9 +4604,9 @@
   "target_id": "ca-us-house-27",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4624,9 +4624,9 @@
   "target_id": "ca-us-house-28",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4644,9 +4644,9 @@
   "target_id": "ca-us-house-29",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4664,9 +4664,9 @@
   "target_id": "ca-us-house-32",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4684,9 +4684,9 @@
   "target_id": "ca-us-house-43",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4704,9 +4704,9 @@
   "target_id": "ca-us-house-44",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4724,9 +4724,9 @@
   "target_id": "ca-state-senate-20",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4744,9 +4744,9 @@
   "target_id": "ca-assembly-40",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4764,9 +4764,9 @@
   "target_id": "ca-assembly-42",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4784,9 +4784,9 @@
   "target_id": "ca-assembly-43",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4804,9 +4804,9 @@
   "target_id": "ca-assembly-44",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4824,9 +4824,9 @@
   "target_id": "ca-assembly-46",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4844,9 +4844,9 @@
   "target_id": "ca-assembly-52",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4864,9 +4864,9 @@
   "target_id": "ca-assembly-65",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4884,9 +4884,9 @@
   "target_id": "ca-assembly-66",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming.",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
   "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5214,9 +5214,9 @@
   "target_id": "ca-us-house-41",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5224,9 +5224,9 @@
   "target_id": "ca-us-house-46",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5234,9 +5234,9 @@
   "target_id": "ca-assembly-59",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Southern California News Group endorsement list (updated Oct 15, 2026). The board says more endorsements are coming. (Same board as the Daily News.)",
-  "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-  "date": "2026-10-17",
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5384,9 +5384,9 @@
   "target_id": "ca-assembly-65",
   "status": "endorsed",
   "choice": "Ayanna Davis",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5394,9 +5394,9 @@
   "target_id": "ca-assembly-66",
   "status": "endorsed",
   "choice": "Paul Seo",
-  "why": "On the LA County Democratic Party's Nov 3, 2026 endorsement page (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://www.lacdp.org/candidates",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5404,9 +5404,9 @@
   "target_id": "la-laccd-seat-4",
   "status": "endorsed",
   "choice": "Darryn Harris",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5414,9 +5414,9 @@
   "target_id": "ca-us-house-26",
   "status": "endorsed",
   "choice": "Jacqui Irwin",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5424,9 +5424,9 @@
   "target_id": "ca-us-house-27",
   "status": "endorsed",
   "choice": "George Whitesides",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5434,9 +5434,9 @@
   "target_id": "ca-us-house-28",
   "status": "endorsed",
   "choice": "Judy Chu",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5444,9 +5444,9 @@
   "target_id": "ca-us-house-29",
   "status": "endorsed",
   "choice": "Luz Maria Rivas",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5454,9 +5454,9 @@
   "target_id": "ca-us-house-30",
   "status": "endorsed",
   "choice": "Laura Friedman",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5464,9 +5464,9 @@
   "target_id": "ca-us-house-32",
   "status": "endorsed",
   "choice": "Brad Sherman",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5474,9 +5474,9 @@
   "target_id": "ca-us-house-34",
   "status": "endorsed",
   "choice": "Jimmy Gomez",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5484,9 +5484,9 @@
   "target_id": "ca-us-house-36",
   "status": "endorsed",
   "choice": "Ted W. Lieu",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5494,9 +5494,9 @@
   "target_id": "ca-us-house-37",
   "status": "endorsed",
   "choice": "Sydney Kamlager-Dove",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5504,9 +5504,9 @@
   "target_id": "ca-us-house-43",
   "status": "endorsed",
   "choice": "Maxine Waters",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5514,9 +5514,9 @@
   "target_id": "ca-us-house-44",
   "status": "endorsed",
   "choice": "Nanette Diaz Barragan",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5524,9 +5524,9 @@
   "target_id": "ca-state-senate-20",
   "status": "endorsed",
   "choice": "Caroline Menjivar",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5534,9 +5534,9 @@
   "target_id": "ca-state-senate-26",
   "status": "endorsed",
   "choice": "Sara Hernandez",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5544,9 +5544,9 @@
   "target_id": "ca-state-senate-28",
   "status": "endorsed",
   "choice": "Lola Smallwood-Cuevas",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5554,9 +5554,9 @@
   "target_id": "ca-assembly-40",
   "status": "endorsed",
   "choice": "Pilar Schiavo",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5564,9 +5564,9 @@
   "target_id": "ca-assembly-42",
   "status": "endorsed",
   "choice": "Deborah Klein Lopez",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5574,9 +5574,9 @@
   "target_id": "ca-assembly-43",
   "status": "endorsed",
   "choice": "Celeste Rodriguez",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5584,9 +5584,9 @@
   "target_id": "ca-assembly-44",
   "status": "endorsed",
   "choice": "Nicholas \"Nick\" Schultz",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5594,9 +5594,9 @@
   "target_id": "ca-assembly-46",
   "status": "endorsed",
   "choice": "Jesse Gabriel",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5604,9 +5604,9 @@
   "target_id": "ca-assembly-51",
   "status": "endorsed",
   "choice": "Rick Chavez Zbur",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5614,9 +5614,9 @@
   "target_id": "ca-assembly-52",
   "status": "endorsed",
   "choice": "Jessica Caloza",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5624,9 +5624,9 @@
   "target_id": "ca-assembly-54",
   "status": "endorsed",
   "choice": "Mark Gonzalez",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5634,9 +5634,9 @@
   "target_id": "ca-assembly-55",
   "status": "endorsed",
   "choice": "Isaac G. Bryan",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5644,9 +5644,9 @@
   "target_id": "ca-assembly-57",
   "status": "endorsed",
   "choice": "Sade Elhawary",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5654,9 +5654,9 @@
   "target_id": "ca-assembly-61",
   "status": "endorsed",
   "choice": "Tina Simone McKinnor",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5664,9 +5664,9 @@
   "target_id": "ca-assembly-65",
   "status": "endorsed",
   "choice": "Ayanna Davis",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5674,9 +5674,9 @@
   "target_id": "ca-assembly-66",
   "status": "endorsed",
   "choice": "Paul Seo",
-  "why": "In the LA County Federation of Labor's November 2026 voter guide (checked Oct 17, 2026).",
+  "why": "Listed in the published November 2026 endorsement guide.",
   "url": "https://thelafed.org/resource/lalaborvoterguide/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5684,9 +5684,9 @@
   "target_id": "la-county-judge-65",
   "status": "endorsed",
   "choice": "Justin Allen Clayton",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup, credited to former DA Steve Cooley (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended (Steve Cooley).",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5694,9 +5694,9 @@
   "target_id": "la-county-judge-87",
   "status": "endorsed",
   "choice": "Anthony (A.J.) Bayne",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup, credited to former DA Steve Cooley (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended (Steve Cooley).",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5714,9 +5714,9 @@
   "target_id": "la-laccd-seat-2",
   "status": "endorsed",
   "choice": "Kristina Irwin",
-  "why": "Listed as the pick in the LA County Republican Party's Nov 3, 2026 lookup, marked as endorsed by the allied group Reform California rather than by the party itself (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Reform CA.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5724,9 +5724,9 @@
   "target_id": "la-laccd-seat-4",
   "status": "endorsed",
   "choice": "Elaine Alaniz",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5734,9 +5734,9 @@
   "target_id": "la-laccd-seat-6",
   "status": "endorsed",
   "choice": "Tonia Arey",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5744,9 +5744,9 @@
   "target_id": "ca-us-house-26",
   "status": "endorsed",
   "choice": "Sam Gallucci",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5754,9 +5754,9 @@
   "target_id": "ca-us-house-27",
   "status": "endorsed",
   "choice": "Jason Gibbs",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5764,9 +5764,9 @@
   "target_id": "ca-us-house-28",
   "status": "endorsed",
   "choice": "April A. Verlato",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5774,9 +5774,9 @@
   "target_id": "ca-us-house-30",
   "status": "endorsed",
   "choice": "Scott Alan Meyers",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5784,9 +5784,9 @@
   "target_id": "ca-us-house-32",
   "status": "endorsed",
   "choice": "Larry Thompson",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5794,9 +5794,9 @@
   "target_id": "ca-us-house-36",
   "status": "endorsed",
   "choice": "Houston Brignano",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5804,9 +5804,9 @@
   "target_id": "ca-us-house-43",
   "status": "endorsed",
   "choice": "Cristian Morales",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5814,9 +5814,9 @@
   "target_id": "ca-us-house-44",
   "status": "endorsed",
   "choice": "Genevieve Angel",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5824,9 +5824,9 @@
   "target_id": "ca-state-senate-24",
   "status": "endorsed",
   "choice": "Brian Goldsmith",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5834,9 +5834,9 @@
   "target_id": "ca-state-senate-28",
   "status": "endorsed",
   "choice": "Joe Lisuzzo",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5844,9 +5844,9 @@
   "target_id": "ca-assembly-40",
   "status": "endorsed",
   "choice": "Rickey Tracy Hayes II",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5854,9 +5854,9 @@
   "target_id": "ca-assembly-42",
   "status": "endorsed",
   "choice": "Ted Nordblum",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5864,9 +5864,9 @@
   "target_id": "ca-assembly-43",
   "status": "endorsed",
   "choice": "Ricardo Benitez",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5874,9 +5874,9 @@
   "target_id": "ca-assembly-44",
   "status": "endorsed",
   "choice": "Carolyn Daniels",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5884,9 +5884,9 @@
   "target_id": "ca-assembly-46",
   "status": "endorsed",
   "choice": "Tracey Schroeder",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5894,9 +5894,9 @@
   "target_id": "ca-assembly-55",
   "status": "endorsed",
   "choice": "Ashley M. Brown",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5904,9 +5904,9 @@
   "target_id": "ca-assembly-57",
   "status": "endorsed",
   "choice": "Constance Jewel Menzies",
-  "why": "Endorsed by the LA County Republican Party in its Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -5924,9 +5924,9 @@
   "target_id": "ca-assembly-66",
   "status": "endorsed",
   "choice": "Paul Seo",
-  "why": "Recommended (not a formal party endorsement) in the LA County Republican Party's Nov 3, 2026 endorsement lookup (checked Oct 17, 2026).",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
   "url": "https://lagop-endorsement-lookup.vercel.app/",
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -6267,6 +6267,756 @@
   "why": "Knock LA's Nov 2026 guide lists 'No Recommendation' for this race.",
   "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
   "date": "2026-10-11",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-attorney",
+  "status": "endorsed",
+  "choice": "John McKinney",
+  "why": "Says the office 'is not the best place to try out trendy activist ideas' and that Roy's platform signals using the office against businesses; prefers McKinney's prosecutor experience.",
+  "url": "https://www.dailynews.com/2026/08/31/endorsement-john-mckinney-for-los-angeles-city-attorney/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-council-3",
+  "status": "endorsed",
+  "choice": "Timothy K. Gaspar",
+  "why": "Endorsed Gaspar before the primary as the business-minded candidate and kept him on its Nov 3 endorsement list (updated Oct 15, 2026).",
+  "url": "https://www.dailynews.com/2026/04/29/endorsement-timothy-gaspar-for-los-angeles-city-council/",
+  "date": "2026-04-29",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-sheriff",
+  "status": "endorsed",
+  "choice": "Robert G. Luna",
+  "why": "Endorsed Luna over Villanueva before the primary and kept him on its Nov 3 endorsement list (updated Oct 15, 2026).",
+  "url": "https://www.dailynews.com/2026/05/13/endorsement-robert-luna-for-los-angeles-county-sheriff-2/",
+  "date": "2026-05-13",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-judge-64",
+  "status": "endorsed",
+  "choice": "Maria Ghobadi",
+  "why": "Endorsed Ghobadi on May 17, 2026 and kept her on its Nov 3 endorsement list (updated Oct 15, 2026).",
+  "url": "https://www.dailynews.com/2026/05/17/endorsement-maria-ghobadi-for-superior-court-office-no-64/",
+  "date": "2026-05-17",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-judge-65",
+  "status": "endorsed",
+  "choice": "Anna Slotky Reitano",
+  "why": "Endorsed Oct 1, 2026 after the board's primary pick, Chellei Jimenez, was eliminated.",
+  "url": "https://www.dailynews.com/2026/10/01/endorsement-anna-slotky-reitano-for-la-superior-court-office-no-65/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-judge-87",
+  "status": "endorsed",
+  "choice": "Anthony (A.J.) Bayne",
+  "why": "Endorsed Bayne on May 28, 2026 and kept him on its Nov 3 endorsement list (updated Oct 15, 2026).",
+  "url": "https://www.dailynews.com/2026/05/28/endorsement-anthony-bayne-for-superior-court-office-no-87/",
+  "date": "2026-05-28",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-judge-131",
+  "status": "endorsed",
+  "choice": "Donna Tryfman",
+  "why": "Listed on the SCNG roundup. In May the board called both 'solid candidates' but passed on Ross 'due to his touting of support from the far-left groups.'",
+  "url": "https://www.dailynews.com/2026/05/19/endorsement-donna-tryfman-for-superior-court-office-no-131/",
+  "date": "2026-05-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-state-senate-24",
+  "status": "endorsed",
+  "choice": "Brian Goldsmith",
+  "why": "Calls Goldsmith 'the more discernibly center-left candidate' who would bring 'an outsider perspective and private sector experience'; Erickson is 'the more progressive candidate.'",
+  "url": "https://www.dailynews.com/2026/09/26/endorsement-brian-goldsmith-for-senate-district-24/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-pl",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "'Perhaps the least objectionable' of the amendments: consolidating seven area planning commissions into one 'is not only more efficient but also saves time and money,' and there is 'no practical need' to cap floor area in the charter.",
+  "url": "https://www.dailynews.com/2026/10/10/endorsement-no-on-los-angeles-charter-amendments-la-ee-prk-prt-yes-on-pl/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-la",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Opposes it 'solely because of its provision allowing the city to engage in commercial enterprises'; otherwise calls it 'a grab bag of reforms.'",
+  "url": "https://www.dailynews.com/2026/10/10/endorsement-no-on-los-angeles-charter-amendments-la-ee-prk-prt-yes-on-pl/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-ee",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Likes the inspector general provisions but says raising the referendum threshold erodes 'the power of the public to check City Hall' and the Council meeting cut is the 'most damning provision.'",
+  "url": "https://www.dailynews.com/2026/10/10/endorsement-no-on-los-angeles-charter-amendments-la-ee-prk-prt-yes-on-pl/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-prk",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "'Mostly pointless': says the Council should stop charging parks for utilities and other costs instead. 'End the theft, no need for a charter amendment.'",
+  "url": "https://www.dailynews.com/2026/10/10/endorsement-no-on-los-angeles-charter-amendments-la-ee-prk-prt-yes-on-pl/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-prt",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Calls the Port workforce-disclosure rule 'a move ... to bolster union influence' that adds 'costly paperwork hurdles.'",
+  "url": "https://www.dailynews.com/2026/10/10/endorsement-no-on-los-angeles-charter-amendments-la-ee-prk-prt-yes-on-pl/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-measure-a",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says arbitrators 'look at the terms of comparable contracts and not at the fiscal condition of the county,' and cites Vallejo's 2008 bankruptcy and 2010 repeal of binding arbitration.",
+  "url": "https://www.dailynews.com/2026/10/08/endorsement-no-on-los-angeles-countys-measure-a/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-county-measure-e",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "Says Measure E 'bundles plausibly fine ethics policy changes with the restoration of really bad policy' (the Measure J set-aside) and that 'ballot box budgeting is simply irresponsible.'",
+  "url": "https://www.dailynews.com/2026/08/31/endorsement-vote-no-on-los-angeles-county-measure-e/",
+  "date": "2026-10-16",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-mayor",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-council-9",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-laccd-seat-2",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-laccd-seat-4",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-laccd-seat-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-prop-te",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-ordinance-fd",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "la-city-charter-sc",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-34",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-36",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-37",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-30",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-state-senate-26",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-state-senate-28",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-51",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-54",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-55",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-61",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-57",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-26",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-27",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-28",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-29",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-32",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-us-house-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-state-senate-20",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-40",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-42",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-43",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-44",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-46",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-52",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-65",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "oc-register-eb",
+  "target_id": "ca-assembly-66",
+  "status": "not_found",
+  "choice": null,
+  "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+  "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "knock-la",
+  "target_id": "ca-coa-2d-retention",
+  "status": "not_found",
+  "choice": null,
+  "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+  "why": "The judicial recommendations still say “coming soon” when checked Oct 19, 2026.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-40",
+  "status": "endorsed",
+  "choice": "Rickey Tracy Hayes II",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-42",
+  "status": "endorsed",
+  "choice": "Ted Nordblum",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-44",
+  "status": "endorsed",
+  "choice": "Carolyn Daniels",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-46",
+  "status": "endorsed",
+  "choice": "Tracey Schroeder",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-54",
+  "status": "endorsed",
+  "choice": "Alexandra Briseno",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-assembly-59",
+  "status": "endorsed",
+  "choice": "Phillip Chen",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Tony Rodriguez",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-state-senate-28",
+  "status": "endorsed",
+  "choice": "Joe Lisuzzo",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-state-senate-34",
+  "status": "endorsed",
+  "choice": "Rhonda Shader",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Mitch Clemmons",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "la-laccd-seat-2",
+  "status": "endorsed",
+  "choice": "Kristina Irwin",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "la-laccd-seat-4",
+  "status": "endorsed",
+  "choice": "Elaine Alaniz",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "hjta-pac",
+  "target_id": "la-laccd-seat-6",
+  "status": "endorsed",
+  "choice": "Tonia Arey",
+  "url": "https://www.hjta.org/2026VotingGuide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "ca-assembly-67",
+  "status": "endorsed",
+  "choice": "Mark Pulido",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-fed",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Linda Sánchez",
+  "url": "https://thelafed.org/resource/lalaborvoterguide/",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "lacdp",
+  "target_id": "ca-assembly-67",
+  "status": "endorsed",
+  "choice": "Mark Pulido",
+  "url": "https://www.lacdp.org/candidates",
+  "why": "Listed in the published November 2026 endorsement guide.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-52",
+  "status": "endorsed",
+  "choice": "Andrea Lee Anderson",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-54",
+  "status": "endorsed",
+  "choice": "Alexandra Briseno",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-61",
+  "status": "endorsed",
+  "choice": "Brian Lockwood",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: Recommended.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-assembly-67",
+  "status": "endorsed",
+  "choice": "Paulo Morales",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-state-senate-20",
+  "status": "endorsed",
+  "choice": "Tony Rodriguez",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-state-senate-34",
+  "status": "endorsed",
+  "choice": "Rhonda Shader",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-us-house-41",
+  "status": "endorsed",
+  "choice": "Mitch Clemmons",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "la-county-gop",
+  "target_id": "ca-us-house-45",
+  "status": "endorsed",
+  "choice": "Chuong V. Vo",
+  "url": "https://lagop-endorsement-lookup.vercel.app/",
+  "why": "The party’s public lookup lists this choice. Its source label is: LAGOP.",
+  "date": "2026-10-19",
   "confidence": "verified"
  }
 ]

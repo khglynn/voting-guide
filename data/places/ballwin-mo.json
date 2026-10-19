@@ -10,11 +10,11 @@
     "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
     "phone": "314-615-1800"
   },
-  "sample_ballot_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+  "sample_ballot_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275",
   "zips": [
     "63011"
   ],
-  "zip_caveats": "Ballwin is in west St. Louis County, NOT the City of St. Louis: you vote with the county Board of Elections in St. Ann, and on Election Day you can use any county polling place. 63011 also covers parts of Manchester, Ellisville, Winchester, Clarkson Valley, Wildwood and unincorporated areas. U.S. House (2022 lines, which govern the Nov. 3 election): all 2nd District (Wagner vs. Wellman vs. Daugherty). State Senate: essentially all of 63011 is in Senate District 15, which is NOT on the ballot this year, so most voters here have no state senate race (a sliver near Valley Park could be SD-24). State House: central Ballwin is HD-100 (Oehlerking vs. Perkins vs. Newhouse); the west side toward Ellisville is HD-88 (Jones vs. Trickey) or HD-110 (Stephens vs. Heinrich); the east side toward Manchester is HD-98 (Zimmermann vs. Bosch) or HD-89 (Hruza vs. Troop); the north edge toward Chesterfield is HD-101 (Keathley vs. Lentz vs. Coleman). County Council: incumbent Mark Harder (District 7) lives in Ballwin, so much of the area is likely District 7 (Harder vs. Kiehne); some 63011 addresses may be in District 3 (Osmack vs. Koenig). Council lines were not checked against a map. School: 63011 addresses may be in the Parkway School District (Prop P is on the ballot) or the Rockwood School District (no Nov. 3 measure found); boundaries were not checked, so confirm by address. No City of Ballwin measure was found. Legislative placements come from official 2022 boundaries checked against points around the ZIP, not a ZIP-level file. Use the county's Sample Ballot Lookup with your street address to see your exact ballot.",
+  "zip_caveats": "Ballwin is in west St. Louis County. ZIP 63011 also reaches nearby cities and unincorporated areas. The county’s official election and ZIP maps confirm County Council Districts 3 and 7 and the Parkway and Rockwood school districts. State House districts 88, 89, 98, 100, 101 and 110 overlap the ZIP. The ZIP is in Senate District 15, which has no race this year, and Congressional District 2. Parkway Prop P applies only in the Parkway School District. A Ballwin mailing address alone does not tell you your school district, council district or city. Use the county’s current Sample Ballot Lookup to confirm each item.",
   "contest_ids": [
     "mo-state-auditor",
     "mo-retention-wilson",
@@ -22,7 +22,6 @@
     "mo-retention-navarro-mckelvey",
     "mo-retention-quigless",
     "mo-us-house-2",
-    "mo-sd-24",
     "mo-hd-100",
     "mo-hd-88",
     "mo-hd-110",

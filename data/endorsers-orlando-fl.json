@@ -167,5 +167,37 @@
   "default_on": false,
   "endorses_candidates": true,
   "endorses_measures": false
+ },
+ {
+  "id": "orange-county-democrats",
+  "name": "Orange County Democratic Party",
+  "type": "party",
+  "party": "Democratic",
+  "lean": "left",
+  "lean_basis": "Official Orange County, Florida party committee, identified in the guide's paid-for disclaimer. Lean follows official party status.",
+  "lean_basis_kind": "party",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
+ },
+ {
+  "id": "orange-county-gop",
+  "name": "Orange County Republican Party",
+  "type": "party",
+  "party": "Republican",
+  "lean": "right",
+  "lean_basis": "Official Orange County, Florida party committee, identified in the guide's paid-for disclaimer. Lean follows official party status.",
+  "lean_basis_kind": "party",
+  "geography": [
+   "orlando-fl"
+  ],
+  "guide_url": "https://gopguide.online/",
+  "default_on": false,
+  "endorses_candidates": true,
+  "endorses_measures": true
  }
 ]

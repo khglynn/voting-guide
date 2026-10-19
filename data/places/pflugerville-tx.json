@@ -16,7 +16,7 @@
     "78660",
     "78691"
   ],
-  "zip_caveats": "Pflugerville straddles the Travis/Williamson line. Most of 78660 is Travis County and votes the Travis ballot (county judge Andy Brown, JPs, TCAD directors). The northern part of 78660 is Williamson County: those voters use apps.wilcotx.gov/elections/voterlookup and see the Williamson county judge (Snell vs. Jefts), county clerk and Commissioner Pct 4 or 2 instead. Both halves vote on Pflugerville City Council and the 14 city charter amendments, and on Pflugerville ISD trustees. The ACC annexation measure appears only for PfISD-area voters outside the current ACC taxing district. Congress: most of Pflugerville is in CD-11 after the 2025 redraw (Labor Council lists Pflugerville under CD-11); some precincts may fall in CD-10 or CD-27. Texas House is HD-46 or HD-50.",
+  "zip_caveats": "Pflugerville straddles the Travis/Williamson line. Most of 78660 is Travis County and votes the Travis ballot (county judge Andy Brown, JPs, TCAD directors). The northern part of 78660 is Williamson County: those voters use apps.wilcotx.gov/elections/voterlookup and see the Williamson county judge (Snell vs. Jefts), county clerk and Commissioner Pct 4 or 2 instead. Both halves vote on Pflugerville City Council and the 14 city charter amendments, and on Pflugerville ISD trustees. The ACC annexation measure appears only for PfISD-area voters outside the current ACC taxing district. Congress: under the adopted 2025 map, almost all of Pflugerville is in CD-11. A few precincts along the south edge in Travis County (146, 149 and 158) are in CD-10. Use your county’s personalized sample ballot to confirm your congressional race. Texas House is HD-46 or HD-50 on the Travis side; check Williamson County separately.",
   "contest_ids": [
     "tx-us-senate",
     "tx-governor",
@@ -38,7 +38,6 @@
     "tx-15th-coa-place-3",
     "tx-us-house-10",
     "tx-us-house-11",
-    "tx-us-house-27",
     "tx-sboe-5",
     "tx-senate-5",
     "tx-house-46",
@@ -96,7 +95,6 @@
     "tx-wilco-commissioner-2",
     "tx-wilco-commissioner-4",
     "tx-wilco-district-court-512",
-    "tx-us-house-31",
     "tx-house-52"
   ],
   "measure_ids": [

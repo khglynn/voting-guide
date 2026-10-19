@@ -7,7 +7,7 @@
     "url": "https://www.elections.il.gov/"
   },
   "voting_model": "in_person_first",
-  "model_plain": "You can vote three ways: early in person (open now; any Chicago voter can use any Chicago site), by mail (anyone can ask for a ballot, no excuse needed, apply by Oct. 29), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk.",
+  "model_plain": "You can vote three ways: early in person (through Monday, Nov. 2; any Chicago voter can use any Chicago site), by mail (anyone can ask for a ballot, no excuse needed, apply by Oct. 29), or at the polls on Tuesday, November 3. City of Chicago voters deal with the Chicago Board of Elections; suburban Cook County voters deal with the Cook County Clerk.",
   "registration": {
     "check_url": "https://ova.elections.il.gov/RegistrationLookup.aspx",
     "deadlines": [
@@ -58,7 +58,7 @@
     "signature_witness_rules": "Sign the certification envelope. No witness or notary. A panel of three election judges compares your signature to the one on file. Date the certification: under 10 ILCS 5/19-8, if the postmark is missing or unreadable, the date you wrote on the certification can establish that you voted by Election Day.",
     "tracking_url": "https://chicagoelections.gov/voting/vote-mail",
     "cure_process": "If judges reject your ballot for a missing or mismatched signature, the election authority must notify you (by mail, and by email or phone if they have it) within 2 days, and you have until 14 days after the election, Tuesday, November 17, 2026, to fix it with a signed statement or new signature. Watch your mail and email after you return your ballot. Illinois Election Code 10 ILCS 5/19-8.",
-    "mail_cutoff_advice": "The law is on your side (postmarked by Nov. 3 counts, and the Supreme Court's June 29, 2026 Watson v. RNC ruling confirmed states may keep post-Election-Day receipt windows), but the Postal Service is not. USPS changed how it processes mail in 2025 and much of it never gets a postmark; Illinois clerks have warned since January 2026 that an unpostmarked late ballot can be rejected; under 10 ILCS 5/19-8 it still counts if the date on your signed certification is Election Day or earlier, and an undated one does not, so always date it. The safe play: mail no later than about Tuesday, October 27, or ask a postal clerk to hand-stamp the envelope at the counter. From Oct. 28 on, use a drop box at an early voting site (through Nov. 2) or, on Election Day, a drop box at a Chicago Vote Center, so it's in official hands by 7:00 PM on Nov. 3. Precinct polling places in Chicago cannot accept mail ballots (Chicago Board of Elections).",
+    "mail_cutoff_advice": "Mail by about October 27, or use an official drop box. USPS says to ask a retail counter clerk for a manual postmark when handing over a ballot; it is free. A mailed ballot counts if it is postmarked by November 3 and arrives by November 17. In Chicago, use an early voting site drop box through November 2, or a designated Election Day vote center drop box by 7 PM on November 3. Ordinary precinct polling places cannot accept completed mail ballots. Follow your own election authority's return instructions outside Chicago.",
     "drop_box_lookup_url": "https://chicagoelections.gov/voting/drop-boxes",
     "confidence": "verified"
   },
@@ -102,7 +102,7 @@
   "gotchas": [
     "Online registration ended Sunday, October 18 at 11:59 PM. You can still register, but only in person, with two IDs, at an early voting site (through Nov. 2) or a polling place or vote center (Nov. 3). You vote in the same visit.",
     "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Your backstop: date the certification on the envelope, because state law counts a late ballot with no postmark if that date is Election Day or earlier (10 ILCS 5/19-8). Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
-    "Asked for a mail ballot but want to vote in person? Bring the mail ballot with you and surrender it to the judges (Sun-Times: voters 'must bring the mail ballot to their polling place and surrender it to receive an in-person ballot'). If you never received it, or you mailed it and were told the election office never got it, you sign an affidavit and then vote in person (Election Code 18-5 and 19A-35; Cook County Clerk affidavit form). If you received it but lost it, ask the judges what applies; you may have to vote a provisional ballot. Don't vote both ways: only one counts and trying is a crime.",
+    "Requested a mail ballot but want to vote in person? Surrender it to the election judges to vote a regular ballot. If you never received it, or the election office says it never received the ballot you mailed, state law allows an affidavit. If you received it but lost it and cannot surrender it, you can vote a provisional ballot. It counts after officials confirm you are eligible and your mail ballot was not counted. Vote only once.",
     "Judicial retention needs 60% yes, not 50%, and the Cook County ballot has 61 retention questions: 1 Appellate Court justice (Bertina E. Lampkin) and 60 Circuit Court judges. A blank vote neither helps nor hurts a judge. Use Injustice Watch's 'Check Your Judges' guide (2026retention.injusticewatch.org), which prints a take-along report, plus the Chicago Bar Association and ISBA ratings.",
     "Two election offices, not one. City of Chicago voters use the Chicago Board of Election Commissioners (chicagoelections.gov, 312-269-7900). Suburban Cook County voters (Evanston, Oak Park, Cicero, Skokie, etc.) use the Cook County Clerk (cookcountyclerkil.gov). Early voting sites, drop boxes, and mail-ballot applications are specific to your jurisdiction. Also: on Election Day the 69 W. Washington office is closed for voting; the Supersite at 137 S. State is open 6 AM to 7 PM."
   ],
@@ -135,7 +135,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
-      "answer": "You still can. Register online through Sunday, October 18 at 11:59 PM, or register and vote in the same visit at any early voting site through November 2 or at the polls on November 3.",
+      "answer": "Online registration closes October 18 at 11:59 PM. After that, you can register and vote in the same visit at a grace-period or early voting site through November 2, or at your polling place on November 3. Bring the required proofs of identity and residence.",
       "steps": [
         "Online: ova.elections.il.gov. You can also check there whether you're already registered.",
         "In person, bring two IDs, one showing your current address.",
@@ -161,14 +161,14 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
-      "answer": "You can vote in person instead. Bring the mail ballot if you have it and hand it in; if it never came, you sign an affidavit at the polls saying so and get a regular ballot.",
+      "answer": "You can vote in person instead. Surrender your mail ballot if you have it. If it never arrived, state law allows an affidavit. If you received it but lost it, ask your election office about a replacement or cancellation before voting early; on Election Day, ask the election judges for a provisional ballot if you cannot surrender it.",
       "steps": [
         "Tell your election office. Chicago: 312-269-7967 or votebymail@chicagoelections.gov. Suburban Cook: the Cook County Clerk's mail voting unit, 312-603-0946 or mail.voting@cookcountyil.gov.",
-        "Vote early at any site in your jurisdiction through Nov 2, or on Election Day. If the ballot got torn, bring what's left; that counts as handing it in.",
-        "Got it but lost it? The affidavit only covers a ballot that never came, or one you mailed that the office says it never got. Otherwise you'll vote a provisional ballot, which counts once the office confirms you didn't vote another way."
+        "For early voting through November 2, ask the election office about replacing or canceling a lost ballot first. On November 3, go to your precinct or a designated Election Day vote center. If your ballot is torn, bring the remaining portion to surrender.",
+        "Received it but lost it? At your polling place on Election Day, state law entitles you to a provisional ballot. It counts after officials confirm you are eligible and your mail ballot was not counted."
       ],
       "deadline": "2026-11-03",
-      "source": "https://chicagoelections.gov/voting/vote-mail",
+      "source": "https://www.ilga.gov/Documents/legislation/ilcs/documents/001000050K18A-5.htm",
       "confidence": "verified"
     },
     {

@@ -10,11 +10,11 @@
     "url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
     "phone": "314-615-1800"
   },
-  "sample_ballot_url": "https://stlouiscountymo.gov/st-louis-county-government/board-of-elections/",
+  "sample_ballot_url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275",
   "zips": [
     "63105"
   ],
-  "zip_caveats": "Clayton is the county seat of St. Louis County, NOT part of the City of St. Louis: you vote with the county Board of Elections in St. Ann, and on Election Day you can use any county polling place. U.S. House (2022 lines, which govern the Nov. 3 election): all of Clayton is in the 1st District (Bell). The 2nd District (Wagner) applies only if your 63105 address is actually in Ladue, Richmond Heights or Brentwood, which are split between the two. State Senate: most of Clayton is SD-4 (Mitten, unopposed); the north end is SD-14 (Norman vs. Proudie); the far west edge toward Ladue may be SD-24 (McCreery vs. Wrobley). State House: central and south Clayton are HD-99 (Schafer, unopposed); the north end is HD-86 (Hales, unopposed); the west edge is HD-83 (Reed vs. Bolin). County Council: Clayton is partly in District 5 (Clancy, unopposed); other parts may be District 1 (Days, unopposed) or District 3 (Osmack vs. Koenig). No City of Clayton or Clayton School District measure was found for Nov. 3. Some 63105 addresses are in the Ladue or University City school districts; no measures were found for those either. These district placements come from official 2022 legislative boundaries checked against points around Clayton, not a ZIP-level file. Use the county's Sample Ballot Lookup with your street address to see your exact ballot.",
+  "zip_caveats": "Clayton is in St. Louis County. The county’s official election and ZIP maps place ZIP 63105 in County Council District 5 and state House districts 86 and 99. The ZIP reaches Clayton, Ladue and University City, with school districts of the same names. State Senate districts 4, 14 and 24 overlap the ZIP, but Clayton city itself is in Senate District 4. The election uses the 2022 congressional lines: ZIP 63105 falls in Congressional District 1. Use the county’s current Sample Ballot Lookup to confirm your districts and measures.",
   "contest_ids": [
     "mo-state-auditor",
     "mo-retention-wilson",
@@ -22,19 +22,15 @@
     "mo-retention-navarro-mckelvey",
     "mo-retention-quigless",
     "mo-us-house-1",
-    "mo-us-house-2",
     "mo-sd-4",
     "mo-sd-14",
     "mo-sd-24",
     "mo-hd-99",
     "mo-hd-86",
-    "mo-hd-83",
     "stlco-county-executive",
     "stlco-prosecuting-attorney",
     "stlco-assessor",
     "stlco-council-5",
-    "stlco-council-1",
-    "stlco-council-3",
     "stlco-retention-stewart",
     "stlco-retention-borbonus",
     "stlco-retention-ott",

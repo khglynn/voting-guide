@@ -574,10 +574,10 @@
     "target_id": "baltimore-question-a",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -604,10 +604,10 @@
     "target_id": "baltimore-question-b",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -634,10 +634,10 @@
     "target_id": "baltimore-question-c",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -664,10 +664,10 @@
     "target_id": "baltimore-question-d",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -694,10 +694,10 @@
     "target_id": "baltimore-question-e",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -724,10 +724,10 @@
     "target_id": "baltimore-question-f",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -754,10 +754,10 @@
     "target_id": "baltimore-question-g",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -784,10 +784,10 @@
     "target_id": "baltimore-question-h",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -814,10 +814,10 @@
     "target_id": "baltimore-question-i",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this city question found; baltimoresun.com blocks automated reads, so check the editorials page.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-banner",
@@ -1707,6 +1707,436 @@
     "why": "The petition committee that put Question I on the ballot.",
     "url": "https://www.wmar2news.com/news/region/baltimore-city/voters-to-decide-on-baltimore-baby-fund-this-november",
     "date": "2026-08-17",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-us-house-2",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-us-house-7",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-sd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-sd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-sd-43",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-sd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-sd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-hd-40",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-hd-41",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-hd-43a",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-hd-45",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-hd-46",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-circuit-court-8",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-states-attorney",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-clerk-circuit-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-register-of-wills",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-orphans-court",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-sheriff",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-board-of-education-at-large",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-a",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-b",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-c",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-d",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-e",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-f",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-g",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-h",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "baltimore-question-i",
+    "status": "not_found",
+    "choice": null,
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-us-house-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-us-house-7",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-sd-40",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-sd-41",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-sd-43",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-sd-45",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "nra-pvf",
+    "target_id": "md-sd-46",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-sd-40",
+    "status": "endorsed",
+    "choice": "Antonio Hayes",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-sd-45",
+    "status": "endorsed",
+    "choice": "Cory V. McCray",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-sd-46",
+    "status": "endorsed",
+    "choice": "Bill Ferguson",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-hd-40",
+    "status": "endorsed",
+    "choice": "Marlon D. Amprey",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-hd-41",
+    "status": "endorsed",
+    "choice": "S. I. \"Sandy\" Rosenberg",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-hd-43a",
+    "status": "endorsed",
+    "choice": "Regina T. Boyce; Elizabeth Embry",
+    "why": "Maryland LCV’s 2026 general-election slate lists these candidates.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-hd-45",
+    "status": "endorsed",
+    "choice": "Jackie Addison",
+    "why": "Maryland LCV lists Jackie Addison on its 2026 general-election endorsement slate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "md-lcv",
+    "target_id": "md-hd-46",
+    "status": "endorsed",
+    "choice": "Luke Clippinger; Mark Edelson; Robbyn Lewis",
+    "why": "Maryland LCV’s 2026 general-election slate lists these candidates.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
     "confidence": "verified"
   }
 ]

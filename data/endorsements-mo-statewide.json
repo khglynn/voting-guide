@@ -2,61 +2,61 @@
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-state-auditor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "The board endorsed Fitzpatrick for the GOP nomination in July (\"State Auditor Fitzpatrick has earned GOP re-nomination\"). Its general-election pick is behind a paywall that blocked fetching; expected in October.",
-    "url": "https://www.stltoday.com/opinion/editorial/article_be93bcee-e326-4434-8cd0-7bd52578a4a0.html",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "The board no longer endorses partisan candidates in general elections. Its October 14 editor’s note says it still takes positions in primaries, local nonpartisan elections and on ballot measures.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "verified"
   },
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-prop-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Prop A editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
-    "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board recommends yes on Amendment 6 and no on the other four statewide measures in its October 14 editorial. The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
     "confidence": "sourced"
   },
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-amendment-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "An editorial titled \"Editorial: Vote no on Amendment 3\" exists on stltoday.com, but it is behind a paywall and its year could not be confirmed (the board also ran a \"no on 3\"-adjacent piece in 2024).",
-    "url": "https://www.stltoday.com/opinion/editorial/editorial-vote-no-on-amendment-3/article_ac09b13d-58c4-5fd0-864b-60cbf68ef6b5.html",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board recommends yes on Amendment 6 and no on the other four statewide measures in its October 14 editorial. The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-amendment-6",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Amendment 6 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
-    "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The board recommends yes on Amendment 6 and no on the other four statewide measures in its October 14 editorial. The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
     "confidence": "sourced"
   },
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-amendment-7",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Amendment 7 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
-    "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board recommends yes on Amendment 6 and no on the other four statewide measures in its October 14 editorial. The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
     "confidence": "sourced"
   },
   {
     "endorser_id": "stl-post-dispatch-eb",
     "target_id": "mo-amendment-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Amendment 8 editorial surfaced in search as of Oct 16; the board editorialized against the mid-decade map in 2025. Expect late-October editorials.",
-    "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The board recommends yes on Amendment 6 and no on the other four statewide measures in its October 14 editorial. The full reasoning requires a subscription.",
+    "url": "https://www.stltoday.com/opinion/editorial/article_d27d6d5f-db25-4ec0-b4ee-87744270193d.html",
+    "date": "2026-10-14",
     "confidence": "sourced"
   },
   {
@@ -64,9 +64,9 @@
     "target_id": "mo-retention-wilson",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 19, 2026).",
     "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -74,9 +74,9 @@
     "target_id": "mo-retention-lay",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 19, 2026).",
     "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -84,9 +84,9 @@
     "target_id": "mo-retention-navarro-mckelvey",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 19, 2026).",
     "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -94,9 +94,9 @@
     "target_id": "mo-retention-quigless",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Post-Dispatch editorial index; full articles require a subscription (checked October 19, 2026).",
     "url": "https://www.stltoday.com/opinion/editorial/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -104,100 +104,100 @@
     "target_id": "mo-state-auditor",
     "status": "not_found",
     "choice": null,
-    "why": "No general-election auditor endorsement surfaced as of Oct 16.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-prop-a",
     "status": "not_found",
     "choice": null,
-    "why": "No Prop A editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "No Amendment 3 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-amendment-6",
     "status": "not_found",
     "choice": null,
-    "why": "No Amendment 6 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-amendment-7",
     "status": "not_found",
     "choice": null,
-    "why": "No Amendment 7 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-amendment-8",
     "status": "not_found",
     "choice": null,
-    "why": "No Amendment 8 editorial surfaced in search as of Oct 16; the board has editorialized against the Kansas City 5th District split. Expect a late-October roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-retention-wilson",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-retention-lay",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-retention-navarro-mckelvey",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "kc-star-eb",
     "target_id": "mo-retention-quigless",
     "status": "not_found",
     "choice": null,
-    "why": "Missouri papers rarely weigh in on retention; check for a judges roundup.",
-    "url": "https://www.kansascity.com/opinion/editorials/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The search-indexed recommendations page shows primary material. The live page could not be read. Access was blocked; a human check is needed.",
+    "url": "https://www.kansascity.com/opinion/election-recommendations/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "lwv-missouri",
@@ -212,11 +212,11 @@
   {
     "endorser_id": "lwv-missouri",
     "target_id": "mo-prop-a",
-    "status": "not_found",
-    "choice": null,
-    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Proposition A but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
-    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The League’s November 2026 ballot-summary flyer explicitly recommends a no vote.",
+    "url": "https://drive.google.com/file/d/1jGIyzf4EkfMy2jz8P0dt7YM14mtXaFhm/view",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -224,39 +224,39 @@
     "target_id": "mo-amendment-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Announced Sept 3, 2026: NO on Amendment 3 \"to prevent politicians from overturning the will of voters and banning abortion.\"",
-    "url": "https://my.lwv.org/missouri/article/league-women-voters-missouri-endorses-no-amendment-3-protect-will-voters",
-    "date": "2026-09-03",
+    "why": "The League’s November 2026 ballot-summary flyer explicitly recommends a no vote.",
+    "url": "https://drive.google.com/file/d/15bhNj4biMHKkMvKnYVvjiHQumm3JYgWy/view",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-missouri",
     "target_id": "mo-amendment-6",
-    "status": "not_found",
-    "choice": null,
-    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 6 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
-    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The League’s November 2026 ballot-summary flyer explicitly recommends a yes vote.",
+    "url": "https://drive.google.com/file/d/19_ey7wQTXxE4NcZFP5xWfZ88_cNDKYQX/view",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-missouri",
     "target_id": "mo-amendment-7",
-    "status": "not_found",
-    "choice": null,
-    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 7 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
-    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The League’s November 2026 ballot-summary flyer explicitly recommends a no vote.",
+    "url": "https://drive.google.com/file/d/1Wk5yd3rVruu3ClVLjekitC7t3xTZcsvy/view",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "lwv-missouri",
     "target_id": "mo-amendment-8",
-    "status": "not_found",
-    "choice": null,
-    "why": "The League's \"November 2026 Amendment Information\" page (updated Oct 5) links ballot summaries for Amendment 8 but states no position. LWV Missouri opposed the 2025 map in the legislature, but no formal Prop A stance was found.",
-    "url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The League’s November 2026 ballot-summary flyer explicitly recommends a no vote.",
+    "url": "https://drive.google.com/file/d/13pt_XuwaSOBawVnFZJJhS3WfMvzIKSPO/view",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -702,12 +702,12 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-state-auditor",
-    "status": "not_found",
-    "choice": null,
-    "why": "MRL PAC endorsed in the August primaries (Missouri Times coverage) but a 2026 general-election auditor endorsement was not found. Fitzpatrick has had MRL backing in past races.",
-    "url": "https://missourilife.org/",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Scott Fitzpatrick",
+    "why": "Missouri Right to Life’s November 3, 2026 general-election slate lists this candidate.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/Endorsement-List.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-right-to-life-pac",
@@ -762,42 +762,42 @@
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-retention-wilson",
-    "status": "not_found",
-    "choice": null,
-    "why": "No position found.",
-    "url": null,
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The 2026 judge guide explicitly recommends voting no on retaining Paul C. Wilson.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-retention-lay",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No position found.",
-    "url": null,
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-retention-navarro-mckelvey",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No position found.",
-    "url": null,
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "mo-right-to-life-pac",
     "target_id": "mo-retention-quigless",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No position found.",
-    "url": null,
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The 2026 judge guide lists this judge but says Paul C. Wilson is the only judge with a definitive retention recommendation.",
+    "url": "https://missourilifepac.org/wp-content/uploads/2026/09/2026-General-Election-Judge-Guide.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "abortion-action-mo",

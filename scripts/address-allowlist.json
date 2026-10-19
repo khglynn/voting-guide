@@ -229,6 +229,31 @@
       "address": "1200 Pearce Mill Rd.",
       "reason": "North Park Ice Rink, Allegheny County satellite election office.",
       "source": "https://www.alleghenycounty.us/Government/Elections"
+    },
+    {
+      "address": "3000 Landerholm Cir SE",
+      "reason": "King County vote center at Bellevue College (Building U).",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "650 SW Campus Dr",
+      "reason": "King County vote center at the Weyerhaeuser Aquatic Center, Federal Way.",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "18120 68th Ave NE",
+      "reason": "King County vote center at Kenmore City Hall.",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "417 Ramsay Way",
+      "reason": "King County vote center at Green River College, Kent campus.",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
+    },
+    {
+      "address": "600 4th Ave.",
+      "reason": "King County vote center at Seattle City Hall.",
+      "source": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers"
     }
   ]
 }

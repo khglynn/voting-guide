@@ -2,212 +2,212 @@
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-mayor",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-clerk",
   "status": "not_found",
   "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-9th-circuit-group-1",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Temika Hampton-Johnson",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/17/endorsements-in-two-judicial-races-voters-have-clear-choices/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-us-house-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Mike Haridopolos",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/13/endorsement-haridopolos-will-keep-focusing-on-the-needs-of-his-district/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-us-house-9",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/04/endorsement-keep-soto-on-the-job-in-u-s-house-9/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-us-house-11",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "James Pericola",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/04/endorsement-experience-gives-pericola-the-edge-in-u-s-district-11/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-senate-10",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/08/endorsement-send-john-lowndes-to-fight-for-locals-in-the-senate/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-35",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/07/endorsement-eric-gray-would-serve-district-35-well/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-37",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/16/endorsement-samuel-vilchez-santiago-jane-aman-have-the-right-priorities-for-florida/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-39",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/14/endorsements-these-house-hopefuls-could-cut-into-gop-stronghold/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-40",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/07/endorsement-rashon-young-a-good-fit-for-florida-house-40/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-42",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/07/endorsement-sousa-lazaballet-a-worthy-heir-in-house-district-42/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-43",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/16/endorsement-samuel-vilchez-santiago-jane-aman-have-the-right-priorities-for-florida/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-house-45",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/endorsement-these-florida-house-candidates-have-the-right-focus/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-commission-2",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Kamia Brown",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-commission-4",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Johanna Lopez",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-commission-6",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Michael \"Mike\" Scott",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-commission-7",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Patricia Rumph",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-commission-8",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "Victor M. Torres Jr.",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/18/endorsements-orange-county-needs-steady-hands-for-rough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-school-board-3",
   "status": "not_found",
   "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "orlando-sentinel-eb",
   "target_id": "fl-orange-ocps-millage",
-  "status": "not_found",
-  "choice": null,
-  "why": "The Sentinel endorses in local races, but its endorsement page was blocked to our tools in this run. In the Oct 15 statewide pass its Orange County picks were still marked 'coming soon.' Check the page before relying on this.",
-  "url": "https://www.orlandosentinel.com/opinion/endorsements/",
-  "date": null,
-  "confidence": "unverified"
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The board's general-election slate, updated October 18, lists this choice. The linked editorial explains the endorsement; its full reasoning requires a subscription.",
+  "url": "https://www.orlandosentinel.com/2026/10/12/endorsement-a-yes-vote-gives-schools-a-lifeline-in-tough-times/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
  },
  {
   "endorser_id": "lwv-florida",
@@ -908,5 +908,575 @@
   "url": "https://www.orlandoweekly.com/news/immigrant-rights-activist-felipe-sousa-lazaballet-files-to-run-for-florida-house-representing-orlando-38863753/",
   "date": "2025-02-14",
   "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-us-house-10",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-soil-water-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-soil-water-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-orange-soil-water-5",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orlando-sentinel-eb",
+  "target_id": "fl-vista-lakes-cdd-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the board's current general-election slate on October 19. No November endorsement for this race was listed; primary endorsements were not carried forward.",
+  "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Tiffany Moore Russell",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-mayor",
+  "status": "endorsed",
+  "choice": "Chris Messina",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-clerk",
+  "status": "endorsed",
+  "choice": "Roberta Walton Johnson",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-clerk",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-9th-circuit-group-1",
+  "status": "endorsed",
+  "choice": "Temika Hampton-Johnson",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-9th-circuit-group-1",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Jennifer Jenkins",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-us-house-8",
+  "status": "endorsed",
+  "choice": "Mike Haridopolos",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Darren Soto",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-us-house-9",
+  "status": "endorsed",
+  "choice": "Dan Green",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-us-house-10",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-us-house-10",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-us-house-11",
+  "status": "endorsed",
+  "choice": "James Pericola",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-us-house-11",
+  "status": "endorsed",
+  "choice": "Joe Strada",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "John Lowndes",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-senate-10",
+  "status": "endorsed",
+  "choice": "Jason Brodeur",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Eric Gray",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-35",
+  "status": "endorsed",
+  "choice": "Erika Booth",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Jane Aman",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-37",
+  "status": "endorsed",
+  "choice": "Robert Prater",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Jarod Fox",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-39",
+  "status": "endorsed",
+  "choice": "Doug Bankson",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Ra'Shon Young",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-40",
+  "status": "endorsed",
+  "choice": "Tuan Le",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Felipe Sousa Lazaballet",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-42",
+  "status": "endorsed",
+  "choice": "Bonnie Jackson",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Samuel Vilchez Santiago",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-43",
+  "status": "endorsed",
+  "choice": "Jorge Malavet",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Leonard Spencer",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-house-45",
+  "status": "endorsed",
+  "choice": "Erin Huntley",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-commission-2",
+  "status": "endorsed",
+  "choice": "Kamia Brown",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-commission-2",
+  "status": "endorsed",
+  "choice": "Mike Crabb",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-commission-4",
+  "status": "endorsed",
+  "choice": "Johanna Lopez",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-commission-4",
+  "status": "endorsed",
+  "choice": "Brian Jones",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-commission-6",
+  "status": "no_position",
+  "choice": null,
+  "why": "The November guide prints both candidates in this two-person race and says to vote for one. It does not choose between them. [checker: this is a two-candidate race and the guide prints both candidates with 'vote for one', so it is not a pick; recorded as no position so neither candidate gets a party endorsement. Checked the PDF page image on 2026-10-19.]",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-commission-6",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-commission-7",
+  "status": "endorsed",
+  "choice": "Patricia Rumph",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-commission-7",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-commission-8",
+  "status": "endorsed",
+  "choice": "Victor M. Torres Jr.",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-commission-8",
+  "status": "endorsed",
+  "choice": "Jeannette Quinones Hernandez",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-school-board-3",
+  "status": "no_position",
+  "choice": null,
+  "why": "The November guide prints both candidates in this two-person race and says to vote for one. It does not choose between them. [checker: this is a two-candidate race and the guide prints both candidates with 'vote for one', so it is not a pick; recorded as no position so neither candidate gets a party endorsement. Checked the PDF page image on 2026-10-19.]",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-school-board-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-soil-water-1",
+  "status": "endorsed",
+  "choice": "Quinnie Perez or Vicente Rafael Perez Carreno",
+  "why": "The November guide lists both candidates and says to vote for one. It does not choose between them.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-soil-water-1",
+  "status": "endorsed",
+  "choice": "Doug Sahr",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-soil-water-3",
+  "status": "endorsed",
+  "choice": "Erik LaMont Melear or José Antonio Rodriguez",
+  "why": "The November guide lists both candidates and says to vote for one. It does not choose between them.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-soil-water-3",
+  "status": "endorsed",
+  "choice": "Chuck Drake",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-soil-water-5",
+  "status": "endorsed",
+  "choice": "Jimm Middleton",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-soil-water-5",
+  "status": "endorsed",
+  "choice": "Zack Green",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-vista-lakes-cdd-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-vista-lakes-cdd-3",
+  "status": "not_found",
+  "choice": null,
+  "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "sourced"
+ },
+ {
+  "endorser_id": "orange-county-democrats",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "endorsed",
+  "choice": "YES",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+  "date": "2026-10-19",
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "orange-county-gop",
+  "target_id": "fl-orange-ocps-millage",
+  "status": "endorsed",
+  "choice": "NO",
+  "why": "The county party's November 2026 voter guide lists this choice.",
+  "url": "https://gopguide.online/",
+  "date": "2026-10-19",
+  "confidence": "verified"
  }
 ]

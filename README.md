@@ -1,8 +1,9 @@
 # Your Ballot, Explained (2026 voting guide)
 
 A one-page guide to the Nov 3, 2026 general election for Kevin's friends and family.
-Enter a ZIP, read your ballot in plain words, see who endorsed whom, and take a cheat
-sheet to the polls. Static site: Vite + vanilla TypeScript, no framework, no analytics,
+Enter a ZIP, see your next step and its date, read your ballot as a calm list of rows
+with the picks of the sources you trust beside each one, decide, and take a cheat sheet
+to the polls. The layout is "the ledger" (v3, Oct 19 2026); agent notes are in `AGENTS.md`. Static site: Vite + vanilla TypeScript, no framework, no analytics,
 no accounts.
 
 ## Run it
@@ -16,8 +17,11 @@ npm run dev          # builds the data, then starts Vite at http://localhost:517
 npm run build        # data + typecheck + production build into dist/
 npm run preview      # serve dist/ at http://localhost:4173
 npm run check        # no stray street addresses, build the data, data rules (no browser)
+npm run test:model   # save-link contract, districts, lenses, verdicts, bulk fills (no browser)
 npm run test:e2e     # scripted Playwright pass at 380px against the preview
 npm run sweep        # opens every ballot the guide can produce at 380px and checks it against the data
+npm run shots        # review screenshots of the test ballots (not a test)
+node tests/perf.mjs  # the biggest ballots at 4x CPU throttle
 scripts/ship.sh --gates-only   # everything above in one go, on a throwaway preview port
 ```
 
@@ -31,7 +35,9 @@ pull request and every push to `main`, plus a daily sweep of the live site.
 To ship: `scripts/ship.sh "what changed" path/to/file ...` runs the gates, opens a
 pull request, waits for CI and tests the Vercel preview. It never merges.
 
-`?today=2026-10-30` on the URL pretends it's that date, for checking the plan card.
+`?today=2026-10-30` on the URL pretends it's that date, for checking the plan strip.
+`?try=fresh`, `aunt`, `straight` or `sources` shows that scenario on whatever ballot you
+open, with a banner, and never touches your saved picks.
 
 ## Add a place
 
@@ -83,21 +89,25 @@ collisions are detected from the measure text.
 
 ## Rules the code keeps
 
-- Every date shown comes from `data/states/{ST}.json`. The plan card formats dates and
-  labels which field they came from; rule text is shown word for word.
-- No red or blue. Party is text only. Lean is a neutral five-step scale plus words.
-- Publications and nonpartisan groups start on. Parties and advocacy groups are opt-in.
+- Every date shown comes from `data/states/{ST}.json`. The plan strip leads with the next
+  step and its date (never a countdown), computed for every voting model.
+- No red or blue. Party is text only. Lean is a neutral five-step scale plus words. Color
+  has one job each: gold = your pick, sage = your sources agree, clay = they disagree,
+  dusk = the frame and official judge reviews.
+- "Who do you trust?" starts with papers and nonpartisan guides. Progressive groups,
+  conservative groups, a party, or any single source are the voter's choice; the chips
+  are presets over the source list the save link already carries.
 - No addresses anywhere. The optional address lookup sends the address only to the
   U.S. Census Geocoder (JSONP) and never stores it.
 - Picks save in `localStorage` (wrapped in try/catch) and in the save link's URL
-  fragment (`#v1~...`, or `#v2~...` when it holds a ranked-choice ranking), which never
-  reaches a server. Old v1 links still restore.
+  fragment (`#v1~...`, or `#v2~...` when it holds a ranked-choice ranking, plus an
+  optional 10th field for races the voter said aren't on their ballot), which never
+  reaches a server. Old v1 links still restore; `tests/model.mjs` pins the format.
 - Ranked-choice races come only from the data (`ranked_choice`, `rank_up_to`, `winners`),
   flagged from official sample ballots; `../research/rcv.md` logs each one.
 
 ## Open items for Kevin
 
-- "Report a problem" destination: `REPORT_URL` in `src/views/items.ts` (TODO).
 - Custom domain, and whether to turn on Vercel Deployment Protection before sharing.
 
 ## Deploy

@@ -40,17 +40,8 @@ export function sampleBallot(): { url: string; label: string } | null {
   return { url: b.howto.official_site.url, label: b.howto.official_site.name };
 }
 
-/* A "disclosure" button. The key lives in S.ui.open. */
+/* Disclosures: the key lives in S.ui.open. */
 export const isOpen = (k: string): boolean => S.ui.open.has(k);
-export function discBtn(k: string, label: string, cls = 'disc'): string {
-  return `<button class="${cls}" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${esc(label)}</button>`;
-}
-
-export const firstSentence = (s: string): [string, string] => {
-  const m = s.match(/^(.+?[.!?])(\s+|$)([\s\S]*)$/);
-  if (!m) return [s.trim(), ''];
-  return [m[1].replace(/\.$/, '').trim(), m[3].trim()];
-};
 
 /* ---------- no shouting ----------
    Research notes sometimes stress a word in capitals ("must be RECEIVED", "NOT in the
@@ -81,9 +72,6 @@ export function deshout(text: string): string {
   }
   return out + fix(text.slice(last), last === 0);
 }
-/* Ballot choice values are stored as YES, NO, FOR, AGAINST. Show them in sentence case. */
-const CHOICE: Record<string, string> = { YES: 'Yes', NO: 'No', FOR: 'For', AGAINST: 'Against' };
-export const choiceWord = (x: string): string => CHOICE[x] || x;
 export const escP = (s: string | null | undefined): string => esc(deshout(s || ''));
 
 /* ---------- skimmable prose ----------

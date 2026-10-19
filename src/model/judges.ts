@@ -78,7 +78,6 @@ export function judgeReview(it: Contest): Review | null {
 }
 
 export const judicialReview = (): JudicialReview | null => S.ballot?.howto.judicial_review || null;
-export const hasEvaluations = (it: Contest): boolean => it.candidates.some((c) => (c.evaluations || []).length > 0);
 
 /* ---------- the batch: keep every judge the review favors ---------- */
 export interface JudgeBatch {

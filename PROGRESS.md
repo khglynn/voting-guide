@@ -1,6 +1,26 @@
-# Voting Guide v2: progress
+# Voting Guide: progress
 
-Resume file. Keep current. Spec: `../V2-BRIEF.md`. Updated Sat Oct 17, 2026 (ranked choice pass).
+Resume file. Keep current. Agent notes: `AGENTS.md`.
+
+## v3, the ledger (Mon Oct 19, 2026)
+- Kevin picked prototype A ("the ledger") from the Oct 18 design round. Spec and research:
+  the workbench's `claude-plans/2026-10-19-ledger-v1/` (BUILD-SPEC.md, research/).
+- The model layer stayed (`ballot.ts`, `state.ts`, save links byte for byte); the views were
+  replaced: masthead, dusk plan strip (next step plus its date, every voting model), "Who do
+  you trust?" chips over the saved source list, one row per item with a verdict column,
+  open rows (grid of your sources, ranked choice, mark up to N, judges, measures, district
+  questions), a Full read sheet, a cheat sheet that ends with Pass it on as its own step.
+- New: "Use their picks where they agree", "Fill in the {party} candidates" and the judges'
+  review batch, each undone as one batch; judge reviews from structured `evaluations`;
+  `heads_up`, `judicial_review`, `seat_label`, `district_finders` from data; "not on my
+  ballot" in the save link; DC wards from an address; numbered seats that share a scope are
+  no longer a district question; unique cheat-sheet titles on every ballot.
+- Removed with v2's views: the Filter shelf, party filter, "only endorsed" and auto-pick
+  (replaced by the lens and the fills).
+- Gates: `tests/model.mjs` (81), `tests/e2e.mjs` (128), the sweep 68/68 fast and full,
+  `tests/perf.mjs` (taps under 250ms at 4x throttle on Chicago and Houston).
+
+## v2 history
 
 ## Done
 - Vite + vanilla TS app in this folder, local git history (branch `main`).

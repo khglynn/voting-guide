@@ -1,6 +1,6 @@
 /* The ballot model: which items a person sees, in what order, grouped how, and the
    rules for filters, statuses and endorsements. Pure functions over S. */
-import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
+import type { Contest, Endorsement, Endorser, HowTo, Item, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
 
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
@@ -154,17 +154,6 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 /* ---------- sections ---------- */
 export const sectionOf = (it: Item): SectionKey => (it.kind === 'measure' ? 'measures' : it.level);
 
-export const itemTitle = (it: Item): string => {
-  if (it.kind === 'measure') return it.number;
-  const d = (it.district || '').replace(/\s*\(.*\)\s*$/, '').trim();
-  if (!d || /^your\b/i.test(d) || it.office.endsWith('?') || it.office.includes('(') || it.office.includes(d)) return it.office;
-  return `${it.office}, ${d}`;
-};
-export const shortTitle = (it: Item): string => {
-  const t = itemTitle(it);
-  return t.length > 64 ? `${t.slice(0, 61)}...` : t;
-};
-
 /* ---------- sources ---------- */
 export function chosenIds(): string[] {
   const b = S.ballot!;
@@ -176,19 +165,6 @@ export function chosen(): Endorser[] {
   const ids = new Set(chosenIds());
   return b.endorsers.filter((e) => ids.has(e.id));
 }
-export const endorsement = (tid: string, eid: string): Endorsement | null => (S.ballot!.ends[tid] || {})[eid] || null;
-
-/* Sources that could weigh in here: they endorse this kind of item, or we have a row for it. */
-export function relevantChosen(it: Item): Endorser[] {
-  return chosen().filter((e) => endorsement(it.id, e.id) || (it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates));
-}
-export function weighedIn(it: Item): Endorser[] {
-  return relevantChosen(it).filter((e) => endorsement(it.id, e.id)?.s === 'endorsed');
-}
-export function backers(it: Item, choice: string): Endorser[] {
-  return chosen().filter((e) => { const en = endorsement(it.id, e.id); return en?.s === 'endorsed' && !!en.c && en.c.includes(choice); });
-}
-
 /* ---------- parties ---------- */
 const NO_PARTY = /^(nonpartisan|unaffiliated|independent|no party affiliation|no party|write-in|none)$/i;
 export const isPartisan = (c: Contest): boolean => c.candidates.some((k) => k.parties.some((p) => !NO_PARTY.test(p)));
@@ -208,19 +184,6 @@ export const ordinal = (n: number): string => {
   const t = n % 100 >= 11 && n % 100 <= 13 ? 'th' : (['th', 'st', 'nd', 'rd'][n % 10] || 'th');
   return `${n}${t}`;
 };
-
-/* The candidates (or YES/NO) this voter chose on an item, in order: one pick, the marked
-   seats, or the ranking, 1st choice first. */
-export function myChoices(it: Item): string[] {
-  const p = S.b.picks;
-  const v = p[it.id];
-  if (v === 'SKIP') return [];
-  if (it.kind === 'measure') return v ? [v] : [];
-  if (isRCV(it)) return ranksOf(it.id);
-  if (isMultiSeat(it)) return it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'PICK').map((c) => c.name);
-  if (isMultiJudge(it)) return [];
-  return v && v !== 'DONE' ? [v] : [];
-}
 
 export function status(it: Item): Status {
   const p = S.b.picks;
@@ -298,5 +261,3 @@ export function decisionItems(): { id: string; done: boolean; question?: boolean
   }
   return out;
 }
-
-export const measureById = (id: string): Measure | null => { const it = S.ballot!.byId.get(id); return it && it.kind === 'measure' ? it : null; };

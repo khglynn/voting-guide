@@ -107,5 +107,4 @@ export function undoFills(): boolean {
   last = null;
   return true;
 }
-export const canUndo = (): boolean => !!last;
 export const forgetUndo = (): void => { last = null; };

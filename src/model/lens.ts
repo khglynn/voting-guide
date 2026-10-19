@@ -135,4 +135,3 @@ export function setParty(b: Ballot, party: string | null): void {
   setSources(b, [...cur.filter((id) => !drop.includes(id)), ...ids(party)]);
   S.b.party = party;
 }
-export const partyOn = (b: Ballot): PartyChoice | null => (S.b.party ? partiesOnBallot(b).find((x) => x.party === S.b.party) || null : null);

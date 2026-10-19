@@ -16,10 +16,6 @@ export function fmtDate(iso: string | null | undefined, opts: { weekday?: boolea
   if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return '';
   return parse(iso).toLocaleDateString('en-US', { weekday: opts.weekday === false ? undefined : 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
-export function fmtLong(iso: string | null | undefined): string {
-  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return '';
-  return parse(iso).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-}
 /* Today's date on this device, as YYYY-MM-DD. A ?today=2026-10-30 query overrides it for testing. */
 export function todayISO(): string {
   try {
@@ -100,16 +96,6 @@ export async function copyText(text: string): Promise<boolean> {
     ta.remove();
     return ok;
   } catch { return false; }
-}
-
-export function reducedMotion(): boolean {
-  try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { return true; }
-}
-
-/* FOUNDATION: smooth scrolling failed on phones last cycle. Jump instead. */
-export function scrollToEl(el: Element | null): void {
-  if (!el) return;
-  el.scrollIntoView({ block: 'start', behavior: 'auto' });
 }
 
 /* A quiet screen-reader announcement (a persistent, visually hidden live region), for

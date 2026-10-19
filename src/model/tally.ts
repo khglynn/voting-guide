@@ -5,7 +5,7 @@
 import type { Contest, Endorsement, Endorser, Item } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosen, status, isMultiJudge, entriesBySection, isDecision } from '../ballot';
+import { chosen, status, entriesBySection, isDecision } from '../ballot';
 import { choiceShort, pickShort } from './labels';
 import { explainsOnly } from './lens';
 import { judgeReview } from './judges';
@@ -242,4 +242,3 @@ export function orderCandidates(c: Contest, l: Lineup): Contest['candidates'] {
   const score = (name: string) => l.groups.filter((g) => g.choices.includes(name)).reduce((n, g) => n + g.sources.length, 0);
   return c.candidates.map((k, i) => ({ k, i, s: score(k.name) })).sort((a, b) => b.s - a.s || a.i - b.i).map((x) => x.k);
 }
-export const isMulti = (it: Item): boolean => it.kind === 'contest' && isMultiJudge(it);

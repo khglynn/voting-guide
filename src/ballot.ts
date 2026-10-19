@@ -1,6 +1,6 @@
 /* The ballot model: which items a person sees, in what order, grouped how, and the
    rules for filters, statuses and endorsements. Pure functions over S. */
-import type { Contest, Endorsement, Endorser, HowTo, Item, PlaceBundle, StateBundle } from './types';
+import type { Contest, Endorsement, Endorser, HowTo, Item, Measure, PlaceBundle, StateBundle } from './types';
 import { S } from './state';
 import { localHowto } from './model/plan';
 
@@ -54,6 +54,25 @@ export const contestDistrict = districtNum;
    county and no district inside it (an appeals court for "LA and three nearby counties"),
    applies to everyone there. Anything scoped to a precinct, ward or numbered district
    still says "May apply". */
+/* Read from the measure's own jurisdiction note, the way coversPlace reads a race's scope: a
+   district named as covering only part of the place ("including part of northwest Houston",
+   "central San Antonio", "only voters inside this territory"), one county of a place that spans
+   several, or a school district that names neither the place nor its county, may apply. */
+const PARTIAL = /\b(part of|parts of|small part|much of|touching|only voters inside|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
+function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
+  if (!places.length) return true;
+  const j = m.jurisdiction || '';
+  if (/\bevery\b[^)]*\bvoter/i.test(j)) return true;
+  if (!['school', 'special_district', 'county'].includes(m.level)) return true;
+  if (PARTIAL.test(j)) return false;
+  const counties = (p: PlaceBundle) => p.counties.map((c) => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
+  if (places.some((p) => counties(p).length > 1 && counties(p).some((c) => new RegExp(`^${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j)))) return false;
+  if (m.level === 'school') {
+    const names = places.flatMap((p) => [p.label.replace(/\s*\(.*\)$/, ''), ...counties(p)]).map((x) => x.toLowerCase());
+    return names.some((x) => x && j.toLowerCase().includes(x));
+  }
+  return true;
+}
 const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d/i;
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
@@ -132,6 +151,9 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
     } else if (!coversPlace(byId.get(members[0]) as Contest, places)) mayApply.add(members[0]);
   }
   Object.keys(onlyIn).forEach((id) => mayApply.add(id));
+  // A local measure for a school or special district that covers only part of the place
+  // (Cy-Fair ISD on a downtown Houston ballot) may apply too, by its own scope.
+  for (const it of items) if (it.kind === 'measure' && !statewide.has(it.id) && !measureCovers(it, places)) mayApply.add(it.id);
 
   const ends: Record<string, Record<string, Endorsement>> = {};
   const eById = new Map<string, Endorser>();

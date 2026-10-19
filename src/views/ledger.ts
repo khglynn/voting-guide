@@ -112,8 +112,8 @@ function questionHTML(g: Group): string {
   const open = S.ui.row === `q:${g.key}`;
   return `<li class="row is-q${open ? ' is-open' : ''}" id="${qId(g)}" data-q="${esc(g.key)}" data-undecided>
     <button class="row-hd" data-act="row" data-id="${esc(`q:${g.key}`)}" aria-expanded="${open}" data-fk="row-${qId(g)}">
-      <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(cleanOffice(g.office))}</b><small>${plural(g.members.length, 'district')} touch your area</small></span></span>
-      ${qVerdict('Which one is yours?')}</button>
+      <span class="mk" aria-hidden="true"><i></i></span><span class="ttl"><span class="t"><b>${esc(cleanOffice(g.office))}</b><small>Depends on your address</small></span></span>
+      ${qVerdict('Which is yours?')}</button>
     ${open ? questionBodyHTML(g) : ''}
   </li>`;
 }
@@ -130,15 +130,17 @@ export function findersFor(g: Group): { label: string; url: string }[] {
 }
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
+  // The count is the whole place's, not your ZIP's: say so ("Houston has 24 of these").
+  const where = () => (b.places.length === 1 ? b.places[0].label.replace(/\s*\(.*\)$/, '') : b.places.length ? 'Your area' : b.stateName);
   const members = g.members.map((id) => b.byId.get(id) as Contest);
   const finders = findersFor(g);
   const sb = sampleBallot();
   return `<div class="ob dq">
     <h3 class="dq-h">Which ${esc(cleanOffice(g.office))} district is yours?</h3>
-    <p class="ob-lede">Your ZIP touches ${members.length} of them. Your sample ballot or voter registration says which.</p>
-    <div class="opts">${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
+    <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot says which is yours${g.kind ? ', or use your address' : ''}.</p>
+    <div class="opts">${g.kind ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The fastest way: the Census lookup answers this for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “May apply”</small></button></div>
-    <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), g.kind ? '<button class="linkbtn" data-act="addr-open">Answer from my address</button>' : '', sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
+    <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
   </div>`;
 }
 function glineHTML(g: Group): string {
@@ -263,7 +265,10 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
       if (status(it) === 'unopposed') { unopp.push(it as Contest); return; }
       if (sec === 'measures' && it.kind === 'measure' && it.jurisdiction !== lastJur) {
         lastJur = it.jurisdiction;
-        out.push(`<li class="subhd">${esc(it.jurisdiction.replace(/\s*\([^)]*\)/g, ''))}</li>`);
+        // The district's name, with its own scope note under it when it covers only part of the
+        // place ("northwest Harris County, including part of northwest Houston").
+        const note = b.mayApply.has(it.id) ? (it.jurisdiction.match(/\(([^)]*)\)/) || [])[1] : '';
+        out.push(`<li class="subhd">${esc(it.jurisdiction.replace(/\s*\([^)]*\)/g, ''))}${note ? `<small>${esc(note.charAt(0).toUpperCase() + note.slice(1))}</small>` : ''}</li>`);
       }
     }
     if (hiddenByOnly(e)) return;

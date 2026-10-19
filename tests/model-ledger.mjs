@@ -24,6 +24,22 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('notMine: picks still decode beside it', state.picks['co-amendment-81'] === 'NO');
   }
 
+  /* ---------- UX review #5: other school districts' measures may apply ---------- */
+  {
+    const h = open('TX', ['houston-tx']);
+    const local = h.items.filter((x) => x.kind === 'measure' && !h.statewide.has(x.id));
+    const cyfair = local.filter((x) => /Cypress-Fairbanks|Spring ISD|Huffman|Crosby/.test(x.jurisdiction));
+    check('may apply: Houston shows Cy-Fair, Spring, Huffman and Crosby ISD measures as May apply', cyfair.length >= 4 && cyfair.every((x) => h.mayApply.has(x.id)), cyfair.filter((x) => !h.mayApply.has(x.id)).map((x) => x.id).join(', '));
+    const city = local.filter((x) => /City of Houston/.test(x.jurisdiction) || x.level === 'city');
+    check('may apply: the City of Houston\'s own measures are not May apply', city.length > 0 && city.every((x) => !h.mayApply.has(x.id)), city.filter((x) => h.mayApply.has(x.id)).map((x) => x.id).join(', '));
+    const dn = open('CO', ['denver-co']);
+    check('may apply: Denver Public Schools measures cover Denver', dn.items.filter((x) => x.kind === 'measure' && /Denver Public Schools/.test(x.jurisdiction)).every((x) => !dn.mayApply.has(x.id)));
+    const ch = open('IL', ['chicago-il']);
+    check('may apply: Chicago Public Schools covers every Chicago voter; the mental health areas may apply', ch.items.filter((x) => x.kind === 'measure' && /Chicago Public Schools/.test(x.jurisdiction)).every((x) => !ch.mayApply.has(x.id)) && ch.items.filter((x) => x.kind === 'measure' && /Mental Health/.test(x.jurisdiction)).every((x) => ch.mayApply.has(x.id)));
+    const lk = open('CO', ['lakewood-co']);
+    check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
+  }
+
   /* ---------- the seat rule ---------- */
   {
     const h = open('TX', ['houston-tx']);

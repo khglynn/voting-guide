@@ -28,7 +28,14 @@ const PAGE = 3;
 /* ---------- the top of an open row: where it applies ---------- */
 function whereHTML(it: Item): string {
   const b = S.ballot!;
-  if (it.kind !== 'contest') return b.onlyIn[it.id] ? `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}.</p>` : '';
+  if (it.kind !== 'contest') {
+    if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}.</p>`;
+    if (!b.mayApply.has(it.id)) return '';
+    // Another district's measure: who votes on it, and a way to clear every one like it at once.
+    const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Measure | undefined)?.jurisdiction === it.jurisdiction);
+    return `<div class="may"><p><b>Only some voters see this.</b> ${escP(it.jurisdiction)}</p>
+      <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} like this</button>` : ''}</p></div>`;
+  }
   const g = b.groupOf[it.id];
   if (g) {
     const ans = S.b.districts[g];

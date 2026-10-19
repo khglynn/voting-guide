@@ -119,6 +119,7 @@ b, strong { font-weight: 600; }
 .opt b { display: block; font-weight: 600; font-size: 15.5px; }
 .opt small { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
 .opt-unsure { border-style: dashed; }
+.opt-addr { border-color: var(--ink); background: var(--gold-wash); }
 
 /* ---------- plan strip (dusk) ---------- */
 .plan { background: var(--dusk); color: var(--on-dusk); }
@@ -285,6 +286,7 @@ b, strong { font-weight: 600; }
 .row.is-open { border-bottom: 1.5px solid var(--rule-2); }
 .row.is-open > .row-hd { border-bottom: 1px solid var(--rule); background: var(--paper); }
 .row.is-open > .row-hd .ttl b { font-size: 17px; }
+.subhd small { display: block; font-style: normal; font-size: 13px; color: var(--muted); margin-top: 1px; }
 .tag-line { position: absolute; left: calc(var(--g) + 26px); bottom: 2px; pointer-events: none; }
 .tag { font-size: 11.5px; color: var(--dusk-ink); border: 1px dashed var(--dusk-2); padding: 0 5px; border-radius: 2px; background: var(--paper); white-space: nowrap; }
 .row:has(.tag-line) > .row-hd .ttl { padding-bottom: 20px; }

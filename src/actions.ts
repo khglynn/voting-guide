@@ -1,7 +1,7 @@
 /* Every control is a data-act attribute dispatched through this table. Model mutations keep
    v2's pick vocabulary byte for byte (YES/NO/SKIP/DONE/PICK, candidate names, "id|name" keys),
    because the save link and saved picks depend on it. */
-import type { Contest } from './types';
+import type { Contest, Item } from './types';
 import { S, persist, forgetLast, type View } from './state';
 import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
@@ -232,14 +232,16 @@ A['district-change'] = (d) => {
 };
 A.notmine = (d) => {
   const b = B();
-  const it = b.byId.get(d.id!) as Contest;
-  const ids = d.all ? [...b.mayApply].filter((id) => (b.byId.get(id) as Contest | undefined)?.scope_plain === it.scope_plain) : [d.id!];
+  const it = b.byId.get(d.id!)!;
+  // "Hide all like this": the same scope (a race) or the same district (a measure), same kind.
+  const scope = (x: Item | undefined) => (!x ? null : x.kind === 'contest' ? `c|${x.scope_plain}` : `m|${x.jurisdiction}`);
+  const ids = d.all ? [...b.mayApply].filter((id) => scope(b.byId.get(id)) === scope(it)) : [d.id!];
   ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
   if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
   anchored(() => renderSection(sectionOf(it)));
   renderSummaries();
   persist();
-  if (ids.length > 1) toast(`Took ${ids.length} races off your list.`);
+  if (ids.length > 1) toast(`Took ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} off your list.`);
 };
 A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id); anchored(() => renderSection(sectionOf(B().byId.get(d.id!)!))); renderSummaries(); persist(); };
 

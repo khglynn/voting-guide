@@ -69,7 +69,8 @@
     "hours_note": "CHICAGO (official, chicagoelections.gov): Downtown Voting Supersite, 137 S. State St., and the Chicago Board of Elections office, 69 W. Washington St., 6th floor, opened Thursday, Oct. 1. Hours Oct. 1 to 25: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Hours Oct. 26 to Nov. 2: Mon to Fri 9 AM to 7 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. All 50 ward sites open Monday, Oct. 19 through Monday, Nov. 2: Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM, Sun 10 AM to 4 PM. Any Chicago voter can use any site. Three campus sites (Chicago State, NEIU, UChicago Reynolds Club) run Oct. 28 to 30, 10 AM to 5 PM. On Election Day the Supersite and all 50 ward sites are open 6 AM to 7 PM as vote centers for any Chicago voter; the 69 W. Washington office is NOT open for voting on Election Day. SUBURBAN COOK: early voting began Oct. 7 at some sites and most sites open Oct. 19; hours vary by site and week; see cookcountyclerkil.gov. COLLAR counties: most opened Sept. 24 at the clerk's office, with more sites Oct. 19; DuPage's 24 permanent sites run weekdays 8 AM to 7 PM and weekends 9 AM to 5 PM.",
     "vote_centers": true,
     "lookup_url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx",
-    "confidence": "verified"
+    "confidence": "verified",
+    "counties_vary": true
   },
   "election_day": {
     "polls_open": "6:00 AM",

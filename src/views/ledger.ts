@@ -353,8 +353,10 @@ function judgeToolsHTML(): string {
       batch.readFirst.forEach((x) => { by.set(x.why, [...(by.get(x.why) || []), x]); });
       const lines = [...by].map(([why, list]) => {
         const shown = list.slice(0, 6).map((x) => `<button class="linkbtn" data-act="goto" data-id="${esc(x.id)}">${esc(last(x.name))}</button>`);
-        const names = shown.length > 1 ? `${shown.slice(0, -1).join(', ')}${list.length > 6 ? ', ' : ' and '}${shown[shown.length - 1]}` : shown[0];
-        return `${esc(why.charAt(0).toUpperCase() + why.slice(1))}: ${names}${list.length > 6 ? ` and ${list.length - 6} more` : ''}.`;
+        // The last name and its period stay on one line, so a wrap never strands the period.
+        const tail = `<span style="white-space:nowrap">${shown[shown.length - 1]}${list.length > 6 ? ` and ${list.length - 6} more` : ''}.</span>`;
+        const names = shown.length > 1 ? `${shown.slice(0, -1).join(', ')}${list.length > 6 ? ', ' : ' and '}${tail}` : tail;
+        return `${esc(why.charAt(0).toUpperCase() + why.slice(1))}: ${names}`;
       });
       parts.push(`<p class="readfirst"><b>Read these first.</b> ${lines.join(' ')}</p>`);
     }

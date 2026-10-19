@@ -69,7 +69,8 @@
     "hours_note": "State MINIMUM: every county must open early voting Saturday, October 24 through Saturday, October 31, 2026 ('the 10th day before the election' through 'the 3rd day before'), 8 to 12 hours a day at each site. Counties may add days 'as early as the 15th day before the election and ending on the 2nd day' (Oct 19 to 23 and Nov 1). CONFIRMED county DATES: ORANGE (Orlando): Monday, October 19 through Sunday, November 1, 8:00 AM to 8:00 PM, 27 sites, each with a secure ballot intake station; six have drive-through drop-off. LEON (Tallahassee): Monday, October 19 through Sunday, November 1, 10 sites, hours vary by site (Courthouse 8 AM to 4 PM; Elections Center 8:30 AM to 6 PM; the other 8 sites 10 AM to 6 PM). ESCAMBIA (Pensacola): Monday, October 19 through Saturday, October 31 (no Sunday Nov 1), 8:00 AM to 6:00 PM Central Time, 10 sites. During early voting you can use ANY early voting site in your county.",
     "vote_centers": true,
     "lookup_url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "counties_vary": true
   },
   "election_day": {
     "polls_open": "7:00 AM",

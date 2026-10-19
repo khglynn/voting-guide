@@ -299,7 +299,7 @@ export function judgeBatch(): JudgeBatch | null {
     for (const x of withBars) {
       const s = st(x);
       const no = s.filter((v) => v === 'no').length, dec = s.filter((v) => v === 'declined').length;
-      const why = [no ? `${no} of ${s.length} groups say no` : '', dec ? `skipped ${dec} ${dec === 1 ? 'screening' : 'screenings'}` : ''].filter(Boolean).join(' and ');
+      const why = [no ? `${no} of ${s.length} groups ${no === 1 ? 'says' : 'say'} no` : '', dec ? `skipped ${dec} ${dec === 1 ? 'screening' : 'screenings'}` : ''].filter(Boolean).join(' and ');
       if (why) readFirst.push({ id: x.it.id, name: x.c.name, why });
     }
   } else return null;

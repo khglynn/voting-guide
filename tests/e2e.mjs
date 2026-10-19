@@ -474,6 +474,19 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Pass it on: the public message never carries the county office line', !/Local election office/.test(pub), pub);
   check('Pass it on: the public message leads with Election Day and the mail rule', /^Election Day in Colorado is Tue, Nov 3\. Ballots must be in by 7 PM Tue, Nov 3\./.test(pub), pub.slice(0, 120));
   check('Pass it on: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
+  // Florida counties set their own early-voting days: a county ballot gives its county's window,
+  // and a statewide-only ballot calls the state's dates a minimum (Codex round 4).
+  for (const [zip, re, label] of [
+    ['32801', /Early voting in Orange County runs Mon, Oct 19 through Sun, Nov 1\./, "Pass it on: Orlando gives Orange County's early-voting window"],
+    ['32052', /Every Florida county offers early voting Sat, Oct 24 through Sat, Oct 31\. Some counties start earlier or finish later/, "Pass it on: a statewide Florida ballot calls Oct 24 to 31 the counties' minimum"],
+  ]) {
+    const fl = await newPage();
+    await openBallot(fl.page, zip);
+    await tap(fl.page, '#plan [data-act="view"][data-v="pass"]');
+    const msg = await text(fl.page, '#msg-pub');
+    check(label, re.test(msg), msg.slice(0, 200));
+    await fl.ctx.close();
+  }
   check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
   check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
   check('Pass it on: partisan groups sit beside "examples, not recommendations"', /not recommendations/.test(await text(page, '#pass .ways')) && /On the left/.test(await text(page, '#pass .ways')) && /On the right/.test(await text(page, '#pass .ways')));

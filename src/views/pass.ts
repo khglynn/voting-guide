@@ -84,11 +84,22 @@ export function messages(): { fam: string | null; pub: string | null } {
     dates.push(r.rule === 'postmarked_by'
       ? `Drop off your ballot by ${time ? `${time} ` : ''}${fmtDate(r.date)}, or mail it with a postmark dated ${fmtDate(r.date, { weekday: false })} or earlier.`
       : `Ballots must be in by ${time ? `${time} ` : ''}${fmtDate(r.date)}. Postmarks don’t count.`);
-  } else {
-    const ep = sh.early_in_person;
-    if (ep.available && ep.start && ep.end && ep.end >= todayISO()) dates.push(`Early voting runs ${fmtDate(ep.start)} through ${fmtDate(ep.end)}.`);
   }
   const place = b.places.length === 1 ? b.places[0] : null;
+  if (!isMailState(sh)) {
+    // A county's own window when this ballot's place has one; otherwise the state's, and where
+    // counties set their own days (Florida, Illinois) the state's dates are a minimum, so say so.
+    const own = place && place.early_in_person;
+    const ep = own || sh.early_in_person;
+    const vary = (sh.early_in_person as { counties_vary?: boolean }).counties_vary;
+    if (sh.early_in_person.available && ep.start && ep.end && ep.end >= todayISO()) {
+      const span = `${fmtDate(ep.start)} through ${fmtDate(ep.end)}`;
+      const county = own && place!.counties && place!.counties.length === 1 ? `${place!.counties[0]} County` : place ? place.label.replace(/\s*\(.*\)$/, '') : '';
+      dates.push(own ? `Early voting in ${county} runs ${span}.`
+        : vary ? `Every ${b.stateName} county offers early voting ${span}. Some counties start earlier or finish later; check yours.`
+        : `Early voting runs ${span}.`);
+    }
+  }
   const where = place && place.lookups ? place.lookups.election_day || place.lookups.early_in_person || '' : '';
   let pub: string | null = null;
   if (links) {

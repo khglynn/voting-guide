@@ -6,7 +6,7 @@ import { chosenIds } from '../ballot';
 import { esc, plural } from '../util';
 import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, explainsOnly } from '../model/lens';
 import { coverage } from '../model/tally';
-import { leanHTML, ext, isOpen } from './common';
+import { leanHTML, sourceLean, ext, isOpen } from './common';
 
 const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const TYPE_WORD: Record<string, string> = {
@@ -46,7 +46,7 @@ export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;
 
 /* ---------- the "More sources" sheet ---------- */
 const GROUPS: [string, string][] = [['left', 'Left'], ['lean_left', 'Leans left'], ['neutral', 'Center'], ['lean_right', 'Leans right'], ['right', 'Right'], ['none', 'Not rated']];
-const BASIS_KIND: Record<string, string> = { outside_rating: 'Rated by an outside group', party: 'Official party', mission: 'Our read of its own mission statement' };
+const BASIS_KIND: Record<string, string> = { outside_rating: 'Rated by an outside group', party: 'A party', mission: 'From its mission statement' };
 function srcRow(e: Endorser): string {
   const b = S.ballot!;
   const on = chosenIds().includes(e.id);
@@ -55,7 +55,7 @@ function srcRow(e: Endorser): string {
   const what = explainsOnly(e) ? 'Explains, doesn’t pick' : n ? `Picks on ${plural(n, 'item')} here` : 'No picks here yet';
   return `<li class="srow">
     <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}. ${esc(what)}.</span>
-      <span class="s-l">${leanHTML(e.lean)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">How we know</button></span>
+      <span class="s-l">${sourceLean(e)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">How we know</button></span>
       ${isOpen(k) ? `<p class="s-b">${e.lean_basis_kind ? `<b>${esc(BASIS_KIND[e.lean_basis_kind])}.</b> ` : ''}${esc(e.lean_basis || 'No basis recorded, so we show it as not rated.')}${e.lean_note ? ` ${esc(e.lean_note)}` : ''}${e.guide_url ? ` ${ext(e.guide_url, 'Their guide')}` : ''}</p>` : ''}</div>
     <button class="tg" role="switch" aria-checked="${on}" aria-labelledby="sn-${esc(e.id)}" data-act="src" data-id="${esc(e.id)}" data-fk="tg-${esc(e.id)}"><span></span></button></li>`;
 }

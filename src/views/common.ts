@@ -1,5 +1,5 @@
 /* Small render helpers shared by every view. */
-import type { Lean } from '../types';
+import type { Endorser, Lean } from '../types';
 import { S } from '../state';
 import { esc, host } from '../util';
 
@@ -9,12 +9,29 @@ export const LEANS: Record<Lean, [number, string]> = {
 
 /* The neutral five-step lean scale plus a word. Ink only, never red or blue; the middle step
    is round. "Not rated" is its own visible state, never a blank scale. */
-export function leanHTML(lean: Lean | null, words = true): string {
+export function leanHTML(lean: Lean | null, words = true, basis = ''): string {
   const word = lean ? LEANS[lean][1] : 'not rated';
   const idx = lean ? LEANS[lean][0] : -1;
   const cells = [0, 1, 2, 3, 4].map((i) => `<i class="${i === 2 ? 'mid' : ''}${i === idx ? ' on' : ''}"></i>`).join('');
-  return `<span class="lean${lean ? '' : ' unrated'}"><span class="ls" aria-hidden="true">${cells}</span>${words ? `<span class="lw">${word}</span>` : `<span class="vh">Lean: ${word}</span>`}</span>`;
+  const lean_ = `<span class="lean${lean ? '' : ' unrated'}"><span class="ls" aria-hidden="true">${cells}</span>${words ? `<span class="lw">${word}</span>` : `<span class="vh">Lean: ${word}</span>`}</span>`;
+  return basis ? `<span class="lean-b">${lean_}<span class="lk">${esc(basis)}</span></span>` : lean_;
 }
+
+/* How a lean was placed, in plain words: an outside rating names the rater, a party is a
+   party, anything else is read from the group's own mission statement. Never from whom a
+   source endorsed. Empty when there is no lean. */
+export function basisWords(e: Endorser): string {
+  if (!e.lean || !e.lean_basis_kind) return '';
+  if (e.lean_basis_kind === 'party') return 'party';
+  if (e.lean_basis_kind === 'mission') return 'from its mission statement';
+  const b = e.lean_basis || '';
+  return /AllSides/i.test(b) ? 'rated by AllSides' : /Ad Fontes/i.test(b) ? 'rated by Ad Fontes Media' : 'rated by an outside group';
+}
+/* The lean scale for a source, with how it was placed beneath. */
+export const sourceLean = (e: Endorser, words = true): string => {
+  const k = basisWords(e);
+  return leanHTML(e.lean, words, k);
+};
 
 export const confLabel = (c: string | null | undefined): string =>
   c === 'unverified' ? 'Not yet confirmed' : c === 'sourced' ? 'Secondhand source' : '';

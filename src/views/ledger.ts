@@ -109,22 +109,28 @@ function questionHTML(g: Group): string {
     ${open ? questionBodyHTML(g) : ''}
   </li>`;
 }
-function finderFor(g: Group): { label: string; url: string } | null {
+/* Every district finder that matches this office, across the ballot's places, once per link:
+   a place in three counties (Austin) needs each county's page. */
+export function findersFor(g: Group): { label: string; url: string }[] {
   const b = S.ballot!;
-  for (const p of b.places) for (const f of p.district_finders || []) if (g.office.toLowerCase().includes(f.office_match.toLowerCase())) return f;
-  return null;
+  const out: { label: string; url: string }[] = [];
+  const office = g.office.toLowerCase();
+  for (const p of b.places) for (const f of p.district_finders || []) {
+    if (office.includes(f.office_match.toLowerCase()) && !out.some((x) => x.url === f.url)) out.push(f);
+  }
+  return out;
 }
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
   const members = g.members.map((id) => b.byId.get(id) as Contest);
-  const finder = finderFor(g);
+  const finders = findersFor(g);
   const sb = sampleBallot();
   return `<div class="ob dq">
     <h3 class="dq-h">Which ${esc(cleanOffice(g.office))} district is yours?</h3>
     <p class="ob-lede">Your ZIP touches ${members.length} of them. Your sample ballot or voter registration says which.</p>
     <div class="opts">${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “May apply”</small></button></div>
-    <p class="dq-help">${[finder ? ext(finder.url, finder.label) : '', g.kind ? '<button class="linkbtn" data-act="addr-open">Answer from my address</button>' : '', sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
+    <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), g.kind ? '<button class="linkbtn" data-act="addr-open">Answer from my address</button>' : '', sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
   </div>`;
 }
 function glineHTML(g: Group): string {

@@ -8,7 +8,7 @@ import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally'
 import { candidateReview, judicialReview, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
+import { sourceLean, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
 import { headsUp, headsHTML } from './ledger';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
@@ -61,7 +61,7 @@ function quietLines(l: Lineup, it: Item): string {
   return out.length ? `<p class="gridnote">${out.join(' ')}</p>` : '';
 }
 function srcCell(e: Endorser): string {
-  return `<th scope="row"><span class="sn">${esc(e.short)}</span>${leanHTML(e.lean)}</th>`;
+  return `<th scope="row"><span class="sn">${esc(e.short)}</span>${sourceLean(e)}</th>`;
 }
 function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | null {
   const r = (S.ballot!.ends[it.id] || {})[e.id];
@@ -114,7 +114,7 @@ function othersHTML(it: Item): string {
   if (!w.length) return '';
   const k = it.id;
   const open = S.ui.others.has(k);
-  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => `<li><span class="o-n">${esc(e.short)}</span>${leanHTML(e.lean)}<span class="o-p">${esc(g.label)}</span>
+  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => `<li><span class="o-n">${esc(e.short)}</span>${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
       <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`)).join('')}</ul>` : '';
   return `<div class="others-wrap"><button class="linkbtn" data-act="others" data-id="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'See'} ${plural(w.length, 'other source')} that picked here</button>${list}</div>`;
 }
@@ -173,12 +173,16 @@ function backedBy(c: Contest, k: Candidate, l: Lineup): string {
   const by = l.groups.filter((g) => g.choices.includes(k.name)).flatMap((g) => g.sources);
   return by.length ? `<span class="by">${CHECK}<span>Backed by ${esc(by.map((e) => e.short).join(', '))}</span></span>` : '';
 }
-/* Every candidate gets the same line: their own words (quote marked) or the honest gap. */
+/* Every candidate gets the same kind of line: their own words (quote marked), "no statement
+   found" when a real search found none, or, when nobody has looked yet, a neutral line that
+   says so without implying a search. */
+export const NOT_LOOKED = 'We haven’t looked up their own words yet.';
+const notLooked = (k: Candidate): boolean => !k.own_words.length && k.own_words_status !== 'none_found';
 function wordsLine(k: Candidate): string {
   const o = k.own_words[0];
   if (o) return `<span class="cl-w${o.is_quote ? ' q' : ''}">${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</span>`;
   if (k.own_words_status === 'none_found') return `<span class="cl-w none">No campaign statement found${k.own_words_checked ? ` (checked ${esc(fmtShort(k.own_words_checked.on))})` : ''}.</span>`;
-  return '';
+  return `<span class="cl-w none">${NOT_LOOKED}</span>`;
 }
 function listHTML(c: Contest, l: Lineup): string {
   const cands = orderCandidates(c, l);
@@ -187,6 +191,7 @@ function listHTML(c: Contest, l: Lineup): string {
       ${pickBtn(c, k, 'pick cl-b')}</li>`).join('')}</ol>`;
 }
 function voicesHTML(c: Contest, cands: Candidate[]): string {
+  if (cands.length && cands.every(notLooked)) return c.is_retention ? '' : `<div class="voices"><h4>In their own words</h4><p class="nostmt">We haven’t looked up these candidates’ own words yet.</p></div>`;
   const bits = cands.map((k) => {
     const o = k.own_words[0];
     if (o) {
@@ -198,7 +203,7 @@ function voicesHTML(c: Contest, cands: Candidate[]): string {
       const ch = k.own_words_checked;
       return `<p class="nostmt"><b>${esc(k.short)}:</b> No campaign statement found${ch ? `; we checked ${esc(ch.where.join(', ') || 'their sites')} on ${esc(fmtShort(ch.on))}` : ''}.</p>`;
     }
-    return '';
+    return `<p class="nostmt"><b>${esc(k.short)}:</b> ${NOT_LOOKED}</p>`;
   }).filter(Boolean);
   return bits.length ? `<div class="voices"><h4>In their own words</h4>${bits.join('')}</div>` : '';
 }
@@ -270,7 +275,7 @@ function reviewHTML(r: Review | null, c: Candidate): string {
 }
 /* Ratings in a contested judicial race: lawyer polls with every candidate's count side by side,
    then each candidate's bar ratings. No tone color on either. */
-function raceRatingsHTML(c: Contest): string {
+export function raceRatingsHTML(c: Contest): string {
   if (!hasRatings(c)) return '';
   const polls = pollsFor(c);
   const groups = raceRatings(c);

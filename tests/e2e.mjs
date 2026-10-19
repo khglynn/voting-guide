@@ -222,6 +222,8 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   check('Austin: asks which council district is yours', !!key);
   await openRow(page, `q:${key}`);
   await shot(page, '04-austin-question');
+  const finders = await page.$$eval(`.row[data-q="${key}"] .dq-help a`, (as) => as.map((a) => a.textContent));
+  check('Austin: the council question links every county’s finder (Travis, Williamson, Hays)', ['Travis', 'Williamson', 'Hays'].every((c) => finders.some((t) => t.includes(c))), finders.join(' | '));
   await tap(page, `.row[data-q="${key}"] [data-act="district"][data-v="tx-austin-council-3"]`);
   check('Austin: District 3 shows, opened; District 1 hides', !!(await page.$('#i-tx-austin-council-3.is-open')) && !(await page.$('#i-tx-austin-council-1')));
   check('Austin: the open race says which district you chose', /You said you’re in District 3/.test(await text(page, '#i-tx-austin-council-3 .ob')));
@@ -440,7 +442,13 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
   const pub = await text(page, '#msg-pub');
   check('Pass it on: "I already voted" says thank you', /You voted\. Thank you\./.test(await text(page, '#pass')));
-  check('Pass it on: the public message uses official links, never this guide', /Official info: https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
+  check('Pass it on: the public message uses official links, never this guide', /(Official election info|Check your registration): https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
+  check('Pass it on: Colorado’s registration and official links are the same URL, given once', (pub.match(/govotecolorado\.gov/g) || []).length === 1, pub);
+  check('Pass it on: the confirmed place adds its election office', /Local election office: https?:\/\//.test(pub), pub);
+  check('Pass it on: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
+  check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
+  check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
+  check('Pass it on: partisan groups sit beside "examples, not recommendations"', /not recommendations/.test(await text(page, '#pass .ways')) && /On the left/.test(await text(page, '#pass .ways')) && /On the right/.test(await text(page, '#pass .ways')));
   check('Pass it on: the friends message can share the guide', (await text(page, '#msg-fam')).includes(new URL(BASE).host));
   check('Pass it on: no relative "today" in a message someone reads later', !/\btoday\b|\btomorrow\b/i.test(pub));
   await tap(page, '[data-act="tick"][data-k="family"]');
@@ -481,6 +489,18 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForTimeout(400);
   check('Try as: the real saved picks are untouched', (await page.evaluate(() => localStorage.getItem('vg2'))) === saved);
   noErrors(page, 'Try as');
+  await ctx.close();
+}
+
+/* ---------- Pass it on in Washington: statewide links only, never King County's page ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '99201');
+  await tap(page, '#plan [data-act="view"][data-v="pass"]');
+  await page.waitForSelector('#msg-pub');
+  const pub = await text(page, '#msg-pub');
+  check('Spokane: the public message never carries King County’s lookup page', !/kingcounty\.gov/.test(pub) && /votewa\.gov/.test(pub), pub);
+  noErrors(page, 'Spokane pass');
   await ctx.close();
 }
 

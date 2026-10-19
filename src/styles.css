@@ -414,6 +414,8 @@ b, strong { font-weight: 600; }
 .ls i.on { background: var(--ink); border-color: var(--ink); }
 .lean.unrated .ls i { border-style: dotted; }
 .lw { font-size: 11.5px; color: var(--muted); font-style: italic; white-space: nowrap; }
+.lean-b { display: inline-flex; flex-direction: column; gap: 1px; }
+.lk { font-size: 11.5px; color: var(--faint); line-height: 1.25; }
 
 /* ---------- end of the ballot ---------- */
 .endcap { padding-top: 26px; padding-bottom: 8px; }
@@ -547,7 +549,6 @@ b, strong { font-weight: 600; }
 .pass .wrap { padding-top: 4px; padding-bottom: 30px; }
 .pass h2 { font-family: var(--f-display); font-size: 38px; font-weight: 600; line-height: 1; letter-spacing: -.02em; font-variation-settings: "SOFT" 60, "opsz" 144; margin-top: 8px; }
 .pass .lede { font-size: 17px; }
-.compound { margin-top: 8px; font-size: 14.5px; color: var(--muted); }
 .study { margin-top: 14px; font-size: 15px; color: var(--ink-2); padding-left: 12px; border-left: 3px solid var(--gold); }
 .pass h3 { font-family: var(--f-display); font-size: 21px; font-weight: 600; margin-top: 26px; font-variation-settings: "opsz" 36; }
 .pass h3 + .sub { font-size: 14px; color: var(--muted); margin-top: 3px; }
@@ -567,7 +568,11 @@ b, strong { font-weight: 600; }
 .msg .copy { margin-top: 6px; min-height: 44px; padding: 0 2px; font-weight: 600; font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px; text-decoration: underline; text-underline-offset: 3px; }
 .msg .copy svg { width: 15px; height: 15px; }
 .ways .grp { padding: 10px 0; border-top: 1px solid var(--rule); }
-.ways li { padding: 4px 0; }
+.ways li { padding: 6px 0; }
+.ways .w-act { display: block; font-size: 14.5px; color: var(--ink-2); margin-top: 2px; }
+.w-note { margin-top: 12px; font-size: 14px; color: var(--muted); font-style: italic; }
+.study-tog { margin-top: 6px; font-size: 14.5px; }
+.study-cav { margin-top: 6px; font-size: 14.5px; color: var(--ink-2); }
 .voted-head .kick { font-family: var(--f-display); font-size: 21px; font-weight: 600; color: var(--gold-ink); margin-top: 6px; }
 
 /* ---------- how this guide works ---------- */

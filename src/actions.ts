@@ -374,6 +374,7 @@ A['copy-link'] = async () => {
 A['copy-msg'] = async (d) => {
   const m = messages();
   const text = d.k === 'pub' ? m.pub : m.fam;
+  if (!text) return;
   if (await copyText(text)) toast('Copied. Paste it into your group chat.');
   else toast('Copy didn’t work here. Press and hold the message to copy it.');
 };

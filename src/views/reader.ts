@@ -6,11 +6,11 @@ import { S } from '../state';
 import { chosenIds, isMultiJudge, isPartisan, isRCV } from '../ballot';
 import { esc, host } from '../util';
 import { rowTitle, courtOf, choiceShort } from '../model/labels';
-import { judicialReview } from '../model/judges';
+import { judicialReview, evalState, surveyLines, strengthOf, hasRatings } from '../model/judges';
 import { explainsOnly } from '../model/lens';
-import { ext, escP, leanHTML, srcLink, confLabel } from './common';
+import { ext, escP, sourceLean, srcLink, confLabel } from './common';
 import { sectionTitle } from './ledger';
-import { rcvURL, reportLink } from './open';
+import { rcvURL, reportLink, raceRatingsHTML } from './open';
 import { sectionOf } from '../ballot';
 
 const sec = (title: string, body: string, sub = ''): string => (body ? `<section class="rd-sec"><h3>${esc(title)}</h3>${sub ? `<p class="sub">${esc(sub)}</p>` : ''}${body}</section>` : '');
@@ -22,7 +22,7 @@ function ownWords(c: Candidate): string {
       const ch = c.own_words_checked;
       return `<p class="fine">No campaign statement found${ch ? `. We checked ${esc(ch.where.join(', ') || 'their sites')} on ${esc(ch.on)}` : ''}.</p>`;
     }
-    return '';
+    return '<p class="fine">We haven’t looked up their own words yet.</p>';
   }
   return c.own_words.map((o) => `<figure class="pq${o.is_quote ? '' : ' para'}"><blockquote>${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</blockquote>
     <figcaption>${o.is_quote ? 'In their words' : 'Paraphrased by us'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`).join('');
@@ -55,7 +55,7 @@ function sourcesSaid(it: Item): string {
   return list.map(({ e, en }) => {
     const st = en.s === 'no_position' ? '<p class="st np">Took no stand</p>' : en.s === 'not_found' ? '<p class="st nf">No pick found</p>'
       : `<p class="st end">${en.both ? 'Lists campaigns on both sides' : esc((en.c || []).map((x) => choiceShort(it, x)).join(', ') || en.note || 'Endorsed')}${en.note && en.c ? ` (${esc(en.note)})` : ''}</p>`;
-    return `<div class="ent"><div class="ent-h"><b>${esc(e.name)}</b>${ids.has(e.id) ? '<span class="mine-tag">you chose</span>' : ''}</div>${leanHTML(e.lean)}${st}
+    return `<div class="ent"><div class="ent-h"><b>${esc(e.name)}</b>${ids.has(e.id) ? '<span class="mine-tag">you chose</span>' : ''}</div>${sourceLean(e)}${st}
       ${en.why ? `<p>${escP(en.why)}</p>` : ''}
       <p class="src">${[en.url ? ext(en.url, host(en.url)) : '', en.date ? esc(en.date) : '', confLabel(en.conf)].filter(Boolean).join(' · ')}</p></div>`;
   }).join('');
@@ -66,11 +66,23 @@ function guides(it: Item): string {
   const g = b.endorsers.filter((e) => ids.has(e.id) && e.guide_url && (explainsOnly(e) || (it.kind === 'measure' ? !e.endorses_measures : !e.endorses_candidates)));
   return g.map((e) => `<div class="guide">${ext(e.guide_url, `${e.short}’s guide`, 'gt')}<p class="by">${esc(e.name)}. Explains without picking.</p></div>`).join('');
 }
+/* One reviewer's entry, with the same rules as the open row: survey rows say how many
+   answered (none under 5 as a percentage), boilerplate never shows as a strength when the
+   survey disagrees, and a reason for not rating is labeled as a reason, not a finding.
+   Lawyer polls are counts, shown for the whole race (raceRatingsHTML), never here. */
 function evalBlock(e: Evaluation): string {
-  const sv = e.survey ? [e.survey.attorneys ? `Lawyers: ${e.survey.attorneys.yes_pct}% yes${e.survey.attorneys.n ? ` of ${e.survey.attorneys.n}` : ''}` : '', e.survey.non_attorneys ? `Others in the courtroom: ${e.survey.non_attorneys.yes_pct}% yes${e.survey.non_attorneys.n ? ` of ${e.survey.non_attorneys.n}` : ''}` : ''].filter(Boolean).join('. ') : '';
-  return `<div class="ent"><div class="ent-h"><b>${esc(e.by)}</b></div><p class="st end">${esc(e.rating)}${e.vote ? ` (vote ${esc(e.vote)})` : ''}</p>
-    ${sv ? `<p>${esc(e.survey?.question ? `${e.survey.question} ` : '')}${esc(sv)}.</p>` : ''}
-    ${e.noted_strength ? `<p><b>Noted:</b> “${esc(e.noted_strength)}”</p>` : ''}${e.noted_concern ? `<p><b>A concern:</b> “${esc(e.noted_concern)}”</p>` : ''}
+  if (e.kind === 'bar_poll') return '';
+  const st = evalState(e);
+  const lines = surveyLines(e);
+  const strength = strengthOf(e);
+  const reason = !!e.noted_concern && (st === 'declined' || st === 'unrated');
+  const sv = e.survey;
+  const survey = lines.length
+    ? `<p>${esc(sv && sv.question ? `The survey asked: ${sv.question}` : 'The survey:')}</p><ul class="bul">${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>${sv && sv.caution ? `<p class="fine">${esc(sv.caution)}</p>` : ''}${sv && sv.report_url ? `<p class="fine">${ext(sv.report_url, 'The survey report')}</p>` : ''}`
+    : e.survey_note ? `<p class="fine">${esc(e.survey_note)}</p>` : '';
+  return `<div class="ent"><div class="ent-h"><b>${esc(e.by)}</b></div><p class="st end">${esc(e.rating)}${e.vote ? ` (vote ${esc(e.vote)}${e.vote_note ? `; ${esc(e.vote_note.replace(/\.$/, ''))}` : ''})` : ''}${st === 'declined' ? ' <span class="muted">(the candidate did not take part in this screening)</span>' : ''}</p>
+    ${survey}
+    ${strength ? `<p><b>Noted:</b> “${esc(strength)}”</p>` : ''}${e.noted_concern ? `<p><b>${reason ? 'Their reason' : 'A concern'}:</b> “${esc(e.noted_concern)}”</p>` : ''}
     <p class="src">${ext(e.url, host(e.url))}${e.verified_on ? ` · checked ${esc(e.verified_on)}` : ''}${confLabel(e.confidence) ? ` · ${confLabel(e.confidence)}` : ''}</p></div>`;
 }
 function links(list: { name: string; url: string }[]): string {
@@ -85,6 +97,7 @@ function raceRead(c: Contest): string {
     ${isRCV(c) ? `<p class="facts"><b>Ranked choice: rank up to ${c.rank_up_to}.</b> ${esc(c.rcv_how || '')} ${rcvURL(c) ? ext(rcvURL(c), 'How the count works') : ''}</p>` : ''}
     ${c.why_it_matters ? sec('Why it matters', para(c.why_it_matters)) : ''}
     ${sec('The candidates, in their own words', c.candidates.map((k) => candBlock(c, k)).join(''), 'Quote marks mean their exact words. Anything else is our summary, labeled.')}
+    ${hasRatings(c) ? sec('Lawyer polls and bar ratings', raceRatingsHTML(c)) : ''}
     ${sec('Guides that explain without picking', guides(c))}
     ${sec('What each source said', sourcesSaid(c), 'Sources you chose come first.')}
     ${sec('Official and source links', links(c.sources))}`;
@@ -108,7 +121,7 @@ function judgeRead(c: Contest): string {
   const judges = isMultiJudge(c) ? c.candidates : [c.candidates[0]];
   const blocks = judges.map((k) => `<div class="cand-blk"><h4>${esc(k.name)}</h4>
     ${(k.evaluations || []).map(evalBlock).join('') || ''}
-    ${k.background ? `<p class="bg">${escP(k.background)}</p>` : ''}${ownWords(k)}
+    ${k.background ? `<p class="bg">${escP(k.background)}</p>` : ''}${k.own_words.length || k.own_words_status ? ownWords(k) : ''}
     ${k.website ? `<p class="site">${ext(k.website, 'More about this judge')}</p>` : ''}</div>`).join('');
   return `<span class="num">${esc(courtOf(c))}</span><h2>${esc(isMultiJudge(c) ? courtOf(c) : c.candidates[0].name)}</h2>
     ${c.office_explainer ? `<p class="lede">${escP(c.office_explainer)}</p>` : ''}

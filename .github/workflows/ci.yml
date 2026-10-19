@@ -135,7 +135,7 @@ jobs:
       # data), never for its warnings, so one slow response from the host does not wake anyone up.
       - name: Sweep production (one retry)
         env:
-          BASE: https://voting-guide-silk.vercel.app
+          BASE: https://vote.kevinhg.com
           MODE: ${{ github.event.inputs.mode || 'fast' }}
           SHOTS_DIR: .tmp/sweep-shots
         run: |

@@ -24,7 +24,7 @@
 # Needs: node 18+, npm, git, gh (logged in as an account that can push to khglynn/voting-guide), curl, python3.
 set -euo pipefail
 
-PROD_URL="${PROD_URL:-https://voting-guide-silk.vercel.app}"
+PROD_URL="${PROD_URL:-https://vote.kevinhg.com}"
 REPO="${VG_REPO:-khglynn/voting-guide}"
 REQUIRED_CHECKS="data browser"            # the job names in .github/workflows/ci.yml
 CI_TIMEOUT="${CI_TIMEOUT:-1800}"          # seconds to wait for the required checks

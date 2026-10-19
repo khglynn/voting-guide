@@ -206,6 +206,10 @@ for (const e of all.endorsers) {
     if (!e.lean && !/not rated|no outside rating|no (separate )?rating|not rate/i.test(e.lean_basis)) warn('lean-null-unexplained', `${id}: no lean, and lean_basis does not say it is unrated`);
   }
   if (!isUrl(e.guide_url)) warn('endorser-guide-url', `${id}: no usable guide_url`);
+  // Paywalled papers (Oct 19): build-data honors only a literal true, so anything else is a typo.
+  if (e.paywall != null && typeof e.paywall !== 'boolean') err('paywall-shape', `${id}: paywall must be true or false, got ${JSON.stringify(e.paywall)}`);
+  if (e.paywall_note_ok != null && typeof e.paywall_note_ok !== 'boolean') err('paywall-shape', `${id}: paywall_note_ok must be true or false, got ${JSON.stringify(e.paywall_note_ok)}`);
+  if (e.paywall_note != null && !isStr(e.paywall_note)) err('paywall-shape', `${id}: paywall_note must be text`);
 }
 for (const [id, vs] of byEndorser) {
   const leans = [...new Set(vs.map((v) => v.lean ?? 'null'))];

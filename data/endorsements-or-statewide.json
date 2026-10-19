@@ -2,9 +2,9 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "or-governor",
-    "status": "endorsed",
-    "choice": "Tina Kotek",
-    "why": "The Oregonian’s syndicated video headline states its November 2026 endorsement of Kotek. The full editorial is blocked.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Oregonian's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-a-dispirited-endorsement-for-kotek.html",
     "date": "2026-10-19",
     "confidence": "sourced"

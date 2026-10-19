@@ -292,11 +292,11 @@
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-governor",
-    "status": "endorsed",
-    "choice": "David Jolly",
-    "why": "Oct 1, 2026 editorial: picking Donalds means \"voters will be inviting more of the same: More division.\"",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Miami Herald's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317273434.html",
-    "date": "2026-10-01",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -392,9 +392,9 @@
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-amendment-1",
-    "status": "endorsed",
-    "choice": "NO",
-    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Miami Herald's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317433651.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -402,9 +402,9 @@
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-amendment-2",
-    "status": "endorsed",
-    "choice": "NO",
-    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Miami Herald's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317441706.html",
     "date": "2026-10-19",
     "confidence": "sourced"
@@ -412,9 +412,9 @@
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-amendment-3",
-    "status": "endorsed",
-    "choice": "NO",
-    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
+    "status": "not_found",
+    "choice": null,
+    "why": "The Miami Herald's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317445636.html",
     "date": "2026-10-19",
     "confidence": "sourced"

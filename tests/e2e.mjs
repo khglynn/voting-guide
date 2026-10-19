@@ -21,6 +21,9 @@ const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
 const TODAY = process.env.TODAY || '2026-10-19';
 const W = 380;
 const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || '';
+/* The copy pass (Oct 19): the sources header's words and the paywall note's, from the copy table. */
+const LENS_HEAD = 'Show endorsements from';
+const PW_NOTE_RE = /behind a paywall, so we couldn’t read/i;
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? `  (${extra})` : ''}`); };
@@ -112,20 +115,22 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   check('Denver: "Am I registered?" goes to the official lookup', /^https?:/.test((await page.getAttribute('.plan .pbtn.line', 'href')) || ''));
   check('Denver: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
   await tap(page, '[data-act="open"][data-k="whatif"]');
-  check('Denver: "What if" opens the situations and the basics', /What if/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
+  check('Denver: the dates and ID toggle opens the situations and the basics', /Common problems and what to do/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
   await tap(page, '[data-act="open"][data-k="whatif"]');
 
-  // The lens: Papers and guides on by default; a chip adds groups; the sheet lists everyone.
-  check('Denver: Papers and guides is on by default', (await page.getAttribute('[data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true');
+  // The lens: Newspapers and guides on by default; a chip adds groups; the sheet lists everyone.
+  // The copy pass (Kevin, Oct 19): the section header says what it does, not "Who do you trust?".
+  check(`Denver: the sources header reads "${LENS_HEAD}"`, (await text(page, '#lens-h')) === LENS_HEAD, await text(page, '#lens-h'));
+  check('Denver: Newspapers and guides is on by default', (await page.getAttribute('[data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true');
   const cov1 = await text(page, '#lens .cov');
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   const cov2 = await text(page, '#lens .cov');
-  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /made picks on \d+ of your \d+ choices/.test(cov2), `${cov1} -> ${cov2}`);
+  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /with endorsements in \d+ of your \d+ races and measures/.test(cov2), `${cov1} -> ${cov2}`);
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   check('Denver: and off again', (await text(page, '#lens .cov')) === cov1);
   await tap(page, '[data-act="sheet"][data-s="sources"]');
   await page.waitForSelector('.sheet-panel');
-  check('Denver: More sources lists every source by lean, each with how we know', (await page.$$('.sgrp')).length >= 2 && /How we know/.test(await text(page, '.sheet-panel')));
+  check('Denver: See all sources lists every source by lean, each with why its lean', (await page.$$('.sgrp')).length >= 2 && /Why this lean/.test(await text(page, '.sheet-panel')));
   check('Denver: the sheet moves focus to its close button', await page.evaluate(() => document.activeElement && document.activeElement.dataset.fk === 'sheet-x'));
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
@@ -173,7 +178,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await tap(page, '[data-act="cheat"]');
   await page.waitForSelector('#cheat');
   check('Denver: the cheat sheet keeps the note', /Read the Blue Book first/.test(await text(page, '#cheat')));
-  check('Denver: the cheat sheet ends, then offers Pass it on as its own step', !(await page.$('#pass')) && !!(await page.$('#cheat [data-act="view"][data-v="pass"]')));
+  check('Denver: the cheat sheet ends, then offers Help friends vote as its own step', !(await page.$('#pass')) && !!(await page.$('#cheat [data-act="view"][data-v="pass"]')));
   await page.emulateMedia({ media: 'print' });
   const vis = await page.evaluate(() => ({ app: getComputedStyle(document.getElementById('app')).display, print: getComputedStyle(document.getElementById('r-print')).display, rows: document.querySelectorAll('#r-print tbody tr').length }));
   check('Denver: print shows only the cheat sheet', vis.app === 'none' && vis.print !== 'none' && vis.rows > 10, JSON.stringify(vis));
@@ -196,7 +201,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   // be a friend's), not a silent "your pick".
   check('Denver link: a fresh device says where the picks came from', /This link brought \d+ picks? for Denver/.test(await text(fresh.page, '#r-restore')) && !!(await fresh.page.$('[data-act="shared-fresh"]')), await text(fresh.page, '#r-restore'));
   await tap(fresh.page, '[data-act="shared-keep"]');
-  check('Denver link: "Keep them" clears the banner and keeps the picks', !(await fresh.page.$('[data-act="shared-fresh"]')));
+  check('Denver link: "Use the link’s picks" clears the banner and keeps the picks', !(await fresh.page.$('[data-act="shared-fresh"]')));
   await tap(fresh.page, '[data-act="cheat"]');
   check('Denver link: the same decided count and the note come back', (await text(fresh.page, '.cheat-head .sub')) === decided && /Read the Blue Book first/.test(await text(fresh.page, '#cheat')));
   noErrors(fresh.page, 'Denver link');
@@ -281,7 +286,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   const { ctx, page } = await newPage();
   await openZip(page, '20001');
   await page.waitForSelector('[data-act="choose-place"]');
-  check('20001: asks which ward, not which city', /is split across \d+ wards/.test(await text(page, '.choose')));
+  check('20001: asks which ward, not which city', /covers \d+ wards\. Pick yours/.test(await text(page, '.choose')));
   await tap(page, '[data-act="choose-place"][data-fk="cp-unsure"]');
   await page.waitForSelector('#plan');
   check('20001 not sure: the headline is "Washington, DC" with the wards under it', (await text(page, '.place')) === 'Washington, DC' && /^Ward \d+(, \d+)* or \d+$/.test(await text(page, '.where-note')), `${await text(page, '.place')} | ${await text(page, '.where-note')}`);
@@ -323,6 +328,16 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   const { ctx, page } = await newPage();
   await openBallot(page, '97214');
   await noSideScroll(page, 'Portland');
+  await tap(page, '[data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel');
+  const pw = await page.evaluate(() => {
+    const row = [...document.querySelectorAll('.sheet-panel .srow')].find((r) => r.querySelector('.pw-note'));
+    if (!row) return null;
+    const a = row.querySelector('.pw-note a');
+    return { name: row.querySelector('.s-n').textContent.trim(), note: row.querySelector('.pw-note').textContent.replace(/\s+/g, ' ').trim(), href: a ? a.href : '' };
+  });
+  check('Portland: a paywalled paper in See all sources carries the note, linking the report form with its name', !!pw && PW_NOTE_RE.test(pw.note) && pw.href.includes('docs.google.com/forms') && new URL(pw.href).searchParams.get('entry.90887649').includes(pw.name), pw ? `${pw.name}: ${pw.note}` : 'no paywalled source on this ballot');
+  await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   const key = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /Portland City Council/.test(k)));
   check('Portland: asks which council district', !!key);
   await openRow(page, `q:${key}`);
@@ -335,6 +350,10 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Portland: header links the official count rules', ((await page.getAttribute(`${card} .rcv a`, 'href')) || '').includes('multco.us'));
   check('Portland: no "mark up to" wording on a ranked race', !/mark up to/i.test(await text(page, card)));
   check('Portland: no em dashes in the ranked race', !/—/.test(await text(page, card)));
+  // Paywalled papers (Kevin, Oct 19): the Oregonian's picks we only saw secondhand are out, so
+  // this race says once why, with a link that opens the report form naming the paper.
+  const pwRow = await page.evaluate((c) => { const n = document.querySelector(`${c} .pw-note`); return n ? { n: document.querySelectorAll(`${c} .pw-note`).length, note: n.textContent.replace(/\s+/g, ' ').trim(), href: (n.querySelector('a') || {}).href || '' } : null; }, card);
+  check('Portland: the race notes the paywalled Oregonian once, linking the report form with its name', !!pwRow && pwRow.n === 1 && /Oregonian/.test(pwRow.note) && PW_NOTE_RE.test(pwRow.note) && new URL(pwRow.href).searchParams.get('entry.90887649').includes('Oregonian'), pwRow ? pwRow.note : 'no note');
   await tap(page, `${card} [data-act="rank"][data-v="Steve Novick"]`);
   await tap(page, `${card} [data-act="rank"][data-v="Tiffany Koyama Lane"]`);
   const nextLabel = await text(page, `${card} [data-act="rank"][data-v="Kellie Torres"]`);
@@ -449,7 +468,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   await ctx.close();
 }
 
-/* ---------- judges, the Full read, Pass it on ---------- */
+/* ---------- judges, Full details, Help your friends vote ---------- */
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
@@ -461,25 +480,34 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   const rId = await page.evaluate(() => document.querySelector('#sec-federal .row[data-item]').dataset.item);
   await openRow(page, rId);
   await tap(page, `#i-${rId} [data-act="reader"]`);
-  check('Lakewood: Full read opens with the candidates in their own words', !!(await page.$('.reader')) && /in their own words/i.test(await text(page, '.reader')));
+  check('Lakewood: Full details opens with the candidates in their own words', !!(await page.$('.reader')) && /in their own words/i.test(await text(page, '.reader')));
   await shot(page, '06-lakewood-reader');
   await page.keyboard.press('Escape');
   await page.waitForTimeout(300);
-  check('Lakewood: Escape closes the Full read and returns focus', !(await page.$('.reader')) && await page.evaluate((id) => document.activeElement && document.activeElement.dataset.fk === `rd-${id}`, rId));
+  check('Lakewood: Escape closes the Full details and returns focus', !(await page.$('.reader')) && await page.evaluate((id) => document.activeElement && document.activeElement.dataset.fk === `rd-${id}`, rId));
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
   const pub = await text(page, '#msg-pub');
-  check('Pass it on: "I already voted" says thank you', /You voted\. Thank you\./.test(await text(page, '#pass')));
-  check('Pass it on: the public message uses official links, never this guide', /(Official election info|Check your registration): https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
-  check('Pass it on: Colorado’s registration and official links are the same URL, given once', (pub.match(/govotecolorado\.gov/g) || []).length === 1, pub);
-  check('Pass it on: the public message never carries the county office line', !/Local election office/.test(pub), pub);
-  check('Pass it on: the public message leads with Election Day and the mail rule', /^Election Day in Colorado is Tue, Nov 3\. Ballots must be in by 7 PM Tue, Nov 3\./.test(pub), pub.slice(0, 120));
-  check('Pass it on: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
+  check('Help friends vote: "I already voted" says thank you', /You voted\. Thank you\./.test(await text(page, '#pass')));
+  check('Help friends vote: the public message uses official links, never this guide', /(Official election info|Check your registration): https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
+  check('Help friends vote: Colorado’s registration and official links are the same URL, given once', (pub.match(/govotecolorado\.gov/g) || []).length === 1, pub);
+  check('Help friends vote: the public message never carries the county office line', !/Local election office/.test(pub), pub);
+  check('Help friends vote: the public message leads with Election Day and the mail rule', /^Election Day in Colorado is Tue, Nov 3\. Ballots must be in by 7 PM Tue, Nov 3\./.test(pub), pub.slice(0, 120));
+  check('Help friends vote: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
   // Florida counties set their own early-voting days: a county ballot gives its county's window,
   // and a statewide-only ballot calls the state's dates a minimum (Codex round 4).
+  {
+    // A judge whose chosen paywalled papers have no readable pick still gets the paywall note
+    // once (Codex, copy pass review): Ballwin's Missouri Supreme Court retention.
+    const bw = await newPage();
+    await openBallot(bw.page, '63011');
+    await openRow(bw.page, 'mo-retention-wilson');
+    check('Ballwin: a retention row names its paywalled papers with the note', /behind a paywall/.test(await text(bw.page, '#i-mo-retention-wilson')));
+    await bw.ctx.close();
+  }
   for (const [zip, re, label] of [
-    ['32801', /Early voting in Orange County runs Mon, Oct 19 through Sun, Nov 1\./, "Pass it on: Orlando gives Orange County's early-voting window"],
-    ['32052', /Every Florida county offers early voting Sat, Oct 24 through Sat, Oct 31\. Some counties start earlier or finish later/, "Pass it on: a statewide Florida ballot calls Oct 24 to 31 the counties' minimum"],
-    ['60614', /Early voting dates vary by county and run through Mon, Nov 2; check yours\./, "Pass it on: Illinois says early voting dates vary by county (no statewide start)"],
+    ['32801', /Early voting in Orange County runs Mon, Oct 19 through Sun, Nov 1\./, "Help friends vote: Orlando gives Orange County's early-voting window"],
+    ['32052', /Every Florida county offers early voting Sat, Oct 24 through Sat, Oct 31\. Some counties start earlier or finish later/, "Help friends vote: a statewide Florida ballot calls Oct 24 to 31 the counties' minimum"],
+    ['60614', /Early voting dates vary by county and run through Mon, Nov 2; check yours\./, "Help friends vote: Illinois says early voting dates vary by county (no statewide start)"],
   ]) {
     const fl = await newPage();
     await openBallot(fl.page, zip);
@@ -488,13 +516,16 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
     check(label, re.test(msg), msg.slice(0, 200));
     await fl.ctx.close();
   }
-  check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
-  check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
-  check('Pass it on: partisan groups sit beside "examples, not recommendations"', /not recommendations/.test(await text(page, '#pass .ways')) && /On the left/.test(await text(page, '#pass .ways')) && /On the right/.test(await text(page, '#pass .ways')));
-  check('Pass it on: the friends message can share the guide', (await text(page, '#msg-fam')).includes(new URL(BASE).host));
-  check('Pass it on: no relative "today" in a message someone reads later', !/\btoday\b|\btomorrow\b/i.test(pub));
+  check('Help friends vote: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
+  check('Help friends vote: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
+  check('Help friends vote: partisan groups sit beside "examples, not recommendations"', /not recommendations/.test(await text(page, '#pass .ways')) && /Progressive groups/.test(await text(page, '#pass .ways')) && /Conservative groups/.test(await text(page, '#pass .ways')));
+  // The guide's address since Oct 19: the friends message shares it whatever host the page is
+  // on (a preview, the old vercel.app address, localhost).
+  const fam = await text(page, '#msg-fam');
+  check('Help friends vote: the friends message shares the guide at https://vote.kevinhg.com/', fam.includes('https://vote.kevinhg.com/') && (new URL(BASE).host === 'vote.kevinhg.com' || !fam.includes(new URL(BASE).host)), fam.slice(0, 200));
+  check('Help friends vote: no relative "today" in a message someone reads later', !/\btoday\b|\btomorrow\b/i.test(pub));
   await tap(page, '[data-act="tick"][data-k="family"]');
-  check('Pass it on: the checklist ticks', (await page.getAttribute('[data-act="tick"][data-k="family"]', 'aria-pressed')) === 'true');
+  check('Help friends vote: the checklist ticks', (await page.getAttribute('[data-act="tick"][data-k="family"]', 'aria-pressed')) === 'true');
   noErrors(page, 'Lakewood');
   await ctx.close();
 }
@@ -534,7 +565,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 
-/* ---------- Pass it on in Washington: statewide links only, never King County's page ---------- */
+/* ---------- Help your friends vote in Washington: statewide links only, never King County's page ---------- */
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '99201');
@@ -664,7 +695,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Polls close on an open page');
   await ctx.close();
 }
-// Codex r2: a contested judicial race's Full read keeps each rating as published, with its scope and source.
+// Codex r2: a contested judicial race's Full details keeps each rating as published, with its scope and source.
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '11201');
@@ -677,12 +708,12 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, `#i-${id} [data-act="reader"]`);
   await page.waitForSelector('.reader');
   const rd = await text(page, '.reader');
-  check('Brooklyn Civil Court Full read: each rating as published, with its June primary scope', /Each rating as published/.test(rd) && /June 11, 2026 primary review/.test(rd) && /Failed to Appear/.test(rd), rd.slice(0, 120));
-  check('Brooklyn Civil Court Full read: links the NYC Bar release', !!(await page.$('.reader a[href*="nycbar.org"]')));
+  check('Brooklyn Civil Court Full details: each rating as published, with its June primary scope', /Ratings, word for word/.test(rd) && /June 11, 2026 primary review/.test(rd) && /Failed to Appear/.test(rd), rd.slice(0, 120));
+  check('Brooklyn Civil Court Full details: links the NYC Bar release', !!(await page.$('.reader a[href*="nycbar.org"]')));
   noErrors(page, 'Brooklyn ratings');
   await ctx.close();
 }
-// #9: a sheet and the Full read hold the keyboard; the ballot behind them is inert.
+// #9: a sheet and the Full details hold the keyboard; the ballot behind them is inert.
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
@@ -710,7 +741,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await openRow(page, id);
   await tap(page, `#i-${id} [data-act="reader"]`);
   await page.waitForSelector('.reader');
-  check('Full read: Tab and Shift+Tab wrap inside it', await wraps('.reader'));
+  check('Full details: Tab and Shift+Tab wrap inside it', await wraps('.reader'));
   noErrors(page, 'Focus trap');
   await ctx.close();
 }
@@ -782,7 +813,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Matched \d+ district/.test(await text(page, '.toast')), await text(page, '.toast'));
+  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(await text(page, '.toast')), await text(page, '.toast'));
   noErrors(page, 'Address');
   await ctx.close();
 }

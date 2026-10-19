@@ -144,7 +144,7 @@ A.mpick = (d) => {
   if (S.b.picks[k] === 'PICK') delete S.b.picks[k];
   else {
     const n = c.candidates.filter((x) => S.b.picks[`${id}|${x.name}`] === 'PICK').length;
-    if (n >= c.vote_for) { toast(`You can mark up to ${c.vote_for}. Unmark one first.`); return; }
+    if (n >= c.vote_for) { toast(`You can pick up to ${c.vote_for}. Remove one first.`); return; }
     S.b.picks[k] = 'PICK';
   }
   if (S.b.picks[id] === 'SKIP' || S.b.picks[id] === 'DONE') delete S.b.picks[id];
@@ -280,7 +280,7 @@ A['party-set'] = (d) => {
   S.ui.sheet = null;
   render(['sheet']); renderLens(); persist();
   const n = planParty(d.p!).fills.length;
-  toast(`Now showing the ${d.p} Party’s picks.${n ? ` Tap “Fill in the ${d.p} candidates” to fill ${plural(n, 'race')}.` : ''}`);
+  toast(`Now showing the ${d.p} Party’s endorsements.${n ? ` Tap “Fill in the ${d.p} candidates” to fill ${plural(n, 'race')}.` : ''}`);
   focusFk('bulk-party');
 };
 A.src = (d) => {
@@ -316,19 +316,19 @@ A.bulk = (d) => {
   const jb = k === 'judges' ? judgeBatch() : null;
   const flagged = jb ? jb.readFirst.filter((x) => jb.targets.some((t) => t.id === x.id)).length : 0;
   const n = plan.fills.length ? applyFills(plan.fills) : 0;
-  if (!n) { toast(plan.skippedPartial ? `Nothing to fill. ${plural(plan.skippedPartial, 'race')} you started picking ${plan.skippedPartial === 1 ? 'was' : 'were'} left for you to finish.` : 'Nothing to fill right now.'); return; }
+  if (!n) { toast(plan.skippedPartial ? `Nothing new to fill. You started ${plural(plan.skippedPartial, 'race')} yourself, so we left ${plan.skippedPartial === 1 ? 'it' : 'those'} for you.` : 'Nothing to fill right now.'); return; }
   S.ui.row = null;
   renderBallot();
   render(['bar']);
   persist();
   const what = k === 'judges' ? plural(plan.fills.reduce((x, f) => x + Object.keys(f.set).length, 0), 'judge') : plural(n, 'pick');
   const extra = [
-    plan.single ? `${plan.single} rest on one source.` : '',
+    plan.single ? `${plan.single} of those come from just one source.` : '',
     plan.skippedTwo ? `Skipped ${plural(plan.skippedTwo, 'race')} where the party has more than one candidate.` : '',
     plan.skippedRanked ? `Skipped ${plural(plan.skippedRanked, 'ranked-choice race')}; rank those yourself.` : '',
-    plan.skippedPartial ? `Left ${plural(plan.skippedPartial, 'race')} you started picking for you to finish.` : '',
+    plan.skippedPartial ? `Left ${plural(plan.skippedPartial, 'race')} you started for you to finish.` : '',
   ].filter(Boolean).join(' ');
-  const head = k === 'judges' ? `Marked keep on ${jb && jb.left === 0 ? 'all ' : ''}${what}.${flagged ? ` ${flagged} had something the review flagged; see “Read these first.”` : ''}`
+  const head = k === 'judges' ? `Marked ${jb && jb.left === 0 ? 'all ' : ''}${what} keep.${flagged ? ` The review flagged ${flagged}; see “Read these first.”` : ''}`
     : `Filled ${what}${k === 'agree' ? ' where your sources agree' : k === 'party' ? ` with ${S.b.party} candidates` : ''}.`;
   toast(`${head} ${extra}`.trim(), { label: 'Undo', act: 'undo-bulk' });
 };
@@ -393,9 +393,9 @@ A.basis = (d) => {
   const e = B().eById.get(d.id!);
   if (!e) return;
   const how = basisWords(e);
-  toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. More sources has the details.` : `${e.short}: not rated for lean.`);
+  toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
-A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Kept. Change any pick as you go.'); };
+A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
 A['shared-fresh'] = () => { const zip = S.b.zip; S.b = emptyBallotState(zip); S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 

@@ -86,7 +86,7 @@ export function render(regions: Region[] = ALL): void {
   });
 }
 
-/* While a sheet or the Full read is open, everything behind it is inert: no Tab, no taps, no
+/* While a sheet or Full details is open, everything behind it is inert: no Tab, no taps, no
    screen reader. main.ts also wraps Tab inside the open dialog, for browsers without inert. */
 function setModal(on: boolean): void {
   for (const sel of ['#app', '#r-bar', '.skip', '.toast']) {

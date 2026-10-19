@@ -148,7 +148,7 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     if (ep.available && ep.start) {
       const late = !ep.end || ep.end >= h.election_date;
       if (t < ep.start || (absolute && t === ep.start)) sub.push(`In-person voting opens ${day(ep.start, t, absolute)}.`);
-      else if (t === ep.start) sub.push('In-person voting opens today, if you’d rather vote in person.');
+      else if (t === ep.start) sub.push('Or vote in person, starting today.');
       else if (!ep.end || t <= ep.end) sub.push(late ? 'Or vote in person through Election Day.' : `Or vote early in person through ${fmtDate(ep.end)}, or on Election Day.`);
     }
     return { phase: 'mail', head, sub, primary: mb.drop_box_lookup_url ? { label: 'Find a drop box', url: mb.drop_box_lookup_url } : ed.lookup_url ? { label: 'Find where to vote', url: ed.lookup_url } : null };

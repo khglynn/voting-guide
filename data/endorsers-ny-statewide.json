@@ -57,7 +57,9 @@
     "default_on": true,
     "endorses_candidates": true,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "times-union-eb",

@@ -103,7 +103,7 @@ Resume file. Keep current. Agent notes: `AGENTS.md`.
   Screenshots `shots/rcv-*.png`.
 
 ## (Resolved) GitHub repo and Vercel deploy
-Repo `khglynn/voting-guide` exists; pushes to `main` deploy to https://voting-guide-silk.vercel.app.
+Repo `khglynn/voting-guide` exists; pushes to `main` deploy to https://vote.kevinhg.com (the custom domain since Oct 19, 2026; https://voting-guide-silk.vercel.app still serves the same site).
 Notes below kept for history.
 - **GitHub:** this session can't create repos. The GitHub MCP returns 403 and `gh api
   user/repos` is refused by session policy ("sessions are bound to their configured
@@ -125,7 +125,7 @@ Notes below kept for history.
 - Data last re-copied Fri Oct 16 late evening: 14 states, 32 places, 887 contests, 164 measures, 0 skipped.
 - Re-copy `../data/` right before deploy (`rm -rf data && cp -r ../data data && npm run build`).
 - Perf at 4x CPU throttle on the biggest ballots (Chicago, Houston): open ~1s, pick ~250ms, filter applies on sheet close (~700ms).
-- Kevin decisions: Report-a-problem destination (`REPORT_URL`), domain, Deployment Protection.
+- Kevin decisions (all settled by Oct 19, 2026): Report-a-problem goes to a Google Form (`REPORT_URL` in `src/views/open.ts`, Oct 16); the domain is vote.kevinhg.com (Oct 19); no Deployment Protection, since the guide is public.
 
 ## Decisions made
 - Default sources follow SCHEMA: `type` publication or civic_nonpartisan = on, everything

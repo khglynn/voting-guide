@@ -4,7 +4,7 @@ A one-page guide to the Nov 3, 2026 general election for Kevin's friends and fam
 Enter a ZIP, see your next step and its date, read your ballot as a calm list of rows
 with the picks of the sources you trust beside each one, decide, and take a cheat sheet
 to the polls. The layout is "the ledger" (v3, Oct 19 2026); agent notes are in `AGENTS.md`. Static site: Vite + vanilla TypeScript, no framework, no analytics,
-no accounts.
+no accounts. Live at https://vote.kevinhg.com.
 
 ## Run it
 
@@ -106,7 +106,7 @@ collisions are detected from the measure text.
 - No red or blue. Party is text only. Lean is a neutral five-step scale plus words. Color
   has one job each: gold = your pick, sage = your sources agree, clay = they disagree,
   dusk = the frame and official judge reviews.
-- "Who do you trust?" starts with papers and nonpartisan guides. Progressive groups,
+- "Show endorsements from" starts with newspapers and nonpartisan guides. Progressive groups,
   conservative groups, a party, or any single source are the voter's choice; the chips
   are presets over the source list the save link already carries.
 - No addresses anywhere. The optional address lookup sends the address only to the
@@ -118,9 +118,11 @@ collisions are detected from the measure text.
 - Ranked-choice races come only from the data (`ranked_choice`, `rank_up_to`, `winners`),
   flagged from official sample ballots; `../research/rcv.md` logs each one.
 
-## Open items for Kevin
+## Where it lives
 
-- Custom domain, and whether to turn on Vercel Deployment Protection before sharing.
+https://vote.kevinhg.com since Oct 19, 2026. The original https://voting-guide-silk.vercel.app
+still serves the same site, but the friends message in "Help your friends vote" always shares
+vote.kevinhg.com, whatever host the page is on.
 
 ## Deploy
 

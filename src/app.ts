@@ -5,7 +5,7 @@ import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
 import { zipState, censusLookup, placeFromGeo, type GeoResult } from './geo';
-import { toast, hideToast } from './util';
+import { toast, hideToast, plural } from './util';
 import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
@@ -110,7 +110,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
         // A device that had nothing here: show the picks, and say plainly where they came from.
         S.b = state;
         const where = ballot.places.length ? ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : ballot.stateName;
-        if (n) S.pending = { kind: 'shared', key: ballot.key, incoming: state, summary: `This link brought ${n} ${n === 1 ? 'pick' : 'picks'} for ${where}${dropped ? ` (${dropped} couldn’t be matched to today’s data)` : ''}. If a friend shared them, keep them as a start or start fresh.` };
+        if (n) S.pending = { kind: 'shared', key: ballot.key, incoming: state, summary: `This link brought ${n} ${n === 1 ? 'pick' : 'picks'} for ${where}${dropped ? ` (${dropped} couldn’t be matched to today’s data)` : ''}. If a friend shared them, use them as a start or start fresh.` };
         else toast('Opened the ballot from your link.');
       } else {
         S.b = state;
@@ -165,7 +165,7 @@ export async function runAddress(addr: string): Promise<void> {
   S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
   let r: GeoResult | null;
   try { r = await censusLookup(addr.trim()); }
-  catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or answer the questions yourself.'; renderAddr(); return; }
+  catch { S.ui.addrBusy = false; S.ui.addrMsg = 'The Census lookup didn’t answer. Try again, or pick your districts yourself.'; renderAddr(); return; }
   S.ui.addrBusy = false;
   if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }
   if (choosing && S.zipChoice) {
@@ -212,12 +212,12 @@ export function applyGeo(r: { cd: number | null; upper: number | null; lower: nu
     answered++;
   }
   const parts = [r.cd != null ? `Congressional District ${r.cd}` : '', r.upper != null ? (b.st === 'DC' ? `Ward ${r.upper}` : `State Senate ${r.upper}`) : '', r.lower != null ? `State House ${r.lower}` : ''].filter(Boolean);
-  S.b.addrNote = parts.length ? `From the address you entered: ${parts.join(', ')}. We didn’t keep the address. Double-check with your sample ballot.` : null;
+  S.b.addrNote = parts.length ? `Your districts: ${parts.join(', ')}. We didn’t save your address. Double-check with your sample ballot.` : null;
   S.ui.addrOpen = false;
   S.ui.addrMsg = null;
   render();
   persist();
-  toast(answered ? `Matched ${answered} district ${answered === 1 ? 'question' : 'questions'} from your address.` : 'Found your address. None of the questions here depend on it.');
+  toast(answered ? `Filled in ${plural(answered, 'district')} from your address.` : (b.groups.some((g) => !S.b.districts[g.key]) ? 'Found your address, but it doesn’t answer the district questions here. Use the finder links in each one.' : 'Found your address. Nothing on this ballot depends on it.'));
 }
 
 /* ---------- "try as": scenarios for feeling the guide, never saved ---------- */

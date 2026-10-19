@@ -420,6 +420,13 @@ for (const [id, vers] of endorserVersions) {
     ...optional({
       party: type === 'party' || type === 'elected_official' ? str(newest.party) : null,
       lean_basis_kind: ['outside_rating', 'party', 'mission'].includes(newest.lean_basis_kind) ? newest.lean_basis_kind : null,
+      // A paper whose endorsements sit behind a paywall we couldn't read (Kevin, Oct 19): picks we
+      // only saw secondhand are taken out in the data, and the app shows a note inviting a
+      // subscriber to send them. Only a literal true counts; `paywall_note_ok: false` hides the
+      // note, and `paywall_note` overrides the app's wording for one source.
+      paywall: vers.some((v) => v.rec.paywall === true) ? true : null,
+      paywall_note_ok: vers.some((v) => v.rec.paywall === true) && newest.paywall_note_ok === false ? false : null,
+      paywall_note: vers.some((v) => v.rec.paywall === true) ? str(newest.paywall_note) : null,
     }),
   });
 }

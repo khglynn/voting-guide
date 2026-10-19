@@ -23,7 +23,7 @@ export interface BallotState {
   offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
   addrNote: string | null;           // "Matched from your address" summary, no address kept
   party: string | null;              // the party chosen in "A party" (for its sources and "Fill in my party")
-  ticks: string[];                   // Pass it on: who you've texted
+  ticks: string[];                   // Help your friends vote: who you've texted
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
@@ -43,7 +43,7 @@ export interface UI {
   onlyUndecided: boolean;
   keep: string | null;        // a row just decided stays visible under "Only undecided" until another opens
   noteOpen: Set<string>;
-  reader: string | null;      // the "Full read" sheet, by item id
+  reader: string | null;      // the "Full details" sheet, by item id
   sheet: null | 'sources' | 'party' | 'whatif';
   sheetFrom: string | null;   // data-fk to focus when a sheet closes
   addrOpen: boolean;

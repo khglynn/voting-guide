@@ -249,7 +249,7 @@ function wantRow(it, kind, p, titles) {
   const row = { t: squash(titles.get(it.id)), v: '', ranks: [], judges: [] };
   if (kind === 'unopposed') row.v = squash(`${it.candidates[0].name} (unopposed)`);
   else if (!p) row.v = '(the sweep made no choice here)';
-  else if (p.t === 'skip') row.v = 'Skipped';
+  else if (p.t === 'skip') row.v = 'Left blank';
   else if (it.kind === 'measure') row.v = p.v === 'YES' ? 'Yes' : 'No';
   else if (p.t === 'pick' && it.is_retention) row.v = p.v === 'YES' ? 'Yes, keep' : 'No, remove';
   else if (p.t === 'pick') { const c = it.candidates.find((k) => k.name === p.v); row.v = squash(`${c.name}${c.party ? ` (${c.party})` : ''}`); }

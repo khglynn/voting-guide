@@ -2,11 +2,11 @@
 
 *Last verified: 2026-10-19 (ledger v1).*
 
-A public, one-page guide to the Nov 3, 2026 general election for Kevin's friends and family: enter a ZIP, see the next step and its date, every item on your ballot as a row with your trusted sources' picks beside it, decide, and leave with a cheat sheet. Live at https://voting-guide-silk.vercel.app. Vite + vanilla TypeScript, no framework, no analytics, no accounts. This repo is public: nothing private goes in it.
+A public, one-page guide to the Nov 3, 2026 general election for Kevin's friends and family: enter a ZIP, see the next step and its date, every item on your ballot as a row with your trusted sources' picks beside it, decide, and leave with a cheat sheet. Live at https://vote.kevinhg.com (since Oct 19, 2026; the original https://voting-guide-silk.vercel.app still serves the same site). Vite + vanilla TypeScript, no framework, no analytics, no accounts. This repo is public: nothing private goes in it.
 
 ## Run and test
 
-Node 20+. On Kevin's Macs a v4 node at `/usr/local/bin` shadows the real one: prefix commands with `export PATH=/usr/local/opt/node@22/bin:$PATH;`.
+Node 20+. If `node --version` shows an old version, prefix commands with `export PATH=/usr/local/opt/node@22/bin:$PATH;` (a stray 2016 node at `/usr/local/bin` shadowed the real one on Kevin's personal Mac until Oct 19, 2026). Use preview ports 4173 to 4189: Node's `fetch` refuses a few ports on the web's "bad ports" list (4190 is one, as are 6000 and 6665 to 6669), and the sweep then fails with "bad port".
 
 ```sh
 npm ci && npm run playwright:install
@@ -26,7 +26,7 @@ scripts/ship.sh --gates-only       # all local gates in one go
 
 - `data/` is the only copy of the research data. `scripts/build-data.mjs` validates it into `public/data/` bundles (bad records are skipped and reported, never fatal); `scripts/check-data.mjs` and `scripts/check-addresses.mjs` are the data gates. New optional fields must be passed through and shape-checked in build-data and typed in `src/types.ts`.
 - `src/ballot.ts`, `src/state.ts`, `src/geo.ts`, `src/util.ts`: the model. `buildBallot` decides what is on a ballot (statewide items, place items, district questions, "may apply"). Don't replace it with a shortcut over `place.order`.
-- `src/model/`: rules the views use. `labels` (titles, seat labels, courts, pick words, pass thresholds), `lens` ("Who do you trust?" presets), `tally` (the verdict column), `bulk` (fills with undo), `judges` (official reviews and the section's plain answer), `plan` (the next step from the state file; a place's own `early_in_person` window wins over the state's when every place on the ballot agrees).
+- `src/model/`: rules the views use. `labels` (titles, seat labels, courts, pick words, pass thresholds), `lens` ("Show endorsements from" presets), `tally` (the verdict column), `bulk` (fills with undo), `judges` (official reviews and the section's plain answer), `plan` (the next step from the state file; a place's own `early_in_person` window wins over the state's when every place on the ballot agrees).
 - Poll times are local: `plan.ts` keeps each state's time zones, the main one first. A new place in a state's other zone (Pensacola is Central in Eastern Florida) needs a line in `PLACE_ZONE`, or its "polls closed" moment is an hour off.
 - `src/views/`: string templates. `render.ts` paints regions and single rows; `actions.ts` holds every `data-act`; `app.ts` the flows; `main.ts` boot and the tap handler (tuned on phones; keep it).
 - `tests/`: `model.mjs` + `model-ledger.mjs`, `e2e.mjs`, `sweep.mjs`, `perf.mjs`, `shots.mjs`.

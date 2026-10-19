@@ -12,7 +12,9 @@
     "default_on": true,
     "endorses_candidates": false,
     "endorses_measures": true,
-    "lean_basis_kind": "outside_rating"
+    "lean_basis_kind": "outside_rating",
+    "paywall": true,
+    "paywall_note_ok": true
   },
   {
     "id": "baltimore-banner",

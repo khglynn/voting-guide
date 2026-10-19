@@ -3,6 +3,42 @@ import type { Endorser, Lean } from '../types';
 import { S } from '../state';
 import { esc, host } from '../util';
 
+/* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
+   The two entry ids prefill "Which race or measure?" (`what`) and "Where are you voting?". */
+const REPORT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ/viewform';
+export function reportURL(what: string): string {
+  const b = S.ballot!;
+  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
+  const q = new URLSearchParams({ usp: 'pp_url', 'entry.90887649': what, 'entry.628621310': where });
+  return `${REPORT_URL}?${q.toString()}`;
+}
+
+/* ---------- paywalled sources (Kevin, Oct 19) ----------
+   A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw
+   secondhand are out of the data, and a short note asks a subscriber to send a PDF or the
+   picks through the report form, prefilled with the source's name. The words come from the
+   copy table. */
+export const hasPaywallNote = (e: Endorser): boolean => e.paywall === true && e.paywall_note_ok !== false;
+/* The form's "Which race or measure?" line for a source's picks, so the report names the paper. */
+export const reportSourceLink = (e: Endorser, where = ''): string => reportURL(`${e.name}: picks${where ? ` on ${where}` : ''} [${e.id}]`);
+const PW_NOTE = 'Behind a paywall, so we couldn’t read its endorsements. Have a login? We’d love a PDF or the list.';
+const PW_LINK = 'Send it to us';
+/* The row's form: lower case after the source names, its or their by count. */
+const PW_ROW = (n: number): string => `behind a paywall, so we couldn’t read ${n === 1 ? 'its' : 'their'} endorsements here. Have a login? We’d love a PDF or the list.`;
+/* In the sources sheet, under one paywalled source. */
+export function paywallSourceHTML(e: Endorser): string {
+  if (!hasPaywallNote(e)) return '';
+  return `<p class="pw-note">${esc(e.paywall_note || PW_NOTE)} ${ext(reportSourceLink(e), PW_LINK)}.</p>`;
+}
+/* In an open row, once, when chosen paywalled sources have no readable pick there. `what` is
+   the row's title for the form. */
+export function paywallRowHTML(list: Endorser[], what: string): string {
+  const pw = list.filter(hasPaywallNote);
+  if (!pw.length) return '';
+  const links = pw.map((e) => ext(reportSourceLink(e, what), `${PW_LINK} (${e.short})`)).join(', ');
+  return `<p class="pw-note">${esc(pw.map((e) => e.short).join(', '))}: ${esc(PW_ROW(pw.length))} ${links}.</p>`;
+}
+
 export const LEANS: Record<Lean, [number, string]> = {
   left: [0, 'left'], lean_left: [1, 'leans left'], neutral: [2, 'center'], lean_right: [3, 'leans right'], right: [4, 'right'],
 };
@@ -22,11 +58,11 @@ export function leanHTML(lean: Lean | null, words = true, basis = ''): string {
    source endorsed. Empty when there is no lean. */
 export function basisWords(e: Endorser): string {
   if (!e.lean || !e.lean_basis_kind) return '';
-  if (e.lean_basis_kind === 'party') return 'party';
+  if (e.lean_basis_kind === 'party') return 'from its party';
   if (e.lean_basis_kind === 'mission') return 'from its mission statement';
   // Name the rater only when the basis names exactly one and doesn't say that rater has none
   // ("no AllSides rating found; Ad Fontes rates it..."). Otherwise stay general; the full basis
-  // is one tap away in More sources.
+  // is one tap away in See all sources.
   const b = e.lean_basis || '';
   const named = (re: RegExp, no: RegExp) => re.test(b) && !no.test(b);
   const raters = [

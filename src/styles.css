@@ -643,3 +643,7 @@ body:not(.v-ballot) #r-trust { display: none; }
   .p-url::after { content: " (" attr(data-url) ")"; font-size: 8pt; }
   .cs-sub, .cs-note, .fine { color: #333; }
 }
+
+/* Paywalled sources (Oct 19): a quiet note with a link to send the picks. */
+.pw-note { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); line-height: 1.45; }
+.srow .pw-note { margin-top: 4px; }

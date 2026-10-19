@@ -7,7 +7,7 @@ import { localHowto } from './model/plan';
 export type SectionKey = 'federal' | 'state' | 'judicial' | 'county' | 'city' | 'school' | 'special_district' | 'measures';
 export const SECTIONS: [SectionKey, string][] = [
   ['federal', 'Federal'], ['state', 'State'], ['judicial', 'Courts'], ['county', 'County'],
-  ['city', 'City'], ['school', 'School'], ['special_district', 'Special districts'], ['measures', 'Measures'],
+  ['city', 'City'], ['school', 'School'], ['special_district', 'Other local districts'], ['measures', 'Ballot measures'],
 ];
 
 export interface Group {

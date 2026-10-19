@@ -128,14 +128,14 @@ export function cheatSectionHTML(): string {
     </div>
     ${S.ui.copyFallback ? `<label class="small screen-only" for="cf">Copy didn’t work here. Select this text and copy it.</label><textarea class="copy-fallback screen-only" id="cf" readonly>${esc(S.ui.copyFallback)}</textarea>` : ''}
     ${S.ui.saveOpen ? `<div class="save screen-only">
-      <p class="small"><b>No account needed.</b> This link holds your picks and notes. Open it on any device to get them back. Anyone with the link can see your picks.</p>
+      <p class="small">This link holds your picks and notes. Open it on any device to get them back. <b>No account needed.</b> Anyone with the link can see your picks.</p>
       <input class="save-url" readonly value="${esc(url)}" aria-label="Your save link" data-fk="save-url">
       <div class="row-btns"><button class="mini dark" data-act="copy-link">Copy link</button>
         <a class="mini" href="sms:?&body=${encodeURIComponent(body)}">Text it to me</a>
         <a class="mini" href="mailto:?subject=${encodeURIComponent('My voting picks')}&body=${encodeURIComponent(body)}">Email it to me</a></div>
       <p class="fine">Text and email open your phone’s apps, if it has them. Copy always works. Your picks also save on this device.</p>
     </div>` : ''}
-    <div class="next-step screen-only"><p><b>One more thing.</b> Help your people make a plan too.</p>
-      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Pass it on</button></div>
+    <div class="next-step screen-only"><p><b>Next:</b> help your friends and family make a plan.</p>
+      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Help friends vote</button></div>
   </section>`;
 }

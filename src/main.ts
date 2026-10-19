@@ -61,6 +61,12 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
+/* A save link pasted into a tab that already has the guide open changes only the hash. */
+window.addEventListener('hashchange', () => {
+  const head = parseShareHead(location.hash);
+  if (!head || !S.index || !S.index.states[head.st]) return;
+  void openBallot(head.st, head.places.filter((p) => S.index!.places[p]), head.zip, { share: head });
+});
 
 /* ---------- boot ---------- */
 async function boot(): Promise<void> {

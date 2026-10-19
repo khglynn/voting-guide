@@ -87,6 +87,7 @@ PREVIEW_PID=$!
 trap 'kill $PREVIEW_PID 2>/dev/null || true; rm -f .tmp-preview.log' EXIT
 for i in $(seq 1 30); do curl -sf "http://localhost:$PORT/data/index.json" >/dev/null && break; sleep 1; done
 curl -sf "http://localhost:$PORT/data/index.json" >/dev/null || { cat .tmp-preview.log; die "preview server did not start."; }
+node tests/model.mjs
 BASE="http://localhost:$PORT" SHOTS_DIR=.tmp/e2e-shots node tests/e2e.mjs
 BASE="http://localhost:$PORT" SHOTS_DIR=.tmp/sweep-shots MODE="$MODE" node tests/sweep.mjs
 kill $PREVIEW_PID 2>/dev/null || true

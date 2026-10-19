@@ -62,11 +62,11 @@ export function passHTML(): string {
     <p class="lede">Make sure everyone you know has a plan. If they do, ask them to text three people.</p>
     <p class="compound">You text 3. They each text 3. That’s 12 people with a plan.</p>
     ${involvedHTML()}
-    <h3>Who to text</h3><p class="sub">Tick them off as you go. This stays on your phone.</p>
-    <ul class="checks">${WHO.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     <div class="msgs fam"><h4>For friends and family</h4><p class="rule">Your people. It’s fine to share this guide.</p>
       <div class="msg"><p id="msg-fam">${esc(m.fam)}</p><button class="copy" data-act="copy-msg" data-k="fam" data-fk="copy-fam">${COPY}Copy this</button></div></div>
     <div class="msgs pub"><h4>For work, school and public groups</h4><p class="rule">Nonpartisan: official links only, never this guide.</p>
       <div class="msg"><p id="msg-pub">${esc(m.pub)}</p><button class="copy" data-act="copy-msg" data-k="pub" data-fk="copy-pub">${COPY}Copy this</button></div></div>
+    <h3>Who to send it to</h3><p class="sub">Tick them off as you go. This stays on your phone.</p>
+    <ul class="checks">${WHO.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
   </div></section>`;
 }

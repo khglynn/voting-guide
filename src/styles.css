@@ -301,7 +301,7 @@ small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
 .grid .cand .nm { display: block; font-family: var(--f-display); font-weight: 600; font-size: 15.5px; line-height: 1.1; overflow-wrap: anywhere; font-variation-settings: "opsz" 24; }
 .grid.c3 .cand .nm { font-size: 14px; }
 .grid .cand .py { display: block; font-size: 12px; line-height: 1.2; margin-top: 3px; overflow-wrap: anywhere; }
-.grid.yn .cand .nm { font-size: 18px; }
+.grid.grid-yn .cand .nm { font-size: 18px; }
 .grid tbody th { text-align: left; font-weight: 600; font-size: 13.5px; line-height: 1.16; padding: 7px 6px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; overflow-wrap: anywhere; }
 .grid tbody th .sn { display: block; }
 .grid tbody th .lean { margin-top: 3px; }
@@ -570,7 +570,7 @@ small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
 .asof { font-size: 14px; margin-top: 6px; display: grid; gap: 2px; }
 
 /* ---------- views ---------- */
-body.v-cheat .plan, body.v-pass .plan { display: none; }
+body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast { display: none; }
 body:not(.v-ballot) #r-trust { display: none; }
 
 @media (min-width: 600px) {

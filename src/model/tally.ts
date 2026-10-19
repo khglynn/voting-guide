@@ -122,23 +122,29 @@ export function tagOf(e: Endorser): string {
   if (!m) {
     m = new Map();
     const places = placeWords();
-    const raw = new Map(b.endorsers.map((x) => [x.id, rawTag(x, places)]));
-    const count = new Map<string, number>();
-    raw.forEach((t) => count.set(t, (count.get(t) || 0) + 1));
-    for (const x of b.endorsers) { const t = raw.get(x.id)!; m.set(x.id, (count.get(t) || 0) > 1 ? x.short : t); }
+    for (const x of b.endorsers) m.set(x.id, rawTag(x, places));
     tagCache.set(b, m);
   }
   return m.get(e.id) || e.short;
+}
+/* Tags for one lineup: if two would read the same ("LWV" and "LWV"), those two keep their names. */
+function lineupTags(list: Endorser[]): Map<string, string> {
+  const raw = new Map(list.map((e) => [e.id, tagOf(e)]));
+  const n = new Map<string, number>();
+  raw.forEach((t) => n.set(t, (n.get(t) || 0) + 1));
+  return new Map(list.map((e) => [e.id, (n.get(raw.get(e.id)!) || 0) > 1 ? e.short : raw.get(e.id)!]));
 }
 const TAG_MAX = 14;
 /* "Post no, Gazette yes" when three or fewer sources weighed in and their names are short;
    null when the row should show a tally instead. */
 export function namedLineup(l: Lineup, it: Item): string | null {
   const w = weighedIn(l);
-  if (!w.length || w.length > 3 || w.some((e) => tagOf(e).length > TAG_MAX)) return null;
-  if (l.groups.length === 1) return w.map(tagOf).join(', ');
+  if (!w.length || w.length > 3) return null;
+  const tags = lineupTags(w);
+  if (w.some((e) => tags.get(e.id)!.length > TAG_MAX)) return null;
+  if (l.groups.length === 1) return w.map((e) => tags.get(e.id)!).join(', ');
   const lower = it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
-  return l.groups.flatMap((g) => g.sources.map((e) => `${tagOf(e)} ${lower ? g.label.toLowerCase() : g.label}`)).join(', ');
+  return l.groups.flatMap((g) => g.sources.map((e) => `${tags.get(e.id)} ${lower ? g.label.toLowerCase() : g.label}`)).join(', ');
 }
 /* "Yes 5, No 2" / "Allen 3, Griswold 1": leading side first. */
 export function tally(l: Lineup): string {

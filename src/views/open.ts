@@ -317,7 +317,7 @@ function sourcesYesNo(it: Item): string {
     { key: 'YES', head: judge ? 'Keep' : 'Yes', sub: '', mine: mine === 'YES' },
     { key: 'NO', head: judge ? 'Remove' : 'No', sub: '', mine: mine === 'NO' },
   ];
-  return `${gridHTML(it, l, cols, '').replace('class="grid c2"', 'class="grid c2 yn"')}${quietLines(l, it)}`;
+  return `${gridHTML(it, l, cols, '').replace('class="grid c2"', 'class="grid c2 grid-yn"')}${quietLines(l, it)}`;
 }
 
 /* ---------- measures ---------- */

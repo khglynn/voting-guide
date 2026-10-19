@@ -5,7 +5,7 @@
 import type { Contest, Endorsement, Endorser, Item } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosen, status, entriesBySection, isDecision } from '../ballot';
+import { chosen, status, entriesBySection, isDecision, isRCV } from '../ballot';
 import { choiceShort, pickShort } from './labels';
 import { explainsOnly } from './lens';
 import { judgeReview } from './judges';
@@ -92,7 +92,10 @@ function computeLineup(it: Item, sources: Endorser[]): Lineup {
     if (r.s === 'no_position') { out.noStand.push(e); continue; }
     if (r.s === 'not_found') { out.notFound.push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
-    const choices = r.c && r.c.length ? [...r.c] : [];
+    // Two sources naming the same candidates in a different order agree. Order is kept only
+    // where it means something: a ranking in a ranked-choice race.
+    const ranked = it.kind === 'contest' && isRCV(it);
+    const choices = r.c && r.c.length ? (ranked ? [...r.c] : [...new Set(r.c)].sort((x, y) => choiceRank(it, x) - choiceRank(it, y) || (x < y ? -1 : x > y ? 1 : 0))) : [];
     const key = choices.length ? choices.join('+') : `note:${r.note || 'endorsed'}`;
     let g = groups.get(key);
     if (!g) {
@@ -168,19 +171,34 @@ export function tally(l: Lineup): string {
 }
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
-export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both';
+export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
 export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',
   no_cover: 'None of your sources cover this', no_sources: 'No sources chosen', both: 'Listed both sides',
+  mixed: 'No picks yet',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (!anyChosen) return 'no_sources';
   if (!l.relevant.length) return l.both.length ? 'both' : 'no_cover';
-  const looked = l.noStand.length + l.notFound.length;
-  if (!looked) return l.both.length ? 'both' : 'not_checked';
-  return l.notFound.length ? 'not_found' : 'no_stand';
+  // One word only when every source that covers this is in the same state; "Took no stand"
+  // never speaks for a source nobody has checked yet.
+  const states: NoneWhy[] = [];
+  if (l.noStand.length) states.push('no_stand');
+  if (l.notFound.length) states.push('not_found');
+  if (l.notChecked.length) states.push('not_checked');
+  if (l.both.length) states.push('both');
+  return states.length === 1 ? states[0] : 'mixed';
+}
+/* "2 took no stand, 1 not checked yet": the counts behind "No picks yet". */
+export function noneCounts(l: Lineup): string {
+  return [
+    l.noStand.length ? `${l.noStand.length} took no stand` : '',
+    l.notFound.length ? `nothing found for ${l.notFound.length}` : '',
+    l.notChecked.length ? `${l.notChecked.length} not checked yet` : '',
+    l.both.length ? `${l.both.length} listed both sides` : '',
+  ].filter(Boolean).join(', ');
 }
 
 /* What the sources said, in small type, under your own pick. */
@@ -214,7 +232,7 @@ export function verdict(it: Item): Verdict {
       const reviewed = /commission|evaluat|review|rated|recommend|bar association|poll/i.test(`${it.why_it_matters || ''} ${it.candidates.map((c) => c.own_words.map((o) => o.text).join(' ')).join(' ')}`);
       return { kind: 'none', main: reviewed ? 'See the review' : 'Keep or remove?', sub: '', why };
     }
-    return { kind: 'none', main: NONE_WORDS[why], sub: '', why };
+    return { kind: 'none', main: NONE_WORDS[why], sub: why === 'mixed' ? noneCounts(l) : '', why };
   }
   // A source whose pick is a note, not a candidate or yes/no ("option 1: five districts"): name
   // who weighed in and leave the words for the open row.

@@ -84,12 +84,21 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     set({ [e1.id]: row('endorsed', ['NO']), [e2.id]: row('endorsed', ['YES']) });
     v = tally.verdict(it);
     check('verdict: a disagreement names the lineup, not "Sources split"', v.kind === 'split' && /no/.test(v.main) && /yes/.test(v.main) && !/split/i.test(v.main), JSON.stringify(v));
+    // Codex #7: "Took no stand" only when every source that covers this took no stand.
     set({ [e1.id]: row('no_position'), [e2.id]: row('no_position') });
     v = tally.verdict(it);
+    check('verdict: two took no stand and one is not checked yet is mixed, with the counts', v.kind === 'none' && v.why === 'mixed' && v.main === 'No picks yet' && v.sub === '2 took no stand, 1 not checked yet', JSON.stringify(v));
+    S.b.sources = [e1.id, e2.id];
+    tally.clearLineups();
+    v = tally.verdict(it);
     check('verdict: all took no stand', v.kind === 'none' && v.why === 'no_stand' && v.main === 'Took no stand', JSON.stringify(v));
-    set({ [e1.id]: row('not_found'), [e2.id]: row('no_position') });
+    set({ [e1.id]: row('not_found'), [e2.id]: row('not_found') });
     v = tally.verdict(it);
     check('verdict: nothing found', v.kind === 'none' && v.why === 'not_found', JSON.stringify(v));
+    set({ [e1.id]: row('not_found'), [e2.id]: row('no_position') });
+    v = tally.verdict(it);
+    check('verdict: one found nothing and one took no stand is mixed', v.why === 'mixed' && /1 took no stand/.test(v.sub) && /nothing found for 1/.test(v.sub), JSON.stringify(v));
+    S.b.sources = [e1.id, e2.id, e3.id];
     set({});
     v = tally.verdict(it);
     check('verdict: sources that cover this area but have no row: not checked yet', v.kind === 'none' && v.why === 'not_checked', JSON.stringify(v));
@@ -109,6 +118,31 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     set(Object.fromEntries(four.map((e, i) => [e.id, row('endorsed', [i < 3 ? 'YES' : 'NO'])])));
     v = tally.verdict(it);
     check('verdict: more than three sources shows a tally, leading side first', v.kind === 'split' && /^Yes 3, No [12]/.test(v.main), JSON.stringify(v));
+  }
+
+  /* ---------- Codex #6: the same set of names in a different order is agreement ---------- */
+  {
+    const sea = open('WA', ['seattle-wa']);
+    S.b.sources = ['king-county-democrats', 'fuse-washington'];
+    tally.clearLineups();
+    const it = sea.byId.get('wa-hd-32-2');
+    const v = tally.verdict(it);
+    check('verdict: King County Democrats (Davis, Siddiqi) and Fuse (Siddiqi, Davis) agree', v.kind === 'agree' && /Davis.*Siddiqi/.test(v.main) && tally.lineup(it).groups.length === 1, JSON.stringify(v));
+    // A ranking keeps its order: two different rankings of the same names are a split.
+    const rcv = sea.items.concat(open('OR', ['portland-or']).items).find((x) => x.kind === 'contest' && x.ranked_choice && x.candidates.length >= 2);
+    if (rcv) {
+      const pb = S.ballot;
+      const [a, c] = [rcv.candidates[0].name, rcv.candidates[1].name];
+      const [s1, s2] = pb.endorsers.slice(0, 2);
+      S.b.sources = [s1.id, s2.id];
+      const keep = pb.ends[rcv.id];
+      pb.ends[rcv.id] = { [s1.id]: { s: 'endorsed', c: [a, c] }, [s2.id]: { s: 'endorsed', c: [c, a] } };
+      tally.clearLineups();
+      check('verdict: in a ranked race, a different ranking is a different pick', tally.lineup(rcv).groups.length === 2);
+      pb.ends[rcv.id] = keep;
+      tally.clearLineups();
+    }
+    check('verdict: the test found a ranked race to try', !!rcv);
   }
 
   /* ---------- bulk fills and undo ---------- */

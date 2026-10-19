@@ -4,9 +4,9 @@
     "target_id": "pa-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Inquirer board endorses in governor's races (Shapiro, Oct. 9, 2022) and usually publishes statewide endorsements in the last two to three weeks before Election Day. No 2026 governor endorsement had appeared as of Oct. 16, and the City & State endorsement tracker (Oct. 13) lists no newspapers.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Inquirer editorial index and its October 15 endorsement-method page checked October 19, 2026.",
     "url": "https://www.inquirer.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -34,9 +34,9 @@
     "target_id": "pa-governor",
     "status": "no_position",
     "choice": null,
-    "why": "The League never endorses candidates. It publishes the candidates' questionnaire answers on VOTE411.",
-    "url": "https://www.vote411.org/pennsylvania",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.palwv.org/about",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -64,30 +64,30 @@
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Josh Shapiro / Austin Davis",
-    "why": "WHYY (Aug. 18, 2026) reports Shapiro 'has also secured endorsements from the Pennsylvania AFL-CIO, the state's largest labor federation.' Listed on the City & State tracker. The AFL-CIO's own announcement page was not located; the date is the article date, not the endorsement date.",
-    "url": "https://whyy.org/articles/philadelphia-building-trades-stacy-garrity-pennsylvania-governor-campaigning-against/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "why": "PA AFL-CIO’s Labor 2026 slate lists Josh Shapiro for governor and Austin Davis for lieutenant governor.",
+    "url": "https://paaflcio.org/labor-2026-endorsed-candidates",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "psea",
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Josh Shapiro / Austin Davis",
-    "why": "WHYY (Aug. 18, 2026) reports PSEA, 'the state's largest teachers union,' has endorsed Shapiro. Listed on the City & State tracker. PSEA's own announcement page was not located; the date is the article date.",
-    "url": "https://whyy.org/articles/philadelphia-building-trades-stacy-garrity-pennsylvania-governor-campaigning-against/",
-    "date": "2026-08-18",
-    "confidence": "sourced"
+    "why": "PSEA’s summer 2026 publication explicitly recommends Shapiro and Davis for reelection in November.",
+    "url": "https://www.psea.org/news--events/Publications/statement/summer-2026/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nfib-pa",
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Stacy Garrity / Jason Richey",
-    "why": "The City & State endorsement tracker (Oct. 13, 2026) lists the National Federation of Independent Business among Garrity's backers, alongside two Associated Builders and Contractors chapters. NFIB's own announcement was not located.",
-    "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
+    "why": "NFIB’s Pennsylvania PAC endorses Stacy Garrity for governor in its October 13, 2026 announcement.",
+    "url": "https://www.nfib.com/news/press-release/pennsylvania-small-businesses-endorse-stacy-garrity-for-governor/",
     "date": "2026-10-13",
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "conservation-voters-pa",
@@ -124,20 +124,20 @@
     "target_id": "pa-governor",
     "status": "endorsed",
     "choice": "Josh Shapiro / Austin Davis",
-    "why": "Giffords and Moms Demand Action both appear on Shapiro's list in the City & State tracker (Oct. 13, 2026).",
-    "url": "https://www.cityandstatepa.com/politics/2026/10/endorsement-tracker-2026-pa-governors-race/416139/",
-    "date": "2026-10-13",
-    "confidence": "sourced"
+    "why": "GIFFORDS PAC’s March 26, 2026 release endorses Josh Shapiro for reelection as governor.",
+    "url": "https://giffords.org/press-release/2026/03/giffords-pac-endorses-josh-shapiro-for-governor-of-pennsylvania/",
+    "date": "2026-03-26",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
     "target_id": "pa-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No NRA-PVF grade or endorsement for the 2026 Pennsylvania governor race was found, and the NRA is absent from the City & State tracker (Oct. 13). Check nrapvf.org/grades/pennsylvania closer to Election Day.",
-    "url": "https://www.nrapvf.org/grades/pennsylvania/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Stacy Garrity / Jason Richey",
+    "why": "The November 3, 2026 general-election page explicitly marks this candidate as NRA endorsed. A letter grade by itself is not counted as an endorsement.",
+    "url": "https://www.nrapvf.org/grades/Pennsylvania/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fop-lodge-5-philadelphia",

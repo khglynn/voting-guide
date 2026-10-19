@@ -378,7 +378,17 @@
         "background": "First run for public office (Branch). Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site search",
+            "Harris County GOP candidate directory",
+            "Conservative Coalition of Harris County questionnaire archive",
+            "LWV Houston candidate page"
+          ]
+        }
       },
       {
         "name": "Christian Dashaun Menefee",
@@ -800,7 +810,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "committed to educational excellence, supporting parents and teachers, and helping ensure every Texas student has the opportunity to succeed.",
+            "is_quote": true,
+            "source": "https://sboe.texas.gov/state-board-of-education/sboe-board-members/sboe-member-district-4"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -1817,9 +1833,15 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "own_words": [
+          {
+            "text": "I would totally support Governor Abbott's proposal for state funding for charter schools",
+            "is_quote": true,
+            "source": "https://onyourballot.vote411.org/m/race-detail.do?id=71560805"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://onyourballot.vote411.org/m/race-detail.do?id=71560805"
       },
       {
         "name": "Staci Childs",
@@ -2372,7 +2394,17 @@
         "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site search",
+            "Harris County GOP candidate directory",
+            "Texas Arts Education Campaign questionnaire",
+            "Texas Classroom Teachers Association candidate profile"
+          ]
+        }
       },
       {
         "name": "Charlene Ward Johnson",
@@ -2436,9 +2468,20 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
-        "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "own_words": [
+          {
+            "text": "Support bills for affordable healthcare. Support the Local Mental Health Authority. Fund community clinics.",
+            "is_quote": true,
+            "source": "https://onyourballot.vote411.org/m/race-detail.do?id=71560887"
+          },
+          {
+            "text": "Air Quality and Industrial Zoning, the measures of action would be documenting pollution events, strict emission controls, real-time fenceline monitoring and buffer zone.",
+            "is_quote": true,
+            "source": "https://onyourballot.vote411.org/m/race-detail.do?id=71560887"
+          }
+        ],
+        "lwv_status": "responded",
+        "lwv_url": "https://onyourballot.vote411.org/m/race-detail.do?id=71560887"
       },
       {
         "name": "Armando Lucio Walle",
@@ -2502,7 +2545,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Did not answer the Community Impact questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Expanding economic opportunity so Texans can find good jobs, earn better wages, and build a secure future.",
+            "is_quote": true,
+            "source": "https://juliehuntforstaterep.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -2645,7 +2694,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "fight for good-paying jobs, safer neighborhoods, better schools, and accountable leadership",
+            "is_quote": true,
+            "source": "https://frankforhd143.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -2706,7 +2761,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Fund Law Enforcement and Lower Crime",
+            "is_quote": true,
+            "source": "https://david4texas.com/issues"
+          },
+          {
+            "text": "Reduce Property Tax and Lower Appraisal Caps",
+            "is_quote": true,
+            "source": "https://david4texas.com/issues"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -2799,7 +2865,18 @@
         "website": "https://www.moralesfordistrict145.com",
         "website_confidence": "sourced",
         "background": "Did not answer the Community Impact questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Raising pay for teachers and guaranteeing students school supplies at no cost",
+            "is_quote": true,
+            "source": "https://www.moralesfordistrict145.com/priorities"
+          },
+          {
+            "text": "Banning the use of public tax dollars to fund private schools",
+            "is_quote": true,
+            "source": "https://www.moralesfordistrict145.com/priorities"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -3013,7 +3090,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Reducing insurance rates, incentivizing lower rents, good education systems and well-paying jobs are each a part of the solution.",
+            "is_quote": true,
+            "source": "https://www.voteforpenny.com/policy"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -3151,7 +3234,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "unify people together from all faiths and races",
+            "is_quote": true,
+            "source": "https://www.houstonchronicle.com/opinion/endorsements/article/endorsements-texas-house-150-swanson-kellum-22475561.php"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7405,7 +7494,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Harris County Treasurer. Did not answer the Community Impact questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "tax payers should have an open line of communication with the individual responsible for moving money for Harris County",
+            "is_quote": true,
+            "source": "https://aframnews.com/local/harris-county-treasurer/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       }
@@ -7502,7 +7597,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Business consultant. Did not answer the Community Impact questionnaire.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "public money is not the government’s money. It belongs to the Harris County families who earned it",
+            "is_quote": true,
+            "source": "https://denisedick.org/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -7814,7 +7915,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "A judge’s job is to apply the law and leave his or her biases at home.",
+            "is_quote": true,
+            "source": "https://ezellcampaign.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.houstonvotersguide.org/"
       },
@@ -9278,7 +9385,16 @@
         "background": "Did not answer the Community Impact questionnaire.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.houstonvotersguide.org/"
+        "lwv_url": "https://www.houstonvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site search",
+            "VOTE411",
+            "Community Impact questionnaire"
+          ]
+        }
       },
       {
         "name": "Kristina Haggard",

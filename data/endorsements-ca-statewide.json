@@ -164,9 +164,9 @@
     "target_id": "ca-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Chronicle's endorsement page lists Governor as 'Coming Soon' as of Oct 15; the board interviewed both candidates.",
+    "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update.",
     "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -484,9 +484,9 @@
     "target_id": "ca-controller",
     "status": "endorsed",
     "choice": "Herb W Morgan",
-    "why": "Listed on the U-T Editorial Board's running endorsement list (updated Oct 15). The list notes some explanatory editorials are still pending; this one was not hyperlinked.",
+    "why": "Listed in the published November 2026 endorsement guide.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -494,9 +494,9 @@
     "target_id": "ca-insurance-commissioner",
     "status": "endorsed",
     "choice": "Ben Allen",
-    "why": "Listed on the U-T Editorial Board's running endorsement list (updated Oct 15). The list notes some explanatory editorials are still pending; this one was not hyperlinked.",
+    "why": "Listed in the published November 2026 endorsement guide.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -504,9 +504,9 @@
     "target_id": "ca-lt-governor",
     "status": "endorsed",
     "choice": "Fiona Ma",
-    "why": "Listed on the U-T Editorial Board's running endorsement list (updated Oct 15). The list notes some explanatory editorials are still pending; this one was not hyperlinked.",
+    "why": "Listed in the published November 2026 endorsement guide.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -514,9 +514,9 @@
     "target_id": "ca-secretary-of-state",
     "status": "endorsed",
     "choice": "Shirley N. Weber",
-    "why": "Listed on the U-T Editorial Board's running endorsement list (updated Oct 15). The list notes some explanatory editorials are still pending; this one was not hyperlinked.",
+    "why": "Listed in the published November 2026 endorsement guide.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -524,39 +524,39 @@
     "target_id": "ca-treasurer",
     "status": "endorsed",
     "choice": "Eleni Kounalakis",
-    "why": "Listed on the U-T Editorial Board's running endorsement list (updated Oct 15). The list notes some explanatory editorials are still pending; this one was not hyperlinked.",
+    "why": "Listed in the published November 2026 endorsement guide.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "sd-union-tribune-eb",
     "target_id": "ca-boe-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Outside the U-T's coverage area (San Diego County is in BOE District 4).",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "sd-union-tribune-eb",
     "target_id": "ca-boe-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Outside the U-T's coverage area (San Diego County is in BOE District 4).",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "sd-union-tribune-eb",
     "target_id": "ca-boe-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Outside the U-T's coverage area (San Diego County is in BOE District 4).",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -564,9 +564,9 @@
     "target_id": "ca-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -574,9 +574,9 @@
     "target_id": "ca-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -584,9 +584,9 @@
     "target_id": "ca-superintendent",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -594,9 +594,9 @@
     "target_id": "ca-boe-4",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -604,9 +604,9 @@
     "target_id": "ca-supreme-court-evans",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -614,9 +614,9 @@
     "target_id": "ca-supreme-court-groban",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -624,9 +624,9 @@
     "target_id": "ca-coa-2d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "ca-coa-4d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the U-T's running endorsement list as of Oct 15, 2026. The board says 'several related editorials are still pending.'",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -734,9 +734,9 @@
     "target_id": "ca-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -744,9 +744,9 @@
     "target_id": "ca-lt-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -754,9 +754,9 @@
     "target_id": "ca-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -764,9 +764,9 @@
     "target_id": "ca-supreme-court-evans",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -774,9 +774,9 @@
     "target_id": "ca-supreme-court-groban",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -784,9 +784,9 @@
     "target_id": "ca-coa-2d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -794,9 +794,9 @@
     "target_id": "ca-coa-4d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on SCNG's Nov. 3 endorsement roundup as of Oct 15, 2026. The board says the list 'will be constantly updated' and 'more will be published over the coming days.'",
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
     "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -844,9 +844,9 @@
     "target_id": "ca-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -854,9 +854,9 @@
     "target_id": "ca-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -864,9 +864,9 @@
     "target_id": "ca-controller",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -874,9 +874,9 @@
     "target_id": "ca-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -884,9 +884,9 @@
     "target_id": "ca-boe-1",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -894,9 +894,9 @@
     "target_id": "ca-boe-2",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -904,9 +904,9 @@
     "target_id": "ca-boe-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -914,9 +914,9 @@
     "target_id": "ca-boe-4",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -924,9 +924,9 @@
     "target_id": "ca-supreme-court-evans",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -934,9 +934,9 @@
     "target_id": "ca-supreme-court-groban",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -944,9 +944,9 @@
     "target_id": "ca-coa-2d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -954,9 +954,9 @@
     "target_id": "ca-coa-4d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on the Bay Area News Group endorsement cheat sheet as of Oct 15, 2026. The page says 'Here are our endorsements, so far' and promises additions through Election Day.",
+    "why": "Not on the Bay Area News Group's running endorsement list as of Oct 19, 2026 (list updated Oct 17). The group's boards mostly cover the South Bay and East Bay.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1124,160 +1124,160 @@
     "target_id": "ca-lt-governor",
     "status": "endorsed",
     "choice": "Gloria Romero",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-secretary-of-state",
     "status": "endorsed",
     "choice": "Donald P. (Don) Wagner",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-controller",
     "status": "endorsed",
     "choice": "Herb W Morgan",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-treasurer",
     "status": "endorsed",
     "choice": "Jennifer Hawks",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-attorney-general",
     "status": "endorsed",
     "choice": "Michael E. Gates",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-superintendent",
     "status": "endorsed",
     "choice": "Sonja Shaw",
-    "why": "Endorsed by delegates at the California Republican Party convention in San Diego, April 12, 2026 (reported by SJV Sun, April 13).",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "At the April 12 convention neither Steve Hilton (44%) nor Chad Bianco (49%) reached the 60% needed for endorsement. No formal post-primary endorsement of Hilton was found, though the party is his largest listed contributor ($263,133, per Secretary of State data via CalMatters/LAist).",
-    "url": "https://calmatters.org/politics/2026/04/california-gop-convention-governor/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Steve Hilton",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-insurance-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Endorsed Stacy Korsgaden in the primary; she did not advance. Both November finalists are Democrats and no party endorsement of either was found.",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": "2026-04-12",
-    "confidence": "sourced"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-boe-4",
     "status": "endorsed",
     "choice": "Denis Bilodeau",
-    "why": "Listed as a California Republican Party endorsee in the CalMatters voter guide and on Wikipedia's race page.",
-    "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-boe-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "CalMatters lists Reform California, California Republican Assembly and HJTA for Grove, not the state party. No CAGOP endorsement found.",
-    "url": "https://calmatters.org/california-voter-guide-2026/board-of-equalization/",
-    "date": null,
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Shannon Grove",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-boe-2",
     "status": "not_found",
     "choice": null,
-    "why": "Both November finalists are Democrats. No CAGOP position found.",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-boe-3",
     "status": "not_found",
     "choice": null,
-    "why": "Both November finalists are Democrats. No CAGOP position found.",
-    "url": "https://sjvsun.com/?p=104219",
-    "date": null,
-    "confidence": "sourced"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-supreme-court-evans",
     "status": "not_found",
     "choice": null,
-    "why": "No party position on judicial retention found.",
-    "url": "https://cagop.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-supreme-court-groban",
     "status": "not_found",
     "choice": null,
-    "why": "No party position on judicial retention found.",
-    "url": "https://cagop.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-coa-2d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "No party position on judicial retention found.",
-    "url": "https://cagop.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-republican-party",
     "target_id": "ca-coa-4d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "No party position on judicial retention found.",
-    "url": "https://cagop.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ca-labor-fed",
@@ -1924,9 +1924,9 @@
     "target_id": "ca-governor",
     "status": "endorsed",
     "choice": "Steve Hilton",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1934,9 +1934,9 @@
     "target_id": "ca-controller",
     "status": "endorsed",
     "choice": "Herb W Morgan",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1944,9 +1944,9 @@
     "target_id": "ca-secretary-of-state",
     "status": "endorsed",
     "choice": "Donald P. (Don) Wagner",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1954,9 +1954,9 @@
     "target_id": "ca-superintendent",
     "status": "endorsed",
     "choice": "Sonja Shaw",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1964,9 +1964,9 @@
     "target_id": "ca-boe-1",
     "status": "endorsed",
     "choice": "Shannon Grove",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1974,9 +1974,9 @@
     "target_id": "ca-boe-2",
     "status": "endorsed",
     "choice": "John Pimentel",
-    "why": "On HJTA PAC's statewide endorsement list dated April 16, 2026 (issued for the primary; this candidate advanced). No separate general-election list was found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1985,8 +1985,8 @@
     "status": "endorsed",
     "choice": "Denis Bilodeau",
     "why": "Dual endorsement with Martin Arias (D) on HJTA PAC's April 16 primary list; Arias did not advance. Bilodeau's VIG statement says he signed HJTA's Prop 13 pledge and has its endorsement.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1994,29 +1994,29 @@
     "target_id": "ca-lt-governor",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "hjta-pac",
     "target_id": "ca-treasurer",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "status": "endorsed",
+    "choice": "Jennifer Hawks",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "hjta-pac",
     "target_id": "ca-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "status": "endorsed",
+    "choice": "Michael E. Gates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2024,9 +2024,9 @@
     "target_id": "ca-insurance-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2034,9 +2034,9 @@
     "target_id": "ca-boe-3",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2044,9 +2044,9 @@
     "target_id": "ca-supreme-court-evans",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2054,9 +2054,9 @@
     "target_id": "ca-supreme-court-groban",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2064,9 +2064,9 @@
     "target_id": "ca-coa-2d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2074,9 +2074,9 @@
     "target_id": "ca-coa-4d-retention",
     "status": "not_found",
     "choice": null,
-    "why": "Not on HJTA PAC's April 16, 2026 endorsement list. No general-election addition found.",
-    "url": "https://www.hjta.org/wp-content/uploads/2026/04/HJTA-PAC-ENDORSEMENTS-4.16.26.pdf",
-    "date": "2026-04-16",
+    "why": "Checked the published November 2026 guide on Oct 19; no recommendation for this contest was listed.",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -3037,6 +3037,666 @@
     "why": "The League of Women Voters does not endorse candidates. It publishes the nonpartisan Easy Voter Guide and Voter's Edge.",
     "url": "https://cavotes.org/wp-content/uploads/sites/3/2026/08/EVG-Nov26-Eng.pdf",
     "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-lt-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Explicit no-endorsement editorial. The board endorsed Bonta in 2022 but says he 'hasn't earned our endorsement' this time, citing 'politically driven litigation,' slow police-shooting investigations and ballot-title 'gamesmanship.' It also says Gates's record 'is not a record that inspires confidence.'",
+    "url": "https://www.ocregister.com/2026/10/12/editorial-rob-bonta-will-win-re-election-but-he-hasnt-earned-our-endorsement/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Herb W Morgan",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Sept 6, 2026.",
+    "url": "https://www.ocregister.com/2026/09/06/endorsement-herb-morgan-for-state-controller/",
+    "date": "2026-09-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Eleni Kounalakis",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Oct 8, 2026.",
+    "url": "https://www.ocregister.com/2026/10/08/endorsement-eleni-kounalakis-for-state-treasurer/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-insurance-commissioner",
+    "status": "endorsed",
+    "choice": "Ben Allen",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Aug 16, 2026.",
+    "url": "https://www.ocregister.com/2026/08/16/endorsement-ben-allen-for-insurance-commissioner/",
+    "date": "2026-08-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Sonja Shaw",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial first published April 30, 2026 for the primary and carried into the general.",
+    "url": "https://www.ocregister.com/2026/04/30/endorsement-sonja-shaw-for-state-superintendent-of-public-instruction/",
+    "date": "2026-04-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-boe-1",
+    "status": "endorsed",
+    "choice": "Shannon Grove",
+    "why": "Calls both candidates 'perfectly credible' but gives Grove 'the nod given her mix of private sector experience and breadth of experience considering matters at a statewide level.'",
+    "url": "https://www.ocregister.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
+    "date": "2026-08-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-boe-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "The current SCNG roundup does not list a recommendation for Board of Equalization District 2.",
+    "url": "https://www.ocregister.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-boe-3",
+    "status": "endorsed",
+    "choice": "Mike Gipson",
+    "why": "Calls it 'an easy call': Gipson 'understands the importance of Prop. 13 and the office he's running for.' Says Sukaton did not respond to a month of interview requests and favors a split-roll property tax.",
+    "url": "https://www.ocregister.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
+    "date": "2026-08-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-boe-4",
+    "status": "endorsed",
+    "choice": "Denis Bilodeau",
+    "why": "Says both candidates have merits but endorses Bilodeau 'for his stronger pro-taxpayer bonafides,' citing his opposition to a City of Orange sales tax and Umberg's low HJTA scorecard grades.",
+    "url": "https://www.ocregister.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
+    "date": "2026-08-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-supreme-court-evans",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-supreme-court-groban",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-coa-2d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "scng-eb",
+    "target_id": "ca-coa-4d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-lt-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-attorney-general",
+    "status": "no_position",
+    "choice": null,
+    "why": "Explicit no-endorsement editorial. The board endorsed Bonta in 2022 but says he 'hasn't earned our endorsement' this time, citing 'politically driven litigation,' slow police-shooting investigations and ballot-title 'gamesmanship.' It also says Gates's record 'is not a record that inspires confidence.'",
+    "url": "https://www.dailynews.com/2026/10/12/editorial-rob-bonta-will-win-re-election-but-he-hasnt-earned-our-endorsement/",
+    "date": "2026-10-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-secretary-of-state",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Herb W Morgan",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Sept 6, 2026.",
+    "url": "https://www.dailynews.com/2026/09/06/endorsement-herb-morgan-for-state-controller/",
+    "date": "2026-09-06",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Eleni Kounalakis",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Oct 8, 2026.",
+    "url": "https://www.dailynews.com/2026/10/08/endorsement-eleni-kounalakis-for-state-treasurer/",
+    "date": "2026-10-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-insurance-commissioner",
+    "status": "endorsed",
+    "choice": "Ben Allen",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial published Aug 16, 2026.",
+    "url": "https://www.dailynews.com/2026/08/16/endorsement-ben-allen-for-insurance-commissioner/",
+    "date": "2026-08-16",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Sonja Shaw",
+    "why": "Listed on SCNG's Nov. 3 endorsement roundup; endorsement editorial first published April 30, 2026 for the primary and carried into the general.",
+    "url": "https://www.dailynews.com/2026/04/30/endorsement-sonja-shaw-for-state-superintendent-of-public-instruction/",
+    "date": "2026-04-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-boe-3",
+    "status": "endorsed",
+    "choice": "Mike Gipson",
+    "why": "Calls it 'an easy call': Gipson 'understands the importance of Prop. 13 and the office he's running for.' Says Sukaton did not respond to a month of interview requests and favors a split-roll property tax.",
+    "url": "https://www.dailynews.com/2026/08/30/our-endorsements-for-the-california-state-board-of-equalization/",
+    "date": "2026-08-30",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-supreme-court-evans",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-supreme-court-groban",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-coa-2d-retention",
+    "status": "not_found",
+    "choice": null,
+    "why": "Not on the Southern California News Group endorsement list as of Oct 19, 2026 (list last updated Oct 15). The board says the list 'will be constantly updated' and more endorsements are coming.",
+    "url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-lt-governor",
+    "status": "endorsed",
+    "choice": "Fiona Ma",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Shirley N. Weber",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Malia M. Cohen",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Eleni Kounalakis",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-attorney-general",
+    "status": "endorsed",
+    "choice": "Rob Bonta",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-insurance-commissioner",
+    "status": "endorsed",
+    "choice": "Jane Kim",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Richard Barrera",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-boe-3",
+    "status": "endorsed",
+    "choice": "Samuel P. Sukaton",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-supreme-court-evans",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "The judicial recommendations still say “coming soon” when checked Oct 19, 2026.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-supreme-court-groban",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "The judicial recommendations still say “coming soon” when checked Oct 19, 2026.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-attorney-general",
+    "status": "endorsed",
+    "choice": "Rob Bonta",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-boe-3",
+    "status": "endorsed",
+    "choice": "Mike Gipson",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Malia M. Cohen",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-governor",
+    "status": "endorsed",
+    "choice": "Xavier Becerra",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-insurance-commissioner",
+    "status": "endorsed",
+    "choice": "Jane Kim",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-lt-governor",
+    "status": "endorsed",
+    "choice": "Fiona Ma",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Shirley N. Weber",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Richard Barrera",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Eleni Kounalakis",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-attorney-general",
+    "status": "endorsed",
+    "choice": "Rob Bonta",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-boe-3",
+    "status": "endorsed",
+    "choice": "Mike Gipson",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Malia M. Cohen",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-governor",
+    "status": "endorsed",
+    "choice": "Xavier Becerra",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-insurance-commissioner",
+    "status": "endorsed",
+    "choice": "Ben Allen",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-lt-governor",
+    "status": "endorsed",
+    "choice": "Fiona Ma",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Shirley N. Weber",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Richard Barrera",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Eleni Kounalakis",
+    "url": "https://www.lacdp.org/candidates",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-attorney-general",
+    "status": "endorsed",
+    "choice": "Michael E. Gates",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-coa-2d-retention",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: Explicit NO recommendation for every named justice in this record.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-controller",
+    "status": "endorsed",
+    "choice": "Herb W Morgan",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-governor",
+    "status": "endorsed",
+    "choice": "Steve Hilton",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-lt-governor",
+    "status": "endorsed",
+    "choice": "Gloria Romero",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-secretary-of-state",
+    "status": "endorsed",
+    "choice": "Donald P. (Don) Wagner",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-superintendent",
+    "status": "endorsed",
+    "choice": "Sonja Shaw",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-supreme-court-evans",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: Explicit NO recommendation for every named justice in this record.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-supreme-court-groban",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: Explicit NO recommendation for every named justice in this record.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-county-gop",
+    "target_id": "ca-treasurer",
+    "status": "endorsed",
+    "choice": "Jennifer Hawks",
+    "url": "https://lagop-endorsement-lookup.vercel.app/",
+    "why": "The party’s public lookup lists this choice. Its source label is: CAGOP.",
+    "date": "2026-10-19",
     "confidence": "verified"
   }
 ]

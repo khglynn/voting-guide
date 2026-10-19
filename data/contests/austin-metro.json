@@ -23,9 +23,9 @@
         "background": "Republican nominee. Did not answer the LWV questionnaire, so the guide prints no biography.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "cut burdensome regulations, expand small business opportunities, make essentials more affordable, and strengthen rural healthcare",
+            "is_quote": true,
+            "source": "https://chrisgober.com/"
           }
         ],
         "lwv_status": "declined",
@@ -95,9 +95,9 @@
         "background": "Republican incumbent since 2021; Air Force veteran from San Angelo.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "We established work requirements to receive federal benefits",
+            "is_quote": true,
+            "source": "https://www.augustpfluger.com/"
           }
         ],
         "lwv_status": "declined",
@@ -167,9 +167,9 @@
         "background": "Republican incumbent since 2018, from Victoria.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Obamacare must be repealed, and healthcare must be driven by a market-oriented approach that brings down costs",
+            "is_quote": true,
+            "source": "https://www.cloudforcongress.com/vision/health-care/"
           }
         ],
         "lwv_status": "declined",
@@ -325,9 +325,9 @@
         "background": "Republican nominee. Did not answer the LWV questionnaire, so the guide prints no biography.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Support and retain great educators by reducing burnout and ensuring they have the tools they need to succeed.",
+            "is_quote": true,
+            "source": "https://micatx.com/"
           }
         ],
         "lwv_status": "declined",
@@ -858,9 +858,9 @@
         "background": "Republican nominee. Did not answer the LWV questionnaire, so the guide prints no biography.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "I stand for the teachers in overcrowded classrooms struggling to make sure their students understand the curriculum.",
+            "is_quote": true,
+            "source": "https://www.howardolsen4texas.com/"
           }
         ],
         "lwv_status": "declined",
@@ -930,9 +930,9 @@
         "background": "Republican nominee. Did not answer the LWV questionnaire, so the guide prints no biography.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Refocus education on academic excellence, expand workforce programs, and defend parents' right to guide their children's education.",
+            "is_quote": true,
+            "source": "https://jessicaforhd51.com/"
           }
         ],
         "lwv_status": "declined",
@@ -1002,9 +1002,9 @@
         "background": "Republican nominee; currently judge of Travis County’s 250th District Court. Did not answer the LWV questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Judge Liu has a long track record of defending free speech and religious freedom.",
+            "is_quote": true,
+            "source": "https://www.coryfortexas.com/"
           }
         ],
         "lwv_status": "declined",
@@ -3333,15 +3333,19 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "No LWV response received, so the guide prints no biography.",
-        "own_words": [
-          {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_url": "https://austinvotersguide.org/",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site search",
+            "LWV Austin Area guide",
+            "Preservation Austin questionnaire",
+            "Austin Area Urban League candidate guide"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3452,9 +3456,14 @@
         "background": "No LWV response received.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "I want a balanced budget with no deficit.",
+            "is_quote": true,
+            "source": "https://www.edward4aisd.com/about"
+          },
+          {
+            "text": "I want teachers paid more.",
+            "is_quote": true,
+            "source": "https://www.edward4aisd.com/about"
           }
         ],
         "lwv_status": "declined",
@@ -3657,9 +3666,9 @@
         "background": "No LWV response received. The Chronicle describes her as a volunteer and advocate.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Make every dollar count. Reduce waste. Leverage every resource.",
+            "is_quote": true,
+            "source": "https://laurieforaisd.com/core-platform"
           }
         ],
         "lwv_status": "declined",
@@ -4011,9 +4020,9 @@
         "background": "No LWV response received.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Public safety is paramount for me, alongside affordability and economic development.",
+            "is_quote": true,
+            "source": "https://communityimpact.com/pflugerville-hutto/government/hear-from-the-candidates-running-for-pflugerville-city-council-place-2/"
           }
         ],
         "lwv_status": "declined",
@@ -4913,9 +4922,9 @@
         "background": "Incumbent commissioner.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Keeping taxes low, backing law enforcement, building infrastructure.",
+            "is_quote": true,
+            "source": "https://voterussboles.com/about"
           }
         ],
         "lwv_status": "declined",
@@ -4930,9 +4939,9 @@
         "background": "Business owner and longtime Williamson County resident (campaign site; Branch).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Transparent budgeting, efficient use of taxpayer dollars, and opposition to wasteful spending.",
+            "is_quote": true,
+            "source": "https://harmonrhea.com/"
           }
         ],
         "lwv_status": "declined",
@@ -5609,9 +5618,9 @@
         "background": "Hosts the podcast Colonial Outcasts and has worked as a political commentator; Army special operations veteran with four combat deployments to Afghanistan (Branch).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "I'm not taking PAC donations from military contractors or anyone else.",
+            "is_quote": true,
+            "source": "https://www.stokerfortexas.com/"
           }
         ],
         "lwv_status": "declined",
@@ -5658,9 +5667,9 @@
         "background": "Longtime congressman from Waco (previously Dallas).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "defends our gun rights, protects our religious liberty, and stands with President Trump to build the border wall.",
+            "is_quote": true,
+            "source": "https://www.petesessions.com/issues/"
           }
         ],
         "lwv_status": "declined",
@@ -5675,9 +5684,9 @@
         "background": "Waco criminal defense attorney who has practiced in Central Texas since 2011, mostly in indigent defense; first run for office (Branch).",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "My mission in Washington will be to confront the chaos head‑on, defend our freedoms, and stop the march toward authoritarianism.",
+            "is_quote": true,
+            "source": "https://caseyshepardforcongress.com/"
           }
         ],
         "lwv_status": "declined",
@@ -5810,9 +5819,9 @@
         "background": "Incumbent since 2023.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "expand technical education programs so students have access to good-paying jobs immediately after graduation.",
+            "is_quote": true,
+            "source": "https://carolinefortexas.com/"
           }
         ],
         "lwv_status": "declined",
@@ -6243,7 +6252,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Prioritize student achievement, safety, opportunity, and preparation for life after graduation.",
+            "is_quote": true,
+            "source": "https://secure.actblue.com/donate/josh-castro-7?refcode=directory"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://austinvotersguide.org/"
       },
@@ -6422,7 +6437,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I’m running for Del Valle ISD Trustee because I believe good governance matters, especially in a growing district",
+            "is_quote": true,
+            "source": "https://www.gloriaverabedolla.com/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://austinvotersguide.org/"
       },
@@ -6515,7 +6536,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "The League of Women Voters Austin Area guide lists him as deceased.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I spent another 10 years working in this audit career.",
+            "is_quote": true,
+            "source": "https://www.leanderisd.org/board_elections/"
+          }
+        ],
         "lwv_status": "not_asked",
         "lwv_url": "https://austinvotersguide.org/"
       }
@@ -6802,9 +6829,9 @@
         "background": "Republican incumbent. Did not answer the LWV questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "ensure data centers respect and do not burden our communities, infrastructure, and natural resources.",
+            "is_quote": true,
+            "source": "https://drschwertner.com/accomplishments"
           }
         ],
         "lwv_status": "declined",
@@ -6874,9 +6901,9 @@
         "background": "Republican incumbent. Did not answer the LWV questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "Pete Flores passed a health care bill that improves access to medication for children",
+            "is_quote": true,
+            "source": "https://floresfortexas.com/issues/"
           }
         ],
         "lwv_status": "declined",
@@ -6946,13 +6973,18 @@
         "background": "Did not answer the LWV questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the League of Women Voters questionnaire.",
-            "is_quote": false,
-            "source": "https://austinvotersguide.org/LWVAA-VG-EN.pdf"
+            "text": "I’ve worked to control spending, return unused funds, strengthen financial oversight and improve board governance.",
+            "is_quote": true,
+            "source": "https://onyourballot.vote411.org/m/race-detail.do?id=73007785"
+          },
+          {
+            "text": "Look for people who know their job, have integrity, and treat taxpayers with respect.",
+            "is_quote": true,
+            "source": "https://onyourballot.vote411.org/m/race-detail.do?id=73007785"
           }
         ],
-        "lwv_status": "declined",
-        "lwv_url": "https://austinvotersguide.org/"
+        "lwv_status": "responded",
+        "lwv_url": "https://onyourballot.vote411.org/m/race-detail.do?id=73007785"
       },
       {
         "name": "Clint Stephenson",

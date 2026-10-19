@@ -2231,7 +2231,7 @@
   "level": "city",
   "office": "Fullerton City Council",
   "district": "District 3",
-  "scope_plain": "Only Fullerton voters who live in the district. Fullerton elects its five councilmembers by district; Districts 3 and 5 are up this year. Nonpartisan. No primary; most votes wins. Four-year term, three-term limit. Check the district map at the city clerk's site; Kevin's brother may be in District 3 or 5, or in a district not up this year.",
+  "scope_plain": "Only City of Fullerton voters in Council District 3. Districts 3 and 5 vote in November 2026; Districts 1, 2 and 4 do not. Use the Orange County Registrar’s district map or your sample ballot to confirm your district.",
   "office_explainer": "One of five Fullerton councilmembers who set the budget, hire the city manager and police chief, and decide land use.",
   "why_it_matters": "Fullerton closed a $3.8 million deficit this summer with cuts after the council rejected putting a sales tax on the ballot (so there is no Fullerton city measure this November). Police and fire take about 70% of the general fund. Roads, parks and downtown are the recurring issues. District 3 is an incumbent defending her seat against a businessman and nonprofit founder.",
   "vote_for": 1,
@@ -2306,6 +2306,10 @@
    {
     "name": "City of Fullerton elections page",
     "url": "https://www.cityoffullerton.com/government/departments/city-clerk/elections"
+   },
+   {
+    "name": "Orange County Registrar: official November 2026 district map or qualified contests",
+    "url": "https://ocvote.gov/bin/maps/pdf/City/Map_Fullerton%20-%20Council%20District%203.pdf"
    }
   ],
   "confidence": "verified"
@@ -2316,7 +2320,7 @@
   "level": "city",
   "office": "Fullerton City Council",
   "district": "District 5",
-  "scope_plain": "Only Fullerton voters who live in the district. Fullerton elects its five councilmembers by district; Districts 3 and 5 are up this year. Nonpartisan. No primary; most votes wins. Four-year term, three-term limit. Check the district map at the city clerk’s site to see whether you live in District 5.",
+  "scope_plain": "Only City of Fullerton voters in Council District 5. Districts 3 and 5 vote in November 2026; Districts 1, 2 and 4 do not. Use the Orange County Registrar’s district map or your sample ballot to confirm your district.",
   "office_explainer": "One of five Fullerton councilmembers who set the budget, hire the city manager and police chief, and decide land use.",
   "why_it_matters": "Fullerton closed a $3.8 million deficit this summer with cuts after the council rejected putting a sales tax on the ballot (so there is no Fullerton city measure this November). Police and fire take about 70% of the general fund. Roads, parks and downtown are the recurring issues. District 5 is open: Ahmad Zahra is not running again. Three candidates, so the winner may take it with well under half the vote.",
   "vote_for": 1,
@@ -2418,6 +2422,10 @@
    {
     "name": "Daily Titan: District 5 candidates",
     "url": "https://dailytitan.com/fullerton-city-council-district-5-candidates-seek-fiscal-transparency/article_75422bfc-efb8-4457-8190-55a28a90db8e.html"
+   },
+   {
+    "name": "Orange County Registrar: official November 2026 district map or qualified contests",
+    "url": "https://ocvote.gov/bin/maps/pdf/City/Map_Fullerton%20-%20Council%20District%205.pdf"
    }
   ],
   "confidence": "verified"
@@ -2494,7 +2502,7 @@
   "level": "school",
   "office": "Fullerton Joint Union High School District Governing Board",
   "district": "Trustee Area 1",
-  "scope_plain": "Only voters in Fullerton Joint Union High School District Trustee Area 1. The district serves Fullerton, La Habra and Buena Park; check your sample ballot to see whether your address is in Area 1. Nonpartisan; most votes wins.",
+  "scope_plain": "Only voters in Fullerton Joint Union High School District Trustee Area 1. The registrar’s map places its Orange County portion mainly in La Habra, north of Imperial Highway, with a southwest boundary along Beach Boulevard. A Fullerton mailing address does not establish eligibility. Check your personalized sample ballot.",
   "office_explainer": "One of five trustees running the high school district for Fullerton, La Habra and Buena Park.",
   "why_it_matters": "Vacant seat. A special education teacher and PTA leader against a financial planner.",
   "vote_for": 1,
@@ -2550,6 +2558,14 @@
    {
     "name": "OC Registrar candidate statements (3233)",
     "url": "https://ocvote.gov/fileadmin/user_upload/elections/GEN2026/cs/3233-1.pdf"
+   },
+   {
+    "name": "Orange County Registrar: official November 2026 district map or qualified contests",
+    "url": "https://ocvote.gov/bin/maps/pdf/School/Map_Fullerton%20Joint%20Union%20High%20School%20District%20-%20Trustee%20Area%201.pdf"
+   },
+   {
+    "name": "FJUHSD: official trustee area map",
+    "url": "https://www.fjuhsd.org/board-member-by-area-map"
    }
   ],
   "confidence": "verified"

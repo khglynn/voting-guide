@@ -292,72 +292,72 @@
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-us-senate",
-    "status": "not_found",
-    "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "James Talarico",
+    "why": "The board endorses James Talarico in the November Senate election. Checked Oct 19, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-us-senate-james-talarico-ken-paxton-22468885.php",
+    "date": "2026-10-18",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-governor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "why": "The board explicitly declines to recommend either candidate for governor. Checked Oct 19, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-governor-election-greg-abbott-gina-hinojosa-22477198.php",
+    "date": "2026-10-17",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-lt-governor",
-    "status": "not_found",
+    "status": "no_position",
     "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "why": "The board explicitly declines to recommend either candidate for lieutenant governor. Checked Oct 19, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/lt-governor-election-dan-patrick-vikki-goodwin-22478732.php",
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
-    "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Sarah Eckhardt",
+    "why": "The board endorses Sarah Eckhardt for comptroller. Checked Oct 19, 2026.",
+    "url": "https://www.dallasnews.com/opinion/we-recommend/article/texas-comptroller-recommendation-eckhardt-huffines-22473846.php",
+    "date": "2026-10-16",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "dallas-morning-news-eb",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "No recommendation on the We Recommend index as of Oct 15; the board was still publishing its slate daily.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.dallasnews.com/opinion/we-recommend/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "san-antonio-express-news-eb",
@@ -414,7 +414,7 @@
     "target_id": "tx-agriculture-commissioner",
     "status": "no_position",
     "choice": null,
-    "why": "The board was split between Sheets and Tucker and made no recommendation.",
+    "why": "The board explicitly declines to recommend a candidate in this race. Checked Oct 19, 2026.",
     "url": "https://www.expressnews.com/opinion/editorial/article/agriculture-commissioner-no-recommendation-22458641.php",
     "date": "2026-10-05",
     "confidence": "verified"
@@ -532,11 +532,11 @@
   {
     "endorser_id": "san-antonio-express-news-eb",
     "target_id": "tx-us-senate",
-    "status": "not_found",
-    "choice": null,
-    "why": "Listed as 'Coming soon' on the Express-News recommendations page as of Oct 15.",
-    "url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/",
-    "date": "2026-10-15",
+    "status": "endorsed",
+    "choice": "James Talarico",
+    "why": "The board’s 2026 general-election recommendation guide names this candidate. Checked Oct 19, 2026.",
+    "url": "https://www.expressnews.com/opinion/editorial/article/senate-election-james-talarico-paxton-recommend-22477209.php",
+    "date": null,
     "confidence": "verified"
   },
   {
@@ -624,9 +624,9 @@
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -634,9 +634,9 @@
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -644,9 +644,9 @@
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -654,9 +654,9 @@
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -664,9 +664,9 @@
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -674,9 +674,9 @@
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -684,9 +684,9 @@
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -694,9 +694,9 @@
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -704,9 +704,9 @@
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -714,9 +714,9 @@
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "No court recommendations on the Statesman endorsements page as of Oct 15.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -724,180 +724,180 @@
     "target_id": "tx-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-lt-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-land-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-railroad-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "fort-worth-star-telegram-eb",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Star-Telegram's endorsement index showed only primary and runoff endorsements as of Oct 15; no general-election statewide picks located.",
+    "why": "No November general-election endorsement found in the public endorsement or editorial indexes on Oct 19, 2026. The listed endorsement roundups concern the spring primaries and runoffs.",
     "url": "https://www.star-telegram.com/opinion/election-recommendations/",
-    "date": "2026-10-15",
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "el-paso-times-eb",
@@ -3424,180 +3424,180 @@
     "target_id": "tx-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-governor",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-lt-governor",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-land-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-railroad-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "tsra-pac",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "We could not read TSRA-PAC's own voter guide. Ballotpedia lists a TSRA endorsement of Dan Patrick for 2026, and Abbott's campaign lists TSRA among his endorsers.",
-    "url": "https://www.tsra.com/tsrapac/endorsements.php",
-    "date": null,
-    "confidence": "unverified"
+    "why": "The final 2026 guide reports candidate grades. No explicit general-election endorsement was found; grades are not recorded as endorsements.",
+    "url": "https://www.tsra.com/docs/V4_10.1.26_TSRA_PAC_Voters_Guide_2026-Emailed.pdf.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texas-parent-pac",
@@ -3964,180 +3964,180 @@
     "target_id": "tx-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-governor",
     "status": "endorsed",
     "choice": "Greg Abbott",
-    "why": "CLEAT announced its endorsement of Abbott; also listed by the Texas Tribune. Not on CLEAT's general-election web table, which covers legislative races.",
-    "url": "https://www.gregabbott.com/texas-law-enforcement-backs-governor-greg-abbott/",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-lt-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Tribune lists 'several law enforcement PACs' for Patrick without naming CLEAT; CLEAT's web table does not list statewide races.",
+    "status": "endorsed",
+    "choice": "Dan Patrick",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "status": "endorsed",
+    "choice": "Mayes Middleton",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-land-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "status": "endorsed",
+    "choice": "Dawn Buckingham",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-railroad-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-cca-place-3",
     "status": "endorsed",
     "choice": "Thomas Smith",
-    "why": "Reported by the Texas Tribune among Smith's endorsements.",
-    "url": "https://www.texastribune.org/2026/09/29/texas-court-of-criminal-appeals-2026-election/",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-cca-place-9",
-    "status": "not_found",
-    "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "status": "endorsed",
+    "choice": "John Messinger",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "cleat",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "CLEAT's 2026 general-election endorsement table lists congressional and legislative races only.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
-    "date": null,
-    "confidence": "sourced"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
@@ -4152,172 +4152,172 @@
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "status": "endorsed",
+    "choice": "Gina Hinojosa",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-lt-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "status": "endorsed",
+    "choice": "Vikki Goodwin",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-attorney-general",
     "status": "endorsed",
     "choice": "Nathan Johnson",
-    "why": "Reported by the Texas Tribune (and Blue Voter Guide for Rosenthal).",
-    "url": "https://www.texastribune.org/2026/10/05/texas-attorney-general-election-2026-candidates-mayes-middleton-nathan-johnson-tom-oxford/",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "status": "endorsed",
+    "choice": "Sarah Eckhardt",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-land-commissioner",
     "status": "endorsed",
     "choice": "Benjamin Flores",
-    "why": "Reported by the Texas Tribune (and Blue Voter Guide for Rosenthal).",
-    "url": "https://www.texastribune.org/2026/09/18/texas-land-commissioner-glo-2026-buckingham/",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-agriculture-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "status": "endorsed",
+    "choice": "Clayton Tucker",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-railroad-commissioner",
     "status": "endorsed",
     "choice": "Jon Rosenthal",
-    "why": "Reported by the Texas Tribune (and Blue Voter Guide for Rosenthal).",
-    "url": "https://www.texastribune.org/2026/09/15/texas-railroad-commission-election-2026-bo-french-jon-rosenthal/",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://www.turntexasgreen.org/2026-endorsements",
     "date": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "sierra-club-lone-star",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "No Sierra Club endorsement located for this race.",
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
     "url": "https://www.turntexasgreen.org/2026-endorsements",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texas-association-of-business",
@@ -4504,10 +4504,10 @@
     "target_id": "tx-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
@@ -4534,330 +4534,330 @@
     "target_id": "tx-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-land-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-railroad-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texans-for-lawsuit-reform",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "TLR PAC's press release page lists legislative endorsements; no statewide entry located for this race. TLR gave $100,000 to Middleton (AG) per the Tribune, which is a donation, not a stated endorsement.",
-    "url": "https://tlrpac.org/press-releases/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No named November general-election slate found in accessible endorsement-page text or the press-release index on Oct 19, 2026. Earlier primary endorsements were not carried forward.",
+    "url": "https://tlrpac.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-us-senate",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "James Talarico",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Gina Hinojosa",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-lt-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Vikki Goodwin",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Nathan Johnson",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Sarah Eckhardt",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-land-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Benjamin Flores",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-railroad-commissioner",
-    "status": "not_found",
-    "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
+    "status": "endorsed",
+    "choice": "Jon Rosenthal",
+    "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
     "date": null,
-    "confidence": "unverified"
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-supreme-court-chief",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-supreme-court-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-supreme-court-place-7",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-supreme-court-place-8",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-cca-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-cca-place-4",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-cca-place-9",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-15th-coa-chief",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-15th-coa-place-2",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "equality-texas",
     "target_id": "tx-15th-coa-place-3",
     "status": "not_found",
     "choice": null,
-    "why": "Equality Texas Action announced 2026 endorsements on social media; we could not confirm a pick in this race on its own list.",
-    "url": "https://equalitytexas.org/",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+    "url": "https://equalitytexas.org/endorsements/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "texas-freedom-network",

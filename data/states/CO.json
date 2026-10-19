@@ -115,7 +115,7 @@
     "Sign the envelope. The number one reason ballots get rejected is a missing or mismatched signature. Sign it the way you sign your driver's license, and don't let anyone else sign for you. If you get a letter or a BallotTrax text saying there's a problem, you have until 11:59 PM on Thursday, November 12 to fix it (the usual 8th day, Nov. 11, is Veterans Day).",
     "Mail ballots don't come with an ID check for most people, but if you vote in person you must show ID. Non-photo ID like a utility bill with a Colorado address works. A digital copy on your phone is fine.",
     "On every measure, 'Yes' means change the law and 'No' means keep things as they are. Amendments 81 through 86 need 55% to pass; Amendment 87 and all seven propositions need a simple majority. Two measures directly conflict: Amendment 87 (graduated income tax) and Proposition 136 (4.4% cap). If both pass, the Blue Book says the one with more yes votes is generally expected to control, but the outcome is legally unclear.",
-    "Denver-metro only: about 800,000 voters in Adams, Arapahoe, Douglas and Weld counties got ballots that wrongly include Ballot Issue 7A (the Front Range passenger rail tax). If you don't live inside the rail district, your 7A vote won't count but the rest of your ballot will. Officials say don't request a new ballot; they will copy your votes onto the correct ballot style. Sources: https://www.cpr.org/2026/10/07/front-range-passenger-rail-incorrect-ballots/ and https://www.denverpost.com/2026/10/09/after-unprecedented-colorado-ballot-error-whats-next-for-front-range-rail-measure/ (sourced, not official)."
+    "Ballot Issue 7A was sent to the wrong voters in parts of Adams, Arapahoe, Douglas and Weld counties because the rail district did not share its new boundaries with county clerks. Arapahoe County says you may vote your ballot normally if it includes 7A even though you live outside the rail district; only eligible district votes on 7A count. Some Columbine Valley ballots have the opposite problem: 7A is missing. Those voters are being sent corrected ballots. If that is you, follow the county notice or get a corrected ballot at a vote center through 7 PM on November 3. The corrected ballot replaces the original; only one counts. Questions in Arapahoe County: 303-795-4511. Other affected counties: ask your own clerk."
   ],
   "situations": [
     {
@@ -250,7 +250,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "answer": "That's easy in Colorado, since everyone already has a mail ballot. Vote it before you leave and drop it in any drop box in your county, or mail it by Monday, October 26.",
+      "answer": "If you have your ballot, vote it and use an official drop box before you leave, by 7 PM on November 3, or mail it by October 26. If it has not arrived or you need a replacement before traveling, contact your county clerk or visit a vote center. Do not assume your ballot can be forwarded to a travel address.",
       "steps": [
         "Fill it out, sign the envelope, and drop it off before you go.",
         "Already away without your ballot? Ask your county clerk about a replacement soon; Denver mails replacements requested by Oct 26.",

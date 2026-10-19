@@ -2694,7 +2694,7 @@
     "district": "Adams County",
     "scope_plain": "All Adams County voters. Includes Thornton, Westminster, Commerce City and north Aurora (roughly north of Colfax). Aurora voters: on your ballot only if you live in Adams County.",
     "office_explainer": "Keeps official land boundary records and represents the county in boundary disputes.",
-    "why_it_matters": "No one is running. The ballot says \"There are no candidates for this office.\"",
+    "why_it_matters": "No candidates are listed for this office. The official sample ballot says, “There are no candidates for this office.”",
     "vote_for": 1,
     "incumbent": null,
     "open_seat": true,

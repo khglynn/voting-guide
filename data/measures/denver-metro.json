@@ -253,12 +253,12 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3A",
-    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.129% starting on Jan. 1, 2027, to provide for the operation of and repairs, maintenance and improvements to community facilities, including without limitation libraries, recreation and community centers ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
+    "official_title": "Shall City of Aurora taxes be increased up to $12,640,000 and as may be generated annually thereafter by the imposition of a new 0.129% sales and use tax (that equals 12.9 cents on every one hundred dollar purchase) for a period beginning on January 1, 2027, and ending on December 31, 2057, to provide for the operation of and repairs, maintenance, and improvements to community facilities, including without limitation libraries, recreation and community centers; and shall City of Aurora debt be increased by an amount not to exceed $105,000,000 with a maximum repayment cost of up to $204,870,000 to accomplish the purposes stated above, including but not limited to: park renovations and new park construction; recreation center improvements and new recreation center construction; library branch improvements and new library construction; such debt to consist of revenue bonds which shall bear interest, mature, be subject to redemption, with or without premium, and be issued, dated and sold (at, above or below par) in such manner and containing such other terms, not inconsistent herewith, as the City Council may determine; shall the City of Aurora be authorized to pay such bonds from, and to secure such payment by a pledge of, the new 0.129% sales and use tax and other legally available funds; and shall the City of Aurora be entitled to collect, retain, and spend the full revenues from such tax increase and the proceeds of any investment thereof notwithstanding any limitation in the state constitution, state law or the City Home Rule Charter?",
     "plain_summary": "A new 0.129% Aurora sales tax (about 13 cents on $100) from 2027 through 2057, plus up to $105 million in bonds, for libraries, recreation centers and parks. It's one of three separate tax questions (3A, 3B, 3C) that together would raise Aurora's sales tax 0.325%, its first increase since 1993.",
     "yes_means": "Aurora's sales tax rises 0.129% starting Jan 1, 2027 and the city may borrow up to $105 million for community facilities.",
     "no_means": "No new tax for community facilities; Aurora's sales tax rate stays the same.",
     "current_law": "Aurora's city sales tax has not increased since 1993. Combined rate today: 8.5% in the Adams County part of Aurora, 8% in the Arapahoe County part. A city task force identified $2.08 billion in infrastructure needs and narrowed to 65 projects costing $264.5 million.",
-    "fiscal_impact": "Up to $12.64 million a year (DSA figure) and up to $105 million in bonds through 2057 (Kim Monson's summary of the ballot title). If all three pass, Aurora's combined sales tax goes to 8.825% (Adams side) or 8.325% (Arapahoe side).",
+    "fiscal_impact": "Up to $12.64 million a year in new sales tax, and up to $105 million in bonds with a maximum repayment cost of $204.87 million, from 2027 through 2057 (figures from the official ballot title).",
     "pass_threshold": "simple majority",
     "referred_by": "council",
     "confusing_wording_note": "3A, 3B and 3C are separate yes/no votes that look like one package. You can vote yes on some and no on others. Each includes bond authority through 2057 that the short description does not mention.",
@@ -270,9 +270,9 @@
       "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Kim Monson's conservative guide recommends no on all three.",
       "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
-    "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
+    "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "aurora-3b",
@@ -280,12 +280,12 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3B",
-    "official_title": "Shall the City of Aurora raise the sales and use tax by 0.064% starting on Jan. 1, 2027, to provide for public safety needs, including without limitation the operation, repair, maintenance and improvements to police, fire and other public safety infrastructure and facilities ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
+    "official_title": "Shall City of Aurora taxes be increased up to $6,270,000 and as may be generated annually thereafter by the imposition of a new 0.064% sales and use tax (that equals 6.4 cents on every one hundred dollar purchase) for a period beginning on January 1, 2027 and ending on December 31, 2057, to provide for public safety needs, including without limitation the operation, repair, maintenance, and improvements to police, fire, and other public safety infrastructure and facilities; and shall City of Aurora debt be increased by an amount not to exceed $53,000,000 with a maximum repayment cost of up to $101,600,000 to accomplish the purposes stated above, including but not limited to: fire station renovations and remodels; Aurora 911 and police facilities improvements; such debt to consist of revenue bonds which shall bear interest, mature, be subject to redemption, with or without premium, and be issued, dated and sold (at, above or below par) in such manner and containing such other terms, not inconsistent herewith, as the City Council may determine; shall the City of Aurora be authorized to pay such bonds from, and to secure such payment by a pledge of, the new 0.064% sales and use tax and other legally available funds; and shall the City of Aurora be entitled to collect, retain, and spend the full revenues from such tax increase and the proceeds of any investment thereof notwithstanding any limitation in the state constitution, state law or the City Home Rule Charter?",
     "plain_summary": "A new 0.064% Aurora sales tax (about 6 cents on $100) from 2027 through 2057, and up to $53 million in bonds, for fire stations, 911 and police facilities.",
     "yes_means": "Aurora's sales tax rises 0.064% starting Jan 1, 2027 and the city may borrow up to $53 million for public safety facilities.",
     "no_means": "No new tax for public safety facilities; Aurora's sales tax rate stays the same.",
     "current_law": "See 3A. The Aurora Police Department is under a consent decree with the state.",
-    "fiscal_impact": "Up to $6.27 million a year (DSA figure) and up to $53 million in bonds through 2057.",
+    "fiscal_impact": "Up to $6.27 million a year in new sales tax, and up to $53 million in bonds with a maximum repayment cost of $101.6 million, from 2027 through 2057 (figures from the official ballot title).",
     "pass_threshold": "simple majority",
     "referred_by": "council",
     "confusing_wording_note": "Same package note as 3A. This is the only one of the three that funds police facilities; the ballot title says 'police, fire and other public safety.'",
@@ -297,9 +297,9 @@
       "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Protesters at council meetings said they 'don't want police projects funded,' and Denver DSA recommends no, citing the police consent decree and a recent roughly 41% officer raise.",
       "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
-    "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
+    "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "aurora-3c",
@@ -307,12 +307,12 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Issue 3C",
-    "official_title": "Shall the City of Aurora raise the sales and use tax rate by 0.132% beginning on Jan. 1, 2027, to provide for transportation infrastructure needs, including without limitation the operation of and repairs, maintenance and improvements to city transportation infrastructure and facilities ... [Opening of the ballot title as quoted by the Denver Gazette; full text not captured.]",
+    "official_title": "Shall City of Aurora taxes be increased up to $12,940,000 and as may be generated annually thereafter by the imposition of a new 0.132% sales and use tax (that equals 13.2 cents on every one hundred dollar purchase) for a period beginning on January 1, 2027, and ending on December 31, 2057, to provide for transportation infrastructure needs, including without limitation the operation of and repairs, maintenance, and improvements to city transportation infrastructure and facilities; and shall City of Aurora debt be increased by an amount not to exceed $108,000,000 with a maximum repayment cost of up to $209,733,000 to accomplish the purposes stated above, including but not limited to: traffic, intersection, and pedestrian safety improvements; major bridge replacements; roadway improvements and expansion; such debt to consist of revenue bonds which shall bear interest, mature, be subject to redemption, with or without premium, and be issued, dated and sold (at, above or below par) in such manner and containing such other terms, not inconsistent herewith, as the City Council may determine; shall the City of Aurora be authorized to pay such bonds from, and to secure such payment by a pledge of, the new 0.132% sales and use tax and other legally available funds; and shall the City of Aurora be entitled to collect, retain, and spend the full revenues from such tax increase and the proceeds of any investment thereof notwithstanding any limitation in the state constitution, state law or the City Home Rule Charter?",
     "plain_summary": "A new 0.132% Aurora sales tax (about 13 cents on $100) from 2027 through 2057, and up to $108 million in bonds, for roads, bridges, intersections and pedestrian safety.",
     "yes_means": "Aurora's sales tax rises 0.132% starting Jan 1, 2027 and the city may borrow up to $108 million for transportation.",
     "no_means": "No new tax for transportation; Aurora's sales tax rate stays the same.",
     "current_law": "See 3A. The task force identified $596 million in transportation needs.",
-    "fiscal_impact": "Up to $12.94 million a year (DSA figure) and up to $108 million in bonds through 2057.",
+    "fiscal_impact": "Up to $12.94 million a year in new sales tax, and up to $108 million in bonds with a maximum repayment cost of $209.733 million, from 2027 through 2057 (figures from the official ballot title).",
     "pass_threshold": "simple majority",
     "referred_by": "council",
     "confusing_wording_note": "Same package note as 3A.",
@@ -324,9 +324,9 @@
       "text": "The Citizens for No New Debt committee urges no on the bond package, saying paying interest on bonds inflates the city's costs and leaves residents on the hook. Kim Monson's guide also recommends no.",
       "source": "https://www.denverpost.com/2026/10/03/aurora-bond-package-ballot-3a/"
     },
-    "official_text_url": "https://www.auroragov.org/city_hall/elections/upcoming_election",
+    "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "aurora-3d",
@@ -334,7 +334,7 @@
     "level": "city",
     "jurisdiction": "City of Aurora",
     "number": "Ballot Question 3D",
-    "official_title": null,
+    "official_title": "Shall Article 2-4 of the City Charter of the City of Aurora, Colorado, be amended to direct that regular municipal elections shall be moved from odd-numbered years to even-numbered years with corresponding amendments to Article 3-5 of the Aurora City Charter to allow one-time shortened terms of office necessary to implement the transition to even-numbered year elections?",
     "plain_summary": "Moves Aurora's mayor and council elections from odd-numbered years to even-numbered years, when turnout is higher. To make the switch, seats elected in 2027 and 2029 would get three-year terms instead of four, and the first even-year city election would be in 2030.",
     "yes_means": "Aurora city elections move to even-numbered years, with some terms shortened once to make the switch.",
     "no_means": "Aurora keeps electing its mayor and council in odd-numbered years.",
@@ -351,9 +351,9 @@
       "text": "Opponents cited by the Denver Post say even-year elections cost the city more, that Aurora races would sit at the bottom of long ballots where voters burn out, and that campaigning in a busier season costs candidates more.",
       "source": "https://www.denverpost.com/2026/10/03/aurora-ballot-question-3d-elections/"
     },
-    "official_text_url": "https://www.denverpost.com/2026/10/03/aurora-ballot-question-3d-elections/",
+    "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "lakewood-2g",
@@ -546,9 +546,9 @@
     "level": "school",
     "jurisdiction": "Littleton Public Schools",
     "number": "Ballot Issue 4A",
-    "official_title": null,
+    "official_title": "Shall Arapahoe County School District Number Six (Littleton Public Schools), Arapahoe County, Colorado taxes be increased $10,289,724 in 2026 for collection in 2027, and by other amounts in subsequent years up to the limit established for the district by Section 22-54-108, with such funds to be used for general fund purposes such as: attract and retain highly qualified teachers to continue to provide exceptional learning opportunities and care for every student; maintain safe, secure schools where all students can thrive; sustain academic excellence and expand career readiness through innovative programming to prepare all students for success after graduation. From the imposition of a mill levy imposed at a rate which will generate revenues up to the limit established for the district by Section 22-54-108(3)(b)(VI), C.R.S. provided that no mill levy increase from year to year shall exceed one mill after 2026; such additional revenues to be deposited in the general fund and used for educational purposes as provided herein and as previously approved by the district voters pursuant to Section 22-54-108(V), C.R.S.; and shall the revenue from such taxes and any earnings from the investment thereon be collected and spent as voter approved revenue change under Article X Section 20 of the Colorado Constitution and any other law?",
     "plain_summary": "A $10.3 million a year property tax increase (a 'mill levy override') for Littleton Public Schools, for teacher pay, career and technical education and school security. The district started 2026-27 with a $10.6 million budget gap. Later increases are capped at one mill a year.",
-    "yes_means": "LPS property taxes rise $10.3 million a year starting with 2027 collections.",
+    "yes_means": "LPS may collect $10,289,724 in new property taxes in 2027, then amounts up to its state limit. Later annual levy increases are capped at one mill.",
     "no_means": "No new override; the district has already frozen wages and scheduled a furlough day.",
     "current_law": "LPS cut central office staff, froze wages and scheduled a districtwide furlough day before referring the measure.",
     "fiscal_impact": "$10,289,724 in 2027. District estimate reported by the Denver Gazette: $25 a year per $100,000 of property value, about $150 a year on a $600,000 home.",
@@ -563,9 +563,9 @@
       "text": "Kim Monson recommends no. No organized opposition found.",
       "source": "https://kimmonson.com/colorado-voter-guide/2026/county-arapahoe/"
     },
-    "official_text_url": "https://www.arapahoevotes.gov/",
+    "official_text_url": "https://files.arapahoeco.gov/Clerk%20and%20Recorder/ArapahoeVotes/Documents-Articles/2026%20Sample%20Ballots/2026%20Arapahoe%20County%20General%20Election%20Sample%20Ballot%20-%20English.pdf?t=202609211726230",
     "official_guide_url": null,
-    "confidence": "sourced"
+    "confidence": "verified"
   },
   {
     "id": "thornton-2a",

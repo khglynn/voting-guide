@@ -3222,7 +3222,16 @@
         "background": "Did not answer the LWV questionnaire.",
         "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site and candidate-questionnaire search",
+            "LWV Dallas general-election guide",
+            "Dallas County GOP candidate directory"
+          ]
+        }
       },
       {
         "name": "Adam M. Swartz",
@@ -3291,7 +3300,17 @@
         "background": "Did not answer the LWV questionnaire.",
         "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site and candidate-questionnaire search",
+            "LWV Dallas general-election guide",
+            "Dallas County GOP candidate directory",
+            "Dallas Morning News questionnaire"
+          ]
+        }
       },
       {
         "name": "Paula M Rosales",
@@ -3616,7 +3635,18 @@
         "background": "Did not answer the LWV questionnaire.",
         "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284"
+        "lwv_url": "https://lwvdallas.org/docs.ashx?id=1831284",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site and candidate-questionnaire search",
+            "LWV Dallas general-election guide",
+            "Dallas County GOP candidate directory",
+            "Dallas Morning News questionnaire",
+            "Ballotpedia survey"
+          ]
+        }
       },
       {
         "name": "Deanna Hammond",

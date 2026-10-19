@@ -102,7 +102,7 @@
   },
   "gotchas": [
     "Two Saturday deadlines in one: October 24 is the last day to register AND the last day the county board can receive your mail-ballot request. Both are received-by, not postmarked, so don't trust the mail with either this late. Register online; request your ballot online. No same-day registration in New York.",
-    "Address changes closed earlier: Monday, October 19. If you moved anywhere in New York after that, vote at the poll site for your new address by affidavit ballot.",
+    "The deadline to submit an address change is October 19. If you miss it and moved within New York, use the polling place for your new address and ask for an affidavit ballot. Check your poll site before leaving.",
     "Nobody mails you a ballot unless you ask. If you want to vote by mail, request an early mail ballot (no reason needed). Once a mail ballot is issued to you, you can't vote on a machine in person; you'd vote an affidavit ballot instead, and only one of the two counts.",
     "Fusion voting: the same candidate appears on more than one line. Hochul is on Democratic and Working Families; Blakeman is on Republican, Conservative and Vote Affordable. Votes on every line add up for that person. Fill in ONE oval. Two ovals for the same person still count once; two ovals for different people in one race void that race.",
     "NYC: your early voting site is assigned and is often NOT your Election Day poll site. Check both at findmypollsite.vote.nyc. Early voting ends Sunday, November 1; there's no voting on Monday, November 2. NYC ballots also carry five ballot questions this year, all proposed City Charter amendments (NYC Votes: 'NYC voters will see five ballot proposals on their ballots'), usually on the back. Flip it over. There is no statewide ballot question in 2026."
@@ -136,7 +136,7 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
-      "answer": "You still have time. Your registration must be received by Saturday, October 24, so register online now instead of mailing a form; New York has no same-day registration.",
+      "answer": "Register online or deliver your application to your county board by October 24. After that date, new voters cannot register for the November 3 election; New York has no same-day registration. Check your existing registration before assuming you cannot vote.",
       "steps": [
         "Check first at voterlookup.elections.ny.gov. You may already be registered.",
         "Register online at elections.ny.gov, or through the DMV if you have a New York license or ID.",

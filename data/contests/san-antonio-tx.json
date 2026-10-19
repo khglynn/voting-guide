@@ -165,7 +165,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Listed as a mediator; UTEP criminal justice graduate who was earlier a regional director in Newsweek's education division and owned a formal-wear shop (Branch). Ran for El Paso mayor in 2024, El Paso City Council in 2023 and Congress in 2016 and 2018 (Ballotpedia). No campaign website found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The Congress needs to assert a check on the Executive Branch as provided by the Constitution.",
+            "is_quote": true,
+            "source": "https://sanantonioreport.org/profile/ben-mendoza-2026-candidate-for-texas-23rd-congressional-district/"
+          }
+        ],
         "lwv_status": "declined",
         "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
       }
@@ -2379,7 +2385,17 @@
         "background": "Former judge of this court; lost it to Ximenez in 2018 and again in 2022, per the Express-News.",
         "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "campaign-site and candidate-questionnaire search",
+            "LWV San Antonio guide",
+            "San Antonio Report profile",
+            "Bexar County GOP candidate directory"
+          ]
+        }
       },
       {
         "name": "Alfredo Ximenez",

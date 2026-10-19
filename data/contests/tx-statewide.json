@@ -208,11 +208,6 @@
         "background": "Governor since 2015; before that Texas attorney general (2002 to 2015) and a Texas Supreme Court justice.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
-          {
             "text": "Priorities reported by the Texas Tribune: abolish school property taxes for homeowners, continue Operation Lone Star border enforcement, and pause new data center grid connections pending an audit.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/09/25/texas-governor-2026-guide-abbott-hinojosa/"
@@ -389,11 +384,6 @@
         "background": "Lieutenant governor since 2015; state senator 2007 to 2015; former talk radio host and TV sportscaster. Seeking a fourth term.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
-          {
             "text": "Priorities reported by the Tribune: expand the school homestead exemption, expand private school vouchers, ban THC product sales, keep the abortion ban.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/09/28/texas-lieutenant-governor-dan-patrick-vikki-goodwin/"
@@ -442,11 +432,6 @@
         "website_confidence": "unverified",
         "background": "High school teacher from San Antonio; lost congressional races in 2018 and 2020.",
         "own_words": [
-          {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
           {
             "text": "Priorities reported by the Tribune: lower property taxes by cutting spending, legalize marijuana, embrace free markets and working immigrants.",
             "is_quote": false,
@@ -567,11 +552,6 @@
         "background": "State senator from Galveston since 2023; state representative 2019 to 2023; president of Middleton Oil Company. Won the May 26 Republican runoff over U.S. Rep. Chip Roy.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
-          {
             "text": "Describes himself as a \"steadfast ally of President Trump and a proven champion of the America First movement,\" per the Tribune.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/10/05/texas-attorney-general-election-2026-candidates-mayes-middleton-nathan-johnson-tom-oxford/"
@@ -684,11 +664,6 @@
         "background": "Acting comptroller, appointed by Gov. Abbott in 2025. Co-founder of Huffines Communities, a Dallas-area real estate developer; state senator 2015 to 2019.",
         "own_words": [
           {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
-          {
             "text": "Describes himself as a \"MAGA Republican with libertarian and Christian roots,\" per the Tribune.",
             "is_quote": false,
             "source": "https://www.texastribune.org/2026/09/29/texas-comptroller-2026-election-huffines-eckhardt/"
@@ -738,7 +713,17 @@
         "background": "City manager of Hearne since 2022 and the city's chief financial officer before that. Ran for comptroller as a Libertarian in 2022. The Texas Tribune found no campaign website or candidate-specific priorities, and he did not answer the Community Impact or Dallas Morning News questionnaires.",
         "own_words": [],
         "lwv_status": "declined",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "2026 campaign-site search",
+            "Community Impact questionnaire",
+            "San Antonio Report candidate profile",
+            "Libertarian Party of Texas candidate directory"
+          ]
+        }
       },
       {
         "name": "Shehla Faizi",
@@ -974,11 +959,6 @@
         "website_confidence": "unverified",
         "background": "Small business owner and natural resource consultant from Comanche County; has lectured in rangeland, botany and ecology at Texas A&M.",
         "own_words": [
-          {
-            "text": "Did not respond to the LWV Texas questionnaire.",
-            "is_quote": false,
-            "source": "https://drive.google.com/file/d/1o7lo83i0xqTygn4HRpKfkGRzEql_aXWZ/view"
-          },
           {
             "text": "Priorities reported by the Tribune: cut regulations on hemp and small producers, audit the department, invest in biosecurity monitoring.",
             "is_quote": false,

@@ -748,5 +748,145 @@
     "url": "https://www.denverpost.com/2026/10/15/phil-weiser-endorsements-republicans-ken-buck-police-union/",
     "date": "2026-10-15",
     "confidence": "sourced"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-freyre",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-harris",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-hood",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-lum",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-moultrie",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-schock",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "denver-post-eb",
+    "target_id": "co-retention-sullivan",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the Post’s roundup and endorsement index on Oct 19, 2026; no pick found for this item. U.S. House endorsements are still announced for the week of Oct 19.",
+    "url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-freyre",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-harris",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-hood",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-lum",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-moultrie",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-schock",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "gazette-eb",
+    "target_id": "co-retention-sullivan",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the endorser’s published endorsement page and index on Oct 19, 2026; no pick found for this item.",
+    "url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   }
 ]

@@ -64,20 +64,20 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "The Tribune's roundup lists no judicial endorsements as of Oct. 16.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The current roundup exists, but its full list requires a subscription; public index headlines did not confirm this item. Access was blocked; a human check is needed.",
+    "url": "https://www.chicagotribune.com/2026/10/18/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "chicago-tribune-eb",
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "The Tribune's roundup lists no retention recommendations as of Oct. 16.",
-    "url": "https://www.chicagotribune.com/2026/09/25/tribune-editorial-board-endorsements-2026/",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "No current endorsement was confirmed. The current roundup exists, but its full list requires a subscription; public index headlines did not confirm this item. Access was blocked; a human check is needed.",
+    "url": "https://www.chicagotribune.com/2026/10/18/tribune-editorial-board-endorsements-2026/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "chicago-sun-times-eb",
@@ -164,9 +164,9 @@
     "target_id": "il-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -174,9 +174,9 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -184,9 +184,9 @@
     "target_id": "il-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -194,9 +194,9 @@
     "target_id": "il-secretary-of-state",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -204,9 +204,9 @@
     "target_id": "il-comptroller",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -214,9 +214,9 @@
     "target_id": "il-treasurer",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -224,9 +224,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -234,9 +234,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement from Crain's found as of Oct. 16.",
+    "why": "No current endorsement was confirmed. The opinion page and a targeted 2026 endorsement search were tried. Access was blocked; a human check is needed.",
     "url": "https://www.chicagobusiness.com/opinion",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -244,9 +244,9 @@
     "target_id": "il-us-senate",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -254,9 +254,9 @@
     "target_id": "il-governor",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "il-attorney-general",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "il-secretary-of-state",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "il-comptroller",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "il-treasurer",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "il-appellate-1st-hoffman-vacancy",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "il-appellate-1st-retention-lampkin",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters never endorses candidates or takes sides in judicial retention. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/illinois",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvil.org/about-league-1",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -724,10 +724,10 @@
     "target_id": "il-us-senate",
     "status": "endorsed",
     "choice": "Juliana Stratton",
-    "why": "IFT endorsed Stratton in the 2026 Senate primary.",
-    "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "why": "IFT lists this candidate on its 2026 general-election endorsement slate.",
+    "url": "https://www.ift-aft.org/vote",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ift-ctu",
@@ -742,12 +742,12 @@
   {
     "endorser_id": "ift-ctu",
     "target_id": "il-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents.",
-    "url": "https://www.ift-aft.org/post/illinois-federation-of-teachers-announces-slate-of-endorsements-for-2026-primaries",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Kwame Raoul",
+    "why": "IFT lists this candidate on its 2026 general-election endorsement slate.",
+    "url": "https://www.ift-aft.org/vote",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ift-ctu",
@@ -772,22 +772,22 @@
   {
     "endorser_id": "ift-ctu",
     "target_id": "il-treasurer",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 general-election slate from IFT found. Its primary slate endorsed the Democratic incumbents.",
-    "url": "https://www.ift-aft.org/post/illinois-federation-of-teachers-announces-slate-of-endorsements-for-2026-primaries",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Michael W. Frerichs",
+    "why": "IFT lists this candidate on its 2026 general-election endorsement slate.",
+    "url": "https://www.ift-aft.org/vote",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ift-ctu",
     "target_id": "il-appellate-1st-hoffman-vacancy",
-    "status": "not_found",
-    "choice": null,
-    "why": "No judicial positions found.",
-    "url": "https://www.ift-aft.org/political-action",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Judith C. Rice",
+    "why": "IFT lists this candidate on its 2026 general-election endorsement slate.",
+    "url": "https://www.ift-aft.org/vote",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "ift-ctu",
@@ -1054,10 +1054,10 @@
     "target_id": "il-governor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election position found as of Oct. 16.",
-    "url": "https://www.nrapvf.org/grades/illinois",
-    "date": "2026-10-16",
-    "confidence": "unverified"
+    "why": "The current general-election table lists ratings for this race, but no candidate carries the NRA endorsement badge. No endorsement confirmed on October 19, 2026.",
+    "url": "https://www.nrapvf.org/grades/Illinois/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "nra-pvf-il",

@@ -11,6 +11,7 @@ import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
+import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages } from './views/pass';
 
@@ -253,6 +254,18 @@ A.notmine = (d) => {
   persist();
   if (ids.length > 1) toast(`Took ${ids.length} ${it.kind === 'measure' ? 'measures' : 'races'} off your list.`);
 };
+/* "None of these are on my ballot" for the other school districts' races, all at once. */
+A['notmine-oth'] = () => {
+  const b = B();
+  const ids = [...b.mayApply].filter((id) => { const it = b.byId.get(id); return !!it && it.kind === 'contest' && sectionOf(it) === 'school' && !b.groupOf[id]; });
+  ids.forEach((id) => { if (!S.b.notMine.includes(id)) S.b.notMine.push(id); });
+  if (S.ui.row && ids.includes(S.ui.row)) S.ui.row = null;
+  S.ui.unfolded.delete('school|oth');
+  anchored(() => renderSection('school'));
+  renderSummaries();
+  persist();
+  toast(`Took ${plural(ids.length, 'race')} off your list. Open the line to bring one back.`);
+};
 A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id); anchored(() => renderSection(sectionOf(B().byId.get(d.id!)!))); renderSummaries(); persist(); };
 
 /* ---------- the lens ---------- */
@@ -375,6 +388,13 @@ A['change-place'] = () => {
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };
+/* A grid's lean dots, tapped: how that lean was placed, in a few words. */
+A.basis = (d) => {
+  const e = B().eById.get(d.id!);
+  if (!e) return;
+  const how = basisWords(e);
+  toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. More sources has the details.` : `${e.short}: not rated for lean.`);
+};
 A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Kept. Change any pick as you go.'); };
 A['shared-fresh'] = () => { const zip = S.b.zip; S.b = emptyBallotState(zip); S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };

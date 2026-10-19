@@ -6,7 +6,7 @@ import { S } from '../state';
 import { chosenIds, isMultiJudge, isPartisan, isRCV } from '../ballot';
 import { esc, host } from '../util';
 import { rowTitle, courtOf, choiceShort } from '../model/labels';
-import { judicialReview, evalState, surveyLines, strengthOf, hasRatings } from '../model/judges';
+import { judicialReview, evalState, surveyLines, surveySentence, strengthOf, hasRatings } from '../model/judges';
 import { explainsOnly } from '../model/lens';
 import { ext, escP, sourceLean, srcLink, confLabel } from './common';
 import { sectionTitle } from './ledger';
@@ -70,14 +70,16 @@ function guides(it: Item): string {
    answered (none under 5 as a percentage), boilerplate never shows as a strength when the
    survey disagrees, and a reason for not rating is labeled as a reason, not a finding.
    Lawyer polls are counts, shown for the whole race (raceRatingsHTML), never here. */
-function evalBlock(e: Evaluation): string {
+function evalBlock(e: Evaluation, name: string): string {
   if (e.kind === 'bar_poll') return '';
   const st = evalState(e);
-  const lines = surveyLines(e);
+  const plain = surveySentence(e, name);
+  const lines = plain ? [] : surveyLines(e);
   const strength = strengthOf(e);
   const reason = !!e.noted_concern && (st === 'declined' || st === 'unrated');
   const sv = e.survey;
-  const survey = lines.length
+  const survey = plain ? `<p>${esc(plain.sentence)}</p>${plain.note ? `<p class="fine">${esc(plain.note)}</p>` : ''}${sv && sv.question ? `<p class="fine">The survey asked: “${esc(sv.question)}”</p>` : ''}${sv && sv.report_url ? `<p class="fine">${ext(sv.report_url, 'The survey report')}</p>` : ''}`
+    : lines.length
     ? `<p>${esc(sv && sv.question ? `The survey asked: ${sv.question}` : 'The survey:')}</p><ul class="bul">${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>${sv && sv.caution ? `<p class="fine">${esc(sv.caution)}</p>` : ''}${sv && sv.report_url ? `<p class="fine">${ext(sv.report_url, 'The survey report')}</p>` : ''}`
     : e.survey_note ? `<p class="fine">${esc(e.survey_note)}</p>` : '';
   return `<div class="ent"><div class="ent-h"><b>${esc(e.by)}</b></div><p class="st end">${esc(e.rating)}${e.vote ? ` (vote ${esc(e.vote)}${e.vote_note ? `; ${esc(e.vote_note.replace(/\.$/, ''))}` : ''})` : ''}${st === 'declined' ? ' <span class="muted">(the candidate did not take part in this screening)</span>' : ''}</p>
@@ -132,7 +134,7 @@ function judgeRead(c: Contest): string {
   const jr = judicialReview();
   const judges = isMultiJudge(c) ? c.candidates : [c.candidates[0]];
   const blocks = judges.map((k) => `<div class="cand-blk"><h4>${esc(k.name)}</h4>
-    ${(k.evaluations || []).map(evalBlock).join('') || ''}
+    ${(k.evaluations || []).map((e) => evalBlock(e, k.name)).join('')}
     ${k.background ? `<p class="bg">${escP(k.background)}</p>` : ''}${k.own_words.length || k.own_words_status ? ownWords(k) : ''}
     ${k.website ? `<p class="site">${ext(k.website, 'More about this judge')}</p>` : ''}</div>`).join('');
   return `<span class="num">${esc(courtOf(c))}</span><h2>${esc(isMultiJudge(c) ? courtOf(c) : c.candidates[0].name)}</h2>

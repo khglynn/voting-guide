@@ -182,7 +182,7 @@ export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
   no_cover: 'Open to compare', no_sources: 'No sources chosen', both: 'Listed both sides',
-  mixed: 'No picks yet',
+  mixed: 'No picks',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (!anyChosen) return 'no_sources';
@@ -196,14 +196,15 @@ export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
   if (l.both.length) states.push('both');
   return states.length === 1 ? states[0] : 'mixed';
 }
-/* "2 took no stand, 1 not checked yet": the counts behind "No picks yet". */
+/* The one count that says the most behind "No picks", short enough for one line in the narrow
+   column ("1 took no stand"); every count is in the open row. */
 export function noneCounts(l: Lineup): string {
   return [
     l.noStand.length ? `${l.noStand.length} took no stand` : '',
     l.notFound.length ? `nothing found for ${l.notFound.length}` : '',
     l.notChecked.length ? `${l.notChecked.length} not checked yet` : '',
     l.both.length ? `${l.both.length} listed both sides` : '',
-  ].filter(Boolean).join(', ');
+  ].filter(Boolean)[0] || '';
 }
 
 /* What the sources said, in small type, under your own pick. */

@@ -276,6 +276,19 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await ctx.close();
 }
 
+/* ---------- DC 20001, not sure which ward: the city up top, the wards under it ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openZip(page, '20001');
+  await page.waitForSelector('[data-act="choose-place"]');
+  check('20001: asks which ward, not which city', /is split across \d+ wards/.test(await text(page, '.choose')));
+  await tap(page, '[data-act="choose-place"][data-fk="cp-unsure"]');
+  await page.waitForSelector('#plan');
+  check('20001 not sure: the headline is "Washington, DC" with the wards under it', (await text(page, '.place')) === 'Washington, DC' && /^Ward \d+(, \d+)* or \d+$/.test(await text(page, '.where-note')), `${await text(page, '.place')} | ${await text(page, '.where-note')}`);
+  noErrors(page, '20001');
+  await ctx.close();
+}
+
 /* ---------- Houston 77002: numbered seats every voter sees are not a question ---------- */
 {
   const { ctx, page } = await newPage();
@@ -283,6 +296,8 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await noSideScroll(page, 'Houston');
   check('Houston: Klein ISD positions are not a district question', !(await page.$('.row[data-q*="Klein ISD"]')));
   if (await page.$('#sec-school .unopp .disc[aria-expanded="false"]')) await tap(page, '#sec-school .unopp .disc');
+  check('Houston: other school districts’ races fold into one line', /Other school districts that touch Houston/.test(await text(page, '#sec-school .grp.oth')));
+  if (await page.$('#sec-school .grp.oth [data-act="grp"][aria-expanded="false"]')) await tap(page, '#sec-school .grp.oth [data-act="grp"]');
   check('Houston: both Klein ISD positions are on the ballot', !!(await page.$('#i-tx-kleinisd-trustee-1')) && !!(await page.$('#i-tx-kleinisd-trustee-2')));
   await openRow(page, 'tx-kleinisd-trustee-1');
   check('Houston: a "May apply" race can hide every seat that shares its scope', !!(await page.$('#i-tx-kleinisd-trustee-1 [data-act="notmine"][data-all="1"]')));
@@ -295,6 +310,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   const fresh = await newPage();
   await fresh.page.goto(linkHere(link));
   await fresh.page.waitForSelector('#plan', { timeout: 15000 });
+  if (await fresh.page.$('#sec-school .grp.oth [data-act="grp"][aria-expanded="false"]')) await tap(fresh.page, '#sec-school .grp.oth [data-act="grp"]');
   check('Houston link: those races come back as not on your ballot', !!(await fresh.page.$('#i-tx-kleinisd-trustee-1.is-off')));
   await fresh.ctx.close();
   noErrors(page, 'Houston');
@@ -455,7 +471,8 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Pass it on: "I already voted" says thank you', /You voted\. Thank you\./.test(await text(page, '#pass')));
   check('Pass it on: the public message uses official links, never this guide', /(Official election info|Check your registration): https?:\/\//.test(pub) && !pub.includes(new URL(BASE).host), pub.slice(0, 80));
   check('Pass it on: Colorado’s registration and official links are the same URL, given once', (pub.match(/govotecolorado\.gov/g) || []).length === 1, pub);
-  check('Pass it on: the public message carries statewide links only, never the county office', !/Local election office|jeffco\.us/.test(pub), pub);
+  check('Pass it on: the public message never carries the county office line', !/Local election office/.test(pub), pub);
+  check('Pass it on: the public message leads with Election Day and the mail rule', /^Election Day in Colorado is Tue, Nov 3\. Ballots must be in by 7 PM Tue, Nov 3\./.test(pub), pub.slice(0, 120));
   check('Pass it on: no "12 people" arithmetic', !/12 people/.test(await text(page, '#pass')));
   check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
   check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
@@ -514,6 +531,24 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   noErrors(page, 'Spokane pass');
   await ctx.close();
 }
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78702');
+  await tap(page, '#plan [data-act="view"][data-v="pass"]');
+  await page.waitForSelector('#msg-pub');
+  const pub = await text(page, '#msg-pub');
+  check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
+  await tap(page, '[data-act="view"][data-v="ballot"]');
+  const oth = await text(page, '#sec-school .grp.oth');
+  check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));
+  await tap(page, '#sec-school .grp.oth [data-act="grp"]');
+  const shown = (await page.$$('#sec-school [data-fold]')).length;
+  check('Austin: opening the line lists them, with "None of these are on my ballot"', shown >= 3 && !!(await page.$('[data-act="notmine-oth"]')), String(shown));
+  await tap(page, '[data-act="notmine-oth"]');
+  check('Austin: "None of these" takes them all off and folds the line', /none on your ballot/.test(await text(page, '#sec-school .grp.oth')), await text(page, '#sec-school .grp.oth'));
+  noErrors(page, 'Austin pass and fold');
+  await ctx.close();
+}
 
 /* ---------- Codex round 1 fixes, each checked in a real browser ---------- */
 // #5: the key dates keep their fine print, and Orlando uses Orange County's own early voting.
@@ -533,6 +568,40 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check('Orlando: the details button says it is open', (await page.getAttribute('.pdates [data-k="kd-eps"]', 'aria-expanded')) === 'true');
   check('Orlando: the key dates show early voting ending Nov 1', /Nov 1/.test(await text(page, '.pdates')));
   noErrors(page, 'Orlando');
+  await ctx.close();
+}
+// UX re-walk: Amendment 87's open row is one conflict box and a two-line official title; grid
+// cells keep the lean dots and word, with how it was placed one tap away.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80226');
+  await openRow(page, 'co-amendment-87');
+  const boxes = await page.$$eval('#i-co-amendment-87 .heads', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+  check('A87: no separate "Read with" box when the heads-up names Prop 136', !boxes.some((t) => /^Read with/.test(t)) && boxes.some((t) => /Heads up:.*Read with Proposition 136/.test(t)), boxes.join(' || ').slice(0, 200));
+  check('A87: the official title is clamped, with "Read the full ballot wording"', !!(await page.$('#i-co-amendment-87 .ot.two')) && /Read the full ballot wording/.test(await text(page, '#i-co-amendment-87 .ot-more')));
+  check('A87: no lean-basis words inside the grid', !(await page.$('#i-co-amendment-87 .grid .lk')) && !!(await page.$('#i-co-amendment-87 .grid .lean-tap')));
+  await tap(page, '#i-co-amendment-87 .grid .lean-tap');
+  check('A87: tapping a lean says how it was placed', /rated by|party|mission|outside media-bias|not rated/.test(await text(page, '.toast')), await text(page, '.toast'));
+  noErrors(page, 'A87');
+  await ctx.close();
+}
+// UX re-walk: a Chicago judge's open row has one wording and every group by full name, one tap away.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '60601');
+  // "Read these first" jumps to Judge Smith (7 of 14 groups say don't keep) and opens her row.
+  const go = await page.evaluate(() => { const bt = [...document.querySelectorAll('.readfirst [data-act="goto"]')].find((x) => x.textContent.trim() === 'Smith'); return bt && bt.dataset.id; });
+  if (go) { await tap(page, `.readfirst [data-act="goto"][data-id="${go}"]`); await page.waitForTimeout(200); }
+  const id = go;
+  check('Chicago: a judge row reads "say don’t keep"', !!id && /say don’t keep/.test(await text(page, `#i-${id} .vd`)), id && await text(page, `#i-${id} .vd`));
+  if (id) {
+    await openRow(page, id);
+    const line = await text(page, `#i-${id} .finding .q`);
+    check('Chicago: the open row says "say don’t keep" too, with no acronyms', /say don’t keep/.test(line) && !/\b[A-Z]{3,}\b/.test(line), line);
+    await tap(page, `#i-${id} .finding [data-act="open"]`);
+    check('Chicago: "See each group" lists the groups by full name', (await page.$$(`#i-${id} .eg li`)).length > 5 && /Association|Bar/.test(await text(page, `#i-${id} .eg`)));
+  }
+  noErrors(page, 'Chicago judge');
   await ctx.close();
 }
 // Codex r2 (r1 #3): confirming a filled pick by hand, even with the same value, survives Undo.

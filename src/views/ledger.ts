@@ -254,6 +254,11 @@ export const hiddenByOnly = (e: Entry): boolean => {
   if (e.id === S.ui.keep || e.id === S.ui.row) return false;
   return status(S.ballot!.byId.get(e.id)!) !== 'open';
 };
+/* "Klein ISD" from "Klein ISD Trustee, Position 6": the district's own name, for the fold line. */
+const districtName = (c: Contest): string => {
+  const m = c.office.match(/^(.*?\b(?:ISD|CISD|School District|Unified|Public Schools|Schools))\b/i);
+  return (m ? m[1] : c.office.replace(/\s+(Board of Trustees|Trustee|Board Member|School Board).*$/i, '')).trim();
+};
 function rowsHTML(sec: SectionKey, entries: Entry[]): string {
   const b = S.ballot!;
   const out: string[] = [];
@@ -274,6 +279,31 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
     if (hiddenByOnly(e)) return;
     out.push(entryHTML(e));
   };
+  // Other school districts' races (Round Rock, Pflugerville and Leander ISD seats on an East
+  // Austin ballot) fold into one row where the first of them would be; open, they list there.
+  if (sec === 'school') {
+    const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
+    if (oth.length >= 3) {
+      const k = 'school|oth';
+      const open = S.ui.unfolded.has(k) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
+      const names = [...new Set(oth.map((e) => districtName(b.byId.get((e as { id: string }).id) as Contest)))];
+      const live = oth.filter((e) => e.t === 'item');
+      const city = b.places.length === 1 ? b.places[0].label.replace(/\s*\(.*\)$/, '') : 'your area';
+      let placed = false;
+      entries.forEach((e) => {
+        if (!oth.includes(e)) { one(e); return; }
+        if (!placed) {
+          placed = true;
+          const decided = live.filter((x) => x.t === 'item' && status(b.byId.get(x.id)!) !== 'open').length;
+          const ct = !live.length ? 'none on your ballot' : decided ? `${decided} of ${live.length} decided` : plural(live.length, 'race');
+          out.push(`<li class="grp oth"><button class="grp-hd" data-act="grp" data-g="${k}" aria-expanded="${open}" data-fk="g-oth"><span class="grp-t">Other school districts that touch ${esc(city)}<small>${esc(names.join(', '))}. Open only if one of them is yours.</small></span><span class="grp-ct">${esc(ct)}</span></button></li>`);
+          if (open && live.length) out.push(`<li class="oth-none"><button class="mini quiet" data-act="notmine-oth" data-fk="oth-none">None of these are on my ballot</button></li>`);
+        }
+        if (open && !hiddenByOnly(e)) out.push(entryHTML(e).replace('<li class="row', '<li data-fold="oth" class="row'));
+      });
+      return `<ol class="rows">${out.join('')}${unoppHTML(sec, unopp)}</ol>`;
+    }
+  }
   const bl = blocks(sec, entries);
   if (bl) {
     for (const g of bl) {

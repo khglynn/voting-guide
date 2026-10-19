@@ -23,6 +23,8 @@ export interface Ballot {
   st: string;
   stateName: string;
   howto: HowTo;
+  /* the state file's own plan facts, before any place override: for text about the whole state */
+  stateHowto: HowTo;
   places: PlaceBundle[];
   items: Item[];
   byId: Map<string, Item>;
@@ -171,7 +173,7 @@ export function buildBallot(sb: StateBundle, places: PlaceBundle[]): Ballot {
 
   return {
     key: `${sb.state}|${places.map((p) => p.id).join('+') || '-'}`,
-    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), places,
+    st: sb.state, stateName: sb.name, howto: localHowto(sb.howto, places), stateHowto: sb.howto, places,
     items, byId, order: ids, endorsers, eById, ends, statewide, onlyIn, groups, groupOf, mayApply,
     hasLocal: places.some((p) => p.local.length > 0),
   };

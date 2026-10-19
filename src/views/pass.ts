@@ -5,7 +5,8 @@
    to get involved. Every link in the public message is a statewide one from the state file, so
    it is right for anyone in the state. */
 import { S } from '../state';
-import { esc } from '../util';
+import { esc, fmtDate, todayISO } from '../util';
+import { clock, isMailState } from '../model/plan';
 import { ext, isOpen } from './common';
 
 /* Optional data from data/get-involved.json. Read defensively: any field may be missing. */
@@ -66,12 +67,38 @@ export function messages(): { fam: string | null; pub: string | null } {
   const fam = famBody && voted ? `I just voted! ${famBody}` : famBody;
   // Statewide official links only: a public group reaches people in other counties, so a local
   // office's page never goes in (a template that still asks for one gets an empty line).
-  const pub = fillTemplate(involved?.messages?.public?.template || PUB, {
+  const links = fillTemplate(involved?.messages?.public?.template || PUB, {
     state_name: b.stateName,
     registration_check_url: h.registration.check_url || '',
     official_voting_url: h.official_site.url || '',
     local_election_office_line: '',
   }, ['state_name', 'official_voting_url']);
+  // The reminder people send it for: Election Day and the state's early-voting or mail line, from
+  // the state file (not one county's window), then the links, then where to vote here when the
+  // place has its own tool.
+  const sh = b.stateHowto;
+  const dates = [`Election Day in ${b.stateName} is ${fmtDate(sh.election_date)}.`];
+  if (isMailState(sh)) {
+    const r = sh.mail_ballot.return_deadline;
+    const time = clock(r.time);
+    dates.push(r.rule === 'postmarked_by'
+      ? `Drop off your ballot by ${time ? `${time} ` : ''}${fmtDate(r.date)}, or mail it with a postmark dated ${fmtDate(r.date, { weekday: false })} or earlier.`
+      : `Ballots must be in by ${time ? `${time} ` : ''}${fmtDate(r.date)}. Postmarks don’t count.`);
+  } else {
+    const ep = sh.early_in_person;
+    if (ep.available && ep.start && ep.end && ep.end >= todayISO()) dates.push(`Early voting runs ${fmtDate(ep.start)} through ${fmtDate(ep.end)}.`);
+  }
+  const place = b.places.length === 1 ? b.places[0] : null;
+  const where = place && place.lookups ? place.lookups.election_day || place.lookups.early_in_person || '' : '';
+  let pub: string | null = null;
+  if (links) {
+    const ls = links.split('\n');
+    if (where && !links.includes(where)) {
+      const at = ls.map((l) => /^(Official election info|Check your registration):/.test(l)).lastIndexOf(true);
+      ls.splice(at + 1, 0, `Find where to vote in ${place!.label.replace(/\s*\(.*\)$/, '')}: ${where}`);
+    }
+    pub = [dates.join(' '), '', ...ls].join('\n');
+  }
   return { fam, pub };
 }
 

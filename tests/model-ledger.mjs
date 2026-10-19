@@ -110,7 +110,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     // Codex #7: "Took no stand" only when every source that covers this took no stand.
     set({ [e1.id]: row('no_position'), [e2.id]: row('no_position') });
     v = tally.verdict(it);
-    check('verdict: two took no stand and one is not checked yet is mixed, with the counts', v.kind === 'none' && v.why === 'mixed' && v.main === 'No picks yet' && v.sub === '2 took no stand, 1 not checked yet', JSON.stringify(v));
+    check('verdict: two took no stand and one is not checked yet is mixed, with the counts', v.kind === 'none' && v.why === 'mixed' && v.main === 'No picks' && v.sub === '2 took no stand', JSON.stringify(v));
     S.b.sources = [e1.id, e2.id];
     tally.clearLineups();
     v = tally.verdict(it);
@@ -120,7 +120,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('verdict: nothing found', v.kind === 'none' && v.why === 'not_found', JSON.stringify(v));
     set({ [e1.id]: row('not_found'), [e2.id]: row('no_position') });
     v = tally.verdict(it);
-    check('verdict: one found nothing and one took no stand is mixed', v.why === 'mixed' && /1 took no stand/.test(v.sub) && /nothing found for 1/.test(v.sub), JSON.stringify(v));
+    check('verdict: one found nothing and one took no stand is mixed, one short line', v.why === 'mixed' && v.main === 'No picks' && v.sub === '1 took no stand', JSON.stringify(v));
     S.b.sources = [e1.id, e2.id, e3.id];
     set({});
     v = tally.verdict(it);
@@ -297,7 +297,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     let r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('mixed', 'Mixed', 'B'), ev('none', 'Not listed', 'C')]));
     check('judges: favorable, mixed and not listed never reads as all recommend', r.main === '1 of 3 recommend' && r.tone === 'mixed' && !/\ball\b/i.test(r.line), JSON.stringify([r.main, r.tone, r.line]));
     r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('none', 'Not listed', 'B')]));
-    check('judges: one recommends and one did not rate says 1 of 2 and names the one that did not', r.main === '1 of 2 recommend' && /1 did not rate Example \(B\)/.test(r.line) && !/\ball\b/i.test(r.line), JSON.stringify([r.main, r.line]));
+    check('judges: one recommends and one did not rate says 1 of 2, with each group behind "See each group"', r.main === '1 of 2 recommend' && /1 did not rate Example/.test(r.line) && !/\ball\b/i.test(r.line) && r.groups.length === 2 && r.groups[1].by === 'B', JSON.stringify([r.main, r.line]));
     r = judges.candidateReview(cand([ev('favorable', 'Recommended', 'A'), ev('favorable', 'Highly qualified', 'B'), ev('favorable', 'Qualified', 'C')]));
     check('judges: every group recommends is all, favorable', r.main === '3 of 3 recommend' && r.tone === 'fav' && /all 3 recommend/.test(r.line), JSON.stringify([r.main, r.line]));
     const ch = open('IL', ['chicago-il']);
@@ -360,14 +360,31 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
+  /* ---------- UX re-walk: the survey in plain words ---------- */
+  {
+    const ev = (attorneys, non) => ({ kind: 'official_commission', by: 'C', by_short: 'C', rating: 'Meets Performance Standards', verdict: 'favorable', vote: '9-0', vote_note: null, survey_note: null, noted_strength: null, noted_concern: null, url: 'https://example.org', verified_on: null, confidence: 'verified',
+      survey: { question: 'Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?', attorneys, non_attorneys: non, judges: null, report_url: null, caution: "Small samples. n counts everyone who answered the question, including 'no opinion'." } });
+    let p = judges.surveySentence(ev({ yes_pct: 100, no_pct: 0, n: 9 }, { yes_pct: 44, no_pct: 56, n: 9 }), 'Sara Garrido');
+    check('survey: "9 of 9 lawyers and 4 of 9 others who saw Judge Garrido in court"', !!p && p.sentence === 'In the survey, 9 of 9 lawyers and 4 of 9 others who saw Judge Garrido in court said the judge meets standards. Small groups, so read with care.' && p.note === '', p && p.sentence);
+    p = judges.surveySentence(ev({ yes_pct: 50, no_pct: 50, n: 13 }, null), 'Pat Example');
+    check('survey: a count that does not reproduce the percentage keeps the percentage', !!p && /50% of the 13 lawyers who answered/.test(p.sentence), p && p.sentence);
+    p = judges.surveySentence(ev({ yes_pct: 67, no_pct: 33, n: 3 }, { yes_pct: 90, no_pct: 10, n: 30 }), 'Pat Example');
+    check('survey: under 5 answers shows no count', !!p && /fewer than 5 lawyers answered/.test(p.sentence) && /27 of 30 others/.test(p.sentence), p && p.sentence);
+  }
+
   /* ---------- UX review #1: the judges section leads with the plain answer ---------- */
   {
     open('CO', ['lakewood-co']);
     const lead = judges.judgesLead();
     check('judges lead: Colorado says "meets standards" is a passing grade, not an endorsement, with how many passed', /passing grade on a job review, not an endorsement/.test(lead) && /121 of 123 judges/.test(lead), lead);
-    check('judges rule: Colorado band says more yes than no keeps the judge', /^To keep a judge: more yes than no votes keeps the judge\.$/.test(judges.judgesRule()), judges.judgesRule());
+    check('judges rule: Colorado band says "A judge stays with more yes than no votes."', judges.judgesRule() === 'A judge stays with more yes than no votes.', judges.judgesRule());
     open('IL', ['chicago-il']);
-    check('judges rule: Chicago band is one line, "Judges need 60% yes to stay."', judges.judgesRule() === 'Judges need 60% yes to stay.', judges.judgesRule());
+    check('judges rule: Chicago band is one line, "A judge needs 60% yes to stay."', judges.judgesRule() === 'A judge needs 60% yes to stay.', judges.judgesRule());
+    // UX re-walk: one wording on a retention row and its open row ("say don't keep"), groups by full name.
+    const chi = open('IL', ['chicago-il']);
+    const smith = chi.items.find((x) => x.kind === 'contest' && x.is_retention && /Tiesha/.test(x.candidates[0]?.name || '') && (x.candidates[0].evaluations || []).length > 5);
+    const sr = smith && judges.judgeReview(smith);
+    check('judges: a split Chicago retention reads "say don’t keep" in the row and the open row, no acronyms', !!sr && /say don’t keep$/.test(sr.main) && /say don’t keep/.test(sr.line) && !/\b[A-Z]{3,}\b/.test(sr.line) && sr.groups.every((g) => g.by.length > 6), sr ? `${sr.main} | ${sr.line}` : 'missing');
     check('judges lead: Chicago explains a bar "no" can mean a skipped interview', /skipped the interview/.test(judges.judgesLead()), judges.judgesLead());
     const jb = judges.judgeBatch();
     check('judges batch: Chicago reads "Keep the N judges the bar groups recommend"', !!jb && /^Keep the \d+ judges the bar groups recommend$/.test(jb.label), jb && jb.label);

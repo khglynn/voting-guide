@@ -25,7 +25,6 @@ const isPoll = (e: Evaluation) => e.kind === 'bar_poll';
 const sentence = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const nameOf = (c: Candidate) => c.short || c.name.split(' ').pop() || c.name;
 const voteAgainst = (v: string | null): number => { const m = (v || '').match(/^\s*(\d+)\s*[-–]\s*(\d+)\s*$/); return m ? +m[2] : 0; };
-const listNames = (es: Evaluation[]): string => es.map((e) => e.by_short).join(', ');
 
 /* A rating short enough for the narrow column, never cut mid-word. */
 export function shortRating(e: Evaluation): string {
@@ -47,6 +46,8 @@ export interface Review {
   concerns: { by: string; text: string; reason: boolean }[];   // reason: why a group did not rate, not a finding
   strengths: { by: string; text: string }[];
   links: { label: string; url: string }[];
+  /* every bar group's own rating, full name first, for "See each group" */
+  groups?: { by: string; rating: string; url: string; state: EvalState }[];
 }
 
 /* Colorado's Eighteenth District narratives say respondents "found no performance issues in any
@@ -69,7 +70,38 @@ export function surveyLines(e: Evaluation): string[] {
   return [row('Lawyers', sv.attorneys), row('Others in the courtroom', sv.non_attorneys), row('Other judges', sv.judges)].filter(Boolean);
 }
 
-export function candidateReview(c: Candidate): Review | null {
+/* `retention`: a keep-or-remove question, where a group's yes is "say keep" and its no "say
+   don't keep", in the row and the open row alike. A contested race says "recommend". */
+/* The survey in one plain sentence: "In the survey, 9 of 9 lawyers and 4 of 9 others who saw
+   Judge Garrido in court said the judge meets standards. Small groups, so read with care." A
+   count is shown only when it reproduces the published percentage exactly; otherwise that group
+   keeps its percentage and how many answered. Under 5 answers, no number at all. Null when the
+   question isn't the standards question, so the caller shows the rows instead. */
+export function surveySentence(e: Evaluation, name: string): { sentence: string; note: string } | null {
+  const sv = e.survey;
+  if (!sv || !/meets? (judicial )?performance standards/i.test(sv.question || '')) return null;
+  const last = name.replace(/,?\s+(Jr\.|Sr\.|II|III|IV)$/, '').split(/\s+/).pop() || name;
+  const one = (r: SurveyRow | null, who: string): string => {
+    if (!r) return '';
+    if (r.n == null) return `${r.yes_pct}% of ${who}`;
+    if (r.n < 5) return `fewer than 5 ${who} answered, so no count is shown`;
+    const x = Math.round((r.yes_pct * r.n) / 100);
+    return Math.round((x / r.n) * 100) === Math.round(r.yes_pct) ? `${x} of ${r.n} ${who}` : `${r.yes_pct}% of the ${r.n} ${who} who answered`;
+  };
+  const parts = [one(sv.attorneys, 'lawyers'), one(sv.non_attorneys, `others who saw Judge ${last} in court`), one(sv.judges, 'other judges')].filter(Boolean);
+  if (!parts.length) return null;
+  const counted = parts.filter((p) => !/fewer than 5/.test(p));
+  const small = [sv.attorneys, sv.non_attorneys, sv.judges].some((r) => r && r.n != null && r.n < 10);
+  const list = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}` : xs[0]);
+  const sentence = counted.length
+    ? `In the survey, ${list(counted)} said the judge meets standards.${parts.length > counted.length ? ` For the rest, ${parts.filter((p) => /fewer than 5/.test(p)).join('; ')}.` : ''}${small ? ' Small groups, so read with care.' : ''}`
+    : `In the survey, ${list(parts)}.`;
+  // Keep any part of the caution that isn't about sample size (which the sentence covers).
+  const note = (sv.caution || '').replace(/^Small samples\.\s*n counts everyone who answered the question, including 'no opinion'\.\s*/i, '').trim();
+  return { sentence, note };
+}
+
+export function candidateReview(c: Candidate, retention = false): Review | null {
   const ev = (c.evaluations || []).filter((e) => !isPoll(e));
   if (!ev.length) return null;
   const concerns = ev.filter((e) => e.noted_concern).map((e) => ({ by: e.by_short, text: e.noted_concern!, reason: ['declined', 'unrated'].includes(evalState(e)) }));
@@ -101,21 +133,25 @@ export function candidateReview(c: Candidate): Review | null {
     // read as agreeing. The tone is favorable only when no group said no, gave a mixed rating
     // or went unscreened: the same rule the "keep every judge the review favors" batch uses.
     const n = groups.length;
+    const yesW = retention ? 'say keep' : 'recommend';
+    const noW = retention ? 'say don’t keep' : 'do not recommend';
     if (!rated) { main = declined.length === n ? 'Declined screening' : declined.length ? `Not rated; ${declined.length} not screened` : 'Not rated'; tone = 'none'; }
-    else if (no.length) { main = `${no.length} of ${n} say no`; tone = no.length * 2 > rated ? 'unfav' : 'mixed'; }
-    else { main = `${yes.length} of ${n} recommend`; tone = mixed.length || declined.length ? 'mixed' : 'fav'; }
+    else if (no.length) { main = `${no.length} of ${n} ${retention ? 'say don’t keep' : 'say no'}`; tone = no.length * 2 > rated ? 'unfav' : 'mixed'; }
+    else { main = `${yes.length} of ${n} ${yesW}`; tone = mixed.length || declined.length ? 'mixed' : 'fav'; }
+    // Counts in the sentence; each group's full name and rating sit behind "See each group".
     const parts = [
-      yes.length ? `${yes.length === groups.length ? `all ${yes.length}` : yes.length} recommend ${who}${yes.length <= 3 ? ` (${listNames(yes)})` : ''}` : '',
-      no.length ? `${no.length} do not (${listNames(no)})` : '',
-      mixed.length ? `${mixed.length} give a mixed rating (${listNames(mixed)})` : '',
+      yes.length ? `${yes.length === groups.length ? `all ${yes.length}` : yes.length} ${yesW}` : '',
+      no.length ? `${no.length} ${noW}` : '',
+      mixed.length ? `${mixed.length} give a mixed rating` : '',
       // Only a group whose published rating is "not recommended" is said to have rated them so;
       // "Failed to Appear" and the like are a group that didn't rate them.
-      declinedNR.length ? `${declinedNR.length} rate ${who} not recommended because the candidate did not take part in their screening${declinedNR.length <= 4 ? ` (${listNames(declinedNR)})` : ''}` : '',
-      declinedOther.length ? `${declinedOther.length} did not rate ${who} because the candidate did not take part in their screening (${declinedOther.map((e) => `${e.by_short}: “${e.rating.split(/\s*\(/)[0]}”`).join(', ')})` : '',
-      unrated.length ? `${unrated.length} did not rate ${who} (${listNames(unrated)})` : '',
+      declinedNR.length ? `${declinedNR.length} rate ${who} not recommended because the candidate did not take part in their screening` : '',
+      declinedOther.length ? `${declinedOther.length} did not rate ${who} because the candidate did not take part in their screening (${[...new Set(declinedOther.map((e) => `“${e.rating.split(/\s*\(/)[0]}”`))].join(', ')})` : '',
+      unrated.length ? `${unrated.length} did not rate ${who}` : '',
     ].filter(Boolean);
     const sub = declined.length && rated ? `bar groups; ${declined.length} did not take part` : 'bar groups';
-    return { main, sub, tone, line: `Of ${groups.length} bar groups: ${parts.join('; ')}.`, split: no.length > 0 && yes.length > 0, concerns, strengths, links };
+    const each = groups.map((e) => ({ by: e.by, rating: e.rating, url: e.url, state: evalState(e) }));
+    return { main, sub, tone, line: `Of ${groups.length} bar groups, ${parts.join(', ')}.`, split: no.length > 0 && yes.length > 0, concerns, strengths, links: [], groups: each };
   }
   const e = ev[0];
   const st = evalState(e);
@@ -126,11 +162,9 @@ export function candidateReview(c: Candidate): Review | null {
 /* One contest: a single judge's review, or a summary across a batch of judges. */
 export function judgeReview(it: Contest): Review | null {
   if (!isMultiJudge(it)) {
-    const r = it.candidates[0] ? candidateReview(it.candidates[0]) : null;
-    // On a keep-or-remove question, a bar group's yes is a "keep".
-    return r && /^bar groups/.test(r.sub) ? { ...r, main: r.main.replace(/ recommend$/, ' say keep').replace(/ say no$/, ' say don’t keep') } : r;
+    return it.candidates[0] ? candidateReview(it.candidates[0], !!it.is_retention) : null;
   }
-  const rs = it.candidates.map(candidateReview);
+  const rs = it.candidates.map((c) => candidateReview(c, !!it.is_retention));
   const have = rs.filter((r): r is Review => !!r);
   if (!have.length) return null;
   // The review's finding counts on its own; a dissent doesn't make a favorable finding less so.
@@ -185,9 +219,10 @@ export function judgesRule(): string {
   if (!t) return '';
   if (/^vote for the candidate/i.test(t)) return 'How judges win here: most votes wins. These aren’t keep-or-remove questions.';
   const pct = t.match(/at least (\d+) percent yes/i);
-  if (pct) return `Judges need ${pct[1]}% yes to stay.`;
+  if (pct) return `A judge needs ${pct[1]}% yes to stay.`;
+  if (/^more yes than no votes keeps/i.test(t)) return 'A judge stays with more yes than no votes.';
   const s = (t.match(/^(.+?[.!?])(\s|$)/) || [])[1] || t;
-  return `To keep a judge: ${s.charAt(0).toLowerCase()}${s.slice(1)}`.replace(/\.?$/, '.');
+  return s.replace(/\.?$/, '.');
 }
 
 /* ---------- lawyer preference polls (Texas): counts side by side, no tone ---------- */

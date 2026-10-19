@@ -5,10 +5,10 @@ import { S } from '../state';
 import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
-import { candidateReview, judicialReview, judgesLead, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
+import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
-import { sourceLean, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
+import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
 import { headsUp, headsHTML } from './ledger';
 
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
@@ -70,7 +70,8 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   return out.length ? `<p class="gridnote">${out.join(' ')}</p>` : '';
 }
 function srcCell(e: Endorser): string {
-  return `<th scope="row"><span class="sn">${esc(e.short)}</span>${sourceLean(e)}</th>`;
+  // The dots and the lean word stay in the cell; how the lean was placed is one tap away.
+  return `<th scope="row"><span class="sn">${esc(e.short)}</span><button class="lean-tap" data-act="basis" data-id="${esc(e.id)}" aria-label="${esc(`${e.short}: how its lean was placed`)}">${leanHTML(e.lean)}</button></th>`;
 }
 function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | null {
   const r = (S.ballot!.ends[it.id] || {})[e.id];
@@ -286,7 +287,6 @@ function reviewHTML(r: Review | null, c: Candidate): string {
   if (!r) return '';
   const ev = (c.evaluations || []);
   const off = ev.find((e) => e.kind === 'official_commission' || e.kind === 'bar_committee');
-  const lines = off ? surveyLines(off) : [];
   const findings = r.concerns.filter((x) => !x.reason);
   const reasons = r.concerns.filter((x) => x.reason).filter((x, i, a) => a.findIndex((y) => y.text === x.text) === i).slice(0, 3);
   const notes = [
@@ -294,11 +294,16 @@ function reviewHTML(r: Review | null, c: Candidate): string {
     ...findings.map((x) => `<p class="nq"><b>${esc(x.by)} noted a concern:</b> “${esc(x.text)}”</p>`),
     ...reasons.map((x) => `<p class="nq"><b>${esc(x.by)}’s reason:</b> “${esc(x.text)}”</p>`),
   ].join('');
-  const survey = lines.length ? `<div class="sv"><p>${esc(off!.survey!.question ? 'The survey asked the same question:' : 'Survey:')}</p><ul>${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>
-    ${off!.survey!.caution ? `<p class="fine">${esc(off!.survey!.caution)}</p>` : ''}${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
+  // The survey in one plain sentence when we can say it honestly; the rows otherwise.
+  const plain = off ? surveySentence(off, c.name) : null;
+  const lines = off && !plain ? surveyLines(off) : [];
+  const survey = plain ? `<div class="sv"><p>${esc(plain.sentence)}</p>${plain.note ? `<p class="fine">${esc(plain.note)}</p>` : ''}${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
+    : lines.length ? `<div class="sv"><p>The survey:</p><ul>${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
     : off && off.survey_note ? `<p class="sv fine">${esc(off.survey_note)}</p>` : '';
-  return `<div class="finding ${r.tone}"><p class="rt">${esc(r.main)}</p><p class="vt">${esc(r.sub)}</p>
-    <p class="q">${esc(r.line)}</p>${notes}${survey}
+  // Bar groups: each group's full name, its rating and its page, one tap away.
+  const k = `eg-${hash(c.name)}`;
+  const each = r.groups && r.groups.length ? `<button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the groups' : 'See each group'}</button>${isOpen(k) ? `<ul class="bul eg">${r.groups.map((g) => `<li>${ext(g.url, g.by)}: ${escP(g.rating)}</li>`).join('')}</ul>` : ''}` : '';
+  return `<div class="finding ${r.tone}"><p class="q">${esc(r.line)}</p>${notes}${survey}${each}
     ${r.links.length ? `<p class="fl">${r.links.map((x) => ext(x.url, x.label)).join(' · ')}</p>` : ''}</div>`;
 }
 /* Ratings in a contested judicial race: lawyer polls with every candidate's count side by side,
@@ -335,7 +340,7 @@ function noReviewHTML(c: Contest): string {
 function judgeHTML(c: Contest): string {
   const j = c.candidates[0];
   const v = S.b.picks[c.id];
-  const r = candidateReview(j);
+  const r = candidateReview(j, !!c.is_retention);
   return `${c.office_explainer ? clampP(`ex-${c.id}`, c.office_explainer, 22, 'ob-lede') : ''}
     ${headsHTML(headsUp(`item:${c.id}`))}
     ${r ? reviewHTML(r, j) + meansLineHTML() : noReviewHTML(c)}
@@ -354,7 +359,7 @@ function multiJudgeHTML(c: Contest): string {
     <ul class="judges">${c.candidates.map((k) => {
       const key = `${c.id}|${k.name}`;
       const v = p[key];
-      const r = candidateReview(k);
+      const r = candidateReview(k, true);
       const bk = `jb-${key}`;
       return `<li><div class="j-top"><span class="j-nm"><b>${esc(k.name)}</b>${r ? `<span class="j-rv ${r.tone}">${esc(r.main)}${r.split ? ', split' : ''}</span>` : ''}</span>
         <span class="yn" role="group" aria-label="Keep ${esc(k.name)}?">
@@ -383,21 +388,44 @@ const sameAsHeads = (m: Measure): boolean => {
   const c = (m.confusing_wording_note || '').slice(0, 50).toLowerCase();
   return !!c && headsUp(`item:${m.id}`).some((h) => h.toLowerCase().includes(c));
 };
+const linkedTo = (m: Measure): Measure[] => m.links.map((id) => S.ballot!.byId.get(id)).filter((x): x is Measure => !!x && x.kind === 'measure');
+const bareNum = (o: Measure) => o.number.replace(/^(Proposition|Prop\.?|Amendment|Measure|Question)\s+/i, '');
+/* The links to a measure's partners, with the voter's own pick on each. */
+function partnerLinks(m: Measure): string {
+  return linkedTo(m).map((o) => { const v = S.b.picks[o.id]; return `<button class="linkbtn" data-act="goto" data-id="${esc(o.id)}">${esc(o.number)}</button>${v === 'YES' || v === 'NO' ? ` (you: ${v === 'YES' ? 'yes' : 'no'})` : ''}`; }).join(' and ');
+}
+/* A heads-up that already names this measure's partners carries their links itself, and the
+   separate "Read with" box is dropped: one box per conflict. */
+const headsNamesPartners = (m: Measure): boolean => {
+  const heads = headsUp(`item:${m.id}`).join(' ');
+  return linkedTo(m).length > 0 && linkedTo(m).some((o) => heads.includes(bareNum(o)));
+};
+function measureHeadsHTML(m: Measure): string {
+  const list = headsUp(`item:${m.id}`);
+  if (!headsNamesPartners(m)) return headsHTML(list);
+  const yesBoth = S.b.picks[m.id] === 'YES' && linkedTo(m).some((o) => S.b.picks[o.id] === 'YES');
+  return list.map((t, i) => `<p class="heads${yesBoth ? ' warn' : ''}"><b>Heads up:</b> ${escP(t)}${i === 0 ? ` Read with ${partnerLinks(m)}.${yesBoth ? ' <b>You picked yes on more than one of these.</b>' : ''}` : ''}</p>`).join('');
+}
 function duelHTML(m: Measure): string {
-  const b = S.ballot!;
-  const others = m.links.map((id) => b.byId.get(id)).filter((x): x is Measure => !!x && x.kind === 'measure');
-  if (!others.length) return '';
+  const others = linkedTo(m);
+  if (!others.length || headsNamesPartners(m)) return '';
   const text = [m.plain_summary, m.confusing_wording_note, m.current_law].filter(Boolean).join(' ');
   // A list number left over from the source ("(2) It conflicts with...") is dropped.
   const found = (text.split(/(?<=[.!?])\s+/).find((s) => CONFLICT.test(s)) || '').replace(/^\(\d+\)\s*/, '');
   // One box per conflict: when a heads-up on this measure already names the others, or the
   // catch below says the same sentence, this box only links them.
-  const heads = headsUp(`item:${m.id}`).join(' ');
-  const said = others.some((o) => heads.includes(o.number.replace(/^(Proposition|Prop\.?|Amendment|Measure|Question)\s+/i, ''))) || (!!m.confusing_wording_note && m.confusing_wording_note.includes(found.slice(0, 40)));
+  const said = !!m.confusing_wording_note && m.confusing_wording_note.includes(found.slice(0, 40));
   const rule = said ? '' : found;
   const yesBoth = S.b.picks[m.id] === 'YES' && others.some((o) => S.b.picks[o.id] === 'YES');
-  const picks = others.map((o) => { const v = S.b.picks[o.id]; return `<button class="linkbtn" data-act="goto" data-id="${esc(o.id)}">${esc(o.number)}</button>${v === 'YES' || v === 'NO' ? ` (you: ${v === 'YES' ? 'yes' : 'no'})` : ''}`; }).join(' and ');
+  const picks = partnerLinks(m);
   return `<div class="heads${yesBoth ? ' warn' : ''}"><b>Read with ${picks}.</b> ${rule ? escP(rule) : 'They conflict.'}${yesBoth ? ' <b>You picked yes on more than one of these.</b>' : ''}</div>`;
+}
+/* The official title, two lines at most: some run to 239 words. The whole wording is in the
+   Full read, one tap away. */
+function officialTitleHTML(m: Measure): string {
+  if (!m.official_title) return '';
+  const long = m.official_title.split(/\s+/).length > 24;
+  return `<p class="ob-meta ot${long ? ' two' : ''}">Official title: ${escP(m.official_title)}</p>${long ? `<button class="linkbtn ot-more" data-act="reader" data-id="${esc(m.id)}" data-fk="ot-${esc(m.id)}">Read the full ballot wording</button>` : ''}`;
 }
 function thresholdLine(m: Measure): string {
   const label = thresholdLabel(m.pass_threshold);
@@ -412,11 +440,11 @@ function measureHTML(m: Measure): string {
       <div class="mean${v === 'YES' ? ' mine' : ''}"><h4>A yes vote means</h4><p>${escP(m.yes_means || 'Not written up yet. See the official text.')}</p></div>
       <div class="mean no${v === 'NO' ? ' mine' : ''}"><h4>A no vote means</h4><p>${escP(m.no_means || 'Not written up yet. See the official text.')}</p></div>
     </div>
-    ${headsHTML(headsUp(`item:${m.id}`))}
+    ${measureHeadsHTML(m)}
     ${duelHTML(m)}
     ${m.confusing_wording_note && !sameAsHeads(m) ? `<div class="heads"><b>The wording has a catch.</b> ${clampP(`cw-${m.id}`, m.confusing_wording_note, 26).replace(/^<p>|<\/p>$/g, '')}</div>` : ''}
     ${thresholdLine(m)}
-    ${m.official_title ? clampP(`ot-${m.id}`, `Official title: ${m.official_title}`, 18, 'ob-meta ot') : ''}
+    ${officialTitleHTML(m)}
     ${weighedIn(l).length ? sourcesYesNo(m) : `${noneLineHTML(m, l)}${quietLines(l, m, false)}`}
     ${othersHTML(m)}
     <div class="duo" role="group" aria-label="Your vote on ${esc(m.number)}">

@@ -228,6 +228,8 @@ b, strong { font-weight: 600; }
 .grp-hd::after { content: "Show"; font-family: var(--f-body); font-style: normal; font-size: 13.5px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; flex: none; }
 .grp-hd[aria-expanded="true"]::after { content: "Hide"; }
 .grp-t { min-width: 0; }
+.oth-none { padding: 8px var(--g); border-bottom: 1px solid var(--rule); }
+.grp.oth .grp-t small { display: block; font-family: var(--f-body); font-style: normal; font-weight: 400; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
 .grp-ct { margin-left: auto; font-family: var(--f-body); font-style: normal; font-weight: 400; font-size: 13px; color: var(--muted); white-space: nowrap; }
 
 /* ---------- rows: the ledger ---------- */
@@ -428,6 +430,9 @@ b, strong { font-weight: 600; }
 .ls i.on { background: var(--ink); border-color: var(--ink); }
 .lean.unrated .ls i { border-style: dotted; }
 .lw { font-size: 11.5px; color: var(--muted); font-style: italic; white-space: nowrap; }
+.ob-meta.ot.two { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ot-more { font-size: 14px; margin: -6px 0 4px; }
+.lean-tap { display: block; padding: 2px 0; min-height: 32px; text-align: left; }
 .lean-b { display: inline-flex; flex-direction: column; gap: 1px; }
 .lk { font-size: 11.5px; color: var(--faint); line-height: 1.25; }
 

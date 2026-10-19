@@ -36,8 +36,10 @@ export function mastHTML(): string {
     const b = S.ballot;
     // "Brooklyn (Kings County)": the name up top, the note in parentheses on the line below.
     const bare = (l: string) => l.replace(/\s*\(.*\)$/, '');
-    const name = b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
-    const note = b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
+    // DC "not sure": the city as the headline and the wards under it, not four ward names.
+    const wards = b.places.length > 1 && b.places.every((p) => /^DC Ward \d+$/.test(p.label)) ? b.places.map((p) => p.label.replace('DC Ward ', '')) : null;
+    const name = wards ? 'Washington, DC' : b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
+    const note = wards ? `Ward ${wards.slice(0, -1).join(', ')} or ${wards[wards.length - 1]}` : b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
     const county = b.places.length === 1 && b.st !== 'DC' ? countyName(b.places[0]) : '';
     const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip ? `ZIP ${S.b.zip}` : ''].filter(Boolean).join('. ');
     const office = b.places.map((p) => p.county_election_office).find(Boolean);

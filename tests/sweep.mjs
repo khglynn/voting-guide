@@ -299,7 +299,9 @@ const SNAPSHOT = (w) => {
     sec[s.dataset.sec] = {
       count: (s.querySelector('.sec-count') || {}).textContent?.trim() || '',
       unopp: u ? Number((u.textContent.match(/^(\d+) unopposed/) || [])[1] || -1) : 0,
-      order: [...s.querySelectorAll('[id^="i-"]')].map((e) => e.id.slice(2)),
+      // Rows inside the "other school districts" fold list where the fold sits, so they are
+      // checked for presence, not for place in the section's order.
+      order: [...s.querySelectorAll('[id^="i-"]:not([data-fold])')].map((e) => e.id.slice(2)),
     };
   });
   return {

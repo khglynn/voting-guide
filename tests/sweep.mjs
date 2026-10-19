@@ -28,7 +28,8 @@
  *
  * The run fails, rather than passing quietly, when it would check nothing: WORKERS that is not
  * 1 to 16, an ONLY that names a ballot that does not exist, an index with no states, places or
- * ZIPs, or any planned ballot that did not finish.
+ * ZIPs, or any planned ballot that did not finish. A ballot that crashes (its page never loaded,
+ * say, on a stalled machine) gets one more try; a second crash fails, and a failed check is never retried.
  *
  * Each run writes to its own new folder, SHOTS_DIR/<time>-<mode>-<pid>/ (SHOTS_DIR defaults to
  * .tmp/sweep-shots and must be inside the repo's .tmp/): the top of every ballot, the failing
@@ -293,30 +294,32 @@ function warn(ballot, what, detail = '') { warns.push({ ballot, what, detail });
 function fail(ballot, what, detail = '') { fails.push({ ballot, what, detail }); console.log(`FAIL  ${ballot}: ${what}${detail ? `  (${detail})` : ''}`); }
 async function open(browser, ballot, R) {
   const ctx = await browser.newContext({ viewport: { width: W, height: 820 }, deviceScaleFactor: 1, hasTouch: true, isMobile: true });
-  if (BYPASS) await ctx.route((u) => u.origin === ORIGIN, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': BYPASS } }));
-  const page = await ctx.newPage();
-  await page.addInitScript(PRESS);
-  page.errs = [];
-  // Only our own origin counts. A slow Google Fonts request is not a bug in the guide.
-  page.on('console', (m) => { if (m.type() === 'error' && (!m.location().url || m.location().url.startsWith(ORIGIN))) page.errs.push(`console: ${m.text().slice(0, 160)}`); });
-  page.on('pageerror', (e) => page.errs.push(`pageerror: ${e.message.slice(0, 160)}`));
-  page.on('requestfailed', (r) => { if (r.url().startsWith(ORIGIN)) page.errs.push(`requestfailed: ${r.url()}`); });
-  page.on('response', (r) => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) page.errs.push(`HTTP ${r.status()}: ${r.url()}`); });
-  await page.goto(`${BASE}/?today=${TODAY}`, { waitUntil: 'domcontentloaded' });
-  await page.waitForSelector('#zip');
-  if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box
-    await page.fill('#zip', ballot.zip);
-    await page.locator('button[type=submit]').click();
-    await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
-  } else {
-    await page.locator('.browse .btn-text').first().click(); // "Or pick a place from the list"
-    const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
-    await page.locator(sel).first().click();
-  }
-  await page.waitForSelector('#plan', { timeout: 20000 });
-  await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
-  await page.waitForTimeout(150);
-  return { ctx, page };
+  try {
+    if (BYPASS) await ctx.route((u) => u.origin === ORIGIN, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': BYPASS } }));
+    const page = await ctx.newPage();
+    await page.addInitScript(PRESS);
+    page.errs = [];
+    // Only our own origin counts. A slow Google Fonts request is not a bug in the guide.
+    page.on('console', (m) => { if (m.type() === 'error' && (!m.location().url || m.location().url.startsWith(ORIGIN))) page.errs.push(`console: ${m.text().slice(0, 160)}`); });
+    page.on('pageerror', (e) => page.errs.push(`pageerror: ${e.message.slice(0, 160)}`));
+    page.on('requestfailed', (r) => { if (r.url().startsWith(ORIGIN)) page.errs.push(`requestfailed: ${r.url()}`); });
+    page.on('response', (r) => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) page.errs.push(`HTTP ${r.status()}: ${r.url()}`); });
+    await page.goto(`${BASE}/?today=${TODAY}`, { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('#zip');
+    if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box
+      await page.fill('#zip', ballot.zip);
+      await page.locator('button[type=submit]').click();
+      await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
+    } else {
+      await page.locator('.browse .btn-text').first().click(); // "Or pick a place from the list"
+      const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
+      await page.locator(sel).first().click();
+    }
+    await page.waitForSelector('#plan', { timeout: 20000 });
+    await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
+    await page.waitForTimeout(150);
+    return { ctx, page };
+  } catch (e) { await ctx.close().catch(() => {}); throw e; } // a failed open must not leave a browser context behind
 }
 
 async function checkStructure(page, ballot, o, answers, label, R) {
@@ -365,49 +368,50 @@ async function sweepBallot(browser, ballot) {
   const R = { n: 0, fail: (b, w, d) => { R.n++; fail(b, w, d); } };
   const o = await oracle(ballot.st, ballot.placeIds);
   const { ctx, page } = await open(browser, ballot, R);
+  try {
 
-  // MODE=full first, while nothing is picked: every member of every district group at least once,
-  // one variant per index. The same page is reused; "Change" reopens a question.
-  if (MODE === 'full' && o.groups.length) {
-    const maxN = Math.max(...o.groups.map((g) => g.members.length));
-    for (let k = 0; k < maxN; k++) {
-      const answers = Object.fromEntries(o.groups.map((g) => [g.key, g.members[k % g.members.length]]));
-      for (const g of o.groups) {
-        if (k > 0) await pressChange(page, g.key);
-        await pressDistrict(page, g.key, answers[g.key]);
+    // MODE=full first, while nothing is picked: every member of every district group at least once,
+    // one variant per index. The same page is reused; "Change" reopens a question.
+    if (MODE === 'full' && o.groups.length) {
+      const maxN = Math.max(...o.groups.map((g) => g.members.length));
+      for (let k = 0; k < maxN; k++) {
+        const answers = Object.fromEntries(o.groups.map((g) => [g.key, g.members[k % g.members.length]]));
+        for (const g of o.groups) {
+          if (k > 0) await pressChange(page, g.key);
+          await pressDistrict(page, g.key, answers[g.key]);
+        }
+        await page.waitForTimeout(100);
+        await checkStructure(page, ballot, o, answers, `district variant ${k + 1}/${maxN}`, R);
       }
-      await page.waitForTimeout(100);
-      await checkStructure(page, ballot, o, answers, `district variant ${k + 1}/${maxN}`, R);
+      for (const g of o.groups) await pressChange(page, g.key);
     }
-    for (const g of o.groups) await pressChange(page, g.key);
-  }
 
-  // Variant "I'm not sure": every candidate race shows once, each marked "May apply".
-  const notSure = Object.fromEntries(o.groups.map((g) => [g.key, '*']));
-  for (const g of o.groups) await pressDistrict(page, g.key, '*');
-  await page.waitForTimeout(200);
-  const { ex, snap } = await checkStructure(page, ballot, o, notSure, 'all districts', R);
-  await page.screenshot({ path: path.join(SHOTS, `${ballot.name}.png`) });
+    // Variant "I'm not sure": every candidate race shows once, each marked "May apply".
+    const notSure = Object.fromEntries(o.groups.map((g) => [g.key, '*']));
+    for (const g of o.groups) await pressDistrict(page, g.key, '*');
+    await page.waitForTimeout(200);
+    const { ex, snap } = await checkStructure(page, ballot, o, notSure, 'all districts', R);
+    await page.screenshot({ path: path.join(SHOTS, `${ballot.name}.png`) });
 
-  // Make the planned choice on every decision. Then both sheets must show each race, in order,
-  // with exactly that choice.
-  const plan = planFor(ex);
-  const problems = await page.evaluate(PICK_PLAN, plan);
-  if (problems.length) R.fail(ballot.name, `${problems.length} problems making the planned choices`, problems.slice(0, 4).join(' | '));
-  await page.waitForTimeout(250); // the sheets render just after the tap paints
-  const cheat = await page.evaluate(CHEAT);
-  const secOrder = Object.keys(snap.sec);
-  compareSheet(R, ballot.name, 'cheat sheet (screen)', cheat.screen, wantSheet(o, ex, plan, secOrder, false));
-  compareSheet(R, ballot.name, 'print sheet', cheat.print, wantSheet(o, ex, plan, secOrder, true));
-  const titles = cheat.screen.map((r) => r.t);
-  // 2026-10-19: found by the first sweep. Two races with the same title leave the voter unable to tell the rows apart.
-  if (new Set(titles).size !== titles.length) (process.env.STRICT ? R.fail : warn)(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
-  const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.trim());
-  if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
+    // Make the planned choice on every decision. Then both sheets must show each race, in order,
+    // with exactly that choice.
+    const plan = planFor(ex);
+    const problems = await page.evaluate(PICK_PLAN, plan);
+    if (problems.length) R.fail(ballot.name, `${problems.length} problems making the planned choices`, problems.slice(0, 4).join(' | '));
+    await page.waitForTimeout(250); // the sheets render just after the tap paints
+    const cheat = await page.evaluate(CHEAT);
+    const secOrder = Object.keys(snap.sec);
+    compareSheet(R, ballot.name, 'cheat sheet (screen)', cheat.screen, wantSheet(o, ex, plan, secOrder, false));
+    compareSheet(R, ballot.name, 'print sheet', cheat.print, wantSheet(o, ex, plan, secOrder, true));
+    const titles = cheat.screen.map((r) => r.t);
+    // 2026-10-19: found by the first sweep. Two races with the same title leave the voter unable to tell the rows apart.
+    if (new Set(titles).size !== titles.length) (process.env.STRICT ? R.fail : warn)(ballot.name, 'cheat sheet lists a title twice', titles.find((x, i) => titles.indexOf(x) !== i));
+    const done = await page.evaluate(() => (document.querySelector('.bar-txt') || {}).textContent.trim());
+    if (done !== `${ex.barTotal} of ${ex.barTotal} decided`) R.fail(ballot.name, 'progress bar after picking everything', done);
 
-  if (page.errs.length) R.fail(ballot.name, 'console or network errors', page.errs.slice(0, 3).join(' | '));
-  if (R.n) await page.screenshot({ path: path.join(SHOTS, `FAIL-${ballot.name}.png`) }).catch(() => {});
-  await ctx.close();
+    if (page.errs.length) R.fail(ballot.name, 'console or network errors', page.errs.slice(0, 3).join(' | '));
+    if (R.n) await page.screenshot({ path: path.join(SHOTS, `FAIL-${ballot.name}.png`) }).catch(() => {});
+  } finally { await ctx.close().catch(() => {}); }
   results.push({ name: ballot.name, items: o.items.length, groups: o.groups.length, ms: Date.now() - t0, failures: R.n });
   console.log(`${R.n ? 'FAIL' : 'ok  '}  ${ballot.name}  ${o.items.length} items, ${o.groups.length} district questions, ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
@@ -445,7 +449,14 @@ const queue = [...todo];
 await Promise.all(Array.from({ length: Math.min(WORKERS, queue.length) }, async () => {
   while (queue.length) {
     const b = queue.shift();
-    try { await sweepBallot(browser, b); } catch (e) { fail(b.name, 'sweep crashed', e.message.split('\n')[0]); }
+    // A crash means the ballot could not be checked (a page that never loaded, a stalled machine), so it
+    // gets one more try. A failed check is never retried, and a second crash fails the run.
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try { await sweepBallot(browser, b); break; } catch (e) {
+        const why = e.message.split('\n')[0];
+        if (attempt === 1) warn(b.name, 'crashed, trying once more', why); else fail(b.name, 'sweep crashed twice', why);
+      }
+    }
   }
 }));
 await browser.close();

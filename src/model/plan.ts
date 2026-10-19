@@ -2,7 +2,7 @@
    Never a countdown. Dates come only from data/states/{ST}.json; `?today=` overrides the
    clock for testing (util.todayISO). */
 import type { HowTo, PlaceBundle } from '../types';
-import { fmtDate, todayISO, daysBetween, nowOverride, minutesIn } from '../util';
+import { fmtDate, todayISO, daysBetween, nowOverride, zonedNow } from '../util';
 
 export type Part = [string, boolean]; // text, emphasized (a date or time)
 export interface Step {
@@ -100,8 +100,12 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     const closesAt = clockMinutes(ed.polls_close);
     const zones = h.zones || STATE_ZONES[h.state] || [];
     const at = now instanceof Date ? now : new Date();
-    const local = (z: string | null) => (typeof now === 'number' ? now : minutesIn(z, at));
-    const shut = closesAt != null && (zones.length ? zones.every((z) => local(z) >= closesAt) : local(null) >= closesAt);
+    // Closed in a zone once that zone's own date and time are past Election Day's close there.
+    const past = (z: string | null): boolean => {
+      const { date, min } = typeof now === 'number' ? { date: h.election_date, min: now } : zonedNow(z, at);
+      return date > h.election_date || (date === h.election_date && min >= closesAt!);
+    };
+    const shut = closesAt != null && (zones.length ? zones.every(past) : past(null));
     if (!absolute && shut) {
       return {
         phase: 'polls_closed',

@@ -58,7 +58,7 @@ export const contestDistrict = districtNum;
    district named as covering only part of the place ("including part of northwest Houston",
    "central San Antonio", "only voters inside this territory"), one county of a place that spans
    several, or a school district that names neither the place nor its county, may apply. */
-const PARTIAL = /\b(part of|parts of|small part|much of|touching|only voters inside|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
+const PARTIAL = /\b(part of|parts of|small part|much of|touching|only|not already|except|excluding|outside|reaches|central|far (north|south|east|west)\w*|northwest|northeast|southwest|southeast)\b/i;
 function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   if (!places.length) return true;
   const j = m.jurisdiction || '';
@@ -66,7 +66,10 @@ function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   if (!['school', 'special_district', 'county'].includes(m.level)) return true;
   if (PARTIAL.test(j)) return false;
   const counties = (p: PlaceBundle) => p.counties.map((c) => c.replace(/\s*\([^)]*\)/g, '').replace(/\s+County$/i, '').trim()).filter(Boolean);
-  if (places.some((p) => counties(p).length > 1 && counties(p).some((c) => new RegExp(`^${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j)))) return false;
+  // A place in several counties: a measure that names some of them but not all (Aurora: "17th
+  // Judicial District (Adams County and ...)") reaches only part of it.
+  const named = (c: string) => new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(j);
+  if (places.some((p) => counties(p).length > 1 && counties(p).some(named) && !counties(p).every(named))) return false;
   if (m.level === 'school') {
     const names = places.flatMap((p) => [p.label.replace(/\s*\(.*\)$/, ''), ...counties(p)]).map((x) => x.toLowerCase());
     return names.some((x) => x && j.toLowerCase().includes(x));

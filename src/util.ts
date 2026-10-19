@@ -34,15 +34,17 @@ export function nowOverride(): number | null {
   } catch { /* ignore */ }
   return null;
 }
-/* Minutes after midnight at this instant in a time zone ("America/Chicago"); the device's own
-   clock when the zone is unknown. */
-export function minutesIn(zone: string | null, at: Date): number {
-  if (!zone) return at.getHours() * 60 + at.getMinutes();
+/* The date and the minutes after midnight at this instant in a time zone (the device's own when
+   the zone is unknown). Comparing both, never the minutes alone, keeps "after midnight" from
+   reading as "before 7 PM". */
+export function zonedNow(zone: string | null, at: Date): { date: string; min: number } {
+  const local = () => ({ date: `${at.getFullYear()}-${String(at.getMonth() + 1).padStart(2, '0')}-${String(at.getDate()).padStart(2, '0')}`, min: at.getHours() * 60 + at.getMinutes() });
+  if (!zone) return local();
   try {
-    const parts = new Intl.DateTimeFormat('en-US', { timeZone: zone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(at);
-    const n = (t: string) => +(parts.find((p) => p.type === t)?.value || 0);
-    return (n('hour') % 24) * 60 + n('minute');
-  } catch { return at.getHours() * 60 + at.getMinutes(); }
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: zone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(at);
+    const v = (t: string) => parts.find((p) => p.type === t)?.value || '0';
+    return { date: `${v('year')}-${v('month')}-${v('day')}`, min: (+v('hour') % 24) * 60 + +v('minute') };
+  } catch { return local(); }
 }
 export const daysBetween = (a: string, b: string): number => Math.round((parse(b).getTime() - parse(a).getTime()) / 864e5);
 

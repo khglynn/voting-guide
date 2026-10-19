@@ -36,6 +36,13 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('may apply: Denver Public Schools measures cover Denver', dn.items.filter((x) => x.kind === 'measure' && /Denver Public Schools/.test(x.jurisdiction)).every((x) => !dn.mayApply.has(x.id)));
     const ch = open('IL', ['chicago-il']);
     check('may apply: Chicago Public Schools covers every Chicago voter; the mental health areas may apply', ch.items.filter((x) => x.kind === 'measure' && /Chicago Public Schools/.test(x.jurisdiction)).every((x) => !ch.mayApply.has(x.id)) && ch.items.filter((x) => x.kind === 'measure' && /Mental Health/.test(x.jurisdiction)).every((x) => ch.mayApply.has(x.id)));
+    // Codex r3: restrictive notes win over a place-name match.
+    const au = open('CO', ['aurora-co']);
+    check('may apply: Aurora\'s 17th Judicial District measure (Adams County only) may apply', au.mayApply.has('adams-broomfield-da-7e'));
+    const sd = open('CA', ['san-diego-ca']);
+    check('may apply: San Diego Unified\'s measure (SDUSD voters only) may apply', sd.mayApply.has('sdusd-measure-m'));
+    const pf = open('TX', ['pflugerville-tx']);
+    check('may apply: ACC\'s Pflugerville measure (area not already in ACC) may apply', pf.mayApply.has('tx-acc-prop-a-pflugerville'));
     const lk = open('CO', ['lakewood-co']);
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
   }
@@ -400,6 +407,9 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     const txAll = plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T01:30:00Z'));
     check('plan: a statewide Texas ballot waits for El Paso (Mountain time) before saying closed', txAll.phase === 'election_day' && /Your local polls close at 7 PM/.test(words(txAll)), words(txAll));
     check('plan: and says closed once every Texas zone has closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T02:01:00Z')).phase === 'polls_closed');
+    // Codex r3: after midnight in Texas (10:10 PM on a Pacific device) the polls must not reopen.
+    check('plan: after midnight Central on Nov 4, a Pacific device still on Nov 3 says closed', plan.nextStep(austin, '2026-11-03', false, new Date('2026-11-04T06:10:00Z')).phase === 'polls_closed');
+    check('plan: a statewide Texas ballot after midnight in both zones says closed', plan.nextStep(tx, '2026-11-03', false, new Date('2026-11-04T07:30:00Z')).phase === 'polls_closed');
     check('plan: Pensacola is on Central time, Orlando Eastern', JSON.stringify(open('FL', ['pensacola-fl']).howto.zones) === '["America/Chicago"]' && JSON.stringify(open('FL', ['orlando-fl']).howto.zones) === '["America/New_York"]');
     // Codex #12: after the polls close on Election Day, say so, and keep the in-line rule.
     const shut = plan.nextStep(tx, '2026-11-03', false, 19 * 60);

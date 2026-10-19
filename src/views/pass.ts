@@ -91,12 +91,15 @@ export function messages(): { fam: string | null; pub: string | null } {
     // counties set their own days (Florida, Illinois) the state's dates are a minimum, so say so.
     const own = place && place.early_in_person;
     const ep = own || sh.early_in_person;
-    const vary = (sh.early_in_person as { counties_vary?: boolean }).counties_vary;
+    // "minimum": the state's window is a floor every county offers (Florida); "varies": there is no
+    // statewide window, only a common last day (Illinois).
+    const vary = (sh.early_in_person as { counties_vary?: 'minimum' | 'varies' }).counties_vary;
     if (sh.early_in_person.available && ep.start && ep.end && ep.end >= todayISO()) {
       const span = `${fmtDate(ep.start)} through ${fmtDate(ep.end)}`;
       const county = own && place!.counties && place!.counties.length === 1 ? `${place!.counties[0]} County` : place ? place.label.replace(/\s*\(.*\)$/, '') : '';
       dates.push(own ? `Early voting in ${county} runs ${span}.`
-        : vary ? `Every ${b.stateName} county offers early voting ${span}. Some counties start earlier or finish later; check yours.`
+        : vary === 'minimum' ? `Every ${b.stateName} county offers early voting ${span}. Some counties start earlier or finish later; check yours.`
+        : vary === 'varies' ? `Early voting dates vary by county and run through ${fmtDate(ep.end)}; check yours.`
         : `Early voting runs ${span}.`);
     }
   }

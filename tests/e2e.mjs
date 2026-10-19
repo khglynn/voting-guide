@@ -479,6 +479,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   for (const [zip, re, label] of [
     ['32801', /Early voting in Orange County runs Mon, Oct 19 through Sun, Nov 1\./, "Pass it on: Orlando gives Orange County's early-voting window"],
     ['32052', /Every Florida county offers early voting Sat, Oct 24 through Sat, Oct 31\. Some counties start earlier or finish later/, "Pass it on: a statewide Florida ballot calls Oct 24 to 31 the counties' minimum"],
+    ['60614', /Early voting dates vary by county and run through Mon, Nov 2; check yours\./, "Pass it on: Illinois says early voting dates vary by county (no statewide start)"],
   ]) {
     const fl = await newPage();
     await openBallot(fl.page, zip);

@@ -70,7 +70,7 @@
     "vote_centers": true,
     "lookup_url": "https://www.elections.il.gov/VotingAndRegistrationSystems/EarlyVotingLocationsSearch.aspx",
     "confidence": "verified",
-    "counties_vary": true
+    "counties_vary": "varies"
   },
   "election_day": {
     "polls_open": "6:00 AM",

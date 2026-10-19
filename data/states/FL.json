@@ -32,7 +32,7 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "None. If you were not registered by October 5, 2026, you cannot vote in this election. If you are registered but moved inside Florida, you can update your address at the polls (early voting or Election Day) by signing a change-of-address affirmation (s. 101.045, F.S.). Moved within your county: you vote a regular ballot. Moved from another Florida county: you vote a regular ballot only if your new county uses an electronic voter list (precinct register) at the polls; otherwise you must vote a provisional ballot. Call your new supervisor of elections to check. A name change can also be handled at the polls with a signed affirmation. Better: update your address or name online at RegisterToVoteFlorida.gov now so your record is clean before you show up.",
-    "still_possible_now": "No. As of October 16, 2026 the deadline (Monday, October 5) has passed. Check your status at the lookup link; if you are registered and moved within Florida, you can still fix your address at the polls.",
+    "still_possible_now": "No. The deadline was Monday, October 5. Check your status at the lookup link; if you are registered and moved within Florida, you can still fix your address at the polls.",
     "confidence": "verified"
   },
   "mail_ballot": {

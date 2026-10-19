@@ -32,7 +32,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any Voter Service and Polling Center (VSPC) in your county through 7:00 PM on November 3. Bring an acceptable ID (see id_rules). If you register on Election Day without verifiable ID you may vote a provisional ballot that is counted after your eligibility is confirmed. Find VSPCs at GoVoteColorado.gov.",
-    "still_possible_now": "Yes. As of October 15 you can still register online at GoVoteColorado.gov through October 26 and get a ballot mailed to you. After October 26, register and vote in person at a vote center, right up to 7:00 PM on Election Day.",
+    "still_possible_now": "Online registration at GoVoteColorado.gov, with a ballot mailed to you, runs through October 26. After October 26, register and vote in person at a vote center, right up to 7:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {

@@ -169,7 +169,7 @@ export function tally(l: Lineup): string {
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
 export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both';
-export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' }
+export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',

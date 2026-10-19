@@ -5,7 +5,7 @@ import { S } from '../state';
 import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
-import { candidateReview, judicialReview, type Review } from '../model/judges';
+import { candidateReview, judicialReview, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
 import { leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
@@ -240,6 +240,7 @@ function raceHTML(c: Contest): string {
   return `${c.office_explainer ? clampP(`ex-${c.id}`, c.office_explainer, 22, 'ob-lede') : ''}
     ${headsHTML(headsUp(`item:${c.id}`))}
     ${rcv ? rcvHeadHTML(c) : ''}${nonpartisan}
+    ${raceRatingsHTML(c)}
     ${body}
     ${othersHTML(c)}
     ${useGrid ? voicesHTML(c, shown) : ''}`;
@@ -252,17 +253,36 @@ function reviewHTML(r: Review | null, c: Candidate): string {
   if (!r) return '';
   const ev = (c.evaluations || []);
   const off = ev.find((e) => e.kind === 'official_commission' || e.kind === 'bar_committee');
-  const survey = off && off.survey ? [
-    off.survey.attorneys ? `lawyers ${off.survey.attorneys.yes_pct}% yes${off.survey.attorneys.n ? ` (${off.survey.attorneys.n} answered)` : ''}` : '',
-    off.survey.non_attorneys ? `others in the courtroom ${off.survey.non_attorneys.yes_pct}% yes${off.survey.non_attorneys.n ? ` (${off.survey.non_attorneys.n} answered)` : ''}` : '',
-  ].filter(Boolean).join('; ') : '';
+  const lines = off ? surveyLines(off) : [];
+  const findings = r.concerns.filter((x) => !x.reason);
+  const reasons = r.concerns.filter((x) => x.reason).filter((x, i, a) => a.findIndex((y) => y.text === x.text) === i).slice(0, 3);
   const notes = [
     ...r.strengths.slice(0, 1).map((x) => `<p class="nq"><b>${esc(x.by)} noted:</b> “${esc(x.text)}”</p>`),
-    ...r.concerns.map((x) => `<p class="nq"><b>${esc(x.by)} noted a concern:</b> “${esc(x.text)}”</p>`),
+    ...findings.map((x) => `<p class="nq"><b>${esc(x.by)} noted a concern:</b> “${esc(x.text)}”</p>`),
+    ...reasons.map((x) => `<p class="nq"><b>${esc(x.by)}’s reason:</b> “${esc(x.text)}”</p>`),
   ].join('');
+  const survey = lines.length ? `<div class="sv"><p>${esc(off!.survey!.question ? 'The survey asked the same question:' : 'Survey:')}</p><ul>${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>
+    ${off!.survey!.caution ? `<p class="fine">${esc(off!.survey!.caution)}</p>` : ''}${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
+    : off && off.survey_note ? `<p class="sv fine">${esc(off.survey_note)}</p>` : '';
   return `<div class="finding ${r.tone}"><p class="rt">${esc(r.main)}</p><p class="vt">${esc(r.sub)}</p>
-    <p class="q">${esc(r.line)}</p>${notes}${survey ? `<p class="sv">Survey on the same question: ${esc(survey)}.</p>` : ''}
+    <p class="q">${esc(r.line)}</p>${notes}${survey}
     ${r.links.length ? `<p class="fl">${r.links.map((x) => ext(x.url, x.label)).join(' · ')}</p>` : ''}</div>`;
+}
+/* Ratings in a contested judicial race: lawyer polls with every candidate's count side by side,
+   then each candidate's bar ratings. No tone color on either. */
+function raceRatingsHTML(c: Contest): string {
+  if (!hasRatings(c)) return '';
+  const polls = pollsFor(c);
+  const groups = raceRatings(c);
+  const k = `rr-${c.id}`;
+  const pollHTML = polls.map((p) => `<li><b>${esc(p.by_short)}</b>, ${esc(p.label)}: ${p.counts.map((x) => `${esc(x.short)} ${x.votes == null ? 'not in this poll' : x.votes.toLocaleString('en-US')}`).join(' · ')}.${p.caveat ? ` <span class="muted">${esc(p.caveat)}</span>` : ''} ${ext(p.url, 'Source')}</li>`).join('');
+  const groupHTML = groups.map((g) => `<li><b>${esc(g.name)}:</b> ${esc(g.review.line.replace(/\.$/, ''))}.${isOpen(k) && g.review.concerns.length ? ` <span class="muted">${g.review.concerns.slice(0, 2).map((x) => `${esc(x.by)}: “${esc(x.text)}”`).join(' ')}</span>` : ''}</li>`).join('');
+  const jr = judicialReview();
+  return `<div class="ratings">
+    ${polls.length ? `<h4>Lawyer preference polls</h4><p class="fine">A count of which candidate responding lawyers prefer. Not an endorsement or a job review.</p><ul>${pollHTML}</ul>` : ''}
+    ${groups.length ? `<h4>Bar ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
+    ${jr && jr.what_the_rating_means ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
+  </div>`;
 }
 function meansLineHTML(): string {
   const jr = judicialReview();

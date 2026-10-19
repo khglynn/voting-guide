@@ -1,62 +1,116 @@
-/* Judges: what their official reviews and bar ratings say, in one line, worded as the
-   reviewer's rating and never as ours. Read from candidates' structured `evaluations`
-   (the Oct 19 data contract). A judge with none shows no review line, not a guess. */
-import type { Candidate, Contest, Evaluation, JudicialReview } from '../types';
+/* Judges: what official reviews, bar ratings and lawyer polls say, worded as the reviewer's own
+   rating, never ours. Read from candidates' structured `evaluations` (the Oct 19 data contract).
+   Each bar group's entry is one of five states, kept apart on purpose:
+     yes       the group recommends or approves
+     no        the group does not, on the merits
+     declined  a negative or blank rating because the candidate did not take part in screening
+     unrated   the group did not rate this candidate ("Not listed", "N/A")
+     mixed     a rating the group itself calls mixed
+   A lawyer preference poll (bar_poll) is a vote count, not a rating: it never gets a tone. */
+import type { Candidate, Contest, Evaluation, JudicialReview, SurveyRow } from '../types';
 import { S } from '../state';
 import { entriesBySection, status, isMultiJudge } from '../ballot';
 
+export type EvalState = 'yes' | 'no' | 'declined' | 'unrated' | 'mixed';
+const DID_NOT_TAKE_PART = /declin|did not (participate|take part|appear)|failed to appear|not participate|chose not to (participate|be screened)|automatic/i;
+export function evalState(e: Evaluation): EvalState {
+  const why = `${e.rating} ${e.noted_concern || ''}`;
+  if (e.verdict === 'favorable') return 'yes';
+  if (e.verdict === 'unfavorable') return DID_NOT_TAKE_PART.test(why) ? 'declined' : 'no';
+  if (e.verdict === 'mixed') return 'mixed';
+  return DID_NOT_TAKE_PART.test(why) ? 'declined' : 'unrated';
+}
+const isOfficial = (e: Evaluation) => e.kind === 'official_commission' || e.kind === 'bar_committee';
+const isPoll = (e: Evaluation) => e.kind === 'bar_poll';
+const sentence = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const nameOf = (c: Candidate) => c.short || c.name.split(' ').pop() || c.name;
+const voteAgainst = (v: string | null): number => { const m = (v || '').match(/^\s*(\d+)\s*[-–]\s*(\d+)\s*$/); return m ? +m[2] : 0; };
+const listNames = (es: Evaluation[]): string => es.map((e) => e.by_short).join(', ');
+
+/* A rating short enough for the narrow column, never cut mid-word. */
+export function shortRating(e: Evaluation): string {
+  const st = evalState(e);
+  if (st === 'unrated') return 'Not rated';
+  if (st === 'declined') return 'Did not take part';
+  const r = e.rating.split(/\s*[(;:]/)[0].replace(/\bperformance\s+/i, '').replace(/\bjudicial\s+/i, '').replace(/\boverall\s+/i, '').trim();
+  const s = sentence(r.toLowerCase());
+  if (s.length <= 24) return s;
+  return st === 'yes' ? 'Favorable review' : st === 'no' ? 'Unfavorable review' : 'Mixed review';
+}
+
 export interface Review {
-  main: string;           // the narrow column: "Meets standards", "7 of 13 say no"
+  main: string;           // the narrow column: "Meets standards", "13 of 14 recommend", "Declined screening"
   sub: string;            // "Commission 10-0", "bar groups"
-  tone: 'fav' | 'unfav' | 'mixed';
+  tone: 'fav' | 'unfav' | 'mixed' | 'none';
   line: string;           // one plain sentence for the open row
-  split: boolean;         // a reviewer voted against, or groups disagree
-  concerns: { by: string; text: string }[];
+  split: boolean;         // a reviewer voted against, or groups disagree on the merits
+  concerns: { by: string; text: string; reason: boolean }[];   // reason: why a group did not rate, not a finding
   strengths: { by: string; text: string }[];
   links: { label: string; url: string }[];
 }
 
-const isOfficial = (e: Evaluation) => e.kind === 'official_commission' || e.kind === 'bar_committee';
-const sentence = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-/* "Meets Performance Standards" -> "Meets standards"; long ratings fall back to the verdict. */
-export function shortRating(e: Evaluation): string {
-  const r = e.rating.replace(/\bperformance\s+/i, '').replace(/\bjudicial\s+/i, '').replace(/\boverall\s+/i, '').trim();
-  const s = sentence(r.toLowerCase());
-  if (s.length <= 22) return s;
-  return e.verdict === 'favorable' ? 'Favorable review' : e.verdict === 'unfavorable' ? 'Unfavorable review' : e.verdict === 'mixed' ? 'Mixed review' : sentence(e.rating.split(/[,;:]/)[0].toLowerCase()).slice(0, 22);
+/* Colorado's Eighteenth District narratives say respondents "found no performance issues in any
+   evaluation criteria" even where the survey shows many said no. Never show that sentence as a
+   strength when the survey says otherwise. */
+const BOILERPLATE = /no performance issues/i;
+export const surveyDisagrees = (e: Evaluation): boolean =>
+  !!e.survey && [e.survey.attorneys, e.survey.non_attorneys, e.survey.judges].some((r) => !!r && (r.n ?? 0) >= 5 && (r.no_pct ?? 0) >= 20);
+export const strengthOf = (e: Evaluation): string | null => (e.noted_strength && !(BOILERPLATE.test(e.noted_strength) && surveyDisagrees(e)) ? e.noted_strength : null);
+
+/* "Lawyers: 85% yes, 15% no (13 answered this question)"; under 5 answers, no percentage at all. */
+export function surveyLines(e: Evaluation): string[] {
+  const sv = e.survey;
+  if (!sv) return [];
+  const row = (label: string, r: SurveyRow | null) => {
+    if (!r) return '';
+    if (r.n != null && r.n < 5) return `${label}: fewer than 5 answered this question`;
+    return `${label}: ${r.yes_pct}% yes${r.no_pct != null ? `, ${r.no_pct}% no` : ''}${r.n != null ? ` (${r.n} answered this question)` : ''}`;
+  };
+  return [row('Lawyers', sv.attorneys), row('Others in the courtroom', sv.non_attorneys), row('Other judges', sv.judges)].filter(Boolean);
 }
-const lastName = (c: Candidate) => c.short || c.name.split(' ').pop() || c.name;
-const voteAgainst = (v: string | null): number => { const m = (v || '').match(/(\d+)\s*[-–]\s*(\d+)/); return m ? +m[2] : 0; };
 
 export function candidateReview(c: Candidate): Review | null {
-  const ev = c.evaluations || [];
+  const ev = (c.evaluations || []).filter((e) => !isPoll(e));
   if (!ev.length) return null;
-  const concerns = ev.filter((e) => e.noted_concern).map((e) => ({ by: e.by_short, text: e.noted_concern! }));
-  const strengths = ev.filter((e) => e.noted_strength).map((e) => ({ by: e.by_short, text: e.noted_strength! }));
+  const concerns = ev.filter((e) => e.noted_concern).map((e) => ({ by: e.by_short, text: e.noted_concern!, reason: ['declined', 'unrated'].includes(evalState(e)) }));
+  const strengths = ev.map((e) => ({ by: e.by_short, text: strengthOf(e) })).filter((x): x is { by: string; text: string } => !!x.text);
   const links = ev.filter((e, i, a) => a.findIndex((x) => x.url === e.url) === i).slice(0, 4).map((e) => ({ label: `${e.by_short}: the full review`, url: e.url }));
   const off = ev.find(isOfficial);
   if (off) {
     const against = voteAgainst(off.vote);
-    const tone: Review['tone'] = off.verdict === 'favorable' ? (against ? 'mixed' : 'fav') : off.verdict === 'unfavorable' ? 'unfav' : 'mixed';
+    const st = evalState(off);
+    const tone: Review['tone'] = st === 'yes' ? (against ? 'mixed' : 'fav') : st === 'no' ? 'unfav' : st === 'mixed' ? 'mixed' : 'none';
     const verbal = /^(meets|does not meet|substantially meets|exceeds)\b/i.test(off.rating);
+    const tally = /^\s*\d+\s*[-–]\s*\d+\s*$/.test(off.vote || '') ? off.vote : null;
+    const note = off.vote_note && tally ? ` (${off.vote_note.replace(/\.$/, '')})` : '';
     const line = verbal
-      ? `${off.by} ${off.vote ? `voted ${off.vote}` : 'found'} that Judge ${lastName(c)} ${off.rating.toLowerCase()}.`
-      : `${off.by}: ${off.rating}${off.vote ? ` (vote ${off.vote})` : ''}.`;
-    return { main: shortRating(off), sub: [off.by_short, off.vote].filter(Boolean).join(' '), tone, line, split: against > 0, concerns, strengths, links };
+      ? `${off.by} ${tally ? `voted ${tally}` : 'found'}${note} that Judge ${nameOf(c)} ${off.rating.toLowerCase()}.`
+      : `${off.by}: ${off.rating}${tally ? ` (vote ${tally})` : ''}.${off.vote_note && !tally ? ` ${off.vote_note}` : ''}`;
+    return { main: shortRating(off), sub: [off.by_short, tally].filter(Boolean).join(' '), tone, line, split: against > 0, concerns, strengths, links };
   }
-  const bars = ev.filter((e) => e.kind === 'bar_group');
-  if (bars.length > 1) {
-    const no = bars.filter((e) => e.verdict === 'unfavorable');
-    const yes = bars.filter((e) => e.verdict === 'favorable');
-    const tone: Review['tone'] = !no.length ? 'fav' : no.length * 2 > bars.length ? 'unfav' : 'mixed';
-    const main = no.length ? `${no.length} of ${bars.length} say no` : `${yes.length} of ${bars.length} say keep`;
-    const line = no.length
-      ? `${no.length} of ${bars.length} bar groups say don’t keep Judge ${lastName(c)}: ${no.map((e) => e.by_short).join(', ')}. ${yes.length} say keep.`
-      : `All ${bars.length} bar groups that rated Judge ${lastName(c)} say keep.`;
-    return { main, sub: 'bar groups', tone, line, split: no.length > 0 && yes.length > 0, concerns, strengths, links };
+  const groups = ev.filter((e) => e.kind === 'bar_group');
+  if (groups.length > 1) {
+    const by = (s: EvalState) => groups.filter((e) => evalState(e) === s);
+    const yes = by('yes'), no = by('no'), declined = by('declined'), unrated = by('unrated'), mixed = by('mixed');
+    const rated = yes.length + no.length + mixed.length;
+    const who = nameOf(c);
+    let main: string; let tone: Review['tone'];
+    if (!rated) { main = declined.length ? 'Declined screening' : 'Not rated'; tone = 'none'; }
+    else if (no.length) { main = `${no.length} of ${rated} say no`; tone = no.length * 2 > rated ? 'unfav' : 'mixed'; }
+    else { main = `${yes.length} of ${rated} recommend`; tone = mixed.length ? 'mixed' : 'fav'; }
+    const parts = [
+      yes.length ? `${yes.length === groups.length ? `all ${yes.length}` : yes.length} recommend ${who}${yes.length <= 3 ? ` (${listNames(yes)})` : ''}` : '',
+      no.length ? `${no.length} do not (${listNames(no)})` : '',
+      mixed.length ? `${mixed.length} give a mixed rating (${listNames(mixed)})` : '',
+      declined.length ? `${declined.length} list ${who} as not recommended because the candidate did not take part in their screening${declined.length <= 4 ? ` (${listNames(declined)})` : ''}` : '',
+      unrated.length ? `${unrated.length} did not rate ${who} (${listNames(unrated)})` : '',
+    ].filter(Boolean);
+    const sub = declined.length && rated ? `bar groups; ${declined.length} did not take part` : 'bar groups';
+    return { main, sub, tone, line: `Of ${groups.length} bar groups: ${parts.join('; ')}.`, split: no.length > 0 && yes.length > 0, concerns, strengths, links };
   }
   const e = ev[0];
-  const tone: Review['tone'] = e.verdict === 'favorable' ? 'fav' : e.verdict === 'unfavorable' ? 'unfav' : 'mixed';
+  const st = evalState(e);
+  const tone: Review['tone'] = st === 'yes' ? 'fav' : st === 'no' ? 'unfav' : st === 'mixed' ? 'mixed' : 'none';
   return { main: shortRating(e), sub: e.by_short, tone, line: `${e.by}: ${e.rating}.`, split: false, concerns, strengths, links };
 }
 
@@ -77,13 +131,39 @@ export function judgeReview(it: Contest): Review | null {
   };
 }
 
+/* ---------- lawyer preference polls (Texas): counts side by side, no tone ---------- */
+export interface Poll { by: string; by_short: string; label: string; caveat: string; url: string; counts: { name: string; short: string; votes: number | null }[] }
+export function pollsFor(c: Contest): Poll[] {
+  const out = new Map<string, Poll>();
+  for (const k of c.candidates) {
+    for (const e of (k.evaluations || []).filter(isPoll)) {
+      let p = out.get(e.by);
+      if (!p) {
+        const m = e.rating.match(/^(.*?):\s*[\d,]+\s+votes?\.\s*(.*)$/);
+        p = { by: e.by, by_short: e.by_short, label: m ? m[1].trim() : e.rating, caveat: m ? m[2].trim() : '', url: e.url, counts: [] };
+        out.set(e.by, p);
+      }
+      const n = parseInt(String(e.vote || '').replace(/,/g, ''), 10);
+      p.counts.push({ name: k.name, short: k.short, votes: Number.isFinite(n) ? n : null });
+    }
+  }
+  // Every candidate in the race appears in every poll's line, so a missing count shows as such.
+  for (const p of out.values()) for (const k of c.candidates) if (!p.counts.some((x) => x.name === k.name)) p.counts.push({ name: k.name, short: k.short, votes: null });
+  return [...out.values()];
+}
+export const hasRatings = (c: Contest): boolean => c.candidates.some((k) => (k.evaluations || []).length > 0);
+/* Bar ratings for a contested race, one line per candidate who has any. */
+export function raceRatings(c: Contest): { name: string; review: Review }[] {
+  return c.candidates.map((k) => ({ name: k.name, review: candidateReview(k) })).filter((x): x is { name: string; review: Review } => !!x.review);
+}
+
 export const judicialReview = (): JudicialReview | null => S.ballot?.howto.judicial_review || null;
 
 /* ---------- the batch: keep every judge the review favors ---------- */
 export interface JudgeBatch {
   label: string;
   targets: { key: string; id: string; name: string }[];
-  readFirst: { id: string; name: string; why: string }[];   // split votes and noted concerns, listed for a careful voter
+  readFirst: { id: string; name: string; why: string }[];   // split votes, concerns, groups that said no or did not rate
   left: number;                                            // judges the batch leaves alone
 }
 export function judgeBatch(): JudgeBatch | null {
@@ -99,28 +179,31 @@ export function judgeBatch(): JudgeBatch | null {
     }
   }
   if (!open.length) return null;
-  const withOfficial = open.filter((x) => (x.c.evaluations || []).some(isOfficial));
-  const withBars = open.filter((x) => (x.c.evaluations || []).filter((e) => e.kind === 'bar_group').length > 1);
+  const evs = (c: Candidate) => (c.evaluations || []).filter((e) => !isPoll(e));
+  const withOfficial = open.filter((x) => evs(x.c).some(isOfficial));
+  const withBars = open.filter((x) => evs(x.c).filter((e) => e.kind === 'bar_group').length > 1);
   let targets: typeof open = [];
   let label = '';
   const readFirst: JudgeBatch['readFirst'] = [];
   if (withOfficial.length) {
-    targets = withOfficial.filter((x) => (x.c.evaluations || []).find(isOfficial)!.verdict === 'favorable');
-    const ratings = targets.map((x) => (x.c.evaluations || []).find(isOfficial)!.rating);
-    const common = ratings.sort((a, c) => ratings.filter((r) => r === c).length - ratings.filter((r) => r === a).length)[0] || '';
+    targets = withOfficial.filter((x) => evalState(evs(x.c).find(isOfficial)!) === 'yes');
+    const ratings = targets.map((x) => evs(x.c).find(isOfficial)!.rating);
+    const common = [...ratings].sort((a, c) => ratings.filter((r) => r === c).length - ratings.filter((r) => r === a).length)[0] || '';
     label = `Keep every judge the review rated “${common.toLowerCase()}”`;
     for (const x of withOfficial) {
-      const off = (x.c.evaluations || []).find(isOfficial)!;
-      const why = [voteAgainst(off.vote) ? `a ${off.vote} vote` : '', (x.c.evaluations || []).some((e) => e.noted_concern) ? 'a noted concern' : '', off.verdict !== 'favorable' ? off.rating.toLowerCase() : ''].filter(Boolean).join(' and ');
+      const off = evs(x.c).find(isOfficial)!;
+      const why = [voteAgainst(off.vote) ? `a ${off.vote} vote` : '', evs(x.c).some((e) => e.noted_concern) ? 'a noted concern' : '', evalState(off) !== 'yes' ? off.rating.toLowerCase() : ''].filter(Boolean).join(' and ');
       if (why) readFirst.push({ id: x.it.id, name: x.c.name, why });
     }
   } else if (withBars.length) {
-    targets = withBars.filter((x) => (x.c.evaluations || []).filter((e) => e.kind === 'bar_group').every((e) => e.verdict === 'favorable'));
-    label = 'Keep every judge all the bar groups recommend';
+    const st = (x: (typeof open)[number]) => evs(x.c).filter((e) => e.kind === 'bar_group').map(evalState);
+    targets = withBars.filter((x) => { const s = st(x); return s.includes('yes') && s.every((v) => v === 'yes' || v === 'unrated'); });
+    label = 'Keep every judge all the rating bar groups recommend';
     for (const x of withBars) {
-      const bars = (x.c.evaluations || []).filter((e) => e.kind === 'bar_group');
-      const no = bars.filter((e) => e.verdict === 'unfavorable').length;
-      if (no) readFirst.push({ id: x.it.id, name: x.c.name, why: `${no} of ${bars.length} groups say no` });
+      const s = st(x);
+      const no = s.filter((v) => v === 'no').length, dec = s.filter((v) => v === 'declined').length;
+      const why = [no ? `${no} of ${s.length} groups say no` : '', dec ? `${dec} list the judge as not recommended for not taking part in screening` : ''].filter(Boolean).join(' and ');
+      if (why) readFirst.push({ id: x.it.id, name: x.c.name, why });
     }
   } else return null;
   if (!targets.length) return null;

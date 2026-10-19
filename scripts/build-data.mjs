@@ -49,7 +49,8 @@ const stripNotes = (t) => t.split(/(?<=[.;!?])\s+/).filter((x) => !META.test(x.t
    Every one is optional. A bad shape warns and drops that field; it never drops the record. */
 const EVAL_KINDS = ['official_commission', 'bar_group', 'bar_poll', 'bar_committee'];
 const VERDICTS = ['favorable', 'unfavorable', 'mixed', 'none'];
-const pct = (x) => (x && Number.isFinite(x.yes_pct) && x.yes_pct >= 0 && x.yes_pct <= 100 ? { yes_pct: x.yes_pct, n: Number.isInteger(x.n) ? x.n : null } : null);
+const pctOk = (v) => Number.isFinite(v) && v >= 0 && v <= 100;
+const pct = (x) => (x && pctOk(x.yes_pct) ? { yes_pct: x.yes_pct, no_pct: pctOk(x.no_pct) ? x.no_pct : null, n: Number.isInteger(x.n) ? x.n : null } : null);
 function evaluations(list, where) {
   if (list == null) return [];
   if (!Array.isArray(list)) { warn(`${where}: evaluations is not a list; dropped it`); return []; }
@@ -58,12 +59,16 @@ function evaluations(list, where) {
     if (!e || !isStr(e.by) || !isStr(e.rating) || !VERDICTS.includes(e.verdict)) { warn(`${where}: an evaluation is missing by, rating or a valid verdict; dropped it`); continue; }
     const url = safeUrl(e.url);
     if (!url) { warn(`${where}: an evaluation by ${e.by} has no source URL; dropped it`); continue; }
-    const sv = e.survey && typeof e.survey === 'object' ? { question: str(e.survey.question), attorneys: pct(e.survey.attorneys), non_attorneys: pct(e.survey.non_attorneys) } : null;
+    const sv = e.survey && typeof e.survey === 'object' ? {
+      question: str(e.survey.question), attorneys: pct(e.survey.attorneys), non_attorneys: pct(e.survey.non_attorneys), judges: pct(e.survey.judges),
+      report_url: safeUrl(e.survey.report_url), caution: str(e.survey.caution),
+    } : null;
     out.push({
       by: e.by.trim(), by_short: str(e.by_short) || e.by.trim(),
       kind: EVAL_KINDS.includes(e.kind) ? e.kind : 'bar_group',
       rating: e.rating.trim(), verdict: e.verdict, vote: str(e.vote),
-      survey: sv && (sv.attorneys || sv.non_attorneys) ? sv : null,
+      survey: sv && (sv.attorneys || sv.non_attorneys || sv.judges) ? sv : null,
+      vote_note: str(e.vote_note), survey_note: str(e.survey_note),
       noted_strength: str(e.noted_strength), noted_concern: str(e.noted_concern),
       url, verified_on: isDate(e.verified_on) ? e.verified_on : null, confidence: conf(e.confidence),
     });

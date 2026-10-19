@@ -30,13 +30,23 @@ export interface Evaluation {
   rating: string;
   verdict: 'favorable' | 'unfavorable' | 'mixed' | 'none';
   vote: string | null;
-  survey: { question: string | null; attorneys: { yes_pct: number; n: number | null } | null; non_attorneys: { yes_pct: number; n: number | null } | null } | null;
+  survey: {
+    question: string | null;
+    attorneys: SurveyRow | null; non_attorneys: SurveyRow | null; judges: SurveyRow | null;
+    report_url: string | null; caution: string | null;
+  } | null;
+  vote_note: string | null;
+  survey_note: string | null;
   noted_strength: string | null;
   noted_concern: string | null;
   url: string;
   verified_on: string | null;
   confidence: Confidence;
 }
+
+/* One group's answers to the review's yes-or-no question. n counts everyone who answered it,
+   including "no opinion", so yes and no need not add to 100. */
+export interface SurveyRow { yes_pct: number; no_pct: number | null; n: number | null }
 
 /* A short note on a known confusion point, shown once where it applies. */
 export interface HeadsUp { text: string; applies_to: string; source?: string | null }

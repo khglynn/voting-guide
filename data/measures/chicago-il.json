@@ -25,7 +25,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Millionaire tax and property tax reductions"
   },
   {
     "id": "il-chicago-gunshot-detection-advisory",
@@ -53,7 +54,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Bringing back gunshot detection"
   },
   {
     "id": "il-chicago-festival-space-advisory",
@@ -81,7 +83,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Permanent outdoor festival venue"
   },
   {
     "id": "il-chicago-ice-cost-recovery-advisory",
@@ -109,7 +112,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Recovering costs of immigration enforcement"
   },
   {
     "id": "il-cps-millionaire-surcharge-advisory",
@@ -137,7 +141,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Millionaire tax for schools"
   },
   {
     "id": "il-cps-vacant-property-charge-advisory",
@@ -165,7 +170,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Vacant property fees for schools"
   },
   {
     "id": "il-chicago-mid-northside-mental-health-program",
@@ -186,7 +192,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://chicagoelections.gov/getting-ballot/referenda-local-options",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mid-Northside mental health program"
   },
   {
     "id": "il-chicago-mid-northside-mental-health-2027-levy",
@@ -207,7 +214,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://chicagoelections.gov/getting-ballot/referenda-local-options",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mid-Northside mental health tax limit"
   },
   {
     "id": "il-chicago-far-southwest-side-mental-health-program",
@@ -228,7 +236,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://chicagoelections.gov/getting-ballot/referenda-local-options",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Far Southwest mental health program"
   },
   {
     "id": "il-chicago-far-southwest-side-mental-health-2027-levy",
@@ -249,7 +258,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://chicagoelections.gov/getting-ballot/referenda-local-options",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Far Southwest mental health tax limit"
   },
   {
     "id": "il-chicago-ward-4-jackson-statue-advisory",
@@ -277,7 +287,8 @@
         "url": "https://blockclubchicago.org/2026/10/14/from-millionaires-tax-to-public-fairgrounds-you-can-vote-on-these-ballot-questions-in-november/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Jesse Jackson statue"
   },
   {
     "id": "il-chicago-ward-26-shared-housing-advisory",
@@ -298,7 +309,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-01/Advisory%20Referenda%20Guidelines%202026.pdf",
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Limits on short-term rentals"
   },
   {
     "id": "il-chicago-lakefront-national-park-advisory",
@@ -319,7 +331,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-01/Advisory%20Referenda%20Guidelines%202026.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Lakefront national park designation"
   },
   {
     "id": "il-chicago-south-works-remediation-advisory",
@@ -340,7 +353,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-01/Advisory%20Referenda%20Guidelines%202026.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "South Works site cleanup"
   },
   {
     "id": "il-chicago-south-works-quantum-spending-advisory",
@@ -361,7 +375,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-01/Advisory%20Referenda%20Guidelines%202026.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "South Works quantum computing funding"
   },
   {
     "id": "il-chicago-corporate-tax-youth-jobs-advisory",
@@ -382,7 +397,8 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-01/Advisory%20Referenda%20Guidelines%202026.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Corporate tax for community programs"
   },
   {
     "id": "il-chicago-ward-21-precinct-10-liquor-local-option",
@@ -403,6 +419,7 @@
     "opponents_case": null,
     "official_text_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf",
     "official_guide_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-02/2026%20Local%20Option%20Guidelines.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Keeping the local alcohol sales ban"
   }
 ]

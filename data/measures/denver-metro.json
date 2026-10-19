@@ -31,7 +31,8 @@
         "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2h-auditors-office-voter-guide/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Auditor enforcement of wage laws"
   },
   {
     "id": "denver-2i",
@@ -65,7 +66,8 @@
         "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2i-biennial-budgeting-voter-guide/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City budget process"
   },
   {
     "id": "denver-2j",
@@ -99,7 +101,8 @@
         "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2j-police-fire-employees-voter-guide/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Police and fire personnel rules"
   },
   {
     "id": "denver-2k",
@@ -133,7 +136,8 @@
         "url": "https://denverite.com/2026/09/25/vg-2026-referred-question-2k-xcel-energy-franchise-agreement-voter-guide/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Xcel power and gas agreement"
   },
   {
     "id": "denver-311",
@@ -167,7 +171,8 @@
         "url": "https://denverite.com/2026/09/25/vg-2026-initiated-ordinance-311-force-feeding-birds-ban-voter-guide/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Foie gras sales ban"
   },
   {
     "id": "denver-dps-4a",
@@ -206,7 +211,8 @@
         "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-denver-public-schools-ballot-issue-4a/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Denver school operating tax"
   },
   {
     "id": "co-frpr-7a",
@@ -245,7 +251,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-ballot-measure-7a-front-range-rail/"
       }
     ],
-    "confidence": "sourced"
+    "confidence": "sourced",
+    "short_title": "Passenger rail tax and bonds"
   },
   {
     "id": "aurora-3a",
@@ -272,7 +279,8 @@
     },
     "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Library and recreation tax and bonds"
   },
   {
     "id": "aurora-3b",
@@ -299,7 +307,8 @@
     },
     "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Public safety tax and bonds"
   },
   {
     "id": "aurora-3c",
@@ -326,7 +335,8 @@
     },
     "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Road tax and bonds"
   },
   {
     "id": "aurora-3d",
@@ -353,7 +363,8 @@
     },
     "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City election years"
   },
   {
     "id": "lakewood-2g",
@@ -380,7 +391,8 @@
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "City sales tax increase"
   },
   {
     "id": "lakewood-2h",
@@ -401,7 +413,8 @@
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mayor and council swearing-in dates"
   },
   {
     "id": "lakewood-2i",
@@ -422,7 +435,8 @@
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Property tax vote requirement"
   },
   {
     "id": "lakewood-2j",
@@ -443,7 +457,8 @@
     "opponents_case": null,
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Citizen petition election timing"
   },
   {
     "id": "arvada-fire-6c",
@@ -470,7 +485,8 @@
     },
     "official_text_url": "https://www.jeffco.us/4652/On-the-Ballot",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Fire district sales tax"
   },
   {
     "id": "jeffco-schools-5a",
@@ -504,7 +520,8 @@
         "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-jeffco-public-schools-ballot-issues-5a-5b/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Jeffco school operating tax"
   },
   {
     "id": "jeffco-schools-5b",
@@ -538,7 +555,8 @@
         "url": "https://www.chalkbeat.org/colorado/2026/10/07/voter-guide-jeffco-public-schools-ballot-issues-5a-5b/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Jeffco school building repair tax"
   },
   {
     "id": "littleton-schools-4a",
@@ -565,7 +583,8 @@
     },
     "official_text_url": "https://files.arapahoeco.gov/Clerk%20and%20Recorder/ArapahoeVotes/Documents-Articles/2026%20Sample%20Ballots/2026%20Arapahoe%20County%20General%20Election%20Sample%20Ballot%20-%20English.pdf?t=202609211726230",
     "official_guide_url": null,
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Littleton school operating tax"
   },
   {
     "id": "thornton-2a",
@@ -592,7 +611,8 @@
     },
     "official_text_url": "https://www.thorntonco.gov/",
     "official_guide_url": null,
-    "confidence": "unverified"
+    "confidence": "unverified",
+    "short_title": "Resigning to seek another office"
   },
   {
     "id": "adams-broomfield-da-7e",
@@ -619,7 +639,8 @@
     },
     "official_text_url": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf",
     "official_guide_url": "https://broomfield.org/DocumentCenter/View/69259",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "District attorney term limits"
   },
   {
     "id": "westminster-schools-4a",
@@ -646,6 +667,7 @@
     },
     "official_text_url": "https://www.adamsvotes.gov/",
     "official_guide_url": null,
-    "confidence": "unverified"
+    "confidence": "unverified",
+    "short_title": "Westminster school tax collection limit"
   }
 ]

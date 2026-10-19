@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://www.sos.mo.gov/CMSImages/Elections/Petitions/2026Referendums/2026-R004.pdf",
     "official_guide_url": "https://www.sos.mo.gov/elections/petitions/2026BallotMeasures",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Congressional district map"
   },
   {
     "id": "mo-amendment-3",
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://www.sos.mo.gov/CMSImages/Elections/Petitions/HCSHJR73-SignedCopy.pdf",
     "official_guide_url": "https://www.sos.mo.gov/elections/petitions/2026BallotMeasures",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Abortion and gender transition rules"
   },
   {
     "id": "mo-amendment-6",
@@ -78,7 +80,8 @@
     },
     "official_text_url": "https://www.sos.mo.gov/CMSImages/Elections/Petitions/2026-106.pdf",
     "official_guide_url": "https://www.sos.mo.gov/elections/petitions/2026BallotMeasures",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Changing voter-approved laws"
   },
   {
     "id": "mo-amendment-7",
@@ -105,7 +108,8 @@
     },
     "official_text_url": "https://www.sos.mo.gov/CMSImages/Elections/Petitions/SSSCSSJR95-SignedCopy.pdf",
     "official_guide_url": "https://www.sos.mo.gov/elections/petitions/2026BallotMeasures",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "State investment fund"
   },
   {
     "id": "mo-amendment-8",
@@ -132,6 +136,7 @@
     },
     "official_text_url": "https://www.sos.mo.gov/CMSImages/Elections/Petitions/CCSHCSSSSJR87-SignedCopy.pdf",
     "official_guide_url": "https://www.sos.mo.gov/elections/petitions/2026BallotMeasures",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Elected county sheriffs"
   }
 ]

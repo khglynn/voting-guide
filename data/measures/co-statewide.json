@@ -36,7 +36,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-81-local-law-enforcement-ice/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Police reporting to immigration authorities"
   },
   {
     "id": "co-amendment-82",
@@ -75,7 +76,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-82-natural-gas-right/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Right to buy natural gas"
   },
   {
     "id": "co-amendment-83",
@@ -114,7 +116,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-83-right-to-hunt-fish/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Right to hunt and fish"
   },
   {
     "id": "co-amendment-84",
@@ -153,7 +156,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-initiative-362-mail-ballot-id/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Mail ballot identification requirements"
   },
   {
     "id": "co-amendment-85",
@@ -192,7 +196,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-initiative-234-plain-language-ballot-questions/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Plain language ballot titles"
   },
   {
     "id": "co-amendment-86",
@@ -231,7 +236,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-86-redistricting/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Redistricting between censuses"
   },
   {
     "id": "co-amendment-87",
@@ -245,7 +251,7 @@
     "no_means": "Keeps the constitutional requirement for a single flat income tax rate (currently 4.4%).",
     "current_law": "Since 1987 Colorado has taxed all income at one flat rate; TABOR (Article X, Section 20 of the constitution) requires a single rate. The rate is 4.4%, approved by voters in 2022. Any tax rate increase already requires voter approval.",
     "fiscal_impact": "Blue Book: rates would be 3.7% on taxable income up to $25,000; 4.2% to $100,000; 4.4% to $500,000; 7.4% to $750,000; 7.9% to $1 million; 8.4% above that. Brackets aren't adjusted for inflation. Raises state income tax revenue by an estimated $958.4 million in 2026-27 (half year) and $1.972 billion in 2027-28, growing with income and population. The $2.7 billion figure in the title is the legally required maximum estimate for the first full year. Average change by federal AGI: average cuts of $1 to $325 in every income group under $1 million (for example, $194 less at $50,000 to $69,999; $325 less at $150,000 to $499,999); an average increase of $26,085 for the roughly 46,000 taxpayers with AGI of $1 million or more. No effect on current TABOR refunds or refund mechanisms. One-time $98,000 cost at the Department of Revenue. More state money flows to school districts, in amounts the legislature decides.",
-    "pass_threshold": "Simple majority (constitutional amendment, but it only repeals existing constitutional language, so the 55% rule does not apply)",
+    "pass_threshold": "Simple majority (the constitutional change only repeals existing language)",
     "referred_by": "citizen_initiative",
     "confusing_wording_note": "Three things to know. (1) The opening 'Shall state taxes be increased $2.7 billion' is required for any tax increase, but the table under the title shows the average taxpayer in every income group under $1 million would pay less. (2) It conflicts with Proposition 136, a 4.4% cap. If both pass, the one with more votes generally controls, but the Blue Book says the outcome is unclear and the legislature or a court would decide. If you want a graduated tax, the consistent vote is Yes on 87 and No on 136; to keep the flat tax, No on 87 and Yes on 136. (3) It needs a simple majority, not 55%, because its constitutional change only removes existing language.",
     "supporters_case": {
@@ -270,7 +276,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-amendment-87-graduated-income-tax/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Income tax brackets"
   },
   {
     "id": "co-proposition-nn",
@@ -309,7 +316,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-nn-tabor-school-funding/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "State revenue cap and education"
   },
   {
     "id": "co-proposition-132",
@@ -348,7 +356,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-132-increase-fentanyl-penalties/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Fentanyl crime penalties"
   },
   {
     "id": "co-proposition-133",
@@ -387,7 +396,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-133-life-in-prison-trafficking/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Child sex trafficking penalties"
   },
   {
     "id": "co-proposition-134",
@@ -426,7 +436,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-134-trans-students-sports/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Sex categories in school sports"
   },
   {
     "id": "co-proposition-135",
@@ -465,7 +476,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-135-minor-gender-affirming-surgeries/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Surgery to alter minors’ sex characteristics"
   },
   {
     "id": "co-proposition-136",
@@ -504,7 +516,8 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-136-income-tax-rate-cap/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Income tax rate limit"
   },
   {
     "id": "co-proposition-137",
@@ -543,6 +556,7 @@
         "url": "https://www.cpr.org/2026/09/25/vg-2026-prop-137-sporting-goods-sales-tax/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Sporting goods taxes for conservation"
   }
 ]

@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf",
     "official_guide_url": "https://www.fultonschools.org/fs/pages/41555",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Fulton school sales tax renewal"
   },
   {
     "id": "dekalb-esplost-vii",
@@ -45,7 +46,8 @@
     "opponents_case": null,
     "official_text_url": "https://dekalbcountyga.gov/sites/default/files/2026-09/sample-booklet.pdf",
     "official_guide_url": "https://www.dekalbschoolsga.org/superintendent/esplost",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "DeKalb school sales tax renewal"
   },
   {
     "id": "fulton-tsplost-2026",
@@ -72,6 +74,7 @@
     },
     "official_text_url": "https://www.fultoncountyga.gov/-/media/2026-Election/November-3-Election/Sample-Ballot--Consolidated--Nov-32026-General--Special-Election--1082026.pdf",
     "official_guide_url": "https://fultoncountyga.gov/tsplost/",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Fulton transportation sales tax renewal"
   }
 ]

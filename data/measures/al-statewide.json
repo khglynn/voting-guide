@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-1.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Lieutenant governor vacancies and legislative spending"
   },
   {
     "id": "al-amendment-2",
@@ -51,7 +52,8 @@
     },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-2.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Merging county school systems"
   },
   {
     "id": "al-amendment-3",
@@ -78,7 +80,8 @@
     },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-3.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "School pledge and student prayer"
   },
   {
     "id": "al-amendment-4",
@@ -105,6 +108,7 @@
     },
     "official_text_url": "https://www.sos.alabama.gov/sites/default/files/2026-08/FBCStatewideAmendment-4.pdf",
     "official_guide_url": "https://www.sos.alabama.gov/sites/default/files/sample-ballots/2026/gen/2026GeneralElectionStatewideBack.pdf",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "National anthem in schools"
   }
 ]

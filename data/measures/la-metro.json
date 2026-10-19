@@ -31,7 +31,8 @@
     "url": "https://laist.com/news/politics/voter-guides/laist-los-angeles-city-voter-game-plan-prop-te"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Fire victim property sale tax exemption"
  },
  {
   "id": "la-city-charter-la",
@@ -65,7 +66,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-los-angeles-charter-amendment-la"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "City infrastructure and budget rules"
  },
  {
   "id": "la-city-charter-pl",
@@ -99,7 +101,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-pl-planning-process"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "City planning approval process"
  },
  {
   "id": "la-city-charter-ee",
@@ -133,7 +136,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-ee"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "City ethics and election rules"
  },
  {
   "id": "la-city-charter-prk",
@@ -167,7 +171,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-charter-amendment-prk"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Minimum parks budget"
  },
  {
   "id": "la-city-charter-prt",
@@ -201,7 +206,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-charter-amendment-prt-guide"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Airport, port and utility department rules"
  },
  {
   "id": "la-city-ordinance-fd",
@@ -235,7 +241,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-general-los-angeles-measure-fd-sales-tax"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Fire department sales tax"
  },
  {
   "id": "la-city-charter-sc",
@@ -269,7 +276,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-city-charter-amendment-sc-guide"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "School board campaign finance rules"
  },
  {
   "id": "la-county-measure-a",
@@ -303,7 +311,8 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-your-la-county-measure-a-binding-arbitration"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "County public safety labor arbitration"
  },
  {
   "id": "la-county-measure-e",
@@ -337,6 +346,7 @@
     "url": "https://laist.com/news/politics/voter-guides/2026-election-california-general-la-county-measure-e-ethics-comission-measure-j"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "County ethics and community spending"
  }
 ]

@@ -36,7 +36,8 @@
     "url": "https://www.wtxl.com/downtown-tallahassee/leon-county-commission-approves-charter-amendment-to-expand-county-authority"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "County rules overriding city rules"
  },
  {
   "id": "fl-leon-charter-street-naming",
@@ -70,7 +71,8 @@
     "url": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Countywide street naming rules"
  },
  {
   "id": "fl-leon-charter-human-dignity",
@@ -97,7 +99,8 @@
   },
   "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Reflect%20the%20Esteemed%20Humanity%20of%20All%20Residents%20of%20Leon%20County.pdf",
   "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Human dignity charter statement"
  },
  {
   "id": "fl-leon-charter-statutory-references",
@@ -124,7 +127,8 @@
   },
   "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Update%20Subsection%205.2(2)%20of%20the%20Leon%20County%20Charter-1.pdf",
   "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Charter review procedures"
  },
  {
   "id": "fl-leon-charter-community-impact",
@@ -151,7 +155,8 @@
   },
   "official_text_url": "https://www.leonvotes.gov/Portals/0/adam/Basic%20Content/DyYGE6fdZU6vRp7OrRaGsw/Text/Ordinance%20to%20Place%20Proposed%20Historic%20Harm%20Charter%20Amendment%20on%20General%20Election%20Ballot%20to%20Establish%20.pdf",
   "official_guide_url": "https://www.leonvotes.gov/Voting/Election-Ready/General-Election-Ballot-Questions",
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "Studies of county policy impacts"
  },
  {
   "id": "fl-leon-school-surtax",
@@ -190,7 +195,8 @@
     "url": "https://www.wctv.tv/2026/05/08/leon-county-schools-seek-extension-half-cent-sales-tax-increase-property-tax-rate/"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "School sales tax renewal"
  },
  {
   "id": "fl-leon-school-millage",
@@ -229,7 +235,8 @@
     "url": "https://www.wtxl.com/northwest-tallahassee/leon-county-school-leaders-push-to-renew-half-cent-sales-tax-before-2027-expiration"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "School property tax for staff pay"
  },
  {
   "id": "fl-leon-consolidation-straw-ballot",
@@ -263,6 +270,7 @@
     "url": "https://www.wctv.tv/2026/03/10/voters-decide-if-they-support-consolidation-functioning-under-leon-county-government/"
    }
   ],
-  "confidence": "verified"
+  "confidence": "verified",
+  "short_title": "County and city merger planning"
  }
 ]

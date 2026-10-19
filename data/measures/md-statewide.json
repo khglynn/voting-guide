@@ -24,7 +24,8 @@
     },
     "official_text_url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0604/?ys=2026rs",
     "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "State employee contract funding"
   },
   {
     "id": "md-question-2",
@@ -45,7 +46,8 @@
     "opponents_case": null,
     "official_text_url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0933?ys=2026RS",
     "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Temporary judicial discipline commissioners"
   },
   {
     "id": "md-question-3",
@@ -72,6 +74,7 @@
     },
     "official_text_url": "https://mgaleg.maryland.gov/2026RS/bills/hb/hb2100t.pdf",
     "official_guide_url": "https://elections.maryland.gov/elections/2026/ballot_questions.html",
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Congressional redistricting rules"
   }
 ]

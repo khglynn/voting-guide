@@ -31,7 +31,8 @@
         "url": "https://www.kpbs.org/news/politics/2026/09/30/measure-a-extending-supervisor-term-limits-and-other-county-charter-reforms"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "County oversight and supervisor term limits"
   },
   {
     "id": "sd-county-measure-b",
@@ -65,7 +66,8 @@
         "url": "https://www.kpbs.org/news/politics/2026/10/01/measure-b-san-diego-county-health-safety-act"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "County health and safety sales tax"
   },
   {
     "id": "sdusd-measure-m",
@@ -99,6 +101,7 @@
         "url": "https://www.nbcsandiego.com/elections/san-diego-school-bonds-november-ballot-districts-seek-billions-for-campus-upgrades/4086962/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "School repair and staff housing bonds"
   }
 ]

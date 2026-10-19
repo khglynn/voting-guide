@@ -25,7 +25,8 @@
     "official_text_url": "https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB308-enr.pdf",
     "official_guide_url": null,
     "explainers": [],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Senior property tax freeze and exemption"
   },
   {
     "id": "mobile-county-payg-bonds",
@@ -59,6 +60,7 @@
         "url": "https://www.fox10tv.com/2026/10/13/mobile-county-pay-as-you-go-road-plan-nov-3-ballot/"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "short_title": "Road and bridge bonds"
   }
 ]

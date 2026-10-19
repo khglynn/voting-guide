@@ -5,7 +5,7 @@ import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
 import { zipState, censusLookup, placeFromGeo, type GeoResult } from './geo';
-import { toast } from './util';
+import { toast, hideToast } from './util';
 import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
@@ -51,6 +51,7 @@ export function go(view: View, push = true): void {
   if (S.ui.view === view) return;
   S.ui.view = view;
   S.ui.reader = null; S.ui.sheet = null;
+  hideToast(); // a toast belongs to the view it was raised on
   if (push) { try { history.pushState({ vg: view }, '', location.pathname + location.search); } catch { /* ignore */ } }
   render();
   if (view === 'cheat') render(['print']);
@@ -105,6 +106,12 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
         && JSON.stringify(existing.ranks) === JSON.stringify(state.ranks);
       if (existing && m > 0 && !same) {
         S.pending = { kind: 'restore', key: ballot.key, incoming: state, summary: `This link has ${n} ${n === 1 ? 'pick' : 'picks'}. This device already has ${m} saved for this ballot. Which do you want to keep?` };
+      } else if (!existing || m === 0) {
+        // A device that had nothing here: show the picks, and say plainly where they came from.
+        S.b = state;
+        const where = ballot.places.length ? ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : ballot.stateName;
+        if (n) S.pending = { kind: 'shared', key: ballot.key, incoming: state, summary: `This link brought ${n} ${n === 1 ? 'pick' : 'picks'} for ${where}${dropped ? ` (${dropped} couldn’t be matched to today’s data)` : ''}. If a friend shared them, keep them as a start or start fresh.` };
+        else toast('Opened the ballot from your link.');
       } else {
         S.b = state;
         toast(`Restored ${n} ${n === 1 ? 'pick' : 'picks'} from your link.${dropped ? ` ${dropped} couldn’t be matched to today’s data.` : ''}`);

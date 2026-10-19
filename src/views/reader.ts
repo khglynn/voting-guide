@@ -104,7 +104,7 @@ function raceRead(c: Contest): string {
   const r = rowTitle(c);
   return `<span class="num">${esc(sectionTitle(sectionOf(c)))}</span><h2>${esc(r.title)}</h2>${r.sub ? `<p class="facts">${esc(r.sub)}</p>` : ''}
     ${c.office_explainer ? `<p class="lede">${escP(c.office_explainer)}</p>` : ''}
-    <p class="facts">${[escP(c.scope_plain), c.term_years ? `${c.term_years}-year term.` : '', c.open_seat ? 'Open seat: no incumbent running.' : c.incumbent ? `Now held by ${esc(c.incumbent)}.` : '', !isPartisan(c) ? 'Nonpartisan race: no party labels on the ballot.' : ''].filter(Boolean).join(' ')}</p>
+    <p class="facts">${[c.scope_plain ? escP(c.scope_plain.replace(/\s*$/, '').replace(/([^.!?])$/, '$1.')) : '', c.term_years ? `${c.term_years}-year term.` : '', c.open_seat ? 'Open seat: no incumbent running.' : c.incumbent ? `Now held by ${esc(c.incumbent)}.` : '', !isPartisan(c) ? 'Nonpartisan race: no party labels on the ballot.' : ''].filter(Boolean).join(' ')}</p>
     ${isRCV(c) ? `<p class="facts"><b>Ranked choice: rank up to ${c.rank_up_to}.</b> ${esc(c.rcv_how || '')} ${rcvURL(c) ? ext(rcvURL(c), 'How the count works') : ''}</p>` : ''}
     ${c.why_it_matters ? sec('Why it matters', para(c.why_it_matters)) : ''}
     ${sec('The candidates, in their own words', c.candidates.map((k) => candBlock(c, k)).join(''), 'Quote marks mean their exact words. Anything else is our summary, labeled.')}

@@ -192,7 +192,11 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await fresh.page.goto(linkHere(link));
   await fresh.page.waitForSelector('#plan', { timeout: 15000 });
   await fresh.page.waitForTimeout(300);
-  check('Denver link: restores with a toast', /^Restored \d+ picks?/.test(await text(fresh.page, '.toast')), await text(fresh.page, '.toast'));
+  // On a device that had nothing for this ballot, a link's picks come with a plain banner (it may
+  // be a friend's), not a silent "your pick".
+  check('Denver link: a fresh device says where the picks came from', /This link brought \d+ picks? for Denver/.test(await text(fresh.page, '#r-restore')) && !!(await fresh.page.$('[data-act="shared-fresh"]')), await text(fresh.page, '#r-restore'));
+  await tap(fresh.page, '[data-act="shared-keep"]');
+  check('Denver link: "Keep them" clears the banner and keeps the picks', !(await fresh.page.$('[data-act="shared-fresh"]')));
   await tap(fresh.page, '[data-act="cheat"]');
   check('Denver link: the same decided count and the note come back', (await text(fresh.page, '.cheat-head .sub')) === decided && /Read the Blue Book first/.test(await text(fresh.page, '#cheat')));
   noErrors(fresh.page, 'Denver link');
@@ -222,6 +226,10 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   check('Austin: asks which council district is yours', !!key);
   await openRow(page, `q:${key}`);
   await shot(page, '04-austin-question');
+  // UX review: write-ins fold into one line in a long race (U.S. Senate has four).
+  await openRow(page, 'tx-us-senate');
+  check('Austin: the U.S. Senate row folds its 4 write-ins into one line', /4 write-in candidates/.test(await text(page, '#i-tx-us-senate .wi-fold')) && !/refers readers to VOTE411/.test(await text(page, '#i-tx-us-senate')), await text(page, '#i-tx-us-senate .wi-fold'));
+  await openRow(page, `q:${key}`);
   const finders = await page.$$eval(`.row[data-q="${key}"] .dq-help a`, (as) => as.map((a) => a.textContent));
   check('Austin: the council question links every county’s finder (Travis, Williamson, Hays)', ['Travis', 'Williamson', 'Hays'].every((c) => finders.some((t) => t.includes(c))), finders.join(' | '));
   await tap(page, `.row[data-q="${key}"] [data-act="district"][data-v="tx-austin-council-3"]`);
@@ -411,13 +419,16 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   await page.goto(`${BASE}/?today=${TODAY}${OLD}`);
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.waitForTimeout(300);
-  check('Old v1 link: restores 3 picks', /^Restored 3 picks/.test(await text(page, '.toast')), await text(page, '.toast'));
+  check('Old v1 link: brings back 3 picks, with the shared-link banner', /This link brought 3 picks/.test(await text(page, '#r-restore')), await text(page, '#r-restore'));
   check('Old v1 link: Ward 1 pick comes back as the 1st choice', (await text(page, '#i-dc-ward-1-council .vd .m')).endsWith('1. Raj'), await text(page, '#i-dc-ward-1-council .vd .m'));
   check('Old v1 link: Mayor pick comes back as the 1st choice', (await text(page, '#i-dc-mayor .vd .m')).endsWith('1. Hamilton'), await text(page, '#i-dc-mayor .vd .m'));
   check('Old v1 link: Chair restores as before', (await text(page, '#i-dc-council-chair .vd .m')).endsWith('Mendelson'), await text(page, '#i-dc-council-chair .vd .m'));
   check('Old v1 link: at-large seat marks reopen the race to rank', !!(await page.$('#i-dc-council-at-large[data-undecided]')));
   await tap(page, '[data-act="cheat"]');
   check('Old v1 link: the note comes back', /Old link note/.test(await text(page, '#cheat')));
+  await tap(page, '[data-act="view"][data-v="ballot"]');
+  await tap(page, '[data-act="shared-fresh"]');
+  check('Shared link: "Start fresh" clears the shared picks', /^0 of/.test(await text(page, '.bar-txt')) && !(await page.$('[data-act="shared-fresh"]')), await text(page, '.bar-txt'));
   noErrors(page, 'Old v1 link');
   await ctx.close();
 }

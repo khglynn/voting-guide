@@ -404,7 +404,7 @@ export function barHTML(): string {
   if (!S.ballot) return '';
   if (S.ui.view !== 'ballot') {
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
-      <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to ballot</button>
+      <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to the ballot</button>
       ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Pass it on</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">Cheat sheet</button>'}</div></div>`;
   }
   // Choices only: a district question is setup, not a choice, so the bar counts what the

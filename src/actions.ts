@@ -2,7 +2,7 @@
    v2's pick vocabulary byte for byte (YES/NO/SKIP/DONE/PICK, candidate names, "id|name" keys),
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
-import { S, persist, forgetLast, type View } from './state';
+import { S, persist, forgetLast, emptyBallotState, type View } from './state';
 import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
@@ -83,6 +83,16 @@ A.sec = (d) => {
   const s = d.sec as SectionKey;
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
+  // A section still being decided doesn't fold on a stray tap; the band takes you to its next
+  // undecided row instead.
+  if (!folded && el && el.querySelector('.row[data-undecided], .row[data-q]')) {
+    const next = el.querySelector<HTMLElement>('.row[data-undecided], .row[data-q]')!;
+    if (next.dataset.item) { A.goto({ id: next.dataset.item }, next); return; }
+    S.ui.row = `q:${next.dataset.q}`;
+    anchored(() => renderSection(s), `sec-${s}`);
+    scrollRowIntoView(S.ui.row, true);
+    return;
+  }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }
   anchored(() => renderSection(s), `sec-${s}`);
 };
@@ -257,7 +267,7 @@ A['party-set'] = (d) => {
   S.ui.sheet = null;
   render(['sheet']); renderLens(); persist();
   const n = planParty(d.p!).fills.length;
-  toast(`Showing the ${d.p} Party’s picks where it made any.${n ? ` “Fill in the ${d.p} candidates” can fill ${plural(n, 'race')}.` : ''}`);
+  toast(`Now showing the ${d.p} Party’s picks.${n ? ` Tap “Fill in the ${d.p} candidates” to fill ${plural(n, 'race')}.` : ''}`);
   focusFk('bulk-party');
 };
 A.src = (d) => {
@@ -365,6 +375,8 @@ A['change-place'] = () => {
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };
+A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Kept. Change any pick as you go.'); };
+A['shared-fresh'] = () => { const zip = S.b.zip; S.b = emptyBallotState(zip); S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 
 /* ---------- cheat sheet, save link, pass it on ---------- */

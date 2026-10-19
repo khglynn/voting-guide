@@ -111,7 +111,7 @@ export function cheatHTML(forPrint = false): string {
       <p class="sub">${done} of ${all.length} decided.${forPrint ? ' Blank lines are yours to fill in.' : ' Tap any line to change it.'}</p>
       <div class="remind">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div></div>
     ${tableHTML(forPrint)}
-    <p class="fine cs-foot">From the 2026 voting guide. Checked ${esc(b.howto.last_verified || '')}. Official info: <span class="p-url" data-url="${esc(b.howto.official_site.url)}">${esc(b.howto.official_site.name)}</span>.</p>
+    <p class="fine cs-foot">From Kevin’s 2026 voting guide.${b.howto.last_verified ? ` Checked ${esc(fmtDate(b.howto.last_verified, { weekday: false }))}.` : ''} Official info: <span class="p-url" data-url="${esc(b.howto.official_site.url)}">${esc(b.howto.official_site.name)}</span>.</p>
   </div>`;
 }
 

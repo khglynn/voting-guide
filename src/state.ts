@@ -54,7 +54,10 @@ export interface UI {
   bulk: string | null;        // label of the last bulk fill, while its Undo is live
 }
 
-export interface Pending { kind: 'restore'; key: string; incoming: BallotState; summary: string }
+/* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
+   brought picks to a device that had none here, which is often a friend's link, so say so
+   instead of quietly calling them "your" picks. */
+export interface Pending { kind: 'restore' | 'shared'; key: string; incoming: BallotState; summary: string }
 
 export const S = {
   index: null as Index | null,

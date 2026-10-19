@@ -1,8 +1,8 @@
 /* "Who do you trust?": the lens head, the sticky chip bar, the "More sources" sheet and the
    party chooser. Lean labels show with their basis; parties are text; no red or blue. */
-import type { Endorser } from '../types';
+import type { Contest, Endorser } from '../types';
 import { S } from '../state';
-import { chosenIds } from '../ballot';
+import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
 import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, explainsOnly } from '../model/lens';
 import { coverage } from '../model/tally';
@@ -35,8 +35,14 @@ export function lensHeadHTML(): string {
   const papers = chipMembers(b, 'papers');
   const ids = new Set(chosenIds());
   if (papers.some((e) => ids.has(e.id)) && !withPicks(b, papers).length) notes.push(CHIPS[0].empty);
+  // The chip row scrolls sideways on a phone, so say in words whose picks are showing.
+  const showing = [
+    ...CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`),
+    ...(S.b.party ? [`the ${S.b.party} Party`] : []),
+  ];
+  const list = showing.length > 1 ? `${showing.slice(0, -1).join(', ')} and ${showing[showing.length - 1]}` : showing[0] || '';
   const line = cov.sources
-    ? `Your ${plural(cov.sources, 'source')} made picks on ${cov.picked} of your ${plural(cov.total, 'choice')}.`
+    ? `${list ? `Showing ${list}. ` : ''}Your ${plural(cov.sources, 'source')} made picks on ${cov.picked} of your ${plural(cov.total, 'choice')}.`
     : 'You haven’t chosen any sources. Pick some below to see their picks on every row.';
   return `<section class="lens-head wrap" id="lens" aria-labelledby="lens-h"><h2 id="lens-h">Who do you trust?</h2>
     <p>Their picks show on every row. The choice is always yours.</p>
@@ -84,8 +90,14 @@ export function sourcesSheetHTML(): string {
 export function partySheetHTML(): string {
   const b = S.ballot!;
   const parties = partiesOnBallot(b);
-  const rows = parties.map((p) => `<li><button class="opt" data-act="party-set" data-p="${esc(p.party)}" data-fk="pty-${esc(p.party)}"><b>${esc(p.party)}</b>
-      <small>${[p.sources.length ? `${plural(p.sources.length, 'party source')} with picks here` : 'No party picks found here', p.nominees ? `A candidate in ${plural(p.nominees, 'race')}` : ''].filter(Boolean).join('. ')}</small></button></li>`).join('');
+  // Count races on this voter's ballot as it stands (no unopposed, no hidden districts), the
+  // same choices the header counts.
+  const mine = decisionItems().filter((i) => !i.question).map((i) => b.byId.get(i.id)).filter((x): x is Contest => !!x && x.kind === 'contest');
+  const rows = parties.map((p) => {
+    const n = mine.filter((c) => c.candidates.some((k) => k.parties.includes(p.party))).length;
+    return `<li><button class="opt" data-act="party-set" data-p="${esc(p.party)}" data-fk="pty-${esc(p.party)}"><b>${esc(p.party)}</b>
+      <small>${[p.sources.length ? `${plural(p.sources.length, 'party source')} with picks here` : 'No party picks found here', n ? `Has a candidate in ${n} of your ${plural(mine.length, 'race')}` : ''].filter(Boolean).join('. ')}</small></button></li>`;
+  }).join('');
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only short" role="dialog" aria-modal="true" aria-labelledby="sh-h">
     <div class="sheet-hd"><h2 id="sh-h">Which party?</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Cancel</button></div>

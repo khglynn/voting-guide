@@ -4,6 +4,7 @@ import { S } from '../state';
 import { esc, fmtDate } from '../util';
 import { ext, isOpen, telHTML } from './common';
 import { countyName } from './ledger';
+import { stateName } from '../geo';
 
 function electionDate(): string {
   if (S.ballot) return S.ballot.howto.election_date;
@@ -54,13 +55,14 @@ export function mastHTML(): string {
   let after = '';
   if (S.zipChoice && idx) {
     after = `<div class="choose" role="group" aria-labelledby="which-h">
-      <h2 id="which-h">${esc(S.zipChoice.zip)} crosses city lines. Which of these is you?</h2>
-      <p class="small">Check the city on your voter registration or your ballot envelope.</p>
+      ${(() => { const dc = S.zipChoice.placeIds.every((id) => idx.places[id].state === 'DC'); const n = S.zipChoice.placeIds.length;
+        return dc ? `<h2 id="which-h">${esc(S.zipChoice.zip)} is split across ${n} wards. Which one is yours?</h2><p class="small">Your voter registration card says, or use your address.</p>`
+          : `<h2 id="which-h">${esc(S.zipChoice.zip)} crosses city lines. Which of these is you?</h2><p class="small">Check the city on your voter registration or your ballot envelope.</p>`; })()}
       <div class="opts">${S.zipChoice.placeIds.map((id) => { const p = idx.places[id]; return `<button class="opt" data-act="choose-place" data-ids="${esc(id)}" data-fk="cp-${esc(id)}"><b>${esc(p.label)}</b><small>${esc(p.counties.join(', '))}</small></button>`; }).join('')}
         <button class="opt opt-unsure" data-act="choose-place" data-ids="${esc(S.zipChoice.placeIds.join('+'))}" data-fk="cp-unsure"><b>I’m not sure</b><small>Show everything that might be on my ballot</small></button></div>
       ${S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Or use my address to pick</button></p>'}</div>`;
   } else if (S.coverage && S.coverage.kind === 'not_covered') {
-    const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : S.coverage.state) : null;
+    const name = S.coverage.state ? (S.coverage.state in (idx?.states || {}) ? idx!.states[S.coverage.state].name : stateName(S.coverage.state)) : null;
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> This guide covers the places Kevin’s friends and family vote. ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p></div>`;
   }
   return `<header class="mast front wrap">${tryBanner()}
@@ -93,6 +95,14 @@ function browseHTML(): string {
 
 export function restoreHTML(): string {
   if (!S.pending) return '';
+  if (S.pending.kind === 'shared') {
+    const where = S.ballot ? (S.ballot.places.length ? S.ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : S.ballot.stateName) : '';
+    return `<div class="notice strong wrap" role="region" aria-labelledby="rs-h">
+    <p id="rs-h"><b>${esc(S.pending.summary)}</b></p>
+    <div class="row-btns"><button class="mini dark" data-act="shared-keep" data-fk="restore-yes">Keep them</button>
+      <button class="mini" data-act="shared-fresh">Start fresh</button></div>
+    <p class="small">Not in ${esc(where)}? <button class="linkbtn" data-act="change-place">Find your ballot</button></p></div>`;
+  }
   return `<div class="notice strong wrap" role="alertdialog" aria-labelledby="rs-h">
     <p id="rs-h"><b>${esc(S.pending.summary)}</b></p>
     <div class="row-btns"><button class="mini dark" data-act="restore-yes" data-fk="restore-yes">Use the link’s picks</button>

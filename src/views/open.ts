@@ -193,24 +193,39 @@ export const NOT_LOOKED = 'We haven’t looked up their own words yet.';
 const notLooked = (k: Candidate): boolean => !k.own_words.length && k.own_words_status !== 'none_found';
 function wordsLine(k: Candidate): string {
   const o = k.own_words[0];
+  // A voter guide that only lists a write-in candidate is not their own words.
+  if (o && isWriteIn(k) && /refers readers to VOTE411/i.test(o.text)) return '<span class="cl-w none">Write-in candidate. No statement found.</span>';
   if (o) return `<span class="cl-w${o.is_quote ? ' q' : ''}">${o.is_quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</span>`;
   if (k.own_words_status === 'none_found') return `<span class="cl-w none">No campaign statement found${k.own_words_checked ? ` (checked ${esc(fmtShort(k.own_words_checked.on))})` : ''}.</span>`;
   return `<span class="cl-w none">${NOT_LOOKED}</span>`;
 }
+/* Write-in candidates fold into one line when there are two or more, so the real choice isn't
+   pushed off the screen; one you picked always stays in view. */
+const isWriteIn = (k: Candidate): boolean => k.parties.includes('Write-in') || /^write-?in$/i.test(k.party || '');
 function listHTML(c: Contest, l: Lineup): string {
   const cands = orderCandidates(c, l);
-  return `<ol class="clist">${cands.map((k) => `<li class="cl${(isRCV(c) ? ranksOf(c.id).includes(k.name) : isMultiSeat(c) ? S.b.picks[`${c.id}|${k.name}`] === 'PICK' : S.b.picks[c.id] === k.name) ? ' on' : ''}">
+  const chosen = (k: Candidate) => (isRCV(c) ? ranksOf(c.id).includes(k.name) : isMultiSeat(c) ? S.b.picks[`${c.id}|${k.name}`] === 'PICK' : S.b.picks[c.id] === k.name);
+  const row = (k: Candidate) => `<li class="cl${chosen(k) ? ' on' : ''}">
       <span class="cl-n"><b>${esc(k.name)}</b><span class="py">${esc([partyText(c, k), k.incumbent ? 'incumbent' : ''].filter(Boolean).join(', '))}</span>${backedBy(c, k, l)}${wordsLine(k)}</span>
-      ${pickBtn(c, k, 'pick cl-b')}</li>`).join('')}</ol>`;
+      ${pickBtn(c, k, 'pick cl-b')}</li>`;
+  const wi = cands.filter((k) => isWriteIn(k) && !chosen(k));
+  if (wi.length < 2) return `<ol class="clist">${cands.map(row).join('')}</ol>`;
+  const k = `wi-${c.id}`;
+  const open = isOpen(k);
+  const last = (n: string) => n.replace(/\s*'[^']*'\s*/, ' ').trim().split(/\s+/).pop() || n;
+  return `<ol class="clist">${cands.filter((x) => !wi.includes(x)).map(row).join('')}
+    <li class="cl wi-fold"><span class="cl-n">${wi.length} write-in candidates: ${esc(wi.map((x) => last(x.name)).join(', '))}.</span><button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'Show'}</button></li>
+    ${open ? wi.map(row).join('') : ''}</ol>`;
 }
 function voicesHTML(c: Contest, cands: Candidate[]): string {
   if (cands.length && cands.every(notLooked)) return c.is_retention ? '' : `<div class="voices"><h4>In their own words</h4><p class="nostmt">We haven’t looked up these candidates’ own words yet.</p></div>`;
   const bits = cands.map((k) => {
     const o = k.own_words[0];
+    if (o && isWriteIn(k) && /refers readers to VOTE411/i.test(o.text)) return `<p class="nostmt"><b>${esc(k.short)}:</b> Write-in candidate. No statement found.</p>`;
     if (o) {
       const quote = o.is_quote;
       return `<figure class="pq${quote ? '' : ' para'}"><blockquote class="clamp">${quote ? (/["“”]/.test(o.text) ? esc(o.text) : `“${esc(o.text)}”`) : escP(o.text)}</blockquote>
-        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', in our words'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`;
+        <figcaption><b>${esc(k.short)}</b>${quote ? '' : ', paraphrased by us'}${o.source ? `. ${srcLink(o.source)}` : ''}</figcaption></figure>`;
     }
     if (k.own_words_status === 'none_found') {
       const ch = k.own_words_checked;
@@ -363,12 +378,23 @@ function sourcesYesNo(it: Item): string {
 
 /* ---------- measures ---------- */
 const CONFLICT = /conflict|cancel|nullif|more yes votes/i;
+/* The catch box repeats the heads-up when they share their first words; show it once. */
+const sameAsHeads = (m: Measure): boolean => {
+  const c = (m.confusing_wording_note || '').slice(0, 50).toLowerCase();
+  return !!c && headsUp(`item:${m.id}`).some((h) => h.toLowerCase().includes(c));
+};
 function duelHTML(m: Measure): string {
   const b = S.ballot!;
   const others = m.links.map((id) => b.byId.get(id)).filter((x): x is Measure => !!x && x.kind === 'measure');
   if (!others.length) return '';
   const text = [m.plain_summary, m.confusing_wording_note, m.current_law].filter(Boolean).join(' ');
-  const rule = text.split(/(?<=[.!?])\s+/).find((s) => CONFLICT.test(s)) || '';
+  // A list number left over from the source ("(2) It conflicts with...") is dropped.
+  const found = (text.split(/(?<=[.!?])\s+/).find((s) => CONFLICT.test(s)) || '').replace(/^\(\d+\)\s*/, '');
+  // One box per conflict: when a heads-up on this measure already names the others, or the
+  // catch below says the same sentence, this box only links them.
+  const heads = headsUp(`item:${m.id}`).join(' ');
+  const said = others.some((o) => heads.includes(o.number.replace(/^(Proposition|Prop\.?|Amendment|Measure|Question)\s+/i, ''))) || (!!m.confusing_wording_note && m.confusing_wording_note.includes(found.slice(0, 40)));
+  const rule = said ? '' : found;
   const yesBoth = S.b.picks[m.id] === 'YES' && others.some((o) => S.b.picks[o.id] === 'YES');
   const picks = others.map((o) => { const v = S.b.picks[o.id]; return `<button class="linkbtn" data-act="goto" data-id="${esc(o.id)}">${esc(o.number)}</button>${v === 'YES' || v === 'NO' ? ` (you: ${v === 'YES' ? 'yes' : 'no'})` : ''}`; }).join(' and ');
   return `<div class="heads${yesBoth ? ' warn' : ''}"><b>Read with ${picks}.</b> ${rule ? escP(rule) : 'They conflict.'}${yesBoth ? ' <b>You picked yes on more than one of these.</b>' : ''}</div>`;
@@ -388,7 +414,7 @@ function measureHTML(m: Measure): string {
     </div>
     ${headsHTML(headsUp(`item:${m.id}`))}
     ${duelHTML(m)}
-    ${m.confusing_wording_note ? `<div class="heads"><b>The wording has a catch.</b> ${clampP(`cw-${m.id}`, m.confusing_wording_note, 26).replace(/^<p>|<\/p>$/g, '')}</div>` : ''}
+    ${m.confusing_wording_note && !sameAsHeads(m) ? `<div class="heads"><b>The wording has a catch.</b> ${clampP(`cw-${m.id}`, m.confusing_wording_note, 26).replace(/^<p>|<\/p>$/g, '')}</div>` : ''}
     ${thresholdLine(m)}
     ${m.official_title ? clampP(`ot-${m.id}`, `Official title: ${m.official_title}`, 18, 'ob-meta ot') : ''}
     ${weighedIn(l).length ? sourcesYesNo(m) : `${noneLineHTML(m, l)}${quietLines(l, m, false)}`}

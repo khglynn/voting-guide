@@ -389,7 +389,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     const jb = judges.judgeBatch();
     check('judges batch: Chicago reads "Keep the N judges the bar associations recommend"', !!jb && /^Keep the \d+ judges the bar associations recommend$/.test(jb.label), jb && jb.label);
     open('TX', ['houston-tx']);
-    check('judges rule: Texas says how judges win, not "to keep a judge"', /^The most votes wins\. These aren’t keep-or-remove votes\./.test(judges.judgesRule()));
+    check('judges rule: Texas says how judges win, not "to keep a judge"', /^The candidate with the most votes wins\. These aren’t keep-or-remove votes\./.test(judges.judgesRule()));
     check('judges lead: Texas calls a lawyer poll a poll', /poll of lawyers, not a job review/.test(judges.judgesLead()), judges.judgesLead());
     open('OR', ['portland-or']);
     check('judges lead: Oregon says there is no official review', /^Oregon has no official review of these judges\./.test(judges.judgesLead()), judges.judgesLead());

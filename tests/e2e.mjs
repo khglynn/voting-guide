@@ -115,7 +115,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   check('Denver: "Am I registered?" goes to the official lookup', /^https?:/.test((await page.getAttribute('.plan .pbtn.line', 'href')) || ''));
   check('Denver: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
   await tap(page, '[data-act="open"][data-k="whatif"]');
-  check('Denver: "What if" opens the situations and the basics', /What if/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
+  check('Denver: the dates and ID toggle opens the situations and the basics', /Common problems and what to do/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
   await tap(page, '[data-act="open"][data-k="whatif"]');
 
   // The lens: Papers and guides on by default; a chip adds groups; the sheet lists everyone.
@@ -125,12 +125,12 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   const cov1 = await text(page, '#lens .cov');
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   const cov2 = await text(page, '#lens .cov');
-  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /made picks on \d+ of your \d+ choices/.test(cov2), `${cov1} -> ${cov2}`);
+  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /with endorsements in \d+ of your \d+ races and measures/.test(cov2), `${cov1} -> ${cov2}`);
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   check('Denver: and off again', (await text(page, '#lens .cov')) === cov1);
   await tap(page, '[data-act="sheet"][data-s="sources"]');
   await page.waitForSelector('.sheet-panel');
-  check('Denver: More sources lists every source by lean, each with how we know', (await page.$$('.sgrp')).length >= 2 && /How we know/.test(await text(page, '.sheet-panel')));
+  check('Denver: More sources lists every source by lean, each with why its lean', (await page.$$('.sgrp')).length >= 2 && /Why this lean/.test(await text(page, '.sheet-panel')));
   check('Denver: the sheet moves focus to its close button', await page.evaluate(() => document.activeElement && document.activeElement.dataset.fk === 'sheet-x'));
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
@@ -286,7 +286,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   const { ctx, page } = await newPage();
   await openZip(page, '20001');
   await page.waitForSelector('[data-act="choose-place"]');
-  check('20001: asks which ward, not which city', /is split across \d+ wards/.test(await text(page, '.choose')));
+  check('20001: asks which ward, not which city', /covers \d+ wards\. Pick yours/.test(await text(page, '.choose')));
   await tap(page, '[data-act="choose-place"][data-fk="cp-unsure"]');
   await page.waitForSelector('#plan');
   check('20001 not sure: the headline is "Washington, DC" with the wards under it', (await text(page, '.place')) === 'Washington, DC' && /^Ward \d+(, \d+)* or \d+$/.test(await text(page, '.where-note')), `${await text(page, '.place')} | ${await text(page, '.where-note')}`);
@@ -699,7 +699,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, `#i-${id} [data-act="reader"]`);
   await page.waitForSelector('.reader');
   const rd = await text(page, '.reader');
-  check('Brooklyn Civil Court Full read: each rating as published, with its June primary scope', /Each rating as published/.test(rd) && /June 11, 2026 primary review/.test(rd) && /Failed to Appear/.test(rd), rd.slice(0, 120));
+  check('Brooklyn Civil Court Full read: each rating as published, with its June primary scope', /Ratings, word for word/.test(rd) && /June 11, 2026 primary review/.test(rd) && /Failed to Appear/.test(rd), rd.slice(0, 120));
   check('Brooklyn Civil Court Full read: links the NYC Bar release', !!(await page.$('.reader a[href*="nycbar.org"]')));
   noErrors(page, 'Brooklyn ratings');
   await ctx.close();
@@ -804,7 +804,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
   await page.waitForSelector('#plan', { timeout: 15000 });
-  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Matched \d+ district/.test(await text(page, '.toast')), await text(page, '.toast'));
+  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Filled in \d+ districts? from your address/.test(await text(page, '.toast')), await text(page, '.toast'));
   noErrors(page, 'Address');
   await ctx.close();
 }

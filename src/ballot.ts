@@ -191,19 +191,6 @@ export function backers(it: Item, choice: string): Endorser[] {
 
 /* ---------- parties ---------- */
 const NO_PARTY = /^(nonpartisan|unaffiliated|independent|no party affiliation|no party|write-in|none)$/i;
-export type PartyCat = 'D' | 'R' | 'O' | 'I';
-export const PARTY_LABEL: Record<PartyCat, string> = { D: 'Democratic', R: 'Republican', O: 'Other parties', I: 'Independent or none' };
-export function partyCats(c: { parties: string[] }): PartyCat[] {
-  const cats = new Set<PartyCat>();
-  for (const p of c.parties) {
-    if (p === 'Democratic') cats.add('D');
-    else if (p === 'Republican') cats.add('R');
-    else if (NO_PARTY.test(p)) cats.add('I');
-    else cats.add('O');
-  }
-  if (!cats.size) cats.add('I');
-  return [...cats];
-}
 export const isPartisan = (c: Contest): boolean => c.candidates.some((k) => k.parties.some((p) => !NO_PARTY.test(p)));
 
 /* ---------- statuses ---------- */
@@ -256,46 +243,6 @@ export function status(it: Item): Status {
 }
 export const isDecision = (s: Status): boolean => s !== 'info' && s !== 'unopposed';
 
-/* ---------- filters ---------- */
-export interface Filtered { shown: Contest['candidates']; hidden: number; party: boolean; endorsed: boolean }
-export function filterCands(c: Contest): Filtered {
-  const all = c.candidates;
-  if (c.is_retention || all.length < 2 || S.ui.showAll.has(c.id)) return { shown: all, hidden: 0, party: false, endorsed: false };
-  let shown = all;
-  let party = false, endorsedF = false;
-  const parties = S.prefs.parties;
-  if (parties && isPartisan(c)) {
-    const next = shown.filter((k) => partyCats(k).some((p) => parties.includes(p)));
-    if (next.length < shown.length) party = true;
-    shown = next;
-  }
-  if (S.prefs.endorsedOnly) {
-    const names = new Set<string>();
-    chosen().forEach((e) => { const en = endorsement(c.id, e.id); if (en?.s === 'endorsed' && en.c) en.c.forEach((n) => names.add(n)); });
-    if (names.size) {
-      const next = shown.filter((k) => names.has(k.name));
-      if (next.length < shown.length) endorsedF = true;
-      shown = next;
-    }
-  }
-  return { shown, hidden: all.length - shown.length, party, endorsed: endorsedF };
-}
-export const filterSig = (): string => `${(S.prefs.parties || []).join('')}|${S.prefs.endorsedOnly ? 1 : 0}|${chosenIds().join(',')}`;
-
-export function autoReason(c: Contest, f: Filtered): string {
-  const k = f.shown[0];
-  if (f.party && !f.endorsed) {
-    const cat = partyCats(k).map((x) => PARTY_LABEL[x]).filter((x) => x !== 'Other parties' && x !== 'Independent or none');
-    const label = k.party || 'their party';
-    return `Only ${cat.length ? cat[0] : label} candidate left after your party filter.`;
-  }
-  if (f.endorsed && !f.party) {
-    const by = backers(c, k.name).map((e) => e.short);
-    return `Only candidate your sources endorsed${by.length ? ` (${by.join(', ')})` : ''}.`;
-  }
-  return 'Only candidate left after your filters.';
-}
-
 /* ---------- what's visible ---------- */
 export type Entry =
   | { t: 'item'; id: string }
@@ -338,24 +285,6 @@ export function decisionItems(): { id: string; done: boolean; question?: boolean
       const s = status(it);
       if (!isDecision(s)) continue;
       out.push({ id: it.id, done: s !== 'open' });
-    }
-  }
-  return out;
-}
-
-/* Races where the filters leave exactly one candidate and nothing is picked yet. */
-export function autoCandidates(): { c: Contest; name: string; why: string }[] {
-  const out: { c: Contest; name: string; why: string }[] = [];
-  if (!S.prefs.parties && !S.prefs.endorsedOnly) return out;
-  for (const [, entries] of entriesBySection()) {
-    for (const e of entries) {
-      if (e.t !== 'item') continue;
-      const it = S.ballot!.byId.get(e.id)!;
-      // Never for ranked races: one candidate left after filters is not a ranking.
-      if (it.kind !== 'contest' || it.is_retention || isMultiSeat(it) || isRCV(it) || it.candidates.length < 2) continue;
-      if (status(it) !== 'open' || S.b.noAuto.includes(it.id)) continue;
-      const f = filterCands(it);
-      if (f.shown.length === 1 && f.hidden > 0) out.push({ c: it, name: f.shown[0].name, why: autoReason(it, f) });
     }
   }
   return out;

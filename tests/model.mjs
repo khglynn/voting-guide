@@ -8,7 +8,7 @@
  * them the real data bundles. What it guards:
  *   - the save link: v1 and v2 formats byte for byte, the pinned pre-ranked-choice v1 link from
  *     the live site, round trips, the optional notMine field
- *   - normalizeRanks migrations, rank order, ranked races never auto-picked
+ *   - normalizeRanks migrations, rank order, ranked races never filled by a bulk action
  *   - district filtering and the "every voter sees each seat" rule
  *   - lens membership, the verdict for every state of a lineup, the bulk fills and their undo
  * Exit code 1 if anything fails.
@@ -33,7 +33,7 @@ const st = await load('/src/state.ts');
 const bl = await load('/src/ballot.ts');
 const util = await load('/src/util.ts');
 const mods = {};
-for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels']) {
+for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
   if (fs.existsSync(f)) mods[m] = await load(`/src/model/${m}.ts`);
 }
@@ -48,8 +48,6 @@ function open(stCode, placeIds, b = null) {
   const ballot = bl.buildBallot(sb, pbs);
   st.S.ballot = ballot;
   st.S.b = b || st.emptyBallotState('');
-  st.S.prefs = { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false };
-  if (st.S.ui && st.S.ui.showAll) st.S.ui.showAll.clear();
   return ballot;
 }
 const head = (link) => st.parseShareHead(link);
@@ -177,17 +175,6 @@ function roundTrip(name, stCode, places, mutate) {
   st.S.b.districts[g.key] = '*';
   const all = [...bl.entriesBySection().values()].flat().filter((e) => e.t === 'item').map((e) => e.id);
   check('districts: "not sure" shows every member', g.members.every((m) => all.includes(m)));
-}
-
-/* ---------- 5. ranked races are never auto-picked ---------- */
-{
-  const ballot = open('OR', ['portland-or']);
-  st.S.prefs.endorsedOnly = true;
-  st.S.b.sources = ['portland-metro-chamber'];
-  const auto = bl.autoCandidates();
-  check('auto-pick: never offers a ranked race', !auto.some((a) => a.c.ranked_choice));
-  check('auto-pick: never offers multi-seat or retention', !auto.some((a) => a.c.is_retention || bl.isMultiSeat(a.c)));
-  void ballot;
 }
 
 /* ---------- extension points: run when the ledger's model modules exist ---------- */

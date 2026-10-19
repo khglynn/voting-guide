@@ -1,0 +1,188 @@
+/* The verdict column: who among your sources weighed in on an item, and what the row says.
+   Endorsement states stay distinct: endorsed, took no stand, nothing found, not checked yet.
+   Colors keep one job each (decided in the view): sage = every source that weighed in agrees,
+   clay = they disagree, gold = your pick, dusk = a judge's official review. */
+import type { Contest, Endorsement, Endorser, Item } from '../types';
+import type { Ballot } from '../ballot';
+import { S } from '../state';
+import { chosen, status, isMultiJudge, entriesBySection, isDecision } from '../ballot';
+import { choiceShort, pickShort } from './labels';
+import { explainsOnly } from './lens';
+import { judgeReview } from './judges';
+
+export interface LGroup { key: string; label: string; choices: string[]; sources: Endorser[] }
+export interface Lineup {
+  groups: LGroup[];          // largest first; ties in ballot order
+  both: Endorser[];          // a campaign listed on both sides of a measure
+  noStand: Endorser[];       // looked, took no position
+  notFound: Endorser[];      // looked, found nothing
+  notChecked: Endorser[];    // covers this kind of item here, no row yet
+  guides: Endorser[];        // explain without picking (this kind of item)
+  relevant: Endorser[];      // everyone above except guides
+}
+
+/* Does a source cover this item's area? It has a row on some item of the same kind here
+   (statewide races, statewide judges, statewide measures, or local items at the same level).
+   Without this, a Boulder paper with one row on a shared rail measure would read as
+   "not checked" on every Lakewood race. */
+const areaCache = new WeakMap<Ballot, Map<string, Set<string>>>();
+const areaKey = (b: Ballot, it: Item): string => {
+  const sw = b.statewide.has(it.id);
+  if (it.kind === 'measure') return sw ? 'sw|m' : `loc|m|${it.level}`;
+  const judge = it.level === 'judicial' || it.is_retention;
+  return sw ? `sw|c|${judge ? 'j' : 'o'}` : `loc|c|${it.level}`;
+};
+function covers(b: Ballot, e: Endorser, it: Item): boolean {
+  let m = areaCache.get(b);
+  if (!m) {
+    m = new Map();
+    for (const t of b.items) {
+      const row = b.ends[t.id];
+      if (!row) continue;
+      const k = areaKey(b, t);
+      for (const eid of Object.keys(row)) { let s = m.get(eid); if (!s) { s = new Set(); m.set(eid, s); } s.add(k); }
+    }
+    areaCache.set(b, m);
+  }
+  return !!m.get(e.id)?.has(areaKey(b, it));
+}
+const makesKind = (e: Endorser, it: Item): boolean => (it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates);
+const en = (b: Ballot, it: Item, e: Endorser): Endorsement | null => (b.ends[it.id] || {})[e.id] || null;
+
+/* Order choices the way the ballot lists them (candidates in ballot order, Yes before No). */
+function choiceRank(it: Item, key: string): number {
+  if (it.kind === 'contest') {
+    const first = key.split('+')[0];
+    const i = it.candidates.findIndex((c) => c.name === first);
+    return i < 0 ? 999 : i;
+  }
+  return key === 'YES' || key === 'FOR' ? 0 : key === 'NO' || key === 'AGAINST' ? 1 : 2;
+}
+
+export function lineup(it: Item, sources: Endorser[] = chosen()): Lineup {
+  const b = S.ballot!;
+  const out: Lineup = { groups: [], both: [], noStand: [], notFound: [], notChecked: [], guides: [], relevant: [] };
+  const groups = new Map<string, LGroup>();
+  for (const e of sources) {
+    const r = en(b, it, e);
+    const picks = makesKind(e, it);
+    if (!r) {
+      if (!picks || explainsOnly(e)) { if (covers(b, e, it) || explainsOnly(e)) out.guides.push(e); continue; }
+      if (covers(b, e, it)) { out.notChecked.push(e); out.relevant.push(e); }
+      continue;
+    }
+    if (r.s !== 'endorsed' && (explainsOnly(e) || !picks)) { out.guides.push(e); continue; }
+    out.relevant.push(e);
+    if (r.s === 'no_position') { out.noStand.push(e); continue; }
+    if (r.s === 'not_found') { out.notFound.push(e); continue; }
+    if (r.both) { out.both.push(e); continue; }
+    const choices = r.c && r.c.length ? [...r.c] : [];
+    const key = choices.length ? choices.join('+') : `note:${r.note || 'endorsed'}`;
+    let g = groups.get(key);
+    if (!g) {
+      const label = choices.length ? choices.map((c) => choiceShort(it, c)).join(', ') : (r.note || 'Endorsed');
+      g = { key, label, choices, sources: [] };
+      groups.set(key, g);
+    }
+    g.sources.push(e);
+  }
+  out.groups = [...groups.values()].sort((a, c) => c.sources.length - a.sources.length || choiceRank(it, a.key) - choiceRank(it, c.key));
+  return out;
+}
+export const weighedIn = (l: Lineup): Endorser[] => l.groups.flatMap((g) => g.sources);
+
+/* A source's name, short enough for a lineup in the narrow column. */
+export function tagOf(e: Endorser): string {
+  return e.short.replace(/^The\s+/, '').replace(/\s+(Editorial Board|Editorial Page|Endorsements?)$/i, '').trim();
+}
+const TAG_MAX = 20;
+/* "Post no, Gazette yes" when three or fewer sources weighed in and their names are short;
+   null when the row should show a tally instead. */
+export function namedLineup(l: Lineup, it: Item): string | null {
+  const w = weighedIn(l);
+  if (!w.length || w.length > 3 || w.some((e) => tagOf(e).length > TAG_MAX)) return null;
+  if (l.groups.length === 1) return w.map(tagOf).join(', ');
+  const lower = it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
+  return l.groups.flatMap((g) => g.sources.map((e) => `${tagOf(e)} ${lower ? g.label.toLowerCase() : g.label}`)).join(', ');
+}
+/* "Yes 5, No 2" / "Allen 3, Griswold 1": leading side first. */
+export function tally(l: Lineup): string {
+  return l.groups.map((g) => `${g.label} ${g.sources.length}`).join(', ');
+}
+
+export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
+export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both';
+export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' }
+
+export const NONE_WORDS: Record<NoneWhy, string> = {
+  no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',
+  no_cover: 'None of your sources cover this', no_sources: 'No sources chosen', both: 'Listed both sides',
+};
+export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
+  if (!anyChosen) return 'no_sources';
+  if (!l.relevant.length) return l.both.length ? 'both' : 'no_cover';
+  const looked = l.noStand.length + l.notFound.length;
+  if (!looked) return l.both.length ? 'both' : 'not_checked';
+  return l.notFound.length ? 'not_found' : 'no_stand';
+}
+
+/* What the sources said, in small type, under your own pick. */
+const yesNo = (it: Item): boolean => it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
+function lineupUnderPick(l: Lineup, it: Item): string {
+  const w = weighedIn(l);
+  if (!w.length) return '';
+  const named = namedLineup(l, it);
+  if (l.groups.length > 1) return named || tally(l);
+  const lab = yesNo(it) ? l.groups[0].label.toLowerCase() : l.groups[0].label;
+  return named ? `${named}: ${lab}` : `all ${w.length}: ${lab}`;
+}
+
+export function verdict(it: Item): Verdict {
+  const l = lineup(it);
+  const s = status(it);
+  if (s === 'decided' || s === 'auto' || s === 'skipped') {
+    return { kind: 'mine', main: pickShort(it) || 'Decided', sub: s === 'skipped' ? '' : lineupUnderPick(l, it), filled: !!S.b.auto[it.id] };
+  }
+  // Judges: the official review, in its own neutral style. It is not one of your sources.
+  if (it.kind === 'contest' && it.is_retention) {
+    const r = judgeReview(it);
+    if (r) return { kind: 'review', main: r.main, sub: r.sub, tone: r.tone };
+  }
+  const w = weighedIn(l);
+  if (!w.length) {
+    const why = noneWhy(l, chosen().length > 0);
+    return { kind: 'none', main: NONE_WORDS[why], sub: '', why };
+  }
+  if (l.groups.length === 1) {
+    const g = l.groups[0];
+    const named = namedLineup(l, it);
+    return { kind: 'agree', main: g.label, sub: named || `all ${w.length} agree` };
+  }
+  const named = namedLineup(l, it);
+  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split' };
+}
+
+/* "Your 4 sources picked on 18 of 42 races and measures." Over what's visible now. */
+export function coverage(): { sources: number; picked: number; total: number } {
+  const b = S.ballot!;
+  const src = chosen().filter((e) => !explainsOnly(e));
+  let picked = 0, total = 0;
+  for (const [, entries] of entriesBySection()) {
+    for (const e of entries) {
+      if (e.t !== 'item') continue;
+      const it = b.byId.get(e.id)!;
+      if (!isDecision(status(it))) continue;
+      if (it.kind === 'contest' && it.is_retention) continue;
+      total++;
+      if (weighedIn(lineup(it, src)).length) picked++;
+    }
+  }
+  return { sources: src.length, picked, total };
+}
+
+/* Candidates in the grid: backed by your sources first, then ballot order. */
+export function orderCandidates(c: Contest, l: Lineup): Contest['candidates'] {
+  const score = (name: string) => l.groups.filter((g) => g.choices.includes(name)).reduce((n, g) => n + g.sources.length, 0);
+  return c.candidates.map((k, i) => ({ k, i, s: score(k.name) })).sort((a, b) => b.s - a.s || a.i - b.i).map((x) => x.k);
+}
+export const isMulti = (it: Item): boolean => it.kind === 'contest' && isMultiJudge(it);

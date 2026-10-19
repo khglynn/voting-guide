@@ -20,29 +20,38 @@ export interface BallotState {
   notMine: string[];                 // "may apply" races the user said aren't on their ballot
   sources: string[] | null;          // null = the defaults
   planSeen: boolean;
-  offerDismissed: string | null;
+  offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
   addrNote: string | null;           // "Matched from your address" summary, no address kept
+  party: string | null;              // the party chosen in "A party" (for its sources and "Fill in my party")
+  ticks: string[];                   // Pass it on: who you've texted
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
-  planSeen: false, offerDismissed: null, addrNote: null,
+  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [],
 });
 
+/* View state for the ledger. Nothing here is saved. */
+export type View = 'ballot' | 'cheat' | 'pass';
 export interface UI {
-  open: Set<string>;          // generic disclosures
-  expanded: Set<string>;      // decided races reopened with "Change"
-  collapsed: Set<string>;     // collapsed ballot sections
+  view: View;
+  open: Set<string>;          // generic disclosures ("More", what-ifs, lean basis)
+  row: string | null;         // the one open row: an item id or "q:<group key>"
+  page: Record<string, number>; // candidate pager per race (3 per page)
+  others: Set<string>;        // rows showing sources outside your lens
+  folded: Set<string>;        // sections or court groups the voter folded
+  unfolded: Set<string>;      // decided sections and long groups the voter opened
+  onlyUndecided: boolean;
+  keep: string | null;        // a row just decided stays visible under "Only undecided" until another opens
   noteOpen: Set<string>;
-  showAll: Set<string>;       // races where the user asked to see filtered-out candidates
-  why: Record<string, string | null>;
-  filterOpen: boolean;
-  gridOpen: boolean;          // the side-by-side grid, inside the Filter shelf
-  shelfFrom: string | null;   // data-fk to focus when the shelf closes
+  reader: string | null;      // the "Full read" sheet, by item id
+  sheet: null | 'sources' | 'party' | 'whatif';
+  sheetFrom: string | null;   // data-fk to focus when a sheet closes
   addrOpen: boolean;
   addrBusy: boolean;
   addrMsg: string | null;
   saveOpen: boolean;
   copyFallback: string | null;
+  bulk: string | null;        // label of the last bulk fill, while its Undo is live
 }
 
 export interface Pending { kind: 'restore'; key: string; incoming: BallotState; summary: string }
@@ -58,9 +67,11 @@ export const S = {
   b: emptyBallotState(),
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
-    open: new Set(), expanded: new Set(), collapsed: new Set(), noteOpen: new Set(), showAll: new Set(), why: {},
-    filterOpen: false, gridOpen: false, shelfFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null,
+    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
   } as UI,
+  /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
+  tryMode: null as string | null,
   pending: null as Pending | null,
   loadErr: null as string | null,
 };
@@ -81,6 +92,7 @@ export function savedBallot(key: string): BallotState | null {
 }
 let saveTimer: number | undefined;
 export function persist(now = false): void {
+  if (S.tryMode) return; // a "try as" scenario never touches the real saved picks
   const run = () => {
     const s = readSaved();
     s.prefs = S.prefs;
@@ -94,6 +106,7 @@ export function persist(now = false): void {
   if (now) run(); else saveTimer = window.setTimeout(run, 250);
 }
 export function forgetLast(): void {
+  if (S.tryMode) return;
   const s = readSaved();
   s.last = null;
   save(KEY, s);
@@ -103,6 +116,10 @@ export function forgetLast(): void {
    v1: #v1~ST~place+place~zip~picks~districts~notes~sources
    v2: the same plus ~ranks, written only when the ballot holds a ranked-choice ranking, so a
        ballot with no rankings still gets a v1 link, byte for byte what older versions wrote.
+   Since Oct 19 (ledger): a 10th field, ~notMine, the "May apply" races the voter said aren't
+       on their ballot (hash5 of each id), written only when there are some. The head stays v1
+       or v2 as above (an empty ranks field fills slot 9). Older clients read fields by
+       position and ignore extras, so these links still open there, minus that one answer.
    Each pick is hash5(key) + Y|N|S|D|P, or hash5(key) + hash3(candidate name).
    Each ranking is hash5(contest id) + hash3(1st choice) + hash3(2nd choice) + ...; hashes are
    lower-case base36, so the fixed widths parse without separators.
@@ -118,9 +135,11 @@ export function encodeShare(ballot: Ballot, b: BallotState): string {
   const src = b.sources ? (b.sources.length ? b.sources.map((e) => hash(e)).join('.') : '0') : '';
   const ranks = Object.entries(b.ranks || {}).filter(([k, l]) => ballot.byId.has(k) && l && l.length)
     .map(([k, l]) => hash(k) + l.map((n) => hash(n, 3)).join('')).join('.');
+  const notMine = (b.notMine || []).filter((id) => ballot.byId.has(id)).map((id) => hash(id)).join('.');
   const places = ballot.places.map((p) => p.id).join('+') || '-';
   const fields = [ranks ? 'v2' : 'v1', ballot.st, places, b.zip || '-', picks, dist, notes, src];
-  if (ranks) fields.push(ranks);
+  if (ranks || notMine) fields.push(ranks);
+  if (notMine) fields.push(notMine);
   return fields.join('~');
 }
 
@@ -137,7 +156,7 @@ export function parseShareHead(hashStr: string): ShareHead | null {
 export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotState; dropped: number } {
   const st = emptyBallotState(head.zip);
   let dropped = 0;
-  const [, , , , picks = '', dist = '', notes = '', src = '', ranks = ''] = head.raw;
+  const [, , , , picks = '', dist = '', notes = '', src = '', ranks = '', notMine = ''] = head.raw;
   // Every key this ballot could hold, by hash. A collision makes both ambiguous; we drop them.
   const keyByHash = new Map<string, string | null>();
   const addKey = (k: string) => { const h = hash(k); keyByHash.set(h, keyByHash.has(h) && keyByHash.get(h) !== k ? null : k); };
@@ -189,6 +208,10 @@ export function decodeShare(ballot: Ballot, head: ShareHead): { state: BallotSta
       }
       if (list.length) st.ranks[key] = list;
     }
+  }
+  if (notMine) {
+    const mayByHash = new Map([...ballot.mayApply].map((id) => [hash(id), id]));
+    st.notMine = notMine.split('.').map((h) => mayByHash.get(h)).filter((x): x is string => !!x);
   }
   st.planSeen = true;
   return { state: st, dropped };

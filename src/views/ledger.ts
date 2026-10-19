@@ -76,7 +76,7 @@ function titleHTML(it: Item): string {
   if (it.kind === 'measure') {
     const tag = measureTag(it);
     if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum">${esc(leadRest(r.sub || r.title, 40)[0])}</span></span></span>`;
-    return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small class="t-sum">${esc(leadRest(r.sub, 40)[0])}</small>` : ''}</span></span>`;
+    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small class="t-sum">${esc(leadRest(r.sub, 40)[0])}</small>` : ''}</span></span>`;
   }
   return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>`;
 }
@@ -257,7 +257,9 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
   const bl = blocks(sec, entries);
   if (bl) {
     for (const g of bl) {
-      const open = S.ui.unfolded.has(g.key) || g.entries.length < 5 || g.entries.some((e) => e.t === 'item' && e.id === S.ui.row);
+      // Only a long run of one court earns a heading that folds; short runs just list their rows.
+      if (g.entries.length < 5) { g.entries.forEach(one); continue; }
+      const open = S.ui.unfolded.has(g.key) || g.entries.some((e) => e.t === 'item' && e.id === S.ui.row);
       const cnt = sectionCount(g.entries);
       out.push(`<li class="grp"><button class="grp-hd" data-act="grp" data-g="${esc(g.key)}" aria-expanded="${open}" data-fk="g-${hash(g.key)}"><span class="grp-t">${esc(g.label)}</span><span class="grp-ct">${esc(cnt)}</span></button></li>`);
       if (open) g.entries.forEach(one);

@@ -244,8 +244,9 @@ b, strong { font-weight: 600; }
 .ttl small { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.3; margin-top: 1px; }
 .ttl .num { font-family: var(--f-display); font-weight: 600; font-size: 16px; min-width: 32px; flex: none; align-self: flex-start; padding-top: 1px; color: var(--ink-2); font-variant-numeric: lining-nums; font-variation-settings: "opsz" 24; }
 .ttl.is-m { align-items: flex-start; }
-.t-sum { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 15px; line-height: 1.3; font-weight: 600; }
-small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
+.ttl .t-sum { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 15px; line-height: 1.3; font-weight: 600; }
+.ttl small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
+.ttl.is-m-long b { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .row.is-off .ttl b, .row.is-off .ttl { color: var(--faint); font-weight: 400; }
 .vd { border-left: 1px solid var(--rule); flex-direction: column; justify-content: center !important; align-items: flex-end !important; padding: 6px var(--g) 6px 10px; text-align: right; line-height: 1.2; gap: 2px; }
 .vd .m { font-size: 14.5px; font-weight: 600; overflow-wrap: anywhere; }

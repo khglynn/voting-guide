@@ -1,21 +1,22 @@
-/* End-to-end pass at 380px. Uses the Chromium preinstalled at /opt/pw-browsers.
+/* End-to-end pass at 380px, using the repo's own playwright (npm ci, then npx playwright install chromium).
    BASE=http://localhost:4173 node tests/e2e.mjs        (vite preview must be running)
-   BASE=https://<deploy>.vercel.app node tests/e2e.mjs  (against production)
-   Screenshots land in shots/. Exits non-zero on any failed check or console error. */
+   BASE=https://<deploy>.vercel.app node tests/e2e.mjs  (a Vercel preview or production)
+   SHOTS_DIR=...   where screenshots go (default .tmp/e2e-shots, gitignored; shots/ holds the committed reference set)
+   VERCEL_AUTOMATION_BYPASS_SECRET=...  only if Deployment Protection is on for the deployment under test
+   Exits non-zero on any failed check or console error. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-process.env.PLAYWRIGHT_BROWSERS_PATH = process.env.PLAYWRIGHT_BROWSERS_PATH || '/opt/pw-browsers';
-const PW = process.env.PW_PATH || '/opt/npm-tools/node_modules/playwright/index.mjs';
-const { chromium } = await import(PW);
+const { chromium } = await import(process.env.PW_PATH || 'playwright');
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SHOTS = path.join(ROOT, 'shots');
+const SHOTS = path.resolve(process.env.SHOTS_DIR || path.join(ROOT, '.tmp', 'e2e-shots'));
 fs.mkdirSync(SHOTS, { recursive: true });
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
 const TODAY = process.env.TODAY || '2026-10-16';
 const W = 380;
+const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || '';
 
 const results = [];
 const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? `  (${extra})` : ''}`); };
@@ -23,9 +24,12 @@ const check = (name, ok, extra = '') => { results.push({ name, ok, extra }); con
 const browser = await chromium.launch();
 async function newPage() {
   const ctx = await browser.newContext({ viewport: { width: W, height: 820 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true });
+  // The bypass header goes only to the site under test, never to fonts or the Census lookup.
+  if (BYPASS) await ctx.route((u) => u.origin === new URL(BASE).origin, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': BYPASS } }));
   const page = await ctx.newPage();
   page.errors = [];
-  page.on('console', (m) => { if (m.type() === 'error') page.errors.push(m.text()); });
+  // Only our own origin counts: a slow Google Fonts request is not a bug in the guide.
+  page.on('console', (m) => { if (m.type() === 'error' && (!m.location().url || m.location().url.startsWith(new URL(BASE).origin))) page.errors.push(m.text()); });
   page.on('pageerror', (e) => page.errors.push(e.message));
   return { ctx, page };
 }
@@ -86,6 +90,8 @@ const noSideScroll = async (page, label) => {
   check('Denver: sources show as one compact line', /^Endorsements from \d+ sources? Change$/.test(lineBefore), lineBefore);
   await tap(page, '[data-act="sources"]');
   await page.waitForSelector('.sheet-panel #flt-src');
+  // 2026-10-19: this check failed once in three runs because focus lands a moment after the shelf opens. Wait for it.
+  await page.waitForFunction(() => document.activeElement && document.activeElement.id === 'flt-src-h', null, { timeout: 2000 }).catch(() => {});
   const at = await page.evaluate(() => {
     const bd = document.querySelector('.sheet-bd'); const h = document.getElementById('flt-src-h');
     return { focus: document.activeElement && document.activeElement.id, top: Math.round(h.getBoundingClientRect().top - bd.getBoundingClientRect().top) };

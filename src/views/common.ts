@@ -24,8 +24,16 @@ export function basisWords(e: Endorser): string {
   if (!e.lean || !e.lean_basis_kind) return '';
   if (e.lean_basis_kind === 'party') return 'party';
   if (e.lean_basis_kind === 'mission') return 'from its mission statement';
+  // Name the rater only when the basis names exactly one and doesn't say that rater has none
+  // ("no AllSides rating found; Ad Fontes rates it..."). Otherwise stay general; the full basis
+  // is one tap away in More sources.
   const b = e.lean_basis || '';
-  return /AllSides/i.test(b) ? 'rated by AllSides' : /Ad Fontes/i.test(b) ? 'rated by Ad Fontes Media' : 'rated by an outside group';
+  const named = (re: RegExp, no: RegExp) => re.test(b) && !no.test(b);
+  const raters = [
+    named(/AllSides/i, /\bno\s+AllSides|AllSides\s+(has|had|gives)\s+no|not\s+(rated|listed)\s+(by|on)\s+AllSides|without\s+an?\s+AllSides/i) ? 'AllSides' : '',
+    named(/Ad Fontes/i, /\bno\s+Ad Fontes|Ad Fontes\s+(has|had|gives)\s+no|not\s+(rated|listed)\s+(by|on)\s+Ad Fontes|without\s+an?\s+Ad Fontes/i) ? 'Ad Fontes Media' : '',
+  ].filter(Boolean);
+  return raters.length === 1 ? `rated by ${raters[0]}` : 'an outside media-bias rating';
 }
 /* The lean scale for a source, with how it was placed beneath. */
 export const sourceLean = (e: Endorser, words = true): string => {

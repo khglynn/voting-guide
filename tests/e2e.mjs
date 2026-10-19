@@ -374,7 +374,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   noErrors(fresh.page, 'Portland link');
   await fresh.ctx.close();
   // "Change" on a cheat-sheet line goes back to that row, opened, even inside a folded section.
-  await tap(page, '#cheat tr[data-cs="portland-council-3"] [data-act="goto"]');
+  await tap(page, '#cheat tr[data-cs="portland-council-3"]');
   check('Portland: Change on the cheat sheet reopens that row on the ballot', !!(await page.$('#i-portland-council-3.is-open')) && !(await page.$('#cheat')));
   await ctx.close();
 }
@@ -568,6 +568,24 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
   check('Austin on a Pacific-time phone: the open page turns to "Polls closed" after 7 PM Central', /^Polls closed at 7 PM/.test(after), after);
   noErrors(page, 'Polls close on an open page');
+  await ctx.close();
+}
+// Codex r2: a contested judicial race's Full read keeps each rating as published, with its scope and source.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '11201');
+  const id = 'nyc-civil-court-brooklyn-md6';
+  if (!(await page.$(`#i-${id}`))) {
+    const key = await page.evaluate((x) => { const q = [...document.querySelectorAll('.row[data-q]')].find((r) => r.querySelector(`[data-v="${x}"]`) || /Civil Court/.test(r.dataset.q)); return q && q.dataset.q; }, id);
+    if (key) { await openRow(page, `q:${key}`); await tap(page, `.row[data-q="${key}"] [data-act="district"][data-v="${id}"]`); }
+  }
+  await openRow(page, id);
+  await tap(page, `#i-${id} [data-act="reader"]`);
+  await page.waitForSelector('.reader');
+  const rd = await text(page, '.reader');
+  check('Brooklyn Civil Court Full read: each rating as published, with its June primary scope', /Each rating as published/.test(rd) && /June 11, 2026 primary review/.test(rd) && /Failed to Appear/.test(rd), rd.slice(0, 120));
+  check('Brooklyn Civil Court Full read: links the NYC Bar release', !!(await page.$('.reader a[href*="nycbar.org"]')));
+  noErrors(page, 'Brooklyn ratings');
   await ctx.close();
 }
 // #9: a sheet and the Full read hold the keyboard; the ballot behind them is inert.

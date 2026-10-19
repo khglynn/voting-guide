@@ -92,6 +92,8 @@ export function candidateReview(c: Candidate): Review | null {
   if (groups.length > 1) {
     const by = (s: EvalState) => groups.filter((e) => evalState(e) === s);
     const yes = by('yes'), no = by('no'), declined = by('declined'), unrated = by('unrated'), mixed = by('mixed');
+    const declinedNR = declined.filter((e) => /\bnot recommended\b|^\s*NR\b/i.test(e.rating));
+    const declinedOther = declined.filter((e) => !declinedNR.includes(e));
     const rated = yes.length + no.length + mixed.length;
     const who = nameOf(c);
     let main: string; let tone: Review['tone'];
@@ -106,7 +108,10 @@ export function candidateReview(c: Candidate): Review | null {
       yes.length ? `${yes.length === groups.length ? `all ${yes.length}` : yes.length} recommend ${who}${yes.length <= 3 ? ` (${listNames(yes)})` : ''}` : '',
       no.length ? `${no.length} do not (${listNames(no)})` : '',
       mixed.length ? `${mixed.length} give a mixed rating (${listNames(mixed)})` : '',
-      declined.length ? `${declined.length} list ${who} as not recommended because the candidate did not take part in their screening${declined.length <= 4 ? ` (${listNames(declined)})` : ''}` : '',
+      // Only a group whose published rating is "not recommended" is said to have rated them so;
+      // "Failed to Appear" and the like are a group that didn't rate them.
+      declinedNR.length ? `${declinedNR.length} rate ${who} not recommended because the candidate did not take part in their screening${declinedNR.length <= 4 ? ` (${listNames(declinedNR)})` : ''}` : '',
+      declinedOther.length ? `${declinedOther.length} did not rate ${who} because the candidate did not take part in their screening (${declinedOther.map((e) => `${e.by_short}: “${e.rating.split(/\s*\(/)[0]}”`).join(', ')})` : '',
       unrated.length ? `${unrated.length} did not rate ${who} (${listNames(unrated)})` : '',
     ].filter(Boolean);
     const sub = declined.length && rated ? `bar groups; ${declined.length} did not take part` : 'bar groups';
@@ -124,13 +129,21 @@ export function judgeReview(it: Contest): Review | null {
   const rs = it.candidates.map(candidateReview);
   const have = rs.filter((r): r is Review => !!r);
   if (!have.length) return null;
-  const fav = have.filter((r) => r.tone === 'fav').length;
+  // The review's finding counts on its own; a dissent doesn't make a favorable finding less so.
+  // Split votes are reported beside it.
+  const favorable = (c: Candidate, r: Review | null): boolean => {
+    const off = (c.evaluations || []).find(isOfficial);
+    return off ? evalState(off) === 'yes' : !!r && r.tone === 'fav';
+  };
+  const fav = it.candidates.filter((c, i) => favorable(c, rs[i])).length;
+  const splits = have.filter((r) => r.split).length;
   const n = it.candidates.length;
   const tone: Review['tone'] = fav === n ? 'fav' : have.some((r) => r.tone === 'unfav') ? 'unfav' : 'mixed';
+  const base = have[0].sub.replace(/\s*\d+\s*[-–]\s*\d+$/, '');
   return {
     main: fav === n ? `All ${n} favorable` : `${fav} of ${n} favorable`,
-    sub: have[0].sub.replace(/\s*\d+\s*[-–]\s*\d+$/, ''),
-    tone, line: `${fav} of ${n} judges got a favorable review.`, split: have.some((r) => r.split),
+    sub: splits ? `${base}; ${splits} by a split vote` : base,
+    tone, line: `${fav} of ${n} judges got a favorable review.${splits ? ` ${splits === 1 ? 'One was' : `${splits} were`} by a split vote.` : ''}`, split: splits > 0,
     concerns: have.flatMap((r) => r.concerns), strengths: [], links: [],
   };
 }

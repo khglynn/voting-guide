@@ -1,6 +1,6 @@
 /* Model checks for the ledger's own modules (lens, verdict, bulk fills, judges, plan, labels).
    Run by tests/model.mjs, which loads the TypeScript and hands over `check`. */
-export async function run({ st, bl, geo, mods, open, head, read, INDEX, check }) {
+export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, check }) {
   const { lens, tally, bulk, judges, labels } = mods;
   const plan = mods.plan;
   const S = st.S;
@@ -282,6 +282,29 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     r = nm && judges.candidateReview(nm);
     check('judges: Natalia Moore (did not take part in 14 screenings) reads as declined, not 14 groups finding her unfit', !!r && r.main === 'Declined screening' && r.tone === 'none' && /did not take part/.test(r.line) && !/do not \(/.test(r.line), r ? JSON.stringify([r.main, r.line.slice(0, 160)]) : 'not found');
     check('judges: her reason is shown as a reason, not a finding', !!r && r.concerns.length > 0 && r.concerns.every((x) => x.reason));
+    // Codex r2: a 7-1 "meets standards" is still a favorable finding; the split is reported beside it.
+    const au = open('CO', ['aurora-co']);
+    const adams = au.byId.get('adams-district-judges');
+    const jr = adams && judges.judgeReview(adams);
+    check('judges: Adams County district judges (all five meet standards, one 7-1) read "All 5 favorable", split noted', !!jr && jr.main === 'All 5 favorable' && /1 by a split vote/.test(jr.sub) && /One was by a split vote/.test(jr.line), jr ? `${jr.main} | ${jr.sub}` : 'missing');
+    // Codex r2: New York "Failed to Appear" is a group that did not rate them, never "not recommended".
+    const bk = open('NY', ['nyc-brooklyn-ny']);
+    const md6 = bk.byId.get('nyc-civil-court-brooklyn-md6');
+    const dsf = md6 && md6.candidates.find((c) => /DeSouza-Forte/.test(c.name));
+    const dr = dsf && judges.candidateReview(dsf);
+    check('judges: DeSouza-Forte reads as not rated by LeGaL ("Failed to Appear"), never "not recommended"', !!dr && !/not recommended/i.test(dr.line) && /did not rate/.test(dr.line) && /Failed to Appear/.test(dr.line), dr ? dr.line : 'missing');
+  }
+
+  /* ---------- how a lean was placed, in plain words (Codex r2) ---------- */
+  {
+    const sea = open('WA', ['seattle-wa']);
+    const stranger = sea.endorsers.find((e) => /stranger/.test(e.id));
+    check('lean: The Stranger reads "rated by Ad Fontes Media" (its basis says no AllSides rating was found)', !!stranger && common.basisWords(stranger) === 'rated by Ad Fontes Media', stranger && common.basisWords(stranger));
+    const all = new Map();
+    for (const f of [...Object.keys(INDEX.states).map((x) => `state-${x}.json`), ...Object.keys(INDEX.places).map((x) => `place-${x}.json`)]) for (const e of read(f).endorsers) all.set(e.id, e);
+    const wrong = [...all.values()].filter((e) => /rated by AllSides/.test(common.basisWords(e)) && /\bno\s+AllSides/i.test(e.lean_basis || ''));
+    check('lean: no source whose basis says "no AllSides rating" is credited to AllSides', wrong.length === 0, wrong.map((e) => e.id).join(', '));
+    check('lean: a party reads "party", a mission "from its mission statement"', [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'party').every((e) => common.basisWords(e) === 'party') && [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'mission').every((e) => common.basisWords(e) === 'from its mission statement'));
   }
 
   /* ---------- what it takes to pass, read as a rule ---------- */

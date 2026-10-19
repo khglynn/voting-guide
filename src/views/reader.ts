@@ -85,6 +85,17 @@ function evalBlock(e: Evaluation): string {
     ${strength ? `<p><b>Noted:</b> “${esc(strength)}”</p>` : ''}${e.noted_concern ? `<p><b>${reason ? 'Their reason' : 'A concern'}:</b> “${esc(e.noted_concern)}”</p>` : ''}
     <p class="src">${ext(e.url, host(e.url))}${e.verified_on ? ` · checked ${esc(e.verified_on)}` : ''}${confLabel(e.confidence) ? ` · ${confLabel(e.confidence)}` : ''}</p></div>`;
 }
+/* Every bar rating in a contested race as the group published it: the full rating text (it carries
+   the scope and date, like "June 11, 2026 primary review"), any vote, the source and when we
+   checked it. The summary above counts them; this is the record. Polls are counts, shown above. */
+function ratingsAsPublished(c: Contest): string {
+  const blocks = c.candidates.map((k) => {
+    const ev = (k.evaluations || []).filter((e) => e.kind !== 'bar_poll');
+    if (!ev.length) return '';
+    return `<li><b>${esc(k.name)}</b><ul class="bul">${ev.map((e) => `<li>${esc(e.by)}: ${escP(e.rating)}${e.vote ? ` (vote ${esc(e.vote)})` : ''}. ${ext(e.url, host(e.url))}${e.verified_on ? ` <span class="host">checked ${esc(e.verified_on)}</span>` : ''}</li>`).join('')}</ul></li>`;
+  }).filter(Boolean);
+  return blocks.length ? `<ul class="links rated">${blocks.join('')}</ul>` : '';
+}
 function links(list: { name: string; url: string }[]): string {
   return list.length ? `<ul class="links">${list.map((s) => `<li>${ext(s.url, s.name)} <span class="host">${esc(host(s.url))}</span></li>`).join('')}</ul>` : '';
 }
@@ -98,6 +109,7 @@ function raceRead(c: Contest): string {
     ${c.why_it_matters ? sec('Why it matters', para(c.why_it_matters)) : ''}
     ${sec('The candidates, in their own words', c.candidates.map((k) => candBlock(c, k)).join(''), 'Quote marks mean their exact words. Anything else is our summary, labeled.')}
     ${hasRatings(c) ? sec('Lawyer polls and bar ratings', raceRatingsHTML(c)) : ''}
+    ${sec('Each rating as published', ratingsAsPublished(c), 'Word for word, with what it covered and when, and a link to the group’s own page.')}
     ${sec('Guides that explain without picking', guides(c))}
     ${sec('What each source said', sourcesSaid(c), 'Sources you chose come first.')}
     ${sec('Official and source links', links(c.sources))}`;

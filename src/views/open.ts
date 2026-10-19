@@ -46,13 +46,15 @@ function whereHTML(it: Item): string {
 }
 
 /* ---------- the sideways grid ---------- */
-function lookedSources(l: Lineup): Endorser[] {
-  return [...weighedIn(l), ...l.noStand, ...l.notFound];
-}
-function quietLines(l: Lineup, it: Item): string {
+/* The grid has a row only for sources that picked. Everyone who took no stand, had no pick we
+   could find, or hasn't been checked goes on one quiet line under it, so the picks stand out. */
+function quietLines(l: Lineup, it: Item, picked = true): string {
   const out: string[] = [];
-  if (l.notChecked.length) out.push(`Not checked yet: ${l.notChecked.map((e) => e.short).join(', ')}.`);
-  if (l.both.length) out.push(`${l.both.map((e) => e.short).join(', ')} ${l.both.length === 1 ? 'lists' : 'list'} campaigns on both sides.`);
+  const names = (list: Endorser[]) => esc(list.map((e) => e.short).join(', '));
+  if (picked && l.noStand.length) out.push(`Took no stand: ${names(l.noStand)}.`);
+  if (picked && l.notFound.length) out.push(`No picks found: ${names(l.notFound)}.`);
+  if (picked && l.notChecked.length) out.push(`Not checked yet: ${names(l.notChecked)}.`);
+  if (l.both.length) out.push(`${names(l.both)} ${l.both.length === 1 ? 'lists' : 'list'} campaigns on both sides.`);
   const guides = l.guides.filter((e) => e.guide_url || picksOnBallot(S.ballot!, e.id) === 0);
   if (guides.length) {
     const what = it.kind === 'measure' ? 'take positions on measures' : 'pick candidates';
@@ -67,7 +69,7 @@ function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | nu
   const r = (S.ballot!.ends[it.id] || {})[e.id];
   if (!r) return null;
   if (r.s === 'no_position') return `<td class="span np" colspan="${n}">Took no stand</td>`;
-  if (r.s === 'not_found') return `<td class="span nf" colspan="${n}">Nothing found</td>`;
+  if (r.s === 'not_found') return `<td class="span nf" colspan="${n}">No picks found</td>`;
   const c = r.c || [];
   if (!c.some((x) => cols.includes(x))) {
     const names = c.length ? c.map((x) => (it.kind === 'contest' ? (it.candidates.find((k) => k.name === x)?.short || x) : x)).join(', ') : (r.note || 'Endorsed');
@@ -76,7 +78,7 @@ function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | nu
   return null;
 }
 function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: string; mine: boolean }[], foot: string): string {
-  const rows = lookedSources(l);
+  const rows = weighedIn(l);
   const keys = cols.map((c) => c.key);
   const body = rows.map((e) => {
     const span = spanCell(it, e, keys, cols.length);
@@ -97,11 +99,9 @@ function noneLineHTML(it: Item, l: Lineup): string {
   if (!chosen().length) parts.push('You haven’t chosen any sources.');
   else if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
-    const bits: string[] = [];
-    if (l.noStand.length) bits.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand`);
-    if (l.notFound.length) bits.push(`we found no pick from ${l.notFound.map((e) => e.short).join(', ')}`);
-    if (l.notChecked.length) bits.push(`${l.notChecked.map((e) => e.short).join(', ')} not checked yet`);
-    parts.push(`Your sources haven’t picked here: ${bits.join('; ')}.`);
+    if (l.noStand.length) parts.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand.`);
+    if (l.notFound.length) parts.push(`No pick found from ${l.notFound.map((e) => e.short).join(', ')}.`);
+    if (l.notChecked.length) parts.push(`Not checked yet: ${l.notChecked.map((e) => e.short).join(', ')}.`);
   }
   return `<p class="none-line">${esc(parts.join(' '))}</p>`;
 }
@@ -242,7 +242,7 @@ function raceHTML(c: Contest): string {
     if (rcv) body += rankPanelHTML(c);
     body += listHTML(c, l);
   }
-  body += quietLines(l, c);
+  body += quietLines(l, c, w.length > 0);
   if (multi) {
     const n = c.candidates.filter((k) => S.b.picks[`${c.id}|${k.name}`] === 'PICK').length;
     body = `<p class="seats"><b>This race fills ${c.vote_for} seats.</b> Mark up to ${c.vote_for} for your cheat sheet. ${n ? `${n} marked.` : ''}</p>${body}${n && n < c.vote_for && status(c) === 'open' ? `<button class="mini" data-act="mdone" data-id="${esc(c.id)}">I’m done with this race</button>` : ''}`;
@@ -384,7 +384,7 @@ function measureHTML(m: Measure): string {
     ${m.confusing_wording_note ? `<div class="heads"><b>The wording has a catch.</b> ${clampP(`cw-${m.id}`, m.confusing_wording_note, 26).replace(/^<p>|<\/p>$/g, '')}</div>` : ''}
     ${thresholdLine(m)}
     ${m.official_title ? clampP(`ot-${m.id}`, `Official title: ${m.official_title}`, 18, 'ob-meta ot') : ''}
-    ${weighedIn(l).length ? sourcesYesNo(m) : `${noneLineHTML(m, l)}${quietLines(l, m)}`}
+    ${weighedIn(l).length ? sourcesYesNo(m) : `${noneLineHTML(m, l)}${quietLines(l, m, false)}`}
     ${othersHTML(m)}
     <div class="duo" role="group" aria-label="Your vote on ${esc(m.number)}">
       <button class="pick tall${v === 'YES' ? ' on' : ''}" data-act="pick" data-id="${esc(m.id)}" data-v="YES" aria-pressed="${v === 'YES'}" data-fk="pb-${esc(m.id)}-y"><span>Yes</span></button>

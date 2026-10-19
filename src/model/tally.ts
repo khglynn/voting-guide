@@ -174,11 +174,14 @@ export function tally(l: Lineup): string {
 
 export type VKind = 'mine' | 'agree' | 'split' | 'none' | 'review';
 export type NoneWhy = 'no_stand' | 'not_found' | 'not_checked' | 'no_cover' | 'no_sources' | 'both' | 'mixed';
-export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none' }
+/* shade: 'one' when a single source weighed in (one group is not a consensus), 'lean' for a
+   lopsided split (2 to 1 or wider), 'even' for a close one. The view styles each differently. */
+export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy; filled?: boolean; tone?: 'fav' | 'unfav' | 'mixed' | 'none'; shade?: 'one' | 'lean' | 'even' }
 
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No picks found', not_checked: 'Not checked yet',
-  no_cover: 'None of your sources cover this', no_sources: 'No sources chosen', both: 'Listed both sides',
+  // The common case on local races: a quiet invitation on the row, said once on the section band.
+  no_cover: 'Open to compare', no_sources: 'No sources chosen', both: 'Listed both sides',
   mixed: 'No picks yet',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
@@ -218,7 +221,10 @@ export function verdict(it: Item): Verdict {
   const l = lineup(it);
   const s = status(it);
   if (s === 'decided' || s === 'auto' || s === 'skipped') {
-    return { kind: 'mine', main: pickShort(it) || 'Decided', sub: s === 'skipped' ? '' : lineupUnderPick(l, it), filled: !!S.b.auto[it.id] };
+    // A filled pick says where it came from, in a few words; what the sources said is in the open row.
+    const auto = S.b.auto[it.id];
+    const from = auto ? (/party|candidate on the ballot/i.test(auto) ? 'Filled from your party' : /review/i.test(auto) ? 'Filled from the review' : 'Filled from your sources') : '';
+    return { kind: 'mine', main: pickShort(it) || 'Decided', sub: s === 'skipped' ? '' : from || lineupUnderPick(l, it), filled: !!auto };
   }
   // Judges: the official review, in its own neutral style. It is not one of your sources.
   if (it.kind === 'contest' && it.is_retention) {
@@ -239,15 +245,18 @@ export function verdict(it: Item): Verdict {
   // A source whose pick is a note, not a candidate or yes/no ("option 1: five districts"): name
   // who weighed in and leave the words for the open row.
   if (l.groups.some((g) => !g.choices.length)) {
-    return { kind: l.groups.length === 1 ? 'agree' : 'split', main: w.length === 1 ? tagOf(w[0]) : `${w.length} sources`, sub: 'weighed in; open to read' };
+    return l.groups.length === 1
+      ? { kind: 'agree', main: w.length === 1 ? tagOf(w[0]) : `${w.length} sources`, sub: 'tap to read what they said', shade: w.length === 1 ? 'one' : undefined }
+      : { kind: 'split', main: 'Mixed', sub: 'tap to see why', shade: 'even' };
   }
   if (l.groups.length === 1) {
     const g = l.groups[0];
     const named = namedLineup(l, it);
-    return { kind: 'agree', main: g.label, sub: named || (w.length === 1 ? w[0].short : `all ${w.length} agree`) };
+    return { kind: 'agree', main: g.label, sub: named || (w.length === 1 ? w[0].short : `all ${w.length} agree`), shade: w.length === 1 ? 'one' : undefined };
   }
   const named = namedLineup(l, it);
-  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split' };
+  const [a, b2] = [l.groups[0].sources.length, l.groups[1] ? l.groups[1].sources.length : 0];
+  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split', shade: a >= 2 * b2 ? 'lean' : 'even' };
 }
 
 /* "Your 4 sources made picks on 18 of your 42 choices." Over what's visible now, counting the same

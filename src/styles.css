@@ -249,6 +249,7 @@ b, strong { font-weight: 600; }
 .ttl.is-m { align-items: flex-start; }
 .ttl .t-sum { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 15px; line-height: 1.3; font-weight: 600; }
 .ttl small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
+.ttl .t-sum.named { display: block; -webkit-line-clamp: unset; overflow: visible; }
 .ttl.is-m-long b { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .row.is-off .ttl b, .row.is-off .ttl { color: var(--faint); font-weight: 400; }
 .vd { border-left: 1px solid var(--rule); flex-direction: column; justify-content: center !important; align-items: flex-end !important; padding: 6px var(--g) 6px 10px; text-align: right; line-height: 1.2; gap: 2px; }
@@ -256,8 +257,18 @@ b, strong { font-weight: 600; }
 .vd .s { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
 .vd.agree { background: var(--sage-tint); }
 .vd.agree .m { color: var(--sage); }
-.vd.split { background: var(--clay-tint); }
-.vd.split .m { color: var(--clay); font-size: 13.5px; }
+/* Color keeps one job each, quietly: agreement is sage; one source alone is ink on a light sage
+   edge (not a consensus); a split is ink with a clay edge, stronger when it's close, so a page of
+   splits reads calm instead of alarmed. */
+.vd.agree.one { background: none; box-shadow: inset 3px 0 0 var(--sage-tint); }
+.vd.agree.one .m { color: var(--ink); }
+.vd.split { background: none; box-shadow: inset 3px 0 0 var(--clay); }
+.vd.split.lean { box-shadow: inset 3px 0 0 var(--clay-tint); }
+.vd.split .m { color: var(--ink); font-size: 13.5px; font-weight: 600; }
+.vd.split.even .m { color: var(--clay); }
+.vd .nw { white-space: nowrap; }
+.sec-note { padding: 10px var(--g) 4px; font-size: 14.5px; color: var(--ink-2); }
+.sec-note .linkbtn { margin: -12px 0; }
 .vd.none .m { color: var(--muted); font-weight: 400; font-style: italic; font-size: 13.5px; }
 .vd.q { background: var(--dusk-tint); }
 .vd.q .m { color: var(--dusk-ink); }

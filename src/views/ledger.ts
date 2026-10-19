@@ -46,7 +46,6 @@ export function sectionTitle(sec: SectionKey): string {
 }
 function sectionSub(sec: SectionKey): string {
   const b = S.ballot!;
-  if (sec === 'measures') return 'Each one says what a yes and a no vote mean.';
   if (sec === 'judicial') {
     return judgesRule();
   }
@@ -65,10 +64,12 @@ export const headsHTML = (list: string[]): string => list.map((t) => `<p class="
 
 /* ---------- the verdict column ---------- */
 export function verdictHTML(v: Verdict): string {
-  const cls = v.kind === 'mine' ? 'done' : v.kind === 'review' ? `review ${v.tone || ''}` : v.kind;
-  const sub = v.kind === 'mine' && v.filled ? `${v.sub ? `${v.sub}. ` : ''}filled for you` : v.sub;
-  const label = v.kind === 'mine' ? 'Your pick: ' : v.kind === 'review' ? 'Official review: ' : v.kind === 'agree' ? 'Your sources agree: ' : v.kind === 'split' ? 'Your sources disagree: ' : '';
-  return `<span class="vd ${cls}"><span class="m"><span class="vh">${label}</span>${esc(v.main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
+  const cls = `${v.kind === 'mine' ? 'done' : v.kind === 'review' ? `review ${v.tone || ''}` : v.kind}${v.shade ? ` ${v.shade}` : ''}`;
+  const sub = v.sub;
+  const label = v.kind === 'mine' ? 'Your pick: ' : v.kind === 'review' ? 'Official review: ' : v.kind === 'agree' ? (v.shade === 'one' ? 'One source picked: ' : 'Your sources agree: ') : v.kind === 'split' ? 'Your sources disagree: ' : '';
+  // "Tucker 1" never breaks between the name and its number: each pair stays on one line.
+  const main = v.kind === 'split' ? v.main.split(', ').map((p) => `<span class="nw">${esc(p)}</span>`).join(', ') : esc(v.main);
+  return `<span class="vd ${cls}"><span class="m"><span class="vh">${label}</span>${main}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 }
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 
@@ -79,9 +80,11 @@ function titleHTML(it: Item): string {
     // The number, then the measure's short name ("Park bonds"); a long summary is cut to a lead.
     const tag = measureTag(it);
     const name = it.short_title ? it.short_title : leadRest(r.sub || r.title, 40)[0];
-    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum">${esc(name)}</span></span></span>`;
+    // A short title is a name, so it is never clipped; a summary lead still is.
+    const named = it.short_title ? ' named' : '';
+    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum${named}">${esc(name)}</span></span></span>`;
     const sub = it.short_title || (r.sub ? leadRest(r.sub, 40)[0] : '');
-    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${sub ? `<small class="t-sum">${esc(sub)}</small>` : ''}</span></span>`;
+    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${sub ? `<small class="t-sum${named}">${esc(sub)}</small>` : ''}</span></span>`;
   }
   return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>`;
 }
@@ -324,6 +327,15 @@ function judgeToolsHTML(): string {
   const html = parts.join('');
   return html ? `<div class="sec-tools">${html}</div>` : '';
 }
+/* When none of your sources cover any open race in a section (three or more), say it once here
+   instead of on every row. */
+function quietNoteHTML(entries: Entry[]): string {
+  const b = S.ballot!;
+  const open = entries.filter((e) => e.t === 'item').map((e) => b.byId.get((e as { id: string }).id)!).filter((it) => status(it) === 'open' && !(it.kind === 'contest' && it.is_retention));
+  if (open.length < 3 || !open.every((it) => { const v = verdict(it); return v.kind === 'none' && v.why === 'no_cover'; })) return '';
+  const m = open.every((it) => it.kind === 'measure');
+  return `<p class="sec-note">Your sources didn’t pick in these ${m ? 'measures' : 'races'}. Open one to ${m ? 'read both sides' : 'compare the candidates in their own words'}, or <button class="linkbtn" data-act="sheet" data-s="sources" data-fk="sec-more">try more sources</button>.</p>`;
+}
 export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   const b = S.ballot!;
   const has = entries.some((e) => e.t !== 'item' || isDecision(status(b.byId.get(e.id)!)) || status(b.byId.get(e.id)!) === 'unopposed' || status(b.byId.get(e.id)!) === 'info');
@@ -334,7 +346,7 @@ export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   if (folded && S.ui.onlyUndecided) return '';
   const title = sectionTitle(sec);
   const sub = folded ? foldSummary(entries) : sectionSub(sec);
-  const tools = !folded && sec === 'judicial' ? judgeToolsHTML() : !folded ? `${headsUp(`section:${sec}`).length ? `<div class="sec-tools">${headsHTML(headsUp(`section:${sec}`))}</div>` : ''}` : '';
+  const tools = !folded && sec === 'judicial' ? judgeToolsHTML() : !folded ? `${headsUp(`section:${sec}`).length ? `<div class="sec-tools">${headsHTML(headsUp(`section:${sec}`))}</div>` : ''}${quietNoteHTML(entries)}` : '';
   return `<section class="sec${done ? ' done' : ''}${folded ? ' folded' : ''}" id="sec-${sec}" data-sec="${sec}" aria-labelledby="sh-${sec}">
     <h2 class="sec-h" id="sh-${sec}"><button class="sec-hd" data-act="sec" data-sec="${sec}" aria-expanded="${!folded}" data-fk="sec-${sec}">
       <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span>

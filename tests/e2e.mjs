@@ -529,14 +529,14 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
   await tap(page, '[data-act="bulk"][data-k="agree"]');
-  const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /filled for you/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
+  const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /Filled from your sources/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
   check('Undo after a hand edit: a measure was filled', !!filled);
   if (filled) {
     await openRow(page, filled.id);
     await tap(page, `#i-${filled.id} [data-act="pick"][data-v="${filled.v}"]`);
     await tap(page, '.toast [data-act="undo-bulk"]').catch(() => {});
     const still = await text(page, `#i-${filled.id} .vd .m`);
-    check('Undo after a hand edit: the pick you confirmed by hand stays', new RegExp(filled.v === 'YES' ? 'Yes$' : 'No$').test(still) && !/filled for you/.test(await text(page, `#i-${filled.id}`)), still);
+    check('Undo after a hand edit: the pick you confirmed by hand stays', new RegExp(filled.v === 'YES' ? 'Yes$' : 'No$').test(still) && !/Filled from your sources/.test(await text(page, `#i-${filled.id}`)), still);
   }
   noErrors(page, 'Undo after a hand edit');
   await ctx.close();

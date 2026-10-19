@@ -52,7 +52,7 @@ function srcRow(e: Endorser): string {
   const on = chosenIds().includes(e.id);
   const k = `basis-${e.id}`;
   const n = picksOnBallot(b, e.id);
-  const what = explainsOnly(e) ? 'Explains, doesn’t pick' : n ? `Picks on ${plural(n, 'item')} here` : 'No picks here yet';
+  const what = explainsOnly(e) ? 'Explains, doesn’t pick' : n ? `Picks on ${plural(n, 'item')} here` : 'No picks found';
   return `<li class="srow">
     <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}. ${esc(what)}.</span>
       <span class="s-l">${sourceLean(e)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">How we know</button></span>

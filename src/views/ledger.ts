@@ -67,8 +67,9 @@ export function verdictHTML(v: Verdict): string {
   const cls = `${v.kind === 'mine' ? 'done' : v.kind === 'review' ? `review ${v.tone || ''}` : v.kind}${v.shade ? ` ${v.shade}` : ''}`;
   const sub = v.sub;
   const label = v.kind === 'mine' ? 'Your pick: ' : v.kind === 'review' ? 'Official review: ' : v.kind === 'agree' ? (v.shade === 'one' ? 'Endorsed by one source: ' : 'Your sources agree: ') : v.kind === 'split' ? 'Your sources disagree: ' : '';
-  // "Tucker 1" never breaks between the name and its number: each pair stays on one line.
-  const main = v.kind === 'split' ? v.main.split(', ').map((p) => `<span class="nw">${esc(p)}</span>`).join(', ') : esc(v.main);
+  // "Tucker 1" keeps its name and number together where it fits; the comma rides with the pair before it,
+  // so a wrapped line never starts with one.
+  const main = v.kind === 'split' ? v.main.split(', ').map((p, i, a) => `<span class="nw">${esc(p)}${i < a.length - 1 ? ',' : ''}</span>`).join(' ') : esc(v.main);
   return `<span class="vd ${cls}"><span class="m"><span class="vh">${label}</span>${main}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;
 }
 const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span class="m">${esc(main)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</span>`;

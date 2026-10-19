@@ -170,6 +170,12 @@ function rankPanelHTML(it: Contest): string {
     <button class="pick on rdone" data-act="rdone" data-id="${id}" data-fk="rd-${id}">Done ranking</button></div>`;
 }
 function backedBy(c: Contest, k: Candidate, l: Lineup): string {
+  if (isRCV(c)) {
+    // A ranking names where each source put this candidate: "Ranked by Mercury (1st), Oregonian (3rd)".
+    const row = S.ballot!.ends[c.id] || {};
+    const by = l.groups.flatMap((g) => g.sources).map((e) => { const i = (row[e.id]?.c || []).indexOf(k.name); return i < 0 ? '' : `${e.short} (${ordinal(i + 1)})`; }).filter(Boolean);
+    return by.length ? `<span class="by">${CHECK}<span>Ranked by ${esc(by.join(', '))}</span></span>` : '';
+  }
   const by = l.groups.filter((g) => g.choices.includes(k.name)).flatMap((g) => g.sources);
   return by.length ? `<span class="by">${CHECK}<span>Backed by ${esc(by.map((e) => e.short).join(', '))}</span></span>` : '';
 }
@@ -374,6 +380,7 @@ function measureHTML(m: Measure): string {
     ${duelHTML(m)}
     ${m.confusing_wording_note ? `<div class="heads"><b>The wording has a catch.</b> ${clampP(`cw-${m.id}`, m.confusing_wording_note, 26).replace(/^<p>|<\/p>$/g, '')}</div>` : ''}
     ${thresholdLine(m)}
+    ${m.official_title ? clampP(`ot-${m.id}`, `Official title: ${m.official_title}`, 18, 'ob-meta ot') : ''}
     ${weighedIn(l).length ? sourcesYesNo(m) : `${noneLineHTML(m, l)}${quietLines(l, m)}`}
     ${othersHTML(m)}
     <div class="duo" role="group" aria-label="Your vote on ${esc(m.number)}">

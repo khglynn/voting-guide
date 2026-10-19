@@ -143,6 +143,19 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
       tally.clearLineups();
     }
     check('verdict: the test found a ranked race to try', !!rcv);
+    // UX review #3: Multnomah County Chair read "Singleton, Brim-Edwards, Meieran 1, Singleton 1, ...".
+    {
+      const pd = open('OR', ['portland-or']);
+      pd.groups.forEach((x) => { S.b.districts[x.key] = '*'; });
+      const races = pd.items.filter((x) => x.kind === 'contest' && x.ranked_choice);
+      S.b.sources = pd.endorsers.map((e) => e.id);
+      tally.clearLineups();
+      const bad = races.map((x) => ({ x, v: tally.verdict(x), l: tally.lineup(x) })).filter(({ l }) => l.groups.some((g) => g.choices.length > 1));
+      check('ranked: no verdict counts a whole ranked list as one candidate', races.length > 0 && bad.length === 0, bad.slice(0, 2).map(({ x, v }) => `${x.id}: ${v.main}`).join(' | '));
+      const chair = races.find((x) => /Chair/i.test(x.office));
+      const v = chair && tally.verdict(chair);
+      check('ranked: the County Chair verdict names first choices', !!v && (/first/.test(v.main) || /First choice/.test(v.main)), v && v.main);
+    }
   }
 
   /* ---------- bulk fills and undo ---------- */

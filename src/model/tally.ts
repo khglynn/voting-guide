@@ -92,14 +92,15 @@ function computeLineup(it: Item, sources: Endorser[]): Lineup {
     if (r.s === 'no_position') { out.noStand.push(e); continue; }
     if (r.s === 'not_found') { out.notFound.push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
-    // Two sources naming the same candidates in a different order agree. Order is kept only
-    // where it means something: a ranking in a ranked-choice race.
+    // Two sources naming the same candidates in a different order agree. In a ranked-choice
+    // race a source's list is a ranking, so sources are grouped by their first choice ("Novick
+    // first"): a whole ranked list is never counted as if it were one candidate.
     const ranked = it.kind === 'contest' && isRCV(it);
-    const choices = r.c && r.c.length ? (ranked ? [...r.c] : [...new Set(r.c)].sort((x, y) => choiceRank(it, x) - choiceRank(it, y) || (x < y ? -1 : x > y ? 1 : 0))) : [];
+    const choices = r.c && r.c.length ? (ranked ? [r.c[0]] : [...new Set(r.c)].sort((x, y) => choiceRank(it, x) - choiceRank(it, y) || (x < y ? -1 : x > y ? 1 : 0))) : [];
     const key = choices.length ? choices.join('+') : `note:${r.note || 'endorsed'}`;
     let g = groups.get(key);
     if (!g) {
-      const label = choices.length ? choices.map((c) => choiceShort(it, c)).join(', ') : (r.note || 'Endorsed');
+      const label = choices.length ? (ranked && r.c!.length > 1 ? `${choiceShort(it, choices[0])} first` : choices.map((c) => choiceShort(it, c)).join(', ')) : (r.note || 'Endorsed');
       g = { key, label, choices, sources: [] };
       groups.set(key, g);
     }
@@ -165,8 +166,9 @@ export function namedLineup(l: Lineup, it: Item): string | null {
   const lower = it.kind === 'measure' || (it.kind === 'contest' && it.is_retention);
   return l.groups.flatMap((g) => g.sources.map((e) => `${tags.get(e.id)} ${lower ? g.label.toLowerCase() : g.label}`)).join(', ');
 }
-/* "Yes 5, No 2" / "Allen 3, Griswold 1": leading side first. */
+/* "Yes 5, No 2" / "Allen 3, Griswold 1": leading side first. Ranked races count first choices. */
 export function tally(l: Lineup): string {
+  if (l.groups.some((g) => / first$/.test(g.label))) return `First choice: ${l.groups.map((g) => `${g.label.replace(/ first$/, '')} ${g.sources.length}`).join(', ')}`;
   return l.groups.map((g) => `${g.label} ${g.sources.length}`).join(', ');
 }
 

@@ -7,7 +7,7 @@ import { status, sectionOf, decisionItems, rankMax, ordinal, chosenIds, type Sec
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, go, openReader, runAddress } from './app';
-import { planAgree, planParty, planJudges, applyFills, undoFills, type Plan } from './model/bulk';
+import { planAgree, planParty, planJudges, applyFills, undoFills, emptyPlan, type Plan } from './model/bulk';
 import { toggleChip, setParty, setSources, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { cheatText, shareURL } from './views/cheat';
@@ -283,10 +283,10 @@ A.bulk = (d) => {
   const k = d.k!;
   let plan: Plan;
   if (k === 'agree') plan = planAgree();
-  else if (k === 'party') plan = S.b.party ? planParty(S.b.party) : { fills: [], single: 0, skippedTwo: 0, skippedRanked: 0 };
+  else if (k === 'party') plan = S.b.party ? planParty(S.b.party) : emptyPlan();
   else plan = planJudges();
-  if (!plan.fills.length) { toast('Nothing to fill right now.'); return; }
-  const n = applyFills(plan.fills);
+  const n = plan.fills.length ? applyFills(plan.fills) : 0;
+  if (!n) { toast(plan.skippedPartial ? `Nothing to fill. ${plural(plan.skippedPartial, 'race')} you started picking ${plan.skippedPartial === 1 ? 'was' : 'were'} left for you to finish.` : 'Nothing to fill right now.'); return; }
   S.ui.row = null;
   renderBallot();
   render(['bar']);
@@ -296,6 +296,7 @@ A.bulk = (d) => {
     plan.single ? `${plan.single} rest on one source.` : '',
     plan.skippedTwo ? `Skipped ${plural(plan.skippedTwo, 'race')} where the party has more than one candidate.` : '',
     plan.skippedRanked ? `Skipped ${plural(plan.skippedRanked, 'ranked-choice race')}; rank those yourself.` : '',
+    plan.skippedPartial ? `Left ${plural(plan.skippedPartial, 'race')} you started picking for you to finish.` : '',
   ].filter(Boolean).join(' ');
   toast(`${k === 'judges' ? `Marked ${what} keep` : `Filled ${what}`}${k === 'agree' ? ' where your sources agree' : k === 'party' ? ` with ${S.b.party} candidates` : ''}. ${extra}`.trim(), { label: 'Undo', act: 'undo-bulk' });
 };

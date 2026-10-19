@@ -5,7 +5,11 @@
    - "Fill in my party": partisan races by the ballot's normalized `parties` labels (never the
      display text). Skips races where the party has two candidates (top-two) and ranked races.
    - "Keep every judge the review favors": from the judges module.
-   Filled picks are marked in S.b.auto so the row can say where the pick came from. */
+   Filled picks are marked in S.b.auto so the row can say where the pick came from.
+   A multi-seat race you've started picking is never filled (adding a source's full set to
+   your own picks would vote for too many), and every fill is checked against the seat count
+   before it lands. Undo puts back only what the batch changed, so a pick you make while the
+   Undo toast is up survives it. */
 import type { Item } from '../types';
 import { S } from '../state';
 import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan } from '../ballot';
@@ -13,7 +17,12 @@ import { lineup, weighedIn } from './tally';
 import { judgeBatch } from './judges';
 
 export interface Fill { id: string; set: Record<string, string>; single: boolean; why: string }
-export interface Plan { fills: Fill[]; single: number; skippedTwo: number; skippedRanked: number }
+export interface Plan { fills: Fill[]; single: number; skippedTwo: number; skippedRanked: number; skippedPartial: number }
+export const emptyPlan = (): Plan => ({ fills: [], single: 0, skippedTwo: 0, skippedRanked: 0, skippedPartial: 0 });
+
+/* Seats already marked in a multi-seat race. */
+const pickedIn = (it: Item, picks: Record<string, string> = S.b.picks): number =>
+  it.kind === 'contest' ? it.candidates.filter((c) => picks[`${it.id}|${c.name}`] === 'PICK').length : 0;
 
 function visibleOpen(): Item[] {
   const b = S.ballot!;
@@ -30,6 +39,7 @@ function visibleOpen(): Item[] {
 
 export function planAgree(): Plan {
   const fills: Fill[] = [];
+  let skippedPartial = 0;
   for (const it of visibleOpen()) {
     if (it.kind === 'contest' && (isRCV(it) || isMultiJudge(it))) continue;
     const l = lineup(it);
@@ -47,18 +57,19 @@ export function planAgree(): Plan {
     if (names.length !== g.choices.length) continue;
     if (isMultiSeat(it)) {
       if (names.length !== it.vote_for) continue;
+      if (pickedIn(it)) { skippedPartial++; continue; }
       fills.push({ id: it.id, set: Object.fromEntries(names.map((n) => [`${it.id}|${n}`, 'PICK'])), single: w.length === 1, why });
       continue;
     }
     if (names.length !== 1) continue;
     fills.push({ id: it.id, set: { [it.id]: names[0] }, single: w.length === 1, why });
   }
-  return { fills, single: fills.filter((f) => f.single).length, skippedTwo: 0, skippedRanked: 0 };
+  return { fills, single: fills.filter((f) => f.single).length, skippedTwo: 0, skippedRanked: 0, skippedPartial };
 }
 
 export function planParty(party: string): Plan {
   const fills: Fill[] = [];
-  let skippedTwo = 0, skippedRanked = 0;
+  let skippedTwo = 0, skippedRanked = 0, skippedPartial = 0;
   for (const it of visibleOpen()) {
     if (it.kind !== 'contest' || it.is_retention || !isPartisan(it)) continue;
     const mine = it.candidates.filter((c) => c.parties.includes(party));
@@ -67,6 +78,7 @@ export function planParty(party: string): Plan {
     const why = `Filled: the ${party} candidate on the ballot`;
     if (isMultiSeat(it)) {
       if (mine.length > it.vote_for) { skippedTwo++; continue; }
+      if (pickedIn(it)) { skippedPartial++; continue; }
       const set: Record<string, string> = Object.fromEntries(mine.map((c) => [`${it.id}|${c.name}`, 'PICK']));
       if (mine.length < it.vote_for) set[it.id] = 'DONE';
       fills.push({ id: it.id, set, single: false, why });
@@ -75,35 +87,55 @@ export function planParty(party: string): Plan {
     if (mine.length > 1) { skippedTwo++; continue; }
     fills.push({ id: it.id, set: { [it.id]: mine[0].name }, single: false, why });
   }
-  return { fills, single: 0, skippedTwo, skippedRanked };
+  return { fills, single: 0, skippedTwo, skippedRanked, skippedPartial };
 }
 
 export function planJudges(): Plan {
   const jb = judgeBatch();
-  if (!jb) return { fills: [], single: 0, skippedTwo: 0, skippedRanked: 0 };
+  if (!jb) return emptyPlan();
   const by = new Map<string, Fill>();
   for (const t of jb.targets) {
     const f = by.get(t.id) || { id: t.id, set: {}, single: false, why: 'Filled: the judges’ review' };
     f.set[t.key] = 'YES';
     by.set(t.id, f);
   }
-  return { fills: [...by.values()], single: 0, skippedTwo: 0, skippedRanked: 0 };
+  return { ...emptyPlan(), fills: [...by.values()] };
 }
 
-/* ---------- apply and undo ---------- */
-interface Snapshot { picks: Record<string, string>; auto: Record<string, string>; ranks: Record<string, string[]> }
-let last: Snapshot | null = null;
+/* A fill fits when, after it lands, a multi-seat race has no more picks than seats. */
+export function fillFits(f: Fill): boolean {
+  const it = S.ballot?.byId.get(f.id);
+  if (!it || it.kind !== 'contest' || !isMultiSeat(it)) return true;
+  return pickedIn(it, { ...S.b.picks, ...f.set }) <= it.vote_for;
+}
+
+/* ---------- apply and undo ----------
+   The batch remembers, key by key, what it replaced and what it wrote. Undo restores a key
+   only while it still holds what the batch wrote. Fills never touch rankings. */
+type Was = string | undefined;
+interface Batch { picks: Map<string, [Was, string]>; auto: Map<string, [Was, string]> }
+let last: Batch | null = null;
 export function applyFills(fills: Fill[]): number {
-  last = { picks: { ...S.b.picks }, auto: { ...S.b.auto }, ranks: JSON.parse(JSON.stringify(S.b.ranks || {})) };
+  const batch: Batch = { picks: new Map(), auto: new Map() };
+  let n = 0;
   for (const f of fills) {
-    Object.assign(S.b.picks, f.set);
+    if (!fillFits(f)) continue;
+    for (const [k, v] of Object.entries(f.set)) {
+      if (!batch.picks.has(k)) batch.picks.set(k, [S.b.picks[k], v]); else batch.picks.get(k)![1] = v;
+      S.b.picks[k] = v;
+    }
+    if (!batch.auto.has(f.id)) batch.auto.set(f.id, [S.b.auto[f.id], f.why]); else batch.auto.get(f.id)![1] = f.why;
     S.b.auto[f.id] = f.why;
+    n++;
   }
-  return fills.length;
+  last = n ? batch : null;
+  return n;
 }
 export function undoFills(): boolean {
   if (!last) return false;
-  S.b.picks = last.picks; S.b.auto = last.auto; S.b.ranks = last.ranks;
+  const put = (o: Record<string, string>, k: string, was: Was) => { if (was === undefined) delete o[k]; else o[k] = was; };
+  for (const [k, [was, wrote]] of last.picks) if (S.b.picks[k] === wrote) put(S.b.picks, k, was);
+  for (const [k, [was, wrote]] of last.auto) if (S.b.auto[k] === wrote) put(S.b.auto, k, was);
   last = null;
   return true;
 }

@@ -127,6 +127,45 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     check('agree fill: a second pass has nothing left to fill', bulk.planAgree().fills.length === 0);
     bulk.undoFills();
     check('agree fill: Undo restores every pick exactly', JSON.stringify(S.b.picks) === before);
+    // Codex #3: a pick made while the Undo toast is up survives Undo.
+    {
+      const plan2 = bulk.planAgree();
+      const filledIds = new Set(plan2.fills.map((f) => f.id));
+      const other = b.items.find((x) => x.kind === 'measure' && !filledIds.has(x.id) && !S.b.picks[x.id]);
+      const changed = plan2.fills.find((f) => f.set[f.id] && b.byId.get(f.id).kind === 'measure');
+      bulk.applyFills(plan2.fills);
+      if (other) S.b.picks[other.id] = 'YES';
+      if (changed) { S.b.picks[changed.id] = changed.set[changed.id] === 'YES' ? 'NO' : 'YES'; delete S.b.auto[changed.id]; }
+      bulk.undoFills();
+      check('undo: the test has a row to decide and a filled row to change', !!other && !!changed);
+      check('undo: a decision made after the fill survives Undo', !other || S.b.picks[other.id] === 'YES', other && other.id);
+      check('undo: a filled row you changed keeps your change', !changed || (S.b.picks[changed.id] && S.b.picks[changed.id] !== changed.set[changed.id]), changed && changed.id);
+      check('undo: the rest of the batch is cleared', plan2.fills.filter((f) => f !== changed).every((f) => Object.keys(f.set).every((k) => S.b.picks[k] === undefined) && !S.b.auto[f.id]));
+      if (other) delete S.b.picks[other.id];
+      if (changed) delete S.b.picks[changed.id];
+    }
+    // Codex #1: a multi-seat race you started picking is never filled past its seats.
+    {
+      const bo = open('CO', ['boulder-co']);
+      S.b.sources = ['plan-boulder'];
+      tally.clearLineups();
+      const council = bo.byId.get('boulder-council');
+      const planIn = bulk.planAgree().fills.find((f) => f.id === 'boulder-council');
+      check('multi-seat: with no picks yet, PLAN-Boulder fills all five council seats', !!planIn && Object.keys(planIn.set).length === council.vote_for);
+      S.b.picks['boulder-council|Lee Gilbert'] = 'PICK';
+      const pa = bulk.planAgree();
+      check('multi-seat: after you pick Lee Gilbert, agreement fill leaves the council alone', !pa.fills.some((f) => f.id === 'boulder-council') && pa.skippedPartial === 1, JSON.stringify(pa.skippedPartial));
+      bulk.applyFills([planIn]);
+      const n = council.candidates.filter((c) => S.b.picks[`boulder-council|${c.name}`] === 'PICK').length;
+      check('multi-seat: a fill that would make six picks for five seats is refused', n === 1, String(n));
+      const ch = open('IL', ['chicago-il']);
+      ch.groups.forEach((x) => { S.b.districts[x.key] = '*'; });
+      check('multi-seat: party fill fills an untouched three-seat race', bulk.planParty('Democratic').fills.some((f) => f.id === 'il-mwrd-6yr'));
+      S.b.picks['il-mwrd-6yr|Michelle Pennington'] = 'PICK';
+      const pp = bulk.planParty('Democratic');
+      check('multi-seat: party fill skips a race you started picking and says so', !pp.fills.some((f) => f.id === 'il-mwrd-6yr') && pp.skippedPartial >= 1);
+    }
+    open('CO', ['lakewood-co']);
     // Never a ranked race.
     const p = open('OR', ['portland-or']);
     S.b.sources = p.endorsers.map((e) => e.id);

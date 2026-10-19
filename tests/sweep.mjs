@@ -398,7 +398,10 @@ async function sweepBallot(browser, ballot) {
     const plan = planFor(ex);
     const problems = await page.evaluate(PICK_PLAN, plan);
     if (problems.length) R.fail(ballot.name, `${problems.length} problems making the planned choices`, problems.slice(0, 4).join(' | '));
-    await page.waitForTimeout(250); // the sheets render just after the tap paints
+    // The sheets render just after the last tap paints. Wait (up to 5 s, for a busy machine) until neither
+  // shows anything undecided; a row that stays blank is then reported by the comparison below.
+  await page.waitForFunction(() => !document.querySelector('#cheat td.undecided, #r-print td.undecided, #cheat td .screen-only, #r-print td .screen-only'), null, { timeout: 5000 }).catch(() => {});
+  await page.waitForTimeout(100);
     const cheat = await page.evaluate(CHEAT);
     const secOrder = Object.keys(snap.sec);
     compareSheet(R, ballot.name, 'cheat sheet (screen)', cheat.screen, wantSheet(o, ex, plan, secOrder, false));

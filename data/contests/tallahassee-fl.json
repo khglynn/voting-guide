@@ -333,9 +333,9 @@
     "background": "Incumbent at-large county commissioner (Leon County SOE).",
     "own_words": [
      {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
+      "text": "I support an independent, transparent cost-and-performance model, shared data and clear service standards.",
+      "is_quote": true,
+      "source": "https://onyourballot.vote411.org/m/candidate-detail.do?id=3698458"
      }
     ],
     "lwv_status": "unknown",
@@ -350,9 +350,9 @@
     "background": "Qualified write-in candidate. The name is not printed on the ballot: to vote for this candidate, fill in the write-in oval and write the name.",
     "own_words": [
      {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Portals/0/Files/Candidates/ElectionFilers.html"
+      "text": "one of my central priorities is better access to quality healthcare for everyone in our community.",
+      "is_quote": true,
+      "source": "https://mishyrashid.com/"
      }
     ],
     "lwv_status": "unknown",
@@ -397,13 +397,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Elected without opposition (Leon County SOE).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -652,15 +646,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Qualified write-in candidate; former Florida House and Senate employee who previously ran for Leon Soil and Water District 5 (Tallahassee Chamber fact sheet). His name is not printed on the ballot: fill in the write-in oval and write his name.",
-    "own_words": [
-     {
-      "text": "No platform collected for this race: the Chamber fact sheet lists no campaign site.",
-      "is_quote": false,
-      "source": "https://www.talchamber.com/wp-content/uploads/2026/07/Leon-County-School-Board-Races-District-1-Candidate-Fact-Sheets.pdf"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search: James Billingsley (write-in) Leon County candidate campaign, platform and questionnaire",
+      "Official Leon County candidate and qualifying records; no candidate policy text"
+     ]
+    }
    }
   ],
   "sources": [
@@ -709,13 +705,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Elected without opposition (Leon County SOE).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -750,13 +740,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Elected without opposition (Leon County SOE).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -795,13 +779,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Unopposed (Florida Division of Elections).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -840,13 +818,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Unopposed (Florida Division of Elections).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -974,13 +946,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Unopposed in the primary and general (Florida Division of Elections).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -1019,13 +985,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Unopposed in the primary and general (Florida Division of Elections).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=LEO&elecid=20261103-GEN"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -1152,13 +1112,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Elected without opposition (Leon County SOE).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -1197,13 +1151,7 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Incumbent. Elected without opposition (Leon County SOE).",
-    "own_words": [
-     {
-      "text": "Not on the ballot; no platform collected.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/"
    }
@@ -1242,15 +1190,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search for Canopy CDD Seat 1 candidate statements",
+      "VOTE411 Canopy CDD Seat 1 questionnaire: candidate has not yet responded"
+     ]
+    }
    },
    {
     "name": "Teegan Fiedler",
@@ -1259,15 +1209,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search for Canopy CDD Seat 1 candidate statements",
+      "VOTE411 Canopy CDD Seat 1 questionnaire: candidate has not yet responded"
+     ]
+    }
    }
   ],
   "sources": [
@@ -1308,15 +1260,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search: Kurt V. Christensen Leon County candidate campaign, platform and questionnaire",
+      "Official Leon County candidate and qualifying records; no candidate policy text"
+     ]
+    }
    },
    {
     "name": "Jennifer Jankowski Green",
@@ -1325,15 +1279,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search: Jennifer Jankowski Green Leon County candidate campaign, platform and questionnaire",
+      "Official Leon County candidate and qualifying records; no candidate policy text"
+     ]
+    }
    }
   ],
   "sources": [
@@ -1374,15 +1330,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search: Rick Hays Leon County candidate campaign, platform and questionnaire",
+      "Official Leon County candidate and qualifying records; no candidate policy text"
+     ]
+    }
    },
    {
     "name": "Diane K. Lamb",
@@ -1391,15 +1349,17 @@
     "website": null,
     "website_confidence": "unverified",
     "background": null,
-    "own_words": [
-     {
-      "text": "No platform collected: we found no campaign site, questionnaire or interview in this run.",
-      "is_quote": false,
-      "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/50/Leon-County-Supervisor-of-Elections-Announces-Qualified-Local-Candidates-for-2026-Elections"
-     }
-    ],
+    "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": "https://www.vote411.org/"
+    "lwv_url": "https://www.vote411.org/",
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Web search: Diane K. Lamb Leon County candidate campaign, platform and questionnaire",
+      "Official Leon County candidate and qualifying records; no candidate policy text"
+     ]
+    }
    }
   ],
   "sources": [

@@ -836,9 +836,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Housing is critical to ensuring the stability of Latiné LGBTQ+ youth, but it isn’t a singular issue.",
+            "is_quote": true,
+            "source": "https://windycitytimes.com/2026/08/31/chicago-advocates-highlight-housing-challenges-for-lgbtq-latine-youth/"
           }
         ],
         "lwv_status": "unknown",
@@ -885,9 +885,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "I encourage eligible residents to apply for the Low-Income Home Energy Assistance Program.",
+            "is_quote": true,
+            "source": "https://senatorhunter.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -934,9 +934,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Senator Collins remains committed to serving working families across the 5th District and the entire state of Illinois.",
+            "is_quote": true,
+            "source": "https://lakesiacollinsforsenate.com/issues/"
           }
         ],
         "lwv_status": "unknown",
@@ -983,9 +983,9 @@
         "background": "Incumbent state senator. Won the March 17 Democratic primary with 55.6% over community organizer Nick Uniejewski. No Republican on the ballot.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "The best way to combat rising costs is to build more housing that increases density.",
+            "is_quote": true,
+            "source": "https://chicago.suntimes.com/elections/2026/candidate-questionnaires/sara-feigenholtz-illinois-senate-primary-6th-district"
           }
         ],
         "lwv_status": "unknown",
@@ -1030,15 +1030,19 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Business owner. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "romanoforrep.com (empty response)",
+            "Ballotpedia profile (bot verification)",
+            "iVoterGuide and Illinois Family Institute guide"
+          ]
+        }
       },
       {
         "name": "Ram Villivalam",
@@ -1108,9 +1112,9 @@
         "background": "Won the Republican primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "reduce state spending and government waste",
+            "is_quote": true,
+            "source": "https://www.jim4hd17.com/rallyforlally"
           }
         ],
         "lwv_status": "unknown",
@@ -1182,13 +1186,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -1233,9 +1231,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "people have the right to live openly, freely, have safe communities, ample resources and opportunities",
+            "is_quote": true,
+            "source": "https://www.celinavillanueva.com/about-celina-1"
           }
         ],
         "lwv_status": "unknown",
@@ -1309,9 +1307,9 @@
         "background": "Incumbent state senator. Won the March 17 Democratic primary with 60.8%.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "When we put people first, we can reach our economic and academic goals.",
+            "is_quote": true,
+            "source": "https://senatoremiljones.com/?start=4"
           }
         ],
         "lwv_status": "unknown",
@@ -1358,9 +1356,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Access to fresh, affordable food is essential to building healthy and thriving communities",
+            "is_quote": true,
+            "source": "https://www.senatornapoleonharris.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1405,13 +1403,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Republican nominee for the Illinois House in 2022 and 2024. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -1422,13 +1414,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state senator. Won the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -1473,9 +1459,9 @@
         "background": "Business owner. Won the Republican primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "She believes the focus should be on recovery for the victims, not making it easy for the predators.",
+            "is_quote": true,
+            "source": "https://www.shanahanmcgovern.com/home"
           }
         ],
         "lwv_status": "unknown",
@@ -1488,13 +1474,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Former state representative. Won the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -1543,9 +1523,9 @@
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Her policy-making will always center those most directly impacted by the issue.",
+            "is_quote": true,
+            "source": "https://www.gracielafor20.org/"
           }
         ],
         "lwv_status": "unknown",
@@ -1590,13 +1570,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state senator. Unopposed in the March 17 Democratic primary and in November.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -1641,9 +1615,9 @@
         "background": "Incumbent state representative. Won the March 17 Democratic primary over educator Guadalupe Rivera.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Fully Fund Our Public Schools",
+            "is_quote": true,
+            "source": "https://www.aaronortiz.org/about"
           }
         ],
         "lwv_status": "unknown",
@@ -1694,9 +1668,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "She is focused on advancing housing affordability, lowering costs for working families, and expanding access to essential services",
+            "is_quote": true,
+            "source": "https://www.staterepdelgado.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1747,9 +1721,9 @@
         "background": "Incumbent state representative. Won the March 17 Democratic primary with 88.7% over business owner Kirk Ortiz.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "I believe our state should tax corporations and billionaires, not working people to stabilize our state.",
+            "is_quote": true,
+            "source": "https://www.lilianforstaterep.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1800,9 +1774,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "A strong, fully funded education system with real resources for every student in the 5th District.",
+            "is_quote": true,
+            "source": "https://kim4staterep.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1853,9 +1827,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "During the fall veto session transit bill I made sure it included language that would rehab and reopen the Green Line Racine station.",
+            "is_quote": true,
+            "source": "https://www.bscactionfund.org/sonya-harper"
           }
         ],
         "lwv_status": "unknown",
@@ -1906,9 +1880,9 @@
         "background": "Illinois Attorney General staffer. Won a four-way Democratic primary with about 46%.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Shantel believes healthcare should be accessible and affordable for every family, regardless of zip code or income.",
+            "is_quote": true,
+            "source": "https://shantelforstaterep.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1957,13 +1931,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2010,13 +1978,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2063,13 +2025,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2118,9 +2074,9 @@
         "background": "Board member of the Lupus Society of Illinois. Unopposed in the Republican primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Policy should serve people, not bureaucracy.",
+            "is_quote": true,
+            "source": "https://kumarforil12.com/policy-initiatives"
           }
         ],
         "lwv_status": "unknown",
@@ -2198,9 +2154,9 @@
         "background": "Republican nominee for this seat in 2024. Unopposed in the Republican primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "From a 2024 Chicago Sun-Times questionnaire for this district: \"We need to cut down on government size to be more streamline and efficient.\"",
+            "is_quote": true,
+            "source": "https://chicago.suntimes.com/candidate-questionnaires/terry-nguyen-le-illinois-house-13th-district"
           }
         ],
         "lwv_status": "unknown",
@@ -2276,13 +2232,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2329,13 +2279,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2382,13 +2326,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2435,15 +2373,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Attorney. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and candidate-questionnaire web search",
+            "BallotReady candidate profile"
+          ]
+        }
       },
       {
         "name": "Robyn Gabel",
@@ -2510,15 +2450,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Republican nominee for this seat in 2024. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "Sun-Times 2024 questionnaire index (did not respond)",
+            "Illinois campaign-committee filing"
+          ]
+        }
       },
       {
         "name": "Lindsey LaPointe",
@@ -2590,13 +2533,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the Republican primary; no Democrat filed.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2723,13 +2660,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -2778,9 +2709,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "he has championed workers’ rights, protected a woman’s right to choose and access to reproductive healthcare",
+            "is_quote": true,
+            "source": "https://www.edgargonzalezjr.com/meetedgar"
           }
         ],
         "lwv_status": "unknown",
@@ -2831,9 +2762,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Our communities deserve strong schools, safe neighborhoods, access to affordable healthcare, good jobs, and tax relief that puts the middle class first",
+            "is_quote": true,
+            "source": "https://theresamah.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2882,15 +2813,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Teacher. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and priorities web search",
+            "Illinois campaign committee filing",
+            "Candidate profile and questionnaire search"
+          ]
+        }
       },
       {
         "name": "Curtis J. Tarver II",
@@ -2954,9 +2888,9 @@
         "background": "Incumbent state representative. Won the March 17 Democratic primary with 74.3% over Chicago Police District Council member Kenya Franklin.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Kam is committed to using all of the tools, energy, and resources needed to create a better today",
+            "is_quote": true,
+            "source": "https://kambuckner.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -3005,15 +2939,19 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web searches for Justin Slaughter campaign priorities, questionnaire, and shared-values quotation",
+            "repjustinslaughter.com: no readable text",
+            "repslaughter27.com: old policy text mixed with unrelated casino promotion; no clean version verified",
+            "Illinois House Democrats member directory: third-party biography"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3058,13 +2996,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Won the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3111,13 +3043,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3166,9 +3092,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Dr. Crawford's main priorities include increasing education funding and opportunities, supporting equal rights for all, equitable healthcare access",
+            "is_quote": true,
+            "source": "https://www.drmikecrawford.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -3219,9 +3145,9 @@
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "delivering a strong voice for women, working families, and seniors.",
+            "is_quote": true,
+            "source": "https://www.lisadavisforstaterepresentative.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -3270,13 +3196,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Unopposed in the March 17 Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3323,13 +3243,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Gun violence prevention advocate. Won the March 17 Democratic primary with 59.0% over political consultant Aja Kearney.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3405,9 +3319,14 @@
         "background": "Incumbent state representative. Won the Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Mary is passionate about public safety, small business empowerment, education",
+            "is_quote": true,
+            "source": "https://maryegill.com/meet-mary/"
+          },
+          {
+            "text": "advocating for those with disabilities, women’s healthcare, and protecting workers’ rights.",
+            "is_quote": true,
+            "source": "https://maryegill.com/meet-mary/"
           }
         ],
         "lwv_status": "unknown",
@@ -3456,13 +3375,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Evergreen Park school board member. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -3473,13 +3386,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Won the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3526,13 +3433,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Patrol officer. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -3545,9 +3446,9 @@
         "background": "Incumbent state representative. Won the Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "It’s time Illinois put the needs of our communities ahead of the wealthy and connected interests.",
+            "is_quote": true,
+            "source": "https://www.willguzzardi.com/home"
           }
         ],
         "lwv_status": "unknown",
@@ -3598,9 +3499,9 @@
         "background": "Local School Council member. Defeated incumbent Rep. Jaime Andrade in the March 17 Democratic primary, 55.6% to 44.4%.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "our communities are fighting every day for justice, for homes we can afford, universal healthcare and the right to live without fear.",
+            "is_quote": true,
+            "source": "https://www.miguelfor40.org/"
           }
         ],
         "lwv_status": "unknown",
@@ -3649,15 +3550,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Business owner. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "Illinois candidate and committee listing"
+          ]
+        }
       },
       {
         "name": "Justin Cochran",
@@ -3724,13 +3627,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Financial guardian. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -3741,13 +3638,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent state representative. Won the Democratic primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -3882,9 +3773,9 @@
         "background": "Incumbent county clerk. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "modernizing the Clerk’s Office, strengthening election administration and making essential government services more accessible to Cook County residents.",
+            "is_quote": true,
+            "source": "https://monicaforcookcounty.com/about/"
           }
         ],
         "lwv_status": "unknown",
@@ -4013,9 +3904,9 @@
         "background": "Incumbent county treasurer. Unopposed in the March 17 Democratic primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Taxpayers have a right to know about the spending and debt incurred by those who tax them.",
+            "is_quote": true,
+            "source": "https://www.mariapappas.net/"
           }
         ],
         "lwv_status": "unknown",
@@ -4144,9 +4035,9 @@
         "background": "Incumbent commissioner, first appointed in 2023. Unopposed in the primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "That means strengthening partnerships with CTA, Pace, and Metra to ensure South and West suburban riders are not left behind.",
+            "is_quote": true,
+            "source": "https://www.bscactionfund.org/tara-stamps"
           }
         ],
         "lwv_status": "unknown",
@@ -4193,9 +4084,9 @@
         "background": "Incumbent commissioner, first appointed in 2024. Won the March 17 Democratic primary with 64.7% over activist Andre Smith.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Together, we can build a stronger, more vibrant Cook County.",
+            "is_quote": true,
+            "source": "https://www.commissionerscott.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4242,9 +4133,14 @@
         "background": "Incumbent commissioner. Unopposed in the primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Support small businesses and economic development.",
+            "is_quote": true,
+            "source": "https://billlowrycommissioner.com/about-us/"
+          },
+          {
+            "text": "Advocate for accessible and equitable healthcare.",
+            "is_quote": true,
+            "source": "https://billlowrycommissioner.com/about-us/"
           }
         ],
         "lwv_status": "unknown",
@@ -4289,13 +4185,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent commissioner, seeking a fourth full term. Unopposed in the primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -4338,13 +4228,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Former Riverdale village trustee. Won the Republican primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -4357,9 +4241,9 @@
         "background": "Incumbent commissioner, first appointed in 2025. Won the March 17 Democratic primary over Dolton trustee Kiana Belcher.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "supporting accountable public safety and justice reform, promoting affordable housing",
+            "is_quote": true,
+            "source": "https://votemccaskill.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4406,9 +4290,9 @@
         "background": "Incumbent commissioner, seeking a third term. Unopposed in the primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "She has also provided policy research on issues facing the community.",
+            "is_quote": true,
+            "source": "https://www.almaanaya.com/about"
           }
         ],
         "lwv_status": "unknown",
@@ -4453,13 +4337,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Listed by the Board of Elections as the Republican candidate. No Republican ran in the March primary.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       },
@@ -4472,9 +4350,9 @@
         "background": "Incumbent commissioner, first appointed in 2025. Won the March 17 Democratic primary with 87.8% over Navy veteran Nicholas Cade.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "providing support for property tax relief through appeals and advocacy, and making Cook County resources more accessible for our residents.",
+            "is_quote": true,
+            "source": "https://www.vasquezforcookcounty.org/about"
           }
         ],
         "lwv_status": "unknown",
@@ -4519,15 +4397,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Listed by the Board of Elections as the Republican candidate. Primary coverage named a different Republican primary winner (Ammie Kessem); we could not confirm how the nomination changed.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://vote411.org/lwvchicago"
+        "lwv_url": "https://vote411.org/lwvchicago",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "2026 county-commissioner campaign-site and questionnaire web search",
+            "luersforillinois.com (expired domain)",
+            "Sun-Times 2024 State Senate questionnaire"
+          ]
+        }
       },
       {
         "name": "Maggie Trevor",
@@ -4597,9 +4478,9 @@
         "background": "Engineer. Defeated incumbent Commissioner Bridget Gainer, who was seeking a fourth full term, in the March 17 Democratic primary, 56.7% to 43.3%.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Bring Fairness To Property Taxes",
+            "is_quote": true,
+            "source": "https://drakefor10.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4646,9 +4527,9 @@
         "background": "Listed by the Board of Elections as the Republican candidate. No Republican ran in the March primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "No one should be taxed out of the neighborhood they love.",
+            "is_quote": true,
+            "source": "https://www.citizensforcharlesspizzirri.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4663,9 +4544,9 @@
         "background": "Incumbent commissioner, seeking an eighth full term. Unopposed in the primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "The decline in rider safety on public transit has also become a significant challenge in recent years.",
+            "is_quote": true,
+            "source": "https://www.bscactionfund.org/john-daley"
           }
         ],
         "lwv_status": "unknown",
@@ -4712,9 +4593,9 @@
         "background": "Small business owner; Republican nominee for this seat in 2022. Unopposed in the Republican primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Fight for fair, transparent property assessments and lower the burden on homeowners.",
+            "is_quote": true,
+            "source": "https://votealicehu.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4783,9 +4664,9 @@
         "background": "Listed by the Board of Elections as the Republican candidate. No Republican ran in the March primary.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "This campaign is about practical leadership, fiscal responsibility, stronger communities, and a county government that answers to the people it serves.",
+            "is_quote": true,
+            "source": "https://www.citizensforaasisiddique.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4852,13 +4733,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Attorney. Won a three-way Democratic primary with 35.7%, defeating incumbent Commissioner Frank Aguilar.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -4903,9 +4778,9 @@
         "background": "Incumbent Board of Review commissioner. Won the March 17 Democratic primary over Juanita Irizarry.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "protect taxpayers through fair appeals, transparent policy, and direct taxpayer assistance.",
+            "is_quote": true,
+            "source": "https://www.georgecardenas.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -4956,9 +4831,9 @@
         "background": "Consultant. Defeated incumbent Commissioner Samantha Steele in the March 17 Democratic primary with more than 60% of the vote.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "That responsibility demands an office that is accessible, responsive, and ethical.",
+            "is_quote": true,
+            "source": "https://news.wttw.com/elections/voters-guide/2026-general/elizabeth-liz-nicholson"
           }
         ],
         "lwv_status": "unknown",
@@ -5009,9 +4884,9 @@
         "background": "Republican nominee.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "What we need to do is spend taxpayer money wisely.",
+            "is_quote": true,
+            "source": "https://www.michelleforcleanwater.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -5026,9 +4901,9 @@
         "background": "Republican nominee.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "We would require one public dashboard that’s easy to read for every MWRD project",
+            "is_quote": true,
+            "source": "https://www.illinoisreview.com/illinoisreview/2026/10/gutter-level-governing-change-it-nov-3.html"
           }
         ],
         "lwv_status": "unknown",
@@ -5043,9 +4918,9 @@
         "background": "Republican nominee.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Make every added dollar earn its way forward.",
+            "is_quote": true,
+            "source": "https://jill4water.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -5173,9 +5048,9 @@
         "background": "Incumbent MWRD commissioner whose current term ends in December; running unopposed for the two years left on another seat's term.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Led efforts to bring green infrastructure to suburban Cook County schoolyards;",
+            "is_quote": true,
+            "source": "https://camdavis.org/"
           }
         ],
         "lwv_status": "unknown",
@@ -27054,9 +26929,9 @@
         "background": "Current Chicago Board of Education member (Chalkbeat, May 2026); this subdistrict seat is new.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "every child deserves a safe, rigorous, and high-quality education, no matter their income, race, religion, or circumstances.",
+            "is_quote": true,
+            "source": "https://www.ellenforeducation.org/"
           }
         ],
         "lwv_status": "unknown",
@@ -27669,13 +27544,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Current Chicago Board of Education member (Chalkbeat, May 2026); this subdistrict seat is new.",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -27725,9 +27594,9 @@
         "background": "Candidate; not a current board member (Chalkbeat, May 2026).",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "I'm running to bring accountable leadership, stronger community voices, and better long-term outcomes for our students.",
+            "is_quote": true,
+            "source": "https://secure.actblue.com/donate/juanignaciogonzalez"
           }
         ],
         "lwv_status": "unknown",
@@ -27777,13 +27646,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Candidate; not a current board member (Chalkbeat, May 2026).",
-        "own_words": [
-          {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://vote411.org/lwvchicago"
       }
@@ -27924,9 +27787,9 @@
         "background": "Current Chicago Board of Education member (Chalkbeat, May 2026); this subdistrict seat is new.",
         "own_words": [
           {
-            "text": "No statement collected for this guide yet.",
-            "is_quote": false,
-            "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf"
+            "text": "Balanced budgets built on money that actually exists.",
+            "is_quote": true,
+            "source": "https://rhymefestforcps.com/"
           }
         ],
         "lwv_status": "unknown",

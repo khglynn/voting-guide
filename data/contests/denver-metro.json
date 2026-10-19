@@ -77,9 +77,9 @@
         "background": "Unity Party nominee. No campaign site or questionnaire answers found.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-1-candidate-qa/"
+            "text": "I think my history as a problem solver really fits well with being able to bring people in.",
+            "is_quote": true,
+            "source": "https://denverite.com/2026/09/25/vg-2026-critter-milton-1st-congressional-district-voter-guide/"
           }
         ],
         "lwv_status": "unknown",
@@ -254,9 +254,9 @@
         "background": "Unity Party nominee.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-6-candidate-qa/"
+            "text": "It is time to end tax breaks for corporations and the rich and fund universal healthcare.",
+            "is_quote": true,
+            "source": "https://votemeredithryan.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -357,9 +357,9 @@
         "background": "Republican nominee.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
+            "text": "reading, writing, math, and the ability to think clearly.",
+            "is_quote": true,
+            "source": "https://www.unbrokenschoolsco.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -372,15 +372,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Libertarian nominee.",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-board-of-education-district-1-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Clayton Casciato Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       }
     ],
     "sources": [
@@ -450,9 +452,9 @@
         "background": "Republican nominee; unopposed in the June primary.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/cu-regent-district-6-candidate-qa/"
+            "text": "Freedom of speech should be on the campus of CU for all students, not just some, all students.",
+            "is_quote": true,
+            "source": "https://www.cpr.org/2026/09/24/vg-2026-cu-board-of-regents-voter-guide/"
           }
         ],
         "lwv_status": "unknown",
@@ -608,7 +610,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Republican nominee. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Let's make Colorado safe and affordable for families again.",
+            "is_quote": true,
+            "source": "https://wulff4colorado.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -651,7 +659,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Nonprofit director. Won the June Democratic primary with 69% over Andrés Carrera. Listed as Graciela \"Chela\" Garcia Irlando by the state party. Did not answer the Denver Gazette or Denver Post questionnaires; no campaign site found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "I believe all people deserve to live a life with dignity.",
+            "is_quote": true,
+            "source": "https://www.chelaforcolorado.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -991,7 +1005,15 @@
         "background": "Won the June Republican primary (Critical Report spells it Erwin; the SOS list says Ervin). Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Cecelia Espenoza",
@@ -1017,7 +1039,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Forward Party nominee. Business executive; most recently president of FBC Remodel and earlier ran the packaging company Clysar (BallotReady). Did not return the Denver Post questionnaire; no campaign site found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "Corporate PAC money is not welcome in this campaign.",
+            "is_quote": true,
+            "source": "https://www.coloradoforwardparty.com/2026_fwdcandidate_hare"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       }
@@ -1160,7 +1188,15 @@
         "background": "Campus coordinator; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1279,7 +1315,15 @@
         "background": "Implementation consultant; won the June Republican primary. Did not return the Denver Post questionnaire; no campaign site or survey answers found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Lindsay Gilchrist",
@@ -1376,7 +1420,15 @@
         "background": "Republican nominee in 2022 and 2024 as well. Did not return the Denver Post questionnaire; only a campaign Facebook page was found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and policy-questionnaire web search",
+            "Ballotpedia profile fetch (bot verification prevented reading)"
+          ]
+        }
       },
       {
         "name": "Monica VanBuskirk",
@@ -1672,13 +1724,7 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Founder of Julissa Soto Latino Health Equity Consulting and Casa Inmigrante. Did not respond to the Denver Gazette or Denver Post questionnaires.",
-        "own_words": [
-          {
-            "text": "Did not respond to the Denver Gazette questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/11/denver-elections-council-race-voter-guide/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -2949,9 +2995,9 @@
         "background": "Retired operations executive. Did not respond to the Denver Gazette questionnaire.",
         "own_words": [
           {
-            "text": "Did not respond to the Denver Gazette questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/11/2-commissioner-seats-up-for-grabs-in-arapahoe-county-4/"
+            "text": "a commissioner who will manage county tax dollars carefully.",
+            "is_quote": true,
+            "source": "https://carlschuldiesforcommissioner.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -3174,9 +3220,9 @@
         "background": "Incumbent commissioner. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://adamscountyco.gov/wp-content/uploads/2026/09/CR-2026-General-Election-Sample-Ballot-092826.pdf"
+            "text": "We need to build an Adams County economy that leaves no one out and no one behind.",
+            "is_quote": true,
+            "source": "https://www.ballotready.org/people/emma-pinter"
           }
         ],
         "lwv_status": "unknown",

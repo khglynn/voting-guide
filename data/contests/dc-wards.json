@@ -685,7 +685,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "Not the same person as Ward 5 Councilmember Zachary Parker.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "We have to get kids interested in reading. We have to intervene early.",
+      "is_quote": true,
+      "source": "https://www.hillrag.com/2026/10/13/ward-6-sboe-candidates-propose-different-paths-to-stronger-schools/"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": "https://www.vote411.org/ballot"
    },

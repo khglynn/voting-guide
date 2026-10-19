@@ -75,20 +75,19 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Chair of the Libertarian Party of Missouri. Unopposed in the August 4 Libertarian primary (6,726 votes). No campaign website found.",
-        "own_words": [
-          {
-            "text": "No campaign statements found. The Missouri Independent's Oct 12 candidate story notes only that he is on the ballot.",
-            "is_quote": false,
-            "source": "https://missouriindependent.com/2026/10/12/missouri-auditor-candidates-split-over-how-office-should-confront-state-budget-problems/"
-          },
-          {
-            "text": "Check Ballotpedia and VOTE411 for any questionnaire answers.",
-            "is_quote": false,
-            "source": "https://ballotpedia.org/Dustin_Coffell"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/missouri"
+        "lwv_url": "https://www.vote411.org/missouri",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search: Dustin Coffell auditor campaign priorities; BallotReady verified links",
+            "Official St. Charles County 2026 questionnaire: no response",
+            "Official campaign Facebook page: access failed",
+            "coffell4mo.com: adapts Facebook material, campaign control not verified"
+          ]
+        }
       }
     ],
     "sources": [

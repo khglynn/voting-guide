@@ -648,11 +648,6 @@
             "text": "Says the secretary of state should be more than \"a glorified, overpaid file clerk\" and should actively uphold the constitution.",
             "is_quote": true,
             "source": "https://www.cpr.org/2026/09/25/vg-2026-secretary-of-state-third-party-voter-guide/"
-          },
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-secretary-of-state-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -799,11 +794,6 @@
             "text": "Priorities, per KSJD: protecting taxpayer funds, more transparency in state investments, reforming PERA and returning unclaimed property.",
             "is_quote": false,
             "source": "https://www.ksjd.org/2026-10-06/colorados-2026-statewide-candidates-voter-guide"
-          },
-          {
-            "text": "Did not return the Denver Post questionnaire.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-treasurer-candidate-qa/"
           }
         ],
         "lwv_status": "unknown",
@@ -818,7 +808,16 @@
         "background": "Boulder photographer and owner of Marilee Photography. Only a Facebook page was found. She did not return the Denver Post questionnaire, and KSJD's statewide guide found no stated platform.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "BallotReady candidate links",
+            "Colorado Public Radio third-party treasurer guide"
+          ]
+        }
       }
     ],
     "sources": [

@@ -75,15 +75,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Denver native who has worked as a teacher; bachelor's degree from Metropolitan State University of Denver (Ballotpedia).",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No campaign site found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-7-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Susan Hall Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       },
       {
         "name": "Lawrence Kyle Clark",
@@ -92,15 +94,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No campaign site found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-u-s-house-district-7-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Lawrence Kyle Clark Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       },
       {
         "name": "Dan \"Kilo\" Sallis",
@@ -706,15 +710,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-senate-district-29-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Robert McKenna Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       }
     ],
     "sources": [
@@ -999,9 +1005,14 @@
         "background": "Incumbent state representative. Did not return the Denver Post questionnaire.",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-36-candidate-qa/"
+            "text": "I will always stand up for the working-families in our community",
+            "is_quote": true,
+            "source": "https://www.carterforcolorado.com/"
+          },
+          {
+            "text": "Make Housing Affordable",
+            "is_quote": true,
+            "source": "https://www.carterforcolorado.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1016,9 +1027,9 @@
         "background": "Bachelor's degree from Liberty University; no occupation listed (Ballotpedia).",
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-36-candidate-qa/"
+            "text": "Working families in Aurora should not have to choose between paying rent and putting food on the table.",
+            "is_quote": true,
+            "source": "https://nelsonforco.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1170,9 +1181,9 @@
         "background": null,
         "own_words": [
           {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-40-candidate-qa/"
+            "text": "Personal information is private and should not be kept on individuals.",
+            "is_quote": true,
+            "source": "https://ivoterguide.com/candidate/92874/race/32836/election/1475"
           }
         ],
         "lwv_status": "unknown",
@@ -1245,9 +1256,9 @@
         "background": "Incumbent state representative (listed as \"Rep. Jamie Jackson\" by the Colorado AFL-CIO). Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "The Denver Post did not run a Q&A for this unopposed race. No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-election-2026-candidate-questionnaires/"
+            "text": "Her vision includes expanding healthcare access, affordability, and rethinking the criminal justice system for better outcomes.",
+            "is_quote": true,
+            "source": "https://www.jamieforcolorado.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -1372,15 +1383,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": null,
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-56-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Amy L. Lunde Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1429,15 +1442,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Has worked as a director of operations (Ballotpedia); the Colorado Times Recorder identifies him with Colorado Right to Life.",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-61-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "scottforco.com and www.scottforco.com: unreadable/failed candidate-page requests",
+            "Web searches: Scott Shamblin campaign policy, school choice, costs and questionnaire",
+            "Current Sentinel guide: reports campaign positions but no verified verbatim candidate excerpt"
+          ]
+        }
       },
       {
         "name": "Eliza Hamrick",
@@ -1468,15 +1484,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Ran for this seat as the Libertarian in 2022 and received 876 votes (Colorado Times Recorder).",
-        "own_words": [
-          {
-            "text": "Did not return the Denver Post questionnaire. No other statement from the candidate found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denverpost.com/2026/10/03/colorado-state-house-district-61-candidate-qa/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search for Kevin Gulbranson Colorado 2026 campaign and candidate statement",
+            "Existing Denver Post candidate-guide/source record"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1753,7 +1771,15 @@
         "background": "Ran for the RTD board in 2022 but was disqualified, per the Denver Gazette. No campaign website or published statement found.",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "VOTE411 Jefferson County Assessor guide (no response)"
+          ]
+        }
       },
       {
         "name": "Andy Kerr",
@@ -1842,15 +1868,17 @@
         "website": "https://marinelliforsheriff.com/",
         "website_confidence": "verified",
         "background": "Sheriff since 2023; joined the Jefferson County Sheriff's Office as a deputy in 1986 and rose through the ranks.",
-        "own_words": [
-          {
-            "text": "Her campaign site had no issue statements we could read as of Oct 17.",
-            "is_quote": false,
-            "source": "https://marinelliforsheriff.com/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "marinelliforsheriff.com campaign homepage: gallery, subscription and donation links; no readable issue statement",
+            "Web search: Regina Marinelli campaign priorities sheriff 2026"
+          ]
+        }
       },
       {
         "name": "Randall Doizaki",
@@ -1917,15 +1945,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent surveyor. Only candidate on the ballot.",
-        "own_words": [
-          {
-            "text": "No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://www.denvergazette.com/2026/10/09/what-jefferson-county-voters-can-expect-to-see-on-their-ballots/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search: Robert Hennessy surveyor 2026 candidate statement",
+            "BallotReady verified webpages and profile",
+            "Official county and election search results; biography only"
+          ]
+        }
       }
     ],
     "sources": [
@@ -2390,9 +2421,9 @@
         "background": "Forensic pathologist. Only candidate on the ballot. No campaign site listed by the county.",
         "own_words": [
           {
-            "text": "No campaign statement found as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "The Coroner’s Office has an exceptional team dedicated to serving families with professionalism, compassion, and integrity",
+            "is_quote": true,
+            "source": "https://sentinelcolorado.com/metro/forensic-pathologist-casey-bitting-chose-to-succeed-kelly-lear-as-arapahoe-coroner/"
           }
         ],
         "lwv_status": "unknown",
@@ -2511,9 +2542,9 @@
         "background": "Financial professional. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "I will ensure every public dollar is collected, managed, and distributed with accuracy, accountability, and transparency.",
+            "is_quote": true,
+            "source": "https://www.jasonforadams.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -2737,9 +2768,9 @@
         "background": "Incumbent coroner. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "From a September 2022 news release: \"Openness and transparency are at the heart of good government\"",
+            "is_quote": true,
+            "source": "https://officeofthecoroner.com/wp-content/uploads/2022/09/Press-Release-09222022.pdf"
           }
         ],
         "lwv_status": "unknown",
@@ -2964,7 +2995,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Public administrator, per Critical Report. No campaign site or published statement found.",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "The Assessor’s Office should be a place where you can ask questions and get answers.",
+            "is_quote": true,
+            "source": "https://kara4dougco.com/"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/colorado"
       },
@@ -3027,9 +3064,9 @@
         "background": "Incumbent sheriff. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "I will continue to stand up for our deputies, work closely with our community, and make decisions based on facts.",
+            "is_quote": true,
+            "source": "https://weeklyforsheriff.com/"
           }
         ],
         "lwv_status": "unknown",
@@ -3074,15 +3111,18 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Incumbent surveyor. Only candidate on the ballot.",
-        "own_words": [
-          {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/colorado"
+        "lwv_url": "https://www.vote411.org/colorado",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search: Darrell Roberts surveyor campaign",
+            "Douglas County Republicans campaign directory",
+            "Official Douglas County surveyor profile (biography only)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3121,9 +3161,9 @@
         "background": "Incumbent coroner. Only candidate on the ballot.",
         "own_words": [
           {
-            "text": "No campaign statement reviewed as of Oct 17.",
-            "is_quote": false,
-            "source": "https://criticalreport.substack.com/p/2026-co-county-primaries"
+            "text": "Decedents deserve dignity. Families deserve answers. Communities deserve accountability.",
+            "is_quote": true,
+            "source": "https://rbrownforcoroner.com/"
           }
         ],
         "lwv_status": "unknown",

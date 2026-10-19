@@ -469,7 +469,16 @@
         "background": null,
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/alabama"
+        "lwv_url": "https://www.vote411.org/alabama",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and HD-99 questionnaire web search",
+            "Alabama Gazette candidate forum listing",
+            "Bama Politics candidate profile"
+          ]
+        }
       }
     ],
     "sources": [

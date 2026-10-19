@@ -970,7 +970,16 @@
     "background": "Ballot designation: Disabled Student Advocate. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site and candidate-questionnaire web search",
+      "Ballotpedia profile fetch (blocked)",
+      "Los Angeles Times Seat 2 guide"
+     ]
+    }
    },
    {
     "name": "Robert Payne",
@@ -1064,7 +1073,15 @@
     "background": "Ballot designation: Fire Department Employee. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site and questionnaire web search",
+      "Los Angeles Times Seat 4 questionnaire"
+     ]
+    }
    },
    {
     "name": "Jason R. Aula",
@@ -1090,7 +1107,13 @@
     "website": null,
     "website_confidence": "unverified",
     "background": "No ballot designation. Filed a form saying he expects to raise and spend under $2,000. No campaign website, questionnaire or news coverage found (City Hall Pass, Sept 30, 2026; Ballotpedia survey not completed).",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "It is very hard to focus on school when you're just trying to survive from one day to the next",
+      "is_quote": true,
+      "source": "https://nz.news.yahoo.com/guide-los-angeles-community-college-100000834.html"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    },
@@ -1230,7 +1253,15 @@
     "background": "North Hollywood community college professor who ran as a Democrat for State Senate District 20 in June 2026 (10.1%). Ballot designation: Community College Professor. No campaign website, questionnaire or news coverage found for this race (City Hall Pass, Sept 30, 2026); his Senate campaign domain no longer works.",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "LACCD campaign-site and statement web search",
+      "Los Angeles Times Seat 6 questionnaire"
+     ]
+    }
    },
    {
     "name": "Randall Winston",
@@ -4039,7 +4070,15 @@
     "background": "Plumber and electrical contractor. Was the Republican nominee in the neighboring 39th Assembly District in 2018. Second in June with 25.1%. No campaign website, survey answers or published positions found (City Hall Pass; Ballotpedia survey not completed).",
     "own_words": [],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "own_words_status": "none_found",
+    "own_words_checked": {
+     "on": "2026-10-19",
+     "where": [
+      "Campaign-site web search",
+      "Indexed Ballotpedia and VOTE411 statement search"
+     ]
+    }
    }
   ],
   "sources": [
@@ -4346,7 +4385,13 @@
     "website": "https://www.lydia4education.com/",
     "website_confidence": "sourced",
     "background": "Long Beach Unified teacher for decades after six years in aerospace. Ran for state superintendent in 2014 (third, 24.5%) and for the LAUSD board in 2015. Second in June with 19.2%. No published positions on state issues found; her listed website now opens only a login page.",
-    "own_words": [],
+    "own_words": [
+     {
+      "text": "Open the accounting books to the public, let taxpayers know where and how their money is being spent.",
+      "is_quote": true,
+      "source": "https://realimpact.us/voter-guide/california-assembly-district-65"
+     }
+    ],
     "lwv_status": "unknown",
     "lwv_url": null
    }

@@ -273,7 +273,15 @@
         "background": "No-party candidate. Running mate: Juan Santana. Lives in Hialeah. Did not respond to the News 6 / Winter Park Voice questionnaire; his only campaign presence found is a Facebook page (News 6 voter guide).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/florida"
+        "lwv_url": "https://www.vote411.org/florida",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "Facebook campaign page and linked policy post (blocked)"
+          ]
+        }
       },
       {
         "name": "Moliere \"Moe\" Dimanche (Lt. Gov.: Benjiman Rojas)",

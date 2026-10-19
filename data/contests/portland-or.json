@@ -140,7 +140,16 @@
         "background": "Republican nominee. Did not file a state Voters' Pamphlet statement; the Multnomah County Republican Party guide links only a Facebook page. No campaign website or survey answers found (Ballotpedia, iVoterGuide).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and candidate-platform web search",
+            "Multnomah voters pamphlet",
+            "Facebook candidate-introduction link (blocked)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -208,7 +217,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Pacific Green Party nominee. Did not file a state Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia, iVoterGuide).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "addressing the housing crisis through deeply affordable social housing and tenant protections",
+            "is_quote": true,
+            "source": "https://www.pacificgreens.org/meet_the_candidates_for_nomination_andrea_townsend"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -1175,7 +1190,15 @@
         "background": "Republican nominee. Did not file a state Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and questionnaire web search",
+            "Oregon Capital Chronicle 2026 House District 46 guide (no response)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -2400,7 +2423,13 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Did not file a Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
-        "own_words": [],
+        "own_words": [
+          {
+            "text": "More cops. Lock up the dangerously unstable drug zombies.",
+            "is_quote": true,
+            "source": "https://www.portland.gov/auditor/elections/documents/mccormick-darren-2026-aud-120/download"
+          }
+        ],
         "lwv_status": "unknown",
         "lwv_url": "https://www.vote411.org/lwvor"
       },
@@ -2582,7 +2611,17 @@
         "background": "Did not file a Voters' Pamphlet statement. His campaign website says it is \"under deconstruction\" and lists only links, including to Democratic Socialists of America; no survey answers found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign website from official filing (no readable platform)",
+            "Candidate-platform web search",
+            "Official candidate filing (background only)",
+            "Multnomah voters pamphlet index (no statement submitted)"
+          ]
+        }
       },
       {
         "name": "Keir Legree",
@@ -2759,7 +2798,17 @@
         "background": "Did not file a Voters' Pamphlet statement or submit any information to the county guide (OPB). No campaign website or survey answers found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign website from prior official filing (unavailable)",
+            "2026 candidate-platform web search",
+            "Official current candidate filing",
+            "Multnomah voters pamphlet index (no statement submitted)"
+          ]
+        }
       },
       {
         "name": "Mitch Green",
@@ -3040,7 +3089,15 @@
         "background": "Did not file a Voters' Pamphlet statement. No campaign website or survey answers found (Ballotpedia).",
         "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Campaign-site and candidate-statement web search",
+            "Official Multnomah voters pamphlet candidate index (no statement submitted)"
+          ]
+        }
       },
       {
         "name": "Jeremy Wood",
@@ -3419,15 +3476,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search: Colby E Riley Rockwood candidate statement 2026",
+            "Existing official Multnomah voters-pamphlet/source record: no statement"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3469,15 +3528,17 @@
         "website": null,
         "website_confidence": "unverified",
         "background": "Did not file a Voters' Pamphlet statement.",
-        "own_words": [
-          {
-            "text": "No Voters' Pamphlet statement and no campaign website found.",
-            "is_quote": false,
-            "source": "https://multco.us/file/multnomah_county_voters'_pamphlet_-_november_2026_general_election/download"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/lwvor"
+        "lwv_url": "https://www.vote411.org/lwvor",
+        "own_words_status": "none_found",
+        "own_words_checked": {
+          "on": "2026-10-19",
+          "where": [
+            "Web search: Nicholas Engels Rockwood candidate statement 2026",
+            "Existing official Multnomah voters-pamphlet/source record: no statement"
+          ]
+        }
       }
     ],
     "sources": [

@@ -430,5 +430,11 @@
       "name": "Fulton County: Request/Return an Absentee Ballot (absentee office contacts; what to do if your ballot hasn't come)",
       "url": "https://www.fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Registration-and-Elections/Absentee-Voting"
     }
+  ],
+  "heads_up": [
+    {
+      "text": "If no candidate gets more than half the votes, the top two go to a Dec. 1 runoff.",
+      "applies_to": "ballot"
+    }
   ]
 }

@@ -4,7 +4,7 @@
     "name": "Dallas Morning News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/dallas-morning-news-media-bias.",
     "geography": [
       "dallas-tx",
       "TX"
@@ -12,7 +12,8 @@
     "guide_url": "https://www.dallasnews.com/opinion/we-recommend/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-dallas",
@@ -26,7 +27,8 @@
     "guide_url": "https://lwvdallas.org/docs.ashx?id=1831284",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dallas-county-democrats",
@@ -40,7 +42,9 @@
     "guide_url": "https://www.dallasdemocrats.org/elections/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "dallas-county-gop",
@@ -54,7 +58,9 @@
     "guide_url": "https://dallasgop.org/meet-the-candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "north-texas-area-labor-federation",
@@ -68,21 +74,23 @@
     "guide_url": "https://northtxlabor.org/news/north-texas-area-labor-federation-2026-general-election",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "stonewall-democrats-dallas",
     "name": "Stonewall Democrats of Dallas",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ+ Democratic club whose stated mission includes to 'Educate Democratic leaders on LGBTQ+ political priorities' (https://www.stonewalldemocratsofdallas.org/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"Champion the Democratic Party's commitment to justice, equity, and foster LGBTQ+ engagement.\". Source: https://www.stonewalldemocratsofdallas.org/.",
     "geography": [
       "dallas-tx"
     ],
     "guide_url": "https://bluevoterguide.org/fr/endorser-org/Stonewall_Democrats_of_Dallas/TX/651",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dallas-regional-chamber",
@@ -96,7 +104,8 @@
     "guide_url": "https://www.dallaschamber.org/priorities/public-policy/dfw-voter-resources/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dallas-police-association",
@@ -110,6 +119,7 @@
     "guide_url": "https://www.fox4news.com/news/dallas-city-leaders-split-443-million-public-safety-bond",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

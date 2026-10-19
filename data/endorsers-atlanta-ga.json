@@ -11,7 +11,9 @@
     "guide_url": "https://fultondems.org/voting-guides/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "dekalb-gop",
@@ -25,6 +27,8 @@
     "guide_url": "https://dekalbgop.org/?p=4613",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   }
 ]

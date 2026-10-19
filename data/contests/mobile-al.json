@@ -1080,7 +1080,8 @@
         "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 3"
   },
   {
     "id": "mobile-school-board-4",
@@ -1138,6 +1139,7 @@
         "url": "https://en.wikipedia.org/wiki/2026_Mobile_County_elections"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 4"
   }
 ]

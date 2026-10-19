@@ -270,5 +270,212 @@
     "tx-crosby-isd-prop-a",
     "tx-crosby-isd-prop-b"
   ],
-  "notes": "Harris County uses vote centers: any registered Harris County voter can vote at any Harris County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: Monday to Saturday 7 AM to 7 PM, Sunday Oct 25 noon to 7 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones and other devices cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Harris ballot is long (four of five races are judges), and skipping a race is fine. There is no Houston mayor or city council race on this ballot; Prop A is the only City of Houston item."
+  "notes": "Harris County uses vote centers: any registered Harris County voter can vote at any Harris County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: Monday to Saturday 7 AM to 7 PM, Sunday Oct 25 noon to 7 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones and other devices cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Harris ballot is long (four of five races are judges), and skipping a race is fine. There is no Houston mayor or city council race on this ballot; Prop A is the only City of Houston item.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Harris sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Harris commissioner precinct",
+      "url": "https://harriscounty.maps.arcgis.com/apps/instant/lookup/index.html?appid=edae4dcc438e41b295bcba5ec178054b"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "View the Harris JP precinct map",
+      "url": "https://www.harriscountytx.gov/Government/Courts/Harris-County-Justice-of-the-Peace-Precincts"
+    },
+    {
+      "office_match": "Klein ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Spring ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Sheldon ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Tomball ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Huffman ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "New Caney ISD Trustee",
+      "label": "Check the races on your Harris County sample ballot",
+      "url": "https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Civil District Judge",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "County Attorney",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "County School Trustee (Harris County Department of Education)",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Criminal District Judge",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Director, Harris Central Appraisal District",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Family District Judge",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Huffman ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Judge, County Civil Court at Law",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Judge, County Criminal Court at Law",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Judge, County Probate Court",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Justice, 14th Court of Appeals",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Justice, 1st Court of Appeals",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Juvenile District Judge",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Klein ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "New Caney ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Sheldon ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Spring ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "Tomball ISD Trustee",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Check your district on your Harris County ballot",
+      "url": "https://www.harrisvotes.com/Voter/Whats-on-my-Ballot"
+    }
+  ]
 }

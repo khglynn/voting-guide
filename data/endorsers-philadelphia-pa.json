@@ -11,7 +11,9 @@
     "guide_url": "https://thephiladelphiacitizen.org/pa-election-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "phila-republican-city-committee",
@@ -25,7 +27,10 @@
     "guide_url": "https://thephiladelphiacitizen.org/pa-election-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party",
+    "short": "Philadelphia Republican Party"
   },
   {
     "id": "pa-working-families-party",
@@ -40,21 +45,24 @@
     "guide_url": "https://workingfamilies.org/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Working Families",
+    "lean_basis_kind": "party"
   },
   {
     "id": "liberty-city-lgbtq-dems",
     "name": "Liberty City LGBTQ Democratic Club",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Its own stated mission (About page, https://www.libertycity.org/about): it \"builds political power for the Philadelphia area ... (LGBTQ+) community through involvement within the Democratic Party\" and \"aims to build progressive power.\" No outside rating.",
+    "lean_basis": "Its stated mission or political identity includes: \"aims to build progressive power\". Source: https://www.libertycity.org/about.",
     "geography": [
       "philadelphia-pa"
     ],
     "guide_url": "https://www.libertycity.org/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "philadelphia-council-afl-cio",
@@ -68,7 +76,8 @@
     "guide_url": "https://phillyaflcio.org/vote26",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "committee-of-seventy",
@@ -83,6 +92,7 @@
     "guide_url": "https://seventy.org/get-informed/voter-guide/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

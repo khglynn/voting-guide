@@ -2,7 +2,9 @@
   "id": "portland-or",
   "label": "Portland",
   "state": "OR",
-  "counties": ["Multnomah"],
+  "counties": [
+    "Multnomah"
+  ],
   "county_election_office": {
     "name": "Multnomah County Elections Division, Duniway-Lovejoy Elections Building, 1040 SE Morrison St., Portland 97214 (Voting Center Express: 600 NE 8th St., Gresham)",
     "url": "https://multco.us/elections",
@@ -10,9 +12,33 @@
   },
   "sample_ballot_url": "https://multco.us/info/sample-ballots-november-2026-general-election",
   "zips": [
-    "97201", "97202", "97203", "97204", "97205", "97206", "97209", "97210", "97211", "97212",
-    "97213", "97214", "97215", "97216", "97217", "97218", "97219", "97220", "97221", "97227",
-    "97230", "97231", "97232", "97233", "97236", "97239", "97266"
+    "97201",
+    "97202",
+    "97203",
+    "97204",
+    "97205",
+    "97206",
+    "97209",
+    "97210",
+    "97211",
+    "97212",
+    "97213",
+    "97214",
+    "97215",
+    "97216",
+    "97217",
+    "97218",
+    "97219",
+    "97220",
+    "97221",
+    "97227",
+    "97230",
+    "97231",
+    "97232",
+    "97233",
+    "97236",
+    "97239",
+    "97266"
   ],
   "zip_caveats": "ZIPs don't match Portland's lines, so check your mailed ballot or the county's sample ballots. City line: 97231 is mostly unincorporated Multnomah County (Sauvie Island, Skyline); only Linnton and nearby areas are in Portland. 97220 includes Maywood Park, a separate city. 97230, 97233 and 97236 extend into Gresham; 97219 and 97221 include unincorporated areas; 97222 (Milwaukie) and 97225 (Washington County) include small Portland edges but are left off this list. A few edges of Portland lie in Washington or Clackamas County and get that county's ballot. Unincorporated addresses do not vote on city races or Measure 26-267. City Council (only Districts 3 and 4 vote this year): west-side ZIPs 97201, 97204, 97205, 97209, 97210, 97219, 97221, 97231 and 97239 are District 4. 97202 is split: Sellwood-Moreland, Eastmoreland and Reed are District 4, while Brooklyn and areas north and east are District 3. 97214, 97215 and 97206 are mostly District 3. 97213, 97232, 97216 and 97266 straddle District 3 and Districts 1 or 2 (no council race). North and Northeast ZIPs (97203, 97211, 97212, 97217, 97218, 97227) and East Portland (97220, 97230, 97233, 97236) have no council race this year. County Commission District 2 covers most of North and Northeast Portland. Congress: the west side and a few inner Southeast precincts are OR-1, most of the east side is OR-3, and parts of Southwest (Lake Oswego edge) and Southeast (Sellwood area, some outer SE) are OR-5. State House and Senate districts split most ZIPs; your ballot or the county precinct map shows yours. Soil and water: east of the Willamette votes East Multnomah SWCD, west votes West Multnomah SWCD. Only some outer East Portland addresses vote on the Reynolds School District bond (26-268) and Rockwood Water PUD seats. No Metro or Portland Public Schools races or measures are on this November ballot.",
   "contest_ids": [
@@ -58,5 +84,118 @@
     "rockwood-pud-5",
     "portland-26-267",
     "reynolds-sd-26-268"
+  ],
+  "heads_up": [
+    {
+      "text": "For City Council, rank up to six candidates in your district; three win. Rank each person once, with one person per rank.",
+      "applies_to": "section:city"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your district",
+      "url": "https://geo.maps.arcgis.com/apps/instant/lookup/index.html?appid=fd070b56c975456ea2a25f7e3f4289d1"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district",
+      "url": "https://geo.maps.arcgis.com/apps/instant/lookup/index.html?appid=fd070b56c975456ea2a25f7e3f4289d1"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://geo.maps.arcgis.com/apps/instant/lookup/index.html?appid=fd070b56c975456ea2a25f7e3f4289d1"
+    },
+    {
+      "office_match": "Portland City Council",
+      "label": "Find your council district",
+      "url": "https://www.portland.gov/transition/districtcommission/map"
+    },
+    {
+      "office_match": "Rockwood Water People's Utility District Director",
+      "label": "View your Rockwood water subdistrict map",
+      "url": "https://rwpud.org/board-of-directors/"
+    },
+    {
+      "office_match": "East Multnomah Soil & Water Conservation District Director, At-Large Position 2",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "East Multnomah Soil & Water Conservation District Director, Zone 3",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Judge of the Circuit Court, 4th District (Multnomah), Position 14",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Judge of the Circuit Court, 4th District (Multnomah), Position 2",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Judge of the Circuit Court, 4th District (Multnomah), Position 6",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Multnomah County Commissioner",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Portland City Council",
+      "label": "Find your City Council district",
+      "url": "https://www.portland.gov/vote/districts"
+    },
+    {
+      "office_match": "Rockwood Water People's Utility District Director, Sub-District 2",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Rockwood Water People's Utility District Director, Sub-District 4",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "Rockwood Water People's Utility District Director, Sub-District 5",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "West Multnomah Soil & Water Conservation District Director, At-Large Position 2",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "West Multnomah Soil & Water Conservation District Director, Zone 4",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    },
+    {
+      "office_match": "West Multnomah Soil & Water Conservation District Director, Zone 5",
+      "label": "Find your election district on the county maps",
+      "url": "https://multco.us/info/maps-and-data-multnomah-county-elections"
+    }
   ]
 }

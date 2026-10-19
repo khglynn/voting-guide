@@ -4,105 +4,112 @@
     "name": "Houston Chronicle editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Houston Chronicle Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Houston Chronicle Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/houston-chronicle-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "dallas-morning-news-eb",
     "name": "Dallas Morning News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates The Dallas Morning News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/dallas-morning-news-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.dallasnews.com/opinion/we-recommend/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "san-antonio-express-news-eb",
     "name": "San Antonio Express-News editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the San Antonio Express-News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the San Antonio Express-News Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/san-antonio-express-news-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.expressnews.com/projects/2026/san-antonio-election-guide-november-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "austin-american-statesman-eb",
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board.",
+    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board. Rating source: https://www.allsides.com/news-source/austin-american-statesman-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "fort-worth-star-telegram-eb",
     "name": "Fort Worth Star-Telegram editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Fort Worth Star-Telegram Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Fort Worth Star-Telegram Center (independent review, low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/fort-worth-star-telegram-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.star-telegram.com/opinion/election-recommendations/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "el-paso-times-eb",
     "name": "El Paso Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the El Paso Times Center (independent review, low or initial confidence, as of Sept. 2026). The Gannett paper published a candidate questionnaire guide, not recommendations, in 2026.",
+    "lean_basis": "AllSides rates the El Paso Times Center (independent review, low or initial confidence, as of Sept. 2026). The Gannett paper published a candidate questionnaire guide, not recommendations, in 2026. Rating source: https://www.allsides.com/news-source/el-paso-times-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.elpasotimes.com/story/news/politics/elections/2026/10/01/meet-the-candidates-running-for-office-in-el-paso-in-2026-election/91923373007/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "texas-tribune",
     "name": "The Texas Tribune",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Texas Tribune Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse candidates or measures.",
+    "lean_basis": "AllSides rates The Texas Tribune Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse candidates or measures. Rating source: https://www.allsides.com/news-source/texas-tribune-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.texastribune.org/2026-vote/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "austin-chronicle-eb",
     "name": "The Austin Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found.",
+    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found. Rating source: https://www.allsides.com/news-source/austin-chronicle-media-bias.",
     "geography": [
       "austin-tx",
       "TX"
@@ -110,7 +117,8 @@
     "guide_url": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-texas",
@@ -124,7 +132,8 @@
     "guide_url": "https://www.vote411.org/lwvtx",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-gop",
@@ -138,7 +147,9 @@
     "guide_url": "https://www.texasgop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "texas-democratic-party",
@@ -152,7 +163,9 @@
     "guide_url": "https://www.txdemocrats.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "libertarian-party-texas",
@@ -166,7 +179,9 @@
     "guide_url": "https://www.lptexas.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Libertarian",
+    "lean_basis_kind": "party"
   },
   {
     "id": "green-party-texas",
@@ -180,7 +195,9 @@
     "guide_url": "https://www.txgreens.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Green",
+    "lean_basis_kind": "party"
   },
   {
     "id": "texas-afl-cio",
@@ -194,7 +211,8 @@
     "guide_url": "https://texasaflcio.org/news/2026-general-election-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "tsta",
@@ -208,7 +226,8 @@
     "guide_url": "https://tsta.org/wp-content/uploads/2026/08/2026EndorsedCandidates.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-association-of-business",
@@ -222,7 +241,8 @@
     "guide_url": "https://www.txbiz.org/2026-general-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texans-for-lawsuit-reform",
@@ -236,7 +256,8 @@
     "guide_url": "https://tlrpac.org/press-releases/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-farm-bureau-agfund",
@@ -250,7 +271,8 @@
     "guide_url": "https://texasagriculture.texasfarmbureau.org/articles/tfb-agfund-successful-in-primary-election-races",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-parent-pac",
@@ -264,7 +286,8 @@
     "guide_url": "https://txparentpac.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -278,7 +301,8 @@
     "guide_url": "https://www.nrapvf.org/grades/texas/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "tsra-pac",
@@ -292,7 +316,8 @@
     "guide_url": "https://www.tsra.com/tsrapac/endorsements.php",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-right-to-life-pac",
@@ -306,7 +331,8 @@
     "guide_url": "https://texasrighttolifepac.com/2026-general-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "planned-parenthood-texas-votes",
@@ -320,7 +346,8 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-texas-votes/elections/pptvendorsementsratings",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "equality-texas",
@@ -334,7 +361,8 @@
     "guide_url": "https://equalitytexas.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "texas-values-action",
@@ -348,7 +376,8 @@
     "guide_url": "https://txvaluesaction.org/endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "cleat",
@@ -362,34 +391,37 @@
     "guide_url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-lone-star",
     "name": "Sierra Club Lone Star Chapter (Sierra Club Political Committee of Texas)",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Texas (Lone Star) chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Texas (Lone Star) chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://www.turntexasgreen.org/2026-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "texas-freedom-network",
     "name": "Texas Freedom Network / Texas Rising Action",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive group that works on 'mobilizing Texans for progressive change at the Capitol and in local municipalities' (https://tfn.org/about/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"mobilizing Texans for progressive change at the Capitol and in local municipalities\". Source: https://tfn.org/about/.",
     "geography": [
       "TX"
     ],
     "guide_url": "https://tfn.org/tfn-texas-rising-actions-november-2026-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

@@ -56,5 +56,22 @@
     "stlco-prop-a",
     "stlco-prop-s",
     "parkway-sd-prop-p"
+  ],
+  "district_finders": [
+    {
+      "office_match": "Missouri House of Representatives",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    },
+    {
+      "office_match": "St. Louis County Council",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district and November sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    }
   ]
 }

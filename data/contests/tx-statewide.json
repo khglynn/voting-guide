@@ -1147,7 +1147,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 302 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "302",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,678 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1678",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Maggie Ellis",
@@ -1174,7 +1202,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 218 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "218",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,259 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1259",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1233,7 +1289,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 262 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "262",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,508 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1508",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Chari Kelly",
@@ -1260,7 +1344,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 201 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "201",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 2,112 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "2112",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1314,7 +1426,35 @@
           }
         ],
         "lwv_status": "declined",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 224 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "224",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,203 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1203",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Kristen Hawkins",
@@ -1341,7 +1481,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 334 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "334",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,705 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1705",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1400,7 +1568,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 404 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "404",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,913 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1913",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Gisela D. Triana",
@@ -1427,7 +1623,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 178 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "178",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,989 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1989",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1486,7 +1710,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 113 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "113",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 391 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "391",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Okey Anyiam",
@@ -1513,7 +1765,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 92 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "92",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,034 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1034",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Mark Ash",
@@ -1540,7 +1820,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 58 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "58",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 337 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "337",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1603,7 +1911,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 180 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "180",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,467 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1467",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Audra Riley",
@@ -1630,7 +1966,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 131 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "131",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,839 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1839",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1689,7 +2053,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 135 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "135",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 799 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "799",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Holly Taylor",
@@ -1716,7 +2108,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 145 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "145",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,529 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1529",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1775,7 +2195,35 @@
           }
         ],
         "lwv_status": "declined",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 348 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "348",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,957 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1957",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jerry Zimmerer",
@@ -1802,7 +2250,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 199 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "199",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,594 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1594",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1861,7 +2337,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 241 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "241",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,523 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1523",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Tom Baker",
@@ -1888,7 +2392,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 131 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "131",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,692 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1692",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1947,7 +2479,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 327 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "327",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,878 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1878",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Marc M. Meyer",
@@ -1974,7 +2534,35 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://www.vote411.org/lwvtx"
+        "lwv_url": "https://www.vote411.org/lwvtx",
+        "evaluations": [
+          {
+            "by": "Houston Bar Association",
+            "by_short": "HBA",
+            "kind": "bar_poll",
+            "rating": "2026 judicial preference poll: 137 votes. This is not an HBA endorsement.",
+            "verdict": "none",
+            "vote": "137",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.hba.org/docDownload/3135922",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 1,417 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "1417",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

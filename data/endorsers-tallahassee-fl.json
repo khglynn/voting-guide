@@ -11,7 +11,9 @@
     "guide_url": "https://www.leondems.com/voting-info",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "leon-gop",
@@ -25,49 +27,55 @@
     "guide_url": "https://leongop.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "tallahassee-reports",
     "name": "Tallahassee Reports",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Its About page describes a nonprofit news site that \"publishes watchdog reports on local government, politics, consumer affairs, business and public policy,\" with no stated ideology (https://tallahasseereports.com/aboutus/). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"publishes watchdog reports on local government, politics, consumer affairs, business and public policy,\". This does not establish a position on the political scale. Source: https://tallahasseereports.com/aboutus/.",
     "geography": [
       "tallahassee-fl"
     ],
     "guide_url": "https://tallahasseereports.com/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "tallahassee-chamber",
     "name": "Tallahassee Chamber of Commerce",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "Chamber of commerce with no AllSides or Ad Fontes rating, so it is labeled lean_right under this guide's rule for chambers. Its stated mission: \"to lead and promote the success of business,\" and its advocacy page says it is \"driven by a pro-business agenda\" (https://www.talchamber.com/about-the-chamber/mission/). Its 2026 voter guides and candidate fact sheets each say the document \"does not advocate for or against.\"",
+    "lean_basis": "Our reading of its stated mission: \"to lead and promote the success of business\". Source: https://www.talchamber.com/about-the-chamber/mission/",
     "geography": [
       "tallahassee-fl"
     ],
     "guide_url": "https://www.talchamber.com/business-advocacy/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "Tallahassee Chamber"
   },
   {
     "id": "big-bend-labor-council",
     "name": "Big Bend Labor Council, AFL-CIO",
     "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "Regional AFL-CIO labor council with no AllSides or Ad Fontes rating, so it is labeled lean_left under this guide's rule for unions. Its own website was not found. Its 2026 release describes it as representing over 5,300 workers in eight North Florida counties (Tallahassee Reports, May 1, 2026).",
+    "lean": null,
+    "lean_basis": "Regional AFL-CIO labor council with no AllSides or Ad Fontes rating. Its own website was not found. Its 2026 release describes it as representing over 5,300 workers in eight North Florida counties (Tallahassee Reports, May 1, 2026). Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
     "geography": [
       "tallahassee-fl"
     ],
     "guide_url": "https://tallahasseereports.com/2026/05/01/big-bend-labor-council-endorses-jeremy-matlow-for-mayor/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "big-bend-pba",
@@ -81,6 +89,7 @@
     "guide_url": "https://www.tallahassee.com/story/news/local/2026/04/27/police-union-endorses-ausley-edwards-williams-cox-tallahassee-city-commisison-mayor/89822868007/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

@@ -70,5 +70,77 @@
   "fl-leon-school-surtax",
   "fl-leon-school-millage",
   "fl-leon-consolidation-straw-ballot"
+ ],
+ "district_finders": [
+  {
+   "office_match": "State Representative",
+   "label": "Find your district on the election maps",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "Board of County Commissioners",
+   "label": "Find your county commission district",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "School Board",
+   "label": "Find your school board district",
+   "url": "https://www.leonvotes.gov/Records/Maps"
+  },
+  {
+   "office_match": "City Commissioner",
+   "label": "Check both city commission seats on your sample ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Board of County Commissioners",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Canopy Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Capital Region Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Circuit Judge, 2nd Judicial Circuit",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "County Judge",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Leon Soil and Water Conservation District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "Piney Z Community Development District Supervisor",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "School Board",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "State Representative",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Check your district on your Leon County ballot",
+   "url": "https://www.leonvotes.gov/Records/Sample-Ballots"
+  }
  ]
 }

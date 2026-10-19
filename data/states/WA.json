@@ -375,5 +375,45 @@
       "name": "Washington State Standard: Voter Guide, 2026 Washington state general election",
       "url": "https://washingtonstatestandard.com/voter-guides/2026-washington-state-general-election/"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "Washington judges run without party labels. You choose a candidate for each position. Appointed judges also face elections to keep their seats.",
+    "who_reviews": "The King County Bar’s committee includes lawyers and public members. It reviews questionnaires, writing samples, references and interviews for candidates in contested elections. Unopposed incumbents generally do not seek ratings.",
+    "what_the_rating_means": "The scale is Exceptionally Well Qualified, Well Qualified, Qualified and Not Qualified. It assesses fitness for judicial office. The 2026 page also includes ratings issued within the past three years.",
+    "what_it_doesnt_mean": "A qualification rating is not an endorsement. “Not rated” means the bar has no recent rating to report; it does not mean the candidate is unqualified.",
+    "to_keep_a_judge": "Vote for the candidate you want. The candidate with the most votes wins; these are candidate elections, not yes-or-no retention questions.",
+    "history": "The bar’s 2026 page, last updated August 4, lists a 2026 rating for Sean O’Donnell and Gabe Rothstein. The other statewide candidates listed there have no recent rating.",
+    "read_one": {
+      "label": "Read the King County Bar’s 2026 candidate ratings",
+      "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election"
+    },
+    "sources": [
+      {
+        "name": "Washington county elections office: nonpartisan judicial elections",
+        "url": "https://douglascountywa.gov/208/Non-Partisan-Elections"
+      },
+      {
+        "name": "King County Bar: evaluation process",
+        "url": "https://www.kcba.org/?pg=Judicial-Candidate-Evaluation-Ratings"
+      },
+      {
+        "name": "King County Bar: 2026 ratings",
+        "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election"
+      },
+      {
+        "name": "King County Bar: rating rules and categories",
+        "url": "https://www.kcba.org/docDownload/2124203"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "The top two primary finishers advance, even if both prefer the same party. Party preference is not a party endorsement.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "On IP26-645, yes repeals the 9.9 percent tax on income over $1 million and bans state and local income taxes. No keeps the tax law as passed.",
+      "applies_to": "item:wa-initiative-645"
+    }
   ]
 }

@@ -2534,7 +2534,23 @@
      }
     ],
     "lwv_status": "responded",
-    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700",
+    "evaluations": [
+     {
+      "by": "King County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Well Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    },
    {
     "name": "Garmon Newsom",
@@ -2556,7 +2572,23 @@
      }
     ],
     "lwv_status": "responded",
-    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700"
+    "lwv_url": "https://www.lwvskc.org/content.aspx?page_id=22&club_id=711832&module_id=807700",
+    "evaluations": [
+     {
+      "by": "King County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Not rated: the bar lists N/A, meaning no rating in the last three years",
+      "verdict": "none",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    }
   ],
   "sources": [

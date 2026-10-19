@@ -5,11 +5,15 @@
     "type": "party",
     "lean": "left",
     "lean_basis": "Official county Democratic Party organization. Its 2026 Election Hub profiles Democratic nominees in partisan races and every registered Democrat in nonpartisan races without choosing among them. Its Central Committee voted to support Measure 26-267.",
-    "geography": ["portland-or"],
+    "geography": [
+      "portland-or"
+    ],
     "guide_url": "https://multdems.org/2026-election-hub/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "multnomah-county-gop",
@@ -17,11 +21,15 @@
     "type": "party",
     "lean": "right",
     "lean_basis": "Official county Republican Party organization. Its Nov. 2026 guide (posted Oct. 13) asks voters to back Republican nominees, names two Portland District 3 council candidates, and opposes two local tax measures.",
-    "geography": ["portland-or"],
+    "geography": [
+      "portland-or"
+    ],
     "guide_url": "https://multco.gop/candidate-measure-guide-for-general-election-nov-2026/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "nw-oregon-labor-council",
@@ -29,11 +37,14 @@
     "type": "labor",
     "lean": "lean_left",
     "lean_basis": "AFL-CIO labor council that calls itself 'dedicated to represent the interests of working people at the state and local level' (https://unionhall.aflcio.org/nolc/about-us). No outside rating found; lean reflects its stated mission.",
-    "geography": ["portland-or"],
+    "geography": [
+      "portland-or"
+    ],
     "guide_url": "https://unionhall.aflcio.org/nolc/news/our-endorsed-portland-city-council-candidates",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "portland-metro-chamber",
@@ -41,23 +52,30 @@
     "type": "business",
     "lean": "lean_right",
     "lean_basis": "Regional chamber of commerce that calls itself 'the leading voice for business in the region' (https://portlandmetrochamber.com/about/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["portland-or"],
+    "geography": [
+      "portland-or"
+    ],
     "guide_url": "https://portlandmetrochamber.com/resources/2026-regional-election-candidates-portlands-future-is-on-the-ballot/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "basic-rights-oregon",
     "name": "Basic Rights Oregon PAC",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ+ rights group whose listed work includes 'Advocating for progressive statewide leaders' (https://www.basicrights.org/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["OR", "portland-or"],
+    "lean_basis": "Its stated mission or political identity includes: \"Advocating for progressive statewide leaders\". Source: https://www.basicrights.org/.",
+    "geography": [
+      "OR",
+      "portland-or"
+    ],
     "guide_url": "https://www.basicrights.org/2026endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "city-club-portland",
@@ -65,10 +83,13 @@
     "type": "civic_nonpartisan",
     "lean": "neutral",
     "lean_basis": "Civic group that says it provides 'an impartial, nonpartisan platform' (https://pdxcityclub.org/about/). No outside rating found; lean reflects its stated mission.",
-    "geography": ["portland-or"],
+    "geography": [
+      "portland-or"
+    ],
     "guide_url": "https://pdxcityclub.org/research/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

@@ -127,7 +127,7 @@
     "district": null,
     "scope_plain": "Every Missouri voter. Missouri uses the 'nonpartisan court plan': the governor appoints appellate judges from a commission's list, then voters decide yes or no on keeping them. No Supreme Court judge has lost a retention vote since the plan began in 1940.",
     "office_explainer": "Highest state court. Final say on Missouri law. Vote yes to keep the judge, no to remove.",
-    "why_it_matters": "The seven-member Supreme Court decides challenges to state laws and ballot measures; this year it put Proposition A and Amendment 6 on the ballot and ruled that the 2025 congressional map cannot take effect unless voters approve it, so the 2022 map is used for this year's U.S. House races. A judge who is retained serves another 12 years.",
+    "why_it_matters": "The seven-member Supreme Court decides challenges to state laws and ballot measures; this year it put Proposition A and Amendment 6 on the ballot and ruled that the 2025 congressional map cannot take effect unless voters approve it, so the 2022 map is used for this year's U.S. House races. A judge who is retained serves another 12 years. The Judicial Performance Review Committee's majority recommends retaining Judge Wilson; it publishes no vote count.",
     "vote_for": 1,
     "incumbent": "Paul C. Wilson",
     "open_seat": false,
@@ -138,18 +138,30 @@
         "name": "Paul C. Wilson",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://yourmissourijudges.org/judges/2026-paul-wilson/",
+        "website_confidence": "verified",
         "background": "On the Supreme Court since December 2012 (appointed by Gov. Jay Nixon); chief justice July 2021 to June 2023. Earlier a circuit judge in Cole County (19th Circuit), an assistant Missouri attorney general, and a lawyer at Sullivan & Cromwell and a Jefferson City firm. Drury College; University of Missouri law, cum laude. Retained by voters in 2014.",
-        "own_words": [
-          {
-            "text": "The Missouri Bar's Judicial Performance Review committee finds he 'should be retained.' The committee reviewed all 50 judges on the Nov 3, 2026 ballot and 'recommends all judges be retained.'",
-            "is_quote": true,
-            "source": "https://yourmissourijudges.org/judges/2026-paul-wilson/"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-paul-wilson/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -188,7 +200,7 @@
     "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
     "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
     "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
-    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years. Newly appointed judges face their first retention vote at the first general election after a year on the bench.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years. Newly appointed judges face their first retention vote at the first general election after a year on the bench. The Judicial Performance Review Committee's majority recommends retaining Judge Lay; it publishes no vote count.",
     "vote_for": 1,
     "incumbent": "Virginia W. Lay",
     "open_seat": false,
@@ -199,18 +211,30 @@
         "name": "Virginia W. Lay",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://yourmissourijudges.org/judges/2026-virginia-lay/",
+        "website_confidence": "verified",
         "background": "Appointed to the Eastern District in early 2025 (formally sworn in April 4, 2025). Before that, three years as a circuit judge and two as an associate circuit judge in St. Louis County (21st Circuit). Earlier an assistant circuit attorney in St. Louis, assistant prosecutor in Jackson County, assistant attorney general, and in private practice in employment and municipal law. Washington University law. First retention vote.",
-        "own_words": [
-          {
-            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
-            "is_quote": false,
-            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-virginia-lay/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -237,7 +261,7 @@
     "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
     "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
     "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
-    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years. The Judicial Performance Review Committee's majority recommends retaining Judge Navarro-McKelvey; it publishes no vote count.",
     "vote_for": 1,
     "incumbent": "Rebeca Navarro-McKelvey",
     "open_seat": false,
@@ -248,18 +272,30 @@
         "name": "Rebeca Navarro-McKelvey",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://yourmissourijudges.org/judges/2026-rebeca-navarro-mckelvey/",
+        "website_confidence": "verified",
         "background": "Appointed to the Court of Appeals in December 2023. Earlier an associate at Armstrong Teasdale (immigration and litigation), a white-collar prosecutor in the St. Louis Circuit Attorney's Office, chief legal counsel for the St. Charles County Juvenile Office, and a sex-crimes and child-abuse prosecutor in St. Charles County. University of Missouri-Columbia law, 2000. First retention vote.",
-        "own_words": [
-          {
-            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
-            "is_quote": false,
-            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-rebeca-navarro-mckelvey/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -286,7 +322,7 @@
     "district": "Eastern District (St. Louis City and County and 23 other eastern counties)",
     "scope_plain": "Voters in the Eastern District only, which includes all of St. Louis County and the City of St. Louis. Each judge gets a separate yes/no question.",
     "office_explainer": "Mid-level appeals court for eastern Missouri. Reviews trial court decisions. Vote yes to keep the judge, no to remove.",
-    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years.",
+    "why_it_matters": "Most appeals in Missouri end here; the Supreme Court takes only a few cases a year. A judge retained serves 12 more years. The Judicial Performance Review Committee's majority recommends retaining Judge Quigless; it publishes no vote count.",
     "vote_for": 1,
     "incumbent": "Angela Turner Quigless",
     "open_seat": false,
@@ -297,18 +333,30 @@
         "name": "Angela Turner Quigless",
         "party": null,
         "incumbent": true,
-        "website": null,
-        "website_confidence": "unverified",
+        "website": "https://yourmissourijudges.org/judges/2026-angela-turner-quigless/",
+        "website_confidence": "verified",
         "background": "Eastern District judge since 2012 (appointed by Gov. Jay Nixon); previously a St. Louis City circuit judge. Retained in 2014; her 12-year term ends Dec 31, 2026, so this is her second retention vote.",
-        "own_words": [
-          {
-            "text": "The Missouri Bar's Judicial Performance Review committee's majority recommendation for her is 'retain.' The committee recommends retaining all 50 judges on the 2026 ballot.",
-            "is_quote": false,
-            "source": "https://yourmissourijudges.org/wp-content/uploads/2026/09/2026-Judicial-Performance-Reviews-1-2.pdf"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Missouri Judicial Performance Review Committee",
+            "by_short": "Review committee",
+            "kind": "official_commission",
+            "rating": "Majority recommendation: retain",
+            "verdict": "favorable",
+            "vote": null,
+            "vote_note": "The committee publishes only its majority recommendation, not a vote count.",
+            "survey": null,
+            "survey_note": "Missouri's lawyer survey uses 1-to-5 ratings on many questions, with no single yes-or-no question, so there is no one number to show. The full results are on the judge's page.",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://yourmissourijudges.org/judges/2026-angela-turner-quigless/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

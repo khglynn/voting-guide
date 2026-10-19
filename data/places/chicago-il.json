@@ -281,5 +281,188 @@
     "il-chicago-south-works-quantum-spending-advisory",
     "il-chicago-corporate-tax-youth-jobs-advisory",
     "il-chicago-ward-21-precinct-10-liquor-local-option"
+  ],
+  "heads_up": [
+    {
+      "text": "Questions labeled advisory are nonbinding. Local-option questions about alcohol sales are binding.",
+      "applies_to": "section:measures"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your district",
+      "url": "https://maps.cookcountyil.gov/findmydistrict/"
+    },
+    {
+      "office_match": "Illinois State Senator",
+      "label": "Find your district",
+      "url": "https://maps.cookcountyil.gov/findmydistrict/"
+    },
+    {
+      "office_match": "Illinois State Representative",
+      "label": "Find your district",
+      "url": "https://maps.cookcountyil.gov/findmydistrict/"
+    },
+    {
+      "office_match": "Cook County Commissioner",
+      "label": "Find your district",
+      "url": "https://maps.cookcountyil.gov/findmydistrict/"
+    },
+    {
+      "office_match": "Commissioner, Cook County Board of Review",
+      "label": "Find your district",
+      "url": "https://maps.cookcountyil.gov/findmydistrict/"
+    },
+    {
+      "office_match": "Member of the Chicago Board of Education (nonpartisan)",
+      "label": "Find your school board subdistrict on the official maps",
+      "url": "https://chicagoelections.gov/districts-maps/legislative-maps"
+    },
+    {
+      "office_match": "Commissioner, Cook County Board of Review",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Cook County Commissioner",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Illinois Appellate Court, First District: Hoffman vacancy",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Illinois State Representative",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Illinois State Senator",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge of the Circuit Court (Vacancy of Burke)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge of the Circuit Court (Vacancy of Cobbs)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge of the Circuit Court (Vacancy of Coghlan)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge of the Circuit Court (Vacancy of Hooks)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge of the Circuit Court (Vacancy of Karkula)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 11th Subcircuit (Vacancy of McLean Meyerson)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 11th Subcircuit (Vacancy of Roberts)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 16th Subcircuit (Converted from Associate Judgeship of Baird)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 16th Subcircuit (Converted from Associate Judgeship of Mendoza)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 17th Subcircuit (Converted from Associate Judgeship of Brooks)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 17th Subcircuit (Converted from Associate Judgeship of Carroll)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 19th Subcircuit (Converted from Associate Judgeship of Fairman)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 19th Subcircuit (Converted from Associate Judgeship of Kane)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 1st Subcircuit (Vacancy of Balanoff)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 1st Subcircuit (Vacancy of Walker)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 20th Subcircuit (Converted from Associate Judgeship of Haracz)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 20th Subcircuit (Converted from Associate Judgeship of Miller)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 3rd Subcircuit (Vacancy of Murphy)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 3rd Subcircuit (Vacancy of Sherlock)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 5th Subcircuit (Vacancy of Ross)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 8th Subcircuit (Vacancy of Gamrath)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Judge, 8th Subcircuit (Vacancy of Mikva)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "Member of the Chicago Board of Education (nonpartisan)",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your districts and sample ballot",
+      "url": "https://chicagoelections.gov/voting/your-voter-information"
+    }
   ]
 }

@@ -94,5 +94,57 @@
     "sf-prop-h",
     "sf-prop-i",
     "sf-prop-j"
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your district on your official ballot",
+      "url": "https://sfelections.org/tools/portal/index.php"
+    },
+    {
+      "office_match": "Member of the State Assembly",
+      "label": "Find your district on your official ballot",
+      "url": "https://sfelections.org/tools/portal/index.php"
+    },
+    {
+      "office_match": "Member, Board of Supervisors",
+      "label": "Find your supervisor district in the voter portal",
+      "url": "https://sfelections.org/tools/portal/index.php"
+    },
+    {
+      "office_match": "BART Director",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "Board of Equalization Member",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "Member of the State Assembly",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "Member, Board of Supervisors",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "Trustee, Community College Board",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "Trustee, Community College Board (partial term)",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Check your district in the official voter portal",
+      "url": "https://sfelections.org/tools/portal/"
+    }
   ]
 }

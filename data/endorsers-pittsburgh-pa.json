@@ -11,7 +11,9 @@
     "guide_url": "https://www.alleghenydems.com/voter-guide",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "allegheny-county-gop",
@@ -25,7 +27,10 @@
     "guide_url": "https://www.wesanews.org/politics-government/2026-10-12/allegheny-county-council-ballot-question",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party",
+    "short": "Allegheny County GOP"
   },
   {
     "id": "allegheny-fayette-clc",
@@ -39,21 +44,23 @@
     "guide_url": "https://paaflcio.org/alleghenyco/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "steel-city-stonewall-democrats",
     "name": "Steel City Stonewall Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Pittsburgh's LGBTQ Democratic club. Its stated mission (https://www.steel-city.org/) is to \"advance equal rights for all people, regardless of sexual orientation or gender identity or expression\" and to \"help elect qualified Democratic candidates\" who support LGBT equal rights.",
+    "lean_basis": "Its stated mission or political identity includes: \"help elect qualified Democratic candidates\". Source: https://www.steel-city.org/.",
     "geography": [
       "pittsburgh-pa"
     ],
     "guide_url": "https://www.steel-city.org/2026-general-election-slate-card/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "pa-chamberpac",
@@ -67,7 +74,8 @@
     "guide_url": "https://www.pachamber.org/advocacy/chamber_pac_old/endorsements/chamberpac_endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lifepac-western-pa",
@@ -81,6 +89,7 @@
     "guide_url": "https://www.wesanews.org/politics-government/2026-04-28/anti-abortion-groups-support-catena-pa-house-race-controversy",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

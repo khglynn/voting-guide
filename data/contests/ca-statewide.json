@@ -1073,7 +1073,7 @@
     "district": null,
     "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court Kelli M. Evans be elected to the office for the term provided by law?\" Vote YES to keep her or no to remove her. No one runs against her.",
     "office_explainer": "One of seven justices on the state's highest court. The final word on California law.",
-    "why_it_matters": "Retention elections are nearly always approved; no California appellate justice has lost one since the 1930s system began, though voters removed three Supreme Court justices in 1986. A majority NO vote would open the seat for the governor to fill.",
+    "why_it_matters": "A majority yes vote keeps the justice. If voters reject the justice, the governor fills the vacancy. In 1986, voters rejected Chief Justice Rose Bird and Justices Cruz Reynoso and Joseph Grodin in retention elections.",
     "vote_for": 1,
     "incumbent": "Kelli M. Evans",
     "open_seat": false,
@@ -1115,9 +1115,14 @@
       {
         "name": "Courts of Appeal: Appellate Retention Elections",
         "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      },
+      {
+        "name": "California Supreme Court Historical Society: 1986 retention election history",
+        "url": "https://www.cschs.org/wp-content/uploads/2014/07/Thirty-Years-After-100-Year-Flood-Judicial-Elections-.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Kelli M. Evans"
   },
   {
     "id": "ca-supreme-court-groban",
@@ -1127,7 +1132,7 @@
     "district": null,
     "scope_plain": "Every California voter. The ballot asks: \"Shall Associate Justice of the Supreme Court Joshua Groban be elected to the office for the term provided by law?\" Vote YES to keep him or no to remove him. No one runs against him.",
     "office_explainer": "One of seven justices on the state's highest court. The final word on California law.",
-    "why_it_matters": "Retention elections are nearly always approved; no California appellate justice has lost one since the 1930s system began, though voters removed three Supreme Court justices in 1986. A majority NO vote would open the seat for the governor to fill.",
+    "why_it_matters": "A majority yes vote keeps the justice. If voters reject the justice, the governor fills the vacancy. In 1986, voters rejected Chief Justice Rose Bird and Justices Cruz Reynoso and Joseph Grodin in retention elections.",
     "vote_for": 1,
     "incumbent": "Joshua P. Groban",
     "open_seat": false,
@@ -1169,9 +1174,14 @@
       {
         "name": "Courts of Appeal: Appellate Retention Elections",
         "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      },
+      {
+        "name": "California Supreme Court Historical Society: 1986 retention election history",
+        "url": "https://www.cschs.org/wp-content/uploads/2014/07/Thirty-Years-After-100-Year-Flood-Judicial-Elections-.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Joshua Groban"
   },
   {
     "id": "ca-coa-2d-retention",

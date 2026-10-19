@@ -108,5 +108,138 @@
     "aurora-3d",
     "co-frpr-7a",
     "adams-broomfield-da-7e"
+  ],
+  "heads_up": [
+    {
+      "text": "Aurora spans Arapahoe, Adams and Douglas counties. Use your home’s county for the county offices and local judges.",
+      "applies_to": "ballot"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "State Senate",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "Arapahoe County Commissioner",
+      "label": "Find your Arapahoe commissioner district",
+      "url": "https://www.arapahoevotes.gov/maps"
+    },
+    {
+      "office_match": "County Clerk and Recorder",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Treasurer",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Assessor",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Sheriff",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Surveyor",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Coroner",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "District Court judge retention",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "County Court judge retention",
+      "label": "Find which county you live in",
+      "url": "https://ags.auroragov.org/propinfo/propinfo.html"
+    },
+    {
+      "office_match": "Adams County Commissioner",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "Arapahoe County Commissioner",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Assessor",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Clerk and Recorder",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Coroner",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Sheriff",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Surveyor",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "County Treasurer",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "Douglas County Commissioner",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "RTD Board of Directors",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "Regent of the University of Colorado",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "State Senate",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Check your district on your official ballot",
+      "url": "https://myballot.coloradosos.gov/"
+    }
   ]
 }

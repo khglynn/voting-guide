@@ -173,5 +173,567 @@
     "tx-austin-prop-j",
     "tx-dvisd-prop-a"
   ],
-  "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county."
+  "notes": "Any Travis County voter can use any Travis polling place, early or on Election Day. Seven early-voting sites stay open until 10 PM on Oct 29 and 30. Travis also has a generic consolidated ballot PDF at votetravis.gov showing every contest in the county.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Travis sample ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Williamson sample ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on the Hays County election page",
+      "url": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Travis commissioner precinct",
+      "url": "https://www.traviscountytx.gov/find-your-representative"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Travis JP precinct",
+      "url": "https://www.traviscountytx.gov/find-your-representative"
+    },
+    {
+      "office_match": "Austin City Council Member",
+      "label": "Find your council district",
+      "url": "https://www.austintexas.gov/council/district-map"
+    },
+    {
+      "office_match": "Austin ISD Trustee",
+      "label": "Find your trustee district",
+      "url": "https://www.austinisd.org/planning-asset-management/school-maps-gis"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee",
+      "label": "Find your Del Valle trustee district",
+      "url": "https://www.dvisd.net/about-us/board-of-trustees/election-information"
+    },
+    {
+      "office_match": "Austin City Council Member",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Austin City Council Member",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Austin City Council Member",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Austin ISD Trustee",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Austin ISD Trustee",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Austin ISD Trustee",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 3",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 3",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 3",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 5",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 5",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 5",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 7",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 7",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 7",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 8",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 8",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 8",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 9",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 9",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Del Valle ISD Trustee, Single Member District 9",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Director, Travis Central Appraisal District",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Director, Travis Central Appraisal District",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Director, Travis Central Appraisal District",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 1",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 1",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 1",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 2",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 2",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 2",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 6",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 6",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 6",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 7",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 7",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Leander ISD Trustee, Place 7",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 6",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 6",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 6",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 7",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 7",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 7",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 3",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 3",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 3",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 4",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 4",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 4",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 5",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 5",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 5",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 6",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 6",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Round Rock ISD Trustee, Place 6",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Hays County: find your district and ballot",
+      "url": "https://mapps.hayscountytx.gov/election/index.cfm?lang=en"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "name": "Los Angeles Times editorial board",
   "type": "publication",
   "lean": "lean_left",
-  "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found.",
+  "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/los-angeles-times-media-bias.",
   "geography": [
    "CA",
    "los-angeles-ca"
@@ -12,14 +12,15 @@
   "guide_url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
   "default_on": true,
   "endorses_candidates": false,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "outside_rating"
  },
  {
   "id": "la-daily-news-eb",
   "name": "Los Angeles Daily News / Southern California News Group editorial board",
   "type": "publication",
   "lean": "neutral",
-  "lean_basis": "AllSides rates the Los Angeles Daily News Center (independent review, initial rating July 2020; low or initial confidence as of Sept. 2026). Its editorials come from the Southern California News Group board it shares with the OC Register, whose news AllSides rates Lean Right.",
+  "lean_basis": "AllSides rates the Los Angeles Daily News Center (independent review, initial rating July 2020; low or initial confidence as of Sept. 2026). Its editorials come from the Southern California News Group board it shares with the OC Register, whose news AllSides rates Lean Right. Rating source: https://www.allsides.com/news-source/los-angeles-daily-news-media-bias.",
   "geography": [
    "los-angeles-ca",
    "CA"
@@ -27,14 +28,15 @@
   "guide_url": "https://www.dailynews.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
   "default_on": true,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
  },
  {
   "id": "oc-register-eb",
   "name": "Orange County Register editorial board (same board as the Daily News)",
   "type": "publication",
   "lean": "lean_right",
-  "lean_basis": "AllSides rates the Orange County Register Lean Right (2.00; independent review, low or initial confidence, as of Oct. 2026). One Southern California News Group board writes the editorials for the Register, the LA Daily News and nine sister papers.",
+  "lean_basis": "AllSides rates the Orange County Register Lean Right (2.00; independent review, low or initial confidence, as of Oct. 2026). One Southern California News Group board writes the editorials for the Register, the LA Daily News and nine sister papers. Rating source: https://www.allsides.com/news-source/orange-county-register-media-bias.",
   "geography": [
    "fullerton-ca",
    "CA"
@@ -42,7 +44,8 @@
   "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
   "default_on": true,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "outside_rating"
  },
  {
   "id": "lwv-greater-la",
@@ -56,21 +59,23 @@
   "guide_url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
   "default_on": true,
   "endorses_candidates": false,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "la-forward",
   "name": "LA Forward (LA Forward Action Fund voter guide)",
   "type": "advocacy",
   "lean": "left",
-  "lean_basis": "Self-described progressive group; its guide is titled 'Los Angeles Progressive Voter Guide' (https://laforwardguide.org/). No outside rating found; lean reflects its stated mission.",
+  "lean_basis": "Its stated mission or political identity includes: \"Los Angeles Progressive Voter Guide\". Source: https://laforwardguide.org/.",
   "geography": [
    "los-angeles-ca"
   ],
   "guide_url": "https://laforwardguide.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "thrive-la",
@@ -84,21 +89,23 @@
   "guide_url": "https://www.thrivelosangeles.org/voter-guide",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "knock-la",
   "name": "Knock LA",
   "type": "publication",
   "lean": "left",
-  "lean_basis": "Self-described left publication: 'We are dedicated to giving a voice to the left and uplifting marginalized communities' (https://knock-la.com/about-us/). No outside rating found; lean reflects its stated mission.",
+  "lean_basis": "Its stated mission or political identity includes: \"We are dedicated to giving a voice to the left and uplifting marginalized communities\". Source: https://knock-la.com/about-us/.",
   "geography": [
    "los-angeles-ca"
   ],
   "guide_url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
   "default_on": true,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "lacdp",
@@ -112,7 +119,9 @@
   "guide_url": "https://www.lacdp.org/candidates",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
  },
  {
   "id": "la-county-gop",
@@ -126,7 +135,10 @@
   "guide_url": "https://lagop-endorsement-lookup.vercel.app/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party",
+  "short": "LA County Republican Party"
  },
  {
   "id": "oc-dems",
@@ -140,7 +152,9 @@
   "guide_url": "https://orangecountydemocrats.com/oc-endorsements-2",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Democratic",
+  "lean_basis_kind": "party"
  },
  {
   "id": "oc-gop",
@@ -154,7 +168,9 @@
   "guide_url": "https://ocgop.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "party": "Republican",
+  "lean_basis_kind": "party"
  },
  {
   "id": "la-fed",
@@ -168,7 +184,8 @@
   "guide_url": "https://thelafed.org/resource/lalaborvoterguide/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "la-chamber",
@@ -182,7 +199,9 @@
   "guide_url": "https://lachamber.com/center-for-business-advocacy/l.a.-jobs-pac-2026-endorsements/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission",
+  "short": "LA Area Chamber"
  },
  {
   "id": "abundant-housing-la",
@@ -196,7 +215,8 @@
   "guide_url": "https://www.abundanthousingla.org/2026-endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "streets-for-all",
@@ -210,7 +230,8 @@
   "guide_url": "https://www.streetsforall.org/endorsements",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "lalcv",
@@ -224,7 +245,9 @@
   "guide_url": "https://lalcv.org/category/featured/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "mission",
+  "short": "LA League of Conservation Voters"
  },
  {
   "id": "lappl",
@@ -238,7 +261,8 @@
   "guide_url": "https://www.lapd.com/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": false
+  "endorses_measures": false,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "alads",
@@ -252,7 +276,8 @@
   "guide_url": "https://www.alads.org/",
   "default_on": false,
   "endorses_candidates": true,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  },
  {
   "id": "measure-committees-la",
@@ -267,6 +292,7 @@
   "guide_url": "https://cityclerk.lacity.org/election/ENG101_NOV-2026_Voter_Info_Pamphlet.pdf",
   "default_on": false,
   "endorses_candidates": false,
-  "endorses_measures": true
+  "endorses_measures": true,
+  "lean_basis_kind": "mission"
  }
 ]

@@ -4,28 +4,30 @@
     "name": "St. Louis Post-Dispatch editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the St. Louis Post-Dispatch Center (staff review Sept. 2021; low or initial confidence as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the St. Louis Post-Dispatch Center (staff review Sept. 2021; low or initial confidence as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/st-louis-post-dispatch-media-bias.",
     "geography": [
       "MO"
     ],
     "guide_url": "https://www.stltoday.com/opinion/editorial/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "kc-star-eb",
     "name": "The Kansas City Star editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Kansas City Star Center. McClatchy paper; the board endorsed in the August 2026 Missouri primaries and has editorialized against the mid-decade redistricting of the Kansas City 5th District. No November 2026 endorsement roundup surfaced in search as of Oct. 16.",
+    "lean_basis": "AllSides rates The Kansas City Star Center. McClatchy paper; the board endorsed in the August 2026 Missouri primaries and has editorialized against the mid-decade redistricting of the Kansas City 5th District. No November 2026 endorsement roundup surfaced in search as of Oct. 16. Rating source: https://www.allsides.com/news-source/kansas-city-star-media-bias-0.",
     "geography": [
       "MO"
     ],
     "guide_url": "https://www.kansascity.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-missouri",
@@ -39,7 +41,8 @@
     "guide_url": "https://my.lwv.org/missouri/article/november-2026-amendment-information",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "mo-democratic-party",
@@ -53,7 +56,9 @@
     "guide_url": "https://www.missouridemocrats.org/2026-general-election",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "mo-republican-party",
@@ -67,7 +72,9 @@
     "guide_url": "https://www.newstalkkzrg.com/2026/10/08/missouri-gop-releases-ballot-guide-ahead-of-november-election/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "mo-chamber",
@@ -81,7 +88,8 @@
     "guide_url": "https://mochamber.com/news-archive/election-news",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "mo-afl-cio",
@@ -95,7 +103,8 @@
     "guide_url": "https://moaflcio.org/news/missouri-afl-cio-2026-primary-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "mo-right-to-life-pac",
@@ -109,7 +118,8 @@
     "guide_url": "https://missourilife.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "abortion-action-mo",
@@ -123,7 +133,8 @@
     "guide_url": "https://abortionactionmissouri.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -137,7 +148,8 @@
     "guide_url": "https://www.nrapvf.org/grades/missouri",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "people-not-politicians-mo",
@@ -151,21 +163,23 @@
     "guide_url": "https://peoplenotpoliticiansmo.org/home/faqs-on-proposition-a/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-mo",
     "name": "Sierra Club Missouri Chapter",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Missouri chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its Missouri chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "MO"
     ],
     "guide_url": "https://www.sierraclub.org/missouri/thomas-hart-benton/blog/2026/10/missouri-chapter-endorsements-yes-6-no-3-and",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "act-for-missouri",
@@ -179,6 +193,7 @@
     "guide_url": "https://new-site.act4mo.org/elections/2026/2026-november-voter-guide.html",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

@@ -469,5 +469,37 @@
       "name": "Florida Senate: 2026 Florida Statutes 101.045 (change of residence or name at the polls; cross-county movers vote provisional unless the county uses an electronic precinct register)",
       "url": "https://m.flsenate.gov/Statutes/101.045"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "The governor appoints Supreme Court justices and appeals judges, who later face yes-or-no retention votes for six-year terms. Trial judges run in nonpartisan elections.",
+    "who_reviews": "Florida has no official job-review commission for retention. The Florida Bar posts biographies and opinions. No 2026 merit-retention poll was found as of October 19, 2026.",
+    "what_the_rating_means": "There is no current rating to show. Earlier lawyer polls asked whether judges should stay; those numbers cannot rate this year’s candidates.",
+    "what_it_doesnt_mean": "A biography is not a performance rating or an endorsement. An old poll does not describe a judge’s current work.",
+    "to_keep_a_judge": "More yes than no votes keeps an appeals judge or justice for six years. Trial-court races ask you to choose a candidate instead.",
+    "history": "The Florida Bar ended its merit-retention poll in 2023, according to a Bar spokesperson quoted by Florida Bulldog. Older polls should not be used as current ratings.",
+    "read_one": {
+      "label": "Read the Florida Bar’s 2026 judge biographies and opinions",
+      "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+    },
+    "sources": [
+      {
+        "name": "Florida Bar: 2026 merit retention biographies",
+        "url": "https://www.floridabar.org/public/faircts/votes010/merit-retention-biographies/"
+      },
+      {
+        "name": "Florida Bar: 2026 judges and election process",
+        "url": "https://www.floridabar.org/the-florida-bar-news/justice-muniz-and-22-dca-judges-to-stand-for-merit-retention/"
+      },
+      {
+        "name": "Florida Bulldog: Bar spokesperson explains the poll’s end, October 11, 2024",
+        "url": "https://www.floridabulldog.org/2024/10/state-supreme-court-justices-francis-sasson-retention-may-lifetime-jobs/"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "State constitutional amendments need at least 60 percent yes votes to pass. That rule does not apply to every local question.",
+      "applies_to": "section:measures"
+    }
   ]
 }

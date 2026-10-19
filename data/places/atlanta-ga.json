@@ -87,5 +87,68 @@
     "ga-amendment-3",
     "fulton-esplost-2026",
     "dekalb-esplost-vii"
+  ],
+  "heads_up": [
+    {
+      "text": "The school sales tax (E-SPLOST) pays for buildings, equipment and other capital projects. It cannot pay teacher salaries.",
+      "applies_to": "section:measures"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Georgia State Senate",
+      "label": "Find your district",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Georgia House of Representatives",
+      "label": "Find your district",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Fulton County Commission",
+      "label": "Find your Fulton commission district",
+      "url": "https://fultoncountyga.gov/Maps"
+    },
+    {
+      "office_match": "DeKalb County Commission",
+      "label": "Find your DeKalb commission district",
+      "url": "https://dekalbcountyga.gov/government/board-of-commissioners/districts"
+    },
+    {
+      "office_match": "DeKalb County Commission",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Fulton County Commission",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Fulton County Commission (special election)",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Fulton County Commission Chair",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Public Service Commission, District 3",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    },
+    {
+      "office_match": "Public Service Commission, District 5",
+      "label": "Check your district on your official ballot",
+      "url": "https://mvp.sos.ga.gov/"
+    }
   ]
 }

@@ -36,5 +36,12 @@
     "delaware-town-highway-superintendent",
     "callicoon-town-supervisor",
     "callicoon-town-highway-superintendent"
+  ],
+  "district_finders": [
+    {
+      "office_match": "State Assembly",
+      "label": "Find your Assembly district",
+      "url": "https://nyassembly.gov/mem/search/"
+    }
   ]
 }

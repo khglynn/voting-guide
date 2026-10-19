@@ -4,42 +4,45 @@
     "name": "The Denver Post editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low or initial confidence, Oct. 2026) and Ad Fontes rates it Middle (-2.86). Neither rates the editorial board separately.",
+    "lean_basis": "AllSides rates The Denver Post's online news Center (independent review, low or initial confidence, Oct. 2026) and Ad Fontes rates it Middle (-2.86). Neither rates the editorial board separately. Rating source: https://www.allsides.com/news-source/denver-post-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.denverpost.com/2026/10/07/colorado-election-2026-endorsements-ballot-measures-editorial-board/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "gazette-eb",
     "name": "The Gazette editorial board (Colorado Springs Gazette and Denver Gazette)",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes.",
+    "lean_basis": "AllSides rates the Denver Gazette's online news Center (independent review, low or initial confidence, Oct. 2026) and does not rate the editorial board, which writes for both the Denver and Colorado Springs Gazettes. Rating source: https://www.allsides.com/news-source/denver-gazette-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.denvergazette.com/2026/10/12/denver-gazette-editorial-board-recommendations-nov-3-ballot/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "colorado-sun",
     "name": "The Colorado Sun",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Colorado Sun Lean Left (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom has no editorial board and does not endorse.",
+    "lean_basis": "AllSides rates The Colorado Sun Lean Left (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom has no editorial board and does not endorse. Rating source: https://www.allsides.com/news-source/colorado-sun-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://coloradosun.com/2026/09/29/colorado-election-guide-2026/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-colorado",
@@ -53,7 +56,8 @@
     "guide_url": "https://lwvcolorado.org/wtls",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "co-democratic-party",
@@ -67,7 +71,9 @@
     "guide_url": "https://www.coloradodems.org/candidates",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "co-republican-party",
@@ -81,7 +87,9 @@
     "guide_url": "https://colorado.gop/candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "weld-county-gop",
@@ -95,21 +103,24 @@
     "guide_url": "https://weldcountygop.com/weld-gop-adopts-positions-on-colorados-2026-ballot-measures/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "bell-policy-center",
     "name": "Bell Policy Center",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive group: it takes 'a progressive, research-focused approach to public policy change in Colorado' (https://bellpolicy.org/about/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"a progressive, research-focused approach to public policy change in Colorado\". Source: https://bellpolicy.org/about/.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://bellpolicy.org/colorado-ballot-guide-2026/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-fiscal-institute",
@@ -123,7 +134,8 @@
     "guide_url": "https://coloradofiscal.org/2026-ballot-guide/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "independence-institute",
@@ -137,7 +149,8 @@
     "guide_url": "https://i2i.org/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "common-sense-institute",
@@ -151,7 +164,8 @@
     "guide_url": "https://commonsenseinstituteus.org/research/2026-colorado-ballot-guide/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-chamber",
@@ -165,7 +179,8 @@
     "guide_url": "https://cochamber.com/2026/09/03/colorado-chamber-announces-positions-on-statewide-ballot-measures/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-afl-cio",
@@ -179,7 +194,8 @@
     "guide_url": "https://coaflcio.org/press-releases/colorado-afl-cio-2026-voter-guide-and-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "conservation-colorado",
@@ -193,35 +209,38 @@
     "guide_url": "https://conservationco.org/resources/2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "aclu-colorado",
     "name": "ACLU of Colorado",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Colorado affiliate.",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Colorado affiliate. Rating source: https://www.allsides.com/news-source/aclu-media-bias.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.aclu-co.org/voterguide2026/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "advance-colorado",
     "name": "Advance Colorado",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Self-described conservative group: it says it works 'to push back on the progressive policies that have put our state on the wrong track' and trains 'emerging conservative leaders' (https://advancecolorado.org/about/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"emerging conservative leaders\". Source: https://advancecolorado.org/about/.",
     "geography": [
       "CO"
     ],
     "guide_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/ballot/contacts/2026.html",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "colorado-concern",
@@ -235,7 +254,8 @@
     "guide_url": "https://coloradoconcern.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sos-issue-committees",
@@ -249,6 +269,7 @@
     "guide_url": "https://www.coloradosos.gov/pubs/elections/Initiatives/ballot/contacts/2026.html",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

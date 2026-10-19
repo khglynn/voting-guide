@@ -493,7 +493,7 @@
   "district": "Office No. 64",
   "scope_plain": "Every Los Angeles County voter. Nonpartisan. No one won a majority in June, so the top two are in a runoff; most votes wins.",
   "office_explainer": "Trial-court judge for all of LA County: hears criminal, civil, family and other cases. Six-year term.",
-  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. A prosecutor versus a public defender. Unusually, Ghobadi has both the County Democratic and Republican parties behind her.",
+  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Exceptionally Well Qualified, Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. A prosecutor versus a public defender. Unusually, Ghobadi has both the County Democratic and Republican parties behind her.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": true,
@@ -520,7 +520,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Well Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    },
    {
     "name": "Rhonda A. Haymon",
@@ -542,7 +558,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    }
   ],
   "sources": [
@@ -569,7 +601,7 @@
   "district": "Office No. 65",
   "scope_plain": "Every Los Angeles County voter. Nonpartisan. No one won a majority in June, so the top two are in a runoff; most votes wins.",
   "office_explainer": "Trial-court judge for all of LA County: hears criminal, civil, family and other cases. Six-year term.",
-  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. Two former public defenders; LA Forward called it 'two good choices.' The Democratic Party backs Clayton, Thrive LA backs Reitano.",
+  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Exceptionally Well Qualified, Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. Two former public defenders; LA Forward called it 'two good choices.' The Democratic Party backs Clayton, Thrive LA backs Reitano.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": true,
@@ -591,7 +623,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    },
    {
     "name": "Anna Slotky Reitano",
@@ -613,7 +661,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    }
   ],
   "sources": [
@@ -640,7 +704,7 @@
   "district": "Office No. 87",
   "scope_plain": "Every Los Angeles County voter. Nonpartisan. No one won a majority in June, so the top two are in a runoff; most votes wins.",
   "office_explainer": "Trial-court judge for all of LA County: hears criminal, civil, family and other cases. Six-year term.",
-  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. The one judicial race where the usual lines scramble: the Democratic Party backs the former federal prosecutor, and the public defender has the newspaper endorsements. LA Forward made no recommendation.",
+  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Exceptionally Well Qualified, Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. The one judicial race where the usual lines scramble: the Democratic Party backs the former federal prosecutor, and the public defender has the newspaper endorsements. LA Forward made no recommendation.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": true,
@@ -662,7 +726,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Well Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    },
    {
     "name": "David DeJute",
@@ -679,7 +759,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    }
   ],
   "sources": [
@@ -706,7 +802,7 @@
   "district": "Office No. 131",
   "scope_plain": "Every Los Angeles County voter. Nonpartisan. No one won a majority in June, so the top two are in a runoff; most votes wins.",
   "office_explainer": "Trial-court judge for all of LA County: hears criminal, civil, family and other cases. Six-year term.",
-  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. Two career public defenders. The Daily News picked Tryfman and said it passed on Ross because he touted support from 'far-left groups'; LA Forward gave Ross the edge for the same reason.",
+  "why_it_matters": "Judges are the hardest races to research and most people skip them. The LA County Bar Association rates candidates (Exceptionally Well Qualified, Well Qualified, Qualified, Not Qualified) based on experience and temperament; both finalists here are rated at least Qualified. Two career public defenders. The Daily News picked Tryfman and said it passed on Ross because he touted support from 'far-left groups'; LA Forward gave Ross the edge for the same reason.",
   "vote_for": 1,
   "incumbent": null,
   "open_seat": true,
@@ -733,7 +829,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    },
    {
     "name": "Donna Tryfman",
@@ -755,7 +867,23 @@
      }
     ],
     "lwv_status": "unknown",
-    "lwv_url": null
+    "lwv_url": null,
+    "evaluations": [
+     {
+      "by": "Los Angeles County Bar Association",
+      "by_short": "County bar",
+      "kind": "bar_group",
+      "rating": "Qualified",
+      "verdict": "favorable",
+      "vote": null,
+      "survey": null,
+      "noted_strength": null,
+      "noted_concern": null,
+      "url": "https://lacba.org/docDownload/3141411",
+      "verified_on": "2026-10-19",
+      "confidence": "verified"
+     }
+    ]
    }
   ],
   "sources": [

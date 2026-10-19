@@ -82,5 +82,17 @@
     "jeffco-schools-5a",
     "jeffco-schools-5b",
     "co-frpr-7a"
+  ],
+  "district_finders": [
+    {
+      "office_match": "State Senate",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    },
+    {
+      "office_match": "State House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.leg.colorado.gov/find-my-legislator"
+    }
   ]
 }

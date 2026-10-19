@@ -4,7 +4,7 @@
     "name": "Los Angeles Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Los Angeles Times Lean Left (-2.00; independent review, low or initial confidence, as of Oct. 2026) and Ad Fontes rates it Skews Left (-6.21). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/los-angeles-times-media-bias.",
     "geography": [
       "CA",
       "los-angeles-metro"
@@ -12,14 +12,15 @@
     "guide_url": "https://www.latimes.com/california/story/2026-10-01/2026-california-general-election-voter-guide",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sf-chronicle-eb",
     "name": "San Francisco Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "AllSides rates the San Francisco Chronicle Left (-4.00; last review May 2022, low or initial confidence as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the San Francisco Chronicle Left (-4.00; last review May 2022, low or initial confidence as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/san-francisco-chronicle-media-bias.",
     "geography": [
       "CA",
       "san-francisco"
@@ -27,28 +28,30 @@
     "guide_url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sacbee-eb",
     "name": "The Sacramento Bee editorial board (McClatchy California)",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Sacramento Bee Lean Left (independent review, low or initial confidence, as of Oct. 2026). One McClatchy board writes for the Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune.",
+    "lean_basis": "AllSides rates The Sacramento Bee Lean Left (independent review, low or initial confidence, as of Oct. 2026). One McClatchy board writes for the Bee, Fresno Bee, Modesto Bee, Merced Sun-Star and San Luis Obispo Tribune. Rating source: https://www.allsides.com/news-source/sacramento-bee-media-bias.",
     "geography": [
       "CA"
     ],
     "guide_url": "https://www.sacbee.com/opinion/election-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sdut-eb",
     "name": "The San Diego Union-Tribune editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the San Diego Union-Tribune Lean Left (independent review, August 2020; low or initial confidence as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found. Since 2023 it has been owned by MediaNews Group and shares an opinion editor with the Southern California News Group, while keeping its own board.",
+    "lean_basis": "AllSides rates the San Diego Union-Tribune Lean Left (independent review, August 2020; low or initial confidence as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found. Since 2023 it has been owned by MediaNews Group and shares an opinion editor with the Southern California News Group, while keeping its own board. Rating source: https://www.allsides.com/news-source/san-diego-union-tribune-media-bias.",
     "geography": [
       "CA",
       "san-diego"
@@ -56,14 +59,15 @@
     "guide_url": "https://www.sandiegouniontribune.com/2026/10/02/the-u-t-editorial-boards-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "scng-eb",
     "name": "Southern California News Group editorial board (Orange County Register, LA Daily News, Press-Enterprise and sister papers)",
     "type": "publication",
     "lean": "lean_right",
-    "lean_basis": "AllSides rates the Orange County Register, this board's flagship, Lean Right (2.00; low or initial confidence, as of Oct. 2026) and notes the Southern California News Group papers share one editorial voice. The board says it endorses 'with our commitments to limited government, economic liberty, personal freedom and free markets in mind.'",
+    "lean_basis": "AllSides rates the Orange County Register, this board's flagship, Lean Right (2.00; low or initial confidence, as of Oct. 2026) and notes the Southern California News Group papers share one editorial voice. The board says it endorses 'with our commitments to limited government, economic liberty, personal freedom and free markets in mind.' Rating source: https://www.allsides.com/news-source/orange-county-register-media-bias.",
     "geography": [
       "CA",
       "los-angeles-metro",
@@ -72,14 +76,15 @@
     "guide_url": "https://www.ocregister.com/2026/10/01/southern-california-news-groups-endorsements-for-nov-3-general-election/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "mercury-news-eb",
     "name": "The Mercury News and East Bay Times editorial boards (Bay Area News Group)",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the San Jose Mercury News Lean Left (independent review, low or initial confidence, as of Oct. 2026). It publishes joint endorsements with the East Bay Times board.",
+    "lean_basis": "AllSides rates the San Jose Mercury News Lean Left (independent review, low or initial confidence, as of Oct. 2026). It publishes joint endorsements with the East Bay Times board. Rating source: https://www.allsides.com/news-source/san-jose-mercury-news-media-bias.",
     "geography": [
       "CA",
       "san-francisco"
@@ -87,7 +92,9 @@
     "guide_url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating",
+    "short": "Mercury News / East Bay Times"
   },
   {
     "id": "lwv-california",
@@ -101,21 +108,23 @@
     "guide_url": "https://lwvc.org/ballot-recommendations/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "calmatters",
     "name": "CalMatters",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates CalMatters Center (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse.",
+    "lean_basis": "AllSides rates CalMatters Center (independent review, low or initial confidence, as of Oct. 2026). The nonprofit newsroom does not endorse. Rating source: https://www.allsides.com/news-source/calmatters-media-bias.",
     "geography": [
       "CA"
     ],
     "guide_url": "https://calmatters.org/california-voter-guide-2026/propositions/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "ca-democratic-party",
@@ -129,7 +138,9 @@
     "guide_url": "https://cadem.org/our-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "ca-republican-party",
@@ -143,7 +154,9 @@
     "guide_url": "https://cagop.org/endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "calchamber",
@@ -157,7 +170,8 @@
     "guide_url": "https://advocacy.calchamber.com/news/2026/09/calchamber-board-of-directors-announces-positions-on-november-ballot-measures",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ca-labor-federation",
@@ -171,14 +185,16 @@
     "guide_url": "https://calaborfed.org/labor-2026-primary-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "California Labor Federation"
   },
   {
     "id": "aclu-socal",
     "name": "ACLU of Southern California",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Southern California affiliate.",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Southern California affiliate. Rating source: https://www.allsides.com/news-source/aclu-media-bias.",
     "geography": [
       "CA",
       "los-angeles-metro",
@@ -188,7 +204,8 @@
     "guide_url": "https://www.aclusocal.org/aclu-socal-2026-voter-guide/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "hjta",
@@ -202,21 +219,23 @@
     "guide_url": "https://www.hjta.org/2026votingguide/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-california",
     "name": "Sierra Club California",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its California chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its California chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "CA"
     ],
     "guide_url": "https://www.sierraclub.org/california/2026-endorsements-scc-political-committee",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "cta",
@@ -230,7 +249,8 @@
     "guide_url": "https://www.cta.org/document/2026-november-general-election-initiative-recommendations",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ppac",
@@ -244,7 +264,8 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/voter-guide",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-1",
@@ -258,7 +279,8 @@
     "guide_url": "https://yesonprop1ca.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-2",
@@ -272,7 +294,8 @@
     "guide_url": "https://www.yesonprop2.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-3",
@@ -286,7 +309,8 @@
     "guide_url": "https://www.yesprop3ca.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-3",
@@ -300,7 +324,8 @@
     "guide_url": "https://votenoprop3.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-4",
@@ -314,7 +339,8 @@
     "guide_url": "https://www.cafairelections.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-4",
@@ -328,7 +354,8 @@
     "guide_url": "https://www.caltax.org/prop4",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-5",
@@ -342,7 +369,8 @@
     "guide_url": "https://fixtherecall.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-37",
@@ -356,7 +384,8 @@
     "guide_url": "https://voteyeson37.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-38",
@@ -370,7 +399,8 @@
     "guide_url": "https://yeson38.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-38",
@@ -384,7 +414,8 @@
     "guide_url": "https://votenoonprop38.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-39",
@@ -398,7 +429,8 @@
     "guide_url": "https://www.voteridca.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-39",
@@ -412,7 +444,8 @@
     "guide_url": "https://noonprop39.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-40",
@@ -426,7 +459,8 @@
     "guide_url": "https://yeson40.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-40",
@@ -440,7 +474,8 @@
     "guide_url": "https://votenoon40.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-41",
@@ -454,7 +489,8 @@
     "guide_url": "https://yesonprop41.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-42",
@@ -468,7 +504,8 @@
     "guide_url": "https://yesonprop42.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-43",
@@ -482,7 +519,9 @@
     "guide_url": "https://www.hjta.org/saveprop13/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Yes on Prop 43"
   },
   {
     "id": "no-on-prop-43",
@@ -496,7 +535,8 @@
     "guide_url": "https://www.noprop43ca.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-44",
@@ -510,7 +550,8 @@
     "guide_url": "https://yesonproposition44.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-44",
@@ -524,7 +565,8 @@
     "guide_url": "https://noprop44.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "yes-on-prop-45",
@@ -538,7 +580,8 @@
     "guide_url": "https://yesonprop45.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "no-on-prop-45",
@@ -552,6 +595,7 @@
     "guide_url": "https://www.noprop45ca.com/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

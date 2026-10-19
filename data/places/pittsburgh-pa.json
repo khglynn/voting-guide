@@ -55,5 +55,17 @@
     "pa-hd-36",
     "pa-hd-38",
     "allegheny-charter-7c"
+  ],
+  "district_finders": [
+    {
+      "office_match": "Pennsylvania State Senate",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    },
+    {
+      "office_match": "Pennsylvania House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    }
   ]
 }

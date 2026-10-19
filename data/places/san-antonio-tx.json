@@ -176,5 +176,142 @@
     "tx-scucisd-prop-a",
     "tx-southsan-isd-prop-a"
   ],
-  "notes": "Bexar County uses vote centers: any registered Bexar County voter can vote at any Bexar County polling place, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30. Most sites: Oct 19 to 23, 8 AM to 6 PM; Sat Oct 24, 7 AM to 7 PM; Sun Oct 25, noon to 6 PM; Oct 26 to 30, 7 AM to 7 PM. The two branch sites (Bexar County Justice Center and Valley Ranch Community Center) are open weekdays 8 AM to 6 PM only. Election Day, Tue Nov 3, is 7 AM to 7 PM. Mail ballot applications must be received by Fri Oct 23. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Bexar ballot is long, mostly judges, and many races have only one name. Skipping a race is fine. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There is no San Antonio mayor or city council race this year; Prop A is the only City of San Antonio item."
+  "notes": "Bexar County uses vote centers: any registered Bexar County voter can vote at any Bexar County polling place, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30. Most sites: Oct 19 to 23, 8 AM to 6 PM; Sat Oct 24, 7 AM to 7 PM; Sun Oct 25, noon to 6 PM; Oct 26 to 30, 7 AM to 7 PM. The two branch sites (Bexar County Justice Center and Valley Ranch Community Center) are open weekdays 8 AM to 6 PM only. Election Day, Tue Nov 3, is 7 AM to 7 PM. Mail ballot applications must be received by Fri Oct 23. Bring your printed or handwritten notes into the booth (take them with you when you leave). Phones cannot be used inside the voting room. Texas has no straight-ticket voting, so you mark every race one by one; the Bexar ballot is long, mostly judges, and many races have only one name. Skipping a race is fine. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There is no San Antonio mayor or city council race this year; Prop A is the only City of San Antonio item.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Bexar sample ballot",
+      "url": "https://maps.bexar.org/PrecinctFinder/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Bexar commissioner precinct",
+      "url": "https://maps.bexar.org/PrecinctFinder/"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Bexar JP precinct",
+      "url": "https://maps.bexar.org/PrecinctFinder/"
+    },
+    {
+      "office_match": "Trustee, Edgewood ISD",
+      "label": "Check all trustee positions on your sample ballot",
+      "url": "https://maps.bexar.org/PrecinctFinder/"
+    },
+    {
+      "office_match": "Trustee, Somerset ISD",
+      "label": "Check your trustee district on your sample ballot",
+      "url": "https://maps.bexar.org/PrecinctFinder/"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Chief Justice, 4th Court of Appeals",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Civil District Judge",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Criminal District Judge",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Director, Bexar Central Appraisal District",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Director, Edwards Aquifer Authority",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Trustee, Edgewood ISD",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "Trustee, Somerset ISD",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your district and Bexar County ballot",
+      "url": "https://maps.bexar.org/VoterRegSearch/"
+    }
+  ]
 }

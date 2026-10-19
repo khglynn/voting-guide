@@ -4,21 +4,22 @@
     "name": "The Austin Chronicle editorial board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found.",
+    "lean_basis": "AllSides rates The Austin Chronicle Left (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found. Rating source: https://www.allsides.com/news-source/austin-chronicle-media-bias.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.austinchronicle.com/news/endorsements/austin-chronicle-endorsements-for-the-november-3-midterm-elections/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "austin-american-statesman-eb",
     "name": "Austin American-Statesman editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board.",
+    "lean_basis": "AllSides' current page rates the Austin American-Statesman Center (independent review, low or initial confidence, as of Aug. 2026); an older duplicate page that still lists its former owners says Lean Left. Neither rates the editorial board. Rating source: https://www.allsides.com/news-source/austin-american-statesman-media-bias.",
     "geography": [
       "austin-tx",
       "TX"
@@ -26,28 +27,30 @@
     "guide_url": "https://www.statesman.com/projects/2026/austin-texas-november-election-voting-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "kut",
     "name": "KUT News (Austin's NPR station)",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Public radio newsroom that does not endorse; it describes its guides as 'Non-partisan voter guides that help Central Texans stay civically engaged and make informed decisions' (https://www.kut.org/about). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"Non-partisan voter guides that help Central Texans stay civically engaged and make informed decisions\". This does not establish a position on the political scale. Source: https://www.kut.org/about.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.kut.org/politics/2026-10-14/austin-tx-election-voter-guide-ballot-races",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "community-impact",
     "name": "Community Impact Newspaper",
     "type": "publication",
     "lean": null,
-    "lean_basis": "AllSides lists Community Impact as Not Rated. Free local newspaper chain that does not endorse; its stated mission is 'to build communities of informed citizens and thriving businesses' (https://communityimpact.com/about/). No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"to build communities of informed citizens and thriving businesses\". This does not establish a position on the political scale. Source: https://communityimpact.com/about/.",
     "geography": [
       "austin-tx",
       "round-rock-tx",
@@ -57,7 +60,8 @@
     "guide_url": "https://communityimpact.com/northwest-austin/voter-guide/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-austin-area",
@@ -73,7 +77,8 @@
     "guide_url": "https://austinvotersguide.org/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "travis-county-democratic-party",
@@ -88,7 +93,9 @@
     "guide_url": "https://www.travisturnsout.com/candidates",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "travis-county-gop",
@@ -103,63 +110,69 @@
     "guide_url": "https://traviscountygop.org/news",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "austin-stonewall-democrats",
     "name": "Stonewall Democrats of Austin",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "LGBTQ Democratic club that says 'National Stonewall Democrats support the Democratic Party and Democratic candidates who support our mission' (https://www.stonewallaustin.org/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"National Stonewall Democrats support the Democratic Party and Democratic candidates who support our mission\". Source: https://www.stonewallaustin.org/.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.stonewallaustin.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "central-austin-democrats",
     "name": "Central Austin Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Central Austin Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "The Travis County Democratic Party lists \"Central Austin Democrats\" under \"Democratic Clubs\" and says the clubs \"work to elect Democrats\". Source: https://www.traviscountydemocrats.org/democratic-clubs.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.traviscountydemocrats.org/democratic-clubs",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "black-austin-democrats",
     "name": "Black Austin Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Black Austin Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "The Travis County Democratic Party lists \"Black Austin Democrats\" under \"Democratic Clubs\" and says the clubs \"work to elect Democrats\". Source: https://www.traviscountydemocrats.org/democratic-clubs.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.blackaustindemocrats.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "austin-environmental-democrats",
     "name": "Austin Environmental Democrats",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Democratic club; the Travis County Democratic Party lists 'Austin Environmental Democrats' among its Democratic clubs (https://www.traviscountydemocrats.org/democratic-clubs). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "The Travis County Democratic Party lists \"Austin Environmental Democrats\" under \"Democratic Clubs\" and says the clubs \"work to elect Democrats\". Source: https://www.traviscountydemocrats.org/democratic-clubs.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.traviscountydemocrats.org/democratic-clubs",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   },
   {
     "id": "austin-firefighters-association",
@@ -173,7 +186,8 @@
     "guide_url": "https://www.austinfirefighters.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-police-association",
@@ -187,7 +201,8 @@
     "guide_url": "https://www.austinpolice.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-ems-association",
@@ -201,7 +216,8 @@
     "guide_url": "https://linktr.ee/AustinEMSA",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-central-labor-council",
@@ -217,7 +233,8 @@
     "guide_url": "https://austinlaborcouncil.org/news/austin-central-labor-council-2026-general-election-endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "workers-defense-action-fund",
@@ -231,7 +248,8 @@
     "guide_url": "https://workersdefense.org/en/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "aura",
@@ -245,7 +263,8 @@
     "guide_url": "https://aura-atx.org/austin-voter-guide-2026/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-board-of-realtors",
@@ -259,7 +278,8 @@
     "guide_url": "https://www.unlockmls.com/advocacy",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "reca",
@@ -273,7 +293,8 @@
     "guide_url": "https://www.reca.org/uploads/1/3/8/9/138900216/2026_general_election_-_reca_full_voter_guide.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-apartment-association",
@@ -287,7 +308,8 @@
     "guide_url": "https://www.austinaptassoc.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "greater-austin-chamber",
@@ -301,7 +323,9 @@
     "guide_url": "https://www.austinchamber.com/advocacy",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Greater Austin Chamber"
   },
   {
     "id": "save-austin-now",
@@ -315,34 +339,37 @@
     "guide_url": "https://www.saveaustinnow.com/austin-proposition-i",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "travis-county-taxpayers-union",
     "name": "Travis County Taxpayers Union",
     "type": "advocacy",
-    "lean": "right",
-    "lean_basis": "Anti-tax group (its name states its cause). Its website, traviscountytaxpayers.org, did not resolve on Oct. 17, 2026, so no mission statement could be quoted. No outside rating found; lean reflects its stated mission.",
+    "lean": null,
+    "lean_basis": "Anti-tax group (its name states its cause). Its website, traviscountytaxpayers.org, did not resolve on Oct. 17, 2026, so no mission statement could be quoted. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://traviscountytaxpayers.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "austin-dsa",
     "name": "Austin Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described socialist group: 'We’re the Austin chapter of the Democratic Socialists of America' (https://www.austindsa.org/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"We’re the Austin chapter of the Democratic Socialists of America\". Source: https://www.austindsa.org/.",
     "geography": [
       "austin-tx"
     ],
     "guide_url": "https://www.austindsa.org/dsa-campaigns",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

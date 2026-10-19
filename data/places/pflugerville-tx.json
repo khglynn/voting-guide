@@ -114,5 +114,252 @@
     "tx-pflugerville-prop-n",
     "tx-acc-prop-a-pflugerville"
   ],
-  "notes": "Williamson County residents of Pflugerville: elections office is Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630. Kevin's friends 'as far north as Pflugerville' should check which county they are registered in before picking a polling place; you must vote in your county of registration."
+  "notes": "Williamson County residents of Pflugerville: elections office is Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630. Kevin's friends 'as far north as Pflugerville' should check which county they are registered in before picking a polling place; you must vote in your county of registration.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Travis sample ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Williamson sample ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Travis precinct",
+      "url": "https://www.traviscountytx.gov/find-your-representative"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Williamson precinct",
+      "url": "https://www.wilcotx.gov/683/Redistricting-Census-Information"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Travis JP precinct",
+      "url": "https://www.traviscountytx.gov/find-your-representative"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Williamson JP precinct",
+      "url": "https://www.wilcotx.gov/683/Redistricting-Census-Information"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Austin Community College Trustee",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, 3rd Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Director, Travis Central Appraisal District",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Director, Travis Central Appraisal District",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, County Court at Law",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Judge, Probate Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Pflugerville City Council Member",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Pflugerville City Council Member",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 6",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 6",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 7",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Pflugerville ISD Trustee, Place 7",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    },
+    {
+      "office_match": "Tax Assessor-Collector",
+      "label": "Travis County: find your district and ballot",
+      "url": "https://votetravis.gov/voter-lookup/"
+    },
+    {
+      "office_match": "Tax Assessor-Collector",
+      "label": "Williamson County: find your district and ballot",
+      "url": "https://apps.wilcotx.gov/elections/voterlookup"
+    }
+  ]
 }

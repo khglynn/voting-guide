@@ -58,5 +58,27 @@
     "stlco-prop-s",
     "webster-groves-sd-prop-w",
     "webster-groves-city-amendment-1"
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    },
+    {
+      "office_match": "Missouri State Senate",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    },
+    {
+      "office_match": "Missouri House of Representatives",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    },
+    {
+      "office_match": "St. Louis County Council",
+      "label": "Find your district on your county sample ballot",
+      "url": "https://stlouiscovotes.maps.arcgis.com/apps/instant/lookup/index.html?appid=4c3116b104af40bea77ebea20aaae275"
+    }
   ]
 }

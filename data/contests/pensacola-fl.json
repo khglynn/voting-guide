@@ -592,7 +592,8 @@
         "url": "https://en.wikipedia.org/wiki/Lois_Benson"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 2"
   },
   {
     "id": "fl-escambia-ecua-4",
@@ -701,7 +702,8 @@
         "url": "https://www.voterfocus.com/CampaignFinance/candidate_pr.php?op=cv&e=26&c=escambia&ca=852&rellevel=4&committee=N"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 4"
   },
   {
     "id": "fl-pensacola-council-2",

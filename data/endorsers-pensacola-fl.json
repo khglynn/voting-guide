@@ -11,7 +11,9 @@
     "guide_url": "https://escambiarepublican.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "escambia-dems",
@@ -25,7 +27,9 @@
     "guide_url": "https://www.escambiademocrats.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "greater-pensacola-chamber",
@@ -39,7 +43,9 @@
     "guide_url": "https://www.pensacolachamber.com/government-affairs",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Greater Pensacola Chamber"
   },
   {
     "id": "nwfl-clc-aflcio",
@@ -53,6 +59,7 @@
     "guide_url": "https://bluevoterguide.org/endorser-org/AFL-CIO_Northwest_Florida_Central_Labor_Council/FL/4671",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

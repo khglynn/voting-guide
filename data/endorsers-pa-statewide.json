@@ -4,42 +4,45 @@
     "name": "The Philadelphia Inquirer editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates The Philadelphia Inquirer Lean Left (-2.00; low or initial confidence, as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found; the board is separate from the newsroom.",
+    "lean_basis": "AllSides rates The Philadelphia Inquirer Lean Left (-2.00; low or initial confidence, as of Oct. 2026). No separate AllSides or Ad Fontes rating for its editorial board was found; the board is separate from the newsroom. Rating source: https://www.allsides.com/news-source/philadelphia-inquirer-media-bias.",
     "geography": [
       "PA"
     ],
     "guide_url": "https://www.inquirer.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "pittsburgh-post-gazette-eb",
     "name": "Pittsburgh Post-Gazette",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Pittsburgh Post-Gazette Center (Jan. 2022 independent review, low or initial confidence). Since May 4, 2026 it has been published by the nonprofit Venetoulis Institute, a 501(c)(3), so it does not endorse.",
+    "lean_basis": "AllSides rates the Pittsburgh Post-Gazette Center (Jan. 2022 independent review, low or initial confidence). Since May 4, 2026 it has been published by the nonprofit Venetoulis Institute, a 501(c)(3), so it does not endorse. Rating source: https://www.allsides.com/news-source/pittsburgh-post-gazette-media-bias.",
     "geography": [
       "PA"
     ],
     "guide_url": "https://www.post-gazette.com/news/politics",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "pittsburgh-tribune-review-eb",
     "name": "Pittsburgh Tribune-Review (TribLive) editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "Ad Fontes rates TribLive Middle (-1.04). Founded by Richard Mellon Scaife, its opinion page has a conservative history. Earlier research found it stopped endorsing candidates in 2016; that was not re-confirmed in this pass. Included so Pittsburgh readers know not to look for a pick.",
+    "lean_basis": "Ad Fontes rates TribLive Middle (-1.04). Founded by Richard Mellon Scaife, its opinion page has a conservative history. Earlier research found it stopped endorsing candidates in 2016; that was not re-confirmed in this pass. Included so Pittsburgh readers know not to look for a pick. Rating source: https://adfontesmedia.com/trib-live-bias-and-reliability/.",
     "geography": [
       "PA"
     ],
     "guide_url": "https://triblive.com/opinion/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-pennsylvania",
@@ -53,7 +56,8 @@
     "guide_url": "https://www.vote411.org/pennsylvania",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "pa-democratic-party",
@@ -67,7 +71,9 @@
     "guide_url": "https://www.padems.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "pa-republican-party",
@@ -81,7 +87,10 @@
     "guide_url": "https://www.pagop.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party",
+    "short": "Pennsylvania Republican Party"
   },
   {
     "id": "pa-afl-cio",
@@ -95,7 +104,8 @@
     "guide_url": "https://www.paaflcio.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "psea",
@@ -109,21 +119,24 @@
     "guide_url": "https://www.psea.org/advocacy/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nfib-pa",
     "name": "National Federation of Independent Business, Pennsylvania (NFIB PA PAC)",
     "type": "business",
     "lean": "lean_right",
-    "lean_basis": "AllSides rates the National Federation of Independent Business Lean Right (think tank/policy group; low or initial confidence, as of Oct. 2026). This is NFIB's Pennsylvania arm and its PAC.",
+    "lean_basis": "AllSides rates the National Federation of Independent Business Lean Right (think tank/policy group; low or initial confidence, as of Oct. 2026). This is NFIB's Pennsylvania arm and its PAC. Rating source: https://www.allsides.com/news-source/national-federation-independent-business-media-bias.",
     "geography": [
       "PA"
     ],
     "guide_url": "https://www.nfib.com/pennsylvania/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating",
+    "short": "NFIB Pennsylvania"
   },
   {
     "id": "conservation-voters-pa",
@@ -137,7 +150,9 @@
     "guide_url": "https://www.conservationpa.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Conservation Voters of PA"
   },
   {
     "id": "planned-parenthood-pa-pac",
@@ -151,7 +166,8 @@
     "guide_url": "https://www.plannedparenthoodpaadvocates.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "pa-pro-life-federation",
@@ -165,7 +181,8 @@
     "guide_url": "https://www.paprolife.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "giffords",
@@ -179,7 +196,8 @@
     "guide_url": "https://giffords.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -193,7 +211,8 @@
     "guide_url": "https://www.nrapvf.org/grades/pennsylvania/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fop-lodge-5-philadelphia",
@@ -207,7 +226,8 @@
     "guide_url": "https://www.fop5.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "pa-state-troopers-assn",
@@ -221,6 +241,7 @@
     "guide_url": "https://www.pstroopers.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

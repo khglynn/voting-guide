@@ -2030,7 +2030,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Manhattan district 1"
   },
   {
     "id": "nyc-civil-court-manhattan-md3",
@@ -2071,7 +2072,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Manhattan district 3"
   },
   {
     "id": "nyc-civil-court-manhattan-md4",
@@ -2112,7 +2114,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Manhattan district 4"
   },
   {
     "id": "nyc-civil-court-manhattan-md7",
@@ -2204,7 +2207,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Manhattan district 7"
   },
   {
     "id": "nyc-civil-court-manhattan-md9",
@@ -2262,7 +2266,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Manhattan district 9"
   },
   {
     "id": "nyc-surrogate-bronx",
@@ -3654,7 +3659,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Bronx district 1"
   },
   {
     "id": "nyc-civil-court-bronx-md2",
@@ -3695,7 +3701,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Bronx district 2"
   },
   {
     "id": "ny-supreme-court-jd2",
@@ -6165,7 +6172,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 2"
   },
   {
     "id": "nyc-civil-court-brooklyn-md3",
@@ -6206,7 +6214,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 3"
   },
   {
     "id": "nyc-civil-court-brooklyn-md4",
@@ -6281,7 +6290,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 4"
   },
   {
     "id": "nyc-civil-court-brooklyn-md6",
@@ -6313,7 +6323,35 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Approved (June 11, 2026 primary review; release lists 5th Municipal District)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Approved (June 9, 2026 Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Michelle DeSouza-Forte",
@@ -6330,7 +6368,35 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Approved (June 11, 2026 primary review; release lists 5th Municipal District)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Failed to Appear (June 9, 2026 Civil Court primary review)",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6339,7 +6405,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 6"
   },
   {
     "id": "nyc-civil-court-brooklyn-md7",
@@ -6380,7 +6447,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 7"
   },
   {
     "id": "nyc-civil-court-brooklyn-md8",
@@ -6412,7 +6480,35 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not Approved (June 11, 2026 Civil Court primary review)",
+            "verdict": "unfavorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Approved (June 9, 2026 Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Etan C. Harris",
@@ -6429,7 +6525,35 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 11, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 9, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -6438,7 +6562,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Brooklyn district 8"
   },
   {
     "id": "ny-supreme-court-jd11",
@@ -6587,7 +6712,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Approved (June 11, 2026 Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Failed to Appear (June 9, 2026 Civil Court primary review)",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Qualified (June 2026 Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       },
       {
         "name": "Thomas D. Barra",
@@ -6604,7 +6770,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 11, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 9, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 16, 2026 Queens Daily Eagle report on Civil Court primary ratings",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       },
       {
         "name": "Julie M. Milner",
@@ -6621,7 +6828,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not Approved (June 11, 2026 Civil Court primary review)",
+            "verdict": "unfavorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Failed to Appear (June 9, 2026 Civil Court primary review)",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Not rated (June 2026 Civil Court primary review); did not participate, according to the Queens Daily Eagle",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       },
       {
         "name": "Jasmine I. Valle-Bueno",
@@ -6638,7 +6886,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 11, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 9, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 16, 2026 Queens Daily Eagle report on Civil Court primary ratings",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       },
       {
         "name": "Michael Mossa",
@@ -6655,7 +6944,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 11, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 9, 2026 Civil Court primary ratings release",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Not listed in the June 16, 2026 Queens Daily Eagle report on Civil Court primary ratings",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       }
     ],
     "sources": [
@@ -8201,7 +8531,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Queens district 2"
   },
   {
     "id": "nyc-civil-court-queens-md3",
@@ -8259,7 +8590,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Queens district 3"
   },
   {
     "id": "nyc-civil-court-queens-md4",
@@ -8291,7 +8623,48 @@
           }
         ],
         "lwv_status": "unknown",
-        "lwv_url": "https://www.vote411.org/new-york"
+        "lwv_url": "https://www.vote411.org/new-york",
+        "evaluations": [
+          {
+            "by": "New York City Bar Association",
+            "by_short": "NYC Bar",
+            "kind": "bar_group",
+            "rating": "Approved (June 11, 2026 countywide Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.nycbar.org/press-releases/new-york-city-bar-association-rates-judicial-candidates-in-new-york-city-3/",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "LGBT Bar Association of Greater New York",
+            "by_short": "LeGaL",
+            "kind": "bar_group",
+            "rating": "Failed to Appear (June 9, 2026 countywide Civil Court primary review)",
+            "verdict": "none",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.lgbtbarny.org/news/announcing-our-ratings-candidates-judges-new-york-city-civil-court-ballot-june-23-2026-primary",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          },
+          {
+            "by": "Queens County Bar Association",
+            "by_short": "Queens Bar",
+            "kind": "bar_group",
+            "rating": "Qualified (June 2026 countywide Civil Court primary review)",
+            "verdict": "favorable",
+            "vote": null,
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://queenseagle.com/all/2026/6/16/city-and-county-bar-associations-rate-queens-judicial-candidates",
+            "verified_on": "2026-10-19",
+            "confidence": "sourced"
+          }
+        ]
       }
     ],
     "sources": [
@@ -8300,7 +8673,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Queens district 4"
   },
   {
     "id": "ny-supreme-court-jd13",
@@ -8663,7 +9037,8 @@
         "url": "https://www.vote.nyc/sites/default/files/pdf/candidates/2026/9_11_2026%2010_26_11%20AM_General%20Contest%20List%20Web%20Version.pdf"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Staten Island district 1"
   },
   {
     "id": "ny-us-house-19",

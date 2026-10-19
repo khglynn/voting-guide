@@ -378,5 +378,45 @@
       "name": "Maryland SBE: Provisional Voting (proof due before 10 am on the 2nd Wednesday after election day; wrong-place provisional counts only shared contests)",
       "url": "https://elections.maryland.gov/voting/provisional_voting.html"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "The governor appoints appeals and circuit judges after screening. Appeals judges later face yes-or-no retention votes. Circuit judges compete for seats. Baltimore’s Orphans’ Court judges run in partisan elections.",
+    "who_reviews": "Nominating commissions and bar groups screen applicants before appointment. We found no current individual job-review ratings for this guide’s judges. The Maryland State Bar separately endorses sitting judges.",
+    "what_the_rating_means": "No current individual evaluation is shown. The bar’s support for sitting judges is a general endorsement based on the appointment process, not a published score for each judge’s work.",
+    "what_it_doesnt_mean": "Appointment screening is not a fresh retention evaluation. An endorsement should not be presented as an official job review or an individual performance rating.",
+    "to_keep_a_judge": "More yes than no votes keeps an appeals judge for ten years. Circuit and Orphans’ Court races ask you to choose candidates, up to the number of seats shown.",
+    "history": "The bar says it has supported sitting judges for more than three decades. Its August 17, 2026 statement reaffirms that general policy.",
+    "read_one": {
+      "label": "Read the Maryland courts’ judicial selection explanation",
+      "url": "https://www.mdcourts.gov/judgeselect"
+    },
+    "sources": [
+      {
+        "name": "Maryland Constitution: article IV, judicial elections",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/43const/html/04art4.html"
+      },
+      {
+        "name": "Maryland courts: judicial selection",
+        "url": "https://www.mdcourts.gov/judgeselect"
+      },
+      {
+        "name": "Maryland Manual: 2026 judicial ballot",
+        "url": "https://www.msa.maryland.gov/msa/mdmanual/42electg/html/2026/2026jud.html"
+      },
+      {
+        "name": "Maryland State Bar: August 17, 2026 sitting-judge endorsement",
+        "url": "https://www.msba.org/site/content/News-and-Publications/News/General-News/MSBA-Supports-Sitting-Judges-in-Maryland%E2%80%99s-2026-General-Election.aspx"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "On ballot questions, “For” means yes and “Against” means no. “For continuance in office” means keeping the named judge.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "Some House of Delegates races let you choose up to three candidates. Check the limit for your district.",
+      "applies_to": "section:state"
+    }
   ]
 }

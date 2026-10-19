@@ -58,5 +58,67 @@
   "ca-state-senate-34",
   "ca-assembly-59",
   "ca-assembly-67"
+ ],
+ "district_finders": [
+  {
+   "office_match": "Fullerton City Council",
+   "label": "Find your council district",
+   "url": "https://www.cityoffullerton.com/government/departments/city-clerk/elections/find-my-district"
+  },
+  {
+   "office_match": "Fullerton Joint Union High School District Governing Board",
+   "label": "Find your high school trustee area",
+   "url": "https://www.fjuhsd.org/board-member-by-area-map"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district",
+   "url": "https://ocvote.gov/maps-and-gis"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district",
+   "url": "https://ocvote.gov/maps-and-gis"
+  },
+  {
+   "office_match": "Board of Equalization Member",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "Fullerton City Council",
+   "label": "Check your district on your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
+  },
+  {
+   "office_match": "Fullerton School District Governing Board",
+   "label": "Check your district on your OC sample ballot",
+   "url": "https://ocvote.gov/vlt/"
+  },
+  {
+   "office_match": "Member of the State Assembly",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "North Orange County Community College District Board of Trustees",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "Orange County Board of Supervisors",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "State Senator",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  },
+  {
+   "office_match": "U.S. Representative",
+   "label": "Find your district on the registrar’s map",
+   "url": "https://ocvote.gov/findmydistrict"
+  }
  ]
 }

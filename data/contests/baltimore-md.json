@@ -3,7 +3,7 @@
     "id": "md-us-house-2",
     "state": "MD",
     "level": "federal",
-    "office": "U.S. Representative, District 2",
+    "office": "U.S. Representative",
     "district": "CD-2",
     "scope_plain": "Only a small slice of Baltimore City: about 5% of city voters, in north Baltimore near the county line (precincts voting at places in Hampden, Medfield, Roland Park, Mount Washington and along York Road and North Charles Street). Most of District 2 is in Baltimore County. Downtown and ZIP 21201 are in District 7, not here.",
     "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
@@ -87,13 +87,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 2"
   },
   {
     "id": "md-us-house-7",
     "state": "MD",
     "level": "federal",
-    "office": "U.S. Representative, District 7",
+    "office": "U.S. Representative",
     "district": "CD-7",
     "scope_plain": "About 95% of Baltimore City voters, including all of downtown, Mount Vernon, the UMB campus and ZIP 21201. A slice of north Baltimore votes in District 2 instead.",
     "office_explainer": "Writes and votes on federal laws and the federal budget. Serves a two-year term.",
@@ -167,13 +168,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 7"
   },
   {
     "id": "md-sd-40",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 40",
+    "office": "State Senator",
     "district": "SD-40",
     "scope_plain": "Voters in Legislative District 40: west and central Baltimore, including the UMB campus area and downtown west, part of Mount Vernon, Bolton Hill, Reservoir Hill, Upton, Sandtown, Hollins Market, Pigtown and parts of Hampden. Neighborhood list is approximate (based on where precincts vote).",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -237,13 +239,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 40"
   },
   {
     "id": "md-sd-41",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 41",
+    "office": "State Senator",
     "district": "SD-41",
     "scope_plain": "Voters in Legislative District 41: northwest and west Baltimore, including Roland Park, Mount Washington, Forest Park and Edmondson Village areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -290,13 +293,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 41"
   },
   {
     "id": "md-sd-43",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 43",
+    "office": "State Senator",
     "district": "SD-43",
     "scope_plain": "Voters in Legislative District 43: north-central Baltimore (the city part of District 43, called 43A for delegates), including Charles Village, Waverly, Govans and Hamilton areas. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -343,13 +347,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 43"
   },
   {
     "id": "md-sd-45",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 45",
+    "office": "State Senator",
     "district": "SD-45",
     "scope_plain": "Voters in Legislative District 45: east and northeast Baltimore, including parts of 21202, 21205, 21206, 21213 and 21218. Neighborhood list is approximate (based on where precincts vote). Not part of ZIP 21201.",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -396,13 +401,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 45"
   },
   {
     "id": "md-sd-46",
     "state": "MD",
     "level": "state",
-    "office": "State Senator, District 46",
+    "office": "State Senator",
     "district": "SD-46",
     "scope_plain": "Voters in Legislative District 46: southeast Baltimore and the harbor, including part of Mount Vernon and downtown, the Inner Harbor, Federal Hill, Fells Point, Canton, Highlandtown, Locust Point, Brooklyn and Curtis Bay. Neighborhood list is approximate (based on where precincts vote).",
     "office_explainer": "One of 47 state senators. Writes Maryland laws, passes the state budget, confirms the governor's appointees.",
@@ -476,13 +482,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 46"
   },
   {
     "id": "md-hd-40",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 40",
+    "office": "House of Delegates",
     "district": "HD-40",
     "scope_plain": "Voters in Legislative District 40 (west and central Baltimore, including the UMB campus area). Same area as State Senate District 40.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -583,13 +590,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 40"
   },
   {
     "id": "md-hd-41",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 41",
+    "office": "House of Delegates",
     "district": "HD-41",
     "scope_plain": "Voters in Legislative District 41 (northwest and west Baltimore). Same area as State Senate District 41. Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -680,13 +688,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 41"
   },
   {
     "id": "md-hd-43a",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 43A",
+    "office": "House of Delegates",
     "district": "HD-43A",
     "scope_plain": "Voters in subdistrict 43A, the Baltimore City part of District 43 (north-central Baltimore). Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -766,13 +775,14 @@
         "url": "https://elections.maryland.gov/elections/2026/GP26_State_Precinct_Reference.xlsx"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 43A"
   },
   {
     "id": "md-hd-45",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 45",
+    "office": "House of Delegates",
     "district": "HD-45",
     "scope_plain": "Voters in Legislative District 45 (east and northeast Baltimore). Same area as State Senate District 45. Not part of ZIP 21201.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -894,13 +904,14 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 45"
   },
   {
     "id": "md-hd-46",
     "state": "MD",
     "level": "state",
-    "office": "House of Delegates, District 46",
+    "office": "House of Delegates",
     "district": "HD-46",
     "scope_plain": "Voters in Legislative District 46 (southeast Baltimore and the harbor, including part of Mount Vernon and downtown in ZIP 21201). Same area as State Senate District 46.",
     "office_explainer": "Delegates write Maryland laws and pass the state budget. Most districts elect three; 43A elects two.",
@@ -1022,7 +1033,8 @@
         "url": "https://api.delilahusa.com/v1/legislators?state=MD"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "District 46"
   },
   {
     "id": "baltimore-circuit-court-8",

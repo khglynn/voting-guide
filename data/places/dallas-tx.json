@@ -137,5 +137,102 @@
     "tx-irving-isd-prop-c",
     "tx-irving-isd-prop-d"
   ],
-  "notes": "Dallas County uses vote centers: any registered Dallas County voter can vote at any Dallas County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: 7 AM to 7 PM every day except Sunday Oct 25, noon to 6 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM; if you're in line by 7 PM, you can vote. Bring a printed or handwritten cheat sheet into the booth (take it with you when you leave; don't show it to others inside the 100-foot zone). Phones and other devices cannot be used in the voting room. Texas has no straight-ticket voting, so you mark each race one by one, and skipping a race is fine. After the county races, the ballot has an \"Uncontested Races\" box listing 53 unopposed judges, all Democrats: one choice, \"Vote for All\" or \"Vote for None,\" covers the whole box. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There are two different Prop A's: Dallas County Prop A (homelessness tax rate) and City of Dallas Prop A ($443 million public safety bond). They are separate votes. Three local races have a write-in line because a write-in candidate filed: district attorney (Eric Reed), JP Precinct 1, Place 2 (Jayla Godbolt) and U.S. House District 33 (Michelle Craig). To vote for a write-in, you write the name in. A mail ballot can be hand-delivered on Election Day only to the Elections Office at 1520 Round Table Drive while polls are open, by the voter, with photo ID. There is no Dallas mayor or city council race on this ballot."
+  "notes": "Dallas County uses vote centers: any registered Dallas County voter can vote at any Dallas County vote center, early or on Election Day. Early voting runs Mon Oct 19 to Fri Oct 30: 7 AM to 7 PM every day except Sunday Oct 25, noon to 6 PM. Election Day, Tue Nov 3, is 7 AM to 7 PM; if you're in line by 7 PM, you can vote. Bring a printed or handwritten cheat sheet into the booth (take it with you when you leave; don't show it to others inside the 100-foot zone). Phones and other devices cannot be used in the voting room. Texas has no straight-ticket voting, so you mark each race one by one, and skipping a race is fine. After the county races, the ballot has an \"Uncontested Races\" box listing 53 unopposed judges, all Democrats: one choice, \"Vote for All\" or \"Vote for None,\" covers the whole box. On the ballot, each proposition says \"For\" or \"Against\": For means yes, Against means no. There are two different Prop A's: Dallas County Prop A (homelessness tax rate) and City of Dallas Prop A ($443 million public safety bond). They are separate votes. Three local races have a write-in line because a write-in candidate filed: district attorney (Eric Reed), JP Precinct 1, Place 2 (Jayla Godbolt) and U.S. House District 33 (Michelle Craig). To vote for a write-in, you write the name in. A mail ballot can be hand-delivered on Election Day only to the Elections Office at 1520 Round Table Drive while polls are open, by the voter, with photo ID. There is no Dallas mayor or city council race on this ballot.",
+  "district_finders": [
+    {
+      "office_match": "U.S. Representative",
+      "label": "Find your 2026 district on your Dallas sample ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Find your district",
+      "url": "https://wrm.capitol.texas.gov/home"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Find your Dallas commissioner district",
+      "url": "https://www.dallascounty.org/government/comcrt/whois.php"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Find your Dallas JP precinct",
+      "url": "https://dallascountygis.maps.arcgis.com/apps/webappviewer/index.html?id=7cb8b11d183b4c60a2380d82ed0a4a91"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Find your Dallas constable precinct",
+      "url": "https://dallascountygis.maps.arcgis.com/apps/webappviewer/index.html?id=7cb8b11d183b4c60a2380d82ed0a4a91"
+    },
+    {
+      "office_match": "Chief Justice, 15th Court of Appeals",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Chief Justice, Supreme Court",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Constable",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "County Commissioner",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "District Judge",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Judge, Court of Criminal Appeals",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Justice of the Peace",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Justice, 15th Court of Appeals",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Justice, 5th Court of Appeals",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Justice, Supreme Court",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "Member, State Board of Education",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "State Representative",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    },
+    {
+      "office_match": "State Senator",
+      "label": "Check your district on your Dallas County ballot",
+      "url": "https://www.dallascountyvotes.org/voters/ballot/"
+    }
+  ]
 }

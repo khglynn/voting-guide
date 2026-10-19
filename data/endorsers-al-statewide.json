@@ -4,28 +4,30 @@
     "name": "AL.com / Alabama Media Group editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates AL.com Center (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found.",
+    "lean_basis": "AllSides rates AL.com Center (independent review, low or initial confidence, as of Oct. 2026). No separate rating for its editorial board was found. Rating source: https://www.allsides.com/news-source/alcom-media-bias.",
     "geography": [
       "AL"
     ],
     "guide_url": "https://www.al.com/opinion/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "alabama-reflector",
     "name": "Alabama Reflector (voter guide, no endorsements)",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Nonprofit newsroom that describes itself as 'an independent nonprofit website covering politics and policy in our state' (https://alabamareflector.com/about/) and does not endorse. No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"an independent nonprofit website covering politics and policy in our state\". This does not establish a position on the political scale. Source: https://alabamareflector.com/about/.",
     "geography": [
       "AL"
     ],
     "guide_url": "https://alabamareflector.com/voter-guides/2026-alabama-general-election/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-alabama",
@@ -39,7 +41,8 @@
     "guide_url": "https://www.vote411.org/alabama",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "al-republican-party",
@@ -53,7 +56,9 @@
     "guide_url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofRepublicanCandidates.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "al-democratic-party",
@@ -67,7 +72,9 @@
     "guide_url": "https://www.sos.alabama.gov/sites/default/files/election-2026/2026GeneralElectionStateCertificationofDemocraticCandidates.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "alfa-farmpac",
@@ -81,7 +88,8 @@
     "guide_url": "https://aldailynews.com/farmpac-announces-endorsements-of-wahl-sorrell-and-zeigler-ahead-of-general-election/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "bca-progresspac",
@@ -95,7 +103,8 @@
     "guide_url": "https://www.bcatoday.org/advocacy/progresspac-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "alabama-realtors-pac",
@@ -109,7 +118,8 @@
     "guide_url": "https://www.alreporter.com/2026/10/05/alabama-realtors-pac-announces-2026-general-election-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "al-afl-cio",
@@ -123,7 +133,8 @@
     "guide_url": "https://alaflcio.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "al-education-association",
@@ -137,7 +148,8 @@
     "guide_url": "https://myaea.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "alabama-arise",
@@ -151,20 +163,22 @@
     "guide_url": "https://alarise.org/resources/2026-alabama-election-guide-election-information/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "al-policy-institute",
     "name": "Alabama Policy Institute",
     "type": "advocacy",
     "lean": "right",
-    "lean_basis": "Self-described conservative think tank: it says it is committed to 'free markets, limited government, and strong families' and 'sets the standard for how to govern conservatively in the state of Alabama' (https://alabamapolicy.org/about/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"sets the standard for how to govern conservatively in the state of Alabama\". Source: https://alabamapolicy.org/about/.",
     "geography": [
       "AL"
     ],
     "guide_url": "https://alabamapolicy.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

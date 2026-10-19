@@ -1272,7 +1272,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 176 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "176",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Antonia \"Toni\" Arteaga",
@@ -1294,7 +1309,22 @@
           }
         ],
         "lwv_status": "responded",
-        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401"
+        "lwv_url": "https://lwvsa.clubexpress.com/docs.ashx?id=1825401",
+        "evaluations": [
+          {
+            "by": "State Bar of Texas",
+            "by_short": "Texas Bar",
+            "kind": "bar_poll",
+            "rating": "February 10, 2026 primary preference poll: 109 votes. The primary field may differ from November. Not a State Bar endorsement.",
+            "verdict": "none",
+            "vote": "109",
+            "noted_strength": null,
+            "noted_concern": null,
+            "url": "https://www.texasbar.com/pollresults",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

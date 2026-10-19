@@ -4,7 +4,7 @@
     "name": "Chicago Tribune editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Chicago Tribune Center (online news; low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Chicago Tribune Center (online news; low or initial confidence, as of Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/chicago-tribune-media-bias.",
     "geography": [
       "IL",
       "chicago-il"
@@ -12,14 +12,15 @@
     "guide_url": "https://www.chicagotribune.com/2026/10/17/tribune-editorial-board-endorsements-2026/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "chicago-sun-times-eb",
     "name": "Chicago Sun-Times editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026).",
+    "lean_basis": "Owned since 2022 by nonprofit Chicago Public Media (WBEZ's parent), a 501(c)(3), so it does not endorse candidates; it publishes voter guides and candidate questionnaires instead. AllSides rates its news Lean Left (medium confidence, Oct. 2026). Rating source: https://www.allsides.com/news-source/chicago-sun-times.",
     "geography": [
       "IL",
       "chicago-il"
@@ -27,7 +28,8 @@
     "guide_url": "https://chicago.suntimes.com/elections/2026",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-chicago",
@@ -41,14 +43,15 @@
     "guide_url": "https://vote411.org/lwvchicago",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "injustice-watch",
     "name": "Injustice Watch: Check Your Judges",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Nonprofit newsroom that calls itself 'the only newsroom in Cook County dedicated to reporting on the court system' (https://www.injusticewatch.org/) and makes no endorsements. No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"the only newsroom in Cook County dedicated to reporting on the court system\". This does not establish a position on the political scale. Source: https://www.injusticewatch.org/.",
     "geography": [
       "cook-county-il",
       "chicago-il"
@@ -56,7 +59,9 @@
     "guide_url": "https://2026retention.injusticewatch.org/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission",
+    "short": "Injustice Watch"
   },
   {
     "id": "isba-judicial-evaluations",
@@ -72,7 +77,8 @@
     "guide_url": "https://www.isba.org/judicial-elections/counties/cook",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "chicago-federation-of-labor",
@@ -87,7 +93,8 @@
     "guide_url": "https://chicagolabor.org/wp-content/uploads/CFL-2026-General-Election-Endorsements.pdf",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "ift-ctu",
@@ -102,14 +109,16 @@
     "guide_url": "https://www.ctulocal1.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission",
+    "short": "Illinois Federation of Teachers"
   },
   {
     "id": "seiu-il-state-council",
     "name": "SEIU Illinois State Council",
     "type": "labor",
-    "lean": "lean_left",
-    "lean_basis": "Statewide council of SEIU locals. Its site (https://www.seiuillinois.org/) could not be read on Oct. 17, 2026, and unions map to lean_left (workers' bargaining power and labor rights). No outside rating found; lean reflects its stated mission.",
+    "lean": null,
+    "lean_basis": "Statewide council of SEIU locals. Its site (https://www.seiuillinois.org/) could not be read on Oct. 17, 2026. Not rated: with no stated mission and no outside rating available, no position on the political scale is shown.",
     "geography": [
       "IL",
       "chicago-il"
@@ -117,7 +126,8 @@
     "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "toni-preckwinkle",
@@ -131,7 +141,8 @@
     "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "party"
   },
   {
     "id": "brandon-johnson",
@@ -145,7 +156,9 @@
     "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "party",
+    "short": "Mayor Brandon Johnson"
   },
   {
     "id": "danny-davis",
@@ -159,7 +172,8 @@
     "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "party"
   },
   {
     "id": "raja-krishnamoorthi",
@@ -174,7 +188,8 @@
     "guide_url": "https://www.fox32chicago.com/news/who-is-running-chicago-school-board-president",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "party"
   },
   {
     "id": "illinois-policy",
@@ -189,6 +204,7 @@
     "guide_url": "https://www.illinoispolicy.org/faq-election-for-metropolitan-water-reclamation-district-of-greater-chicago-commissioners/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   }
 ]

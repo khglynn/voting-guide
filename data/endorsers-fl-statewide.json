@@ -4,98 +4,105 @@
     "name": "Orlando Sentinel editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate.",
+    "lean_basis": "AllSides rates the Orlando Sentinel Center (independent review, low or initial confidence, as of Oct. 2026). Under a 2022 Tribune Publishing policy it no longer endorses for president, governor or U.S. Senate. Rating source: https://www.allsides.com/news-source/orlando-sentinel-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.orlandosentinel.com/opinion/endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "sun-sentinel-eb",
     "name": "South Florida Sun Sentinel editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Sun Sentinel Center. Sister paper of the Orlando Sentinel (same Alden ownership and the same 2022 no-endorsement policy for president, governor and Senate); its amendment editorials were co-published with the Sentinel. Included because its 'just say no to all three' editorial is one of the newspaper positions on the amendments.",
+    "lean_basis": "AllSides rates the Sun Sentinel Center. Sister paper of the Orlando Sentinel (same Alden ownership and the same 2022 no-endorsement policy for president, governor and Senate); its amendment editorials were co-published with the Sentinel. Included because its 'just say no to all three' editorial is one of the newspaper positions on the amendments. Rating source: https://www.allsides.com/news-source/sun-sentinel-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.sun-sentinel.com/2026/09/30/just-say-no-to-all-three-state-amendments-endorsement/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "miami-herald-eb",
     "name": "Miami Herald editorial board",
     "type": "publication",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the Miami Herald Lean Left (checked Oct. 2026). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates the Miami Herald Lean Left (checked Oct. 2026). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/miami-herald-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "tampa-bay-times-eb",
     "name": "Tampa Bay Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Tampa Bay Times Center (independent review, low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-3.28). It is owned by the nonprofit Poynter Institute.",
+    "lean_basis": "AllSides rates the Tampa Bay Times Center (independent review, low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-3.28). It is owned by the nonprofit Poynter Institute. Rating source: https://www.allsides.com/news-source/tampa-bay-times-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.tampabay.com/opinion/editorials/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "tcpalm-eb",
     "name": "TCPalm / Treasure Coast Newspapers editorial board",
     "type": "publication",
     "lean": null,
-    "lean_basis": "No AllSides or Ad Fontes rating found. Gannett paper whose site blocked automated reads on Oct. 17, 2026, so no mission statement could be quoted; shown as not rated.",
+    "lean_basis": "Not rated. The existing record contains no quoted ideological mission or usable outside rating. Its source: https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.tcpalm.com/story/news/politics/elections/2026/10/14/florida-amendment-3-endorsement-recommendation-how-vote-opinion/92242024007/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "tallahassee-democrat-eb",
     "name": "Tallahassee Democrat",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Tallahassee Democrat Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations.",
+    "lean_basis": "AllSides rates the Tallahassee Democrat Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations. Rating source: https://www.allsides.com/news-source/tallahassee-democrat-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.tallahassee.com/opinion/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "pensacola-news-journal-eb",
     "name": "Pensacola News Journal",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates the Pensacola News Journal Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations.",
+    "lean_basis": "AllSides rates the Pensacola News Journal Center (independent review, low or initial confidence, as of Oct. 2026). The Gannett paper is not among those offering 2026 recommendations. Rating source: https://www.allsides.com/news-source/pensacola-news-journal-media-bias.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://www.pnj.com/opinion/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-florida",
@@ -109,21 +116,23 @@
     "guide_url": "https://lwvfl.org/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "florida-taxwatch",
     "name": "Florida TaxWatch",
     "type": "advocacy",
-    "lean": "lean_right",
-    "lean_basis": "Taxpayer watchdog that calls itself 'the state’s leading independent voice for taxpayer accountability' (https://floridataxwatch.org/about/) and nonpartisan. No outside rating found; lean reflects its stated mission.",
+    "lean": "neutral",
+    "lean_basis": "Its own description says it is nonpartisan or takes no side: \"independent, nonpartisan, nonprofit taxpayer research institute and government watchdog\". Source: https://www.floridataxwatch.org/about-florida-taxwatch/about/.",
     "geography": [
       "FL"
     ],
     "guide_url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fl-democratic-party",
@@ -137,7 +146,9 @@
     "guide_url": "https://www.floridadems.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "fl-republican-party",
@@ -151,7 +162,9 @@
     "guide_url": "https://florida.gop/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "fl-afl-cio",
@@ -165,7 +178,8 @@
     "guide_url": "https://flaflcio.org/florida-afl-cio-labor-2026-endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fl-chamber",
@@ -179,7 +193,8 @@
     "guide_url": "https://www.flchamber.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "nra-pvf",
@@ -193,7 +208,8 @@
     "guide_url": "https://www.nrapvf.org/grades/florida/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fl-sheriffs-assn",
@@ -207,7 +223,8 @@
     "guide_url": "https://www.flsheriffs.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fl-education-assn",
@@ -221,7 +238,8 @@
     "guide_url": "https://feaweb.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "fl-realtors",
@@ -235,6 +253,7 @@
     "guide_url": "https://www.floridarealtors.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   }
 ]

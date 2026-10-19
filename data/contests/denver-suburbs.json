@@ -3164,15 +3164,39 @@
         "website": "https://judicialperformance.colorado.gov/contiguglia-chantel-e-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed docket (criminal, civil, domestic relations). Jefferson County district judge since January 2024; six years as an Arapahoe County Court judge; more than ten years with the State Public Defender.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): described as \"prepared, fair, consistent, and respectful\"; some found her scheduling inflexible, and the commission saw improvement after her interim review.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/contiguglia-chantel-e-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 50,
+                "no_pct": 50,
+                "n": 20
+              },
+              "non_attorneys": {
+                "yes_pct": 72,
+                "no_pct": 22,
+                "n": 18
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Chantel%20E.%20Contiguglia%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Contiguglia has been described as prepared, fair, consistent, and respectful with good judicial demeanor and temperament.",
+            "noted_concern": "Her case management was described as efficient; however it was noted her scheduling practices could be inflexible for trial and docket management, which has been perceived by some litigants to overlook practical needs of the parties.  During her interim evaluation Judge Contiguglia was given this feedback and since that time, there has been improvement.",
+            "url": "https://judicialperformance.colorado.gov/contiguglia-chantel-e-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3213,15 +3237,39 @@
         "website": "https://judicialperformance.colorado.gov/loewer-ryan-p-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed docket (domestic relations, civil, criminal). Appointed August 2023; teaches at the state's advanced new-judge orientation.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): demeanor described as \"formal, professional, dignified and fair\"; he acknowledges room to grow with experience.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/loewer-ryan-p-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 80,
+                "no_pct": 15,
+                "n": 20
+              },
+              "non_attorneys": {
+                "yes_pct": 92,
+                "no_pct": 8,
+                "n": 25
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Ryan%20P.%20Loewer%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Loewer’s demeanor is described as formal, professional, dignified and fair.",
+            "noted_concern": "Judge Loewer indicated to the Commission that he is working to balance the level of formality that he believes maintains decorum and expectations in his court with the need to make sure parties are not intimidated by the process.",
+            "url": "https://judicialperformance.colorado.gov/loewer-ryan-p-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3262,15 +3310,39 @@
         "website": "https://judicialperformance.colorado.gov/miloud-meegan-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal, civil, domestic relations and some probate cases. On the bench three years after serving as a 1st Judicial District magistrate; earlier represented parents and served as guardian ad litem in child welfare and mental health cases.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): noted for calm demeanor, clear communication and preparation; brought a backlogged docket current.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/miloud-meegan-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 70,
+                "no_pct": 30,
+                "n": 10
+              },
+              "non_attorneys": {
+                "yes_pct": 64,
+                "no_pct": 36,
+                "n": 14
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Meegan%20Miloud%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Among her many accomplishments, she successfully managed a backlogged docket and brought it current.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/miloud-meegan-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3311,15 +3383,40 @@
         "website": "https://judicialperformance.colorado.gov/poland-andrew-c-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed docket (criminal 30%, civil 40%, domestic relations 30%). Appointed June 2024; private practice 2012 to 2023 in juvenile defense and child welfare.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0, one recusal): showing \"meaningful growth in the role,\" with room to further refine his legal analysis.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/poland-andrew-c-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "One Commissioner recused because the Commissioner is a party to a case pending before Judge Poland",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 93,
+                "no_pct": 7,
+                "n": 15
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Andrew%20C.%20Poland%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "He was recognized for managing his courtroom, having a fair and even temperament, being deliberate, clearly explaining his rulings, and being effective in case management.",
+            "noted_concern": "Judge Poland was also described as demonstrating meaningful growth in the role, with continued opportunity to further develop and refine his legal analysis as he gains experience across a broad district court docket.",
+            "url": "https://judicialperformance.colorado.gov/poland-andrew-c-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3360,15 +3457,40 @@
         "website": "https://judicialperformance.colorado.gov/rhamey-christopher-b-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal, civil and domestic relations cases. Appointed July 2023; previously a prosecutor in the Adams County District Attorney's office specializing in crimes against children.",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0, one abstention): demeanor described as \"calm, professional, and attentive.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/rhamey-christopher-b-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "1 abstention",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 67,
+                "no_pct": 28,
+                "n": 18
+              },
+              "non_attorneys": {
+                "yes_pct": 77,
+                "no_pct": 20,
+                "n": 30
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Christopher%20B.%20Rhamey%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Rhamey’s demeanor is described as calm, professional, and attentive.",
+            "noted_concern": "There were references that his tone in written orders could be harsh. The commission took extra care to examine the judge’s orders and concluded that Judge Rhamey’s tone was appropriate.",
+            "url": "https://judicialperformance.colorado.gov/rhamey-christopher-b-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3409,15 +3531,39 @@
         "website": "https://judicialperformance.colorado.gov/russell-tamara-s-2026-evaluation",
         "website_confidence": "verified",
         "background": "All-criminal docket since February 2026 (mixed before). On the Jefferson County bench since October 2005; previously chief deputy city attorney for Lakewood.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): \"a highly experienced Judge\" who is \"balanced and respectful\" to attorneys and litigants.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/russell-tamara-s-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 71,
+                "no_pct": 29,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 88,
+                "no_pct": 13,
+                "n": 16
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Tamara%20S.%20Russell%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Russell is a highly experienced Judge and is noted to be balanced and respectful to both attorneys and litigants in her courtroom.",
+            "noted_concern": "Even if a litigant disagrees with her rulings, she works to have the parties feel that they are understood and that they, in turn, understand her rulings. This aim has, at times, potentially come at the expense of docket management, a component of her performance that she continues to hone.",
+            "url": "https://judicialperformance.colorado.gov/russell-tamara-s-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3458,15 +3604,39 @@
         "website": "https://judicialperformance.colorado.gov/zenisek-christopher-c-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed docket. On the bench since December 2011; former prosecutor and private-practice lawyer; presided over the Marshall Fire cases; a 2026 finalist for the Colorado Supreme Court.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): \"consistently described as thoughtful, prepared, thorough, and fair.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/zenisek-christopher-c-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 73,
+                "no_pct": 27,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 90,
+                "no_pct": 10,
+                "n": 30
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Christopher%20C.%20Zenisek%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "He is consistently described as thoughtful, prepared, thorough, and fair.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/zenisek-christopher-c-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3507,15 +3677,39 @@
         "website": "https://judicialperformance.colorado.gov/garrido-sara-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil (90%) and small claims (10%) docket. Appointed to Jefferson County Court in April 2020.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): \"knowledgeable, decisive, patient, and highly organized\"; other judges consult her on eviction law; working on fairness when only one side has a lawyer.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/garrido-sara-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 9
+              },
+              "non_attorneys": {
+                "yes_pct": 44,
+                "no_pct": 56,
+                "n": 9
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Sara%20Garrido%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "She is described as knowledgeable, decisive, patient, and highly organized.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/garrido-sara-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3556,15 +3750,39 @@
         "website": "https://judicialperformance.colorado.gov/magid-corinne-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mostly misdemeanor and traffic cases, plus civil. Appointed March 2019; previously presiding judge for the Golden and Northglenn municipal courts and a Denver County Court magistrate.",
-        "own_words": [
-          {
-            "text": "Commission finding (10-0): \"prepared, fair, kind, respectful, and compassionate\"; made improvements after earlier feedback.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/magid-corinne-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "10-0",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 78,
+                "no_pct": 22,
+                "n": 9
+              },
+              "non_attorneys": {
+                "yes_pct": 95,
+                "no_pct": 0,
+                "n": 21
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Corinne%20M.%20Magid%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Magid is described as prepared, fair, kind, respectful, and compassionate.",
+            "noted_concern": "During the interim period Judge Magid was given feedback that she needed to assert her role in courtroom management of parties when necessary.  She took this feedback and has made improvements.",
+            "url": "https://judicialperformance.colorado.gov/magid-corinne-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3605,15 +3823,40 @@
         "website": "https://judicialperformance.colorado.gov/melton-jennifer-l-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed criminal, misdemeanor and civil docket. Appointed July 2019; previously in private practice (civil, criminal defense, child welfare).",
-        "own_words": [
-          {
-            "text": "Commission finding (9-0, one abstention): feedback says she \"can often move too quickly\" on afternoon dockets and should attend more to Victim Rights Act issues; praised for mentoring new lawyers.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/melton-jennifer-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "First Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "9-0",
+            "vote_note": "The page describes the tenth commissioner's non-vote as both an abstention and an absence; the recorded vote is 9-0.",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 8
+              },
+              "non_attorneys": {
+                "yes_pct": 50,
+                "no_pct": 50,
+                "n": 2
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Jennifer%20Lynn%20Melton%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Melton was observed to have an even-tempered and practical courtroom demeanor.",
+            "noted_concern": "Evaluations and feedback indicate Judge Melton can often move too quickly, specifically in the afternoon docket, and she needs to be more conscious of addressing Victim Rights Act (VRA) issues. Going forward, she has committed to slowing down the pace to ensure that all parties in her courtroom have adequate time for case presentation and understand the legal basis for her decisions.",
+            "url": "https://judicialperformance.colorado.gov/melton-jennifer-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3654,15 +3897,40 @@
         "website": "https://judicialperformance.colorado.gov/amico-michelle-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Chief judge of the 18th Judicial District since July 2018; district judge since 2012; former chief deputy district attorney in Denver.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"a tremendous leader who leads by example\" while carrying the chief judge's administrative load.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/amico-michelle-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 10
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 12
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Michelle%20A.%20Amico%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Amico treats everyone who appears before her with dignity, respect and impartiality.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/amico-michelle-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "LaQunya Latrese Baker-McKay",
@@ -3671,15 +3939,40 @@
         "website": "https://judicialperformance.colorado.gov/baker-laqunya-l-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal and competency dockets. Arapahoe County Court judge 2022, district judge since July 2023; the first Black woman on the Arapahoe district bench.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"a clear communicator who treats all courtroom participants with respect.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/baker-laqunya-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 6
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 14
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20LaQunya%20Latrese%20Baker-McKay%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Baker-McKay was described as a clear communicator who treats all courtroom participants with respect.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/baker-laqunya-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jacob A. Edson",
@@ -3688,15 +3981,40 @@
         "website": "https://judicialperformance.colorado.gov/edson-jacob-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed July 2023; former 18th Judicial District magistrate and chief deputy district attorney.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"calm, diligent, kind, courteous and respectful.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/edson-jacob-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 86,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 75,
+                "no_pct": 15,
+                "n": 20
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Jacob%20A%20Edson%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Edson is described as calm, diligent, kind, courteous and respectful.",
+            "noted_concern": "While a limited handful of respondents shared that Judge Edson’s records at times are a little lengthy, Judge Edson’s surveys reveal that he is viewed as thorough, hard-working, and unbiased.",
+            "url": "https://judicialperformance.colorado.gov/edson-jacob-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Thomas W. Henderson",
@@ -3705,15 +4023,40 @@
         "website": "https://judicialperformance.colorado.gov/henderson-thomas-w-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed 2023 after a 35-year career as a civil litigator.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"respectful, fair, careful and reasoned,\" able to handle complex cases.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/henderson-thomas-w-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 90,
+                "no_pct": 10,
+                "n": 21
+              },
+              "non_attorneys": {
+                "yes_pct": 67,
+                "no_pct": 22,
+                "n": 9
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Thomas%20W.%20Henderson%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Henderson is consistently described as respectful, fair, careful and reasoned, very knowledgeable in the Rules of Evidence, and able to handle complex cases.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/henderson-thomas-w-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Michelle Jones",
@@ -3722,15 +4065,27 @@
         "website": "https://judicialperformance.colorado.gov/jones-michelle-e-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed January 2023; former defense attorney, administrative law judge and 18th Judicial District magistrate.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"intelligent and thoughtful, patient, respectful, and fair\"; twice volunteered to clear overburdened dockets.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/jones-michelle-e-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": null,
+            "survey_note": "The page labels a link '2026 Retention Survey Report', but the saved link points to a 2025 report. A 2026 survey row could not be verified.",
+            "noted_strength": "Judge Jones is repeatedly described as intelligent and thoughtful, patient, respectful, and fair with a balanced demeanor and strong intellect.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/jones-michelle-e-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "David N. Karpel",
@@ -3739,15 +4094,40 @@
         "website": "https://judicialperformance.colorado.gov/karpel-david-n-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed 2023; CU Boulder, University of Denver law school and a Northwestern MBA.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): non-attorneys say he \"gives proceedings a sense of dignity\" and treats people with respect.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/karpel-david-n-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 80,
+                "no_pct": 10,
+                "n": 10
+              },
+              "non_attorneys": {
+                "yes_pct": 93,
+                "no_pct": 5,
+                "n": 44
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20David%20N.%20Karpel%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Karpel’s courtroom demeanor is measured, direct, and calm.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/karpel-david-n-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Natalie G. Stricklin",
@@ -3756,15 +4136,40 @@
         "website": "https://judicialperformance.colorado.gov/stricklin-natalie-g-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed December 2023; former assistant federal public defender for Colorado and Wyoming.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"praised for her preparation and command of the law.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/stricklin-natalie-g-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 86,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 4
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Natalie%20G.%20Stricklin%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Stricklin is a clear communicator who treats all courtroom participants with respect.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/stricklin-natalie-g-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Darren L. Vahle",
@@ -3773,15 +4178,40 @@
         "website": "https://judicialperformance.colorado.gov/vahle-darren-l-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal docket. County judge 2008, district judge since 2018; former 18th Judicial District prosecutor.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-0, one abstention): \"smart,\" manages caseloads well, \"calm, fair, diligent, courteous.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/vahle-darren-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-0",
+            "vote_note": "with one member abstaining, one member absent, and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 80,
+                "no_pct": 20,
+                "n": 15
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 7
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Darren%20L.%20Vahle%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Judge was described as smart, understanding the law, and managing caseloads effectively, as well as being calm, fair, diligent, courteous and a team player.",
+            "noted_concern": "At times Judge Vahle can be critical and make undue comments, but he assured the Commission that his aim is not to be critical but to maintain a high standard in the court; he takes his values and the consideration of others as foremost.",
+            "url": "https://judicialperformance.colorado.gov/vahle-darren-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Christine A. Washburn",
@@ -3790,15 +4220,40 @@
         "website": "https://judicialperformance.colorado.gov/washburn-christine-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Domestic relations docket (divorce and parenting cases). Appointed September 2024; former 18th Judicial District magistrate.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"patient, thoughtful, and attentive\"; most negative feedback came from non-attorneys, which the commission tied to the type of docket.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/washburn-christine-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 79,
+                "no_pct": 7,
+                "n": 28
+              },
+              "non_attorneys": {
+                "yes_pct": 30,
+                "no_pct": 43,
+                "n": 23
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Christine%20A.%20Washburn%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Washburn was described as patient, thoughtful, and attentive.",
+            "noted_concern": "While reference was made to Judge Washburn taking too much time to issue orders, the Commission concluded the sheer volume and complex issues in many cases contributed to this dynamic.",
+            "url": "https://judicialperformance.colorado.gov/washburn-christine-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3835,15 +4290,40 @@
         "website": "https://judicialperformance.colorado.gov/apostoli-christina-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed January 2024 after more than 14 years as a magistrate; former 18th Judicial District prosecutor.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"professional, kind, courteous, fair and respectful.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/apostoli-christina-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 85,
+                "no_pct": 15,
+                "n": 13
+              },
+              "non_attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 14
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Christina%20Apostoli%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "She received praise for her demeanor, and was described as professional, kind, courteous, fair and respectful to all parties who appear before her.",
+            "noted_concern": "While a few commented about Judge Apostoli’s legal knowledge, the Commission concluded Judge Apostoli’s knowledge base is well above average, and she is consistently striving to learn to grow.",
+            "url": "https://judicialperformance.colorado.gov/apostoli-christina-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Colleen Clark",
@@ -3852,15 +4332,40 @@
         "website": "https://judicialperformance.colorado.gov/clark-colleen-e-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal county court docket. Appointed October 2016; former magistrate, municipal judge and prosecutor.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-1, the only split vote among Arapahoe judges): \"fair, calm, punctual, and courteous\"; some said she can be slow to rule, visibly frustrated at times, and could improve with people who have no lawyer.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/clark-colleen-e-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-1",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 55,
+                "no_pct": 45,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 36,
+                "no_pct": 55,
+                "n": 11
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Colleen%20E.%20Clark%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Clark was described as fair, calm, punctual, and courteous.",
+            "noted_concern": "Some respondents expressed concerns that Judge Clark can be at times slow to make rulings, appears to be visibly frustrated at times, and has opportunity to grow with how she engages with pro se litigants.",
+            "url": "https://judicialperformance.colorado.gov/clark-colleen-e-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Cheryl Rowles-Stokes",
@@ -3869,15 +4374,40 @@
         "website": "https://judicialperformance.colorado.gov/rowles-stokes-cheryl-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed January 2012; former chief deputy district attorney in the 18th Judicial District.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"extremely knowledgeable about the law\" and a mentor to young attorneys.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/rowles-stokes-cheryl-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Eighteenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with one member absent and one vacancy on the Commission",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 47,
+                "no_pct": 53,
+                "n": 15
+              },
+              "non_attorneys": {
+                "yes_pct": 81,
+                "no_pct": 16,
+                "n": 32
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Cheryl%20Rowles-Stokes%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Rowles-Stokes was described as extremely knowledgeable about the law, wanting to share that knowledge, especially with young lawyers.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/rowles-stokes-cheryl-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -3914,15 +4444,40 @@
         "website": "https://judicialperformance.colorado.gov/datz-caryn-a-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal docket since 2025 after juvenile cases. Appointed August 2018; former chief trial deputy in the Boulder County District Attorney's office.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"considerate of all in her courtroom\" with clear, well-reasoned written decisions.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/datz-caryn-a-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 16
+              },
+              "non_attorneys": {
+                "yes_pct": 85,
+                "no_pct": 0,
+                "n": 13
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Caryn%20A.%20Datz%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Datz is considerate of all in her courtroom and provides written communications that are clear, thorough and well-reasoned.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/datz-caryn-a-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Sean Patrick Finn",
@@ -3931,15 +4486,40 @@
         "website": "https://judicialperformance.colorado.gov/finn-sean-p-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil, domestic, juvenile, mental health and criminal matters. Appointed 2018; former senior deputy district attorney in Adams and Broomfield counties.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-1): strengths in legal knowledge and courtroom management; some commissioners raised concerns about his interactions with attorneys.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/finn-sean-p-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-1",
+            "vote_note": "with two commissioners absent",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 86,
+                "no_pct": 14,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 97,
+                "no_pct": 3,
+                "n": 37
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Sean%20P.%20Finn%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Finn is widely regarded as a highly knowledgeable and intellectually rigorous jurist.",
+            "noted_concern": "At the same time, some members of the Commission identified concerns relating to Judge Finn’s interaction with attorneys that warrant continued attention.",
+            "url": "https://judicialperformance.colorado.gov/finn-sean-p-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Priscilla Loew",
@@ -3948,15 +4528,40 @@
         "website": "https://judicialperformance.colorado.gov/loew-priscilla-j-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal (40%), civil, juvenile and probate cases. Magistrate 2016, district judge since May 2017.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"strong knowledge of the law\"; received the Colorado Women's Bar Judicial Excellence Award in 2026.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/loew-priscilla-j-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 0,
+                "no_pct": 33,
+                "n": 3
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Priscilla%20Loew%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The Commission finds Judge Loew to be thoughtful, professional, fair, and impartial.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/loew-priscilla-j-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Jeffrey Dean Ruff",
@@ -3965,15 +4570,40 @@
         "website": "https://judicialperformance.colorado.gov/ruff-jeffrey-d-2026-evaluation",
         "website_confidence": "verified",
         "background": "All-criminal docket. Appointed 2024 after private practice.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"kind and respectful\"; ongoing concerns about timely case management, with improvement the commission called encouraging.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/ruff-jeffrey-d-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 69,
+                "no_pct": 23,
+                "n": 13
+              },
+              "non_attorneys": {
+                "yes_pct": 92,
+                "no_pct": 0,
+                "n": 12
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Jeffrey%20D.%20Ruff%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "The reviewed information confirmed that Judge Ruff is almost universally considered to be fair.",
+            "noted_concern": "There have been concerns over the past two years about the Judge’s case management. The Commission specifically considered this issue. It noted that while there are ongoing concerns about him timely and effectively managing his docket, his focus on improving has produced results which the Commission finds encouraging.",
+            "url": "https://judicialperformance.colorado.gov/ruff-jeffrey-d-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Kelley R. Southerland",
@@ -3982,15 +4612,40 @@
         "website": "https://judicialperformance.colorado.gov/southerland-kelley-r-2026-evaluation",
         "website_confidence": "verified",
         "background": "Appointed January 2023; 17th Judicial District magistrate from 2017.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): respected for \"integrity, fairness, and calm judicial temperament\"; the only negatives concerned timeliness of orders.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/southerland-kelley-r-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 100,
+                "no_pct": 0,
+                "n": 7
+              },
+              "non_attorneys": {
+                "yes_pct": 57,
+                "no_pct": 43,
+                "n": 7
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Kelley%20R.%20Southerland%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Southerland is respected for her integrity, fairness, and calm judicial temperament, consistently treating litigants, attorneys, and court staff with patience, respect, and dignity.",
+            "noted_concern": "The only negative responses were about the timeliness of orders, an area where Judge Southerland strives to improve, but also is exceptionally challenging for the entire bench due to a lack of judicial resources.",
+            "url": "https://judicialperformance.colorado.gov/southerland-kelley-r-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4027,15 +4682,27 @@
         "website": "https://judicialperformance.colorado.gov/jimenez-lara-m-2026-evaluation",
         "website_confidence": "verified",
         "background": "Felony (15%), misdemeanor and traffic (85%) cases. Appointed January 2023; former magistrate and deputy district attorney (2011 to 2020).",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): \"runs an efficient courtroom\"; mentors newer attorneys. Too few survey responses to publish a survey report.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/jimenez-lara-m-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "The Commission finds Judge Jimenez to be consistent, impartial, and fair.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/jimenez-lara-m-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "MaryAnn \"Mariana\" Vielma",
@@ -4044,15 +4711,27 @@
         "website": "https://judicialperformance.colorado.gov/vielma-mariana-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal, misdemeanor and traffic cases. Appointed July 2020; former magistrate, assistant county attorney and senior deputy district attorney.",
-        "own_words": [
-          {
-            "text": "Commission finding (8-0): a leader in bar and judicial groups. Too few 2026 survey responses to publish a survey report.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/vielma-mariana-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Seventeenth Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "8-0",
+            "vote_note": "with two commissioners absent",
+            "survey": null,
+            "survey_note": "Too few people answered the survey, so the commission did not publish a survey report for this judge.",
+            "noted_strength": "Judge Vielma’s demeanor is respectful, professional, dignified, and fair.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/vielma-mariana-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4089,15 +4768,40 @@
         "website": "https://judicialperformance.colorado.gov/baum-andrew-c-2026-evaluation",
         "website_confidence": "verified",
         "background": "Domestic relations and the new problem-solving courts (sobriety, recovery, wellness, veterans). District judge since August 2017.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-0): \"respectful, fair, kind, and just.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/baum-andrew-c-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-0",
+            "vote_note": "with one commissioner absent and two commission vacancies",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 75,
+                "no_pct": 25,
+                "n": 20
+              },
+              "non_attorneys": {
+                "yes_pct": 82,
+                "no_pct": 18,
+                "n": 17
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Andrew%20C.%20Baum%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Baum’s demeanor is described as respectful, fair, kind, and just.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/baum-andrew-c-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Victoria E. Klingensmith",
@@ -4106,15 +4810,40 @@
         "website": "https://judicialperformance.colorado.gov/klingensmith-victoria-e-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil and criminal cases. Appointed September 2023.",
-        "own_words": [
-          {
-            "text": "Commission finding (6-1): \"prepared, professional, respectful, fair, and knowledgeable.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/klingensmith-victoria-e-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "6-1",
+            "vote_note": "with one commissioner absent and two commission vacancies",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 25,
+                "no_pct": 75,
+                "n": 4
+              },
+              "non_attorneys": {
+                "yes_pct": 82,
+                "no_pct": 18,
+                "n": 11
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Victoria%20E.%20Klingensmith%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Klingensmith’s demeanor is described as prepared, professional, respectful, fair, and knowledgeable about criminal and civil law.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/klingensmith-victoria-e-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Theresa Slade",
@@ -4123,15 +4852,40 @@
         "website": "https://judicialperformance.colorado.gov/slade-theresa-m-2026-evaluation",
         "website_confidence": "verified",
         "background": "Mixed docket, now in Elbert County; has served Douglas, Arapahoe and Elbert counties. Appointed August 2012.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-0): \"a diligent judicial officer\" who manages a demanding docket.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/slade-theresa-m-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-0",
+            "vote_note": "The official page prints 'a vote of 70'; the commission's 7 present members all voted meets (one absent, two vacancies).",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 82,
+                "no_pct": 18,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 60,
+                "no_pct": 40,
+                "n": 10
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Theresa%20M.%20Slade%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "She demonstrates a professional and respectful courtroom demeanor and conducts proceedings in a manner that promotes order and clarity.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/slade-theresa-m-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Daniel W. Warhola",
@@ -4140,15 +4894,40 @@
         "website": "https://judicialperformance.colorado.gov/warhola-david-w-2026-evaluation",
         "website_confidence": "verified",
         "background": "Criminal docket since October 2025. Appointed August 2024; former assistant U.S. attorney.",
-        "own_words": [
-          {
-            "text": "Commission finding (6-0, one recusal): \"calm, respectful, and approachable.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/warhola-david-w-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "6-0",
+            "vote_note": "with one commissioner recusing themselves, one commissioner absent, and two commission vacancies",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 82,
+                "no_pct": 18,
+                "n": 11
+              },
+              "non_attorneys": {
+                "yes_pct": 67,
+                "no_pct": 20,
+                "n": 15
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Daniel%20W.%20Warhola%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Warhola’s demeanor is described as calm, respectful, and approachable.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/warhola-david-w-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [
@@ -4185,15 +4964,40 @@
         "website": "https://judicialperformance.colorado.gov/bowling-lawrence-r-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil, criminal, misdemeanor and traffic cases. Appointed January 2011; former magistrate, assistant county attorney and deputy district attorney.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-0): survey participants noted his \"knowledge of law and impartiality.\"",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/bowling-lawrence-r-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-0",
+            "vote_note": "with one commissioner absent and two commission vacancies",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 92,
+                "no_pct": 8,
+                "n": 12
+              },
+              "non_attorneys": {
+                "yes_pct": 86,
+                "no_pct": 11,
+                "n": 44
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Lawrence%20R.%20Bowling%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Judge Bowling reliably displays a calm temperament and respectful demeanor.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/bowling-lawrence-r-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       },
       {
         "name": "Kolony L. Fields",
@@ -4202,15 +5006,40 @@
         "website": "https://judicialperformance.colorado.gov/fields-kolony-l-2026-evaluation",
         "website_confidence": "verified",
         "background": "Civil, misdemeanor and traffic cases. Appointed December 2019.",
-        "own_words": [
-          {
-            "text": "Commission finding (7-0): the commission commends her courtroom demeanor and clear oral findings.",
-            "is_quote": false,
-            "source": "https://judicialperformance.colorado.gov/fields-kolony-l-2026-evaluation"
-          }
-        ],
+        "own_words": [],
         "lwv_status": "not_asked",
-        "lwv_url": null
+        "lwv_url": null,
+        "evaluations": [
+          {
+            "by": "Twenty-Third Judicial District Commission on Judicial Performance",
+            "by_short": "Commission",
+            "kind": "official_commission",
+            "rating": "Meets Performance Standards",
+            "verdict": "favorable",
+            "vote": "7-0",
+            "vote_note": "with one commissioner absent and two commission vacancies",
+            "survey": {
+              "question": "Based on your responses to the previous questions related to the performance evaluation criteria, do you think this judge meets judicial performance standards?",
+              "attorneys": {
+                "yes_pct": 89,
+                "no_pct": 11,
+                "n": 9
+              },
+              "non_attorneys": {
+                "yes_pct": 86,
+                "no_pct": 14,
+                "n": 14
+              },
+              "report_url": "https://judicialperformance.colorado.gov/sites/judicialperformance/files/documents/2026%20Judge%20Kolony%20L.%20Fields%20Survey%20Report.pdf",
+              "caution": "Small samples. n counts everyone who answered the question, including 'no opinion'."
+            },
+            "noted_strength": "Comments received regarding Judge Fields were positive and mention her respectful demeanor to parties and her ability to care.",
+            "noted_concern": null,
+            "url": "https://judicialperformance.colorado.gov/fields-kolony-l-2026-evaluation",
+            "verified_on": "2026-10-19",
+            "confidence": "verified"
+          }
+        ]
       }
     ],
     "sources": [

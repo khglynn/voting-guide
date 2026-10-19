@@ -4,21 +4,22 @@
     "name": "The Seattle Times editorial board",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates The Seattle Times Center (low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-7.06). No separate editorial-board rating was found.",
+    "lean_basis": "AllSides rates The Seattle Times Center (low or initial confidence, as of Oct. 2026), and Ad Fontes rates it Middle (-7.06). No separate editorial-board rating was found. Rating source: https://www.allsides.com/news-source/seattle-times-media-bias.",
     "geography": [
       "WA"
     ],
     "guide_url": "https://www.seattletimes.com/opinion/editorials/seattle-times-editorial-board-endorsements-nov-3-2026-general-election/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "the-stranger-eb",
     "name": "The Stranger Election Control Board",
     "type": "publication",
     "lean": "left",
-    "lean_basis": "Ad Fontes rates The Stranger Hyper-Partisan Left (-18.18). No AllSides rating was found.",
+    "lean_basis": "Ad Fontes rates The Stranger Hyper-Partisan Left (-18.18). No AllSides rating was found. Rating source: https://adfontesmedia.com/the-stranger-bias-and-reliability/.",
     "geography": [
       "WA",
       "seattle-wa"
@@ -26,7 +27,8 @@
     "guide_url": "https://www.thestranger.com/news/the-strangers-2026-general-election-endorsements/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lwv-wa",
@@ -40,7 +42,8 @@
     "guide_url": "https://lwvwa.org/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "wa-democrats",
@@ -54,7 +57,9 @@
     "guide_url": "https://wadems.org/vote/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "wa-gop",
@@ -68,7 +73,9 @@
     "guide_url": "https://wagop.org/wagop-endorses-a-slate-of-ten-congressional-candidates-as-election-day-nears/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "wa-labor-council",
@@ -82,7 +89,8 @@
     "guide_url": "https://wslc.org/vote/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "awb",
@@ -96,7 +104,8 @@
     "guide_url": "https://www.awb.org/awb-endorses-i-645-washington-supreme-court-justices/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "wa-education-association",
@@ -110,7 +119,8 @@
     "guide_url": "https://www.washingtonea.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "wa-state-pta",
@@ -124,7 +134,8 @@
     "guide_url": "https://www.wastatepta.org/focus-areas/advocacy/2026-ballot-measures/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "planned-parenthood-wa",
@@ -138,21 +149,23 @@
     "guide_url": "https://www.plannedparenthoodaction.org/planned-parenthood-alliance-advocates/elections/washington-candidate-endorsements/wa-initiatives",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "aclu-wa",
     "name": "ACLU of Washington",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Washington affiliate.",
+    "lean_basis": "AllSides rates the national ACLU Lean Left (think tank/policy group; independent review, checked Oct. 2026). This is its Washington affiliate. Rating source: https://www.allsides.com/news-source/aclu-media-bias.",
     "geography": [
       "WA"
     ],
     "guide_url": "https://www.aclu-wa.org/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "lets-go-washington",
@@ -166,7 +179,8 @@
     "guide_url": "https://washingtonstatestandard.com/voter-guides/ballot-measures/to-repeal-the-states-income-tax/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "wa-house-republicans",
@@ -180,6 +194,7 @@
     "guide_url": "https://houserepublicans.wa.gov/il26-638/",
     "default_on": false,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "party"
   }
 ]

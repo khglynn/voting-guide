@@ -100,5 +100,28 @@
     "pa-hd-203",
     "philadelphia-question-1",
     "philadelphia-question-2"
+  ],
+  "heads_up": [
+    {
+      "text": "Check both sides of your mail ballot. The charter questions are on the back.",
+      "applies_to": "ballot"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    },
+    {
+      "office_match": "Pennsylvania State Senate",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    },
+    {
+      "office_match": "Pennsylvania House of Representatives",
+      "label": "Find your district",
+      "url": "https://www.palegis.us/find-my-legislator"
+    }
   ]
 }

@@ -3401,7 +3401,7 @@
     "id": "rockwood-pud-2",
     "state": "OR",
     "level": "special_district",
-    "office": "Rockwood Water People's Utility District Director, Sub-District 2",
+    "office": "Rockwood Water People's Utility District Director",
     "district": "Sub-District 2",
     "scope_plain": "Only voters in Rockwood Water PUD Sub-District 2, a small part of outer East Portland and Gresham. Unopposed.",
     "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
@@ -3444,13 +3444,14 @@
         "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Sub-District 2"
   },
   {
     "id": "rockwood-pud-4",
     "state": "OR",
     "level": "special_district",
-    "office": "Rockwood Water People's Utility District Director, Sub-District 4",
+    "office": "Rockwood Water People's Utility District Director",
     "district": "Sub-District 4",
     "scope_plain": "Only voters in Rockwood Water PUD Sub-District 4, a small part of outer East Portland and Gresham. Unopposed.",
     "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
@@ -3493,13 +3494,14 @@
         "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Sub-District 4"
   },
   {
     "id": "rockwood-pud-5",
     "state": "OR",
     "level": "special_district",
-    "office": "Rockwood Water People's Utility District Director, Sub-District 5",
+    "office": "Rockwood Water People's Utility District Director",
     "district": "Sub-District 5",
     "scope_plain": "Only voters in Rockwood Water PUD Sub-District 5, a small part of outer East Portland and Gresham. Unopposed.",
     "office_explainer": "Elected board of the public water utility that serves the Rockwood area; sets water rates and budgets.",
@@ -3542,6 +3544,7 @@
         "url": "https://multco.us/info/sample-ballots-november-2026-general-election"
       }
     ],
-    "confidence": "verified"
+    "confidence": "verified",
+    "seat_label": "Sub-District 5"
   }
 ]

@@ -4,42 +4,45 @@
     "name": "The Washington Post editorial board",
     "type": "publication",
     "lean": "lean_right",
-    "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found.",
+    "lean_basis": "AllSides rates The Washington Post Editorial Board Lean Right (1.0, just past Center) after reviews in July and August 2026, with low confidence; it rates the Post's news pages Lean Left. In February 2025 owner Jeff Bezos refocused the opinion section on 'personal liberties and free markets.' Its editorial page (The Post's View) shows no endorsements in DC or Maryland races from Sept. 26 to Oct. 17, 2026, so it is treated as not endorsing this year. No policy statement on local endorsements was found. Rating source: https://www.allsides.com/news-source/washington-post-editorial-board-media-bias.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://www.washingtonpost.com/opinions/the-posts-view/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "washington-city-paper",
     "name": "Washington City Paper",
     "type": "publication",
     "lean": "neutral",
-    "lean_basis": "AllSides rates Washington City Paper Center (independent review, low or initial confidence, as of Oct. 2026).",
+    "lean_basis": "AllSides rates Washington City Paper Center (independent review, low or initial confidence, as of Oct. 2026). Rating source: https://www.allsides.com/news-source/washington-city-paper-media-bias.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://washingtoncitypaper.com/",
     "default_on": true,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   },
   {
     "id": "hill-rag",
     "name": "Hill Rag / East of the River (Capital Community News)",
     "type": "publication",
     "lean": null,
-    "lean_basis": "Its publisher calls itself 'Washington DC’s number 1 hyper-local news publisher since 1976' (https://www.capitalcommunitynews.com/about/); the monthlies do not endorse. No outside rating found, so it is shown as not rated.",
+    "lean_basis": "Not rated. The recorded description says: \"Washington DC’s number 1 hyper-local news publisher since 1976\". This does not establish a position on the political scale. Source: https://www.capitalcommunitynews.com/about/.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://www.hillrag.com/2026/10/13/the-election-isnt-over-yet/",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "lwv-dc",
@@ -53,7 +56,8 @@
     "guide_url": "https://www.vote411.org/lwvdc",
     "default_on": true,
     "endorses_candidates": false,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dc-democratic-party",
@@ -67,7 +71,9 @@
     "guide_url": "https://www.dcdemocraticparty.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Democratic",
+    "lean_basis_kind": "party"
   },
   {
     "id": "dc-republican-party",
@@ -81,7 +87,9 @@
     "guide_url": "https://dcgop.com/meet-dc-candidates/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "Republican",
+    "lean_basis_kind": "party"
   },
   {
     "id": "dc-statehood-green-party",
@@ -95,21 +103,24 @@
     "guide_url": "https://statehoodgreensofdc.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "party": "DC Statehood Green",
+    "lean_basis_kind": "party"
   },
   {
     "id": "dc-for-democracy",
     "name": "DC for Democracy",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described progressive group; its bylaws mission says it will 'support progressive issues and candidates' (https://www.dcfordemocracy.org/mission-and-values). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"support progressive issues and candidates\". Source: https://www.dcfordemocracy.org/mission-and-values.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://www.dcfordemocracy.org/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "greater-greater-washington",
@@ -123,21 +134,23 @@
     "guide_url": "https://ggwash.org/elections/2026",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "metro-dc-dsa",
     "name": "Metro DC Democratic Socialists of America",
     "type": "advocacy",
     "lean": "left",
-    "lean_basis": "Self-described socialist group: 'a chapter of the national Democratic Socialists of America, the largest socialist organization in the United States' (https://mdcdsa.org/about-us/). No outside rating found; lean reflects its stated mission.",
+    "lean_basis": "Its stated mission or political identity includes: \"a chapter of the national Democratic Socialists of America, the largest socialist organization in the United States\". Source: https://mdcdsa.org/about-us/.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://mdcdsa.org/2026endorsements/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dc-chamber-of-commerce",
@@ -151,7 +164,8 @@
     "guide_url": "https://www.dcchamber.org/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "dc-police-union",
@@ -165,7 +179,8 @@
     "guide_url": "https://www.dcpoliceunion.com/",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": false
+    "endorses_measures": false,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "metro-washington-council-afl-cio",
@@ -179,20 +194,22 @@
     "guide_url": "https://www.dclabor.org/voter-guides",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "mission"
   },
   {
     "id": "sierra-club-dc",
     "name": "Sierra Club, DC Chapter",
     "type": "advocacy",
     "lean": "lean_left",
-    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its DC chapter.",
+    "lean_basis": "AllSides rates the national Sierra Club Lean Left (think tank/policy group; independent review, low or initial confidence, as of Oct. 2026). This is its DC chapter. Rating source: https://www.allsides.com/news-source/sierra-club-media-bias.",
     "geography": [
       "DC"
     ],
     "guide_url": "https://www.sierraclub.org/dc/endorsements",
     "default_on": false,
     "endorses_candidates": true,
-    "endorses_measures": true
+    "endorses_measures": true,
+    "lean_basis_kind": "outside_rating"
   }
 ]

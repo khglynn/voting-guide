@@ -45,5 +45,58 @@
     "fl-escambia-ecua-4",
     "fl-pensacola-council-2",
     "fl-pensacola-council-4"
+  ],
+  "heads_up": [
+    {
+      "text": "Pensacola uses Central Time. Election Day polls close at 7 p.m. Central.",
+      "applies_to": "ballot"
+    }
+  ],
+  "district_finders": [
+    {
+      "office_match": "Florida House of Representatives",
+      "label": "Find your district on the election maps",
+      "url": "https://escambiavotes.gov/maps"
+    },
+    {
+      "office_match": "Escambia County Commission",
+      "label": "Find your county commission district",
+      "url": "https://escambiavotes.gov/maps"
+    },
+    {
+      "office_match": "Emerald Coast Utilities Authority (ECUA) Board",
+      "label": "Find your ECUA district",
+      "url": "https://escambiavotes.gov/maps"
+    },
+    {
+      "office_match": "Pensacola City Council",
+      "label": "Find your city council district",
+      "url": "https://escambiavotes.gov/maps"
+    },
+    {
+      "office_match": "Emerald Coast Utilities Authority (ECUA) Board",
+      "label": "Check your district on your sample ballot",
+      "url": "https://escambiavotes.gov/sample-ballots"
+    },
+    {
+      "office_match": "Escambia County Commission",
+      "label": "Check your district on your sample ballot",
+      "url": "https://escambiavotes.gov/sample-ballots"
+    },
+    {
+      "office_match": "Florida House of Representatives",
+      "label": "Check your district on your sample ballot",
+      "url": "https://escambiavotes.gov/sample-ballots"
+    },
+    {
+      "office_match": "Pensacola City Council",
+      "label": "Check your district on your sample ballot",
+      "url": "https://escambiavotes.gov/sample-ballots"
+    },
+    {
+      "office_match": "U.S. House of Representatives",
+      "label": "Check your district on your sample ballot",
+      "url": "https://escambiavotes.gov/sample-ballots"
+    }
   ]
 }

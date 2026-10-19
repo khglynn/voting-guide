@@ -406,5 +406,61 @@
       "name": "Register to Vote",
       "url": "https://registertovote.ca.gov/"
     }
+  ],
+  "judicial_review": {
+    "how_judges_get_here": "The governor appoints Supreme Court and appeals justices, subject to confirmation. You later vote yes or no on keeping them. Superior Court candidates compete in nonpartisan elections; the four Los Angeles races are runoffs.",
+    "who_reviews": "There is no official job review for appellate retention. The Los Angeles County Bar evaluates local Superior Court candidates through questionnaires, interviews and reference checks. Appointment screening of appellate nominees is a separate process.",
+    "what_the_rating_means": "The county bar’s scale is Exceptionally Well Qualified, Well Qualified, Qualified and Not Qualified. These tiers assess qualifications for the job. None of the eight Los Angeles runoff candidates received the highest or lowest tier.",
+    "what_it_doesnt_mean": "A county bar qualification rating is not an endorsement. A nominee’s appointment screening is not a current review for retention. We show no evaluations for appellate retention.",
+    "to_keep_a_judge": "More yes than no votes keeps an appellate justice. For a Superior Court runoff, choose a candidate; the one with the most votes wins.",
+    "history": "In 1986, voters rejected Supreme Court Chief Justice Rose Bird and Justices Cruz Reynoso and Joseph Grodin in retention elections.",
+    "read_one": {
+      "label": "Read the county bar’s full 2026 evaluation report",
+      "url": "https://lacba.org/JEEC2026"
+    },
+    "sources": [
+      {
+        "name": "Los Angeles County Bar: full 2026 report",
+        "url": "https://lacba.org/JEEC2026"
+      },
+      {
+        "name": "Los Angeles County Bar: November runoff ratings",
+        "url": "https://lacba.org/docDownload/3141411"
+      },
+      {
+        "name": "California courts: appellate retention",
+        "url": "https://appellate.courts.ca.gov/about-courts/appellate-retention-elections"
+      },
+      {
+        "name": "State Bar: nominee evaluation questions",
+        "url": "https://www.calbar.ca.gov/about-us/who-we-are/committees/commission-judicial-nominees-evaluation/frequently-asked-questions-judicial-nominees-evaluation"
+      },
+      {
+        "name": "California Supreme Court Historical Society: 1986 retention history",
+        "url": "https://www.cschs.org/wp-content/uploads/2014/07/Thirty-Years-After-100-Year-Flood-Judicial-Elections-.pdf"
+      }
+    ]
+  },
+  "heads_up": [
+    {
+      "text": "For Congress and state offices, the top two primary finishers advance. Both can prefer the same party.",
+      "applies_to": "ballot"
+    },
+    {
+      "text": "Supreme Court and appeals court justices face yes-or-no retention votes. Yes keeps the named justice in office.",
+      "applies_to": "section:judicial"
+    },
+    {
+      "text": "Props 40, 41 and 42 can conflict. If 41 or 42 gets more yes votes than 40, a court could block 40 even if it passes.",
+      "applies_to": "item:ca-prop-40"
+    },
+    {
+      "text": "Props 40, 41 and 42 can conflict. If 41 or 42 gets more yes votes than 40, a court could block 40 even if it passes.",
+      "applies_to": "item:ca-prop-41"
+    },
+    {
+      "text": "Props 40, 41 and 42 can conflict. If 41 or 42 gets more yes votes than 40, a court could block 40 even if it passes.",
+      "applies_to": "item:ca-prop-42"
+    }
   ]
 }

@@ -182,6 +182,8 @@ b, strong { font-weight: 600; }
 .bhead h2 { font-family: var(--f-display); font-size: 28px; font-weight: 600; line-height: 1.05; font-variation-settings: "SOFT" 50, "opsz" 72; letter-spacing: -.01em; }
 .bhead p { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
 .bhead .statewide-note { color: var(--ink-2); }
+.bhead .addr-cta, .bhead .sb, .bhead .statewide-note { margin-top: 10px; }
+.bhead .addr { margin-top: 10px; }
 .pfm { padding-top: 6px; padding-bottom: 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .pfm .act { min-height: 54px; padding: 6px 10px; border: 1.5px solid var(--ink); border-radius: 2px; background: var(--paper); font-weight: 600; font-size: 14.5px; line-height: 1.2; display: flex; align-items: center; justify-content: space-between; gap: 6px; text-align: left; }
 .pfm .act .n { font-size: 13px; font-variant-numeric: tabular-nums; background: var(--sage-tint); color: var(--sage); padding: 1px 7px; border-radius: 2px; }
@@ -461,7 +463,8 @@ small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
 .s-b { font-size: 13.5px; color: var(--ink-2); margin-top: 4px; line-height: 1.45; }
 .tg { width: 52px; height: 44px; position: relative; display: inline-flex; align-items: center; }
 .tg span { width: 46px; height: 26px; border-radius: 13px; border: 1.5px solid var(--ink-2); background: var(--paper); position: relative; display: block; }
-.tg span::after { content: ""; position: absolute; top: 3px; left: 3px; width: 17px; height: 17px; border-radius: 50%; background: var(--ink-2); transition: left .15s ease; }
+.tg span { border-color: var(--rule-2); }
+.tg span::after { content: ""; position: absolute; top: 3px; left: 3px; width: 17px; height: 17px; border-radius: 50%; background: var(--rule-2); transition: left .15s ease; }
 .tg[aria-checked="true"] span { background: var(--dusk); border-color: var(--dusk); }
 .tg[aria-checked="true"] span::after { left: 23px; background: var(--on-dusk); }
 
@@ -521,7 +524,7 @@ small.t-sum { font-weight: 400; font-size: 13.5px; color: var(--muted); }
 .cs-table td { font-weight: 600; overflow-wrap: anywhere; }
 .cs-table td.undecided { color: var(--faint); font-weight: 400; font-style: italic; }
 .cs-table tr.cs-sec th { padding-top: 16px; border-bottom: 1.5px solid var(--ink); font-family: var(--f-display); font-weight: 600; font-size: 17px; width: auto; }
-.cs-go { text-align: left; min-height: 32px; text-decoration: underline; text-decoration-color: var(--rule-2); text-underline-offset: 3px; }
+.cs-go { display: block; font-size: 13px; color: var(--muted); min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
 .cs-sub, .cs-note { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
 .cs-ranks li { display: flex; gap: 6px; }
 .cs-rk { color: var(--gold-ink); min-width: 30px; }

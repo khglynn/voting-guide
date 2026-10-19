@@ -138,7 +138,8 @@ export function pickLabel(it: Item): string | null {
     const n = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'NO').length;
     const left = it.candidates.length - y - n;
     if (!y && !n) return null;
-    return `Keep ${y}, remove ${n}${left ? `, ${left} blank` : ''}`;
+    // The ballot asks yes or no on each judge, so the cheat sheet says it that way.
+    return `Yes on ${y}, No on ${n}${left ? `, ${left} blank` : ''}`;
   }
   if (isRCV(it)) {
     const list = ranksOf(it.id);

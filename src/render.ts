@@ -148,8 +148,9 @@ export function renderSummaries(): void {
     withFocusKept(() => {
       const head = $('#lens');
       if (head) head.outerHTML = lensHeadHTML();
+      // Leave the head alone while the address form is open: repainting it would clear what you typed.
       const wrap = $('.wrap-led');
-      if (wrap) wrap.innerHTML = ballotHeadHTML();
+      if (wrap && !S.ui.addrOpen) wrap.innerHTML = ballotHeadHTML();
     });
   }, 60);
 }

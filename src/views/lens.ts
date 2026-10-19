@@ -85,7 +85,7 @@ export function partySheetHTML(): string {
   const b = S.ballot!;
   const parties = partiesOnBallot(b);
   const rows = parties.map((p) => `<li><button class="opt" data-act="party-set" data-p="${esc(p.party)}" data-fk="pty-${esc(p.party)}"><b>${esc(p.party)}</b>
-      <small>${[p.sources.length ? `${plural(p.sources.length, 'party source')} with picks here` : 'No party picks found here', p.nominees ? `${plural(p.nominees, 'race')} with a ${esc(p.party)} candidate` : ''].filter(Boolean).join('. ')}</small></button></li>`).join('');
+      <small>${[p.sources.length ? `${plural(p.sources.length, 'party source')} with picks here` : 'No party picks found here', p.nominees ? `A candidate in ${plural(p.nominees, 'race')}` : ''].filter(Boolean).join('. ')}</small></button></li>`).join('');
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only short" role="dialog" aria-modal="true" aria-labelledby="sh-h">
     <div class="sheet-hd"><h2 id="sh-h">Which party?</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Cancel</button></div>

@@ -7,32 +7,61 @@ no accounts.
 
 ## Run it
 
+Needs Node 20 or newer (CI uses 24, Vercel builds on 24).
+
 ```sh
 npm install
+npm run playwright:install   # once: downloads Chromium for the browser checks
 npm run dev          # builds the data, then starts Vite at http://localhost:5173
 npm run build        # data + typecheck + production build into dist/
 npm run preview      # serve dist/ at http://localhost:4173
-npm run test:e2e     # Playwright pass at 380px against the preview (screenshots in shots/)
+npm run check        # no stray street addresses, build the data, data rules (no browser)
+npm run test:e2e     # scripted Playwright pass at 380px against the preview
+npm run sweep        # opens every ballot the guide can produce at 380px and checks it against the data
+scripts/ship.sh --gates-only   # everything above in one go, on a throwaway preview port
 ```
+
+`test:e2e` and `sweep` read `BASE` (default `http://localhost:4173`, so run `npm run build`
+and `npm run preview` first, or point `BASE` at a Vercel preview). `sweep` takes
+`MODE=full` to also visit every district variant, and `ONLY=austin-tx,dc-ward-1` to
+debug a few ballots. Screenshots land in `.tmp/` (ignored by git); `shots/` is the
+committed reference set. CI (`.github/workflows/ci.yml`) runs the same gates on every
+pull request and every push to `main`, plus a daily sweep of the live site.
+
+To ship: `scripts/ship.sh "what changed" path/to/file ...` runs the gates, opens a
+pull request, waits for CI and tests the Vercel preview. It never merges.
 
 `?today=2026-10-30` on the URL pretends it's that date, for checking the plan card.
 
 ## Add a place
 
-Research lives in `data/` (a copy of `../data/`, the analysts' output). Shapes are in
-`../SCHEMA.md`. To add a place, drop in its files and rebuild:
+`data/` in this repo is the only copy of the research data: edit it here, and nothing
+else needs refreshing. The shapes of each file are in `scripts/build-data.mjs` and the
+check rules are in `scripts/check-data.mjs`. To add a place, drop in its files and run
+the checks:
 
 1. `data/places/{place-id}.json`: label, state, counties, ZIPs, `contest_ids` (and
    optionally `measure_ids`). ZIPs that cross into another place make the app ask
    "Which of these is you?"
 2. `data/contests/{file}.json` and `data/measures/{file}.json` for the local items.
 3. `data/endorsers-{file}.json` and `data/endorsements-{file}.json`.
-4. `npm run build`.
+4. `npm run check`, then `npm run build`, then `npm run test:e2e` and `npm run sweep`.
+   The sweep finds the new place by itself from `data/index.json`, so it is checked
+   with no test edits.
 
 The state must already have `data/states/{ST}.json`. Statewide items come from
 `data/contests/{st}-statewide.json` and `data/measures/{st}-statewide.json`.
 
-To refresh from the research folder: `rm -rf data && cp -r ../data data && npm run build`.
+Two guards you may trip, both on purpose:
+
+- **Addresses.** `scripts/check-addresses.mjs` fails on anything shaped like a street
+  address. A public office or polling place is allowed by adding it, with a reason and
+  a source URL, to `scripts/address-allowlist.json`. A person's address is never
+  allowed: delete it from the data.
+- **Data rules.** `scripts/check-data.mjs` blocks dates after the election, broken
+  measure links, bad endorsement states and similar. Known older findings are counted
+  in `scripts/data-baseline.json`; the count may fall but not rise. After fixing some,
+  run `node scripts/check-data.mjs --update-baseline` to lock the gain in.
 
 ## What the data step does
 

@@ -58,12 +58,16 @@ export function fillTemplate(tpl: string, slots: Record<string, string>, require
   return /\{\w+\}/.test(out) ? null : out;
 }
 
+/* The guide's public address since Oct 19, 2026. The friends message shares this one whatever
+   host the page is on (the old vercel.app address and Vercel previews still work, but a friend
+   should get the short, lasting one). */
+export const GUIDE_URL = 'https://vote.kevinhg.com/';
+
 export function messages(): { fam: string | null; pub: string | null } {
   const b = S.ballot!;
   const h = b.howto;
-  const site = `${location.origin}${location.pathname}`;
   const voted = S.ui.open.has('voted');
-  const famBody = fillTemplate(involved?.messages?.friends_family?.template || FAM, { guide_url: site }, ['guide_url']);
+  const famBody = fillTemplate(involved?.messages?.friends_family?.template || FAM, { guide_url: GUIDE_URL }, ['guide_url']);
   const fam = famBody && voted ? `I just voted! ${famBody}` : famBody;
   // Statewide official links only: a public group reaches people in other counties, so a local
   // office's page never goes in (a template that still asks for one gets an empty line).

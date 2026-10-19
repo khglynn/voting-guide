@@ -491,7 +491,10 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Pass it on: having voted, the friends message starts "I just voted!"', /^I just voted!/.test(await text(page, '#msg-fam')));
   check('Pass it on: the texting study shows, with its caveats one tap away', /Outvote/.test(await text(page, '#pass')) && !!(await page.$('#pass [data-k="study-more"]')));
   check('Pass it on: partisan groups sit beside "examples, not recommendations"', /not recommendations/.test(await text(page, '#pass .ways')) && /On the left/.test(await text(page, '#pass .ways')) && /On the right/.test(await text(page, '#pass .ways')));
-  check('Pass it on: the friends message can share the guide', (await text(page, '#msg-fam')).includes(new URL(BASE).host));
+  // The guide's address since Oct 19: the friends message shares it whatever host the page is
+  // on (a preview, the old vercel.app address, localhost).
+  const fam = await text(page, '#msg-fam');
+  check('Pass it on: the friends message shares the guide at https://vote.kevinhg.com/', fam.includes('https://vote.kevinhg.com/') && (new URL(BASE).host === 'vote.kevinhg.com' || !fam.includes(new URL(BASE).host)), fam.slice(0, 200));
   check('Pass it on: no relative "today" in a message someone reads later', !/\btoday\b|\btomorrow\b/i.test(pub));
   await tap(page, '[data-act="tick"][data-k="family"]');
   check('Pass it on: the checklist ticks', (await page.getAttribute('[data-act="tick"][data-k="family"]', 'aria-pressed')) === 'true');

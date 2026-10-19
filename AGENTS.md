@@ -2,7 +2,7 @@
 
 *Last verified: 2026-10-19 (ledger v1).*
 
-A public, one-page guide to the Nov 3, 2026 general election for Kevin's friends and family: enter a ZIP, see the next step and its date, every item on your ballot as a row with your trusted sources' picks beside it, decide, and leave with a cheat sheet. Live at https://voting-guide-silk.vercel.app. Vite + vanilla TypeScript, no framework, no analytics, no accounts. This repo is public: nothing private goes in it.
+A public, one-page guide to the Nov 3, 2026 general election for Kevin's friends and family: enter a ZIP, see the next step and its date, every item on your ballot as a row with your trusted sources' picks beside it, decide, and leave with a cheat sheet. Live at https://vote.kevinhg.com (since Oct 19, 2026; the original https://voting-guide-silk.vercel.app still serves the same site). Vite + vanilla TypeScript, no framework, no analytics, no accounts. This repo is public: nothing private goes in it.
 
 ## Run and test
 

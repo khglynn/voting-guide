@@ -275,8 +275,8 @@
       "template": "Got a plan to vote? Here’s a guide to help you sort through your ballot: {guide_url}\n\nIf you’ve already voted, text three people and ask if they have a plan too. Message me if you have questions.",
       "slots": {
         "guide_url": {
-          "source": "app base URL only",
-          "default": "https://voting-guide-silk.vercel.app/",
+          "source": "the guide's public address (GUIDE_URL in src/views/pass.ts), whatever host the page is on",
+          "default": "https://vote.kevinhg.com/",
           "required": true,
           "note": "Use the guide homepage, without saved picks, personal lookup details or a tracking query."
         }

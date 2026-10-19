@@ -257,7 +257,8 @@ function shortEndorser(name) {
   let s = name.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim().replace(/^The\s+/, '').replace(/\s+editorial boards?$/i, '')
     .replace(/\s+endorsements?$/i, '').replace(/League of Women Voters( of)?( the)?/i, 'LWV').trim();
   if (s.includes(' / ')) s = s.split(' / ')[0].trim();
-  if (s.length > 30) { const cut = s.slice(0, 30); s = cut.slice(0, cut.lastIndexOf(' ')) || cut; }
+  // No length cut: a cut chopped 98 names mid-phrase (four Planned Parenthood groups all read
+  // "Planned Parenthood..."). The views wrap long names; the verdict column uses a shorter tag.
   return s.replace(/[,;:]$/, '');
 }
 
@@ -375,8 +376,9 @@ for (const [id, vers] of endorserVersions) {
   const newest = [...vers].sort((a, b) => b.t - a.t)[0].rec;
   const name = CONFIG.endorserNames[id] || (vers.find((v) => v.rec.id === id) || vers[0]).rec.name.trim();
   const type = str(newest.type) || 'other';
+  const dataShort = vers.map((v) => v.rec.short).find(isStr);
   endorsers.set(id, {
-    id, name, short: shortEndorser(name), type,
+    id, name, short: dataShort ? dataShort.trim() : shortEndorser(name), type,
     lean,
     lean_basis: str(newest.lean_basis),
     lean_note: leanKeys.length > 1 ? `Our research passes rated this source differently: ${leanKeys.map((k) => LEAN_WORD[k]).join(' and ')}. We show ${LEAN_WORD[lean]}.` : null,
@@ -507,14 +509,31 @@ function linkGroups() {
 report.linkedMeasures = linkGroups();
 
 /* ---------- bundles ---------- */
-function bundleFor(ids) {
+/* Where a source speaks, from its own `geography` (state codes and/or place ids, across every
+   file that defines it). A state code means statewide. A source with only place ids is local to
+   those places: an Orlando county party's picks on Florida's statewide races belong on Orlando
+   ballots, not on Tallahassee's or Pensacola's. A source with no geography counts as statewide. */
+const endorserHome = new Map(); // eid -> null (statewide) | Set(placeIds)
+for (const [id, vers] of endorserVersions) {
+  const geo = vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim());
+  if (!geo.length || geo.some((g) => /^[A-Z]{2}$/.test(g))) { endorserHome.set(id, null); continue; }
+  endorserHome.set(id, new Set(geo.filter((g) => places.has(g))));
+}
+const allStatewide = new Set([...statewideFileIds.values()].flatMap((s) => [...s]));
+report.localSources = [...endorserHome].filter(([, h]) => h).length;
+/* A bundle's rows: every row on its items, except that a local source's rows on statewide items go
+   only to its home places' bundles (placeId), never to the state bundle. */
+function bundleFor(ids, placeId = null) {
   const items = ids.map(item).filter(Boolean);
   const idSet = new Set(items.map((i) => i.id));
+  const extra = placeId ? new Set((places.get(placeId)?.order || []).filter((id) => allStatewide.has(id))) : new Set();
   const ends = {};
   const used = new Set();
   for (const [key, rec] of endorsementByKey) {
     const [eid, tid] = key.split('|');
-    if (!idSet.has(tid)) continue;
+    const home = endorserHome.get(eid);
+    if (idSet.has(tid)) { if (!placeId && home) continue; }
+    else if (!(extra.has(tid) && home && home.has(placeId))) continue;
     const { f: _file, ...clean } = rec;
     (ends[tid] = ends[tid] || {})[eid] = clean;
     used.add(eid);
@@ -545,7 +564,7 @@ for (const [st, s] of states) {
 for (const [id, p] of places) {
   const sw = statewideFileIds.get(p.state) || new Set();
   const local = p.order.filter((x) => !sw.has(x));
-  const b = bundleFor(local);
+  const b = bundleFor(local, id);
   const bundle = { ...p, file: undefined, local, ...b };
   sizes[`place-${id}.json`] = write(`place-${id}.json`, bundle);
   index.places[id] = { label: p.label, state: p.state, counties: p.counties, local_count: local.length };

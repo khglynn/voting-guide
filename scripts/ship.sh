@@ -130,16 +130,26 @@ wait_vercel() { # $1 commit, $2 preview|production. Vercel's own commit status m
     sleep 15
   done
 }
-wait_serves() { # $1 url, $2 commit, $3 label, $4 1 if a later commit that contains $2 also counts
-  local url="$1" sha="$2" what="$3" newer_ok="${4:-0}" deadline=$((SECONDS + DEPLOY_TIMEOUT)) got
+# Git facts, as functions so --self-test can stand in for them. on_main fetches first, every time.
+on_main() { git fetch -q origin main 2>/dev/null && git merge-base --is-ancestor "$1" origin/main 2>/dev/null; }
+contains() { [ "$1" = "$2" ] || git merge-base --is-ancestor "$1" "$2" 2>/dev/null; } # does commit $2 include $1?
+wait_serves() { # $1 url, $2 commit, $3 label, $4 exact | production
+  # exact: the deployment must name exactly $2 (a preview of the commit just pushed).
+  # production: it must name a commit that is on freshly fetched origin/main AND includes $2, so a later
+  # merge counts but a feature-branch deployment promoted by mistake never does.
+  local url="$1" sha="$2" what="$3" mode="${4:-exact}" deadline=$((SECONDS + DEPLOY_TIMEOUT)) got why
   while :; do
     got="$(served_commit "$url")"
-    if [ "$got" = "$sha" ]; then echo "$what serves ${sha:0:12}"; return 0; fi
-    if [ -n "$got" ] && [ "$newer_ok" = 1 ]; then
-      git fetch -q origin main 2>/dev/null || true
-      if git merge-base --is-ancestor "$sha" "$got" 2>/dev/null; then echo "$what serves ${got:0:12}, a later commit that includes ${sha:0:12}"; return 0; fi
+    if [ -z "$got" ]; then why="it names no commit"
+    elif [ "$mode" = production ]; then
+      if ! on_main "$got"; then why="${got:0:12} is not on origin/main (or origin could not be fetched)"
+      elif ! contains "$sha" "$got"; then why="${got:0:12} does not include ${sha:0:12}"
+      else [ "$got" = "$sha" ] && echo "$what serves ${sha:0:12}, on origin/main" || echo "$what serves ${got:0:12}, a later origin/main commit that includes ${sha:0:12}"; return 0
+      fi
+    elif [ "$got" = "$sha" ]; then echo "$what serves ${sha:0:12}"; return 0
+    else why="it serves ${got:0:12}"
     fi
-    [ "$SECONDS" -lt "$deadline" ] || die "$what ($url) serves commit '${got:-none recorded}', not ${sha:0:12}, after $(span "$DEPLOY_TIMEOUT"). If production is wrong, roll back in Vercel (promote the previous deployment), then fix forward: https://vercel.com/kevinhg/voting-guide"
+    [ "$SECONDS" -lt "$deadline" ] || die "$what ($url) is not serving ${sha:0:12} after $(span "$DEPLOY_TIMEOUT"): $why. If production is wrong, roll back in Vercel (promote the previous deployment), then fix forward: https://vercel.com/kevinhg/voting-guide"
     sleep 15
   done
 }
@@ -176,16 +186,24 @@ if [ "$SELF_TEST" = 1 ]; then
   fetch_vercel_state() { echo failure; }
   got="$( (wait_vercel 0123456789abcdef production) 2>&1 )" && rc=0 || rc=$?
   [ "$rc" != 0 ] && echo "ok    a failed Vercel build stops the ship -> exit $rc" || { echo "FAIL  a failed Vercel build passed"; bad=$((bad + 1)); }
-  # Production must serve the merge commit (Codex: an old deployment used to count as rebuilt).
-  served_commit() { echo 1111111111111111111111111111111111111111; }
-  got="$( (DEPLOY_TIMEOUT=0; wait_serves https://example.invalid 2222222222222222222222222222222222222222 production 0) 2>&1 )" && rc=0 || rc=$?
-  [ "$rc" != 0 ] && echo "ok    a deployment serving another commit does not count -> exit $rc" || { echo "FAIL  a deployment serving another commit counted"; bad=$((bad + 1)); }
-  served_commit() { echo ''; }
-  got="$( (DEPLOY_TIMEOUT=0; wait_serves https://example.invalid 2222222222222222222222222222222222222222 production 1) 2>&1 )" && rc=0 || rc=$?
-  [ "$rc" != 0 ] && echo "ok    a deployment that names no commit does not count -> exit $rc" || { echo "FAIL  a deployment naming no commit counted"; bad=$((bad + 1)); }
-  served_commit() { echo 2222222222222222222222222222222222222222; }
-  got="$( (DEPLOY_TIMEOUT=0; wait_serves https://example.invalid 2222222222222222222222222222222222222222 production 0) 2>&1 )" && rc=0 || rc=$?
-  [ "$rc" = 0 ] && echo "ok    a deployment serving the commit counts -> $got" || { echo "FAIL  the right commit did not count: $got"; bad=$((bad + 1)); }
+  # A deployment counts only when it serves the right commit (Codex round 1: an old deployment used to
+  # count as rebuilt; round 2: a feature-branch descendant used to count as production).
+  T=2222222222222222222222222222222222222222; N=3333333333333333333333333333333333333333
+  serves() { # $1 want pass|fail, $2 label, $3 served commit, $4 mode, $5 on_main answer, $6 contains answer
+    local rc out
+    served_commit() { echo "$SERVED"; }; on_main() { [ "$ONMAIN" = yes ]; }; contains() { [ "$CONTAINS" = yes ]; }
+    out="$( (SERVED="$3" ONMAIN="$5" CONTAINS="$6" DEPLOY_TIMEOUT=0 wait_serves https://example.invalid "$T" production "$4") 2>&1 )" && rc=0 || rc=$?
+    if { [ "$1" = pass ] && [ "$rc" = 0 ]; } || { [ "$1" = fail ] && [ "$rc" != 0 ]; }; then echo "ok    $2 -> $(printf '%s' "$out" | tr '\n' ' ' | sed 's/^ *//' | cut -c1-110)"; else echo "FAIL  $2: want $1, got rc=$rc $out"; bad=$((bad + 1)); fi
+  }
+  serves fail "exact: a deployment serving another commit" 1111111111111111111111111111111111111111 exact yes yes
+  serves fail "exact: a deployment that names no commit" '' exact yes yes
+  serves pass "exact: the deployment serves the commit" "$T" exact no no
+  serves pass "production: serves the merge commit, on main" "$T" production yes yes
+  serves pass "production: serves a later main commit that includes it" "$N" production yes yes
+  serves fail "production: a descendant that is not on main (Codex round 2)" "$N" production no yes
+  serves fail "production: the merge commit itself, but origin/main does not have it" "$T" production no yes
+  serves fail "production: a main commit that does not include it" "$N" production yes no
+  serves fail "production: names no commit" '' production yes yes
   # The preview URL from the Vercel bot's comment (PR #3's real comment, 2026-10-19).
   C='[vc]: #jZ4+aKnWQ4nmsFf4HlRAIv1dtreTz50my/dH5XNFBdk=:eyJpc01vbm9yZXBvIjp0cnVlLCJ0eXBlIjoiZ2l0aHViIiwicHJvamVjdHMiOlt7Im5hbWUiOiJ2b3RpbmctZ3VpZGUiLCJwcm9qZWN0SWQiOiJwcmpfbHVBUW55TTA5b2RrVjhxUjRTT0dlTGxDclRLcCIsImxpdmVGZWVkYmFjayI6eyJyZXNvbHZlZCI6MCwidW5yZXNvbHZlZCI6MCwidG90YWwiOjAsImxpbmsiOiJ2b3RpbmctZ3VpZGUtZ2l0LWNpLWZvdW5kYXRpb24ta2V2aW5oZy52ZXJjZWwuYXBwIn0sImluc3BlY3RvclVybCI6Imh0dHBzOi8vdmVyY2VsLmNvbS9rZXZpbmhnL3ZvdGluZy1ndWlkZS9IRnppRGh5WUY0aVBCRmN1aG1kd29NemROSjZLIiwicHJldmlld1VybCI6InZvdGluZy1ndWlkZS1naXQtY2ktZm91bmRhdGlvbi1rZXZpbmhnLnZlcmNlbC5hcHAiLCJuZXh0Q29tbWl0U3RhdHVzIjoiREVQTE9ZRUQifV0sInJlcXVlc3RSZXZpZXdVcmwiOiJodHRwczovL3ZlcmNlbC5jb20vdmVyY2VsLWFnZW50L3JlcXVlc3QtcmV2aWV3P293bmVyPWtoZ2x5bm4mcmVwbz12b3RpbmctZ3VpZGUmcHI9MyJ9'
   got="$(printf '%s\nThe latest updates on your projects.' "$C" | python3 -c "$PREVIEW_PY")"
@@ -215,7 +233,7 @@ if [ -n "$AFTER_MERGE" ]; then
   say "Waiting for Vercel to build ${MERGED_SHA:0:12} for production"
   wait_vercel "$MERGED_SHA" production
   say "Waiting for $PROD_URL to serve it"
-  wait_serves "$PROD_URL" "$MERGED_SHA" production 1
+  wait_serves "$PROD_URL" "$MERGED_SHA" production production
   say "Sweeping production (fast) and running the scripted checks"
   BASE="$PROD_URL" MODE=fast SHOTS_DIR=.tmp/prod-sweep node tests/sweep.mjs || die "production failed its checks. Roll back in Vercel (promote the previous deployment), then fix forward: https://vercel.com/kevinhg/voting-guide"
   BASE="$PROD_URL" SHOTS_DIR=.tmp/prod-e2e node tests/e2e.mjs || die "production failed e2e. Roll back in Vercel, then fix forward."
@@ -324,7 +342,7 @@ wait_vercel "$SHA" preview
 PREVIEW=""
 for i in $(seq 1 20); do PREVIEW="$(fetch_vercel_comment "$PR" | python3 -c "$PREVIEW_PY")"; [ -n "$PREVIEW" ] && break; sleep 15; done
 [ -n "$PREVIEW" ] || die "Vercel built ${SHA:0:12}, but its comment on $PR_URL names no preview URL."
-wait_serves "$PREVIEW" "$SHA" preview 0
+wait_serves "$PREVIEW" "$SHA" preview exact
 BASE="$PREVIEW" MODE=fast SHOTS_DIR=.tmp/preview-sweep node tests/sweep.mjs
 BASE="$PREVIEW" SHOTS_DIR=.tmp/preview-e2e node tests/e2e.mjs
 

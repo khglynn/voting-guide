@@ -32,7 +32,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Go to any vote center in your county (LA, Orange, San Diego) or, in San Francisco, the Department of Elections at City Hall Room 48 or any polling place on Election Day, through 8:00 PM on November 3. You register and vote in one trip. Bring something with your name and address if you have it (driver's license, utility bill, or the sample ballot booklet the county mailed you); first-time voters who registered without a DL or SSN may be asked for ID. Your ballot is held until the county verifies your eligibility, then counted. Find locations at https://caearlyvoting.sos.ca.gov/.",
-    "still_possible_now": "Yes. As of October 15 you have until Monday, October 19 to register online at RegisterToVote.ca.gov and get a ballot mailed to you. If you miss that, you can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
+    "still_possible_now": "Until Monday, October 19, you can register online at RegisterToVote.ca.gov and get a ballot mailed to you. If you miss that, you can still register and vote in person at any vote center (from October 24 in LA, Orange and San Diego) or at your county elections office, right up to 8:00 PM on Election Day.",
     "confidence": "verified"
   },
   "mail_ballot": {

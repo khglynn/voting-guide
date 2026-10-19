@@ -333,6 +333,9 @@ const PICK_PLAN = (plan) => {
       const c = card(id);
       const hit = c && [...c.querySelectorAll(`[data-act="${act}"]`)].find(pred);
       if (hit) return hit;
+      // Write-in candidates fold into one line; open it and look again.
+      const wi = c && c.querySelector('.wi-fold [data-act="open"][aria-expanded="false"]');
+      if (wi) { window.__press(wi); page--; continue; }
       const pager = c && c.querySelector('[data-act="page"]');
       if (!pager) return null;
       window.__press(pager);

@@ -20,7 +20,7 @@
       {
         "method": "mail",
         "date": "2026-10-19",
-        "rule": "A paper application must be received by your county voter registration office by Monday, October 19. The official calendar says 'Voter Registration Mail Applications must be received by the county voter registration commission not later than the deadline to register.' a postmark is not enough. As of Friday, October 16, mailing one is risky; register online or in person instead.",
+        "rule": "A paper application must be received by your county voter registration office by Monday, October 19. The official calendar says 'Voter Registration Mail Applications must be received by the county voter registration commission not later than the deadline to register.' a postmark is not enough. Mailing one this late is risky; register online or in person instead.",
         "source": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf"
       },
       {
@@ -101,7 +101,7 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "REGISTER by Monday, October 19. Three days from today. Online by 11:59 PM at pavoterservices.pa.gov. No same-day registration exists in Pennsylvania, so missing this means sitting out. Already registered but moved? Same deadline to update.",
+    "The registration deadline is Monday, October 19, at 11:59 PM online at pavoterservices.pa.gov. Pennsylvania has no same-day registration, so after that you can't register for this election. Already registered but moved? Same deadline to update.",
     "Two envelopes or your mail ballot doesn't count. Ballot goes in the yellow 'Official Election Ballot' envelope (write nothing on it), then in the big return envelope. Sign AND date the back of the big one with today's date, not your birthday. A 'naked ballot' with no inner envelope is thrown out. The date rule is currently relaxed by a federal court, but date it anyway.",
     "'Received by 8 PM' means in the county's hands, not postmarked. Mail it by about October 27 or hand-deliver it. Philadelphia: 35 drop boxes, 24/7 until 8 PM Nov. 3. Pittsburgh: no unstaffed boxes; use the County Office Building (542 Forbes, weekdays) or one of 12 staffed return sites open only Oct. 30 to Nov. 2. You cannot hand it to a poll worker at your polling place.",
     "There is no early voting, but you can vote early anyway. Go to your county election office or a satellite office before 5 PM on Tuesday, October 27, apply for a mail ballot, and vote it right there. Philly has 10 satellite offices open seven days a week. Allegheny's weekend sites are Oct. 17, 18, 24 and 25 only. After October 27 that door closes and your only option is Election Day, 7 AM to 8 PM.",

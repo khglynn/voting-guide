@@ -20,7 +20,7 @@
       {
         "method": "online",
         "date": "2026-10-18",
-        "rule": "Online registration at ova.elections.il.gov closes Sunday, October 18, 2026 at 11:59 PM, the 16th day before the election. State Board 2026 calendar: 'October 18, 2026: Close of Online Voter Registration for the General Election. Last day for voters to register to vote through the State Board of Elections website' (10 ILCS 5/1A-16.5). As of Friday, Oct. 16 you still have through Sunday night to do this from your phone. After that, it's in person only.",
+        "rule": "Online registration at ova.elections.il.gov closes Sunday, October 18, 2026 at 11:59 PM, the 16th day before the election. State Board 2026 calendar: 'October 18, 2026: Close of Online Voter Registration for the General Election. Last day for voters to register to vote through the State Board of Elections website' (10 ILCS 5/1A-16.5). After that, it's in person only.",
         "source": "https://www.elections.il.gov/agencyforms/1%20ELECTION%20CALENDAR/2026%20Abbreviated%20Calendar%207.7.2025%20Amended.pdf"
       },
       {
@@ -32,7 +32,7 @@
     ],
     "same_day_registration": true,
     "same_day_notes": "Yes. Illinois calls it grace period registration and it runs through 7:00 PM on Election Day. You must do it in person and vote right then; you can't register during the grace period and take a mail ballot home. Bring two forms of ID, at least one showing your current address (examples the Chicago Board and news guides list: Illinois driver's license or state ID, passport, student ID, utility bill, bank statement, lease or mortgage, paycheck, a piece of government mail). Chicago: any early voting site through Nov. 2, any of 51 vote centers on Nov. 3. Suburban Cook County and the collar counties run their own sites; check your county clerk. Chicago Board of Elections phone: 312-269-7900.",
-    "still_possible_now": "Yes. As of Friday, October 16, 2026: (1) you can still register ONLINE through Sunday, October 18 at 11:59 PM at ova.elections.il.gov; (2) after that, register in person and vote on the spot at any early voting site through Monday, November 2, or at the polls on Tuesday, November 3. Bring two forms of ID, one with your current address.",
+    "still_possible_now": "Yes, in person. Online registration ended Sunday, October 18. You can still register and vote on the spot at any early voting site through Monday, November 2, or at the polls on Tuesday, November 3. Bring two forms of ID, one with your current address.",
     "confidence": "verified"
   },
   "mail_ballot": {
@@ -100,7 +100,7 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "Online registration closes this SUNDAY, Oct. 18 at 11:59 PM. Miss it and you can still register, but only in person, with two IDs, at an early voting site (through Nov. 2) or a polling place or vote center (Nov. 3). You vote in the same visit.",
+    "Online registration ended Sunday, October 18 at 11:59 PM. You can still register, but only in person, with two IDs, at an early voting site (through Nov. 2) or a polling place or vote center (Nov. 3). You vote in the same visit.",
     "The postmark trap. A mailed ballot counts if it's postmarked by Nov. 3 and arrives by Nov. 17, and the Supreme Court upheld that kind of rule in June 2026. The problem is USPS: much mail no longer gets a postmark, and Illinois clerks have been warning all year that an unpostmarked late ballot can be tossed. Your backstop: date the certification on the envelope, because state law counts a late ballot with no postmark if that date is Election Day or earlier (10 ILCS 5/19-8). Mail by about Oct. 27 or get a hand-stamped postmark at the counter. After that, use a drop box at an early voting site, or on Election Day a drop box at any Chicago Vote Center, by 7 PM on Nov. 3. Don't hand a mail ballot to your precinct polling place: Chicago precinct judges can't accept it and it won't be processed.",
     "Asked for a mail ballot but want to vote in person? Bring the mail ballot with you and surrender it to the judges (Sun-Times: voters 'must bring the mail ballot to their polling place and surrender it to receive an in-person ballot'). If you never received it, or you mailed it and were told the election office never got it, you sign an affidavit and then vote in person (Election Code 18-5 and 19A-35; Cook County Clerk affidavit form). If you received it but lost it, ask the judges what applies; you may have to vote a provisional ballot. Don't vote both ways: only one counts and trying is a crime.",
     "Judicial retention needs 60% yes, not 50%, and the Cook County ballot has 61 retention questions: 1 Appellate Court justice (Bertina E. Lampkin) and 60 Circuit Court judges. A blank vote neither helps nor hurts a judge. Use Injustice Watch's 'Check Your Judges' guide (2026retention.injusticewatch.org), which prints a take-along report, plus the Chicago Bar Association and ISBA ratings.",

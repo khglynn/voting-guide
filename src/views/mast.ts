@@ -46,7 +46,7 @@ export function mastHTML(): string {
       <h1 class="place">${esc(name)}</h1>
       ${note && !/county\)?$/i.test(note) ? `<p class="where-note">${esc(note.charAt(0).toUpperCase() + note.slice(1))}</p>` : ''}
       <p class="where"><span>${esc(where)}.</span> <button class="linkbtn" data-act="change-place" data-fk="change-place">Not your ballot? Change</button></p>
-      ${office ? `<p class="office">Election office: ${office.url ? ext(office.url, officeName) : esc(officeName)}${office.phone ? `, ${telHTML(office.phone)}` : ''}</p>` : ''}
+      ${office ? `<p class="office">${office.url ? ext(office.url, officeName) : esc(officeName)}${office.phone ? `, ${telHTML(office.phone)}` : ''}</p>` : ''}
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }

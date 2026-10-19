@@ -98,7 +98,7 @@ export function registrationAlert(h: HowTo, t = todayISO(), absolute = false): s
     : `Register ${how(first.method)} by ${day(first.date!, t, absolute)}.`;
   const later = open.filter((d) => d.date !== first.date).pop();
   const laterLine = later && later.method === 'in_person' && later.date === h.election_date && h.registration.same_day_registration
-    ? ` After that you can still register and vote in person, through Election Day.`
+    ? ' Or in person through Election Day.'
     : later ? ` ${how(later.method).charAt(0).toUpperCase()}${how(later.method).slice(1)}: by ${fmtDate(later.date)}.` : '';
   return `Not registered? ${firstLine}${laterLine}`;
 }

@@ -39,7 +39,7 @@ export function lensHeadHTML(): string {
     ? `Your ${plural(cov.sources, 'source')} picked on ${cov.picked} of ${plural(cov.total, 'race and measure', 'races and measures')} here.`
     : 'You haven’t chosen any sources. Pick some below to see their picks on every row.';
   return `<section class="lens-head wrap" id="lens" aria-labelledby="lens-h"><h2 id="lens-h">Who do you trust?</h2>
-    <p>Their picks show on every row. Choose any; we never choose for you.</p>
+    <p>Their picks show on every row. You choose; we never do.</p>
     <p class="cov">${esc(line)}${notes.length ? ` ${esc(notes.join(' '))}` : ''}</p></section>`;
 }
 export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;

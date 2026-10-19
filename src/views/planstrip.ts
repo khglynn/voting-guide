@@ -17,10 +17,10 @@ export function planHTML(): string {
   const open = isOpen('whatif');
   const check = h.registration.check_url;
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
-      <p class="plan-k">Your next step</p>
+      <h2 class="vh">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
       ${step.sub.length ? `<p class="plan-sub">${esc(step.sub.join(' '))}</p>` : ''}
-      ${reg ? `<p class="plan-reg">${esc(reg)}${check ? ` ${ext(check, 'Check or register')}` : ''}</p>` : ''}
+      ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Am I registered?</a>` : ''}</div>
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>What if…, key dates, ID</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>

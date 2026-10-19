@@ -1,0 +1,145 @@
+# .github/workflows/ci.yml
+# Runs the same gates as scripts/ship.sh, on a clean machine, for every pull request and every push to main.
+# Required checks to set on the main ruleset: "data", "browser".
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Sweep mode'
+        type: choice
+        options: [fast, full]
+        default: full
+  schedule:
+    # Daily at 4:23am Central (09:23 UTC) while the election is live. Checks the LIVE site, not the repo.
+    # Remove after Nov 4, 2026, or keep weekly. It fails loudly if production breaks with nobody pushing.
+    - cron: '23 9 * * *'
+
+# A newer push to the same PR replaces the older run. Main is never cancelled.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: '24'   # Vercel builds on 24.x (project setting). Local Macs run 22; both pass.
+  FORCE_COLOR: '0'
+
+jobs:
+  # Fast, no browser. The rules from FOUNDATION.md as code, then the build (which includes the typecheck).
+  data:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: No street addresses that are not allowlisted public offices
+        run: node scripts/check-addresses.mjs
+      - name: Build data bundles (also writes public/data/build-report.json)
+        run: npm run data
+      - name: Data rules (dates, measures, endorsements, lean basis, copy)
+        run: node scripts/check-data.mjs
+      - name: Typecheck and production build
+        run: npm run build
+
+  # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
+  browser:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      # Playwright's own CI guide says caching browsers rarely beats downloading them. We cache only the
+      # headless shell (about 100MB) keyed on the exact Playwright version; OS libraries are installed every run.
+      - id: pw
+        run: echo "version=$(node -p "require('playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+      - id: pwcache
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ runner.os }}-${{ steps.pw.outputs.version }}-shell
+      - if: steps.pwcache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps --only-shell chromium
+      - if: steps.pwcache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: Serve the production build
+        run: |
+          npx vite preview --port 4173 --strictPort > .tmp-preview.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:4173/data/index.json > /dev/null && exit 0; sleep 1; done
+          cat .tmp-preview.log; exit 1
+
+      - name: Scripted end-to-end checks
+        env:
+          BASE: http://localhost:4173
+          SHOTS_DIR: .tmp/e2e-shots
+        run: node tests/e2e.mjs
+
+      - name: Every-ballot sweep (fast on pull requests, full on main and manual runs)
+        env:
+          BASE: http://localhost:4173
+          SHOTS_DIR: .tmp/sweep-shots
+          MODE: ${{ (github.event_name == 'pull_request') && 'fast' || (github.event.inputs.mode || 'full') }}
+          WORKERS: '4'
+        run: node tests/sweep.mjs
+
+      - name: Screenshots and report from a failed run
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: browser-failures
+          path: |
+            .tmp/e2e-shots
+            .tmp/sweep-shots
+          retention-days: 14
+
+  # The LIVE site, once a day. No checkout of data needed: the sweep reads /data from the URL it tests.
+  live:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps --only-shell chromium
+      # Fails (and GitHub emails the repo owner) only when the sweep fails twice, a minute apart. The
+      # sweep exits non-zero for real failures (missing items, console errors, sideways scroll, broken
+      # data), never for its warnings, so one slow response from the host does not wake anyone up.
+      - name: Sweep production (one retry)
+        env:
+          BASE: https://voting-guide-silk.vercel.app
+          MODE: ${{ github.event.inputs.mode || 'fast' }}
+          SHOTS_DIR: .tmp/sweep-shots
+        run: |
+          if node tests/sweep.mjs; then exit 0; fi
+          echo "::warning::First live sweep failed; retrying once in 60 seconds."
+          sleep 60
+          node tests/sweep.mjs
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: live-failures
+          path: .tmp/sweep-shots
+          retention-days: 14

@@ -327,7 +327,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     for (const f of [...Object.keys(INDEX.states).map((x) => `state-${x}.json`), ...Object.keys(INDEX.places).map((x) => `place-${x}.json`)]) for (const e of read(f).endorsers) all.set(e.id, e);
     const wrong = [...all.values()].filter((e) => /rated by AllSides/.test(common.basisWords(e)) && /\bno\s+AllSides/i.test(e.lean_basis || ''));
     check('lean: no source whose basis says "no AllSides rating" is credited to AllSides', wrong.length === 0, wrong.map((e) => e.id).join(', '));
-    check('lean: a party reads "from party status", a mission "from its mission statement"', [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'party').every((e) => common.basisWords(e) === 'from party status') && [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'mission').every((e) => common.basisWords(e) === 'from its mission statement'));
+    check('lean: a party reads "from its party", a mission "from its mission statement"', [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'party').every((e) => common.basisWords(e) === 'from its party') && [...all.values()].filter((e) => e.lean && e.lean_basis_kind === 'mission').every((e) => common.basisWords(e) === 'from its mission statement'));
   }
 
   /* ---------- what it takes to pass, read as a rule ---------- */
@@ -387,7 +387,7 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     check('judges: a split Chicago retention reads "say don’t keep" in the row and the open row, no acronyms', !!sr && /say don’t keep$/.test(sr.main) && /say don’t keep/.test(sr.line) && !/\b[A-Z]{3,}\b/.test(sr.line) && sr.groups.every((g) => g.by.length > 6), sr ? `${sr.main} | ${sr.line}` : 'missing');
     check('judges lead: Chicago explains a bar "no" can mean a skipped interview', /skipped the interview/.test(judges.judgesLead()), judges.judgesLead());
     const jb = judges.judgeBatch();
-    check('judges batch: Chicago reads "Keep the N judges the bar groups recommend"', !!jb && /^Keep the \d+ judges the bar groups recommend$/.test(jb.label), jb && jb.label);
+    check('judges batch: Chicago reads "Keep the N judges the bar associations recommend"', !!jb && /^Keep the \d+ judges the bar associations recommend$/.test(jb.label), jb && jb.label);
     open('TX', ['houston-tx']);
     check('judges rule: Texas says how judges win, not "to keep a judge"', /^The most votes wins\. These aren’t keep-or-remove votes\./.test(judges.judgesRule()));
     check('judges lead: Texas calls a lawyer poll a poll', /poll of lawyers, not a job review/.test(judges.judgesLead()), judges.judgesLead());

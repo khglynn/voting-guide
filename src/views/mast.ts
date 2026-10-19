@@ -101,7 +101,7 @@ export function restoreHTML(): string {
     const where = S.ballot ? (S.ballot.places.length ? S.ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : S.ballot.stateName) : '';
     return `<div class="notice strong wrap" role="region" aria-labelledby="rs-h">
     <p id="rs-h"><b>${esc(S.pending.summary)}</b></p>
-    <div class="row-btns"><button class="mini dark" data-act="shared-keep" data-fk="restore-yes">Keep these picks</button>
+    <div class="row-btns"><button class="mini dark" data-act="shared-keep" data-fk="restore-yes">Use the link’s picks</button>
       <button class="mini" data-act="shared-fresh">Start fresh</button></div>
     <p class="small">Not in ${esc(where)}? <button class="linkbtn" data-act="change-place">Find your ballot</button></p></div>`;
   }

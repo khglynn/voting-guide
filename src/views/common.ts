@@ -58,11 +58,11 @@ export function leanHTML(lean: Lean | null, words = true, basis = ''): string {
    source endorsed. Empty when there is no lean. */
 export function basisWords(e: Endorser): string {
   if (!e.lean || !e.lean_basis_kind) return '';
-  if (e.lean_basis_kind === 'party') return 'from party status';
+  if (e.lean_basis_kind === 'party') return 'from its party';
   if (e.lean_basis_kind === 'mission') return 'from its mission statement';
   // Name the rater only when the basis names exactly one and doesn't say that rater has none
   // ("no AllSides rating found; Ad Fontes rates it..."). Otherwise stay general; the full basis
-  // is one tap away in More sources.
+  // is one tap away in See all sources.
   const b = e.lean_basis || '';
   const named = (re: RegExp, no: RegExp) => re.test(b) && !no.test(b);
   const raters = [

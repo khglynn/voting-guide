@@ -110,7 +110,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
         // A device that had nothing here: show the picks, and say plainly where they came from.
         S.b = state;
         const where = ballot.places.length ? ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : ballot.stateName;
-        if (n) S.pending = { kind: 'shared', key: ballot.key, incoming: state, summary: `This link brought ${n} ${n === 1 ? 'pick' : 'picks'} for ${where}${dropped ? ` (${dropped} couldn’t be matched to today’s data)` : ''}. If a friend shared them, keep them as a start or start fresh.` };
+        if (n) S.pending = { kind: 'shared', key: ballot.key, incoming: state, summary: `This link brought ${n} ${n === 1 ? 'pick' : 'picks'} for ${where}${dropped ? ` (${dropped} couldn’t be matched to today’s data)` : ''}. If a friend shared them, use them as a start or start fresh.` };
         else toast('Opened the ballot from your link.');
       } else {
         S.b = state;

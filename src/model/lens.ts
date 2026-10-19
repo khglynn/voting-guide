@@ -1,4 +1,4 @@
-/* "Who do you trust?": the chips are presets over S.b.sources, the explicit list of endorser
+/* "Show endorsements from": the chips are presets over S.b.sources, the explicit list of endorser
    ids that save links already carry. A chip never stores itself; it reads and writes that list.
    Membership is a rule over each source's own fields (type, lean, party), never a hand list,
    and never inferred from whom a source endorsed. */
@@ -11,7 +11,7 @@ export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
 const RIGHT = ['lean_right', 'right'];
 
-/* Papers and guides: newsrooms and nonpartisan civic groups. These are the defaults
+/* Newspapers and guides: newsrooms and nonpartisan civic groups. These are the defaults
    (Kevin's founding rule: neutral by default, partisan by choice). */
 export const isPaper = (e: Endorser): boolean => e.type === 'publication' || e.type === 'civic_nonpartisan';
 const isGroup = (e: Endorser): boolean => e.type !== 'party' && e.type !== 'publication';

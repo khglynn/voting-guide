@@ -110,7 +110,7 @@
     "groups": [
       {
         "id": "nonpartisan",
-        "label": "Nonpartisan",
+        "label": "Nonpartisan ways to help",
         "items": [
           {
             "id": "poll-worker",
@@ -161,7 +161,7 @@
       },
       {
         "id": "left",
-        "label": "On the left",
+        "label": "Progressive groups",
         "items": [
           {
             "id": "swing-left",
@@ -207,7 +207,7 @@
       },
       {
         "id": "right",
-        "label": "On the right",
+        "label": "Conservative groups",
         "items": [
           {
             "id": "turning-point-action",
@@ -362,7 +362,7 @@
       ]
     },
     {
-      "title": "On the left",
+      "title": "Progressive groups",
       "items": [
         {
           "label": "Swing Left",
@@ -377,7 +377,7 @@
       ]
     },
     {
-      "title": "On the right",
+      "title": "Conservative groups",
       "items": [
         {
           "label": "Turning Point Action",

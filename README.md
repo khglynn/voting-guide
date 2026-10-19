@@ -106,7 +106,7 @@ collisions are detected from the measure text.
 - No red or blue. Party is text only. Lean is a neutral five-step scale plus words. Color
   has one job each: gold = your pick, sage = your sources agree, clay = they disagree,
   dusk = the frame and official judge reviews.
-- "Who do you trust?" starts with papers and nonpartisan guides. Progressive groups,
+- "Show endorsements from" starts with newspapers and nonpartisan guides. Progressive groups,
   conservative groups, a party, or any single source are the voter's choice; the chips
   are presets over the source list the save link already carries.
 - No addresses anywhere. The optional address lookup sends the address only to the
@@ -121,7 +121,7 @@ collisions are detected from the measure text.
 ## Where it lives
 
 https://vote.kevinhg.com since Oct 19, 2026. The original https://voting-guide-silk.vercel.app
-still serves the same site, but the friends message in "Pass it on" always shares
+still serves the same site, but the friends message in "Help your friends vote" always shares
 vote.kevinhg.com, whatever host the page is on.
 
 ## Deploy

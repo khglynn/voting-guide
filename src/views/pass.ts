@@ -1,4 +1,4 @@
-/* Pass it on: after your own plan, help your people make theirs. Two messages to copy (one for
+/* Help your friends vote (was "Pass it on"): after your own plan, help your people make theirs. Two messages to copy (one for
    friends and family that can include the guide; one for work, school and public channels with
    official links only, never the guide), a who-to-send-it-to checklist, and, from
    data/get-involved.json, the message templates, the texting study with its caveats and ways
@@ -26,8 +26,8 @@ let involved: GetInvolved | null = null;
 export const setInvolved = (g: GetInvolved | null): void => { involved = g; };
 
 const WHO = [
-  ['family', 'Family group chat'], ['friends', 'Friends group chat'], ['school', 'School or parent groups'],
-  ['work', 'Work Slack or Teams'], ['hood', 'Neighborhood or building group'], ['post', 'A social post'],
+  ['family', 'Family chat'], ['friends', 'Friends chat'], ['school', 'School or parent groups'],
+  ['work', 'Work channels'], ['hood', 'Neighborhood groups'], ['post', 'A public post'],
 ];
 const COPY = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="5" y="5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 11V3h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 
@@ -177,7 +177,7 @@ export function passHTML(): string {
     <p class="lede">Copy a message below and send it. Ask each person to text three more.</p>
     <div class="msgs fam"><h4>For friends and family</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
     <div class="msgs pub"><h4>For work, school and public groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
-    <h3>Who to send it to</h3><p class="sub">Check them off as you go. Saved on this device only.</p>
+    <h3>Checklist: where to send it</h3><p class="sub">Saved on this device only.</p>
     <ul class="checks">${who.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${studyHTML()}
     ${waysHTML()}

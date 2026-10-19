@@ -1,6 +1,6 @@
 /* Judges: what official reviews, bar ratings and lawyer polls say, worded as the reviewer's own
    rating, never ours. Read from candidates' structured `evaluations` (the Oct 19 data contract).
-   Each bar group's entry is one of five states, kept apart on purpose:
+   Each bar association's entry is one of five states, kept apart on purpose:
      yes       the group recommends or approves
      no        the group does not, on the merits
      declined  a negative or blank rating because the candidate did not take part in screening
@@ -30,7 +30,7 @@ const voteAgainst = (v: string | null): number => { const m = (v || '').match(/^
 export function shortRating(e: Evaluation): string {
   const st = evalState(e);
   if (st === 'unrated') return 'Not rated';
-  if (st === 'declined') return 'Did not take part';
+  if (st === 'declined') return 'Declined screening';
   const r = e.rating.split(/\s*[(;:]/)[0].replace(/\bperformance\s+/i, '').replace(/\bjudicial\s+/i, '').replace(/\boverall\s+/i, '').trim();
   const s = sentence(r.toLowerCase());
   if (s.length <= 24) return s;
@@ -39,14 +39,14 @@ export function shortRating(e: Evaluation): string {
 
 export interface Review {
   main: string;           // the narrow column: "Meets standards", "13 of 14 recommend", "Declined screening"
-  sub: string;            // "Commission 10-0", "bar groups"
+  sub: string;            // "Commission 10-0", "bar associations"
   tone: 'fav' | 'unfav' | 'mixed' | 'none';
   line: string;           // one plain sentence for the open row
   split: boolean;         // a reviewer voted against, or groups disagree on the merits
   concerns: { by: string; text: string; reason: boolean }[];   // reason: why a group did not rate, not a finding
   strengths: { by: string; text: string }[];
   links: { label: string; url: string }[];
-  /* every bar group's own rating, full name first, for "See each group" */
+  /* every bar association's own rating, full name first, for "See each bar association's rating" */
   groups?: { by: string; rating: string; url: string; state: EvalState }[];
 }
 
@@ -149,9 +149,9 @@ export function candidateReview(c: Candidate, retention = false): Review | null 
       declinedOther.length ? `${declinedOther.length} did not rate ${who} because the candidate did not take part in their screening (${[...new Set(declinedOther.map((e) => `“${e.rating.split(/\s*\(/)[0]}”`))].join(', ')})` : '',
       unrated.length ? `${unrated.length} did not rate ${who}` : '',
     ].filter(Boolean);
-    const sub = declined.length && rated ? `bar groups; ${declined.length} did not take part` : 'bar groups';
+    const sub = declined.length && rated ? `bar associations; ${declined.length} declined screening` : 'bar associations';
     const each = groups.map((e) => ({ by: e.by, rating: e.rating, url: e.url, state: evalState(e) }));
-    return { main, sub, tone, line: `Of ${groups.length} bar groups, ${parts.join(', ')}.`, split: no.length > 0 && yes.length > 0, concerns, strengths, links: [], groups: each };
+    return { main, sub, tone, line: `Of ${groups.length} bar associations, ${parts.join(', ')}.`, split: no.length > 0 && yes.length > 0, concerns, strengths, links: [], groups: each };
   }
   const e = ev[0];
   const st = evalState(e);
@@ -189,7 +189,7 @@ export function judgeReview(it: Contest): Review | null {
 /* ---------- the plain answer, first ----------
    One or two plain sentences that answer "what does this rating mean?" before any process: a
    "meets standards" review is a passing grade, not an endorsement (with how many passed, from
-   the state's own history line); bar groups' ratings say fit or not and a "no" can mean a
+   the state's own history line); bar associations' ratings say fit or not and a "no" can mean a
    skipped interview; a lawyer poll is a poll; no review at all says so. The process stays one
    tap away. Built from the ballot's evaluations and the state's judicial_review fields. */
 export function judgesLead(): string {
@@ -206,9 +206,9 @@ export function judgesLead(): string {
   if (official.length) return first(jr?.what_it_doesnt_mean) || first(jr?.what_the_rating_means);
   if (evs.some((e) => e.kind === 'bar_group')) {
     const skipped = evs.some((e) => evalState(e) === 'declined');
-    return `Bar groups rate whether a judge is fit for the job.${skipped ? ' A “no” sometimes just means the judge skipped the interview, so check the reason.' : ' A rating isn’t an endorsement.'}`;
+    return `Bar associations rate whether a judge is fit for the job.${skipped ? ' A “no” sometimes just means the judge skipped the interview, so check the reason.' : ' A rating isn’t an endorsement.'}`;
   }
-  if (evs.some(isPoll)) return 'Some bar groups poll lawyers on who they prefer. It’s a poll of lawyers, not a job review.';
+  if (evs.some(isPoll)) return 'Some bar associations poll lawyers on who they prefer. It’s a poll of lawyers, not a job review.';
   if (jr && /\bno\b[^.]*\b(official|published)\b/i.test(`${jr.who_reviews || ''} ${jr.what_the_rating_means || ''}`)) return `${b.stateName} has no official review of these judges. Read each candidate’s own statement below.`;
   return first(jr?.what_it_doesnt_mean) || first(jr?.what_the_rating_means);
 }
@@ -295,11 +295,11 @@ export function judgeBatch(): JudgeBatch | null {
   } else if (withBars.length) {
     const st = (x: (typeof open)[number]) => evs(x.c).filter((e) => e.kind === 'bar_group').map(evalState);
     targets = withBars.filter((x) => { const s = st(x); return s.includes('yes') && s.every((v) => v === 'yes' || v === 'unrated'); });
-    label = `Keep the ${targets.length} ${targets.length === 1 ? 'judge' : 'judges'} the bar groups recommend`;
+    label = `Keep the ${targets.length} ${targets.length === 1 ? 'judge' : 'judges'} the bar associations recommend`;
     for (const x of withBars) {
       const s = st(x);
       const no = s.filter((v) => v === 'no').length, dec = s.filter((v) => v === 'declined').length;
-      const why = [no ? `${no} of ${s.length} groups ${no === 1 ? 'says' : 'say'} no` : '', dec ? `skipped ${dec} ${dec === 1 ? 'screening' : 'screenings'}` : ''].filter(Boolean).join(' and ');
+      const why = [no ? `${no} of ${s.length} bar associations ${no === 1 ? 'says' : 'say'} no` : '', dec ? `skipped ${dec} ${dec === 1 ? 'screening' : 'screenings'}` : ''].filter(Boolean).join(' and ');
       if (why) readFirst.push({ id: x.it.id, name: x.c.name, why });
     }
   } else return null;

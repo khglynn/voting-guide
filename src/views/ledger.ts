@@ -40,7 +40,7 @@ export function sectionTitle(sec: SectionKey): string {
     case 'county': return one ? countyName(one) : 'County';
     case 'city': return b.st === 'DC' ? 'Local offices' : one ? one.label.replace(/\s*\(.*\)$/, '') : 'City';
     case 'school': return 'Schools';
-    case 'special_district': return 'Special districts';
+    case 'special_district': return 'Other local districts';
     default: return 'Ballot measures';
   }
 }
@@ -387,7 +387,7 @@ export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   return `<section class="sec${done ? ' done' : ''}${folded ? ' folded' : ''}" id="sec-${sec}" data-sec="${sec}" aria-labelledby="sh-${sec}">
     <h2 class="sec-h" id="sh-${sec}"><button class="sec-hd" data-act="sec" data-sec="${sec}" aria-expanded="${!folded}" data-fk="sec-${sec}">
       <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span>
-      <span class="sec-r"><span class="sec-count">${esc(count)}</span>${folded ? '<span class="sec-edit">Edit</span>' : ''}</span></button></h2>
+      <span class="sec-r"><span class="sec-count">${esc(count)}</span>${folded ? '<span class="sec-edit">Show</span>' : ''}</span></button></h2>
     ${folded ? '' : `${tools}${rowsHTML(sec, entries)}`}
   </section>`;
 }

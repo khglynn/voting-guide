@@ -1,5 +1,5 @@
 /* An open row: what this race, measure or judge is, who among your sources weighed in, and
-   the buttons to decide. One tap deeper ("Full read") is the reader. */
+   the buttons to decide. One tap deeper ("Full details") is the reader. */
 import type { Candidate, Contest, Endorser, Item, Measure } from '../types';
 import { S } from '../state';
 import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds } from '../ballot';
@@ -27,7 +27,7 @@ function whereHTML(it: Item): string {
     // Another district's measure: who votes on it, and a way to clear every one like it at once.
     const same = [...b.mayApply].filter((id) => id !== it.id && !S.b.notMine.includes(id) && (b.byId.get(id) as Measure | undefined)?.jurisdiction === it.jurisdiction);
     return `<div class="may"><p><b>Only on some ballots.</b> ${escP(it.jurisdiction)}</p>
-      <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} like this</button>` : ''}</p></div>`;
+      <p class="may-acts"><button class="mini" data-act="notmine" data-id="${esc(it.id)}" data-fk="nm-${esc(it.id)}">Not on my ballot</button>${same.length ? `<button class="mini quiet" data-act="notmine" data-id="${esc(it.id)}" data-all="1">Hide all ${same.length + 1} for this area</button>` : ''}</p></div>`;
   }
   const g = b.groupOf[it.id];
   if (g) {
@@ -81,14 +81,14 @@ function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | nu
   }
   return null;
 }
-function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: string; mine: boolean }[], foot: string): string {
+function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: string; mine: boolean; aria?: string }[], foot: string): string {
   const rows = weighedIn(l);
   const keys = cols.map((c) => c.key);
   const body = rows.map((e) => {
     const span = spanCell(it, e, keys, cols.length);
     if (span) return `<tr>${srcCell(e)}${span}</tr>`;
     const r = (S.ballot!.ends[it.id] || {})[e.id]!;
-    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} endorses ${esc(c.head)}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
+    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} ${c.aria ? esc(c.aria) : `endorses ${esc(c.head)}`}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
   }).join('');
   return `<div class="gridwrap"><table class="grid c${cols.length}">
     <colgroup><col class="src">${cols.map(() => '<col>').join('')}</colgroup>
@@ -135,7 +135,7 @@ function pickBtn(c: Contest, k: Candidate, cls = 'pick'): string {
   }
   if (isMultiSeat(c)) {
     const on = S.b.picks[`${c.id}|${k.name}`] === 'PICK';
-    return `<button class="${cls}${on ? ' on' : ''}" data-act="mpick" data-id="${id}" data-v="${esc(k.name)}" aria-pressed="${on}" data-fk="${fk}">${on ? `${CHECK} Marked` : 'Mark'}<span class="vh"> ${esc(k.short)}</span></button>`;
+    return `<button class="${cls}${on ? ' on' : ''}" data-act="mpick" data-id="${id}" data-v="${esc(k.name)}" aria-pressed="${on}" data-fk="${fk}">${on ? `${CHECK} Picked` : 'Pick'}<span class="vh"> ${esc(k.short)}</span></button>`;
   }
   const on = S.b.picks[c.id] === k.name;
   return `<button class="${cls}${on ? ' on' : ''}" data-act="pick" data-id="${id}" data-v="${esc(k.name)}" aria-pressed="${on}" data-fk="${fk}">${on ? `${CHECK} Your pick` : 'Pick'}<span class="vh"> ${esc(k.short)}</span></button>`;
@@ -264,7 +264,7 @@ function raceHTML(c: Contest): string {
   body += quietLines(l, c, w.length > 0);
   if (multi) {
     const n = c.candidates.filter((k) => S.b.picks[`${c.id}|${k.name}`] === 'PICK').length;
-    body = `<p class="seats"><b>Fills ${c.vote_for} seats:</b> mark up to ${c.vote_for}. ${n ? `${n} marked.` : ''}</p>${body}${n && n < c.vote_for && status(c) === 'open' ? `<button class="mini" data-act="mdone" data-id="${esc(c.id)}">I’m done with this race</button>` : ''}`;
+    body = `<p class="seats"><b>Fills ${c.vote_for} seats:</b> pick up to ${c.vote_for}. ${n ? `${n} picked.` : ''}</p>${body}${n && n < c.vote_for && status(c) === 'open' ? `<button class="mini" data-act="mdone" data-id="${esc(c.id)}">Leave the other seats blank</button>` : ''}`;
   }
   const nonpartisan = !isPartisan(c) ? '<p class="ob-meta">Nonpartisan race: no party labels on the ballot.</p>' : '';
   return `${c.office_explainer ? clampP(`ex-${c.id}`, c.office_explainer, 22, 'ob-lede') : ''}
@@ -293,12 +293,12 @@ function reviewHTML(r: Review | null, c: Candidate): string {
   // The survey in one plain sentence when we can say it honestly; the rows otherwise.
   const plain = off ? surveySentence(off, c.name) : null;
   const lines = off && !plain ? surveyLines(off) : [];
-  const survey = plain ? `<div class="sv"><p>${esc(plain.sentence)}</p>${plain.note ? `<p class="fine">${esc(plain.note)}</p>` : ''}${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
+  const survey = plain ? `<div class="sv"><p>${esc(plain.sentence)}</p>${plain.note ? `<p class="fine">${esc(plain.note)}</p>` : ''}${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'Full survey report')}</p>` : ''}</div>`
     : lines.length ? `<div class="sv"><p>The survey:</p><ul>${lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>${off!.survey!.report_url ? `<p class="fine">${ext(off!.survey!.report_url, 'The survey report')}</p>` : ''}</div>`
     : off && off.survey_note ? `<p class="sv fine">${esc(off.survey_note)}</p>` : '';
-  // Bar groups: each group's full name, its rating and its page, one tap away.
+  // Bar associations: each one's full name, its rating and its page, one tap away.
   const k = `eg-${hash(c.name)}`;
-  const each = r.groups && r.groups.length ? `<button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the groups' : 'See each group'}</button>${isOpen(k) ? `<ul class="bul eg">${r.groups.map((g) => `<li>${ext(g.url, g.by)}: ${escP(g.rating)}</li>`).join('')}</ul>` : ''}` : '';
+  const each = r.groups && r.groups.length ? `<button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the ratings' : 'See each bar association’s rating'}</button>${isOpen(k) ? `<ul class="bul eg">${r.groups.map((g) => `<li>${ext(g.url, g.by)}: ${escP(g.rating)}</li>`).join('')}</ul>` : ''}` : '';
   return `<div class="finding ${r.tone}"><p class="q">${esc(r.line)}</p>${notes}${survey}${each}
     ${r.links.length ? `<p class="fl">${r.links.map((x) => ext(x.url, x.label)).join(' · ')}</p>` : ''}</div>`;
 }
@@ -314,7 +314,7 @@ export function raceRatingsHTML(c: Contest): string {
   const jr = judicialReview();
   return `<div class="ratings">
     ${polls.length ? `<h4>Lawyer preference polls</h4><p class="fine">A count of which candidate responding lawyers prefer. Not an endorsement or a job review.</p><ul>${pollHTML}</ul>` : ''}
-    ${groups.length ? `<h4>Bar group ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
+    ${groups.length ? `<h4>Bar association ratings</h4><ul>${groupHTML}</ul>${groups.some((g) => g.review.concerns.length) ? `<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">${isOpen(k) ? 'Hide the reasons' : 'Show the reasons they gave'}</button>` : ''}` : ''}
     ${jr && jr.what_the_rating_means ? `<p class="fine">${escP(leadRest(jr.what_the_rating_means, 30)[0])}</p>` : ''}
   </div>`;
 }
@@ -371,8 +371,8 @@ function sourcesYesNo(it: Item): string {
   const mine = S.b.picks[it.id];
   const judge = it.kind === 'contest';
   const cols = [
-    { key: 'YES', head: judge ? 'Keep' : 'Yes', sub: '', mine: mine === 'YES' },
-    { key: 'NO', head: judge ? 'Remove' : 'No', sub: '', mine: mine === 'NO' },
+    { key: 'YES', head: judge ? 'Said keep' : 'Said yes', sub: '', mine: mine === 'YES', aria: judge ? 'says keep' : 'says yes' },
+    { key: 'NO', head: judge ? 'Said remove' : 'Said no', sub: '', mine: mine === 'NO', aria: judge ? 'says remove' : 'says no' },
   ];
   return `${gridHTML(it, l, cols, '').replace('class="grid c2"', 'class="grid c2 grid-yn"')}${quietLines(l, it)}`;
 }
@@ -417,7 +417,7 @@ function duelHTML(m: Measure): string {
   return `<div class="heads${yesBoth ? ' warn' : ''}"><b>Read with ${picks}.</b> ${rule ? escP(rule) : 'They conflict.'}${yesBoth ? ' <b>You picked yes on more than one of these.</b>' : ''}</div>`;
 }
 /* The official title, two lines at most: some run to 239 words. The whole wording is in the
-   Full read, one tap away. */
+   Full details, one tap away. */
 function officialTitleHTML(m: Measure): string {
   if (!m.official_title) return '';
   const long = m.official_title.split(/\s+/).length > 24;
@@ -464,7 +464,7 @@ function footHTML(it: Item): string {
   const noteOpen = S.ui.noteOpen.has(it.id) || hasNote;
   const rcv = it.kind === 'contest' && isRCV(it);
   const acts = [
-    s !== 'info' ? `<button class="mini quiet" data-act="skip" data-id="${esc(it.id)}" aria-pressed="${s === 'skipped'}" data-fk="sk-${esc(it.id)}">${s === 'skipped' ? 'Skipped. Undo' : 'Skip this one'}</button>` : '',
+    s !== 'info' ? `<button class="mini quiet" data-act="skip" data-id="${esc(it.id)}" aria-pressed="${s === 'skipped'}" data-fk="sk-${esc(it.id)}">${s === 'skipped' ? 'Left blank. Undo' : 'Leave blank'}</button>` : '',
     decided && s !== 'skipped' ? `<button class="mini quiet" data-act="clear" data-id="${esc(it.id)}" data-fk="cl-${esc(it.id)}">${rcv ? 'Clear my ranking' : 'Clear my pick'}</button>` : '',
     noteOpen ? '' : `<button class="mini quiet" data-act="note" data-id="${esc(it.id)}">Add a note</button>`,
     `<a class="mini quiet" href="${esc(reportLink(it))}" target="_blank" rel="noopener">Report a problem</a>`,

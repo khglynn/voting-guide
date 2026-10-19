@@ -144,7 +144,7 @@ A.mpick = (d) => {
   if (S.b.picks[k] === 'PICK') delete S.b.picks[k];
   else {
     const n = c.candidates.filter((x) => S.b.picks[`${id}|${x.name}`] === 'PICK').length;
-    if (n >= c.vote_for) { toast(`You can mark up to ${c.vote_for}. Unmark one first.`); return; }
+    if (n >= c.vote_for) { toast(`You can pick up to ${c.vote_for}. Remove one first.`); return; }
     S.b.picks[k] = 'PICK';
   }
   if (S.b.picks[id] === 'SKIP' || S.b.picks[id] === 'DONE') delete S.b.picks[id];
@@ -393,9 +393,9 @@ A.basis = (d) => {
   const e = B().eById.get(d.id!);
   if (!e) return;
   const how = basisWords(e);
-  toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “All sources” for details.` : `${e.short}: not rated for lean.`);
+  toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
-A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Kept. Change any pick as you go.'); };
+A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
 A['shared-fresh'] = () => { const zip = S.b.zip; S.b = emptyBallotState(zip); S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 

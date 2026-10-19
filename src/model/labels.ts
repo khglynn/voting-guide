@@ -150,8 +150,8 @@ function uniqueTitles(b: Ballot): Map<string, string> {
 const candOf = (c: Contest, name: string) => c.candidates.find((k) => k.name === name);
 export function pickLabel(it: Item): string | null {
   const p = S.b.picks;
-  if (it.kind === 'measure') return p[it.id] === 'YES' ? 'Yes' : p[it.id] === 'NO' ? 'No' : p[it.id] === 'SKIP' ? 'Skipped' : null;
-  if (p[it.id] === 'SKIP') return 'Skipped';
+  if (it.kind === 'measure') return p[it.id] === 'YES' ? 'Yes' : p[it.id] === 'NO' ? 'No' : p[it.id] === 'SKIP' ? 'Left blank' : null;
+  if (p[it.id] === 'SKIP') return 'Left blank';
   if (isMultiJudge(it)) {
     const y = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'YES').length;
     const n = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'NO').length;
@@ -177,8 +177,8 @@ export function pickLabel(it: Item): string | null {
 /* The pick in a narrow column: last names, "Yes", "Keep". */
 export function pickShort(it: Item): string | null {
   const p = S.b.picks;
-  if (it.kind === 'measure') return p[it.id] === 'YES' ? 'Yes' : p[it.id] === 'NO' ? 'No' : p[it.id] === 'SKIP' ? 'Skipped' : null;
-  if (p[it.id] === 'SKIP') return 'Skipped';
+  if (it.kind === 'measure') return p[it.id] === 'YES' ? 'Yes' : p[it.id] === 'NO' ? 'No' : p[it.id] === 'SKIP' ? 'Left blank' : null;
+  if (p[it.id] === 'SKIP') return 'Left blank';
   if (isMultiJudge(it)) {
     const y = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'YES').length;
     const n = it.candidates.filter((c) => p[`${it.id}|${c.name}`] === 'NO').length;

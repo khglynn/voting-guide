@@ -1,4 +1,4 @@
-/* "Who do you trust?": the lens head, the sticky chip bar, the "More sources" sheet and the
+/* "Show endorsements from": the lens head, the sticky chip bar, the "See all sources" sheet and the
    party chooser. Lean labels show with their basis; parties are text; no red or blue. */
 import type { Contest, Endorser } from '../types';
 import { S } from '../state';
@@ -25,7 +25,7 @@ export function lensBarHTML(): string {
   const party = S.b.party;
   const parties = partiesOnBallot(b);
   const partyChip = parties.length ? `<button class="chip" data-act="${party ? 'party-off' : 'sheet'}" data-s="party" aria-pressed="${!!party}" data-fk="chip-party">${TICK}${party ? `${esc(party)} Party` : 'Pick a party'}</button>` : '';
-  const more = `<button class="chip more" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="chip-more">All sources</button>`;
+  const more = `<button class="chip more" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="chip-more">See all sources</button>`;
   return `<div class="lensbar" id="lensbar" role="toolbar" aria-label="Show endorsements from"><div class="chipwrap"><div class="chips" data-keep="chips">${chips}${partyChip}${more}</div></div></div>`;
 }
 export function lensHeadHTML(): string {
@@ -50,7 +50,7 @@ export function lensHeadHTML(): string {
 }
 export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;
 
-/* ---------- the "More sources" sheet ---------- */
+/* ---------- the "See all sources" sheet ---------- */
 const GROUPS: [string, string][] = [['left', 'Left'], ['lean_left', 'Leans left'], ['neutral', 'Center'], ['lean_right', 'Leans right'], ['right', 'Right'], ['none', 'Not rated']];
 const BASIS_KIND: Record<string, string> = { outside_rating: 'Rated by an outside group', party: 'A party', mission: 'From its mission statement' };
 function srcRow(e: Endorser): string {
@@ -80,7 +80,7 @@ export function sourcesSheetHTML(): string {
   <div class="sheet-panel screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h">
     <div class="sheet-hd"><h2 id="sh-h">Every source on your ballot</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Done</button></div>
     <div class="sheet-bd" data-keep="sheet">
-      <p class="small">Turn on any source to see its endorsements next to each race and measure. Grouped by lean, which comes from outside ratings, party status or the source’s own stated mission, never from whom it endorses.</p>
+      <p class="small">Turn on any source to see its endorsements next to each race and measure. Grouped by lean, which comes from outside ratings, the source’s party or the source’s own stated mission, never from whom it endorses.</p>
       ${empties.length ? `<p class="small muted">${esc(empties.join(' '))}</p>` : ''}
       <p class="row-btns"><button class="mini" data-act="src-default">Reset to newspapers and guides</button><button class="mini quiet" data-act="src-none">Turn all off</button></p>
       ${groups}
@@ -101,9 +101,9 @@ export function partySheetHTML(): string {
   }).join('');
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only short" role="dialog" aria-modal="true" aria-labelledby="sh-h">
-    <div class="sheet-hd"><h2 id="sh-h">Pick a party</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Cancel</button></div>
+    <div class="sheet-hd"><h2 id="sh-h">Show a party’s endorsements</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Cancel</button></div>
     <div class="sheet-bd">
-      <p class="small">Shows that party’s own endorsements, where it published any, and lets you fill in its candidates in one tap. You can undo it. Listed A to Z.</p>
+      <p class="small">Not every party published endorsements here. Choosing one also lets you fill in its candidates in one tap, and you can undo it. Listed A to Z.</p>
       <ul class="opts">${rows}</ul>
     </div></div>`;
 }

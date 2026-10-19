@@ -90,6 +90,8 @@ export interface Measure {
   jurisdiction: string;
   number: string;
   official_title: string | null;
+  /* 2 to 5 plain words naming what it does ("Parks bond, $260M"), for rows and the cheat sheet */
+  short_title?: string | null;
   plain_summary: string | null;
   yes_means: string | null;
   no_means: string | null;

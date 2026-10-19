@@ -63,7 +63,8 @@ export function cheatText(): string {
       if (l.note) out.push(`  Note: ${l.note}`);
       continue;
     }
-    out.push(`${l.title}: ${l.label || '____'}`);
+    const short = it && it.kind === 'measure' && it.short_title ? ` (${it.short_title})` : '';
+    out.push(`${l.title}${short}: ${l.label || '____'}`);
     if (it && it.kind === 'contest' && isMultiJudge(it)) {
       it.candidates.forEach((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; out.push(`  ${c.name}: ${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '____'}`); });
     }
@@ -83,16 +84,18 @@ function tableHTML(forPrint: boolean): string {
     const it = l.it;
     const go = it && !forPrint ? ` data-act="goto" data-id="${esc(it.id)}"` : '';
     const ranks = rankedList(it);
-    // The title stays a plain text node (tests read it that way); "Change" is its own small button.
-    const title = (extra = '') => `<th scope="row">${esc(l.title)}${extra}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}${go ? `<button class="cs-go"${go}>Change<span class="vh"> ${esc(l.title)}</span></button>` : ''}</th>`;
+    // The title stays a plain text node (tests read it that way). The whole line is the tap
+    // target; the "Change" button stays for keyboards and screen readers, shown only on focus.
+    const short = it && it.kind === 'measure' && it.short_title ? `<span class="cs-sub">${esc(it.short_title)}</span>` : '';
+    const title = (extra = '') => `<th scope="row">${esc(l.title)}${short}${extra}${l.note ? `<span class="cs-note">Note: ${esc(l.note)}</span>` : ''}${go ? `<button class="cs-go"${go}>Change<span class="vh"> ${esc(l.title)}</span></button>` : ''}</th>`;
     if (it && it.kind === 'contest' && isRCV(it) && (ranks.length || !l.label)) {
       const body = ranks.length ? `<ol class="cs-ranks">${ranks.map((n, i) => `<li><span class="cs-rk">${ordinal(i + 1)}</span> ${esc(n)}</li>`).join('')}</ol>` : blank;
-      rows.push(`<tr data-cs="${esc(it.id)}">${title(`<span class="cs-sub">${esc(rankNote(it))}</span>`)}<td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
+      rows.push(`<tr data-cs="${esc(it.id)}"${go}>${title(`<span class="cs-sub">${esc(rankNote(it))}</span>`)}<td class="${ranks.length ? '' : 'undecided'}">${body}</td></tr>`);
       continue;
     }
     const multi = !!it && it.kind === 'contest' && isMultiJudge(it);
     const sub = it && it.kind === 'contest' && multi ? `<ul class="cs-judges">${it.candidates.map((c) => { const v = S.b.picks[`${it.id}|${c.name}`]; return `<li>${esc(c.name)}: <strong>${v === 'YES' ? 'Yes' : v === 'NO' ? 'No' : '<span class="print-only">____</span><span class="screen-only">not decided</span>'}</strong></li>`; }).join('')}</ul>` : '';
-    rows.push(`<tr${it ? ` data-cs="${esc(it.id)}"` : ''}>${title()}<td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : blank}${sub}</td></tr>`);
+    rows.push(`<tr${it ? ` data-cs="${esc(it.id)}"` : ''}${go}>${title()}<td class="${l.label ? '' : 'undecided'}">${l.label ? esc(l.label) : blank}${sub}</td></tr>`);
   }
   return `<table class="cs-table"><tbody>${rows.join('')}</tbody></table>`;
 }

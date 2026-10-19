@@ -222,6 +222,7 @@ function normMeasure(m, file) {
     jurisdiction: str(m.jurisdiction) || m.state,
     number: m.number.trim(),
     official_title: str(m.official_title),
+    short_title: str(m.short_title),
     plain_summary: str(m.plain_summary),
     yes_means: str(m.yes_means),
     no_means: str(m.no_means),

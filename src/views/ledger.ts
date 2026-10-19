@@ -74,9 +74,12 @@ const qVerdict = (main: string, sub = ''): string => `<span class="vd q"><span c
 function titleHTML(it: Item): string {
   const r = rowTitle(it);
   if (it.kind === 'measure') {
+    // The number, then the measure's short name ("Park bonds"); a long summary is cut to a lead.
     const tag = measureTag(it);
-    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum">${esc(leadRest(r.sub || r.title, 40)[0])}</span></span></span>`;
-    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small class="t-sum">${esc(leadRest(r.sub, 40)[0])}</small>` : ''}</span></span>`;
+    const name = it.short_title ? it.short_title : leadRest(r.sub || r.title, 40)[0];
+    if (tag && tag.length <= 4) return `<span class="ttl is-m"><span class="num">${esc(tag)}</span><span class="t"><span class="t-sum">${esc(name)}</span></span></span>`;
+    const sub = it.short_title || (r.sub ? leadRest(r.sub, 40)[0] : '');
+    return `<span class="ttl is-m-long"><span class="t"><b>${esc(r.title)}</b>${sub ? `<small class="t-sum">${esc(sub)}</small>` : ''}</span></span>`;
   }
   return `<span class="ttl"><span class="t"><b>${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span></span>`;
 }

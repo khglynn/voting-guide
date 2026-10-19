@@ -530,7 +530,10 @@ b, strong { font-weight: 600; }
 .cs-table td { font-weight: 600; overflow-wrap: anywhere; }
 .cs-table td.undecided { color: var(--faint); font-weight: 400; font-style: italic; }
 .cs-table tr.cs-sec th { padding-top: 16px; border-bottom: 1.5px solid var(--ink); font-family: var(--f-display); font-weight: 600; font-size: 17px; width: auto; }
-.cs-go { display: block; font-size: 13px; color: var(--muted); min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
+/* The whole line is the tap target; "Change" shows only when a keyboard lands on it. */
+.cs-table tr[data-act] { cursor: pointer; }
+.cs-go { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.cs-go:focus-visible { position: static; width: auto; height: auto; clip-path: none; display: block; min-height: 32px; }
 .cs-sub, .cs-note { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
 .cs-ranks li { display: flex; gap: 6px; }
 .cs-rk { color: var(--gold-ink); min-width: 30px; }

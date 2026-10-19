@@ -6,7 +6,7 @@ import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf,
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, surveyLines, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
-import { seatLabel, cheatTitle } from '../model/labels';
+import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot } from '../model/lens';
 import { sourceLean, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink } from './common';
 import { headsUp, headsHTML } from './ledger';
@@ -358,11 +358,9 @@ function duelHTML(m: Measure): string {
   return `<div class="heads${yesBoth ? ' warn' : ''}"><b>Read with ${picks}.</b> ${rule ? escP(rule) : 'They conflict.'}${yesBoth ? ' <b>You picked yes on more than one of these.</b>' : ''}</div>`;
 }
 function thresholdLine(m: Measure): string {
-  const t = m.pass_threshold || '';
-  const pct = t.match(/(\d{2}(?:\.\d+)?%)/);
-  const label = pct ? `Needs ${pct[1]} yes to pass.` : /two.thirds/i.test(t) ? 'Needs two-thirds yes to pass.' : /majority/i.test(t) ? 'Needs a simple majority to pass.' : '';
+  const label = thresholdLabel(m.pass_threshold);
   const who = m.referred_by === 'citizen_initiative' ? 'Put on the ballot by a citizen petition.' : m.referred_by === 'legislature' ? 'Put on the ballot by the legislature.' : '';
-  return label || who ? `<p class="ob-meta">${esc([label, who].filter(Boolean).join(' '))}</p>` : '';
+  return label || who ? `<p class="ob-meta">${escP([label, who].filter(Boolean).join(' '))}</p>` : '';
 }
 function measureHTML(m: Measure): string {
   const v = S.b.picks[m.id];

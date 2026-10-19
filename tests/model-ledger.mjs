@@ -261,6 +261,23 @@ export async function run({ st, bl, geo, mods, open, head, read, INDEX, check })
     check('judges: her reason is shown as a reason, not a finding', !!r && r.concerns.length > 0 && r.concerns.every((x) => x.reason));
   }
 
+  /* ---------- what it takes to pass, read as a rule ---------- */
+  {
+    const t = labels.thresholdLabel;
+    check('threshold: "Simple majority (... the 55% rule does not apply)" is a simple majority', t('Simple majority (because it only repeals language, the 55% rule does not apply)') === 'Needs a simple majority to pass.');
+    check('threshold: "Simple majority (more than 50% yes)" never reads as 50%', t('Simple majority (more than 50% yes). The pamphlet cites RCW 36.73.065(1).') === 'Needs a simple majority to pass.');
+    check('threshold: a leading 55% is the rule', t('55% (constitutional amendment that adds language)') === 'Needs 55% yes to pass.');
+    check('threshold: Florida 60%', t('60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))') === 'Needs 60% yes to pass.');
+    check('threshold: advisory questions say so', /Advisory only/.test(t("Simple majority, but advisory only: the result is not binding and doesn't change any law.")));
+    check('threshold: the Washington one-third turnout rule rides along', /one-third/.test(t('Simple majority of votes cast on the measure; at least one-third of voters taking part in the election must vote on it.')));
+    check('threshold: anything else is shown as written', t('whichever option gets more votes; takes effect only if Question 200 passes') === 'To pass: whichever option gets more votes; takes effect only if Question 200 passes.');
+    const co = read('state-CO.json');
+    const a87 = co.items.find((x) => x.id === 'co-amendment-87');
+    check('threshold: Colorado Amendment 87 reads simple majority from the data', !!a87 && t(a87.pass_threshold) === 'Needs a simple majority to pass.', a87 && a87.pass_threshold);
+    check('measures: every measure carries a short title', [...Object.values(INDEX.states)].length > 0 && co.items.filter((x) => x.kind === 'measure').every((x) => x.short_title));
+    check('measures: the row title uses the short title', labels.rowTitle(a87).sub === a87.short_title);
+  }
+
   /* ---------- Codex #2: an address picks a place only in its own state ---------- */
   {
     const r = (state, place, upper = null) => ({ matched: '', state, county: null, place, cd: null, upper, lower: null });

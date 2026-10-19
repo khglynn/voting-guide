@@ -77,8 +77,27 @@ const jurisdictionShort = (m: Measure): string => m.jurisdiction.replace(/\s*\([
 
 /* One plain line about what a measure does, for the row under its number. */
 export function measureLine(m: Measure): string {
-  const s = (m as Measure & { short_title?: string }).short_title || m.plain_summary || m.official_title || '';
+  const s = m.short_title || m.plain_summary || m.official_title || '';
   return s.trim();
+}
+
+/* What it takes to pass, read as a rule, never from an incidental number: text that leads with
+   "majority" is a simple majority (whatever percentages it mentions later, like "the 55% rule
+   does not apply"); a percentage or two-thirds counts only when the text leads with it as the
+   requirement. Anything else is shown as written. Advisory questions and turnout rules ride
+   along, since they change what a yes means. */
+export function thresholdLabel(text: string | null | undefined): string {
+  const t = (text || '').trim();
+  if (!t) return '';
+  const advisory = /\b(advisory|non-?binding|not binding)\b/i.test(t);
+  const turnout = /one-third of (the )?voters/i.test(t);
+  const tail = `${advisory ? ' Advisory only: the result doesn’t change any law.' : ''}${turnout ? ' At least one-third of the people voting in the election must also vote on it.' : ''}`;
+  if (/^(a\s+)?(simple\s+)?majority\b/i.test(t)) return `Needs a simple majority to pass.${tail}`;
+  const pct = t.match(/^(\d{2}(?:\.\d+)?)\s*(%|percent)/i);
+  if (pct) return `Needs ${pct[1]}% yes to pass.${tail}`;
+  if (/^two[- ]thirds\b/i.test(t)) return `Needs two-thirds yes to pass.${tail}`;
+  if (/^three[- ]fifths\b/i.test(t)) return `Needs three-fifths yes to pass.${tail}`;
+  return `To pass: ${t.replace(/\.?$/, '.')}`;
 }
 
 /* ---------- row titles ---------- */

@@ -34,8 +34,8 @@ runs every gate on a copy of exactly the commit it will make (so a file left out
 something else staged, cannot slip through), opens a pull request, waits for the `data`
 and `browser` checks to pass on that exact commit, then tests the Vercel preview once
 it serves that commit. It never merges. After the review and the merge,
-`scripts/ship.sh --after-merge <pr>` waits until production serves the merge commit,
-then sweeps it. `scripts/ship.sh --self-test` and `node scripts/check-addresses.mjs
+`scripts/ship.sh --after-merge <pr>` waits until production serves the merge commit
+(or a later `main` commit that includes it), then sweeps it. `scripts/ship.sh --self-test` and `node scripts/check-addresses.mjs
 --self-test` check the scripts' own decisions; CI runs both.
 
 `?today=2026-10-30` on the URL pretends it's that date, for checking the plan card.

@@ -18,7 +18,8 @@
 # script stops at a green PR and prints the one command to run: gh pr merge <n> --squash
 # Green means the required checks (data, browser) each finished with success on the PR's exact head
 # commit: cancelled, skipped, timed out or missing is not green, and every wait has a time limit.
-# A preview or production counts only when its build-report.json names the expected commit.
+# A preview counts only when its build-report.json names the pushed commit; production only when it names
+# a commit on freshly fetched origin/main that includes the merge commit.
 #
 # Needs: node 18+, npm, git, gh (logged in as an account that can push to khglynn/voting-guide), curl, python3.
 set -euo pipefail
@@ -35,7 +36,7 @@ while [ $# -gt 0 ]; do
     --gates-only) GATES_ONLY=1 ;;
     --self-test) SELF_TEST=1 ;;
     --after-merge) shift; AFTER_MERGE="${1:?pr number}" ;;
-    -h|--help) sed -n 2,23p "$0"; exit 0 ;;
+    -h|--help) sed -n 2,24p "$0"; exit 0 ;;
     *) if [ -z "$MSG" ] && [ "$GATES_ONLY" = 0 ] && [ -z "$AFTER_MERGE" ]; then MSG="$1"; else PATHS+=("$1"); fi ;;
   esac
   shift

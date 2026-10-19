@@ -44,29 +44,29 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this question found.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-sun-eb",
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "No Sun editorial on this question found.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": null,
-    "confidence": "unverified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "baltimore-sun-eb",
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Sun's opinion section ran guest pieces against Question 3 on Oct 4 (Sen. Justin Ready), Oct 8 ('Question 3 is just another power grab') and Oct 9 ('This liberal is voting against Question 3'), but none could be confirmed as the editorial board's own position.",
+    "why": "No 2026 general-election endorsement for this race or measure was found in the Sun editorial index and targeted ballot-question search; full articles may require a subscription (checked October 19, 2026).",
     "url": "https://www.baltimoresun.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -214,9 +214,9 @@
     "target_id": "md-governor",
     "status": "no_position",
     "choice": null,
-    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/ballot",
-    "date": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -224,9 +224,9 @@
     "target_id": "md-comptroller",
     "status": "no_position",
     "choice": null,
-    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/ballot",
-    "date": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -234,9 +234,9 @@
     "target_id": "md-attorney-general",
     "status": "no_position",
     "choice": null,
-    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/ballot",
-    "date": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -244,9 +244,9 @@
     "target_id": "md-retention-friedman",
     "status": "no_position",
     "choice": null,
-    "why": "The League does not endorse candidates. It publishes candidate answers on VOTE411.",
-    "url": "https://www.vote411.org/ballot",
-    "date": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -254,30 +254,30 @@
     "target_id": "md-question-1",
     "status": "not_found",
     "choice": null,
-    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
-    "url": "https://www.lwvmd.org/voterguides2026",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "lwv-maryland",
     "target_id": "md-question-2",
     "status": "not_found",
     "choice": null,
-    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
-    "url": "https://www.lwvmd.org/voterguides2026",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "lwv-maryland",
     "target_id": "md-question-3",
     "status": "not_found",
     "choice": null,
-    "why": "No LWVMD position found on lwvmd.org or VOTE411 (lwvmd.org blocked automated reads). Open https://www.lwvmd.org/voterguides2026.",
-    "url": "https://www.lwvmd.org/voterguides2026",
-    "date": null,
-    "confidence": "unverified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in the state League’s advocacy page, voter-service policy and targeted 2026 ballot-question searches checked October 19, 2026.",
+    "url": "https://www.lwvmd.org/advocacy",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "md-democratic-party",
@@ -632,32 +632,32 @@
   {
     "endorser_id": "md-lcv",
     "target_id": "md-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No 2026 pick found. The earlier source, the Moore campaign's endorsement page, is its 2022 list (it still names the Washington Post and Baltimore Sun boards and calls Alsobrooks county executive), so it does not show a 2026 endorsement.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Wes Moore and Aruna Miller",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-lcv",
     "target_id": "md-comptroller",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Brooke Elizabeth Lierman",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-lcv",
     "target_id": "md-attorney-general",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Anthony G. Brown",
+    "why": "Maryland LCV’s 2026 general-election slate lists this candidate.",
+    "url": "https://www.mdlcv.org/endorsements",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "md-lcv",
@@ -842,12 +842,12 @@
   {
     "endorser_id": "nra-pvf",
     "target_id": "md-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "We did not find a position from this group.",
-    "url": null,
-    "date": null,
-    "confidence": "unverified"
+    "status": "endorsed",
+    "choice": "Dan Cox and Rob Krop",
+    "why": "The November 3, 2026 general-election page explicitly marks this candidate as NRA endorsed. A letter grade by itself is not counted as an endorsement. NRA marks Dan Cox; the lieutenant governor candidate, Rob Krop, is listed without an endorsement badge.",
+    "url": "https://www.nrapvf.org/grades/Maryland/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "nra-pvf",
@@ -998,5 +998,15 @@
     "url": null,
     "date": null,
     "confidence": "unverified"
+  },
+  {
+    "endorser_id": "lwv-maryland",
+    "target_id": "md-retention-killough",
+    "status": "no_position",
+    "choice": null,
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvmd.org/about",
+    "date": "2026-10-19",
+    "confidence": "verified"
   }
 ]

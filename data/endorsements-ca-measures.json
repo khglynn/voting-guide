@@ -224,9 +224,9 @@
     "target_id": "ca-prop-40",
     "status": "not_found",
     "choice": null,
-    "why": "Listed as 'Coming Soon' on the Chronicle's endorsement hub as of Oct 15, 2026.",
+    "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update.",
     "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -254,9 +254,9 @@
     "target_id": "ca-prop-43",
     "status": "not_found",
     "choice": null,
-    "why": "Listed as 'Coming Soon' on the Chronicle's endorsement hub as of Oct 15, 2026.",
+    "why": "The Chronicle's endorsement page still says 'Coming Soon' for this one as of its Oct 18, 2026 update.",
     "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -272,11 +272,11 @@
   {
     "endorser_id": "sf-chronicle-eb",
     "target_id": "ca-prop-45",
-    "status": "not_found",
-    "choice": null,
-    "why": "Listed as 'Coming Soon' on the Chronicle's endorsement hub as of Oct 15, 2026.",
-    "url": "https://www.sfchronicle.com/projects/2026/california-sf-election-endorsements/",
-    "date": "2026-10-15",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'The measure as written would lock California into a regulatory regime that makes it easier to build the same environmentally ruinous projects that gave us CEQA in the first place.'",
+    "url": "https://www.sfchronicle.com/opinion/editorials/article/prop-45-ceqa-california-22468905.php",
+    "date": "2026-10-18",
     "confidence": "verified"
   },
   {
@@ -426,7 +426,7 @@
     "choice": "NO",
     "why": "Continues failed state housing policies; 'subsidized shelter can't solve the housing crisis.'",
     "url": "https://www.sandiegouniontribune.com/2026/09/11/endorsement-no-on-prop-1-which-continues-failed-state-housing-policies/",
-    "date": "2026-09-11",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -436,7 +436,7 @@
     "choice": "NO",
     "why": "'Isn't what it seems': would make it easier to raid the rainy day fund for short-term, non-emergency spending.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/endorsements-props-2-37-wouldnt-yield-saner-state-budgets-more-housing/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -446,7 +446,7 @@
     "choice": "NO",
     "why": "School funding should be tied to districts adopting best practices, not locked in permanently.",
     "url": "https://www.sandiegouniontribune.com/2026/09/18/why-voting-against-prop-3-is-a-vote-against-school-status-quo/",
-    "date": "2026-09-18",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -456,7 +456,7 @@
     "choice": "NO",
     "why": "No evidence that public financing of campaigns leads to better governance.",
     "url": "https://www.sandiegouniontribune.com/2026/09/04/endorsement-dont-buy-prop-4s-baloney-about-publicly-financed-campaigns/",
-    "date": "2026-09-04",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -466,7 +466,7 @@
     "choice": "NO",
     "why": "'A power play masquerading as reform.'",
     "url": "https://www.sandiegouniontribune.com/2026/09/25/a-vote-against-prop-5-is-a-vote-against-the-california-status-quo/",
-    "date": "2026-09-25",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -476,7 +476,7 @@
     "choice": "NO",
     "why": "Says the program 'has a math problem.'",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/endorsements-props-2-37-wouldnt-yield-saner-state-budgets-more-housing/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -486,7 +486,7 @@
     "choice": "NO",
     "why": "'An $8.4 billion wolf in sheep's clothing'; key claims by advocates are deceptive, and the money is steered to one UCLA-affiliated institution.",
     "url": "https://www.sandiegouniontribune.com/2026/09/18/no-on-prop-38-an-8-4-billion-wolf-in-sheeps-clothing/",
-    "date": "2026-09-18",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -496,7 +496,7 @@
     "choice": "NO",
     "why": "The citizenship-verification rule is unworkable because there is no reliable database to check who is a citizen.",
     "url": "https://www.sandiegouniontribune.com/2026/10/02/endorsement-vote-no-on-prop-39-and-its-unworkable-voter-registration-rule/",
-    "date": "2026-10-02",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -506,7 +506,7 @@
     "choice": "NO",
     "why": "Would cause economic chaos; 'job-creating entrepreneurs should be coveted, not targeted.'",
     "url": "https://www.sandiegouniontribune.com/2026/08/28/vote-no-on-billionaires-tax-to-prevent-economic-chaos-preserve-jobs/",
-    "date": "2026-08-28",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -516,7 +516,7 @@
     "choice": "YES",
     "why": "Opponents complain it ties the hands of future Legislatures on taxes; the board is 'totally fine with' that.",
     "url": "https://www.sandiegouniontribune.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
-    "date": "2026-09-21",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -526,7 +526,7 @@
     "choice": "YES",
     "why": "Same editorial as Prop 41: supports limiting taxation in California even if it constrains future Legislatures.",
     "url": "https://www.sandiegouniontribune.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
-    "date": "2026-09-21",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -536,7 +536,7 @@
     "choice": "YES",
     "why": "Preserves the intent of Prop 13 against what it calls the state Supreme Court's rewrite of tax law.",
     "url": "https://www.sandiegouniontribune.com/2026/09/04/vote-yes-on-prop-43-to-block-state-supreme-courts-rewrite-of-tax-laws/",
-    "date": "2026-09-04",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -546,7 +546,7 @@
     "choice": "NO",
     "why": "Calls it SEIU's attempt to 'shake down' community clinics; would make clinics costlier to run and force many to close.",
     "url": "https://www.sandiegouniontribune.com/2026/08/28/vote-no-on-prop-44-the-seius-attempt-to-shake-down-community-clinics/",
-    "date": "2026-08-28",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -556,7 +556,7 @@
     "choice": "YES",
     "why": "'It's too easy to block major projects in California'; reform CEQA and limit state dysfunction.",
     "url": "https://www.sandiegouniontribune.com/2026/09/11/endorsement-yes-on-prop-45-to-reform-ceqa-limit-state-dysfunction/",
-    "date": "2026-09-11",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -702,61 +702,61 @@
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-1",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-2",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-3",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-4",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-5",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-37",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
@@ -782,41 +782,41 @@
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-40",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-41",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-42",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "Listed on the Bay Area News Group's running endorsement list (updated Oct 17, 2026); no separate editorial linked yet.",
     "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-43",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
-    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Proposition 43 would undo the latest judicial meddling by once again restoring a supermajority threshold for passage of special taxes. Voters should approve it.' (The board's list labels this pick No; the editorial itself says yes.)",
+    "url": "https://www.mercurynews.com/2026/10/17/endorsement-back-prop-43-restore-voter-approved-restrictions-on-local-taxes-proposition-13/",
+    "date": "2026-10-17",
     "confidence": "verified"
   },
   {
@@ -832,11 +832,11 @@
   {
     "endorser_id": "mercury-news-eb",
     "target_id": "ca-prop-45",
-    "status": "not_found",
-    "choice": null,
-    "why": "Not yet published as of Oct 15, 2026; the boards say to check back for more endorsements before Nov 3.",
-    "url": "https://www.mercurynews.com/2026/10/13/bay-area-news-group-california-election-endorsements-november-2026/",
-    "date": "2026-10-15",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "'Prop. 45 won't transform the state's regulatory maze overnight. But it would make California's planning approval process fairer, less expensive and considerably more predictable.'",
+    "url": "https://www.mercurynews.com/2026/10/16/endorsement-proposition-45-november3-ballot-initiative-ceqa-reform-housing-costs/",
+    "date": "2026-10-16",
     "confidence": "verified"
   },
   {
@@ -1265,8 +1265,8 @@
     "status": "no_position",
     "choice": null,
     "why": "The party's voter guide lists this measure as 'Neutral.'",
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1274,9 +1274,9 @@
     "target_id": "ca-prop-2",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1284,9 +1284,9 @@
     "target_id": "ca-prop-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1294,9 +1294,9 @@
     "target_id": "ca-prop-4",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1304,9 +1304,9 @@
     "target_id": "ca-prop-5",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1315,8 +1315,8 @@
     "status": "no_position",
     "choice": null,
     "why": "The party's voter guide lists this measure as 'Neutral.'",
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1324,9 +1324,9 @@
     "target_id": "ca-prop-38",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1334,9 +1334,9 @@
     "target_id": "ca-prop-39",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1344,9 +1344,9 @@
     "target_id": "ca-prop-40",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1354,9 +1354,9 @@
     "target_id": "ca-prop-41",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1364,9 +1364,9 @@
     "target_id": "ca-prop-42",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1374,9 +1374,9 @@
     "target_id": "ca-prop-43",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1384,9 +1384,9 @@
     "target_id": "ca-prop-44",
     "status": "endorsed",
     "choice": "NO",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1394,9 +1394,9 @@
     "target_id": "ca-prop-45",
     "status": "endorsed",
     "choice": "YES",
-    "why": null,
-    "url": "https://cagop.org/wp-content/uploads/2026/10/CRP-2026G-Statewide-Voter-Guide.pdf",
-    "date": "2026-10-01",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://cagop.org/endorsements/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1825,8 +1825,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Only $1.25 billion of $11.25 billion goes to veterans; bonds roughly double the cost through interest and are the most expensive way to fund programs.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1835,8 +1835,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Addresses revenue volatility but not the weakening of the Gann limit; 'a Band-Aid on a severed limb.'",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1845,8 +1845,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "The 2012 'temporary' tax, renewed in 2016, would become permanent; temporary hikes shouldn't be a backdoor to permanent increases.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1855,8 +1855,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "HJTA won court cases upholding the ban on public campaign funding; taxpayers shouldn't pay candidates' campaign expenses.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1865,8 +1865,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Eliminates the replacement election and lets the recalled official run in the special election; 'makes a mockery of the recall process.'",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1875,8 +1875,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Appreciates the intent but worries about the program's size and eligibility criteria, and that a downturn could cause mass foreclosures among stretched borrowers.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1885,8 +1885,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Research can be funded by pharma, foundations and the federal government; cites CalMatters' finding that the criteria likely fit only one institute, co-founded by the measure's chief backer.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1895,8 +1895,8 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "36 states require some form of voter ID; securing elections matters to taxpayers because billions in tax measures are on nearly every ballot.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1905,8 +1905,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Calls it a threat to every taxpayer because the Legislature could later rewrite thresholds, covered assets and frequency; 'an entirely new type of tax.'",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1915,8 +1915,8 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "Find out where existing funds go before voters are asked to approve higher taxes for the same programs.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1925,8 +1925,8 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "Protects Californians, especially homeowners, from a future wealth tax on homes, savings and investments.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1935,8 +1935,8 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "HJTA's own measure: restores Prop 13's two-thirds rule and closes the court-created 'Upland loophole.'",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1945,8 +1945,8 @@
     "status": "endorsed",
     "choice": "NO",
     "why": "Sponsored by a labor organization seeking to expand control over private clinics; authorizes penalties and criminal charges.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1955,8 +1955,8 @@
     "status": "endorsed",
     "choice": "YES",
     "why": "Not perfect (locks in labor agreements, picks winners and losers), but 'a good first step' toward CEQA reform.",
-    "url": "https://www.hjta.org/2026votingguide/",
-    "date": "2026-10-13",
+    "url": "https://www.hjta.org/2026VotingGuide/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2597,6 +2597,1266 @@
     "why": "Official campaign committee for this side of the measure.",
     "url": "https://www.noprop45ca.com/",
     "date": null,
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "More debt won't fix the housing shortage; 'squanders billions into expensive housing and other gimmicks to buy political support.'",
+    "url": "https://www.dailynews.com/2026/09/23/endorsement-no-on-prop-1-more-debt-wont-fix-californias-housing-shortage/",
+    "date": "2026-09-23",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "California needs fiscal discipline, not accounting tricks.",
+    "url": "https://www.dailynews.com/2026/10/07/endorsement-no-on-prop-2-california-needs-fiscal-discipline-not-accounting-tricks/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'Temporary' taxes should be temporary.",
+    "url": "https://www.dailynews.com/2026/09/02/endorsement-no-on-proposition-3-temporary-taxes-should-be-temporary/",
+    "date": "2026-09-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "California doesn't need taxpayer-funded campaigns.",
+    "url": "https://www.dailynews.com/2026/09/27/endorsement-no-on-proposition-4-california-doesnt-need-taxpayer-funded-campaigns/",
+    "date": "2026-09-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'An attack on California's recall power.'",
+    "url": "https://www.dailynews.com/2026/08/12/endorsement-vote-no-on-proposition-5-an-attack-on-californias-recall-power/",
+    "date": "2026-08-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A risky $25 billion housing experiment.'",
+    "url": "https://www.dailynews.com/2026/09/20/endorsement-no-on-proposition-37-a-risky-25-billion-housing-experiment/",
+    "date": "2026-09-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'An $8.4 billion money grab' that makes little sense unless your research institution expects a windfall.",
+    "url": "https://www.dailynews.com/2026/08/23/endorsement-no-on-proposition-38-an-8-4-billion-money-grab/",
+    "date": "2026-08-23",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "A simple rule (ID in person, ID digits by mail) to improve public confidence in elections.",
+    "url": "https://www.dailynews.com/2026/10/15/endorsement-yes-on-proposition-39/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A reckless tax proposed by a special interest group that wants to obtain funding to benefit its members.'",
+    "url": "https://www.dailynews.com/2026/09/13/endorsement-no-on-proposition-40s-reckless-wealth-tax/",
+    "date": "2026-09-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Supports both 41 and 42 to limit taxation in California, while noting that similar-sounding measures 'muddy the waters' for voters.",
+    "url": "https://www.dailynews.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
+    "date": "2026-09-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Same editorial as Prop 41: limit taxation in California.",
+    "url": "https://www.dailynews.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
+    "date": "2026-09-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Makes it harder to raise local special taxes and closes the loophole that lets governments get around the two-thirds vote.",
+    "url": "https://www.dailynews.com/2026/08/09/endorsement-yes-on-proposition-43-to-make-it-harder-to-raise-taxes/",
+    "date": "2026-08-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A cynical attack on community health clinics'; voters must not fall for SEIU-UHW's tactics.",
+    "url": "https://www.dailynews.com/2026/09/08/endorsement-no-on-proposition-44-a-cynical-attack-on-community-health-clinics/",
+    "date": "2026-09-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-daily-news-eb",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "After decades of CEQA abuse, it's time to streamline the process and break the logjam.",
+    "url": "https://www.dailynews.com/2026/09/09/endorsement-yes-on-prop-45-to-reform-ceqa/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "More debt won't fix the housing shortage; 'squanders billions into expensive housing and other gimmicks to buy political support.'",
+    "url": "https://www.ocregister.com/2026/09/23/endorsement-no-on-prop-1-more-debt-wont-fix-californias-housing-shortage/",
+    "date": "2026-09-23",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "California needs fiscal discipline, not accounting tricks.",
+    "url": "https://www.ocregister.com/2026/10/07/endorsement-no-on-prop-2-california-needs-fiscal-discipline-not-accounting-tricks/",
+    "date": "2026-10-07",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'Temporary' taxes should be temporary.",
+    "url": "https://www.ocregister.com/2026/09/02/endorsement-no-on-proposition-3-temporary-taxes-should-be-temporary/",
+    "date": "2026-09-02",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "California doesn't need taxpayer-funded campaigns.",
+    "url": "https://www.ocregister.com/2026/09/27/endorsement-no-on-proposition-4-california-doesnt-need-taxpayer-funded-campaigns/",
+    "date": "2026-09-27",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'An attack on California's recall power.'",
+    "url": "https://www.ocregister.com/2026/08/12/endorsement-vote-no-on-proposition-5-an-attack-on-californias-recall-power/",
+    "date": "2026-08-12",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A risky $25 billion housing experiment.'",
+    "url": "https://www.ocregister.com/2026/09/20/endorsement-no-on-proposition-37-a-risky-25-billion-housing-experiment/",
+    "date": "2026-09-20",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'An $8.4 billion money grab' that makes little sense unless your research institution expects a windfall.",
+    "url": "https://www.ocregister.com/2026/08/23/endorsement-no-on-proposition-38-an-8-4-billion-money-grab/",
+    "date": "2026-08-23",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "A simple rule (ID in person, ID digits by mail) to improve public confidence in elections.",
+    "url": "https://www.ocregister.com/2026/10/15/endorsement-yes-on-proposition-39/",
+    "date": "2026-10-15",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A reckless tax proposed by a special interest group that wants to obtain funding to benefit its members.'",
+    "url": "https://www.ocregister.com/2026/09/13/endorsement-no-on-proposition-40s-reckless-wealth-tax/",
+    "date": "2026-09-13",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Supports both 41 and 42 to limit taxation in California, while noting that similar-sounding measures 'muddy the waters' for voters.",
+    "url": "https://www.ocregister.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
+    "date": "2026-09-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Same editorial as Prop 41: limit taxation in California.",
+    "url": "https://www.ocregister.com/2026/09/21/endorsement-yes-on-proposition-41-and-42-to-limit-taxation-in-california/",
+    "date": "2026-09-21",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "Makes it harder to raise local special taxes and closes the loophole that lets governments get around the two-thirds vote.",
+    "url": "https://www.ocregister.com/2026/08/09/endorsement-yes-on-proposition-43-to-make-it-harder-to-raise-taxes/",
+    "date": "2026-08-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "'A cynical attack on community health clinics'; voters must not fall for SEIU-UHW's tactics.",
+    "url": "https://www.ocregister.com/2026/09/08/endorsement-no-on-proposition-44-a-cynical-attack-on-community-health-clinics/",
+    "date": "2026-09-08",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "oc-register-eb",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "After decades of CEQA abuse, it's time to streamline the process and break the logjam.",
+    "url": "https://www.ocregister.com/2026/09/09/endorsement-yes-on-prop-45-to-reform-ceqa/",
+    "date": "2026-09-09",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "knock-la",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://knock-la.com/knock-la-los-angeles-progressive-voter-guide-november-2026-general-election/",
+    "why": "Listed in Knock LA’s November 2026 general-election guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-38",
+    "status": "no_position",
+    "choice": null,
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "The guide explicitly takes no position in this contest.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "la-fed",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://thelafed.org/resource/lalaborvoterguide/",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-4",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-5",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-37",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-38",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-39",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-40",
+    "status": "endorsed",
+    "choice": "YES",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-41",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-42",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-43",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-44",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lacdp",
+    "target_id": "ca-prop-45",
+    "status": "endorsed",
+    "choice": "NO",
+    "url": "https://www.lacdp.org/ballotmeasures",
+    "why": "Listed in LACDP’s November 2026 ballot-measure table.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-greater-la",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/california/greater-los-angeles/vote-league-women-votersvota-con-liga",
+    "why": "The local vote-with-the-League page still labels its recommendations November 2024. No separate November 2026 local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-san-diego",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://www.lwvsandiego.org/content.aspx?page_id=22&club_id=681146&module_id=537890",
+    "why": "The local vote-with-the-League page still displays June 2026 material and directs state-proposition readers to LWV California. No separate local-chapter November recommendation was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-sf",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://lwvsf.org/ballot-recommendations",
+    "why": "The November 2026 local endorsement page lists San Francisco propositions. No separate local-chapter recommendation for this state proposition was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-1",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-2",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-3",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-37",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-38",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-39",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-4",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-40",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-41",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-42",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-43",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-44",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-45",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "lwv-bay-area",
+    "target_id": "ca-prop-5",
+    "status": "not_found",
+    "choice": null,
+    "url": "https://my.lwv.org/sites/default/files/2026_nov_regional_transit_measure_vwtl.pdf",
+    "why": "The November 2026 Bay Area League recommendation found covers the regional transit measure. No recommendation by that regional organization for this item was found when checked Oct 19.",
+    "date": "2026-10-19",
     "confidence": "verified"
   }
 ]

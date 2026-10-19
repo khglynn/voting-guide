@@ -232,7 +232,7 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
-      "answer": "Your ballot has already been mailed, so vote it before you leave and put it in any official drop box in Oregon. If you'll be away when it arrives, ask your county to mail it to where you'll be.",
+      "answer": "If you have your ballot, fill it out and put it in an official Oregon drop box before you leave, or mail it by October 27. If you will be away before it arrives, ask your county to send it to your travel address. Ballots are not forwarded; if there is too little time for mail, contact the county about getting a replacement in person.",
       "steps": [
         "Update your mailing address at oregonvotes.gov/myvote, or use the Absentee Ballot Request form (SEL 111).",
         "Mail by Tuesday, October 27, or use a drop box until 8 PM on November 3.",

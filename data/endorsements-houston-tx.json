@@ -154,7 +154,7 @@
   "target_id": "tx-senate-13",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -162,11 +162,11 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-senate-18",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -574,7 +574,7 @@
   "target_id": "tx-harris-district-court-314th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -784,7 +784,7 @@
   "target_id": "tx-harris-district-court-246th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -794,7 +794,7 @@
   "target_id": "tx-harris-district-court-247th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -804,7 +804,7 @@
   "target_id": "tx-harris-district-court-257th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -824,7 +824,7 @@
   "target_id": "tx-harris-district-court-308th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -844,7 +844,7 @@
   "target_id": "tx-harris-district-court-310th",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1204,7 +1204,7 @@
   "target_id": "tx-harris-jp-1-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1224,7 +1224,7 @@
   "target_id": "tx-harris-jp-3-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1254,7 +1254,7 @@
   "target_id": "tx-harris-jp-6-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1264,7 +1264,7 @@
   "target_id": "tx-harris-jp-7-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1312,11 +1312,11 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-kleinisd-trustee-1",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1324,7 +1324,7 @@
   "target_id": "tx-kleinisd-trustee-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1334,7 +1334,7 @@
   "target_id": "tx-springisd-trustee-4",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1342,31 +1342,31 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-springisd-trustee-5",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-4",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-5",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1374,7 +1374,7 @@
   "target_id": "tx-sheldonisd-trustee-6",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1382,21 +1382,21 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-sheldonisd-trustee-7",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-tomballisd-trustee-1",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1404,7 +1404,7 @@
   "target_id": "tx-tomballisd-trustee-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1412,11 +1412,11 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-tomballisd-trustee-3",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1424,7 +1424,7 @@
   "target_id": "tx-tomballisd-trustee-4",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1432,11 +1432,11 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-huffmanisd-trustee-1",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1444,7 +1444,7 @@
   "target_id": "tx-huffmanisd-trustee-2",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1454,7 +1454,7 @@
   "target_id": "tx-huffmanisd-trustee-3",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1464,7 +1464,7 @@
   "target_id": "tx-newcaneyisd-trustee-1",
   "status": "no_position",
   "choice": null,
-  "why": "Only one candidate is on the ballot; the board makes recommendations in contested races.",
+  "why": "The board’s stated policy limits candidate recommendations to contested races. Checked Oct 19, 2026.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
   "date": null,
   "confidence": "verified"
@@ -1472,11 +1472,11 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-newcaneyisd-trustee-2",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "Not among the 141 races on the board's complete Nov 3 endorsement list, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -1492,91 +1492,91 @@
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-a",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-b",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-c",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-d",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-cfisd-prop-e",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-springisd-prop-a",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-huffman-isd-prop-a",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-crosby-isd-prop-a",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
   "endorser_id": "houston-chronicle-eb",
   "target_id": "tx-crosby-isd-prop-b",
-  "status": "no_position",
+  "status": "not_found",
   "choice": null,
-  "why": "The board's complete November list (141 of 141 races) does not cover school district measures, so it takes no position here.",
+  "why": "No pick found for this item in the board’s current general-election guide as of Oct 19, 2026. Omission does not establish an explicit decision to take no position.",
   "url": "https://www.houstonchronicle.com/projects/2026/houston-texas-november-election-endorsements",
-  "date": null,
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3214,9 +3214,9 @@
   "target_id": "tx-land-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3224,9 +3224,9 @@
   "target_id": "tx-agriculture-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3234,9 +3234,9 @@
   "target_id": "tx-railroad-commissioner",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3274,9 +3274,9 @@
   "target_id": "tx-supreme-court-place-8",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3284,9 +3284,9 @@
   "target_id": "tx-cca-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3294,9 +3294,9 @@
   "target_id": "tx-cca-place-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3314,9 +3314,9 @@
   "target_id": "tx-15th-coa-chief",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3324,9 +3324,9 @@
   "target_id": "tx-15th-coa-place-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3334,9 +3334,9 @@
   "target_id": "tx-15th-coa-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3344,9 +3344,9 @@
   "target_id": "tx-us-house-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3374,9 +3374,9 @@
   "target_id": "tx-us-house-9",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3394,9 +3394,9 @@
   "target_id": "tx-us-house-22",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3414,9 +3414,9 @@
   "target_id": "tx-us-house-36",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3424,9 +3424,9 @@
   "target_id": "tx-us-house-38",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3434,9 +3434,9 @@
   "target_id": "tx-sboe-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3454,9 +3454,9 @@
   "target_id": "tx-sboe-7",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3464,9 +3464,9 @@
   "target_id": "tx-sboe-8",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3474,9 +3474,9 @@
   "target_id": "tx-senate-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3494,9 +3494,9 @@
   "target_id": "tx-senate-13",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3504,9 +3504,9 @@
   "target_id": "tx-senate-18",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3514,9 +3514,9 @@
   "target_id": "tx-house-126",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3524,9 +3524,9 @@
   "target_id": "tx-house-127",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3534,9 +3534,9 @@
   "target_id": "tx-house-128",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3554,9 +3554,9 @@
   "target_id": "tx-house-130",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3574,9 +3574,9 @@
   "target_id": "tx-house-132",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3584,9 +3584,9 @@
   "target_id": "tx-house-133",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3614,9 +3614,9 @@
   "target_id": "tx-house-137",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3654,9 +3654,9 @@
   "target_id": "tx-house-141",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3664,9 +3664,9 @@
   "target_id": "tx-house-142",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3684,9 +3684,9 @@
   "target_id": "tx-house-144",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3694,9 +3694,9 @@
   "target_id": "tx-house-145",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3744,9 +3744,9 @@
   "target_id": "tx-house-150",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3834,9 +3834,9 @@
   "target_id": "tx-harris-district-court-189th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -3914,9 +3914,9 @@
   "target_id": "tx-harris-district-court-314th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4014,9 +4014,9 @@
   "target_id": "tx-harris-district-court-230th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4074,9 +4074,9 @@
   "target_id": "tx-harris-district-court-496th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4134,9 +4134,9 @@
   "target_id": "tx-harris-district-court-247th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4144,9 +4144,9 @@
   "target_id": "tx-harris-district-court-257th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4184,9 +4184,9 @@
   "target_id": "tx-harris-district-court-310th",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4224,9 +4224,9 @@
   "target_id": "tx-harris-ccl-civil-2",
   "status": "not_found",
   "choice": null,
-  "why": "No pick for this court on the Caucus's 2026 card (the card's \"No. 2\" entry names LaShawn A. Williams, who runs in No. 3).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4304,9 +4304,9 @@
   "target_id": "tx-harris-ccl-criminal-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4494,9 +4494,9 @@
   "target_id": "tx-harris-treasurer",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4504,9 +4504,9 @@
   "target_id": "tx-harris-hcde-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4544,9 +4544,9 @@
   "target_id": "tx-harris-jp-1-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4564,9 +4564,9 @@
   "target_id": "tx-harris-jp-3-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4574,9 +4574,9 @@
   "target_id": "tx-harris-jp-4-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4594,9 +4594,9 @@
   "target_id": "tx-harris-jp-6-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4614,9 +4614,9 @@
   "target_id": "tx-harris-jp-8-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4624,9 +4624,9 @@
   "target_id": "tx-hcad-place-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4644,9 +4644,9 @@
   "target_id": "tx-hcad-place-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4654,9 +4654,9 @@
   "target_id": "tx-kleinisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4664,9 +4664,9 @@
   "target_id": "tx-kleinisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4674,9 +4674,9 @@
   "target_id": "tx-springisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4684,9 +4684,9 @@
   "target_id": "tx-springisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4694,9 +4694,9 @@
   "target_id": "tx-sheldonisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4704,9 +4704,9 @@
   "target_id": "tx-sheldonisd-trustee-5",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4714,9 +4714,9 @@
   "target_id": "tx-sheldonisd-trustee-6",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4724,9 +4724,9 @@
   "target_id": "tx-sheldonisd-trustee-7",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4734,9 +4734,9 @@
   "target_id": "tx-tomballisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4744,9 +4744,9 @@
   "target_id": "tx-tomballisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4754,9 +4754,9 @@
   "target_id": "tx-tomballisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4764,9 +4764,9 @@
   "target_id": "tx-tomballisd-trustee-4",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4774,9 +4774,9 @@
   "target_id": "tx-huffmanisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4784,9 +4784,9 @@
   "target_id": "tx-huffmanisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4794,9 +4794,9 @@
   "target_id": "tx-huffmanisd-trustee-3",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4804,9 +4804,9 @@
   "target_id": "tx-newcaneyisd-trustee-1",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4814,9 +4814,9 @@
   "target_id": "tx-newcaneyisd-trustee-2",
   "status": "not_found",
   "choice": null,
-  "why": "Not on the Caucus's 2026 general election card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4824,9 +4824,9 @@
   "target_id": "tx-houston-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4834,9 +4834,9 @@
   "target_id": "tx-cfisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4844,9 +4844,9 @@
   "target_id": "tx-cfisd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4854,9 +4854,9 @@
   "target_id": "tx-cfisd-prop-c",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4864,9 +4864,9 @@
   "target_id": "tx-cfisd-prop-d",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4874,9 +4874,9 @@
   "target_id": "tx-cfisd-prop-e",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4884,9 +4884,9 @@
   "target_id": "tx-springisd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4894,9 +4894,9 @@
   "target_id": "tx-huffman-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4904,9 +4904,9 @@
   "target_id": "tx-crosby-isd-prop-a",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -4914,9 +4914,9 @@
   "target_id": "tx-crosby-isd-prop-b",
   "status": "not_found",
   "choice": null,
-  "why": "No position on this measure appears on the Caucus's 2026 card (checked against the card image).",
-  "url": "https://pac.thecaucus.org/endorsements",
-  "date": null,
+  "why": "No general-election pick found for this item on the checked endorsement page as of Oct 19, 2026.",
+  "url": "https://pac.thecaucus.org/wp-content/uploads/2026/09/endorsements2026.png",
+  "date": "2026-10-19",
   "confidence": "verified"
  },
  {
@@ -6522,10 +6522,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-8",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6572,10 +6572,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-us-house-36",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6632,80 +6632,80 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-11",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-13",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-senate-18",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-126",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-127",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-128",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-129",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6732,10 +6732,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-132",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6822,10 +6822,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-142",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6872,10 +6872,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-147",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6902,10 +6902,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-house-150",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6962,10 +6962,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-55th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -6992,10 +6992,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-189th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7072,10 +7072,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-314th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7092,10 +7092,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-180th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7152,30 +7152,30 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-209th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-228th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-230th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7232,10 +7232,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-496th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7282,30 +7282,30 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-246th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-247th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-257th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7322,10 +7322,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-308th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7342,20 +7342,20 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-310th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-court-311th",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7382,10 +7382,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7402,10 +7402,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-civil-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7462,10 +7462,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-ccl-criminal-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7632,10 +7632,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-district-clerk",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7652,20 +7652,20 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-treasurer",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-hcde-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7702,10 +7702,10 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-1-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7732,40 +7732,40 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-4-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-5-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-6-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-harris-jp-7-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -7792,290 +7792,290 @@
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-hcad-place-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-hcad-place-3",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-kleinisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-kleinisd-trustee-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-trustee-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-trustee-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-5",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-6",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-sheldonisd-trustee-7",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-3",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-tomballisd-trustee-4",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffmanisd-trustee-3",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-newcaneyisd-trustee-1",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-newcaneyisd-trustee-2",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "Not on the federation's Nov. 3, 2026 slate (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-houston-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-b",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-c",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-d",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-cfisd-prop-e",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-springisd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-huffman-isd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-crosby-isd-prop-a",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
  {
   "endorser_id": "tx-gulf-coast-labor-federation",
   "target_id": "tx-crosby-isd-prop-b",
-  "status": "not_found",
+  "status": "no_position",
   "choice": null,
-  "why": "The federation's Nov. 3, 2026 slate takes no position on ballot measures (checked Oct. 17).",
-  "url": "https://www.gcaflcio.org/endorsements",
+  "why": "The group states that it made no endorsement in races not listed on this 2026 general-election slate. Checked Oct 19, 2026.",
+  "url": "https://www.gcaflcio.org/s/TGALF-Slate-Gen-Election-20261103-FIN.pdf",
   "date": null,
   "confidence": "verified"
  },
@@ -8178,5 +8178,575 @@
   "url": null,
   "date": null,
   "confidence": "sourced"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-senate-11",
+  "status": "endorsed",
+  "choice": "Shannon Dicely",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-129",
+  "status": "endorsed",
+  "choice": "Albert Wittliff",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-131",
+  "status": "endorsed",
+  "choice": "Staci Childs",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-134",
+  "status": "endorsed",
+  "choice": "Ann Johnson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-135",
+  "status": "endorsed",
+  "choice": "Odus E. Evbagharu",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-137",
+  "status": "endorsed",
+  "choice": "Gene Wu",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-139",
+  "status": "endorsed",
+  "choice": "Charlene Ward Johnson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-141",
+  "status": "endorsed",
+  "choice": "Senfronia Thompson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-143",
+  "status": "endorsed",
+  "choice": "Ana Hernandez",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-144",
+  "status": "endorsed",
+  "choice": "Mary Ann Perez",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-145",
+  "status": "endorsed",
+  "choice": "Christina Morales",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-147",
+  "status": "endorsed",
+  "choice": "Jolanda Jones",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-148",
+  "status": "endorsed",
+  "choice": "Penny Morales Shaw",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-149",
+  "status": "endorsed",
+  "choice": "Darlene Breaux",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-harris-commissioner-2",
+  "status": "endorsed",
+  "choice": "Adrian Garcia",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-harris-commissioner-4",
+  "status": "endorsed",
+  "choice": "Lesley Briones",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-senate-11",
+  "status": "endorsed",
+  "choice": "Dennis Paul",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-127",
+  "status": "endorsed",
+  "choice": "Charles Cunningham",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-129",
+  "status": "endorsed",
+  "choice": "Scott Bowen",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-130",
+  "status": "endorsed",
+  "choice": "Tom Oliverson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-132",
+  "status": "endorsed",
+  "choice": "Mike Schofield",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-133",
+  "status": "endorsed",
+  "choice": "Mano DeAyala",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-134",
+  "status": "endorsed",
+  "choice": "Ann Johnson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-135",
+  "status": "endorsed",
+  "choice": "Odus E. Evbagharu",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-138",
+  "status": "endorsed",
+  "choice": "Lacey Hull",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-141",
+  "status": "endorsed",
+  "choice": "Senfronia Thompson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-143",
+  "status": "endorsed",
+  "choice": "Ana Hernandez",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-144",
+  "status": "endorsed",
+  "choice": "Mary Ann Perez",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-147",
+  "status": "endorsed",
+  "choice": "Jolanda Jones",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-148",
+  "status": "endorsed",
+  "choice": "Penny Morales Shaw",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-150",
+  "status": "endorsed",
+  "choice": "Valoree Swanson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-1st-coa-place-4",
+  "status": "endorsed",
+  "choice": "David Gunn",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-us-house-8",
+  "status": "endorsed",
+  "choice": "Laura Jones",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-us-house-29",
+  "status": "endorsed",
+  "choice": "Sylvia Garcia",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-us-house-38",
+  "status": "endorsed",
+  "choice": "Melissa McDonough",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-senate-11",
+  "status": "endorsed",
+  "choice": "Shannon Dicely",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-128",
+  "status": "endorsed",
+  "choice": "Desiree Klaus",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-133",
+  "status": "endorsed",
+  "choice": "Josh Wallenstein",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-134",
+  "status": "endorsed",
+  "choice": "Ann Johnson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-135",
+  "status": "endorsed",
+  "choice": "Odus E. Evbagharu",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-137",
+  "status": "endorsed",
+  "choice": "Gene Wu",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-138",
+  "status": "endorsed",
+  "choice": "Tyler Smith",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-139",
+  "status": "endorsed",
+  "choice": "Charlene Ward Johnson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-141",
+  "status": "endorsed",
+  "choice": "Senfronia Thompson",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-142",
+  "status": "endorsed",
+  "choice": "Harold V. Dutton, Jr",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-143",
+  "status": "endorsed",
+  "choice": "Ana Hernandez",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-145",
+  "status": "endorsed",
+  "choice": "Christina Morales",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-147",
+  "status": "endorsed",
+  "choice": "Jolanda Jones",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-148",
+  "status": "endorsed",
+  "choice": "Penny Morales Shaw",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-149",
+  "status": "endorsed",
+  "choice": "Darlene Breaux",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-140",
+  "status": "endorsed",
+  "choice": "Armando Lucio Walle",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "sierra-club-lone-star",
+  "target_id": "tx-house-146",
+  "status": "endorsed",
+  "choice": "Lauren Ashley Simmons",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.turntexasgreen.org/2026-endorsements",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-senate-4",
+  "status": "endorsed",
+  "choice": "Brett W. Ligon",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-senate-18",
+  "status": "endorsed",
+  "choice": "Lois W. Kolkhorst",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "cleat",
+  "target_id": "tx-house-140",
+  "status": "endorsed",
+  "choice": "Armando Lucio Walle",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://www.cleat.org/services/public-affairs/cleat-pac/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-senate-13",
+  "status": "endorsed",
+  "choice": "Borris L. Miles",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
+ },
+ {
+  "endorser_id": "equality-texas",
+  "target_id": "tx-house-146",
+  "status": "endorsed",
+  "choice": "Lauren Ashley Simmons",
+  "why": "Listed on the group’s 2026 general-election endorsement slate. Checked Oct 19, 2026.",
+  "url": "https://equalitytexas.org/endorsements/",
+  "date": null,
+  "confidence": "verified"
  }
 ]

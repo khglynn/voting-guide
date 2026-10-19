@@ -84,9 +84,9 @@
     "target_id": "dc-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -94,9 +94,9 @@
     "target_id": "dc-council-chair",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -104,9 +104,9 @@
     "target_id": "dc-council-at-large",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -114,9 +114,9 @@
     "target_id": "dc-delegate",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -124,9 +124,9 @@
     "target_id": "dc-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -134,9 +134,9 @@
     "target_id": "dc-shadow-senator",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -144,9 +144,9 @@
     "target_id": "dc-shadow-representative",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -154,9 +154,9 @@
     "target_id": "dc-initiative-86",
     "status": "not_found",
     "choice": null,
-    "why": "No 2026 general-election endorsement or editorial found in searches of washingtoncitypaper.com.",
-    "url": "https://washingtoncitypaper.com/",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in City Paper’s election-2026 archive and endorsement search checked October 19, 2026.",
+    "url": "https://washingtoncitypaper.com/article/tag/election-2026/",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -244,9 +244,9 @@
     "target_id": "dc-mayor",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -254,9 +254,9 @@
     "target_id": "dc-council-chair",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -264,9 +264,9 @@
     "target_id": "dc-council-at-large",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -274,9 +274,9 @@
     "target_id": "dc-delegate",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -284,9 +284,9 @@
     "target_id": "dc-attorney-general",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -294,9 +294,9 @@
     "target_id": "dc-shadow-senator",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "dc-shadow-representative",
     "status": "no_position",
     "choice": null,
-    "why": "The League of Women Voters does not endorse candidates.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "The League does not support or oppose candidates. It offers voter information; this is a candidate-endorsement policy, not a ballot-measure position.",
+    "url": "https://www.lwvdc.org/content.aspx?club_id=263021&module_id=613185&page_id=22",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "dc-initiative-86",
     "status": "not_found",
     "choice": null,
-    "why": "No LWVDC position on Initiative 86 was found on vote411.org/lwvdc or lwvdc.org.",
-    "url": "https://www.vote411.org/lwvdc",
-    "date": "2026-10-16",
+    "why": "No 2026 general-election endorsement for this race or measure was found in LWVDC’s position page, November election-information page and targeted Initiative 86 search checked October 19, 2026.",
+    "url": "https://lwvdc.org/content.aspx?page_id=22&club_id=263021&module_id=610391",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -644,27 +644,27 @@
     "target_id": "dc-mayor",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general; it says more may be posted. (Its June primary pick for mayor was Janeese Lewis George.)",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-council-chair",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-council-at-large",
     "status": "endorsed",
-    "choice": "Elissa Silverman (rank #1)",
-    "why": "Says it is 'especially important that voters rank Silverman first' because under the at-large count 'your second vote will not transfer' once your first choice is one of the final two. Cites her housing and transit record.",
+    "choice": "Elissa Silverman",
+    "why": "GGWash recommends ranking Elissa Silverman first for an at-large council seat.",
     "url": "https://ggwash.org/view/105043/rank-elissa-silverman-1-for-at-large-in-the-2026-dc-general-election",
     "date": "2026-10-01",
     "confidence": "verified"
@@ -674,50 +674,50 @@
     "target_id": "dc-delegate",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-shadow-senator",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-shadow-representative",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "greater-greater-washington",
     "target_id": "dc-initiative-86",
     "status": "not_found",
     "choice": null,
-    "why": "GGWash's 2026 elections hub lists only the at-large endorsement for the general election as of Oct 16.",
-    "url": "https://ggwash.org/elections/2026",
-    "date": "2026-10-16",
-    "confidence": "verified"
+    "why": "No 2026 general-election endorsement for this race or measure was found in GGWash’s current endorsement archive; primary picks were not carried forward without a general-election statement (checked October 19, 2026).",
+    "url": "https://ggwash.org/contributors/endorsements",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "metro-dc-dsa",

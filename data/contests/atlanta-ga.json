@@ -1115,7 +1115,7 @@
     "level": "county",
     "office": "Fulton County Commission",
     "district": "District 1",
-    "scope_plain": "Voters in Fulton Commission District 1 in North Fulton. Not on City of Atlanta ballots (the Fulton Democrats list it only on their North Fulton card).",
+    "scope_plain": "Voters in Fulton County Commission District 1: Johns Creek and parts of Roswell, Alpharetta and Sandy Springs. This district does not include the City of Atlanta.",
     "office_explainer": "A Fulton County commissioner. The commission funds the jail and courts, runs elections and sets county taxes.",
     "why_it_matters": null,
     "vote_for": 1,
@@ -1191,6 +1191,10 @@
       {
         "name": "Wikipedia: 2026 Fulton County elections (secondary)",
         "url": "https://en.wikipedia.org/wiki/2026_Fulton_County_elections"
+      },
+      {
+        "name": "Fulton County: Commissioner Bridget Thorne’s district coverage",
+        "url": "https://fultoncountyga.gov/Commissioners/Bridget-Thorne"
       }
     ],
     "confidence": "verified"

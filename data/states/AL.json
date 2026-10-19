@@ -143,9 +143,9 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
-      "answer": "Do it by Monday, October 19. Alabama has no same-day registration, and registration closes for the last 14 days before the election.",
+      "answer": "Register by October 19 to vote in the November 3 election. After October 19, new registrations are too late for this election; Alabama has no same-day registration. Check your existing record first.",
       "steps": [
-        "Online by 11:59 PM Monday if you have an Alabama driver's license or non-driver ID.",
+        "Online registration is available through 11:59 PM on October 19 with an Alabama driver's license or non-driver ID.",
         "Or mail a paper form postmarked by October 19, or hand it in before close of business that day (Mobile County Board of Registrars: 151 Government St, Suite 165).",
         "Check first at myinfo.alabamavotes.gov in case you're already registered."
       ],

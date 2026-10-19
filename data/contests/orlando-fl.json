@@ -1006,11 +1006,11 @@
   "level": "state",
   "office": "State Representative",
   "district": "HD-42",
-  "scope_plain": "Central and east Orlando. On 69 ballot styles spread across County Commission Districts 3, 5, 6 and 7, including the Lake Margaret area of 32806 and College Park. Most likely the state House race for downtown, Lake Eola and Delaney Park voters, but confirm on your sample ballot.",
+  "scope_plain": "House District 42 includes downtown Orlando, Lake Eola and Delaney Park, as well as other central Orlando neighborhoods. District lines cross ZIP codes. Check Orange County’s personalized sample ballot for your address.",
   "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
-  "why_it_matters": "Open seat: Rep. Anna Eskamani is term-limited. The seat covers what Orlando Weekly calls 'a majority-Democrat stretch of Orlando.'",
+  "why_it_matters": "Neither candidate is the current representative.",
   "vote_for": 1,
-  "incumbent": null,
+  "incumbent": "Anna V. Eskamani",
   "open_seat": true,
   "term_years": 2,
   "is_retention": false,
@@ -1081,6 +1081,18 @@
    {
     "name": "Watermark Out News: Sousa-Lazaballet qualifies (May 20, 2026)",
     "url": "https://watermarkoutnews.com/2026/05/20/felipe-sousa-lazaballet-qualifies-for-florida-house-raises-200k/"
+   },
+   {
+    "name": "U.S. Census Bureau: official 2022 House District 42 reference map",
+    "url": "https://www2.census.gov/geo/maps/DC2020/SLD_RefMap/SLD2022/lower/st12_fl/SLD22L_12042.pdf"
+   },
+   {
+    "name": "Official source checked October 19, 2026",
+    "url": "https://voteorangefl.gov/whats-on-my-ballot/"
+   },
+   {
+    "name": "Florida House: official 2024–2026 member roster",
+    "url": "https://flhouse.gov/Sections/Representatives/representatives.aspx?LegislativeTermId=91"
    }
   ],
   "confidence": "sourced"
@@ -1093,10 +1105,10 @@
   "district": "HD-43",
   "scope_plain": "East and southeast Orlando precincts in County Commission Districts 3, 4 and 8, for example along Curry Ford Road and Chickasaw Trail and parts of the Lake Nona area (39 ballot styles). Possible for the east side of 32806; check your sample ballot.",
   "office_explainer": "One of 120 state representatives: writes Florida laws and the state budget; two-year term.",
-  "why_it_matters": null,
+  "why_it_matters": "Neither candidate is the current representative.",
   "vote_for": 1,
-  "incumbent": null,
-  "open_seat": null,
+  "incumbent": "Johanna López",
+  "open_seat": true,
   "term_years": 2,
   "is_retention": false,
   "candidates": [
@@ -1163,6 +1175,10 @@
    {
     "name": "Orange County SOE official Aug 18 primary results",
     "url": "https://enr.electionsfl.org/ORA/3998/Summary/"
+   },
+   {
+    "name": "Florida House: official 2024–2026 member roster",
+    "url": "https://flhouse.gov/Sections/Representatives/representatives.aspx?LegislativeTermId=91"
    }
   ],
   "confidence": "sourced"

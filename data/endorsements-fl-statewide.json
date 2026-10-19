@@ -4,9 +4,9 @@
     "target_id": "fl-us-senate-special",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since 2022: 'the Orlando Sentinel's Editorial Board no longer endorses candidates in races for president, governor or U.S. Senate, including this year's races.'",
-    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
-    "date": "2026-10-15",
+    "why": "The current slate explicitly says the board no longer endorses candidates for governor or U.S. Senate.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -14,9 +14,9 @@
     "target_id": "fl-governor",
     "status": "no_position",
     "choice": null,
-    "why": "Policy since 2022: 'the Orlando Sentinel's Editorial Board no longer endorses candidates in races for president, governor or U.S. Senate, including this year's races.'",
-    "url": "https://www.orlandosentinel.com/2022/10/07/a-change-in-our-endorsement-policy/",
-    "date": "2026-10-15",
+    "why": "The current slate explicitly says the board no longer endorses candidates for governor or U.S. Senate.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -24,120 +24,120 @@
     "target_id": "fl-attorney-general",
     "status": "endorsed",
     "choice": "Jose Javier Rodriguez",
-    "why": "Endorsement editorial Sept 17, 2026 (reasoning behind paywall; listed on the board's Oct 15 full slate).",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/09/17/for-attorney-general-jose-javier-rodr%ce%afguez-endorsement/",
-    "date": "2026-09-17",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-cfo",
     "status": "endorsed",
     "choice": "Annette Taddeo",
-    "why": "Joint editorial Oct 4, 2026, \"Taddeo for CFO, Atkins for Ag Commissioner\" (reasoning behind paywall).",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/10/04/endorsements-taddeo-for-cfo-atkins-for-ag-commissioner/",
-    "date": "2026-10-04",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-agriculture-commissioner",
     "status": "endorsed",
     "choice": "Joey Mendoza Atkins",
-    "why": "Oct 4, 2026 editorial endorsed Atkins; the board's own list labels it the \"Democrat primary\" pick, but the editorial ran after the primary and is the only Ag Commissioner recommendation on the general-election slate.",
+    "why": "The October 4 editorial names Atkins. The November slate also lists him, but labels the entry Democrat primary; the full reasoning requires a subscription.",
     "url": "https://www.orlandosentinel.com/2026/10/04/endorsements-taddeo-for-cfo-atkins-for-ag-commissioner/",
-    "date": "2026-10-04",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-muniz",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Editorial Oct 1, 2026, \"It's only fair to retire this Florida justice\": recommends voting NO on retaining Chief Justice Muñiz (reasoning behind paywall).",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/10/01/its-only-fair-to-retire-this-florida-justice-endorsement-2/",
-    "date": "2026-10-01",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
-    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
-    "date": "2026-10-15",
-    "confidence": "verified"
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
-    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
-    "date": "2026-10-15",
-    "confidence": "verified"
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
-    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
-    "date": "2026-10-15",
-    "confidence": "verified"
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
-    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
-    "date": "2026-10-15",
-    "confidence": "verified"
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "The Sentinel recommends only on judges its Central Florida readers vote on (the 5th DCA: YES on Harris, Makar and Wallis). The 1st DCA is outside its area.",
-    "url": "https://www.yahoo.com/news/politics/articles/list-orlando-sentinel-endorsements-recommendations-123800638.html",
-    "date": "2026-10-15",
-    "confidence": "verified"
+    "why": "Checked the current general-election slate on October 19. It lists Fifth District appellate retention picks but no First District pick.",
+    "url": "https://www.orlandosentinel.com/2026/10/15/list-of-orlando-sentinels-endorsements-recommendations-for-the-november-general-election/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-amendment-1",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"If you want to know what hypocrisy in action looks like, take a good look at these proposed constitutional amendments\" (joint editorial on 1 and 2, Sept 30).",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/09/30/endorsement-vote-no-on-amendments-1-and-2/",
-    "date": "2026-09-30",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-amendment-2",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Same Sept 30 editorial as Amendment 1: the board calls both legislative amendments hypocritical and unnecessary.",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/09/30/endorsement-vote-no-on-amendments-1-and-2/",
-    "date": "2026-09-30",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "orlando-sentinel-eb",
     "target_id": "fl-amendment-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"If you do nothing else at the polls this November, vote no on Amendment 3. It's that important... It's a recipe for disaster.\" Warns it guts local police, fire and basic services.",
+    "why": "The board's current general-election slate lists this choice. The linked editorial has the full reasoning behind a subscription.",
     "url": "https://www.orlandosentinel.com/2026/09/24/no-no-no-on-awful-amendment-3-endorsement/",
-    "date": "2026-09-24",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "sun-sentinel-eb",
@@ -284,9 +284,9 @@
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -304,9 +304,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -314,9 +314,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -324,9 +324,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -334,9 +334,9 @@
     "target_id": "fl-retention-muniz",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -344,9 +344,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -354,9 +354,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -364,9 +364,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -374,9 +374,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -384,9 +384,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "The Herald's recommendations page is behind a block/paywall; only the governor pick and the three amendment editorials were confirmed through syndication.",
+    "why": "Checked on October 19. The current slate could not be read, and no current choice for this item was independently confirmed. A human check of the Herald slate is needed.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317608557.html",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -394,39 +394,39 @@
     "target_id": "fl-amendment-1",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"After reading the ballot summary, voters may assume Florida is fiscally irresponsible and needs to be forced to save more money. That couldn't be farther from the truth.\"",
+    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317433651.html",
-    "date": "2026-10-14",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-amendment-2",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"Mom-and-pop farmers are not the ones who donate millions to elect state leaders each election. Big farming interest would benefit much more from this amendment.\"",
+    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317441706.html",
-    "date": "2026-10-14",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "miami-herald-eb",
     "target_id": "fl-amendment-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": "\"Nothing less than a fundamental rewrite of the economics of local governments... We'd see small cities and some rural communities going belly-up.\"",
+    "why": "The October 14 USA TODAY Network report lists the Herald's No recommendation and links to the board's endorsement. The original page could not be read in this check.",
     "url": "https://www.miamiherald.com/opinion/election-recommendations/article317445636.html",
-    "date": "2026-10-14",
-    "confidence": "verified"
+    "date": "2026-10-19",
+    "confidence": "sourced"
   },
   {
     "endorser_id": "tampa-bay-times-eb",
     "target_id": "fl-us-senate-special",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -434,9 +434,9 @@
     "target_id": "fl-governor",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -444,9 +444,9 @@
     "target_id": "fl-attorney-general",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -454,9 +454,9 @@
     "target_id": "fl-cfo",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -464,9 +464,9 @@
     "target_id": "fl-agriculture-commissioner",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -474,9 +474,9 @@
     "target_id": "fl-retention-muniz",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -484,9 +484,9 @@
     "target_id": "fl-retention-1dca-lewis",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -494,9 +494,9 @@
     "target_id": "fl-retention-1dca-nordby",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -504,9 +504,9 @@
     "target_id": "fl-retention-1dca-osterhaus",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -514,9 +514,9 @@
     "target_id": "fl-retention-1dca-roberts",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -524,9 +524,9 @@
     "target_id": "fl-retention-1dca-treadwell",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -534,9 +534,9 @@
     "target_id": "fl-amendment-1",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -544,9 +544,9 @@
     "target_id": "fl-amendment-2",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -554,9 +554,9 @@
     "target_id": "fl-amendment-3",
     "status": "not_found",
     "choice": null,
-    "why": "The Times' site lists 2026 recommendations on governor, U.S. Senate and Amendment 3, but the pages were unreadable to us (paywall), so no pick is recorded.",
-    "url": "https://www.tampabay.com/opinion/editorials/",
-    "date": "2026-10-16",
+    "why": "Checked on October 19. No current pick could be confirmed: the opinion page was blocked or returned no readable content. A human check is needed.",
+    "url": "https://www.tampabay.com/opinion/",
+    "date": "2026-10-19",
     "confidence": "unverified"
   },
   {
@@ -702,282 +702,282 @@
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-us-senate-special",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-cfo",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-agriculture-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-amendment-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-amendment-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "tallahassee-democrat-eb",
     "target_id": "fl-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.tallahassee.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-us-senate-special",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-governor",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-attorney-general",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-cfo",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-agriculture-commissioner",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-muniz",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-1dca-lewis",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-1dca-nordby",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-1dca-osterhaus",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-1dca-roberts",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-retention-1dca-treadwell",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-amendment-1",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-amendment-2",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "pensacola-news-journal-eb",
     "target_id": "fl-amendment-3",
-    "status": "no_position",
+    "status": "not_found",
     "choice": null,
-    "why": "Gannett paper. The USA TODAY Network's own Oct 14, 2026 roundup lists only the Palm Beach Post and TCPalm among its Florida papers offering 2026 recommendations.",
-    "url": "https://www.yahoo.com/news/politics/articles/vote-2026-florida-amendments-according-195946728.html",
-    "date": "2026-10-14",
-    "confidence": "sourced"
+    "why": "Checked on October 19. The opinion page returned an access block and search found no current board endorsement for this item. A blanket no-endorsement policy was not confirmed.",
+    "url": "https://www.pnj.com/opinion/",
+    "date": "2026-10-19",
+    "confidence": "unverified"
   },
   {
     "endorser_id": "lwv-florida",
@@ -1234,9 +1234,9 @@
     "target_id": "fl-amendment-1",
     "status": "endorsed",
     "choice": "YES",
-    "why": "Building reserves is sound fiscal practice, though a mandatory $750 million a year \"could last a very long time.\"",
+    "why": "The current TaxWatch guide explicitly recommends this vote in its recommendation section for the amendment.",
     "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
-    "date": "2026-09-17",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1244,9 +1244,9 @@
     "target_id": "fl-amendment-2",
     "status": "endorsed",
     "choice": "YES",
-    "why": "The tangible personal property tax is costly to administer and comply with, and the roughly $30 million a year impact is small.",
+    "why": "The current TaxWatch guide explicitly recommends this vote in its recommendation section for the amendment.",
     "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
-    "date": "2026-09-17",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -1254,9 +1254,9 @@
     "target_id": "fl-amendment-3",
     "status": "endorsed",
     "choice": "NO",
-    "why": "Shifts the burden onto non-homestead owners, gives local governments no replacement for a $45.8 billion five-year revenue loss, and was rushed; reform belongs with the Taxation and Budget Reform Commission.",
+    "why": "The current TaxWatch guide explicitly recommends this vote in its recommendation section for the amendment.",
     "url": "https://floridataxwatch.org/the-florida-taxpayers-guide-for-the-2026-constitutional-amendments/",
-    "date": "2026-09-17",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -2377,6 +2377,426 @@
     "why": "Florida Realtors argue the bigger homestead exemption makes homeownership more attainable.",
     "url": "https://www.chronicleonline.com/news/local/all-3-florida-amendments-on-the-2026-ballot-explained/article_a4a6c5f9-44c0-5462-97a2-89890ce5ecd2.html",
     "date": "2026-09-27",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Angie Nixon",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-us-senate-special",
+    "status": "endorsed",
+    "choice": "Ashley Moody",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "David Jolly (Lt. Gov.: Gwen Graham)",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-governor",
+    "status": "endorsed",
+    "choice": "Byron Donalds (Lt. Gov.: Bryan Avila)",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "Jose Javier Rodriguez",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-attorney-general",
+    "status": "endorsed",
+    "choice": "James Uthmeier",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Annette Taddeo",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-cfo",
+    "status": "endorsed",
+    "choice": "Blaise Ingoglia",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Joey Mendoza Atkins",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "endorsed",
+    "choice": "Wilton Simpson",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-muniz",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-muniz",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the county party's November 2026 voter guide on October 19. No choice for this race was listed.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-amendment-1",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-amendment-2",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-democrats",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "NO",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://orangefldemocrats.com/s/2026-November-Democratic-Voter-Guide-Final2.pdf",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "orange-county-gop",
+    "target_id": "fl-amendment-3",
+    "status": "endorsed",
+    "choice": "YES",
+    "why": "The county party's November 2026 voter guide lists this choice.",
+    "url": "https://gopguide.online/",
+    "date": "2026-10-19",
+    "confidence": "verified"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-us-senate-special",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-governor",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-attorney-general",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-cfo",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-agriculture-commissioner",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-muniz",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-1dca-lewis",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-1dca-nordby",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-1dca-osterhaus",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-1dca-roberts",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-retention-1dca-treadwell",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-amendment-1",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-amendment-2",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
+    "confidence": "sourced"
+  },
+  {
+    "endorser_id": "tallahassee-reports",
+    "target_id": "fl-amendment-3",
+    "status": "not_found",
+    "choice": null,
+    "why": "Checked the current site and 2026 endorsement-search results on October 19. Found reporting about other groups' endorsements, but no endorsement by Tallahassee Reports.",
+    "url": "https://tallahasseereports.com/?s=endorsement",
+    "date": "2026-10-19",
     "confidence": "sourced"
   }
 ]

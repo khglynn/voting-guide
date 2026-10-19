@@ -2,11 +2,11 @@
   {
     "endorser_id": "oregonian-eb",
     "target_id": "or-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary.",
-    "url": "https://www.oregonlive.com/opinion/",
-    "date": "2026-10-16",
+    "status": "endorsed",
+    "choice": "Tina Kotek",
+    "why": "The Oregonian’s syndicated video headline states its November 2026 endorsement of Kotek. The full editorial is blocked.",
+    "url": "https://www.oregonlive.com/opinion/2026/10/editorial-endorsement-november-2026-a-dispirited-endorsement-for-kotek.html",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -14,9 +14,9 @@
     "target_id": "or-us-senate",
     "status": "not_found",
     "choice": null,
-    "why": "No Nov. 2026 general-election endorsement for this race located as of Oct. 16. The Oregonian endorsed in the May GOP primary.",
+    "why": "No Senate pick was found in the public endorsement indexes checked Oct 19. OregonLive blocks direct access, so the search is incomplete.",
     "url": "https://www.oregonlive.com/opinion/",
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "confidence": "sourced"
   },
   {
@@ -26,7 +26,7 @@
     "choice": "Tina Kotek",
     "why": "Endorses Kotek over Christine Drazan again, as in 2022, while faulting her record on housing, schools and the economy.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-statewide/",
-    "date": "2026-10-14",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
@@ -36,28 +36,28 @@
     "choice": "Jeff Merkley",
     "why": "Backs Merkley for a fourth term over state Sen. David Brock Smith, citing his fight against what it calls a president acting above the law.",
     "url": "https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-federal/",
-    "date": "2026-10-14",
+    "date": "2026-10-19",
     "confidence": "verified"
   },
   {
     "endorser_id": "portland-mercury-eb",
     "target_id": "or-governor",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Mercury's Nov. 2026 endorsements had not been located as of Oct. 16.",
-    "url": "https://www.portlandmercury.com/elections",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Tina Kotek",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "portland-mercury-eb",
     "target_id": "or-us-senate",
-    "status": "not_found",
-    "choice": null,
-    "why": "The Mercury's Nov. 2026 endorsements had not been located as of Oct. 16.",
-    "url": "https://www.portlandmercury.com/elections",
-    "date": "2026-10-16",
-    "confidence": "sourced"
+    "status": "endorsed",
+    "choice": "Jeff Merkley",
+    "why": "Listed in the published November 2026 endorsement guide.",
+    "url": "https://www.portlandmercury.com/election-2026/the-mercurys-2026-november-endorsement-cheat-sheet/",
+    "date": "2026-10-19",
+    "confidence": "verified"
   },
   {
     "endorser_id": "lwv-oregon",

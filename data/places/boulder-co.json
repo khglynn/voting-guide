@@ -10,7 +10,7 @@
     "url": "https://bouldercounty.gov/elections/",
     "phone": "303-413-7740"
   },
-  "sample_ballot_url": "https://www.govotecolorado.gov/",
+  "sample_ballot_url": "https://myballot.coloradosos.gov/",
   "zips": [
     "80301",
     "80302",
@@ -20,7 +20,7 @@
     "80309",
     "80310"
   ],
-  "zip_caveats": "This place is the City of Boulder, but Boulder ZIP codes reach past city limits (Gunbarrel in 80301 is mostly unincorporated, and 80301, 80302, 80303 and 80304 all take in county land). If you live outside city limits, you will not see the mayor, City Council or city measures 2J, 2K, 2L and 2M. Everyone in Boulder County votes on CO-2, CU Regent CD-2, the county offices, the county judges, 1A, 200, 201 and Front Range rail 7A. State House splits Boulder roughly at Broadway: east of Broadway (plus Gunbarrel and the CU campus) is HD-10, where only one candidate is running; west of Broadway is HD-49. The whole city is in State Senate District 18, which is not up in 2026, so most Boulder voters have no state senate race. SD-15, SD-17 and HD-12 appear on other Boulder County ballots; we could not confirm their exact boundaries, so they are listed only in case a Boulder-ZIP address outside the city falls in them. RTD: Boulder is in Director District O (an open seat); if your address is in another RTD district, you have no RTD race this year. No school board race or school district measure is on the 2026 Boulder County ballot. Check your exact ballot with the GoVoteColorado sample ballot lookup.",
+  "zip_caveats": "This guide covers Boulder and nearby Boulder ZIPs. ZIP codes extend beyond city limits, so city races and city measures apply only if you live in the city. State House districts 10, 12 and 49 overlap the covered ZIP areas. Senate District 18 has no race in 2026. Senate Districts 15 and 17 can apply outside the central city: official ZIP-area and legislative maps show SD-15 in ZIP statistical areas 80301, 80302, 80303, 80304 and 80305, and SD-17 in 80301. HD-12 overlaps 80301, 80302 and 80303. These ZIP-area maps are approximate and do not establish your ballot. Keep those races conditional and confirm them with your official Colorado sample ballot. Boulder’s RTD district is O; if your address is in a different RTD district, check whether it has an election this year. No school-board race or school-district measure appears in the county’s 2026 general-election list.",
   "contest_ids": [
     "co-us-senate",
     "co-governor",

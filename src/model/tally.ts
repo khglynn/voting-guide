@@ -216,6 +216,11 @@ export function verdict(it: Item): Verdict {
     }
     return { kind: 'none', main: NONE_WORDS[why], sub: '', why };
   }
+  // A source whose pick is a note, not a candidate or yes/no ("option 1: five districts"): name
+  // who weighed in and leave the words for the open row.
+  if (l.groups.some((g) => !g.choices.length)) {
+    return { kind: l.groups.length === 1 ? 'agree' : 'split', main: w.length === 1 ? tagOf(w[0]) : `${w.length} sources`, sub: 'weighed in; open to read' };
+  }
   if (l.groups.length === 1) {
     const g = l.groups[0];
     const named = namedLineup(l, it);

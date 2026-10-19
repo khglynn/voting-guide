@@ -32,7 +32,7 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "Pennsylvania has no same-day registration. The state's rule is that you must register 'at least 15 days before the election.' If you miss October 19 you cannot vote in this election. Moved within Pennsylvania since you last voted? Update your address by October 19 too. If you miss that, the Department of State says you vote at the polling place for your old address one more time, whether you moved within your county or to another Pennsylvania county. Same county: tell the poll workers your new address and they update your registration. Different county: fill out the form there with your new address and county.",
-    "still_possible_now": "YES, but only for three more days. Register online at pavoterservices.pa.gov by 11:59 PM on Monday, October 19. Don't mail it now. Check your status first at the link above; it takes 30 seconds. In Pittsburgh, the Allegheny County satellite sites open Saturday and Sunday, Oct. 17 and 18, 9 AM to 4 PM, and take registrations.",
+    "still_possible_now": "Only through Monday, October 19. Register online at pavoterservices.pa.gov by 11:59 PM that day, or hand in a paper application at your county election office (or a PennDOT driver's license center) during business hours. Mailing one this late is risky. Check your status first at the link above; it takes 30 seconds. After October 19, you can't register for this election.",
     "confidence": "verified"
   },
   "mail_ballot": {

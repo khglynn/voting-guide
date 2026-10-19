@@ -32,7 +32,7 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "Alabama has no same-day or Election Day registration. Registration is 'closed during the 14 days prior to an election and on Election Day.' If you are not registered by October 19, you cannot vote in this election. One exception: if you moved within your county and didn't update in time, you can go to your NEW polling place, update your registration there, and cast a provisional ballot.",
-    "still_possible_now": "Only through Monday, October 19. Online is fastest if you have an Alabama driver's license or non-driver ID (deadline 11:59 PM). If you don't, print the form and get it postmarked by October 19, or walk it into the Board of Registrars before close of business that day. Check your status first at myinfo.alabamavotes.gov. If you moved, update your address by the same deadline. After October 19, you can't register for this election.",
+    "still_possible_now": "The deadline is Monday, October 19. Online is fastest if you have an Alabama driver's license or non-driver ID (11:59 PM that day). If you don't, a paper form must be postmarked by October 19, or hand-delivered to the Board of Registrars before close of business that day. Check your status first at myinfo.alabamavotes.gov. If you moved, update your address by the same deadline. After October 19, you can't register for this election.",
     "confidence": "verified"
   },
   "mail_ballot": {

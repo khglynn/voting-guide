@@ -32,7 +32,7 @@
     ],
     "same_day_registration": false,
     "same_day_notes": "New York has no same-day registration. If you are not registered by October 24 you cannot vote on November 3. Separate from registration: the deadline to change your ADDRESS on an existing registration was Monday, October 19 (state calendar, Election Law 5-208(3); NYC311: 'Last day to request a change of address on your voter registration' is October 19). If you moved anywhere in New York after that, go to the poll site for your new address and vote by affidavit ballot; it counts and moves your registration. A 2019 law (Chapter 3, amending Election Law 5-208 and 8-302) extended this from moves within a county or NYC to moves anywhere in the state.",
-    "still_possible_now": "Until Saturday, October 24. Fastest is online at elections.ny.gov. The address-change deadline is sooner: Monday, October 19. Check whether you're already registered first at voterlookup.elections.ny.gov.",
+    "still_possible_now": "You can register until Saturday, October 24. Fastest is online at elections.ny.gov. The address-change deadline is sooner: Monday, October 19. Check whether you're already registered first at voterlookup.elections.ny.gov.",
     "confidence": "verified"
   },
   "mail_ballot": {

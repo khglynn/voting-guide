@@ -4,3 +4,5 @@ public/data/
 shots/*.pdf
 .DS_Store
 .vercel
+.tmp/
+.tmp-preview.log

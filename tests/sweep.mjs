@@ -154,7 +154,8 @@ function expected(o, answers) {
   }
   for (const g of unanswered) (perSec[g.sec] ||= { decisions: 0, unopposed: 0, questions: 0 }).questions++;
   const decisions = visible.filter((i) => o.kinds[i.id] === 'decision');
-  return { visible, perSec, decisions, unanswered, barTotal: decisions.length + unanswered.length };
+  // The bar and the section counts count choices; a district question is setup, not a choice.
+  return { visible, perSec, decisions, unanswered, barTotal: decisions.length };
 }
 
 /* ---------- the choices this sweep makes, and what the cheat sheet must then say ----------
@@ -432,7 +433,7 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   const wantQ = ex.unanswered.map((g) => g.key).sort().join('|'), gotQ = [...snap.qs].sort().join('|');
   if (wantQ !== gotQ) R.fail(where, 'district questions differ from the oracle', `want ${wantQ || 'none'} got ${gotQ || 'none'}`);
   for (const [sec, s] of Object.entries(ex.perSec)) {
-    const total = s.decisions + s.questions;
+    const total = s.decisions;
     const wantCount = total ? `0 of ${total} decided` : s.unopposed ? 'Nothing to decide' : '';
     const d = snap.sec[sec];
     if (!d) { if (s.decisions || s.unopposed || s.questions) R.fail(where, `section ${sec} is missing`); continue; }

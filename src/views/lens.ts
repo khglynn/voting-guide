@@ -36,10 +36,10 @@ export function lensHeadHTML(): string {
   const ids = new Set(chosenIds());
   if (papers.some((e) => ids.has(e.id)) && !withPicks(b, papers).length) notes.push(CHIPS[0].empty);
   const line = cov.sources
-    ? `Your ${plural(cov.sources, 'source')} picked on ${cov.picked} of ${plural(cov.total, 'race and measure', 'races and measures')} here.`
+    ? `Your ${plural(cov.sources, 'source')} made picks on ${cov.picked} of your ${plural(cov.total, 'choice')}.`
     : 'You haven’t chosen any sources. Pick some below to see their picks on every row.';
   return `<section class="lens-head wrap" id="lens" aria-labelledby="lens-h"><h2 id="lens-h">Who do you trust?</h2>
-    <p>Their picks show on every row. You choose; we never do.</p>
+    <p>Their picks show on every row. The choice is always yours.</p>
     <p class="cov">${esc(line)}${notes.length ? ` ${esc(notes.join(' '))}` : ''}</p></section>`;
 }
 export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;

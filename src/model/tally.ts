@@ -250,7 +250,9 @@ export function verdict(it: Item): Verdict {
   return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split' };
 }
 
-/* "Your 4 sources picked on 18 of 42 races and measures." Over what's visible now. */
+/* "Your 4 sources made picks on 18 of your 42 choices." Over what's visible now, counting the same
+   choices as the ballot header and the progress bar (judges included), so the first screens
+   give one number for the size of the ballot. */
 export function coverage(): { sources: number; picked: number; total: number } {
   const b = S.ballot!;
   const src = chosen().filter((e) => !explainsOnly(e));
@@ -260,7 +262,6 @@ export function coverage(): { sources: number; picked: number; total: number } {
       if (e.t !== 'item') continue;
       const it = b.byId.get(e.id)!;
       if (!isDecision(status(it))) continue;
-      if (it.kind === 'contest' && it.is_retention) continue;
       total++;
       if (weighedIn(lineup(it, src)).length) picked++;
     }

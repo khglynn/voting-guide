@@ -169,8 +169,7 @@ export function sectionCount(entries: Entry[]): string {
   const b = S.ballot!;
   let decided = 0, total = 0, unopp = 0;
   for (const e of entries) {
-    if (e.t === 'question') { total++; continue; }
-    if (e.t !== 'item') continue;
+    if (e.t !== 'item') continue; // a district question is setup, not a choice
     const s = status(b.byId.get(e.id)!);
     if (s === 'unopposed') { unopp++; continue; }
     if (isDecision(s)) { total++; if (s !== 'open') decided++; }
@@ -348,12 +347,12 @@ export function ballotHeadHTML(): string {
   const may = [...b.mayApply].filter((id) => !S.b.notMine.includes(id)).length;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  const parts = [`${plural(items.length - qs, 'decision')}, in ballot order.`];
-  if (qs) parts.push(`${plural(qs, 'question')} about where you live.`);
-  if (may) parts.push(`${may} marked “may apply”.`);
+  // One number for the ballot's size, the same one the bar and the lens line count.
+  const parts = [`${plural(items.length - qs, 'choice')}, in the order they’re on your ballot.`];
+  if (qs || may) parts.push('A few depend on your address; answer those once.');
   return `<div class="bhead"><h2 id="ballot-h">Your ballot</h2>
       <p>${esc(parts.join(' '))}</p>
-      ${(b.groups.length || b.mayApply.size) ? (S.ui.addrOpen ? addrHTML() : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Answer the “where do you live” questions from your address</button></p>') : ''}
+      ${(b.groups.length || b.mayApply.size) ? (S.ui.addrOpen ? addrHTML() : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use your address to answer these for you</button></p>') : ''}
       ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. ${sb ? ext(sb.url, sb.label) : ''}</p>` : sb ? `<p class="sb">Double-check with ${ext(sb.url, 'your official sample ballot')}.</p>` : ''}
     </div>
     ${headsHTML(headsUp('ballot'))}
@@ -377,10 +376,13 @@ export function barHTML(): string {
       <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to ballot</button>
       ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Pass it on</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">Cheat sheet</button>'}</div></div>`;
   }
-  const items = decisionItems();
+  // Choices only: a district question is setup, not a choice, so the bar counts what the
+  // header counts. "Next undecided" still visits the questions.
+  const all = decisionItems();
+  const items = all.filter((i) => !i.question);
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const allDone = done === items.length;
+  const allDone = all.every((i) => i.done);
   return `<div class="foot screen-only" role="region" aria-label="Your progress">
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
     <div class="foot-in">

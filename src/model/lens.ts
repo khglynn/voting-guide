@@ -19,7 +19,7 @@ const isGroup = (e: Endorser): boolean => e.type !== 'party' && e.type !== 'publ
 export const explainsOnly = (e: Endorser): boolean => !e.endorses_candidates && !e.endorses_measures;
 
 export const CHIPS: { key: ChipKey; label: string; empty: string }[] = [
-  { key: 'papers', label: 'Papers and guides', empty: 'Papers and guides here haven’t made picks on this ballot yet.' },
+  { key: 'papers', label: 'Papers and guides', empty: 'The papers here don’t make picks on this ballot. Try another group above to see who did.' },
   { key: 'progressive', label: 'Progressive groups', empty: 'No progressive groups we checked made picks on this ballot.' },
   { key: 'conservative', label: 'Conservative groups', empty: 'No conservative groups we checked made picks on this ballot.' },
 ];

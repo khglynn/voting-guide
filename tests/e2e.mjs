@@ -120,7 +120,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   const cov1 = await text(page, '#lens .cov');
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   const cov2 = await text(page, '#lens .cov');
-  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /picked on \d+ of \d+/.test(cov2), `${cov1} -> ${cov2}`);
+  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /made picks on \d+ of your \d+ choices/.test(cov2), `${cov1} -> ${cov2}`);
   await tap(page, '[data-act="chip"][data-k="progressive"]');
   check('Denver: and off again', (await text(page, '#lens .cov')) === cov1);
   await tap(page, '[data-act="sheet"][data-s="sources"]');

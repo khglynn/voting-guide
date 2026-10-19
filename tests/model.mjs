@@ -32,6 +32,7 @@ const load = (p) => vite.ssrLoadModule(p);
 const st = await load('/src/state.ts');
 const bl = await load('/src/ballot.ts');
 const util = await load('/src/util.ts');
+const geo = await load('/src/geo.ts');
 const mods = {};
 for (const m of ['lens', 'tally', 'bulk', 'judges', 'labels', 'plan']) {
   const f = path.join(ROOT, 'src', 'model', `${m}.ts`);
@@ -181,7 +182,7 @@ function roundTrip(name, stCode, places, mutate) {
 const extra = path.join(ROOT, 'tests', 'model-ledger.mjs');
 if (fs.existsSync(extra)) {
   const { run } = await import(extra);
-  await run({ st, bl, util, mods, open, head, read, INDEX, check });
+  await run({ st, bl, util, geo, mods, open, head, read, INDEX, check });
 }
 
 await vite.close();

@@ -6,7 +6,7 @@ import { S } from './state';
 import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
-import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts } from './views/ledger';
+import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts, hiddenByOnly } from './views/ledger';
 import { lensHeadHTML, lensBarHTML, sourcesSheetHTML, partySheetHTML } from './views/lens';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
 import { passHTML } from './views/pass';
@@ -81,8 +81,18 @@ export function render(regions: Region[] = ALL): void {
     }
     document.body.classList.toggle('has-bar', !!S.ballot);
     document.body.classList.toggle('sheet-open', !!(S.ui.sheet || S.ui.reader));
+    setModal(!!(S.ui.sheet || S.ui.reader));
     ['ballot', 'cheat', 'pass'].forEach((v) => document.body.classList.toggle(`v-${v}`, !!S.ballot && S.ui.view === v));
   });
+}
+
+/* While a sheet or the Full read is open, everything behind it is inert: no Tab, no taps, no
+   screen reader. main.ts also wraps Tab inside the open dialog, for browsers without inert. */
+function setModal(on: boolean): void {
+  for (const sel of ['#app', '#r-bar', '.skip', '.toast']) {
+    const el = document.querySelector<HTMLElement>(sel);
+    if (el) el.inert = on;
+  }
 }
 
 /* One section, in place. */
@@ -110,6 +120,9 @@ export function renderRow(key: string | null, counts = true): void {
   }
   const it = b.byId.get(key);
   if (!it) return;
+  // Under "Only undecided", a row that is now decided leaves: repaint its section with the
+  // same filter the full render uses, held in place.
+  if (hiddenByOnly({ t: 'item', id: key })) { anchored(() => renderSection(sectionOf(it))); return; }
   const el = $(`#i-${CSS.escape(key)}`);
   if (!el || !el.classList.contains('row') || el.classList.contains('is-off')) { renderSection(sectionOf(it)); return; }
   withFocusKept(() => { el.outerHTML = rowHTML(it); });
@@ -133,9 +146,14 @@ export const rowEl = (key: string): HTMLElement | null => {
 
 /* The address form lives in the ballot head on a ballot, in the masthead on the place question. */
 export function renderAddr(): void {
+  // What you typed stays in the box across "Looking up..." and any message, so a miss can be
+  // fixed instead of retyped. It lives only in the page, never in saved state.
+  const typed = ($('#addr-in') as HTMLInputElement | null)?.value || '';
   const wrap = $('.wrap-led');
   if (S.ballot && S.view === 'ballot' && S.ui.view === 'ballot' && wrap) withFocusKept(() => { wrap.innerHTML = ballotHeadHTML(); });
   else render(['mast']);
+  const i = $('#addr-in') as HTMLInputElement | null;
+  if (i && typed && !i.value) i.value = typed;
 }
 
 /* The parts that summarize the whole ballot: the lens coverage line, the bulk counts, the bar. */

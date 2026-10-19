@@ -1,6 +1,6 @@
 /* Model checks for the ledger's own modules (lens, verdict, bulk fills, judges, plan, labels).
    Run by tests/model.mjs, which loads the TypeScript and hands over `check`. */
-export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
+export async function run({ st, bl, geo, mods, open, head, read, INDEX, check }) {
   const { lens, tally, bulk, judges, labels } = mods;
   const plan = mods.plan;
   const S = st.S;
@@ -259,6 +259,19 @@ export async function run({ st, bl, mods, open, head, read, INDEX, check }) {
     r = nm && judges.candidateReview(nm);
     check('judges: Natalia Moore (did not take part in 14 screenings) reads as declined, not 14 groups finding her unfit', !!r && r.main === 'Declined screening' && r.tone === 'none' && /did not take part/.test(r.line) && !/do not \(/.test(r.line), r ? JSON.stringify([r.main, r.line.slice(0, 160)]) : 'not found');
     check('judges: her reason is shown as a reason, not a finding', !!r && r.concerns.length > 0 && r.concerns.every((x) => x.reason));
+  }
+
+  /* ---------- Codex #2: an address picks a place only in its own state ---------- */
+  {
+    const r = (state, place, upper = null) => ({ matched: '', state, county: null, place, cd: null, upper, lower: null });
+    const ids = INDEX.zips['80247'] || [];
+    check('address: 80247 asks between places that include Aurora, CO', ids.includes('aurora-co'), ids.join());
+    check('address: a Census result for Aurora, Illinois never picks Aurora, Colorado', geo.placeFromGeo(INDEX.places, ids, r('IL', 'Aurora')) === null);
+    check('address: Aurora, Colorado still does', geo.placeFromGeo(INDEX.places, ids, r('CO', 'Aurora')) === 'aurora-co');
+    check('address: a result with no state picks nothing', geo.placeFromGeo(INDEX.places, ids, r(null, 'Aurora')) === null);
+    const dc = Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-'));
+    check('address: DC still picks a ward from the upper layer', geo.placeFromGeo(INDEX.places, dc, r('DC', null, 2)) === 'dc-ward-2');
+    check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
   /* ---------- plan strip ---------- */

@@ -59,6 +59,18 @@ document.addEventListener('input', (e) => {
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
 });
 document.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab' && (S.ui.reader || S.ui.sheet)) {
+    // Keep Tab inside the open dialog: from the last control back to the first, and back.
+    const dlg = document.querySelector<HTMLElement>('#r-sheet [role="dialog"]');
+    if (!dlg) return;
+    const all = [...dlg.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input:not([disabled]), textarea, select, [tabindex]:not([tabindex="-1"])')].filter((x) => x.offsetParent !== null || x === document.activeElement);
+    if (!all.length) return;
+    const first = all[0], last = all[all.length - 1];
+    const inside = dlg.contains(document.activeElement);
+    if (e.shiftKey && (!inside || document.activeElement === first)) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && (!inside || document.activeElement === last)) { e.preventDefault(); first.focus(); }
+    return;
+  }
   if (e.key !== 'Escape') return;
   if (S.ui.reader) A['reader-close']({}, document.body);
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
@@ -83,13 +95,14 @@ async function boot(): Promise<void> {
   try { await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and reload.'; render(); return; }
   if (head && S.index!.states[head.st]) {
     const places = head.places.filter((p) => S.index!.places[p]);
-    return openBallot(head.st, places, head.zip, { share: head });
+    await openBallot(head.st, places, head.zip, { share: head });
+    return;
   }
   const last = S.tryMode ? null : readSaved().last;
   if (last) {
     const [st, placesStr] = last.key.split('|');
     const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
-    if (S.index!.states[st]) return openBallot(st, places, last.zip);
+    if (S.index!.states[st]) { await openBallot(st, places, last.zip); return; }
   }
   render();
 }

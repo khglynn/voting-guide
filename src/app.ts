@@ -4,7 +4,7 @@
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
-import { zipState, censusLookup, type GeoResult } from './geo';
+import { zipState, censusLookup, placeFromGeo, type GeoResult } from './geo';
 import { toast } from './util';
 import { render, renderBallot, renderAddr, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
@@ -78,7 +78,9 @@ window.addEventListener('popstate', (e) => {
 
 /* ---------- opening a ballot ---------- */
 const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Object.keys(b.ranks || {}).filter((k) => !(k in b.picks)).length;
-export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead> } = {}): Promise<void> {
+/* Resolves true once the ballot is open, false when it couldn't load (the start view then
+   shows why). Callers that do more after opening check it. */
+export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead> } = {}): Promise<boolean> {
   S.view = 'loading';
   S.loadErr = null;
   render(['mast']);
@@ -118,12 +120,14 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
     persist(true);
     window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
+    return true;
   } catch (e) {
     console.warn('Could not load ballot', e);
     S.view = 'start';
     S.ballot = null;
     S.loadErr = 'We couldn’t load that ballot. Check your connection and try again.';
     render();
+    return false;
   }
 }
 
@@ -134,24 +138,18 @@ export async function submitZip(raw: string): Promise<void> {
   let idx: Index;
   try { idx = await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and try again.'; render(['mast']); return; }
   const places = idx.zips[v] || [];
-  if (places.length === 1) return openBallot(idx.places[places[0]].state, places, v);
+  if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v); return; }
   if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); $(`[data-fk="cp-${CSS.escape(places[0])}"]`)?.focus(); return; }
   const st = zipState(v);
-  if (st && idx.states[st]) return openBallot(st, [], v);
+  if (st && idx.states[st]) { await openBallot(st, [], v); return; }
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); $('#zip')?.focus(); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
 }
 
 /* ---------- address lookup ----------
-   The address goes only to the Census geocoder and is never stored. In DC the Census "upper"
-   legislative layer is the ward (NAME "Ward 2"), so the address can pick a ward. */
-function placeFromGeo(ids: string[], r: GeoResult): string | null {
-  const idx = S.index!;
-  if (r.state === 'DC' && r.upper != null) return ids.find((id) => idx.places[id].label === `DC Ward ${r.upper}`) || null;
-  if (!r.place) return null;
-  return ids.find((id) => idx.places[id].label.toLowerCase() === r.place!.toLowerCase()) || null;
-}
+   The address goes only to the Census geocoder and is never stored. Picking a place from the
+   result lives in geo.ts (placeFromGeo), where the state must match before anything else. */
 export async function runAddress(addr: string): Promise<void> {
   const choosing = S.view !== 'ballot' && S.zipChoice;
   const b = S.ballot;
@@ -164,18 +162,26 @@ export async function runAddress(addr: string): Promise<void> {
   S.ui.addrBusy = false;
   if (!r) { S.ui.addrMsg = 'The Census lookup couldn’t find that address. Try adding the city and ZIP.'; renderAddr(); return; }
   if (choosing && S.zipChoice) {
-    const hit = placeFromGeo(S.zipChoice.placeIds, r);
-    if (!hit) { S.ui.addrMsg = 'That address didn’t match one of these places. Pick one, or “I’m not sure”.'; renderAddr(); return; }
+    const idx = S.index!;
+    const ids = S.zipChoice.placeIds;
+    const hit = placeFromGeo(idx.places, ids, r);
+    if (!hit) {
+      const st = idx.places[ids[0]]?.state;
+      S.ui.addrMsg = r.state && st && ids.every((id) => idx.places[id].state !== r.state)
+        ? `That address is outside ${idx.states[st]?.name || st}. Check the ZIP, or pick a place below.`
+        : 'That address didn’t match one of these places. Pick one, or “I’m not sure”.';
+      renderAddr(); return;
+    }
     const zip = S.zipChoice.zip;
     S.ui.addrOpen = false;
-    await openBallot(S.index!.places[hit].state, [hit], zip);
-    return applyGeo(r);
+    if (await openBallot(idx.places[hit].state, [hit], zip)) applyGeo(r);
+    return;
   }
   if (!b) return;
   if (r.state && r.state !== b.st) { S.ui.addrMsg = `That address is outside ${b.stateName}. Change your ZIP first.`; renderAddr(); return; }
   if (b.places.length > 1) {
-    const hit = placeFromGeo(b.places.map((p) => p.id), r);
-    if (hit) { await openBallot(b.st, [hit], S.b.zip); return applyGeo(r); }
+    const hit = placeFromGeo(S.index!.places, b.places.map((p) => p.id), r);
+    if (hit) { if (await openBallot(b.st, [hit], S.b.zip)) applyGeo(r); return; }
   }
   applyGeo(r);
 }

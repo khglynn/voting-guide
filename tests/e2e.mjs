@@ -484,6 +484,143 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 
+/* ---------- Codex round 1 fixes, each checked in a real browser ---------- */
+// #5: the key dates keep their fine print, and Orlando uses Orange County's own early voting.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '32801');
+  const head = await text(page, '.plan-h');
+  check('Orlando: on Oct 19 early voting starts today (Orange County opens Oct 19)', /^Early voting starts today, Oct 19\.$/.test(head), head);
+  check('Orlando: the early voting button goes to Orange County', /voteorangefl\.gov/.test((await page.getAttribute('.plan .pbtn.gold', 'href')) || ''));
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  await tap(page, '[data-act="open"][data-k="bx-dates"]');
+  const n = (await page.$$('.pdates .pd-more')).length;
+  check('Orlando: key dates offer their details', n >= 3, String(n));
+  await tap(page, '.pdates [data-act="open"][data-k="kd-eps"]');
+  const eps = await text(page, '.pdates .pd-x');
+  check('Orlando: early voting details name Orange County’s hours, in normal case', /Orange County/.test(eps) && /8:00 AM to 8:00 PM/.test(eps) && !/\b[A-Z]{4,}\b/.test(eps.replace(/\b(AM|PM)\b/g, '')), eps.slice(0, 120));
+  check('Orlando: the details button says it is open', (await page.getAttribute('.pdates [data-k="kd-eps"]', 'aria-expanded')) === 'true');
+  check('Orlando: the key dates show early voting ending Nov 1', /Nov 1/.test(await text(page, '.pdates')));
+  noErrors(page, 'Orlando');
+  await ctx.close();
+}
+// #12: after the polls close on Election Day.
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=2026-11-03&now=19:05`);
+  await page.fill('#zip', '77002');
+  await page.locator('button[type=submit]').tap();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  const head = await text(page, '.plan-h');
+  check('Houston 7:05 PM on Election Day: polls closed, stay in line', /^Polls closed at 7 PM\. Already in line\? Stay in line\.$/.test(head), head);
+  noErrors(page, 'Polls closed');
+  await ctx.close();
+}
+// #9: a sheet and the Full read hold the keyboard; the ballot behind them is inert.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  await tap(page, '[data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel');
+  check('Sheet: the ballot behind it is inert', await page.evaluate(() => document.getElementById('app').inert && document.getElementById('r-bar').inert));
+  // From the last control, Tab wraps to the first; from the first, Shift+Tab wraps to the last.
+  const FOC = (sc) => `${sc} a[href], ${sc} button:not([disabled]), ${sc} input:not([disabled]), ${sc} textarea`;
+  const wraps = async (scope) => {
+    const sel = FOC(scope);
+    const focusAt = (k) => page.evaluate(([q, i]) => { const els = [...document.querySelectorAll(q)].filter((x) => x.offsetParent !== null); const el = els[i < 0 ? els.length + i : i]; if (el) el.focus(); return els.length; }, [sel, k]);
+    const isAt = (k) => page.evaluate(([q, i]) => { const els = [...document.querySelectorAll(q)].filter((x) => x.offsetParent !== null); return document.activeElement === els[i < 0 ? els.length + i : i]; }, [sel, k]);
+    if (!(await focusAt(-1))) return false;
+    await page.keyboard.press('Tab'); const fwd = await isAt(0);
+    await focusAt(0); await page.keyboard.press('Shift+Tab'); const back = await isAt(-1);
+    let out = 0;
+    for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); if (!(await page.evaluate((sc) => !!document.activeElement && !!document.activeElement.closest(sc), scope))) out++; }
+    return fwd && back && out === 0;
+  };
+  check('Sheet: Tab and Shift+Tab wrap inside the sheet', await wraps('.sheet-panel'));
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(150);
+  check('Sheet: after closing, the ballot is live again', await page.evaluate(() => !document.getElementById('app').inert));
+  const id = await page.evaluate(() => document.querySelector('.row[data-item]').dataset.item);
+  await openRow(page, id);
+  await tap(page, `#i-${id} [data-act="reader"]`);
+  await page.waitForSelector('.reader');
+  check('Full read: Tab and Shift+Tab wrap inside it', await wraps('.reader'));
+  noErrors(page, 'Focus trap');
+  await ctx.close();
+}
+// #10: "Only undecided" drops a decided row on the next move, even on a one-row repaint.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  await tap(page, '[data-act="only"]');
+  const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item]')].slice(0, 2).map((r) => r.dataset.item));
+  await openRow(page, ids[0]);
+  await tap(page, `#i-${ids[0]} [data-act="pick"][data-v="YES"]`);
+  check('Only undecided: the row you just decided stays for a moment', !!(await page.$(`#i-${ids[0]}`)));
+  await openRow(page, ids[1]);
+  check('Only undecided: opening the next row drops the decided one', !(await page.$(`#i-${ids[0]}`)) && !!(await page.$(`#i-${ids[1]}.is-open`)));
+  noErrors(page, 'Only undecided');
+  await ctx.close();
+}
+// #2 and #11: the address lookup checks the state, and a ballot that fails to load after a
+// Census match fails cleanly. The Census lookup is answered here, never called.
+{
+  const { ctx, page } = await newPage();
+  const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+    States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
+  const answer = geoFor('17', 'Aurora', 14, 25);
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await openZip(page, '80247');
+  await page.waitForSelector('[data-act="choose-place"]');
+  await tap(page, '.choose [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('form[data-form="addr"] [role="status"]', { timeout: 8000 }).catch(() => {});
+  const msg = await text(page, 'form[data-form="addr"] [role="status"]');
+  check('Address: a Census match in Aurora, Illinois does not open Aurora, Colorado', /outside Colorado/.test(msg) && !(await page.$('#plan')), msg);
+  check('Address: what you typed stays in the box after a miss', (await page.inputValue('#addr-in').catch(() => '')) === 'a test lookup');
+  noErrors(page, 'Address in the wrong state');
+  await ctx.close();
+}
+{
+  const { ctx, page } = await newPage();
+  const geoFor = (fips, place, cd, upper) => ({ result: { addressMatches: [{ matchedAddress: 'TEST', geographies: {
+    States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
+  const answer = geoFor('08', 'Aurora', 6, 28);
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
+  });
+  await page.route('**/data/place-aurora-co.json', (route) => route.fulfill({ status: 503, body: 'down' }));
+  await openZip(page, '80247');
+  await page.waitForSelector('[data-act="choose-place"]');
+  await tap(page, '.choose [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.zip-err[role="alert"]', { timeout: 8000 }).catch(() => {});
+  check('Address: a ballot that fails after the Census match says so', /couldn’t load that ballot/.test(await text(page, '.zip-err')));
+  await page.waitForTimeout(300);
+  // The browser logs the mocked 503 itself; what must not happen is an error in our code.
+  const own = page.errors.filter((e) => !/Failed to load resource/.test(e));
+  check('Address then 503: no unhandled error', own.length === 0, own.slice(0, 2).join(' | '));
+  page.errors = [];
+  await page.unroute('**/data/place-aurora-co.json');
+  await openZip(page, '80247');
+  await page.waitForSelector('[data-act="choose-place"]');
+  await tap(page, '.choose [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Address: Aurora, Colorado opens its ballot and answers its districts', /Aurora/.test(await text(page, '.place')) && /Matched \d+ district/.test(await text(page, '.toast')), await text(page, '.toast'));
+  noErrors(page, 'Address');
+  await ctx.close();
+}
+
 await browser.close();
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length} of ${results.length} checks passed.`);

@@ -88,9 +88,33 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
   const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }
-function srcCell(e: Endorser): string {
-  // The dots and the lean word stay in the cell; how the lean was placed is one tap away.
-  return `<th scope="row"><span class="sn">${esc(e.short)}</span><button class="lean-tap" data-act="basis" data-id="${esc(e.id)}" aria-label="${esc(`${e.short}: how its lean was placed`)}">${leanHTML(e.lean)}</button></th>`;
+/* Where a source's word on this race lives (Kevin, Oct 21: let people click through to the source):
+   the page its pick, or its "no stand", came from, else its guide. A pick opens at the pick where
+   the browser can, through a text fragment for the candidate's full name, then last name, or the
+   measure's number ("Proposition A", "Prop A"); a browser without them, or a page that words it
+   another way, just opens the page. Verified anchors per page are a later research pass. */
+export function pickURL(it: Item, e: Endorser): string | null {
+  const r = (S.ballot!.ends[it.id] || {})[e.id];
+  const url = (r && r.url) || e.guide_url || null;
+  if (!url || !r || !r.url || r.s !== 'endorsed') return url;
+  const words: string[] = [];
+  if (it.kind === 'contest') {
+    const name = (r.c || []).find((x) => it.candidates.some((k) => k.name === x));
+    if (name) words.push(name, name.replace(/,?\s+(jr|sr|ii|iii|iv)\.?$/i, '').split(/\s+/).pop() || name);
+  } else if (it.kind === 'measure' && it.number) {
+    const p = it.number.match(/^Proposition\s+(\S+)$/i);
+    words.push(it.number, ...(p ? [`Prop ${p[1]}`, `Prop. ${p[1]}`] : []));
+  }
+  if (!words.length) return url;
+  const enc = (t: string) => encodeURIComponent(t).replace(/-/g, '%2D');
+  return `${url}${url.includes('#') ? '' : '#'}:~:${[...new Set(words)].map((w) => `text=${enc(w)}`).join('&')}`;
+}
+function srcCell(it: Item, e: Endorser): string {
+  // The source's name opens its page for this race; the dots and the lean word stay in the cell, and
+  // how the lean was placed is one tap away.
+  const url = pickURL(it, e);
+  const name = url ? `<a class="sn" href="${esc(url)}" target="_blank" rel="noopener">${esc(e.short)}</a>` : `<span class="sn">${esc(e.short)}</span>`;
+  return `<th scope="row">${name}<button class="lean-tap" data-act="basis" data-id="${esc(e.id)}" aria-label="${esc(`${e.short}: how its lean was placed`)}">${leanHTML(e.lean)}</button></th>`;
 }
 function spanCell(it: Item, e: Endorser, cols: string[], n: number): string | null {
   const r = (S.ballot!.ends[it.id] || {})[e.id];
@@ -109,9 +133,9 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
   const keys = cols.map((c) => c.key);
   const body = rows.map((e) => {
     const span = spanCell(it, e, keys, cols.length);
-    if (span) return `<tr>${srcCell(e)}${span}</tr>`;
+    if (span) return `<tr>${srcCell(it, e)}${span}</tr>`;
     const r = (S.ballot!.ends[it.id] || {})[e.id]!;
-    return `<tr>${srcCell(e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} ${c.aria ? esc(c.aria) : `endorses ${esc(c.head)}`}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
+    return `<tr>${srcCell(it, e)}${cols.map((c) => `<td class="${c.mine ? 'col-me' : ''}">${(r.c || []).includes(c.key) ? `<span class="hit" role="img" aria-label="${esc(e.short)} ${c.aria ? esc(c.aria) : `endorses ${esc(c.head)}`}">${CHECK}</span>` : ''}</td>`).join('')}</tr>`;
   }).join('');
   return `<div class="gridwrap"><table class="grid c${cols.length}">
     <colgroup><col class="src">${cols.map(() => '<col>').join('')}</colgroup>
@@ -144,8 +168,8 @@ function othersHTML(it: Item): string {
   if (!w.length) return '';
   const k = it.id;
   const open = S.ui.others.has(k);
-  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => `<li><span class="o-n">${esc(e.short)}</span>${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
-      <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`)).join('')}</ul>` : '';
+  const list = open ? `<ul class="others">${ol.groups.flatMap((g) => g.sources.map((e) => { const u = pickURL(it, e); return `<li>${u ? `<a class="o-n" href="${esc(u)}" target="_blank" rel="noopener">${esc(e.short)}</a>` : `<span class="o-n">${esc(e.short)}</span>`}${sourceLean(e)}<span class="o-p">${esc(g.label)}</span>
+      <button class="mini quiet" data-act="src" data-id="${esc(e.id)}" data-fk="add-${esc(it.id)}-${esc(e.id)}">Add to my sources</button></li>`; })).join('')}</ul>` : '';
   return `<div class="others-wrap"><button class="linkbtn" data-act="others" data-id="${esc(k)}" aria-expanded="${open}">${open ? 'Hide' : 'See'} ${plural(w.length, 'other source')} that endorsed here</button>${list}</div>`;
 }
 

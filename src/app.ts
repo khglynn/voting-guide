@@ -2,7 +2,7 @@
    the ZIP box, the Census address lookup, views and the browser's Back button, and the hidden
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle } from './types';
-import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
+import { S, emptyBallotState, noSections, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, type Ballot } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
@@ -44,7 +44,10 @@ export async function loadInvolved(): Promise<void> {
 /* ---------- views and the Back button ---------- */
 export function resetUI(): void {
   const u = S.ui;
-  u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.reveal.clear(); u.keep = null; u.beat = null;
+  u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.keep = null; u.beat = null;
+  // The sections as you left them on this ballot (S.b.secs, saved with it).
+  const secs = S.b.secs || noSections();
+  u.folded = new Set(secs.folded); u.unfolded = new Set(secs.unfolded); u.reveal = new Set(secs.reveal);
   u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrFound = null; u.addrWhich = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
   u.resume = false;
   u.open.delete('voted');
@@ -183,8 +186,10 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (opts.share && !S.tryMode) {
       const { state, dropped } = decodeShare(ballot, opts.share);
       state.setupDone = true; // a ballot that came from a link never asks step 2, even after a reload
-      // "Hide races I've decided" isn't in the link: a link opened on this device keeps this device's.
+      // "Hide races I've decided" and the sections you folded aren't in the link: a link opened on
+      // this device keeps this device's.
       state.hideDecided = !!existing && existing.hideDecided;
+      state.secs = existing ? existing.secs : noSections();
       normalizeRanks(ballot, state);
       const n = countPicks(state);
       const m = existing ? countPicks(existing) : 0;

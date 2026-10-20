@@ -279,11 +279,12 @@ A.sec = (d, btn) => {
   }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }
   anchored(() => renderSection(s), `sec-${s}`);
+  persist(); // the sections as you left them come back after a reload
 };
 /* A band's count ("2 of 5 decided", ledger countHTML): under "Hide races I've decided" it shows or
    hides the section's decided rows (a folded band opens with them); otherwise it folds or unfolds
-   the section, even one still being decided. The band stays where it is. The choice lasts for this
-   visit; the filter itself is what's saved. */
+   the section, even one still being decided. The band stays where it is. The choice is saved with
+   the ballot (S.b.secs, by persist), so a reload shows the sections as you left them. */
 A['sec-count'] = (d) => {
   const s = d.sec as SectionKey;
   anchored(() => endBeat(), `sec-${s}`);
@@ -303,6 +304,7 @@ A['sec-count'] = (d) => {
   anchored(() => renderSection(s), `sec-${s}`);
   // The other school districts' fold may have opened or closed with it: the counts follow.
   renderSummaries();
+  persist();
 };
 A.grp = (d) => {
   const k = d.g!;
@@ -313,6 +315,7 @@ A.grp = (d) => {
   anchored(() => renderSection(s), `sec-${s}`);
   // Opening the other school districts' fold claims its races, so the count changes.
   if (k === OTH_KEY) renderSummaries();
+  persist();
 };
 
 /* ---------- picks ---------- */
@@ -772,7 +775,7 @@ A.basis = (d) => {
   toast(e.lean ? `${e.short}: ${LEANS[e.lean][1]}, ${how || 'basis not recorded'}. Tap “See all sources” for details.` : `${e.short}: not rated for lean.`);
 };
 A['shared-keep'] = () => { S.pending = null; render(['restore']); toast('Using the picks from your link. Change any pick as you go.'); };
-A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
+A['shared-fresh'] = () => { const zip = S.b.zip; const hide = S.b.hideDecided; const secs = S.b.secs; S.b = emptyBallotState(zip); S.b.hideDecided = hide; S.b.secs = secs; S.pending = null; render(); persist(true); toast('Started fresh. The shared picks are cleared on this device.'); };
 A['restore-no'] = () => { S.pending = null; render(['restore']); toast('Kept the picks on this device.'); };
 
 /* ---------- cheat sheet, save link, pass it on ---------- */

@@ -397,17 +397,16 @@ def state_rings(code, keep=.02):
 # leave desk under its right side), kept out of the repo: simulated annealing over each piece's place, size
 # (within 8% of its old one) and turn, and the order they fall in, toward paper on every column of the frame's
 # bottom edge, even cover across a phone's middle 390 px with the same paper left and right of center, no desk
-# showing between pieces under the heap's top edge, turns and a skyline that vary, the heap settling lower
-# toward the ends, each state showing at least 70% of itself (Florida, Texas and California 80%), and nothing
-# past the frame's top or sides. Papers were then dealt so touching pieces mostly differ and each paper spreads
-# across the width. DC is a small punched dot on top, where the city sits on Maryland's southwest edge. The
-# numbers are fixed here so a render is repeatable.
+# showing between pieces under the heap's top edge, each state showing at least 62% of itself, and nothing
+# past the frame's top or sides. Kevin chose this one from the candidates. Papers were then dealt so touching
+# pieces mostly differ and each paper spreads across the width. DC is a small punched dot on top, where the
+# city sits on Maryland's southwest edge. The numbers are fixed here so a render is repeatable.
 PILE = [
-    ('GA', 1.70, -0.38, .83, 13, 'cream'), ('MD', -0.91, -0.12, .66, 35, 'deep'), ('AL', 2.83, -0.17, .72, -13, 'green'),
-    ('IL', -1.48, 0.05, .70, 35, 'green'), ('CO', -0.29, -0.41, .77, 1, 'tint'), ('MO', 0.83, -0.31, .91, -3, 'deep'),
-    ('OR', -1.08, -0.39, .81, 0, 'cream'), ('TX', -2.42, -0.09, .97, 11, 'cream'), ('FL', 1.66, -0.27, .79, 35, 'tint'),
-    ('WA', 2.54, -0.60, .77, -24, 'deep'), ('CA', 0.38, -0.29, .85, -24, 'green'), ('PA', -1.57, -0.56, .70, -13, 'tint'),
-    ('NY', -2.44, -0.66, .75, -13, 'deep'), ('DC', -0.86, -0.06, .12, 0, 'cream'),
+    ('WA', -0.63, -0.20, .74, -3, 'cream'), ('CA', 1.25, -0.32, .96, 28, 'green'), ('IL', 2.81, -0.39, .70, 13, 'deep'),
+    ('AL', -2.71, -0.42, .72, 9, 'green'), ('NY', -0.06, -0.54, .79, 2, 'tint'), ('CO', 2.25, -0.40, .85, 4, 'cream'),
+    ('FL', 1.77, -0.11, .79, 35, 'tint'), ('GA', -2.04, -0.35, .87, -31, 'cream'), ('TX', -1.37, -0.07, .94, 35, 'deep'),
+    ('OR', 1.51, 0.10, .77, -8, 'deep'), ('MD', -1.82, -0.39, .60, 10, 'tint'), ('PA', -1.19, -0.60, .76, -4, 'green'),
+    ('MO', 0.60, -0.61, .81, 15, 'deep'), ('DC', -1.76, -0.36, .12, 0, 'cream'),
 ]
 PILE_FRAME = (6.4, 1.5)   # scene units; at PX=300 the image is 1920 by 450, drawn at 640 by 150 CSS px (3x)
 PILE_STEP = .017          # a sheet clears the one under it by this much: its thickness plus the most a crumple

@@ -29,13 +29,20 @@ export interface BallotState {
   setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
   hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
   mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
+  secs: SectionsShown;               // the sections and court groups you folded, opened or showed decided rows in, on this device; never in the save link
 }
+/* What you did to the ballot's sections, kept with it so a reload looks the way you left it (Kevin,
+   Oct 21): the UI's folded, unfolded and reveal sets. */
+export interface SectionsShown { folded: string[]; unfolded: string[]; reveal: string[] }
+export const noSections = (): SectionsShown => ({ folded: [], unfolded: [], reveal: [] });
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
   planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false, mine: [],
+  secs: noSections(),
 });
 
-/* View state for the ledger. Nothing here is saved. */
+/* View state for the ledger. Nothing here is saved, except the section sets, which persist() copies to
+   S.b.secs and resetUI reads back when a ballot opens. */
 export type View = 'ballot' | 'cheat' | 'pass';
 export interface UI {
   view: View;
@@ -45,7 +52,7 @@ export interface UI {
   others: Set<string>;        // rows showing sources outside your lens
   folded: Set<string>;        // sections or court groups the voter folded
   unfolded: Set<string>;      // decided sections and long groups the voter opened
-  reveal: Set<string>;        // sections whose decided rows show under "Hide races I've decided" (their count, tapped), for this visit
+  reveal: Set<string>;        // sections whose decided rows show under "Hide races I've decided" (their count, tapped)
   keep: string | null;        // the row just decided ("Next up" goes on from it)
   beat: string | null;        // under "Hide races I've decided", the row just decided, showing its pick for a beat before it folds away
   noteOpen: Set<string>;
@@ -117,7 +124,7 @@ export function readSaved(): Saved {
 }
 export function savedBallot(key: string): BallotState | null {
   const b = readSaved().ballots[key];
-  return b ? { ...emptyBallotState(), ...b, ranks: { ...(b.ranks || {}) } } : null;
+  return b ? { ...emptyBallotState(), ...b, ranks: { ...(b.ranks || {}) }, secs: { ...noSections(), ...(b.secs || {}) } } : null;
 }
 let saveTimer: number | undefined;
 export function persist(now = false): void {
@@ -128,6 +135,7 @@ export function persist(now = false): void {
     const s = readSaved();
     s.prefs = S.prefs;
     if (S.ballot) {
+      S.b.secs = { folded: [...S.ui.folded], unfolded: [...S.ui.unfolded], reveal: [...S.ui.reveal] };
       s.ballots[S.ballot.key] = S.b;
       s.last = { key: S.ballot.key, zip: S.b.zip };
     }

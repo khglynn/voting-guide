@@ -449,6 +449,8 @@ b, strong { font-weight: 600; }
 .grid.grid-yn .cand .nm { font-size: 18px; }
 .grid tbody th { text-align: left; font-weight: 600; font-size: 13.5px; line-height: 1.16; padding: 7px 6px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; overflow-wrap: anywhere; }
 .grid tbody th .sn { display: block; }
+/* A source's name opens its page for this race: a quiet underline, the ink it already had. */
+.grid tbody th a.sn, .others a.o-n { color: inherit; text-decoration: underline; text-decoration-color: var(--rule-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .grid tbody th .lean { margin-top: 3px; }
 .grid td { text-align: center; border-bottom: 1px solid var(--rule); border-left: 1px solid var(--rule); padding: 4px 2px; vertical-align: middle; }
 .grid td.col-me, .grid th.col-me { background: var(--gold-wash); }
@@ -783,11 +785,12 @@ b, strong { font-weight: 600; }
    render drawn at 640 by 150). The first page is at least a screen tall, and the band sits on its bottom
    edge, as wide as the page; the heap is drawn at its own size in the middle, so a phone sees it run off
    both sides and a wider screen sees all of it, ending in bare desk. Every piece along the bottom runs
-   off the render's edge, so no desk shows under the heap (Kevin, Oct 21); the bottom 3px are cut off,
-   where the bake's softening leaves the edge a little see-through. Decoration only. */
-.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 165px; }
-.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 147px; overflow: hidden; overflow: clip; pointer-events: none; }
-.pile img { position: absolute; left: 50%; bottom: -3px; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
+   off the render's edge, so no desk shows under the heap (Kevin, Oct 21); the bottom 5px are cut off,
+   where the bake's softening leaves the edge a little see-through and two pieces' lifted edges can
+   leave a sliver of desk. Decoration only. */
+.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 163px; }
+.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 145px; overflow: hidden; overflow: clip; pointer-events: none; }
+.pile img { position: absolute; left: 50%; bottom: -5px; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
 @media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 

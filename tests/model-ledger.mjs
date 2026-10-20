@@ -481,7 +481,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     if (pf1) {
       bulk.applyFills([pf1]);
       const pv = tally.verdict(p.byId.get(pf1.id));
-      check('party fill: the row says "Filled from your party", not "from your sources"', pv.sub === 'Filled from your party', JSON.stringify(pv));
+      check('party fill: the row says "From your party", not "From your sources"', pv.sub === 'From your party', JSON.stringify(pv));
     } else check('party fill: a single-seat party fill exists to test', false);
     // Top-two: LA has races with two candidates of one party.
     const la = open('CA', ['los-angeles-ca']);
@@ -749,21 +749,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     if (one) {
       const src = tally.weighedIn(tally.lineup(b.byId.get(one.id)))[0];
       const v = tally.verdict(b.byId.get(one.id));
-      check('fill names: a pick filled from one source says "Filled from" that source', v.sub === `Filled from ${src.short}`, `${one.id}: ${v.sub}`);
+      check('fill names: a pick filled from one source says "From" that source', v.sub === `From ${src.short}`, `${one.id}: ${v.sub}`);
     }
-    if (many) check('fill names: a pick several sources agreed on still says "Filled from your sources"', tally.verdict(b.byId.get(many.id)).sub === 'Filled from your sources', tally.verdict(b.byId.get(many.id)).sub);
+    if (many) check('fill names: a pick several sources agreed on still says "From your sources"', tally.verdict(b.byId.get(many.id)).sub === 'From your sources', tally.verdict(b.byId.get(many.id)).sub);
     // A single source whose name holds a comma or the word "Party" is still named, not "your party".
     const it = b.items.find((x) => x.kind === 'measure');
     const party = b.endorsers.find((e) => /party/i.test(e.short) && e.endorses_measures);
     if (party) {
       S.b.picks[it.id] = 'YES';
       S.b.auto[it.id] = `Filled in from your sources: ${party.short}`;
-      check('fill names: an agree fill from one party organization names it, not "your party"', tally.verdict(it).sub === `Filled from ${party.short}`, tally.verdict(it).sub);
+      check('fill names: an agree fill from one party organization names it, not "your party"', tally.verdict(it).sub === `From ${party.short}`, tally.verdict(it).sub);
     }
     const comma = b.endorsers.find((e) => /, /.test(e.short));
     if (comma) {
       S.b.auto[it.id] = `Filled in from your sources: ${comma.short}`;
-      check('fill names: a source whose name has a comma is still one source', tally.verdict(it).sub === `Filled from ${comma.short}`, tally.verdict(it).sub);
+      check('fill names: a source whose name has a comma is still one source', tally.verdict(it).sub === `From ${comma.short}`, tally.verdict(it).sub);
     }
     bulk.undoFills();
   }
@@ -1477,6 +1477,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: "mine" never goes in the save link', st.encodeShare(au, bare) === linked && st.decodeShare(au, head(linked)).state.mine.length === 0);
     const old = { zip: '78704', picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: true, hideDecided: false };
     check('address: an older save reads "mine" as empty', JSON.stringify({ ...st.emptyBallotState(), ...old }.mine) === '[]');
+    // The sections you folded or opened are saved with the ballot on this device, never in the link.
+    const folded = { ...S.b, secs: { folded: ['state'], unfolded: ['judicial'], reveal: ['measures'] } };
+    check('sections: what you folded or opened never goes in the save link', st.encodeShare(au, folded) === linked && JSON.stringify(st.decodeShare(au, head(linked)).state.secs) === JSON.stringify(st.noSections()));
+    check('sections: an older save reads them as none', JSON.stringify({ ...st.emptyBallotState(), ...old }.secs) === JSON.stringify(st.noSections()));
     // Statewide Florida: the appeals judges are the sample ballot's; nothing here turns on Congress.
     const fl = open('FL', []);
     const fset = address.setFromAddress(fl, S.b, { cd: 24, upper: 38, lower: null });
@@ -1515,13 +1519,32 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
     S.ui.addrFound = 'Test One, Austin, TX 78704';
     const n1 = ledger.addressCount();
-    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} still depend on your address. Your sample ballot shows them. See my sample ballot`, box());
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} races need your sample ballot. The address lookup doesn’t cover races like school board or state board of education. See my sample ballot`, box());
     check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
     S.ui.addrFound = null;
     check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
     open('FL', []);
     S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
-    check('address box: nothing set, "Found your address. Your sample ballot shows the rest."', /^Found your address\. Your sample ballot shows the rest\. See my sample ballot$/.test(box()), box());
+    check('address box: nothing set, what is left for the sample ballot', /^\d+ races? needs? your sample ballot\.( The address lookup doesn’t cover races like [a-zA-Z .]+( or [a-zA-Z .]+)?\.)? See my sample ballot$/.test(box()), box());
+    check('address: the kinds of race the lookup can’t settle, most common first', address.addressKinds(['Austin City Council Member', 'Austin ISD Trustee', 'Round Rock ISD Trustee, Place 3', 'Travis County Commissioner', 'Mayor of Kyle', 'U.S. Representative']).join('|') === 'school board|city council|county board|city office|U.S. House');
+    // A source's name opens its page for the race, at the pick where the browser can (Kevin, Oct 21).
+    {
+      const ab = open('TX', ['austin-tx']);
+      const chron = ab.eById.get('austin-chronicle-eb');
+      const race = ab.byId.get('tx-us-house-10');
+      const r = ab.ends['tx-us-house-10']['austin-chronicle-eb'];
+      const u = views.open.pickURL(race, chron);
+      check('sources: a pick links to its page, at the candidate’s full name, then last name', u === `${r.url}#:~:text=${encodeURIComponent(r.c[0])}&text=${encodeURIComponent(r.c[0].split(' ').pop())}`, u);
+      const prop = ab.items.find((x) => x.kind === 'measure' && /^Proposition \S+$/.test(x.number) && Object.values(ab.ends[x.id] || {}).some((e) => e.s === 'endorsed'));
+      const pe = Object.entries(ab.ends[prop.id]).find(([, e]) => e.s === 'endorsed');
+      const pu = views.open.pickURL(prop, ab.eById.get(pe[0]));
+      check('sources: a measure’s pick links at its number, written both ways', pu.endsWith(`:~:text=${encodeURIComponent(prop.number)}&text=${encodeURIComponent(prop.number.replace('Proposition', 'Prop'))}&text=${encodeURIComponent(prop.number.replace('Proposition', 'Prop.'))}`), pu);
+      const np = Object.entries(ab.ends).flatMap(([id, by]) => Object.entries(by).filter(([, e]) => e.s === 'no_position' && e.url).map(([eid, e]) => [id, eid, e]))[0];
+      check('sources: a source that took no stand links to the page we checked, as is', views.open.pickURL(ab.byId.get(np[0]), ab.eById.get(np[1])) === np[2].url);
+      S.ui.row = race.id;
+      check('sources: the grid’s source names are links that open a new tab', new RegExp(`<a class="sn" href="${r.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}#:~:text=`).test(ledger.rowHTML(race)) && /<a class="sn"[^>]*target="_blank" rel="noopener"/.test(ledger.rowHTML(race)));
+      S.ui.row = null;
+    }
     // A DC ward: nothing turns on the address, so after a lookup only what was found, and no "the rest".
     open('DC', ['dc-ward-1']);
     const hasBox = () => /class="addrbox"/.test(ledger.ballotHeadHTML());

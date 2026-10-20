@@ -53,3 +53,37 @@ export function setFromAddress(b: Ballot, s: BallotState, r: Districts): string[
    found the address but put no race on this ballot, FOUND_ONLY. Never the address. */
 export const FOUND_ONLY = 'Found your address.';
 export const addrSummary = (set: string[]): string => (set.length ? `Set from your address: ${set.join(' · ')}.` : FOUND_ONLY);
+
+/* What the address can't settle, in a voter's words, for the address box: "The address lookup doesn't
+   cover races like city council or school board." Each office still depending on the address gets a
+   kind; the two most common come first. Anything that matches no kind says nothing. */
+const OFFICE_KINDS: [RegExp, string][] = [
+  [/state board of education/i, 'state board of education'],
+  [/board of equalization/i, 'Board of Equalization'],
+  [/board of supervisors/i, 'board of supervisors'],
+  [/county (clerk|treasurer|assessor|sheriff|surveyor|coroner|recorder)/i, 'county office'],
+  [/county.*(commission|council|board)|(commission|council|board).*county|commissioners court/i, 'county board'],
+  [/council|alder|selectm/i, 'city council'],
+  [/school|education|\bisd\b|trustee|college|regent|universit/i, 'school board'],
+  [/justice of the peace/i, 'justice of the peace'],
+  [/constable/i, 'constable'],
+  [/judge|court|justice/i, 'judge'],
+  [/neighborhood|advisory/i, 'neighborhood commission'],
+  [/rtd|bart|transit/i, 'transit board'],
+  [/water|aquifer|soil/i, 'water district'],
+  [/utilit/i, 'utility board'],
+  [/hospital/i, 'hospital district'],
+  [/development district/i, 'development district'],
+  [/town|highway|village/i, 'town office'],
+  [/mayor|city commission/i, 'city office'],
+  [/state (representative|senator|house|senate)|assembly|delegate/i, 'state legislature'],
+  [/u\.?\s?s\.?\s|congress/i, 'U.S. House'],
+];
+export function addressKinds(offices: string[]): string[] {
+  const n = new Map<string, number>();
+  for (const o of offices) {
+    const k = OFFICE_KINDS.find(([re]) => re.test(o));
+    if (k) n.set(k[1], (n.get(k[1]) || 0) + 1);
+  }
+  return [...n.entries()].sort((a, b) => b[1] - a[1]).map(([k]) => k);
+}

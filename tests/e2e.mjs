@@ -591,7 +591,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '[data-act="open"][data-k="whatif"]');
   check('Ballot top: in Austin (Travis, Williamson and Hays) the next step names no one county\'s hours, then says to bring a photo ID', !/Travis County sites/.test(await text(page, '.plan-sub')) && /in your county\..*Bring a photo ID\.$/.test(await text(page, '.plan-sub')), await text(page, '.plan-sub'));
   const box = await text(page, '.addrbox > p');
-  check('Ballot top: the address box says how many races depend on your address', /^\d+ races depend on your address\.$/.test(box), box);
+  check('Ballot top: the address box says how many races depend on your address, and what the address can do', /^\d+ races depend on your address\. Your address finds \d+ of them\. Your sample ballot shows all \d+\.$/.test(box), box);
   check('Ballot top: with "Use my address" and "See my sample ballot"', (await text(page, '.addrbox [data-act="addr-open"]')) === 'Use my address' && (await text(page, '.addrbox a')) === 'See my sample ballot' && /^https:/.test((await page.getAttribute('.addrbox a', 'href')) || ''));
   check('Ballot top: the old head lines are gone', !/in the same order as your ballot/.test(await text(page, '#r-ballot')) && !(await page.$('.bhead .sb')));
   await tap(page, '.addrbox [data-act="addr-open"]');
@@ -666,7 +666,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   });
   await openBallot(page, '78704');
   const before = await text(page, '.addrbox .addr-n');
-  check('Address box before a lookup: "{n} races depend on your address."', /^\d+ races depend on your address\.$/.test(before), before);
+  check('Address box before a lookup: "{n} races depend on your address." and how many the address finds', /^\d+ races depend on your address\. Your address finds \d+ of them\./.test(before), before);
   await tap(page, '.addrbox [data-act="addr-open"]');
   await page.fill('#addr-in', 'a test lookup');
   await page.locator('form[data-form="addr"] button[type=submit]').tap();
@@ -678,7 +678,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Address box after a lookup: what it set, by office', (await text(page, '.addrbox .addr-set')) === setLine, await text(page, '.addrbox .addr-set'));
   const left = await text(page, '.addrbox .addr-n');
   const nLeft = Number((left.match(/^(\d+)/) || [])[1]);
-  check('Address box after a lookup: the rest counted, for the sample ballot', /^\d+ still depend on your address\. Your sample ballot shows them\.$/.test(left) && nLeft < Number((before.match(/^(\d+)/) || [])[1]), `${before} then ${left}`);
+  check('Address box after a lookup: the rest counted for the sample ballot, with the kinds of race the lookup doesn’t cover', /^\d+ races need your sample ballot\. The address lookup doesn’t cover races like [a-zA-Z .]+( or [a-zA-Z .]+)?\.$/.test(left) && nLeft < Number((before.match(/^(\d+)/) || [])[1]) && !/depend on your address/.test(left), `${before} then ${left}`);
   const btns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
   check('Address box after a lookup: the sample ballot leads', btns.join('|') === 'See my sample ballot (dark)', btns.join('|'));
   check('Address box after a lookup: no question left offers Use my address', !(await page.$('.ledger [data-act="addr-open"]')));
@@ -727,7 +727,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   const fbtns = await page.$$eval('.addrbox .row-btns > *', (els) => els.map((e) => `${e.textContent.trim()}${e.classList.contains('dark') ? ' (dark)' : ''}`));
-  check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', (await text(page, '.addrbox .addr-n')) === 'Found your address. Your sample ballot shows the rest.' && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
+  check('Statewide Florida: nothing here turns on Congress, so the box sends you to the sample ballot', /^\d+ races? needs? your sample ballot\./.test(await text(page, '.addrbox .addr-n')) && !(await page.$('.addrbox .addr-set')) && fbtns.join('|') === 'See my sample ballot (dark)', `${await text(page, '.addrbox')} | ${fbtns.join('|')}`);
   check('Statewide Florida: the box still shows what was found', (await text(page, '.addrbox .addr-found')) === 'Found: Test Two, Miami, FL 33101 Not it? Try again', await text(page, '.addrbox .addr-found'));
   noErrors(page, 'Statewide Florida address');
   await ctx.close();
@@ -1824,14 +1824,14 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
   await editFill(page);
-  const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /Filled from your sources/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
+  const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /From your sources/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
   check('Undo after a hand edit: a measure was filled', !!filled);
   if (filled) {
     await openRow(page, filled.id);
     await tap(page, `#i-${filled.id} [data-act="pick"][data-v="${filled.v}"]`);
     await tap(page, '.toast [data-act="undo-bulk"]').catch(() => {});
     const still = await text(page, `#i-${filled.id} .vd .m`);
-    check('Undo after a hand edit: the pick you confirmed by hand stays', new RegExp(filled.v === 'YES' ? 'Yes$' : 'No$').test(still) && !/Filled from your sources/.test(await text(page, `#i-${filled.id}`)), still);
+    check('Undo after a hand edit: the pick you confirmed by hand stays', new RegExp(filled.v === 'YES' ? 'Yes$' : 'No$').test(still) && !/From your sources/.test(await text(page, `#i-${filled.id}`)), still);
   }
   noErrors(page, 'Undo after a hand edit');
   await ctx.close();
@@ -2096,6 +2096,13 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   check('Beat under a band: tapping its count ends the beat and the band stays where it was', c.beat && c.gone && Math.abs(c.b1 - c.b0) <= 1 && (await text(page, '#sec-measures .sec-edit')) === 'Hide', `beat ${c.beat}, ${c.b0} then ${c.b1}`);
   const f = await held('city', '#sec-city [data-act="sec"]');
   check('Beat under a band: tapping a folded band’s title does the same', f.beat && f.gone && Math.abs(f.b1 - f.b0) <= 1 && !(await page.$('#sec-city.folded')), `beat ${f.beat}, ${f.b0} then ${f.b1}`);
+  // What you showed under the filter is still showing after a reload (Kevin, Oct 21).
+  const shownBefore = await page.$$eval('#sec-measures .row[data-item]:not([data-undecided])', (els) => els.length);
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await settle(page);
+  check('Hide races I’ve decided: sections you opened stay open after a reload, decided rows and all', (await text(page, '#sec-measures .sec-edit')) === 'Hide' && !(await page.$('#sec-city.folded'))
+    && shownBefore > 0 && (await page.$$eval('#sec-measures .row[data-item]:not([data-undecided])', (els) => els.length)) === shownBefore, `${shownBefore} | ${await text(page, '#sec-measures .sec-r')}`);
   noErrors(page, 'Beat under a band');
   await ctx.close();
 }
@@ -2117,7 +2124,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
 }
 {
   // Without the filter, a band's count folds and unfolds its section, even one still being decided;
-  // the band itself still goes to the next race left. The choice lasts the visit.
+  // the band itself still goes to the next race left. The choice is saved with the ballot.
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
   check('Counts: without the filter the count reads "0 of 2 decided" with Hide', (await text(page, '#sec-federal .sec-r')) === '0 of 2 decided Hide' && (await page.getAttribute('#sec-federal [data-act="sec-count"]', 'aria-expanded')) === 'true', await text(page, '#sec-federal .sec-r'));
@@ -2128,6 +2135,10 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   const b1 = await page.$eval('#sec-state > .sec-h', (e) => e.getBoundingClientRect().top);
   check('Counts: tapped, it folds the section, the band where it was', !!(await page.$('#sec-state.folded')) && !(await page.$('#sec-state .row')) && (await text(page, '#sec-state .sec-r')) === '0 of 8 decided Show' && Math.abs(b1 - b0) <= 1, `${b0} then ${b1}`);
   check('Counts: the bar still counts the folded races', /^0 of /.test(await text(page, '.bar-txt')));
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await settle(page);
+  check('Counts: a section you folded stays folded after a reload', !!(await page.$('#sec-state.folded')) && (await text(page, '#sec-state .sec-r')) === '0 of 8 decided Show', await text(page, '#sec-state .sec-r'));
   await tap(page, '#sec-state [data-act="sec-count"]');
   await settle(page);
   check('Counts: tapped again, it unfolds', !(await page.$('#sec-state.folded')) && (await page.$$('#sec-state .row[data-undecided]')).length >= 6 && (await text(page, '#sec-state .sec-edit')) === 'Hide');
@@ -2324,7 +2335,7 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   const opts = await page.$$eval('.addrbox .addr-which [data-act="addr-which"]', (els) => els.map((e) => e.textContent.trim()));
   check('Several matches: "Which one is yours?" with one button each, the same address once', (await text(page, '.addrbox .addr-which #aw-h')) === 'Which one is yours?' && opts.join(' | ') === 'Test One, Austin, TX 78704 | Test Two, Austin, TX 78745' && (await text(page, '.addrbox [data-fk="aw-none"]')) === 'None of these', opts.join(' | '));
   check('Several matches: focus on the first', (await focusedFk(page)) === 'aw-0', await focusedFk(page));
-  check('Several matches: nothing set yet', !(await page.$('.addrbox .addr-set')) && /^\d+ races depend on your address\.$/.test(await text(page, '.addrbox .addr-n')));
+  check('Several matches: nothing set yet', !(await page.$('.addrbox .addr-set')) && /^\d+ races depend on your address\./.test(await text(page, '.addrbox .addr-n')));
   await shot(page, '04e-which-address');
   const bigEnough = await small44(page, '.addrbox .addr-which');
   check('Several matches: every button is a full-size tap', bigEnough.length === 0, bigEnough.join(', '));

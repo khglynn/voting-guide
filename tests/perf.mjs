@@ -55,7 +55,7 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   out.push({ name, open, setupChip, setupFill, show, openRow, pick, edit, chip, done, menu, only });
   await ctx.close();
 }
-/* From 1000px the menu stands as a rail drawn with the bar, so it repaints after every pick: a pick
+/* From 1180px the menu stands as a rail drawn with the bar, so it repaints after every pick: a pick
    on the biggest ballot at 1280px must still paint under 250ms. */
 const wide = [];
 for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {

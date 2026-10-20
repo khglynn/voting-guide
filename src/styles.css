@@ -542,7 +542,7 @@ b, strong { font-weight: 600; }
 .ftog { min-height: 46px; padding: 0 10px; border: 1.25px solid var(--ink); border-radius: 2px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
 .fcta { min-height: 46px; padding: 0 14px; background: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); border-radius: 2px; font-weight: 600; font-size: 15px; text-align: center; }
 
-/* ---------- the menu: a sheet, and from 1000px a rail in the left margin ---------- */
+/* ---------- the menu: a sheet, and from 1180px a rail in the left margin ---------- */
 .nv-next { width: 100%; min-height: 48px; padding: 8px 14px; background: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); border-radius: 2px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 16px; line-height: 1.2; text-align: left; }
 .nv-sw.su-sw { align-items: center; padding: 8px 0 4px; }
 .nv-sw .su-l b { font-weight: 400; }
@@ -556,7 +556,7 @@ b, strong { font-weight: 600; }
 .nv-next .nv-a { color: var(--on-dusk); }
 .nv-plan .nv-t { color: var(--print); }
 .rail { display: none; }
-@media (min-width: 1000px) {
+@media (min-width: 1180px) {
   /* In the margin left of the column (and clear of the bands' 20px overhang), up to 240px wide. */
   .rail { display: block; position: fixed; z-index: 30; top: 20px; width: min(240px, calc(50vw - 372px)); left: calc(50vw - 356px - min(240px, calc(50vw - 372px)));
     max-height: calc(100vh - var(--foot-h) - 40px); overflow-y: auto; overscroll-behavior: contain; padding: 2px 4px 10px 2px; }

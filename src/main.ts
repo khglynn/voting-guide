@@ -92,7 +92,7 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
-/* From 1000px the menu stands as a rail in the margin (drawn with the bar): crossing that width
+/* From 1180px the menu stands as a rail in the margin (drawn with the bar): crossing that width
    redraws the bar, and a menu sheet left open closes, since the rail now shows it. */
 try {
   window.matchMedia(RAIL_AT).addEventListener('change', (e) => {

@@ -87,7 +87,7 @@ A.next = (d) => {
   closeMenu();
   if (key) openAt(key);
 };
-/* The menu: a sheet ("☰ 20 of 43" in the bar), or the rail from 1000px. */
+/* The menu: a sheet ("☰ 20 of 43" in the bar), or the rail from 1180px. */
 A.toc = (_d, el) => {
   S.ui.sheetFrom = el.dataset.fk || 'bar-menu';
   S.ui.sheetBack = null;

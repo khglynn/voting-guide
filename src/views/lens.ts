@@ -27,7 +27,7 @@ export function chipsHTML(): string {
 /* "Picks: Newspapers and guides" at the top of the ballot: whose picks show, in a few words. */
 export function lensSummary(): string {
   const b = S.ballot!;
-  if (noEndorsements()) return 'No endorsements';
+  if (noEndorsements()) return 'No endorsements shown';
   const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
   if (S.b.party) on.push(`the ${S.b.party} Party`);
   const n = chosenIds().length;

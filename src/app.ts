@@ -117,7 +117,7 @@ const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && co
    chosen (a group with no picks here stays out, as its chip does), then the party if it is on
    this ballot. A party it doesn't have just drops out. */
 function applyDoor(b: Ballot): void {
-  if (doorNone()) { S.b.sources = []; S.b.party = null; return; } // "No endorsements"
+  if (doorNone()) { S.b.sources = []; S.b.party = null; return; } // "Don’t show endorsements"
   let ids = chosenIds();
   for (const c of CHIPS) {
     if (c.key !== 'papers' && chipState(b, c.key) === 'empty') continue;

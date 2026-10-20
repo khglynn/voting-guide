@@ -122,7 +122,7 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
 /* When none of your sources weighed in: one calm line instead of an empty table. */
 function noneLineHTML(it: Item, l: Lineup): string {
   const parts: string[] = [];
-  // "No endorsements" chosen: nothing to say about sources, so the row stays tight.
+  // "Don’t show endorsements" chosen: nothing to say about sources, so the row stays tight.
   if (!chosen().length) return '';
   if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
@@ -135,7 +135,7 @@ function noneLineHTML(it: Item, l: Lineup): string {
 }
 /* Sources outside your lens that did pick here, marked as such. */
 function othersHTML(it: Item): string {
-  if (!chosen().length) return ''; // "No endorsements": no other sources either
+  if (!chosen().length) return ''; // "Don’t show endorsements": no other sources either
   const ids = new Set(chosenIds());
   const others = S.ballot!.endorsers.filter((e) => !ids.has(e.id));
   const ol = lineup(it, others);

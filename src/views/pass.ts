@@ -197,7 +197,7 @@ export function passHTML(): string {
     <button class="back" data-act="view" data-v="ballot" data-fk="pass-back">Back to the ballot</button>
     ${voted ? '<div class="voted-head"><p class="kick">You voted. Thank you.</p></div>' : ''}
     <h2 id="pass-h">Help your friends vote</h2>
-    <p class="lede">Copy a message below and send it. Ask each person to text three more.</p>
+    <p class="lede">Copy a message, make it your own, and send it. Ask each person to text three more.</p>
     ${m.fam ? '<button class="bigbtn" data-act="share-guide" data-fk="share-guide">Share the guide</button>' : ''}
     <div class="msgs fam"><h4>For friends, family and public posts</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
     <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>

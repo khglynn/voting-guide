@@ -197,7 +197,7 @@ export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
-  // "No endorsements" chosen: the column stays empty and quiet.
+  // "Don’t show endorsements" chosen: the column stays empty and quiet.
   no_cover: 'Not covered by your sources', no_sources: '', both: 'Listed both sides',
   mixed: 'No endorsements',
 };
@@ -292,7 +292,7 @@ export function verdict(it: Item): Verdict {
   }
   const named = namedLineup(l, it);
   const [a, b2] = [l.groups[0].sources.length, l.groups[1] ? l.groups[1].sources.length : 0];
-  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split', shade: a >= 2 * b2 ? 'lean' : 'even' };
+  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'picks split', shade: a >= 2 * b2 ? 'lean' : 'even' };
 }
 
 /* "Your 4 sources made picks on 18 of your 42 choices." Over what's visible now, counting the same

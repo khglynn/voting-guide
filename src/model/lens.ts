@@ -142,7 +142,7 @@ export function setSources(b: Ballot, ids: string[]): void {
   const def = defaultIds(b);
   S.b.sources = uniq.length === def.length && def.every((id) => uniq.includes(id)) ? null : uniq;
 }
-/* "No endorsements": no source on and no party, so every row shows just the choices. An option,
+/* "Don’t show endorsements": no source on and no party, so every row shows just the choices. An option,
    never the default (Kevin, Oct 20); turning on any chip or a party ends it. On the first page
    before a ZIP, the same reading of the choices kept so far. */
 export const noEndorsements = (): boolean => !S.b.party && chosenIds().length === 0;

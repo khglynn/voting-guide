@@ -9,7 +9,7 @@ import { chipsHTML, TICK } from './lens';
 import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens';
 import { coverage } from '../model/tally';
 import { planSetup } from '../model/bulk';
-import { isOpen, FILL, HIDE } from './common';
+import { isOpen, FILL, HIDE, NO_ENDS } from './common';
 
 /* "Austin, Texas", "Aurora or Denver, Colorado", "Ward 1, Washington, DC", or the state alone for
    statewide races. */
@@ -28,7 +28,7 @@ export function fillLine(party: string | null): string {
   const p = plan.party ? plan.party.fills.length : 0;
   if (plan.party && (p || a)) return `${[p ? `${p} from the ${party} Party` : '', a ? `${a} where your other sources agree` : ''].filter(Boolean).join(' and ')}.`;
   const one = plan.agree.single;
-  return `${plural(a, 'race')} where they agree${one ? ` (${one} from just one source)` : ''}. Races where they split stay open.`;
+  return `${plural(a, 'race')} where they agree${one ? ` (${one} from just one source)` : ''}. Races where picks split stay open.`;
 }
 
 const sw = (act: string, on: boolean, label: string, sub = ''): string =>
@@ -55,16 +55,18 @@ export function pickControlsHTML(inSheet = false): string {
     : '';
   const chips = b ? chipsHTML()
     : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
-  // "No endorsements": every row shows just the choices. With it on there is nothing to fill and
-  // nothing to count, so the fill switch and the coverage line step aside.
+  // "Don't show endorsements": every row shows just the choices. With it on there is nothing to fill
+  // and nothing to count, so the fill switch and the coverage line step aside. It leads the row
+  // (Kevin, Oct 20), so the chips that open more choices come after it; newspapers and guides stay
+  // the default.
   const none = b ? noEndorsements() : doorNone();
-  const noneChip = `<button class="chip" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none">${TICK}No endorsements</button>`;
+  const noneChip = `<button class="chip" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none">${TICK}${NO_ENDS}</button>`;
   const cov = b && !none ? coverage() : null;
-  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${noneChip}${more}</div>
+  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${noneChip}${chips}${partyChip}${more}</div>
     ${list}
     ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
     <div class="su-sws">
-      ${none ? '' : sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where they split stay open.')}
+      ${none ? '' : sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where picks split stay open.')}
       ${sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE)}
     </div>`;
 }

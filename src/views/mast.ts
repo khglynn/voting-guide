@@ -138,9 +138,9 @@ function whereHTML(): string {
     after = `<div class="notice" role="status"><p><b>We don’t cover ${name ? esc(name) : 'that area'} yet.</b> ${ext('https://vote.gov/', 'Vote.gov')} has official info for every state.</p>
       <p>Want this for your city? <a href="${esc(ask)}" target="_blank" rel="noopener" data-ask-kevin>Ask Kevin</a>.</p></div>`;
   }
-  // "Use my street address instead" opens the address form right here. The place question has its
+  // "Use my address for exact local races" opens the address form right here. The place question has its
   // own link, so this one steps aside while it shows.
-  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my street address instead</button></p>';
+  const addr = S.zipChoice ? '' : S.ui.addrOpen ? addrHTML(true) : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address for exact local races</button></p>';
   return `${err}
     ${S.view === 'loading' ? '<p class="small" role="status">Loading your ballot...</p>' : ''}
     ${S.loadErr ? `<p class="zip-err" role="alert">${esc(S.loadErr)}</p>${retryHTML()}` : ''}

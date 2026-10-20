@@ -411,7 +411,7 @@ A.src = (d) => {
   renderLens();
 };
 A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
-/* "No endorsements" (step 2 and the Edit sheet): every source off and no party, so every row shows
+/* "Don’t show endorsements" (step 2 and the Edit sheet): every source off and no party, so every row shows
    just the choices; the save link carries it as an empty source list. Tapped again, the newspapers
    and guides come back. Any other chip, or a party, ends it on its own. */
 A['no-ends'] = () => {

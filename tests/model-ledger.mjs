@@ -359,6 +359,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     set(Object.fromEntries(four.map((e, i) => [e.id, row('endorsed', [i < 3 ? 'YES' : 'NO'])])));
     v = tally.verdict(it);
     check('verdict: more than three sources shows a tally, leading side first', v.kind === 'split' && /^Yes 3, No [12]/.test(v.main), JSON.stringify(v));
+    check('verdict: under a tally the column says "picks split" (Kevin, Oct 20: "they split" was confusing)', v.sub === 'picks split', v.sub);
   }
 
   /* ---------- Codex #6: the same set of names in a different order is agreement ---------- */
@@ -903,7 +904,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     open('TX', ['austin-tx']);
     tally.clearLineups();
     const a0 = bulk.planSetup(null).agree;
-    check('fill line: no party, "{n} races where they agree ({k} from just one source). Races where they split stay open."', views.setup.fillLine(null) === `${a0.fills.length} races where they agree${a0.single ? ` (${a0.single} from just one source)` : ''}. Races where they split stay open.`, views.setup.fillLine(null));
+    check('fill line: no party, "{n} races where they agree ({k} from just one source). Races where picks split stay open."', views.setup.fillLine(null) === `${a0.fills.length} races where they agree${a0.single ? ` (${a0.single} from just one source)` : ''}. Races where picks split stay open.`, views.setup.fillLine(null));
     lens.setParty(S.ballot, 'Republican');
     tally.clearLineups();
     const pr = bulk.planSetup('Republican');
@@ -915,7 +916,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.view = 'start'; S.index = INDEX;
     const door = views.setup.pickControlsHTML();
     check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-cov/.test(door)
-      && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where they split stay open.') && door.includes('Hide races I’ve decided'));
+      && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
     S.door.chips = { papers: false, progressive: false, conservative: false };
     const doorNone = views.setup.pickControlsHTML();
     check('first page before a ZIP: every chip off is "No endorsements", with no fill switch', lens.doorNone() && /data-act="no-ends" aria-pressed="true"/.test(doorNone) && !/setup-fill/.test(doorNone));
@@ -1035,9 +1036,9 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('no endorsements: off by default', !lens.noEndorsements() && /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)));
     S.b.sources = [];
     tally.clearLineups();
-    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements');
+    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements shown');
     const sh = views.setup.pickControlsHTML(true);
-    check('no endorsements: its chip is on, the fill switch and the counts step aside, the filter stays', /data-act="no-ends" aria-pressed="true"[^>]*>.*No endorsements<\/button>/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
+    check('no endorsements: its chip is on, the fill switch and the counts step aside, the filter stays', /data-act="no-ends" aria-pressed="true"[^>]*>.*Don’t show endorsements<\/button>/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
     const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
     check('no endorsements: a measure is tight, yes and no with no source lines', /A yes vote means/.test(m81) && /data-act="pick"[^>]*data-v="YES"/.test(m81) && !/none-line|gridnote|papers-on|others-wrap|class="grid/.test(m81), strip(m81).slice(0, 120));
     const race = dn.items.find((x) => x.kind === 'contest' && !x.is_retention && x.candidates.length > 1 && x.candidates.length <= 6 && !x.ranked_choice && bl.status(x) === 'open');

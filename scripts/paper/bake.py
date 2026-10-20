@@ -7,10 +7,13 @@ Writes public/paper/<name>.webp and public/paper/dark/<name>.webp, and the paper
 
 - Shadow pixels from the shadow catcher are tinted to the page ink and capped, so no edge gets a hard
   black line. It fails if a real dark line survives.
-- The plan and the strips are drawn with CSS border-image, which stretches their middle rows to any
-  height; it checks those rows really are flat from top to bottom.
-- The cheat sheet's torn top is a band; its fill continues the render's light as a CSS gradient sampled
-  from the band's flat rows.
+- Everything is drawn as plain background images, never border-image: Safari scales border-image
+  slices roughly, and a 2x render upscaled on a 3x iPhone showed stair-stepped edges (Oct 20).
+- The plan notice is a torn top band and a torn bottom band; between them a CSS gradient sampled from
+  the render's flat middle continues its light at any height. The check below makes sure those middle
+  rows really are flat. The cheat sheet's torn top works the same way.
+- The strips are one image each, scaled as a whole to the header's height (no slices, so the cut
+  end stays one straight line).
 - The dark set is derived from the same renders: paper scaled to the dark tokens, white fiber cores
   pulled down to a quiet green grey, shadows lighter.
 """
@@ -32,6 +35,39 @@ def soften(a, cap=90, k=.55):
     a[sh, :3] = INK; a[sh, 3] = np.minimum(a[sh, 3] * k, cap)
     bad = (a[..., :3].max(-1) < 40) & (a[..., 3] > 150)
     assert bad.sum() < 40, 'dark opaque pixels left: %d' % bad.sum()   # a baked black edge is hundreds
+    return a
+
+def box(x, r):
+    """Mean over a (2r+1) square window, by summed-area table (no scipy needed)."""
+    p = np.pad(x, ((r + 1, r), (r + 1, r)) + ((0, 0),) * (x.ndim - 2), mode='edge').cumsum(0).cumsum(1)
+    n = 2 * r + 1
+    return (p[n:, n:] - p[:-n, n:] - p[n:, :-n] + p[:-n, :-n])
+
+def defringe(a, r=5):
+    """Where the paper's edge meets its own contact shadow, Cycles blends the edge pixels with the near-black
+    shadow under them: a dark, nearly opaque line one or two pixels wide along every cut edge. On a slanted edge
+    it steps row by row and reads as jagged teeth once a phone upscales it (Kevin, Oct 20). The shadow adds no
+    light, so a pixel's brightness over the nearby paper's is how much of it is paper: give it the paper's own
+    color with that coverage as alpha. Pixels that are almost all shadow stay for soften() to tint."""
+    a = a.copy(); al = a[..., 3]
+    near_clear = box((al < 250).astype(float), 2) > 0
+    inner = ((al == 255) & ~near_clear).astype(float)
+    cnt = box(inner, r)
+    local = box(a[..., :3] * inner[..., None], r) / np.maximum(cnt, 1e-6)[..., None]
+    lum, loc = a[..., :3].mean(-1), local.mean(-1)
+    c = np.clip(lum / np.maximum(loc, 1e-6), 0, 1)
+    fix = (al >= 100) & (inner == 0) & (cnt > 0) & (lum < .92 * loc) & (c >= .15)
+    a[fix, :3] = local[fix]; a[fix, 3] = np.minimum(al[fix], 255 * c[fix])
+    print('  defringed %d edge pixels' % fix.sum())
+    return a
+
+def soft_contact(a):
+    """The contact shadow just outside a cut edge is a crisp one-pixel line, and it steps too: average the
+    shadow's alpha over its 3x3 neighborhood so the line goes soft."""
+    a = a.copy()
+    sh = (np.abs(a[..., :3] - INK).max(-1) < 2) & (a[..., 3] < 255)
+    soft = box(np.where(sh, a[..., 3], 0.0), 1) / 9
+    a[sh, 3] = np.minimum(a[sh, 3], np.maximum(soft[sh], a[sh, 3] * .6))
     return a
 
 def darken(a, k, core_to=None, sh=.45):
@@ -67,17 +103,20 @@ def gradient(a, row, k=(1, 1, 1)):
 
 kb = {}
 light, dark = {}, {}
-a = soften(load('plan')); flat_rows(a, 200, a.shape[0] - 200, 'plan')
-kb['plan'] = save(a, os.path.join(OUT, 'plan.webp')); save(darken(a, GREEN_K, GREEN_CORE), os.path.join(OUTD, 'plan.webp'))
+a = soft_contact(soften(defringe(load('plan')))); flat_rows(a, 200, a.shape[0] - 200, 'plan')
+ad = darken(a, GREEN_K, GREEN_CORE); mid = a.shape[0] // 2
+kb['plan-top'] = save(a[:200], os.path.join(OUT, 'plan-top.webp')); save(ad[:200], os.path.join(OUTD, 'plan-top.webp'))
+kb['plan-bot'] = save(a[-200:], os.path.join(OUT, 'plan-bot.webp')); save(ad[-200:], os.path.join(OUTD, 'plan-bot.webp'))
+light['--plan-fill'] = gradient(a, mid); dark['--plan-fill'] = gradient(ad, mid)
 for n in ('strip-a', 'strip-b', 'strip-c', 'strip-d'):
-    a = soften(load(n)); flat_rows(a, 80, 120, n)
+    a = soft_contact(soften(defringe(load(n)))); flat_rows(a, 80, 120, n)
     kb[n] = save(a, os.path.join(OUT, n + '.webp')); save(darken(a, GREEN_K, GREEN_CORE), os.path.join(OUTD, n + '.webp'))
-a = soften(load('sheet')); row = 180
+a = soft_contact(soften(defringe(load('sheet')))); row = 180
 light['--sheet-fill'] = gradient(a, row); dark['--sheet-fill'] = gradient(a, row, SHEET_K)
 mid = np.median(a[row - 3:row + 4, 600:680, :3].reshape(-1, 3), 0)
 light['--sheet-paper'] = hexc(mid); dark['--sheet-paper'] = hexc(mid * np.array(SHEET_K))
 kb['sheet'] = save(a, os.path.join(OUT, 'sheet.webp')); save(darken(a, SHEET_K), os.path.join(OUTD, 'sheet.webp'))
-a = soften(load('crowd'))
+a = soft_contact(soften(defringe(load('crowd'))))
 kb['crowd'] = save(a, os.path.join(OUT, 'crowd.webp')); save(darken(a, (.86, .86, .86)), os.path.join(OUTD, 'crowd.webp'))
 
 def block(sel, d): return '%s { %s }' % (sel, ' '.join('%s: %s;' % kv for kv in d.items()))

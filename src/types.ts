@@ -134,8 +134,9 @@ export interface Endorser {
   /* This source's own wording for the note, when the data gives one; otherwise the app's. */
   paywall_note?: string;
   /* The place ids in the source's own geography, when it names any (a regional paper, even one that
-     also picks statewide races). Absent when it names none (a statewide group). "Not checked yet" on
-     a district race needs the ballot's place in here. */
+     also picks statewide races, or a county party). Absent when it names none, and for a party or
+     group whose geography names its state (a statewide group). "Not checked yet" on a district race
+     needs the ballot's place in here. */
   home_places?: string[];
 }
 

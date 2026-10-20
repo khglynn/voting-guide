@@ -169,6 +169,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.b.sources = ['equality-texas'];
     tally.clearLineups();
     check('geography: a statewide group (Equality Texas) still reads "Not checked yet" on an Austin district it has no row on', tally.lineup(a2.byId.get('tx-us-house-37')).notChecked.some((e) => e.id === 'equality-texas'));
+    // Review, Oct 20: a statewide party whose geography lists its state and the places it was
+    // researched for (["CO", "boulder-co"], ["CO", "denver-co"]) is not a regional source. A county
+    // party, which names only its places, still is.
+    S.b.sources = ['bexar-county-gop'];
+    tally.clearLineups();
+    check('geography: a county party (Bexar County GOP) never reads "Not checked yet" on an Austin district', !tally.lineup(a2.byId.get('tx-us-house-37')).notChecked.length && !!a2.eById.get('bexar-county-gop')?.home_places?.length);
+    const aur = open('CO', ['aurora-co']);
+    S.b.sources = ['co-wfp'];
+    tally.clearLineups();
+    check('geography: the Colorado Working Families Party (statewide) has no home places', !aur.eById.get('co-wfp').home_places, JSON.stringify(aur.eById.get('co-wfp').home_places));
+    check('geography: and still reads "Not checked yet" on Aurora\'s HD-36', tally.lineup(aur.byId.get('co-hd-36')).notChecked.some((e) => e.id === 'co-wfp'));
+    const md = open('MD', []);
+    S.b.sources = ['md-democratic-party', 'md-republican-party'];
+    tally.clearLineups();
+    check('geography: Maryland\'s state parties still read "Not checked yet" on a statewide-only ballot\'s district judge', tally.lineup(md.byId.get('md-retention-killough')).notChecked.length === 2);
     S.b.sources = null;
     tally.clearLineups();
   }

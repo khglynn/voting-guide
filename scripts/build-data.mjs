@@ -430,8 +430,15 @@ for (const [id, vers] of endorserVersions) {
       // The places in its own `geography` (across every file that defines it), when it names any:
       // a regional source (the San Antonio Express-News, ["TX", "san-antonio-tx"]). The app reads
       // "not checked yet" on a district race only from sources whose places include the ballot's,
-      // or that name none (statewide groups). Unknown place ids are dropped.
-      home_places: [...new Set(vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim()).filter((g) => places.has(g)))].sort(),
+      // or that have none. A paper's places are its home even when it names its state too (it picks
+      // statewide races from its city). A party or group that names its state speaks statewide, as
+      // endorserHome below reads it (the Colorado Working Families Party, ["CO", "denver-co"]), so it
+      // has none. Unknown place ids are dropped.
+      home_places: (() => {
+        const geo = vers.flatMap((v) => (Array.isArray(v.rec.geography) ? v.rec.geography : [])).filter(isStr).map((g) => g.trim());
+        if (type !== 'publication' && geo.some((g) => /^[A-Z]{2}$/.test(g))) return null;
+        return [...new Set(geo.filter((g) => places.has(g)))].sort();
+      })(),
     }),
   });
 }

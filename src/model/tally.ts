@@ -29,8 +29,9 @@ export interface Lineup {
    A district race (a U.S. House, legislative, state board or appeals-court district) also needs
    the source's own geography to include this ballot's place, when the source names places at all.
    Without this, the San Antonio Express-News, with picks in the two districts Austin shares with
-   San Antonio, read "not checked yet" on every other Austin district. Statewide groups, which
-   name no place, still cover every district in their state. */
+   San Antonio, read "not checked yet" on every other Austin district. Statewide groups (no place
+   in their geography, or a party or group that names its state, like the Colorado Working
+   Families Party) have no home_places and still cover every district in their state. */
 const LOCAL_LEVELS = new Set(['county', 'city', 'school', 'special_district']);
 const districtRace = (it: Item): boolean => it.kind === 'contest' && !it.every && !LOCAL_LEVELS.has(it.level);
 const areaCache = new WeakMap<Ballot, Map<string, Set<string>>>();

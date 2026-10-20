@@ -1047,6 +1047,43 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('My plan: the ballot ends "That’s your whole ballot. Next, save your plan." with "Open my plan"', /That’s your whole ballot\.<\/h3><p>Next, save your plan\.<\/p>/.test(end) && /data-act="cheat" data-fk="endcap-cheat">Open my plan</.test(end));
   }
 
+  /* ---------- flow, Oct 20: the share page ---------- */
+  {
+    const pass = views.pass;
+    const fam = 'Got a plan to vote? Here’s a guide to help you sort through your ballot: https://vote.kevinhg.com/\n\nIf you’ve already voted, text three people and ask if they have a plan too.';
+    const sd = pass.shareData(fam);
+    check('share: the share sheet gets the message with the guide as its link, not twice', sd.url === pass.GUIDE_URL && sd.title === 'Quickly make your voting plan.' && sd.text === 'Got a plan to vote? Here’s a guide to help you sort through your ballot.\n\nIf you’ve already voted, text three people and ask if they have a plan too.', JSON.stringify(sd));
+    const odd = pass.shareData('See https://vote.kevinhg.com/ for your ballot.');
+    check('share: a message worded another way goes as written, with no separate link', odd.text === 'See https://vote.kevinhg.com/ for your ballot.' && !('url' in odd));
+    // The work message's where-to-vote line: the early voting sites during early voting (dates pinned).
+    const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+    const on = (d) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${d}`, origin: 'http://x', pathname: '/' } });
+    try {
+      on('2026-10-20');
+      open('TX', ['austin-tx']);
+      let pub = pass.messages().pub || '';
+      check('share: Austin during early voting links the state’s early voting sites', /\nFind early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html\n/.test(pub), pub);
+      open('FL', ['orlando-fl']);
+      pub = pass.messages().pub || '';
+      check('share: Orlando during early voting links Orange County’s early voting page, by name', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(pub) && !/find-your-polling-place/.test(pub), pub);
+      on('2026-11-02');
+      pub = pass.messages().pub || '';
+      check('share: Orlando after early voting links where to vote on Election Day', /Find where to vote in Orlando: https:\/\/voteorangefl\.gov\/find-your-polling-place\//.test(pub), pub);
+      on('2026-10-20');
+      open('CA', ['los-angeles-ca']);
+      pub = pass.messages().pub || '';
+      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.net/.test(pub) && !/early voting places/.test(pub), pub);
+      open('FL', []);
+      pub = pass.messages().pub || '';
+      check('share: a statewide ballot before early voting opens gets no where-to-vote line', !/Find (early voting places|where to vote)/.test(pub), pub);
+      open('TX', []);
+      pub = pass.messages().pub || '';
+      check('share: a statewide Texas ballot during early voting gets the state’s early voting page', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub), pub);
+    } finally {
+      if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+    }
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

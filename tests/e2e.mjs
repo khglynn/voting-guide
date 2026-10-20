@@ -578,6 +578,53 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await la.ctx.close();
 }
 
+/* ---------- the share page (flow, Oct 20): Share the guide, a public post, early voting sites ---------- */
+{
+  // A phone with a share sheet (stubbed: it records what it was handed).
+  const { ctx, page } = await newPage();
+  await page.addInitScript(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d; } }); });
+  await openBallot(page, '78702');
+  await tap(page, '.foot [data-act="cheat"]');
+  await tap(page, '.foot [data-act="view"][data-v="pass"]');
+  await page.waitForSelector('#pass');
+  await shot(page, '10b-share');
+  check('Share page: "Share the guide" comes right after the lede', (await page.$eval('#pass .lede', (e) => e.nextElementSibling && e.nextElementSibling.dataset.act)) === 'share-guide' && (await text(page, '[data-act="share-guide"]')) === 'Share the guide');
+  await tap(page, '[data-act="share-guide"]');
+  const shared = await page.evaluate(() => window.__shared || null);
+  const fam = await text(page, '#msg-fam');
+  check('Share the guide: the share sheet gets the friends message, with the guide as its link', !!shared && shared.url === 'https://vote.kevinhg.com/' && shared.title === 'Quickly make your voting plan.' && /^Got a plan to vote\? Here’s a guide to help you sort through your ballot\./.test(shared.text) && !shared.text.includes('https://') && /text three people/.test(shared.text), JSON.stringify(shared));
+  check('Share page: a public post goes with the friends message, official links with work, school and neighborhood groups', (await text(page, '#pass .msgs.fam h4')) === 'For friends, family and public posts' && (await text(page, '#pass .msgs.pub h4')) === 'For work, school and neighborhood groups' && fam.includes('https://vote.kevinhg.com/'));
+  const order = await page.$$eval('#pass .checks [data-act="tick"]', (els) => els.map((e) => e.dataset.k));
+  check('Share page: the checklist follows the two messages, a public post third', order.join() === 'family,friends,post,school,work,hood', order.join());
+  const pub = await text(page, '#msg-pub');
+  check('Share page: during early voting the work message links the early voting sites, not Election Day’s', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub) && !pub.includes(new URL(BASE).host), pub);
+  noErrors(page, 'Share the guide');
+  await ctx.close();
+  // No share sheet (most desktops): the message is copied instead.
+  const two = await newPage();
+  await two.page.addInitScript(() => {
+    Object.defineProperty(navigator, 'share', { configurable: true, value: undefined });
+    Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (t) => { window.__copied = t; } } });
+  });
+  await openBallot(two.page, '78702');
+  await tap(two.page, '#plan [data-act="view"][data-v="pass"]');
+  await tap(two.page, '[data-act="share-guide"]');
+  await two.page.waitForSelector('.toast:not([hidden])', { timeout: 3000 }).catch(() => {});
+  const copied = await two.page.evaluate(() => window.__copied || '');
+  check('Share the guide with no share sheet: copies the friends message and says so', /^I just voted! Got a plan to vote\? Here’s a guide to help you sort through your ballot: https:\/\/vote\.kevinhg\.com\/\n\nIf you’ve already voted/.test(copied), copied.slice(0, 80));
+  check('Share the guide with no share sheet: the toast says copied', /^Copied\. Paste it into your group chat\./.test(await text(two.page, '.toast')), await text(two.page, '.toast'));
+  noErrors(two.page, 'Share the guide, copied');
+  await two.ctx.close();
+  // Orlando's county opened early voting on Oct 19: its own early voting page, not its polling-place finder.
+  const orl = await newPage();
+  await openBallot(orl.page, '32801');
+  await tap(orl.page, '.foot [data-act="cheat"]');
+  await tap(orl.page, '.foot [data-act="view"][data-v="pass"]');
+  const op = await text(orl.page, '#msg-pub');
+  check('Share page: Orlando’s work message links Orange County’s early voting sites', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(op) && !/find-your-polling-place/.test(op), op);
+  await orl.ctx.close();
+}
+
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
 {
   const { ctx, page } = await newPage();

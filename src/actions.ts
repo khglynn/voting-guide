@@ -13,7 +13,7 @@ import { toggleChip, setParty, setSources, chipState, type ChipKey } from './mod
 import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
-import { messages } from './views/pass';
+import { messages, shareData } from './views/pass';
 import { nextUp, sectionTally, qId } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
@@ -578,6 +578,19 @@ A['copy-msg'] = async (d) => {
   const text = d.k === 'pub' ? m.pub : m.fam;
   if (!text) return;
   if (await copyText(text)) toast('Copied. Paste it into your group chat.');
+  else toast('Copy didn’t work here. Press and hold the message to copy it.');
+};
+/* "Share the guide": the phone's share sheet with the friends message and the guide's link; where
+   there is none (most desktops), or it fails, the message is copied instead. Closing the sheet
+   without sharing does nothing. */
+A['share-guide'] = async () => {
+  const fam = messages().fam;
+  if (!fam) return;
+  const nav = navigator as Navigator & { share?: (d: ShareData) => Promise<void> };
+  if (typeof nav.share === 'function') {
+    try { await nav.share(shareData(fam)); return; } catch (e) { if (e && (e as Error).name === 'AbortError') return; }
+  }
+  if (await copyText(fam)) toast('Copied. Paste it into your group chat.');
   else toast('Copy didn’t work here. Press and hold the message to copy it.');
 };
 A.tick = (d) => {

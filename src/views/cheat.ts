@@ -148,7 +148,7 @@ export function cheatHTML(forPrint = false): string {
   // On screen the sheet is paper torn off a pad: a rendered top and a fill that continues its light.
   return `<div class="cheat">${forPrint ? '' : '<span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>'}
     <div class="cheat-head"><p class="kick">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. Election Day ${esc(fmtDate(b.howto.election_date))}</p>
-      <h2 id="${forPrint ? 'cs-p' : 'cs-h'}">Your voting plan</h2>
+      ${forPrint ? '<h2 id="cs-p">Your voting plan</h2>' : '<div class="step cs-step"><span class="step-n" aria-hidden="true">4</span><h2 id="cs-h">Your voting plan</h2></div>'}
       <p class="sub">${done} of ${all.length} decided.${forPrint ? ' Blank lines are yours to fill in.' : ' Tap any line to change it.'}</p>
       <div class="remind">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div>
       ${save ? `<p class="notice save-go"><b>Save it before you go.</b> ${esc(save)}</p>` : ''}</div>

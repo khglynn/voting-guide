@@ -276,6 +276,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await shot(page, '01-denver-top');
   await noSideScroll(page, 'Denver');
   check('Denver: masthead names the place, then where, the ZIP and Change', /Denver/.test(await text(page, '.place')) && /· 80205 · Change$/.test(await text(page, '.where')) && !!(await page.$('.where [data-act="change-place"]')), await text(page, '.where'));
+  check('Denver: the ballot is step 3, "Your ballot", above whose picks show', (await text(page, '#ballot-h')) === '3Your ballot' && (await text(page, '#ballot-h .step-n')) === '3'
+    && (await page.evaluate(() => { const h = document.getElementById('ballot-h').getBoundingClientRect(); const p = document.querySelector('.picks-line').getBoundingClientRect(); return h.height > 10 && h.bottom <= p.top; })), await text(page, '#ballot-h'));
   check('Denver: a mail state’s plan says nothing about a photo ID', !/photo ID/.test(await text(page, '#plan')));
   const head = await text(page, '.plan-h');
   check('Denver: plan strip leads with the next step and its date, never a countdown', /^Mail your ballot by Mon, Oct 26\.$/.test(head) && !/days? (left|until)/i.test(await text(page, '#plan')), head);
@@ -612,7 +614,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForSelector('#cheat');
   await page.evaluate(() => document.fonts.ready);
   await shot(page, '05b-my-plan');
-  check('My plan: titled "Your voting plan"', (await text(page, '#cs-h')) === 'Your voting plan');
+  check('My plan: titled "Your voting plan", numbered 4 like the first page’s steps', (await text(page, '#cs-h')) === 'Your voting plan' && (await text(page, '.cs-step .step-n')) === '4' && (await page.getAttribute('.cs-step .step-n', 'aria-hidden')) === 'true', await text(page, '.cs-step'));
   check('My plan: Texas says save it, and print it or write it down', (await text(page, '#cheat .save-go')) === 'Save it before you go. Print it or write it down.', await text(page, '#cheat .save-go'));
   check('My plan: in person, the reminder keeps the booth line', /In the booth:/.test(await text(page, '#cheat .remind')));
   check('My plan: the print sheet has the title but no save line', /Your voting plan/.test(await text(page, '#r-print')) && !(await page.$('#r-print .save-go')));

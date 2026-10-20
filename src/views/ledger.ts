@@ -474,7 +474,7 @@ export function ballotHeadHTML(): string {
   const look = n > 0 && addressHelps();
   const addr = n ? `<div class="addrbox"><p><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
       ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sb ? `<a class="mini${look ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}</div>`}</div>` : '';
-  return `<div class="bhead"><h2 class="vh" id="ballot-h">Your ballot</h2>
+  return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
       <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
       ${filled}${addr}
       ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>

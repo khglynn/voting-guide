@@ -101,6 +101,7 @@ b, strong { font-weight: 600; }
   -webkit-mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; }
 .place { --mx: 11px; --my: 7px; }
 .su-h { --mx: 33px; --my: 11px; }
+.bal-h { --mx: 21px; --my: 5px; }
 .cheat-head h2 { --mx: 7px; --my: 31px; }
 .pass h2 { --mx: 29px; --my: 13px; }
 .endcap h3 { --mx: 17px; --my: 23px; }
@@ -265,6 +266,7 @@ b, strong { font-weight: 600; }
 /* ---------- ballot head: whose picks, a fill's Undo, the address ---------- */
 .wrap-led { padding-left: var(--g); padding-right: 16px; max-width: 640px; margin: 0 auto; }
 .bhead { padding-top: 14px; padding-bottom: 8px; }
+.bhead .bal-h { margin: 6px 0 12px; }
 .picks-line { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 6px 0; border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); font-size: 16px; color: var(--ink); }
 .picks-line .mini { flex: none; }
 .filled { margin-top: 10px; font-size: 15.5px; color: var(--gold-ink); }
@@ -655,6 +657,9 @@ b, strong { font-weight: 600; }
 .cheat-head .kick { text-wrap: balance; }
 .cheat-head h2 { font-family: var(--f-display); font-size: 38px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; }
 .cheat-head .sub { font-size: 15px; color: var(--muted); margin-top: 6px; }
+/* Step 4: the same marker as the first page's steps, beside the title and clear of its ink specks. */
+.cs-step { margin-top: 4px; }
+.cs-step h2 { margin-top: 0; }
 .remind { margin-top: 12px; padding: 10px 12px; background: var(--dusk); color: var(--on-dusk); font-size: 14.5px; line-height: 1.4; border-radius: 2px; display: grid; gap: 4px; }
 /* On the sheet's own paper, which stays light in dark mode: no fill of its own, the sheet's dusk rule. */
 .cheat-head .save-go { margin-top: 8px; padding: 6px 12px; font-size: 14.5px; line-height: 1.4; background: none; border-left-color: var(--dusk); }

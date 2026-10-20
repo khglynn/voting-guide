@@ -134,6 +134,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     tally.clearLineups();
   }
 
+  /* ---------- place notes speak to voters, not to researchers (blockers review, Oct 20) ----------
+     "Notes for Pflugerville" said "Kevin's friends ...", Round Rock's "not in this file; see the
+     memo", San Marcos's "the county site blocked automated checks". */
+  {
+    const meta = /\bKevin\b|this file|the memo|automated|research(er)?s?\b|agent/i;
+    const bad = Object.keys(INDEX.places).map((p) => [p, read(`place-${p}.json`).notes || '']).filter(([, n]) => meta.test(n) || /—/.test(n));
+    check('place notes: no internal research talk or em dashes in any "Notes for" text', bad.length === 0, bad.map(([p, n]) => `${p}: ${(n.match(meta) || ['—'])[0]}`).join(' | '));
+    const pf = read('place-pflugerville-tx.json').notes;
+    check('place notes: Pflugerville keeps its facts (office, address, phone, vote in your county)', /Williamson County Elections, 301 SE Inner Loop, Georgetown, 512-943-1630/.test(pf) && /county of registration/.test(pf));
+    const rr = read('place-round-rock-tx.json').notes;
+    check('place notes: Round Rock keeps the Leander ISD places and the Georgetown ISD tax election', /Leander ISD trustee races \(Places 1, 2, 6 and 7\)/.test(rr) && /Georgetown ISD tax election/.test(rr) && /sample ballot/.test(rr));
+    const sm = read('place-san-marcos-tx.json').notes;
+    check('place notes: San Marcos keeps the site, the measures it looked for and the sample ballot', /120 Stagecoach Trail/.test(sm) && /San Marcos CISD or Hays CISD bond or tax measure/.test(sm) && /Hays sample ballot/.test(sm));
+  }
+
   /* ---------- no shouting: "A NO vote means" reads like "A yes vote" (Austin walk, Oct 20) ---------- */
   {
     const d = common.deshout;

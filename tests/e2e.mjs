@@ -582,7 +582,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '#plan [data-act="view"][data-v="pass"]');
   await page.waitForSelector('#msg-pub');
   const pub = await text(page, '#msg-pub');
-  check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
+  check('Austin: the public message says Election Day and the early-voting dates', /Election Day in Texas is Tue, Nov 3\./.test(pub) && /Early voting (in Austin )?runs Mon, Oct 19 through Fri, Oct 30\./.test(pub), pub.slice(0, 140));
   await tap(page, '[data-act="view"][data-v="ballot"]');
   const oth = await text(page, '#sec-school .grp.oth');
   check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));

@@ -680,6 +680,14 @@ for (const [id, p] of places) {
     if (!index.zips[z].includes(id)) index.zips[z].push(id);
   }
 }
+/* The parties the guide covers, for the first page's "A party" before a ZIP: each party whose own
+   organization has an endorsement in the data. A ballot then offers only the parties on it. */
+const partiesCovered = new Set();
+for (const [key, rec] of endorsementByKey) {
+  const e = endorsers.get(key.split('|')[0]);
+  if (rec.s === 'endorsed' && e && e.type === 'party' && isStr(e.party)) partiesCovered.add(e.party.trim());
+}
+index.parties = [...partiesCovered].sort();
 sizes['index.json'] = write('index.json', index);
 // Optional: "Pass it on" ways to get involved and the texting study, from the data track.
 if (fs.existsSync(path.join(DATA, 'get-involved.json'))) {

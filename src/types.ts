@@ -282,4 +282,6 @@ export interface Index {
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;
+  /* the parties whose own organizations have endorsements in the data, A to Z ("A party" before a ZIP) */
+  parties?: string[];
 }

@@ -2,7 +2,7 @@
    the ZIP box, the Census address lookup, views and the browser's Back button, and the hidden
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
-import { S, emptyBallotState, persist, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
+import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
@@ -65,10 +65,32 @@ export function openReader(id: string, push = true): void {
   document.body.classList.add('sheet-open');
   ($('[data-fk="reader-x"]'))?.focus({ preventScroll: true });
 }
+/* The first page. Back after a ZIP lands here (the history entry it left is marked "start"), and
+   so does "Change". Picks already saved stay saved; the guide just stops reopening that ballot. */
+export function toDoor(): void {
+  if (S.view === 'ballot') persist(true);
+  forgetLast();
+  S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.addrOpen = false; S.ui.addrMsg = null;
+  forgetUndo();
+  hideToast();
+  render();
+  window.scrollTo(0, 0);
+  $('#zip')?.focus({ preventScroll: true });
+}
+/* Leaving the first page for a ballot (a ZIP, a place picked, an address): the entry we leave
+   becomes the first page, so the phone's Back button returns to it instead of leaving the site. */
+function leftDoor(): void {
+  try {
+    history.replaceState({ vg: 'start' }, '', location.pathname + location.search);
+    history.pushState({ vg: 'ballot', door: 1 }, '', location.pathname + location.search);
+  } catch { /* ignore */ }
+}
 window.addEventListener('popstate', (e) => {
+  const st = (e.state || {}) as { vg?: View | 'start'; reader?: string };
+  if (st.vg === 'start') { if (S.view !== 'start' || S.ballot) toDoor(); return; }
   if (!S.ballot || S.view !== 'ballot') return;
-  const st = (e.state || {}) as { vg?: View; reader?: string };
-  const view = st.vg || 'ballot';
+  const view: View = st.vg || 'ballot';
   const fromReader = S.ui.reader;
   S.ui.reader = st.reader || null;
   S.ui.sheet = null;
@@ -87,10 +109,10 @@ const countPicks = (b: BallotState): number => Object.keys(b.picks).length + Obj
    and "try as" go straight to the ballot. */
 const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && countPicks(b) === 0 && b.sources === null && b.party === null);
 /* Resolves true once the ballot (or its step 2) is open, false when it couldn't load (the start
-   view then shows why). Callers that do more after opening check it. `noSetup`: the voter is
-   already on a ballot (an address narrowing "Aurora or Denver" to Aurora), so step 2 would only
-   interrupt. */
-export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead>; noSetup?: boolean } = {}): Promise<boolean> {
+   view then shows why). Callers that do more after opening check it. `door`: opened from the first
+   page, so Back returns there. `noSetup`: the voter is already on a ballot (an address narrowing
+   "Aurora or Denver" to Aurora), so step 2 would only interrupt. */
+export async function openBallot(st: string, placeIds: string[], zip: string, opts: { share?: ReturnType<typeof parseShareHead>; door?: boolean; noSetup?: boolean } = {}): Promise<boolean> {
   if (S.ballot && S.view === 'ballot') persist(true); // a pick made just now lands on its own ballot
   S.view = 'loading';
   S.loadErr = null;
@@ -137,6 +159,7 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
     resetUI();
     if (setup) { S.ui.setupFill = false; S.ui.setupOnly = false; S.ui.open.delete('su-party'); }
     else S.b.setupDone = true; // a ballot this device has shown never asks step 2 again
+    if (opts.door) leftDoor();
     render();
     persist(true); // saves nothing during step 2
     window.scrollTo(0, 0);
@@ -162,10 +185,10 @@ export async function submitZip(raw: string): Promise<void> {
   let idx: Index;
   try { idx = await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and try again.'; render(['mast']); return; }
   const places = idx.zips[v] || [];
-  if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v); return; }
+  if (places.length === 1) { await openBallot(idx.places[places[0]].state, places, v, { door: true }); return; }
   if (places.length > 1) { S.zipChoice = { zip: v, placeIds: places }; S.ui.addrOpen = false; render(['mast']); $(`[data-fk="cp-${CSS.escape(places[0])}"]`)?.focus(); return; }
   const st = zipState(v);
-  if (st && idx.states[st]) { await openBallot(st, [], v); return; }
+  if (st && idx.states[st]) { await openBallot(st, [], v, { door: true }); return; }
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); $('#zip')?.focus(); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
@@ -181,7 +204,7 @@ export async function openChosen(ids: string[], zip: string): Promise<void> {
   const g = chooserGeo && chooserGeo.zip === zip ? chooserGeo.r : null;
   chooserGeo = null;
   const st = S.index!.places[ids[0]].state;
-  if (await openBallot(st, ids, zip) && g && g.state === st) applyGeo(g);
+  if (await openBallot(st, ids, zip, { door: true }) && g && g.state === st) applyGeo(g);
 }
 export async function runAddress(addr: string): Promise<void> {
   if (S.view === 'setup' || S.view === 'loading') return;
@@ -219,7 +242,7 @@ export async function runAddress(addr: string): Promise<void> {
       $(`[data-fk="cp-${CSS.escape(hit.ids[0])}"]`)?.focus();
       return;
     }
-    if (await openBallot(hit.st, hit.ids, hit.zip)) applyGeo(r);
+    if (await openBallot(hit.st, hit.ids, hit.zip, { door: true })) applyGeo(r);
     return;
   }
   if (choosing && S.zipChoice) {
@@ -235,7 +258,7 @@ export async function runAddress(addr: string): Promise<void> {
     }
     const zip = S.zipChoice.zip;
     S.ui.addrOpen = false;
-    if (await openBallot(idx.places[hit].state, [hit], zip)) applyGeo(r);
+    if (await openBallot(idx.places[hit].state, [hit], zip, { door: true })) applyGeo(r);
     return;
   }
   if (!b) return;

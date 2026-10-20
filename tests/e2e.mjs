@@ -109,7 +109,7 @@ const small44 = (page, scope) => page.$$eval(`${scope} button`, (els) => els.fil
   await ctx.close();
 }
 
-/* ---------- the first page (flow, Oct 20): step 1 and step 2 ---------- */
+/* ---------- the first page (flow, Oct 20): step 1, step 2, and Back ---------- */
 const SETUP = '[data-act="setup-done"]';
 const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
 {
@@ -163,18 +163,45 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Step 2: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Step 2');
 
+  // Back after a ZIP returns to the first page, with the ZIP still in the box.
+  await page.goBack();
+  await page.waitForSelector('#zip');
+  check('Back from step 2: returns to the first page, ZIP still in the box', !(await page.$(SETUP)) && (await page.inputValue('#zip')) === '78704');
+  check('Back from step 2: still nothing saved', (await savedVG(page)) === null);
+  await page.locator('button[type=submit]').tap();
+  await page.waitForSelector(SETUP, { timeout: 15000 });
   await tap(page, SETUP);
   await page.waitForSelector('#plan', { timeout: 15000 });
   check('Step 2: "Show my ballot" shows the ballot, nothing filled', !!(await page.$('#plan')) && /^0 of \d+ decided$/.test(await text(page, '.bar-txt')) && !(await page.$('.toast:not([hidden])')), await text(page, '.bar-txt'));
   check('Step 2: the ballot is saved once it shows', /austin-tx/.test((await savedVG(page)) || ''));
   check('How this guide works: names the source for "Voting is underway in every state"', /“Voting is underway in every state”: Center for Election Innovation & Research\./.test(await text(page, '#how')) && !!(await page.$('#how a[href="https://electioninnovation.org/research/dates-for-2026-early-in-person-and-mail-voting/"]')));
-  await tap(page, '.mast [data-act="change-place"]');
+  await page.goBack();
   await page.waitForSelector('#zip');
-  await page.fill('#zip', '78704');
+  check('Back from the ballot: returns to the first page', !(await page.$('#plan')) && !(await page.$('.foot')) && (await page.inputValue('#zip')) === '78704');
   await page.locator('button[type=submit]').tap();
   await page.waitForSelector('#plan, [data-act="setup-done"]', { timeout: 15000 });
   check('The same ZIP again: a ballot finished on this device skips step 2', !!(await page.$('#plan')) && !(await page.$(SETUP)));
   noErrors(page, 'First page');
+  await ctx.close();
+}
+{
+  // "Change" (step 2's place line, the ballot's masthead) goes back the way Back does, so the first
+  // page never sits in history twice and one more Back leaves the site.
+  const { ctx, page } = await newPage();
+  await openZip(page, '78704');
+  await page.waitForSelector(SETUP, { timeout: 15000 });
+  const depth = await page.evaluate(() => history.length);
+  await tap(page, '.su-done [data-act="change-place"]');
+  await page.waitForSelector('#zip');
+  check('Change on step 2: back to the first page, ZIP still in the box', !(await page.$(SETUP)) && (await page.inputValue('#zip')) === '78704' && (await page.evaluate(() => history.state && history.state.vg)) === 'start');
+  await page.locator('button[type=submit]').tap();
+  await throughSetup(page);
+  await tap(page, '.mast [data-act="change-place"]');
+  await page.waitForSelector('#zip');
+  await page.locator('button[type=submit]').tap();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('Change: the first page is in history once, however often you change', (await page.evaluate(() => history.length)) === depth, `${depth} then ${await page.evaluate(() => history.length)}`);
+  noErrors(page, 'Change');
   await ctx.close();
 }
 {

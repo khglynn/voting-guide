@@ -349,7 +349,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Denver: "Am I registered?" goes to the official lookup', /^https?:/.test((await page.getAttribute('.plan .pbtn.line', 'href')) || ''));
   check('Denver: nothing in all caps', (await upperCased(page)).length === 0, (await upperCased(page)).join(' | '));
   await tap(page, '[data-act="open"][data-k="whatif"]');
-  check('Denver: the dates and ID toggle opens the situations and the basics', /Common problems and what to do/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
+  const wiHeads = await page.$$eval('.whatifs .wi-h', (els) => els.map((e) => e.textContent.trim()));
+  check('Denver: the dates and ID toggle opens dates and ID first, then gotchas, then what to do', wiHeads.join('|') === 'Dates, ID and voting rules|Gotchas in Colorado|If something goes wrong' && /In the booth/.test(await text(page, '.whatifs')), wiHeads.join('|'));
   await tap(page, '[data-act="open"][data-k="whatif"]');
 
   // Whose picks you see (flow, Oct 20): one line at the top of the ballot; Edit opens step 2's

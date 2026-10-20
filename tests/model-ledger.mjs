@@ -1309,6 +1309,8 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     q = sit(ps.planHTML(), 'not_registered');
     check('common questions: "More" shows the full answer, the steps and the source', /sorry: the Texas deadline/.test(q) && /<ol>/.test(q) && /class="src"/.test(q) && />Less</.test(q));
     html = ps.planHTML();
+    const heads = [...html.matchAll(/<h3 class="wi-h">([^<]*)<\/h3>/g)].map((m) => m[1]);
+    check('details: dates and ID first, then "Gotchas in Texas", then "If something goes wrong"', heads.join('|') === 'Dates, ID and voting rules|Gotchas in Texas|If something goes wrong' && html.indexOf('data-k="bx-dates"') < html.indexOf('data-k="gm-0"') && html.indexOf('data-k="gm-0"') < html.indexOf('data-k="wi-not_registered"'), heads.join('|'));
     check('common mistakes: each shows its one-line fix, the full text behind its own "More"', (html.match(/class="g-short"/g) || []).length === tx.gotchas.length && !/Election Code 61\.014/.test(html) && /data-k="gm-2"/.test(html));
     st.S.ui.open.add('gm-2');
     check('common mistakes: "More" shows that mistake in full', /Election Code 61\.014/.test(ps.planHTML()));

@@ -1,7 +1,7 @@
 /* The plan strip (green paper): the next step and its date, one short line, the main button,
-   "Am I registered?", "What if..." and "I already voted". Behind "What if...", on the same paper, sit the
-   situations, the gotchas, the key dates and the rules for ID and the booth: everything the
-   v2 plan card held, one tap away. Every date is read from the state file. */
+   "Am I registered?", "Dates, ID, ..." and "I already voted". Behind "Dates, ID, ...", on the same
+   paper, sit the key dates and the rules for ID and the booth, the gotchas, and what to do if
+   something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
 import type { HowTo, HelpAction, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
@@ -103,7 +103,7 @@ function sitBody(x: Situation): string {
   // An answer we haven't confirmed says so beside its quick answer, not only behind "More".
   return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${x.confidence === 'unverified' ? 'Not yet confirmed. ' : ''}${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
 }
-/* "Common mistakes": each one's fix in a line, the full text behind its "More". A mistake with
+/* "Gotchas": each one's fix in a line, the full text behind its "More". A gotcha with
    no short line in the data shows as before. */
 function gotchasHTML(h: HowTo): string {
   const shorts = h.gotcha_shorts || [];
@@ -142,10 +142,11 @@ function whatIfHTML(h: HowTo): string {
     h.model_plain ? disc('bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain)) : '',
     ...b.places.filter((p) => p.notes).map((p) => disc(`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes))),
   ].join('');
-  return `<div class="whatifs" role="region" aria-label="Dates, ID, rules and common problems">
-    ${sits.length ? `<h3 class="wi-h">Common problems and what to do</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
-    ${h.gotchas.length ? `<h3 class="wi-h">Common mistakes in ${esc(b.stateName)}</h3>${gotchasHTML(h)}` : ''}
+  // Dates and ID first, then the state's gotchas, then what to do if something goes wrong (Kevin, Oct 20).
+  return `<div class="whatifs" role="region" aria-label="Dates, ID, gotchas and what to do">
     <h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>
+    ${h.gotchas.length ? `<h3 class="wi-h">Gotchas in ${esc(b.stateName)}</h3>${gotchasHTML(h)}` : ''}
+    ${sits.length ? `<h3 class="wi-h">If something goes wrong</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div>`;
 }

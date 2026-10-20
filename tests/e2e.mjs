@@ -436,7 +436,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await openBallot(page, '78704');
   await page.evaluate(() => document.fonts.ready);
   await shot(page, '03b-austin-top');
-  check('Ballot top: the place, then where, the ZIP and Change', (await text(page, '.mast .place')) === 'Austin' && /, Texas · 78704 · Change$/.test(await text(page, '.mast .where')), await text(page, '.mast .where'));
+  // Austin spans three counties, so the line names just the state; a one-county place names its county.
+  check('Ballot top: the place, then where, the ZIP and Change', (await text(page, '.mast .place')) === 'Austin' && (await text(page, '.mast .where')) === 'Texas · 78704 · Change', await text(page, '.mast .where'));
   check('Ballot top: the election office left the masthead', !(await page.$('.mast .office')) && !/Your election office/.test(await text(page, '.mast')));
   await tap(page, '[data-act="open"][data-k="whatif"]');
   check('Ballot top: "Your election office" is in the plan’s details', /Your election office/.test(await text(page, '.whatifs')));

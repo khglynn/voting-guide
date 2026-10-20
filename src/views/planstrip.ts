@@ -100,7 +100,8 @@ function sitBody(x: Situation): string {
   const full = `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`;
   if (!x.short) return full;
   const k = `wim-${x.id}`;
-  return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
+  // An answer we haven't confirmed says so beside its quick answer, not only behind "More".
+  return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${x.confidence === 'unverified' ? 'Not yet confirmed. ' : ''}${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
 }
 /* "Common mistakes": each one's fix in a line, the full text behind its "More". A mistake with
    no short line in the data shows as before. */

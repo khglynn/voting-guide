@@ -1273,6 +1273,15 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     html = ps.planHTML();
     q = sit(html, 'not_registered');
     check('common questions: without short lines, a question opens to its full answer as before', /sorry: the Texas deadline/.test(q) && !/wi-short|wim-/.test(q) && !/g-short/.test(html) && /<strong>Registration is closed\.<\/strong>/.test(html));
+    // An unconfirmed answer says so beside its quick answer, before "More" (review, Oct 20).
+    open('GA', ['atlanta-ga']);
+    st.S.ui.open = new Set(['whatif', 'wi-no_mail_ballot_or_lost', 'wi-wrong_polling_place']);
+    html = ps.planHTML();
+    q = sit(html, 'no_mail_ballot_or_lost');
+    check('common questions: Georgia’s unconfirmed lost-ballot answer says "Not yet confirmed." before More', /class="wi-short"/.test(q) && /class="meta wi-more">Not yet confirmed\. <button[^>]*>More</.test(q), q.slice(0, 400));
+    check('common questions: a confirmed answer has no such mark', !/Not yet confirmed/.test(sit(html, 'wrong_polling_place')));
+    const unconfirmed = Object.keys(INDEX.states).flatMap((s) => (read(`state-${s}.json`).howto.situations || []).filter((x) => x.short && x.confidence === 'unverified').map((x) => `${s} ${x.id}`));
+    check('common questions: the data has an unconfirmed quick answer for the mark to cover', unconfirmed.length >= 1, unconfirmed.join(', '));
     // Quick answers keep the condition or the place the full answer gives (review, Oct 20).
     const ny = read('state-NY.json').howto.situations.find((x) => x.id === 'wrong_polling_place');
     check('common questions: New York’s wrong poll site says where an affidavit ballot counts', /county and Assembly district/.test(ny.short) && /county and Assembly district/.test(ny.answer), ny.short);

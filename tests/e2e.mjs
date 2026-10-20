@@ -80,6 +80,19 @@ async function next(page) {
 const focusedFk = (page) => page.evaluate(() => document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.fk || '' : '');
 const linkHere = (url) => url.replace(/^https?:\/\/[^/]+/, BASE).replace('/#', `/?today=${TODAY}#`);
 const text = async (page, sel) => ((await page.textContent(sel).catch(() => '')) || '').replace(/\s+/g, ' ').trim();
+/* Motion (Oct 20): a jump glides for about a third of a second and a sheet slides away in a fifth.
+   Wait until the page has stopped scrolling and nothing is on its way out. */
+const settle = (page) => page.evaluate(() => new Promise((res) => {
+  let last = -1, same = 0;
+  const t0 = performance.now();
+  const f = () => {
+    const y = window.scrollY;
+    same = y === last && !document.querySelector('.sheet-ghost, .ob-gone') ? same + 1 : 0;
+    last = y;
+    if (same >= 4 || performance.now() - t0 > 4000) res(); else requestAnimationFrame(f);
+  };
+  requestAnimationFrame(f);
+}));
 /* Open a row (an item id, or "q:<group key>") by tapping its header. */
 async function openRow(page, id) {
   const sel = id.startsWith('q:') ? `.row[data-q="${id.slice(2)}"]` : `#i-${id}`;
@@ -796,12 +809,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const first = await page.evaluate(() => { const r = document.querySelector('.ledger .row[data-undecided]'); return r && (r.dataset.item || `q:${r.dataset.q}`); });
   check('Menu: "Next up" names the first thing left on the page', (await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k')) === first && /^Next up: \S/.test(await text(page, '.sheet-panel [data-act="next"]')), `${await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k')} vs ${first}`);
   await tap(page, '.sheet-panel [data-act="jump"][data-to="measures"]');
-  await page.waitForTimeout(150);
+  await settle(page);
   const top = await page.evaluate(() => Math.round(document.getElementById('sec-measures').getBoundingClientRect().top));
   check('Menu: a section row closes the menu, brings its band to the top and focuses it', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'sec-measures' && top >= 0 && top < 60, `top ${top}, focus ${await focusedFk(page)}`);
   await menu(page);
   await tap(page, '.sheet-panel [data-act="jump"][data-to="plan"]');
-  await page.waitForTimeout(150);
+  await settle(page);
   check('Menu: "Your next step" goes back to the plan', (await focusedFk(page)) === 'plan-k' && (await page.evaluate(() => Math.round(document.getElementById('plan').getBoundingClientRect().top))) < 60);
   await menu(page);
   await tap(page, '.sheet-panel [data-act="picks"]');
@@ -867,6 +880,124 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForTimeout(200);
   check('Rail: under 1180px it goes, the bar’s menu stays', !(await page.$('.rail')) && !!(await page.$('.foot [data-act="toc"]')));
   noErrors(page, 'Rail');
+  await ctx.close();
+}
+
+/* ---------- motion (Kevin, Oct 20: "opening a shelf and closing it again ... feels cruddy") ----------
+   A tapped header stays where it is while its panel grows open beneath it and folds back up into it;
+   a pick draws its tick and settles the verdict in gold; jumps glide and mark where they land. With
+   prefers-reduced-motion everything lands at once. Measured every frame, at 380px. */
+const film = (page, sel, ms = 520) => page.evaluate(([sel, ms]) => {
+  window.__film = [];
+  const t0 = performance.now();
+  const f = () => {
+    const r = document.querySelector(sel);
+    const p = r && r.querySelector('.ink path');
+    if (r) { const b = r.getBoundingClientRect(); window.__film.push([b.top, b.height, p ? parseFloat(getComputedStyle(p).strokeDashoffset) : null, window.scrollY]); }
+    if (performance.now() - t0 < ms) requestAnimationFrame(f);
+  };
+  requestAnimationFrame(f);
+}, [sel, ms]);
+const reel = async (page) => { await page.waitForTimeout(600); return page.evaluate(() => window.__film); };
+const drift = (frames, y) => Math.max(...frames.map(([t]) => Math.abs(t - y)));
+const topOf = (page, sel) => page.evaluate((s) => document.querySelector(s).getBoundingClientRect().top, sel);
+const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, document.querySelector(s).getBoundingClientRect().top - y), [sel, y]);
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-state .row[data-item][data-undecided]')].map((r) => r.dataset.item));
+  const a = ids[1], b = ids[3];
+  const B = `#i-${b}`;
+  await placeAt(page, B, 300);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  let f = await reel(page);
+  const h0 = f[0][1], h1 = f[f.length - 1][1];
+  const between = (fr) => fr.filter(([, h]) => h > h0 + 4 && h < h1 - 4).length;
+  check('Motion: opening a row, its header stays put (within 2px) as the panel grows open beneath it', drift(f, 300) <= 2 && h1 > h0 + 100 && between(f) >= 3, `drift ${drift(f, 300).toFixed(1)}px, ${Math.round(h0)} to ${Math.round(h1)}px over ${between(f)} frames`);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  f = await reel(page);
+  check('Motion: closing it, the header stays put and the panel folds up into it, then is gone', drift(f, 300) <= 2 && Math.abs(f[f.length - 1][1] - h0) <= 1 && between(f) >= 2 && !(await page.$('.ob-gone')), `drift ${drift(f, 300).toFixed(1)}px, ${between(f)} frames between`);
+  // A row open above it: that one closes at once and the page makes up the difference in the same frame.
+  await openRow(page, a);
+  await settle(page);
+  await placeAt(page, B, 420);
+  const above = await page.evaluate((id) => document.getElementById(`i-${id}`).getBoundingClientRect().height, a);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  f = await reel(page);
+  check('Motion: with a row open above, opening this one closes that one and still leaves this header where it was', above > 150 && drift(f, 420) <= 2 && !(await page.$(`#i-${a}.is-open`)) && !!(await page.$(`${B}.is-open`)), `drift ${drift(f, 420).toFixed(1)}px, the open row above was ${Math.round(above)}px`);
+  // A pick closes the row: the header stays put, the pen tick draws itself, the verdict settles in gold.
+  const pickAt = await page.evaluate((s) => document.querySelector(`${s} [data-act="pick"]`).getBoundingClientRect().top - document.querySelector(s).getBoundingClientRect().top, B);
+  const y = Math.max(20, Math.min(300, 560 - pickAt));
+  await placeAt(page, B, y);
+  await film(page, B);
+  await page.locator(`${B} [data-act="pick"]`).first().tap();
+  f = await reel(page);
+  const ink = f.map(([, , o]) => o).filter((o) => o !== null);
+  check('Motion: a pick closes the row with its header in place, focus on it', drift(f, y) <= 2 && !!(await page.$(`${B}:not(.is-open) .vd.done`)) && !(await page.$('.ob-gone')) && (await focusedFk(page)) === `row-${b}`, `drift ${drift(f, y).toFixed(1)}px, focus ${await focusedFk(page)}`);
+  await page.waitForTimeout(300);
+  check('Motion: the tick draws itself in the box, then the drawn one steps aside for the printed one', ink.length >= 3 && ink[0] > 10 && ink.some((o) => o > 1 && o < ink[0] - 1) && ink[ink.length - 1] < 1 && !(await page.$(`${B} .ink`)) && !!(await page.$(`${B}.is-done`)), ink.map((o) => Math.round(o)).join(','));
+  // A pick made below a header that scrolled off the top: the row comes down into view as the panel folds.
+  const c = await page.evaluate(() => { const r = [...document.querySelectorAll('.ledger .row[data-item][data-undecided]')].find((x) => x.closest('#sec-measures')); return r && r.dataset.item; });
+  const C = `#i-${c}`;
+  await openRow(page, c);
+  await settle(page);
+  const yes = await page.evaluate((s) => document.querySelector(`${s} [data-act="pick"][data-v="YES"]`).getBoundingClientRect().top - document.querySelector(s).getBoundingClientRect().top, C);
+  await placeAt(page, C, Math.min(-40, 560 - yes));
+  const off = await topOf(page, C);
+  await page.locator(`${C} [data-act="pick"][data-v="YES"]`).tap();
+  await settle(page);
+  const back = await topOf(page, C);
+  check('Motion: a pick below a header scrolled out of view brings the decided row back into view', off < 0 && back >= 0 && back <= 820 * 0.4 + 4, `header at ${Math.round(off)}px, then ${Math.round(back)}px`);
+  // Jumps glide (no teleport to the end) and mark where they land.
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await menu(page);
+  await page.evaluate(() => { window.__ys = []; const t0 = performance.now(); const f = () => { window.__ys.push(window.scrollY); if (performance.now() - t0 < 700) requestAnimationFrame(f); }; requestAnimationFrame(f); });
+  const sheetFrames = await page.evaluate(() => getComputedStyle(document.querySelector('.sheet-panel')).transform);
+  await tap(page, '.sheet-panel [data-act="jump"][data-to="judicial"]');
+  await settle(page);
+  const ys = await page.evaluate(() => window.__ys);
+  const steps = new Set(ys.map((v) => Math.round(v))).size;
+  check('Motion: a menu row glides to its band and marks it', steps >= 5 && Math.abs(await topOf(page, '#sec-judicial')) <= 2 && !!(await page.$('#sec-judicial.land')), `${steps} scroll positions, band at ${Math.round(await topOf(page, '#sec-judicial'))}px`);
+  check('Motion: the menu sheet slid away, nothing left behind', !(await page.$('.sheet-panel')) && !(await page.$('.sheet-ghost')), sheetFrames);
+  await next(page);
+  await settle(page);
+  const up = await page.evaluate(() => { const r = document.querySelector('.ledger .row.is-open'); return r ? [Math.round(r.getBoundingClientRect().top), r.classList.contains('land')] : null; });
+  check('Motion: Next up glides to its row, near the top, and marks it', !!up && up[0] >= 0 && up[0] <= 8 && up[1], JSON.stringify(up));
+  check('Motion: nothing in all caps', (await upperCased(page)).length === 0);
+  noErrors(page, 'Motion');
+  await ctx.close();
+}
+{
+  // prefers-reduced-motion: the same end states, at once.
+  const { ctx, page } = await newPage({ reducedMotion: 'reduce' });
+  await openBallot(page, '80205');
+  const b = await page.evaluate(() => [...document.querySelectorAll('#sec-state .row[data-item][data-undecided]')][3].dataset.item);
+  const B = `#i-${b}`;
+  await placeAt(page, B, 300);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  let f = await reel(page);
+  const hs = [...new Set(f.map(([, h]) => Math.round(h)))];
+  check('Reduced motion: a row opens at once, header in place', hs.length <= 2 && drift(f, 300) <= 2 && !!(await page.$(`${B}.is-open`)), `heights ${hs.join(', ')}`);
+  await film(page, B);
+  await page.locator(`${B} > [data-act="row"]`).tap();
+  f = await reel(page);
+  check('Reduced motion: and closes at once, nothing folding away', [...new Set(f.map(([, h]) => Math.round(h)))].length <= 2 && drift(f, 300) <= 2 && !(await page.$('.ob-gone')));
+  await openRow(page, b);
+  await page.locator(`${B} [data-act="pick"]`).first().tap();
+  check('Reduced motion: a pick shows its tick and gold at once, nothing drawn', !!(await page.$(`${B} .vd.done`)) && !(await page.$(`${B} .ink`)) && !(await page.$(`${B}.flash`)) && !(await page.$('.ob-gone')));
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.locator('.foot [data-act="toc"]').tap();
+  const t = await page.evaluate(() => getComputedStyle(document.querySelector('.sheet-panel')).transform);
+  await page.evaluate(() => { window.__ys = []; const t0 = performance.now(); const f = () => { window.__ys.push(window.scrollY); if (performance.now() - t0 < 500) requestAnimationFrame(f); }; requestAnimationFrame(f); });
+  await page.locator('.sheet-panel [data-act="jump"][data-to="judicial"]').tap();
+  await page.waitForTimeout(550);
+  const ys = await page.evaluate(() => window.__ys);
+  check('Reduced motion: the menu is up at once and its jump lands at once, sheet gone, no mark', t === 'none' && new Set(ys.map((v) => Math.round(v))).size <= 2 && Math.abs(await topOf(page, '#sec-judicial')) <= 2 && !(await page.$('.sheet-panel, .sheet-ghost, .land')), `${t}, ${new Set(ys.map((v) => Math.round(v))).size} positions`);
+  noErrors(page, 'Reduced motion');
   await ctx.close();
 }
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from typing the ZIP to
-   step 2's counts, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
+   step 2's counts, and time for a tap (a step 2 chip or switch, open a row, make a pick, open and close a
+   row in view, open the Edit sheet
    and tap a chip there, open the menu) to paint; then a row and a pick at 1280px, with the rail;
    then a returning visitor's "Pick up where I left off".
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
@@ -42,6 +43,14 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
   const openRow = await tapTime(`#i-${id} [data-act="row"]`);
   const pick = await tapTime(`#i-${id} [data-act="pick"]`);
+  // A row in view, as a finger finds it (motion, Oct 20): its header stays put while the panel grows
+  // open beneath it, then folds away. The first frame of each must paint under 250ms like any tap.
+  const id2 = await page.evaluate(() => { const r = document.querySelector('#sec-measures .row[data-item][data-undecided]'); window.scrollBy(0, r.getBoundingClientRect().top - 300); return r.dataset.item; });
+  await page.waitForTimeout(300);
+  const openInView = await tapTime(`#i-${id2} [data-act="row"]`);
+  await page.waitForTimeout(300);
+  const closeInView = await tapTime(`#i-${id2} [data-act="row"]`);
+  await page.waitForTimeout(300);
   // The lens lives in the Edit sheet: open it, tap a chip (only the sheet repaints), then Done
   // (the ballot behind repaints once; not a tap budget, like "Show my ballot").
   const edit = await tapTime('[data-act="picks"]');
@@ -51,7 +60,7 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   // the old "Only undecided").
   const menu = await tapTime('.foot [data-act="toc"]');
   const only = await tapTime('.sheet-panel [data-act="only"]');
-  out.push({ name, open, setupChip, setupFill, show, openRow, pick, edit, chip, done, menu, only });
+  out.push({ name, open, setupChip, setupFill, show, openRow, pick, openInView, closeInView, edit, chip, done, menu, only });
   await ctx.close();
 }
 /* From 1180px the menu stands as a rail drawn with the bar, so it repaints after every pick: a pick
@@ -107,8 +116,8 @@ for (const [name, zip] of [['Chicago', '60614']]) {
   await ctx.close();
 }
 await browser.close();
-for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms, open the menu ${r.menu}ms, its switch ${r.only}ms (4x CPU throttle)`);
+for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open a row in view ${r.openInView}ms, close it ${r.closeInView}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms, open the menu ${r.menu}ms, its switch ${r.only}ms (4x CPU throttle)`);
 for (const r of wide) console.log(`${r.name} at 1280px, with the rail: open a row ${r.openRow}ms, pick ${r.pick}ms, Next up ${r.next}ms (4x CPU throttle)`);
 for (const r of resume) console.log(`${r.name}, back again: "Pick up where I left off" ${r.go}ms${r.gone ? '' : ' (the line stayed!)'} (4x CPU throttle)`);
-const slow = [...out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip, r.menu].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250), ...resume.filter((r) => r.go > 250 || !r.gone)];
+const slow = [...out.filter((r) => [r.openRow, r.pick, r.openInView, r.closeInView, r.setupChip, r.setupFill, r.edit, r.chip, r.menu].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250), ...resume.filter((r) => r.go > 250 || !r.gone)];
 process.exit(slow.length ? 1 : 0);

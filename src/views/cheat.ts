@@ -3,11 +3,11 @@
    on is its own step after it. Test hooks: #cheat and #r-print tables, tr[data-cs] rows. */
 import type { Contest, Item } from '../types';
 import { S, encodeShare } from '../state';
-import { SECTIONS, entriesBySection, status, decisionItems, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
+import { SECTIONS, entriesBySection, status, decisionItems, unclaimed, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
 import { esc, fmtDate } from '../util';
 import { cheatTitle, pickLabel } from '../model/labels';
 import { nextStep } from '../model/plan';
-import { sectionTitle, otherSchools, othOpen } from './ledger';
+import { sectionTitle } from './ledger';
 
 /* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
    your ballot" instead of presenting it as certain. */
@@ -26,9 +26,8 @@ function lines(): Line[] {
   const by = entriesBySection();
   const out: Line[] = [];
   // Races folded under "Other school districts that touch ..." stay off the sheet, as on the
-  // ballot, unless you decided one, wrote a note on it, or opened that row as yours.
-  const oth = otherSchools(by.get('school') || []);
-  const hidden = new Set(othOpen(oth) ? [] : oth.map((e) => (e as { id: string }).id));
+  // ballot, unless you claimed one: opened the fold, or picked or noted one of them.
+  const hidden = unclaimed();
   for (const [k] of SECTIONS) {
     const label = sectionTitle(k);
     for (const e of by.get(k) || []) {
@@ -40,7 +39,7 @@ function lines(): Line[] {
       const note = (S.b.notes[it.id] || '').trim();
       const unopposed = s === 'unopposed';
       const pick = unopposed ? null : pickLabel(it);
-      if (hidden.has(it.id) && !pick && !note) continue;
+      if (hidden.has(it.id)) continue;
       out.push({ sec: label, it, title: cheatTitle(it), label: unopposed && it.kind === 'contest' ? `${it.candidates[0].name} (unopposed)` : pick, note, unopposed, maybe: !!pick && s !== 'skipped' && isMaybe(it.id) });
     }
   }
@@ -124,9 +123,9 @@ function tableHTML(forPrint: boolean): string {
 
 export function cheatHTML(forPrint = false): string {
   const b = S.ballot!;
-  // The bar's own count: choices only (a district question is setup, not a choice), decided the
-  // same way, so the sheet and the bar never give two totals for one ballot.
-  const all = decisionItems().filter((i) => !i.question);
+  // The bar's own count (the one rule in ballot.ts), so the sheet and the bar never give two
+  // totals for one ballot.
+  const all = decisionItems();
   const done = all.filter((i) => i.done).length;
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
   // On screen the sheet is paper torn off a pad: a rendered top and a fill that continues its light.

@@ -5,7 +5,7 @@
 import type { Contest, Endorsement, Endorser, Item } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosen, status, entriesBySection, isDecision, isRCV } from '../ballot';
+import { chosen, status, isRCV, decisionItems } from '../ballot';
 import { choiceShort, pickShort } from './labels';
 import { explainsOnly, hasPaywallNote } from './lens';
 import { judgeReview } from './judges';
@@ -297,18 +297,15 @@ export function verdict(it: Item): Verdict {
 /* "Your 4 sources made picks on 18 of your 42 choices." Over what's visible now, counting the same
    choices as the ballot header and the progress bar (judges included), so the first screens
    give one number for the size of the ballot. */
+/* "Picks in N of your M races": M is the bar's own count (ballot.ts), so step 2 and the bar agree.
+   A district question still to answer counts, with no picks until you pick your district. */
 export function coverage(): { sources: number; picked: number; total: number } {
   const b = S.ballot!;
   const src = chosen().filter((e) => !explainsOnly(e));
   let picked = 0, total = 0;
-  for (const [, entries] of entriesBySection()) {
-    for (const e of entries) {
-      if (e.t !== 'item') continue;
-      const it = b.byId.get(e.id)!;
-      if (!isDecision(status(it))) continue;
-      total++;
-      if (weighedIn(lineup(it, src)).length) picked++;
-    }
+  for (const x of decisionItems()) {
+    total++;
+    if (!x.question && weighedIn(lineup(b.byId.get(x.id)!, src)).length) picked++;
   }
   return { sources: src.length, picked, total };
 }

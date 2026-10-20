@@ -298,18 +298,54 @@ export function isMaybe(id: string): boolean {
   return !!g && S.b.districts[g] === '*';
 }
 
-/* Visible decision items, in order, for progress and "Next undecided". */
-export function decisionItems(): { id: string; done: boolean; question?: boolean }[] {
-  const out: { id: string; done: boolean; question?: boolean }[] = [];
-  for (const [, entries] of entriesBySection()) {
-    for (const e of entries) {
-      if (e.t === 'question') { out.push({ id: `q:${e.group.key}`, done: false, question: true }); continue; }
+/* ---------- counting: "N of M decided" ----------
+   One rule for the bar, the section bands, the menu and the cheat sheet:
+   - every choice the page shows counts, "Maybe on your ballot" rows too;
+   - a district question counts as one race until it's answered, then its race (or, for "Not
+     sure", each of its races) takes its place;
+   - the races folded under "Other school districts that touch ..." count only once you claim
+     one: open the fold, or pick or note one of them. */
+/* Other school districts' races: "may apply" school races outside any district question. Three
+   or more fold into one row on the ballot ("Other school districts that touch Austin"). */
+export const OTH_KEY = 'school|oth';
+export function otherSchools(entries: Entry[]): Entry[] {
+  const b = S.ballot!;
+  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
+  return oth.length >= 3 ? oth : [];
+}
+export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
+/* Anything of yours on a race: a pick (a seat, a judge, a rank) or a note. */
+const touched = (id: string): boolean => !!S.b.picks[id] || (S.b.ranks[id] || []).length > 0 || !!(S.b.notes[id] || '').trim()
+  || Object.keys(S.b.picks).some((k) => k.startsWith(`${id}|`));
+/* The folded races that don't count: their fold is closed and you haven't picked or noted them. */
+export function unclaimed(): Set<string> {
+  const out = new Set<string>();
+  const oth = otherSchools(entriesBySection().get('school') || []);
+  if (!oth.length || othOpen(oth)) return out;
+  for (const e of oth) if (e.t === 'item' && !touched(e.id)) out.add(e.id);
+  return out;
+}
+/* Every choice and district question in the order the page draws them: sections in SECTIONS
+   order, then each section's own order. key is an item id or "q:<group key>". `folded` marks an
+   unclaimed race in the closed "Other school districts" fold: the page draws none of them, so
+   the count leaves them out and "Next" passes them by. */
+export interface Walked { key: string; done: boolean; sec: SectionKey; question?: boolean; folded?: boolean }
+export function pageWalk(): Walked[] {
+  const b = S.ballot!;
+  const by = entriesBySection();
+  const shut = unclaimed();
+  const out: Walked[] = [];
+  for (const [sec] of SECTIONS) {
+    for (const e of by.get(sec) || []) {
+      if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false, sec, question: true }); continue; }
       if (e.t !== 'item') continue;
-      const it = S.ballot!.byId.get(e.id)!;
-      const s = status(it);
-      if (!isDecision(s)) continue;
-      out.push({ id: it.id, done: s !== 'open' });
+      const s = status(b.byId.get(e.id)!);
+      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open', sec, ...(shut.has(e.id) ? { folded: true } : {}) });
     }
   }
   return out;
+}
+/* What "N of M decided" counts, in page order: M is the length, N the ones done. */
+export function decisionItems(): { id: string; done: boolean; question?: boolean }[] {
+  return pageWalk().filter((x) => !x.folded).map((x) => ({ id: x.key, done: x.done, ...(x.question ? { question: true } : {}) }));
 }

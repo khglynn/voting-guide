@@ -150,9 +150,12 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Step 2: "Picks in N of your M races."', /^Picks in \d+ of your \d+ races\.$/.test(await text(page, '.su-cov')), await text(page, '.su-cov'));
   check('Step 2: the fill switch says how many races they agree on', /^\d+ races? where they agree( \(\d+ from just one source\))?\. Skips the ones where they split\.$/.test(await text(page, '[data-act="setup-fill"] small')), await text(page, '[data-act="setup-fill"] small'));
   check('Step 2: nothing is saved before "Show my ballot"', (await savedVG(page)) === null);
-  const cov1 = await text(page, '.su-cov');
+  // The counts repaint in place: coverage, or the fill line when the new sources pick only in
+  // races already covered (Austin's progressive groups).
+  const cov1 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
-  check('Step 2: a chip changes the count in place', (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && (await text(page, '.su-cov')) !== cov1, `${cov1} -> ${await text(page, '.su-cov')}`);
+  const cov2 = `${await text(page, '.su-cov')} | ${await text(page, '[data-act="setup-fill"] small')}`;
+  check('Step 2: a chip changes the counts in place', (await page.getAttribute('#setup [data-act="chip"][data-k="progressive"]', 'aria-pressed')) === 'true' && cov2 !== cov1, `${cov1} -> ${cov2}`);
   await tap(page, '#setup [data-act="chip"][data-k="progressive"]');
   await tap(page, '#setup [data-fk="chip-party"]');
   check('Step 2: "A party" opens the party list right there, not a sheet', (await page.$$('#setup [data-act="party-set"]')).length >= 2 && !(await page.$('.sheet-panel')));
@@ -728,11 +731,16 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-act="view"][data-v="ballot"]');
   const oth = await text(page, '#sec-school .grp.oth');
   check('Austin: other school districts’ races fold into one line', /Other school districts that touch Austin/.test(oth) && !(await page.$('#sec-school [data-fold]')), oth.slice(0, 120));
+  const barM = async () => Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
+  const m0 = await barM();
   await tap(page, '#sec-school .grp.oth [data-act="grp"]');
   const shown = (await page.$$('#sec-school [data-fold]')).length;
   check('Austin: opening the line lists them, with "None of these are on my ballot"', shown >= 3 && !!(await page.$('[data-act="notmine-oth"]')), String(shown));
+  // Counting (Oct 20): the fold's races count only once you claim them, and opening it does.
+  check('Austin: opening the fold adds its races to the bar\'s count', (await barM()) === m0 + shown, `${m0} then ${await barM()} with ${shown} shown`);
   await tap(page, '[data-act="notmine-oth"]');
   check('Austin: "None of these" takes them all off and folds the line', /none on your ballot/.test(await text(page, '#sec-school .grp.oth')), await text(page, '#sec-school .grp.oth'));
+  check('Austin: and the bar\'s count drops back', (await barM()) === m0, `${m0} vs ${await barM()}`);
   noErrors(page, 'Austin pass and fold');
   await ctx.close();
 }

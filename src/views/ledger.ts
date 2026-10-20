@@ -8,6 +8,7 @@ import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
+  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
@@ -171,28 +172,31 @@ function unoppHTML(sec: SectionKey, list: Contest[]): string {
 }
 
 /* ---------- sections ---------- */
-export function sectionCount(entries: Entry[]): string {
+/* A band's "N of M decided", by the one counting rule (ballot.ts): a district question is one race
+   until it's answered, and an unclaimed race in the closed "Other school districts" fold isn't one. */
+export function sectionTally(entries: Entry[]): { done: number; total: number; unopp: number } {
   const b = S.ballot!;
-  let decided = 0, total = 0, unopp = 0;
+  const shut = unclaimed();
+  let done = 0, total = 0, unopp = 0;
   for (const e of entries) {
-    if (e.t !== 'item') continue; // a district question is setup, not a choice
-    const s = status(b.byId.get(e.id)!);
-    if (s === 'unopposed') { unopp++; continue; }
-    if (isDecision(s)) { total++; if (s !== 'open') decided++; }
-  }
-  return total ? `${decided} of ${total} decided` : unopp ? 'Nothing to decide' : '';
-}
-function sectionDone(entries: Entry[]): boolean {
-  const b = S.ballot!;
-  let any = false;
-  for (const e of entries) {
-    if (e.t === 'question') return false;
+    if (e.t === 'question') { total++; continue; }
     if (e.t !== 'item') continue;
     const s = status(b.byId.get(e.id)!);
-    if (s === 'open') return false;
-    if (isDecision(s)) any = true;
+    if (s === 'unopposed') { unopp++; continue; }
+    if (!isDecision(s) || shut.has(e.id)) continue;
+    total++;
+    if (s !== 'open') done++;
   }
-  return any;
+  return { done, total, unopp };
+}
+export function sectionCount(entries: Entry[]): string {
+  const { done, total, unopp } = sectionTally(entries);
+  return total ? `${done} of ${total} decided` : unopp ? 'Nothing to decide' : '';
+}
+/* Done: something decided and nothing left by the count. */
+function sectionDone(entries: Entry[]): boolean {
+  const { done, total } = sectionTally(entries);
+  return total > 0 && done === total;
 }
 export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean =>
   (S.ui.folded.has(sec) || (sectionDone(entries) && !S.ui.unfolded.has(sec))) && !entries.some((e) => e.t === 'item' && e.id === S.ui.row);
@@ -257,36 +261,11 @@ export const hiddenByOnly = (e: Entry): boolean => {
   if (e.id === S.ui.keep || e.id === S.ui.row) return false;
   return status(S.ballot!.byId.get(e.id)!) !== 'open';
 };
-/* Other school districts' races: "may apply" school races outside any district question. Three
-   or more fold into one row on the ballot ("Other school districts that touch Austin"), and the
-   cheat sheet leaves out the undecided ones while that row is closed. */
-export const OTH_KEY = 'school|oth';
-export function otherSchools(entries: Entry[]): Entry[] {
-  const b = S.ballot!;
-  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
-  return oth.length >= 3 ? oth : [];
-}
-export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
-/* Every choice and district question in the order the page draws them: sections in SECTIONS
-   order, then rows in each section's own order (rowsHTML keeps it; unopposed races, which are not
-   choices, are the only rows it moves). "N of M decided" in the bar walks this list. key is an
-   item id or "q:<group key>". `folded` marks the other school districts' races while their fold
-   is closed: the page draws none of them, so the walk passes them by. */
+/* The fold helpers live with the counting rule in ballot.ts; the cheat sheet and tests read them here too. */
+export { OTH_KEY, otherSchools, othOpen };
+/* Every choice and district question in the order the page draws them, for "Next": see pageWalk. */
 export function pageOrder(): { key: string; done: boolean; folded?: boolean }[] {
-  const b = S.ballot!;
-  const by = entriesBySection();
-  const oth = otherSchools(by.get('school') || []);
-  const shut = new Set(othOpen(oth) ? [] : oth);
-  const out: { key: string; done: boolean; folded?: boolean }[] = [];
-  for (const [sec] of SECTIONS) {
-    for (const e of by.get(sec) || []) {
-      if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false }); continue; }
-      if (e.t !== 'item') continue;
-      const s = status(b.byId.get(e.id)!);
-      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open', ...(shut.has(e) ? { folded: true } : {}) });
-    }
-  }
-  return out;
+  return pageWalk().map((x) => ({ key: x.key, done: x.done, ...(x.folded ? { folded: true } : {}) }));
 }
 /* "Klein ISD" from "Klein ISD Trustee, Position 6": the district's own name, for the fold line. */
 const districtName = (c: Contest): string => {
@@ -444,8 +423,8 @@ export function ballotHeadHTML(): string {
   const may = [...b.mayApply].filter((id) => !S.b.notMine.includes(id)).length;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  // One number for the ballot's size, the same one the bar and the lens line count.
-  const parts = [`${items.length - qs} ${items.length - qs === 1 ? 'race or measure' : 'races and measures'}, in the same order as your ballot.`];
+  // One number for the ballot's size, the same one the bar counts.
+  const parts = [`${items.length} ${items.length === 1 ? 'race or measure' : 'races and measures'}, in the same order as your ballot.`];
   if (qs || may) parts.push('A few depend on your address.');
   return `<div class="bhead"><h2 id="ballot-h">Your ballot</h2>
       <p>${esc(parts.join(' '))}</p>
@@ -473,13 +452,11 @@ export function barHTML(): string {
       <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to the ballot</button>
       ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">Cheat sheet</button>'}</div></div>`;
   }
-  // Choices only: a district question is setup, not a choice, so the bar counts what the
-  // header counts. "Next undecided" still visits the questions.
-  const all = decisionItems();
-  const items = all.filter((i) => !i.question);
+  // The one counting rule (ballot.ts): a district question is one race until it's answered.
+  const items = decisionItems();
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const allDone = all.every((i) => i.done);
+  const allDone = items.every((i) => i.done);
   return `<div class="foot screen-only" role="region" aria-label="Your progress">
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
     <div class="foot-in">

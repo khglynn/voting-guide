@@ -5,7 +5,7 @@
 import type { Endorser } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosenIds, isPartisan, entriesBySection, status, isDecision } from '../ballot';
+import { chosenIds, isPartisan, entriesBySection, status, isDecision, unclaimed } from '../ballot';
 
 export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
@@ -59,9 +59,10 @@ export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filte
 export function picksShown(b: Ballot): { decisions: Map<string, number>; unopposed: Map<string, number> } {
   const decisions = new Map<string, number>();
   const unopposed = new Map<string, number>();
+  const shut = unclaimed();
   for (const [, entries] of entriesBySection()) {
     for (const x of entries) {
-      if (x.t !== 'item') continue;
+      if (x.t !== 'item' || shut.has(x.id)) continue;
       const s = status(b.byId.get(x.id)!);
       const m = s === 'unopposed' ? unopposed : isDecision(s) ? decisions : null;
       if (!m) continue;

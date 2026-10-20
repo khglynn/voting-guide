@@ -542,9 +542,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const secOf = (k) => bl.sectionOf(b.byId.get(k.startsWith('q:') ? b.groups.find((g) => `q:${g.key}` === k).members[0] : k));
       const idx = po.map((x) => secIdx[secOf(x.key)]);
       check(`next: ${pid} walks sections in the order the page draws them`, po.length > 0 && idx.every((v, i) => !i || v >= idx[i - 1]), idx.join(','));
+      // The count (decisionItems) is the walk minus the closed fold's unclaimed races.
       const want = bl.decisionItems().map((x) => x.id).sort().join();
-      const got = po.map((x) => x.key).sort().join();
-      check(`next: ${pid} walks every choice and every district question, once`, want === got && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
+      const got = po.filter((x) => !x.folded).map((x) => x.key).sort().join();
+      check(`next: ${pid} walks every choice and every district question, once`, want === got && new Set(po.map((x) => x.key)).size === po.length && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
       check(`next: ${pid} starts with the first thing the page shows`, po.length > 0 && po[0].key === bl.SECTIONS.map(([k]) => (bl.entriesBySection().get(k) || []).find((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))))).filter(Boolean).map((e) => (e.t === 'question' ? `q:${e.group.key}` : e.id))[0], po[0] && po[0].key);
     }
     // Review, Oct 20: the walk opened Round Rock, Pflugerville and Leander ISD seats one by one on
@@ -561,6 +562,61 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.unfolded.delete(ledger.OTH_KEY);
   }
 
+  /* ---------- counting: one rule for "N of M decided" (flow, Oct 20) ----------
+     A district question counts as one race until it's answered, then its race takes its place;
+     the closed "Other school districts" fold's races count only once claimed (the fold opened, or
+     one picked or noted); "Maybe on your ballot" rows count. The bar, the bands, the cheat sheet
+     and step 2's coverage line all give the same M. */
+  {
+    const { ledger } = views;
+    const tally = mods.tally;
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false; };
+    const barM = () => { const m = ledger.barHTML().match(/<span class="bar-txt"><b>(\d+)<\/b> of (\d+)/); return m ? [+m[1], +m[2]] : null; };
+    const bandSum = () => bl.SECTIONS.reduce((n, [k]) => { const t = ledger.sectionTally(bl.entriesBySection().get(k) || []); return [n[0] + t.done, n[1] + t.total]; }, [0, 0]);
+    const cheatM = () => { const m = views.cheat.cheatHTML(false).match(/(\d+) of (\d+) decided\./); return m ? [+m[1], +m[2]] : null; };
+    const b = open('TX', ['austin-tx']);
+    reset();
+    const items = bl.decisionItems();
+    const qs = b.groups.length;
+    const oth = ledger.otherSchools(bl.entriesBySection().get('school') || []).map((e) => e.id);
+    const may = items.filter((x) => !x.question && bl.isMaybe(x.id)).length;
+    const choices = [...bl.entriesBySection().values()].flat().filter((e) => e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))).length;
+    check('count: Austin has district questions, a closed fold and maybe rows to test with', qs >= 5 && oth.length >= 3 && may >= 1, `${qs} questions, ${oth.length} folded, ${may} maybes`);
+    check('count: a fresh Austin ballot counts every question once, every maybe row, and no folded race', items.length === choices - oth.length + qs && items.filter((x) => x.question).length === qs && oth.every((id) => !items.some((x) => x.id === id)), `${items.length} vs ${choices} - ${oth.length} + ${qs}`);
+    const [n0, m0] = barM() || [];
+    check('count: the bar says 0 of M with that M', n0 === 0 && m0 === items.length, `${n0} of ${m0}, want ${items.length}`);
+    check('count: the bands add up to the bar', bandSum().join() === `0,${items.length}`, bandSum().join());
+    check('count: the cheat sheet gives the bar\'s M', (cheatM() || []).join() === `0,${items.length}`, (cheatM() || []).join());
+    check('count: step 2\'s "Picks in N of your M races" gives the bar\'s M', tally.coverage().total === items.length, `${tally.coverage().total} vs ${items.length}`);
+    const fed = bl.entriesBySection().get('federal') || [];
+    check('count: a band with a district question counts it ("0 of 2 decided", not "0 of 1")', ledger.sectionCount(fed) === `0 of ${fed.filter((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id))))).length} decided` && fed.some((e) => e.t === 'question'), ledger.sectionCount(fed));
+    // Answering a question: its race takes its place, so M holds still.
+    const g = b.groups.find((x) => x.members.every((id) => bl.isDecision(bl.status(b.byId.get(id)))));
+    S.b.districts[g.key] = g.members[0];
+    check('count: answering a question puts its race in its place, so M holds', bl.decisionItems().length === items.length && bl.decisionItems().some((x) => x.id === g.members[0]) && !bl.decisionItems().some((x) => x.id === `q:${g.key}`), String(bl.decisionItems().length));
+    // "Not sure": every district's race shows, each a maybe, each counted.
+    S.b.districts[g.key] = '*';
+    check('count: "Not sure" counts each of its races, each a maybe', bl.decisionItems().length === items.length - 1 + g.members.length && g.members.every((id) => bl.isMaybe(id)), String(bl.decisionItems().length));
+    delete S.b.districts[g.key];
+    // The fold: opened, its races count; closed again, a race you picked still counts, the rest don't.
+    S.ui.unfolded.add(ledger.OTH_KEY);
+    check('count: opening the fold claims its races', bl.decisionItems().length === items.length + oth.length && barM()[1] === items.length + oth.length, String(bl.decisionItems().length));
+    const one = b.byId.get(oth[0]);
+    S.b.picks[one.id] = one.candidates[0].name;
+    S.ui.unfolded.delete(ledger.OTH_KEY);
+    check('count: closed again, the one you picked still counts, as decided', bl.decisionItems().length === items.length + 1 && (barM() || []).join() === `1,${items.length + 1}` && bandSum().join() === `1,${items.length + 1}`, `${(barM() || []).join()} / ${bandSum().join()}`);
+    check('count: the cheat sheet lists the race you picked there and no other folded race', /data-cs="/.test(views.cheat.cheatHTML(false)) && views.cheat.cheatHTML(false).includes(`data-cs="${one.id}"`) && oth.slice(1).every((id) => !views.cheat.cheatHTML(false).includes(`data-cs="${id}"`)));
+    delete S.b.picks[one.id];
+    S.b.notes[oth[1]] = 'My district?';
+    check('count: a note on a folded race claims it too', bl.decisionItems().some((x) => x.id === oth[1]) && bl.decisionItems().length === items.length + 1);
+    delete S.b.notes[oth[1]];
+    // The school band never counts the unclaimed fold, and the section is done once the rest is.
+    const school = bl.entriesBySection().get('school') || [];
+    const t = ledger.sectionTally(school);
+    check('count: the Schools band leaves the closed fold out', t.total === school.filter((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id))) && !oth.includes(e.id))).length, `${t.total}`);
+    reset();
+  }
+
   /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------
      LA's sheet said "Knock LA: Endorsed in 59 of your races and measures" on a 46-item ballot. */
   {
@@ -568,7 +624,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       for (const notSure of [false, true]) {
         const b = open(stc, [pid]);
         if (notSure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
-        const M = bl.decisionItems().filter((x) => !x.question).length;
+        const M = bl.decisionItems().length;
         const h = views.lens.sourcesSheetHTML();
         const ns = [...h.matchAll(/Endorsed in (\d+) of your races and measures/g)].map((m) => +m[1]);
         const rows = h.split('<li class="srow">').slice(1);

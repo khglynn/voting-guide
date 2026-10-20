@@ -3,7 +3,7 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor } from './app';
@@ -73,6 +73,7 @@ function openAt(key: string): void {
   const prevIt = prev && prev !== key ? itemOfKey(prev) : undefined;
   if (prevIt && sectionOf(prevIt) !== sec) renderSection(sectionOf(prevIt));
   renderSection(sec);
+  render(['bar']); // a race opened inside the other school districts' fold claims it, so the count may change
   scrollRowIntoView(key, true);
   $(`[data-fk="row-${CSS.escape(key.startsWith('q:') ? rowEl(key)?.id || '' : key)}"]`)?.focus({ preventScroll: true });
 }
@@ -122,6 +123,8 @@ A.grp = (d) => {
   const open = el?.getAttribute('aria-expanded') === 'true';
   if (open) S.ui.unfolded.delete(k); else S.ui.unfolded.add(k);
   renderSection(k.split('|')[0] as SectionKey);
+  // Opening the other school districts' fold claims its races, so the count changes.
+  if (k === OTH_KEY) renderSummaries();
 };
 
 /* ---------- picks ---------- */

@@ -747,7 +747,10 @@ b, strong { font-weight: 600; }
 .w-note { margin-top: 12px; font-size: 14px; color: var(--muted); font-style: italic; }
 .study-tog { margin-top: 6px; font-size: 14.5px; }
 .study-cav { margin-top: 6px; font-size: 14.5px; color: var(--ink-2); }
-.crowd { height: clamp(180px, 50vw, 240px); margin-top: 18px; margin-bottom: -4px; background: var(--r-crowd) center bottom / auto 100% no-repeat; }
+/* The crowd under the share page. The render's top 30% is empty air above the tallest head
+   (crowd.webp: 1200x480, heads from row 144), so the box starts just above the heads and the
+   image, drawn at the same size as before (139% of the box), lets that air fall off the top. */
+.crowd { height: clamp(130px, 36vw, 173px); margin-top: 18px; margin-bottom: -4px; background: var(--r-crowd) center bottom / auto 139% no-repeat; }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 
 /* ---------- how this guide works: one row, folded until you open it ---------- */

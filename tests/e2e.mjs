@@ -713,7 +713,19 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Share the guide: the share sheet gets the friends message, with the guide as its link', !!shared && shared.url === 'https://vote.kevinhg.com/' && shared.title === 'Quickly make your voting plan.' && /^Got a plan to vote\? Here’s a guide to help you sort through your ballot\./.test(shared.text) && !shared.text.includes('https://') && /text three people/.test(shared.text), JSON.stringify(shared));
   check('Share page: a public post goes with the friends message, official links with work, school and neighborhood groups', (await text(page, '#pass .msgs.fam h4')) === 'For friends, family and public posts' && (await text(page, '#pass .msgs.pub h4')) === 'For work, school and neighborhood groups' && fam.includes('https://vote.kevinhg.com/'));
   const order = await page.$$eval('#pass .checks [data-act="tick"]', (els) => els.map((e) => e.dataset.k));
-  check('Share page: the checklist follows the two messages, a public post third', order.join() === 'family,friends,post,school,work,hood', order.join());
+  check('Share page: the spots to post follow the two messages, a public post third', order.join() === 'family,friends,post,school,work,hood', order.join());
+  const spots = await page.evaluate(() => { const ul = document.querySelector('#pass .checks'); const h = ul.previousElementSibling; return [h.tagName, h.textContent.trim()]; });
+  check('Share page: "Good spots to post", with no line under it', spots.join() === 'H3,Good spots to post' && !/Saved on this device/.test(await text(page, '#pass')), spots.join());
+  // The crowd (Kevin, Oct 20: "Too much space above the people's heads"): crowd.webp's heads start
+  // at row 144 of 480, so the box starts just above them; every head stays whole.
+  const crowd = await page.evaluate(() => {
+    const el = document.querySelector('#pass .crowd'); const c = el.getBoundingClientRect();
+    const img = c.height * (parseFloat(getComputedStyle(el).backgroundSize.split(' ')[1]) / 100);
+    const heads = c.bottom - img + img * 144 / 480;
+    const words = Math.max(...[...document.querySelectorAll('#pass .wrap *')].filter((e) => e.getClientRects().length).map((e) => e.getBoundingClientRect().bottom));
+    return { gap: Math.round(heads - words), whole: Math.round(heads - c.top), img: Math.round(img) };
+  });
+  check('Share page: the crowd sits close under the last words, every head whole', crowd.gap > 16 && crowd.gap <= 40 && crowd.whole >= 0 && crowd.img >= 180, JSON.stringify(crowd));
   const pub = await text(page, '#msg-pub');
   check('Share page: during early voting the work message links the early voting sites, not Election Day’s', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub) && !pub.includes(new URL(BASE).host), pub);
   noErrors(page, 'Share the guide');
@@ -1415,7 +1427,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Help friends vote: the friends message shares the guide at https://vote.kevinhg.com/', fam.includes('https://vote.kevinhg.com/') && (new URL(BASE).host === 'vote.kevinhg.com' || !fam.includes(new URL(BASE).host)), fam.slice(0, 200));
   check('Help friends vote: no relative "today" in a message someone reads later', !/\btoday\b|\btomorrow\b/i.test(pub));
   await tap(page, '[data-act="tick"][data-k="family"]');
-  check('Help friends vote: the checklist ticks', (await page.getAttribute('[data-act="tick"][data-k="family"]', 'aria-pressed')) === 'true');
+  check('Help friends vote: a spot to post ticks', (await page.getAttribute('[data-act="tick"][data-k="family"]', 'aria-pressed')) === 'true');
   noErrors(page, 'Lakewood');
   await ctx.close();
 }

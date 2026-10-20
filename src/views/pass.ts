@@ -2,7 +2,7 @@
    "Share the guide" (the phone's share sheet, or a copy), two messages to copy (one for friends,
    family and public posts that links the guide, since public sharing is fine (Kevin, Oct 20); one
    for work, school and neighborhood groups with official links only, never the guide), a
-   who-to-send-it-to checklist, and, from data/get-involved.json, the message templates, the
+   list of good spots to post (ticks stay on this device), and, from data/get-involved.json, the message templates, the
    texting study with its caveats and ways to get involved. Every link in the official-links
    message is a statewide one from the state file, or this place's own where-to-vote page. */
 import { S } from '../state';
@@ -30,7 +30,7 @@ const WHO = [
   ['family', 'Family chat'], ['friends', 'Friends chat'], ['school', 'School or parent groups'],
   ['work', 'Work channels'], ['hood', 'Neighborhood groups'], ['post', 'A public post'],
 ];
-/* The checklist in the order of the two messages: a public post goes with the friends message. */
+/* "Good spots to post", in the order of the two messages: a public post goes with the friends message. */
 const WHO_ORDER = [0, 1, 5, 2, 3, 4];
 const COPY = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="5" y="5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 11V3h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 
@@ -201,7 +201,7 @@ export function passHTML(): string {
     ${m.fam ? '<button class="bigbtn" data-act="share-guide" data-fk="share-guide">Share the guide</button>' : ''}
     <div class="msgs fam"><h4>For friends, family and public posts</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
     <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
-    <h3>Checklist: where to send it</h3><p class="sub">Saved on this device only.</p>
+    <h3>Good spots to post</h3>
     <ul class="checks">${WHO_ORDER.map((i) => who[i]).map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${studyHTML()}
     ${waysHTML()}

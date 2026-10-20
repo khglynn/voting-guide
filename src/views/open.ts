@@ -9,7 +9,7 @@ import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentenc
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
 import { picksOnBallot, chipMembers } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
-import { headsUp, headsHTML } from './ledger';
+import { headsUp, headsHTML, addressCount } from './ledger';
 
 /* "Report a problem" on a row: the form (see common.reportURL) prefilled with this row. */
 export const reportLink = (it: Item): string => reportURL(`${cheatTitle(it)} [${it.id}]`);
@@ -31,7 +31,8 @@ export function censusSettles(c: Contest): boolean {
    stays as a quiet extra. */
 function mayHTML(it: Item, scope: string, same: number, allLabel: string): string {
   const sb = sampleBallot();
-  const addr = it.kind === 'contest' && censusSettles(it);
+  // The form opens in the address box at the top, which shows while any race depends on your address.
+  const addr = it.kind === 'contest' && censusSettles(it) && addressCount() > 0;
   const btns = [
     addr ? `<button class="mini dark" data-act="addr-open" data-fk="ma-${esc(it.id)}">Check with my address</button>` : '',
     sb ? `<a class="mini${addr ? '' : ' dark'}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '',

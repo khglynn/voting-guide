@@ -169,7 +169,8 @@ export async function openBallot(st: string, placeIds: string[], zip: string, op
     window.scrollTo(0, 0);
     if (S.pending) $('[data-fk="restore-yes"]')?.focus();
     if (setup) $('[data-fk="su-h"]')?.focus({ preventScroll: true });
-    if (opts.after) opts.after();
+    // What the caller does next (an address's districts) can't turn a loaded ballot into a load error.
+    if (opts.after) { try { opts.after(); } catch (e) { console.error(e); } }
     return true;
   } catch (e) {
     console.warn('Could not load ballot', e);

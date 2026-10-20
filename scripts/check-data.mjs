@@ -85,6 +85,7 @@ const BUILD_WARNINGS = [
   [/couldn't match .* to a candidate; shown as text/, 'build-endorsement-unlinked'],
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
   [/is missing yes_means or no_means/, 'measure-means'],
+  [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
@@ -320,7 +321,7 @@ else if (report) {
 const OURS = new Set(['office_explainer', 'why_it_matters', 'scope_plain', 'plain_summary', 'yes_means', 'no_means', 'current_law', 'fiscal_impact',
   'confusing_wording_note', 'pass_threshold', 'background', 'model_plain', 'gotchas', 'answer', 'steps', 'mail_cutoff_advice', 'notes', 'zip_caveats',
   'lean_basis', 'why', 'note', 'rcv_how', 'who_gets_one', 'hours_note', 'same_day_notes', 'cure_process', 'signature_witness_rules', 'in_line_rule',
-  'apparel_rule', 'phones_detail', 'notes_detail', 'still_possible_now', 'postage', 'no_id_option', 'smd_names_note', 'text']);
+  'apparel_rule', 'phones_detail', 'notes_detail', 'still_possible_now', 'postage', 'no_id_option', 'smd_names_note', 'text', 'short', 'hours_short']);
 const SKIP_PARENT = new Set(['official_title']);
 const ACRONYMS = new Set(fs.existsSync(path.join(ROOT, 'scripts', 'acronyms.txt')) ? fs.readFileSync(path.join(ROOT, 'scripts', 'acronyms.txt'), 'utf8').split(/\s+/).filter(Boolean) : []);
 // Names of groups and offices are written in caps by their owners (ISBA, TABOR). Tokens that occur in any name-like field are allowed.
@@ -359,6 +360,39 @@ all.measures.forEach((m) => walk(m, `${m._f} ${m.id}`));
 all.states.forEach((s) => walk(s, `states/${s.state}`));
 all.places.forEach((p) => walk(p, `places/${p.id}`));
 all.endorsers.forEach((e) => walk(e, `${e._f} ${e.id}`));
+
+/* ---------- 9. common questions: quick answers and their buttons (Oct 20) ---------- */
+// A situation's short answer is one sentence of 20 words at most, a gotcha's fix 15, a place's
+// hours line 20. Every button goes to a URL this state file already holds: no new links.
+const words = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
+const oneSentence = (t) => !/[.!?]\s+\S/.test(String(t).replace(/\b(U\.S|St|No|Mr|Mrs|Ms|Dr|a\.m|p\.m)\./g, '$1'));
+function shortOk(t, max, where) {
+  if (t == null) return;
+  if (!isStr(t)) return;
+  if (words(t) > max) err('help-short-long', `${where}: ${words(t)} words (max ${max}): "${t.slice(0, 60)}..."`);
+  if (!oneSentence(t)) warn('help-short-sentences', `${where}: more than one sentence: "${t.slice(0, 60)}..."`);
+}
+for (const s of all.states) {
+  const st = s.state || s._f;
+  const r = s.registration || {};
+  if (!isUrl(r.register_url)) warn('help-register-url', `${st}: no registration.register_url`);
+  const known = new Set([r.check_url, r.register_url, r.register_url_source, s.election_day?.lookup_url, s.early_in_person?.lookup_url, s.mail_ballot?.tracking_url,
+    s.mail_ballot?.drop_box_lookup_url, s.official_site?.url, ...(s.sources || []).map((x) => x && x.url)].filter(isStr).map((u) => u.trim()));
+  (s.situations || []).forEach((x) => {
+    if (!x) return;
+    const where = `${st} situation ${x.id}`;
+    shortOk(x.short, 20, where);
+    (Array.isArray(x.actions) ? x.actions : []).forEach((a, i) => {
+      if (!a || !isStr(a.url)) return;
+      if (!known.has(a.url.trim()) && a.url.trim() !== (x.source || '').trim()) err('help-action-url', `${where} action ${i + 1}: ${a.url} is not a URL this state file already holds`);
+      const n = words(a.label);
+      if (n < 2 || n > 5) warn('help-action-label', `${where} action ${i + 1}: "${a.label}" is ${n} words (2 to 5)`);
+      scanCopy(a.label, `${where} action ${i + 1}`);
+    });
+  });
+  (s.gotchas || []).forEach((g, i) => { if (g && typeof g === 'object') shortOk(g.short, 15, `${st} gotcha ${i + 1}`); });
+}
+all.places.forEach((p) => shortOk(p.early_in_person?.hours_short, 20, `places/${p.id} early_in_person.hours_short`));
 all.endorsements.forEach((r) => walk(r, `${r._f} ${r.endorser_id}->${r.target_id}`));
 
 /* ---------- report with the ratchet ---------- */

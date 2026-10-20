@@ -1,54 +1,39 @@
-/* "Show endorsements from": the lens head, the chip bar (it wraps; it sticks on wide screens), the "See all sources" sheet and the
-   party chooser. Lean labels show with their basis; parties are text; no red or blue. */
+/* Whose picks you see: the chips (step 2 and the ballot's Edit sheet), the one-line summary at the
+   top of the ballot, the "See all sources" sheet and the party chooser. Lean labels show with their
+   basis; parties are text; no red or blue. */
 import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, picksShown, explainsOnly } from '../model/lens';
-import { coverage } from '../model/tally';
+import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements } from '../model/lens';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
 
-const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+export const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const TYPE_WORD: Record<string, string> = {
   publication: 'Newspaper or newsroom', civic_nonpartisan: 'Nonpartisan civic group', party: 'Political party', advocacy: 'Issue group',
   labor: 'Union', business: 'Business group', elected_official: 'Officeholder', other: 'Other',
 };
 
-export function lensBarHTML(): string {
+/* The three preset chips. A group chip with no picks on this ballot stays out of the way. */
+export function chipsHTML(): string {
   const b = S.ballot!;
-  const chips = CHIPS.map((c) => {
+  return CHIPS.map((c) => {
     const st = chipState(b, c.key);
     if (st === 'empty' && c.key !== 'papers') return '';
     const on = st === 'on' || st === 'some';
     return `<button class="chip${st === 'some' ? ' some' : ''}" data-act="chip" data-k="${c.key}" aria-pressed="${on}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`;
   }).join('');
-  const party = S.b.party;
-  const parties = partiesOnBallot(b);
-  const partyChip = parties.length ? `<button class="chip" data-act="${party ? 'party-off' : 'sheet'}" data-s="party" aria-pressed="${!!party}" data-fk="chip-party">${TICK}${party ? `${esc(party)} Party` : 'Pick a party'}</button>` : '';
-  const more = `<button class="chip more" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="chip-more">See all sources</button>`;
-  return `<div class="lensbar" id="lensbar" role="toolbar" aria-label="Show endorsements from"><div class="chipwrap"><div class="chips" data-keep="chips">${chips}${partyChip}${more}</div></div></div>`;
 }
-export function lensHeadHTML(): string {
+/* "Picks: Newspapers and guides" at the top of the ballot: whose picks show, in a few words. */
+export function lensSummary(): string {
   const b = S.ballot!;
-  const cov = coverage();
-  const notes: string[] = [];
-  const papers = chipMembers(b, 'papers');
-  const ids = new Set(chosenIds());
-  if (papers.some((e) => ids.has(e.id)) && !withPicks(b, papers).length) notes.push(CHIPS[0].empty);
-  // The chip row scrolls sideways on a phone, so say in words whose picks are showing.
-  const showing = [
-    ...CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`),
-    ...(S.b.party ? [`the ${S.b.party} Party`] : []),
-  ];
-  const list = showing.length > 1 ? `${showing.slice(0, -1).join(', ')} and ${showing[showing.length - 1]}` : showing[0] || '';
-  const line = cov.sources
-    ? `${list ? `Showing ${list}: ` : ''}${plural(cov.sources, 'source')}, with endorsements in ${cov.picked} of your ${cov.total} ${cov.total === 1 ? 'race or measure' : 'races and measures'}.`
-    : 'No sources on yet. Tap one below to see its endorsements.';
-  return `<section class="lens-head wrap" id="lens" aria-labelledby="lens-h"><h2 id="lens-h">Show endorsements from</h2>
-    <p>Their endorsements show next to each race and measure. You make your own picks.</p>
-    <p class="cov">${esc(line)}${notes.length ? ` ${esc(notes.join(' '))}` : ''}</p></section>`;
+  if (noEndorsements()) return 'No endorsements shown';
+  const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
+  if (S.b.party) on.push(`the ${S.b.party} Party`);
+  const n = chosenIds().length;
+  const list = on.length ? on.join(', ') : n ? plural(n, 'source') : 'none';
+  return list.charAt(0).toUpperCase() + list.slice(1);
 }
-export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;
 
 /* ---------- the "See all sources" sheet ---------- */
 const GROUPS: [string, string][] = [['left', 'Left'], ['lean_left', 'Leans left'], ['neutral', 'Center'], ['lean_right', 'Leans right'], ['right', 'Right'], ['none', 'Not rated']];

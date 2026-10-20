@@ -168,6 +168,9 @@ export interface HowTo {
   model_plain: string | null;
   registration: {
     check_url: string | null;
+    /* vote.gov's register page for this state, and the vote.gov page that confirms the pattern */
+    register_url?: string;
+    register_url_source?: string;
     deadlines: { method: string; date: string | null; rule: string; source: string | null }[];
     same_day_registration: boolean | null;
     same_day_notes: string | null;
@@ -210,7 +213,12 @@ export interface HowTo {
     apparel_rule: string | null;
   };
   gotchas: string[];
-  situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence }[];
+  /* each gotcha's fix in one line, in the same order as gotchas (null where none was written) */
+  gotcha_shorts?: (string | null)[];
+  /* `short`: the quick answer, one sentence; `actions`: up to 2 official links from this state file */
+  situations?: { id: string; question: string; answer: string; steps: string[] | null; deadline: string | null; source: string | null; confidence: Confidence; short?: string; actions?: HelpAction[] }[];
+  /* a better official sample-ballot lookup than any source named like one, for a statewide-only ballot */
+  sample_ballot_url?: string;
   sources: Src[];
   heads_up?: HeadsUp[];
   judicial_review?: JudicialReview | null;
@@ -238,7 +246,10 @@ export interface StateBundle {
   endorsements: Record<string, Record<string, Endorsement>>;
 }
 
-export interface PlaceEarly { start: string; end: string; hours_note: string | null; lookup_url: string | null; source: string | null; confidence: string }
+export interface HelpAction { label: string; url: string }
+
+/* `hours_short`: the county's early voting hours in one line ("Travis County sites are open 7 AM to 7 PM every day.") */
+export interface PlaceEarly { start: string; end: string; hours_note: string | null; hours_short?: string; lookup_url: string | null; source: string | null; confidence: string }
 
 export interface PlaceBundle {
   id: string;
@@ -271,4 +282,6 @@ export interface Index {
   zips: Record<string, string[]>;
   /* true when data/get-involved.json was bundled (the app never asks for a file that isn't there) */
   involved?: boolean;
+  /* the parties whose own organizations have endorsements in the data, A to Z ("A party" before a ZIP) */
+  parties?: string[];
 }

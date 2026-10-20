@@ -1,12 +1,12 @@
 /* The plan strip (green paper): the next step and its date, one short line, the main button,
-   "Am I registered?", "What if..." and "I already voted". Behind "What if...", on the same paper, sit the
-   situations, the gotchas, the key dates and the rules for ID and the booth: everything the
-   v2 plan card held, one tap away. Every date is read from the state file. */
-import type { HowTo } from '../types';
+   "Am I registered?", "Dates, ID, ..." and "I already voted". Behind "Dates, ID, ...", on the same
+   paper, sit the key dates and the rules for ID and the booth, the gotchas, and what to do if
+   something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
+import type { HowTo, HelpAction, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, isMailState } from '../model/plan';
-import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML } from './common';
+import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
+import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -19,19 +19,52 @@ export function planHTML(): string {
   planKey = `${step.phase}|${step.head.map((p) => p[0]).join('')}`;
   const head = step.head.map(([t, em]) => (em ? `<span class="d">${esc(t)}</span>` : esc(t))).join('');
   const reg = registrationAlert(h);
+  const regBtn = reg ? registerAction(h) : null;
   const open = isOpen('whatif');
   const check = h.registration.check_url;
+  const sub = planSub(step);
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
-      <h2 class="vh">Your next step</h2>
+      <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
-      ${step.sub.length ? `<p class="plan-sub">${esc(step.sub.join(' '))}</p>` : ''}
-      ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
+      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
+      ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
       <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
       ${open ? whatIfHTML(h) : ''}
     </div></section>`;
+}
+
+/* The line under the next step. While you can vote in person (not in a mail state), "Bring a
+   photo ID." ends it where the state asks for one. During early voting, when the place gives its
+   sites' hours in one line, that line stands in for the step's own lines (under "Early voting is
+   open through Sun, Nov 1.": "Orange County sites are open 8 AM to 8 PM every day. Bring a photo
+   ID."); before it opens, the date it runs through stays first. The rest stays behind "Dates,
+   ID, ...". */
+const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
+function planSub(step: Step): string[] {
+  const h = S.ballot!.howto;
+  if (isMailState(h) || !IN_PERSON.includes(step.phase)) return step.sub;
+  const id = h.id_rules.required === 'photo' ? ['Bring a photo ID.'] : [];
+  const hours = hoursLine(step);
+  if (!hours) return [...step.sub, ...id];
+  const runs = step.phase === 'early_before' ? step.sub.filter((s) => /^It runs through /.test(s)) : [];
+  return [...runs, hours, ...id];
+}
+/* A place's early-voting hours in one line (its `hours_short`, else an `hours_note` that already
+   fits), when every place on the ballot gives the same one and lies in one county. One county's
+   hours can't speak for a place across county lines: Austin reaches into Williamson and Hays,
+   and in Texas you vote early only in your own county. */
+function hoursLine(step: Step): string {
+  if (step.phase !== 'early_before' && step.phase !== 'early_open') return '';
+  if (S.ballot!.places.some((p) => p.counties.length !== 1)) return '';
+  const line = (e: PlaceEarly | undefined): string => {
+    const n = (e?.hours_note || '').trim();
+    return (e?.hours_short || '').trim() || (n && wordCount(n) <= 12 && sentences(n).length === 1 ? n : '');
+  };
+  const lines = [...new Set(S.ballot!.places.map((p) => line(p.early_in_person)))];
+  return lines.length === 1 ? lines[0] : '';
 }
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }
@@ -55,12 +88,40 @@ const IDS: Record<string, string> = {
 };
 const RULE: Record<string, string> = { allowed: 'allowed', restricted: 'restricted', prohibited: 'not allowed', unclear: 'unclear' };
 
+/* A common question, opened: the quick answer and its buttons, with the full answer, steps and
+   source behind "More" (Kevin, Oct 20: quick answers with things you can do). A question with no
+   short answer in the data shows the full answer as before. */
+type Situation = NonNullable<HowTo['situations']>[number];
+const moreBtn = (k: string, label: string): string => `<button class="pd-more" data-act="open" data-k="${esc(k)}" data-fk="${esc(k)}" aria-expanded="${isOpen(k)}" aria-label="${esc(isOpen(k) ? `Less: ${label}` : `More: ${label}`)}">${isOpen(k) ? 'Less' : 'More'}</button>`;
+/* A short line with any phone number in it tappable. */
+const shortHTML = (s: string): string => telHTML(deshout(s));
+const actsHTML = (acts: HelpAction[] | undefined): string => (acts && acts.length ? `<div class="plan-acts wi-acts">${acts.map((a) => `<a class="pbtn line" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.label)}</a>`).join('')}</div>` : '');
+function sitBody(x: Situation): string {
+  const full = `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`;
+  if (!x.short) return full;
+  const k = `wim-${x.id}`;
+  // An answer we haven't confirmed says so beside its quick answer, not only behind "More".
+  return `<p class="wi-short">${shortHTML(x.short)}</p>${actsHTML(x.actions)}<p class="meta wi-more">${x.confidence === 'unverified' ? 'Not yet confirmed. ' : ''}${moreBtn(k, x.question)}</p>${isOpen(k) ? `<div class="wi-full">${full}</div>` : ''}`;
+}
+/* "Gotchas": each one's fix in a line, the full text behind its "More". A gotcha with
+   no short line in the data shows as before. */
+function gotchasHTML(h: HowTo): string {
+  const shorts = h.gotcha_shorts || [];
+  if (!shorts.some(Boolean)) return leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas');
+  return `<ul class="bul bul-lead gotchas">${h.gotchas.map((t, i) => {
+    const sh = shorts[i];
+    if (!sh) { const ss = sentences(t); return `<li><strong>${escP(ss[0] || t)}</strong>${ss.length > 1 ? ` <span class="bul-rest">${escP(ss.slice(1).join(' '))}</span>` : ''}</li>`; }
+    const k = `gm-${i}`;
+    return `<li class="g-short">${shortHTML(sh)} ${moreBtn(k, sh)}${isOpen(k) ? `<span class="pd-x">${escP(t)}</span>` : ''}</li>`;
+  }).join('')}</ul>`;
+}
+
 function whatIfHTML(h: HowTo): string {
   const b = S.ballot!;
   const t = todayISO();
   const sits = (h.situations || []).filter((x) => x && x.question && x.answer);
-  const disc = (k: string, q: string, body: string) => `<li><button class="wi-q" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}"><span>${esc(q)}</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>${isOpen(k) ? `<div class="wi-a">${body}</div>` : ''}</li>`;
-  const sitList = sits.map((x) => disc(`wi-${x.id}`, x.question, `<p>${escP(x.answer)}</p>${x.steps && x.steps.length ? `<ol>${x.steps.map((s) => `<li>${escP(s)}</li>`).join('')}</ol>` : ''}${x.source ? `<p class="meta">Source: ${srcLink(x.source)}${x.confidence === 'unverified' ? '. Not yet confirmed' : ''}</p>` : ''}`)).join('');
+  const disc = (k: string, q: string, body: string) => `<li><button class="wi-q" data-act="open" data-k="${esc(k)}" data-fk="${esc(k)}" aria-expanded="${isOpen(k)}"><span>${esc(q)}</span><svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>${isOpen(k) ? `<div class="wi-a">${body}</div>` : ''}</li>`;
+  const sitList = sits.map((x) => disc(`wi-${x.id}`, x.question, sitBody(x))).join('');
   // Each date keeps its fine print (the rule, the hours, the noon cutoff) one tap away.
   const dates = dateRows(h).map((r) => {
     const k = `kd-${r.key}`;
@@ -75,16 +136,17 @@ function whatIfHTML(h: HowTo): string {
   const basics = [
     disc('bx-dates', 'Key dates', `<ol class="pdates">${dates}</ol>`),
     disc('bx-id', `What to bring: ${IDS[idr.required] || idr.required}`, `${idr.accepted.length ? `<ul>${idr.accepted.map((a) => `<li>${escP(a)}</li>`).join('')}</ul>` : ''}${idr.no_id_option ? `<p><b>No ID?</b> ${escP(idr.no_id_option)}</p>` : ''}`),
-    disc('bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and this cheat sheet.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`),
+    disc('bx-booth', `In the booth: notes ${RULE[booth.notes_allowed] || booth.notes_allowed}, phones ${RULE[booth.phones] || booth.phones}`, `${booth.notes_detail ? `<p><b>Notes and your plan.</b> ${escP(booth.notes_detail)}</p>` : ''}${booth.phones_detail ? `<p><b>Phones.</b> ${escP(booth.phones_detail)}</p>` : ''}${booth.apparel_rule ? `<p><b>What to wear.</b> ${escP(booth.apparel_rule)}</p>` : ''}`),
     disc('bx-mail', isMailState(h) ? 'How voting by mail works' : 'Voting by mail instead', `${bulletsHTML(mail.who_gets_one)}${mail.return_options && mail.return_options.length ? `<ul>${mail.return_options.map((o) => `<li>${escP(o)}</li>`).join('')}</ul>` : ''}${mail.mail_cutoff_advice ? `<p>${escP(mail.mail_cutoff_advice)}</p>` : ''}<p>${[mail.tracking_url ? ext(mail.tracking_url, 'Track your ballot') : '', mail.drop_box_lookup_url ? ext(mail.drop_box_lookup_url, 'Find a drop box') : ''].filter(Boolean).join(' · ')}</p>`),
     office ? disc('bx-office', 'Your election office', (() => { const m = office.name.match(/^(.*?)[,:]\s*(\d[\s\S]*)$/); const [n, a] = m ? [m[1], m[2]] : [sentences(office.name)[0], sentences(office.name).slice(1).join(' ')]; return `<p>${office.url ? ext(office.url, n) : esc(n)}${office.phone ? `<br>${telHTML(office.phone)}` : ''}${a ? `<br>${esc(a)}` : ''}</p>`; })()) : '',
     h.model_plain ? disc('bx-how', `How voting works in ${b.stateName}`, bulletsHTML(h.model_plain)) : '',
     ...b.places.filter((p) => p.notes).map((p) => disc(`bx-n-${p.id}`, `Notes for ${p.label}`, bulletsHTML(p.notes))),
   ].join('');
-  return `<div class="whatifs" role="region" aria-label="Dates, ID, rules and common problems">
-    ${sits.length ? `<h3 class="wi-h">Common problems and what to do</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
-    ${h.gotchas.length ? `<h3 class="wi-h">Common mistakes in ${esc(b.stateName)}</h3>${leadBulletsHTML(h.gotchas, 'bul bul-lead gotchas')}` : ''}
+  // Dates and ID first, then the state's gotchas, then what to do if something goes wrong (Kevin, Oct 20).
+  return `<div class="whatifs" role="region" aria-label="Dates, ID, gotchas and what to do">
     <h3 class="wi-h">Dates, ID and voting rules</h3><ul class="wi-list">${basics}</ul>
+    ${h.gotchas.length ? `<h3 class="wi-h">Gotchas in ${esc(b.stateName)}</h3>${gotchasHTML(h)}` : ''}
+    ${sits.length ? `<h3 class="wi-h">If something goes wrong</h3><p class="wi-sub">Answers come from ${ext(h.official_site.url, h.official_site.name)}.</p><ul class="wi-list">${sitList}</ul>` : ''}
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div>`;
 }

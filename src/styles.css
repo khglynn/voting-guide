@@ -1,6 +1,7 @@
 /* Voting guide: the ledger in worn green (v4, Oct 20 2026). One page, three materials, each true to itself:
      paper  real sheets rendered in Blender (scripts/paper): the torn notice for your next step, cut section
-            strips, the cheat sheet torn off a pad, the crowd on the share step. Everything else sits on recycled stock.
+            strips, the cheat sheet torn off a pad, the crowd on the share step, the covered states piled at the foot
+            of the first page. Everything else sits on recycled stock.
      ink    headings printed in one green ink: Archivo condensed, crisp letters, a few specks where the ink missed
      pen    rules, grids, boxes and ticks drawn fine and even
    Color carries meaning only, one job each (token names kept from v3):
@@ -66,7 +67,10 @@
 /* paper:end */
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; }
+/* The page keeps its own place when rows open, close and repaint (render.ts anchored, holdRow).
+   The browser's own scroll anchoring loses its anchor when a row is rebuilt, then follows something
+   below and throws the page hundreds of pixels, so it is off. */
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; overflow-anchor: none; }
 html, body { margin: 0; }
 body {
   background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); color: var(--ink);
@@ -96,12 +100,12 @@ b, strong { font-weight: 600; }
 .pbtn, .chip, .mini, .pick, .ftog, .fcta, .cbtn, .bigbtn, .closebtn, .pfm .act, .retain-all > span { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; }
 /* Printed headings: one green ink with a few specks where it missed. Each heading sits on its own patch of the
    plate (--mx, --my), so no two show the same specks. The padding keeps descenders inside the mask. */
-.place, .bhead h2, .lens-head h2, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
+.place, .su-h, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
   padding-bottom: .16em; margin-bottom: -.16em;
   -webkit-mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; }
 .place { --mx: 11px; --my: 7px; }
-.lens-head h2 { --mx: 23px; --my: 4px; }
-.bhead h2 { --mx: 41px; --my: 19px; }
+.su-h { --mx: 33px; --my: 11px; }
+.bal-h { --mx: 21px; --my: 5px; }
 .cheat-head h2 { --mx: 7px; --my: 31px; }
 .pass h2 { --mx: 29px; --my: 13px; }
 .endcap h3 { --mx: 17px; --my: 23px; }
@@ -123,10 +127,15 @@ b, strong { font-weight: 600; }
 .heads p { display: inline; }
 .notice { margin: 12px auto 0; padding: 12px 14px; background: var(--paper); border-left: 3px solid var(--dusk-2); }
 .notice.strong { border-left-color: var(--gold); background: var(--gold-wash); }
+/* "Welcome back": one line, "Pick up where I left off", and a small close in the corner. */
+.resume { position: relative; padding-right: 50px; margin-bottom: 18px; }
+.resume .row-btns { margin-top: 8px; }
+.resume-x { position: absolute; top: 2px; right: 2px; color: var(--ink-2); }
 .trybar { margin: 6px 0 0; padding: 6px 10px; background: var(--dusk-tint); color: var(--dusk-ink); font-size: 13.5px; }
 
 /* ---------- masthead and the front door ---------- */
 .mast { padding-top: 6px; padding-bottom: 12px; }
+.mast:not(.front) { padding-top: 22px; }
 .mast-top { display: flex; align-items: center; justify-content: space-between; min-height: 30px; }
 .dateline { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13.5px; color: var(--muted); }
 .place { font-family: var(--f-display); font-weight: 800; font-size: clamp(44px, 15vw, 60px); line-height: .98; letter-spacing: -.01em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; overflow-wrap: anywhere; }
@@ -134,8 +143,8 @@ b, strong { font-weight: 600; }
 .where { margin-top: 8px; font-size: 15.5px; color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
 .phone a, a[href^="tel:"] { white-space: nowrap; }
 .where-note { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.where .chg { color: var(--muted); text-decoration: none; padding: 0; gap: .28em; }
-.where .chg u { color: var(--ink-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.mast:not(.front) .where { display: block; }
+.where .chg { color: var(--ink-2); padding: 0; }
 .office { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule-2); display: grid; gap: 2px; font-size: 15px; color: var(--ink-2); line-height: 1.35; }
 .office-k { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--muted); }
 .office-v { display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 2px; }
@@ -156,6 +165,40 @@ b, strong { font-weight: 600; }
 .addr { margin-top: 12px; padding: 12px; background: var(--paper); border: 1px solid var(--rule-2); }
 .addr label { display: block; font-size: 15px; margin-bottom: 6px; }
 .addr input { width: 100%; min-height: 46px; padding: 0 10px; border: 1.5px solid var(--ink); background: var(--bone); border-radius: 2px; }
+
+/* The first page: step 1, where you vote, and step 2, whose picks, together on one sheet torn off
+   the pad My plan is written on (the sheet's own rules are with My plan's below). Pen ticks and
+   step numbers in the one green ink; nothing new in color. */
+.front .mast-top .dateline { padding: 4px 0; line-height: 1.35; }
+.ticks { margin-top: 14px; display: grid; gap: 6px; font-size: 17px; color: var(--ink-2); }
+.ticks li { display: flex; align-items: center; gap: 10px; }
+.ticks i { width: 17px; height: 17px; border: 1.3px solid var(--ink); border-radius: 1.5px; flex: none; position: relative; }
+.ticks i::after { content: ""; position: absolute; left: -1px; top: -9px; width: 26px; height: 24px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
+.step { display: flex; align-items: center; gap: 9px; }
+.step-n { width: 24px; height: 24px; border-radius: 50%; background: var(--paper-green); color: var(--on-dusk); display: inline-flex; align-items: center; justify-content: center; flex: none; font-family: var(--f-display); font-weight: 800; font-size: 14px; font-variation-settings: "wdth" 84; line-height: 1; }
+.zipform label.zip-h { display: flex; margin: 0 0 12px; font-size: 22px; font-weight: 800; }
+.zip-h { --mx: 9px; --my: 27px; }
+.front .addr-cta { margin-top: 10px; font-size: 15.5px; }
+.door-place { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; margin-top: 6px; font-size: 16px; color: var(--ink-2); }
+.door-place b { color: var(--ink); }
+.door-place .linkbtn { margin: 0; flex: none; }
+.door-found { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 12px; margin-top: 2px; font-size: 15.5px; color: var(--ink-2); }
+.door-found b { color: var(--ink); }
+.door-found .linkbtn { margin: 0; flex: none; }
+.door-picks { margin-top: 18px; padding-top: 4px; border-top: 1px solid var(--rule); }
+.door .bigbtn { margin-top: 16px; }
+.door-foot { margin-top: 14px; }
+.front .fine .linkbtn { margin: -12px 0; padding: 0; }
+.su-h { margin-top: 16px; font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
+.su-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.su-parties { margin-top: 8px; }
+.su-cov { margin-top: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--rule-2); font-size: 14.5px; color: var(--muted); }
+.su-sw { width: 100%; min-height: 52px; display: grid; grid-template-columns: minmax(0, 1fr) 52px; gap: 12px; align-items: start; padding: 12px 0 6px; text-align: left; }
+.su-l b { display: block; font-size: 17px; line-height: 1.3; }
+.su-l small { display: block; margin-top: 2px; font-size: 14.5px; line-height: 1.4; color: var(--muted); }
+.su-sw .tg { height: 26px; justify-content: flex-end; }
+.su-sw[aria-checked="true"] .tg span { background: var(--paper-green); border-color: var(--paper-green); }
+.su-sw[aria-checked="true"] .tg span::after { left: 23px; background: var(--on-dusk); }
 
 /* option cards: district questions, the place question, the party chooser */
 .opts { display: grid; gap: 8px; margin-top: 12px; }
@@ -178,6 +221,7 @@ b, strong { font-weight: 600; }
 .plan-sub { margin-top: 6px; font-size: 14.5px; color: var(--on-dusk-2); line-height: 1.4; text-wrap: pretty; }
 .plan-reg { margin-top: 8px; font-size: 14px; line-height: 1.38; padding: 4px 0 4px 12px; border-left: 3px solid var(--gold-on-dusk); }
 .plan-reg a { color: var(--on-dusk); }
+.plan-reg .pbtn { display: inline-flex; margin-top: 8px; padding: 0 14px; min-height: 44px; }
 .plan-acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
 .pbtn { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 10px; font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 2px; text-align: center; line-height: 1.2; }
 .pbtn.gold { background: #F3EDDD; color: #1F2623; box-shadow: var(--lie); }
@@ -219,60 +263,54 @@ b, strong { font-weight: 600; }
 .bul { list-style: disc; padding-left: 20px; display: grid; gap: 4px; margin-top: 6px; }
 .bul-lead .bul-rest { color: var(--muted); }
 
-/* ---------- lens: who do you trust ---------- */
-.lens-head { padding-top: 14px; padding-bottom: 4px; }
-.lens-head h2 { font-family: var(--f-display); font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: -.004em; font-variation-settings: "wdth" 78; color: var(--print); }
-.lens-head p { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
-.lens-head .cov { color: var(--ink-2); }
-/* The chips wrap, so every choice is in view. On a phone two rows would cover too much of the ballot to stay
-   pinned, so the bar sticks only on wide screens. */
-.chipwrap { max-width: 640px; margin: 0 auto; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 16px 6px var(--g); }
-@media (min-width: 600px) {
-  html { scroll-padding-top: 128px; }
-  .lensbar { position: sticky; top: 0; z-index: 30; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
-  .chips { padding-bottom: 10px; }
-}
+/* ---------- chips: whose picks you see (step 2 and the Edit sheet; they wrap, and nothing sticks) ---------- */
 .chip { flex: none; min-height: 44px; padding: 0 13px; border: 1.25px solid var(--ink); border-radius: 2px; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); white-space: nowrap; }
 .chip[aria-pressed="true"] { background: var(--paper-green); border-color: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); }
 .chip.some[aria-pressed="true"] { background: var(--dusk-tint); color: var(--dusk-ink); border-color: var(--dusk-2); }
 .chip .tick { width: 12px; height: 12px; display: none; }
 .chip[aria-pressed="true"] .tick { display: block; }
-.chip.more { border-style: dashed; }
+.chip.all-src { border-style: dashed; }
 
-/* ---------- ballot head and bulk actions ---------- */
+/* ---------- ballot head: whose picks, a fill's Undo, the address ---------- */
 .wrap-led { padding-left: var(--g); padding-right: 16px; max-width: 640px; margin: 0 auto; }
-.bhead { padding-top: 20px; padding-bottom: 8px; }
-.bhead h2 { font-family: var(--f-display); font-size: 34px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); }
-.bhead p { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.bhead .statewide-note { color: var(--ink-2); }
-.bhead .addr-cta, .bhead .sb, .bhead .statewide-note { margin-top: 10px; }
-.bhead .addr { margin-top: 10px; }
-.pfm { padding-top: 6px; padding-bottom: 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.pfm .act { min-height: 54px; padding: 6px 10px; border: 1.25px solid var(--ink); border-radius: 2px; font-weight: 600; font-size: 14.5px; line-height: 1.2; display: flex; align-items: center; justify-content: space-between; gap: 6px; text-align: left; }
-.pfm .act .n { font-size: 13px; font-variant-numeric: tabular-nums; background: var(--sage-tint); color: var(--sage); padding: 1px 7px; border-radius: 2px; }
-.pfm .act[disabled] { border-color: var(--rule-2); color: var(--faint); }
-.pfm .act[disabled] .n { background: var(--rule); color: var(--faint); }
+.bhead { padding-top: 14px; padding-bottom: 8px; }
+.bhead .bal-h { margin: 6px 0 12px; }
+.picks-line { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 6px 0; border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); font-size: 16px; color: var(--ink); }
+.picks-line .mini { flex: none; }
+.filled { margin-top: 10px; font-size: 15.5px; color: var(--gold-ink); }
+.filled .linkbtn { margin: -12px 0; padding: 0; color: var(--gold-ink); }
+.addrbox { margin-top: 14px; padding: 12px 14px 14px; background: var(--paper); border: 1.25px dashed var(--dusk-2); border-radius: 2px; }
+.addrbox > p { font-size: 16px; }
+.addrbox > p b { font-weight: 600; }
+.addrbox .addr { margin-top: 8px; padding: 0; border: 0; background: none; }
+/* After a lookup: what the Census found (this visit only), what it set, what's left. */
+.addrbox > p + p { margin-top: 8px; }
+.addrbox .addr-found .linkbtn { margin: -12px 0; padding: 0; }
+.addrbox .addr-set { color: var(--ink-2); }
+.bhead .statewide-note { margin-top: 12px; font-size: 14.5px; color: var(--ink-2); }
 
 /* ---------- sections ---------- */
 .ledger { max-width: 640px; margin: 0 auto; }
 .sec { margin-top: 6px; }
-.sec-h { margin: 0; position: relative; padding: 18px 0 20px; overflow: hidden; overflow: clip; }
+.sec-h { margin: 0; position: relative; padding: 18px 0 20px; overflow: hidden; overflow: clip; display: flex; align-items: stretch; }
 .sec-h::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 640px; background: var(--strip) right center / 100% 100% no-repeat; pointer-events: none; }
 .sec { --strip: var(--r-strip-a); }
 .sec[data-sec="state"], .sec[data-sec="school"] { --strip: var(--r-strip-b); }
 .sec[data-sec="judicial"], .sec[data-sec="special_district"] { --strip: var(--r-strip-c); }
 .sec[data-sec="county"], .sec[data-sec="measures"] { --strip: var(--r-strip-d); }
-.sec-hd { position: relative; isolation: isolate; width: 100%; color: var(--on-dusk); padding: 12px 18px 11px var(--g); display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; min-height: 62px; }
+.sec-hd { position: relative; isolation: isolate; flex: 1 1 auto; min-width: 0; color: var(--on-dusk); padding: 12px 6px 11px var(--g); display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; min-height: 62px; }
 .sec-l { min-width: 0; display: block; }
 .sec-t { display: block; font-family: var(--f-display); font-size: 26px; font-weight: 800; line-height: 1.02; color: var(--on-dusk); font-variation-settings: "wdth" 78; text-wrap: balance; }
 .sec-sub { display: block; font-size: 14px; color: var(--on-dusk-2); margin-top: 4px; font-weight: 400; line-height: 1.3; text-wrap: pretty; }
-.sec-r { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex: none; }
+.sec-r { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 2px; flex: none; position: relative; isolation: isolate; color: var(--on-dusk); padding: 12px 18px 11px 6px; min-height: 62px; }
+/* The count is a button (Show or Hide after it): the band's title is one, the count another. */
+.sec-cb { text-align: right; }
+.sec-cb:focus-visible { outline-color: var(--on-dusk); outline-offset: -5px; }
 .sec-count { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 15px; color: var(--on-dusk-2); white-space: nowrap; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; gap: 4px; }
 .sec-edit { font-size: 14px; text-decoration: underline; text-underline-offset: 3px; color: var(--on-dusk); }
 .sec.done .sec-count { color: var(--on-dusk); }
 .sec.done .sec-count::before { content: ""; width: 17px; height: 16px; flex: none; background: var(--gold-on-dusk); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
-.sec.folded > .sec-h .sec-hd { min-height: 54px; padding-top: 8px; padding-bottom: 8px; }
+.sec.folded > .sec-h .sec-hd, .sec.folded > .sec-h .sec-r { min-height: 54px; padding-top: 8px; padding-bottom: 8px; }
 .sec.folded .sec-t { font-size: 21px; }
 .sec.folded .sec-sub { font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sec.folded + .sec.folded { margin-top: -22px; }
@@ -345,8 +383,23 @@ b, strong { font-weight: 600; }
 .vd.off .linkbtn { font-size: 13px; margin: -12px 0; }
 .vd.done .m { background: var(--gold); color: #1F2623; padding: 2px 7px 1px; border-radius: 1px; }
 .vd.done .s { color: var(--muted); }
-.row.flash .vd.done .m { animation: press .45s ease-out; }
-@keyframes press { 0% { transform: scale(1.08); box-shadow: 0 3px 6px rgba(31, 38, 35, .25); } 100% { transform: none; box-shadow: none; } }
+/* Motion (motion.ts), quiet: a pick that closes its row draws its tick in the box with the pen and
+   settles the verdict in gold. Nothing bounces. */
+.mk .ink { position: absolute; left: -1px; top: -9px; width: 26px; height: 24px; overflow: visible; color: var(--tick); pointer-events: none; }
+.mk .ink path { stroke-dasharray: 29; stroke-dashoffset: 29; animation: ink .25s cubic-bezier(.4, 0, .2, 1) .03s forwards; }
+.row.flash .mk i::after { visibility: hidden; }
+.row.flash .vd.done .m { animation: settle .28s cubic-bezier(.33, 1, .68, 1); }
+@keyframes ink { to { stroke-dashoffset: 0; } }
+@keyframes settle { from { opacity: 0; transform: translateY(-3px); } }
+/* Where a jump lands (the menu, Next up, My plan's lines, a band): a short wash that fades. */
+.row.land > .row-hd { position: relative; isolation: isolate; }
+.row.land > .row-hd::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
+.sec.land > .sec-h::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 640px; background: var(--on-dusk); opacity: 0; pointer-events: none;
+  -webkit-mask: var(--strip) right center / 100% 100% no-repeat; mask: var(--strip) right center / 100% 100% no-repeat; animation: land-band 1s ease-out; }
+@keyframes land { 15% { opacity: 1; } to { opacity: 0; } }
+@keyframes land-band { 15% { opacity: .2; } to { opacity: 0; } }
+/* "No endorsements": the column stays, empty and quiet. */
+.vd.blank { border-left-color: var(--rule); }
 .row.is-open { border-bottom: 1.5px solid var(--ink); }
 .row.is-open > .row-hd { border-bottom: 1px solid var(--rule); }
 .subhd small { display: block; font-style: normal; font-size: 13px; color: var(--muted); margin-top: 1px; }
@@ -362,7 +415,13 @@ b, strong { font-weight: 600; }
 .py { color: var(--muted); font-size: 13px; }
 
 /* ---------- open row ---------- */
-.ob { padding: 6px 0 20px; }
+.ob, .ob-gone { padding: 6px 0 20px; }
+/* A panel growing open, and the one folding away under a header that just closed (motion.ts). */
+.ob.moving, .ob-gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
+.ob-gone { pointer-events: none; }
+/* Under "Hide races I've decided", a decided row folding away after its beat, and a finished
+   section's rows folding under its band (motion.ts collapseRow, shrinkAway). */
+.row-gone, .sec-gone { overflow: hidden; overflow: clip; overflow-anchor: none; pointer-events: none; }
 .ob-lede { font-size: 15.5px; color: var(--ink-2); line-height: 1.45; }
 .ob-lede + .ob-lede { margin-top: 6px; }
 .ob-meta { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
@@ -477,7 +536,7 @@ b, strong { font-weight: 600; }
 .deeper b { display: block; font-family: var(--f-display); font-size: 19px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--print); }
 .deeper small { display: block; font-size: 13px; color: var(--muted); line-height: 1.3; }
 .deeper svg { width: 18px; height: 18px; flex: none; }
-.ob > .deeper:last-child { border-bottom: 0; margin-bottom: -20px; }
+.ob > .deeper:last-child, .ob-gone > .deeper:last-child { border-bottom: 0; margin-bottom: -20px; }
 .dq-h { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.06; color: var(--print); font-variation-settings: "wdth" 78; }
 .dq .ob-lede { margin-top: 4px; }
 .dq-help { font-size: 14px; color: var(--muted); margin-top: 10px; }
@@ -511,26 +570,55 @@ b, strong { font-weight: 600; }
 .foot .bar i { display: block; height: 100%; background: var(--gold); transition: width .3s ease; }
 .foot-in { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 8px; min-height: 64px; padding: 0 16px; max-width: 640px; margin: 0 auto; }
 .foot-in.two { grid-template-columns: 1fr 1fr; }
-.prog { min-height: 48px; display: flex; flex-direction: column; justify-content: center; text-align: left; line-height: 1.15; min-width: 0; }
-.bar-txt { font-size: 13.5px; color: var(--muted); white-space: nowrap; line-height: 1.1; }
-.bar-txt .dl { display: block; }
-.prog:not([disabled]) .dl { text-decoration: underline dotted; text-underline-offset: 3px; }
-.bar-txt b { font-family: var(--f-display); font-weight: 800; font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; font-variation-settings: "wdth" 78; }
-.prog-n { font-size: 12.5px; text-decoration: underline; text-underline-offset: 2px; color: var(--ink-2); }
-.prog[disabled] .prog-n { text-decoration: none; color: var(--gold-ink); font-weight: 600; }
+/* On the ballot: the menu with the count at one end, My plan at the other. */
+.foot-in.ends { grid-template-columns: auto auto; justify-content: space-between; }
+.menu-btn { min-height: 48px; padding: 0 16px 0 14px; border: 1.25px solid var(--ink); border-radius: 2px; display: inline-flex; align-items: center; gap: 12px; color: var(--ink); }
+.menu-btn .burger { width: 18px; height: 14px; flex: none; }
+.bar-txt { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 19px; line-height: 1; white-space: nowrap; color: var(--ink); font-variant-numeric: tabular-nums; }
+.bar-txt b { font-weight: 600; }
+.ends .fcta { min-width: 128px; min-height: 48px; font-size: 17px; }
 .ftog { min-height: 46px; padding: 0 10px; border: 1.25px solid var(--ink); border-radius: 2px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
-.ftog .box { width: 16px; height: 16px; border: 1.3px solid var(--ink); border-radius: 1.5px; display: inline-block; flex: none; position: relative; }
-.ftog[aria-pressed="true"] .box::after { content: ""; position: absolute; left: -1px; top: -9px; width: 24px; height: 22px; background: var(--ink); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
 .fcta { min-height: 46px; padding: 0 14px; background: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); border-radius: 2px; font-weight: 600; font-size: 15px; text-align: center; }
+
+/* ---------- the menu: a sheet, and from 1180px a rail in the left margin ---------- */
+.nv-next { width: 100%; min-height: 48px; padding: 8px 14px; background: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); border-radius: 2px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 16px; line-height: 1.2; text-align: left; }
+.nv-sw.su-sw { align-items: center; padding: 8px 0 4px; }
+/* The switch heads the section rows it filters, ruled off from the rows above. */
+.nv-list + .nv-sw { margin-top: 6px; border-top: 1px solid var(--rule-2); }
+.nv-sw .su-l b { font-weight: 400; }
+.nv-list { margin-top: 2px; }
+.nv-list li { border-bottom: 1px solid var(--rule); }
+.nv-list li:last-child { border-bottom: 0; }
+.nv { width: 100%; min-height: 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto 12px; align-items: center; gap: 10px; padding: 6px 0; text-align: left; }
+.nv-t { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; font-size: 17px; line-height: 1.15; color: var(--ink); }
+.nv-n { font-size: 14.5px; color: var(--muted); white-space: nowrap; }
+.nv-a { font-style: normal; font-weight: 700; font-size: 17px; line-height: 1; color: var(--dusk-ink); text-align: right; }
+.nv-next .nv-a { color: var(--on-dusk); }
+.nv-plan .nv-t { color: var(--print); }
+.nv-end { margin-top: 6px; border-top: 1px solid var(--rule-2); }
+.nv-how .nv-t { font-family: var(--f-body); font-weight: 400; font-variation-settings: normal; letter-spacing: 0; font-size: 15.5px; color: var(--ink-2); }
+.rail { display: none; }
+@media (min-width: 1180px) {
+  /* In the margin left of the column (and clear of the bands' 20px overhang), up to 240px wide. */
+  .rail { display: block; position: fixed; z-index: 30; top: 20px; width: min(240px, calc(50vw - 372px)); left: calc(50vw - 356px - min(240px, calc(50vw - 372px)));
+    max-height: calc(100vh - var(--foot-h) - 40px); overflow-y: auto; overscroll-behavior: contain; padding: 2px 4px 10px 2px; }
+  .rail .nv-next { font-size: 15px; padding: 8px 10px; }
+  .rail .nv-sw { grid-template-columns: minmax(0, 1fr) 52px; gap: 8px; }
+  .rail .nv-sw .su-l b { font-size: 15px; }
+  .rail .nv-t { font-size: 15.5px; }
+  .rail .nv-n { font-size: 13.5px; }
+}
 
 /* ---------- toast ---------- */
 .toast { position: fixed; left: 12px; right: 12px; bottom: calc(var(--foot-h) + env(safe-area-inset-bottom, 0px) + 10px); z-index: 80; background: var(--paper-green); box-shadow: var(--lie); color: var(--on-dusk); border-radius: 3px; padding: 8px 6px 8px 14px; min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14.5px; line-height: 1.35; max-width: 600px; margin: 0 auto; }
 .toast button { min-height: 44px; padding: 0 12px; color: var(--on-dusk); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; flex: none; }
 
 /* ---------- sheets: more sources, party chooser ---------- */
-.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 60; }
-.sheet-panel { position: fixed; left: 0; right: 0; bottom: 0; max-height: 88vh; z-index: 61; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-top: 2px solid var(--ink); display: flex; flex-direction: column; max-width: 640px; margin: 0 auto; padding-bottom: env(safe-area-inset-bottom, 0px); }
-.sheet-panel.short { max-height: 70vh; }
+.scrim, .scrim-gone { position: fixed; inset: 0; background: var(--scrim); z-index: 60; }
+/* A sheet on its way out (motion.ts sheetOut) keeps its look under another name, out of reach. */
+.sheet-ghost { pointer-events: none; }
+.sheet-panel, .sheet-gone { position: fixed; left: 0; right: 0; bottom: 0; max-height: 88vh; z-index: 61; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-top: 2px solid var(--ink); display: flex; flex-direction: column; max-width: 640px; margin: 0 auto; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.sheet-panel.short, .sheet-gone.short { max-height: 70vh; }
 .sheet-hd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--rule-2); }
 .sheet-hd h2 { font-family: var(--f-display); font-size: 22px; font-weight: 800; line-height: 1.05; font-variation-settings: "wdth" 78; color: var(--print); }
 .sheet-bd { overflow-y: auto; padding: 12px 16px 24px; overscroll-behavior: contain; }
@@ -551,7 +639,7 @@ b, strong { font-weight: 600; }
 .tg[aria-checked="true"] span::after { left: 23px; background: var(--on-dusk); }
 
 /* ---------- full read ---------- */
-.reader { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.reader, .reader-gone { position: fixed; inset: 0; z-index: 70; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .reader-bar { position: sticky; top: 0; z-index: 2; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 16px; min-height: 56px; }
 .crumb { font-size: 13.5px; color: var(--muted); }
 .rd { padding-top: 22px; padding-bottom: 56px; }
@@ -596,20 +684,33 @@ b, strong { font-weight: 600; }
 
 /* ---------- cheat sheet ---------- */
 .back { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 14.5px; text-decoration: underline; text-underline-offset: 3px; margin-top: 8px; }
-#cheat .cheat { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
+/* The pad's sheet, for My plan and the first page's steps 1 and 2: the rendered top, a fill that
+   continues its light, and ink that stays dark because the paper stays light in dark mode. */
+#cheat .cheat, .pad { position: relative; isolation: isolate; margin-top: 0; padding: 40px 18px 20px; color: var(--ink);
   --ink: #1F2623; --ink-2: #3B433F; --muted: #5C645F; --faint: #6E756F; --rule: rgba(31, 38, 35, .16); --print: #2E5A50; --gold-ink: #855F06; --dusk: #2E5A50; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
-:root[data-theme="dark"] #cheat .cheat { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #cheat .cheat, :root:not([data-theme="light"]) .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; } }
+:root[data-theme="dark"] #cheat .cheat, :root[data-theme="dark"] .pad { --muted: #4A524D; --faint: #535B56; --gold-ink: #6E4F05; }
+/* The first page's controls on the sheet: the light-mode tokens they read, so a dark-mode page keeps
+   them legible on the light paper. */
+.pad { --rule-2: rgba(31, 38, 35, .3); --paper: #F7F3E8; --bone: #EFE9DA; --paper-green: #416E62; --dusk-2: #4F7C6F; --dusk-ink: #2E5A50; --dusk-tint: #DEE6DF;
+  --clay: #8E4C2C; --gold-wash: #F4EACB; color-scheme: light; }
+.pad.door { margin-top: 14px; }
 #cheat .cs-table td.undecided { color: var(--muted); }
-#cheat .sheet-top, #cheat .sheet-fill { position: absolute; left: 0; right: 0; pointer-events: none; }
-#cheat .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
-#cheat .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
-#cheat .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
+#cheat .sheet-top, #cheat .sheet-fill, .pad > .sheet-top, .pad > .sheet-fill { position: absolute; left: 0; right: 0; pointer-events: none; }
+#cheat .sheet-top, .pad > .sheet-top { top: 0; height: 100px; overflow: hidden; overflow: clip; z-index: -1; }
+#cheat .sheet-top::before, .pad > .sheet-top::before { content: ""; position: absolute; left: 50%; top: 0; width: 640px; height: 100px; margin-left: -320px; background: var(--r-sheet) center / 640px 100px no-repeat; }
+#cheat .sheet-fill, .pad > .sheet-fill { top: 30px; bottom: 0; z-index: -2; background: var(--sheet-fill) center / 640px 100% no-repeat, var(--sheet-paper); box-shadow: var(--lie); clip-path: inset(0 -6px -6px -6px); }
 .cheat-head { padding: 6px 0 14px; }
 .cheat-head .kick { text-wrap: balance; }
 .cheat-head h2 { font-family: var(--f-display); font-size: 38px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; }
 .cheat-head .sub { font-size: 15px; color: var(--muted); margin-top: 6px; }
+/* Step 4: the same marker as the first page's steps, beside the title and clear of its ink specks. */
+.cs-step { margin-top: 4px; }
+.cs-step h2 { margin-top: 0; }
 .remind { margin-top: 12px; padding: 10px 12px; background: var(--dusk); color: var(--on-dusk); font-size: 14.5px; line-height: 1.4; border-radius: 2px; display: grid; gap: 4px; }
+/* On the sheet's own paper, which stays light in dark mode: no fill of its own, the sheet's dusk rule. */
+.cheat-head .save-go { margin-top: 8px; padding: 6px 12px; font-size: 14.5px; line-height: 1.4; background: none; border-left-color: var(--dusk); }
+.save-go b { font-weight: 600; }
 .cs-table { width: 100%; border-collapse: collapse; }
 .cs-table th, .cs-table td { text-align: left; vertical-align: top; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
 .cs-table th { font-weight: 400; padding-right: 10px; width: 55%; overflow-wrap: anywhere; }
@@ -662,13 +763,33 @@ b, strong { font-weight: 600; }
 .w-note { margin-top: 12px; font-size: 14px; color: var(--muted); font-style: italic; }
 .study-tog { margin-top: 6px; font-size: 14.5px; }
 .study-cav { margin-top: 6px; font-size: 14.5px; color: var(--ink-2); }
-.crowd { height: clamp(180px, 50vw, 240px); margin-top: 18px; margin-bottom: -4px; background: var(--r-crowd) center bottom / auto 100% no-repeat; }
+/* The crowd under the share page. The render's top 30% is empty air above the tallest head
+   (crowd.webp: 1200x480, heads from row 144), so the box starts just above the heads and the
+   image, drawn at the same size as before (139% of the box), lets that air fall off the top. */
+.crowd { height: clamp(130px, 36vw, 173px); margin-top: 18px; margin-bottom: -4px; background: var(--r-crowd) center bottom / auto 139% no-repeat; }
+/* The covered states cut from paper and piled up at the foot of the first page (pile.webp: 1920x450, a 3x
+   render drawn at 640 by 150). The first page is at least a screen tall, and the band sits on its bottom
+   edge, as wide as the page; the heap is drawn at its own size in the middle, so a phone sees it run off
+   both sides and a wider screen sees all of it, ending in bare desk. Decoration only. */
+.front.mast { position: relative; min-height: 100vh; min-height: 100svh; padding-bottom: 168px; }
+.pile { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; overflow: hidden; overflow: clip; pointer-events: none; }
+.pile img { position: absolute; left: 50%; bottom: 0; width: 640px; height: 150px; max-width: none; margin-left: -320px; }
+@media print { .pile { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 
-/* ---------- how this guide works ---------- */
+/* ---------- how this guide works: one row, folded until you open it ---------- */
 .trust { padding-top: 30px; padding-bottom: 12px; font-size: 15px; }
-#how h2 { font-family: var(--f-display); font-size: 24px; font-weight: 800; line-height: 1.04; font-variation-settings: "wdth" 78; color: var(--print); }
-#how > p { margin-top: 8px; }
+.how-h { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.how-tog { width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; text-align: left;
+  font-family: var(--f-display); font-size: 18px; font-weight: 600; line-height: 1.15; font-variation-settings: "wdth" 84; letter-spacing: .015em; color: var(--ink); }
+.how-bd > p { margin-top: 8px; }
+.how-bd > :first-child { margin-top: 10px; }
+.how-credit { margin-top: 6px; }
+/* Its body growing open, and the one folding away (motion.ts grow, shrinkAway). */
+.how-bd.moving, .trust .gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
+.trust .gone { pointer-events: none; }
+#how.land .how-h { position: relative; isolation: isolate; }
+#how.land .how-h::before { content: ""; position: absolute; top: 0; bottom: 0; left: -6px; right: -6px; z-index: -1; background: var(--dusk-tint); opacity: 0; animation: land 1s ease-out; pointer-events: none; }
 .trust-list { margin-top: 10px; display: grid; gap: 8px; list-style: disc; padding-left: 20px; font-size: 14.5px; }
 .asof { font-size: 14px; margin-top: 6px; display: grid; gap: 2px; }
 
@@ -689,7 +810,7 @@ body:not(.v-ballot) #r-trust { display: none; }
 @media (min-width: 700px) {
   .plan::before { width: 680px; margin-left: -340px; }
   .sec-h { overflow: visible; }
-  .sec-h::before { right: -20px; width: 680px; }
+  .sec-h::before, .sec.land > .sec-h::after { right: -20px; width: 680px; }
 }
 @media (max-width: 359px) {
   .row-hd { grid-template-columns: 26px minmax(0, 1fr) 108px 14px; }
@@ -698,8 +819,13 @@ body:not(.v-ballot) #r-trust { display: none; }
   .foot-in { gap: 6px; padding: 0 10px; }
   .ftog { padding: 0 8px; font-size: 13px; }
   .fcta { padding: 0 10px; font-size: 13.5px; }
+  .ends .fcta { min-width: 0; font-size: 16px; }
+  .menu-btn { padding: 0 12px 0 10px; gap: 9px; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .mk .ink path { stroke-dashoffset: 0; }
+}
 
 /* ---------- print: the cheat sheet, black on white ---------- */
 @media print {

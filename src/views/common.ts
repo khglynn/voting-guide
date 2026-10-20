@@ -7,12 +7,31 @@ import { hasPaywallNote } from '../model/lens';
 /* "Report a problem" goes to a Google Form in Kevin's personal account (picked Oct 16).
    The two entry ids prefill "Which race or measure?" (`what`) and "Where are you voting?". */
 const REPORT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTJFFXbh5ZlZzDmoqvbD5uGEKopuk2zy-nsl4dqmjNA65bOQ/viewform';
-export function reportURL(what: string): string {
-  const b = S.ballot!;
-  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
+/* The form, prefilled, reading no state: the first page has no ballot yet. */
+export function formURL(what: string, where: string): string {
   const q = new URLSearchParams({ usp: 'pp_url', 'entry.90887649': what, 'entry.628621310': where });
   return `${REPORT_URL}?${q.toString()}`;
 }
+export function reportURL(what: string): string {
+  const b = S.ballot!;
+  const where = [b.places.map((p) => p.label).join(' / ') || b.stateName, S.b.zip].filter(Boolean).join(', ');
+  return formURL(what, where);
+}
+/* "Ask for yours" on the first page: the same form, with whatever ZIP is in the box. */
+export const askCityURL = (zip: string): string => formURL('Please add my city', zip);
+
+/* The two switches, the same words wherever they show (step 2, the Edit sheet, the menu, the rail). */
+export const FILL = 'Fill in my ballot with their picks';
+export const HIDE = 'Hide races I’ve decided';
+/* The chip that turns every source off (step 2 and the Edit sheet); the ballot's Picks line then
+   reads "No endorsements shown". */
+export const NO_ENDS = 'Don’t show endorsements';
+
+/* The credit, on the first page and at the end of "How this guide works". Buy him a coffee shows
+   while this has a link. */
+export const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/kevinhg';
+export const KEVIN_URL = 'https://kevinhg.com';
+export const creditHTML = (): string => ['Made by Kevin', ext(KEVIN_URL, 'kevinhg.com'), BUY_ME_A_COFFEE_URL ? ext(BUY_ME_A_COFFEE_URL, 'Buy him a coffee') : ''].filter(Boolean).join(' · ');
 
 /* ---------- paywalled sources (Kevin, Oct 19) ----------
    A paper whose endorsements sit behind a paywall we couldn't read: the picks we only saw
@@ -87,13 +106,15 @@ export const ext = (url: string | null | undefined, text: string, cls = ''): str
 export const srcLink = (url: string | null | undefined): string =>
   url ? `<a class="src" href="${esc(url)}" target="_blank" rel="noopener">${esc(host(url))}</a>` : '';
 
-/* The official place to see your exact ballot: the place file's lookup, then any
-   state source named like a sample ballot, then the state's registration lookup. */
+/* The official place to see your exact ballot: the place file's lookup, then the state file's
+   own sample_ballot_url, then any state source named like a sample ballot, then the state's
+   registration lookup. */
 export function sampleBallot(): { url: string; label: string } | null {
   const b = S.ballot;
   if (!b) return null;
   const p = b.places.find((x) => x.sample_ballot_url);
   if (p && p.sample_ballot_url) return { url: p.sample_ballot_url, label: 'See your official sample ballot' };
+  if (b.howto.sample_ballot_url) return { url: b.howto.sample_ballot_url, label: 'See official sample ballots' };
   const src = b.howto.sources.find((s) => /sample ballot/i.test(s.name));
   if (src) return { url: src.url, label: 'See official sample ballots' };
   const look = b.howto.sources.find((s) => /voter lookup|my voter|myvote|voterview|my vote/i.test(s.name));

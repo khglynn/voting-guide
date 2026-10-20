@@ -1,12 +1,13 @@
-/* Help your friends vote (was "Pass it on"): after your own plan, help your people make theirs. Two messages to copy (one for
-   friends and family that can include the guide; one for work, school and public channels with
-   official links only, never the guide), a who-to-send-it-to checklist, and, from
-   data/get-involved.json, the message templates, the texting study with its caveats and ways
-   to get involved. Every link in the public message is a statewide one from the state file, so
-   it is right for anyone in the state. */
+/* Help your friends vote (was "Pass it on"): after your own plan, help your people make theirs.
+   "Share the guide" (the phone's share sheet, or a copy), two messages to copy (one for friends,
+   family and public posts that links the guide, since public sharing is fine (Kevin, Oct 20); one
+   for work, school and neighborhood groups with official links only, never the guide), a
+   list of good spots to post (ticks stay on this device), and, from data/get-involved.json, the message templates, the
+   texting study with its caveats and ways to get involved. Every link in the official-links
+   message is a statewide one from the state file, or this place's own where-to-vote page. */
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { clock, isMailState } from '../model/plan';
+import { clock, isMailState, nextStep } from '../model/plan';
 import { ext, isOpen } from './common';
 
 /* Optional data from data/get-involved.json. Read defensively: any field may be missing. */
@@ -29,6 +30,8 @@ const WHO = [
   ['family', 'Family chat'], ['friends', 'Friends chat'], ['school', 'School or parent groups'],
   ['work', 'Work channels'], ['hood', 'Neighborhood groups'], ['post', 'A public post'],
 ];
+/* "Good spots to post", in the order of the two messages: a public post goes with the friends message. */
+const WHO_ORDER = [0, 1, 5, 2, 3, 4];
 const COPY = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="5" y="5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 11V3h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
 
 /* The default templates match data/get-involved.json, so the page reads the same with or
@@ -62,6 +65,14 @@ export function fillTemplate(tpl: string, slots: Record<string, string>, require
    host the page is on (the old vercel.app address and Vercel previews still work, but a friend
    should get the short, lasting one). */
 export const GUIDE_URL = 'https://vote.kevinhg.com/';
+export const SHARE_TITLE = 'Quickly make your voting plan.';
+/* What "Share the guide" hands the phone's share sheet: the friends message, with the guide's
+   address as the link. The message ends its first line with the address; the link carries it
+   instead, so a text never shows it twice. A message worded some other way goes as written. */
+export function shareData(fam: string): { title: string; text: string; url?: string } {
+  const at = new RegExp(`:\\s*${GUIDE_URL.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}(?=\\n|$)`);
+  return at.test(fam) ? { title: SHARE_TITLE, text: fam.replace(at, '.'), url: GUIDE_URL } : { title: SHARE_TITLE, text: fam };
+}
 
 export function messages(): { fam: string | null; pub: string | null } {
   const b = S.ballot!;
@@ -107,13 +118,25 @@ export function messages(): { fam: string | null; pub: string | null } {
         : `Early voting runs ${span}.`);
     }
   }
-  const where = place && place.lookups ? place.lookups.election_day || place.lookups.early_in_person || '' : '';
+  // Where to vote: during early voting, the early voting sites (the plan's own "Find early voting
+  // places" page: this place's, or the state's); otherwise this place's own where-to-vote page.
+  const name = place ? place.label.replace(/\s*\(.*\)$/, '') : '';
+  let where = '';
+  let whereLine = '';
+  if (nextStep(b.howto).phase === 'early_open') {
+    where = b.howto.early_in_person.lookup_url || sh.early_in_person.lookup_url || '';
+    const own = !!name && where !== sh.early_in_person.lookup_url;
+    whereLine = `Find early voting places${own ? ` in ${name}` : ''}: ${where}`;
+  } else {
+    where = place && place.lookups ? place.lookups.election_day || place.lookups.early_in_person || '' : '';
+    whereLine = `Find where to vote in ${name}: ${where}`;
+  }
   let pub: string | null = null;
   if (links) {
     const ls = links.split('\n');
     if (where && !links.includes(where)) {
       const at = ls.map((l) => /^(Official election info|Check your registration):/.test(l)).lastIndexOf(true);
-      ls.splice(at + 1, 0, `Find where to vote in ${place!.label.replace(/\s*\(.*\)$/, '')}: ${where}`);
+      ls.splice(at + 1, 0, whereLine);
     }
     pub = [dates.join(' '), '', ...ls].join('\n');
   }
@@ -174,11 +197,12 @@ export function passHTML(): string {
     <button class="back" data-act="view" data-v="ballot" data-fk="pass-back">Back to the ballot</button>
     ${voted ? '<div class="voted-head"><p class="kick">You voted. Thank you.</p></div>' : ''}
     <h2 id="pass-h">Help your friends vote</h2>
-    <p class="lede">Copy a message below and send it. Ask each person to text three more.</p>
-    <div class="msgs fam"><h4>For friends and family</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
-    <div class="msgs pub"><h4>For work, school and public groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
-    <h3>Checklist: where to send it</h3><p class="sub">Saved on this device only.</p>
-    <ul class="checks">${who.map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
+    <p class="lede">Copy a message, make it your own, and send it. Ask each person to text three more.</p>
+    ${m.fam ? '<button class="bigbtn" data-act="share-guide" data-fk="share-guide">Share the guide</button>' : ''}
+    <div class="msgs fam"><h4>For friends, family and public posts</h4><p class="rule">Includes a link to this guide.</p>${msg('fam', m.fam)}</div>
+    <div class="msgs pub"><h4>For work, school and neighborhood groups</h4><p class="rule">Official links only. No link to this guide, so it stays nonpartisan.</p>${msg('pub', m.pub)}</div>
+    <h3>Good spots to post</h3>
+    <ul class="checks">${WHO_ORDER.map((i) => who[i]).map(([k, l]) => { const on = S.b.ticks.includes(k); return `<li><button data-act="tick" data-k="${k}" aria-pressed="${on}" data-fk="tick-${k}"><span class="bx" aria-hidden="true"></span><span class="lb">${esc(l)}</span></button></li>`; }).join('')}</ul>
     ${studyHTML()}
     ${waysHTML()}
   </div><div class="crowd" aria-hidden="true"></div></section>`;

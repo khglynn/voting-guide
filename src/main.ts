@@ -2,9 +2,11 @@
 import './styles.css';
 import { S, readSaved, persist, parseShareHead } from './state';
 import { stepKey, planKey } from './views/planstrip';
-import { render } from './render';
-import { ensureIndex, openBallot, submitZip } from './app';
+import { render, anchored } from './render';
+import { RAIL_AT } from './views/ledger';
+import { ensureIndex, openBallot, zipTyped, offerResume, dismissResume } from './app';
 import { A, runAddress } from './actions';
+import { askCityURL } from './views/common';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -17,16 +19,29 @@ function fire(el: HTMLElement): void {
   lastTap = Date.now();
   el.classList.add('is-pressed');
   window.setTimeout(() => el.classList.remove('is-pressed'), 120);
+  dismissResume(); // "Welcome back" lasts until the first tap, whatever it is
   try { void fn(el.dataset, el); } catch (e) { console.error(e); }
   // Count the click-dedupe window from when the action finished painting, not when it started:
   // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
   lastTap = Date.now();
 }
+/* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
+   re-rendered under the finger, and a stray mousedown there would pull focus away. A control the
+   tap moved into a closing sheet or panel (motion.ts, [data-husk]) counts as the control it was. */
+const cancelFollowUp = (e: Event): void => {
+  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act], [data-husk]')) e.preventDefault();
+};
 document.addEventListener('pointerdown', (e) => {
   if (e.button !== 0) return;
   const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act]');
   if (!el) return;
-  if (e.pointerType === 'touch') { touch = { el, x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId }; return; }
+  if (e.pointerType === 'touch') {
+    touch = { el, x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId };
+    // Also on the touched element itself: when the tap replaced it (a form opening where its
+    // button was, one sheet swapped for another), its touchend never reaches the document.
+    e.target!.addEventListener('touchend', cancelFollowUp, { once: true, passive: false });
+    return;
+  }
   fire(el);
 });
 document.addEventListener('pointerup', (e) => {
@@ -36,11 +51,7 @@ document.addEventListener('pointerup', (e) => {
   if ((e.target as HTMLElement).closest('[data-act]') === t.el) fire(t.el);
 });
 document.addEventListener('pointercancel', () => { touch = null; });
-/* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
-   re-rendered under the finger, and a stray mousedown there would pull focus away. */
-document.addEventListener('touchend', (e) => {
-  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act]')) e.preventDefault();
-}, { passive: false });
+document.addEventListener('touchend', cancelFollowUp, { passive: false });
 document.addEventListener('click', (e) => {
   const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act]');
   if (!el) return;
@@ -51,12 +62,19 @@ document.addEventListener('click', (e) => {
 document.addEventListener('submit', (e) => {
   e.preventDefault();
   const f = e.target as HTMLFormElement;
-  if (f.dataset.form === 'zip') void submitZip((f.querySelector('input') as HTMLInputElement).value);
+  // Enter in the ZIP box does what "Show my ballot" does.
+  if (f.dataset.form === 'zip') { S.zip = (f.querySelector('input') as HTMLInputElement).value.replace(/\D/g, '').slice(0, 5); void A['setup-done']({}, f); }
   if (f.dataset.form === 'addr') { const i = f.querySelector('input') as HTMLInputElement; void runAddress(i.value); }
 });
 document.addEventListener('input', (e) => {
   const t = e.target as HTMLElement;
-  if (t.matches('.zip-input')) { const i = t as HTMLInputElement; i.value = i.value.replace(/\D/g, '').slice(0, 5); S.zip = i.value; }
+  if (t.matches('.zip-input')) {
+    const i = t as HTMLInputElement; i.value = i.value.replace(/\D/g, '').slice(0, 5); S.zip = i.value;
+    // "Ask for yours" carries whatever ZIP is in the box.
+    const ask = document.querySelector<HTMLAnchorElement>('a[data-ask]');
+    if (ask) ask.href = askCityURL(S.zip);
+    zipTyped(S.zip);
+  }
   if (t.matches('textarea[data-note]')) { const ta = t as HTMLTextAreaElement; S.b.notes[ta.dataset.note!] = ta.value; persist(); }
 });
 document.addEventListener('keydown', (e) => {
@@ -77,11 +95,20 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
+/* From 1180px the menu stands as a rail in the margin (drawn with the bar): crossing that width
+   redraws the bar, and a menu sheet left open closes, since the rail now shows it. */
+try {
+  window.matchMedia(RAIL_AT).addEventListener('change', (e) => {
+    if (!S.ballot || S.view !== 'ballot') return;
+    if (e.matches && S.ui.sheet === 'toc') S.ui.sheet = null;
+    render(['bar', 'sheet']);
+  });
+} catch { /* an old browser: the bar redraws on the next tap */ }
 /* The next step can change while the page sits open: the polls close at 7, or midnight passes.
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
 function refreshPlan(): void {
   if (!S.ballot || S.view !== 'ballot') return;
-  if (stepKey(S.ballot.howto) !== planKey) render(['plan']);
+  if (stepKey(S.ballot.howto) !== planKey) anchored(() => render(['plan']));
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshPlan(); });
 window.addEventListener('focus', refreshPlan);
@@ -102,7 +129,11 @@ async function boot(): Promise<void> {
   } catch { /* ignore */ }
   render();
   const head = parseShareHead(location.hash);
-  try { await ensureIndex(); } catch { S.loadErr = 'We couldn’t reach the guide’s data. Check your connection and reload.'; render(); return; }
+  try { await ensureIndex(); } catch {
+    S.loadErr = 'We couldn’t reach the guide’s data. Check your connection.';
+    S.retry = () => { S.loadErr = null; void boot(); };
+    render(); return;
+  }
   if (head && S.index!.states[head.st]) {
     const places = head.places.filter((p) => S.index!.places[p]);
     await openBallot(head.st, places, head.zip, { share: head });
@@ -112,7 +143,7 @@ async function boot(): Promise<void> {
   if (last) {
     const [st, placesStr] = last.key.split('|');
     const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
-    if (S.index!.states[st]) { await openBallot(st, places, last.zip); return; }
+    if (S.index!.states[st]) { if (await openBallot(st, places, last.zip)) offerResume(); return; }
   }
   render();
 }

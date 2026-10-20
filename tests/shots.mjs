@@ -2,7 +2,7 @@
 /* Morning-review screenshots of the test ballots at 380x820 (not a test; it never fails).
    BASE=http://localhost:4173 node tests/shots.mjs            -> .tmp/shots/ledger/
    ONLY=lakewood,chicago node tests/shots.mjs                 -> just those
-   Each ballot: fresh first screen, an open race, an open measure, the judges section, the
+   Each ballot: fresh first screen, the menu, an open race, an open measure, the judges section, the
    "aunt" scenario (mostly decided), the cheat sheet and Pass it on. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,9 +29,16 @@ async function open(b, query = '') {
   const page = await ctx.newPage();
   await page.addInitScript(PRESS);
   await page.goto(`${BASE}/?today=${TODAY}${query}`);
+  await page.waitForSelector('#zip');
   await page.fill('#zip', b.zip);
-  await page.locator('button[type=submit]').click();
   if (b.choose) await page.locator(`[data-act="choose-place"][data-ids="${b.choose}"]`).click();
+  // The first page, steps 1 and 2 with the place found: shoot it once per ballot, then "Show my ballot".
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  if (!query) {
+    await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]));
+    await shot(page, `${b.name}-0-steps-1-2`);
+  }
+  await page.locator('[data-act="setup-done"]').click();
   await page.waitForSelector('#plan', { timeout: 15000 });
   await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]));
   await page.waitForTimeout(200);
@@ -46,6 +53,12 @@ async function openRow(page, sel) {
 for (const b of BALLOTS) {
   let { ctx, page } = await open(b);
   await shot(page, `${b.name}-1-fresh`);
+  // The menu the bar's "☰ N of M" opens.
+  await page.evaluate(() => window.__press(document.querySelector('.foot [data-act="toc"]')));
+  await page.waitForTimeout(200);
+  await shot(page, `${b.name}-1b-menu`);
+  await page.evaluate(() => window.__press(document.querySelector('.sheet-panel [data-act="sheet-close"][data-fk="sheet-x"]')));
+  await page.waitForTimeout(150);
   if (await openRow(page, '.row[data-item]:has(.vd.agree), .row[data-item]:has(.vd.split)')) await shot(page, `${b.name}-2-race-open`);
   if (await openRow(page, '#sec-measures .row[data-item]')) await shot(page, `${b.name}-3-measure-open`);
   if (await page.$('#sec-judicial')) {

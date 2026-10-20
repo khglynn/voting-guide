@@ -19,7 +19,8 @@
  *   3  every item the oracle says is on the ballot renders exactly once, nothing extra
  *   4  no duplicate DOM ids anywhere
  *   5  district questions match the oracle's groups
- *   6  section counts, unopposed counts and the progress bar match the data
+ *   6  section counts, unopposed counts and the progress bar match the data, by the one counting rule:
+ *      a district question counts as one race until it's answered (checked once with none answered)
  *   7  make a choice on every decision row (opened, paged if needed), chosen here from the data (varied by race: different
  *      candidates, yes and no, skips, rankings with a reorder, mixed judge answers), then the
  *      cheat sheet and the print sheet must show every race, in order, each with exactly that
@@ -154,8 +155,10 @@ function expected(o, answers) {
   }
   for (const g of unanswered) (perSec[g.sec] ||= { decisions: 0, unopposed: 0, questions: 0 }).questions++;
   const decisions = visible.filter((i) => o.kinds[i.id] === 'decision');
-  // The bar and the section counts count choices; a district question is setup, not a choice.
-  return { visible, perSec, decisions, unanswered, barTotal: decisions.length };
+  // The one counting rule (Oct 20): every choice shown, and a district question as one race until
+  // it's answered. (The other school districts' fold leaves its races out only while it is closed
+  // and unclaimed; this sweep opens every fold before it counts, so they all count here.)
+  return { visible, perSec, decisions, unanswered, barTotal: decisions.length + unanswered.length };
 }
 
 /* ---------- the choices this sweep makes, and what the cheat sheet must then say ----------
@@ -308,7 +311,6 @@ const SNAPSHOT = (w) => {
     ids, dupIds: [...dupIds], over, sec, scrollWidth: document.documentElement.scrollWidth,
     qs: [...document.querySelectorAll('.row[data-q]')].map((q) => q.dataset.q),
     bar: (document.querySelector('.bar-txt') || {}).textContent?.replace(/\s+/g, ' ').trim() || '',
-    barBtnDisabled: !!document.querySelector('[data-act="next"][disabled]'),
   };
 };
 /* The app ignores a click within 650ms of the last action (a touch guard), so programmatic taps
@@ -405,15 +407,18 @@ async function open(browser, ballot, R) {
     page.on('response', (r) => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) page.errs.push(`HTTP ${r.status()}: ${r.url()}`); });
     await page.goto(`${BASE}/?today=${TODAY}`, { waitUntil: 'domcontentloaded' });
     await page.waitForSelector('#zip');
-    if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box
+    if (ballot.combo) { // a multi-place ZIP only exists behind the ZIP box: it asks as soon as it's typed
       await page.fill('#zip', ballot.zip);
-      await page.locator('button[type=submit]').click();
       await page.locator(`[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]`).click();
     } else {
-      await page.locator('[data-fk="browse"]').click(); // "Or pick a place from the list"
+      await page.locator('[data-fk="browse"]').click(); // "Covers N cities": the list of places
       const sel = ballot.placeIds.length ? `[data-act="choose-place"][data-ids="${ballot.placeIds.join('+')}"]` : `[data-act="choose-state"][data-st="${ballot.st}"]`;
       await page.locator(sel).first().click();
     }
+    // The first page names the place under the ZIP box; "Show my ballot" with both switches off
+    // shows the ballot as is.
+    await page.waitForSelector('.door-place', { timeout: 20000 });
+    await page.locator('[data-act="setup-done"]').click();
     await page.waitForSelector('#plan', { timeout: 20000 });
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 4000))])); // real font metrics, but never wait long
     await page.waitForTimeout(150);
@@ -438,7 +443,7 @@ async function checkStructure(page, ballot, o, answers, label, R) {
   const wantQ = ex.unanswered.map((g) => g.key).sort().join('|'), gotQ = [...snap.qs].sort().join('|');
   if (wantQ !== gotQ) R.fail(where, 'district questions differ from the oracle', `want ${wantQ || 'none'} got ${gotQ || 'none'}`);
   for (const [sec, s] of Object.entries(ex.perSec)) {
-    const total = s.decisions;
+    const total = s.decisions + s.questions;
     const wantCount = total ? `0 of ${total} decided` : s.unopposed ? 'Nothing to decide' : '';
     const d = snap.sec[sec];
     if (!d) { if (s.decisions || s.unopposed || s.questions) R.fail(where, `section ${sec} is missing`); continue; }
@@ -473,6 +478,9 @@ async function sweepBallot(browser, ballot) {
   const o = await oracle(ballot.st, ballot.placeIds);
   const { ctx, page } = await open(browser, ballot, R);
   try {
+
+    // Before any district is answered: each question counts as one race in its band and the bar.
+    if (o.groups.length) await checkStructure(page, ballot, o, {}, 'no districts answered', R);
 
     // MODE=full first, while nothing is picked: every member of every district group at least once,
     // one variant per index. The same page is reused; "Change" reopens a question.

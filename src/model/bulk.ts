@@ -1,8 +1,9 @@
-/* The one-tap fills, each with an Undo for the whole batch:
-   - "Use their picks where they agree": undecided rows where every chosen source that weighed in
+/* The fills, each with an Undo for the whole batch. "Fill in my ballot with their picks" (step 2
+   and the Edit sheet) is the first two together, the party's candidates first (planSetup):
+   - Where your sources agree: undecided rows where every chosen source that weighed in
      made the same pick. Never ranked-choice races (a pick is not a ranking), never a multi-seat
      race unless the sources name the same full set, never anything already decided.
-   - "Fill in my party": partisan races by the ballot's normalized `parties` labels (never the
+   - The party's candidates: partisan races by the ballot's normalized `parties` labels (never the
      display text). Skips races where the party has two candidates (top-two) and ranked races.
    - "Keep every judge the review favors": from the judges module.
    Filled picks are marked in S.b.auto so the row can say where the pick came from.
@@ -92,6 +93,17 @@ export function planParty(party: string): Plan {
   return { fills, single: 0, skippedTwo, skippedRanked, skippedPartial };
 }
 
+/* Step 2's "Fill in my ballot with their picks": the party's candidates first (when a party is
+   chosen), then where your sources agree in the races the party left open, as one batch for one
+   Undo. Plan it after the party is set: the agree lineup includes the party's own sources. */
+export function planSetup(party: string | null): { party: Plan | null; agree: Plan; fills: Fill[] } {
+  const p = party ? planParty(party) : null;
+  const a = planAgree();
+  const taken = new Set(p ? p.fills.map((f) => f.id) : []);
+  const rest = a.fills.filter((f) => !taken.has(f.id));
+  return { party: p, agree: { ...a, fills: rest, single: rest.filter((f) => f.single).length }, fills: [...(p ? p.fills : []), ...rest] };
+}
+
 export function planJudges(): Plan {
   const jb = judgeBatch();
   if (!jb) return emptyPlan();
@@ -142,6 +154,8 @@ export function undoFills(): boolean {
   return true;
 }
 export const forgetUndo = (): void => { last = null; };
+/* An Undo is waiting: the ballot head's "20 filled in. Undo" shows only while it is. */
+export const canUndo = (): boolean => !!last;
 /* A hand edit to a row takes that row out of the pending Undo, even when you set the same value
    the batch did: Undo only ever takes back what the batch did on its own. */
 export function touchUndo(id: string): void {

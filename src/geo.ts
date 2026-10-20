@@ -43,6 +43,7 @@ export interface GeoResult {
   cd: number | null;         // congressional district
   upper: number | null;      // state senate
   lower: number | null;      // state house
+  zip?: string | null;       // the ZIP Census matched (its ZCTA layer, else the end of the matched address)
 }
 
 const STATE_FIPS: Record<string, string> = {
@@ -65,6 +66,42 @@ export function placeFromGeo(places: Record<string, { label: string; state: stri
   return inState.find((id) => places[id].label.toLowerCase() === r.place!.toLowerCase()) || null;
 }
 
+/* An address typed on the first page, before any ZIP: which ballot it opens. The place Census
+   names wins when it is one we cover in that state (matched as placeFromGeo does, then without the
+   label's note, "Los Angeles (city)", and for New York City by borough county). Otherwise the ZIP
+   Census matched goes through the same index the ZIP box uses: one place opens, several ask. A
+   covered state with no matching place gets its statewide ballot, as a ZIP there would. "none"
+   means we couldn't tell, and the page says so. */
+export type AddressHit =
+  | { kind: 'open'; st: string; ids: string[]; zip: string }
+  | { kind: 'choose'; zip: string; ids: string[] }
+  | { kind: 'out'; st: string; zip: string }
+  | { kind: 'none' };
+interface IndexLike { places: Record<string, { label: string; state: string }>; zips: Record<string, string[]>; states: Record<string, unknown> }
+export function settleAddress(idx: IndexLike, r: GeoResult): AddressHit {
+  const st = r.state;
+  if (!st) return { kind: 'none' };
+  const zip = r.zip && /^\d{5}$/.test(r.zip) ? r.zip : '';
+  const inState = Object.keys(idx.places).filter((id) => idx.places[id].state === st);
+  const bare = (l: string) => l.replace(/\s*\(.*\)$/, '').toLowerCase();
+  const byName = (): string | null => {
+    if (!r.place) return null;
+    const name = r.place.toLowerCase();
+    if (name === 'new york' && r.county) {
+      const nyc = inState.find((id) => (idx.places[id].label.match(/\(([^)]*) County\)$/) || [])[1] === r.county);
+      if (nyc) return nyc;
+    }
+    return inState.find((id) => bare(idx.places[id].label) === name) || null;
+  };
+  const hit = placeFromGeo(idx.places, inState, r) || byName();
+  if (hit) return { kind: 'open', st, ids: [hit], zip };
+  const ids = zip ? (idx.zips[zip] || []).filter((id) => inState.includes(id)) : [];
+  if (ids.length === 1) return { kind: 'open', st, ids, zip };
+  if (ids.length > 1) return { kind: 'choose', zip, ids };
+  if (!(st in idx.states)) return { kind: 'out', st, zip };
+  return zip ? { kind: 'open', st, ids: [], zip } : { kind: 'none' };
+}
+
 /* Most people type just the street ("2 Main St"), and the Census geocoder can't place a street
    without a city or ZIP. The guide already knows both the state and the ZIP they typed, so add
    them unless the address already ends in a ZIP; a state already at the end gets only the ZIP. */
@@ -77,10 +114,58 @@ export function withPlace(addr: string, st: string | null, zip: string | null): 
   return `${a}, ${st}${zip ? ` ${zip}` : ''}`;
 }
 
+/* The Census writes addresses in capitals ("100 N TEST ST, AUSTIN, TX, 78704"). Shown back the
+   way people write them: "100 N Test St, Austin, TX 78704". Directions, the state and a few road
+   prefixes stay capitals, ordinals go lower (1st), a word with a digit in it stays as it is, and
+   the comma before the ZIP goes. */
+const KEEP = /^(N|S|E|W|NE|NW|SE|SW|US|FM|RM|RR|SH|IH|CR|PO)$/;
+const tidyWord = (w: string): string => {
+  if (KEEP.test(w)) return w;
+  if (/^\d+(ST|ND|RD|TH)$/i.test(w)) return w.toLowerCase();
+  if (/\d/.test(w)) return w;
+  return w.toLowerCase().replace(/(^|[-'’.])([a-z])/g, (_, a: string, c: string) => a + c.toUpperCase());
+};
+export function tidyAddress(s: string): string {
+  const parts = s.trim().split(/\s*,\s*/).filter(Boolean);
+  return parts.map((p, i) => (i > 0 && /^[A-Z]{2}$/.test(p) ? p : p.split(/\s+/).map(tidyWord).join(' ')))
+    .join(', ').replace(/,\s*(\d{5}(?:-\d{4})?)$/, ' $1');
+}
+
+/* The Census answer as results: every match it found, in its order, the same address once. Most
+   addresses match once; one typed without a city can match several ("Which one is yours?"). */
+export function parseCensus(data: any): GeoResult[] {
+  const list: any[] = (data && data.result && Array.isArray(data.result.addressMatches)) ? data.result.addressMatches : [];
+  const out: GeoResult[] = [];
+  for (const m of list) {
+    const g = (m && m.geographies) || {};
+    const layer = (re: RegExp) => { const k = Object.keys(g).find((x) => re.test(x)); return k && g[k] && g[k][0] ? g[k][0] : null; };
+    const num = (x: any) => { const n = x ? parseInt(String(x.BASENAME || '').replace(/\D/g, ''), 10) : NaN; return Number.isFinite(n) ? n : null; };
+    const st = layer(/^States$/);
+    const county = layer(/^Counties$/);
+    const place = layer(/Incorporated Places/);
+    const zcta = layer(/ZIP Code Tabulation/);
+    const matched = String((m && m.matchedAddress) || '');
+    const zipAt = matched.match(/(\d{5})(?:-\d{4})?\s*$/);
+    const r: GeoResult = {
+      matched,
+      state: st ? STATE_FIPS[String(st.STATE)] || null : null,
+      county: county ? String(county.BASENAME || '') : null,
+      place: place ? String(place.BASENAME || '') : null,
+      cd: num(layer(/Congressional Districts/)),
+      upper: num(layer(/State Legislative Districts - Upper/)),
+      lower: num(layer(/State Legislative Districts - Lower/)),
+      zip: zcta && /^\d{5}$/.test(String(zcta.ZCTA5 || zcta.BASENAME || '')) ? String(zcta.ZCTA5 || zcta.BASENAME) : zipAt ? zipAt[1] : null,
+    };
+    if (!out.some((x) => tidyAddress(x.matched) === tidyAddress(r.matched))) out.push(r);
+  }
+  return out;
+}
+
 /* US Census Geocoder, JSONP (no key, no CORS). The address goes only to the Census
-   Bureau. We keep it in memory for this one request and never store it. */
+   Bureau. We keep it in memory for this one request and never store it. Resolves with every
+   match, none when it found nothing. */
 let seq = 0;
-export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoResult | null> {
+export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoResult[]> {
   return new Promise((resolve, reject) => {
     const cb = `__vgGeo${Date.now()}${seq++}`;
     const script = document.createElement('script');
@@ -90,25 +175,7 @@ export function censusLookup(address: string, timeoutMs = 15000): Promise<GeoRes
     const timer = window.setTimeout(() => { if (!done) { cleanup(); reject(new Error('timeout')); } }, timeoutMs);
     w[cb] = (data: any) => {
       cleanup();
-      try {
-        const m = data && data.result && data.result.addressMatches && data.result.addressMatches[0];
-        if (!m) return resolve(null);
-        const g = m.geographies || {};
-        const layer = (re: RegExp) => { const k = Object.keys(g).find((x) => re.test(x)); return k && g[k] && g[k][0] ? g[k][0] : null; };
-        const num = (x: any) => { const n = x ? parseInt(String(x.BASENAME || '').replace(/\D/g, ''), 10) : NaN; return Number.isFinite(n) ? n : null; };
-        const st = layer(/^States$/);
-        const county = layer(/^Counties$/);
-        const place = layer(/Incorporated Places/);
-        resolve({
-          matched: String(m.matchedAddress || ''),
-          state: st ? STATE_FIPS[String(st.STATE)] || null : null,
-          county: county ? String(county.BASENAME || '') : null,
-          place: place ? String(place.BASENAME || '') : null,
-          cd: num(layer(/Congressional Districts/)),
-          upper: num(layer(/State Legislative Districts - Upper/)),
-          lower: num(layer(/State Legislative Districts - Lower/)),
-        });
-      } catch (e) { reject(e); }
+      try { resolve(parseCensus(data)); } catch (e) { reject(e); }
     };
     const q = new URLSearchParams({
       address, benchmark: 'Public_AR_Current', vintage: 'Current_Current', format: 'jsonp', callback: cb,

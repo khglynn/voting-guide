@@ -5,7 +5,7 @@
 import type { Contest, Endorsement, Endorser, Item } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosen, status, entriesBySection, isDecision, isRCV } from '../ballot';
+import { chosen, status, isRCV, decisionItems } from '../ballot';
 import { choiceShort, pickShort } from './labels';
 import { explainsOnly, hasPaywallNote } from './lens';
 import { judgeReview } from './judges';
@@ -197,7 +197,8 @@ export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
-  no_cover: 'Not covered by your sources', no_sources: 'No sources on', both: 'Listed both sides',
+  // "Don’t show endorsements" chosen: the column stays empty and quiet.
+  no_cover: 'Not covered by your sources', no_sources: '', both: 'Listed both sides',
   mixed: 'No endorsements',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {
@@ -291,24 +292,21 @@ export function verdict(it: Item): Verdict {
   }
   const named = namedLineup(l, it);
   const [a, b2] = [l.groups[0].sources.length, l.groups[1] ? l.groups[1].sources.length : 0];
-  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'they split', shade: a >= 2 * b2 ? 'lean' : 'even' };
+  return { kind: 'split', main: named || tally(l), sub: named ? '' : 'picks split', shade: a >= 2 * b2 ? 'lean' : 'even' };
 }
 
 /* "Your 4 sources made picks on 18 of your 42 choices." Over what's visible now, counting the same
    choices as the ballot header and the progress bar (judges included), so the first screens
    give one number for the size of the ballot. */
+/* "Picks in N of your M races": M is the bar's own count (ballot.ts), so step 2 and the bar agree.
+   A district question still to answer counts, with no picks until you pick your district. */
 export function coverage(): { sources: number; picked: number; total: number } {
   const b = S.ballot!;
   const src = chosen().filter((e) => !explainsOnly(e));
   let picked = 0, total = 0;
-  for (const [, entries] of entriesBySection()) {
-    for (const e of entries) {
-      if (e.t !== 'item') continue;
-      const it = b.byId.get(e.id)!;
-      if (!isDecision(status(it))) continue;
-      total++;
-      if (weighedIn(lineup(it, src)).length) picked++;
-    }
+  for (const x of decisionItems()) {
+    total++;
+    if (!x.question && weighedIn(lineup(b.byId.get(x.id)!, src)).length) picked++;
   }
   return { sources: src.length, picked, total };
 }

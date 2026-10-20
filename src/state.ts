@@ -1,6 +1,8 @@
 /* App state, saved state and the save-my-picks link. */
 import type { Index } from './types';
 import type { Ballot } from './ballot';
+import type { ChipKey } from './model/lens';
+import type { GeoResult } from './geo';
 import { load, save, hash, b64urlEncode, b64urlDecode } from './util';
 
 export interface Prefs {
@@ -21,13 +23,16 @@ export interface BallotState {
   sources: string[] | null;          // null = the defaults
   planSeen: boolean;
   offerDismissed: string | null;     // v2 only; kept so old saved state reads cleanly
-  addrNote: string | null;           // "Matched from your address" summary, no address kept
-  party: string | null;              // the party chosen in "A party" (for its sources and "Fill in my party")
+  addrNote: string | null;           // what an address lookup set ("Set from your address: ..."), never the address
+  party: string | null;              // the party chosen in "A party" (for its sources and its candidates in the fill)
   ticks: string[];                   // Help your friends vote: who you've texted
+  setupDone: boolean;                // step 2 ("Pick by endorsements or party") finished on this device
+  hideDecided: boolean;              // "Hide races I've decided", on this device; never in the save link
+  mine: string[];                    // "may apply" races an address lookup put on your ballot; never in the save link
 }
 export const emptyBallotState = (zip = ''): BallotState => ({
   zip, picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null,
-  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [],
+  planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: false, hideDecided: false, mine: [],
 });
 
 /* View state for the ledger. Nothing here is saved. */
@@ -40,18 +45,26 @@ export interface UI {
   others: Set<string>;        // rows showing sources outside your lens
   folded: Set<string>;        // sections or court groups the voter folded
   unfolded: Set<string>;      // decided sections and long groups the voter opened
-  onlyUndecided: boolean;
-  keep: string | null;        // a row just decided stays visible under "Only undecided" until another opens
+  reveal: Set<string>;        // sections whose decided rows show under "Hide races I've decided" (their count, tapped), for this visit
+  keep: string | null;        // the row just decided ("Next up" goes on from it)
+  beat: string | null;        // under "Hide races I've decided", the row just decided, showing its pick for a beat before it folds away
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
-  sheet: null | 'sources' | 'party' | 'whatif';
+  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc';  // picks: the ballot's Edit sheet; toc: the menu
   sheetFrom: string | null;   // data-fk to focus when a sheet closes
+  sheetBack: string | null;   // all sources or a party, opened from the Edit sheet: its sheetFrom, kept to go back to it
   addrOpen: boolean;
   addrBusy: boolean;
   addrMsg: string | null;
+  addrFail: '' | 'down' | 'miss'; // the lookup didn't answer (Try again) or matched nothing usable
+  addrFound: string | null;   // the address the Census matched, tidied, shown back until a reload or another ballot ("Found: ...")
+  addrWhich: GeoResult[] | null; // the Census matched several addresses: "Which one is yours?"
   saveOpen: boolean;
   copyFallback: string | null;
-  bulk: string | null;        // label of the last bulk fill, while its Undo is live
+  bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
+  setupFill: boolean;         // "Fill in my ballot with their picks" in the Edit sheet
+  setupOnly: boolean;         // "Hide races I've decided" in the Edit sheet, applied when it closes (to S.b.hideDecided)
+  resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
 }
 
 /* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
@@ -59,24 +72,37 @@ export interface UI {
    instead of quietly calling them "your" picks. */
 export interface Pending { kind: 'restore' | 'shared'; key: string; incoming: BallotState; summary: string }
 
+/* The first page's step 2 as chosen so far: the chips, a party, and the two switches. In memory
+   only. Before a ZIP they are all there is; once a ballot this device has nothing for loads, they
+   become its sources and party (app.ts applyDoor), and the switches apply on "Show my ballot". */
+export interface Door { chips: Record<ChipKey, boolean>; party: string | null; fill: boolean; only: boolean }
+
 export const S = {
   index: null as Index | null,
-  view: 'start' as 'start' | 'loading' | 'ballot',
+  /* The first page shows for start, loading and setup. setup: a ballot is loaded for the first page's
+     place line and counts, not shown, and nothing is saved until "Show my ballot". */
+  view: 'start' as 'start' | 'loading' | 'setup' | 'ballot',
   zip: '',
   zipErr: '' as string,
   zipChoice: null as null | { zip: string; placeIds: string[] },
+  /* The place question just answered (its ZIP and places), so the place line's Change can ask again. */
+  picked: null as null | { zip: string; placeIds: string[] },
+  door: { chips: { papers: true, progressive: false, conservative: false }, party: null, fill: false, only: false } as Door,
   coverage: null as null | { kind: 'not_covered'; state: string | null; zip: string },
   ballot: null as Ballot | null,
   b: emptyBallotState(),
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
-    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
+    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', addrFound: null, addrWhich: null, saveOpen: false, copyFallback: null, bulk: null,
+    setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,
   pending: null as Pending | null,
   loadErr: null as string | null,
+  /* What "Try again" under a load error does: the same ZIP, ballot or first visit again. */
+  retry: null as null | (() => void),
 };
 
 /* ---------- saved state (localStorage, per ballot) ---------- */
@@ -96,7 +122,9 @@ export function savedBallot(key: string): BallotState | null {
 let saveTimer: number | undefined;
 export function persist(now = false): void {
   if (S.tryMode) return; // a "try as" scenario never touches the real saved picks
+  // The first page saves nothing: someone who leaves before "Show my ballot" finds it again.
   const run = () => {
+    if (S.view !== 'ballot') return;
     const s = readSaved();
     s.prefs = S.prefs;
     if (S.ballot) {
@@ -111,6 +139,7 @@ export function persist(now = false): void {
 export function forgetLast(): void {
   if (S.tryMode) return;
   const s = readSaved();
+  if (!s.last) return; // nothing to forget, so nothing to write
   s.last = null;
   save(KEY, s);
 }

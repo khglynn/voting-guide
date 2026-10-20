@@ -200,6 +200,15 @@ export function mailBy(h: HowTo): { date: string; about: boolean } | null {
 }
 const firstSentence = (s: string): string => { const m = s.match(/^(.+?[.!?])(\s|$)/); return (m ? m[1] : s).trim(); };
 
+/* The button beside "Not registered?": the state's register page (registration.register_url, from
+   the data track). "Register now" while any deadline is still ahead; once they have all passed,
+   "Register for next time". Null when the state file has no register page. */
+export function registerAction(h: HowTo, t = todayISO()): { label: string; url: string } | null {
+  const url = h.registration.register_url;
+  if (!url) return null;
+  const open = h.registration.deadlines.some((d) => !!d.date && d.date >= t);
+  return { label: open ? 'Register now' : 'Register for next time', url };
+}
 /* "Not registered?" when a registration deadline is within a week, from the state file. */
 export function registrationAlert(h: HowTo, t = todayISO(), absolute = false): string | null {
   const open = h.registration.deadlines.filter((d) => d.date && d.date >= t).sort((a, b) => (a.date! < b.date! ? -1 : 1));

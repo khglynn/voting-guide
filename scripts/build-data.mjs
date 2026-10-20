@@ -100,7 +100,7 @@ function placeEarly(x, where) {
   if (x == null) return null;
   const ok = x && typeof x === 'object' && isDate(x.start) && isDate(x.end) && x.start <= x.end && safeUrl(x.source);
   if (!ok) { warn(`${where}: early_in_person needs start and end dates (start first) and an https source; dropped it`); return null; }
-  return { start: x.start, end: x.end, hours_note: str(x.hours_note), lookup_url: safeUrl(x.lookup_url), source: safeUrl(x.source), confidence: conf(x.confidence) };
+  return { start: x.start, end: x.end, hours_note: str(x.hours_note), ...optional({ hours_short: helpShort(x.hours_short, `${where} early_in_person.hours_short`) }), lookup_url: safeUrl(x.lookup_url), source: safeUrl(x.source), confidence: conf(x.confidence) };
 }
 /* A place's own where-to-vote tools, when its county runs them; plan.ts prefers them over the
    state's statewide lookups. */
@@ -116,6 +116,58 @@ function placeLookups(x, where) {
   return Object.keys(out).length ? out : null;
 }
 const optional = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v != null && !(Array.isArray(v) && !v.length)));
+/* Common questions as quick answers (Oct 20). Each situation may carry `short` (one plain line)
+   and `actions` (up to 2 official links, {label, url}); each gotcha may be {text, short} instead
+   of plain text. The bundle keeps `gotchas` as plain text and puts the short lines beside it in
+   `gotcha_shorts`, in the same order. scripts/check-data.mjs holds the word limits and checks
+   that every action URL comes from the state file. */
+function helpShort(v, where) {
+  if (v == null) return null;
+  if (!isStr(v) || /\n/.test(v) || v.trim().length > 200) { warn(`${where}: short is not one plain line; dropped it`); return null; }
+  return v.trim();
+}
+function helpActions(list, where) {
+  if (list == null) return [];
+  if (!Array.isArray(list)) { warn(`${where}: actions is not a list; dropped it`); return []; }
+  const out = [];
+  for (const a of list) {
+    if (!a || !isStr(a.label) || !safeUrl(a.url)) { warn(`${where}: an action needs a label and an http(s) URL; dropped it`); continue; }
+    if (out.length === 2) { warn(`${where}: more than 2 actions; dropped the rest`); break; }
+    out.push({ label: a.label.trim(), url: safeUrl(a.url) });
+  }
+  return out;
+}
+function stateHelp(s, f) {
+  if (Array.isArray(s.situations)) {
+    s.situations = s.situations.map((x) => {
+      if (!x || typeof x !== 'object') return x;
+      const { short, actions, ...rest } = x;
+      const where = `${f} situation ${x.id}`;
+      return { ...rest, ...optional({ short: helpShort(short, where), actions: helpActions(actions, where) }) };
+    });
+  }
+  if (Array.isArray(s.gotchas)) {
+    const texts = [];
+    const shorts = [];
+    for (const g of s.gotchas) {
+      if (isStr(g)) { texts.push(g); shorts.push(null); }
+      else if (g && typeof g === 'object' && isStr(g.text)) { texts.push(g.text.trim()); shorts.push(helpShort(g.short, `${f} gotcha ${texts.length}`)); }
+      else warn(`${f}: a gotcha has no text; dropped it`);
+    }
+    s.gotchas = texts;
+    if (shorts.some(Boolean)) s.gotcha_shorts = shorts;
+  }
+  const reg = s.registration;
+  for (const k of ['register_url', 'register_url_source']) {
+    if (reg[k] == null) continue;
+    const u = safeUrl(reg[k]);
+    if (u) reg[k] = u; else { warn(`${f}: registration.${k} is not an http(s) URL; dropped it`); delete reg[k]; }
+  }
+  if (s.sample_ballot_url != null) {
+    const u = safeUrl(s.sample_ballot_url);
+    if (u) s.sample_ballot_url = u; else { warn(`${f}: sample_ballot_url is not an http(s) URL; dropped it`); delete s.sample_ballot_url; }
+  }
+}
 function ownWordsChecked(x, where) {
   if (x == null) return null;
   if (typeof x !== 'object' || !isDate(x.on)) { warn(`${where}: own_words_checked needs an "on" date; dropped it`); return null; }
@@ -330,6 +382,7 @@ for (const f of listJson('states')) {
   if (!s || !validState(s, f)) continue;
   s.state = s.state.toUpperCase();
   s.heads_up = headsUp(s.heads_up, f);
+  stateHelp(s, f);
   if (s.judicial_review != null) {
     const jr = s.judicial_review;
     const ok = jr && typeof jr === 'object' && ['what_the_rating_means', 'who_reviews', 'how_judges_get_here'].some((k) => isStr(jr[k]));
@@ -627,6 +680,14 @@ for (const [id, p] of places) {
     if (!index.zips[z].includes(id)) index.zips[z].push(id);
   }
 }
+/* The parties the guide covers, for the first page's "A party" before a ZIP: each party whose own
+   organization has an endorsement in the data. A ballot then offers only the parties on it. */
+const partiesCovered = new Set();
+for (const [key, rec] of endorsementByKey) {
+  const e = endorsers.get(key.split('|')[0]);
+  if (rec.s === 'endorsed' && e && e.type === 'party' && isStr(e.party)) partiesCovered.add(e.party.trim());
+}
+index.parties = [...partiesCovered].sort();
 sizes['index.json'] = write('index.json', index);
 // Optional: "Pass it on" ways to get involved and the texting study, from the data track.
 if (fs.existsSync(path.join(DATA, 'get-involved.json'))) {

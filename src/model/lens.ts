@@ -5,7 +5,7 @@
 import type { Endorser } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosenIds, isPartisan, entriesBySection, status, isDecision } from '../ballot';
+import { chosenIds, isPartisan, entriesBySection, status, isDecision, unclaimed } from '../ballot';
 
 export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
@@ -59,9 +59,10 @@ export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filte
 export function picksShown(b: Ballot): { decisions: Map<string, number>; unopposed: Map<string, number> } {
   const decisions = new Map<string, number>();
   const unopposed = new Map<string, number>();
+  const shut = unclaimed();
   for (const [, entries] of entriesBySection()) {
     for (const x of entries) {
-      if (x.t !== 'item') continue;
+      if (x.t !== 'item' || shut.has(x.id)) continue;
       const s = status(b.byId.get(x.id)!);
       const m = s === 'unopposed' ? unopposed : isDecision(s) ? decisions : null;
       if (!m) continue;
@@ -141,6 +142,11 @@ export function setSources(b: Ballot, ids: string[]): void {
   const def = defaultIds(b);
   S.b.sources = uniq.length === def.length && def.every((id) => uniq.includes(id)) ? null : uniq;
 }
+/* "Don’t show endorsements": no source on and no party, so every row shows just the choices. An option,
+   never the default (Kevin, Oct 20); turning on any chip or a party ends it. On the first page
+   before a ZIP, the same reading of the choices kept so far. */
+export const noEndorsements = (): boolean => !S.b.party && chosenIds().length === 0;
+export const doorNone = (): boolean => !S.door.party && !Object.values(S.door.chips).some(Boolean);
 export function toggleChip(b: Ballot, key: ChipKey): boolean {
   const st = chipState(b, key);
   const members = chipMembers(b, key).map((e) => e.id);
@@ -149,8 +155,8 @@ export function toggleChip(b: Ballot, key: ChipKey): boolean {
   setSources(b, turnOn ? [...cur, ...members] : cur.filter((id) => !members.includes(id)));
   return turnOn;
 }
-/* The party lens: turning a party on adds its sources (and remembers the party for
-   "Fill in my party"); off removes them. */
+/* The party lens: turning a party on adds its sources (and remembers the party, whose candidates
+   "Fill in my ballot with their picks" fills first); off removes them. */
 export function setParty(b: Ballot, party: string | null): void {
   const prev = S.b.party;
   const cur = chosenIds();

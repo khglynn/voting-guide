@@ -1,13 +1,14 @@
-/* Cheat sheet: picks and notes in ballot order with seat labels, ranked choices in order, the
-   plan essentials; Print (a real print sheet), Copy as text, Save a link. It ends there; Pass it
+/* My plan (the cheat sheet, "Your voting plan"): picks and notes in ballot order with seat labels,
+   ranked choices in order, the plan essentials and "Save it before you go"; Print (a real print
+   sheet), Copy as text, Save a link. It ends there; Pass it
    on is its own step after it. Test hooks: #cheat and #r-print tables, tr[data-cs] rows. */
 import type { Contest, Item } from '../types';
 import { S, encodeShare } from '../state';
-import { SECTIONS, entriesBySection, status, decisionItems, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
-import { esc, fmtDate } from '../util';
+import { SECTIONS, entriesBySection, status, decisionItems, unclaimed, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
+import { esc, fmtDate, todayISO } from '../util';
 import { cheatTitle, pickLabel } from '../model/labels';
 import { nextStep } from '../model/plan';
-import { sectionTitle, otherSchools, othOpen } from './ledger';
+import { sectionTitle } from './ledger';
 
 /* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
    your ballot" instead of presenting it as certain. */
@@ -26,9 +27,8 @@ function lines(): Line[] {
   const by = entriesBySection();
   const out: Line[] = [];
   // Races folded under "Other school districts that touch ..." stay off the sheet, as on the
-  // ballot, unless you decided one, wrote a note on it, or opened that row as yours.
-  const oth = otherSchools(by.get('school') || []);
-  const hidden = new Set(othOpen(oth) ? [] : oth.map((e) => (e as { id: string }).id));
+  // ballot, unless you claimed one: opened the fold, or picked or noted one of them.
+  const hidden = unclaimed();
   for (const [k] of SECTIONS) {
     const label = sectionTitle(k);
     for (const e of by.get(k) || []) {
@@ -40,21 +40,36 @@ function lines(): Line[] {
       const note = (S.b.notes[it.id] || '').trim();
       const unopposed = s === 'unopposed';
       const pick = unopposed ? null : pickLabel(it);
-      if (hidden.has(it.id) && !pick && !note) continue;
+      if (hidden.has(it.id)) continue;
       out.push({ sec: label, it, title: cheatTitle(it), label: unopposed && it.kind === 'contest' ? `${it.candidates[0].name} (unopposed)` : pick, note, unopposed, maybe: !!pick && s !== 'skipped' && isMaybe(it.id) });
     }
   }
   return out;
 }
 
-export function essentials(): string[] {
+export function essentials(t = todayISO()): string[] {
   const h = S.ballot!.howto;
-  const step = nextStep(h);
-  const out = [step.head.map((p) => p[0]).join(''), ...step.sub.slice(0, 1)];
+  const step = nextStep(h, t);
+  const head = step.head.map((p) => p[0]).join('');
+  // While the next step is mailing your ballot, the box gives the mail steps, not the rules for a
+  // voting booth you may never see (Oct 20: LA's box said "In the booth" to someone at home).
+  if (step.phase === 'mail') return [head, ...step.sub];
+  const out = [head, ...step.sub.slice(0, 1)];
   const booth = h.in_the_booth;
   const rule = (v: string, yes: string, no: string) => (v === 'allowed' ? yes : v === 'prohibited' ? no : v === 'restricted' ? 'are restricted' : 'rules are unclear');
   out.push(`In the booth: notes ${rule(booth.notes_allowed, 'are allowed', 'are not allowed')}; phones ${rule(booth.phones, 'are allowed', 'are not allowed')}.`);
   return out;
+}
+
+/* What follows "Save it before you go.", worded from the state's phone rule: a tab can reload to
+   "No internet" in line at the polls. Nothing once voting has closed. */
+export function saveLine(t = todayISO()): string | null {
+  const b = S.ballot!;
+  const phase = nextStep(b.howto, t).phase;
+  if (phase === 'closed' || phase === 'polls_closed') return null;
+  const phones = b.howto.in_the_booth.phones;
+  if (phones === 'prohibited') return 'Print it or write it down.';
+  return phones === 'allowed' ? 'Print it, copy it, or take a screenshot.' : 'Print it or copy it.';
 }
 
 export function shareURL(): string {
@@ -124,17 +139,19 @@ function tableHTML(forPrint: boolean): string {
 
 export function cheatHTML(forPrint = false): string {
   const b = S.ballot!;
-  // The bar's own count: choices only (a district question is setup, not a choice), decided the
-  // same way, so the sheet and the bar never give two totals for one ballot.
-  const all = decisionItems().filter((i) => !i.question);
+  // The bar's own count (the one rule in ballot.ts), so the sheet and the bar never give two
+  // totals for one ballot.
+  const all = decisionItems();
   const done = all.filter((i) => i.done).length;
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
+  const save = forPrint ? null : saveLine();
   // On screen the sheet is paper torn off a pad: a rendered top and a fill that continues its light.
   return `<div class="cheat">${forPrint ? '' : '<span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span>'}
     <div class="cheat-head"><p class="kick">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. Election Day ${esc(fmtDate(b.howto.election_date))}</p>
-      <h2 id="${forPrint ? 'cs-p' : 'cs-h'}">Your cheat sheet</h2>
+      ${forPrint ? '<h2 id="cs-p">Your voting plan</h2>' : '<div class="step cs-step"><span class="step-n" aria-hidden="true">4</span><h2 id="cs-h">Your voting plan</h2></div>'}
       <p class="sub">${done} of ${all.length} decided.${forPrint ? ' Blank lines are yours to fill in.' : ' Tap any line to change it.'}</p>
-      <div class="remind">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div></div>
+      <div class="remind">${essentials().map((x) => `<p>${esc(x)}</p>`).join('')}</div>
+      ${save ? `<p class="notice save-go"><b>Save it before you go.</b> ${esc(save)}</p>` : ''}</div>
     ${tableHTML(forPrint)}
     <p class="fine cs-foot">From Kevin’s 2026 voting guide.${b.howto.last_verified ? ` Checked ${esc(fmtDate(b.howto.last_verified, { weekday: false }))}.` : ''} Official info: <span class="p-url" data-url="${esc(b.howto.official_site.url)}">${esc(b.howto.official_site.name)}</span>.</p>
   </div>`;

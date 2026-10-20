@@ -359,6 +359,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     set(Object.fromEntries(four.map((e, i) => [e.id, row('endorsed', [i < 3 ? 'YES' : 'NO'])])));
     v = tally.verdict(it);
     check('verdict: more than three sources shows a tally, leading side first', v.kind === 'split' && /^Yes 3, No [12]/.test(v.main), JSON.stringify(v));
+    check('verdict: under a tally the column says "picks split" (Kevin, Oct 20: "they split" was confusing)', v.sub === 'picks split', v.sub);
   }
 
   /* ---------- Codex #6: the same set of names in a different order is agreement ---------- */
@@ -542,9 +543,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const secOf = (k) => bl.sectionOf(b.byId.get(k.startsWith('q:') ? b.groups.find((g) => `q:${g.key}` === k).members[0] : k));
       const idx = po.map((x) => secIdx[secOf(x.key)]);
       check(`next: ${pid} walks sections in the order the page draws them`, po.length > 0 && idx.every((v, i) => !i || v >= idx[i - 1]), idx.join(','));
+      // The count (decisionItems) is the walk minus the closed fold's unclaimed races.
       const want = bl.decisionItems().map((x) => x.id).sort().join();
-      const got = po.map((x) => x.key).sort().join();
-      check(`next: ${pid} walks every choice and every district question, once`, want === got && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
+      const got = po.filter((x) => !x.folded).map((x) => x.key).sort().join();
+      check(`next: ${pid} walks every choice and every district question, once`, want === got && new Set(po.map((x) => x.key)).size === po.length && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
       check(`next: ${pid} starts with the first thing the page shows`, po.length > 0 && po[0].key === bl.SECTIONS.map(([k]) => (bl.entriesBySection().get(k) || []).find((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))))).filter(Boolean).map((e) => (e.t === 'question' ? `q:${e.group.key}` : e.id))[0], po[0] && po[0].key);
     }
     // Review, Oct 20: the walk opened Round Rock, Pflugerville and Leander ISD seats one by one on
@@ -561,6 +563,147 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     S.ui.unfolded.delete(ledger.OTH_KEY);
   }
 
+  /* ---------- counting: one rule for "N of M decided" (flow, Oct 20) ----------
+     A district question counts as one race until it's answered, then its race takes its place;
+     the closed "Other school districts" fold's races count only once claimed (the fold opened, or
+     one picked or noted); "Maybe on your ballot" rows count. The bar, the bands, the cheat sheet
+     and step 2's coverage line all give the same M. */
+  {
+    const { ledger } = views;
+    const tally = mods.tally;
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false; };
+    const barM = () => { const m = ledger.barHTML().match(/<span class="bar-txt"><b>(\d+)<\/b> of (\d+)/); return m ? [+m[1], +m[2]] : null; };
+    const bandSum = () => bl.SECTIONS.reduce((n, [k]) => { const t = ledger.sectionTally(bl.entriesBySection().get(k) || []); return [n[0] + t.done, n[1] + t.total]; }, [0, 0]);
+    const cheatM = () => { const m = views.cheat.cheatHTML(false).match(/(\d+) of (\d+) decided\./); return m ? [+m[1], +m[2]] : null; };
+    const b = open('TX', ['austin-tx']);
+    reset();
+    const items = bl.decisionItems();
+    const qs = b.groups.length;
+    const oth = ledger.otherSchools(bl.entriesBySection().get('school') || []).map((e) => e.id);
+    const may = items.filter((x) => !x.question && bl.isMaybe(x.id)).length;
+    const choices = [...bl.entriesBySection().values()].flat().filter((e) => e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))).length;
+    check('count: Austin has district questions, a closed fold and maybe rows to test with', qs >= 5 && oth.length >= 3 && may >= 1, `${qs} questions, ${oth.length} folded, ${may} maybes`);
+    check('count: a fresh Austin ballot counts every question once, every maybe row, and no folded race', items.length === choices - oth.length + qs && items.filter((x) => x.question).length === qs && oth.every((id) => !items.some((x) => x.id === id)), `${items.length} vs ${choices} - ${oth.length} + ${qs}`);
+    const [n0, m0] = barM() || [];
+    check('count: the bar says 0 of M with that M', n0 === 0 && m0 === items.length, `${n0} of ${m0}, want ${items.length}`);
+    check('count: the bands add up to the bar', bandSum().join() === `0,${items.length}`, bandSum().join());
+    check('count: the cheat sheet gives the bar\'s M', (cheatM() || []).join() === `0,${items.length}`, (cheatM() || []).join());
+    check('count: step 2\'s "Picks in N of your M races" gives the bar\'s M', tally.coverage().total === items.length, `${tally.coverage().total} vs ${items.length}`);
+    const fed = bl.entriesBySection().get('federal') || [];
+    check('count: a band with a district question counts it ("0 of 2 decided", not "0 of 1")', ledger.sectionCount(fed) === `0 of ${fed.filter((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id))))).length} decided` && fed.some((e) => e.t === 'question'), ledger.sectionCount(fed));
+    // Answering a question: its race takes its place, so M holds still.
+    const g = b.groups.find((x) => x.members.every((id) => bl.isDecision(bl.status(b.byId.get(id)))));
+    S.b.districts[g.key] = g.members[0];
+    check('count: answering a question puts its race in its place, so M holds', bl.decisionItems().length === items.length && bl.decisionItems().some((x) => x.id === g.members[0]) && !bl.decisionItems().some((x) => x.id === `q:${g.key}`), String(bl.decisionItems().length));
+    // "Not sure": every district's race shows, each a maybe, each counted.
+    S.b.districts[g.key] = '*';
+    check('count: "Not sure" counts each of its races, each a maybe', bl.decisionItems().length === items.length - 1 + g.members.length && g.members.every((id) => bl.isMaybe(id)), String(bl.decisionItems().length));
+    delete S.b.districts[g.key];
+    // The fold: opened, its races count; closed again, a race you picked still counts, the rest don't.
+    S.ui.unfolded.add(ledger.OTH_KEY);
+    check('count: opening the fold claims its races', bl.decisionItems().length === items.length + oth.length && barM()[1] === items.length + oth.length, String(bl.decisionItems().length));
+    const one = b.byId.get(oth[0]);
+    S.b.picks[one.id] = one.candidates[0].name;
+    S.ui.unfolded.delete(ledger.OTH_KEY);
+    check('count: closed again, the one you picked still counts, as decided', bl.decisionItems().length === items.length + 1 && (barM() || []).join() === `1,${items.length + 1}` && bandSum().join() === `1,${items.length + 1}`, `${(barM() || []).join()} / ${bandSum().join()}`);
+    check('count: the cheat sheet lists the race you picked there and no other folded race', /data-cs="/.test(views.cheat.cheatHTML(false)) && views.cheat.cheatHTML(false).includes(`data-cs="${one.id}"`) && oth.slice(1).every((id) => !views.cheat.cheatHTML(false).includes(`data-cs="${id}"`)));
+    delete S.b.picks[one.id];
+    S.b.notes[oth[1]] = 'My district?';
+    check('count: a note on a folded race claims it too', bl.decisionItems().some((x) => x.id === oth[1]) && bl.decisionItems().length === items.length + 1);
+    delete S.b.notes[oth[1]];
+    // The school band never counts the unclaimed fold, and the section is done once the rest is.
+    const school = bl.entriesBySection().get('school') || [];
+    const t = ledger.sectionTally(school);
+    check('count: the Schools band leaves the closed fold out', t.total === school.filter((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id))) && !oth.includes(e.id))).length, `${t.total}`);
+    reset();
+  }
+
+  /* ---------- "Hide races I've decided" (Kevin, Oct 20): the beat and the band's count ----------
+     A decided row hides unless it is open, in its beat, or in a section whose count you tapped; a
+     finished section stays on the page as its folded band; the count is a button with Show or
+     Hide after it, except under the filter with nothing decided yet. */
+  {
+    const { ledger } = views;
+    const b = open('CO', ['denver-co']);
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.beat = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.reveal = new Set(); S.b.hideDecided = false; };
+    reset();
+    const ms = () => bl.entriesBySection().get('measures') || [];
+    const m0 = ms().find((e) => e.t === 'item').id;
+    S.b.picks[m0] = 'YES';
+    const has = (sec, id) => ledger.sectionHTML(sec, bl.entriesBySection().get(sec) || []).includes(`id="i-${id}"`);
+    const cnt = (sec) => ledger.countHTML(sec, bl.entriesBySection().get(sec) || []);
+    check('hide: without the filter the count folds its section: a button reading Hide', /^<button class="sec-r sec-cb" data-act="sec-count" data-sec="measures" aria-expanded="true"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Hide<\/span><\/button>$/.test(cnt('measures')) && has('measures', m0), cnt('measures'));
+    S.b.hideDecided = true;
+    check('hide: under the filter a decided row hides', ledger.hiddenByOnly({ t: 'item', id: m0 }, 'measures') && !has('measures', m0));
+    check('hide: and its count reads Show, collapsed', /aria-expanded="false"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Show</.test(cnt('measures')), cnt('measures'));
+    S.ui.beat = m0;
+    check('hide: in its beat the row stays, marked', !ledger.hiddenByOnly({ t: 'item', id: m0 }, 'measures') && /data-beat/.test(ledger.rowHTML(b.byId.get(m0))) && has('measures', m0));
+    S.ui.beat = null;
+    S.ui.row = m0;
+    check('hide: open, it stays', has('measures', m0));
+    S.ui.row = null;
+    S.ui.reveal.add('measures');
+    check('hide: its section\'s count tapped, the decided rows show, and the count reads Hide', has('measures', m0) && /aria-expanded="true"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Hide</.test(cnt('measures')), cnt('measures'));
+    check('hide: other sections keep hiding theirs', (() => { const st0 = (bl.entriesBySection().get('state') || []).find((e) => e.t === 'item'); S.b.picks[st0.id] = 'SKIP'; const out = !has('state', st0.id); delete S.b.picks[st0.id]; return out; })());
+    S.ui.reveal.delete('measures');
+    const fed = bl.entriesBySection().get('federal') || [];
+    check('hide: with nothing decided under the filter, the count is just the count', cnt('federal') === `<span class="sec-r"><span class="sec-count">${ledger.sectionCount(fed)}</span></span>` && /^0 of /.test(ledger.sectionCount(fed)), cnt('federal'));
+    // A finished section: under the filter, its band, folded, with Show; in its last row's beat, open.
+    const city = b.byId.get('denver-council-at-large-b');
+    S.b.picks[city.id] = city.candidates[0].name;
+    const ch = () => ledger.sectionHTML('city', bl.entriesBySection().get('city') || []);
+    check('hide: a finished section under the filter stays as its folded band, "1 of 1 decided" with Show', /class="sec done folded"/.test(ch()) && !/<li class="row/.test(ch()) && /1 of 1 decided<\/span> <span class="sec-edit">Show/.test(ch()), ch().slice(0, 200));
+    S.ui.beat = city.id;
+    check('hide: while its last row has its beat, it stays open', !/folded/.test(ch()) && ch().includes(`id="i-${city.id}"`));
+    S.ui.beat = null;
+    S.ui.reveal.add('city');
+    check('hide: its count tapped, it opens with the decided row', !/folded/.test(ch()) && ch().includes(`id="i-${city.id}"`) && /sec-edit">Hide/.test(ch()));
+    S.ui.reveal.delete('city');
+    S.b.hideDecided = false;
+    check('hide: without the filter the finished section folds as before, and its count reads Show', /class="sec done folded"/.test(ch()) && /sec-edit">Show/.test(ch()));
+    S.ui.unfolded.add('city');
+    check('hide: unfolded, it reads Hide', !/folded/.test(ch()) && /sec-edit">Hide/.test(ch()));
+    check('hide: the band\'s title and its count are two buttons, the count outside the band\'s', /<button class="sec-hd" data-act="sec"[^>]*>\s*<span class="sec-l">[\s\S]*?<\/button><button class="sec-r sec-cb" data-act="sec-count"/.test(ch()), ch().slice(0, 400));
+    delete S.b.picks[city.id];
+    delete S.b.picks[m0];
+    reset();
+  }
+
+  /* ---------- the menu (flow, Oct 20): "Next up", the rows and their counts ----------
+     "Next up" names the next undecided race or question after the row you're on, in page order,
+     and its button opens that one; the section rows' "N left" add up to the bar; when nothing the
+     count includes is left there is no "Next up" and every row says "Done". */
+  {
+    const { ledger } = views;
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false; };
+    for (const [stc, pid] of [['TX', 'austin-tx'], ['CA', 'los-angeles-ca']]) {
+      const b = open(stc, [pid]);
+      reset();
+      const left = ledger.pageOrder().filter((x) => !x.folded && !x.done).map((x) => x.key);
+      const up = ledger.nextUp();
+      check(`menu: ${pid} "Next up" starts with the first thing left on the page`, !!up && up.key === left[0] && up.title.length > 0, up && `${up.key}: ${up.title}`);
+      S.ui.row = left[0];
+      check(`menu: ${pid} with that row open, "Next up" is the one after it`, ledger.nextUp().key === left[1], ledger.nextUp().key);
+      S.ui.row = null; S.ui.keep = left[left.length - 1];
+      check(`menu: ${pid} after the last one, "Next up" wraps to the first`, ledger.nextUp().key === left[0], ledger.nextUp().key);
+      S.ui.keep = null;
+      const html = ledger.menuHTML('toc');
+      const n = [...html.matchAll(/<span class="nv-n">(\d+) left<\/span>/g)].reduce((a, m) => a + +m[1], 0);
+      const items = bl.decisionItems();
+      check(`menu: ${pid} the sections' "N left" add up to the bar`, n === items.filter((x) => !x.done).length, `${n} vs ${items.filter((x) => !x.done).length}`);
+      const at = (x) => html.indexOf(x);
+      check(`menu: ${pid} "Next up" leads, then your next step and Quick picks, then the switch right above the sections, then My plan, ending with How this guide works`, at('data-act="next"') < at('data-to="plan"') && at('data-to="plan"') < at('data-act="picks"') && at('data-act="picks"') < at('data-act="only"')
+        && at('data-act="only"') < at('data-act="jump" data-to="federal"') && at('data-act="jump" data-to="federal"') < at('data-act="cheat"')
+        && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>\s*<ul class="nv-list nv-end"><li><button class="nv nv-how" data-act="jump" data-to="how"[^>]*><span class="nv-t">How this guide works<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+      // Everything decided: answer every question, leave every race blank on purpose.
+      b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
+      for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';
+      const done = ledger.menuHTML('toc');
+      check(`menu: ${pid} with nothing left, no "Next up", and every section reads Done`, ledger.nextUp() === null && !done.includes('data-act="next"') && !/ left<\/span>/.test(done) && /Done/.test(done));
+      reset();
+    }
+  }
+
   /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------
      LA's sheet said "Knock LA: Endorsed in 59 of your races and measures" on a 46-item ballot. */
   {
@@ -568,7 +711,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       for (const notSure of [false, true]) {
         const b = open(stc, [pid]);
         if (notSure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
-        const M = bl.decisionItems().filter((x) => !x.question).length;
+        const M = bl.decisionItems().length;
         const h = views.lens.sourcesSheetHTML();
         const ns = [...h.matchAll(/Endorsed in (\d+) of your races and measures/g)].map((m) => +m[1]);
         const rows = h.split('<li class="srow">').slice(1);
@@ -582,7 +725,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
   /* ---------- a folded section's summary starts with a capital (Orlando walk, Oct 20) ---------- */
   {
     const b = open('FL', ['orlando-fl']);
-    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false;
+    S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.b.hideDecided = false;
     S.b.picks['fl-retention-muniz'] = 'NO';
     S.b.picks['fl-9th-circuit-group-1'] = b.byId.get('fl-9th-circuit-group-1').candidates[0].name;
     const html = views.ledger.sectionHTML('judicial', bl.entriesBySection().get('judicial') || []);
@@ -765,6 +908,78 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('address: a Maryland "Ward 2" never picks DC Ward 2', geo.placeFromGeo(INDEX.places, dc, r('MD', null, 2)) === null);
   }
 
+  /* ---------- the first page (flow, Oct 20): an address before any ZIP, step 2, the city count ---------- */
+  {
+    const r = (state, place, extra = {}) => ({ matched: '', state, county: null, place, cd: null, upper: null, lower: null, zip: null, ...extra });
+    const go = (x) => JSON.stringify(geo.settleAddress(INDEX, x));
+    check('first-page address: Austin, Texas opens Austin', go(r('TX', 'Austin', { zip: '78704' })) === JSON.stringify({ kind: 'open', st: 'TX', ids: ['austin-tx'], zip: '78704' }), go(r('TX', 'Austin', { zip: '78704' })));
+    check('first-page address: Census "Los Angeles" finds "Los Angeles (city)"', geo.settleAddress(INDEX, r('CA', 'Los Angeles')).ids?.join() === 'los-angeles-ca');
+    check('first-page address: Census "New York" in Kings County finds Brooklyn', geo.settleAddress(INDEX, r('NY', 'New York', { county: 'Kings' })).ids?.join() === 'nyc-brooklyn-ny');
+    check('first-page address: DC picks the ward from the upper layer', geo.settleAddress(INDEX, r('DC', 'Washington', { upper: 6 })).ids?.join() === 'dc-ward-6');
+    check('first-page address: Aurora, Illinois never opens Aurora, Colorado', geo.settleAddress(INDEX, r('IL', 'Aurora')).kind === 'none');
+    const both = geo.settleAddress(INDEX, r('CO', null, { zip: '80247' }));
+    check('first-page address: no place name and a ZIP with several places asks which', both.kind === 'choose' && both.ids.includes('aurora-co') && both.ids.includes('denver-co'), JSON.stringify(both));
+    check('first-page address: a covered state outside our places gets its statewide ballot', go(r('TX', 'Waco', { zip: '76701' })) === JSON.stringify({ kind: 'open', st: 'TX', ids: [], zip: '76701' }), go(r('TX', 'Waco', { zip: '76701' })));
+    check('first-page address: a state we don\'t cover says so', geo.settleAddress(INDEX, r('MA', 'Cambridge', { zip: '02139' })).kind === 'out');
+    check('first-page address: no ZIP and no place we know is "none"', geo.settleAddress(INDEX, r('TX', 'Waco')).kind === 'none' && geo.settleAddress(INDEX, r(null, 'Austin')).kind === 'none');
+
+    const au = open('TX', ['austin-tx']);
+    tally.clearLineups();
+    const agree = bulk.planAgree();
+    const solo = bulk.planSetup(null);
+    check('step 2: with no party, the fill is the agree fill', solo.fills.map((f) => f.id).join() === agree.fills.map((f) => f.id).join() && !solo.party && solo.agree.single === agree.single);
+    lens.setParty(au, 'Democratic');
+    tally.clearLineups();
+    const both2 = bulk.planSetup('Democratic');
+    const pids = both2.party.fills.map((f) => f.id);
+    const ids = both2.fills.map((f) => f.id);
+    check('step 2: with a party, its candidates come first, then agree in the races it left', pids.length > 0 && ids.slice(0, pids.length).join() === pids.join() && both2.agree.fills.every((f) => !pids.includes(f.id)), `${pids.length} party, ${both2.agree.fills.length} agree`);
+    check('step 2: one batch, no race twice', new Set(ids).size === ids.length);
+    const n = bulk.applyFills(both2.fills);
+    check('step 2: the batch lands whole', n === ids.length, `${n} of ${ids.length}`);
+    bulk.undoFills();
+    check('step 2: one Undo takes all of it back', Object.keys(S.b.picks).length === 0 && Object.keys(S.b.auto).length === 0, JSON.stringify(S.b.picks).slice(0, 120));
+    lens.setParty(au, null);
+
+    const old = { zip: '78704', picks: { 'tx-us-senate': 'X' }, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [] };
+    check('step 2: a save from before step 2 back-fills setupDone as false', ({ ...st.emptyBallotState(), ...old }).setupDone === false);
+    const b = st.emptyBallotState('78704');
+    b.picks['tx-us-senate'] = au.byId.get('tx-us-senate').candidates[0].name;
+    const before = st.encodeShare(au, b);
+    b.setupDone = true;
+    check('step 2: finishing it never changes the save link', st.encodeShare(au, b) === before);
+    check('first page: the city count counts DC\'s wards and New York City\'s boroughs once', views.mast.cityCount(INDEX) === Object.keys(INDEX.places).length - (Object.keys(INDEX.places).filter((id) => id.startsWith('dc-ward-')).length - 1) - (Object.keys(INDEX.places).filter((id) => id.startsWith('nyc-')).length - 1), String(views.mast.cityCount(INDEX)));
+    check('step 2: the place line reads like the mock-up', views.setup.placeLine(au) === 'Austin, Texas' && views.setup.placeLine(open('DC', ['dc-ward-1'])) === 'Ward 1, Washington, DC' && views.setup.placeLine(open('NY', ['nyc-brooklyn-ny'])) === 'Brooklyn, New York' && views.setup.placeLine(open('WA', [])) === 'Washington');
+
+    // Round 3 (Oct 20): the fill switch's words, the first page before a ZIP, and the parties it offers.
+    open('TX', ['austin-tx']);
+    tally.clearLineups();
+    const a0 = bulk.planSetup(null).agree;
+    check('fill line: no party, "{n} races where they agree ({k} from just one source). Races where picks split stay open."', views.setup.fillLine(null) === `${a0.fills.length} races where they agree${a0.single ? ` (${a0.single} from just one source)` : ''}. Races where picks split stay open.`, views.setup.fillLine(null));
+    lens.setParty(S.ballot, 'Republican');
+    tally.clearLineups();
+    const pr = bulk.planSetup('Republican');
+    const want = [pr.party.fills.length ? `${pr.party.fills.length} from the Republican Party` : '', pr.agree.fills.length ? `${pr.agree.fills.length} where your other sources agree` : ''].filter(Boolean).join(' and ');
+    check('fill line: with a party, "{p} from the {Party} Party and {a} where your other sources agree.", zero parts dropped', views.setup.fillLine('Republican') === `${want}.` && !/\b0 /.test(views.setup.fillLine('Republican')), views.setup.fillLine('Republican'));
+    lens.setParty(S.ballot, null);
+    tally.clearLineups();
+    const view0 = S.view; const idx0 = S.index;
+    S.view = 'start'; S.index = INDEX;
+    const door = views.setup.pickControlsHTML();
+    check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-cov/.test(door)
+      && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where picks split stay open.') && door.includes('Hide races I’ve decided'));
+    S.door.chips = { papers: false, progressive: false, conservative: false };
+    const doorNone = views.setup.pickControlsHTML();
+    check('first page before a ZIP: every chip off is "No endorsements", with no fill switch', lens.doorNone() && /data-act="no-ends" aria-pressed="true"/.test(doorNone) && !/setup-fill/.test(doorNone));
+    S.door.chips = { papers: true, progressive: false, conservative: false };
+    S.ui.open.add('su-party');
+    const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
+    S.ui.open.delete('su-party');
+    check('first page before a ZIP: "A party" lists every party the guide covers', listed.length > 2 && JSON.stringify(listed) === JSON.stringify(INDEX.parties), listed.join(', '));
+    S.view = view0; S.index = idx0;
+    check('index: the parties the guide covers, A to Z, each with its own party organization in the data', Array.isArray(INDEX.parties) && INDEX.parties.includes('Democratic') && INDEX.parties.includes('Republican') && JSON.stringify([...INDEX.parties].sort()) === JSON.stringify(INDEX.parties), (INDEX.parties || []).join(', '));
+  }
+
   /* ---------- UX re-walk: the survey in plain words ---------- */
   {
     const ev = (attorneys, non) => ({ kind: 'official_commission', by: 'C', by_short: 'C', rating: 'Meets Performance Standards', verdict: 'favorable', vote: '9-0', vote_note: null, survey_note: null, noted_strength: null, noted_concern: null, url: 'https://example.org', verified_on: null, confidence: 'verified',
@@ -801,6 +1016,212 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const lk = open('CO', ['lakewood-co']);
     const cb = judges.judgeBatch();
     check('judges batch: Colorado reads "Keep all N judges the review says meet standards"', !!cb && /^Keep all \d+ judges the review says meet standards$/.test(cb.label), cb && cb.label);
+  }
+
+  /* ---------- flow, Oct 20: every "go check" gets a button ---------- */
+  {
+    const ledger = views.ledger;
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    const au = open('TX', ['austin-tx']);
+    // "Only on some ballots": the address (Congress and the state legislature only), the sample ballot, "It's not on my ballot".
+    const sd = views.open.openHTML(au.byId.get('tx-senate-21'));
+    const at = (t) => sd.indexOf(t);
+    check('go check: a maybe state senate race offers Check with my address, See my sample ballot, It’s not on my ballot, in that order',
+      /Only on some ballots\./.test(sd) && at('>Check with my address<') > 0 && at('>Check with my address<') < at('>See my sample ballot<') && at('>See my sample ballot<') < at('>It’s not on my ballot<'), strip(sd).slice(0, 200));
+    check('go check: its address button opens the address form', /data-act="addr-open"[^>]*>Check with my address/.test(sd));
+    check('go check: "It’s not on my ballot" keeps the notmine action', /data-act="notmine" data-id="tx-senate-21"[^>]*>It’s not on my ballot/.test(sd));
+    // The address box leads with "Use my address" only while the lookup can settle something:
+    // Congress and the state legislature, before a lookup has run on this ballot.
+    const btns = (h) => [...((h.match(/<div class="addrbox">[\s\S]*?<\/div><\/div>/) || [''])[0]).matchAll(/class="mini( dark)?"[^>]*>([^<]+)</g)].map((m) => `${m[2]}${m[1] ? ' (dark)' : ''}`).join('|');
+    check('address box: Austin, fresh, offers Use my address first, then the sample ballot', btns(ledger.ballotHeadHTML()) === 'Use my address (dark)|See my sample ballot' && ledger.addressHelps(), btns(ledger.ballotHeadHTML()));
+    // What the lookup answers (Congress, the state Senate and House, and the maybe rows for them).
+    for (const g of au.groups) if (g.kind) S.b.districts[g.key] = g.members[0];
+    for (const id of au.mayApply) { const c = au.byId.get(id); if (c.kind === 'contest' && views.open.censusSettles(c)) S.b.notMine.push(id); }
+    const left = ledger.addressCount();
+    check('address box: with only council, county and school questions left, the sample ballot leads and Use my address goes', left > 0 && !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)' && new RegExp(`${left} races depend on your address`).test(ledger.ballotHeadHTML()), `${left} | ${btns(ledger.ballotHeadHTML())}`);
+    S.b.districts = {}; S.b.notMine = [];
+    S.b.addrNote = 'Your districts: Congressional District 37. We didn’t save your address. Double-check with your sample ballot.';
+    check('address box: once a lookup has run, it offers only the sample ballot', !ledger.addressHelps() && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)', btns(ledger.ballotHeadHTML()));
+    const sd2 = views.open.openHTML(au.byId.get('tx-senate-21'));
+    check('address box: and a maybe row no longer offers Check with my address', !/Check with my address/.test(sd2) && /class="mini dark"[^>]*>See my sample ballot/.test(sd2));
+    S.ui.row = `q:${au.groups.find((x) => x.kind === 'cd').key}`;
+    check('address box: nor does a district question', !/data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
+    S.ui.row = null;
+    S.b.addrNote = null;
+    S.ui.row = `q:${au.groups.find((x) => x.kind === 'cd').key}`;
+    check('address box: before a lookup, a Congress question offers Use my address', /data-fk="dq-addr"/.test(ledger.sectionHTML('federal', bl.entriesBySection().get('federal'))));
+    S.ui.row = null;
+    open('FL', []);
+    check('address box: statewide Florida (appeals judges only) leads with the sample ballot, no Use my address', ledger.addressCount() > 0 && btns(ledger.ballotHeadHTML()) === 'See my sample ballot (dark)', `${ledger.addressCount()} | ${btns(ledger.ballotHeadHTML())}`);
+    open('TX', ['austin-tx']);
+    const dv = views.open.openHTML(au.byId.get('tx-dvisd-prop-a'));
+    check('go check: a maybe measure has no address button (the Census doesn’t settle school districts)', !/Check with my address/.test(dv) && /See my sample ballot/.test(dv) && /It’s not on my ballot/.test(dv));
+    const fake = (district) => ({ kind: 'contest', district });
+    check('go check: the Census settles CD, SD and HD races, nothing else', views.open.censusSettles(fake('CD-10')) && views.open.censusSettles(fake('SD-21')) && views.open.censusSettles(fake('HD-49')) && !views.open.censusSettles(fake('Precinct 2')) && !views.open.censusSettles(fake('District 3')));
+    open('DC', ['dc-ward-1']);
+    check('go check: in DC an "upper" district is a ward, which the Census doesn’t settle', !views.open.censusSettles(fake('SD-1')) && views.open.censusSettles(fake('CD-0')));
+    // District questions: a last answer for a district you're not in.
+    check('go check: districtEntity names school and utility districts only', ledger.districtEntity('Del Valle ISD Trustee') === 'Del Valle ISD' && ledger.districtEntity('Trustee, Somerset ISD') === 'Somerset ISD'
+      && ledger.districtEntity('Fullerton Joint Union High School District Governing Board') === 'Fullerton Joint Union High School District' && ledger.districtEntity('San Diego Unified School District Board of Education') === 'San Diego Unified School District'
+      && ledger.districtEntity('Rockwood Water People\'s Utility District Director') === 'Rockwood Water People\'s Utility District'
+      && [ 'U.S. Representative', 'Austin City Council Member', 'School Board', 'Member of the Chicago Board of Education (nonpartisan)', 'Soil and Water Conservation District Supervisor', 'RTD Board of Directors'].every((o) => ledger.districtEntity(o) === null));
+    const a2 = open('TX', ['austin-tx']);
+    const g = (re) => a2.groups.find((x) => re.test(x.office));
+    check('go check: Austin’s questions end "I’m not in Del Valle ISD", "I’m not in Austin ISD", "Not in any of these"', ledger.noneLabel(g(/Del Valle/)) === 'I’m not in Del Valle ISD' && ledger.noneLabel(g(/Austin ISD/)) === 'I’m not in Austin ISD' && ledger.noneLabel(g(/City Council/)) === 'Not in any of these' && ledger.noneLabel(g(/U\.S\. Rep/)) === 'Not in any of these');
+    const dvg = g(/Del Valle/);
+    S.ui.row = `q:${dvg.key}`;
+    const qh = ledger.sectionHTML('school', bl.entriesBySection().get('school'));
+    const opts = [...qh.matchAll(/data-act="district"[^>]*data-v="([^"]+)"/g)].map((m) => m[1]);
+    check('go check: "I’m not in Del Valle ISD" is the question’s last answer, after "Not sure"', opts[opts.length - 1] === 'none' && opts[opts.length - 2] === '*' && /I’m not in Del Valle ISD/.test(qh), opts.join(','));
+    S.ui.row = null;
+    const m0 = bl.decisionItems().length;
+    S.b.districts[dvg.key] = 'none';
+    const sch = ledger.sectionHTML('school', bl.entriesBySection().get('school'));
+    check('go check: answered "none", the question leaves the count and no race takes its place', bl.decisionItems().length === m0 - 1 && !dvg.members.some((id) => sch.includes(`id="i-${id}"`)), `${m0} then ${bl.decisionItems().length}`);
+    check('go check: its line says "Not on your ballot", with Change', /Del Valle ISD Trustee: Not on your ballot/.test(strip(sch)) && /data-act="district-change" data-g="[^"]*Del Valle/.test(sch));
+    const back = st.decodeShare(a2, head(st.encodeShare(a2, S.b))).state;
+    check('go check: "none" travels in the save link', back.districts[dvg.key] === 'none');
+    // "No endorsements" (Kevin, Oct 20): an option, never the default. Every source off and no party;
+    // the rows stay tight: what it is, the choices with Pick, and the foot.
+    const dn = open('CO', ['denver-co']);
+    check('no endorsements: off by default', !lens.noEndorsements() && /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)));
+    S.b.sources = [];
+    tally.clearLineups();
+    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements shown');
+    const sh = views.setup.pickControlsHTML(true);
+    check('no endorsements: its chip is on, the fill switch and the counts step aside, the filter stays', /data-act="no-ends" aria-pressed="true"[^>]*>.*Don’t show endorsements<\/button>/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
+    const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
+    check('no endorsements: a measure is tight, yes and no with no source lines', /A yes vote means/.test(m81) && /data-act="pick"[^>]*data-v="YES"/.test(m81) && !/none-line|gridnote|papers-on|others-wrap|class="grid/.test(m81), strip(m81).slice(0, 120));
+    const race = dn.items.find((x) => x.kind === 'contest' && !x.is_retention && x.candidates.length > 1 && x.candidates.length <= 6 && !x.ranked_choice && bl.status(x) === 'open');
+    S.ui.row = race.id;
+    const rh = ledger.rowHTML(race);
+    S.ui.row = null;
+    check('no endorsements: a race lists its candidates with Pick, no grid, no source lines', /class="clist"/.test(rh) && (rh.match(/data-act="pick"/g) || []).length === race.candidates.length && !/class="grid|class="by"|none-line|gridnote|others-wrap/.test(rh), race.id);
+    check('no endorsements: the verdict column is empty', /<span class="vd none blank"><\/span>/.test(ledger.rowHTML(race)) && !/No sources on/.test(ledger.rowHTML(race)));
+    S.b.party = 'Democratic';
+    check('no endorsements: a party ends it', !lens.noEndorsements());
+    S.b.party = null;
+    S.b.sources = null;
+    tally.clearLineups();
+    check('no endorsements: with sources on, the rows say whose picks they are again', /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)) && /setup-fill/.test(views.setup.pickControlsHTML(true)));
+    // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
+    const wa = open('WA', []);
+    const hd = ledger.ballotHeadHTML();
+    const ask = (hd.match(/href="([^"]+)"[^>]*>Ask for your city</) || [])[1] || '';
+    check('go check: a statewide ballot says so, with See my sample ballot and Ask for your city', /We only have statewide races for your area so far\./.test(hd) && /href="https:[^"]+"[^>]*>See my sample ballot</.test(hd) && /docs\.google\.com/.test(ask), strip(hd).slice(0, 160));
+    const askQ = new URLSearchParams(ask.replace(/&amp;/g, '&').split('?')[1] || '');
+    check('go check: Ask for your city prefills "Please add my city" and the state', askQ.get('entry.90887649') === 'Please add my city' && /Washington/.test(askQ.get('entry.628621310') || ''), askQ.toString());
+    wa.howto = { ...wa.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
+    check('go check: a state’s own sample_ballot_url wins on a statewide ballot', common.sampleBallot().url === 'https://sos.example.gov/sample');
+    const au3 = open('TX', ['austin-tx']);
+    au3.howto = { ...au3.howto, sample_ballot_url: 'https://sos.example.gov/sample' };
+    check('go check: a place’s own sample ballot still wins over the state’s', common.sampleBallot().url === au3.places[0].sample_ballot_url);
+    // Not covered: Vote.gov, then "Want this for your city? Ask Kevin." with the form prefilled.
+    const keep = { view: S.view, ballot: S.ballot, index: S.index, coverage: S.coverage };
+    S.view = 'start'; S.ballot = null; S.index = INDEX; S.coverage = { kind: 'not_covered', state: 'MA', zip: '02139' };
+    const nc = views.mast.mastHTML();
+    const kevin = ((nc.match(/href="([^"]+)"[^>]*data-ask-kevin/) || [])[1] || '').replace(/&amp;/g, '&');
+    check('go check: not covered says "We don’t cover Massachusetts yet. Vote.gov has official info for every state."', /We don’t cover Massachusetts yet\. Vote\.gov has official info for every state\./.test(strip(nc)) && !/friends and family vote/.test(nc), strip(nc).slice(0, 300));
+    check('go check: then "Want this for your city? Ask Kevin." to the form, prefilled with the state and ZIP', /Want this for your city\? Ask Kevin \./.test(strip(nc)) && new URLSearchParams(kevin.split('?')[1]).get('entry.628621310') === 'Massachusetts, 02139' && new URLSearchParams(kevin.split('?')[1]).get('entry.90887649') === 'Please add my city', kevin);
+    // A load error gets "Try again".
+    S.coverage = null; S.loadErr = 'We couldn’t load that ballot. Check your connection.'; S.retry = () => {};
+    check('go check: a load error gets "Try again"', /data-act="retry"[^>]*>Try again</.test(views.mast.mastHTML()));
+    S.retry = null;
+    check('go check: no Try again without something to retry', !/data-act="retry"/.test(views.mast.mastHTML()));
+    S.loadErr = null;
+    Object.assign(S, keep);
+    // A lookup that went wrong: "Try again" when the Census didn't answer; "Pick them myself" on a ballot with a question left.
+    open('TX', ['austin-tx']);
+    S.view = 'ballot'; S.ui.addrOpen = true; S.ui.addrMsg = 'The Census lookup didn’t answer.'; S.ui.addrFail = 'down';
+    let ah = views.mast.addrHTML();
+    check('go check: Census down on a ballot: Try again and Pick them myself', /data-act="addr-retry"[^>]*>Try again</.test(ah) && /data-act="addr-pick"[^>]*>Pick them myself</.test(ah) && /type="button" data-act="addr-retry"/.test(ah));
+    S.ui.addrFail = 'miss';
+    ah = views.mast.addrHTML();
+    check('go check: a miss on a ballot: only Pick them myself', !/addr-retry/.test(ah) && /addr-pick/.test(ah));
+    S.view = 'start'; S.ui.addrFail = 'down';
+    ah = views.mast.addrHTML(true);
+    check('go check: on the first page: Try again, nothing to pick', /addr-retry/.test(ah) && !/addr-pick/.test(ah));
+    S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.view = keep.view;
+    // The registration alert's button: every state file carries its vote.gov register link.
+    const txr = read('state-TX.json').howto;
+    check('go check: "Register now" before the deadline, "Register for next time" after', plan.registerAction(txr, '2026-10-01').label === 'Register now' && plan.registerAction(txr, '2026-10-20').label === 'Register for next time' && plan.registerAction(txr, '2026-10-01').url === 'https://vote.gov/register/texas');
+    const { register_url, ...noUrl } = txr.registration;
+    check('go check: no button without a register link', plan.registerAction({ ...txr, registration: noUrl }, '2026-10-01') === null);
+  }
+
+  /* ---------- flow, Oct 20: My plan ---------- */
+  {
+    const cheat = views.cheat;
+    open('TX', ['austin-tx']);
+    const sc = cheat.cheatHTML(false);
+    check('My plan: titled "Your voting plan", on screen and in print', /<h2 id="cs-h">Your voting plan<\/h2>/.test(sc) && /<h2 id="cs-p">Your voting plan<\/h2>/.test(cheat.cheatHTML(true)) && !/cheat sheet/i.test(sc));
+    check('My plan: Texas bans phones in the voting room, so "print it or write it down"', cheat.saveLine('2026-10-20') === 'Print it or write it down.' && /<b>Save it before you go\.<\/b> Print it or write it down\./.test(sc.replace(/&#39;/g, '’')));
+    check('My plan: the save line sits under the reminder, on screen only', sc.indexOf('class="remind"') < sc.indexOf('save-go') && !/save-go/.test(cheat.cheatHTML(true)));
+    check('My plan: in person, the reminder keeps the booth rules', cheat.essentials('2026-10-20').some((x) => /^In the booth:/.test(x)));
+    check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);
+    open('CA', ['los-angeles-ca']);
+    check('My plan: where phones are allowed, "Print it, copy it, or take a screenshot."', cheat.saveLine('2026-10-20') === 'Print it, copy it, or take a screenshot.');
+    const la = cheat.essentials('2026-10-20');
+    check('My plan: a mail phase leads with the mail steps and drops the booth line', /^Mail your ballot by/.test(la[0]) && la.some((x) => /drop box/.test(x)) && !la.some((x) => /In the booth/.test(x)), la.join(' | '));
+    open('NY', ['nyc-manhattan-ny']);
+    check('My plan: where phones are restricted, "Print it or copy it."', cheat.saveLine('2026-10-20') === 'Print it or copy it.');
+    open('TX', ['austin-tx']);
+    const end = views.ledger.ballotHTML();
+    check('My plan: the ballot ends "That’s your whole ballot. Next, save your plan." with "Open my plan"', /That’s your whole ballot\.<\/h3><p>Next, save your plan\.<\/p>/.test(end) && /data-act="cheat" data-fk="endcap-cheat">Open my plan</.test(end));
+  }
+
+  /* ---------- flow, Oct 20: the share page ---------- */
+  {
+    const pass = views.pass;
+    const fam = 'Got a plan to vote? Here’s a guide to help you sort through your ballot: https://vote.kevinhg.com/\n\nIf you’ve already voted, text three people and ask if they have a plan too.';
+    const sd = pass.shareData(fam);
+    check('share: the share sheet gets the message with the guide as its link, not twice', sd.url === pass.GUIDE_URL && sd.title === 'Quickly make your voting plan.' && sd.text === 'Got a plan to vote? Here’s a guide to help you sort through your ballot.\n\nIf you’ve already voted, text three people and ask if they have a plan too.', JSON.stringify(sd));
+    const odd = pass.shareData('See https://vote.kevinhg.com/ for your ballot.');
+    check('share: a message worded another way goes as written, with no separate link', odd.text === 'See https://vote.kevinhg.com/ for your ballot.' && !('url' in odd));
+    // The work message's where-to-vote line: the early voting sites during early voting (dates pinned).
+    const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+    const on = (d) => Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: `?today=${d}`, origin: 'http://x', pathname: '/' } });
+    try {
+      on('2026-10-20');
+      open('TX', ['austin-tx']);
+      let pub = pass.messages().pub || '';
+      check('share: Austin during early voting links the state’s early voting sites', /\nFind early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html\n/.test(pub), pub);
+      open('FL', ['orlando-fl']);
+      pub = pass.messages().pub || '';
+      check('share: Orlando during early voting links Orange County’s early voting page, by name', /Find early voting places in Orlando: https:\/\/voteorangefl\.gov\/event\/early-voting-general-election\//.test(pub) && !/find-your-polling-place/.test(pub), pub);
+      on('2026-11-02');
+      pub = pass.messages().pub || '';
+      check('share: Orlando after early voting links where to vote on Election Day', /Find where to vote in Orlando: https:\/\/voteorangefl\.gov\/find-your-polling-place\//.test(pub), pub);
+      on('2026-10-20');
+      open('CA', ['los-angeles-ca']);
+      pub = pass.messages().pub || '';
+      check('share: a mail state keeps its own where-to-vote page', /Find where to vote in Los Angeles: https:\/\/locator\.lavote\.net/.test(pub) && !/early voting places/.test(pub), pub);
+      open('FL', []);
+      pub = pass.messages().pub || '';
+      check('share: a statewide ballot before early voting opens gets no where-to-vote line', !/Find (early voting places|where to vote)/.test(pub), pub);
+      open('TX', []);
+      pub = pass.messages().pub || '';
+      check('share: a statewide Texas ballot during early voting gets the state’s early voting page', /Find early voting places: https:\/\/www\.votetexas\.gov\/voting\/where\.html/.test(pub), pub);
+    } finally {
+      if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+    }
+  }
+
+  /* ---------- flow, Oct 20: resume ---------- */
+  {
+    open('TX', ['austin-tx']);
+    S.b.picks[bl.decisionItems().find((x) => !x.question).id] = 'SKIP'; // one race decided (left blank)
+    const m = bl.decisionItems().length;
+    const keep = { view: S.view, uiView: S.ui.view, pending: S.pending };
+    S.view = 'ballot'; S.ui.view = 'ballot'; S.pending = null;
+    S.ui.resume = true;
+    const r = views.mast.restoreHTML();
+    check('resume: "Welcome back. You’ve decided 1 of M." with "Pick up where I left off" (the menu’s Next) and a close', /<b>Welcome back\.<\/b> You’ve decided 1 of \d+\./.test(r) && r.includes(`decided 1 of ${m}.`) && /data-act="next"[^>]*>Pick up where I left off</.test(r) && /data-act="resume-x"[^>]*aria-label="Close"/.test(r), r.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '));
+    S.ui.view = 'cheat';
+    check('resume: only on the ballot view', views.mast.restoreHTML() === '');
+    S.ui.view = 'ballot'; S.ui.resume = false;
+    check('resume: nothing once it’s gone', views.mast.restoreHTML() === '');
+    S.view = keep.view; S.ui.view = keep.uiView; S.pending = keep.pending;
   }
 
   /* ---------- plan strip ---------- */
@@ -899,5 +1320,204 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       for (const it of S.ballot.items) { const t = labels.cheatTitle(it); if (seen.has(t)) dups.push(`${s}|${places.join('+')}: ${t}`); seen.set(t, it.id); }
     }
     check(`titles: every cheat-sheet title is unique on all ${views.length} ballots`, dups.length === 0, dups.slice(0, 4).join(' | '));
+  }
+
+  /* ---------- common questions: quick answers with buttons (Kevin, Oct 20) ----------
+     "They should be quick answers with things that you can do." Each situation's short answer is
+     one line with up to two official buttons; the full answer, steps and source sit behind "More".
+     A state file without the short lines shows its questions as before. */
+  {
+    const ps = views.planstrip;
+    const n = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
+    const bad = [];
+    let shorts = 0;
+    let buttons = 0;
+    for (const s of Object.keys(INDEX.states)) {
+      const h = read(`state-${s}.json`).howto;
+      for (const x of h.situations || []) {
+        if (x.short) { shorts++; if (n(x.short) > 20) bad.push(`${s} ${x.id}: ${n(x.short)} words`); }
+        const acts = x.actions || [];
+        buttons += acts.length;
+        if (acts.length > 2 || acts.some((a) => !a.label || !/^https:\/\//.test(a.url))) bad.push(`${s} ${x.id}: buttons`);
+      }
+      const gs = h.gotcha_shorts;
+      if (gs && (gs.length !== h.gotchas.length || gs.some((g) => g && n(g) > 15))) bad.push(`${s}: gotcha_shorts`);
+      if (h.registration.register_url && !/^https:\/\/vote\.gov\/register\/[a-z-]+$/.test(h.registration.register_url)) bad.push(`${s}: register_url`);
+    }
+    check(`common questions: ${shorts} quick answers and ${buttons} buttons in the bundles, each within its limits`, bad.length === 0 && shorts > 0, bad.slice(0, 5).join(' | '));
+    const tx = read('state-TX.json').howto;
+    check('common questions: every Texas and California question and mistake has its short line', ['TX', 'CA'].every((s) => { const h = read(`state-${s}.json`).howto; return h.situations.every((x) => x.short) && h.gotcha_shorts && h.gotcha_shorts.every(Boolean); }));
+    check('common questions: Texas registers for next time at vote.gov', tx.registration.register_url === 'https://vote.gov/register/texas' && tx.situations.find((x) => x.id === 'not_registered').actions.some((a) => a.label === 'Register for next time' && a.url === tx.registration.register_url));
+
+    const saved = st.S.ui.open;
+    open('TX', ['austin-tx']);
+    st.S.ui.open = new Set(['whatif', 'wi-not_registered']);
+    let html = ps.planHTML();
+    // One question's markup: from its button to the next question's.
+    const sit = (h, id) => { const i = h.indexOf(`data-k="wi-${id}"`); if (i < 0) return ''; const j = h.indexOf('<button class="wi-q"', i); return h.slice(i, j < 0 ? undefined : j); };
+    let q = sit(html, 'not_registered');
+    check('common questions: an opened question shows its quick answer and two buttons', /class="wi-short"/.test(q) && (q.match(/class="pbtn line"/g) || []).length === 2 && /href="https:\/\/vote\.gov\/register\/texas"/.test(q) && />Register for next time</.test(q), q.slice(0, 300));
+    check('common questions: its full answer waits behind "More"', !/sorry: the Texas deadline/.test(q) && /data-k="wim-not_registered"[^>]*aria-expanded="false"[^>]*>More</.test(q));
+    st.S.ui.open.add('wim-not_registered');
+    q = sit(ps.planHTML(), 'not_registered');
+    check('common questions: "More" shows the full answer, the steps and the source', /sorry: the Texas deadline/.test(q) && /<ol>/.test(q) && /class="src"/.test(q) && />Less</.test(q));
+    html = ps.planHTML();
+    const heads = [...html.matchAll(/<h3 class="wi-h">([^<]*)<\/h3>/g)].map((m) => m[1]);
+    check('details: dates and ID first, then "Gotchas in Texas", then "If something goes wrong"', heads.join('|') === 'Dates, ID and voting rules|Gotchas in Texas|If something goes wrong' && html.indexOf('data-k="bx-dates"') < html.indexOf('data-k="gm-0"') && html.indexOf('data-k="gm-0"') < html.indexOf('data-k="wi-not_registered"'), heads.join('|'));
+    check('common mistakes: each shows its one-line fix, the full text behind its own "More"', (html.match(/class="g-short"/g) || []).length === tx.gotchas.length && !/Election Code 61\.014/.test(html) && /data-k="gm-2"/.test(html));
+    st.S.ui.open.add('gm-2');
+    check('common mistakes: "More" shows that mistake in full', /Election Code 61\.014/.test(ps.planHTML()));
+    // A state file with no short lines keeps today's display.
+    const b = open('TX', ['austin-tx']);
+    b.howto = { ...b.howto, situations: b.howto.situations.map(({ short, actions, ...r }) => r), gotcha_shorts: undefined };
+    st.S.ui.open = new Set(['whatif', 'wi-not_registered']);
+    html = ps.planHTML();
+    q = sit(html, 'not_registered');
+    check('common questions: without short lines, a question opens to its full answer as before', /sorry: the Texas deadline/.test(q) && !/wi-short|wim-/.test(q) && !/g-short/.test(html) && /<strong>Registration is closed\.<\/strong>/.test(html));
+    // An unconfirmed answer says so beside its quick answer, before "More" (review, Oct 20).
+    open('GA', ['atlanta-ga']);
+    st.S.ui.open = new Set(['whatif', 'wi-no_mail_ballot_or_lost', 'wi-wrong_polling_place']);
+    html = ps.planHTML();
+    q = sit(html, 'no_mail_ballot_or_lost');
+    check('common questions: Georgia’s unconfirmed lost-ballot answer says "Not yet confirmed." before More', /class="wi-short"/.test(q) && /class="meta wi-more">Not yet confirmed\. <button[^>]*>More</.test(q), q.slice(0, 400));
+    check('common questions: a confirmed answer has no such mark', !/Not yet confirmed/.test(sit(html, 'wrong_polling_place')));
+    const unconfirmed = Object.keys(INDEX.states).flatMap((s) => (read(`state-${s}.json`).howto.situations || []).filter((x) => x.short && x.confidence === 'unverified').map((x) => `${s} ${x.id}`));
+    check('common questions: the data has an unconfirmed quick answer for the mark to cover', unconfirmed.length >= 1, unconfirmed.join(', '));
+    // Quick answers keep the condition or the place the full answer gives (review, Oct 20).
+    const ny = read('state-NY.json').howto.situations.find((x) => x.id === 'wrong_polling_place');
+    check('common questions: New York’s wrong poll site says where an affidavit ballot counts', /county and Assembly district/.test(ny.short) && /county and Assembly district/.test(ny.answer), ny.short);
+    const fl = read('state-FL.json').howto;
+    const flMail = fl.gotchas.findIndex((t) => /IN the supervisor's office/.test(t));
+    check('common mistakes: Florida’s late mail ballot goes to early voting or the supervisor’s office', flMail >= 0 && /early voting or the supervisor's office/.test(fl.gotcha_shorts[flMail]) && /supervisor's main or branch office/.test(fl.gotchas[flMail]), fl.gotcha_shorts[flMail]);
+    st.S.ui.open = saved;
+
+    // The places' one-line hours, and Austin's window adds nothing else to the plan.
+    const au = open('TX', ['austin-tx']);
+    const txEp = read('state-TX.json').howto.early_in_person;
+    check('hours: Austin and Orlando carry a one-line early voting hours note', au.places[0].early_in_person.hours_short === 'Travis County sites are open 7 AM to 7 PM every day.' && open('FL', ['orlando-fl']).places[0].early_in_person.hours_short === 'Orange County sites are open 8 AM to 8 PM every day.');
+    check('hours: Austin keeps the state window, hours note and lookup in the plan', au.howto.early_in_person.start === txEp.start && au.howto.early_in_person.end === txEp.end && au.howto.early_in_person.hours_note === txEp.hours_note && au.howto.early_in_person.lookup_url === txEp.lookup_url);
+    // The plan's sub line during early voting: the place's one-line hours, then the ID.
+    {
+      const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+      Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: '?today=2026-10-20', origin: 'http://x', pathname: '/' } });
+      try {
+        const subOf = (h) => (h.match(/<p class="plan-sub">([^<]*)<\/p>/) || [])[1] || '';
+        open('TX', ['austin-tx']);
+        let sub = subOf(ps.planHTML());
+        // Austin reaches into Williamson and Hays, so Travis County's hours can't speak for it.
+        check('hours: Austin, across three counties, names no one county\'s hours and keeps "in your county"', !/Travis County sites/.test(sub) && /any early voting location in your county\./.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
+        // The hours line stands in for the step's own lines ("any early voting location", "Or vote on
+        // Election Day"), so the strip reads two short sentences.
+        const orl = open('FL', ['orlando-fl']);
+        sub = subOf(ps.planHTML());
+        check('hours: Orlando\'s next step says when Orange County sites are open, then to bring a photo ID, and nothing else', sub === 'Orange County sites are open 8 AM to 8 PM every day. Bring a photo ID.', sub);
+        orl.places[0] = { ...orl.places[0], counties: ['Orange', 'Seminole'] };
+        sub = subOf(ps.planHTML());
+        check('hours: the same place across two counties drops the hours line', !/Orange County sites/.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
+        // Without an hours line the step keeps its own lines, then the ID.
+        open('FL', ['pensacola-fl']);
+        sub = subOf(ps.planHTML());
+        check('hours: a place with no one-line hours keeps the step\'s own lines, then the ID', /in your county\./.test(sub) && /Or vote on Election Day/.test(sub) && /Bring a photo ID\.$/.test(sub), sub);
+      } finally {
+        if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+      }
+    }
+
+    // A statewide-only ballot's sample ballot link: the state's own, else a source, else the lookup.
+    open('WA', []);
+    check('sample ballot: statewide Washington goes to VoteWA, not one county', common.sampleBallot().url === 'https://voter.votewa.gov/');
+    open('TX', ['austin-tx']);
+    check('sample ballot: a place\'s own link still wins', common.sampleBallot().url === au.places[0].sample_ballot_url);
+    open('CA', []);
+    check('sample ballot: a state with none keeps the old fallback', !!common.sampleBallot() && !read('state-CA.json').howto.sample_ballot_url);
+  }
+  /* ---------- Kevin, Oct 20: a clear address result ----------
+     The Census's capitals tidied, every match it found, what the districts set on the ballot, and the
+     line the ballot keeps (never the address). Made-up addresses only. */
+  {
+    const { address } = mods;
+    const ledger = views.ledger;
+    const t = geo.tidyAddress;
+    check('address: the Census capitals read the way people write them', t('100 N TEST ST, AUSTIN, TX, 78704') === '100 N Test St, Austin, TX 78704', t('100 N TEST ST, AUSTIN, TX, 78704'));
+    check('address: ordinals, units and road prefixes', t('12 W 1ST AVE APT 4B, TESTVILLE, CO, 80205-1234') === '12 W 1st Ave Apt 4B, Testville, CO 80205-1234' && t('9 FM 1626, TEST CITY, TX, 78748') === '9 FM 1626, Test City, TX 78748' && t("1 O'TEST LN-EAST, TESTTOWN, MD, 21201") === "1 O'Test Ln-East, Testtown, MD 21201", t('12 W 1ST AVE APT 4B, TESTVILLE, CO, 80205-1234'));
+    check('address: the bare test string', t('TEST') === 'Test' && t('') === '');
+    const g = (matched, cd, upper, lower) => ({ matchedAddress: matched, geographies: {
+      States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+      '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }], '2024 State Legislative Districts - Lower': [{ BASENAME: String(lower) }] } });
+    const one = geo.parseCensus({ result: { addressMatches: [g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49)] } });
+    check('address: one Census match is one result, with its districts and ZIP', one.length === 1 && one[0].state === 'TX' && one[0].place === 'Austin' && one[0].cd === 37 && one[0].upper === 14 && one[0].lower === 49 && one[0].zip === '78704', JSON.stringify(one));
+    const two = geo.parseCensus({ result: { addressMatches: [g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), g('TEST TWO, AUSTIN, TX, 78745', 35, 21, 50)] } });
+    check('address: several matches are all kept, the same address once', two.length === 2 && two[1].matched === 'TEST TWO, AUSTIN, TX, 78745' && two[1].upper === 21, JSON.stringify(two.map((x) => x.matched)));
+    check('address: no match, or a broken answer, is none', geo.parseCensus({ result: { addressMatches: [] } }).length === 0 && geo.parseCensus(null).length === 0 && geo.parseCensus({}).length === 0);
+
+    // Austin: Congress and the state House are questions; the one state Senate race (SD-21) may apply.
+    const au = open('TX', ['austin-tx']);
+    const before = ledger.addressCount();
+    const set = address.setFromAddress(au, S.b, { cd: 37, upper: 14, lower: 49 });
+    check('address: Austin names the races it put on the ballot, Congress, then the House', set.join(' | ') === 'U.S. Representative, District 37 | State Representative, District 49', set.join(' | '));
+    check('address: the line the ballot keeps is Kevin’s, word for word', address.addrSummary(set) === 'Set from your address: U.S. Representative, District 37 · State Representative, District 49.', address.addrSummary(set));
+    check('address: Senate District 14 isn’t named, since no District 14 race is on this ballot (the SD-21 row says "Not on your ballot")', !/Senator/.test(set.join(' ')), set.join(' | '));
+    const cdq = au.groups.find((x) => x.kind === 'cd');
+    check('address: the Congress question gets its race', S.b.districts[cdq.key] === 'tx-us-house-37' || /37/.test(au.byId.get(S.b.districts[cdq.key])?.district || ''), S.b.districts[cdq.key]);
+    check('address: Senate District 14 takes the SD-21 race off the ballot', S.b.notMine.includes('tx-senate-21') && !S.b.mine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'));
+    const after = ledger.addressCount();
+    check('address: fewer races depend on your address after it', after < before, `${before} then ${after}`);
+    // Not it: a second address in SD-21 puts the race back, on the ballot for sure now.
+    const set2 = address.setFromAddress(au, S.b, { cd: 35, upper: 21, lower: 50 });
+    check('address: a district with no race here ("none") isn’t named; the race it put on is', S.b.districts[cdq.key] === 'none' && !/Representative, District 35/.test(set2.join(' ')) && set2.includes('State Senator, District 21'), set2.join(' | '));
+    check('address: a second lookup moves the race to "on your ballot", no longer a maybe', S.b.mine.includes('tx-senate-21') && !S.b.notMine.includes('tx-senate-21') && !bl.isMaybe('tx-senate-21'), JSON.stringify({ mine: S.b.mine, notMine: S.b.notMine }));
+    check('address: so it no longer counts as depending on your address', ledger.addressCount() === after, `${ledger.addressCount()} vs ${after}`);
+    const row = views.open.openHTML(au.byId.get('tx-senate-21'));
+    const secH = ledger.sectionHTML('state', bl.entriesBySection().get('state'));
+    const own = secH.slice(secH.indexOf('id="i-tx-senate-21"'), secH.indexOf('id="i-', secH.indexOf('id="i-tx-senate-21"') + 5) >>> 0);
+    check('address: its row drops "Maybe on your ballot" and its open row "Only on some ballots"', own.length > 0 && !/Maybe on your ballot/.test(own) && !/Only on some ballots/.test(row), own.slice(0, 120));
+    // The save link carries none of it beyond the districts and notMine it always had.
+    const linked = st.encodeShare(au, S.b);
+    const bare = { ...S.b, mine: [] };
+    check('address: "mine" never goes in the save link', st.encodeShare(au, bare) === linked && st.decodeShare(au, head(linked)).state.mine.length === 0);
+    const old = { zip: '78704', picks: {}, ranks: {}, auto: {}, noAuto: [], notes: {}, districts: {}, notMine: [], sources: null, planSeen: false, offerDismissed: null, addrNote: null, party: null, ticks: [], setupDone: true, hideDecided: false };
+    check('address: an older save reads "mine" as empty', JSON.stringify({ ...st.emptyBallotState(), ...old }.mine) === '[]');
+    // Statewide Florida: the appeals judges are the sample ballot's; nothing here turns on Congress.
+    const fl = open('FL', []);
+    const fset = address.setFromAddress(fl, S.b, { cd: 24, upper: 38, lower: null });
+    check('address: statewide Florida sets nothing, and keeps "Found your address."', fset.length === 0 && address.addrSummary(fset) === 'Found your address.', fset.join(' | '));
+    // DC: the "upper" layer is the ward, which the place already settles.
+    const dc = open('DC', ['dc-ward-1']);
+    check('address: DC sets nothing from its ward layer', address.setFromAddress(dc, S.b, { cd: null, upper: 1, lower: null }).length === 0);
+    // Lakewood: three races by congressional district may apply; District 7 puts them on the ballot.
+    const lk = open('CO', ['lakewood-co']);
+    const lset = address.setFromAddress(lk, S.b, { cd: 7, upper: 22, lower: 24 });
+    check('address: Lakewood names each office District 7 set', lset.filter((x) => /District 7$/.test(x)).length === 3 && ['co-us-house-7', 'co-sboe-7', 'co-cu-regent-7'].every((id) => S.b.mine.includes(id) && !bl.isMaybe(id)), lset.join(' | '));
+
+    // The address box: before, after (this visit, with what was found), after a reload (no address).
+    const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const box = () => strip((ledger.ballotHeadHTML().match(/<div class="addrbox">[\s\S]*?<\/div>(?=\s*(?:<div class="statewide-note"|<\/div>))/) || [''])[0]);
+    open('TX', ['austin-tx']);
+    const view0 = S.view;
+    S.view = 'ballot'; S.ui.addrOpen = false; S.ui.addrFound = null;
+    const n0 = ledger.addressCount();
+    check('address box: before a lookup, "{n} races depend on your address."', box().startsWith(`${n0} races depend on your address.`), box());
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 37, upper: 14, lower: 49 }));
+    S.ui.addrFound = 'Test One, Austin, TX 78704';
+    const n1 = ledger.addressCount();
+    check('address box: after one, what was found, what it set, and the rest counted', box() === `Found: Test One, Austin, TX 78704 Not it? Try again Set from your address: U.S. Representative, District 37 · State Representative, District 49. ${n1} still depend on your address. Your sample ballot shows them. See my sample ballot`, box());
+    check('address box: the masthead no longer carries it', !/Set from|Your districts/.test(views.mast.mastHTML()));
+    S.ui.addrFound = null;
+    check('address box: after a reload, what it set without the address', !/Found:|Test One/.test(box()) && /^Set from your address: /.test(box()), box());
+    open('FL', []);
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 24, upper: 38, lower: null }));
+    check('address box: nothing set, "Found your address. Your sample ballot shows the rest."', /^Found your address\. Your sample ballot shows the rest\. See my sample ballot$/.test(box()), box());
+    // A DC ward: nothing turns on the address, so after a lookup only what was found, and no "the rest".
+    open('DC', ['dc-ward-1']);
+    const hasBox = () => /class="addrbox"/.test(ledger.ballotHeadHTML());
+    check('address box: a DC ward has no box before a lookup', ledger.addressCount() === 0 && !hasBox());
+    S.b.addrNote = address.addrSummary(address.setFromAddress(S.ballot, S.b, { cd: 98, upper: 1, lower: null }));
+    S.ui.addrFound = 'Test Four, Washington, DC 20001';
+    check('address box: a DC ward after a lookup holds only what was found', box() === 'Found: Test Four, Washington, DC 20001 Not it? Try again', box());
+    S.ui.addrOpen = true;
+    check('address box: and Not it? Try again keeps the box, with the form', /<div class="addrbox">[\s\S]*data-form="addr"/.test(ledger.ballotHeadHTML()) && !/the rest/.test(ledger.ballotHeadHTML()));
+    S.ui.addrOpen = false; S.ui.addrFound = null;
+    check('address box: a DC ward after a reload has no box', !hasBox(), box());
+    S.view = view0; S.ui.addrFound = null;
   }
 }

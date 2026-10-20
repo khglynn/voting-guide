@@ -8,16 +8,18 @@ import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
+  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
-import { planAgree, planParty } from '../model/bulk';
+import { canUndo } from '../model/bulk';
+import { FOUND_ONLY } from '../model/address';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
-import { ext, sampleBallot, isOpen, escP, leadRest } from './common';
-import { lensHTML } from './lens';
+import { ext, sampleBallot, isOpen, escP, leadRest, reportURL, HIDE } from './common';
+import { lensSummary } from './lens';
 import { addrHTML } from './mast';
-import { openHTML } from './open';
+import { openHTML, censusSettles } from './open';
 
 /* ---------- names ---------- */
 export function countyName(p: PlaceBundle): string {
@@ -64,6 +66,7 @@ export const headsHTML = (list: string[]): string => list.map((t) => `<p class="
 
 /* ---------- the verdict column ---------- */
 export function verdictHTML(v: Verdict): string {
+  if (v.kind === 'none' && !v.main) return '<span class="vd none blank"></span>';
   const cls = `${v.kind === 'mine' ? 'done' : v.kind === 'review' ? `review ${v.tone || ''}` : v.kind}${v.shade ? ` ${v.shade}` : ''}`;
   const sub = v.sub;
   const label = v.kind === 'mine' ? 'Your pick: ' : v.kind === 'review' ? 'Official review: ' : v.kind === 'agree' ? (v.shade === 'one' ? 'Endorsed by one source: ' : 'Your sources agree: ') : v.kind === 'split' ? 'Your sources disagree: ' : '';
@@ -103,7 +106,7 @@ export function rowHTML(it: Item): string {
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
   else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
-  return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
+  return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}${S.ui.beat === it.id ? ' data-beat' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
       <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it, tags.length ? `<span class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : '')}${vd}${CHEV}</button>
     ${open ? openHTML(it) : ''}
@@ -130,25 +133,42 @@ export function findersFor(g: Group): { label: string; url: string }[] {
   }
   return out;
 }
+/* The district a question's races all belong to, when its office names one a voter may live
+   outside of entirely: a school district ("Del Valle ISD Trustee") or a utility district. Null for
+   offices every voter here has one of (U.S. Representative, City Council). */
+const ENTITY = /([A-Z][\w.'’-]*(?:\s+[A-Z][\w.'’-]*)*?\s+(?:C?ISD|Independent School District|Unified School District|Union High School District|School District|Community College District|People['’]s Utility District))\b/;
+export function districtEntity(office: string): string | null {
+  const m = office.match(ENTITY);
+  return m ? m[1].trim() : null;
+}
+/* The question's last answer: none of its districts is yours. */
+export const noneLabel = (g: Group): string => {
+  const e = districtEntity(g.office);
+  return e ? `I’m not in ${e}` : 'Not in any of these';
+};
 function questionBodyHTML(g: Group): string {
   const b = S.ballot!;
   // The count is the whole place's, not your ZIP's: say so ("Houston has 24 of these").
   const where = () => (b.places.length === 1 ? b.places[0].label.replace(/\s*\(.*\)$/, '') : b.places.length ? 'Your area' : b.stateName);
-  const members = g.members.map((id) => b.byId.get(id) as Contest);
+  // In number order, as a sample ballot lists them (the data keeps its own order: 10, 11, 27, 37, 31).
+  const num = (c: Contest) => contestDistrict(c).n ?? Infinity;
+  const members = g.members.map((id) => b.byId.get(id) as Contest).sort((x, y) => num(x) - num(y));
   const finders = findersFor(g);
   const sb = sampleBallot();
   return `<div class="ob dq">
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot lists yours.</p>
-    <div class="opts">${g.kind ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
-      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button></div>
+    <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
+      <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
   </div>`;
 }
 function glineHTML(g: Group): string {
   const b = S.ballot!;
   const ans = S.b.districts[g.key];
-  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'None on your ballot (from your address)' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? optionLabel(c)[0] : ''; })();
+  // "none": you said none of them is yours, or your address matched none of them.
+  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? optionLabel(c)[0] : ''; })();
   return `<li class="row gline" id="${qId(g)}"><div class="gl-in"><span class="gl-t">${esc(cleanOffice(g.office))}: <b>${esc(v)}</b></span>
     <button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">Change</button></div></li>`;
 }
@@ -166,36 +186,59 @@ function unoppHTML(sec: SectionKey, list: Contest[]): string {
     ${isOpen(k) ? `<ul class="unopp-list">${list.map((c) => {
       const k1 = c.candidates[0];
       const r = rowTitle(c);
-      return `<li id="i-${esc(c.id)}" data-item="${esc(c.id)}"><span class="u-t">${esc(r.title)}${r.sub ? `, ${esc(r.sub)}` : ''}</span> <b>${esc(k1.name)}</b>${k1.party ? ` <span class="py">${esc(k1.party)}</span>` : ''}${b.mayApply.has(c.id) ? ' <span class="tag">Maybe on your ballot</span>' : ''}</li>`;
+      return `<li id="i-${esc(c.id)}" data-item="${esc(c.id)}"><span class="u-t">${esc(r.title)}${r.sub ? `, ${esc(r.sub)}` : ''}</span> <b>${esc(k1.name)}</b>${k1.party ? ` <span class="py">${esc(k1.party)}</span>` : ''}${b.mayApply.has(c.id) && !(S.b.mine || []).includes(c.id) ? ' <span class="tag">Maybe on your ballot</span>' : ''}</li>`;
     }).join('')}</ul>` : ''}</li>`;
 }
 
 /* ---------- sections ---------- */
-export function sectionCount(entries: Entry[]): string {
+/* A band's "N of M decided", by the one counting rule (ballot.ts): a district question is one race
+   until it's answered, and an unclaimed race in the closed "Other school districts" fold isn't one. */
+export function sectionTally(entries: Entry[]): { done: number; total: number; unopp: number } {
   const b = S.ballot!;
-  let decided = 0, total = 0, unopp = 0;
+  const shut = unclaimed();
+  let done = 0, total = 0, unopp = 0;
   for (const e of entries) {
-    if (e.t !== 'item') continue; // a district question is setup, not a choice
-    const s = status(b.byId.get(e.id)!);
-    if (s === 'unopposed') { unopp++; continue; }
-    if (isDecision(s)) { total++; if (s !== 'open') decided++; }
-  }
-  return total ? `${decided} of ${total} decided` : unopp ? 'Nothing to decide' : '';
-}
-function sectionDone(entries: Entry[]): boolean {
-  const b = S.ballot!;
-  let any = false;
-  for (const e of entries) {
-    if (e.t === 'question') return false;
+    if (e.t === 'question') { total++; continue; }
     if (e.t !== 'item') continue;
     const s = status(b.byId.get(e.id)!);
-    if (s === 'open') return false;
-    if (isDecision(s)) any = true;
+    if (s === 'unopposed') { unopp++; continue; }
+    if (!isDecision(s) || shut.has(e.id)) continue;
+    total++;
+    if (s !== 'open') done++;
   }
-  return any;
+  return { done, total, unopp };
 }
-export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean =>
-  (S.ui.folded.has(sec) || (sectionDone(entries) && !S.ui.unfolded.has(sec))) && !entries.some((e) => e.t === 'item' && e.id === S.ui.row);
+export function sectionCount(entries: Entry[]): string {
+  const { done, total, unopp } = sectionTally(entries);
+  return total ? `${done} of ${total} decided` : unopp ? 'Nothing to decide' : '';
+}
+/* Done: something decided and nothing left by the count. */
+function sectionDone(entries: Entry[]): boolean {
+  const { done, total } = sectionTally(entries);
+  return total > 0 && done === total;
+}
+/* A section folds to its band when you folded it, or when it's done: then it stays folded until you
+   open it (its band or its count), which under "Hide races I've decided" means showing its decided
+   rows. Never while it holds the open row, or the row in its beat. */
+export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
+  if (entries.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.beat))) return false;
+  if (S.ui.folded.has(sec)) return true;
+  if (!sectionDone(entries)) return false;
+  return !(S.b.hideDecided ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
+};
+/* The band's count, "2 of 5 decided", is a button with a word after it (Kevin, Oct 20: "a quick and
+   easy way to expand and hide is tapping any of those numbers"). Under "Hide races I've decided" it
+   shows or hides the section's decided rows (and a finished section's band opens with them);
+   otherwise it folds or unfolds the section, as the band does. With nothing to show or hide (no
+   races, or none decided yet under the filter) it's just the count. render.ts repaints it after a
+   pick. */
+export function countHTML(sec: SectionKey, entries: Entry[], folded = sectionFolded(sec, entries)): string {
+  const t = sectionTally(entries);
+  const count = sectionCount(entries);
+  if ((!t.total && !folded) || (S.b.hideDecided && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
+  const open = S.b.hideDecided ? !folded && S.ui.reveal.has(sec) : !folded;
+  return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${open}" data-fk="secn-${sec}"><span class="sec-count">${esc(count)}</span> <span class="sec-edit">${open ? 'Hide' : 'Show'}</span></button>`;
+}
 function foldSummary(entries: Entry[]): string {
   const b = S.ballot!;
   const bits: string[] = [];
@@ -248,45 +291,22 @@ function entryHTML(e: Entry): string {
   if (e.t === 'notmine') return notMineHTML(b.byId.get(e.id)!);
   return rowHTML(b.byId.get(e.id)!);
 }
-/* "Only undecided" hides a row once it is decided, except the one you just decided (kept
-   until your next move) and the open one. render.ts uses the same rule for one-row repaints. */
-export const hiddenByOnly = (e: Entry): boolean => {
-  if (!S.ui.onlyUndecided) return false;
-  if (e.t === 'question') return false;
+/* "Hide races I've decided" hides a row once it is decided, except the open one, the one in its beat
+   (it shows its pick for a moment, then folds away: actions.ts) and every row of a section whose
+   decided rows you asked to see (its count, tapped). render.ts uses the same rule for one-row
+   repaints. */
+export const hiddenByOnly = (e: Entry, sec: SectionKey): boolean => {
+  if (!S.b.hideDecided) return false;
+  if (e.t === 'question' || S.ui.reveal.has(sec)) return false;
   if (e.t !== 'item') return true;
-  if (e.id === S.ui.keep || e.id === S.ui.row) return false;
+  if (e.id === S.ui.beat || e.id === S.ui.row) return false;
   return status(S.ballot!.byId.get(e.id)!) !== 'open';
 };
-/* Other school districts' races: "may apply" school races outside any district question. Three
-   or more fold into one row on the ballot ("Other school districts that touch Austin"), and the
-   cheat sheet leaves out the undecided ones while that row is closed. */
-export const OTH_KEY = 'school|oth';
-export function otherSchools(entries: Entry[]): Entry[] {
-  const b = S.ballot!;
-  const oth = entries.filter((e) => (e.t === 'item' || e.t === 'notmine') && b.mayApply.has(e.id) && b.byId.get(e.id)!.kind === 'contest' && !b.groupOf[e.id] && status(b.byId.get(e.id)!) !== 'unopposed');
-  return oth.length >= 3 ? oth : [];
-}
-export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
-/* Every choice and district question in the order the page draws them: sections in SECTIONS
-   order, then rows in each section's own order (rowsHTML keeps it; unopposed races, which are not
-   choices, are the only rows it moves). "N of M decided" in the bar walks this list. key is an
-   item id or "q:<group key>". `folded` marks the other school districts' races while their fold
-   is closed: the page draws none of them, so the walk passes them by. */
+/* The fold helpers live with the counting rule in ballot.ts; the cheat sheet and tests read them here too. */
+export { OTH_KEY, otherSchools, othOpen };
+/* Every choice and district question in the order the page draws them, for "Next": see pageWalk. */
 export function pageOrder(): { key: string; done: boolean; folded?: boolean }[] {
-  const b = S.ballot!;
-  const by = entriesBySection();
-  const oth = otherSchools(by.get('school') || []);
-  const shut = new Set(othOpen(oth) ? [] : oth);
-  const out: { key: string; done: boolean; folded?: boolean }[] = [];
-  for (const [sec] of SECTIONS) {
-    for (const e of by.get(sec) || []) {
-      if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false }); continue; }
-      if (e.t !== 'item') continue;
-      const s = status(b.byId.get(e.id)!);
-      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open', ...(shut.has(e) ? { folded: true } : {}) });
-    }
-  }
-  return out;
+  return pageWalk().map((x) => ({ key: x.key, done: x.done, ...(x.folded ? { folded: true } : {}) }));
 }
 /* "Klein ISD" from "Klein ISD Trustee, Position 6": the district's own name, for the fold line. */
 const districtName = (c: Contest): string => {
@@ -310,7 +330,7 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
         out.push(`<li class="subhd">${esc(it.jurisdiction.replace(/\s*\([^)]*\)/g, ''))}${note ? `<small>${esc(note.charAt(0).toUpperCase() + note.slice(1))}</small>` : ''}</li>`);
       }
     }
-    if (hiddenByOnly(e)) return;
+    if (hiddenByOnly(e, sec)) return;
     out.push(entryHTML(e));
   };
   // Other school districts' races (Round Rock, Pflugerville and Leander ISD seats on an East
@@ -333,7 +353,7 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
           out.push(`<li class="grp oth"><button class="grp-hd" data-act="grp" data-g="${k}" aria-expanded="${open}" data-fk="g-oth"><span class="grp-t">Other school districts that touch ${esc(city)}<small>${esc(names.join(', '))}. Open only if one of them is yours.</small></span><span class="grp-ct">${esc(ct)}</span></button></li>`);
           if (open && live.length) out.push(`<li class="oth-none"><button class="mini quiet" data-act="notmine-oth" data-fk="oth-none">None of these are on my ballot</button></li>`);
         }
-        if (open && !hiddenByOnly(e)) out.push(entryHTML(e).replace('<li class="row', '<li data-fold="oth" class="row'));
+        if (open && !hiddenByOnly(e, sec)) out.push(entryHTML(e).replace('<li class="row', '<li data-fold="oth" class="row'));
       });
       return `<ol class="rows">${out.join('')}${unoppHTML(sec, unopp)}</ol>`;
     }
@@ -407,85 +427,185 @@ function quietNoteHTML(entries: Entry[]): string {
   const m = open.every((it) => it.kind === 'measure');
   return `<p class="sec-note">Your sources made no endorsements in these ${m ? 'measures' : 'races'}. Open one to ${m ? 'read both sides' : 'compare the candidates in their own words'}, or <button class="linkbtn" data-act="sheet" data-s="sources" data-fk="sec-more">add sources</button>.</p>`;
 }
-export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
+/* A section shows on the page when it has anything to show: a question, a choice, an unopposed
+   race or an information row. (Under "Hide races I've decided" a finished one shows as its band,
+   folded, "5 of 5 decided" with Show: that's where its races went.) */
+export function sectionShows(entries: Entry[]): boolean {
   const b = S.ballot!;
-  const has = entries.some((e) => e.t !== 'item' || isDecision(status(b.byId.get(e.id)!)) || status(b.byId.get(e.id)!) === 'unopposed' || status(b.byId.get(e.id)!) === 'info');
-  if (!entries.length || !has) return '';
+  return entries.some((e) => { if (e.t !== 'item') return true; const s = status(b.byId.get(e.id)!); return isDecision(s) || s === 'unopposed' || s === 'info'; });
+}
+export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
+  if (!entries.length || !sectionShows(entries)) return '';
   const folded = sectionFolded(sec, entries);
-  const count = sectionCount(entries);
   const done = sectionDone(entries);
-  if (folded && S.ui.onlyUndecided) return '';
   const title = sectionTitle(sec);
   const sub = folded ? foldSummary(entries) : sectionSub(sec);
   const tools = !folded && sec === 'judicial' ? judgeToolsHTML() : !folded ? `${headsUp(`section:${sec}`).length ? `<div class="sec-tools">${headsHTML(headsUp(`section:${sec}`))}</div>` : ''}${quietNoteHTML(entries)}` : '';
   return `<section class="sec${done ? ' done' : ''}${folded ? ' folded' : ''}" id="sec-${sec}" data-sec="${sec}" aria-labelledby="sh-${sec}">
     <h2 class="sec-h" id="sh-${sec}"><button class="sec-hd" data-act="sec" data-sec="${sec}" aria-expanded="${!folded}" data-fk="sec-${sec}">
-      <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span>
-      <span class="sec-r"><span class="sec-count">${esc(count)}</span>${folded ? '<span class="sec-edit">Show</span>' : ''}</span></button></h2>
+      <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span></button>${countHTML(sec, entries, folded)}</h2>
     ${folded ? '' : `${tools}${rowsHTML(sec, entries)}`}
   </section>`;
 }
 
-/* ---------- the ballot head and its bulk actions ---------- */
-function bulkHTML(): string {
-  const agree = planAgree();
-  const pf = S.b.party ? planParty(S.b.party) : null;
-  const n = agree.fills.length;
-  const agreeBtn = `<button class="act" data-act="bulk" data-k="agree" data-fk="bulk-agree" ${n ? '' : 'disabled'}><span>Fill in where my sources agree</span><span class="n">${n}</span></button>`;
-  const partyBtn = S.b.party
-    ? `<button class="act" data-act="bulk" data-k="party" data-fk="bulk-party" ${pf && pf.fills.length ? '' : 'disabled'}><span>Fill in the ${esc(S.b.party)} candidates</span><span class="n">${pf ? pf.fills.length : 0}</span></button>`
-    : `<button class="act" data-act="sheet" data-s="party" data-fk="bulk-party"><span>Fill in a party’s candidates</span></button>`;
-  return `<div class="pfm">${agreeBtn}${partyBtn}</div>`;
+/* ---------- the ballot head ----------
+   Whose picks you see, in one line with Edit (the sheet holds step 2's controls); after a fill
+   from your sources, how many it filled and Undo, while that Undo lasts; then the address box. */
+/* Races that depend on your address: each district question still to answer, each one answered
+   "Not sure", and each other row tagged "Maybe on your ballot" that the count includes. */
+export function addressCount(): number {
+  const b = S.ballot!;
+  const groups = new Set<string>();
+  let n = 0;
+  for (const x of decisionItems()) {
+    if (x.question) { n++; continue; }
+    if (!isMaybe(x.id)) continue;
+    const g = b.groupOf[x.id];
+    if (!g) n++;
+    else if (!groups.has(g)) { groups.add(g); n++; }
+  }
+  return n;
+}
+/* Whether "Use my address" can still settle one of them. The Census answers Congress and the
+   state legislature only (open.censusSettles), so a question or "maybe" row for anything else
+   (a council seat, a school district, a judge) is the sample ballot's to settle. And once a
+   lookup has run on this ballot (its addrNote), it has answered all it can. */
+export function addressHelps(): boolean {
+  const b = S.ballot!;
+  if (S.b.addrNote) return false;
+  return decisionItems().some((x) => {
+    if (x.question) {
+      const g = b.groups.find((gr) => `q:${gr.key}` === x.id);
+      return !!g && censusSettles(b.byId.get(g.members[0]) as Contest);
+    }
+    if (!isMaybe(x.id)) return false;
+    const it = b.byId.get(x.id);
+    return !!it && it.kind === 'contest' && censusSettles(it);
+  });
+}
+/* The address box. Before a lookup, while races depend on your address: how many, with the lookup
+   ("Use my address" leads while it can settle something) and your sample ballot. After one: what
+   the Census found, for this visit only ("Found: ..." with "Not it? Try again"); what it set, which
+   the ballot keeps (S.b.addrNote, never the address); and how many the sample ballot still has to
+   settle. A reload shows the last two. When it put no race on the ballot and nothing is left for
+   the sample ballot either (a DC ward's), the box holds only what was found, or the form again
+   after "Not it? Try again", and after a reload there is no box, as before the lookup. */
+function addrBoxHTML(): string {
+  const n = addressCount();
+  const note = S.b.addrNote;
+  const sb = sampleBallot();
+  const sbLink = (dark: boolean): string => (sb ? `<a class="mini${dark ? ' dark' : ''}" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : '');
+  if (!note) {
+    if (!n) return '';
+    const look = addressHelps();
+    return `<div class="addrbox"><p class="addr-n"><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
+      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns">${look ? '<button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>' : ''}${sbLink(!look)}</div>`}</div>`;
+  }
+  const found = S.ui.addrFound && !S.ui.addrOpen
+    ? `<p class="addr-found" tabindex="-1" data-fk="addr-found"><b>Found:</b> ${esc(S.ui.addrFound)} <button class="linkbtn" data-act="addr-again" data-fk="addr-again">Not it? Try again</button></p>` : '';
+  const none = note === FOUND_ONLY;
+  if (none && !n) return found || S.ui.addrOpen ? `<div class="addrbox">${found}${S.ui.addrOpen ? addrHTML() : ''}</div>` : '';
+  const left = none ? '<p class="addr-n">Found your address. Your sample ballot shows the rest.</p>'
+    : n ? `<p class="addr-n"><b>${n === 1 ? '1 still depends' : `${n} still depend`} on your address.</b> Your sample ballot shows ${n === 1 ? 'it' : 'them'}.</p>` : '';
+  const after = S.ui.addrOpen ? addrHTML() : (none || n) && sb ? `<div class="row-btns">${sbLink(true)}</div>` : '';
+  return `<div class="addrbox">${found}${none ? '' : `<p class="addr-set">${esc(note)}</p>`}${left}${after}</div>`;
 }
 export function ballotHeadHTML(): string {
   const b = S.ballot!;
-  const items = decisionItems();
-  const qs = items.filter((i) => i.question).length;
-  const may = [...b.mayApply].filter((id) => !S.b.notMine.includes(id)).length;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  // One number for the ballot's size, the same one the bar and the lens line count.
-  const parts = [`${items.length - qs} ${items.length - qs === 1 ? 'race or measure' : 'races and measures'}, in the same order as your ballot.`];
-  if (qs || may) parts.push('A few depend on your address.');
-  return `<div class="bhead"><h2 id="ballot-h">Your ballot</h2>
-      <p>${esc(parts.join(' '))}</p>
-      ${(b.groups.length || b.mayApply.size) ? (S.ui.addrOpen ? addrHTML() : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address to find my districts</button></p>') : ''}
-      ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. For local races: ${sb ? ext(sb.url, sb.label) : ''}</p>` : sb ? `<p class="sb">Double-check with ${ext(sb.url, 'your official sample ballot')}.</p>` : ''}
+  const filled = S.ui.bulk && canUndo()
+    ? `<p class="filled">${esc(S.ui.bulk)} filled in. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
+  const addr = addrBoxHTML();
+  return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
+      <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      ${filled}${addr}
+      ${statewideOnly ? `<div class="statewide-note"><p>We only have statewide races for your area so far.</p>
+        <p class="row-btns">${sb ? `<a class="mini dark" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}<a class="mini" href="${esc(reportURL('Please add my city'))}" target="_blank" rel="noopener">Ask for your city</a></p></div>` : ''}
     </div>
-    ${headsHTML(headsUp('ballot'))}
-    ${bulkHTML()}`;
+    ${headsHTML(headsUp('ballot'))}`;
 }
 export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
-  const empty = S.ui.onlyUndecided && !decisionItems().some((i) => !i.done)
-    ? '<p class="empty"><b>Nothing left to decide here.</b> Turn off “Only undecided” to see everything, or open your cheat sheet.</p>' : '';
-  return `${lensHTML()}<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
-    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Your picks save on this device as you go.</p>
-      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open your cheat sheet</button></div>`;
+  const empty = S.b.hideDecided && !decisionItems().some((i) => !i.done)
+    ? `<p class="empty"><b>Nothing left to decide here.</b> Turn off “${HIDE}” to see everything.</p>` : '';
+  return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
+    <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Next, save your plan.</p>
+      <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open my plan</button></div>`;
 }
 
-/* ---------- the bottom bar ---------- */
+/* ---------- the bottom bar ----------
+   On the ballot, two buttons: the menu ("☰ 20 of 43", whose .bar-txt reads "20 of 43 decided") and
+   My plan (the cheat sheet). From 1180px the menu also stands as a rail in the left margin, drawn
+   here so it repaints with the bar after every pick. */
+const BURGER = '<svg class="burger" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1.5h16M1 7h16M1 12.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+export const RAIL_AT = '(min-width: 1180px)';
+const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
 export function barHTML(): string {
   if (!S.ballot) return '';
   if (S.ui.view !== 'ballot') {
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
       <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to the ballot</button>
-      ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">Cheat sheet</button>'}</div></div>`;
+      ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">My plan</button>'}</div></div>`;
   }
-  // Choices only: a district question is setup, not a choice, so the bar counts what the
-  // header counts. "Next undecided" still visits the questions.
-  const all = decisionItems();
-  const items = all.filter((i) => !i.question);
+  // The one counting rule (ballot.ts): a district question is one race until it's answered.
+  const items = decisionItems();
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const allDone = all.every((i) => i.done);
-  return `<div class="foot screen-only" role="region" aria-label="Your progress">
+  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
+  return `${rail}<div class="foot screen-only" role="region" aria-label="Your progress">
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
-    <div class="foot-in">
-      <button class="prog" data-act="next" ${allDone ? 'disabled' : ''} data-fk="bar-next" aria-label="${allDone ? `All ${items.length} decided` : `${done} of ${items.length} decided. Go to the next undecided`}"><span class="bar-txt"><b>${done}</b> of ${items.length} <span class="dl">decided</span></span></button>
-      <button class="ftog" data-act="only" aria-pressed="${S.ui.onlyUndecided}" data-fk="bar-only"><span class="box" aria-hidden="true"></span>Only undecided</button>
-      <button class="fcta" data-act="cheat" data-fk="bar-cheat">Cheat sheet</button>
+    <div class="foot-in ends">
+      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt"><b>${done}</b> of ${items.length}<span class="vh"> decided</span></span></button>
+      <button class="fcta" data-act="cheat" data-fk="bar-cheat">My plan</button>
     </div></div>`;
+}
+
+/* ---------- the menu: a sheet under 1180px, a rail from there ----------
+   "Next up" first, then rows that go somewhere: your next step, Quick picks (the Edit sheet), the
+   "Hide races I've decided" switch right above the sections it filters, each section on the page
+   with what's left, My plan, and last, ruled off, "How this guide works". */
+/* The next undecided race or question after the one you're on (open, or just decided), in page
+   order, wrapping to the first; null when nothing the count includes is left. The menu names it
+   and its button opens it, so the two never disagree. */
+export function nextUp(): { key: string; title: string } | null {
+  const b = S.ballot!;
+  const order = pageWalk().filter((x) => !x.folded);
+  const left = order.filter((x) => !x.done);
+  if (!left.length) return null;
+  const from = S.ui.row || S.ui.keep;
+  const at = from ? order.findIndex((x) => x.key === from) : -1;
+  const pick = order.find((x, i) => i > at && !x.done) || left.find((x) => x.key !== S.ui.row) || left[0];
+  const g = pick.key.startsWith('q:') ? b.groups.find((x) => `q:${x.key}` === pick.key) : null;
+  return { key: pick.key, title: g ? cleanOffice(g.office) : rowTitle(b.byId.get(pick.key)!).title };
+}
+const ARROW = '<i class="nv-a" aria-hidden="true">›</i>';
+export function menuHTML(where: 'toc' | 'rail'): string {
+  const by = entriesBySection();
+  const up = nextUp();
+  const next = up ? `<button class="nv-next" data-act="next" data-k="${esc(up.key)}" data-fk="${where}-next"><span>Next up: ${esc(up.title)}</span>${ARROW}</button>` : '';
+  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.b.hideDecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>${HIDE}</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
+  const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
+    `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
+  const secs = SECTIONS.map(([k]) => {
+    const entries = by.get(k) || [];
+    if (!entries.length || !sectionShows(entries)) return '';
+    const t = sectionTally(entries);
+    return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);
+  }).join('');
+  return `${next}<ul class="nv-list">
+    ${row('data-act="jump" data-to="plan"', 'plan', 'Your next step')}
+    ${row('data-act="picks"', 'picks', 'Quick picks')}</ul>
+    ${only}<ul class="nv-list nv-secs">
+    ${secs}
+    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>
+    <ul class="nv-list nv-end">${row('data-act="jump" data-to="how"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
+}
+export function tocSheetHTML(): string {
+  return `<div class="scrim screen-only" data-act="sheet-close"></div>
+  <div class="sheet-panel screen-only toc" role="dialog" aria-modal="true" aria-labelledby="sh-h">
+    <div class="sheet-hd"><h2 id="sh-h">Your ballot</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Close</button></div>
+    <div class="sheet-bd" data-keep="toc">${menuHTML('toc')}</div></div>`;
 }
 export { sectionOf };

@@ -9203,6 +9203,7 @@
     "endorser_id": "newsday-eb",
     "target_id": "ny-us-house-3",
     "status": "not_found",
+    "unreadable": true,
     "choice": null,
     "why": "Newsday's endorsement page is behind a paywall we couldn't read. We only saw a pick for this secondhand, so we're not showing one. Checked Oct 19, 2026.",
     "url": "https://suozziforcongress.com/article/thomas-r-suozzi-for-new-yorks-3rd-congressional-district/",

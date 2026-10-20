@@ -148,6 +148,9 @@ export interface Endorsement {
   date: string | null;
   conf: Confidence;
   both?: boolean;
+  /* A not_found row whose record says the source's page couldn't be read (a paywall or an access
+     block). A paywalled paper's row then shows its paywall note instead of "No endorsements found". */
+  unreadable?: true;
 }
 
 export interface Deadline { method?: string; date: string | null; rule: string; source?: string; time?: string | null }

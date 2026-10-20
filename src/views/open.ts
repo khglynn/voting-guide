@@ -61,8 +61,9 @@ function quietLines(l: Lineup, it: Item, picked = true): string {
     const what = it.kind === 'measure' ? 'take positions on measures' : 'endorse candidates';
     out.push(`${guides.map((e) => (e.guide_url ? ext(e.guide_url, e.short) : esc(e.short))).join(', ')} ${guides.length === 1 ? 'doesn’t' : 'don’t'} ${what}; ${guides.length === 1 ? 'its guide explains' : 'their guides explain'}.`);
   }
-  // Called once per open row, so a chosen paywalled source with no readable pick here gets its
-  // note once (Kevin, Oct 19).
+  // Called once per open row, so a chosen paywalled source with no readable record here (none, or
+  // one marked unreadable) gets its note once (Kevin, Oct 19). One whose record says it was read is
+  // named by that record's state instead.
   const pw = paywallRowHTML(l.paywalled, cheatTitle(it));
   return `${out.length ? `<p class="gridnote">${out.join(' ')}</p>` : ''}${pw}`;
 }

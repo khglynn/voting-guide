@@ -230,6 +230,9 @@ for (const r of all.endorsements) {
     if (!isStr(r.choice)) err('endorsement-choice', `${id}: endorsed with no choice`);
   } else if (isStr(r.choice)) err('endorsement-state-mixed', `${id}: status ${r.status} but has a choice ("${r.choice}")`);
   if (r.confidence != null && !['verified', 'sourced', 'unverified'].includes(r.confidence)) err('confidence', `${id}: confidence "${r.confidence}"`);
+  // `unreadable: true` marks a not_found row whose source couldn't be read (Oct 20); build-data honors
+  // only a literal true on a not_found row, so anything else is a typo.
+  if (r.unreadable != null && (r.unreadable !== true || r.status !== 'not_found')) err('endorsement-unreadable-shape', `${id}: unreadable must be true and only on a not_found row, got ${JSON.stringify(r.unreadable)} on ${r.status}`);
 }
 
 /* ---------- 7. places ---------- */

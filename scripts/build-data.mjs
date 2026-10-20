@@ -493,6 +493,10 @@ for (const f of listJson('').filter((x) => /^endorsements-.*\.json$/.test(path.b
     }
     const rec = {
       s: r.status, c: choices, note, why: str(r.why), url: safeUrl(r.url), date: str(r.date), conf: conf(r.confidence), f,
+      // A "not found" whose record says the source's page couldn't be read (a paywall or an access
+      // block): the app names a paywalled paper there by its paywall note, not "No endorsements
+      // found". Only a literal true on a not_found row counts.
+      ...(r.unreadable === true && r.status === 'not_found' ? { unreadable: true } : {}),
     };
     const key = `${eid}|${target.id}`;
     const prev = endorsementByKey.get(key);

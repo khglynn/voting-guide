@@ -49,51 +49,90 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
 
   /* ---------- one source, one endorsement state per row (Orlando and LA walks, Oct 20) ----------
      "No endorsements found: Orlando Sentinel" sat above "Orlando Sentinel: behind a paywall, so we
-     couldn't read its endorsements here" in the same row. A paywalled paper with no readable pick is
-     only in the paywall note; "Not checked yet" and "No endorsements found" stay apart. */
+     couldn't read its endorsements here" in the same row. Each source now gets exactly one state in a
+     row, and its record decides which: a paywalled paper's checked "not found" record (the Sentinel
+     read its slate: "No November endorsement for this race was listed") is "No endorsements found";
+     one marked `unreadable` (the Herald: "The current slate could not be read") or no record at all
+     gets only the paywall note, never "Not checked yet" as well (review, Oct 20). */
   {
     const pwNote = (e) => e.paywall === true && e.paywall_note_ok !== false;
     const stateLists = (h) => {
       const t = h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
       const grab = (re) => [...t.matchAll(re)].flatMap((m) => m[1].split(/,\s*/)).map((x) => x.trim()).filter(Boolean);
-      return { nf: grab(/No endorsements? found(?: from)?:? ([^.]*)\./g), nc: grab(/Not checked yet: ([^.]*)\./g), pw: grab(/([^.:]*): behind a paywall/g) };
+      return { nf: grab(/No endorsements? found(?: from)?:? ([^.]*)\./g), nc: grab(/Not checked yet: ([^.]*)\./g), pw: grab(/([^.:]*): behind a paywall/g), ns: grab(/([^.]*) took no stand\./g) };
     };
-    for (const [stc, pid] of [['FL', 'orlando-fl'], ['CA', 'los-angeles-ca']]) {
+    let pwRows = 0, nfRows = 0;
+    for (const [stc, pid] of [['FL', 'orlando-fl'], ['CA', 'los-angeles-ca'], ['IL', 'chicago-il']]) {
       const b = open(stc, [pid]);
       S.ui.row = null;
       tally.clearLineups();
-      const both = [], lists = [];
-      let rows = 0;
+      const twice = [], wrong = [];
       for (const it of b.items) {
         const l = tally.lineup(it);
-        if ([...l.notFound, ...l.notChecked].some(pwNote)) lists.push(it.id);
-        const h = views.open.openHTML(it);
-        const s = stateLists(h);
-        if (!s.pw.length) continue;
-        rows++;
-        const dup = s.pw.filter((n) => s.nf.includes(n) || s.nc.includes(n));
-        if (dup.length) both.push(`${it.id}: ${dup.join(', ')}`);
+        const rec = (e) => (b.ends[it.id] || {})[e.id];
+        // The lineup: a paywalled paper's record decides its state; with no record, only the note.
+        for (const e of l.paywalled) if (rec(e) && !rec(e).unreadable) wrong.push(`${it.id}: ${e.short} was read but reads "behind a paywall"`);
+        for (const e of l.notFound) if (pwNote(e) && rec(e).unreadable) wrong.push(`${it.id}: ${e.short} couldn't be read but reads "No endorsements found"`);
+        for (const e of l.notChecked) if (pwNote(e)) wrong.push(`${it.id}: ${e.short} reads "Not checked yet" beside its paywall note`);
+        for (const e of l.notFound) if (pwNote(e)) nfRows++;
+        // The open row: no source named in two states.
+        const s = stateLists(views.open.openHTML(it));
+        if (s.pw.length) pwRows++;
+        const all = [...s.nf, ...s.nc, ...s.pw, ...s.ns];
+        const dup = [...new Set(all.filter((n, i) => all.indexOf(n) !== i))];
+        if (dup.length) twice.push(`${it.id}: ${dup.join(', ')}`);
       }
-      check(`one state: ${pid} has rows with a paywall note to check`, rows > 0, String(rows));
-      check(`one state: ${pid} never lists a paywalled paper as "No endorsements found" or "Not checked yet"`, both.length === 0 && lists.length === 0, both.slice(0, 3).join(' | ') || lists.slice(0, 3).join(', '));
+      check(`one state: ${pid} names every source in exactly one state per row`, twice.length === 0, twice.slice(0, 3).join(' | '));
+      check(`one state: ${pid} reads a paywalled paper's state from its record`, wrong.length === 0, wrong.slice(0, 3).join(' | '));
     }
-    // The verdict: a row whose only covering sources are paywalled says so, not "No endorsements found".
+    check('one state: these ballots have paywall notes and read paywalled "not found" records to check', pwRows > 0 && nfRows > 0, `${pwRows} notes, ${nfRows} records`);
+    // The Orlando Clerk row: the Sentinel read its slate and found no pick, so "No endorsements found".
+    const orl = open('FL', ['orlando-fl']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const clerk = orl.byId.get('fl-orange-clerk');
+    const cv = tally.verdict(clerk);
+    const ch = views.open.openHTML(clerk).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: Orlando Clerk reads "No endorsements found" from the Sentinel, as its record says', cv.main === 'No endorsements found' && cv.why === 'not_found' && /No endorsements? found(?: from)?:? Orlando Sentinel/.test(ch) && !/Orlando Sentinel: behind a paywall/.test(ch), `${cv.main} | ${ch.slice(0, 160)}`);
+    const la = open('CA', ['los-angeles-ca']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const lh = views.open.openHTML(la.byId.get('ca-lt-governor')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: LA Lt. Governor names the Sacramento Bee as "No endorsements found", never "couldn\'t read"', /No endorsements? found[^.]*Sacramento Bee/.test(lh) && !/Sacramento Bee[^.]*: behind a paywall/.test(lh), lh.slice(0, 200));
+    // A record that says the page couldn't be read (Miami Herald, Florida's U.S. Senate race) is the
+    // paywall note alone.
+    open('FL', ['orlando-fl']);
+    S.ui.row = null;
+    tally.clearLineups();
+    const sen = st.S.ballot.byId.get('fl-us-senate-special');
+    const sh = views.open.openHTML(sen).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    check('one state: Florida\'s Senate race names the Miami Herald, which couldn\'t be read, only in the paywall note', st.S.ballot.ends['fl-us-senate-special']['miami-herald-eb'].unreadable === true && /Miami Herald[^.]*: behind a paywall/.test(sh) && !/No endorsements? found[^.]*Miami Herald/.test(sh), sh.slice(0, 240));
+    // The verdict: a row whose only covering source is a paywalled paper with no record there reads
+    // "Behind a paywall"; beside a source that found nothing, it is mixed and counts only that one.
     const b = open('FL', ['orlando-fl']);
     const pws = b.endorsers.filter(pwNote);
-    const it = b.items.find((x) => x.kind === 'measure' && !b.statewide.has(x.id)) || b.items.find((x) => x.kind === 'measure');
-    S.b.sources = [pws[0].id];
-    const keep = b.ends[it.id];
-    b.ends[it.id] = { [pws[0].id]: { s: 'not_found', c: null, note: null, why: null, url: null, date: null, conf: 'unverified' } };
-    tally.clearLineups();
-    let v = tally.verdict(it);
-    check('one state: a row whose only source is paywalled reads "Behind a paywall"', v.kind === 'none' && v.main === 'Behind a paywall' && v.why === 'paywall', JSON.stringify(v));
-    const plain = b.endorsers.find((e) => !pwNote(e) && e.endorses_measures && !e.paywall);
-    S.b.sources = [pws[0].id, plain.id];
-    b.ends[it.id] = { [pws[0].id]: { s: 'not_found', c: null }, [plain.id]: { s: 'not_found', c: null } };
-    tally.clearLineups();
-    v = tally.verdict(it);
-    check('one state: one found nothing and one is paywalled is mixed, counting only the one that found nothing', v.why === 'mixed' && v.sub === 'nothing found for 1', JSON.stringify(v));
-    b.ends[it.id] = keep;
+    let hit = null;
+    for (const e of pws) {
+      S.b.sources = [e.id];
+      tally.clearLineups();
+      const it = b.items.find((x) => tally.lineup(x).paywalled.length === 1);
+      if (it) { hit = { e, it }; break; }
+    }
+    check('one state: Orlando has a row where a paywalled paper has no readable record', !!hit);
+    if (hit) {
+      S.b.sources = [hit.e.id];
+      tally.clearLineups();
+      let v = tally.verdict(hit.it);
+      check('one state: a row whose only source is paywalled with no readable record reads "Behind a paywall"', v.kind === 'none' && v.main === 'Behind a paywall' && v.why === 'paywall', JSON.stringify(v));
+      const plain = b.endorsers.find((e) => !pwNote(e) && !e.paywall && (hit.it.kind === 'measure' ? e.endorses_measures : e.endorses_candidates));
+      const keep = b.ends[hit.it.id];
+      b.ends[hit.it.id] = { ...(keep || {}), [plain.id]: { s: 'not_found', c: null } };
+      S.b.sources = [hit.e.id, plain.id];
+      tally.clearLineups();
+      v = tally.verdict(hit.it);
+      check('one state: one found nothing and one is paywalled is mixed, counting only the one that found nothing', v.why === 'mixed' && v.sub === 'nothing found for 1', JSON.stringify(v));
+      if (keep) b.ends[hit.it.id] = keep; else delete b.ends[hit.it.id];
+    }
     S.b.sources = null;
     tally.clearLineups();
   }

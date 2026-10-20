@@ -17,7 +17,7 @@ export interface Lineup {
   noStand: Endorser[];       // looked, took no position
   notFound: Endorser[];      // looked, found nothing
   notChecked: Endorser[];    // covers this kind of item here, no row yet
-  paywalled: Endorser[];     // its endorsements sit behind a paywall we couldn't read; only the paywall note names it
+  paywalled: Endorser[];     // behind a paywall: no record here, or one that says it couldn't be read; only the paywall note names it
   guides: Endorser[];        // explain without picking (this kind of item)
   relevant: Endorser[];      // everyone above except guides
 }
@@ -100,9 +100,12 @@ function computeLineup(it: Item, sources: Endorser[]): Lineup {
     if (r.s !== 'endorsed' && (explainsOnly(e) || !picks)) { out.guides.push(e); continue; }
     out.relevant.push(e);
     if (r.s === 'no_position') { out.noStand.push(e); continue; }
-    // A paywalled paper with no readable pick here is one state, "behind a paywall", never also
-    // "No endorsements found" or "Not checked yet".
-    if (r.s === 'not_found') { (hasPaywallNote(e) ? out.paywalled : out.notFound).push(e); continue; }
+    // The record decides the state. A paywalled paper's "not found" is "No endorsements found" when
+    // its source was read (the Orlando Sentinel: "Checked the board's current general-election
+    // slate ... No November endorsement for this race was listed"), and only its paywall note when
+    // the record says the page couldn't be read (`unreadable`). Never both, and a paywalled paper
+    // with no record here gets only the note (above), never "Not checked yet" as well.
+    if (r.s === 'not_found') { (r.unreadable && hasPaywallNote(e) ? out.paywalled : out.notFound).push(e); continue; }
     if (r.both) { out.both.push(e); continue; }
     // Two sources naming the same candidates in a different order agree. In a ranked-choice
     // race a source's list is a ranking, so sources are grouped by their first choice ("Novick

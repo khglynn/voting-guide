@@ -2196,6 +2196,77 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await ctx.close();
 }
 
+// Several Census matches (Kevin, Oct 20: "did I select the right address?"): "Which one is yours?",
+// one button each, and the one tapped is the one applied. A miss says so, with what you typed kept.
+// Census is answered here, with made-up addresses.
+{
+  const { ctx, page } = await newPage();
+  const m = (matched, cd, upper, lower) => ({ matchedAddress: matched, geographies: {
+    States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
+    '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }], '2024 State Legislative Districts - Lower': [{ BASENAME: String(lower) }] } });
+  let matches = [];
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify({ result: { addressMatches: matches } })})` });
+  });
+  await openBallot(page, '78704');
+  const submit = async () => {
+    await page.locator('form[data-form="addr"] button[type=submit]').tap();
+    await page.waitForSelector('.addrbox .addr-which, .addrbox .addr-found, form[data-form="addr"] [role="status"]', { timeout: 8000 }).catch(() => {});
+    await page.waitForTimeout(150);
+  };
+  // A miss: nothing found, one line, and the address still in the box.
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await submit();
+  check('Address miss: says the Census couldn’t find it, and keeps what you typed', (await text(page, 'form[data-form="addr"] [role="status"]')) === 'The Census lookup couldn’t find that address. Try adding the city and ZIP.' && (await page.inputValue('#addr-in')) === 'a test lookup' && !(await page.$('.addr-found')), await text(page, 'form[data-form="addr"] [role="status"]'));
+  // Several: one button each, the same address once.
+  matches = [m('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), m('TEST ONE, AUSTIN, TX, 78704', 37, 14, 49), m('TEST TWO, AUSTIN, TX, 78745', 35, 21, 50)];
+  await submit();
+  const opts = await page.$$eval('.addrbox .addr-which [data-act="addr-which"]', (els) => els.map((e) => e.textContent.trim()));
+  check('Several matches: "Which one is yours?" with one button each, the same address once', (await text(page, '.addrbox .addr-which #aw-h')) === 'Which one is yours?' && opts.join(' | ') === 'Test One, Austin, TX 78704 | Test Two, Austin, TX 78745' && (await text(page, '.addrbox [data-fk="aw-none"]')) === 'None of these', opts.join(' | '));
+  check('Several matches: focus on the first', (await focusedFk(page)) === 'aw-0', await focusedFk(page));
+  check('Several matches: nothing set yet', !(await page.$('.addrbox .addr-set')) && /^\d+ races depend on your address\.$/.test(await text(page, '.addrbox .addr-n')));
+  await shot(page, '04e-which-address');
+  const bigEnough = await small44(page, '.addrbox .addr-which');
+  check('Several matches: every button is a full-size tap', bigEnough.length === 0, bigEnough.join(', '));
+  await tap(page, '.addrbox [data-act="addr-again"]');
+  check('Several matches: None of these brings back the form with what you typed', (await page.inputValue('#addr-in').catch(() => '')) === 'a test lookup' && !(await page.$('.addr-which')));
+  await submit();
+  await tap(page, '.addrbox [data-act="addr-which"][data-i="1"]');
+  await page.waitForSelector('.addrbox .addr-found', { timeout: 8000 }).catch(() => {});
+  await page.waitForTimeout(150);
+  check('Several matches: the one tapped is the one found', (await text(page, '.addrbox .addr-found')) === 'Found: Test Two, Austin, TX 78745 Not it? Try again', await text(page, '.addrbox .addr-found'));
+  check('Several matches: and its districts are the ones set', (await text(page, '.addrbox .addr-set')) === 'Set from your address: U.S. Representative, District 35 · State Senator, District 21 · State Representative, District 50.', await text(page, '.addrbox .addr-set'));
+  check('Several matches: Senate District 21 puts that race on the ballot, no longer a maybe', !!(await page.$('#i-tx-senate-21')) && !/Maybe on your ballot/.test(await text(page, '#i-tx-senate-21')), await text(page, '#i-tx-senate-21'));
+  await page.waitForTimeout(400);
+  check('Several matches: neither address is saved', !/test (one|two)|a test lookup/i.test((await savedVG(page)) || ''));
+  noErrors(page, 'Several matches');
+  await ctx.close();
+}
+// The first page, several matches: the list, then the one tapped opens its ballot.
+{
+  const { ctx, page } = await newPage();
+  const m = (matched, zip, cd) => ({ matchedAddress: matched, geographies: {
+    States: [{ STATE: '48' }], 'Incorporated Places': [{ BASENAME: 'Austin' }], 'ZIP Code Tabulation Areas': [{ ZCTA5: zip }], '119th Congressional Districts': [{ BASENAME: String(cd) }] } });
+  await page.route('https://geocoding.geo.census.gov/**', (route) => {
+    const cb = new URL(route.request().url()).searchParams.get('callback');
+    return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify({ result: { addressMatches: [m('TEST ONE, AUSTIN, TX, 78704', '78704', 37), m('TEST TWO, AUSTIN, TX, 78745', '78745', 35)] } })})` });
+  });
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  await tap(page, '.front [data-act="addr-open"]');
+  await page.fill('#addr-in', 'a test lookup');
+  await page.locator('form[data-form="addr"] button[type=submit]').tap();
+  await page.waitForSelector('.front .addr-which', { timeout: 8000 }).catch(() => {});
+  check('First page, several matches: Which one is yours?', (await page.$$('.front [data-act="addr-which"]')).length === 2);
+  await tap(page, '.front [data-act="addr-which"][data-i="1"]');
+  await page.waitForSelector('.door-found', { timeout: 15000 }).catch(() => {});
+  check('First page, several matches: the one tapped opens its ballot and shows under the place line', /^Austin, Texas · 78745/.test(await text(page, '.door-place span')) && (await text(page, '.door-found')) === 'Found: Test Two, Austin, TX 78745 Not it? Try again', `${await text(page, '.door-place span')} | ${await text(page, '.door-found')}`);
+  noErrors(page, 'First page, several matches');
+  await ctx.close();
+}
+
 // Nav review, Oct 20: "Next" walks the page in its own order, from the first thing on it (LA's U.S.
 // House question), one row open at a time. Since the flow (Oct 20) it is the menu's "Next up": the
 // sheet's at 380px, the rail's at 1280px.

@@ -364,22 +364,27 @@ export function rechoose(): void {
   render(['mast']);
   $(`[data-fk="cp-${CSS.escape(p.placeIds[0])}"]`)?.focus();
 }
+/* What was typed into the address box last, in memory only: "Not it? Try again", "None of these"
+   and a message after a match put it back in the box. Never saved, logged or put in the page's
+   address. */
+let typedAddr = '';
+function paintAddr(): void {
+  renderAddr();
+  const i = $('#addr-in') as HTMLInputElement | null;
+  if (i && !i.value) i.value = typedAddr;
+}
 /* A lookup that went wrong: one line, and what to do next. `down`: the Census didn't answer, so
    "Try again"; `miss`: it answered with nothing we can use. On a ballot, either way, "Pick them
    myself" goes to the first district question. */
 function addrFailed(msg: string, fail: 'down' | 'miss'): void {
   S.ui.addrBusy = false; S.ui.addrMsg = msg; S.ui.addrFail = fail;
-  renderAddr();
+  paintAddr();
 }
-/* What was typed into the address box last, in memory only: "Not it? Try again" puts it back in
-   the box. Never saved, logged or put in the page's address. */
-let typedAddr = '';
 export function reopenAddr(): void {
   S.ui.addrOpen = true; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.addrWhich = null;
-  renderAddr();
+  paintAddr();
   const i = $('#addr-in') as HTMLInputElement | null;
   if (!i) return;
-  if (!i.value) i.value = typedAddr;
   i.scrollIntoView({ block: 'center' });
   i.focus({ preventScroll: true });
 }
@@ -389,29 +394,45 @@ export async function runAddress(addr: string): Promise<void> {
   const b = S.view === 'ballot' ? S.ballot : null;
   const door = !b && !choosing;
   S.ui.addrFail = '';
-  if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; renderAddr(); return; }
-  S.ui.addrBusy = true; S.ui.addrMsg = null; renderAddr();
+  if (addr.trim().length < 6) { S.ui.addrMsg = 'Enter a street address with the city or ZIP.'; paintAddr(); return; }
+  S.ui.addrBusy = true; S.ui.addrMsg = null; paintAddr();
   // Add the state and ZIP we already know; if that finds nothing (a typo in the ZIP, or an
   // address across a ZIP line), try once more with exactly what they typed.
   const typedZip = /^\d{5}$/.test(S.zip) ? S.zip : null;
   const st = door ? (typedZip ? zipState(typedZip) : null) : choosing && S.zipChoice ? S.index!.places[S.zipChoice.placeIds[0]]?.state || null : b!.st;
   const zip = door ? typedZip : choosing && S.zipChoice ? S.zipChoice.zip : S.b.zip || null;
   const full = withPlace(addr, st, zip);
-  let r: GeoResult | null;
+  let list: GeoResult[];
   try {
-    let list = await censusLookup(full);
+    list = await censusLookup(full);
     if (!list.length && full !== addr.trim()) list = await censusLookup(addr.trim());
-    r = list[0] || null;
   }
   catch { addrFailed('The Census lookup didn’t answer.', 'down'); return; }
   S.ui.addrBusy = false;
-  if (!r) { addrFailed('The Census lookup couldn’t find that address. Try adding the city and ZIP.', 'miss'); return; }
+  if (!list.length) { addrFailed('The Census lookup couldn’t find that address. Try adding the city and ZIP.', 'miss'); return; }
+  // Several matches (an address typed without its city can match more than one): "Which one is
+  // yours?", and the one tapped goes on as a single match would (useMatch).
+  if (list.length > 1) {
+    S.ui.addrWhich = list; S.ui.addrMsg = null;
+    paintAddr();
+    $('[data-fk="aw-0"]')?.focus({ preventScroll: true });
+    return;
+  }
+  await useMatch(list[0]);
+}
+/* One Census match, from the lookup or tapped from "Which one is yours?": the place it opens on the
+   first page or the place question, or the districts it settles on a ballot. */
+export async function useMatch(r: GeoResult): Promise<void> {
+  const choosing = S.view !== 'ballot' && S.zipChoice;
+  const b = S.view === 'ballot' ? S.ballot : null;
+  const door = !b && !choosing;
+  S.ui.addrWhich = null; S.ui.addrBusy = false; S.ui.addrFail = '';
   const geo = r;
   if (door) {
     let idx: Index;
     try { idx = await ensureIndex(); } catch { addrFailed('We couldn’t reach the guide’s data. Check your connection.', 'down'); return; }
     const hit = settleAddress(idx, r);
-    if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; renderAddr(); return; }
+    if (hit.kind === 'none') { S.ui.addrMsg = 'We couldn’t tell which place that is. Try your ZIP.'; paintAddr(); return; }
     S.ui.addrOpen = false; S.ui.addrMsg = null; S.zipErr = '';
     if (hit.zip) S.zip = hit.zip;
     if (hit.kind === 'out') {
@@ -442,7 +463,7 @@ export async function runAddress(addr: string): Promise<void> {
       S.ui.addrMsg = r.state && st && ids.every((id) => idx.places[id].state !== r.state)
         ? `That address is outside ${idx.states[st]?.name || st}. Check the ZIP, or pick a place below.`
         : 'That address didn’t match one of these places. Pick one, or “I’m not sure”.';
-      renderAddr(); return;
+      paintAddr(); return;
     }
     const zip = S.zipChoice.zip;
     const asked = S.zipChoice;

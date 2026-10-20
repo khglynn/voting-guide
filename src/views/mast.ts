@@ -6,7 +6,7 @@ import { esc, fmtDate, todayISO } from '../util';
 import { ext, isOpen, askCityURL, formURL, creditHTML } from './common';
 import { countyName } from './ledger';
 import { doorPicksHTML, placeLine } from './setup';
-import { stateName } from '../geo';
+import { stateName, tidyAddress } from '../geo';
 import { pageWalk, decisionItems } from '../ballot';
 
 function electionDate(): string {
@@ -33,8 +33,18 @@ function tryBanner(): string {
   return S.tryMode ? `<p class="trybar" role="status">Demo: “${esc(S.tryMode)}”. Nothing here is saved. <a href="${esc(location.pathname)}">Exit demo</a></p>` : '';
 }
 
+/* The address form. When the Census matched more than one address, "Which one is yours?" takes its
+   place: each match is a button, and "None of these" brings the form back with what you typed. */
 export function addrHTML(forPlaces = false): string {
   if (!S.ui.addrOpen) return '';
+  const which = S.ui.addrWhich;
+  if (which && which.length) {
+    return `<div class="addr addr-which" role="group" aria-labelledby="aw-h">
+    <p id="aw-h"><b>Which one is yours?</b></p>
+    <div class="opts">${which.map((r, i) => `<button class="opt" type="button" data-act="addr-which" data-i="${i}" data-fk="aw-${i}"><b>${esc(tidyAddress(r.matched))}</b></button>`).join('')}</div>
+    <div class="row-btns"><button class="mini quiet" type="button" data-act="addr-again" data-fk="aw-none">None of these</button></div>
+  </div>`;
+  }
   return `<form class="addr" data-form="addr" novalidate>
     <label for="addr-in"><b>Street address</b></label>
     <input id="addr-in" name="addr" data-fk="addr" autocomplete="street-address" placeholder="Street, city and ZIP" ${S.ui.addrBusy ? 'disabled' : ''}>

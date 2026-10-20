@@ -156,6 +156,12 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('deshout: "A YES vote" still does', d('A YES vote lets the city sell bonds.') === 'A yes vote lets the city sell bonds.');
     check('deshout: NO at the start of a clause is "No"', d('Special taxes need two-thirds. NO means they still need a simple majority.') === 'Special taxes need two-thirds. No means they still need a simple majority.');
     check('deshout: real acronyms and quoted ballot words stay', d('A NO vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.') === 'A no vote keeps the ACC tax; the US rate and "NO on Prop A" stay as written.');
+    // Review, Oct 20: the LA County GOP's "Explicit NO recommendation" (a pick to remove a justice)
+    // came out "Explicit no recommendation", which reads as no stand at all.
+    const gop = 'The party’s public lookup lists this choice. Its source label is: Explicit NO recommendation for every named justice in this record.';
+    check('deshout: "NO recommendation" (a pick of no) never becomes "no recommendation"', d(gop) === gop, d(gop));
+    check('deshout: NO before position, endorsement or stand stays too, even beside a shouted word', d('NOTE: the board gave a NO endorsement and a NO position.') === 'Note: the board gave a NO endorsement and a NO position.', d('NOTE: the board gave a NO endorsement and a NO position.'));
+    check('deshout: a vote of no still reads "no" ("Recommends NO on", "Measure FD: NO.")', d('Recommends NO on all seven questions.') === 'Recommends no on all seven questions.' && d('Its lookup lists Measure FD: NO.') === 'Its lookup lists Measure FD: No.', `${d('Recommends NO on all seven questions.')} | ${d('Its lookup lists Measure FD: NO.')}`);
     // Every measure on every ballot: its yes and no meanings never shout YES or NO.
     const QUOTED = /“[^”]*”|"[^"]*"|(^|[\s(])'[^']*'(?=[\s.,;:)!?]|$)/g;
     const shouts = [];

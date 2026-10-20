@@ -654,7 +654,8 @@ b, strong { font-weight: 600; }
 .cheat-head h2 { font-family: var(--f-display); font-size: 38px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; }
 .cheat-head .sub { font-size: 15px; color: var(--muted); margin-top: 6px; }
 .remind { margin-top: 12px; padding: 10px 12px; background: var(--dusk); color: var(--on-dusk); font-size: 14.5px; line-height: 1.4; border-radius: 2px; display: grid; gap: 4px; }
-.cheat-head .save-go { margin-top: 8px; padding: 8px 12px; font-size: 14.5px; line-height: 1.4; }
+/* On the sheet's own paper, which stays light in dark mode: no fill of its own, the sheet's dusk rule. */
+.cheat-head .save-go { margin-top: 8px; padding: 6px 12px; font-size: 14.5px; line-height: 1.4; background: none; border-left-color: var(--dusk); }
 .save-go b { font-weight: 600; }
 .cs-table { width: 100%; border-collapse: collapse; }
 .cs-table th, .cs-table td { text-align: left; vertical-align: top; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }

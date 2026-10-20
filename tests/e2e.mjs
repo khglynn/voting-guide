@@ -1069,6 +1069,10 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   check('Dark mode: the page goes dark', bg === 'rgb(22, 29, 26)', bg);
   await noSideScroll(page, 'Dark mode');
   await shot(page, '07-dark');
+  // My plan stays light paper in dark mode: its save line takes no dark fill, so its dark ink reads.
+  await tap(page, '.foot [data-act="cheat"]');
+  const sg = await page.$eval('#cheat .save-go', (e) => [getComputedStyle(e).backgroundColor, getComputedStyle(e).color]);
+  check('Dark mode: My plan’s save line is dark ink on the sheet, no dark fill', sg[0] === 'rgba(0, 0, 0, 0)' && sg[1] === 'rgb(31, 38, 35)', sg.join(' / '));
   await ctx.close();
 }
 {

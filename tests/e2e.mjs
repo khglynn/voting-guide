@@ -850,6 +850,27 @@ for (const width of [380, 1280]) {
   await ctx.close();
 }
 
+// Review, Oct 20: on Austin, Next opened the folded "Other school districts that touch Austin" races
+// one by one (seven taps through Round Rock, Pflugerville and Leander ISD). The fold says "Open only
+// if one of them is yours", so Next passes it by while it is closed and goes on to the measures.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  await page.evaluate(() => window.scrollTo(0, 0));
+  const opened = [];
+  for (let i = 0; i < 45; i++) {
+    await tap(page, '[data-act="next"]');
+    const o = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => `${e.dataset.fold ? 'fold:' : ''}${e.dataset.item || `q:${e.dataset.q}`}`));
+    opened.push(o.join('+'));
+    if (o.some((k) => /^tx-austin-prop/.test(k))) break;
+  }
+  const inFold = opened.filter((k) => k.startsWith('fold:'));
+  check('Next on Austin: never opens a race inside the closed "Other school districts" fold', inFold.length === 0, inFold.join(', '));
+  check('Next on Austin: goes on past the fold to the measures', opened.some((k) => /^tx-austin-prop/.test(k)) && !(await page.$('.grp.oth [aria-expanded="true"]')), opened.slice(-4).join(' > '));
+  noErrors(page, 'Next on Austin');
+  await ctx.close();
+}
+
 // Walks, Oct 20: a cheat-sheet line for an unanswered district question was dead. It now goes back
 // to the ballot with that question open.
 {

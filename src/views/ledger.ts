@@ -270,17 +270,20 @@ export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || 
 /* Every choice and district question in the order the page draws them: sections in SECTIONS
    order, then rows in each section's own order (rowsHTML keeps it; unopposed races, which are not
    choices, are the only rows it moves). "N of M decided" in the bar walks this list. key is an
-   item id or "q:<group key>". */
-export function pageOrder(): { key: string; done: boolean }[] {
+   item id or "q:<group key>". `folded` marks the other school districts' races while their fold
+   is closed: the page draws none of them, so the walk passes them by. */
+export function pageOrder(): { key: string; done: boolean; folded?: boolean }[] {
   const b = S.ballot!;
   const by = entriesBySection();
-  const out: { key: string; done: boolean }[] = [];
+  const oth = otherSchools(by.get('school') || []);
+  const shut = new Set(othOpen(oth) ? [] : oth);
+  const out: { key: string; done: boolean; folded?: boolean }[] = [];
   for (const [sec] of SECTIONS) {
     for (const e of by.get(sec) || []) {
       if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false }); continue; }
       if (e.t !== 'item') continue;
       const s = status(b.byId.get(e.id)!);
-      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open' });
+      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open', ...(shut.has(e) ? { folded: true } : {}) });
     }
   }
   return out;

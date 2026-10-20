@@ -461,6 +461,18 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check(`next: ${pid} walks every choice and every district question, once`, want === got && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
       check(`next: ${pid} starts with the first thing the page shows`, po.length > 0 && po[0].key === bl.SECTIONS.map(([k]) => (bl.entriesBySection().get(k) || []).find((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))))).filter(Boolean).map((e) => (e.t === 'question' ? `q:${e.group.key}` : e.id))[0], po[0] && po[0].key);
     }
+    // Review, Oct 20: the walk opened Round Rock, Pflugerville and Leander ISD seats one by one on
+    // an Austin ballot, though their fold is closed and says "Open only if one of them is yours".
+    // Closed, the fold's races are marked folded (A.next skips them); open, they are walked.
+    open('TX', ['austin-tx']);
+    S.ui.row = null; S.ui.keep = null; S.ui.unfolded.delete(ledger.OTH_KEY);
+    const oth = ledger.otherSchools(bl.entriesBySection().get('school') || []).map((e) => e.id);
+    const shut = ledger.pageOrder();
+    check('next: Austin\'s closed "Other school districts" fold has races to skip', oth.length >= 3 && oth.includes('tx-rrisd-trustee-3'), oth.join(', '));
+    check('next: while that fold is closed, the walk passes every one of its races by', shut.filter((x) => x.folded).map((x) => x.key).sort().join() === [...oth].sort().join() && shut.filter((x) => !x.folded).every((x) => !oth.includes(x.key)));
+    S.ui.unfolded.add(ledger.OTH_KEY);
+    check('next: opened, the fold\'s races are walked in place', ledger.pageOrder().every((x) => !x.folded) && oth.every((id) => ledger.pageOrder().some((x) => x.key === id)));
+    S.ui.unfolded.delete(ledger.OTH_KEY);
   }
 
   /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------

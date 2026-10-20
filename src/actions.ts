@@ -80,11 +80,14 @@ A.goto = (d) => { openAt(d.q ? `q:${d.q}` : d.id!); };
 /* "N of M decided": the next undecided row or district question after where you are, in the
    order the page draws them, wrapping to the first. "Where you are" is the last row at or above
    the reading line (just under the lens bar while it sticks), and never before the row you have
-   open, so a row parked under a tall bar is not picked again. */
+   open, so a row parked under a tall bar is not picked again. The closed "Other school districts"
+   fold says "Open only if one of them is yours", so the walk skips its races; only when nothing
+   else is left does it open the first of them. */
 A.next = () => {
-  const order = pageOrder();
+  const all = pageOrder();
+  const order = all.filter((x) => !x.folded);
   const left = order.filter((x) => !x.done);
-  if (!left.length) return;
+  if (!left.length) { const f = all.find((x) => !x.done); if (f) openAt(f.key); return; }
   const lens = $('#lensbar');
   const lr = lens ? lens.getBoundingClientRect() : null;
   const line = (lens && lr && getComputedStyle(lens).position === 'sticky' && lr.top <= 1 ? lr.bottom : 0) + 8;

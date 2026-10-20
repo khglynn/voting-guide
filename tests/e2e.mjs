@@ -1184,6 +1184,46 @@ const touchAt = async (page, sel) => {
   await ctx.close();
 }
 
+/* "No endorsements" on the first page with a ballot that has choices of its own (review, Oct 20):
+   the chip shows the ballot's choice, so a tap turns that over; and the next new ZIP takes what the
+   page showed. */
+{
+  const { ctx, page } = await newPage();
+  const none = () => page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed');
+  const papers = () => page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed');
+  await openBallot(page, '80205');
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="no-ends"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  await tap(page, '[data-act="change-place"]');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('No endorsements, back on the first page: the chip shows the ballot\'s choice', (await none()) === 'true' && (await papers()) === 'false');
+  await page.fill('#zip', '78704');
+  await page.waitForFunction(() => /Austin/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
+  check('No endorsements: a new ZIP from there keeps what the page showed', (await none()) === 'true' && (await papers()) === 'false', `${await none()} ${await papers()}`);
+  await page.fill('#zip', '80205');
+  await page.waitForFunction(() => /Denver/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
+  await tap(page, '#setup [data-act="no-ends"]');
+  check('No endorsements: on a saved ballot\'s first page, one tap turns it off and the newspapers come back', (await none()) === 'false' && (await papers()) === 'true', `${await none()} ${await papers()}`);
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  check('No endorsements: and the ballot shows the newspapers\' picks', /Newspapers and guides/.test(await text(page, '.picks-line span')), await text(page, '.picks-line span'));
+  // The other way: chosen before the ZIP, then a ZIP whose saved ballot uses the newspapers.
+  await tap(page, '[data-act="change-place"]');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  await page.fill('#zip', '');
+  await page.waitForFunction(() => !document.querySelector('.door-place'));
+  if ((await none()) !== 'true') await tap(page, '#setup [data-act="no-ends"]');
+  await page.fill('#zip', '80205');
+  await page.waitForFunction(() => /Denver/.test(document.querySelector('.door-place')?.textContent || ''), null, { timeout: 15000 });
+  const shown = await none();
+  await tap(page, '#setup [data-act="no-ends"]');
+  check('No endorsements: chosen before a ZIP whose ballot uses the newspapers, the chip shows off, and one tap turns it on', shown === 'false' && (await none()) === 'true' && (await papers()) === 'false', `${shown}, then ${await none()} ${await papers()}`);
+  noErrors(page, 'No endorsements, first page');
+  await ctx.close();
+}
+
 /* ---------- common questions: quick answers with buttons (Kevin, Oct 20) ----------
    "They should be quick answers with things that you can do." An opened question shows one
    short line and its buttons; the full answer, steps and source wait behind "More". Each common

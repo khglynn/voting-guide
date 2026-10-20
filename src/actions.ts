@@ -416,7 +416,8 @@ A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); rend
    and guides come back. Any other chip, or a party, ends it on its own. */
 A['no-ends'] = () => {
   if (S.view !== 'ballot') {
-    const on = !doorNone();
+    // With a ballot found, the chip shows that ballot's choice (it may have its own): turn that over.
+    const on = doorBallot() ? !noEndorsements() : !doorNone();
     S.door.chips = { papers: !on, progressive: false, conservative: false };
     S.door.party = null;
     if (on) S.door.fill = false;

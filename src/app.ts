@@ -10,7 +10,7 @@ import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { addressCount } from './views/ledger';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
-import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, CHIPS } from './model/lens';
+import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, noEndorsements, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -128,6 +128,17 @@ function applyDoor(b: Ballot): void {
   const p = S.door.party;
   if (p && partiesOnBallot(b).some((x) => x.party === p)) setParty(b, p);
 }
+/* The other way: the first page showing a ballot with choices of its own shows those, so the
+   choices kept for the next new ZIP become the ones on screen. A chip this ballot hides (no group
+   of that kind made picks here) keeps what it was. */
+function doorFromBallot(b: Ballot): void {
+  if (noEndorsements()) { S.door.chips = { papers: false, progressive: false, conservative: false }; S.door.party = null; return; }
+  for (const c of CHIPS) {
+    const st = chipState(b, c.key);
+    if (st !== 'empty' || c.key === 'papers') S.door.chips[c.key] = st === 'on' || st === 'some';
+  }
+  S.door.party = S.b.party;
+}
 /* Loads race: a ZIP typed again, or cleared, while the last one was still loading. Only the newest
    load lands; `previewing` is the one the first page waits on when "Show my ballot" comes early. */
 let loadSeq = 0;
@@ -193,6 +204,7 @@ async function loadBallot(st: string, placeIds: string[], zip: string, opts: Ope
     if (S.tryMode) applyScenario(S.tryMode);
     const door = !opts.share && !opts.noSetup && (!!opts.door || (!S.tryMode && needsSetup(existing)));
     if (door && !S.tryMode && needsSetup(existing)) applyDoor(ballot);
+    else if (door) doorFromBallot(ballot);
     if (door) S.zip = zip;
     S.view = door ? 'setup' : 'ballot';
     S.zipChoice = null;

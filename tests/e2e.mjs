@@ -2040,6 +2040,48 @@ const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((re
   await ctx.close();
 }
 {
+  // A band tapped while a row above it is in its beat: the row goes at once, and the band under
+  // your finger stays where it was, for its count and for a folded band's title.
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  // City's one race decided folds it to its band; one measure decided gives Measures its "Show".
+  for (const sec of ['city', 'measures']) {
+    const id = await page.evaluate((s) => document.querySelector(`#sec-${s} .row[data-item][data-undecided]`).dataset.item, sec);
+    await openRow(page, id);
+    await settle(page);
+    await page.locator(`#i-${id} [data-act="pick"]`).first().tap();
+    await page.waitForTimeout(1300);
+    await settle(page);
+  }
+  check('Beat under a band: City folded to its band, Measures has 1 decided', !!(await page.$('#sec-city.folded')) && /^1 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), `${await text(page, '#sec-city .sec-r')} | ${await text(page, '#sec-measures .sec-r')}`);
+  const held = async (band, target) => {
+    const left = await page.evaluate(() => [...document.querySelectorAll('#sec-judicial .row[data-item][data-undecided]')].map((r) => r.dataset.item));
+    const id = left[left.length - 2];
+    await openRow(page, id);
+    await settle(page);
+    await page.evaluate((b) => { const h = document.querySelector(`#sec-${b} > .sec-h`); window.scrollBy(0, h.getBoundingClientRect().top - 560); }, band);
+    await page.waitForTimeout(100);
+    await page.locator(`#i-${id} [data-act="pick"]`).first().tap();
+    await page.waitForTimeout(300);
+    const beat = !!(await page.$(`#i-${id}[data-beat]`));
+    const b0 = await page.$eval(`#sec-${band} > .sec-h`, (e) => e.getBoundingClientRect().top);
+    await page.locator(target).first().tap();
+    const b1 = await page.$eval(`#sec-${band} > .sec-h`, (e) => e.getBoundingClientRect().top);
+    await settle(page);
+    return { beat, b0, b1, gone: !(await page.$(`#i-${id}`)) };
+  };
+  const c = await held('measures', '#sec-measures [data-act="sec-count"]');
+  check('Beat under a band: tapping its count ends the beat and the band stays where it was', c.beat && c.gone && Math.abs(c.b1 - c.b0) <= 1 && (await text(page, '#sec-measures .sec-edit')) === 'Hide', `beat ${c.beat}, ${c.b0} then ${c.b1}`);
+  const f = await held('city', '#sec-city [data-act="sec"]');
+  check('Beat under a band: tapping a folded band’s title does the same', f.beat && f.gone && Math.abs(f.b1 - f.b0) <= 1 && !(await page.$('#sec-city.folded')), `beat ${f.beat}, ${f.b0} then ${f.b1}`);
+  noErrors(page, 'Beat under a band');
+  await ctx.close();
+}
+{
   // Reduced motion: no animation; the row just goes after its beat.
   const { ctx, page } = await newPage({ reducedMotion: 'reduce' });
   await openBallot(page, '80205');

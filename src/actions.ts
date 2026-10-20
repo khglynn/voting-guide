@@ -260,7 +260,8 @@ A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk=
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
 A.sec = (d, btn) => {
   const s = d.sec as SectionKey;
-  endBeat();
+  // A row in its beat goes first, with the band you tapped held where it is (it may sit under it).
+  anchored(() => endBeat(), `sec-${s}`);
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   // Under "Hide races I've decided" a folded band opens as its count does: with its decided rows.
@@ -285,7 +286,7 @@ A.sec = (d, btn) => {
    visit; the filter itself is what's saved. */
 A['sec-count'] = (d) => {
   const s = d.sec as SectionKey;
-  endBeat();
+  anchored(() => endBeat(), `sec-${s}`);
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   const entries = entriesBySection().get(s) || [];

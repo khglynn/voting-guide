@@ -1,6 +1,7 @@
 /* Voting guide: the ledger in worn green (v4, Oct 20 2026). One page, three materials, each true to itself:
      paper  real sheets rendered in Blender (scripts/paper): the torn notice for your next step, cut section
-            strips, the cheat sheet torn off a pad, the crowd on the share step. Everything else sits on recycled stock.
+            strips, the cheat sheet torn off a pad, the crowd on the share step, the covered states under the first
+            page's credits. Everything else sits on recycled stock.
      ink    headings printed in one green ink: Archivo condensed, crisp letters, a few specks where the ink missed
      pen    rules, grids, boxes and ticks drawn fine and even
    Color carries meaning only, one job each (token names kept from v3):
@@ -751,6 +752,10 @@ b, strong { font-weight: 600; }
    (crowd.webp: 1200x480, heads from row 144), so the box starts just above the heads and the
    image, drawn at the same size as before (139% of the box), lets that air fall off the top. */
 .crowd { height: clamp(130px, 36vw, 173px); margin-top: 18px; margin-bottom: -4px; background: var(--r-crowd) center bottom / auto 139% no-repeat; }
+/* The covered states cut from paper, under the first page's credits. Decoration only. */
+.states { display: block; max-width: 480px; margin: 18px auto 0; }
+.states img { display: block; width: 100%; height: auto; }
+@media print { .states { display: none; } }
 .voted-head .kick { font-family: var(--f-display); font-size: 22px; font-weight: 800; font-variation-settings: "wdth" 78; color: var(--gold-ink); margin-top: 6px; }
 
 /* ---------- how this guide works: one row, folded until you open it ---------- */

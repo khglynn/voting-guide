@@ -68,7 +68,7 @@ async function editFill(page) {
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   return n;
 }
-/* The menu: a sheet the bar's "☰ N of M" opens, and from 1000px a rail in the left margin too. */
+/* The menu: a sheet the bar's "☰ N of M" opens, and from 1180px a rail in the left margin too. */
 async function menu(page) { await tap(page, '.foot [data-act="toc"]'); await page.waitForSelector('.sheet-panel.toc'); }
 /* The menu's "Next up": the rail's where it shows, else the sheet's. */
 async function next(page) {
@@ -612,7 +612,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.evaluate(() => document.fonts.ready);
   await shot(page, '05b-my-plan');
   check('My plan: titled "Your voting plan"', (await text(page, '#cs-h')) === 'Your voting plan');
-  check('My plan: Texas says save it, and print it or write it down', (await text(page, '#cheat .save-go')) === 'Save it before you go. Phones aren’t allowed in the voting room in Texas, so print it or write it down.', await text(page, '#cheat .save-go'));
+  check('My plan: Texas says save it, and print it or write it down', (await text(page, '#cheat .save-go')) === 'Save it before you go. Print it or write it down.', await text(page, '#cheat .save-go'));
   check('My plan: in person, the reminder keeps the booth line', /In the booth:/.test(await text(page, '#cheat .remind')));
   check('My plan: the print sheet has the title but no save line', /Your voting plan/.test(await text(page, '#r-print')) && !(await page.$('#r-print .save-go')));
   check('My plan: nothing in all caps', (await upperCased(page)).length === 0);
@@ -793,7 +793,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 {
-  // From 1000px the menu stands as a rail in the left margin, clear of the ballot.
+  // From 1180px the menu stands as a rail in the left margin, clear of the ballot.
   const { ctx, page } = await newPage({ viewport: { width: 1280, height: 900 }, isMobile: false, deviceScaleFactor: 1 });
   await openBallot(page, '78704');
   await shot(page, '09-rail-1280');
@@ -810,7 +810,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Rail: a pick updates its counts with the bar', (await leftOf()) !== l0 && (await text(page, '.bar-txt')) !== before, `${l0} -> ${await leftOf()}`);
   await page.setViewportSize({ width: 800, height: 900 });
   await page.waitForTimeout(200);
-  check('Rail: under 1000px it goes, the bar’s menu stays', !(await page.$('.rail')) && !!(await page.$('.foot [data-act="toc"]')));
+  check('Rail: under 1180px it goes, the bar’s menu stays', !(await page.$('.rail')) && !!(await page.$('.foot [data-act="toc"]')));
   noErrors(page, 'Rail');
   await ctx.close();
 }

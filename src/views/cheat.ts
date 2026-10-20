@@ -68,7 +68,7 @@ export function saveLine(t = todayISO()): string | null {
   const phase = nextStep(b.howto, t).phase;
   if (phase === 'closed' || phase === 'polls_closed') return null;
   const phones = b.howto.in_the_booth.phones;
-  if (phones === 'prohibited') return `Phones aren’t allowed in the voting room in ${b.stateName}, so print it or write it down.`;
+  if (phones === 'prohibited') return 'Print it or write it down.';
   return phones === 'allowed' ? 'Print it, copy it, or take a screenshot.' : 'Print it or copy it.';
 }
 

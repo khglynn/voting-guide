@@ -1056,7 +1056,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     open('TX', ['austin-tx']);
     const sc = cheat.cheatHTML(false);
     check('My plan: titled "Your voting plan", on screen and in print', /<h2 id="cs-h">Your voting plan<\/h2>/.test(sc) && /<h2 id="cs-p">Your voting plan<\/h2>/.test(cheat.cheatHTML(true)) && !/cheat sheet/i.test(sc));
-    check('My plan: Texas bans phones in the voting room, so "print it or write it down"', cheat.saveLine('2026-10-20') === 'Phones aren’t allowed in the voting room in Texas, so print it or write it down.' && /<b>Save it before you go\.<\/b> Phones aren’t allowed in the voting room in Texas, so print it or write it down\./.test(sc.replace(/&#39;/g, '’')));
+    check('My plan: Texas bans phones in the voting room, so "print it or write it down"', cheat.saveLine('2026-10-20') === 'Print it or write it down.' && /<b>Save it before you go\.<\/b> Print it or write it down\./.test(sc.replace(/&#39;/g, '’')));
     check('My plan: the save line sits under the reminder, on screen only', sc.indexOf('class="remind"') < sc.indexOf('save-go') && !/save-go/.test(cheat.cheatHTML(true)));
     check('My plan: in person, the reminder keeps the booth rules', cheat.essentials('2026-10-20').some((x) => /^In the booth:/.test(x)));
     check('My plan: once voting has closed, no save line', cheat.saveLine('2026-11-04') === null);

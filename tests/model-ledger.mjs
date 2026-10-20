@@ -1495,18 +1495,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
 
     // The other ways the research writes Census districts (Oct 20): each is read, so an address settles
     // the House and legislature in Atlanta, Seattle, Chicago, Portland and New York too. Washington's
-    // two representatives per district stay unread: one answer would show only one of the two.
+    // two representatives per district are both its lower-house district: one answer shows both.
     const kd = (office, district) => { const r = bl.contestDistrict({ office, district }); return `${r.kind}:${r.n}`; };
     const kinds = [kd('U.S. Representative', 'CD-37'), kd('U.S. House of Representatives', 'GA-5'), kd('U.S. Representative', 'NY-13'), kd('Georgia State Senate', 'Senate District 35'),
       kd('Georgia House of Representatives', 'House District 53'), kd('State Senator', 'LD-32'), kd('House of Delegates', 'HD-43A'),
       kd('State Representative', 'LD-32 Position 1'), kd('County Commissioner', 'TX-3'), kd('State Board of Education', 'District 5')];
-    check('address: districts written other ways are read, and nothing else is', kinds.join() === 'cd:37,cd:5,cd:13,upper:35,lower:53,upper:32,lower:43,null:null,null:null,null:null', kinds.join());
+    check('address: districts written other ways are read, and nothing else is', kinds.join() === 'cd:37,cd:5,cd:13,upper:35,lower:53,upper:32,lower:43,lower:32,null:null,null:null', kinds.join());
     open('GA', ['atlanta-ga']);
     const atl = address.setFromAddress(S.ballot, S.b, { cd: 5, upper: 35, lower: 53 });
     check('address: Atlanta settles Congress, the state senate and the state house', S.b.districts['federal|U.S. House of Representatives'] === 'ga-us-house-5' && S.b.districts['state|Georgia State Senate'] === 'ga-sd-35' && S.b.districts['state|Georgia House of Representatives'] === 'ga-hd-53' && atl.length === 3, atl.join(' | '));
     open('WA', ['seattle-wa']);
     const sea = address.setFromAddress(S.ballot, S.b, { cd: 7, upper: 32, lower: 32 });
-    check('address: Seattle settles Congress and the state senator, and leaves the two representative seats to the voter', S.b.districts['federal|U.S. Representative'] === 'wa-us-house-7' && S.b.districts['state|State Senator'] === 'wa-sd-32' && S.b.districts['state|State Representative'] === undefined, sea.join(' | '));
+    check('address: Seattle settles Congress, the state senator and the state house', S.b.districts['federal|U.S. Representative'] === 'wa-us-house-7' && S.b.districts['state|State Senator'] === 'wa-sd-32' && ['wa-hd-32-1', 'wa-hd-32-2'].includes(S.b.districts['state|State Representative']) && sea.join(' | ') === 'U.S. Representative, District 7 | State Senator, District 32 | State Representative, District 32', sea.join(' | '));
+    const stateRows = (bl.entriesBySection().get('state') || []).filter((e) => e.t === 'item').map((e) => e.id);
+    check('address: both of District 32’s representative seats are on the ballot, and no other district’s', stateRows.includes('wa-hd-32-1') && stateRows.includes('wa-hd-32-2') && !stateRows.some((id) => /^wa-hd-(?!32-)/.test(id)), stateRows.filter((id) => /^wa-hd/.test(id)).join());
+    S.b.districts['state|State Representative'] = 'wa-hd-36-2';
+    const by36 = (bl.entriesBySection().get('state') || []).filter((e) => e.t === 'item' && /^wa-hd/.test(e.id)).map((e) => e.id);
+    check('districts: answering with either seat of a two-seat district shows both', by36.join() === 'wa-hd-36-1,wa-hd-36-2', by36.join());
 
     // The address box: before, after (this visit, with what was found), after a reload (no address).
     const strip = (h) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();

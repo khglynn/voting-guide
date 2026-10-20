@@ -8,7 +8,7 @@ import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
   SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
-  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict,
+  OTH_KEY, otherSchools, othOpen, unclaimed, pageWalk, contestDistrict, sameSeat,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
@@ -158,12 +158,15 @@ function questionBodyHTML(g: Group): string {
   // In number order, as a sample ballot lists them (the data keeps its own order: 10, 11, 27, 37, 31).
   const num = (c: Contest) => contestDistrict(c).n ?? Infinity;
   const members = g.members.map((id) => b.byId.get(id) as Contest).sort((x, y) => num(x) - num(y));
+  // Two seats of one district ("District 32, Position 1" and "Position 2") are one choice: the district.
+  const choices = members.filter((c, k) => !members.slice(0, k).some((x) => sameSeat(x, c)));
+  const seatless = (l: string) => l.replace(/,\s*Position \d+$/i, '');
   const finders = findersFor(g);
   const sb = sampleBallot();
   return `<div class="ob dq">
     <h3 class="dq-h">Pick your ${esc(cleanOffice(g.office))} district</h3>
     <p class="ob-lede">${esc(where())} has ${members.length} of these districts. Your sample ballot lists yours.</p>
-    <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${members.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
+    <div class="opts">${censusSettles(members[0]) && !S.b.addrNote ? '<button class="opt opt-addr" data-act="addr-open" data-fk="dq-addr"><b>Use my address</b><small>The Census lookup finds it for you</small></button>' : ''}${choices.map((c) => { const [l, sub] = optionLabel(c); return `<button class="opt" data-act="district" data-g="${esc(g.key)}" data-v="${esc(c.id)}" data-fk="d-${esc(c.id)}"><b>${esc(choices.length < members.length ? seatless(l) : l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</button>`; }).join('')}
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="*" data-fk="d-${hash(g.key)}-x"><b>Not sure? Skip for now</b><small>Show all ${members.length}, each marked “Maybe on your ballot”</small></button>
       <button class="opt opt-unsure" data-act="district" data-g="${esc(g.key)}" data-v="none" data-fk="d-${hash(g.key)}-n"><b>${esc(noneLabel(g))}</b></button></div>
     <p class="dq-help">${[...finders.map((f) => ext(f.url, f.label)), sb ? ext(sb.url, sb.label) : ''].filter(Boolean).join('<span class="dot" aria-hidden="true"> · </span>')}</p>
@@ -173,7 +176,7 @@ function glineHTML(g: Group): string {
   const b = S.ballot!;
   const ans = S.b.districts[g.key];
   // "none": you said none of them is yours, or your address matched none of them.
-  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? optionLabel(c)[0] : ''; })();
+  const v = ans === '*' ? `showing all ${g.members.length} districts` : ans === 'none' ? 'Not on your ballot' : (() => { const c = b.byId.get(ans) as Contest | undefined; return c ? (g.members.some((m) => sameSeat(c, b.byId.get(m))) ? optionLabel(c)[0].replace(/,\s*Position \d+$/i, '') : optionLabel(c)[0]) : ''; })();
   return `<li class="row gline" id="${qId(g)}"><div class="gl-in"><span class="gl-t">${esc(cleanOffice(g.office))}: <b>${esc(v)}</b></span>
     <button class="linkbtn" data-act="district-change" data-g="${esc(g.key)}" data-fk="dc-${qId(g)}">Change</button></div></li>`;
 }

@@ -44,9 +44,9 @@ export interface Ballot {
    (upper) or the state house or assembly (lower), with its number. The research mostly writes "CD-37",
    "SD-14", "HD-49" or "AD-51", and a few places another way (Oct 20): a U.S. House seat as "GA-5" or
    "NY-13", a legislature seat spelled out ("Senate District 35", "House District 53"), and Washington's
-   legislative districts, which elect one senator each ("LD-32"). Washington's two representatives
-   per district ("LD-32 Position 1" and "Position 2") stay unread: one district answer shows one race,
-   and both are on that district's ballot. Anything else is no Census district. */
+   legislative districts, which elect one senator each ("LD-32") and two representatives ("LD-32
+   Position 1" and "Position 2", both on that district's ballot, so one answer shows both: sameSeat).
+   Anything else is no Census district. */
 const US_HOUSE = /\bU\.?\s?S\.?\s+(?:House|Representative)|\bCongress/i;
 const districtNum = (c: Contest): { kind: Group['kind']; n: number | null } => {
   const d = (c.district || '').trim();
@@ -64,8 +64,15 @@ const districtNum = (c: Contest): { kind: Group['kind']; n: number | null } => {
   if (m) return { kind: 'lower', n: +m[1] };
   m = d.match(/^LD-?\s*(\d+)$/i);
   if (m && /senat/i.test(c.office)) return { kind: 'upper', n: +m[1] };
+  m = d.match(/^LD-?\s*(\d+)\s+Position\s+\d+$/i);
+  if (m && /representative|house/i.test(c.office)) return { kind: 'lower', n: +m[1] };
   return { kind: null, n: null };
 };
+/* Two seats of one district in a district question: Washington's "LD-32 Position 1" and "LD-32
+   Position 2" are both on every 32nd District ballot, so answering the question with one puts both
+   on (review, Oct 20: picking a position hid the other one). */
+const seatBase = (c: Item | undefined): string => (c && c.kind === 'contest' && /\s+Position\s+\d+$/i.test(c.district || '') ? (c.district || '').replace(/\s+Position\s+\d+$/i, '') : '');
+export const sameSeat = (a: Item | undefined, c: Item | undefined): boolean => !!a && !!c && a !== c && !!seatBase(a) && seatBase(a) === seatBase(c);
 export const contestDistrict = districtNum;
 
 /* A single regional race a place's own research listed, whose scope names that place's
@@ -293,7 +300,7 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
         seenGroup.add(gk);
         push(sec, ans === undefined ? { t: 'question', group: g } : { t: 'groupline', group: g });
       }
-      if (ans === '*' || ans === it.id) push(sec, { t: 'item', id: it.id });
+      if (ans === '*' || ans === it.id || (ans !== 'none' && sameSeat(b.byId.get(ans), it))) push(sec, { t: 'item', id: it.id });
       continue;
     }
     if (b.mayApply.has(it.id) && S.b.notMine.includes(it.id)) { push(sec, { t: 'notmine', id: it.id }); continue; }

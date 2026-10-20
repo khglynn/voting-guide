@@ -2,7 +2,7 @@
    the buttons to decide. One tap deeper ("Full details") is the reader. */
 import type { Candidate, Contest, Endorser, Item, Measure } from '../types';
 import { S } from '../state';
-import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds, contestDistrict } from '../ballot';
+import { status, isRCV, isMultiSeat, isMultiJudge, isPartisan, rankMax, ranksOf, ordinal, chosen, chosenIds, contestDistrict, sameSeat } from '../ballot';
 import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
@@ -55,8 +55,11 @@ function whereHTML(it: Item): string {
   if (g) {
     const ans = S.b.districts[g];
     const grp = b.groups.find((x) => x.key === g)!;
-    // Who chose the district: the address lookup, or you.
-    if (ans === it.id) return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(seatLabel(it) || 'this district')}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
+    // Who chose the district: the address lookup, or you. A district with two seats is one answer.
+    if (ans === it.id || (ans && ans !== '*' && ans !== 'none' && sameSeat(b.byId.get(ans), it))) {
+      const where = (seatLabel(b.byId.get(ans) as Contest) || 'this district').replace(/,\s*Position \d+$/i, '');
+      return `<p class="ob-meta">${(S.b.addrSet || []).includes(g) ? 'Your address puts you in' : 'You said you’re in'} ${esc(where)}. <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Change</button></p>`;
+    }
     return `<p class="ob-meta"><b>Maybe on your ballot.</b> You weren’t sure of your ${esc(grp.office)} district, so all ${grp.members.length} show. ${escP(it.scope_plain)} <button class="linkbtn" data-act="district-change" data-g="${esc(g)}">Choose one</button></p>`;
   }
   if (b.onlyIn[it.id]) return `<p class="ob-meta">Only on ballots in ${esc(b.onlyIn[it.id].join(', '))}. <button class="linkbtn" data-act="notmine" data-id="${esc(it.id)}">Not on my ballot</button></p>`;

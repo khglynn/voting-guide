@@ -49,20 +49,24 @@ A.row = (d) => {
   renderRow(key, false);
   scrollRowIntoView(key);
 };
-A.goto = (d) => {
-  const id = d.id!;
-  const it = B().byId.get(id);
+/* Open one row on the ballot from anywhere (a cheat-sheet line, a judge's name, the bar): an item
+   id, or "q:<group key>" for a district question. Its section and court group unfold. */
+function openAt(key: string): void {
+  const b = B();
+  const g = key.startsWith('q:') ? b.groups.find((x) => `q:${x.key}` === key) : null;
+  const it = b.byId.get(g ? g.members[0] : key);
   if (!it) return;
   if (S.ui.view !== 'ballot') go('ballot');
   const sec = sectionOf(it);
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
   if (it.kind === 'contest') S.ui.unfolded.add(`${sec}|${courtGroup(it)}`); // its court group, if the section folds into groups
-  S.ui.row = id;
+  S.ui.row = key;
   renderSection(sec);
-  scrollRowIntoView(id, true);
-  $(`[data-fk="row-${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
-};
+  scrollRowIntoView(key, true);
+  $(`[data-fk="row-${CSS.escape(g ? rowEl(key)?.id || '' : key)}"]`)?.focus({ preventScroll: true });
+}
+A.goto = (d) => { openAt(d.q ? `q:${d.q}` : d.id!); };
 A.next = () => {
   const items = decisionItems().filter((i) => !i.done);
   if (!items.length) return;

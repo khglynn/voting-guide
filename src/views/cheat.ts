@@ -11,12 +11,15 @@ import { sectionTitle, otherSchools, othOpen } from './ledger';
 
 /* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
    your ballot" instead of presenting it as certain. */
-interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean; maybe?: boolean }
+interface Line { sec: string; it: Item | null; title: string; label: string | null; note: string; unopposed: boolean; question?: boolean; q?: string; maybe?: boolean }
 
 const rankedList = (it: Item | null): string[] => (it && it.kind === 'contest' && isRCV(it) && S.b.picks[it.id] !== 'SKIP' ? ranksOf(it.id) : []);
 const rankNote = (it: Contest): string => `Ranked choice: rank up to ${it.rank_up_to}`;
 
 const MAYBE = 'If it’s on your ballot';
+/* An unanswered district question: the ballot's own words, and a tap that takes you to it. */
+const Q_SUB = 'Depends on your district';
+const Q_ACT = 'Pick your district';
 
 function lines(): Line[] {
   const b = S.ballot!;
@@ -29,7 +32,7 @@ function lines(): Line[] {
   for (const [k] of SECTIONS) {
     const label = sectionTitle(k);
     for (const e of by.get(k) || []) {
-      if (e.t === 'question') { out.push({ sec: label, it: null, title: e.group.office, label: null, note: 'Depends on your district. Pick it in the guide or check your sample ballot.', unopposed: false, question: true }); continue; }
+      if (e.t === 'question') { out.push({ sec: label, it: null, title: e.group.office, label: null, note: '', unopposed: false, question: true, q: e.group.key }); continue; }
       if (e.t !== 'item') continue;
       const it = b.byId.get(e.id)!;
       const s = status(it);
@@ -74,6 +77,7 @@ export function cheatText(): string {
       if (l.note) out.push(`  Note: ${l.note}`);
       continue;
     }
+    if (l.question) { out.push(`${l.title}: ____ (${Q_SUB.toLowerCase()})`); continue; }
     const short = it && it.kind === 'measure' && it.short_title ? ` (${it.short_title})` : '';
     out.push(`${l.title}${short}: ${l.label || '____'}${l.maybe ? ` (${MAYBE.toLowerCase()})` : ''}`);
     if (it && it.kind === 'contest' && isMultiJudge(it)) {
@@ -92,6 +96,12 @@ function tableHTML(forPrint: boolean): string {
   for (const l of lines()) {
     if (l.unopposed && !forPrint) continue;
     if (l.sec !== sec) { sec = l.sec; rows.push(`<tr class="cs-sec"><th colspan="2" scope="colgroup">${esc(sec)}</th></tr>`); }
+    if (l.question) {
+      // The line goes back to the ballot with that question open, like every other line.
+      const qgo = forPrint ? '' : ` data-act="goto" data-q="${esc(l.q!)}"`;
+      rows.push(`<tr class="cs-q"${qgo}><th scope="row">${esc(l.title)}<span class="cs-sub">${Q_SUB}</span>${qgo ? `<button class="cs-go"${qgo}>${Q_ACT}<span class="vh"> for ${esc(l.title)}</span></button>` : ''}</th><td class="undecided">${forPrint ? '________________' : Q_ACT}</td></tr>`);
+      continue;
+    }
     const it = l.it;
     const go = it && !forPrint ? ` data-act="goto" data-id="${esc(it.id)}"` : '';
     const ranks = rankedList(it);

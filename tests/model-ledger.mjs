@@ -315,6 +315,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     let html = cheat.cheatHTML(false);
     check('cheat sheet: the folded other school districts\' races stay off it while undecided', oth.every((it) => !has(html, it.id)), oth.filter((it) => has(html, it.id)).map((it) => it.id).join(', '));
     check('cheat sheet: an unanswered district question is still a line', /Depends on your district/.test(html));
+    // Every unanswered question's line is a tap back to that question, with "Pick your district".
+    const qLines = au.groups.map((g) => (html.match(new RegExp(`<tr[^>]*data-q="${g.key.replace(/[|()]/g, '\\$&')}"[\\s\\S]*?</tr>`)) || [''])[0]);
+    check('cheat sheet: each district line goes back to its question ("Pick your district")', au.groups.length > 0 && qLines.every((l) => /data-act="goto"/.test(l) && /Pick your district/.test(l)), qLines.filter((l) => !/data-act="goto"/.test(l)).length + ' dead');
+    check('cheat sheet: printed district lines stay plain', !/data-act/.test(cheat.cheatHTML(true).match(/<tr class="cs-q"[\s\S]*?<\/tr>/)?.[0] || 'data-act'));
     check('cheat sheet: "N of M decided" is the bar\'s count, district questions left out', !!sheetCount(html) && sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
     S.b.picks[oth[0].id] = oth[0].candidates[0].name;
     S.b.picks['tx-sboe-5'] = au.byId.get('tx-sboe-5').candidates[0].name;

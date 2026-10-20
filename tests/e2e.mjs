@@ -818,6 +818,23 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 
+// Walks, Oct 20: a cheat-sheet line for an unanswered district question was dead. It now goes back
+// to the ballot with that question open.
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '32801');
+  await tap(page, '[data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  const key = await page.evaluate(() => { const r = document.querySelector('#cheat tr[data-q]'); return r && r.dataset.q; });
+  check('Orlando cheat sheet: an unanswered district line is a tap ("Pick your district")', !!key && /Pick your district/.test(await text(page, `#cheat tr[data-q="${key}"]`)) && (await page.getAttribute(`#cheat tr[data-q="${key}"]`, 'data-act')) === 'goto', key || 'no line');
+  if (key) {
+    await tap(page, `#cheat tr[data-q="${key}"]`);
+    check('Orlando cheat sheet: tapping it reopens that question on the ballot', !(await page.$('#cheat')) && !!(await page.$(`.row[data-q="${key}"].is-open`)));
+  }
+  noErrors(page, 'Cheat sheet district line');
+  await ctx.close();
+}
+
 await browser.close();
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length} of ${results.length} checks passed.`);

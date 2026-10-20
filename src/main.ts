@@ -3,6 +3,7 @@ import './styles.css';
 import { S, readSaved, persist, parseShareHead } from './state';
 import { stepKey, planKey } from './views/planstrip';
 import { render } from './render';
+import { RAIL_AT } from './views/ledger';
 import { ensureIndex, openBallot, submitZip } from './app';
 import { A, runAddress } from './actions';
 import { askCityURL } from './views/common';
@@ -90,6 +91,15 @@ document.addEventListener('keydown', (e) => {
   else if (S.ui.sheet) A['sheet-close']({}, document.body);
 });
 window.addEventListener('beforeprint', () => render(['print']));
+/* From 1000px the menu stands as a rail in the margin (drawn with the bar): crossing that width
+   redraws the bar, and a menu sheet left open closes, since the rail now shows it. */
+try {
+  window.matchMedia(RAIL_AT).addEventListener('change', (e) => {
+    if (!S.ballot || S.view !== 'ballot') return;
+    if (e.matches && S.ui.sheet === 'toc') S.ui.sheet = null;
+    render(['bar', 'sheet']);
+  });
+} catch { /* an old browser: the bar redraws on the next tap */ }
 /* The next step can change while the page sits open: the polls close at 7, or midnight passes.
    Check once a minute and whenever the tab comes back; repaint the strip only when it changed. */
 function refreshPlan(): void {

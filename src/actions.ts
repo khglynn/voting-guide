@@ -3,9 +3,9 @@
    because the save link and saved picks depend on it. */
 import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
-import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, OTH_KEY, type SectionKey } from './ballot';
+import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $, type Region } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $, type Region } from './render';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -14,7 +14,7 @@ import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages } from './views/pass';
-import { pageOrder } from './views/ledger';
+import { nextUp, sectionTally } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -78,25 +78,52 @@ function openAt(key: string): void {
   $(`[data-fk="row-${CSS.escape(key.startsWith('q:') ? rowEl(key)?.id || '' : key)}"]`)?.focus({ preventScroll: true });
 }
 A.goto = (d) => { openAt(d.q ? `q:${d.q}` : d.id!); };
-/* "N of M decided": the next undecided row or district question after where you are, in the
-   order the page draws them, wrapping to the first. "Where you are" is the last row at or above
-   the reading line (just under the lens bar while it sticks), and never before the row you have
-   open, so a row parked under a tall bar is not picked again. The closed "Other school districts"
-   fold says "Open only if one of them is yours", so the walk skips its races; only when nothing
-   else is left does it open the first of them. */
-A.next = () => {
-  const all = pageOrder();
-  const order = all.filter((x) => !x.folded);
-  const left = order.filter((x) => !x.done);
-  if (!left.length) { const f = all.find((x) => !x.done); if (f) openAt(f.key); return; }
-  const lens = $('#lensbar');
-  const lr = lens ? lens.getBoundingClientRect() : null;
-  const line = (lens && lr && getComputedStyle(lens).position === 'sticky' && lr.top <= 1 ? lr.bottom : 0) + 8;
-  let at = -1;
-  order.forEach((x, i) => { const el = rowEl(x.key); if (el && el.getClientRects().length && el.getBoundingClientRect().top <= line) at = i; });
-  if (S.ui.row) at = Math.max(at, order.findIndex((x) => x.key === S.ui.row));
-  const pick = order.find((x, i) => i > at && !x.done) || left.find((x) => x.key !== S.ui.row) || left[0];
-  openAt(pick.key);
+/* The menu's "Next up": the race or question it names (nextUp: the next undecided one after the
+   row you're on, in page order). A menu painted a moment ago may name one you've since decided;
+   then it's the next one now. */
+A.next = (d) => {
+  const live = d.k ? pageWalk().find((x) => x.key === d.k && !x.done && !x.folded) : null;
+  const key = live ? live.key : nextUp()?.key;
+  closeMenu();
+  if (key) openAt(key);
+};
+/* The menu: a sheet ("☰ 20 of 43" in the bar), or the rail from 1000px. */
+A.toc = (_d, el) => {
+  S.ui.sheetFrom = el.dataset.fk || 'bar-menu';
+  S.ui.sheetBack = null;
+  S.ui.sheet = 'toc';
+  render(['sheet']);
+  focusFk('sheet-x');
+};
+/* A jump goes somewhere else on the page, so the menu sheet closes first, without handing focus
+   back to the bar: the place you jump to takes it. */
+function closeMenu(): void {
+  if (S.ui.sheet !== 'toc') return;
+  S.ui.sheet = null;
+  render(['sheet']);
+  flushLens();
+}
+/* A menu row: your next step, or a section. The section unfolds, comes to the top and takes focus.
+   Under "Show only what's left" a finished section isn't on the page, so the filter turns off. */
+A.jump = (d) => {
+  closeMenu();
+  if (S.ui.view !== 'ballot') go('ballot');
+  if (d.to === 'plan') {
+    $('#plan')?.scrollIntoView({ block: 'start' });
+    focusFk('plan-k');
+    return;
+  }
+  const sec = d.to as SectionKey;
+  const entries = entriesBySection().get(sec) || [];
+  const t = sectionTally(entries);
+  const wasFolded = !!$(`#sec-${sec}.folded`);
+  const unfilter = S.ui.onlyUndecided && t.total > 0 && t.done === t.total;
+  S.ui.folded.delete(sec);
+  S.ui.unfolded.add(sec);
+  if (unfilter) { S.ui.onlyUndecided = false; S.ui.keep = null; renderBallot(); render(['bar']); }
+  else if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
+  $(`#sec-${sec}`)?.scrollIntoView({ block: 'start' });
+  focusFk(`sec-${sec}`);
 };
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
@@ -434,12 +461,14 @@ A.view = (d) => {
   go(d.v as View);
 };
 A.cheat = () => go('cheat');
-A.only = () => {
+/* "Show only what's left", in the menu. In the rail the ballot repaints right away; under the menu
+   sheet it repaints when the sheet closes, so the switch answers at once on a 200-row ballot. */
+A.only = (_d, el) => {
   S.ui.onlyUndecided = !S.ui.onlyUndecided;
   S.ui.keep = null;
-  renderBallot();
-  render(['bar']);
-  focusFk('bar-only');
+  if (S.ui.sheet === 'toc') { markBehind(); render(['sheet', 'bar']); }
+  else { renderBallot(); render(['bar']); }
+  focusFk(el.dataset.fk || '');
 };
 A.reader = (d) => openReader(d.id!);
 A['reader-close'] = () => {

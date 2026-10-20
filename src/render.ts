@@ -6,7 +6,7 @@ import { S } from './state';
 import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
-import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts, hiddenByOnly } from './views/ledger';
+import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts, hiddenByOnly, tocSheetHTML } from './views/ledger';
 import { sourcesSheetHTML, partySheetHTML } from './views/lens';
 import { picksSheetHTML } from './views/setup';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
@@ -34,6 +34,7 @@ const html: Record<Region, () => string> = {
     if (S.ui.sheet === 'sources') return sourcesSheetHTML();
     if (S.ui.sheet === 'party') return partySheetHTML();
     if (S.ui.sheet === 'picks') return picksSheetHTML();
+    if (S.ui.sheet === 'toc') return tocSheetHTML();
     return '';
   },
   print: () => (shown() ? cheatHTML(true) : ''),
@@ -184,6 +185,8 @@ export function renderLens(): void {
   if (S.ui.sheet) { render(['sheet']); lensDirty = true; return; }
   anchored(() => render(['ballot', 'bar']));
 }
+/* Something the ballot shows changed while a sheet covers it (the menu's switch): repaint on close. */
+export function markBehind(): void { lensDirty = true; }
 export function flushLens(force = false): void {
   if (!lensDirty && !force) return;
   lensDirty = false;

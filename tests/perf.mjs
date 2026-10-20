@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from the ZIP box to
    step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
-   and tap a chip there) to paint.
+   and tap a chip there, open the menu) to paint; then a row and a pick at 1280px, with the rail.
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
 const { chromium } = await import(process.env.PW_PATH || 'playwright');
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
@@ -47,10 +47,41 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   const edit = await tapTime('[data-act="picks"]');
   const chip = await tapTime('.sheet-panel [data-act="chip"][data-k="progressive"]');
   const done = await tapTime('.sheet-panel [data-fk="sheet-x"]');
-  out.push({ name, open, setupChip, setupFill, show, openRow, pick, edit, chip, done });
+  // The menu: "☰ N of M" opens it (gated); its switch repaints the ballot behind (not gated, like
+  // the old "Only undecided").
+  const menu = await tapTime('.foot [data-act="toc"]');
+  const only = await tapTime('.sheet-panel [data-act="only"]');
+  out.push({ name, open, setupChip, setupFill, show, openRow, pick, edit, chip, done, menu, only });
+  await ctx.close();
+}
+/* From 1000px the menu stands as a rail drawn with the bar, so it repaints after every pick: a pick
+   on the biggest ballot at 1280px must still paint under 250ms. */
+const wide = [];
+for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await ctx.newPage();
+  const cdp = await ctx.newCDPSession(page);
+  await page.goto(`${BASE}/?today=2026-10-19`);
+  await page.fill('#zip', zip);
+  await page.locator('button[type=submit]').click();
+  await page.locator('[data-act="setup-done"]').click();
+  await page.waitForSelector('.rail');
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+  const t = (sel) => page.evaluate((s) => new Promise((resolve) => {
+    const el = document.querySelector(s);
+    const t0 = performance.now();
+    el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));
+    requestAnimationFrame(() => setTimeout(() => resolve(Math.round(performance.now() - t0)), 0));
+  }), sel);
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
+  const openRow = await t(`#i-${id} [data-act="row"]`);
+  const pick = await t(`#i-${id} [data-act="pick"]`);
+  const next = await t('.rail [data-act="next"]');
+  wide.push({ name, openRow, pick, next });
   await ctx.close();
 }
 await browser.close();
-for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms (4x CPU throttle)`);
-const slow = out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip].some((t) => t > 250));
+for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms, open the menu ${r.menu}ms, its switch ${r.only}ms (4x CPU throttle)`);
+for (const r of wide) console.log(`${r.name} at 1280px, with the rail: open a row ${r.openRow}ms, pick ${r.pick}ms, Next up ${r.next}ms (4x CPU throttle)`);
+const slow = [...out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip, r.menu].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250)];
 process.exit(slow.length ? 1 : 0);

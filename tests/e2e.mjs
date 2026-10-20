@@ -68,6 +68,15 @@ async function editFill(page) {
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   return n;
 }
+/* The menu: a sheet the bar's "☰ N of M" opens, and from 1000px a rail in the left margin too. */
+async function menu(page) { await tap(page, '.foot [data-act="toc"]'); await page.waitForSelector('.sheet-panel.toc'); }
+/* The menu's "Next up": the rail's where it shows, else the sheet's. */
+async function next(page) {
+  if (await page.$('.rail [data-act="next"]')) { await tap(page, '.rail [data-act="next"]'); return; }
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="next"]');
+}
+const focusedFk = (page) => page.evaluate(() => document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.fk || '' : '');
 const linkHere = (url) => url.replace(/^https?:\/\/[^/]+/, BASE).replace('/#', `/?today=${TODAY}#`);
 const text = async (page, sel) => ((await page.textContent(sel).catch(() => '')) || '').replace(/\s+/g, ' ').trim();
 /* Open a row (an item id, or "q:<group key>") by tapping its header. */
@@ -232,7 +241,10 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Step 2 fill: "Show my ballot" fills the races where your sources agree', bar.startsWith(`${n} of `), `${bar} (switch said ${n})`);
   check('Step 2 fill: one toast says so, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree\\.`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
   check('Step 2 fill: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
-  check('Step 2: "Show only what’s left" turns the filter on, so no decided row shows', (await page.getAttribute('[data-act="only"]', 'aria-pressed')) === 'true' && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  check('Step 2: "Show only what’s left" turns the filter on, so no decided row shows', !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  await menu(page);
+  check('Step 2: the menu’s "Show only what’s left" switch shows it on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   await tap(page, '.toast [data-act="undo-bulk"]');
   check('Step 2 fill: Undo takes every filled pick back', /^0 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
   await page.reload();
@@ -329,8 +341,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await page.waitForTimeout(300);
 
   await page.evaluate(() => window.scrollTo(0, 0));
-  await tap(page, '[data-act="next"]');
-  check('Denver: Next undecided opens an undecided row', !!(await page.$('.row.is-open[data-undecided]')));
+  await next(page);
+  check('Denver: Next up opens an undecided row', !!(await page.$('.row.is-open[data-undecided]')));
 
   // "Fill in their picks" from the Edit sheet: fills on Done, says so, and undoes as one batch.
   const before = await text(page, '.bar-txt');
@@ -439,6 +451,105 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Ballot top: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Ballot top');
   noErrors(page, 'Ballot top');
+  await ctx.close();
+}
+
+/* ---------- the bar and the menu (flow, Oct 20) ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  const acts = await page.$$eval('.foot button', (els) => els.map((e) => e.dataset.act));
+  check('Bar: two buttons, the menu and My plan', acts.join() === 'toc,cheat' && (await text(page, '.foot [data-act="cheat"]')) === 'My plan', acts.join());
+  const bar = await text(page, '.bar-txt');
+  const [n0, m0] = (bar.match(/^(\d+) of (\d+) decided$/) || []).slice(1).map(Number);
+  const shown = await page.evaluate(() => { const c = document.querySelector('.menu-btn').cloneNode(true); c.querySelectorAll('.vh').forEach((e) => e.remove()); return c.textContent.replace(/\s+/g, ' ').trim(); });
+  check('Bar: the menu button shows "N of M"; its .bar-txt reads "N of M decided"', n0 === 0 && m0 > 0 && shown === `0 of ${m0}` && !!(await page.$('.menu-btn svg.burger')), `${shown} / ${bar}`);
+  check('Bar: no rail on a phone', !(await page.$('.rail')));
+  await menu(page);
+  await shot(page, '08-menu');
+  check('Menu: "Your ballot" with Close, focus on Close', (await text(page, '.sheet-panel #sh-h')) === 'Your ballot' && (await text(page, '.sheet-panel [data-fk="sheet-x"]')) === 'Close' && (await focusedFk(page)) === 'sheet-x');
+  const order = await page.$$eval('.sheet-panel .sheet-bd button', (els) => els.map((e) => e.dataset.act));
+  check('Menu: Next up first, then the switch, then the rows', order[0] === 'next' && order[1] === 'only' && order[2] === 'jump', order.slice(0, 4).join());
+  const rows = await page.$$eval('.sheet-panel .nv', (els) => els.map((e) => [e.querySelector('.nv-t').textContent.trim(), e.querySelector('.nv-n').textContent.trim()]));
+  const names = rows.map((r) => r[0]);
+  check('Menu: your next step, Quick picks, each section on the page, then My plan', names[0] === 'Your next step' && names[1] === 'Quick picks' && names[names.length - 1] === 'My plan'
+    && JSON.stringify(names.slice(2, -1)) === JSON.stringify(await page.$$eval('.ledger .sec .sec-t', (els) => els.map((e) => e.textContent.trim()))), names.join(' | '));
+  const left = rows.reduce((n, [, r]) => n + Number((r.match(/^(\d+) left$/) || [])[1] || 0), 0);
+  check('Menu: what each section has left adds up to the bar', left === m0 - n0 && rows.every(([, r]) => r === '' || r === 'Done' || /^\d+ left$/.test(r)), `${left} vs ${m0 - n0}`);
+  const first = await page.evaluate(() => { const r = document.querySelector('.ledger .row[data-undecided]'); return r && (r.dataset.item || `q:${r.dataset.q}`); });
+  check('Menu: "Next up" names the first thing left on the page', (await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k')) === first && /^Next up: \S/.test(await text(page, '.sheet-panel [data-act="next"]')), `${await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k')} vs ${first}`);
+  await tap(page, '.sheet-panel [data-act="jump"][data-to="measures"]');
+  await page.waitForTimeout(150);
+  const top = await page.evaluate(() => Math.round(document.getElementById('sec-measures').getBoundingClientRect().top));
+  check('Menu: a section row closes the menu, brings its band to the top and focuses it', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'sec-measures' && top >= 0 && top < 60, `top ${top}, focus ${await focusedFk(page)}`);
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="jump"][data-to="plan"]');
+  await page.waitForTimeout(150);
+  check('Menu: "Your next step" goes back to the plan', (await focusedFk(page)) === 'plan-k' && (await page.evaluate(() => Math.round(document.getElementById('plan').getBoundingClientRect().top))) < 60);
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="picks"]');
+  check('Menu: "Quick picks" opens the Edit sheet', !!(await page.$('.sheet-panel.picks')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  check('Menu: closing the Edit sheet hands focus back to the menu button', (await focusedFk(page)) === 'bar-menu', await focusedFk(page));
+  await menu(page);
+  const k = await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k');
+  await tap(page, '.sheet-panel [data-act="next"]');
+  const opened = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.dataset.item || `q:${e.dataset.q}`));
+  check('Menu: "Next up" opens the race it names, and only that one', opened.length === 1 && opened[0] === k, `${opened.join()} vs ${k}`);
+  await menu(page);
+  check('Menu: then it names the next one after it', (await page.getAttribute('.sheet-panel [data-act="next"]', 'data-k')) !== k);
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(150);
+  check('Menu: Escape closes it, focus back on the menu button', !(await page.$('.sheet-panel')) && (await focusedFk(page)) === 'bar-menu');
+  await tap(page, '.foot [data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  check('Bar on the cheat sheet: Back to the ballot and Help friends vote', (await text(page, '.foot')) === 'Back to the ballot Help friends vote', await text(page, '.foot'));
+  await tap(page, '.foot [data-act="view"][data-v="pass"]');
+  check('Bar on Help friends vote: Back to the ballot and My plan', (await text(page, '.foot')) === 'Back to the ballot My plan', await text(page, '.foot'));
+  check('Menu: nothing in all caps', (await upperCased(page)).length === 0);
+  noErrors(page, 'Bar and menu');
+  await ctx.close();
+}
+{
+  // Under "Show only what's left" a finished section isn't on the page: the menu says "Done", and
+  // jumping there turns the filter off. ("Try as aunt" decides everything but the measures.)
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704', '&try=aunt');
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  check('Menu: the switch turns "Show only what’s left" on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  check('Menu: a finished section reads "Done"', (await text(page, '.sheet-panel [data-to="federal"] .nv-n')) === 'Done');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  check('Menu: closed, the ballot shows only what’s left', !(await page.$('#sec-federal')) && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="jump"][data-to="federal"]');
+  await page.waitForTimeout(150);
+  check('Menu: jumping to it turns the filter off and shows it, focused', !!(await page.$('#sec-federal')) && (await focusedFk(page)) === 'sec-federal' && !!(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  await menu(page);
+  check('Menu: and the switch says so', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'false');
+  noErrors(page, 'Menu under the filter');
+  await ctx.close();
+}
+{
+  // From 1000px the menu stands as a rail in the left margin, clear of the ballot.
+  const { ctx, page } = await newPage({ viewport: { width: 1280, height: 900 }, isMobile: false, deviceScaleFactor: 1 });
+  await openBallot(page, '78704');
+  await shot(page, '09-rail-1280');
+  const r = await page.evaluate(() => { const a = document.querySelector('.rail').getBoundingClientRect(); const l = document.querySelector('.ledger').getBoundingClientRect(); const sh = document.querySelector('.sec-h').getBoundingClientRect(); return { left: a.left, right: a.right, col: l.left, band: sh.left, vis: getComputedStyle(document.querySelector('.rail')).display }; });
+  check('Rail: at 1280px it stands in the left margin, clear of the bands', r.vis !== 'none' && r.left >= 0 && r.right <= r.band - 8, JSON.stringify(r));
+  check('Rail: Next up, the switch and the rows, with no header', !!(await page.$('.rail [data-act="next"]')) && !!(await page.$('.rail [data-act="only"]')) && (await page.$$('.rail .nv')).length >= 5 && !(await page.$('.rail [data-act="sheet-close"]')));
+  const before = await text(page, '.bar-txt');
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item][data-undecided]').dataset.item);
+  const leftOf = async () => text(page, '.rail [data-to="measures"] .nv-n');
+  const l0 = await leftOf();
+  await page.locator(`#i-${id} > [data-act="row"]`).click();
+  await page.locator(`#i-${id} [data-act="pick"]`).first().click();
+  await page.waitForTimeout(150);
+  check('Rail: a pick updates its counts with the bar', (await leftOf()) !== l0 && (await text(page, '.bar-txt')) !== before, `${l0} -> ${await leftOf()}`);
+  await page.setViewportSize({ width: 800, height: 900 });
+  await page.waitForTimeout(200);
+  check('Rail: under 1000px it goes, the bar’s menu stays', !(await page.$('.rail')) && !!(await page.$('.foot [data-act="toc"]')));
+  noErrors(page, 'Rail');
   await ctx.close();
 }
 
@@ -956,7 +1067,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
-  await tap(page, '[data-act="only"]');
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item]')].slice(0, 2).map((r) => r.dataset.item));
   await openRow(page, ids[0]);
   await tap(page, `#i-${ids[0]} [data-act="pick"][data-v="YES"]`);
@@ -1071,19 +1184,18 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 
-// Nav review, Oct 20: "N of M decided" walks the page in its own order, from the first thing on it
-// (LA's U.S. House question), one row open at a time, and never sticks on a row parked under a tall
-// sticky lens bar (the wrapped chips of wide screens make it 117px).
+// Nav review, Oct 20: "Next" walks the page in its own order, from the first thing on it (LA's U.S.
+// House question), one row open at a time. Since the flow (Oct 20) it is the menu's "Next up": the
+// sheet's at 380px, the rail's at 1280px.
 for (const width of [380, 1280]) {
   const { ctx, page } = await newPage({ viewport: { width, height: 900 } });
   await openBallot(page, '90004');
-  if (width > 600) await page.addStyleTag({ content: '#lensbar .chips { flex-wrap: wrap; }' });
   const all = await page.evaluate(() => [...document.querySelectorAll('.ledger .row[data-item], .ledger .row[data-q]')].map((e) => e.id));
   await page.evaluate(() => window.scrollTo(0, 0));
   const opened = [];
   let oneAtATime = true;
   for (let i = 0; i < 8; i++) {
-    await tap(page, '[data-act="next"]');
+    await next(page);
     const open = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
     if (open.length !== 1) oneAtATime = false;
     opened.push(open[open.length - 1] || '');
@@ -1112,7 +1224,7 @@ for (const width of [380, 1280]) {
   await page.evaluate(() => window.scrollTo(0, 0));
   const opened = [];
   for (let i = 0; i < 45; i++) {
-    await tap(page, '[data-act="next"]');
+    await next(page);
     const o = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => `${e.dataset.fold ? 'fold:' : ''}${e.dataset.item || `q:${e.dataset.q}`}`));
     opened.push(o.join('+'));
     if (o.some((k) => /^tx-austin-prop/.test(k))) break;

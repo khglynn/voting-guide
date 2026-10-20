@@ -617,6 +617,38 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     reset();
   }
 
+  /* ---------- the menu (flow, Oct 20): "Next up", the rows and their counts ----------
+     "Next up" names the next undecided race or question after the row you're on, in page order,
+     and its button opens that one; the section rows' "N left" add up to the bar; when nothing the
+     count includes is left there is no "Next up" and every row says "Done". */
+  {
+    const { ledger } = views;
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.onlyUndecided = false; };
+    for (const [stc, pid] of [['TX', 'austin-tx'], ['CA', 'los-angeles-ca']]) {
+      const b = open(stc, [pid]);
+      reset();
+      const left = ledger.pageOrder().filter((x) => !x.folded && !x.done).map((x) => x.key);
+      const up = ledger.nextUp();
+      check(`menu: ${pid} "Next up" starts with the first thing left on the page`, !!up && up.key === left[0] && up.title.length > 0, up && `${up.key}: ${up.title}`);
+      S.ui.row = left[0];
+      check(`menu: ${pid} with that row open, "Next up" is the one after it`, ledger.nextUp().key === left[1], ledger.nextUp().key);
+      S.ui.row = null; S.ui.keep = left[left.length - 1];
+      check(`menu: ${pid} after the last one, "Next up" wraps to the first`, ledger.nextUp().key === left[0], ledger.nextUp().key);
+      S.ui.keep = null;
+      const html = ledger.menuHTML('toc');
+      const n = [...html.matchAll(/<span class="nv-n">(\d+) left<\/span>/g)].reduce((a, m) => a + +m[1], 0);
+      const items = bl.decisionItems();
+      check(`menu: ${pid} the sections' "N left" add up to the bar`, n === items.filter((x) => !x.done).length, `${n} vs ${items.filter((x) => !x.done).length}`);
+      check(`menu: ${pid} "Next up" leads, then the switch, then the rows, ending with My plan`, html.indexOf('data-act="next"') < html.indexOf('data-act="only"') && html.indexOf('data-act="only"') < html.indexOf('data-to="plan"') && /My plan<\/span><span class="nv-n"><\/span><i class="nv-a" aria-hidden="true">›<\/i><\/button><\/li><\/ul>$/.test(html.trim()));
+      // Everything decided: answer every question, leave every race blank on purpose.
+      b.groups.forEach((g) => { S.b.districts[g.key] = g.members[0]; });
+      for (const x of bl.decisionItems()) S.b.picks[x.id] = 'SKIP';
+      const done = ledger.menuHTML('toc');
+      check(`menu: ${pid} with nothing left, no "Next up", and every section reads Done`, ledger.nextUp() === null && !done.includes('data-act="next"') && !/ left<\/span>/.test(done) && /Done/.test(done));
+      reset();
+    }
+  }
+
   /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------
      LA's sheet said "Knock LA: Endorsed in 59 of your races and measures" on a 46-item ballot. */
   {

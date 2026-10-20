@@ -311,7 +311,6 @@ const SNAPSHOT = (w) => {
     ids, dupIds: [...dupIds], over, sec, scrollWidth: document.documentElement.scrollWidth,
     qs: [...document.querySelectorAll('.row[data-q]')].map((q) => q.dataset.q),
     bar: (document.querySelector('.bar-txt') || {}).textContent?.replace(/\s+/g, ' ').trim() || '',
-    barBtnDisabled: !!document.querySelector('[data-act="next"][disabled]'),
   };
 };
 /* The app ignores a click within 650ms of the last action (a touch guard), so programmatic taps

@@ -386,10 +386,15 @@ function quietNoteHTML(entries: Entry[]): string {
   const m = open.every((it) => it.kind === 'measure');
   return `<p class="sec-note">Your sources made no endorsements in these ${m ? 'measures' : 'races'}. Open one to ${m ? 'read both sides' : 'compare the candidates in their own words'}, or <button class="linkbtn" data-act="sheet" data-s="sources" data-fk="sec-more">add sources</button>.</p>`;
 }
-export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
+/* A section shows on the page when it has anything to show: a question, a choice, an unopposed
+   race or an information row. (Under "Show only what's left" a finished one hides; the menu still
+   lists it, as "Done".) */
+export function sectionShows(entries: Entry[]): boolean {
   const b = S.ballot!;
-  const has = entries.some((e) => e.t !== 'item' || isDecision(status(b.byId.get(e.id)!)) || status(b.byId.get(e.id)!) === 'unopposed' || status(b.byId.get(e.id)!) === 'info');
-  if (!entries.length || !has) return '';
+  return entries.some((e) => { if (e.t !== 'item') return true; const s = status(b.byId.get(e.id)!); return isDecision(s) || s === 'unopposed' || s === 'info'; });
+}
+export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
+  if (!entries.length || !sectionShows(entries)) return '';
   const folded = sectionFolded(sec, entries);
   const count = sectionCount(entries);
   const done = sectionDone(entries);
@@ -450,25 +455,74 @@ export function ballotHTML(): string {
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open your cheat sheet</button></div>`;
 }
 
-/* ---------- the bottom bar ---------- */
+/* ---------- the bottom bar ----------
+   On the ballot, two buttons: the menu ("☰ 20 of 43", whose .bar-txt reads "20 of 43 decided") and
+   My plan (the cheat sheet). From 1000px the menu also stands as a rail in the left margin, drawn
+   here so it repaints with the bar after every pick. */
+const BURGER = '<svg class="burger" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1.5h16M1 7h16M1 12.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+export const RAIL_AT = '(min-width: 1000px)';
+const wide = (): boolean => typeof window !== 'undefined' && typeof window.matchMedia === 'function' && window.matchMedia(RAIL_AT).matches;
 export function barHTML(): string {
   if (!S.ballot) return '';
   if (S.ui.view !== 'ballot') {
     return `<div class="foot screen-only" role="region" aria-label="Navigation"><div class="foot-in two">
       <button class="ftog" data-act="view" data-v="ballot" data-fk="bar-back">Back to the ballot</button>
-      ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">Cheat sheet</button>'}</div></div>`;
+      ${S.ui.view === 'cheat' ? '<button class="fcta" data-act="view" data-v="pass" data-fk="bar-pass">Help friends vote</button>' : '<button class="fcta" data-act="view" data-v="cheat" data-fk="bar-cheat">My plan</button>'}</div></div>`;
   }
   // The one counting rule (ballot.ts): a district question is one race until it's answered.
   const items = decisionItems();
   const done = items.filter((i) => i.done).length;
   const pct = items.length ? Math.round((done / items.length) * 100) : 0;
-  const allDone = items.every((i) => i.done);
-  return `<div class="foot screen-only" role="region" aria-label="Your progress">
+  const rail = wide() ? `<nav class="rail screen-only" aria-label="Your ballot" data-keep="rail">${menuHTML('rail')}</nav>` : '';
+  return `${rail}<div class="foot screen-only" role="region" aria-label="Your progress">
     <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>
-    <div class="foot-in">
-      <button class="prog" data-act="next" ${allDone ? 'disabled' : ''} data-fk="bar-next" aria-label="${allDone ? `All ${items.length} decided` : `${done} of ${items.length} decided. Go to the next undecided`}"><span class="bar-txt"><b>${done}</b> of ${items.length} <span class="dl">decided</span></span></button>
-      <button class="ftog" data-act="only" aria-pressed="${S.ui.onlyUndecided}" data-fk="bar-only"><span class="box" aria-hidden="true"></span>Only undecided</button>
-      <button class="fcta" data-act="cheat" data-fk="bar-cheat">Cheat sheet</button>
+    <div class="foot-in ends">
+      <button class="menu-btn" data-act="toc" aria-haspopup="dialog" data-fk="bar-menu">${BURGER}<span class="bar-txt"><b>${done}</b> of ${items.length}<span class="vh"> decided</span></span></button>
+      <button class="fcta" data-act="cheat" data-fk="bar-cheat">My plan</button>
     </div></div>`;
+}
+
+/* ---------- the menu: a sheet under 1000px, a rail from there ----------
+   "Next up" first, the "Show only what's left" switch, then rows that go somewhere: your next
+   step, Quick picks (the Edit sheet), each section on the page with what's left, and My plan. */
+/* The next undecided race or question after the one you're on (open, or just decided), in page
+   order, wrapping to the first; null when nothing the count includes is left. The menu names it
+   and its button opens it, so the two never disagree. */
+export function nextUp(): { key: string; title: string } | null {
+  const b = S.ballot!;
+  const order = pageWalk().filter((x) => !x.folded);
+  const left = order.filter((x) => !x.done);
+  if (!left.length) return null;
+  const from = S.ui.row || S.ui.keep;
+  const at = from ? order.findIndex((x) => x.key === from) : -1;
+  const pick = order.find((x, i) => i > at && !x.done) || left.find((x) => x.key !== S.ui.row) || left[0];
+  const g = pick.key.startsWith('q:') ? b.groups.find((x) => `q:${x.key}` === pick.key) : null;
+  return { key: pick.key, title: g ? cleanOffice(g.office) : rowTitle(b.byId.get(pick.key)!).title };
+}
+const ARROW = '<i class="nv-a" aria-hidden="true">›</i>';
+export function menuHTML(where: 'toc' | 'rail'): string {
+  const by = entriesBySection();
+  const up = nextUp();
+  const next = up ? `<button class="nv-next" data-act="next" data-k="${esc(up.key)}" data-fk="${where}-next"><span>Next up: ${esc(up.title)}</span>${ARROW}</button>` : '';
+  const only = `<button class="su-sw nv-sw" role="switch" aria-checked="${S.ui.onlyUndecided}" data-act="only" data-fk="${where}-only"><span class="su-l"><b>Show only what’s left</b></span><span class="tg" aria-hidden="true"><span></span></span></button>`;
+  const row = (attrs: string, fk: string, label: string, right = '', cls = '') =>
+    `<li><button class="nv${cls}" ${attrs} data-fk="${where}-${fk}"><span class="nv-t">${esc(label)}</span><span class="nv-n">${esc(right)}</span>${ARROW}</button></li>`;
+  const secs = SECTIONS.map(([k]) => {
+    const entries = by.get(k) || [];
+    if (!entries.length || !sectionShows(entries)) return '';
+    const t = sectionTally(entries);
+    return row(`data-act="jump" data-to="${k}"`, k, sectionTitle(k), !t.total ? '' : t.done === t.total ? 'Done' : `${t.total - t.done} left`);
+  }).join('');
+  return `${next}${only}<ul class="nv-list">
+    ${row('data-act="jump" data-to="plan"', 'plan', 'Your next step')}
+    ${row('data-act="picks"', 'picks', 'Quick picks')}
+    ${secs}
+    ${row('data-act="cheat"', 'cheat', 'My plan', '', ' nv-plan')}</ul>`;
+}
+export function tocSheetHTML(): string {
+  return `<div class="scrim screen-only" data-act="sheet-close"></div>
+  <div class="sheet-panel screen-only toc" role="dialog" aria-modal="true" aria-labelledby="sh-h">
+    <div class="sheet-hd"><h2 id="sh-h">Your ballot</h2><button class="closebtn" data-act="sheet-close" data-fk="sheet-x">Close</button></div>
+    <div class="sheet-bd" data-keep="toc">${menuHTML('toc')}</div></div>`;
 }
 export { sectionOf };

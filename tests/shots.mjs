@@ -2,7 +2,7 @@
 /* Morning-review screenshots of the test ballots at 380x820 (not a test; it never fails).
    BASE=http://localhost:4173 node tests/shots.mjs            -> .tmp/shots/ledger/
    ONLY=lakewood,chicago node tests/shots.mjs                 -> just those
-   Each ballot: fresh first screen, an open race, an open measure, the judges section, the
+   Each ballot: fresh first screen, the menu, an open race, an open measure, the judges section, the
    "aunt" scenario (mostly decided), the cheat sheet and Pass it on. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -55,6 +55,12 @@ async function openRow(page, sel) {
 for (const b of BALLOTS) {
   let { ctx, page } = await open(b);
   await shot(page, `${b.name}-1-fresh`);
+  // The menu the bar's "☰ N of M" opens.
+  await page.evaluate(() => window.__press(document.querySelector('.foot [data-act="toc"]')));
+  await page.waitForTimeout(200);
+  await shot(page, `${b.name}-1b-menu`);
+  await page.evaluate(() => window.__press(document.querySelector('.sheet-panel [data-act="sheet-close"][data-fk="sheet-x"]')));
+  await page.waitForTimeout(150);
   if (await openRow(page, '.row[data-item]:has(.vd.agree), .row[data-item]:has(.vd.split)')) await shot(page, `${b.name}-2-race-open`);
   if (await openRow(page, '#sec-measures .row[data-item]')) await shot(page, `${b.name}-3-measure-open`);
   if (await page.$('#sec-judicial')) {

@@ -13,10 +13,10 @@ import {
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
 import { verdict, type Verdict } from '../model/tally';
-import { planAgree, planParty } from '../model/bulk';
+import { canUndo } from '../model/bulk';
 import { judgeBatch, judicialReview, judgesLead, judgesRule } from '../model/judges';
 import { ext, sampleBallot, isOpen, escP, leadRest } from './common';
-import { lensHTML } from './lens';
+import { lensSummary } from './lens';
 import { addrHTML } from './mast';
 import { openHTML } from './open';
 
@@ -405,41 +405,47 @@ export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   </section>`;
 }
 
-/* ---------- the ballot head and its bulk actions ---------- */
-function bulkHTML(): string {
-  const agree = planAgree();
-  const pf = S.b.party ? planParty(S.b.party) : null;
-  const n = agree.fills.length;
-  const agreeBtn = `<button class="act" data-act="bulk" data-k="agree" data-fk="bulk-agree" ${n ? '' : 'disabled'}><span>Fill in where my sources agree</span><span class="n">${n}</span></button>`;
-  const partyBtn = S.b.party
-    ? `<button class="act" data-act="bulk" data-k="party" data-fk="bulk-party" ${pf && pf.fills.length ? '' : 'disabled'}><span>Fill in the ${esc(S.b.party)} candidates</span><span class="n">${pf ? pf.fills.length : 0}</span></button>`
-    : `<button class="act" data-act="sheet" data-s="party" data-fk="bulk-party"><span>Fill in a party’s candidates</span></button>`;
-  return `<div class="pfm">${agreeBtn}${partyBtn}</div>`;
+/* ---------- the ballot head ----------
+   Whose picks you see, in one line with Edit (the sheet holds step 2's controls); after a fill
+   from your sources, how many it filled and Undo, while that Undo lasts; then, while some races
+   depend on your address, how many, with the address lookup and your sample ballot. */
+/* Races that depend on your address: each district question still to answer, each one answered
+   "Not sure", and each other row tagged "Maybe on your ballot" that the count includes. */
+export function addressCount(): number {
+  const b = S.ballot!;
+  const groups = new Set<string>();
+  let n = 0;
+  for (const x of decisionItems()) {
+    if (x.question) { n++; continue; }
+    if (!isMaybe(x.id)) continue;
+    const g = b.groupOf[x.id];
+    if (!g) n++;
+    else if (!groups.has(g)) { groups.add(g); n++; }
+  }
+  return n;
 }
 export function ballotHeadHTML(): string {
   const b = S.ballot!;
-  const items = decisionItems();
-  const qs = items.filter((i) => i.question).length;
-  const may = [...b.mayApply].filter((id) => !S.b.notMine.includes(id)).length;
   const sb = sampleBallot();
   const statewideOnly = !b.places.length;
-  // One number for the ballot's size, the same one the bar counts.
-  const parts = [`${items.length} ${items.length === 1 ? 'race or measure' : 'races and measures'}, in the same order as your ballot.`];
-  if (qs || may) parts.push('A few depend on your address.');
-  return `<div class="bhead"><h2 id="ballot-h">Your ballot</h2>
-      <p>${esc(parts.join(' '))}</p>
-      ${(b.groups.length || b.mayApply.size) ? (S.ui.addrOpen ? addrHTML() : '<p class="addr-cta"><button class="linkbtn" data-act="addr-open" data-fk="addr-open">Use my address to find my districts</button></p>') : ''}
-      ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. For local races: ${sb ? ext(sb.url, sb.label) : ''}</p>` : sb ? `<p class="sb">Double-check with ${ext(sb.url, 'your official sample ballot')}.</p>` : ''}
+  const n = addressCount();
+  const filled = S.ui.bulk && canUndo()
+    ? `<p class="filled">${esc(S.ui.bulk)} filled in. <button class="linkbtn" data-act="undo-bulk" data-fk="filled-undo">Undo</button></p>` : '';
+  const addr = n ? `<div class="addrbox"><p><b>${n === 1 ? '1 race depends' : `${n} races depend`} on your address.</b></p>
+      ${S.ui.addrOpen ? addrHTML() : `<div class="row-btns"><button class="mini dark" data-act="addr-open" data-fk="addr-open">Use my address</button>${sb ? `<a class="mini" href="${esc(sb.url)}" target="_blank" rel="noopener">See my sample ballot</a>` : ''}</div>`}</div>` : '';
+  return `<div class="bhead"><h2 class="vh" id="ballot-h">Your ballot</h2>
+      <p class="picks-line"><span>Picks: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      ${filled}${addr}
+      ${statewideOnly ? `<p class="statewide-note">We only have statewide races for your area so far. For local races: ${sb ? ext(sb.url, sb.label) : ''}</p>` : ''}
     </div>
-    ${headsHTML(headsUp('ballot'))}
-    ${bulkHTML()}`;
+    ${headsHTML(headsUp('ballot'))}`;
 }
 export function ballotHTML(): string {
   const by = entriesBySection();
   const secs = SECTIONS.map(([k]) => sectionHTML(k, by.get(k) || [])).join('');
   const empty = S.ui.onlyUndecided && !decisionItems().some((i) => !i.done)
-    ? '<p class="empty"><b>Nothing left to decide here.</b> Turn off “Only undecided” to see everything, or open your cheat sheet.</p>' : '';
-  return `${lensHTML()}<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
+    ? '<p class="empty"><b>Nothing left to decide here.</b> Turn off “Show only what’s left” to see everything.</p>' : '';
+  return `<div class="wrap-led">${ballotHeadHTML()}</div><div class="ledger" aria-labelledby="ballot-h">${secs}${empty}</div>
     <div class="endcap wrap"><h3>That’s your whole ballot.</h3><p>Your picks save on this device as you go.</p>
       <button class="bigbtn" data-act="cheat" data-fk="endcap-cheat">Open your cheat sheet</button></div>`;
 }

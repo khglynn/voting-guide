@@ -23,11 +23,22 @@ function fire(el: HTMLElement): void {
   // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
   lastTap = Date.now();
 }
+/* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
+   re-rendered under the finger, and a stray mousedown there would pull focus away. */
+const cancelFollowUp = (e: Event): void => {
+  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act]')) e.preventDefault();
+};
 document.addEventListener('pointerdown', (e) => {
   if (e.button !== 0) return;
   const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act]');
   if (!el) return;
-  if (e.pointerType === 'touch') { touch = { el, x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId }; return; }
+  if (e.pointerType === 'touch') {
+    touch = { el, x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId };
+    // Also on the touched element itself: when the tap replaced it (a form opening where its
+    // button was, one sheet swapped for another), its touchend never reaches the document.
+    e.target!.addEventListener('touchend', cancelFollowUp, { once: true, passive: false });
+    return;
+  }
   fire(el);
 });
 document.addEventListener('pointerup', (e) => {
@@ -37,11 +48,7 @@ document.addEventListener('pointerup', (e) => {
   if ((e.target as HTMLElement).closest('[data-act]') === t.el) fire(t.el);
 });
 document.addEventListener('pointercancel', () => { touch = null; });
-/* After a tap has fired, cancel the touch's follow-up mouse events: the page may have
-   re-rendered under the finger, and a stray mousedown there would pull focus away. */
-document.addEventListener('touchend', (e) => {
-  if (Date.now() - lastTap < 80 && (e.target as HTMLElement).closest('[data-act]')) e.preventDefault();
-}, { passive: false });
+document.addEventListener('touchend', cancelFollowUp, { passive: false });
 document.addEventListener('click', (e) => {
   const el = (e.target as HTMLElement).closest<HTMLElement>('[data-act]');
   if (!el) return;

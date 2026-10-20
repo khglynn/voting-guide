@@ -44,13 +44,13 @@ export async function loadInvolved(): Promise<void> {
 export function resetUI(): void {
   const u = S.ui;
   u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.keep = null;
-  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.addrOpen = false; u.addrMsg = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
+  u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
   u.open.delete('voted');
 }
 export function go(view: View, push = true): void {
   if (S.ui.view === view) return;
   S.ui.view = view;
-  S.ui.reader = null; S.ui.sheet = null;
+  S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null;
   hideToast(); // a toast belongs to the view it was raised on
   if (push) { try { history.pushState({ vg: view }, '', location.pathname + location.search); } catch { /* ignore */ } }
   render();
@@ -71,7 +71,7 @@ export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
   forgetLast();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null;
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.addrOpen = false; S.ui.addrMsg = null;
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null;
   forgetUndo();
   hideToast();
   render();
@@ -93,7 +93,7 @@ window.addEventListener('popstate', (e) => {
   const view: View = st.vg || 'ballot';
   const fromReader = S.ui.reader;
   S.ui.reader = st.reader || null;
-  S.ui.sheet = null;
+  S.ui.sheet = null; S.ui.sheetBack = null;
   if (view !== S.ui.view) { S.ui.view = view; render(); window.scrollTo(0, 0); }
   else render(['sheet']);
   if (fromReader && !S.ui.reader) document.querySelector<HTMLElement>(`[data-fk="rd-${CSS.escape(fromReader)}"]`)?.focus({ preventScroll: true });

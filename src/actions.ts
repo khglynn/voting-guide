@@ -5,7 +5,7 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, decisionItems, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, renderBallot, renderAddr, rowEl, scrollRowIntoView, anchored, $, type Region } from './render';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
@@ -290,7 +290,9 @@ A['notmine-oth'] = () => {
 };
 A['notmine-undo'] = (d) => { S.b.notMine = S.b.notMine.filter((x) => x !== d.id); anchored(() => renderSection(sectionOf(B().byId.get(d.id!)!))); renderSummaries(); persist(); };
 
-/* ---------- the lens ---------- */
+/* ---------- the lens ----------
+   Chips and sources apply as you tap. On the ballot they live in the Edit sheet, and the ballot
+   behind it repaints when the sheet closes (render.ts flushLens). */
 A.chip = (d) => {
   const on = toggleChip(B(), d.k as ChipKey);
   renderLens(); persist();
@@ -300,37 +302,79 @@ A['party-off'] = () => { setParty(B(), null); renderLens(); persist(); };
 A['party-set'] = (d) => {
   setParty(B(), d.p!);
   if (S.view === 'setup') { S.ui.open.delete('su-party'); renderLens(); focusFk('chip-party'); return; }
+  persist();
+  // Chosen from the Edit sheet: back to it, with the party on.
+  if (S.ui.sheetBack !== null) { backToPicks(true); return; }
   S.ui.sheet = null;
-  render(['sheet']); renderLens(); persist();
-  const n = planParty(d.p!).fills.length;
-  toast(`Now showing the ${d.p} Party’s endorsements.${n ? ` Tap “Fill in the ${d.p} candidates” to fill ${plural(n, 'race')}.` : ''}`);
-  focusFk('bulk-party');
+  render(['sheet']);
+  renderLens();
+  toast(`Now showing the ${d.p} Party’s endorsements.`);
 };
 A.src = (d) => {
   const cur = chosenIds();
   setSources(B(), cur.includes(d.id!) ? cur.filter((x) => x !== d.id) : [...cur, d.id!]);
   persist();
-  if (S.ui.sheet) { render(['sheet']); sheetDirty = true; } else renderLens();
+  renderLens();
 };
-A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); render(['sheet']); sheetDirty = true; };
-A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); render(['sheet']); sheetDirty = true; };
-let sheetDirty = false;
+A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
+A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
+/* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */
 A.sheet = (d, el) => {
+  S.ui.sheetBack = S.ui.sheet === 'picks' ? S.ui.sheetFrom || '' : null;
   S.ui.sheet = d.s as 'sources' | 'party';
   S.ui.sheetFrom = el.dataset.fk || null;
   render(['sheet']);
   focusFk('sheet-x');
 };
+function backToPicks(lensChanged = false): void {
+  const from = S.ui.sheetFrom;
+  S.ui.sheet = 'picks';
+  S.ui.sheetFrom = S.ui.sheetBack || null;
+  S.ui.sheetBack = null;
+  if (lensChanged) renderLens(); else render(['sheet']);
+  if (from) focusFk(from);
+}
+/* "Picks: ... · Edit" and the menu's "Quick picks": step 2's controls in a sheet. The fill switch
+   starts off each time; "Show only what's left" shows where the ballot is now. */
+A.picks = (_d, el) => {
+  S.ui.sheetFrom = S.ui.sheet === 'toc' ? 'bar-menu' : el.dataset.fk || null;
+  S.ui.sheetBack = null;
+  S.ui.setupFill = false;
+  S.ui.setupOnly = S.ui.onlyUndecided;
+  S.ui.sheet = 'picks';
+  render(['sheet']);
+  focusFk('sheet-x');
+};
+/* The Edit sheet closes (Done, the scrim, Escape) and its switches take effect: one batch of fills
+   (the party's candidates, then where your sources agree) for one Undo, and the filter. */
+function closePicks(): void {
+  const plan = S.ui.setupFill ? planSetup(S.b.party) : null;
+  const only = S.ui.setupOnly;
+  S.ui.sheet = null;
+  S.ui.setupFill = false;
+  render(['sheet']);
+  const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
+  if (n) { S.ui.bulk = String(n); S.ui.row = null; S.ui.keep = null; }
+  const onlyChanged = only !== S.ui.onlyUndecided;
+  if (onlyChanged) { S.ui.onlyUndecided = only; S.ui.keep = null; }
+  flushLens(!!n || onlyChanged);
+  persist();
+  if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
+  if (n && plan) fillToast(fillHead(n, plan), setupPlan(plan));
+}
 A['sheet-close'] = () => {
+  const was = S.ui.sheet;
+  if (was === 'picks') { closePicks(); return; }
+  if ((was === 'sources' || was === 'party') && S.ui.sheetBack !== null) { backToPicks(); return; }
   S.ui.sheet = null;
   render(['sheet']);
-  if (sheetDirty) { sheetDirty = false; renderLens(); }
+  flushLens();
   if (S.ui.sheetFrom) focusFk(S.ui.sheetFrom);
 };
 
 /* ---------- bulk fills, each undone as a batch ---------- */
-/* The toast after a fill: what landed, what was skipped and why, and Undo. The ballot head's
-   buttons and step 2's "Show my ballot" share it. */
+/* The toast after a fill: what landed, what was skipped and why, and Undo. Step 2's "Show my
+   ballot", the Edit sheet and the judges' button share it. */
 function fillToast(head: string, plan: Plan): void {
   const extra = [
     plan.single ? `${plan.single} of those come from just one source.` : '',
@@ -340,6 +384,16 @@ function fillToast(head: string, plan: Plan): void {
   ].filter(Boolean).join(' ');
   toast(`${head} ${extra}`.trim(), { label: 'Undo', act: 'undo-bulk' });
 }
+type SetupPlan = ReturnType<typeof planSetup>;
+const fillHead = (n: number, plan: SetupPlan): string => {
+  const p = plan.party ? plan.party.fills.length : 0;
+  const a = plan.agree.fills.length;
+  return `Filled ${plural(n, 'pick')}${p ? ` with ${S.b.party} candidates` : ''}${p && a ? ' and' : ''}${a ? ' where your sources agree' : ''}.`;
+};
+const setupPlan = (plan: SetupPlan): Plan => {
+  const pp = plan.party || emptyPlan();
+  return { fills: plan.fills, single: plan.agree.single, skippedTwo: pp.skippedTwo, skippedRanked: pp.skippedRanked, skippedPartial: pp.skippedPartial + plan.agree.skippedPartial };
+};
 A.bulk = (d) => {
   const k = d.k!;
   let plan: Plan;
@@ -351,6 +405,8 @@ A.bulk = (d) => {
   const flagged = jb ? jb.readFirst.filter((x) => jb.targets.some((t) => t.id === x.id)).length : 0;
   const n = plan.fills.length ? applyFills(plan.fills) : 0;
   if (!n) { toast(plan.skippedPartial ? `Nothing new to fill. You started ${plural(plan.skippedPartial, 'race')} yourself, so we left ${plan.skippedPartial === 1 ? 'it' : 'those'} for you.` : 'Nothing to fill right now.'); return; }
+  // This batch is now the one Undo takes back, so the head's "filled in" line steps aside.
+  S.ui.bulk = null;
   S.ui.row = null;
   renderBallot();
   render(['bar']);
@@ -362,10 +418,13 @@ A.bulk = (d) => {
 };
 A['undo-bulk'] = () => {
   if (!undoFills()) return;
+  const fromLine = (document.activeElement as HTMLElement | null)?.dataset?.fk === 'filled-undo';
+  S.ui.bulk = null;
   hideToast();
   renderBallot();
   render(['bar']);
   persist();
+  if (fromLine) focusFk('picks-edit');
   toast('Undone. Those picks are cleared.');
 };
 
@@ -414,8 +473,10 @@ A['change-place'] = () => {
 };
 
 /* ---------- step 2: pick by endorsements or party ---------- */
-A['setup-fill'] = () => { S.ui.setupFill = !S.ui.setupFill; render(['mast']); };
-A['setup-only'] = () => { S.ui.setupOnly = !S.ui.setupOnly; render(['mast']); };
+/* Step 2's two switches, and the Edit sheet's: each repaints where it lives. */
+const switchRegion = (): Region => (S.ui.sheet === 'picks' ? 'sheet' : 'mast');
+A['setup-fill'] = () => { S.ui.setupFill = !S.ui.setupFill; render([switchRegion()]); };
+A['setup-only'] = () => { S.ui.setupOnly = !S.ui.setupOnly; render([switchRegion()]); };
 /* "Show my ballot": one batch of fills (the party's candidates, then where your sources agree), so
    one Undo takes it all back; the "only what's left" filter when something is left; then the
    ballot, saved for the first time. */
@@ -425,17 +486,14 @@ A['setup-done'] = () => {
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
   S.ui.onlyUndecided = S.ui.setupOnly && decisionItems().some((i) => !i.done);
   S.ui.row = null; S.ui.keep = null;
+  S.ui.bulk = n ? String(n) : null;
   S.b.setupDone = true;
   S.view = 'ballot';
   render();
   persist(true);
   window.scrollTo(0, 0);
   if (!n || !plan) return;
-  const p = plan.party ? plan.party.fills.length : 0;
-  const a = plan.agree.fills.length;
-  const head = `Filled ${plural(n, 'pick')}${p ? ` with ${S.b.party} candidates` : ''}${p && a ? ' and' : ''}${a ? ' where your sources agree' : ''}.`;
-  const pp = plan.party || emptyPlan();
-  fillToast(head, { fills: plan.fills, single: plan.agree.single, skippedTwo: pp.skippedTwo, skippedRanked: pp.skippedRanked, skippedPartial: pp.skippedPartial + plan.agree.skippedPartial });
+  fillToast(fillHead(n, plan), setupPlan(plan));
 };
 A['addr-open'] = () => { S.ui.addrOpen = true; S.ui.addrMsg = null; renderAddr(); const i = $('#addr-in'); if (i) { i.scrollIntoView({ block: 'center' }); i.focus({ preventScroll: true }); } };
 A['addr-close'] = () => { S.ui.addrOpen = false; renderAddr(); focusFk('addr-open'); };

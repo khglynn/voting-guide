@@ -5,8 +5,8 @@
 import type { HowTo } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, isMailState } from '../model/plan';
-import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML } from './common';
+import { nextStep, registrationAlert, isMailState, type Step } from '../model/plan';
+import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount } from './common';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -21,10 +21,11 @@ export function planHTML(): string {
   const reg = registrationAlert(h);
   const open = isOpen('whatif');
   const check = h.registration.check_url;
+  const sub = [...step.sub, ...inPerson(step)];
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
-      <h2 class="vh">Your next step</h2>
+      <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
-      ${step.sub.length ? `<p class="plan-sub">${esc(step.sub.join(' '))}</p>` : ''}
+      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
       ${reg ? `<p class="plan-reg">${esc(reg)}</p>` : ''}
       <div class="plan-acts">${step.primary ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
         ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
@@ -32,6 +33,24 @@ export function planHTML(): string {
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
       ${open ? whatIfHTML(h) : ''}
     </div></section>`;
+}
+
+/* While you can vote in person (not in a mail state): a place's early-voting hours when they fit
+   in one short line ("Sites are open 7 AM to 7 PM."), and "Bring a photo ID." where the state
+   asks for one. The rest stays behind "Dates, ID, ...". */
+const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
+function inPerson(step: Step): string[] {
+  const b = S.ballot!;
+  const h = b.howto;
+  if (isMailState(h) || !IN_PERSON.includes(step.phase)) return [];
+  const out: string[] = [];
+  if (step.phase === 'early_before' || step.phase === 'early_open') {
+    const notes = [...new Set(b.places.map((p) => (p.early_in_person?.hours_note || '').trim()))];
+    const n = notes.length === 1 ? notes[0] : '';
+    if (n && wordCount(n) <= 12 && sentences(n).length === 1) out.push(n);
+  }
+  if (h.id_rules.required === 'photo') out.push('Bring a photo ID.');
+  return out;
 }
 
 interface Row { date: string; label: string; detail: string | null; source: string | null; key: string }

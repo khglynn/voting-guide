@@ -153,6 +153,8 @@ export function undoFills(): boolean {
   return true;
 }
 export const forgetUndo = (): void => { last = null; };
+/* An Undo is waiting: the ballot head's "20 filled in. Undo" shows only while it is. */
+export const canUndo = (): boolean => !!last;
 /* A hand edit to a row takes that row out of the pending Undo, even when you set the same value
    the batch did: Undo only ever takes back what the batch did on its own. */
 export function touchUndo(id: string): void {

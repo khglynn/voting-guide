@@ -21,8 +21,7 @@ const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
 const TODAY = process.env.TODAY || '2026-10-19';
 const W = 380;
 const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET || '';
-/* The copy pass (Oct 19): the sources header's words and the paywall note's, from the copy table. */
-const LENS_HEAD = 'Show endorsements from';
+/* The copy pass (Oct 19): the paywall note's words, from the copy table. */
 const PW_NOTE_RE = /behind a paywall, so we couldn’t read/i;
 
 const results = [];
@@ -58,6 +57,16 @@ async function openBallot(page, zip, query = '') {
   await openZip(page, zip, query);
   await throughSetup(page);
   await page.waitForTimeout(150);
+}
+/* The ballot's Edit sheet ("Picks: ... · Edit"): step 2's controls. Its Done (data-fk sheet-x) applies
+   the two switches. */
+async function edit(page) { await tap(page, '[data-act="picks"]'); await page.waitForSelector('.sheet-panel.picks'); }
+async function editFill(page) {
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="setup-fill"]');
+  const n = Number(((await text(page, '.sheet-panel [data-act="setup-fill"] small')).match(/^(\d+)/) || [])[1] || 0);
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  return n;
 }
 const linkHere = (url) => url.replace(/^https?:\/\/[^/]+/, BASE).replace('/#', `/?today=${TODAY}#`);
 const text = async (page, sel) => ((await page.textContent(sel).catch(() => '')) || '').replace(/\s+/g, ' ').trim();
@@ -222,6 +231,7 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   const t = await text(page, '.toast');
   check('Step 2 fill: "Show my ballot" fills the races where your sources agree', bar.startsWith(`${n} of `), `${bar} (switch said ${n})`);
   check('Step 2 fill: one toast says so, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree\\.`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
+  check('Step 2 fill: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
   check('Step 2: "Show only what’s left" turns the filter on, so no decided row shows', (await page.getAttribute('[data-act="only"]', 'aria-pressed')) === 'true' && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
   await tap(page, '.toast [data-act="undo-bulk"]');
   check('Step 2 fill: Undo takes every filled pick back', /^0 of /.test(await text(page, '.bar-txt')), await text(page, '.bar-txt'));
@@ -253,7 +263,8 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await openBallot(page, '80205');
   await shot(page, '01-denver-top');
   await noSideScroll(page, 'Denver');
-  check('Denver: masthead names the place and offers a way out', /Denver/.test(await text(page, '.place')) && /Not your ballot\? Change/.test(await text(page, '.where')));
+  check('Denver: masthead names the place, then where, the ZIP and Change', /Denver/.test(await text(page, '.place')) && /· 80205 · Change$/.test(await text(page, '.where')) && !!(await page.$('.where [data-act="change-place"]')), await text(page, '.where'));
+  check('Denver: a mail state’s plan says nothing about a photo ID', !/photo ID/.test(await text(page, '#plan')));
   const head = await text(page, '.plan-h');
   check('Denver: plan strip leads with the next step and its date, never a countdown', /^Mail your ballot by Mon, Oct 26\.$/.test(head) && !/days? (left|until)/i.test(await text(page, '#plan')), head);
   check('Denver: plan paragraphs stay under 40 words', (await planWalls(page)).length === 0, (await planWalls(page)).join(' | '));
@@ -263,23 +274,37 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Denver: the dates and ID toggle opens the situations and the basics', /Common problems and what to do/.test(await text(page, '.whatifs')) && /In the booth/.test(await text(page, '.whatifs')));
   await tap(page, '[data-act="open"][data-k="whatif"]');
 
-  // The lens: Newspapers and guides on by default; a chip adds groups; the sheet lists everyone.
-  // The copy pass (Kevin, Oct 19): the section header says what it does, not "Who do you trust?".
-  check(`Denver: the sources header reads "${LENS_HEAD}"`, (await text(page, '#lens-h')) === LENS_HEAD, await text(page, '#lens-h'));
-  check('Denver: Newspapers and guides is on by default', (await page.getAttribute('[data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true');
-  const cov1 = await text(page, '#lens .cov');
-  await tap(page, '[data-act="chip"][data-k="progressive"]');
-  const cov2 = await text(page, '#lens .cov');
-  check('Denver: turning on Progressive groups changes the coverage line', cov1 !== cov2 && /with endorsements in \d+ of your \d+ races and measures/.test(cov2), `${cov1} -> ${cov2}`);
-  await tap(page, '[data-act="chip"][data-k="progressive"]');
-  check('Denver: and off again', (await text(page, '#lens .cov')) === cov1);
-  await tap(page, '[data-act="sheet"][data-s="sources"]');
-  await page.waitForSelector('.sheet-panel');
+  // Whose picks you see (flow, Oct 20): one line at the top of the ballot; Edit opens step 2's
+  // controls in a sheet, with every source and the party list a tap further in.
+  const fk = () => page.evaluate(() => document.activeElement && document.activeElement.dataset.fk);
+  check('Denver: no "Show endorsements from" block, chip bar or fill buttons on the ballot', !(await page.$('#lens')) && !(await page.$('#lensbar')) && !(await page.$('.pfm')) && !(await page.$('#r-ballot [data-act="chip"]')));
+  check('Denver: the ballot says whose picks show, with Edit', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides' && (await text(page, '.picks-line [data-act="picks"]')) === 'Edit', await text(page, '.picks-line'));
+  await edit(page);
+  check('Denver: Edit opens step 2’s controls, Newspapers and guides on, both switches off', (await text(page, '.sheet-panel #sh-h')) === 'Pick by endorsements or party' && (await page.getAttribute('.sheet-panel [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true'
+    && (await page.getAttribute('.sheet-panel [data-act="setup-fill"]', 'aria-checked')) === 'false' && (await page.getAttribute('.sheet-panel [data-act="setup-only"]', 'aria-checked')) === 'false');
+  check('Denver: the Edit sheet takes focus', (await fk()) === 'sheet-x');
+  const cov1 = `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}`;
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="progressive"]');
+  const cov2 = `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}`;
+  check('Denver: turning on Progressive groups changes the counts in the sheet', cov1 !== cov2 && /^Picks in \d+ of your \d+ races\./.test(cov2), `${cov1} -> ${cov2}`);
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="progressive"]');
+  check('Denver: and off again', `${await text(page, '.sheet-panel .su-cov')} | ${await text(page, '.sheet-panel [data-act="setup-fill"] small')}` === cov1);
+  await tap(page, '.sheet-panel [data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel .sgrp');
   check('Denver: See all sources lists every source by lean, each with why its lean', (await page.$$('.sgrp')).length >= 2 && /Why this lean/.test(await text(page, '.sheet-panel')));
-  check('Denver: the sheet moves focus to its close button', await page.evaluate(() => document.activeElement && document.activeElement.dataset.fk === 'sheet-x'));
+  check('Denver: the sheet moves focus to its close button', (await fk()) === 'sheet-x');
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
-  check('Denver: Escape closes the sheet and returns focus to the chip', !(await page.$('.sheet-panel')) && await page.evaluate(() => document.activeElement && document.activeElement.dataset.fk === 'chip-more'));
+  check('Denver: Escape goes back to the Edit sheet, focus on See all sources', !!(await page.$('.sheet-panel.picks')) && (await fk()) === 'chip-more', await fk());
+  await tap(page, '.sheet-panel [data-act="sheet"][data-s="party"]');
+  await page.waitForSelector('.sheet-panel [data-act="party-set"]');
+  await tap(page, '.sheet-panel [data-act="party-set"]');
+  check('Denver: a party from the party list comes back to the Edit sheet, turned on', !!(await page.$('.sheet-panel.picks')) && (await page.getAttribute('.sheet-panel [data-fk="chip-party"]', 'aria-pressed')) === 'true' && / Party$/.test(await text(page, '.sheet-panel [data-fk="chip-party"]')));
+  await tap(page, '.sheet-panel [data-act="party-off"]');
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(150);
+  check('Denver: Escape closes the Edit sheet, focus back on Edit', !(await page.$('.sheet-panel')) && (await fk()) === 'picks-edit', await fk());
+  check('Denver: the line still says Newspapers and guides', (await text(page, '.picks-line span')) === 'Picks: Newspapers and guides', await text(page, '.picks-line span'));
 
   // A race: open it, see your sources, pick, and the row closes with your pick in gold.
   const raceId = await page.evaluate(() => { const r = document.querySelector('.row[data-item]:has(.vd.agree)'); return r && r.dataset.item; });
@@ -307,17 +332,17 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '[data-act="next"]');
   check('Denver: Next undecided opens an undecided row', !!(await page.$('.row.is-open[data-undecided]')));
 
-  // "Use their picks where they agree": fills, says so, and undoes as one batch.
+  // "Fill in their picks" from the Edit sheet: fills on Done, says so, and undoes as one batch.
   const before = await text(page, '.bar-txt');
-  const n = Number((await text(page, '[data-act="bulk"][data-k="agree"] .n')) || 0);
-  check('Denver: agree fill has rows to fill on the default lens', n > 0, String(n));
+  const n = await editFill(page);
+  check('Denver: the Edit sheet’s fill switch has races to fill on the default lens', n > 0, String(n));
   if (n) {
-    await tap(page, '[data-act="bulk"][data-k="agree"]');
     const t = await text(page, '.toast');
-    check('Denver: agree fill says how many, with Undo', /^Filled \d+ picks? where your sources agree/.test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
+    check('Denver: Done fills them and says how many, with Undo', new RegExp(`^Filled ${n} picks? where your sources agree`).test(t) && !!(await page.$('.toast [data-act="undo-bulk"]')), t);
+    check('Denver: the ballot says "N filled in. Undo"', (await text(page, '.filled')) === `${n} filled in. Undo`, await text(page, '.filled'));
     check('Denver: the bar counts the filled picks', (await text(page, '.bar-txt')) !== before);
-    await tap(page, '.toast [data-act="undo-bulk"]');
-    check('Denver: Undo puts every pick back', (await text(page, '.bar-txt')) === before, `${before} vs ${await text(page, '.bar-txt')}`);
+    await tap(page, '.filled [data-act="undo-bulk"]');
+    check('Denver: Undo puts every pick back, and the line goes', (await text(page, '.bar-txt')) === before && !(await page.$('.filled')), `${before} vs ${await text(page, '.bar-txt')}`);
   }
 
   await tap(page, '[data-act="cheat"]');
@@ -390,6 +415,30 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await tap(page, '#sec-judicial .unopp .disc');
   check('Austin: the line opens to the list', (await page.$$('#sec-judicial .unopp-list li')).length > 1);
   noErrors(page, 'Austin');
+  await ctx.close();
+}
+
+/* ---------- the ballot top (flow, Oct 20): the place, the next step, whose picks, the address ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  await page.evaluate(() => document.fonts.ready);
+  await shot(page, '03b-austin-top');
+  check('Ballot top: the place, then where, the ZIP and Change', (await text(page, '.mast .place')) === 'Austin' && /, Texas · 78704 · Change$/.test(await text(page, '.mast .where')), await text(page, '.mast .where'));
+  check('Ballot top: the election office left the masthead', !(await page.$('.mast .office')) && !/Your election office/.test(await text(page, '.mast')));
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  check('Ballot top: "Your election office" is in the plan’s details', /Your election office/.test(await text(page, '.whatifs')));
+  await tap(page, '[data-act="open"][data-k="whatif"]');
+  check('Ballot top: in Texas the next step says to bring a photo ID', /Bring a photo ID\.$/.test(await text(page, '.plan-sub')), await text(page, '.plan-sub'));
+  const box = await text(page, '.addrbox > p');
+  check('Ballot top: the address box says how many races depend on your address', /^\d+ races depend on your address\.$/.test(box), box);
+  check('Ballot top: with "Use my address" and "See my sample ballot"', (await text(page, '.addrbox [data-act="addr-open"]')) === 'Use my address' && (await text(page, '.addrbox a')) === 'See my sample ballot' && /^https:/.test((await page.getAttribute('.addrbox a', 'href')) || ''));
+  check('Ballot top: the old head lines are gone', !/in the same order as your ballot/.test(await text(page, '#r-ballot')) && !(await page.$('.bhead .sb')));
+  await tap(page, '.addrbox [data-act="addr-open"]');
+  check('Ballot top: "Use my address" opens the form in the box', !!(await page.$('.addrbox form[data-form="addr"]')) && await page.evaluate(() => document.activeElement && document.activeElement.id === 'addr-in'));
+  check('Ballot top: nothing in all caps', (await upperCased(page)).length === 0);
+  await noSideScroll(page, 'Ballot top');
+  noErrors(page, 'Ballot top');
   await ctx.close();
 }
 
@@ -473,8 +522,9 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   const { ctx, page } = await newPage();
   await openBallot(page, '97214');
   await noSideScroll(page, 'Portland');
-  await tap(page, '[data-act="sheet"][data-s="sources"]');
-  await page.waitForSelector('.sheet-panel');
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel .sgrp');
   const pw = await page.evaluate(() => {
     const row = [...document.querySelectorAll('.sheet-panel .srow')].find((r) => r.querySelector('.pw-note'));
     if (!row) return null;
@@ -482,6 +532,7 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
     return { name: row.querySelector('.s-n').textContent.trim(), note: row.querySelector('.pw-note').textContent.replace(/\s+/g, ' ').trim(), href: a ? a.href : '' };
   });
   check('Portland: a paywalled paper in See all sources carries the note, linking the report form with its name', !!pw && PW_NOTE_RE.test(pw.note) && pw.href.includes('docs.google.com/forms') && new URL(pw.href).searchParams.get('entry.90887649').includes(pw.name), pw ? `${pw.name}: ${pw.note}` : 'no paywalled source on this ballot');
+  await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   await tap(page, '[data-act="sheet-close"][data-fk="sheet-x"]');
   const key = await page.evaluate(() => [...document.querySelectorAll('.row[data-q]')].map((r) => r.dataset.q).find((k) => /Portland City Council/.test(k)));
   check('Portland: asks which council district', !!key);
@@ -534,8 +585,10 @@ const panelNames = (page, card) => page.$$eval(`${card} .rank-row .rank-nm`, (el
   check('Portland: Done ranking finishes the city section, which folds to one band naming the pick', !!(await page.$('#sec-city.folded')) && /1\. Morillo \+2/.test(await text(page, '#sec-city .sec-sub')), await text(page, '#sec-city .sec-sub'));
   await unfold(page, 'city');
   check('Portland: opened again, the row shows the 1st choice in gold', !(await page.$(`${card}.is-open`)) && (await text(page, `${card} .vd .m`)).endsWith('1. Morillo +2'), await text(page, `${card} .vd .m`));
-  for (const k of ['progressive', 'conservative']) if (await page.$(`[data-act="chip"][data-k="${k}"][aria-pressed="false"]`)) await tap(page, `[data-act="chip"][data-k="${k}"]`);
-  if (await page.$('[data-act="bulk"][data-k="agree"]:not([disabled])')) await tap(page, '[data-act="bulk"][data-k="agree"]');
+  await edit(page);
+  for (const k of ['progressive', 'conservative']) if (await page.$(`.sheet-panel [data-act="chip"][data-k="${k}"][aria-pressed="false"]`)) await tap(page, `.sheet-panel [data-act="chip"][data-k="${k}"]`);
+  await tap(page, '.sheet-panel [data-act="setup-fill"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
   check('Portland: "use their picks" never fills a ranked race', !!(await page.$('#i-multnomah-chair[data-undecided]')));
   await tap(page, '[data-act="cheat"]');
   const cs = await page.$$eval('#cheat tr[data-cs="portland-council-3"] .cs-ranks li', (els) => els.map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
@@ -803,7 +856,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80226');
-  await tap(page, '[data-act="bulk"][data-k="agree"]');
+  await editFill(page);
   const filled = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-measures .row[data-item]')].find((x) => /Filled from your sources/.test(x.textContent)); return r ? { id: r.dataset.item, v: /Yes\s*$/.test(r.querySelector('.vd .m').textContent) ? 'YES' : 'NO' } : null; });
   check('Undo after a hand edit: a measure was filled', !!filled);
   if (filled) {
@@ -867,8 +920,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
 {
   const { ctx, page } = await newPage();
   await openBallot(page, '80205');
-  await tap(page, '[data-act="sheet"][data-s="sources"]');
-  await page.waitForSelector('.sheet-panel');
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="sheet"][data-s="sources"]');
+  await page.waitForSelector('.sheet-panel .sgrp');
   check('Sheet: the ballot behind it is inert', await page.evaluate(() => document.getElementById('app').inert && document.getElementById('r-bar').inert));
   // From the last control, Tab wraps to the first; from the first, Shift+Tab wraps to the last.
   const FOC = (sc) => `${sc} a[href], ${sc} button:not([disabled]), ${sc} input:not([disabled]), ${sc} textarea`;
@@ -884,6 +938,9 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     return fwd && back && out === 0;
   };
   check('Sheet: Tab and Shift+Tab wrap inside the sheet', await wraps('.sheet-panel'));
+  await page.keyboard.press('Escape'); // back to the Edit sheet
+  await page.waitForTimeout(150);
+  check('Sheet: the Edit sheet holds the keyboard too', await wraps('.sheet-panel.picks'));
   await page.keyboard.press('Escape');
   await page.waitForTimeout(150);
   check('Sheet: after closing, the ballot is live again', await page.evaluate(() => !document.getElementById('app').inert));

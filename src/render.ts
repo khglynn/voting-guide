@@ -7,7 +7,8 @@ import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
 import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts, hiddenByOnly } from './views/ledger';
-import { lensHeadHTML, lensBarHTML, sourcesSheetHTML, partySheetHTML } from './views/lens';
+import { sourcesSheetHTML, partySheetHTML } from './views/lens';
+import { picksSheetHTML } from './views/setup';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
 import { passHTML } from './views/pass';
 import { trustHTML } from './views/trust';
@@ -32,6 +33,7 @@ const html: Record<Region, () => string> = {
     if (S.ui.reader) return readerHTML(S.ui.reader);
     if (S.ui.sheet === 'sources') return sourcesSheetHTML();
     if (S.ui.sheet === 'party') return partySheetHTML();
+    if (S.ui.sheet === 'picks') return picksSheetHTML();
     return '';
   },
   print: () => (shown() ? cheatHTML(true) : ''),
@@ -53,12 +55,10 @@ export function withFocusKept(fn: () => void): void {
 
 /* Keep what you're looking at still while content above it changes height. */
 function anchorRow(): { el: string; top: number } | null {
-  const lens = $('#lensbar');
-  const floor = lens ? Math.max(0, lens.getBoundingClientRect().bottom) : 0;
   const rows = document.querySelectorAll<HTMLElement>('.ledger .row, .ledger .sec-hd');
   for (const r of rows) {
     const rect = r.getBoundingClientRect();
-    if (rect.bottom > floor + 4) {
+    if (rect.bottom > 4) {
       const id = r.id || (r.closest('.sec') as HTMLElement | null)?.id || '';
       return id ? { el: id, top: rect.top } : null;
     }
@@ -159,41 +159,41 @@ export function renderAddr(): void {
   if (i && typed && !i.value) i.value = typed;
 }
 
-/* The parts that summarize the whole ballot: the lens coverage line, the bulk counts, the bar. */
+/* The parts that summarize the whole ballot: the bar (and its menu), then the ballot head. */
 let lazyTimer: number | undefined;
 export function renderSummaries(): void {
   if (S.view === 'setup') { render(['mast']); return; }
   render(['bar']);
+  if (S.ui.sheet === 'toc') render(['sheet']);
   window.clearTimeout(lazyTimer);
   lazyTimer = window.setTimeout(() => {
     if (S.ui.view !== 'ballot' || !S.ballot) return;
     withFocusKept(() => {
-      const head = $('#lens');
-      if (head) head.outerHTML = lensHeadHTML();
       // Leave the head alone while the address form is open: repainting it would clear what you typed.
       const wrap = $('.wrap-led');
       if (wrap && !S.ui.addrOpen) wrap.innerHTML = ballotHeadHTML();
     });
   }, 60);
 }
+/* Whose picks you see changed. Step 2's chips live in the first page's masthead. While a sheet is
+   open (the Edit sheet, all sources, a party) only the sheet repaints: the ballot behind it follows
+   when the sheet closes (flushLens), so a chip tap stays quick on a 200-row ballot. */
+let lensDirty = false;
 export function renderLens(): void {
-  // Step 2's chips live in the first page's masthead.
   if (S.view === 'setup') { render(['mast']); return; }
-  anchored(() => {
-    withFocusKept(() => {
-      const bar = $('#lensbar');
-      if (bar) bar.outerHTML = lensBarHTML();
-    });
-    render(['ballot', 'bar']);
-  }, 'lensbar');
+  if (S.ui.sheet) { render(['sheet']); lensDirty = true; return; }
+  anchored(() => render(['ballot', 'bar']));
+}
+export function flushLens(force = false): void {
+  if (!lensDirty && !force) return;
+  lensDirty = false;
+  if (S.ballot && S.view === 'ballot') anchored(() => render(['ballot', 'bar']));
 }
 
-/* Bring a row into view, under the lens bar where it sticks (wide screens). */
+/* Bring a row into view near the top. Nothing sticks at the top of the page. */
 export function scrollRowIntoView(key: string, force = false): void {
   const el = rowEl(key);
   if (!el) return;
-  const lens = $('#lensbar');
-  const top = lens && getComputedStyle(lens).position === 'sticky' ? lens.getBoundingClientRect().height : 0;
   const r = el.getBoundingClientRect();
-  if (force || r.top < top || r.top > window.innerHeight * 0.4) window.scrollBy(0, r.top - top - 4);
+  if (force || r.top < 0 || r.top > window.innerHeight * 0.4) window.scrollBy(0, r.top - 4);
 }

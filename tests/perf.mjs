@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from the ZIP box to
-   step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick) to paint.
+   step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
+   and tap a chip there) to paint.
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
 const { chromium } = await import(process.env.PW_PATH || 'playwright');
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
@@ -41,11 +42,15 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002'], ['Aurora 
   const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
   const openRow = await tapTime(`#i-${id} [data-act="row"]`);
   const pick = await tapTime(`#i-${id} [data-act="pick"]`);
-  const chip = await tapTime('[data-act="chip"][data-k="progressive"]');
-  out.push({ name, open, setupChip, setupFill, show, openRow, pick, chip });
+  // The lens lives in the Edit sheet: open it, tap a chip (only the sheet repaints), then Done
+  // (the ballot behind repaints once; not a tap budget, like "Show my ballot").
+  const edit = await tapTime('[data-act="picks"]');
+  const chip = await tapTime('.sheet-panel [data-act="chip"][data-k="progressive"]');
+  const done = await tapTime('.sheet-panel [data-fk="sheet-x"]');
+  out.push({ name, open, setupChip, setupFill, show, openRow, pick, edit, chip, done });
   await ctx.close();
 }
 await browser.close();
-for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, change the lens ${r.chip}ms (4x CPU throttle)`);
-const slow = out.filter((r) => r.openRow > 250 || r.pick > 250 || r.setupChip > 250 || r.setupFill > 250);
+for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms (4x CPU throttle)`);
+const slow = out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip].some((t) => t > 250));
 process.exit(slow.length ? 1 : 0);

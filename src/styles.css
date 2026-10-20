@@ -96,13 +96,11 @@ b, strong { font-weight: 600; }
 .pbtn, .chip, .mini, .pick, .ftog, .fcta, .cbtn, .bigbtn, .closebtn, .pfm .act, .retain-all > span { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 84; letter-spacing: .015em; }
 /* Printed headings: one green ink with a few specks where it missed. Each heading sits on its own patch of the
    plate (--mx, --my), so no two show the same specks. The padding keeps descenders inside the mask. */
-.place, .su-h, .bhead h2, .lens-head h2, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
+.place, .su-h, .cheat-head h2, .pass h2, .endcap h3, .rd h2 {
   padding-bottom: .16em; margin-bottom: -.16em;
   -webkit-mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; mask: var(--press) var(--mx, 0) var(--my, 0) / 2.4em 2.4em repeat; }
 .place { --mx: 11px; --my: 7px; }
 .su-h { --mx: 33px; --my: 11px; }
-.lens-head h2 { --mx: 23px; --my: 4px; }
-.bhead h2 { --mx: 41px; --my: 19px; }
 .cheat-head h2 { --mx: 7px; --my: 31px; }
 .pass h2 { --mx: 29px; --my: 13px; }
 .endcap h3 { --mx: 17px; --my: 23px; }
@@ -128,6 +126,7 @@ b, strong { font-weight: 600; }
 
 /* ---------- masthead and the front door ---------- */
 .mast { padding-top: 6px; padding-bottom: 12px; }
+.mast:not(.front) { padding-top: 22px; }
 .mast-top { display: flex; align-items: center; justify-content: space-between; min-height: 30px; }
 .dateline { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13.5px; color: var(--muted); }
 .place { font-family: var(--f-display); font-weight: 800; font-size: clamp(44px, 15vw, 60px); line-height: .98; letter-spacing: -.01em; font-variation-settings: "wdth" 78; color: var(--print); margin-top: 4px; overflow-wrap: anywhere; }
@@ -135,8 +134,8 @@ b, strong { font-weight: 600; }
 .where { margin-top: 8px; font-size: 15.5px; color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
 .phone a, a[href^="tel:"] { white-space: nowrap; }
 .where-note { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.where .chg { color: var(--muted); text-decoration: none; padding: 0; gap: .28em; }
-.where .chg u { color: var(--ink-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.mast:not(.front) .where { display: block; }
+.where .chg { color: var(--ink-2); padding: 0; }
 .office { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule-2); display: grid; gap: 2px; font-size: 15px; color: var(--ink-2); line-height: 1.35; }
 .office-k { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--muted); }
 .office-v { display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 2px; }
@@ -250,40 +249,26 @@ b, strong { font-weight: 600; }
 .bul { list-style: disc; padding-left: 20px; display: grid; gap: 4px; margin-top: 6px; }
 .bul-lead .bul-rest { color: var(--muted); }
 
-/* ---------- lens: who do you trust ---------- */
-.lens-head { padding-top: 14px; padding-bottom: 4px; }
-.lens-head h2 { font-family: var(--f-display); font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: -.004em; font-variation-settings: "wdth" 78; color: var(--print); }
-.lens-head p { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
-.lens-head .cov { color: var(--ink-2); }
-/* The chips wrap, so every choice is in view. On a phone two rows would cover too much of the ballot to stay
-   pinned, so the bar sticks only on wide screens. */
-.chipwrap { max-width: 640px; margin: 0 auto; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 16px 6px var(--g); }
-@media (min-width: 600px) {
-  html { scroll-padding-top: 128px; }
-  .lensbar { position: sticky; top: 0; z-index: 30; background-color: var(--bone); background-image: var(--tile); background-size: 256px; background-blend-mode: var(--tile-blend); border-bottom: 1px solid var(--rule-2); }
-  .chips { padding-bottom: 10px; }
-}
+/* ---------- chips: whose picks you see (step 2 and the Edit sheet; they wrap, and nothing sticks) ---------- */
 .chip { flex: none; min-height: 44px; padding: 0 13px; border: 1.25px solid var(--ink); border-radius: 2px; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); white-space: nowrap; }
 .chip[aria-pressed="true"] { background: var(--paper-green); border-color: var(--paper-green); color: var(--on-dusk); box-shadow: var(--lie); }
 .chip.some[aria-pressed="true"] { background: var(--dusk-tint); color: var(--dusk-ink); border-color: var(--dusk-2); }
 .chip .tick { width: 12px; height: 12px; display: none; }
 .chip[aria-pressed="true"] .tick { display: block; }
-.chip.more { border-style: dashed; }
+.chip.all-src { border-style: dashed; }
 
-/* ---------- ballot head and bulk actions ---------- */
+/* ---------- ballot head: whose picks, a fill's Undo, the address ---------- */
 .wrap-led { padding-left: var(--g); padding-right: 16px; max-width: 640px; margin: 0 auto; }
-.bhead { padding-top: 20px; padding-bottom: 8px; }
-.bhead h2 { font-family: var(--f-display); font-size: 34px; font-weight: 800; line-height: .98; letter-spacing: -.006em; font-variation-settings: "wdth" 78; color: var(--print); }
-.bhead p { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
-.bhead .statewide-note { color: var(--ink-2); }
-.bhead .addr-cta, .bhead .sb, .bhead .statewide-note { margin-top: 10px; }
-.bhead .addr { margin-top: 10px; }
-.pfm { padding-top: 6px; padding-bottom: 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.pfm .act { min-height: 54px; padding: 6px 10px; border: 1.25px solid var(--ink); border-radius: 2px; font-weight: 600; font-size: 14.5px; line-height: 1.2; display: flex; align-items: center; justify-content: space-between; gap: 6px; text-align: left; }
-.pfm .act .n { font-size: 13px; font-variant-numeric: tabular-nums; background: var(--sage-tint); color: var(--sage); padding: 1px 7px; border-radius: 2px; }
-.pfm .act[disabled] { border-color: var(--rule-2); color: var(--faint); }
-.pfm .act[disabled] .n { background: var(--rule); color: var(--faint); }
+.bhead { padding-top: 14px; padding-bottom: 8px; }
+.picks-line { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 6px 0; border-top: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); font-size: 16px; color: var(--ink); }
+.picks-line .mini { flex: none; }
+.filled { margin-top: 10px; font-size: 15.5px; color: var(--gold-ink); }
+.filled .linkbtn { margin: -12px 0; padding: 0; color: var(--gold-ink); }
+.addrbox { margin-top: 14px; padding: 12px 14px 14px; background: var(--paper); border: 1.25px dashed var(--dusk-2); border-radius: 2px; }
+.addrbox > p { font-size: 16px; }
+.addrbox > p b { font-weight: 600; }
+.addrbox .addr { margin-top: 8px; padding: 0; border: 0; background: none; }
+.bhead .statewide-note { margin-top: 12px; font-size: 14.5px; color: var(--ink-2); }
 
 /* ---------- sections ---------- */
 .ledger { max-width: 640px; margin: 0 auto; }

@@ -45,16 +45,17 @@ export interface UI {
   keep: string | null;        // a row just decided stays visible under "Only undecided" until another opens
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
-  sheet: null | 'sources' | 'party' | 'whatif';
+  sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc';  // picks: the ballot's Edit sheet; toc: the menu
   sheetFrom: string | null;   // data-fk to focus when a sheet closes
+  sheetBack: string | null;   // all sources or a party, opened from the Edit sheet: its sheetFrom, kept to go back to it
   addrOpen: boolean;
   addrBusy: boolean;
   addrMsg: string | null;
   saveOpen: boolean;
   copyFallback: string | null;
-  bulk: string | null;        // label of the last bulk fill, while its Undo is live
-  setupFill: boolean;         // step 2's "Fill in their picks" switch
-  setupOnly: boolean;         // step 2's "Show only what's left" switch
+  bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
+  setupFill: boolean;         // "Fill in their picks" in step 2 and the Edit sheet
+  setupOnly: boolean;         // "Show only what's left" in step 2 and the Edit sheet, applied when they close
 }
 
 /* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
@@ -75,7 +76,7 @@ export const S = {
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
-    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
+    noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, saveOpen: false, copyFallback: null, bulk: null,
     setupFill: false, setupOnly: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */

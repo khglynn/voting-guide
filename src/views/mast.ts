@@ -3,7 +3,7 @@
 import type { Index } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO } from '../util';
-import { ext, isOpen, telHTML, askCityURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
+import { ext, isOpen, askCityURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from './common';
 import { countyName } from './ledger';
 import { setupHTML } from './setup';
 import { stateName } from '../geo';
@@ -55,16 +55,12 @@ export function mastHTML(): string {
     const name = wards ? 'Washington, DC' : b.places.length ? b.places.map((p) => bare(p.label)).join(' or ') : b.stateName;
     const note = wards ? `Ward ${wards.slice(0, -1).join(', ')} or ${wards[wards.length - 1]}` : b.places.length === 1 ? (b.places[0].label.match(/\((.*)\)$/) || [])[1] : '';
     const county = b.places.length === 1 && b.st !== 'DC' ? countyName(b.places[0]) : '';
-    const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip ? `ZIP ${S.b.zip}` : ''].filter(Boolean).join('. ');
-    const office = b.places.map((p) => p.county_election_office).find(Boolean);
-    // The office's short name: before its address, first office only, no asides or building names.
-    const officeName = office ? office.name.replace(/\s*\([^)]*\)/g, '').split(/[,:]\s*\d/)[0].split(/;|\.\s/)[0].replace(/,\s*(?:City Hall|[^,]*\bBuilding\b)[\s\S]*$/i, '').trim() : '';
+    // "Travis County, Texas · 78704 · Change". The election office is in the plan's details.
+    const where = [b.places.length ? (county && county !== b.stateName ? `${county}, ${b.stateName}` : b.stateName) : 'Statewide races', S.b.zip].filter(Boolean).join(' · ');
     return `<header class="mast wrap">${tryBanner()}
-      <div class="mast-top"><span class="dateline">${esc(dateline())}</span></div>
       <h1 class="place">${esc(name)}</h1>
       ${note && !/county\)?$/i.test(note) ? `<p class="where-note">${esc(note.charAt(0).toUpperCase() + note.slice(1))}</p>` : ''}
-      <p class="where"><span>${esc(where)}.</span> <button class="linkbtn chg" data-act="change-place" data-fk="change-place">Not your ballot? <u>Change</u></button></p>
-      ${office ? `<p class="office"><span class="office-k">Your election office</span><span class="office-v"><span>${office.url ? ext(office.url, officeName) : esc(officeName)}</span>${office.phone ? `<span>${telHTML(office.phone)}</span>` : ''}</span></p>` : ''}
+      <p class="where"><span>${esc(where)} ·</span> <button class="linkbtn chg" data-act="change-place" data-fk="change-place">Change</button></p>
       ${S.b.addrNote ? `<p class="fine">${esc(S.b.addrNote)}</p>` : ''}
     </header>`;
   }

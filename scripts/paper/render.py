@@ -2,8 +2,8 @@
 
     <venv>/bin/python scripts/paper/render.py OUT_DIR JOB[,JOB...] [SAMPLES]
 
-Jobs: plan, strip-a, strip-b, strip-c, strip-d, sheet, crowd, states (envelope is kept as an example of a two-piece
-prop). The states job reads its outlines from the GeoJSON file named by the STATES environment variable.
+Jobs: plan, strip-a, strip-b, strip-c, strip-d, sheet, crowd, pile (envelope is kept as an example of a two-piece
+prop). The pile job reads its state outlines from the GeoJSON file named by the STATES environment variable.
 Each job writes OUT_DIR/<job>.png: the paper in its final color with its cast shadow, on a transparent
 background (the ground is a Cycles shadow catcher), ready to lay on the page. Every piece is lit by the
 same sun from the upper left, so they all sit on one desk.
@@ -218,9 +218,11 @@ def _weights(me, pts, fade):
     return [max(0.0, 1.0 - kd.find((v.co.x, v.co.y, 0.0))[2] / fade) for v in me.vertices]
 
 def piece(name, P, torn, face, rim, fringe=None, z=0.0, thick=.009, crumple=(.02, 1.6), crumple_fade=None,
-          lift=.006, lift_fade=.18, fringe_w=.035, spacing=.035, seed=0):
+          lift=.006, lift_fade=.18, fringe_w=.035, spacing=.035, seed=0, rest=None):
+    """rest: a function of x and y arrays giving the height the sheet lies at there, for a sheet draped over others."""
     vc, faces = tessellate(P, spacing)
-    bm = bmesh.new(); bv = [bm.verts.new((v.x, v.y, 0.0)) for v in vc]
+    hz = rest(np.array([v.x for v in vc]), np.array([v.y for v in vc])) if rest else np.zeros(len(vc))
+    bm = bmesh.new(); bv = [bm.verts.new((v.x, v.y, float(h))) for v, h in zip(vc, hz)]
     for f in faces:
         try: bm.faces.new([bv[i] for i in f])
         except ValueError: pass
@@ -388,48 +390,67 @@ def state_rings(code, keep=.02):
     out = sorted((np.stack(_albers(R[:, 0], R[:, 1], lon0, lat0), 1) for R in rings), key=lambda P: -abs(_area(P)))
     return [P for P in out if abs(_area(P)) >= keep * abs(_area(out[0]))]
 
-# A loose row, west to east, the way the crowd stands: x, y of the state's middle, a turn in degrees, paper.
-# DC is a small punched dot on Maryland's edge, about where it sits on a map.
-STATE_ROW = [
-    ('WA', -2.67, .34, -4, 'deep'), ('OR', -2.27, -.36, 3, 'tint'), ('CA', -1.81, .22, -2, 'green'),
-    ('CO', -1.37, -.38, 4, 'cream'), ('TX', -0.91, .30, -3, 'deep'), ('MO', -0.41, -.34, 4, 'tint'),
-    ('IL', 0.01, .30, -5, 'green'), ('AL', 0.41, -.34, 3, 'deep'), ('GA', 0.85, .32, -2, 'tint'),
-    ('FL', 1.33, -.32, 4, 'green'), ('PA', 1.75, .40, -3, 'cream'), ('MD', 2.23, -.30, 5, 'deep'),
-    ('DC', 2.25, -.40, 0, 'cream'), ('NY', 2.53, .40, -4, 'tint'),
+# The pile at the foot of the first page: the same states, cut from the crowd's papers and dropped in a heap
+# that runs off the bottom of the frame and, on a phone, off both sides; on a wide screen it ends in bare desk.
+# Back to front: x, y of the state's middle, its size (the square root of its area), a turn in degrees, paper.
+# The places came from a scratch search (many tries per piece, keeping the one that covered the most new desk
+# below a line with room to poke above it, overlapping the pieces already down by about a third, never past
+# the frame's top or sides), then were fixed here so a render is repeatable. DC is a small punched dot on top.
+PILE = [
+    ('CO', -0.30, -0.24, .84, 2, 'deep'), ('WA', -1.16, -0.30, .80, -19, 'tint'), ('OR', 0.35, -0.30, .84, 9, 'tint'),
+    ('PA', -1.73, -0.29, .76, -15, 'deep'), ('MO', 1.07, -0.35, .84, 15, 'deep'), ('GA', 1.63, -0.26, .82, 17, 'cream'),
+    ('AL', 2.09, -0.35, .78, 4, 'tint'), ('NY', -2.22, -0.50, .82, 4, 'tint'), ('IL', 2.42, -0.45, .76, 26, 'deep'),
+    ('MD', -1.13, -0.04, .62, 12, 'cream'), ('CA', -1.10, -0.44, .92, 12, 'green'), ('FL', 0.68, -0.18, .86, 28, 'green'),
+    ('TX', -2.36, -0.44, 1.02, -19, 'cream'), ('DC', -0.28, 0.12, .12, 0, 'cream'),
 ]
-STATE_SIZE, STATE_EVEN = .52, .12   # the square root of a state's area is about STATE_SIZE * (its area over the median's) ** STATE_EVEN
+PILE_FRAME = (6.4, 1.5)   # scene units; at PX=300 the image is 1920 by 450, drawn at 640 by 150 CSS px (3x)
+PILE_STEP = .017          # a sheet clears the one under it by this much: its thickness plus the most a crumple
+                          # and the edge lift raise the one below, so no two sheets pass through each other
+PILE_RES = 100            # cells per scene unit in the height map the pieces drape over
 
-def states_layout(seed=300):
-    """Each covered state as scissor-cut outlines in place: [(code, [outline, ...], paper)], back to front."""
-    sizes = {c: sum(abs(_area(P)) for P in state_rings(c)) for c, *_ in STATE_ROW if c != 'DC'}
-    med = float(np.median(list(sizes.values())))
+def pile_layout(seed=300):
+    """Each piece as scissor-cut outlines in place, back to front, with the height it lies at:
+    [(code, [outline, ...], paper, rest)]. Paper isn't stiff, so a piece dropped across others rides up over
+    them and settles back onto the desk past their edges: each one drapes over a height map of the pieces
+    already down (spread a little past their edges and softened, so it never dips into them), then adds
+    itself to the map."""
+    from scipy import ndimage
+    from skimage.draw import polygon as fill
+    fw, fh = PILE_FRAME
+    hmap = np.zeros((int((fh + .6) * PILE_RES), int(fw * PILE_RES)))   # rows run past the bottom of the frame
+    def cell(x, y): return (fh / 2 - y) * PILE_RES - .5, (x + fw / 2) * PILE_RES - .5
     out = []
-    for i, (code, x, y, turn, col) in enumerate(STATE_ROW):
+    for i, (code, x, y, size, turn, col) in enumerate(PILE):
         r = np.random.default_rng(seed + i)
         if code == 'DC':
-            t = np.linspace(0, 2 * math.pi, 90, endpoint=False); rings = [np.stack([.065 * np.cos(t), .065 * np.sin(t)], 1)]
-            k, snip = 1.0, (.012, .02)
+            t = np.linspace(0, 2 * math.pi, 90, endpoint=False); rings = [np.stack([np.cos(t), np.sin(t)], 1) * size / 2]
+            snip = (.012, .02)
         else:
             rings = state_rings(code); allp = np.concatenate(rings); mid = (allp.min(0) + allp.max(0)) / 2
-            rings = [P - mid for P in rings]
-            k = STATE_SIZE * (sizes[code] / med) ** STATE_EVEN / math.sqrt(sizes[code]); snip = (.022, .045)
+            k = size / math.sqrt(sum(abs(_area(P)) for P in rings))
+            rings = [(P - mid) * k for P in rings]; snip = (.022, .045)
         th = math.radians(turn); R = np.array([[math.cos(th), -math.sin(th)], [math.sin(th), math.cos(th)]])
-        cuts = [scissor_recut(np.ascontiguousarray(P * k @ R.T + np.array([x, y])), r, snip=snip, jitter=.0008)[0] for P in rings]
-        out.append((code, cuts, col))
+        cuts = [scissor_recut(np.ascontiguousarray(P @ R.T + np.array([x, y])), r, snip=snip, jitter=.0008)[0] for P in rings]
+        under = ndimage.gaussian_filter(ndimage.maximum_filter(hmap, size=15), 3.5)
+        rest = lambda X, Y, u=under: ndimage.map_coordinates(u, cell(X, Y), order=1, mode='nearest')
+        mask = np.zeros(hmap.shape, bool)
+        for P in cuts:
+            rr, cc = fill(*cell(P[:, 0], P[:, 1]), shape=hmap.shape); mask[rr, cc] = True
+        hmap[mask] = np.maximum(hmap[mask], under[mask] + PILE_STEP)
+        out.append((code, cuts, col, rest))
     return out
 
-def job_states():
-    """A footer for the first page: the outlines of the states the guide covers, cut from the crowd's papers and
-    laid in a loose row, west to east."""
-    fw, fh = 6.4, 1.7                   # room on the right for the shadows, so none is cut by the frame
+def job_pile():
+    """The foot of the first page: the covered states piled up, running off the bottom of the frame."""
+    fw, fh = PILE_FRAME
     sc = scene(fw, fh)
     rim = paper_mat('rim', PAPER['core'], sss=.4)
-    for i, (code, cuts, col) in enumerate(states_layout()):
+    for i, (code, cuts, col, rest) in enumerate(pile_layout()):
         face = paper_mat('s%d' % i, CROWD_PAPER[col])
         for j, P in enumerate(cuts):
-            piece('%s%d' % (code, j), P, np.zeros(len(P), bool), face, rim, z=.004 * i, thick=.006,
-                  crumple=(.006, 1.8), lift=.003, lift_fade=.06, spacing=.02, seed=300 + i)
-    render(sc, 'states')
+            piece('%s%d' % (code, j), P, np.zeros(len(P), bool), face, rim, thick=.006,
+                  crumple=(.006, 1.8), lift=.003, lift_fade=.06, spacing=.02, seed=300 + i, rest=rest)
+    render(sc, 'pile')
 
 def job_envelope():
     """A plain white envelope, flap hinged at the top edge and lifting a little."""
@@ -448,6 +469,6 @@ def job_envelope():
 
 TABLE = {'plan': job_plan, 'strip-a': lambda: job_strip(23, 'strip-a', -.3, .97), 'strip-b': lambda: job_strip(51, 'strip-b', .25, 1.04),
          'strip-c': lambda: job_strip(67, 'strip-c', -.15, 1.0), 'strip-d': lambda: job_strip(83, 'strip-d', .3, .99),
-         'sheet': job_sheet, 'crowd': job_crowd, 'states': job_states, 'envelope': job_envelope}
+         'sheet': job_sheet, 'crowd': job_crowd, 'pile': job_pile, 'envelope': job_envelope}
 for j in [j for j in JOBS if j]:
     print('job', j, flush=True); TABLE[j]()

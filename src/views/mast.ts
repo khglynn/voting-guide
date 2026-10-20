@@ -112,14 +112,14 @@ function doorHTML(): string {
       <button class="bigbtn" data-act="setup-done" data-fk="setup-done">Show my ballot</button>
     </div>
     <div class="door-foot" data-part="fine">${creditsHTML()}</div>
-    ${STATES_STRIP}
+    ${PILE}
   </header>`;
 }
 
-/* The states the guide covers, cut from paper (scripts/paper renders it), under the credits. Outside
-   the repainted parts, so it never reloads while you type. Decoration: empty alt, lazy, and its width
-   and height hold the space so nothing shifts when it loads. Dark mode gets its own render. */
-const STATES_STRIP = '<picture class="states"><source srcset="/paper/dark/states.webp" media="(prefers-color-scheme: dark)"><img src="/paper/states.webp" alt="" width="1152" height="306" loading="lazy" decoding="async"></picture>';
+/* The states the guide covers, cut from paper and piled up at the foot of the first page (scripts/paper
+   renders it). Outside the repainted parts, so it never reloads while you type. Decoration: empty alt,
+   lazy, and the band's size is set in CSS, so nothing shifts when it loads. Dark mode gets its own render. */
+const PILE = '<picture class="pile"><source srcset="/paper/dark/pile.webp" media="(prefers-color-scheme: dark)"><img src="/paper/pile.webp" alt="" width="640" height="150" loading="lazy" decoding="async"></picture>';
 
 /* Under the ZIP box: what the ZIP found (the place, the place question, a state we don't cover),
    or what's wrong with it, and the address lookup. */

@@ -4,7 +4,7 @@
 
 Writes public/paper/<name>.webp and public/paper/dark/<name>.webp, and the paper variables between the
 /* paper:start */ and /* paper:end */ markers in src/styles.css. With a list of pieces (plan, strips, sheet,
-crowd, states) it bakes only those, so one new render doesn't re-bake the rest; the paper variables are
+crowd, pile) it bakes only those, so one new render doesn't re-bake the rest; the paper variables are
 rewritten only when both plan and sheet are baked, since they come from those two.
 
 - Shadow pixels from the shadow catcher are tinted to the page ink and capped, so no edge gets a hard
@@ -23,7 +23,7 @@ import sys, os, re
 import numpy as np
 from PIL import Image
 R = sys.argv[1]
-ONLY = set(sys.argv[2].split(',')) if len(sys.argv) > 2 else {'plan', 'strips', 'sheet', 'crowd', 'states'}
+ONLY = set(sys.argv[2].split(',')) if len(sys.argv) > 2 else {'plan', 'strips', 'sheet', 'crowd', 'pile'}
 OUT = 'public/paper'; OUTD = os.path.join(OUT, 'dark'); os.makedirs(OUTD, exist_ok=True)
 CSS = 'src/styles.css'
 INK = np.array([31, 38, 35], float)
@@ -36,7 +36,9 @@ def load(n):
 def soften(a, cap=90, k=.55):
     a = a.copy(); sh = (a[..., :3].max(-1) < 40) & (a[..., 3] < 255)
     a[sh, :3] = INK; a[sh, 3] = np.minimum(a[sh, 3] * k, cap)
-    bad = (a[..., :3].max(-1) < 40) & (a[..., 3] > 150)
+    # A baked black edge runs along the paper's outline, next to the desk. Deep green paper in the shade where
+    # one sheet of the pile lies over another is dark too, but it sits inside the paper, so it doesn't count.
+    bad = (a[..., :3].max(-1) < 40) & (a[..., 3] > 150) & (box((a[..., 3] < 250).astype(float), 2) > 0)
     assert bad.sum() < 40, 'dark opaque pixels left: %d' % bad.sum()   # a baked black edge is hundreds
     return a
 
@@ -128,9 +130,9 @@ if 'sheet' in ONLY:
 if 'crowd' in ONLY:
     a = soft_contact(soften(defringe(load('crowd'))))
     kb['crowd'] = save(a, os.path.join(OUT, 'crowd.webp')); save(darken(a, (.86, .86, .86)), os.path.join(OUTD, 'crowd.webp'))
-if 'states' in ONLY:
-    a = soft_contact(soften(defringe(load('states'))))
-    kb['states'] = save(a, os.path.join(OUT, 'states.webp')); save(darken(a, (.86, .86, .86), pale=.6), os.path.join(OUTD, 'states.webp'))
+if 'pile' in ONLY:
+    a = soft_contact(soften(defringe(load('pile'))))
+    kb['pile'] = save(a, os.path.join(OUT, 'pile.webp')); save(darken(a, (.86, .86, .86), pale=.6), os.path.join(OUTD, 'pile.webp'))
 
 def block(sel, d): return '%s { %s }' % (sel, ' '.join('%s: %s;' % kv for kv in d.items()))
 if {'plan', 'sheet'} <= ONLY:

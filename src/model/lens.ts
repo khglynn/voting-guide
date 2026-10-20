@@ -5,7 +5,7 @@
 import type { Endorser } from '../types';
 import type { Ballot } from '../ballot';
 import { S } from '../state';
-import { chosenIds, isPartisan } from '../ballot';
+import { chosenIds, isPartisan, entriesBySection, status, isDecision } from '../ballot';
 
 export type ChipKey = 'papers' | 'progressive' | 'conservative';
 const LEFT = ['left', 'lean_left'];
@@ -48,6 +48,24 @@ export function picksOnBallot(b: Ballot, eid: string): number {
   return m.get(eid) || 0;
 }
 export const withPicks = (b: Ballot, list: Endorser[]): Endorser[] => list.filter((e) => picksOnBallot(b, e.id) > 0);
+/* How many of the choices your ballot shows each source endorsed in: the same choices the bar's
+   "N of M decided" counts (no district variants you haven't picked, no races you hid), so the
+   sources sheet never says "Endorsed in 59" on a 46-item ballot. `unopposed` counts its picks in
+   the unopposed races your ballot shows, which the bar leaves out. Computed per call. */
+export function picksShown(b: Ballot): { decisions: Map<string, number>; unopposed: Map<string, number> } {
+  const decisions = new Map<string, number>();
+  const unopposed = new Map<string, number>();
+  for (const [, entries] of entriesBySection()) {
+    for (const x of entries) {
+      if (x.t !== 'item') continue;
+      const s = status(b.byId.get(x.id)!);
+      const m = s === 'unopposed' ? unopposed : isDecision(s) ? decisions : null;
+      if (!m) continue;
+      for (const [e, en] of Object.entries(b.ends[x.id] || {})) if (en.s === 'endorsed') m.set(e, (m.get(e) || 0) + 1);
+    }
+  }
+  return { decisions, unopposed };
+}
 
 /* ---------- parties ---------- */
 const PARTY_WORDS: [RegExp, string][] = [

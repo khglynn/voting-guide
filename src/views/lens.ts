@@ -4,7 +4,7 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, explainsOnly } from '../model/lens';
+import { CHIPS, chipState, chipMembers, withPicks, partiesOnBallot, picksOnBallot, picksShown, explainsOnly } from '../model/lens';
 import { coverage } from '../model/tally';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
 
@@ -53,13 +53,16 @@ export const lensHTML = (): string => `${lensHeadHTML()}${lensBarHTML()}`;
 /* ---------- the "See all sources" sheet ---------- */
 const GROUPS: [string, string][] = [['left', 'Left'], ['lean_left', 'Leans left'], ['neutral', 'Center'], ['lean_right', 'Leans right'], ['right', 'Right'], ['none', 'Not rated']];
 const BASIS_KIND: Record<string, string> = { outside_rating: 'Rated by an outside group', party: 'A party', mission: 'From its mission statement' };
-function srcRow(e: Endorser): string {
+function srcRow(e: Endorser, shown: ReturnType<typeof picksShown>): string {
   const b = S.ballot!;
   const on = chosenIds().includes(e.id);
   const k = `basis-${e.id}`;
-  const n = picksOnBallot(b, e.id);
+  const n = shown.decisions.get(e.id) || 0;
   // A paywalled paper with no readable pick here is named once, by its paywall note below.
-  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : hasPaywallNote(e) ? '' : 'No endorsements found';
+  // A source whose picks are all in unopposed races, or in races your ballot doesn't show yet (a
+  // district you haven't picked, a race you hid), says so, never "No endorsements found".
+  const what = explainsOnly(e) ? 'Explains, doesn’t endorse' : n ? `Endorsed in ${n} of your races and measures` : hasPaywallNote(e) ? ''
+    : shown.unopposed.get(e.id) ? 'Endorsed only in unopposed races' : picksOnBallot(b, e.id) ? 'Endorsed only in races that depend on your address' : 'No endorsements found';
   return `<li class="srow">
     <div class="s-main"><span class="s-n" id="sn-${esc(e.id)}">${esc(e.name)}</span><span class="s-d">${esc(TYPE_WORD[e.type] || e.type)}.${what ? ` ${esc(what)}.` : ''}</span>
       <span class="s-l">${sourceLean(e)}<button class="linkbtn" data-act="open" data-k="${esc(k)}" aria-expanded="${isOpen(k)}">Why this lean</button></span>
@@ -69,13 +72,14 @@ function srcRow(e: Endorser): string {
 }
 export function sourcesSheetHTML(): string {
   const b = S.ballot!;
-  const byCount = (a: Endorser, c: Endorser) => picksOnBallot(b, c.id) - picksOnBallot(b, a.id) || a.name.localeCompare(c.name);
+  const shown = picksShown(b);
+  const byCount = (a: Endorser, c: Endorser) => (shown.decisions.get(c.id) || 0) - (shown.decisions.get(a.id) || 0) || a.name.localeCompare(c.name);
   const empties = CHIPS.filter((c) => c.key !== 'papers' && chipState(b, c.key) === 'empty').map((c) => c.empty);
   const groups = GROUPS.map(([lean, word]) => {
     const list = b.endorsers.filter((e) => (e.lean || 'none') === lean).sort(byCount);
     if (!list.length) return '';
     const on = list.filter((e) => chosenIds().includes(e.id)).length;
-    return `<section class="sgrp"><h3>${lean === 'none' ? '' : leanHTML(lean as Endorser['lean'], false)} ${esc(word)} <span class="s-ct">${plural(list.length, 'source')}${on ? `, ${on} on` : ''}</span></h3><ul>${list.map(srcRow).join('')}</ul></section>`;
+    return `<section class="sgrp"><h3>${lean === 'none' ? '' : leanHTML(lean as Endorser['lean'], false)} ${esc(word)} <span class="s-ct">${plural(list.length, 'source')}${on ? `, ${on} on` : ''}</span></h3><ul>${list.map((e) => srcRow(e, shown)).join('')}</ul></section>`;
   }).join('');
   return `<div class="scrim screen-only" data-act="sheet-close"></div>
   <div class="sheet-panel screen-only" role="dialog" aria-modal="true" aria-labelledby="sh-h">

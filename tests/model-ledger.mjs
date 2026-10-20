@@ -463,6 +463,24 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     }
   }
 
+  /* ---------- the sources sheet counts your ballot, not every district (walks, Oct 20) ----------
+     LA's sheet said "Knock LA: Endorsed in 59 of your races and measures" on a 46-item ballot. */
+  {
+    for (const [stc, pid] of [['CA', 'los-angeles-ca'], ['FL', 'orlando-fl'], ['TX', 'austin-tx']]) {
+      for (const notSure of [false, true]) {
+        const b = open(stc, [pid]);
+        if (notSure) b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+        const M = bl.decisionItems().filter((x) => !x.question).length;
+        const h = views.lens.sourcesSheetHTML();
+        const ns = [...h.matchAll(/Endorsed in (\d+) of your races and measures/g)].map((m) => +m[1]);
+        const rows = h.split('<li class="srow">').slice(1);
+        const two = rows.filter((r) => /No endorsements found/.test(r) && /class="pw-note"/.test(r)).length;
+        check(`sources sheet: ${pid}${notSure ? ' with "Not sure" answered' : ''} never counts more races than the bar's ${M}`, ns.length > 0 && Math.max(...ns) <= M, `max ${Math.max(...ns)} of ${M}`);
+        check(`sources sheet: ${pid}${notSure ? ' with "Not sure" answered' : ''} never shows a paper as both "No endorsements found" and paywalled`, two === 0, String(two));
+      }
+    }
+  }
+
   /* ---------- a folded section's summary starts with a capital (Orlando walk, Oct 20) ---------- */
   {
     const b = open('FL', ['orlando-fl']);

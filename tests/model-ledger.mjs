@@ -183,6 +183,16 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: the King County District Court West district (all of Seattle) stays certain', se.items.filter((x) => /^kc-district-court-west/.test(x.id)).every((x) => !se.mayApply.has(x.id)));
   }
 
+  /* ---------- Board of Equalization District 3 is all of LA County (LA walk, Oct 20) ---------- */
+  {
+    const la = open('CA', ['los-angeles-ca']);
+    check('may apply: BOE District 3 is a sure thing on an LA ballot, as its scope says', la.items.some((x) => x.id === 'ca-boe-3') && !la.mayApply.has('ca-boe-3'));
+    check('may apply: BOE District 3 is still not every Californian\'s race', !la.byId.get('ca-boe-3').every);
+    const ca = open('CA', []);
+    check('may apply: a statewide-only California ballot still asks which BOE district', ca.groups.some((g) => g.members.includes('ca-boe-3') && g.members.length === 4));
+    check('may apply: other places\' BOE races are unchanged', ['fullerton-ca', 'san-diego-ca'].every((p) => open('CA', [p]).mayApply.has('ca-boe-4')) && !open('CA', ['fullerton-ca']).items.some((x) => x.id === 'ca-boe-3'));
+  }
+
   /* ---------- the seat rule ---------- */
   {
     const h = open('TX', ['houston-tx']);

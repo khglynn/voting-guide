@@ -47,6 +47,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('may apply: Jeffco schools cover Lakewood', lk.items.filter((x) => x.kind === 'measure' && /Jeffco/.test(x.jurisdiction)).every((x) => !lk.mayApply.has(x.id)));
   }
 
+  /* ---------- a neighborhood's own district never covers the whole place (Orlando walk, Oct 20) ---------- */
+  {
+    const orl = open('FL', ['orlando-fl']);
+    check('may apply: Vista Lakes Community Development District is a maybe on an Orlando ballot', orl.mayApply.has('fl-vista-lakes-cdd-3'));
+    const ch = open('IL', ['chicago-il']);
+    const sub = ch.items.filter((x) => /^il-cook-subcircuit-/.test(x.id));
+    check('may apply: every Cook County judicial subcircuit race is a maybe on a Chicago ballot', sub.length > 0 && sub.every((x) => ch.mayApply.has(x.id)), sub.filter((x) => !ch.mayApply.has(x.id)).map((x) => x.id).join(', '));
+    // Guards against a wider pattern: districts that hold the whole place stay certain.
+    check('may apply: the 1st DCA, which holds all of Tallahassee and Pensacola, stays certain where its scope names their counties', ['tallahassee-fl', 'pensacola-fl'].every((p) => !open('FL', [p]).mayApply.has('fl-retention-1dca-lewis')));
+    const en = open('CO', ['englewood-co']);
+    check('may apply: Arapahoe County races stay certain in Englewood', en.items.filter((x) => /^arapahoe-/.test(x.id) && x.kind === 'contest').every((x) => !en.mayApply.has(x.id)));
+    const se = open('WA', ['seattle-wa']);
+    check('may apply: the King County District Court West district (all of Seattle) stays certain', se.items.filter((x) => /^kc-district-court-west/.test(x.id)).every((x) => !se.mayApply.has(x.id)));
+  }
+
   /* ---------- the seat rule ---------- */
   {
     const h = open('TX', ['houston-tx']);

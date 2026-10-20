@@ -78,7 +78,12 @@ function measureCovers(m: Measure, places: PlaceBundle[]): boolean {
   }
   return true;
 }
-const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d/i;
+/* A scope that names a district inside the place: a precinct, ward, numbered district or judicial
+   subcircuit ("Only voters in Cook County Judicial Subcircuit 1"), or a neighborhood's own
+   district ("Only voters who live inside the Vista Lakes Community Development District in
+   southeast Orange County"). Naming the county only to say where such a district sits never
+   makes it cover the place. */
+const DISTRICTISH = /precinct|ward\b|trustee area|congressional|\bseat\b|\bplace \d|district\s*(?:\d|[a-z]\b)|\b(?:CD|SD|HD|AD)-\d|\bsubcircuit\s*\d|community development district/i;
 function coversPlace(c: Contest, places: PlaceBundle[]): boolean {
   if (!places.length || !places.every((p) => p.order.includes(c.id))) return false;
   const scope = c.scope_plain || '';

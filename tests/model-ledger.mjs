@@ -618,6 +618,57 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     reset();
   }
 
+  /* ---------- "Hide races I've decided" (Kevin, Oct 20): the beat and the band's count ----------
+     A decided row hides unless it is open, in its beat, or in a section whose count you tapped; a
+     finished section stays on the page as its folded band; the count is a button with Show or
+     Hide after it, except under the filter with nothing decided yet. */
+  {
+    const { ledger } = views;
+    const b = open('CO', ['denver-co']);
+    const reset = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.beat = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); S.ui.reveal = new Set(); S.b.hideDecided = false; };
+    reset();
+    const ms = () => bl.entriesBySection().get('measures') || [];
+    const m0 = ms().find((e) => e.t === 'item').id;
+    S.b.picks[m0] = 'YES';
+    const has = (sec, id) => ledger.sectionHTML(sec, bl.entriesBySection().get(sec) || []).includes(`id="i-${id}"`);
+    const cnt = (sec) => ledger.countHTML(sec, bl.entriesBySection().get(sec) || []);
+    check('hide: without the filter the count folds its section: a button reading Hide', /^<button class="sec-r sec-cb" data-act="sec-count" data-sec="measures" aria-expanded="true"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Hide<\/span><\/button>$/.test(cnt('measures')) && has('measures', m0), cnt('measures'));
+    S.b.hideDecided = true;
+    check('hide: under the filter a decided row hides', ledger.hiddenByOnly({ t: 'item', id: m0 }, 'measures') && !has('measures', m0));
+    check('hide: and its count reads Show, collapsed', /aria-expanded="false"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Show</.test(cnt('measures')), cnt('measures'));
+    S.ui.beat = m0;
+    check('hide: in its beat the row stays, marked', !ledger.hiddenByOnly({ t: 'item', id: m0 }, 'measures') && /data-beat/.test(ledger.rowHTML(b.byId.get(m0))) && has('measures', m0));
+    S.ui.beat = null;
+    S.ui.row = m0;
+    check('hide: open, it stays', has('measures', m0));
+    S.ui.row = null;
+    S.ui.reveal.add('measures');
+    check('hide: its section\'s count tapped, the decided rows show, and the count reads Hide', has('measures', m0) && /aria-expanded="true"[^>]*><span class="sec-count">1 of \d+ decided<\/span> <span class="sec-edit">Hide</.test(cnt('measures')), cnt('measures'));
+    check('hide: other sections keep hiding theirs', (() => { const st0 = (bl.entriesBySection().get('state') || []).find((e) => e.t === 'item'); S.b.picks[st0.id] = 'SKIP'; const out = !has('state', st0.id); delete S.b.picks[st0.id]; return out; })());
+    S.ui.reveal.delete('measures');
+    const fed = bl.entriesBySection().get('federal') || [];
+    check('hide: with nothing decided under the filter, the count is just the count', cnt('federal') === `<span class="sec-r"><span class="sec-count">${ledger.sectionCount(fed)}</span></span>` && /^0 of /.test(ledger.sectionCount(fed)), cnt('federal'));
+    // A finished section: under the filter, its band, folded, with Show; in its last row's beat, open.
+    const city = b.byId.get('denver-council-at-large-b');
+    S.b.picks[city.id] = city.candidates[0].name;
+    const ch = () => ledger.sectionHTML('city', bl.entriesBySection().get('city') || []);
+    check('hide: a finished section under the filter stays as its folded band, "1 of 1 decided" with Show', /class="sec done folded"/.test(ch()) && !/<li class="row/.test(ch()) && /1 of 1 decided<\/span> <span class="sec-edit">Show/.test(ch()), ch().slice(0, 200));
+    S.ui.beat = city.id;
+    check('hide: while its last row has its beat, it stays open', !/folded/.test(ch()) && ch().includes(`id="i-${city.id}"`));
+    S.ui.beat = null;
+    S.ui.reveal.add('city');
+    check('hide: its count tapped, it opens with the decided row', !/folded/.test(ch()) && ch().includes(`id="i-${city.id}"`) && /sec-edit">Hide/.test(ch()));
+    S.ui.reveal.delete('city');
+    S.b.hideDecided = false;
+    check('hide: without the filter the finished section folds as before, and its count reads Show', /class="sec done folded"/.test(ch()) && /sec-edit">Show/.test(ch()));
+    S.ui.unfolded.add('city');
+    check('hide: unfolded, it reads Hide', !/folded/.test(ch()) && /sec-edit">Hide/.test(ch()));
+    check('hide: the band\'s title and its count are two buttons, the count outside the band\'s', /<button class="sec-hd" data-act="sec"[^>]*>\s*<span class="sec-l">[\s\S]*?<\/button><button class="sec-r sec-cb" data-act="sec-count"/.test(ch()), ch().slice(0, 400));
+    delete S.b.picks[city.id];
+    delete S.b.picks[m0];
+    reset();
+  }
+
   /* ---------- the menu (flow, Oct 20): "Next up", the rows and their counts ----------
      "Next up" names the next undecided race or question after the row you're on, in page order,
      and its button opens that one; the section rows' "N left" add up to the bar; when nothing the

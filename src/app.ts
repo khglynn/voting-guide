@@ -44,7 +44,7 @@ export async function loadInvolved(): Promise<void> {
 /* ---------- views and the Back button ---------- */
 export function resetUI(): void {
   const u = S.ui;
-  u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.keep = null;
+  u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.reveal.clear(); u.keep = null; u.beat = null;
   u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
   u.resume = false;
   u.open.delete('voted');

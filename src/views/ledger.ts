@@ -105,7 +105,7 @@ export function rowHTML(it: Item): string {
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
   else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
-  return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
+  return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}${S.ui.beat === it.id ? ' data-beat' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">
       <span class="mk" aria-hidden="true"><i></i></span>${titleHTML(it, tags.length ? `<span class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</span>` : '')}${vd}${CHEV}</button>
     ${open ? openHTML(it) : ''}
@@ -216,8 +216,28 @@ function sectionDone(entries: Entry[]): boolean {
   const { done, total } = sectionTally(entries);
   return total > 0 && done === total;
 }
-export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean =>
-  (S.ui.folded.has(sec) || (sectionDone(entries) && !S.ui.unfolded.has(sec))) && !entries.some((e) => e.t === 'item' && e.id === S.ui.row);
+/* A section folds to its band when you folded it, or when it's done: then it stays folded until you
+   open it (its band or its count), which under "Hide races I've decided" means showing its decided
+   rows. Never while it holds the open row, or the row in its beat. */
+export const sectionFolded = (sec: SectionKey, entries: Entry[]): boolean => {
+  if (entries.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.beat))) return false;
+  if (S.ui.folded.has(sec)) return true;
+  if (!sectionDone(entries)) return false;
+  return !(S.b.hideDecided ? S.ui.reveal.has(sec) : S.ui.unfolded.has(sec));
+};
+/* The band's count, "2 of 5 decided", is a button with a word after it (Kevin, Oct 20: "a quick and
+   easy way to expand and hide is tapping any of those numbers"). Under "Hide races I've decided" it
+   shows or hides the section's decided rows (and a finished section's band opens with them);
+   otherwise it folds or unfolds the section, as the band does. With nothing to show or hide (no
+   races, or none decided yet under the filter) it's just the count. render.ts repaints it after a
+   pick. */
+export function countHTML(sec: SectionKey, entries: Entry[], folded = sectionFolded(sec, entries)): string {
+  const t = sectionTally(entries);
+  const count = sectionCount(entries);
+  if ((!t.total && !folded) || (S.b.hideDecided && !folded && !t.done)) return count ? `<span class="sec-r"><span class="sec-count">${esc(count)}</span></span>` : '';
+  const open = S.b.hideDecided ? !folded && S.ui.reveal.has(sec) : !folded;
+  return `<button class="sec-r sec-cb" data-act="sec-count" data-sec="${sec}" aria-expanded="${open}" data-fk="secn-${sec}"><span class="sec-count">${esc(count)}</span> <span class="sec-edit">${open ? 'Hide' : 'Show'}</span></button>`;
+}
 function foldSummary(entries: Entry[]): string {
   const b = S.ballot!;
   const bits: string[] = [];
@@ -270,13 +290,15 @@ function entryHTML(e: Entry): string {
   if (e.t === 'notmine') return notMineHTML(b.byId.get(e.id)!);
   return rowHTML(b.byId.get(e.id)!);
 }
-/* "Hide races I've decided" hides a row once it is decided, except the one you just decided (kept
-   until your next move) and the open one. render.ts uses the same rule for one-row repaints. */
-export const hiddenByOnly = (e: Entry): boolean => {
+/* "Hide races I've decided" hides a row once it is decided, except the open one, the one in its beat
+   (it shows its pick for a moment, then folds away: actions.ts) and every row of a section whose
+   decided rows you asked to see (its count, tapped). render.ts uses the same rule for one-row
+   repaints. */
+export const hiddenByOnly = (e: Entry, sec: SectionKey): boolean => {
   if (!S.b.hideDecided) return false;
-  if (e.t === 'question') return false;
+  if (e.t === 'question' || S.ui.reveal.has(sec)) return false;
   if (e.t !== 'item') return true;
-  if (e.id === S.ui.keep || e.id === S.ui.row) return false;
+  if (e.id === S.ui.beat || e.id === S.ui.row) return false;
   return status(S.ballot!.byId.get(e.id)!) !== 'open';
 };
 /* The fold helpers live with the counting rule in ballot.ts; the cheat sheet and tests read them here too. */
@@ -307,7 +329,7 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
         out.push(`<li class="subhd">${esc(it.jurisdiction.replace(/\s*\([^)]*\)/g, ''))}${note ? `<small>${esc(note.charAt(0).toUpperCase() + note.slice(1))}</small>` : ''}</li>`);
       }
     }
-    if (hiddenByOnly(e)) return;
+    if (hiddenByOnly(e, sec)) return;
     out.push(entryHTML(e));
   };
   // Other school districts' races (Round Rock, Pflugerville and Leander ISD seats on an East
@@ -330,7 +352,7 @@ function rowsHTML(sec: SectionKey, entries: Entry[]): string {
           out.push(`<li class="grp oth"><button class="grp-hd" data-act="grp" data-g="${k}" aria-expanded="${open}" data-fk="g-oth"><span class="grp-t">Other school districts that touch ${esc(city)}<small>${esc(names.join(', '))}. Open only if one of them is yours.</small></span><span class="grp-ct">${esc(ct)}</span></button></li>`);
           if (open && live.length) out.push(`<li class="oth-none"><button class="mini quiet" data-act="notmine-oth" data-fk="oth-none">None of these are on my ballot</button></li>`);
         }
-        if (open && !hiddenByOnly(e)) out.push(entryHTML(e).replace('<li class="row', '<li data-fold="oth" class="row'));
+        if (open && !hiddenByOnly(e, sec)) out.push(entryHTML(e).replace('<li class="row', '<li data-fold="oth" class="row'));
       });
       return `<ol class="rows">${out.join('')}${unoppHTML(sec, unopp)}</ol>`;
     }
@@ -405,8 +427,8 @@ function quietNoteHTML(entries: Entry[]): string {
   return `<p class="sec-note">Your sources made no endorsements in these ${m ? 'measures' : 'races'}. Open one to ${m ? 'read both sides' : 'compare the candidates in their own words'}, or <button class="linkbtn" data-act="sheet" data-s="sources" data-fk="sec-more">add sources</button>.</p>`;
 }
 /* A section shows on the page when it has anything to show: a question, a choice, an unopposed
-   race or an information row. (Under "Hide races I've decided" a finished one hides; the menu still
-   lists it, as "Done".) */
+   race or an information row. (Under "Hide races I've decided" a finished one shows as its band,
+   folded, "5 of 5 decided" with Show: that's where its races went.) */
 export function sectionShows(entries: Entry[]): boolean {
   const b = S.ballot!;
   return entries.some((e) => { if (e.t !== 'item') return true; const s = status(b.byId.get(e.id)!); return isDecision(s) || s === 'unopposed' || s === 'info'; });
@@ -414,16 +436,13 @@ export function sectionShows(entries: Entry[]): boolean {
 export function sectionHTML(sec: SectionKey, entries: Entry[]): string {
   if (!entries.length || !sectionShows(entries)) return '';
   const folded = sectionFolded(sec, entries);
-  const count = sectionCount(entries);
   const done = sectionDone(entries);
-  if (folded && S.b.hideDecided) return '';
   const title = sectionTitle(sec);
   const sub = folded ? foldSummary(entries) : sectionSub(sec);
   const tools = !folded && sec === 'judicial' ? judgeToolsHTML() : !folded ? `${headsUp(`section:${sec}`).length ? `<div class="sec-tools">${headsHTML(headsUp(`section:${sec}`))}</div>` : ''}${quietNoteHTML(entries)}` : '';
   return `<section class="sec${done ? ' done' : ''}${folded ? ' folded' : ''}" id="sec-${sec}" data-sec="${sec}" aria-labelledby="sh-${sec}">
     <h2 class="sec-h" id="sh-${sec}"><button class="sec-hd" data-act="sec" data-sec="${sec}" aria-expanded="${!folded}" data-fk="sec-${sec}">
-      <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span>
-      <span class="sec-r"><span class="sec-count">${esc(count)}</span>${folded ? '<span class="sec-edit">Show</span>' : ''}</span></button></h2>
+      <span class="sec-l"><span class="sec-t">${esc(title)}</span>${sub ? `<span class="sec-sub">${esc(sub)}</span>` : ''}</span></button>${countHTML(sec, entries, folded)}</h2>
     ${folded ? '' : `${tools}${rowsHTML(sec, entries)}`}
   </section>`;
 }

@@ -286,22 +286,25 @@ b, strong { font-weight: 600; }
 /* ---------- sections ---------- */
 .ledger { max-width: 640px; margin: 0 auto; }
 .sec { margin-top: 6px; }
-.sec-h { margin: 0; position: relative; padding: 18px 0 20px; overflow: hidden; overflow: clip; }
+.sec-h { margin: 0; position: relative; padding: 18px 0 20px; overflow: hidden; overflow: clip; display: flex; align-items: stretch; }
 .sec-h::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 640px; background: var(--strip) right center / 100% 100% no-repeat; pointer-events: none; }
 .sec { --strip: var(--r-strip-a); }
 .sec[data-sec="state"], .sec[data-sec="school"] { --strip: var(--r-strip-b); }
 .sec[data-sec="judicial"], .sec[data-sec="special_district"] { --strip: var(--r-strip-c); }
 .sec[data-sec="county"], .sec[data-sec="measures"] { --strip: var(--r-strip-d); }
-.sec-hd { position: relative; isolation: isolate; width: 100%; color: var(--on-dusk); padding: 12px 18px 11px var(--g); display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; min-height: 62px; }
+.sec-hd { position: relative; isolation: isolate; flex: 1 1 auto; min-width: 0; color: var(--on-dusk); padding: 12px 6px 11px var(--g); display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; min-height: 62px; }
 .sec-l { min-width: 0; display: block; }
 .sec-t { display: block; font-family: var(--f-display); font-size: 26px; font-weight: 800; line-height: 1.02; color: var(--on-dusk); font-variation-settings: "wdth" 78; text-wrap: balance; }
 .sec-sub { display: block; font-size: 14px; color: var(--on-dusk-2); margin-top: 4px; font-weight: 400; line-height: 1.3; text-wrap: pretty; }
-.sec-r { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex: none; }
+.sec-r { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 2px; flex: none; position: relative; isolation: isolate; color: var(--on-dusk); padding: 12px 18px 11px 6px; min-height: 62px; }
+/* The count is a button (Show or Hide after it): the band's title is one, the count another. */
+.sec-cb { text-align: right; }
+.sec-cb:focus-visible { outline-color: var(--on-dusk); outline-offset: -5px; }
 .sec-count { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 15px; color: var(--on-dusk-2); white-space: nowrap; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; gap: 4px; }
 .sec-edit { font-size: 14px; text-decoration: underline; text-underline-offset: 3px; color: var(--on-dusk); }
 .sec.done .sec-count { color: var(--on-dusk); }
 .sec.done .sec-count::before { content: ""; width: 17px; height: 16px; flex: none; background: var(--gold-on-dusk); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; }
-.sec.folded > .sec-h .sec-hd { min-height: 54px; padding-top: 8px; padding-bottom: 8px; }
+.sec.folded > .sec-h .sec-hd, .sec.folded > .sec-h .sec-r { min-height: 54px; padding-top: 8px; padding-bottom: 8px; }
 .sec.folded .sec-t { font-size: 21px; }
 .sec.folded .sec-sub { font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sec.folded + .sec.folded { margin-top: -22px; }
@@ -410,6 +413,9 @@ b, strong { font-weight: 600; }
 /* A panel growing open, and the one folding away under a header that just closed (motion.ts). */
 .ob.moving, .ob-gone { overflow: hidden; overflow: clip; overflow-anchor: none; }
 .ob-gone { pointer-events: none; }
+/* Under "Hide races I've decided", a decided row folding away after its beat, and a finished
+   section's rows folding under its band (motion.ts collapseRow, shrinkAway). */
+.row-gone, .sec-gone { overflow: hidden; overflow: clip; overflow-anchor: none; pointer-events: none; }
 .ob-lede { font-size: 15.5px; color: var(--ink-2); line-height: 1.45; }
 .ob-lede + .ob-lede { margin-top: 6px; }
 .ob-meta { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }

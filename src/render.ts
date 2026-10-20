@@ -6,7 +6,7 @@ import { S } from './state';
 import { entriesBySection, sectionOf, type SectionKey } from './ballot';
 import { mastHTML, restoreHTML } from './views/mast';
 import { planHTML } from './views/planstrip';
-import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, sectionCount, groupCounts, hiddenByOnly, tocSheetHTML } from './views/ledger';
+import { ballotHTML, sectionHTML, rowHTML, barHTML, qId, ballotHeadHTML, sectionFolded, countHTML, groupCounts, hiddenByOnly, tocSheetHTML } from './views/ledger';
 import { sourcesSheetHTML, partySheetHTML } from './views/lens';
 import { picksSheetHTML } from './views/setup';
 import { cheatSectionHTML, cheatHTML } from './views/cheat';
@@ -167,9 +167,9 @@ export function renderRow(key: string | null, counts = true, shut = false): Anim
   }
   const it = b.byId.get(key);
   if (!it) return null;
-  // Under "Hide races I've decided", a row that is now decided leaves: repaint its section with the
-  // same filter the full render uses, held in place.
-  if (hiddenByOnly({ t: 'item', id: key })) { anchored(() => renderSection(sectionOf(it))); return null; }
+  // Under "Hide races I've decided", a row that is now decided (and past its beat) leaves: repaint its
+  // section with the same filter the full render uses, held in place.
+  if (hiddenByOnly({ t: 'item', id: key }, sectionOf(it))) { anchored(() => renderSection(sectionOf(it))); return null; }
   const el = $(`#i-${CSS.escape(key)}`);
   if (!el || !el.classList.contains('row') || el.classList.contains('is-off')) { renderSection(sectionOf(it)); return fold(); }
   withFocusKept(() => { el.outerHTML = rowHTML(it); });
@@ -191,8 +191,10 @@ export function renderRow(key: string | null, counts = true, shut = false): Anim
     }
     return null;
   }
-  const count = document.querySelector(`#sec-${sec} .sec-count`);
-  if (count) count.textContent = sectionCount(entries);
+  // The band's count, and the word after it (Show or Hide): a first decided row under "Hide races I've
+  // decided" turns the plain count into a button.
+  const count = document.querySelector(`#sec-${sec} > .sec-h > .sec-r`);
+  if (count) withFocusKept(() => { count.outerHTML = countHTML(sec, entries, isFolded); });
   for (const [k, c] of groupCounts(sec)) {
     const g = document.querySelector(`#sec-${sec} [data-act="grp"][data-g="${CSS.escape(k)}"] .grp-ct`);
     if (g) g.textContent = c;

@@ -43,7 +43,9 @@ export interface UI {
   others: Set<string>;        // rows showing sources outside your lens
   folded: Set<string>;        // sections or court groups the voter folded
   unfolded: Set<string>;      // decided sections and long groups the voter opened
-  keep: string | null;        // a row just decided stays visible under "Hide races I've decided" until another opens
+  reveal: Set<string>;        // sections whose decided rows show under "Hide races I've decided" (their count, tapped), for this visit
+  keep: string | null;        // the row just decided ("Next up" goes on from it)
+  beat: string | null;        // under "Hide races I've decided", the row just decided, showing its pick for a beat before it folds away
   noteOpen: Set<string>;
   reader: string | null;      // the "Full details" sheet, by item id
   sheet: null | 'sources' | 'party' | 'whatif' | 'picks' | 'toc';  // picks: the ballot's Edit sheet; toc: the menu
@@ -87,7 +89,7 @@ export const S = {
   b: emptyBallotState(),
   prefs: { parties: null, endorsedOnly: false, foldDecided: true, autoPick: false } as Prefs,
   ui: {
-    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), keep: null,
+    view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), reveal: new Set(), keep: null, beat: null,
     noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', saveOpen: false, copyFallback: null, bulk: null,
     setupFill: false, setupOnly: false, resume: false,
   } as UI,

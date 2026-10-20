@@ -5,6 +5,8 @@
    - A jump (the menu, Next up, My plan's lines, a section band) glides to where it goes and marks
      where it landed, so the eye finds it.
    - Sheets slide up over a fading scrim and slide back down.
+   - Under "Hide races I've decided", a decided row shows its pick for a beat, then folds to nothing
+     as the rows under it slide up (or its finished section folds to its band).
    Only transform, opacity and one container's height (with its padding) animate, through the Web
    Animations API: a repaint that replaces an element drops its animation, and the new element is
    already in its end state, so nothing restarts. With prefers-reduced-motion everything lands at
@@ -17,6 +19,7 @@ const easeOut = (t: number): number => 1 - Math.pow(1 - t, 3);
 export const OPEN_MS = 200;
 export const SHUT_MS = 160;
 export const SHEET_MS = 200;
+export const COLLAPSE_MS = 220;
 
 export function still(): boolean {
   try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { return true; }
@@ -26,14 +29,13 @@ const canAnimate = (el: Element | null | undefined): el is HTMLElement => !!el &
 /* What's left of something on its way out: no ids, no controls, nothing a script or a test can
    find by name, and nothing a screen reader or a tap can reach. data-husk tells main.ts that a tap
    which began on a control now in here still was a tap on a control. */
+const HUSKED = ['id', 'data-act', 'data-fk', 'data-keep', 'data-note', 'data-item', 'data-undecided', 'data-q'];
 function husk(el: HTMLElement): void {
   el.setAttribute('data-husk', '');
   el.setAttribute('aria-hidden', 'true');
   el.inert = true;
-  el.removeAttribute('id');
-  el.querySelectorAll('[id],[data-act],[data-fk],[data-keep],[data-note]').forEach((x) => {
-    ['id', 'data-act', 'data-fk', 'data-keep', 'data-note'].forEach((a) => x.removeAttribute(a));
-  });
+  HUSKED.forEach((a) => el.removeAttribute(a));
+  el.querySelectorAll(HUSKED.map((a) => `[${a}]`).join(',')).forEach((x) => HUSKED.forEach((a) => x.removeAttribute(a)));
 }
 
 /* ---------- a row ---------- */
@@ -103,12 +105,12 @@ export function grow(el: HTMLElement | null): void {
   a.oncancel = done;
 }
 /* `old` (the body as it was, `h` tall) goes back in after `at` as a husk and folds away. */
-export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: number): void {
+export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: number, cls = 'gone'): void {
   if (!at || !canAnimate(old) || h < 2) return;
   old.getAnimations?.().forEach((x) => x.cancel());
   husk(old);
   old.classList.remove('moving');
-  old.classList.add('gone');
+  old.classList.add(cls);
   at.after(old);
   const a = old.animate([{ height: `${h}px` }, { height: '0px' }], { duration: SHUT_MS, easing: OUT, fill: 'forwards' });
   old.animate([{ opacity: 1 }, { opacity: 0 }], { duration: SHUT_MS, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
@@ -116,6 +118,38 @@ export function shrinkAway(at: HTMLElement | null, old: HTMLElement | null, h: n
   a.onfinish = end;
   a.oncancel = end;
 }
+
+/* ---------- a decided row leaving ("Hide races I've decided") ----------
+   The row, in place, folds to nothing and fades: its height (and its rule) go to zero, so the rows
+   under it slide up into its place while everything above stays still; the page doesn't scroll.
+   `done` runs once it's gone (the section then repaints as the state says). One at a time: a new
+   one, or finishCollapse (another row opening), ends the one in flight at once. */
+let collapsing: (() => void) | null = null;
+export function collapseRow(row: HTMLElement, done: () => void): void {
+  finishCollapse();
+  if (!canAnimate(row)) { done(); return; }
+  const h = row.getBoundingClientRect().height;
+  row.getAnimations?.().forEach((x) => x.cancel());
+  husk(row);
+  row.classList.add('row-gone');
+  const cs = getComputedStyle(row);
+  const a = row.animate([
+    { height: `${h}px`, borderBottomWidth: cs.borderBottomWidth, opacity: 1 },
+    { height: '0px', borderBottomWidth: '0px', opacity: 0 },
+  ], { duration: COLLAPSE_MS, easing: OUT, fill: 'forwards' });
+  let over = false;
+  const end = (): void => {
+    if (over) return;
+    over = true;
+    if (collapsing === end) collapsing = null;
+    row.remove();
+    done();
+  };
+  collapsing = end;
+  a.onfinish = end;
+  a.oncancel = end;
+}
+export function finishCollapse(): void { if (collapsing) collapsing(); }
 
 /* ---------- scrolling ---------- */
 let tween = 0;

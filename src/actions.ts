@@ -6,7 +6,7 @@ import { S, persist, emptyBallotState, type View } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
 import { render, renderRow, renderSection, renderSummaries, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
-import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway } from './motion';
+import { growOpen, inkRow, followFold, glideTo, land, stopGlide, grow, shrinkAway, collapseRow, finishCollapse } from './motion';
 import { HOW_K } from './views/trust';
 import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
@@ -16,20 +16,93 @@ import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
 import { messages, shareData } from './views/pass';
-import { nextUp, sectionTally, qId } from './views/ledger';
+import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
 const B = () => S.ballot!;
 
 /* ---------- after a decision ---------- */
+/* Under "Hide races I've decided" (Kevin, Oct 20: "give it like a beat, and then they collapse"): a
+   row that closes decided shows its pick in gold for a beat, then folds away, the rows under it
+   sliding up (motion.collapseRow); when it was the section's last, the section folds to its band
+   instead, "5 of 5 decided", and the band is marked. Under reduced motion it just goes after the
+   beat. Opening another row, a jump, the count, or a repaint of the whole ballot ends the beat at
+   once, so nothing moves under the next tap. */
+export const BEAT_MS = 900;
+let beatTimer = 0;
+/* A row that closed: give it its beat when the filter would now hide it. */
+function startBeat(id: string): void {
+  const it = B().byId.get(id);
+  if (!it || !hiddenByOnly({ t: 'item', id }, sectionOf(it))) return;
+  if (S.ui.beat && S.ui.beat !== id) endBeat();
+  window.clearTimeout(beatTimer);
+  S.ui.beat = id;
+  beatTimer = window.setTimeout(() => endBeat(true), BEAT_MS);
+}
+/* For a repaint of the whole ballot (it draws the row gone): forget the beat. */
+function dropBeat(): void {
+  window.clearTimeout(beatTimer);
+  S.ui.beat = null;
+  finishCollapse();
+}
+/* The beat is over and the row leaves: folding away (`fold`, when the beat ran its course), or at
+   once with what's on screen held still. A row reopened meanwhile, or the filter turned off,
+   stays. */
+function endBeat(fold = false): void {
+  window.clearTimeout(beatTimer);
+  finishCollapse();
+  const id = S.ui.beat;
+  if (!id) return;
+  S.ui.beat = null;
+  if (S.view !== 'ballot' || S.ui.view !== 'ballot' || !S.ballot) return;
+  const it = B().byId.get(id);
+  if (!it) return;
+  const sec = sectionOf(it);
+  const el = rowEl(id);
+  if (!hiddenByOnly({ t: 'item', id }, sec)) { el?.removeAttribute('data-beat'); return; }
+  const band = $(`#sec-${sec}`);
+  const top = el ? el.getBoundingClientRect().top : -1;
+  const refocus = focusAfter(el, sec);
+  // Out of sight above or below, or nothing to watch: it just goes, the view held still.
+  if (!fold || !el || !band || top < 0 || top > window.innerHeight) { anchored(() => renderSection(sec)); refocus(); return; }
+  if (sectionFolded(sec, entriesBySection().get(sec) || [])) { foldDone(sec); refocus(); return; }
+  collapseRow(el, () => { anchored(() => renderSection(sec)); refocus(); });
+}
+/* Focus on a row that leaves (a keyboard pick) goes on to the row that takes its place, or to its
+   section's band. */
+function focusAfter(el: HTMLElement | null, sec: SectionKey): () => void {
+  if (!el || !el.contains(document.activeElement)) return () => {};
+  let n = el.nextElementSibling;
+  while (n && !n.querySelector(':scope > [data-fk]')) n = n.nextElementSibling;
+  const fk = n?.querySelector<HTMLElement>(':scope > [data-fk]')?.dataset.fk || `sec-${sec}`;
+  return () => { if (!document.activeElement || document.activeElement === document.body) focusFk(document.querySelector(`[data-fk="${CSS.escape(fk)}"]`) ? fk : `sec-${sec}`); };
+}
+/* The last row of a section left under the filter: the band stays where it is and everything under
+   it folds away together, then the band is marked. A band that had scrolled off the top comes back
+   to the top instead, as a finished section does without the filter. */
+function foldDone(sec: SectionKey): void {
+  const el = $(`#sec-${sec}`)!;
+  const hd = el.querySelector<HTMLElement>(':scope > .sec-h');
+  const was = hd ? hd.getBoundingClientRect() : null;
+  const body = [...el.children].filter((x) => x !== hd) as HTMLElement[];
+  const h = was ? el.getBoundingClientRect().bottom - was.bottom : 0;
+  const ghost = document.createElement('div');
+  body.forEach((x) => ghost.appendChild(x));
+  anchored(() => renderSection(sec), `sec-${sec}`);
+  const now = $(`#sec-${sec}`);
+  if (!now) return;
+  if (was && was.top < 0) window.scrollBy(0, now.getBoundingClientRect().top);
+  else shrinkAway(now.querySelector<HTMLElement>(':scope > .sec-h'), ghost, h, 'sec-gone');
+  land(now);
+}
 /* A pick that closes its row: the panel folds up into the header, which stays where it is (or,
    when it had scrolled off the top, comes down into view as the panel folds, motion.followFold),
    and the tick draws itself in the box. */
 function afterPick(id: string, close = true): void {
   touchUndo(id);
   const shut = close && S.ui.row === id;
-  if (shut) { S.ui.row = null; S.ui.keep = id; }
+  if (shut) { S.ui.row = null; S.ui.keep = id; startBeat(id); }
   const box = shut ? rowEl(id)?.getBoundingClientRect() : undefined;
   const fold = renderRow(id, true, shut);
   const it = B().byId.get(id);
@@ -54,14 +127,23 @@ function afterPick(id: string, close = true): void {
 A.row = (d) => {
   const key = d.id!;
   const prev = S.ui.row;
-  const prevKeep = S.ui.keep;
   S.ui.keep = null;
   stopGlide();
-  if (prev === key) { S.ui.row = null; renderRow(key, false, true); return; }
-  S.ui.row = key;
+  if (prev === key) {
+    // Closed decided under "Hide races I've decided": the same beat as a pick.
+    if (S.ui.beat !== key) endBeat();
+    S.ui.row = null;
+    if (!key.startsWith('q:')) startBeat(key);
+    renderRow(key, false, true);
+    return;
+  }
+  // Reopened in its beat, a row stays; any other row in its beat goes now, before this one opens,
+  // and the header you tapped stays where it is (holdRow).
+  if (S.ui.beat === key) { window.clearTimeout(beatTimer); S.ui.beat = null; }
   const top = rowTop(key);
+  S.ui.row = key;
+  endBeat();
   if (prev) renderRow(prev, false);
-  if (prevKeep && prevKeep !== key && S.b.hideDecided) renderRow(prevKeep);
   renderRow(key, false);
   const el = rowEl(key);
   if (top === null) { if (el) window.scrollBy(0, el.getBoundingClientRect().top - 4); }
@@ -84,6 +166,7 @@ const itemOfKey = (key: string): Item | undefined => {
 function openAt(key: string): void {
   const it = itemOfKey(key);
   if (!it) return;
+  endBeat();
   if (S.ui.view !== 'ballot') go('ballot');
   const sec = sectionOf(it);
   S.ui.folded.delete(sec);
@@ -126,9 +209,11 @@ function closeMenu(): void {
   flushLens();
 }
 /* A menu row: your next step, or a section. The section unfolds, comes to the top and takes focus.
-   Under "Hide races I've decided" a finished section isn't on the page, so the filter turns off. */
+   Under "Hide races I've decided" a finished section opens with its decided rows showing, as its
+   count does; the filter stays on. */
 A.jump = (d) => {
   closeMenu();
+  endBeat();
   if (S.ui.view !== 'ballot') go('ballot');
   if (d.to === 'plan') {
     glideTo($('#plan'), 12);
@@ -145,11 +230,10 @@ A.jump = (d) => {
   const entries = entriesBySection().get(sec) || [];
   const t = sectionTally(entries);
   const wasFolded = !!$(`#sec-${sec}.folded`);
-  const unfilter = S.b.hideDecided && t.total > 0 && t.done === t.total;
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
-  if (unfilter) { S.b.hideDecided = false; S.ui.keep = null; renderBallot(); render(['bar']); persist(); }
-  else if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
+  if (S.b.hideDecided && t.total > 0 && t.done === t.total) S.ui.reveal.add(sec);
+  if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
 };
@@ -168,10 +252,13 @@ function toggleHow(open = !S.ui.open.has(HOW_K), move = true): void {
 }
 A.page = (d) => { S.ui.page[d.id!] = Number(d.v); renderRow(d.id!); $(`[data-fk="pg-${CSS.escape(d.id!)}"]`)?.focus({ preventScroll: true }); };
 A.others = (d) => { const k = d.id!; S.ui.others.has(k) ? S.ui.others.delete(k) : S.ui.others.add(k); renderRow(k); };
-A.sec = (d) => {
+A.sec = (d, btn) => {
   const s = d.sec as SectionKey;
+  endBeat();
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
+  // Under "Hide races I've decided" a folded band opens as its count does: with its decided rows.
+  if (folded && S.b.hideDecided) { A['sec-count'](d, btn); focusFk(`sec-${s}`); return; }
   // A section still being decided doesn't fold on a stray tap; the band takes you to its next
   // undecided row instead.
   if (!folded && el && el.querySelector('.row[data-undecided], .row[data-q]')) {
@@ -185,6 +272,30 @@ A.sec = (d) => {
   }
   if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); } else { S.ui.unfolded.delete(s); S.ui.folded.add(s); if (S.ui.row && B().byId.get(S.ui.row) && sectionOf(B().byId.get(S.ui.row)!) === s) S.ui.row = null; }
   anchored(() => renderSection(s), `sec-${s}`);
+};
+/* A band's count ("2 of 5 decided", ledger countHTML): under "Hide races I've decided" it shows or
+   hides the section's decided rows (a folded band opens with them); otherwise it folds or unfolds
+   the section, even one still being decided. The band stays where it is. The choice lasts for this
+   visit; the filter itself is what's saved. */
+A['sec-count'] = (d) => {
+  const s = d.sec as SectionKey;
+  endBeat();
+  const el = $(`#sec-${s}`);
+  const folded = !!el && el.classList.contains('folded');
+  const entries = entriesBySection().get(s) || [];
+  if (S.b.hideDecided && sectionTally(entries).total > 0) {
+    if (folded) { S.ui.folded.delete(s); S.ui.reveal.add(s); }
+    else if (S.ui.reveal.has(s)) S.ui.reveal.delete(s);
+    else S.ui.reveal.add(s);
+  } else if (folded) { S.ui.folded.delete(s); S.ui.unfolded.add(s); }
+  else {
+    S.ui.unfolded.delete(s); S.ui.folded.add(s);
+    const open = S.ui.row ? itemOfKey(S.ui.row) : undefined;
+    if (open && sectionOf(open) === s) S.ui.row = null;
+  }
+  anchored(() => renderSection(s), `sec-${s}`);
+  // The other school districts' fold may have opened or closed with it: the counts follow.
+  renderSummaries();
 };
 A.grp = (d) => {
   const k = d.g!;
@@ -472,6 +583,7 @@ function closePicks(): void {
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
   if (n) { S.ui.bulk = String(n); S.ui.row = null; S.ui.keep = null; }
+  if (n || only !== S.b.hideDecided) dropBeat();
   const onlyChanged = only !== S.b.hideDecided;
   if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
   flushLens(!!n || onlyChanged);
@@ -525,6 +637,7 @@ A.bulk = (d) => {
   // This batch is now the one Undo takes back, so the head's "filled in" line steps aside.
   S.ui.bulk = null;
   S.ui.row = null;
+  dropBeat();
   renderBallot();
   render(['bar']);
   persist();
@@ -537,6 +650,7 @@ A['undo-bulk'] = () => {
   if (!undoFills()) return;
   const fromLine = (document.activeElement as HTMLElement | null)?.dataset?.fk === 'filled-undo';
   S.ui.bulk = null;
+  dropBeat();
   hideToast();
   renderBallot();
   render(['bar']);
@@ -557,6 +671,7 @@ A.cheat = () => go('cheat');
 A.only = (_d, el) => {
   S.b.hideDecided = !S.b.hideDecided;
   S.ui.keep = null;
+  dropBeat();
   persist();
   if (S.ui.sheet === 'toc') { markBehind(); render(['sheet', 'bar']); }
   else { renderBallot(); render(['bar']); }

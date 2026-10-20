@@ -80,14 +80,15 @@ async function next(page) {
 const focusedFk = (page) => page.evaluate(() => document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.fk || '' : '');
 const linkHere = (url) => url.replace(/^https?:\/\/[^/]+/, BASE).replace('/#', `/?today=${TODAY}#`);
 const text = async (page, sel) => ((await page.textContent(sel).catch(() => '')) || '').replace(/\s+/g, ' ').trim();
-/* Motion (Oct 20): a jump glides for about a third of a second and a sheet slides away in a fifth.
+/* Motion (Oct 20): a jump glides for about a third of a second and a sheet slides away in a fifth;
+   under "Hide races I've decided" a decided row waits a beat (data-beat), then folds away.
    Wait until the page has stopped scrolling and nothing is on its way out. */
 const settle = (page) => page.evaluate(() => new Promise((res) => {
   let last = -1, same = 0;
   const t0 = performance.now();
   const f = () => {
     const y = window.scrollY;
-    same = y === last && !document.querySelector('.sheet-ghost, .ob-gone, .trust .gone') ? same + 1 : 0;
+    same = y === last && !document.querySelector('.sheet-ghost, .ob-gone, .trust .gone, .row-gone, .sec-gone, [data-beat]') ? same + 1 : 0;
     last = y;
     if (same >= 4 || performance.now() - t0 > 4000) res(); else requestAnimationFrame(f);
   };
@@ -916,8 +917,9 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await ctx.close();
 }
 {
-  // Under "Hide races I've decided" a finished section isn't on the page: the menu says "Done", and
-  // jumping there turns the filter off. ("Try as aunt" decides everything but the measures.)
+  // Under "Hide races I've decided" a finished section is just its band, folded, with Show (that's
+  // where its races went): the menu says "Done", and jumping there opens it with its decided rows,
+  // the filter still on. ("Try as aunt" decides everything but the measures.)
   const { ctx, page } = await newPage();
   await openBallot(page, '78704', '&try=aunt');
   await menu(page);
@@ -925,13 +927,33 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   check('Menu: the switch turns "Hide races I’ve decided" on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
   check('Menu: a finished section reads "Done"', (await text(page, '.sheet-panel [data-to="federal"] .nv-n')) === 'Done');
   await tap(page, '.sheet-panel [data-fk="sheet-x"]');
-  check('Menu: closed, the ballot shows only what’s left', !(await page.$('#sec-federal')) && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  await settle(page);
+  check('Menu: closed, the ballot shows only what’s left, a finished section as its band', !!(await page.$('#sec-federal.folded')) && !(await page.$('#sec-federal .row')) && !(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  check('Menu: that band reads "2 of 2 decided" with Show', (await text(page, '#sec-federal .sec-r')) === '2 of 2 decided Show' && (await text(page, '#sec-federal .sec-count')) === '2 of 2 decided', await text(page, '#sec-federal .sec-r'));
   await menu(page);
   await tap(page, '.sheet-panel [data-act="jump"][data-to="federal"]');
-  await page.waitForTimeout(150);
-  check('Menu: jumping to it turns the filter off and shows it, focused', !!(await page.$('#sec-federal')) && (await focusedFk(page)) === 'sec-federal' && !!(await page.$('.ledger .row[data-item]:not([data-undecided])')));
+  await settle(page);
+  check('Menu: jumping to it opens it with its decided rows, focused', !(await page.$('#sec-federal.folded')) && (await focusedFk(page)) === 'sec-federal' && !!(await page.$('#sec-federal .row[data-item]:not([data-undecided])')) && (await text(page, '#sec-federal .sec-r')) === '2 of 2 decided Hide', await text(page, '#sec-federal .sec-r'));
+  check('Menu: the other finished sections stay folded', !!(await page.$('#sec-state.folded')) && !(await page.$('#sec-state .row')));
   await menu(page);
-  check('Menu: and the switch says so', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'false');
+  check('Menu: and the filter is still on', (await page.getAttribute('.sheet-panel [data-act="only"]', 'aria-checked')) === 'true');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  // A finished band's count, and the band itself, open and close it.
+  await tap(page, '#sec-federal [data-act="sec-count"]');
+  await settle(page);
+  check('Counts: under the filter, "Hide" folds a finished section back to its band', !!(await page.$('#sec-federal.folded')) && !(await page.$('#sec-federal .row')) && (await text(page, '#sec-federal .sec-r')) === '2 of 2 decided Show', await text(page, '#sec-federal .sec-r'));
+  await page.locator('#sec-state [data-act="sec-count"]').scrollIntoViewIfNeeded();
+  const band0 = await page.$eval('#sec-state > .sec-h', (e) => e.getBoundingClientRect().top);
+  await tap(page, '#sec-state [data-act="sec-count"]');
+  await settle(page);
+  const band1 = await page.$eval('#sec-state > .sec-h', (e) => e.getBoundingClientRect().top);
+  check('Counts: "Show" on a finished band opens it with its decided rows, the band where it was', !(await page.$('#sec-state.folded')) && (await page.$$('#sec-state .row[data-item]')).length >= 2 && Math.abs(band1 - band0) <= 1, `${band0} then ${band1}`);
+  await tap(page, '#sec-judicial [data-act="sec"]');
+  await settle(page);
+  check('Counts: under the filter, a finished band itself opens the same way', !(await page.$('#sec-judicial.folded')) && !!(await page.$('#sec-judicial .row[data-item]:not([data-undecided])')) && (await text(page, '#sec-judicial .sec-edit')) === 'Hide', await text(page, '#sec-judicial .sec-r'));
+  const cb = await page.$eval('#sec-state [data-act="sec-count"]', (e) => e.getBoundingClientRect().height);
+  check('Counts: the count is a full-height tap target', cb >= 44, String(cb));
   noErrors(page, 'Menu under the filter');
   await ctx.close();
 }
@@ -1861,6 +1883,142 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await openRow(page, ids[1]);
   check('Hide races I’ve decided: opening the next row drops the decided one', !(await page.$(`#i-${ids[0]}`)) && !!(await page.$(`#i-${ids[1]}.is-open`)));
   noErrors(page, 'Hide races I’ve decided');
+  await ctx.close();
+}
+/* Frame by frame for `ms`: whether a husk is folding away, and the top of each selector (null when
+   it isn't on the page). */
+const sample = (page, ms, sels) => page.evaluate(([ms, sels]) => new Promise((res) => {
+  const out = [];
+  const t0 = performance.now();
+  const f = () => {
+    const t = performance.now() - t0;
+    out.push({ t, husk: !!document.querySelector('.row-gone, .sec-gone'), tops: sels.map((s) => { const e = document.querySelector(s); return e ? e.getBoundingClientRect().top : null; }) });
+    if (t < ms) requestAnimationFrame(f); else res(out);
+  };
+  requestAnimationFrame(f);
+}), [ms, sels]);
+/* "A beat, then they collapse" (Kevin, Oct 20): under "Hide races I've decided" a pick closes the row,
+   which shows its pick in gold for about 900ms, then folds away while the rows under it slide up;
+   the band above stays still. Opening another row in the beat ends it at once, the tapped header
+   held where it was; reopening the row keeps it. */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  const ids = await page.evaluate(() => [...document.querySelectorAll('#sec-measures .row[data-item][data-undecided]')].slice(0, 5).map((r) => r.dataset.item));
+  await page.evaluate((id) => { const r = document.getElementById(`i-${id}`); window.scrollBy(0, r.getBoundingClientRect().top - 220); }, ids[0]);
+  await openRow(page, ids[0]);
+  await settle(page);
+  await page.locator(`#i-${ids[0]} [data-act="pick"][data-v="YES"]`).first().tap();
+  const beat = await page.evaluate((id) => { const r = document.getElementById(`i-${id}`); return r && { beat: r.hasAttribute('data-beat'), open: r.classList.contains('is-open'), gold: !!r.querySelector('.vd.done'), count: document.querySelector('#sec-measures .sec-r').textContent.replace(/\s+/g, ' ').trim() }; }, ids[0]);
+  check('Beat: a pick closes the row, which stays with its pick in gold', !!beat && beat.beat && !beat.open && beat.gold, JSON.stringify(beat));
+  check('Beat: the band counts it at once, with Show for the hidden one', !!beat && /^1 of \d+ decided ?Show$/.test(beat.count), beat && beat.count);
+  const s = await sample(page, 1700, ['#sec-measures > .sec-h', `#i-${ids[1]}`, `#i-${ids[0]}`]);
+  const goneAt = s.findIndex((x) => x.tops[2] === null);
+  const tGone = goneAt >= 0 ? s[goneAt].t : -1;
+  check('Beat: the row waits about 900ms before it goes', tGone >= 650 && tGone <= 1250, `${Math.round(tGone)}ms`);
+  check('Beat: then it folds away (a husk, for a moment)', s.some((x) => x.husk) && !s[s.length - 1].husk);
+  // (The pick's own panel fold may bring the row back into view first: motion.followFold, 160ms.)
+  const bandTops = s.filter((x) => x.t >= 300).map((x) => x.tops[0]);
+  check('Beat: the band above holds still through the beat and the fold', Math.max(...bandTops) - Math.min(...bandTops) <= 1, `${Math.min(...bandTops)} to ${Math.max(...bandTops)}`);
+  const before = goneAt > 0 ? s[goneAt - 1].tops[1] : null;
+  const after = s[s.length - 1].tops[1];
+  const mid = s.filter((x) => x.husk && x.tops[1] !== null && x.tops[1] < before - 2 && x.tops[1] > after + 2).length;
+  check('Beat: the row under it slides up into its place, not in one jump', before !== null && after < before - 40 && mid >= 2, `${before} to ${after}, ${mid} frames between`);
+  check('Beat: gone, and the band still says so', !(await page.$(`#i-${ids[0]}`)) && /^1 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
+  check('Beat: focus goes on to the row that took its place', (await focusedFk(page)) === `row-${ids[1]}`, await focusedFk(page));
+  // Another row opened in the beat: the decided one goes at once and the tapped header holds still.
+  await openRow(page, ids[1]);
+  await settle(page);
+  await page.locator(`#i-${ids[1]} [data-act="pick"][data-v="NO"]`).first().tap();
+  await page.waitForTimeout(250);
+  check('Beat: the next pick waits its beat too', !!(await page.$(`#i-${ids[1]}[data-beat]`)));
+  const top2 = await page.$eval(`#i-${ids[2]} > .row-hd`, (e) => e.getBoundingClientRect().top);
+  await page.locator(`#i-${ids[2]} > [data-act="row"]`).tap();
+  const now2 = await page.evaluate((id) => ({ top: document.querySelector(`#i-${id} > .row-hd`).getBoundingClientRect().top, open: document.getElementById(`i-${id}`).classList.contains('is-open') }), ids[2]);
+  check('Beat: opening another row ends the beat first: the decided row is gone, no husk left', !(await page.$(`#i-${ids[1]}`)) && !(await page.$('.row-gone')) && now2.open);
+  check('Beat: and the header you tapped stays where it was', Math.abs(now2.top - top2) <= 1, `${top2} then ${now2.top}`);
+  await settle(page);
+  // Reopened in its beat, a row stays.
+  await page.locator(`#i-${ids[2]} [data-act="pick"][data-v="YES"]`).first().tap();
+  await page.waitForTimeout(200);
+  await page.locator(`#i-${ids[2]} > [data-act="row"]`).tap();
+  await page.waitForTimeout(1300);
+  check('Beat: a row reopened in its beat stays, open', !!(await page.$(`#i-${ids[2]}.is-open`)) && !(await page.$(`#i-${ids[2]}[data-beat]`)));
+  // Closed by its header while decided: the same beat, then it goes.
+  await page.locator(`#i-${ids[2]} > [data-act="row"]`).tap();
+  await page.waitForTimeout(250);
+  check('Beat: a decided row closed by its header waits its beat', !!(await page.$(`#i-${ids[2]}[data-beat]`)));
+  await settle(page);
+  check('Beat: then it goes', !(await page.$(`#i-${ids[2]}`)) && /^3 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
+  // The count shows the section's decided rows and hides them again; the choice lasts the visit.
+  await tap(page, '#sec-measures [data-act="sec-count"]');
+  await settle(page);
+  check('Counts: "Show" shows the section\'s decided rows', !!(await page.$(`#i-${ids[0]}`)) && !!(await page.$(`#i-${ids[1]}`)) && !!(await page.$(`#i-${ids[2]}`)) && (await text(page, '#sec-measures .sec-edit')) === 'Hide' && (await page.getAttribute('#sec-measures [data-act="sec-count"]', 'aria-expanded')) === 'true');
+  check('Counts: the count itself still reads "N of M decided"', /^3 of \d+ decided$/.test(await text(page, '#sec-measures .sec-count')), await text(page, '#sec-measures .sec-count'));
+  check('Counts: other sections keep hiding theirs', !(await page.$('.ledger .sec:not(#sec-measures) .row[data-item]:not([data-undecided])')));
+  await openRow(page, ids[3]);
+  await settle(page);
+  await page.locator(`#i-${ids[3]} [data-act="pick"][data-v="YES"]`).first().tap();
+  await page.waitForTimeout(1300);
+  check('Counts: while shown, a new pick there stays on the page', !!(await page.$(`#i-${ids[3]}`)) && !(await page.$(`#i-${ids[3]}[data-beat]`)));
+  await tap(page, '#sec-measures [data-act="sec-count"]');
+  await settle(page);
+  check('Counts: "Hide" hides them again', !(await page.$(`#i-${ids[0]}`)) && !(await page.$(`#i-${ids[3]}`)) && (await text(page, '#sec-measures .sec-r')).endsWith('decided Show'), await text(page, '#sec-measures .sec-r'));
+  await tap(page, '#sec-measures [data-act="sec-count"]');
+  await page.reload();
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('Counts: what a count showed lasts the visit; after a reload the filter hides them again', !(await page.$(`#i-${ids[0]}`)) && /^4 of \d+ decided Show$/.test(await text(page, '#sec-measures .sec-r')), await text(page, '#sec-measures .sec-r'));
+  // The section's last race: the section folds to its band, the band holding still.
+  const cid = await page.evaluate(() => document.querySelector('#sec-city .row[data-item][data-undecided]')?.dataset.item);
+  await page.evaluate((id) => { const r = document.getElementById(`i-${id}`); window.scrollBy(0, r.getBoundingClientRect().top - 260); }, cid);
+  await openRow(page, cid);
+  await settle(page);
+  await page.locator(`#i-${cid} [data-act="pick"]`).first().tap();
+  const sc = await sample(page, 1600, ['#sec-city > .sec-h']);
+  const ct = sc.map((x) => x.tops[0]).filter((x) => x !== null);
+  check('Beat: a section\'s last race folds the section to its band, "1 of 1 decided" with Show', !!(await page.$('#sec-city.folded')) && !(await page.$('#sec-city .row')) && (await text(page, '#sec-city .sec-r')) === '1 of 1 decided Show', await text(page, '#sec-city .sec-r'));
+  check('Beat: the band holds still as the section folds under it', ct.length === sc.length && Math.max(...ct) - Math.min(...ct) <= 1 && sc.some((x) => x.husk), `${Math.min(...ct)} to ${Math.max(...ct)}`);
+  noErrors(page, 'Beat and counts');
+  await ctx.close();
+}
+{
+  // Reduced motion: no animation; the row just goes after its beat.
+  const { ctx, page } = await newPage({ reducedMotion: 'reduce' });
+  await openBallot(page, '80205');
+  await menu(page);
+  await tap(page, '.sheet-panel [data-act="only"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item][data-undecided]').dataset.item);
+  await openRow(page, id);
+  await page.locator(`#i-${id} [data-act="pick"][data-v="YES"]`).first().tap();
+  const s = await sample(page, 1400, [`#i-${id}`]);
+  const at = s.findIndex((x) => x.tops[0] === null);
+  check('Beat, reduced motion: the row stays its beat, then goes with no husk', at > 0 && s[at].t >= 650 && s[at].t <= 1250 && !s.some((x) => x.husk), `${at >= 0 ? Math.round(s[at].t) : -1}ms`);
+  noErrors(page, 'Beat, reduced motion');
+  await ctx.close();
+}
+{
+  // Without the filter, a band's count folds and unfolds its section, even one still being decided;
+  // the band itself still goes to the next race left. The choice lasts the visit.
+  const { ctx, page } = await newPage();
+  await openBallot(page, '80205');
+  check('Counts: without the filter the count reads "0 of 2 decided" with Hide', (await text(page, '#sec-federal .sec-r')) === '0 of 2 decided Hide' && (await page.getAttribute('#sec-federal [data-act="sec-count"]', 'aria-expanded')) === 'true', await text(page, '#sec-federal .sec-r'));
+  await page.locator('#sec-state [data-act="sec-count"]').scrollIntoViewIfNeeded();
+  const b0 = await page.$eval('#sec-state > .sec-h', (e) => e.getBoundingClientRect().top);
+  await tap(page, '#sec-state [data-act="sec-count"]');
+  await settle(page);
+  const b1 = await page.$eval('#sec-state > .sec-h', (e) => e.getBoundingClientRect().top);
+  check('Counts: tapped, it folds the section, the band where it was', !!(await page.$('#sec-state.folded')) && !(await page.$('#sec-state .row')) && (await text(page, '#sec-state .sec-r')) === '0 of 8 decided Show' && Math.abs(b1 - b0) <= 1, `${b0} then ${b1}`);
+  check('Counts: the bar still counts the folded races', /^0 of /.test(await text(page, '.bar-txt')));
+  await tap(page, '#sec-state [data-act="sec-count"]');
+  await settle(page);
+  check('Counts: tapped again, it unfolds', !(await page.$('#sec-state.folded')) && (await page.$$('#sec-state .row[data-undecided]')).length >= 6 && (await text(page, '#sec-state .sec-edit')) === 'Hide');
+  noErrors(page, 'Counts without the filter');
   await ctx.close();
 }
 // #2 and #11: the address lookup checks the state, and a ballot that fails to load after a

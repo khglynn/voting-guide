@@ -495,6 +495,38 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('fold summary: "Keep 1, ..." still reads the same', /^Keep 1, /.test(sub2), sub2);
   }
 
+  /* ---------- a fill from one source names it (LA walk, Oct 20) ----------
+     A row filled from Knock LA alone read "Filled from your sources", the same as five agreeing. */
+  {
+    const b = open('CA', ['los-angeles-ca']);
+    tally.clearLineups();
+    const plan = bulk.planAgree();
+    const one = plan.fills.find((f) => f.single);
+    const many = plan.fills.find((f) => !f.single);
+    check('fill names: LA has a one-source fill and a several-source fill to check', !!one && !!many);
+    bulk.applyFills(plan.fills);
+    if (one) {
+      const src = tally.weighedIn(tally.lineup(b.byId.get(one.id)))[0];
+      const v = tally.verdict(b.byId.get(one.id));
+      check('fill names: a pick filled from one source says "Filled from" that source', v.sub === `Filled from ${src.short}`, `${one.id}: ${v.sub}`);
+    }
+    if (many) check('fill names: a pick several sources agreed on still says "Filled from your sources"', tally.verdict(b.byId.get(many.id)).sub === 'Filled from your sources', tally.verdict(b.byId.get(many.id)).sub);
+    // A single source whose name holds a comma or the word "Party" is still named, not "your party".
+    const it = b.items.find((x) => x.kind === 'measure');
+    const party = b.endorsers.find((e) => /party/i.test(e.short) && e.endorses_measures);
+    if (party) {
+      S.b.picks[it.id] = 'YES';
+      S.b.auto[it.id] = `Filled in from your sources: ${party.short}`;
+      check('fill names: an agree fill from one party organization names it, not "your party"', tally.verdict(it).sub === `Filled from ${party.short}`, tally.verdict(it).sub);
+    }
+    const comma = b.endorsers.find((e) => /, /.test(e.short));
+    if (comma) {
+      S.b.auto[it.id] = `Filled in from your sources: ${comma.short}`;
+      check('fill names: a source whose name has a comma is still one source', tally.verdict(it).sub === `Filled from ${comma.short}`, tally.verdict(it).sub);
+    }
+    bulk.undoFills();
+  }
+
   /* ---------- the cheat sheet lists what the ballot shows, with the bar's count (walks, Oct 20) ----------
      Austin's sheet listed seven Round Rock, Pflugerville and Leander ISD seats the ballot folds
      away, listed six House picks as certain, and said "28 of 56" beside a bar's "28 of 50". */

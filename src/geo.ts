@@ -65,6 +65,18 @@ export function placeFromGeo(places: Record<string, { label: string; state: stri
   return inState.find((id) => places[id].label.toLowerCase() === r.place!.toLowerCase()) || null;
 }
 
+/* Most people type just the street ("2 Main St"), and the Census geocoder can't place a street
+   without a city or ZIP. The guide already knows both the state and the ZIP they typed, so add
+   them unless the address already ends in a ZIP; a state already at the end gets only the ZIP. */
+export function withPlace(addr: string, st: string | null, zip: string | null): string {
+  const a = addr.trim().replace(/[\s,]+$/, '');
+  if (!st || /\b\d{5}(?:-\d{4})?$/.test(a)) return a;
+  const name = NAMES[st];
+  const endsInState = new RegExp(`(?:^|[\\s,])(?:${st}${name ? `|${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}` : ''})$`, 'i').test(a);
+  if (endsInState) return zip ? `${a} ${zip}` : a;
+  return `${a}, ${st}${zip ? ` ${zip}` : ''}`;
+}
+
 /* US Census Geocoder, JSONP (no key, no CORS). The address goes only to the Census
    Bureau. We keep it in memory for this one request and never store it. */
 let seq = 0;

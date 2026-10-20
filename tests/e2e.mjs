@@ -767,8 +767,11 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
     States: [{ STATE: fips }], 'Incorporated Places': [{ BASENAME: place }], '119th Congressional Districts': [{ BASENAME: String(cd) }],
     '2024 State Legislative Districts - Upper': [{ BASENAME: String(upper) }] } }] } });
   const answer = geoFor('17', 'Aurora', 14, 25);
+  const asked = [];
   await page.route('https://geocoding.geo.census.gov/**', (route) => {
-    const cb = new URL(route.request().url()).searchParams.get('callback');
+    const u = new URL(route.request().url());
+    asked.push(u.searchParams.get('address') || '');
+    const cb = u.searchParams.get('callback');
     return route.fulfill({ status: 200, contentType: 'application/javascript', body: `${cb}(${JSON.stringify(answer)})` });
   });
   await openZip(page, '80247');
@@ -780,6 +783,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const msg = await text(page, 'form[data-form="addr"] [role="status"]');
   check('Address: a Census match in Aurora, Illinois does not open Aurora, Colorado', /outside Colorado/.test(msg) && !(await page.$('#plan')), msg);
   check('Address: what you typed stays in the box after a miss', (await page.inputValue('#addr-in').catch(() => '')) === 'a test lookup');
+  check('Address: the lookup adds the state and ZIP you entered', asked[0] === 'a test lookup, CO 80247', asked.join(' | '));
   noErrors(page, 'Address in the wrong state');
   await ctx.close();
 }

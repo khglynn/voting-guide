@@ -376,7 +376,7 @@ for (const s of all.states) {
   const st = s.state || s._f;
   const r = s.registration || {};
   if (!isUrl(r.register_url)) warn('help-register-url', `${st}: no registration.register_url`);
-  const known = new Set([r.check_url, r.register_url, s.election_day?.lookup_url, s.early_in_person?.lookup_url, s.mail_ballot?.tracking_url,
+  const known = new Set([r.check_url, r.register_url, r.register_url_source, s.election_day?.lookup_url, s.early_in_person?.lookup_url, s.mail_ballot?.tracking_url,
     s.mail_ballot?.drop_box_lookup_url, s.official_site?.url, ...(s.sources || []).map((x) => x && x.url)].filter(isStr).map((u) => u.trim()));
   (s.situations || []).forEach((x) => {
     if (!x) return;

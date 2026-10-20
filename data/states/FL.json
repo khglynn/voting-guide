@@ -112,17 +112,46 @@
     "confidence": "sourced"
   },
   "gotchas": [
-    "Your old mail-ballot request is probably dead. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). Everything requested in 2023 or 2024 expired December 31, 2024. If you have not re-requested since January 2025, nothing is coming. Request by 5 PM Thursday, October 22 (voteorangefl.gov, leonvotes.gov, escambiavotes.gov), or plan to vote in person.",
-    "Mail ballots must be IN the supervisor's office by 7 PM on November 3. Postmarks do not count. Do not mail after about October 27. And do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
-    "Early voting is 'any site in your county' and in Orange, Leon and Escambia it starts Monday, October 19 (not the Oct 24 state minimum you may see quoted). Election Day is 'your assigned precinct only.' Escambia has no Sunday Nov 1 early voting; Orange and Leon do. Check your precinct at the lookup link the night before.",
-    "Bring a photo ID with a signature. If the photo ID has no signature (common with student IDs), bring a second ID with your signature. No ID at all: you still vote a provisional ballot, and it counts if your signature matches your record.",
-    "Constitutional amendments need 60% YES to pass, not 50%. There are three this year (1: rainy-day fund, 2: farm equipment tax break, 3: bigger homestead exemption). A 'Yes' always means change the constitution. The one judicial retention question every Floridian sees is 'Shall Chief Justice Carlos G. Muñiz be retained?': Yes keeps him, No removes him, simple majority decides. Orlando-area voters will NOT see any District Court of Appeal judges this year (none from the 6th DCA are up); Tallahassee and Pensacola voters see five 1st DCA judges.",
-    "Pensacola is on Central Time. Polls open 7 AM to 7 PM Central there, and the 7 PM mail-ballot deadline is 7 PM Central too."
+    {
+      "text": "Your old mail-ballot request is probably dead. Florida requests expire at the end of every general-election year (official rule: a request covers elections 'through the end of the calendar year' of the next general election). Everything requested in 2023 or 2024 expired December 31, 2024. If you have not re-requested since January 2025, nothing is coming. Request by 5 PM Thursday, October 22 (voteorangefl.gov, leonvotes.gov, escambiavotes.gov), or plan to vote in person.",
+      "short": "If you last requested a mail ballot before 2025, request again by Oct 22."
+    },
+    {
+      "text": "Mail ballots must be IN the supervisor's office by 7 PM on November 3. Postmarks do not count. Do not mail after about October 27. And do not take it to your Election Day polling place: precincts cannot accept mail ballots. Use a secure ballot intake station at an early voting site (during early voting hours) or the supervisor's main or branch office.",
+      "short": "After about Oct 27, drop off your mail ballot at an early voting site."
+    },
+    {
+      "text": "Early voting is 'any site in your county' and in Orange, Leon and Escambia it starts Monday, October 19 (not the Oct 24 state minimum you may see quoted). Election Day is 'your assigned precinct only.' Escambia has no Sunday Nov 1 early voting; Orange and Leon do. Check your precinct at the lookup link the night before.",
+      "short": "Vote early at any site in your county; on Election Day, use your own precinct."
+    },
+    {
+      "text": "Bring a photo ID with a signature. If the photo ID has no signature (common with student IDs), bring a second ID with your signature. No ID at all: you still vote a provisional ballot, and it counts if your signature matches your record.",
+      "short": "Bring a photo ID with a signature, or a second ID that has one."
+    },
+    {
+      "text": "Constitutional amendments need 60% YES to pass, not 50%. There are three this year (1: rainy-day fund, 2: farm equipment tax break, 3: bigger homestead exemption). A 'Yes' always means change the constitution. The one judicial retention question every Floridian sees is 'Shall Chief Justice Carlos G. Muñiz be retained?': Yes keeps him, No removes him, simple majority decides. Orlando-area voters will NOT see any District Court of Appeal judges this year (none from the 6th DCA are up); Tallahassee and Pensacola voters see five 1st DCA judges.",
+      "short": "Amendments need 60% yes to pass, and yes always means change the constitution."
+    },
+    {
+      "text": "Pensacola is on Central Time. Polls open 7 AM to 7 PM Central there, and the 7 PM mail-ballot deadline is 7 PM Central too.",
+      "short": "In Pensacola, polls and the mail deadline run on Central Time."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Florida.",
+      "short": "If you were registered by Oct 5, update your address at the polls and vote.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        },
+        {
+          "label": "Find early voting places",
+          "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+        }
+      ],
       "answer": "If you were registered in Florida by October 5, you can update your address at the polls and vote, during early voting or on Election Day. If you moved within the same county, like within Orange, you sign a short change-of-address form at the polls and vote a regular ballot.",
       "steps": [
         "Better yet, update your address now at RegisterToVoteFlorida.gov so your record is clean.",
@@ -136,6 +165,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I just moved to Florida from another state.",
+      "short": "Florida's deadline was Oct 5, so register now for next time.",
+      "actions": [
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/florida"
+        }
+      ],
       "answer": "Florida's registration deadline for this election was October 5, so if you weren't registered here by then, you can't vote in Florida on November 3. Register now at RegisterToVoteFlorida.gov so you're ready next time.",
       "steps": [
         "Get a Florida driver's license or ID card; it makes registering and voting easier.",
@@ -148,6 +184,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered to vote.",
+      "short": "The deadline was Oct 5, but check first, because you may be registered already.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        },
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/florida"
+        }
+      ],
       "answer": "We're sorry: Florida's deadline was October 5 and there's no same-day registration, so if you missed it, you can't vote in this election. First double-check, because you may be registered already.",
       "steps": [
         "Look yourself up with the state's voter status lookup.",
@@ -161,6 +208,17 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
+      "short": "Early voting works at any site in your county; on Election Day, go to your assigned precinct.",
+      "actions": [
+        {
+          "label": "Find my precinct",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        },
+        {
+          "label": "Find early voting places",
+          "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+        }
+      ],
       "answer": "During early voting (Oct 19 to Nov 1 in Orange County), you can use any early voting site in your county. On Election Day you must vote at your assigned precinct, so look it up and go there.",
       "steps": [
         "Find your precinct with the state's voter status lookup or your supervisor of elections.",
@@ -174,6 +232,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My mail ballot never came, or I lost it.",
+      "short": "Just vote in person: the office checks your mail ballot hasn't come back, then you vote normally.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        },
+        {
+          "label": "Find early voting places",
+          "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+        }
+      ],
       "answer": "Just vote in person. The supervisor's office checks that your mail ballot hasn't come back, and then you vote a regular ballot.",
       "steps": [
         "Check whether you even have a mail ballot request on file; requests from 2023 or 2024 expired.",
@@ -187,6 +256,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Don't scan it; ask for a new one, or bring a mail ballot when you vote in person.",
+      "actions": [
+        {
+          "label": "Find early voting places",
+          "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+        }
+      ],
       "answer": "At the polls, don't put it in the scanner: hand it back and get a new one (you can get up to three ballots in all). On a mail ballot, bring it with you to an early voting site or your precinct, turn it in, and vote a regular ballot.",
       "steps": [
         "In person: tell a poll worker before you scan your ballot.",
@@ -199,6 +275,13 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I mailed my ballot but now want to vote in person.",
+      "short": "Once the office has your mail ballot, it counts; if you still have it, bring it and vote.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        }
+      ],
       "answer": "Once the supervisor's office receives your mail ballot, it counts as your vote and you can't vote again. If you haven't sent it yet, bring it to the polls, turn it in, and vote a regular ballot.",
       "steps": [
         "Check the state's voter status lookup to see whether your mail ballot was received.",
@@ -211,6 +294,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "Bring a photo ID with your signature; with none, vote a provisional ballot that counts if your signature matches.",
       "answer": "Florida asks for a current photo ID with your signature, like a Florida license, passport, or for this election a student ID or a debit or credit card with your photo. If you have none, you can still vote a provisional ballot, and it counts if your signature matches your voter record.",
       "steps": [
         "Photo ID without a signature? Bring a second ID that has your signature.",
@@ -224,6 +308,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "You can still vote: sign a short name change form at the polls.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        }
+      ],
       "answer": "You can still vote. At the polls, sign a short name change form (or fill out a voter registration application with your new name) and vote.",
       "steps": [
         "Easier: update your name now at RegisterToVoteFlorida.gov.",
@@ -236,6 +327,17 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Vote where you're registered; if that's home, request a mail ballot from that county by 5 PM Oct 22.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        },
+        {
+          "label": "Find my county office",
+          "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+        }
+      ],
       "answer": "Registration closed October 5, so you vote where you're already registered. If that's your hometown and you're away at school, request a mail ballot from that county by 5 PM Thursday, October 22.",
       "steps": [
         "Registered at school in Orange County (say, UCF)? Vote early at any Orange County site, Oct 19 to Nov 1.",
@@ -249,6 +351,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote early at any site in your county, or request a mail ballot by 5 PM Oct 22.",
+      "actions": [
+        {
+          "label": "Find early voting places",
+          "url": "https://dos.fl.gov/elections/for-voters/voting/early-voting/"
+        },
+        {
+          "label": "Find my county office",
+          "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+        }
+      ],
       "answer": "Vote early: Orange County runs early voting Monday, October 19 through Sunday, November 1, at any of its sites. Or request a mail ballot by 5 PM Thursday, October 22 and get it back to the supervisor's office by 7 PM on November 3.",
       "steps": [
         "Request a mail ballot through your supervisor of elections (Orange: voteorangefl.gov).",
@@ -262,6 +375,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when polls close.",
+      "short": "Stay in line: anyone in line at 7 PM gets to vote.",
       "answer": "Stay in line. Anyone waiting in line at 7 PM gets to vote.",
       "steps": [
         "Don't leave, even if the line is long.",
@@ -274,6 +388,17 @@
     {
       "id": "signature_problem",
       "question": "They said my signature doesn't match.",
+      "short": "Send your supervisor of elections the cure affidavit and an ID copy by 5 PM Thursday, Nov 5.",
+      "actions": [
+        {
+          "label": "Find my county office",
+          "url": "https://dos.fl.gov/elections/contacts/supervisor-of-elections/"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        }
+      ],
       "answer": "You can fix it. Send your supervisor of elections the Vote-by-Mail Ballot Cure Affidavit plus a copy of your ID by 5 PM on Thursday, November 5.",
       "steps": [
         "Get the form from your notice or your supervisor's website (Orange: voteorangefl.gov).",
@@ -287,6 +412,7 @@
     {
       "id": "provisional_ballot",
       "question": "What's a provisional ballot?",
+      "short": "It's a sealed ballot used when you can't be confirmed at the polls; the county decides later if it counts.",
       "answer": "It's a ballot sealed in a special envelope when your eligibility can't be confirmed at the polls, such as when you have no ID or your name isn't on the list. The county canvassing board decides afterward whether it counts; on Election Day it only counts at your own precinct.",
       "steps": [
         "You can send the supervisor of elections proof that you're eligible until 5 PM Thursday, Nov 5.",
@@ -300,6 +426,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check my ballot was counted?",
+      "short": "For a mail ballot, use the state's voter status lookup; for a provisional one, use your county's lookup.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://registration.elections.myflorida.com/CheckVoterStatus"
+        }
+      ],
       "answer": "For a mail ballot, use the state's voter status lookup, which shows whether your ballot was received. For a provisional ballot, use your supervisor of elections' free lookup described in the instructions you got at the polls.",
       "steps": [
         "Look yourself up and check the vote-by-mail status line.",

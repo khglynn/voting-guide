@@ -110,16 +110,38 @@
     "confidence": "verified"
   },
   "gotchas": [
-    "The registration deadline is Monday, October 19, and Alabama has no same-day registration. Online registration (by 11:59 PM) needs an Alabama driver's license or non-driver ID; without one, a paper form must be postmarked by October 19 or hand-delivered before close of business. Moved? Updating your address has the same deadline.",
-    "There is no early voting. If you can't vote on November 3, absentee with an excuse is the only option: your application must REACH the absentee office by Tuesday, October 27 if mailed, or Thursday, October 29 if you bring it in person. In person you can apply and vote in one trip.",
-    "An absentee ballot has two traps: a copy of your photo ID goes with the application, and the ballot envelope needs a notary or two adult witnesses (remote notarization not allowed). There is no fix-it process. Mail it so it arrives by noon on Election Day (postmarks don't count), or hand-deliver it yourself by 5 PM Monday, November 2. No drop boxes, and nobody can drop it off for you.",
-    "Photo ID is required at the polls. A utility bill or bank statement does not work in Alabama. A driver's license expired less than 60 days is OK; the ALEA digital license is OK; a student ID from an Alabama college is OK. No ID means a provisional ballot that only counts if you show ID at the Board of Registrars by 5 PM Friday, November 6.",
-    "Straight-ticket voting: filling in one party's 'straight party' oval at the top votes for that party's candidate in every partisan race on your ballot, including the judges (Alabama elects judges with party labels). You can still override any single race by marking a different candidate there; the individual mark wins. The straight-ticket oval does not vote on the four statewide amendments, Mobile County's Local Amendment 1, or the Pay-As-You-Go road question (FOR or AGAINST, titled \"Special County Election,\" the last item on the ballot). You have to mark each one yourself or it's left blank."
+    {
+      "text": "The registration deadline is Monday, October 19, and Alabama has no same-day registration. Online registration (by 11:59 PM) needs an Alabama driver's license or non-driver ID; without one, a paper form must be postmarked by October 19 or hand-delivered before close of business. Moved? Updating your address has the same deadline.",
+      "short": "Alabama has no same-day registration, so the Oct 19 deadline is final."
+    },
+    {
+      "text": "There is no early voting. If you can't vote on November 3, absentee with an excuse is the only option: your application must REACH the absentee office by Tuesday, October 27 if mailed, or Thursday, October 29 if you bring it in person. In person you can apply and vote in one trip.",
+      "short": "With an excuse, apply and vote absentee in one trip by Oct 29."
+    },
+    {
+      "text": "An absentee ballot has two traps: a copy of your photo ID goes with the application, and the ballot envelope needs a notary or two adult witnesses (remote notarization not allowed). There is no fix-it process. Mail it so it arrives by noon on Election Day (postmarks don't count), or hand-deliver it yourself by 5 PM Monday, November 2. No drop boxes, and nobody can drop it off for you.",
+      "short": "Include a photo ID copy, and get a notary or two adult witnesses."
+    },
+    {
+      "text": "Photo ID is required at the polls. A utility bill or bank statement does not work in Alabama. A driver's license expired less than 60 days is OK; the ALEA digital license is OK; a student ID from an Alabama college is OK. No ID means a provisional ballot that only counts if you show ID at the Board of Registrars by 5 PM Friday, November 6.",
+      "short": "Bring photo ID; a utility bill or bank statement won't work."
+    },
+    {
+      "text": "Straight-ticket voting: filling in one party's 'straight party' oval at the top votes for that party's candidate in every partisan race on your ballot, including the judges (Alabama elects judges with party labels). You can still override any single race by marking a different candidate there; the individual mark wins. The straight-ticket oval does not vote on the four statewide amendments, Mobile County's Local Amendment 1, or the Pay-As-You-Go road question (FOR or AGAINST, titled \"Special County Election,\" the last item on the ballot). You have to mark each one yourself or it's left blank.",
+      "short": "The straight-party oval skips the amendments and the road question, so mark those yourself."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Alabama.",
+      "short": "If you moved within your county, update at your new polling place and vote a provisional ballot.",
+      "actions": [
+        {
+          "label": "Find my polling place",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
       "answer": "Update your registration by Monday, October 19, online (with an Alabama license or ID) or with a paper form; you can't vote at your old polling place. If you moved within your county and miss that, you can go to your new polling place, update there and vote a provisional ballot.",
       "steps": [
         "Moved to a different county? Register at your new address by October 19.",
@@ -133,6 +155,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I moved out of Alabama.",
+      "short": "Register in your new state instead; some still take registrations or offer same-day registration.",
+      "actions": [
+        {
+          "label": "Register in my new state",
+          "url": "https://vote.gov/register"
+        }
+      ],
       "answer": "You vote where you live now, so register in your new state instead. Some states still take registrations or offer same-day registration, so check today.",
       "steps": [
         "Look up your new state's rules and deadline at vote.gov.",
@@ -145,6 +174,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
+      "short": "After Oct 19, new registrations are too late for this election, so check whether you're already registered.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        },
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/alabama"
+        }
+      ],
       "answer": "Register by October 19 to vote in the November 3 election. After October 19, new registrations are too late for this election; Alabama has no same-day registration. Check your existing record first.",
       "steps": [
         "Online registration is available through 11:59 PM on October 19 with an Alabama driver's license or non-driver ID.",
@@ -158,6 +198,13 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
+      "short": "Go to your assigned polling place; a provisional ballot cast at the wrong one won't count.",
+      "actions": [
+        {
+          "label": "Find my polling place",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
       "answer": "Go to your assigned polling place. In Alabama a provisional ballot only counts if you're a qualified voter at the polling place where you cast it, so one cast at the wrong place won't count.",
       "steps": [
         "Look up your polling place at myinfo.alabamavotes.gov (My Voting Information).",
@@ -171,6 +218,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My absentee ballot never came, or I lost it.",
+      "short": "Vote a provisional ballot at your polling place on Election Day, and bring a valid photo ID.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        },
+        {
+          "label": "Find my absentee office",
+          "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+        }
+      ],
       "answer": "You can vote a provisional ballot at your polling place on Election Day if you never got your absentee ballot or didn't send it back. Bring a valid photo ID.",
       "steps": [
         "Check your absentee status at myinfo.alabamavotes.gov.",
@@ -183,6 +241,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Ask a poll worker for a replacement; on an absentee ballot, call your Absentee Election Manager before sending it.",
+      "actions": [
+        {
+          "label": "Find my absentee office",
+          "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+        }
+      ],
       "answer": "At the polls, take the ballot to a poll worker and ask for a replacement; they'll set the old one aside as spoiled. On an absentee ballot, call your county's Absentee Election Manager before you send it.",
       "steps": null,
       "deadline": null,
@@ -192,6 +257,13 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I applied to vote absentee, but I want to vote in person.",
+      "short": "If you haven't returned it, vote a provisional ballot at your polling place; if you have, you've voted.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
       "answer": "If you haven't returned your absentee ballot, you can vote a provisional ballot at your polling place on Election Day. If you already returned it, you've voted.",
       "steps": [
         "Bring a valid photo ID.",
@@ -204,6 +276,13 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "If two poll workers can identify you, you vote normally; if not, vote provisionally and show ID by Nov 6.",
+      "actions": [
+        {
+          "label": "Get a free photo ID",
+          "url": "https://www.sos.alabama.gov/alabama-votes/photo-voter-id"
+        }
+      ],
       "answer": "Alabama requires photo ID, but you can still vote a regular ballot if two poll workers can positively identify you. Otherwise you'll vote a provisional ballot, which counts only if you bring a valid photo ID to the Board of Registrars by 5 PM on Friday, November 6.",
       "steps": [
         "Get a free Alabama Photo Voter ID at the Board of Registrars before Election Day, or call 1-800-274-8683 for a home visit.",
@@ -217,6 +296,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "Call the Board of Registrars before Election Day to ask what to bring.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
       "answer": "Update your registration by Monday, October 19, online or with a paper form to the Board of Registrars. If you miss it, call the Board of Registrars before Election Day to ask what to bring.",
       "steps": [
         "Mobile County Board of Registrars: 251-574-8586."
@@ -228,6 +314,13 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Being away at school is a valid absentee excuse; a mailed application must reach your county by Oct 27.",
+      "actions": [
+        {
+          "label": "Find my absentee office",
+          "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+        }
+      ],
       "answer": "Registered at home but away at school? Being a student who lives outside your county is a valid excuse to vote absentee, and the application must reach your county by Tuesday, October 27 if mailed.",
       "steps": [
         "Send a copy of your photo ID with the application.",
@@ -241,6 +334,13 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Vote absentee: mail your application to arrive by Oct 27, or apply and vote in person by Oct 29.",
+      "actions": [
+        {
+          "label": "Find my absentee office",
+          "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+        }
+      ],
       "answer": "Alabama has no early voting, but being away from your county is a valid absentee excuse. A mailed application must arrive by Tuesday, October 27; or apply in person at your county's absentee office by Thursday, October 29 and vote right there.",
       "steps": [
         "Include a copy of your photo ID with the application.",
@@ -254,6 +354,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line when the polls close.",
+      "short": "Stay in line: if you're in line by 7 PM, you get to vote.",
       "answer": "Stay in line. If you're in line by 7 PM you get to vote, but anyone who joins the line after 7 PM can't.",
       "steps": null,
       "deadline": null,
@@ -263,6 +364,13 @@
     {
       "id": "signature_problem",
       "question": "I'm worried about the signature or witnesses on my absentee ballot.",
+      "short": "Check it twice before sealing: you sign, plus a notary or two adult witnesses, because there's no fix-it process.",
+      "actions": [
+        {
+          "label": "Find my absentee office",
+          "url": "https://www.sos.alabama.gov/city-county-lookup/absentee-election-manager"
+        }
+      ],
       "answer": "Check it twice before you seal it, because Alabama has no general fix-it process. The affidavit envelope must be signed by you and either notarized or signed by two witnesses who are 18 or older; remote notarization isn't allowed.",
       "steps": [
         "Made a mistake on the envelope? Call your county's Absentee Election Manager before you send it.",
@@ -275,6 +383,7 @@
     {
       "id": "provisional_ballot",
       "question": "They told me to vote a provisional ballot.",
+      "short": "It counts once the registrars confirm you're qualified there; if it was about ID, bring photo ID by Nov 6.",
       "answer": "It counts once the Board of Registrars confirms you're a qualified voter at that polling place and any other requirement is met. If it was because of photo ID, bring a valid photo ID to the Board of Registrars by 5 PM on Friday, November 6.",
       "steps": [
         "Make sure you're at your own assigned polling place first.",
@@ -287,6 +396,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check that my ballot was counted?",
+      "short": "Check your absentee ballot at VoterView; for a provisional ballot, call your county Board of Registrars.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://myinfo.alabamavotes.gov/voterview"
+        }
+      ],
       "answer": "Check your absentee ballot status at myinfo.alabamavotes.gov (VoterView). For a provisional ballot, call your county Board of Registrars after the election.",
       "steps": null,
       "deadline": null,

@@ -99,17 +99,46 @@
     "confidence": "verified"
   },
   "gotchas": [
-    "Oregon counts mailed ballots postmarked by November 3, but only if they reach the county by November 10. The state says mail by Tuesday, October 27. After that, use a drop box (any official one in Oregon) or ask a post office counter for a hand postmark. Drop boxes close at 8:00 PM sharp on November 3.",
-    "Sign the envelope, in your normal signature. A missing or mismatched signature is the top reason Oregon ballots don't count. Nobody can sign for you, not even with power of attorney. If the county flags your signature, you have until November 24 to fix it. Sign up for text or email ballot alerts (multnomah.ballottrax.net) so you hear about a problem right away.",
-    "Registration closed October 13 and there is no same-day registration. If you're already registered in Oregon and moved, update your address at My Vote; ballots aren't forwarded. Within 5 days of the election, call the county to get a ballot in person.",
-    "No stamp needed. The return envelope is prepaid. The secrecy sleeve is optional.",
-    "Dropping off a friend's ballot? Legal, but you must put it in a drop box or the mail within 2 days of getting it, or by Election Day, whichever comes first. Don't collect ballots within 100 feet of a drop site.",
-    "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). To get a replacement by mail, ask by 7 PM on Wednesday, October 28; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person."
+    {
+      "text": "Oregon counts mailed ballots postmarked by November 3, but only if they reach the county by November 10. The state says mail by Tuesday, October 27. After that, use a drop box (any official one in Oregon) or ask a post office counter for a hand postmark. Drop boxes close at 8:00 PM sharp on November 3.",
+      "short": "After Oct 27, skip the mail and use any official drop box."
+    },
+    {
+      "text": "Sign the envelope, in your normal signature. A missing or mismatched signature is the top reason Oregon ballots don't count. Nobody can sign for you, not even with power of attorney. If the county flags your signature, you have until November 24 to fix it. Sign up for text or email ballot alerts (multnomah.ballottrax.net) so you hear about a problem right away.",
+      "short": "Sign the envelope yourself, in your normal signature."
+    },
+    {
+      "text": "Registration closed October 13 and there is no same-day registration. If you're already registered in Oregon and moved, update your address at My Vote; ballots aren't forwarded. Within 5 days of the election, call the county to get a ballot in person.",
+      "short": "If you moved within Oregon, update your address at My Vote; ballots aren't forwarded."
+    },
+    {
+      "text": "No stamp needed. The return envelope is prepaid. The secrecy sleeve is optional.",
+      "short": "No stamp needed, and the secrecy sleeve is optional."
+    },
+    {
+      "text": "Dropping off a friend's ballot? Legal, but you must put it in a drop box or the mail within 2 days of getting it, or by Election Day, whichever comes first. Don't collect ballots within 100 feet of a drop site.",
+      "short": "Turn in a friend's ballot within 2 days, or by Election Day if sooner."
+    },
+    {
+      "text": "No ballot by October 22? Multnomah County says call 503-988-VOTE (8683). To get a replacement by mail, ask by 7 PM on Wednesday, October 28; after that, go to 1040 SE Morrison St. in Portland or the Gresham Voting Center Express in person.",
+      "short": "If your ballot hasn't come, call Multnomah County at 503-988-8683."
+    }
   ],
   "situations": [
     {
       "id": "moved_in_state",
       "question": "I moved to a new address in Oregon.",
+      "short": "If you're registered in Oregon, update your address at My Vote now; ballots are never forwarded.",
+      "actions": [
+        {
+          "label": "Update my address",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        },
+        {
+          "label": "Find my county office",
+          "url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx"
+        }
+      ],
       "answer": "If you're already registered in Oregon, you can still update your address, through Election Day. Do it now, because ballots are never forwarded; an old address means no ballot.",
       "steps": [
         "Update at oregonvotes.gov/myvote, or with Multnomah County's online change-of-address form.",
@@ -123,6 +152,13 @@
     {
       "id": "moved_out_of_state",
       "question": "I moved out of Oregon.",
+      "short": "Register in your new state instead, and list your old Oregon registration when you sign up.",
+      "actions": [
+        {
+          "label": "Register in my new state",
+          "url": "https://vote.gov/register"
+        }
+      ],
       "answer": "You vote where you live now, so register in your new state instead. List your old Oregon registration when you sign up so your new state can tell Oregon.",
       "steps": [
         "Look up your new state's rules and deadline at vote.gov.",
@@ -135,6 +171,17 @@
     {
       "id": "not_registered",
       "question": "I'm not registered yet.",
+      "short": "The Oct 13 deadline passed, but check My Vote, because you may already be registered.",
+      "actions": [
+        {
+          "label": "Check my registration",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        },
+        {
+          "label": "Register for next time",
+          "url": "https://vote.gov/register/oregon"
+        }
+      ],
       "answer": "Oregon's registration deadline was Tuesday, October 13, and there's no same-day registration, so new registrations won't count for this election. Before you give up, check My Vote: you may already be registered.",
       "steps": [
         "If the DMV registered you automatically (Oregon Motor Voter) or you mailed a form postmarked by October 13, you're set.",
@@ -148,6 +195,13 @@
     {
       "id": "wrong_polling_place",
       "question": "I dropped my ballot in a box in a different county.",
+      "short": "That's fine: any official drop site in Oregon works until 8 PM on Election Day.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "That's fine. Oregon has no polling places, and any official ballot drop site anywhere in Oregon works until 8 PM on Election Day; your ballot gets sent to your county.",
       "steps": [
         "Use only official drop boxes. Find them at sos.oregon.gov/elections/Pages/drop-box-locator.aspx.",
@@ -160,6 +214,17 @@
     {
       "id": "no_mail_ballot_or_lost",
       "question": "My ballot never came, or I lost it.",
+      "short": "Ask your county for a replacement; in Multnomah, ask by 7 PM Oct 28 to get it by mail.",
+      "actions": [
+        {
+          "label": "Find my county office",
+          "url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx"
+        },
+        {
+          "label": "Track my ballot",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "Ask your county for a replacement. In Multnomah County, request one online or by phone; to have it mailed, ask by 7 PM on Wednesday, October 28, and after that pick it up in person through 8 PM on Election Day.",
       "steps": [
         "Multnomah: multco.us replacement ballot page, or call 503-988-VOTE (8683).",
@@ -173,6 +238,13 @@
     {
       "id": "mistake_on_ballot",
       "question": "I made a mistake on my ballot.",
+      "short": "Fix it yourself and make your final choice obvious, or ask your county for a replacement.",
+      "actions": [
+        {
+          "label": "Find my county office",
+          "url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx"
+        }
+      ],
       "answer": "You can fix it yourself or ask for a replacement. If you correct it on the ballot, make your final choice obvious, because election workers check each ballot for what you meant.",
       "steps": [
         "Voting for too many candidates, or both yes and no, means that contest won't count.",
@@ -186,6 +258,13 @@
     {
       "id": "mailed_but_want_in_person",
       "question": "I'd rather vote in person.",
+      "short": "You can fill out your ballot at your county elections office and drop it there.",
+      "actions": [
+        {
+          "label": "Find my county office",
+          "url": "https://sos.oregon.gov/elections/Pages/countyofficials.aspx"
+        }
+      ],
       "answer": "Oregon has no polling places, but you can fill out your ballot at your county elections office and drop it there, or get a replacement or accessible ballot there. Once you've mailed or dropped off a ballot, you can't change your vote.",
       "steps": [
         "Multnomah: 1040 SE Morrison St., Portland, or 600 NE 8th St., Gresham.",
@@ -198,6 +277,7 @@
     {
       "id": "no_id",
       "question": "I don't have an ID.",
+      "short": "You don't need one: your signature on the return envelope is your ID.",
       "answer": "You don't need one. In Oregon, your signature on the return envelope is your identification.",
       "steps": [
         "Rare exception: some first-time voters who registered by mail without a license or Social Security number are asked by the county for a copy of ID or a bill with their address. The county will tell you if that's you."
@@ -209,6 +289,13 @@
     {
       "id": "name_changed",
       "question": "My name changed since I registered.",
+      "short": "Update your registration through Election Day so the county has your new name and signature.",
+      "actions": [
+        {
+          "label": "Update my registration",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "Update your registration so the county has your new name and new signature to compare with your envelope. You can update through Election Day, but sooner is better.",
       "steps": [
         "Fill out a paper registration card and mail or drop it at your county elections office, or update at oregonvotes.gov/myvote with your Oregon license or ID.",
@@ -221,6 +308,13 @@
     {
       "id": "college_student",
       "question": "I'm a college student.",
+      "short": "Ask your county to send your ballot to your school address; ballots are never forwarded.",
+      "actions": [
+        {
+          "label": "Update my address",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "Registered at your Oregon home but away at school? Ask your county to send your ballot to your school address; ballots are never forwarded. If you go to school in Oregon and are already registered here, you can update to your school address.",
       "steps": [
         "Update your mailing address at oregonvotes.gov/myvote, or send the Absentee Ballot Request form (SEL 111).",
@@ -234,6 +328,17 @@
     {
       "id": "away_on_election_day",
       "question": "I'll be away on Election Day.",
+      "short": "Fill out your ballot and use a drop box before you leave, or mail it by Oct 27.",
+      "actions": [
+        {
+          "label": "Find a drop box",
+          "url": "https://sos.oregon.gov/elections/Pages/drop-box-locator.aspx"
+        },
+        {
+          "label": "Update my address",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "If you have your ballot, fill it out and put it in an official Oregon drop box before you leave, or mail it by October 27. If you will be away before it arrives, ask your county to send it to your travel address. Ballots are not forwarded; if there is too little time for mail, contact the county about getting a replacement in person.",
       "steps": [
         "Update your mailing address at oregonvotes.gov/myvote, or use the Absentee Ballot Request form (SEL 111).",
@@ -247,6 +352,7 @@
     {
       "id": "in_line_at_close",
       "question": "I'm in line at the drop box when it closes.",
+      "short": "Stay in line: if you're in line at 8 PM, you can still drop off your ballot.",
       "answer": "Stay in line. Voters who are in line at 8 PM on Election Day may still drop off their ballot.",
       "steps": null,
       "deadline": null,
@@ -256,6 +362,13 @@
     {
       "id": "signature_problem",
       "question": "There's a problem with the signature on my ballot envelope.",
+      "short": "You have until Tuesday, Nov 24 to prove you signed it; return the county's form or go in person.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "The county will contact you by mail, and by text or email if you signed up for alerts. You have until Tuesday, November 24 to prove you signed it.",
       "steps": [
         "Sign and return the county's form, or fix it in person at the county elections office.",
@@ -269,6 +382,7 @@
     {
       "id": "provisional_ballot",
       "question": "They told me to vote a provisional ballot.",
+      "short": "It only comes up at your county elections office, and it counts once the county confirms you're eligible.",
       "answer": "Oregon has no polling places, so this only comes up at your county elections office: if they can't confirm you're eligible, you have the right to ask for a provisional ballot there. It counts once the county confirms you're eligible.",
       "steps": [
         "Afterward, call your county to check on it (Multnomah: 503-988-8683)."
@@ -280,6 +394,13 @@
     {
       "id": "check_ballot_counted",
       "question": "How do I check that my ballot was counted?",
+      "short": "Check your ballot status at My Vote.",
+      "actions": [
+        {
+          "label": "Track my ballot",
+          "url": "https://sos.oregon.gov/elections/Pages/myvote.aspx"
+        }
+      ],
       "answer": "Check your ballot status at My Vote (oregonvotes.gov/myvote). Multnomah voters can also sign up for text and email alerts at multnomah.ballottrax.net.",
       "steps": null,
       "deadline": null,

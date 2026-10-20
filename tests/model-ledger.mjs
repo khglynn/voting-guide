@@ -273,6 +273,31 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     }), `${lap.skippedTwo} skipped`);
   }
 
+  /* ---------- fills never pick a race the row calls "Maybe on your ballot" (walks, Oct 20) ----------
+     Austin's fill picked SBOE 5 and Senate 21; after "Not sure" on U.S. Rep it filled six House
+     races; LA 90012 with "Not sure" everywhere filled 35. The rule is the row tag's own. */
+  {
+    const maybe = (b, id) => (b.mayApply.has(id) && !S.b.notMine.includes(id)) || (!!b.groupOf[id] && S.b.districts[b.groupOf[id]] === '*');
+    // A maybe race whose sources all agree: the old fill took it.
+    const agreeable = (b) => b.items.filter((it) => maybe(b, it.id) && bl.status(it) === 'open' && !(it.kind === 'contest' && (it.ranked_choice || (it.is_retention && it.candidates.length > 1)))).filter((it) => { const l = tally.lineup(it); return l.groups.length === 1 && !l.both.length && l.groups[0].choices.length; });
+    for (const [stc, pid] of [['TX', 'austin-tx'], ['CA', 'los-angeles-ca'], ['FL', 'orlando-fl']]) {
+      const b = open(stc, [pid]);
+      tally.clearLineups();
+      const fresh = bulk.planAgree().fills.map((f) => f.id);
+      const freshParty = bulk.planParty('Democratic').fills.map((f) => f.id);
+      check(`fills: ${pid} has maybe races its sources agree on, so the rule is tested`, agreeable(b).length > 0, String(agreeable(b).length));
+      check(`fills: ${pid} agree fill leaves every "Maybe on your ballot" race alone`, fresh.every((id) => !maybe(b, id)), fresh.filter((id) => maybe(b, id)).join(', '));
+      b.groups.forEach((g) => { S.b.districts[g.key] = '*'; });
+      const agree = bulk.planAgree().fills.map((f) => f.id);
+      const party = bulk.planParty('Democratic').fills.map((f) => f.id);
+      check(`fills: ${pid} with "Not sure" on every district, the agree fill still skips them all`, agree.every((id) => !maybe(b, id)) && agree.length === fresh.length, `${fresh.length} then ${agree.length}: ${agree.filter((id) => maybe(b, id)).slice(0, 6).join(', ')}`);
+      check(`fills: ${pid} with "Not sure" on every district, the party fill count stays the same`, party.every((id) => !maybe(b, id)) && party.length === freshParty.length, `${freshParty.length} then ${party.length}`);
+    }
+    // A hidden "may apply" race stays out, and one the voter brings back is still a maybe.
+    const au = open('TX', ['austin-tx']);
+    check('fills: Austin\'s SBOE 5 and Senate 21 are maybes, never filled', ['tx-sboe-5', 'tx-senate-21'].every((id) => au.mayApply.has(id)) && !bulk.planAgree().fills.some((f) => ['tx-sboe-5', 'tx-senate-21'].includes(f.id)));
+  }
+
   /* ---------- judges ---------- */
   {
     const b = open('CO', ['lakewood-co']);

@@ -12,7 +12,7 @@
    Undo toast is up survives it. */
 import type { Item } from '../types';
 import { S } from '../state';
-import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan } from '../ballot';
+import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe } from '../ballot';
 import { lineup, weighedIn } from './tally';
 import { judgeBatch } from './judges';
 
@@ -24,12 +24,14 @@ export const emptyPlan = (): Plan => ({ fills: [], single: 0, skippedTwo: 0, ski
 const pickedIn = (it: Item, picks: Record<string, string> = S.b.picks): number =>
   it.kind === 'contest' ? it.candidates.filter((c) => picks[`${it.id}|${c.name}`] === 'PICK').length : 0;
 
+/* Open rows the fills may touch: never one tagged "Maybe on your ballot" (another district's race,
+   or every district of a question answered "Not sure"), since that race may not be the voter's. */
 function visibleOpen(): Item[] {
   const b = S.ballot!;
   const out: Item[] = [];
   for (const [, entries] of entriesBySection()) {
     for (const e of entries) {
-      if (e.t !== 'item') continue;
+      if (e.t !== 'item' || isMaybe(e.id)) continue;
       const it = b.byId.get(e.id)!;
       if (status(it) === 'open') out.push(it);
     }

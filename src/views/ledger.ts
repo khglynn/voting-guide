@@ -7,7 +7,7 @@
 import type { Contest, Item, PlaceBundle } from '../types';
 import { S } from '../state';
 import {
-  SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge,
+  SECTIONS, type SectionKey, type Entry, type Group, entriesBySection, status, isDecision, sectionOf, decisionItems, isMultiJudge, isMaybe,
 } from '../ballot';
 import { esc, hash, plural } from '../util';
 import { rowTitle, measureTag, courtGroup, cleanOffice, optionLabel } from '../model/labels';
@@ -101,7 +101,7 @@ export function rowHTML(it: Item): string {
   else vd = verdictHTML(verdict(it));
   const tags: string[] = [];
   if (b.onlyIn[it.id]) tags.push(`Only in ${b.onlyIn[it.id].join(', ')}`);
-  else if (b.mayApply.has(it.id) || (b.groupOf[it.id] && S.b.districts[b.groupOf[it.id]] === '*')) tags.push('Maybe on your ballot');
+  else if (isMaybe(it.id)) tags.push('Maybe on your ballot');
   const cls = ['row', decided ? 'is-done' : '', open ? 'is-open' : '', s === 'info' ? 'is-info' : '', S.ui.keep === it.id ? 'just' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}" id="i-${esc(it.id)}" data-item="${esc(it.id)}"${s === 'open' ? ' data-undecided' : ''}>
     <button class="row-hd" data-act="row" data-id="${esc(it.id)}" aria-expanded="${open}" data-fk="row-${esc(it.id)}">

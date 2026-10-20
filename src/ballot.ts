@@ -274,6 +274,18 @@ function computeEntries(b: Ballot): Map<SectionKey, Entry[]> {
   return out;
 }
 
+/* "Maybe on your ballot": a race or measure this ballot can't promise is yours. A "may apply"
+   item the voter hasn't hidden (its row says "Maybe on your ballot", or "Only in <place>" on a
+   ballot for several places), or a race in a district group answered "Not sure". The row tag,
+   the one-tap fills and the cheat sheet all read this one rule, so a fill never picks a race the
+   row itself calls a maybe. */
+export function isMaybe(id: string): boolean {
+  const b = S.ballot!;
+  if (b.mayApply.has(id)) return !S.b.notMine.includes(id);
+  const g = b.groupOf[id];
+  return !!g && S.b.districts[g] === '*';
+}
+
 /* Visible decision items, in order, for progress and "Next undecided". */
 export function decisionItems(): { id: string; done: boolean; question?: boolean }[] {
   const out: { id: string; done: boolean; question?: boolean }[] = [];

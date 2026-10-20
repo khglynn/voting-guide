@@ -298,6 +298,25 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('fills: Austin\'s SBOE 5 and Senate 21 are maybes, never filled', ['tx-sboe-5', 'tx-senate-21'].every((id) => au.mayApply.has(id)) && !bulk.planAgree().fills.some((f) => ['tx-sboe-5', 'tx-senate-21'].includes(f.id)));
   }
 
+  /* ---------- "N of M decided" walks the page's own order (nav review, Oct 20) ----------
+     It walked printed-ballot order, so LA never reached the U.S. House question, the Sheriff, the
+     Mayor or the council question, and Austin never reached its city and school sections. */
+  {
+    const { ledger } = views;
+    const secIdx = Object.fromEntries(bl.SECTIONS.map(([k], i) => [k, i]));
+    for (const [stc, pid] of [['CA', 'los-angeles-ca'], ['TX', 'austin-tx'], ['FL', 'orlando-fl']]) {
+      const b = open(stc, [pid]);
+      const po = typeof ledger.pageOrder === 'function' ? ledger.pageOrder() : [];
+      const secOf = (k) => bl.sectionOf(b.byId.get(k.startsWith('q:') ? b.groups.find((g) => `q:${g.key}` === k).members[0] : k));
+      const idx = po.map((x) => secIdx[secOf(x.key)]);
+      check(`next: ${pid} walks sections in the order the page draws them`, po.length > 0 && idx.every((v, i) => !i || v >= idx[i - 1]), idx.join(','));
+      const want = bl.decisionItems().map((x) => x.id).sort().join();
+      const got = po.map((x) => x.key).sort().join();
+      check(`next: ${pid} walks every choice and every district question, once`, want === got && b.groups.every((g) => po.some((x) => x.key === `q:${g.key}`)));
+      check(`next: ${pid} starts with the first thing the page shows`, po.length > 0 && po[0].key === bl.SECTIONS.map(([k]) => (bl.entriesBySection().get(k) || []).find((e) => e.t === 'question' || (e.t === 'item' && bl.isDecision(bl.status(b.byId.get(e.id)))))).filter(Boolean).map((e) => (e.t === 'question' ? `q:${e.group.key}` : e.id))[0], po[0] && po[0].key);
+    }
+  }
+
   /* ---------- the cheat sheet lists what the ballot shows, with the bar's count (walks, Oct 20) ----------
      Austin's sheet listed seven Round Rock, Pflugerville and Leander ISD seats the ballot folds
      away, listed six House picks as certain, and said "28 of 56" beside a bar's "28 of 50". */

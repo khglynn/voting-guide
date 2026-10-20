@@ -818,6 +818,38 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await ctx.close();
 }
 
+// Nav review, Oct 20: "N of M decided" walks the page in its own order, from the first thing on it
+// (LA's U.S. House question), one row open at a time, and never sticks on a row parked under a tall
+// sticky lens bar (the wrapped chips of wide screens make it 117px).
+for (const width of [380, 1280]) {
+  const { ctx, page } = await newPage({ viewport: { width, height: 900 } });
+  await openBallot(page, '90004');
+  if (width > 600) await page.addStyleTag({ content: '#lensbar .chips { flex-wrap: wrap; }' });
+  const all = await page.evaluate(() => [...document.querySelectorAll('.ledger .row[data-item], .ledger .row[data-q]')].map((e) => e.id));
+  await page.evaluate(() => window.scrollTo(0, 0));
+  const opened = [];
+  let oneAtATime = true;
+  for (let i = 0; i < 8; i++) {
+    await tap(page, '[data-act="next"]');
+    const open = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
+    if (open.length !== 1) oneAtATime = false;
+    opened.push(open[open.length - 1] || '');
+  }
+  const idx = opened.map((id) => all.indexOf(id));
+  check(`Next at ${width}px: starts at the first thing on the page, the U.S. House question`, /^q-/.test(opened[0]) && (await page.evaluate((id) => !!document.querySelector(`#${id}[data-q^="federal|"]`), opened[0])), opened[0]);
+  check(`Next at ${width}px: eight taps open eight different rows, in page order`, new Set(opened).size === 8 && idx.every((v, i) => v >= 0 && (!i || v > idx[i - 1])), opened.join(' > '));
+  check(`Next at ${width}px: a jump closes the row that was open`, oneAtATime);
+  // A jump into another section from the cheat sheet closes the row left open here, too.
+  await tap(page, '[data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  const mLine = await page.evaluate(() => { const r = document.querySelector('#cheat tr[data-cs^="ca-prop"]'); return r && r.dataset.cs; });
+  if (mLine) await tap(page, `#cheat tr[data-cs="${mLine}"]`);
+  const after = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
+  check(`Next at ${width}px: a cheat-sheet jump to a measure leaves only that row open`, !!mLine && after.length === 1 && after[0] === `i-${mLine}`, after.join(', '));
+  noErrors(page, `Next at ${width}px`);
+  await ctx.close();
+}
+
 // Walks, Oct 20: a cheat-sheet line for an unanswered district question was dead. It now goes back
 // to the ballot with that question open.
 {

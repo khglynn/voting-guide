@@ -266,6 +266,24 @@ export function otherSchools(entries: Entry[]): Entry[] {
   return oth.length >= 3 ? oth : [];
 }
 export const othOpen = (oth: Entry[]): boolean => S.ui.unfolded.has(OTH_KEY) || oth.some((e) => e.t === 'item' && (e.id === S.ui.row || e.id === S.ui.keep));
+/* Every choice and district question in the order the page draws them: sections in SECTIONS
+   order, then rows in each section's own order (rowsHTML keeps it; unopposed races, which are not
+   choices, are the only rows it moves). "N of M decided" in the bar walks this list. key is an
+   item id or "q:<group key>". */
+export function pageOrder(): { key: string; done: boolean }[] {
+  const b = S.ballot!;
+  const by = entriesBySection();
+  const out: { key: string; done: boolean }[] = [];
+  for (const [sec] of SECTIONS) {
+    for (const e of by.get(sec) || []) {
+      if (e.t === 'question') { out.push({ key: `q:${e.group.key}`, done: false }); continue; }
+      if (e.t !== 'item') continue;
+      const s = status(b.byId.get(e.id)!);
+      if (isDecision(s)) out.push({ key: e.id, done: s !== 'open' });
+    }
+  }
+  return out;
+}
 /* "Klein ISD" from "Klein ISD Trustee, Position 6": the district's own name, for the fold line. */
 const districtName = (c: Contest): string => {
   const m = c.office.match(/^(.*?\b(?:ISD|CISD|School District|Unified|Public Schools|Schools))\b/i);

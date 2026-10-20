@@ -3,10 +3,10 @@
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle, Contest } from './types';
 import { S, emptyBallotState, persist, forgetLast, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
-import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax } from './ballot';
+import { buildBallot, contestDistrict, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems } from './ballot';
 import { zipState, censusLookup, placeFromGeo, settleAddress, withPlace, type GeoResult } from './geo';
 import { toast, hideToast, plural } from './util';
-import { render, renderBallot, renderAddr, $ } from './render';
+import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { planAgree, applyFills, planParty, forgetUndo } from './model/bulk';
 import { partiesOnBallot, toggleChip } from './model/lens';
@@ -45,6 +45,7 @@ export function resetUI(): void {
   const u = S.ui;
   u.view = 'ballot'; u.row = null; u.page = {}; u.others.clear(); u.folded.clear(); u.unfolded.clear(); u.keep = null;
   u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.saveOpen = false; u.copyFallback = null; u.bulk = null;
+  u.resume = false;
   u.open.delete('voted');
 }
 export function go(view: View, push = true): void {
@@ -71,7 +72,7 @@ export function toDoor(): void {
   if (S.view === 'ballot') persist(true);
   forgetLast();
   S.view = 'start'; S.ballot = null; S.zipChoice = null; S.coverage = null; S.pending = null; S.loadErr = null; S.retry = null;
-  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = '';
+  S.ui.view = 'ballot'; S.ui.reader = null; S.ui.sheet = null; S.ui.sheetBack = null; S.ui.addrOpen = false; S.ui.addrMsg = null; S.ui.addrFail = ''; S.ui.resume = false;
   forgetUndo();
   hideToast();
   render();
@@ -203,6 +204,23 @@ export async function submitZip(raw: string): Promise<void> {
   if (!st) { S.zipErr = 'We couldn’t find that ZIP. Check the digits and try again.'; render(['mast']); $('#zip')?.focus(); return; }
   S.coverage = { kind: 'not_covered', state: st, zip: v };
   render(['mast']);
+}
+
+/* "Welcome back. You've decided 12 of 43.": a returning visitor's started ballot, reopened from this
+   device (boot's last ballot, never a link or "try as"), with something decided and something left.
+   Once per visit, above the plan, until any tap (main.ts). */
+export function offerResume(): void {
+  if (S.view !== 'ballot' || S.pending || S.tryMode) return;
+  const items = decisionItems();
+  const done = items.filter((i) => i.done).length;
+  if (!done || done === items.length) return;
+  S.ui.resume = true;
+  render(['restore']);
+}
+export function dismissResume(): void {
+  if (!S.ui.resume) return;
+  S.ui.resume = false;
+  anchored(() => render(['restore']));
 }
 
 /* ---------- address lookup ----------

@@ -1084,6 +1084,23 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     }
   }
 
+  /* ---------- flow, Oct 20: resume ---------- */
+  {
+    open('TX', ['austin-tx']);
+    S.b.picks[bl.decisionItems().find((x) => !x.question).id] = 'SKIP'; // one race decided (left blank)
+    const m = bl.decisionItems().length;
+    const keep = { view: S.view, uiView: S.ui.view, pending: S.pending };
+    S.view = 'ballot'; S.ui.view = 'ballot'; S.pending = null;
+    S.ui.resume = true;
+    const r = views.mast.restoreHTML();
+    check('resume: "Welcome back. You’ve decided 1 of M." with "Pick up where I left off" (the menu’s Next) and a close', /<b>Welcome back\.<\/b> You’ve decided 1 of \d+\./.test(r) && r.includes(`decided 1 of ${m}.`) && /data-act="next"[^>]*>Pick up where I left off</.test(r) && /data-act="resume-x"[^>]*aria-label="Close"/.test(r), r.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '));
+    S.ui.view = 'cheat';
+    check('resume: only on the ballot view', views.mast.restoreHTML() === '');
+    S.ui.view = 'ballot'; S.ui.resume = false;
+    check('resume: nothing once it’s gone', views.mast.restoreHTML() === '');
+    S.view = keep.view; S.ui.view = keep.uiView; S.pending = keep.pending;
+  }
+
   /* ---------- plan strip ---------- */
   {
     const tx = read('state-TX.json').howto;

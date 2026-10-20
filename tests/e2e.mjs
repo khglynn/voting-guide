@@ -625,6 +625,46 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await orl.ctx.close();
 }
 
+/* ---------- resume (flow, Oct 20): "Welcome back" on a started ballot, once per visit ---------- */
+{
+  const { ctx, page } = await newPage();
+  await openBallot(page, '78704');
+  check('Resume: not on a first visit', !(await page.$('.resume')));
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
+  await openRow(page, id);
+  await tap(page, `#i-${id} [data-act="pick"][data-v="YES"]`);
+  await page.waitForTimeout(400);
+  await page.reload();
+  await page.waitForSelector('#plan');
+  const m = Number(((await text(page, '.bar-txt')).match(/of (\d+)/) || [])[1]);
+  await shot(page, '03c-resume');
+  check('Resume: a started ballot says "Welcome back. You’ve decided 1 of M."', (await text(page, '.resume #rs-h')) === `Welcome back. You’ve decided 1 of ${m}.`, await text(page, '.resume'));
+  check('Resume: above the plan, with "Pick up where I left off" and a small close', await page.evaluate(() => document.querySelector('.resume').getBoundingClientRect().bottom <= document.getElementById('plan').getBoundingClientRect().top)
+    && (await text(page, '.resume [data-act="next"]')) === 'Pick up where I left off' && (await page.getAttribute('.resume [data-act="resume-x"]', 'aria-label')) === 'Close');
+  const first = await page.evaluate(() => { const r = document.querySelector('.ledger .row[data-undecided]'); return r && (r.dataset.item ? `i-${r.dataset.item}` : r.id); });
+  await tap(page, '.resume [data-act="next"]');
+  const opened = await page.$$eval('.ledger .row.is-open', (els) => els.map((e) => e.id));
+  check('Resume: "Pick up where I left off" opens the first thing left, and the line goes', !(await page.$('.resume')) && opened.length === 1 && opened[0] === first, `${opened.join()} vs ${first}`);
+  await page.reload();
+  await page.waitForSelector('.resume');
+  await tap(page, '.resume [data-act="resume-x"]');
+  check('Resume: the close takes it away, focus on to the plan', !(await page.$('.resume')) && (await focusedFk(page)) === 'plan-k', await focusedFk(page));
+  await page.reload();
+  await page.waitForSelector('.resume');
+  await tap(page, `#i-${id} > [data-act="row"]`);
+  check('Resume: any other tap takes it away too, and does what it says', !(await page.$('.resume')) && !!(await page.$(`#i-${id}.is-open`)));
+  await tap(page, '.foot [data-act="cheat"]');
+  await tap(page, '[data-act="save-open"]');
+  const link = await page.inputValue('.save-url');
+  noErrors(page, 'Resume');
+  await ctx.close();
+  const fresh = await newPage();
+  await fresh.page.goto(linkHere(link));
+  await fresh.page.waitForSelector('#plan');
+  check('Resume: a save link never says "Welcome back"', !(await fresh.page.$('.resume')));
+  await fresh.ctx.close();
+}
+
 /* ---------- the bar and the menu (flow, Oct 20) ---------- */
 {
   const { ctx, page } = await newPage();

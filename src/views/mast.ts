@@ -7,7 +7,7 @@ import { ext, isOpen, askCityURL, formURL, BUY_ME_A_COFFEE_URL, KEVIN_URL } from
 import { countyName } from './ledger';
 import { setupHTML } from './setup';
 import { stateName } from '../geo';
-import { pageWalk } from '../ballot';
+import { pageWalk, decisionItems } from '../ballot';
 
 function electionDate(): string {
   if (S.ballot) return S.ballot.howto.election_date;
@@ -142,8 +142,19 @@ function browseHTML(): string {
       <button class="linkbtn" data-act="choose-state" data-st="${esc(st)}">${s.places.length ? 'Elsewhere in the state: statewide races only' : 'Statewide races'}</button></li>`).join('')}</ul>`;
 }
 
+/* "Welcome back", above the plan on a returning visitor's started ballot (app.ts offerResume):
+   where you are, a way to pick up where you left off (the menu's "Next up"), and a small close. */
+const CLOSE = '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
+function resumeHTML(): string {
+  const items = decisionItems();
+  const done = items.filter((i) => i.done).length;
+  return `<div class="notice resume wrap" role="region" aria-labelledby="rs-h">
+    <p id="rs-h"><b>Welcome back.</b> You’ve decided ${done} of ${items.length}.</p>
+    <div class="row-btns"><button class="mini dark" data-act="next" data-fk="resume-go">Pick up where I left off</button></div>
+    <button class="ibtn resume-x" data-act="resume-x" data-fk="resume-x" aria-label="Close">${CLOSE}</button></div>`;
+}
 export function restoreHTML(): string {
-  if (!S.pending) return '';
+  if (!S.pending) return S.ui.resume && S.view === 'ballot' && S.ballot && S.ui.view === 'ballot' ? resumeHTML() : '';
   if (S.pending.kind === 'shared') {
     const where = S.ballot ? (S.ballot.places.length ? S.ballot.places.map((p) => p.label.replace(/\s*\(.*\)$/, '')).join(' or ') : S.ballot.stateName) : '';
     return `<div class="notice strong wrap" role="region" aria-labelledby="rs-h">

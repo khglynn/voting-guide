@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /* Performance on the biggest ballots, at 4x CPU throttle (a mid phone): time from the ZIP box to
    step 2, and time for a tap (a step 2 chip or switch, open a row, make a pick, open the Edit sheet
-   and tap a chip there, open the menu) to paint; then a row and a pick at 1280px, with the rail.
+   and tap a chip there, open the menu) to paint; then a row and a pick at 1280px, with the rail;
+   then a returning visitor's "Pick up where I left off".
    BASE=http://localhost:4173 node tests/perf.mjs     Targets (v2's): open about 1s, taps under 250ms. */
 const { chromium } = await import(process.env.PW_PATH || 'playwright');
 const BASE = (process.env.BASE || 'http://localhost:4173').replace(/\/$/, '');
@@ -80,8 +81,37 @@ for (const [name, zip] of [['Chicago', '60614'], ['Houston', '77002']]) {
   wide.push({ name, openRow, pick, next });
   await ctx.close();
 }
+/* A returning visitor's first tap also takes "Welcome back" away (main.ts), on the biggest ballot:
+   "Pick up where I left off" must paint under 250ms too. */
+const resume = [];
+for (const [name, zip] of [['Chicago', '60614']]) {
+  const ctx = await browser.newContext({ viewport: { width: 380, height: 820 }, hasTouch: true, isMobile: true });
+  const page = await ctx.newPage();
+  const cdp = await ctx.newCDPSession(page);
+  await page.goto(`${BASE}/?today=2026-10-19`);
+  await page.fill('#zip', zip);
+  await page.locator('button[type=submit]').click();
+  await page.locator('[data-act="setup-done"]').click();
+  await page.waitForSelector('#plan');
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
+  await page.locator(`#i-${id} [data-act="row"]`).click();
+  await page.locator(`#i-${id} [data-act="pick"]`).first().click();
+  await page.waitForTimeout(400);
+  await page.reload();
+  await page.waitForSelector('.resume');
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+  const go = await page.evaluate(() => new Promise((resolve) => {
+    const el = document.querySelector('.resume [data-act="next"]');
+    const t0 = performance.now();
+    el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));
+    requestAnimationFrame(() => setTimeout(() => resolve(Math.round(performance.now() - t0)), 0));
+  }));
+  resume.push({ name, go, gone: !(await page.$('.resume')) });
+  await ctx.close();
+}
 await browser.close();
 for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms, open the menu ${r.menu}ms, its switch ${r.only}ms (4x CPU throttle)`);
 for (const r of wide) console.log(`${r.name} at 1280px, with the rail: open a row ${r.openRow}ms, pick ${r.pick}ms, Next up ${r.next}ms (4x CPU throttle)`);
-const slow = [...out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip, r.menu].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250)];
+for (const r of resume) console.log(`${r.name}, back again: "Pick up where I left off" ${r.go}ms${r.gone ? '' : ' (the line stayed!)'} (4x CPU throttle)`);
+const slow = [...out.filter((r) => [r.openRow, r.pick, r.setupChip, r.setupFill, r.edit, r.chip, r.menu].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250), ...resume.filter((r) => r.go > 250 || !r.gone)];
 process.exit(slow.length ? 1 : 0);

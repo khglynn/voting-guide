@@ -546,6 +546,8 @@ A['addr-pick'] = () => {
   renderAddr();
   if (q) openAt(q.key);
 };
+/* "Welcome back"'s close: the tap itself took the line away (main.ts); focus goes on to the plan. */
+A['resume-x'] = () => { focusFk('plan-k'); };
 /* "Try again" under a load error. */
 A.retry = () => { const f = S.retry; S.retry = null; if (f) f(); };
 A['restore-yes'] = () => { if (S.pending) { S.b = S.pending.incoming; S.pending = null; render(); persist(true); toast('Using the picks from your link.'); } };

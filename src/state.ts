@@ -57,6 +57,7 @@ export interface UI {
   bulk: string | null;        // how many races the last fill from your sources filled, while its Undo is live
   setupFill: boolean;         // "Fill in their picks" in step 2 and the Edit sheet
   setupOnly: boolean;         // "Show only what's left" in step 2 and the Edit sheet, applied when they close
+  resume: boolean;            // "Welcome back" above the plan: once per visit to a started ballot, until any tap
 }
 
 /* restore: this device has other picks for the ballot, so ask which to keep. shared: a link
@@ -78,7 +79,7 @@ export const S = {
   ui: {
     view: 'ballot', open: new Set(), row: null, page: {}, others: new Set(), folded: new Set(), unfolded: new Set(), onlyUndecided: false, keep: null,
     noteOpen: new Set(), reader: null, sheet: null, sheetFrom: null, sheetBack: null, addrOpen: false, addrBusy: false, addrMsg: null, addrFail: '', saveOpen: false, copyFallback: null, bulk: null,
-    setupFill: false, setupOnly: false,
+    setupFill: false, setupOnly: false, resume: false,
   } as UI,
   /* ?try=fresh|aunt|straight|sources: a scenario on whatever ballot opens, never saved. */
   tryMode: null as string | null,

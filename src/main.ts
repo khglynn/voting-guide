@@ -4,7 +4,7 @@ import { S, readSaved, persist, parseShareHead } from './state';
 import { stepKey, planKey } from './views/planstrip';
 import { render } from './render';
 import { RAIL_AT } from './views/ledger';
-import { ensureIndex, openBallot, submitZip } from './app';
+import { ensureIndex, openBallot, submitZip, offerResume, dismissResume } from './app';
 import { A, runAddress } from './actions';
 import { askCityURL } from './views/common';
 
@@ -19,6 +19,7 @@ function fire(el: HTMLElement): void {
   lastTap = Date.now();
   el.classList.add('is-pressed');
   window.setTimeout(() => el.classList.remove('is-pressed'), 120);
+  dismissResume(); // "Welcome back" lasts until the first tap, whatever it is
   try { void fn(el.dataset, el); } catch (e) { console.error(e); }
   // Count the click-dedupe window from when the action finished painting, not when it started:
   // on a slow phone a long repaint could otherwise outlast it and let the follow-up click fire twice.
@@ -139,7 +140,7 @@ async function boot(): Promise<void> {
   if (last) {
     const [st, placesStr] = last.key.split('|');
     const places = placesStr === '-' ? [] : placesStr.split('+').filter((p) => S.index!.places[p]);
-    if (S.index!.states[st]) { await openBallot(st, places, last.zip); return; }
+    if (S.index!.states[st]) { if (await openBallot(st, places, last.zip)) offerResume(); return; }
   }
   render();
 }

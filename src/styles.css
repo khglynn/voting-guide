@@ -122,6 +122,10 @@ b, strong { font-weight: 600; }
 .heads p { display: inline; }
 .notice { margin: 12px auto 0; padding: 12px 14px; background: var(--paper); border-left: 3px solid var(--dusk-2); }
 .notice.strong { border-left-color: var(--gold); background: var(--gold-wash); }
+/* "Welcome back": one line, "Pick up where I left off", and a small close in the corner. */
+.resume { position: relative; padding-right: 50px; margin-bottom: 18px; }
+.resume .row-btns { margin-top: 8px; }
+.resume-x { position: absolute; top: 2px; right: 2px; color: var(--ink-2); }
 .trybar { margin: 6px 0 0; padding: 6px 10px; background: var(--dusk-tint); color: var(--dusk-ink); font-size: 13.5px; }
 
 /* ---------- masthead and the front door ---------- */

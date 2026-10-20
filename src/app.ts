@@ -10,7 +10,7 @@ import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
 import { addressCount } from './views/ledger';
 import { planAgree, applyFills, planParty, planSetup, forgetUndo } from './model/bulk';
-import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, CHIPS } from './model/lens';
+import { partiesOnBallot, toggleChip, setSources, setParty, chipMembers, chipState, doorNone, CHIPS } from './model/lens';
 
 /* ---------- data ---------- */
 const BASE = import.meta.env.BASE_URL || '/';
@@ -117,6 +117,7 @@ const needsSetup = (b: BallotState | null): boolean => !b || (!b.setupDone && co
    chosen (a group with no picks here stays out, as its chip does), then the party if it is on
    this ballot. A party it doesn't have just drops out. */
 function applyDoor(b: Ballot): void {
+  if (doorNone()) { S.b.sources = []; S.b.party = null; return; } // "No endorsements"
   let ids = chosenIds();
   for (const c of CHIPS) {
     if (c.key !== 'papers' && chipState(b, c.key) === 'empty') continue;

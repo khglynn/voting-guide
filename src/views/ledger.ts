@@ -65,6 +65,7 @@ export const headsHTML = (list: string[]): string => list.map((t) => `<p class="
 
 /* ---------- the verdict column ---------- */
 export function verdictHTML(v: Verdict): string {
+  if (v.kind === 'none' && !v.main) return '<span class="vd none blank"></span>';
   const cls = `${v.kind === 'mine' ? 'done' : v.kind === 'review' ? `review ${v.tone || ''}` : v.kind}${v.shade ? ` ${v.shade}` : ''}`;
   const sub = v.sub;
   const label = v.kind === 'mine' ? 'Your pick: ' : v.kind === 'review' ? 'Official review: ' : v.kind === 'agree' ? (v.shade === 'one' ? 'Endorsed by one source: ' : 'Your sources agree: ') : v.kind === 'split' ? 'Your sources disagree: ' : '';

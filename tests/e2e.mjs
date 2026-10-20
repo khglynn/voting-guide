@@ -564,15 +564,6 @@ const savedVG = (page) => page.evaluate(() => localStorage.getItem('vg2'));
   await openRow(page, 'tx-senate-21');
   await tap(page, '#i-tx-senate-21 [data-act="notmine"]:not([data-all])');
   check('Maybe box: It’s not on my ballot hides the race', /Not on your ballot/.test(await text(page, '#i-tx-senate-21')));
-  // "No sources on" gets a button.
-  await edit(page);
-  await tap(page, '.sheet-panel [data-act="chip"][data-k="papers"]');
-  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
-  const mid = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
-  await openRow(page, mid);
-  check('No sources on: the open row offers "Turn on newspapers and guides"', (await text(page, `#i-${mid} .none-line`)) === 'No sources on.' && (await text(page, `#i-${mid} [data-act="papers-on"]`)) === 'Turn on newspapers and guides');
-  await tap(page, `#i-${mid} [data-act="papers-on"]`);
-  check('No sources on: one tap turns them back on and stays on the row', /^Picks: Newspapers and guides/.test(await text(page, '.picks-line')) && !(await page.$('[data-act="papers-on"]')) && !!(await page.$(`#i-${mid}.is-open`)) && (await focusedFk(page)) === `row-${mid}`, await text(page, '.picks-line'));
   check('Go check: nothing in all caps', (await upperCased(page)).length === 0);
   await noSideScroll(page, 'Go check');
   page.errors = page.errors.filter((e) => !/Failed to load resource|ERR_FAILED/.test(e));
@@ -998,6 +989,64 @@ const placeAt = (page, sel, y) => page.evaluate(([s, y]) => window.scrollBy(0, d
   const ys = await page.evaluate(() => window.__ys);
   check('Reduced motion: the menu is up at once and its jump lands at once, sheet gone, no mark', t === 'none' && new Set(ys.map((v) => Math.round(v))).size <= 2 && Math.abs(await topOf(page, '#sec-judicial')) <= 2 && !(await page.$('.sheet-panel, .sheet-ghost, .land')), `${t}, ${new Set(ys.map((v) => Math.round(v))).size} positions`);
   noErrors(page, 'Reduced motion');
+  await ctx.close();
+}
+
+/* ---------- "No endorsements" (Kevin, Oct 20): an option, never the default; tight rows ---------- */
+{
+  const { ctx, page } = await newPage();
+  await page.goto(`${BASE}/?today=${TODAY}`);
+  await page.waitForSelector('#zip');
+  check('No endorsements: a chip in step 2, off to start', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'false' && (await text(page, '#setup [data-act="no-ends"]')) === 'No endorsements' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'true');
+  await tap(page, '#setup [data-act="no-ends"]');
+  check('No endorsements: choosing it turns the other chips off and hides the fill switch', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'true' && (await page.getAttribute('#setup [data-act="chip"][data-k="papers"]', 'aria-pressed')) === 'false' && !(await page.$('#setup [data-act="setup-fill"]')) && !!(await page.$('#setup [data-act="setup-only"]')));
+  await page.fill('#zip', '80205');
+  await page.waitForSelector('.door-place', { timeout: 15000 });
+  check('No endorsements: with the ZIP found, still on, and no picks count to read', (await page.getAttribute('#setup [data-act="no-ends"]', 'aria-pressed')) === 'true' && !(await page.$('#setup .su-cov')));
+  await tap(page, SETUP);
+  await page.waitForSelector('#plan', { timeout: 15000 });
+  await page.waitForTimeout(150);
+  check('No endorsements: the ballot says "Picks: No endorsements"', (await text(page, '.picks-line span')) === 'Picks: No endorsements', await text(page, '.picks-line span'));
+  const vds = await page.$$eval('.ledger .row[data-item][data-undecided]:not(.is-info) .vd', (els) => els.map((e) => [e.className, e.textContent.trim()]));
+  const blank = vds.filter(([c, t]) => /\bblank\b/.test(c) && t === '');
+  const words = vds.filter(([c]) => !/\b(blank|review)\b/.test(c));
+  check('No endorsements: the verdict column is empty and quiet on every undecided row (judges keep their official review)', blank.length > 20 && words.length === 0, `${blank.length} empty, others: ${words.slice(0, 3).map(([, t]) => t).join(' | ')}`);
+  const race = await page.evaluate(() => { const r = [...document.querySelectorAll('#sec-state .row[data-item][data-undecided]')][0]; return r && r.dataset.item; });
+  const R = `#i-${race}`;
+  await openRow(page, race);
+  await shot(page, '12-no-endorsements-row');
+  const tight = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
+  const n = await page.$$eval(`${R} .clist [data-act="pick"]`, (els) => els.length);
+  check('No endorsements: an open race is tight: the candidates with Pick, no grid, no source lines, no other sources', n >= 2 && !(await page.$(`${R} .grid, ${R} .none-line, ${R} .gridnote, ${R} .others-wrap, ${R} .by`)) && !!(await page.$(`${R} .ob-acts`)), `${n} candidates`);
+  await edit(page);
+  check('No endorsements: the Edit sheet has it on, with no fill switch', (await page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'true' && !(await page.$('.sheet-panel [data-act="setup-fill"]')));
+  await tap(page, '.sheet-panel [data-act="chip"][data-k="papers"]');
+  check('No endorsements: any other chip turns it off, and the fill switch is back', (await page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'false' && !!(await page.$('.sheet-panel [data-act="setup-fill"]')));
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  const full = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().height, R);
+  check('No endorsements: the same open race is taller with sources on', full > tight + 40, `${Math.round(tight)}px vs ${Math.round(full)}px`);
+  await edit(page);
+  await tap(page, '.sheet-panel [data-act="no-ends"]');
+  await tap(page, '.sheet-panel [data-fk="sheet-x"]');
+  await settle(page);
+  await page.locator(`${R} [data-act="pick"]`).first().tap();
+  await page.waitForTimeout(400);
+  await tap(page, '.foot [data-act="cheat"]');
+  await page.waitForSelector('#cheat');
+  await tap(page, '[data-act="save-open"]');
+  const link = await page.inputValue('.save-url');
+  check('No endorsements: the save link carries it as an empty source list', link.split('#')[1].split('~')[7] === '0', link.split('#')[1].split('~')[7]);
+  noErrors(page, 'No endorsements');
+  const fresh = await newPage();
+  await fresh.page.goto(linkHere(link));
+  await fresh.page.waitForSelector('#plan', { timeout: 15000 });
+  await fresh.page.waitForTimeout(250);
+  if (await fresh.page.$('[data-act="shared-keep"]')) await tap(fresh.page, '[data-act="shared-keep"]');
+  await edit(fresh.page);
+  check('No endorsements: it comes back from the save link, chip on', (await text(fresh.page, '.picks-line span')) === 'Picks: No endorsements' && (await fresh.page.getAttribute('.sheet-panel [data-act="no-ends"]', 'aria-pressed')) === 'true', await text(fresh.page, '.picks-line span'));
+  noErrors(fresh.page, 'No endorsements link');
+  await fresh.ctx.close();
   await ctx.close();
 }
 

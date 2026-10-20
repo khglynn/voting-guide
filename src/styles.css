@@ -385,6 +385,8 @@ b, strong { font-weight: 600; }
   -webkit-mask: var(--strip) right center / 100% 100% no-repeat; mask: var(--strip) right center / 100% 100% no-repeat; animation: land-band 1s ease-out; }
 @keyframes land { 15% { opacity: 1; } to { opacity: 0; } }
 @keyframes land-band { 15% { opacity: .2; } to { opacity: 0; } }
+/* "No endorsements": the column stays, empty and quiet. */
+.vd.blank { border-left-color: var(--rule); }
 .row.is-open { border-bottom: 1.5px solid var(--ink); }
 .row.is-open > .row-hd { border-bottom: 1px solid var(--rule); }
 .subhd small { display: block; font-style: normal; font-size: 13px; color: var(--muted); margin-top: 1px; }

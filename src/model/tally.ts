@@ -197,7 +197,8 @@ export interface Verdict { kind: VKind; main: string; sub: string; why?: NoneWhy
 export const NONE_WORDS: Record<NoneWhy, string> = {
   no_stand: 'Took no stand', not_found: 'No endorsements found', not_checked: 'Not checked yet', paywall: 'Behind a paywall',
   // The common case on local races: a quiet invitation on the row, said once on the section band.
-  no_cover: 'Not covered by your sources', no_sources: 'No sources on', both: 'Listed both sides',
+  // "No endorsements" chosen: the column stays empty and quiet.
+  no_cover: 'Not covered by your sources', no_sources: '', both: 'Listed both sides',
   mixed: 'No endorsements',
 };
 export function noneWhy(l: Lineup, anyChosen: boolean): NoneWhy {

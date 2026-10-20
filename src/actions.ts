@@ -10,7 +10,7 @@ import { growOpen, inkRow, followFold, glideTo, land, stopGlide } from './motion
 import { openBallot, openChosen, go, openReader, runAddress, toDoor, showBallot, rechoose } from './app';
 import { judgeBatch } from './model/judges';
 import { planAgree, planParty, planJudges, planSetup, applyFills, undoFills, emptyPlan, touchUndo, type Plan } from './model/bulk';
-import { toggleChip, setParty, setSources, chipState, type ChipKey } from './model/lens';
+import { toggleChip, setParty, setSources, noEndorsements, doorNone, type ChipKey } from './model/lens';
 import { courtGroup } from './model/labels';
 import { basisWords, LEANS } from './views/common';
 import { cheatText, shareURL } from './views/cheat';
@@ -384,13 +384,27 @@ A.src = (d) => {
   renderLens();
 };
 A['src-default'] = () => { S.b.sources = null; S.b.party = null; persist(); renderLens(); };
-/* "No sources on" in an open row: turn the newspapers and guides back on, and stay on that row. */
-A['papers-on'] = (d) => {
-  const b = B();
-  if (chipState(b, 'papers') !== 'on') toggleChip(b, 'papers');
-  persist();
-  renderLens();
-  if (d.id) focusFk(`row-${d.id}`);
+/* "No endorsements" (step 2 and the Edit sheet): every source off and no party, so every row shows
+   just the choices; the save link carries it as an empty source list. Tapped again, the newspapers
+   and guides come back. Any other chip, or a party, ends it on its own. */
+A['no-ends'] = () => {
+  if (S.view !== 'ballot') {
+    const on = !doorNone();
+    S.door.chips = { papers: !on, progressive: false, conservative: false };
+    S.door.party = null;
+    if (on) S.door.fill = false;
+    S.ui.open.delete('su-party');
+    if (doorBallot()) { S.b.sources = on ? [] : null; S.b.party = null; }
+    render(['mast']);
+    announce(on ? 'Turned on.' : 'Turned off.');
+    return;
+  }
+  const on = !noEndorsements();
+  S.b.sources = on ? [] : null;
+  S.b.party = null;
+  if (on) S.ui.setupFill = false;
+  renderLens(); persist();
+  announce(on ? 'Turned on.' : 'Turned off.');
 };
 A['src-none'] = () => { S.b.sources = []; S.b.party = null; persist(); renderLens(); };
 /* All sources or a party. Opened from the Edit sheet, it goes back there when it closes. */

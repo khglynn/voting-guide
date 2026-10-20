@@ -915,6 +915,10 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const door = views.setup.pickControlsHTML();
     check('first page before a ZIP: the chips from memory, no counts, the fill switch says what it does', /data-k="papers" aria-pressed="true"/.test(door) && /data-k="progressive" aria-pressed="false"/.test(door) && !/su-cov/.test(door)
       && door.includes('Fill in my ballot with their picks') && door.includes('Fills the races where they agree. Races where they split stay open.') && door.includes('Hide races I’ve decided'));
+    S.door.chips = { papers: false, progressive: false, conservative: false };
+    const doorNone = views.setup.pickControlsHTML();
+    check('first page before a ZIP: every chip off is "No endorsements", with no fill switch', lens.doorNone() && /data-act="no-ends" aria-pressed="true"/.test(doorNone) && !/setup-fill/.test(doorNone));
+    S.door.chips = { papers: true, progressive: false, conservative: false };
     S.ui.open.add('su-party');
     const listed = [...views.setup.pickControlsHTML().matchAll(/data-act="party-set" data-p="([^"]+)"/g)].map((m) => m[1]);
     S.ui.open.delete('su-party');
@@ -1024,13 +1028,29 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     check('go check: its line says "Not on your ballot", with Change', /Del Valle ISD Trustee: Not on your ballot/.test(strip(sch)) && /data-act="district-change" data-g="[^"]*Del Valle/.test(sch));
     const back = st.decodeShare(a2, head(st.encodeShare(a2, S.b))).state;
     check('go check: "none" travels in the save link', back.districts[dvg.key] === 'none');
-    // "No sources on": a button that turns the newspapers and guides back on.
-    open('CO', ['denver-co']);
+    // "No endorsements" (Kevin, Oct 20): an option, never the default. Every source off and no party;
+    // the rows stay tight: what it is, the choices with Pick, and the foot.
+    const dn = open('CO', ['denver-co']);
+    check('no endorsements: off by default', !lens.noEndorsements() && /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)));
     S.b.sources = [];
-    const m81 = views.open.openHTML(S.ballot.byId.get('co-amendment-81'));
-    check('go check: "No sources on." with "Turn on newspapers and guides", no "at the top"', /No sources on\./.test(m81) && /data-act="papers-on" data-id="co-amendment-81"[^>]*>Turn on newspapers and guides/.test(m81) && !/at the top/.test(m81));
+    tally.clearLineups();
+    check('no endorsements: an empty source list is it, and the line says so', lens.noEndorsements() && views.lens.lensSummary() === 'No endorsements');
+    const sh = views.setup.pickControlsHTML(true);
+    check('no endorsements: its chip is on, the fill switch and the counts step aside, the filter stays', /data-act="no-ends" aria-pressed="true"[^>]*>.*No endorsements<\/button>/.test(sh) && !/setup-fill/.test(sh) && !/su-cov/.test(sh) && /setup-only/.test(sh));
+    const m81 = views.open.openHTML(dn.byId.get('co-amendment-81'));
+    check('no endorsements: a measure is tight, yes and no with no source lines', /A yes vote means/.test(m81) && /data-act="pick"[^>]*data-v="YES"/.test(m81) && !/none-line|gridnote|papers-on|others-wrap|class="grid/.test(m81), strip(m81).slice(0, 120));
+    const race = dn.items.find((x) => x.kind === 'contest' && !x.is_retention && x.candidates.length > 1 && x.candidates.length <= 6 && !x.ranked_choice && bl.status(x) === 'open');
+    S.ui.row = race.id;
+    const rh = ledger.rowHTML(race);
+    S.ui.row = null;
+    check('no endorsements: a race lists its candidates with Pick, no grid, no source lines', /class="clist"/.test(rh) && (rh.match(/data-act="pick"/g) || []).length === race.candidates.length && !/class="grid|class="by"|none-line|gridnote|others-wrap/.test(rh), race.id);
+    check('no endorsements: the verdict column is empty', /<span class="vd none blank"><\/span>/.test(ledger.rowHTML(race)) && !/No sources on/.test(ledger.rowHTML(race)));
+    S.b.party = 'Democratic';
+    check('no endorsements: a party ends it', !lens.noEndorsements());
+    S.b.party = null;
     S.b.sources = null;
-    check('go check: with sources on, no such button', !/papers-on/.test(views.open.openHTML(S.ballot.byId.get('co-amendment-81'))));
+    tally.clearLineups();
+    check('no endorsements: with sources on, the rows say whose picks they are again', /data-act="no-ends" aria-pressed="false"/.test(views.setup.pickControlsHTML(true)) && /setup-fill/.test(views.setup.pickControlsHTML(true)));
     // Statewide-only: the state's sample ballot (its own sample_ballot_url first) and "Ask for your city".
     const wa = open('WA', []);
     const hd = ledger.ballotHeadHTML();

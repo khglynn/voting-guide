@@ -5,7 +5,7 @@ import type { Contest, Endorser } from '../types';
 import { S } from '../state';
 import { chosenIds, decisionItems } from '../ballot';
 import { esc, plural } from '../util';
-import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly } from '../model/lens';
+import { CHIPS, chipState, partiesOnBallot, picksOnBallot, picksShown, explainsOnly, noEndorsements } from '../model/lens';
 import { leanHTML, sourceLean, ext, isOpen, paywallSourceHTML, hasPaywallNote } from './common';
 
 export const TICK = '<svg class="tick" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6.3l2.6 2.6L10 3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
@@ -27,6 +27,7 @@ export function chipsHTML(): string {
 /* "Picks: Newspapers and guides" at the top of the ballot: whose picks show, in a few words. */
 export function lensSummary(): string {
   const b = S.ballot!;
+  if (noEndorsements()) return 'No endorsements';
   const on = CHIPS.filter((c) => ['on', 'some'].includes(chipState(b, c.key))).map((c) => `${chipState(b, c.key) === 'some' ? 'some ' : ''}${c.label.toLowerCase()}`);
   if (S.b.party) on.push(`the ${S.b.party} Party`);
   const n = chosenIds().length;

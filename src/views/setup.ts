@@ -6,7 +6,7 @@ import type { Ballot } from '../ballot';
 import { S } from '../state';
 import { esc, plural } from '../util';
 import { chipsHTML, TICK } from './lens';
-import { partiesOnBallot, CHIPS } from '../model/lens';
+import { partiesOnBallot, CHIPS, noEndorsements, doorNone } from '../model/lens';
 import { coverage } from '../model/tally';
 import { planSetup } from '../model/bulk';
 import { isOpen, FILL, HIDE } from './common';
@@ -55,12 +55,16 @@ export function pickControlsHTML(inSheet = false): string {
     : '';
   const chips = b ? chipsHTML()
     : CHIPS.map((c) => `<button class="chip" data-act="chip" data-k="${c.key}" aria-pressed="${S.door.chips[c.key]}" data-fk="chip-${c.key}">${TICK}${esc(c.label)}</button>`).join('');
-  const cov = b ? coverage() : null;
-  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${more}</div>
+  // "No endorsements": every row shows just the choices. With it on there is nothing to fill and
+  // nothing to count, so the fill switch and the coverage line step aside.
+  const none = b ? noEndorsements() : doorNone();
+  const noneChip = `<button class="chip" data-act="no-ends" aria-pressed="${none}" data-fk="chip-none">${TICK}No endorsements</button>`;
+  const cov = b && !none ? coverage() : null;
+  return `<div class="su-chips" role="group" aria-labelledby="${inSheet ? 'sh-h' : 'su-h'}">${chips}${partyChip}${noneChip}${more}</div>
     ${list}
     ${cov ? `<p class="su-cov">Picks in ${cov.picked} of your ${plural(cov.total, 'race')}.</p>` : ''}
     <div class="su-sws">
-      ${sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where they split stay open.')}
+      ${none ? '' : sw('setup-fill', inSheet ? S.ui.setupFill : S.door.fill, FILL, b ? fillLine(party) : 'Fills the races where they agree. Races where they split stay open.')}
       ${sw('setup-only', inSheet ? S.ui.setupOnly : S.door.only, HIDE)}
     </div>`;
 }

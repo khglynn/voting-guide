@@ -7,7 +7,7 @@ import { esc, hash, plural, host } from '../util';
 import { lineup, weighedIn, orderCandidates, type Lineup } from '../model/tally';
 import { candidateReview, judicialReview, judgesLead, surveyLines, surveySentence, pollsFor, raceRatings, hasRatings, type Review } from '../model/judges';
 import { seatLabel, cheatTitle, thresholdLabel } from '../model/labels';
-import { picksOnBallot, chipMembers } from '../model/lens';
+import { picksOnBallot } from '../model/lens';
 import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest, srcLink, reportURL, paywallRowHTML } from './common';
 import { headsUp, headsHTML, addressCount } from './ledger';
 
@@ -122,12 +122,8 @@ function gridHTML(it: Item, l: Lineup, cols: { key: string; head: string; sub: s
 /* When none of your sources weighed in: one calm line instead of an empty table. */
 function noneLineHTML(it: Item, l: Lineup): string {
   const parts: string[] = [];
-  // No sources on: one tap turns the newspapers and guides back on, right here.
-  if (!chosen().length) {
-    const on = chipMembers(S.ballot!, 'papers').length
-      ? `<p class="row-btns"><button class="mini" data-act="papers-on" data-id="${esc(it.id)}" data-fk="pon-${esc(it.id)}">Turn on newspapers and guides</button></p>` : '';
-    return `<p class="none-line">No sources on.</p>${on}`;
-  }
+  // "No endorsements" chosen: nothing to say about sources, so the row stays tight.
+  if (!chosen().length) return '';
   if (!l.relevant.length) parts.push(`None of your sources cover this ${it.kind === 'measure' ? 'measure' : 'race'}.`);
   else {
     if (l.noStand.length) parts.push(`${l.noStand.map((e) => e.short).join(', ')} took no stand.`);
@@ -139,6 +135,7 @@ function noneLineHTML(it: Item, l: Lineup): string {
 }
 /* Sources outside your lens that did pick here, marked as such. */
 function othersHTML(it: Item): string {
+  if (!chosen().length) return ''; // "No endorsements": no other sources either
   const ids = new Set(chosenIds());
   const others = S.ballot!.endorsers.filter((e) => !ids.has(e.id));
   const ol = lineup(it, others);

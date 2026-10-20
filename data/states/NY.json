@@ -192,7 +192,7 @@
     {
       "id": "wrong_polling_place",
       "question": "I went to the wrong polling place.",
-      "short": "Go to your assigned poll site if you can; if not, vote an affidavit ballot where you are.",
+      "short": "Go to your own poll site; an affidavit ballot elsewhere counts only in your county and Assembly district.",
       "actions": [
         {
           "label": "Find my poll site",

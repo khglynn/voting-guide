@@ -1256,6 +1256,21 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const txEp = read('state-TX.json').howto.early_in_person;
     check('hours: Austin and Orlando carry a one-line early voting hours note', au.places[0].early_in_person.hours_short === 'Travis County sites are open 7 AM to 7 PM every day.' && open('FL', ['orlando-fl']).places[0].early_in_person.hours_short === 'Orange County sites are open 8 AM to 8 PM every day.');
     check('hours: Austin keeps the state window, hours note and lookup in the plan', au.howto.early_in_person.start === txEp.start && au.howto.early_in_person.end === txEp.end && au.howto.early_in_person.hours_note === txEp.hours_note && au.howto.early_in_person.lookup_url === txEp.lookup_url);
+    // The plan's sub line during early voting: the place's one-line hours, then the ID.
+    {
+      const had = Object.getOwnPropertyDescriptor(globalThis, 'location');
+      Object.defineProperty(globalThis, 'location', { configurable: true, value: { search: '?today=2026-10-20', origin: 'http://x', pathname: '/' } });
+      try {
+        const subOf = (h) => (h.match(/<p class="plan-sub">([^<]*)<\/p>/) || [])[1] || '';
+        open('TX', ['austin-tx']);
+        let sub = subOf(ps.planHTML());
+        check('hours: Austin\'s next step says when Travis County sites are open, then to bring a photo ID', /Travis County sites are open 7 AM to 7 PM every day\. Bring a photo ID\.$/.test(sub), sub);
+        open('FL', ['orlando-fl']);
+        sub = subOf(ps.planHTML());
+        check('hours: Orlando\'s next step says when Orange County sites are open', /Orange County sites are open 8 AM to 8 PM every day\. Bring a photo ID\.$/.test(sub), sub);
+      } finally {
+        if (had) Object.defineProperty(globalThis, 'location', had); else delete globalThis.location;
+      }
     }
 
     // A statewide-only ballot's sample ballot link: the state's own, else a source, else the lookup.

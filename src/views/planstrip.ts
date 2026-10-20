@@ -2,7 +2,7 @@
    "Am I registered?", "What if..." and "I already voted". Behind "What if...", on the same paper, sit the
    situations, the gotchas, the key dates and the rules for ID and the booth: everything the
    v2 plan card held, one tap away. Every date is read from the state file. */
-import type { HowTo, HelpAction } from '../types';
+import type { HowTo, HelpAction, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, type Step } from '../model/plan';
@@ -36,9 +36,10 @@ export function planHTML(): string {
     </div></section>`;
 }
 
-/* While you can vote in person (not in a mail state): a place's early-voting hours when they fit
-   in one short line ("Sites are open 7 AM to 7 PM."), and "Bring a photo ID." where the state
-   asks for one. The rest stays behind "Dates, ID, ...". */
+/* While you can vote in person (not in a mail state): a place's early-voting hours in one line
+   (its `hours_short`, else an `hours_note` that already fits: "Travis County sites are open 7 AM
+   to 7 PM every day."), when every place on the ballot gives the same one, and "Bring a photo
+   ID." where the state asks for one. The rest stays behind "Dates, ID, ...". */
 const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
 function inPerson(step: Step): string[] {
   const b = S.ballot!;
@@ -46,9 +47,12 @@ function inPerson(step: Step): string[] {
   if (isMailState(h) || !IN_PERSON.includes(step.phase)) return [];
   const out: string[] = [];
   if (step.phase === 'early_before' || step.phase === 'early_open') {
-    const notes = [...new Set(b.places.map((p) => (p.early_in_person?.hours_note || '').trim()))];
-    const n = notes.length === 1 ? notes[0] : '';
-    if (n && wordCount(n) <= 12 && sentences(n).length === 1) out.push(n);
+    const line = (e: PlaceEarly | undefined): string => {
+      const n = (e?.hours_note || '').trim();
+      return (e?.hours_short || '').trim() || (n && wordCount(n) <= 12 && sentences(n).length === 1 ? n : '');
+    };
+    const lines = [...new Set(b.places.map((p) => line(p.early_in_person)))];
+    if (lines.length === 1 && lines[0]) out.push(lines[0]);
   }
   if (h.id_rules.required === 'photo') out.push('Bring a photo ID.');
   return out;

@@ -1,6 +1,6 @@
 /* Model checks for the ledger's own modules (lens, verdict, bulk fills, judges, plan, labels).
    Run by tests/model.mjs, which loads the TypeScript and hands over `check`. */
-export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, check }) {
+export async function run({ st, bl, geo, common, mods, views, open, head, read, INDEX, check }) {
   const { lens, tally, bulk, judges, labels } = mods;
   const plan = mods.plan;
   const S = st.S;
@@ -296,6 +296,48 @@ export async function run({ st, bl, geo, common, mods, open, head, read, INDEX, 
     // A hidden "may apply" race stays out, and one the voter brings back is still a maybe.
     const au = open('TX', ['austin-tx']);
     check('fills: Austin\'s SBOE 5 and Senate 21 are maybes, never filled', ['tx-sboe-5', 'tx-senate-21'].every((id) => au.mayApply.has(id)) && !bulk.planAgree().fills.some((f) => ['tx-sboe-5', 'tx-senate-21'].includes(f.id)));
+  }
+
+  /* ---------- the cheat sheet lists what the ballot shows, with the bar's count (walks, Oct 20) ----------
+     Austin's sheet listed seven Round Rock, Pflugerville and Leander ISD seats the ballot folds
+     away, listed six House picks as certain, and said "28 of 56" beside a bar's "28 of 50". */
+  {
+    const { cheat, ledger } = views;
+    const resetUI = () => { S.ui.view = 'ballot'; S.ui.row = null; S.ui.keep = null; S.ui.unfolded = new Set(); S.ui.folded = new Set(); };
+    const has = (h, id) => h.includes(`data-cs="${id}"`);
+    const rowOf = (h, id) => (h.match(new RegExp(`<tr data-cs="${id}"[\\s\\S]*?</tr>`)) || [''])[0];
+    const sheetCount = (h) => (h.match(/(\d+) of (\d+) decided/) || []).slice(1).join(' of ');
+    const barCount = () => (ledger.barHTML().match(/<b>(\d+)<\/b> of (\d+)/) || []).slice(1).join(' of ');
+    const au = open('TX', ['austin-tx']);
+    resetUI();
+    const oth = au.items.filter((it) => it.kind === 'contest' && it.level === 'school' && au.mayApply.has(it.id) && !au.groupOf[it.id] && it.candidates.length > 1);
+    check('cheat sheet: Austin folds three or more other school districts\' races', oth.length >= 3, String(oth.length));
+    let html = cheat.cheatHTML(false);
+    check('cheat sheet: the folded other school districts\' races stay off it while undecided', oth.every((it) => !has(html, it.id)), oth.filter((it) => has(html, it.id)).map((it) => it.id).join(', '));
+    check('cheat sheet: an unanswered district question is still a line', /Depends on your district/.test(html));
+    check('cheat sheet: "N of M decided" is the bar\'s count, district questions left out', !!sheetCount(html) && sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    S.b.picks[oth[0].id] = oth[0].candidates[0].name;
+    S.b.picks['tx-sboe-5'] = au.byId.get('tx-sboe-5').candidates[0].name;
+    const gov = au.byId.get('tx-governor');
+    S.b.picks[gov.id] = gov.candidates[0].name;
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: an other-district race you picked is listed, the rest stay off', has(html, oth[0].id) && oth.slice(1).every((it) => !has(html, it.id)));
+    check('cheat sheet: a pick on a maybe race says "If it’s on your ballot"', /If it’s on your ballot/.test(rowOf(html, 'tx-sboe-5')) && /If it’s on your ballot/.test(rowOf(html, oth[0].id)), rowOf(html, 'tx-sboe-5').slice(0, 200));
+    check('cheat sheet: a pick on a race that is surely yours has no such note', has(html, gov.id) && !/If it’s on your ballot/.test(rowOf(html, gov.id)));
+    check('cheat sheet: copied text carries the note too', /\(if it’s on your ballot\)/.test(cheat.cheatText().split('\n').find((x) => x.includes(au.byId.get('tx-sboe-5').candidates[0].name)) || ''));
+    check('cheat sheet: the count still matches the bar after picks', sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    // "Not sure" on U.S. Rep: every district shows on the ballot as a maybe; a pick in one is marked.
+    const usr = au.groups.find((g) => g.kind === 'cd');
+    S.b.districts[usr.key] = '*';
+    S.b.picks[usr.members[0]] = au.byId.get(usr.members[0]).candidates[0].name;
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: a House pick under "Not sure" says "If it’s on your ballot"', /If it’s on your ballot/.test(rowOf(html, usr.members[0])));
+    check('cheat sheet: the count matches the bar with "Not sure" answered', sheetCount(html) === barCount(), `${sheetCount(html)} vs bar ${barCount()}`);
+    // Opening the fold on the ballot ("Open only if one of them is yours") lists them all again.
+    S.ui.unfolded.add('school|oth');
+    html = cheat.cheatHTML(false);
+    check('cheat sheet: with the other-districts row opened, every one of them is listed', oth.every((it) => has(html, it.id)));
+    resetUI();
   }
 
   /* ---------- judges ---------- */

@@ -621,6 +621,7 @@ b, strong { font-weight: 600; }
 .cs-go { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 .cs-go:focus-visible { position: static; width: auto; height: auto; clip-path: none; display: block; min-height: 32px; }
 .cs-sub, .cs-note { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+.cs-table td .cs-sub { font-weight: 400; }
 .cs-ranks li { display: flex; gap: 6px; }
 .cs-rk { color: var(--gold-ink); min-width: 30px; }
 .cs-judges { margin-top: 4px; font-weight: 400; font-size: 14px; }
